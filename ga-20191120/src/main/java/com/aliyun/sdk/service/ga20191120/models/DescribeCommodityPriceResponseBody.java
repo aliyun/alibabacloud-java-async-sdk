@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommodityPriceResponseBody</p>
  */
 public class DescribeCommodityPriceResponseBody extends TeaModel {
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @NameInMap("DiscountPrice")
+    @com.aliyun.core.annotation.NameInMap("DiscountPrice")
     private Double discountPrice;
 
-    @NameInMap("OrderDetails")
+    @com.aliyun.core.annotation.NameInMap("OrderDetails")
     private java.util.List < OrderDetails> orderDetails;
 
-    @NameInMap("OriginalPrice")
+    @com.aliyun.core.annotation.NameInMap("OriginalPrice")
     private Double originalPrice;
 
-    @NameInMap("Promotions")
+    @com.aliyun.core.annotation.NameInMap("Promotions")
     private java.util.List < Promotions> promotions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleDetails")
+    @com.aliyun.core.annotation.NameInMap("RuleDetails")
     private java.util.List < RuleDetails> ruleDetails;
 
-    @NameInMap("TradePrice")
+    @com.aliyun.core.annotation.NameInMap("TradePrice")
     private Double tradePrice;
 
     private DescribeCommodityPriceResponseBody(Builder builder) {
@@ -199,19 +198,19 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
     } 
 
     public static class ModuleDetails extends TeaModel {
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Double discountPrice;
 
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Double originalPrice;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Double tradePrice;
 
         private ModuleDetails(Builder builder) {
@@ -320,19 +319,19 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     }
     public static class PromDetails extends TeaModel {
-        @NameInMap("FinalPromFee")
+        @com.aliyun.core.annotation.NameInMap("FinalPromFee")
         private Double finalPromFee;
 
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("PromType")
+        @com.aliyun.core.annotation.NameInMap("PromType")
         private String promType;
 
-        @NameInMap("PromotionId")
+        @com.aliyun.core.annotation.NameInMap("PromotionId")
         private String promotionId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
         private PromDetails(Builder builder) {
@@ -456,31 +455,31 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     }
     public static class OrderDetails extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CommodityName")
+        @com.aliyun.core.annotation.NameInMap("CommodityName")
         private String commodityName;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Double discountPrice;
 
-        @NameInMap("ModuleDetails")
+        @com.aliyun.core.annotation.NameInMap("ModuleDetails")
         private java.util.List < ModuleDetails> moduleDetails;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Double originalPrice;
 
-        @NameInMap("PromDetails")
+        @com.aliyun.core.annotation.NameInMap("PromDetails")
         private java.util.List < PromDetails> promDetails;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Long quantity;
 
-        @NameInMap("RuleIds")
+        @com.aliyun.core.annotation.NameInMap("RuleIds")
         private java.util.List < Long > ruleIds;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Double tradePrice;
 
         private OrderDetails(Builder builder) {
@@ -660,19 +659,19 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     }
     public static class Promotions extends TeaModel {
-        @NameInMap("CanPromFee")
+        @com.aliyun.core.annotation.NameInMap("CanPromFee")
         private Double canPromFee;
 
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("PromotionOptionNo")
+        @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
         private String promotionOptionNo;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
         private Promotions(Builder builder) {
@@ -799,10 +798,10 @@ public class DescribeCommodityPriceResponseBody extends TeaModel {
 
     }
     public static class RuleDetails extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private RuleDetails(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCustomRoutingEndpointsResponseBody</p>
  */
 public class UpdateCustomRoutingEndpointsResponseBody extends TeaModel {
-    @NameInMap("EndpointIds")
+    @com.aliyun.core.annotation.NameInMap("EndpointIds")
     private java.util.List < String > endpointIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateCustomRoutingEndpointsResponseBody(Builder builder) {

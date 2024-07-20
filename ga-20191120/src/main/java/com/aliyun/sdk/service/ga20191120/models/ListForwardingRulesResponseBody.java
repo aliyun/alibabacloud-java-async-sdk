@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListForwardingRulesResponseBody</p>
  */
 public class ListForwardingRulesResponseBody extends TeaModel {
-    @NameInMap("ForwardingRules")
+    @com.aliyun.core.annotation.NameInMap("ForwardingRules")
     private java.util.List < ForwardingRules> forwardingRules;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListForwardingRulesResponseBody(Builder builder) {
@@ -136,7 +135,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
     } 
 
     public static class ServerGroupTuples extends TeaModel {
-        @NameInMap("EndpointGroupId")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
         private String endpointGroupId;
 
         private ServerGroupTuples(Builder builder) {
@@ -180,7 +179,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     }
     public static class ForwardGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupTuples")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
         private java.util.List < ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
@@ -224,16 +223,16 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     }
     public static class RuleActions extends TeaModel {
-        @NameInMap("ForwardGroupConfig")
+        @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
         private ForwardGroupConfig forwardGroupConfig;
 
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private Integer order;
 
-        @NameInMap("RuleActionType")
+        @com.aliyun.core.annotation.NameInMap("RuleActionType")
         private String ruleActionType;
 
-        @NameInMap("RuleActionValue")
+        @com.aliyun.core.annotation.NameInMap("RuleActionValue")
         private String ruleActionValue;
 
         private RuleActions(Builder builder) {
@@ -376,7 +375,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     }
     public static class HostConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private HostConfig(Builder builder) {
@@ -420,7 +419,7 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     }
     public static class PathConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private PathConfig(Builder builder) {
@@ -464,16 +463,16 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     }
     public static class RuleConditions extends TeaModel {
-        @NameInMap("HostConfig")
+        @com.aliyun.core.annotation.NameInMap("HostConfig")
         private HostConfig hostConfig;
 
-        @NameInMap("PathConfig")
+        @com.aliyun.core.annotation.NameInMap("PathConfig")
         private PathConfig pathConfig;
 
-        @NameInMap("RuleConditionType")
+        @com.aliyun.core.annotation.NameInMap("RuleConditionType")
         private String ruleConditionType;
 
-        @NameInMap("RuleConditionValue")
+        @com.aliyun.core.annotation.NameInMap("RuleConditionValue")
         private String ruleConditionValue;
 
         private RuleConditions(Builder builder) {
@@ -591,13 +590,13 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     }
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -695,37 +694,37 @@ public class ListForwardingRulesResponseBody extends TeaModel {
 
     }
     public static class ForwardingRules extends TeaModel {
-        @NameInMap("ForwardingRuleDirection")
+        @com.aliyun.core.annotation.NameInMap("ForwardingRuleDirection")
         private String forwardingRuleDirection;
 
-        @NameInMap("ForwardingRuleId")
+        @com.aliyun.core.annotation.NameInMap("ForwardingRuleId")
         private String forwardingRuleId;
 
-        @NameInMap("ForwardingRuleName")
+        @com.aliyun.core.annotation.NameInMap("ForwardingRuleName")
         private String forwardingRuleName;
 
-        @NameInMap("ForwardingRuleStatus")
+        @com.aliyun.core.annotation.NameInMap("ForwardingRuleStatus")
         private String forwardingRuleStatus;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RuleActions")
+        @com.aliyun.core.annotation.NameInMap("RuleActions")
         private java.util.List < RuleActions> ruleActions;
 
-        @NameInMap("RuleConditions")
+        @com.aliyun.core.annotation.NameInMap("RuleConditions")
         private java.util.List < RuleConditions> ruleConditions;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("ServiceManagedInfos")
+        @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
         private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
         private ForwardingRules(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAclRequest</p>
  */
 public class CreateAclRequest extends Request {
-    @Query
-    @NameInMap("AclEntries")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclEntries")
     private java.util.List < AclEntries> aclEntries;
 
-    @Query
-    @NameInMap("AclName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclName")
     private String aclName;
 
-    @Query
-    @NameInMap("AddressIPVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addressIPVersion;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private CreateAclRequest(Builder builder) {
@@ -157,7 +156,7 @@ public class CreateAclRequest extends Request {
          * The entries of IP addresses or CIDR blocks to add to the ACL.
          * <p>
          * 
-         * You can add up to 20 entries in each request.
+         * You can add a maximum of 50 entries at a time.
          */
         public Builder aclEntries(java.util.List < AclEntries> aclEntries) {
             this.putQueryParameter("AclEntries", aclEntries);
@@ -166,7 +165,10 @@ public class CreateAclRequest extends Request {
         }
 
         /**
-         * The name of the ACL. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * The ACL name.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -191,9 +193,9 @@ public class CreateAclRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -249,10 +251,10 @@ public class CreateAclRequest extends Request {
     } 
 
     public static class AclEntries extends TeaModel {
-        @NameInMap("Entry")
+        @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
 
-        @NameInMap("EntryDescription")
+        @com.aliyun.core.annotation.NameInMap("EntryDescription")
         private String entryDescription;
 
         private AclEntries(Builder builder) {
@@ -290,7 +292,7 @@ public class CreateAclRequest extends Request {
              * The IP addresses (192.168.XX.XX) or CIDR blocks (10.0.XX.XX/24) that you want to add to the ACL.
              * <p>
              * 
-             * You can add up to 20 entries in each request.
+             * You can add a maximum of 50 entries at a time.
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -301,7 +303,7 @@ public class CreateAclRequest extends Request {
              * The description of the entry that you want to add to the ACL.
              * <p>
              * 
-             * You can add the descriptions of up to 20 entries in each request.
+             * You can add a maximum of 50 entries at a time.
              * 
              * The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (\_).
              */
@@ -318,10 +320,10 @@ public class CreateAclRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

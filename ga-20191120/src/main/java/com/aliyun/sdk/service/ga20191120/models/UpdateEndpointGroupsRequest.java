@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEndpointGroupsRequest</p>
  */
 public class UpdateEndpointGroupsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EndpointGroupConfigurations")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupConfigurations")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateEndpointGroupsRequest(Builder builder) {
@@ -174,19 +173,19 @@ public class UpdateEndpointGroupsRequest extends Request {
     } 
 
     public static class EndpointConfigurations extends TeaModel {
-        @NameInMap("Endpoint")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endpoint;
 
-        @NameInMap("SubAddress")
+        @com.aliyun.core.annotation.NameInMap("SubAddress")
         private String subAddress;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Weight")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long weight;
 
         private EndpointConfigurations(Builder builder) {
@@ -302,10 +301,10 @@ public class UpdateEndpointGroupsRequest extends Request {
 
     }
     public static class PortOverrides extends TeaModel {
-        @NameInMap("EndpointPort")
+        @com.aliyun.core.annotation.NameInMap("EndpointPort")
         private Long endpointPort;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Long listenerPort;
 
         private PortOverrides(Builder builder) {
@@ -372,50 +371,53 @@ public class UpdateEndpointGroupsRequest extends Request {
 
     }
     public static class EndpointGroupConfigurations extends TeaModel {
-        @NameInMap("EnableClientIPPreservationProxyProtocol")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservationProxyProtocol")
         private Boolean enableClientIPPreservationProxyProtocol;
 
-        @NameInMap("EnableClientIPPreservationToa")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservationToa")
         private Boolean enableClientIPPreservationToa;
 
-        @NameInMap("EndpointConfigurations")
+        @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
         private java.util.List < EndpointConfigurations> endpointConfigurations;
 
-        @NameInMap("EndpointGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupDescription")
         private String endpointGroupDescription;
 
-        @NameInMap("EndpointGroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endpointGroupId;
 
-        @NameInMap("EndpointGroupName")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupName")
         private String endpointGroupName;
 
-        @NameInMap("EndpointRequestProtocol")
+        @com.aliyun.core.annotation.NameInMap("EndpointProtocolVersion")
+        private String endpointProtocolVersion;
+
+        @com.aliyun.core.annotation.NameInMap("EndpointRequestProtocol")
         private String endpointRequestProtocol;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
-        @NameInMap("HealthCheckIntervalSeconds")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckIntervalSeconds")
         private Long healthCheckIntervalSeconds;
 
-        @NameInMap("HealthCheckPath")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
         private String healthCheckPath;
 
-        @NameInMap("HealthCheckPort")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
         private Long healthCheckPort;
 
-        @NameInMap("HealthCheckProtocol")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
-        @NameInMap("PortOverrides")
+        @com.aliyun.core.annotation.NameInMap("PortOverrides")
         private java.util.List < PortOverrides> portOverrides;
 
-        @NameInMap("ThresholdCount")
+        @com.aliyun.core.annotation.NameInMap("ThresholdCount")
         private Long thresholdCount;
 
-        @NameInMap("TrafficPercentage")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercentage")
         private Long trafficPercentage;
 
         private EndpointGroupConfigurations(Builder builder) {
@@ -425,6 +427,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             this.endpointGroupDescription = builder.endpointGroupDescription;
             this.endpointGroupId = builder.endpointGroupId;
             this.endpointGroupName = builder.endpointGroupName;
+            this.endpointProtocolVersion = builder.endpointProtocolVersion;
             this.endpointRequestProtocol = builder.endpointRequestProtocol;
             this.healthCheckEnabled = builder.healthCheckEnabled;
             this.healthCheckIntervalSeconds = builder.healthCheckIntervalSeconds;
@@ -484,6 +487,13 @@ public class UpdateEndpointGroupsRequest extends Request {
          */
         public String getEndpointGroupName() {
             return this.endpointGroupName;
+        }
+
+        /**
+         * @return endpointProtocolVersion
+         */
+        public String getEndpointProtocolVersion() {
+            return this.endpointProtocolVersion;
         }
 
         /**
@@ -556,6 +566,7 @@ public class UpdateEndpointGroupsRequest extends Request {
             private String endpointGroupDescription; 
             private String endpointGroupId; 
             private String endpointGroupName; 
+            private String endpointProtocolVersion; 
             private String endpointRequestProtocol; 
             private Boolean healthCheckEnabled; 
             private Long healthCheckIntervalSeconds; 
@@ -625,6 +636,14 @@ public class UpdateEndpointGroupsRequest extends Request {
              */
             public Builder endpointGroupName(String endpointGroupName) {
                 this.endpointGroupName = endpointGroupName;
+                return this;
+            }
+
+            /**
+             * EndpointProtocolVersion.
+             */
+            public Builder endpointProtocolVersion(String endpointProtocolVersion) {
+                this.endpointProtocolVersion = endpointProtocolVersion;
                 return this;
             }
 

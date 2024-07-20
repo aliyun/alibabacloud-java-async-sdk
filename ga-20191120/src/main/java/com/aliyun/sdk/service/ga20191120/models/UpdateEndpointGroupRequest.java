@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,71 +11,75 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEndpointGroupRequest</p>
  */
 public class UpdateEndpointGroupRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EndpointConfigurations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
     private java.util.List < EndpointConfigurations> endpointConfigurations;
 
-    @Query
-    @NameInMap("EndpointGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointGroupId;
 
-    @Query
-    @NameInMap("EndpointGroupRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointGroupRegion;
 
-    @Query
-    @NameInMap("EndpointRequestProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointProtocolVersion")
+    private String endpointProtocolVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointRequestProtocol")
     private String endpointRequestProtocol;
 
-    @Query
-    @NameInMap("HealthCheckEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
     private Boolean healthCheckEnabled;
 
-    @Query
-    @NameInMap("HealthCheckIntervalSeconds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckIntervalSeconds")
     private Integer healthCheckIntervalSeconds;
 
-    @Query
-    @NameInMap("HealthCheckPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
     private String healthCheckPath;
 
-    @Query
-    @NameInMap("HealthCheckPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
     private Integer healthCheckPort;
 
-    @Query
-    @NameInMap("HealthCheckProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
     private String healthCheckProtocol;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PortOverrides")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortOverrides")
     private java.util.List < PortOverrides> portOverrides;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ThresholdCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThresholdCount")
     private Integer thresholdCount;
 
-    @Query
-    @NameInMap("TrafficPercentage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrafficPercentage")
     private Integer trafficPercentage;
 
     private UpdateEndpointGroupRequest(Builder builder) {
@@ -86,6 +89,7 @@ public class UpdateEndpointGroupRequest extends Request {
         this.endpointConfigurations = builder.endpointConfigurations;
         this.endpointGroupId = builder.endpointGroupId;
         this.endpointGroupRegion = builder.endpointGroupRegion;
+        this.endpointProtocolVersion = builder.endpointProtocolVersion;
         this.endpointRequestProtocol = builder.endpointRequestProtocol;
         this.healthCheckEnabled = builder.healthCheckEnabled;
         this.healthCheckIntervalSeconds = builder.healthCheckIntervalSeconds;
@@ -145,6 +149,13 @@ public class UpdateEndpointGroupRequest extends Request {
      */
     public String getEndpointGroupRegion() {
         return this.endpointGroupRegion;
+    }
+
+    /**
+     * @return endpointProtocolVersion
+     */
+    public String getEndpointProtocolVersion() {
+        return this.endpointProtocolVersion;
     }
 
     /**
@@ -230,6 +241,7 @@ public class UpdateEndpointGroupRequest extends Request {
         private java.util.List < EndpointConfigurations> endpointConfigurations; 
         private String endpointGroupId; 
         private String endpointGroupRegion; 
+        private String endpointProtocolVersion; 
         private String endpointRequestProtocol; 
         private Boolean healthCheckEnabled; 
         private Integer healthCheckIntervalSeconds; 
@@ -253,6 +265,7 @@ public class UpdateEndpointGroupRequest extends Request {
             this.endpointConfigurations = request.endpointConfigurations;
             this.endpointGroupId = request.endpointGroupId;
             this.endpointGroupRegion = request.endpointGroupRegion;
+            this.endpointProtocolVersion = request.endpointProtocolVersion;
             this.endpointRequestProtocol = request.endpointRequestProtocol;
             this.healthCheckEnabled = request.healthCheckEnabled;
             this.healthCheckIntervalSeconds = request.healthCheckIntervalSeconds;
@@ -319,6 +332,15 @@ public class UpdateEndpointGroupRequest extends Request {
         public Builder endpointGroupRegion(String endpointGroupRegion) {
             this.putQueryParameter("EndpointGroupRegion", endpointGroupRegion);
             this.endpointGroupRegion = endpointGroupRegion;
+            return this;
+        }
+
+        /**
+         * EndpointProtocolVersion.
+         */
+        public Builder endpointProtocolVersion(String endpointProtocolVersion) {
+            this.putQueryParameter("EndpointProtocolVersion", endpointProtocolVersion);
+            this.endpointProtocolVersion = endpointProtocolVersion;
             return this;
         }
 
@@ -451,25 +473,25 @@ public class UpdateEndpointGroupRequest extends Request {
     } 
 
     public static class EndpointConfigurations extends TeaModel {
-        @NameInMap("EnableClientIPPreservation")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservation")
         private Boolean enableClientIPPreservation;
 
-        @NameInMap("EnableProxyProtocol")
+        @com.aliyun.core.annotation.NameInMap("EnableProxyProtocol")
         private Boolean enableProxyProtocol;
 
-        @NameInMap("Endpoint")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endpoint;
 
-        @NameInMap("SubAddress")
+        @com.aliyun.core.annotation.NameInMap("SubAddress")
         private String subAddress;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Weight")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer weight;
 
         private EndpointConfigurations(Builder builder) {
@@ -628,10 +650,10 @@ public class UpdateEndpointGroupRequest extends Request {
 
     }
     public static class PortOverrides extends TeaModel {
-        @NameInMap("EndpointPort")
+        @com.aliyun.core.annotation.NameInMap("EndpointPort")
         private Integer endpointPort;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
         private PortOverrides(Builder builder) {

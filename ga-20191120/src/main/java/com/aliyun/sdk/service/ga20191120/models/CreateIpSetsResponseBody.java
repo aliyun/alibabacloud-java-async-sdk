@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIpSetsResponseBody</p>
  */
 public class CreateIpSetsResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("IpSets")
+    @com.aliyun.core.annotation.NameInMap("IpSets")
     private java.util.List < IpSets> ipSets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateIpSetsResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class CreateIpSetsResponseBody extends TeaModel {
     } 
 
     public static class IpSets extends TeaModel {
-        @NameInMap("AccelerateRegionId")
+        @com.aliyun.core.annotation.NameInMap("AccelerateRegionId")
         private String accelerateRegionId;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("IpSetId")
+        @com.aliyun.core.annotation.NameInMap("IpSetId")
         private String ipSetId;
 
-        @NameInMap("IspType")
+        @com.aliyun.core.annotation.NameInMap("IspType")
         private String ispType;
 
         private IpSets(Builder builder) {

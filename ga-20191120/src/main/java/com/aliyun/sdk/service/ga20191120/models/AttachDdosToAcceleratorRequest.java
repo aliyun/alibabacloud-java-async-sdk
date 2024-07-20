@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachDdosToAcceleratorRequest</p>
  */
 public class AttachDdosToAcceleratorRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("DdosId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosId;
 
-    @Query
-    @NameInMap("DdosRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DdosRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ddosRegionId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private AttachDdosToAcceleratorRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBasicEndpointsRequest</p>
  */
 public class CreateBasicEndpointsRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("EndpointGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointGroupId;
 
-    @Query
-    @NameInMap("Endpoints")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Endpoints")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Endpoints> endpoints;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateBasicEndpointsRequest(Builder builder) {
@@ -171,22 +170,22 @@ public class CreateBasicEndpointsRequest extends Request {
     } 
 
     public static class Endpoints extends TeaModel {
-        @NameInMap("EndpointAddress")
+        @com.aliyun.core.annotation.NameInMap("EndpointAddress")
         private String endpointAddress;
 
-        @NameInMap("EndpointSubAddress")
+        @com.aliyun.core.annotation.NameInMap("EndpointSubAddress")
         private String endpointSubAddress;
 
-        @NameInMap("EndpointSubAddressType")
+        @com.aliyun.core.annotation.NameInMap("EndpointSubAddressType")
         private String endpointSubAddressType;
 
-        @NameInMap("EndpointType")
+        @com.aliyun.core.annotation.NameInMap("EndpointType")
         private String endpointType;
 
-        @NameInMap("EndpointZoneId")
+        @com.aliyun.core.annotation.NameInMap("EndpointZoneId")
         private String endpointZoneId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Endpoints(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationMonitorDetectResultResponseBody</p>
  */
 public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
-    @NameInMap("ApplicationMonitorDetectResultList")
+    @com.aliyun.core.annotation.NameInMap("ApplicationMonitorDetectResultList")
     private java.util.List < ApplicationMonitorDetectResultList> applicationMonitorDetectResultList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListApplicationMonitorDetectResultResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class ListApplicationMonitorDetectResultResponseBody extends TeaModel {
     } 
 
     public static class ApplicationMonitorDetectResultList extends TeaModel {
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("DetectTime")
+        @com.aliyun.core.annotation.NameInMap("DetectTime")
         private String detectTime;
 
-        @NameInMap("DiagStatus")
+        @com.aliyun.core.annotation.NameInMap("DiagStatus")
         private String diagStatus;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("StatusCode")
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
         private String statusCode;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private ApplicationMonitorDetectResultList(Builder builder) {

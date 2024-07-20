@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAclResponseBody</p>
  */
 public class GetAclResponseBody extends TeaModel {
-    @NameInMap("AclEntries")
+    @com.aliyun.core.annotation.NameInMap("AclEntries")
     private java.util.List < AclEntries> aclEntries;
 
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @NameInMap("AclName")
+    @com.aliyun.core.annotation.NameInMap("AclName")
     private String aclName;
 
-    @NameInMap("AclStatus")
+    @com.aliyun.core.annotation.NameInMap("AclStatus")
     private String aclStatus;
 
-    @NameInMap("AddressIPVersion")
+    @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
     private String addressIPVersion;
 
-    @NameInMap("RelatedListeners")
+    @com.aliyun.core.annotation.NameInMap("RelatedListeners")
     private java.util.List < RelatedListeners> relatedListeners;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
     private GetAclResponseBody(Builder builder) {
@@ -202,7 +201,7 @@ public class GetAclResponseBody extends TeaModel {
         }
 
         /**
-         * The tags of the ACL.
+         * The tag of the ACL.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -216,10 +215,10 @@ public class GetAclResponseBody extends TeaModel {
     } 
 
     public static class AclEntries extends TeaModel {
-        @NameInMap("Entry")
+        @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
 
-        @NameInMap("EntryDescription")
+        @com.aliyun.core.annotation.NameInMap("EntryDescription")
         private String entryDescription;
 
         private AclEntries(Builder builder) {
@@ -277,13 +276,13 @@ public class GetAclResponseBody extends TeaModel {
 
     }
     public static class RelatedListeners extends TeaModel {
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("AclType")
+        @com.aliyun.core.annotation.NameInMap("AclType")
         private String aclType;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
         private RelatedListeners(Builder builder) {
@@ -338,8 +337,8 @@ public class GetAclResponseBody extends TeaModel {
              * The type of the ACL. Valid values:
              * <p>
              * 
-             * *   **white**: a whitelist. Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow only specific IP addresses to access an application. Risks may arise if an IP address whitelist is improperly configured. After you configure a whitelist for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.
-             * *   **black**: a blacklist. All requests from the IP addresses or CIDR blocks in the ACL are blocked. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If a blacklist is enabled but no IP address is added to the blacklist, the listener forwards all requests.
+             * *   **white**: Only requests from the IP addresses or CIDR blocks in the ACL are forwarded. Whitelists are suitable for scenarios in which you want to allow access from specific IP addresses to an application. If a whitelist is improperly configured, risks may arise. After a whitelist is configured for a listener, only requests from the IP addresses that are added to the whitelist are distributed by the listener. If a whitelist is enabled but no IP address is added to the whitelist, the listener forwards all requests.
+             * *   **black**: All requests from the IP addresses or CIDR blocks in the ACL are rejected. Blacklists are suitable for scenarios in which you want to deny access from specific IP addresses to an application. If a blacklist is enabled but no IP address is added to the blacklist, the listener forwards all requests.
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -362,10 +361,10 @@ public class GetAclResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -400,7 +399,7 @@ public class GetAclResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of tag N that is add to the ACL.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -408,7 +407,7 @@ public class GetAclResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of tag N that is add to the ACL.
              */
             public Builder value(String value) {
                 this.value = value;

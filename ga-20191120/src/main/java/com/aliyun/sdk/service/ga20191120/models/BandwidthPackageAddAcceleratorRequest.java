@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BandwidthPackageAddAcceleratorRequest</p>
  */
 public class BandwidthPackageAddAcceleratorRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("BandwidthPackageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bandwidthPackageId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private BandwidthPackageAddAcceleratorRequest(Builder builder) {

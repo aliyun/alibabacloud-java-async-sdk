@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBandwidthPackagesResponseBody</p>
  */
 public class ListBandwidthPackagesResponseBody extends TeaModel {
-    @NameInMap("BandwidthPackages")
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackages")
     private java.util.List < BandwidthPackages> bandwidthPackages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListBandwidthPackagesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -193,58 +192,58 @@ public class ListBandwidthPackagesResponseBody extends TeaModel {
 
     }
     public static class BandwidthPackages extends TeaModel {
-        @NameInMap("Accelerators")
+        @com.aliyun.core.annotation.NameInMap("Accelerators")
         private java.util.List < String > accelerators;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
-        @NameInMap("BandwidthType")
+        @com.aliyun.core.annotation.NameInMap("BandwidthType")
         private String bandwidthType;
 
-        @NameInMap("BillingType")
+        @com.aliyun.core.annotation.NameInMap("BillingType")
         private String billingType;
 
-        @NameInMap("CbnGeographicRegionIdA")
+        @com.aliyun.core.annotation.NameInMap("CbnGeographicRegionIdA")
         private String cbnGeographicRegionIdA;
 
-        @NameInMap("CbnGeographicRegionIdB")
+        @com.aliyun.core.annotation.NameInMap("CbnGeographicRegionIdB")
         private String cbnGeographicRegionIdB;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ratio")
+        @com.aliyun.core.annotation.NameInMap("Ratio")
         private Integer ratio;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private BandwidthPackages(Builder builder) {

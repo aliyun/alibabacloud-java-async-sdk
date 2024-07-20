@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListListenerCertificatesRequest</p>
  */
 public class ListListenerCertificatesRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
     private ListListenerCertificatesRequest(Builder builder) {
@@ -146,10 +145,7 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return.
-         * <p>
-         * 
-         * Valid values: **1** to **50**. Default value: **20**.
+         * The maximum number of entries to return. Valid values: **1** to **50**. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -158,11 +154,11 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If this is your first and only query, ignore this parameter.
-         * *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -171,7 +167,7 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Global Accelerator (GA) instance is deployed. Set the value to **cn-hangzhou**.
+         * The ID of the region where the GA instance is deployed. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,10 +179,10 @@ public class ListListenerCertificatesRequest extends Request {
          * The type of the certificate. Valid values:
          * <p>
          * 
-         * *   **default**: a default certificate
-         * *   **additional**: an additional certificate
+         * *   **default**
+         * *   **additional**
          * 
-         * If you do not set this parameter, default and additional certificates are returned by default.
+         * If you do not specify this parameter, default and additional certificates are returned by default.
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);

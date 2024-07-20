@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateForwardingRulesRequest</p>
  */
 public class UpdateForwardingRulesRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ForwardingRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardingRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ForwardingRules> forwardingRules;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateForwardingRulesRequest(Builder builder) {
@@ -171,8 +170,8 @@ public class UpdateForwardingRulesRequest extends Request {
     } 
 
     public static class ServerGroupTuples extends TeaModel {
-        @NameInMap("EndpointGroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endpointGroupId;
 
         private ServerGroupTuples(Builder builder) {
@@ -216,8 +215,8 @@ public class UpdateForwardingRulesRequest extends Request {
 
     }
     public static class ForwardGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupTuples")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
@@ -261,18 +260,18 @@ public class UpdateForwardingRulesRequest extends Request {
 
     }
     public static class RuleActions extends TeaModel {
-        @NameInMap("ForwardGroupConfig")
+        @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
         private ForwardGroupConfig forwardGroupConfig;
 
-        @NameInMap("Order")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Order")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer order;
 
-        @NameInMap("RuleActionType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleActionType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleActionType;
 
-        @NameInMap("RuleActionValue")
+        @com.aliyun.core.annotation.NameInMap("RuleActionValue")
         private String ruleActionValue;
 
         private RuleActions(Builder builder) {
@@ -417,7 +416,7 @@ public class UpdateForwardingRulesRequest extends Request {
 
     }
     public static class HostConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private HostConfig(Builder builder) {
@@ -461,7 +460,7 @@ public class UpdateForwardingRulesRequest extends Request {
 
     }
     public static class PathConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private PathConfig(Builder builder) {
@@ -505,17 +504,17 @@ public class UpdateForwardingRulesRequest extends Request {
 
     }
     public static class RuleConditions extends TeaModel {
-        @NameInMap("HostConfig")
+        @com.aliyun.core.annotation.NameInMap("HostConfig")
         private HostConfig hostConfig;
 
-        @NameInMap("PathConfig")
+        @com.aliyun.core.annotation.NameInMap("PathConfig")
         private PathConfig pathConfig;
 
-        @NameInMap("RuleConditionType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleConditionType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleConditionType;
 
-        @NameInMap("RuleConditionValue")
+        @com.aliyun.core.annotation.NameInMap("RuleConditionValue")
         private String ruleConditionValue;
 
         private RuleConditions(Builder builder) {
@@ -646,26 +645,26 @@ public class UpdateForwardingRulesRequest extends Request {
 
     }
     public static class ForwardingRules extends TeaModel {
-        @NameInMap("ForwardingRuleId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ForwardingRuleId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String forwardingRuleId;
 
-        @NameInMap("ForwardingRuleName")
+        @com.aliyun.core.annotation.NameInMap("ForwardingRuleName")
         private String forwardingRuleName;
 
-        @NameInMap("Priority")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer priority;
 
-        @NameInMap("RuleActions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleActions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < RuleActions> ruleActions;
 
-        @NameInMap("RuleConditions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleConditions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < RuleConditions> ruleConditions;
 
-        @NameInMap("RuleDirection")
+        @com.aliyun.core.annotation.NameInMap("RuleDirection")
         private String ruleDirection;
 
         private ForwardingRules(Builder builder) {

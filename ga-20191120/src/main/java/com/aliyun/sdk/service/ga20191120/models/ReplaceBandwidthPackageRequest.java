@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReplaceBandwidthPackageRequest</p>
  */
 public class ReplaceBandwidthPackageRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @Query
-    @NameInMap("BandwidthPackageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bandwidthPackageId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TargetBandwidthPackageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetBandwidthPackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetBandwidthPackageId;
 
     private ReplaceBandwidthPackageRequest(Builder builder) {

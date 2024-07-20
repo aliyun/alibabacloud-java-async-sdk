@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIpSetsRequest</p>
  */
 public class CreateIpSetsRequest extends Request {
-    @Query
-    @NameInMap("AccelerateRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccelerateRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AccelerateRegion> accelerateRegion;
 
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateIpSetsRequest(Builder builder) {
@@ -147,17 +146,17 @@ public class CreateIpSetsRequest extends Request {
     } 
 
     public static class AccelerateRegion extends TeaModel {
-        @NameInMap("AccelerateRegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AccelerateRegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accelerateRegionId;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
-        @NameInMap("IspType")
+        @com.aliyun.core.annotation.NameInMap("IspType")
         private String ispType;
 
         private AccelerateRegion(Builder builder) {

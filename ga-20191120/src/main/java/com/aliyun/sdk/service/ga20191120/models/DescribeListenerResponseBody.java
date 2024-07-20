@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,76 +11,76 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeListenerResponseBody</p>
  */
 public class DescribeListenerResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("AclType")
+    @com.aliyun.core.annotation.NameInMap("AclType")
     private String aclType;
 
-    @NameInMap("BackendPorts")
+    @com.aliyun.core.annotation.NameInMap("BackendPorts")
     private java.util.List < BackendPorts> backendPorts;
 
-    @NameInMap("Certificates")
+    @com.aliyun.core.annotation.NameInMap("Certificates")
     private java.util.List < Certificates> certificates;
 
-    @NameInMap("ClientAffinity")
+    @com.aliyun.core.annotation.NameInMap("ClientAffinity")
     private String clientAffinity;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("HttpVersion")
+    @com.aliyun.core.annotation.NameInMap("HttpVersion")
     private String httpVersion;
 
-    @NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("PortRanges")
+    @com.aliyun.core.annotation.NameInMap("PortRanges")
     private java.util.List < PortRanges> portRanges;
 
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @NameInMap("ProxyProtocol")
+    @com.aliyun.core.annotation.NameInMap("ProxyProtocol")
     private Boolean proxyProtocol;
 
-    @NameInMap("RelatedAcls")
+    @com.aliyun.core.annotation.NameInMap("RelatedAcls")
     private java.util.List < RelatedAcls> relatedAcls;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
     private Integer requestTimeout;
 
-    @NameInMap("SecurityPolicyId")
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceManaged")
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
-    @NameInMap("ServiceManagedInfos")
+    @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
     private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("XForwardedForConfig")
+    @com.aliyun.core.annotation.NameInMap("XForwardedForConfig")
     private XForwardedForConfig xForwardedForConfig;
 
     private DescribeListenerResponseBody(Builder builder) {
@@ -590,10 +589,10 @@ public class DescribeListenerResponseBody extends TeaModel {
     } 
 
     public static class BackendPorts extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private String fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private String toPort;
 
         private BackendPorts(Builder builder) {
@@ -654,10 +653,10 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     }
     public static class Certificates extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Certificates(Builder builder) {
@@ -718,10 +717,10 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     }
     public static class PortRanges extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private PortRanges(Builder builder) {
@@ -779,10 +778,10 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     }
     public static class RelatedAcls extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RelatedAcls(Builder builder) {
@@ -844,13 +843,13 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     }
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -948,19 +947,19 @@ public class DescribeListenerResponseBody extends TeaModel {
 
     }
     public static class XForwardedForConfig extends TeaModel {
-        @NameInMap("XForwardedForGaApEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForGaApEnabled")
         private Boolean xForwardedForGaApEnabled;
 
-        @NameInMap("XForwardedForGaIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForGaIdEnabled")
         private Boolean xForwardedForGaIdEnabled;
 
-        @NameInMap("XForwardedForPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForPortEnabled")
         private Boolean xForwardedForPortEnabled;
 
-        @NameInMap("XForwardedForProtoEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProtoEnabled")
         private Boolean xForwardedForProtoEnabled;
 
-        @NameInMap("XRealIpEnabled")
+        @com.aliyun.core.annotation.NameInMap("XRealIpEnabled")
         private Boolean xRealIpEnabled;
 
         private XForwardedForConfig(Builder builder) {

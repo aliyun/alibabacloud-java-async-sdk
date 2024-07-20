@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCustomRoutingPortMappingsByDestinationResponseBody</p>
  */
 public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PortMappings")
+    @com.aliyun.core.annotation.NameInMap("PortMappings")
     private java.util.List < PortMappings> portMappings;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListCustomRoutingPortMappingsByDestinationResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
     } 
 
     public static class DestinationSocketAddress extends TeaModel {
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private DestinationSocketAddress(Builder builder) {
@@ -193,34 +192,34 @@ public class ListCustomRoutingPortMappingsByDestinationResponseBody extends TeaM
 
     }
     public static class PortMappings extends TeaModel {
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("AcceleratorPort")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorPort")
         private Integer acceleratorPort;
 
-        @NameInMap("DestinationSocketAddress")
+        @com.aliyun.core.annotation.NameInMap("DestinationSocketAddress")
         private DestinationSocketAddress destinationSocketAddress;
 
-        @NameInMap("DestinationTrafficState")
+        @com.aliyun.core.annotation.NameInMap("DestinationTrafficState")
         private String destinationTrafficState;
 
-        @NameInMap("EndpointGroupId")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
         private String endpointGroupId;
 
-        @NameInMap("EndpointGroupRegion")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
         private String endpointGroupRegion;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("Protocols")
+        @com.aliyun.core.annotation.NameInMap("Protocols")
         private java.util.List < String > protocols;
 
-        @NameInMap("Vswitch")
+        @com.aliyun.core.annotation.NameInMap("Vswitch")
         private String vswitch;
 
         private PortMappings(Builder builder) {

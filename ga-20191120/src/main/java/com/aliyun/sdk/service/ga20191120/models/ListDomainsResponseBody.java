@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDomainsResponseBody</p>
  */
 public class ListDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private java.util.List < Domains> domains;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDomainsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class ListDomainsResponseBody extends TeaModel {
     } 
 
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -236,19 +235,19 @@ public class ListDomainsResponseBody extends TeaModel {
 
     }
     public static class Accelerators extends TeaModel {
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("ServiceManagedInfos")
+        @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
         private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
         private Accelerators(Builder builder) {
@@ -369,13 +368,13 @@ public class ListDomainsResponseBody extends TeaModel {
 
     }
     public static class Domains extends TeaModel {
-        @NameInMap("Accelerators")
+        @com.aliyun.core.annotation.NameInMap("Accelerators")
         private java.util.List < Accelerators> accelerators;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Domains(Builder builder) {

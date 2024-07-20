@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAclResponseBody</p>
  */
 public class DeleteAclResponseBody extends TeaModel {
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAclResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DeleteAclResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the network ACL.
+         * The ID of the ACL.
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
@@ -58,7 +57,7 @@ public class DeleteAclResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

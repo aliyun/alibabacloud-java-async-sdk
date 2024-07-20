@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,69 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateListenerRequest</p>
  */
 public class UpdateListenerRequest extends Request {
-    @Query
-    @NameInMap("BackendPorts")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendPorts")
     private java.util.List < BackendPorts> backendPorts;
 
-    @Query
-    @NameInMap("Certificates")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificates")
     private java.util.List < Certificates> certificates;
 
-    @Query
-    @NameInMap("ClientAffinity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientAffinity")
     private String clientAffinity;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("HttpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpVersion")
     private String httpVersion;
 
-    @Query
-    @NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PortRanges")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortRanges")
     private java.util.List < PortRanges> portRanges;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("ProxyProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyProtocol")
     private String proxyProtocol;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
     private Integer requestTimeout;
 
-    @Query
-    @NameInMap("SecurityPolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
-    @Query
-    @NameInMap("XForwardedForConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedForConfig")
     private XForwardedForConfig xForwardedForConfig;
 
     private UpdateListenerRequest(Builder builder) {
@@ -299,9 +298,9 @@ public class UpdateListenerRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -310,7 +309,10 @@ public class UpdateListenerRequest extends Request {
         }
 
         /**
-         * The description of the listener. The description can be at most 200 characters in length.
+         * The description of the listener.
+         * <p>
+         * 
+         * The description can be up to 200 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -361,7 +363,7 @@ public class UpdateListenerRequest extends Request {
          * The name of the listener.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -490,10 +492,10 @@ public class UpdateListenerRequest extends Request {
     } 
 
     public static class BackendPorts extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private BackendPorts(Builder builder) {
@@ -557,7 +559,7 @@ public class UpdateListenerRequest extends Request {
 
     }
     public static class Certificates extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Certificates(Builder builder) {
@@ -601,12 +603,12 @@ public class UpdateListenerRequest extends Request {
 
     }
     public static class PortRanges extends TeaModel {
-        @NameInMap("FromPort")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FromPort")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer fromPort;
 
-        @NameInMap("ToPort")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ToPort")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer toPort;
 
         private PortRanges(Builder builder) {
@@ -678,19 +680,19 @@ public class UpdateListenerRequest extends Request {
 
     }
     public static class XForwardedForConfig extends TeaModel {
-        @NameInMap("XForwardedForGaApEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForGaApEnabled")
         private Boolean xForwardedForGaApEnabled;
 
-        @NameInMap("XForwardedForGaIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForGaIdEnabled")
         private Boolean xForwardedForGaIdEnabled;
 
-        @NameInMap("XForwardedForPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForPortEnabled")
         private Boolean xForwardedForPortEnabled;
 
-        @NameInMap("XForwardedForProtoEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProtoEnabled")
         private Boolean xForwardedForProtoEnabled;
 
-        @NameInMap("XRealIpEnabled")
+        @com.aliyun.core.annotation.NameInMap("XRealIpEnabled")
         private Boolean xRealIpEnabled;
 
         private XForwardedForConfig(Builder builder) {

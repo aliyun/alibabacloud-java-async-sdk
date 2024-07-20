@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEndpointGroupsResponseBody</p>
  */
 public class ListEndpointGroupsResponseBody extends TeaModel {
-    @NameInMap("EndpointGroups")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroups")
     private java.util.List < EndpointGroups> endpointGroups;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListEndpointGroupsResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
     } 
 
     public static class EndpointConfigurations extends TeaModel {
-        @NameInMap("EnableClientIPPreservation")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservation")
         private Boolean enableClientIPPreservation;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("ProbePort")
+        @com.aliyun.core.annotation.NameInMap("ProbePort")
         private Integer probePort;
 
-        @NameInMap("ProbeProtocol")
+        @com.aliyun.core.annotation.NameInMap("ProbeProtocol")
         private String probeProtocol;
 
-        @NameInMap("SubAddress")
+        @com.aliyun.core.annotation.NameInMap("SubAddress")
         private String subAddress;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private EndpointConfigurations(Builder builder) {
@@ -332,10 +331,10 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     }
     public static class PortOverrides extends TeaModel {
-        @NameInMap("EndpointPort")
+        @com.aliyun.core.annotation.NameInMap("EndpointPort")
         private Integer endpointPort;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
         private PortOverrides(Builder builder) {
@@ -393,13 +392,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     }
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -497,10 +496,10 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -558,79 +557,82 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
 
     }
     public static class EndpointGroups extends TeaModel {
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndpointConfigurations")
+        @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
         private java.util.List < EndpointConfigurations> endpointConfigurations;
 
-        @NameInMap("EndpointGroupId")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
         private String endpointGroupId;
 
-        @NameInMap("EndpointGroupIpList")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupIpList")
         private java.util.List < String > endpointGroupIpList;
 
-        @NameInMap("EndpointGroupRegion")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
         private String endpointGroupRegion;
 
-        @NameInMap("EndpointGroupType")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupType")
         private String endpointGroupType;
 
-        @NameInMap("EndpointGroupUnconfirmedIpList")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupUnconfirmedIpList")
         private java.util.List < String > endpointGroupUnconfirmedIpList;
 
-        @NameInMap("EndpointRequestProtocol")
+        @com.aliyun.core.annotation.NameInMap("EndpointProtocolVersion")
+        private String endpointProtocolVersion;
+
+        @com.aliyun.core.annotation.NameInMap("EndpointRequestProtocol")
         private String endpointRequestProtocol;
 
-        @NameInMap("ForwardingRuleIds")
+        @com.aliyun.core.annotation.NameInMap("ForwardingRuleIds")
         private java.util.List < String > forwardingRuleIds;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
-        @NameInMap("HealthCheckIntervalSeconds")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckIntervalSeconds")
         private Integer healthCheckIntervalSeconds;
 
-        @NameInMap("HealthCheckPath")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
         private String healthCheckPath;
 
-        @NameInMap("HealthCheckPort")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
         private Integer healthCheckPort;
 
-        @NameInMap("HealthCheckProtocol")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PortOverrides")
+        @com.aliyun.core.annotation.NameInMap("PortOverrides")
         private java.util.List < PortOverrides> portOverrides;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("ServiceManagedInfos")
+        @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
         private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("ThresholdCount")
+        @com.aliyun.core.annotation.NameInMap("ThresholdCount")
         private Integer thresholdCount;
 
-        @NameInMap("TrafficPercentage")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercentage")
         private Integer trafficPercentage;
 
         private EndpointGroups(Builder builder) {
@@ -642,6 +644,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             this.endpointGroupRegion = builder.endpointGroupRegion;
             this.endpointGroupType = builder.endpointGroupType;
             this.endpointGroupUnconfirmedIpList = builder.endpointGroupUnconfirmedIpList;
+            this.endpointProtocolVersion = builder.endpointProtocolVersion;
             this.endpointRequestProtocol = builder.endpointRequestProtocol;
             this.forwardingRuleIds = builder.forwardingRuleIds;
             this.healthCheckEnabled = builder.healthCheckEnabled;
@@ -723,6 +726,13 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
          */
         public java.util.List < String > getEndpointGroupUnconfirmedIpList() {
             return this.endpointGroupUnconfirmedIpList;
+        }
+
+        /**
+         * @return endpointProtocolVersion
+         */
+        public String getEndpointProtocolVersion() {
+            return this.endpointProtocolVersion;
         }
 
         /**
@@ -853,6 +863,7 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
             private String endpointGroupRegion; 
             private String endpointGroupType; 
             private java.util.List < String > endpointGroupUnconfirmedIpList; 
+            private String endpointProtocolVersion; 
             private String endpointRequestProtocol; 
             private java.util.List < String > forwardingRuleIds; 
             private Boolean healthCheckEnabled; 
@@ -936,6 +947,14 @@ public class ListEndpointGroupsResponseBody extends TeaModel {
              */
             public Builder endpointGroupUnconfirmedIpList(java.util.List < String > endpointGroupUnconfirmedIpList) {
                 this.endpointGroupUnconfirmedIpList = endpointGroupUnconfirmedIpList;
+                return this;
+            }
+
+            /**
+             * EndpointProtocolVersion.
+             */
+            public Builder endpointProtocolVersion(String endpointProtocolVersion) {
+                this.endpointProtocolVersion = endpointProtocolVersion;
                 return this;
             }
 

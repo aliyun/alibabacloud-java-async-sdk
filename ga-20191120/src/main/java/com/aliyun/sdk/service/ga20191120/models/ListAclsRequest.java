@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAclsRequest</p>
  */
 public class ListAclsRequest extends Request {
-    @Query
-    @NameInMap("AclIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclIds")
     private java.util.List < String > aclIds;
 
-    @Query
-    @NameInMap("AclName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclName")
     private String aclName;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private ListAclsRequest(Builder builder) {
@@ -154,7 +153,7 @@ public class ListAclsRequest extends Request {
         } 
 
         /**
-         * The ID of the network ACL. You can specify up to 20 network ACL IDs in each request.
+         * The ACL IDs. You can specify a maximum of 20 ACL IDs in each request.
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.putQueryParameter("AclIds", aclIds);
@@ -163,10 +162,10 @@ public class ListAclsRequest extends Request {
         }
 
         /**
-         * The name of the network ACL. You can specify up to 10 network ACL names in each request.
+         * The ACL name. You can specify a maximum of ACL names in each request.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+         * The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder aclName(String aclName) {
             this.putQueryParameter("AclName", aclName);
@@ -178,9 +177,9 @@ public class ListAclsRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -229,7 +228,7 @@ public class ListAclsRequest extends Request {
         }
 
         /**
-         * The tags of the resource.
+         * The tag of the ACL.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -245,10 +244,10 @@ public class ListAclsRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -283,12 +282,12 @@ public class ListAclsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the network ACL. The tag key cannot be an empty string.
+             * The tag key of the ACL. The value of this parameter cannot be an empty string.
              * <p>
              * 
-             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * The tag key can be up to 64 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              * 
-             * You can specify up to 20 tag keys.
+             * You can specify a maximum of 20 tag keys.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -296,12 +295,12 @@ public class ListAclsRequest extends Request {
             }
 
             /**
-             * The tag value of the network ACL. The tag value can be an empty string.
+             * The tag value of the ACL. The tag value can be an empty string.
              * <p>
              * 
-             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `aliyun` or `acs:`.
              * 
-             * You can specify up to 20 tag values.
+             * You can specify a maximum of 20 tag values.
              */
             public Builder value(String value) {
                 this.value = value;

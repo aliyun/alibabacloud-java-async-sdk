@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssociateAclsWithListenerResponseBody</p>
  */
 public class AssociateAclsWithListenerResponseBody extends TeaModel {
-    @NameInMap("AclIds")
+    @com.aliyun.core.annotation.NameInMap("AclIds")
     private java.util.List < String > aclIds;
 
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AssociateAclsWithListenerResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHealthStatusResponseBody</p>
  */
 public class GetHealthStatusResponseBody extends TeaModel {
-    @NameInMap("EndpointGroups")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroups")
     private java.util.List < EndpointGroups> endpointGroups;
 
-    @NameInMap("HealthStatus")
+    @com.aliyun.core.annotation.NameInMap("HealthStatus")
     private String healthStatus;
 
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetHealthStatusResponseBody(Builder builder) {
@@ -117,22 +116,22 @@ public class GetHealthStatusResponseBody extends TeaModel {
     } 
 
     public static class Endpoints extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("HealthDetail")
+        @com.aliyun.core.annotation.NameInMap("HealthDetail")
         private String healthDetail;
 
-        @NameInMap("HealthStatus")
+        @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Endpoints(Builder builder) {
@@ -277,19 +276,19 @@ public class GetHealthStatusResponseBody extends TeaModel {
 
     }
     public static class EndpointGroups extends TeaModel {
-        @NameInMap("EndpointGroupId")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
         private String endpointGroupId;
 
-        @NameInMap("EndpointGroupType")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupType")
         private String endpointGroupType;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private java.util.List < Endpoints> endpoints;
 
-        @NameInMap("ForwardingRuleIds")
+        @com.aliyun.core.annotation.NameInMap("ForwardingRuleIds")
         private java.util.List < String > forwardingRuleIds;
 
-        @NameInMap("HealthStatus")
+        @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
 
         private EndpointGroups(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCustomRoutingEndpointGroupDestinationsResponseBody</p>
  */
 public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaModel {
-    @NameInMap("Destinations")
+    @com.aliyun.core.annotation.NameInMap("Destinations")
     private java.util.List < Destinations> destinations;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListCustomRoutingEndpointGroupDestinationsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
     } 
 
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {
@@ -236,34 +235,34 @@ public class ListCustomRoutingEndpointGroupDestinationsResponseBody extends TeaM
 
     }
     public static class Destinations extends TeaModel {
-        @NameInMap("AcceleratorId")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorId")
         private String acceleratorId;
 
-        @NameInMap("DestinationId")
+        @com.aliyun.core.annotation.NameInMap("DestinationId")
         private String destinationId;
 
-        @NameInMap("EndpointGroupId")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
         private String endpointGroupId;
 
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("Protocols")
+        @com.aliyun.core.annotation.NameInMap("Protocols")
         private java.util.List < String > protocols;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("ServiceManagedInfos")
+        @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
         private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private Destinations(Builder builder) {

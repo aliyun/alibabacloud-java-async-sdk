@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBasicEndpointResponseBody</p>
  */
 public class CreateBasicEndpointResponseBody extends TeaModel {
-    @NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
     private String endpointGroupId;
 
-    @NameInMap("EndpointId")
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
     private String endpointId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBasicEndpointResponseBody(Builder builder) {

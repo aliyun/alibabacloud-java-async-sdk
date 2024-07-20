@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBasicAccelerateIpResponseBody</p>
  */
 public class CreateBasicAccelerateIpResponseBody extends TeaModel {
-    @NameInMap("AccelerateIpAddress")
+    @com.aliyun.core.annotation.NameInMap("AccelerateIpAddress")
     private String accelerateIpAddress;
 
-    @NameInMap("AccelerateIpId")
+    @com.aliyun.core.annotation.NameInMap("AccelerateIpId")
     private String accelerateIpId;
 
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("IpSetId")
+    @com.aliyun.core.annotation.NameInMap("IpSetId")
     private String ipSetId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private CreateBasicAccelerateIpResponseBody(Builder builder) {

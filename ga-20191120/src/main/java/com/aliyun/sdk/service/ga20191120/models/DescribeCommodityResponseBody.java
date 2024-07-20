@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommodityResponseBody</p>
  */
 public class DescribeCommodityResponseBody extends TeaModel {
-    @NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
     private String commodityCode;
 
-    @NameInMap("CommodityName")
+    @com.aliyun.core.annotation.NameInMap("CommodityName")
     private String commodityName;
 
-    @NameInMap("Components")
+    @com.aliyun.core.annotation.NameInMap("Components")
     private java.util.List < Components> components;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCommodityResponseBody(Builder builder) {
@@ -126,16 +125,16 @@ public class DescribeCommodityResponseBody extends TeaModel {
     } 
 
     public static class PropertyValueList extends TeaModel {
-        @NameInMap("OrderIndex")
+        @com.aliyun.core.annotation.NameInMap("OrderIndex")
         private Long orderIndex;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Tips")
+        @com.aliyun.core.annotation.NameInMap("Tips")
         private String tips;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PropertyValueList(Builder builder) {
@@ -239,13 +238,13 @@ public class DescribeCommodityResponseBody extends TeaModel {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PropertyValueList")
+        @com.aliyun.core.annotation.NameInMap("PropertyValueList")
         private java.util.List < PropertyValueList> propertyValueList;
 
         private Properties(Builder builder) {
@@ -329,13 +328,13 @@ public class DescribeCommodityResponseBody extends TeaModel {
 
     }
     public static class Components extends TeaModel {
-        @NameInMap("ComponentCode")
+        @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
-        @NameInMap("ComponentName")
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private java.util.List < Properties> properties;
 
         private Components(Builder builder) {

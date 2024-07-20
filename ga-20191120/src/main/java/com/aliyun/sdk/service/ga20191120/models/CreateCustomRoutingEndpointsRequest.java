@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomRoutingEndpointsRequest</p>
  */
 public class CreateCustomRoutingEndpointsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("EndpointConfigurations")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < EndpointConfigurations> endpointConfigurations;
 
-    @Query
-    @NameInMap("EndpointGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private CreateCustomRoutingEndpointsRequest(Builder builder) {
@@ -150,10 +149,10 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
     } 
 
     public static class PortRanges extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private PortRanges(Builder builder) {
@@ -221,11 +220,11 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
 
     }
     public static class PolicyConfigurations extends TeaModel {
-        @NameInMap("Address")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Address")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String address;
 
-        @NameInMap("PortRanges")
+        @com.aliyun.core.annotation.NameInMap("PortRanges")
         private java.util.List < PortRanges> portRanges;
 
         private PolicyConfigurations(Builder builder) {
@@ -295,16 +294,16 @@ public class CreateCustomRoutingEndpointsRequest extends Request {
 
     }
     public static class EndpointConfigurations extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("PolicyConfigurations")
+        @com.aliyun.core.annotation.NameInMap("PolicyConfigurations")
         private java.util.List < PolicyConfigurations> policyConfigurations;
 
-        @NameInMap("TrafficToEndpointPolicy")
+        @com.aliyun.core.annotation.NameInMap("TrafficToEndpointPolicy")
         private String trafficToEndpointPolicy;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EndpointConfigurations(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCommonAreasResponseBody</p>
  */
 public class ListCommonAreasResponseBody extends TeaModel {
-    @NameInMap("Areas")
+    @com.aliyun.core.annotation.NameInMap("Areas")
     private java.util.List < Areas> areas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCommonAreasResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListCommonAreasResponseBody extends TeaModel {
     } 
 
     public static class RegionList extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private RegionList(Builder builder) {
@@ -133,13 +132,13 @@ public class ListCommonAreasResponseBody extends TeaModel {
 
     }
     public static class Areas extends TeaModel {
-        @NameInMap("AreaId")
+        @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionList")
+        @com.aliyun.core.annotation.NameInMap("RegionList")
         private java.util.List < RegionList> regionList;
 
         private Areas(Builder builder) {

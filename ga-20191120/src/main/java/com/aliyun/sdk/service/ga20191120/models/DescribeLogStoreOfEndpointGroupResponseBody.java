@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogStoreOfEndpointGroupResponseBody</p>
  */
 public class DescribeLogStoreOfEndpointGroupResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
     private String endpointGroupId;
 
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsLogStoreName")
+    @com.aliyun.core.annotation.NameInMap("SlsLogStoreName")
     private String slsLogStoreName;
 
-    @NameInMap("SlsProjectName")
+    @com.aliyun.core.annotation.NameInMap("SlsProjectName")
     private String slsProjectName;
 
-    @NameInMap("SlsRegionId")
+    @com.aliyun.core.annotation.NameInMap("SlsRegionId")
     private String slsRegionId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeLogStoreOfEndpointGroupResponseBody(Builder builder) {

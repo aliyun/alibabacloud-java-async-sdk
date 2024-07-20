@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateIpSetsRequest</p>
  */
 public class UpdateIpSetsRequest extends Request {
-    @Query
-    @NameInMap("IpSets")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpSets")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < IpSets> ipSets;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateIpSetsRequest(Builder builder) {
@@ -95,12 +94,12 @@ public class UpdateIpSetsRequest extends Request {
     } 
 
     public static class IpSets extends TeaModel {
-        @NameInMap("Bandwidth")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer bandwidth;
 
-        @NameInMap("IpSetId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("IpSetId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ipSetId;
 
         private IpSets(Builder builder) {

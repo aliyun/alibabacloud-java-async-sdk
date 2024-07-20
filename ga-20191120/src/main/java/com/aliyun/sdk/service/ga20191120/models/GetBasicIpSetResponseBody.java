@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBasicIpSetResponseBody</p>
  */
 public class GetBasicIpSetResponseBody extends TeaModel {
-    @NameInMap("AccelerateRegionId")
+    @com.aliyun.core.annotation.NameInMap("AccelerateRegionId")
     private String accelerateRegionId;
 
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Long bandwidth;
 
-    @NameInMap("IpAddress")
+    @com.aliyun.core.annotation.NameInMap("IpAddress")
     private String ipAddress;
 
-    @NameInMap("IpSetId")
+    @com.aliyun.core.annotation.NameInMap("IpSetId")
     private String ipSetId;
 
-    @NameInMap("IpVersion")
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
     private String ipVersion;
 
-    @NameInMap("IspType")
+    @com.aliyun.core.annotation.NameInMap("IspType")
     private String ispType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private GetBasicIpSetResponseBody(Builder builder) {

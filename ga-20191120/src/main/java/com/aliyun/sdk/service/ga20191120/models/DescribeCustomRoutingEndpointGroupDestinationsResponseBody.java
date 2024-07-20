@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomRoutingEndpointGroupDestinationsResponseBody</p>
  */
 public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("DestinationId")
+    @com.aliyun.core.annotation.NameInMap("DestinationId")
     private String destinationId;
 
-    @NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
     private String endpointGroupId;
 
-    @NameInMap("FromPort")
+    @com.aliyun.core.annotation.NameInMap("FromPort")
     private Integer fromPort;
 
-    @NameInMap("ListenerId")
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
     private String listenerId;
 
-    @NameInMap("Protocols")
+    @com.aliyun.core.annotation.NameInMap("Protocols")
     private java.util.List < String > protocols;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceManaged")
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
     private Boolean serviceManaged;
 
-    @NameInMap("ServiceManagedInfos")
+    @com.aliyun.core.annotation.NameInMap("ServiceManagedInfos")
     private java.util.List < ServiceManagedInfos> serviceManagedInfos;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("ToPort")
+    @com.aliyun.core.annotation.NameInMap("ToPort")
     private Integer toPort;
 
     private DescribeCustomRoutingEndpointGroupDestinationsResponseBody(Builder builder) {
@@ -290,13 +289,13 @@ public class DescribeCustomRoutingEndpointGroupDestinationsResponseBody extends 
     } 
 
     public static class ServiceManagedInfos extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ChildType")
+        @com.aliyun.core.annotation.NameInMap("ChildType")
         private String childType;
 
-        @NameInMap("IsManaged")
+        @com.aliyun.core.annotation.NameInMap("IsManaged")
         private Boolean isManaged;
 
         private ServiceManagedInfos(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommodityPriceRequest</p>
  */
 public class DescribeCommodityPriceRequest extends Request {
-    @Query
-    @NameInMap("Orders")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Orders")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Orders> orders;
 
-    @Query
-    @NameInMap("PromotionOptionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
     private String promotionOptionNo;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DescribeCommodityPriceRequest(Builder builder) {
@@ -121,10 +120,10 @@ public class DescribeCommodityPriceRequest extends Request {
     } 
 
     public static class Properties extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Properties(Builder builder) {
@@ -188,10 +187,10 @@ public class DescribeCommodityPriceRequest extends Request {
 
     }
     public static class Components extends TeaModel {
-        @NameInMap("ComponentCode")
+        @com.aliyun.core.annotation.NameInMap("ComponentCode")
         private String componentCode;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private java.util.List < Properties> properties;
 
         private Components(Builder builder) {
@@ -255,25 +254,25 @@ public class DescribeCommodityPriceRequest extends Request {
 
     }
     public static class Orders extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("Components")
+        @com.aliyun.core.annotation.NameInMap("Components")
         private java.util.List < Components> components;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("PricingCycle")
+        @com.aliyun.core.annotation.NameInMap("PricingCycle")
         private String pricingCycle;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Long quantity;
 
         private Orders(Builder builder) {

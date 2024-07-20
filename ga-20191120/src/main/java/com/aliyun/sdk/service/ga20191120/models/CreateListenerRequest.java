@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,79 +11,79 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateListenerRequest</p>
  */
 public class CreateListenerRequest extends Request {
-    @Query
-    @NameInMap("AcceleratorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String acceleratorId;
 
-    @Query
-    @NameInMap("Certificates")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificates")
     private java.util.List < Certificates> certificates;
 
-    @Query
-    @NameInMap("ClientAffinity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientAffinity")
     private String clientAffinity;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CustomRoutingEndpointGroupConfigurations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomRoutingEndpointGroupConfigurations")
     private java.util.List < CustomRoutingEndpointGroupConfigurations> customRoutingEndpointGroupConfigurations;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EndpointGroupConfigurations")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupConfigurations")
     private java.util.List < EndpointGroupConfigurations> endpointGroupConfigurations;
 
-    @Query
-    @NameInMap("HttpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpVersion")
     private String httpVersion;
 
-    @Query
-    @NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PortRanges")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortRanges")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < PortRanges> portRanges;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("ProxyProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyProtocol")
     private Boolean proxyProtocol;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
     private Integer requestTimeout;
 
-    @Query
-    @NameInMap("SecurityPolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("XForwardedForConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedForConfig")
     private XForwardedForConfig xForwardedForConfig;
 
     private CreateListenerRequest(Builder builder) {
@@ -550,7 +549,7 @@ public class CreateListenerRequest extends Request {
     } 
 
     public static class Certificates extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Certificates(Builder builder) {
@@ -594,13 +593,13 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class DestinationConfigurations extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("Protocols")
+        @com.aliyun.core.annotation.NameInMap("Protocols")
         private java.util.List < String > protocols;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private DestinationConfigurations(Builder builder) {
@@ -694,10 +693,10 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class PolicyConfigurationsPortRanges extends TeaModel {
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private PolicyConfigurationsPortRanges(Builder builder) {
@@ -769,10 +768,10 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class PolicyConfigurations extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("PortRanges")
+        @com.aliyun.core.annotation.NameInMap("PortRanges")
         private java.util.List < PolicyConfigurationsPortRanges> portRanges;
 
         private PolicyConfigurations(Builder builder) {
@@ -846,16 +845,16 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class EndpointConfigurations extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("PolicyConfigurations")
+        @com.aliyun.core.annotation.NameInMap("PolicyConfigurations")
         private java.util.List < PolicyConfigurations> policyConfigurations;
 
-        @NameInMap("TrafficToEndpointPolicy")
+        @com.aliyun.core.annotation.NameInMap("TrafficToEndpointPolicy")
         private String trafficToEndpointPolicy;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EndpointConfigurations(Builder builder) {
@@ -969,19 +968,19 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class CustomRoutingEndpointGroupConfigurations extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationConfigurations")
+        @com.aliyun.core.annotation.NameInMap("DestinationConfigurations")
         private java.util.List < DestinationConfigurations> destinationConfigurations;
 
-        @NameInMap("EndpointConfigurations")
+        @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
         private java.util.List < EndpointConfigurations> endpointConfigurations;
 
-        @NameInMap("EndpointGroupRegion")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
         private String endpointGroupRegion;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private CustomRoutingEndpointGroupConfigurations(Builder builder) {
@@ -1121,16 +1120,16 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class EndpointGroupConfigurationsEndpointConfigurations extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("SubAddress")
+        @com.aliyun.core.annotation.NameInMap("SubAddress")
         private String subAddress;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Long weight;
 
         private EndpointGroupConfigurationsEndpointConfigurations(Builder builder) {
@@ -1255,10 +1254,10 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class PortOverrides extends TeaModel {
-        @NameInMap("EndpointPort")
+        @com.aliyun.core.annotation.NameInMap("EndpointPort")
         private Long endpointPort;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Long listenerPort;
 
         private PortOverrides(Builder builder) {
@@ -1329,52 +1328,55 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class EndpointGroupConfigurations extends TeaModel {
-        @NameInMap("EnableClientIPPreservationProxyProtocol")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservationProxyProtocol")
         private Boolean enableClientIPPreservationProxyProtocol;
 
-        @NameInMap("EnableClientIPPreservationToa")
+        @com.aliyun.core.annotation.NameInMap("EnableClientIPPreservationToa")
         private Boolean enableClientIPPreservationToa;
 
-        @NameInMap("EndpointConfigurations")
+        @com.aliyun.core.annotation.NameInMap("EndpointConfigurations")
         private java.util.List < EndpointGroupConfigurationsEndpointConfigurations> endpointConfigurations;
 
-        @NameInMap("EndpointGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupDescription")
         private String endpointGroupDescription;
 
-        @NameInMap("EndpointGroupName")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupName")
         private String endpointGroupName;
 
-        @NameInMap("EndpointGroupRegion")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupRegion")
         private String endpointGroupRegion;
 
-        @NameInMap("EndpointGroupType")
+        @com.aliyun.core.annotation.NameInMap("EndpointGroupType")
         private String endpointGroupType;
 
-        @NameInMap("EndpointRequestProtocol")
+        @com.aliyun.core.annotation.NameInMap("EndpointProtocolVersion")
+        private String endpointProtocolVersion;
+
+        @com.aliyun.core.annotation.NameInMap("EndpointRequestProtocol")
         private String endpointRequestProtocol;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
-        @NameInMap("HealthCheckIntervalSeconds")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckIntervalSeconds")
         private Long healthCheckIntervalSeconds;
 
-        @NameInMap("HealthCheckPath")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
         private String healthCheckPath;
 
-        @NameInMap("HealthCheckPort")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
         private Long healthCheckPort;
 
-        @NameInMap("HealthCheckProtocol")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
-        @NameInMap("PortOverrides")
+        @com.aliyun.core.annotation.NameInMap("PortOverrides")
         private java.util.List < PortOverrides> portOverrides;
 
-        @NameInMap("ThresholdCount")
+        @com.aliyun.core.annotation.NameInMap("ThresholdCount")
         private Long thresholdCount;
 
-        @NameInMap("TrafficPercentage")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercentage")
         private Long trafficPercentage;
 
         private EndpointGroupConfigurations(Builder builder) {
@@ -1385,6 +1387,7 @@ public class CreateListenerRequest extends Request {
             this.endpointGroupName = builder.endpointGroupName;
             this.endpointGroupRegion = builder.endpointGroupRegion;
             this.endpointGroupType = builder.endpointGroupType;
+            this.endpointProtocolVersion = builder.endpointProtocolVersion;
             this.endpointRequestProtocol = builder.endpointRequestProtocol;
             this.healthCheckEnabled = builder.healthCheckEnabled;
             this.healthCheckIntervalSeconds = builder.healthCheckIntervalSeconds;
@@ -1451,6 +1454,13 @@ public class CreateListenerRequest extends Request {
          */
         public String getEndpointGroupType() {
             return this.endpointGroupType;
+        }
+
+        /**
+         * @return endpointProtocolVersion
+         */
+        public String getEndpointProtocolVersion() {
+            return this.endpointProtocolVersion;
         }
 
         /**
@@ -1524,6 +1534,7 @@ public class CreateListenerRequest extends Request {
             private String endpointGroupName; 
             private String endpointGroupRegion; 
             private String endpointGroupType; 
+            private String endpointProtocolVersion; 
             private String endpointRequestProtocol; 
             private Boolean healthCheckEnabled; 
             private Long healthCheckIntervalSeconds; 
@@ -1631,6 +1642,14 @@ public class CreateListenerRequest extends Request {
              */
             public Builder endpointGroupType(String endpointGroupType) {
                 this.endpointGroupType = endpointGroupType;
+                return this;
+            }
+
+            /**
+             * EndpointProtocolVersion.
+             */
+            public Builder endpointProtocolVersion(String endpointProtocolVersion) {
+                this.endpointProtocolVersion = endpointProtocolVersion;
                 return this;
             }
 
@@ -1768,12 +1787,12 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class PortRanges extends TeaModel {
-        @NameInMap("FromPort")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FromPort")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer fromPort;
 
-        @NameInMap("ToPort")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ToPort")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer toPort;
 
         private PortRanges(Builder builder) {
@@ -1845,19 +1864,19 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class XForwardedForConfig extends TeaModel {
-        @NameInMap("XForwardedForGaApEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForGaApEnabled")
         private Boolean xForwardedForGaApEnabled;
 
-        @NameInMap("XForwardedForGaIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForGaIdEnabled")
         private Boolean xForwardedForGaIdEnabled;
 
-        @NameInMap("XForwardedForPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForPortEnabled")
         private Boolean xForwardedForPortEnabled;
 
-        @NameInMap("XForwardedForProtoEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProtoEnabled")
         private Boolean xForwardedForProtoEnabled;
 
-        @NameInMap("XRealIpEnabled")
+        @com.aliyun.core.annotation.NameInMap("XRealIpEnabled")
         private Boolean xRealIpEnabled;
 
         private XForwardedForConfig(Builder builder) {

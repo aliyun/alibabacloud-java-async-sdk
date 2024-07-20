@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAvailableAccelerateAreasResponseBody</p>
  */
 public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
-    @NameInMap("Areas")
+    @com.aliyun.core.annotation.NameInMap("Areas")
     private java.util.List < Areas> areas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAvailableAccelerateAreasResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
     } 
 
     public static class RegionList extends TeaModel {
-        @NameInMap("ChinaMainland")
+        @com.aliyun.core.annotation.NameInMap("ChinaMainland")
         private Boolean chinaMainland;
 
-        @NameInMap("IspTypeList")
+        @com.aliyun.core.annotation.NameInMap("IspTypeList")
         private java.util.List < String > ispTypeList;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("MultiAz")
+        @com.aliyun.core.annotation.NameInMap("MultiAz")
         private Boolean multiAz;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SupportIpv6")
+        @com.aliyun.core.annotation.NameInMap("SupportIpv6")
         private Boolean supportIpv6;
 
         private RegionList(Builder builder) {
@@ -229,13 +228,13 @@ public class ListAvailableAccelerateAreasResponseBody extends TeaModel {
 
     }
     public static class Areas extends TeaModel {
-        @NameInMap("AreaId")
+        @com.aliyun.core.annotation.NameInMap("AreaId")
         private String areaId;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionList")
+        @com.aliyun.core.annotation.NameInMap("RegionList")
         private java.util.List < RegionList> regionList;
 
         private Areas(Builder builder) {

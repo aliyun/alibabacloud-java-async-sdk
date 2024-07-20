@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAcceleratorAutoRenewAttributeResponseBody</p>
  */
 public class DescribeAcceleratorAutoRenewAttributeResponseBody extends TeaModel {
-    @NameInMap("AcceleratorId")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorId")
     private String acceleratorId;
 
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @NameInMap("AutoRenewDuration")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDuration")
     private Integer autoRenewDuration;
 
-    @NameInMap("RenewalStatus")
+    @com.aliyun.core.annotation.NameInMap("RenewalStatus")
     private String renewalStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAcceleratorAutoRenewAttributeResponseBody(Builder builder) {

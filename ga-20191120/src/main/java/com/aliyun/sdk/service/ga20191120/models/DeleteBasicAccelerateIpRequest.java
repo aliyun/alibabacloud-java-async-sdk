@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteBasicAccelerateIpRequest</p>
  */
 public class DeleteBasicAccelerateIpRequest extends Request {
-    @Query
-    @NameInMap("AccelerateIpId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccelerateIpId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accelerateIpId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteBasicAccelerateIpRequest(Builder builder) {
@@ -85,6 +84,9 @@ public class DeleteBasicAccelerateIpRequest extends Request {
 
         /**
          * The ID of the accelerated IP address that you want to delete.
+         * <p>
+         * 
+         * You can call the [ListBasicAccelerateIps](~~2253393~~) operation to query the ID of the accelerated IP address.
          */
         public Builder accelerateIpId(String accelerateIpId) {
             this.putQueryParameter("AccelerateIpId", accelerateIpId);

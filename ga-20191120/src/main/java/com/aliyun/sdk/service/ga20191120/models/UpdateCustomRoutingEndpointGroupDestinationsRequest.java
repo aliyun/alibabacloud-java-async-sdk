@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ga20191120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCustomRoutingEndpointGroupDestinationsRequest</p>
  */
 public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DestinationConfigurations")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationConfigurations")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < DestinationConfigurations> destinationConfigurations;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EndpointGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointGroupId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private UpdateCustomRoutingEndpointGroupDestinationsRequest(Builder builder) {
@@ -179,17 +178,17 @@ public class UpdateCustomRoutingEndpointGroupDestinationsRequest extends Request
     } 
 
     public static class DestinationConfigurations extends TeaModel {
-        @NameInMap("DestinationId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DestinationId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String destinationId;
 
-        @NameInMap("FromPort")
+        @com.aliyun.core.annotation.NameInMap("FromPort")
         private Integer fromPort;
 
-        @NameInMap("Protocols")
+        @com.aliyun.core.annotation.NameInMap("Protocols")
         private java.util.List < String > protocols;
 
-        @NameInMap("ToPort")
+        @com.aliyun.core.annotation.NameInMap("ToPort")
         private Integer toPort;
 
         private DestinationConfigurations(Builder builder) {
