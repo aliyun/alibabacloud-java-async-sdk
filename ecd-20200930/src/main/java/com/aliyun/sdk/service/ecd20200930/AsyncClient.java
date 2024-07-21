@@ -417,6 +417,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DissociateNetworkPackageResponse> dissociateNetworkPackage(DissociateNetworkPackageRequest request);
 
+    CompletableFuture<DownloadCdsFileResponse> downloadCdsFile(DownloadCdsFileRequest request);
+
     CompletableFuture<ExportClientEventsResponse> exportClientEvents(ExportClientEventsRequest request);
 
     CompletableFuture<ExportDesktopGroupInfoResponse> exportDesktopGroupInfo(ExportDesktopGroupInfoRequest request);

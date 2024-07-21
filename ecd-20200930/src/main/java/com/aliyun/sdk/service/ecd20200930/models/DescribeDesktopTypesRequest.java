@@ -36,6 +36,10 @@ public class DescribeDesktopTypesRequest extends Request {
     private Float gpuCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuDriverType")
+    private String gpuDriverType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
@@ -60,6 +64,7 @@ public class DescribeDesktopTypesRequest extends Request {
         this.desktopIdForModify = builder.desktopIdForModify;
         this.desktopTypeId = builder.desktopTypeId;
         this.gpuCount = builder.gpuCount;
+        this.gpuDriverType = builder.gpuDriverType;
         this.instanceTypeFamily = builder.instanceTypeFamily;
         this.memorySize = builder.memorySize;
         this.orderType = builder.orderType;
@@ -122,6 +127,13 @@ public class DescribeDesktopTypesRequest extends Request {
     }
 
     /**
+     * @return gpuDriverType
+     */
+    public String getGpuDriverType() {
+        return this.gpuDriverType;
+    }
+
+    /**
      * @return instanceTypeFamily
      */
     public String getInstanceTypeFamily() {
@@ -156,6 +168,7 @@ public class DescribeDesktopTypesRequest extends Request {
         private String desktopIdForModify; 
         private String desktopTypeId; 
         private Float gpuCount; 
+        private String gpuDriverType; 
         private String instanceTypeFamily; 
         private Integer memorySize; 
         private String orderType; 
@@ -173,6 +186,7 @@ public class DescribeDesktopTypesRequest extends Request {
             this.desktopIdForModify = request.desktopIdForModify;
             this.desktopTypeId = request.desktopTypeId;
             this.gpuCount = request.gpuCount;
+            this.gpuDriverType = request.gpuDriverType;
             this.instanceTypeFamily = request.instanceTypeFamily;
             this.memorySize = request.memorySize;
             this.orderType = request.orderType;
@@ -395,6 +409,15 @@ public class DescribeDesktopTypesRequest extends Request {
         public Builder gpuCount(Float gpuCount) {
             this.putQueryParameter("GpuCount", gpuCount);
             this.gpuCount = gpuCount;
+            return this;
+        }
+
+        /**
+         * GpuDriverType.
+         */
+        public Builder gpuDriverType(String gpuDriverType) {
+            this.putQueryParameter("GpuDriverType", gpuDriverType);
+            this.gpuDriverType = gpuDriverType;
             return this;
         }
 

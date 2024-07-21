@@ -410,6 +410,208 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         } 
 
     }
+    public static class DeviceRedirects extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
+        private String deviceType;
+
+        @com.aliyun.core.annotation.NameInMap("RedirectType")
+        private String redirectType;
+
+        private DeviceRedirects(Builder builder) {
+            this.deviceType = builder.deviceType;
+            this.redirectType = builder.redirectType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeviceRedirects create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deviceType
+         */
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        /**
+         * @return redirectType
+         */
+        public String getRedirectType() {
+            return this.redirectType;
+        }
+
+        public static final class Builder {
+            private String deviceType; 
+            private String redirectType; 
+
+            /**
+             * DeviceType.
+             */
+            public Builder deviceType(String deviceType) {
+                this.deviceType = deviceType;
+                return this;
+            }
+
+            /**
+             * RedirectType.
+             */
+            public Builder redirectType(String redirectType) {
+                this.redirectType = redirectType;
+                return this;
+            }
+
+            public DeviceRedirects build() {
+                return new DeviceRedirects(this);
+            } 
+
+        } 
+
+    }
+    public static class DeviceRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
+        private String deviceName;
+
+        @com.aliyun.core.annotation.NameInMap("DevicePid")
+        private String devicePid;
+
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
+        private String deviceType;
+
+        @com.aliyun.core.annotation.NameInMap("DeviceVid")
+        private String deviceVid;
+
+        @com.aliyun.core.annotation.NameInMap("OptCommand")
+        private String optCommand;
+
+        @com.aliyun.core.annotation.NameInMap("RedirectType")
+        private String redirectType;
+
+        private DeviceRules(Builder builder) {
+            this.deviceName = builder.deviceName;
+            this.devicePid = builder.devicePid;
+            this.deviceType = builder.deviceType;
+            this.deviceVid = builder.deviceVid;
+            this.optCommand = builder.optCommand;
+            this.redirectType = builder.redirectType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeviceRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deviceName
+         */
+        public String getDeviceName() {
+            return this.deviceName;
+        }
+
+        /**
+         * @return devicePid
+         */
+        public String getDevicePid() {
+            return this.devicePid;
+        }
+
+        /**
+         * @return deviceType
+         */
+        public String getDeviceType() {
+            return this.deviceType;
+        }
+
+        /**
+         * @return deviceVid
+         */
+        public String getDeviceVid() {
+            return this.deviceVid;
+        }
+
+        /**
+         * @return optCommand
+         */
+        public String getOptCommand() {
+            return this.optCommand;
+        }
+
+        /**
+         * @return redirectType
+         */
+        public String getRedirectType() {
+            return this.redirectType;
+        }
+
+        public static final class Builder {
+            private String deviceName; 
+            private String devicePid; 
+            private String deviceType; 
+            private String deviceVid; 
+            private String optCommand; 
+            private String redirectType; 
+
+            /**
+             * DeviceName.
+             */
+            public Builder deviceName(String deviceName) {
+                this.deviceName = deviceName;
+                return this;
+            }
+
+            /**
+             * DevicePid.
+             */
+            public Builder devicePid(String devicePid) {
+                this.devicePid = devicePid;
+                return this;
+            }
+
+            /**
+             * DeviceType.
+             */
+            public Builder deviceType(String deviceType) {
+                this.deviceType = deviceType;
+                return this;
+            }
+
+            /**
+             * DeviceVid.
+             */
+            public Builder deviceVid(String deviceVid) {
+                this.deviceVid = deviceVid;
+                return this;
+            }
+
+            /**
+             * OptCommand.
+             */
+            public Builder optCommand(String optCommand) {
+                this.optCommand = optCommand;
+                return this;
+            }
+
+            /**
+             * RedirectType.
+             */
+            public Builder redirectType(String redirectType) {
+                this.redirectType = redirectType;
+                return this;
+            }
+
+            public DeviceRules build() {
+                return new DeviceRules(this);
+            } 
+
+        } 
+
+    }
     public static class DomainResolveRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -804,6 +1006,12 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuSingleRateLimit")
         private Integer cpuSingleRateLimit;
 
+        @com.aliyun.core.annotation.NameInMap("DeviceRedirects")
+        private java.util.List < DeviceRedirects> deviceRedirects;
+
+        @com.aliyun.core.annotation.NameInMap("DeviceRules")
+        private java.util.List < DeviceRules> deviceRules;
+
         @com.aliyun.core.annotation.NameInMap("DisplayMode")
         private String displayMode;
 
@@ -1023,6 +1231,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.cpuRateLimit = builder.cpuRateLimit;
             this.cpuSampleDuration = builder.cpuSampleDuration;
             this.cpuSingleRateLimit = builder.cpuSingleRateLimit;
+            this.deviceRedirects = builder.deviceRedirects;
+            this.deviceRules = builder.deviceRules;
             this.displayMode = builder.displayMode;
             this.domainList = builder.domainList;
             this.domainResolveRule = builder.domainResolveRule;
@@ -1197,6 +1407,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public Integer getCpuSingleRateLimit() {
             return this.cpuSingleRateLimit;
+        }
+
+        /**
+         * @return deviceRedirects
+         */
+        public java.util.List < DeviceRedirects> getDeviceRedirects() {
+            return this.deviceRedirects;
+        }
+
+        /**
+         * @return deviceRules
+         */
+        public java.util.List < DeviceRules> getDeviceRules() {
+            return this.deviceRules;
         }
 
         /**
@@ -1690,6 +1914,8 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private Integer cpuRateLimit; 
             private Integer cpuSampleDuration; 
             private Integer cpuSingleRateLimit; 
+            private java.util.List < DeviceRedirects> deviceRedirects; 
+            private java.util.List < DeviceRules> deviceRules; 
             private String displayMode; 
             private String domainList; 
             private java.util.List < DomainResolveRule> domainResolveRule; 
@@ -1890,6 +2116,22 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder cpuSingleRateLimit(Integer cpuSingleRateLimit) {
                 this.cpuSingleRateLimit = cpuSingleRateLimit;
+                return this;
+            }
+
+            /**
+             * DeviceRedirects.
+             */
+            public Builder deviceRedirects(java.util.List < DeviceRedirects> deviceRedirects) {
+                this.deviceRedirects = deviceRedirects;
+                return this;
+            }
+
+            /**
+             * DeviceRules.
+             */
+            public Builder deviceRules(java.util.List < DeviceRules> deviceRules) {
+                this.deviceRules = deviceRules;
                 return this;
             }
 

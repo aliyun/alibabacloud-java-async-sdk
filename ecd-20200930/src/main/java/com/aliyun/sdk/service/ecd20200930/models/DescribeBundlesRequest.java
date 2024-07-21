@@ -44,6 +44,10 @@ public class DescribeBundlesRequest extends Request {
     private Float gpuCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuDriverType")
+    private String gpuDriverType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private java.util.List < String > imageId;
 
@@ -103,6 +107,7 @@ public class DescribeBundlesRequest extends Request {
         this.fotaChannel = builder.fotaChannel;
         this.fromDesktopGroup = builder.fromDesktopGroup;
         this.gpuCount = builder.gpuCount;
+        this.gpuDriverType = builder.gpuDriverType;
         this.imageId = builder.imageId;
         this.maxResults = builder.maxResults;
         this.memorySize = builder.memorySize;
@@ -184,6 +189,13 @@ public class DescribeBundlesRequest extends Request {
      */
     public Float getGpuCount() {
         return this.gpuCount;
+    }
+
+    /**
+     * @return gpuDriverType
+     */
+    public String getGpuDriverType() {
+        return this.gpuDriverType;
     }
 
     /**
@@ -279,6 +291,7 @@ public class DescribeBundlesRequest extends Request {
         private String fotaChannel; 
         private Boolean fromDesktopGroup; 
         private Float gpuCount; 
+        private String gpuDriverType; 
         private java.util.List < String > imageId; 
         private Integer maxResults; 
         private Integer memorySize; 
@@ -306,6 +319,7 @@ public class DescribeBundlesRequest extends Request {
             this.fotaChannel = request.fotaChannel;
             this.fromDesktopGroup = request.fromDesktopGroup;
             this.gpuCount = request.gpuCount;
+            this.gpuDriverType = request.gpuDriverType;
             this.imageId = request.imageId;
             this.maxResults = request.maxResults;
             this.memorySize = request.memorySize;
@@ -434,6 +448,15 @@ public class DescribeBundlesRequest extends Request {
         public Builder gpuCount(Float gpuCount) {
             this.putQueryParameter("GpuCount", gpuCount);
             this.gpuCount = gpuCount;
+            return this;
+        }
+
+        /**
+         * GpuDriverType.
+         */
+        public Builder gpuDriverType(String gpuDriverType) {
+            this.putQueryParameter("GpuDriverType", gpuDriverType);
+            this.gpuDriverType = gpuDriverType;
             return this;
         }
 
