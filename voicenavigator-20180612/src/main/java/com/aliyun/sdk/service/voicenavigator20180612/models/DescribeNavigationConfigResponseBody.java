@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNavigationConfigResponseBody</p>
  */
 public class DescribeNavigationConfigResponseBody extends TeaModel {
-    @NameInMap("GreetingConfig")
+    @com.aliyun.core.annotation.NameInMap("GreetingConfig")
     private GreetingConfig greetingConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SilenceTimeoutConfig")
+    @com.aliyun.core.annotation.NameInMap("SilenceTimeoutConfig")
     private SilenceTimeoutConfig silenceTimeoutConfig;
 
-    @NameInMap("UnrecognizingConfig")
+    @com.aliyun.core.annotation.NameInMap("UnrecognizingConfig")
     private UnrecognizingConfig unrecognizingConfig;
 
     private DescribeNavigationConfigResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
     } 
 
     public static class GreetingConfig extends TeaModel {
-        @NameInMap("GreetingWords")
+        @com.aliyun.core.annotation.NameInMap("GreetingWords")
         private String greetingWords;
 
-        @NameInMap("IntentTrigger")
+        @com.aliyun.core.annotation.NameInMap("IntentTrigger")
         private String intentTrigger;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
         private GreetingConfig(Builder builder) {
@@ -193,28 +192,28 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
 
     }
     public static class SilenceTimeoutConfig extends TeaModel {
-        @NameInMap("FinalAction")
+        @com.aliyun.core.annotation.NameInMap("FinalAction")
         private String finalAction;
 
-        @NameInMap("FinalActionParams")
+        @com.aliyun.core.annotation.NameInMap("FinalActionParams")
         private String finalActionParams;
 
-        @NameInMap("FinalPrompt")
+        @com.aliyun.core.annotation.NameInMap("FinalPrompt")
         private String finalPrompt;
 
-        @NameInMap("IntentTrigger")
+        @com.aliyun.core.annotation.NameInMap("IntentTrigger")
         private String intentTrigger;
 
-        @NameInMap("Prompt")
+        @com.aliyun.core.annotation.NameInMap("Prompt")
         private String prompt;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Integer threshold;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Long timeout;
 
         private SilenceTimeoutConfig(Builder builder) {
@@ -374,19 +373,19 @@ public class DescribeNavigationConfigResponseBody extends TeaModel {
 
     }
     public static class UnrecognizingConfig extends TeaModel {
-        @NameInMap("FinalAction")
+        @com.aliyun.core.annotation.NameInMap("FinalAction")
         private String finalAction;
 
-        @NameInMap("FinalActionParams")
+        @com.aliyun.core.annotation.NameInMap("FinalActionParams")
         private String finalActionParams;
 
-        @NameInMap("FinalPrompt")
+        @com.aliyun.core.annotation.NameInMap("FinalPrompt")
         private String finalPrompt;
 
-        @NameInMap("Prompt")
+        @com.aliyun.core.annotation.NameInMap("Prompt")
         private String prompt;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Integer threshold;
 
         private UnrecognizingConfig(Builder builder) {

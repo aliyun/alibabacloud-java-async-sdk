@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveRecordingRequest</p>
  */
 public class SaveRecordingRequest extends Request {
-    @Query
-    @NameInMap("ConversationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConversationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String conversationId;
 
-    @Query
-    @NameInMap("Duration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String duration;
 
-    @Query
-    @NameInMap("FileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Query
-    @NameInMap("FilePath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilePath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String filePath;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceOwnerId")
     private Long instanceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("VoiceSliceRecordingList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceSliceRecordingList")
     private String voiceSliceRecordingList;
 
     private SaveRecordingRequest(Builder builder) {

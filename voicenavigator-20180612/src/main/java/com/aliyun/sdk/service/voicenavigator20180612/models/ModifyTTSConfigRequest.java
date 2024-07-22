@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTTSConfigRequest</p>
  */
 public class ModifyTTSConfigRequest extends Request {
-    @Query
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliCustomizedVoice")
+    private String aliCustomizedVoice;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @Query
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @Query
-    @NameInMap("EngineXunfei")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineXunfei")
     private String engineXunfei;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NlsServiceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NlsServiceType")
     private String nlsServiceType;
 
-    @Query
-    @NameInMap("SpeechRate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpeechRate")
     private String speechRate;
 
-    @Query
-    @NameInMap("Voice")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Voice")
     private String voice;
 
-    @Query
-    @NameInMap("Volume")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Volume")
     private String volume;
 
     private ModifyTTSConfigRequest(Builder builder) {
         super(builder);
+        this.aliCustomizedVoice = builder.aliCustomizedVoice;
         this.appKey = builder.appKey;
         this.engine = builder.engine;
         this.engineXunfei = builder.engineXunfei;
@@ -68,6 +72,13 @@ public class ModifyTTSConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return aliCustomizedVoice
+     */
+    public String getAliCustomizedVoice() {
+        return this.aliCustomizedVoice;
     }
 
     /**
@@ -127,6 +138,7 @@ public class ModifyTTSConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyTTSConfigRequest, Builder> {
+        private String aliCustomizedVoice; 
         private String appKey; 
         private String engine; 
         private String engineXunfei; 
@@ -142,6 +154,7 @@ public class ModifyTTSConfigRequest extends Request {
 
         private Builder(ModifyTTSConfigRequest request) {
             super(request);
+            this.aliCustomizedVoice = request.aliCustomizedVoice;
             this.appKey = request.appKey;
             this.engine = request.engine;
             this.engineXunfei = request.engineXunfei;
@@ -151,6 +164,15 @@ public class ModifyTTSConfigRequest extends Request {
             this.voice = request.voice;
             this.volume = request.volume;
         } 
+
+        /**
+         * AliCustomizedVoice.
+         */
+        public Builder aliCustomizedVoice(String aliCustomizedVoice) {
+            this.putQueryParameter("AliCustomizedVoice", aliCustomizedVoice);
+            this.aliCustomizedVoice = aliCustomizedVoice;
+            return this;
+        }
 
         /**
          * AppKey.

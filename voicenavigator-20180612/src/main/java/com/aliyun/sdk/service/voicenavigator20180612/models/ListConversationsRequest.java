@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConversationsRequest</p>
  */
 public class ListConversationsRequest extends Request {
-    @Query
-    @NameInMap("BeginTimeLeftRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTimeLeftRange")
     private Long beginTimeLeftRange;
 
-    @Query
-    @NameInMap("BeginTimeRightRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTimeRightRange")
     private Long beginTimeRightRange;
 
-    @Query
-    @NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
     private String callingNumber;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IsSandBox")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSandBox")
     private String isSandBox;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
-    @Query
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Long result;
 
-    @Query
-    @NameInMap("RoundsLeftRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoundsLeftRange")
     private Integer roundsLeftRange;
 
-    @Query
-    @NameInMap("RoundsRightRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoundsRightRange")
     private Integer roundsRightRange;
 
     private ListConversationsRequest(Builder builder) {

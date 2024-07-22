@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryConversationsResponseBody</p>
  */
 public class QueryConversationsResponseBody extends TeaModel {
-    @NameInMap("Conversations")
+    @com.aliyun.core.annotation.NameInMap("Conversations")
     private java.util.List < Conversations> conversations;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryConversationsResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class QueryConversationsResponseBody extends TeaModel {
     } 
 
     public static class Conversations extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("CallingNumber")
+        @com.aliyun.core.annotation.NameInMap("CallingNumber")
         private String callingNumber;
 
-        @NameInMap("ConversationId")
+        @com.aliyun.core.annotation.NameInMap("ConversationId")
         private String conversationId;
 
-        @NameInMap("EffectiveAnswerCount")
+        @com.aliyun.core.annotation.NameInMap("EffectiveAnswerCount")
         private Integer effectiveAnswerCount;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("SkillGroupId")
+        @com.aliyun.core.annotation.NameInMap("SkillGroupId")
         private String skillGroupId;
 
-        @NameInMap("TransferredToAgent")
+        @com.aliyun.core.annotation.NameInMap("TransferredToAgent")
         private Boolean transferredToAgent;
 
-        @NameInMap("UserUtteranceCount")
+        @com.aliyun.core.annotation.NameInMap("UserUtteranceCount")
         private Integer userUtteranceCount;
 
         private Conversations(Builder builder) {

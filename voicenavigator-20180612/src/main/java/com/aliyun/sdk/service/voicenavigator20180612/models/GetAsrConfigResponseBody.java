@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAsrConfigResponseBody</p>
  */
 public class GetAsrConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAsrConfigResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class GetAsrConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AsrAcousticModelId")
+        @com.aliyun.core.annotation.NameInMap("AsrAcousticModelId")
         private String asrAcousticModelId;
 
-        @NameInMap("AsrClassVocabularyId")
+        @com.aliyun.core.annotation.NameInMap("AsrClassVocabularyId")
         private String asrClassVocabularyId;
 
-        @NameInMap("AsrCustomizationId")
+        @com.aliyun.core.annotation.NameInMap("AsrCustomizationId")
         private String asrCustomizationId;
 
-        @NameInMap("AsrVocabularyId")
+        @com.aliyun.core.annotation.NameInMap("AsrVocabularyId")
         private String asrVocabularyId;
 
         private Data(Builder builder) {

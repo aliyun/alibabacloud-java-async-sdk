@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRealTimeConcurrencyResponseBody</p>
  */
 public class GetRealTimeConcurrencyResponseBody extends TeaModel {
-    @NameInMap("MaxConcurrency")
+    @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
     private Long maxConcurrency;
 
-    @NameInMap("RealTimeConcurrency")
+    @com.aliyun.core.annotation.NameInMap("RealTimeConcurrency")
     private Long realTimeConcurrency;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Long timestamp;
 
     private GetRealTimeConcurrencyResponseBody(Builder builder) {

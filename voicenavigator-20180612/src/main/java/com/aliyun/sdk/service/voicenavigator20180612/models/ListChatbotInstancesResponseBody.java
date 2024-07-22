@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListChatbotInstancesResponseBody</p>
  */
 public class ListChatbotInstancesResponseBody extends TeaModel {
-    @NameInMap("Bots")
+    @com.aliyun.core.annotation.NameInMap("Bots")
     private java.util.List < Bots> bots;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListChatbotInstancesResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListChatbotInstancesResponseBody extends TeaModel {
     } 
 
     public static class Bots extends TeaModel {
-        @NameInMap("Avatar")
+        @com.aliyun.core.annotation.NameInMap("Avatar")
         private String avatar;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Introduction")
+        @com.aliyun.core.annotation.NameInMap("Introduction")
         private String introduction;
 
-        @NameInMap("LanguageCode")
+        @com.aliyun.core.annotation.NameInMap("LanguageCode")
         private String languageCode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private Bots(Builder builder) {

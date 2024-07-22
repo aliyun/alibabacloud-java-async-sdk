@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTTSConfigResponseBody</p>
  */
 public class DescribeTTSConfigResponseBody extends TeaModel {
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.NameInMap("AliCustomizedVoice")
+    private String aliCustomizedVoice;
+
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("EngineXunfei")
+    @com.aliyun.core.annotation.NameInMap("EngineXunfei")
     private String engineXunfei;
 
-    @NameInMap("NlsServiceType")
+    @com.aliyun.core.annotation.NameInMap("NlsServiceType")
     private String nlsServiceType;
 
-    @NameInMap("PitchRate")
+    @com.aliyun.core.annotation.NameInMap("PitchRate")
     private Integer pitchRate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SpeechRate")
+    @com.aliyun.core.annotation.NameInMap("SpeechRate")
     private Integer speechRate;
 
-    @NameInMap("Voice")
+    @com.aliyun.core.annotation.NameInMap("Voice")
     private String voice;
 
-    @NameInMap("Volume")
+    @com.aliyun.core.annotation.NameInMap("Volume")
     private Integer volume;
 
     private DescribeTTSConfigResponseBody(Builder builder) {
+        this.aliCustomizedVoice = builder.aliCustomizedVoice;
         this.appKey = builder.appKey;
         this.engine = builder.engine;
         this.engineXunfei = builder.engineXunfei;
@@ -57,6 +60,13 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
 
     public static DescribeTTSConfigResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return aliCustomizedVoice
+     */
+    public String getAliCustomizedVoice() {
+        return this.aliCustomizedVoice;
     }
 
     /**
@@ -123,6 +133,7 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String aliCustomizedVoice; 
         private String appKey; 
         private String engine; 
         private String engineXunfei; 
@@ -132,6 +143,14 @@ public class DescribeTTSConfigResponseBody extends TeaModel {
         private Integer speechRate; 
         private String voice; 
         private Integer volume; 
+
+        /**
+         * AliCustomizedVoice.
+         */
+        public Builder aliCustomizedVoice(String aliCustomizedVoice) {
+            this.aliCustomizedVoice = aliCustomizedVoice;
+            return this;
+        }
 
         /**
          * AppKey.

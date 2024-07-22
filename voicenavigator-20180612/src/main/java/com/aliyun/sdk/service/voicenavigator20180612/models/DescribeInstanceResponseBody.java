@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("AbilityType")
+    @com.aliyun.core.annotation.NameInMap("AbilityType")
     private String abilityType;
 
-    @NameInMap("ApplicableOperations")
+    @com.aliyun.core.annotation.NameInMap("ApplicableOperations")
     private java.util.List < String > applicableOperations;
 
-    @NameInMap("Concurrency")
+    @com.aliyun.core.annotation.NameInMap("Concurrency")
     private Long concurrency;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("ModifyTime")
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private Long modifyTime;
 
-    @NameInMap("ModifyUserName")
+    @com.aliyun.core.annotation.NameInMap("ModifyUserName")
     private String modifyUserName;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("NluServiceParamsJson")
+    @com.aliyun.core.annotation.NameInMap("NluServiceParamsJson")
     private String nluServiceParamsJson;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UnionInstanceId")
+    @com.aliyun.core.annotation.NameInMap("UnionInstanceId")
     private String unionInstanceId;
 
-    @NameInMap("UnionSource")
+    @com.aliyun.core.annotation.NameInMap("UnionSource")
     private String unionSource;
 
     private DescribeInstanceResponseBody(Builder builder) {

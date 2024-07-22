@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConversationsResponseBody</p>
  */
 public class ListConversationsResponseBody extends TeaModel {
-    @NameInMap("Conversations")
+    @com.aliyun.core.annotation.NameInMap("Conversations")
     private java.util.List < Conversations> conversations;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListConversationsResponseBody(Builder builder) {
@@ -132,43 +131,43 @@ public class ListConversationsResponseBody extends TeaModel {
     } 
 
     public static class Conversations extends TeaModel {
-        @NameInMap("CalledNumber")
+        @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
-        @NameInMap("CallingNumber")
+        @com.aliyun.core.annotation.NameInMap("CallingNumber")
         private String callingNumber;
 
-        @NameInMap("ConversationId")
+        @com.aliyun.core.annotation.NameInMap("ConversationId")
         private String conversationId;
 
-        @NameInMap("DsReport")
+        @com.aliyun.core.annotation.NameInMap("DsReport")
         private String dsReport;
 
-        @NameInMap("DsReportTitles")
+        @com.aliyun.core.annotation.NameInMap("DsReportTitles")
         private java.util.List < String > dsReportTitles;
 
-        @NameInMap("EndReason")
+        @com.aliyun.core.annotation.NameInMap("EndReason")
         private Integer endReason;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("HasLastPlaybackCompleted")
+        @com.aliyun.core.annotation.NameInMap("HasLastPlaybackCompleted")
         private Boolean hasLastPlaybackCompleted;
 
-        @NameInMap("HasToAgent")
+        @com.aliyun.core.annotation.NameInMap("HasToAgent")
         private Boolean hasToAgent;
 
-        @NameInMap("Rounds")
+        @com.aliyun.core.annotation.NameInMap("Rounds")
         private Integer rounds;
 
-        @NameInMap("SandBox")
+        @com.aliyun.core.annotation.NameInMap("SandBox")
         private Boolean sandBox;
 
-        @NameInMap("SkillGroup")
+        @com.aliyun.core.annotation.NameInMap("SkillGroup")
         private String skillGroup;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Conversations(Builder builder) {

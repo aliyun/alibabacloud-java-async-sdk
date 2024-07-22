@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AuditTTSVoiceRequest</p>
  */
 public class AuditTTSVoiceRequest extends Request {
-    @Query
-    @NameInMap("AccessKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessKey")
     private String accessKey;
 
-    @Query
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private String appKey;
 
-    @Query
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("PitchRate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PitchRate")
     private String pitchRate;
 
-    @Query
-    @NameInMap("SecretKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretKey")
     private String secretKey;
 
-    @Query
-    @NameInMap("SpeechRate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpeechRate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String speechRate;
 
-    @Query
-    @NameInMap("Text")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Text")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String text;
 
-    @Query
-    @NameInMap("Voice")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Voice")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String voice;
 
-    @Query
-    @NameInMap("Volume")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Volume")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String volume;
 
     private AuditTTSVoiceRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SilenceTimeoutResponseBody</p>
  */
 public class SilenceTimeoutResponseBody extends TeaModel {
-    @NameInMap("Action")
+    @com.aliyun.core.annotation.NameInMap("Action")
     private String action;
 
-    @NameInMap("ActionParams")
+    @com.aliyun.core.annotation.NameInMap("ActionParams")
     private String actionParams;
 
-    @NameInMap("Interruptible")
+    @com.aliyun.core.annotation.NameInMap("Interruptible")
     private Boolean interruptible;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TextResponse")
+    @com.aliyun.core.annotation.NameInMap("TextResponse")
     private String textResponse;
 
     private SilenceTimeoutResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAsrConfigRequest</p>
  */
 public class ModifyAsrConfigRequest extends Request {
-    @Query
-    @NameInMap("AsrAcousticModelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrAcousticModelId")
     private String asrAcousticModelId;
 
-    @Query
-    @NameInMap("AsrClassVocabularyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrClassVocabularyId")
     private String asrClassVocabularyId;
 
-    @Query
-    @NameInMap("AsrCustomizationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrCustomizationId")
     private String asrCustomizationId;
 
-    @Query
-    @NameInMap("AsrVocabularyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AsrVocabularyId")
     private String asrVocabularyId;
 
-    @Query
-    @NameInMap("ConfigLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigLevel")
     private Integer configLevel;
 
-    @Query
-    @NameInMap("EntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntryId")
     private String entryId;
 
     private ModifyAsrConfigRequest(Builder builder) {

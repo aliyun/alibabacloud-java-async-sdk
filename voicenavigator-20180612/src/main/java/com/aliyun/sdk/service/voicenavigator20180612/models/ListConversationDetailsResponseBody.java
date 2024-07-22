@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConversationDetailsResponseBody</p>
  */
 public class ListConversationDetailsResponseBody extends TeaModel {
-    @NameInMap("ConversationDetails")
+    @com.aliyun.core.annotation.NameInMap("ConversationDetails")
     private java.util.List < ConversationDetails> conversationDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListConversationDetailsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListConversationDetailsResponseBody extends TeaModel {
     } 
 
     public static class ConversationDetails extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionParams")
+        @com.aliyun.core.annotation.NameInMap("ActionParams")
         private String actionParams;
 
-        @NameInMap("ConversationId")
+        @com.aliyun.core.annotation.NameInMap("ConversationId")
         private String conversationId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("SequenceId")
+        @com.aliyun.core.annotation.NameInMap("SequenceId")
         private String sequenceId;
 
-        @NameInMap("Speaker")
+        @com.aliyun.core.annotation.NameInMap("Speaker")
         private String speaker;
 
-        @NameInMap("Utterance")
+        @com.aliyun.core.annotation.NameInMap("Utterance")
         private String utterance;
 
         private ConversationDetails(Builder builder) {

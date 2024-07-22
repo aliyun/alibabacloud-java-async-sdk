@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DebugBeginDialogueRequest</p>
  */
 public class DebugBeginDialogueRequest extends Request {
-    @Query
-    @NameInMap("CalledNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CalledNumber")
     private String calledNumber;
 
-    @Query
-    @NameInMap("CallingNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callingNumber;
 
-    @Query
-    @NameInMap("ConversationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConversationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String conversationId;
 
-    @Query
-    @NameInMap("InitialContext")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitialContext")
     private String initialContext;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private DebugBeginDialogueRequest(Builder builder) {

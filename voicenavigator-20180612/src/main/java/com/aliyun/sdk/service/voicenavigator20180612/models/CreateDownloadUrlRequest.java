@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDownloadUrlRequest</p>
  */
 public class CreateDownloadUrlRequest extends Request {
-    @Query
-    @NameInMap("DownloadTaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DownloadTaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String downloadTaskId;
 
-    @Query
-    @NameInMap("FileId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileId;
 
     private CreateDownloadUrlRequest(Builder builder) {

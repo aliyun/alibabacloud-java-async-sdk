@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExportConversationDetailsRequest</p>
  */
 public class ExportConversationDetailsRequest extends Request {
-    @Query
-    @NameInMap("BeginTimeLeftRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTimeLeftRange")
     private Long beginTimeLeftRange;
 
-    @Query
-    @NameInMap("BeginTimeRightRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTimeRightRange")
     private Long beginTimeRightRange;
 
-    @Query
-    @NameInMap("CallingNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallingNumber")
     private String callingNumber;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
     private java.util.List < String > options;
 
-    @Query
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Integer result;
 
-    @Query
-    @NameInMap("RoundsLeftRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoundsLeftRange")
     private Integer roundsLeftRange;
 
-    @Query
-    @NameInMap("RoundsRightRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoundsRightRange")
     private Integer roundsRightRange;
 
     private ExportConversationDetailsRequest(Builder builder) {

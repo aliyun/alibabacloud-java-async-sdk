@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySilenceTimeoutConfigRequest</p>
  */
 public class ModifySilenceTimeoutConfigRequest extends Request {
-    @Query
-    @NameInMap("FinalAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FinalAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String finalAction;
 
-    @Query
-    @NameInMap("FinalActionParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FinalActionParams")
     private String finalActionParams;
 
-    @Query
-    @NameInMap("FinalPrompt")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FinalPrompt")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String finalPrompt;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("IntentTrigger")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntentTrigger")
     private String intentTrigger;
 
-    @Query
-    @NameInMap("Prompt")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Prompt")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String prompt;
 
-    @Query
-    @NameInMap("SourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
-    @Query
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer threshold;
 
-    @Query
-    @NameInMap("Timeout")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long timeout;
 
     private ModifySilenceTimeoutConfigRequest(Builder builder) {

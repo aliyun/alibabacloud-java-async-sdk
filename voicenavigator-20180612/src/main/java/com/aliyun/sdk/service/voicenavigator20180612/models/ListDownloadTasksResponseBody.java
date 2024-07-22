@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.voicenavigator20180612.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDownloadTasksResponseBody</p>
  */
 public class ListDownloadTasksResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DownloadTasks")
+    @com.aliyun.core.annotation.NameInMap("DownloadTasks")
     private DownloadTasks downloadTasks;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDownloadTasksResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class ListDownloadTasksResponseBody extends TeaModel {
     } 
 
     public static class DownloadTaskFiles extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private DownloadTaskFiles(Builder builder) {
@@ -253,19 +252,19 @@ public class ListDownloadTasksResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("DownloadTaskFiles")
+        @com.aliyun.core.annotation.NameInMap("DownloadTaskFiles")
         private java.util.List < DownloadTaskFiles> downloadTaskFiles;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private List(Builder builder) {
@@ -374,16 +373,16 @@ public class ListDownloadTasksResponseBody extends TeaModel {
 
     }
     public static class DownloadTasks extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private DownloadTasks(Builder builder) {
