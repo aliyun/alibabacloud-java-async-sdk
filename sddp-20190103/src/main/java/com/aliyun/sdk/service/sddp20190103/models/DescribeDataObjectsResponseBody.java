@@ -355,6 +355,9 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductId")
         private Long productId;
 
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
         @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
@@ -382,6 +385,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             this.path = builder.path;
             this.productCode = builder.productCode;
             this.productId = builder.productId;
+            this.regionId = builder.regionId;
             this.regionName = builder.regionName;
             this.ruleList = builder.ruleList;
             this.sensitiveCount = builder.sensitiveCount;
@@ -495,6 +499,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
          * @return regionName
          */
         public String getRegionName() {
@@ -537,6 +548,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             private String path; 
             private String productCode; 
             private Long productId; 
+            private String regionId; 
             private String regionName; 
             private java.util.List < RuleList> ruleList; 
             private Integer sensitiveCount; 
@@ -651,6 +663,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
              */
             public Builder productId(Long productId) {
                 this.productId = productId;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
