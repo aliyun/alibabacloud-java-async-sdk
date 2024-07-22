@@ -19,6 +19,10 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddTextFeedbackResponse> addTextFeedback(AddTextFeedbackRequest request);
+
+    CompletableFuture<CheckSessionResponse> checkSession(CheckSessionRequest request);
+
     CompletableFuture<CreateIllustrationTaskResponse> createIllustrationTask(CreateIllustrationTaskRequest request);
 
     CompletableFuture<CreateTextTaskResponse> createTextTask(CreateTextTaskRequest request);
@@ -29,12 +33,36 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetOssUploadTokenResponse> getOssUploadToken(GetOssUploadTokenRequest request);
 
+    CompletableFuture<GetProjectTaskResponse> getProjectTask(GetProjectTaskRequest request);
+
     CompletableFuture<GetTextResponse> getText(GetTextRequest request);
 
     CompletableFuture<GetTextTaskResponse> getTextTask(GetTextTaskRequest request);
 
+    CompletableFuture<GetTextTemplateResponse> getTextTemplate(GetTextTemplateRequest request);
+
+    CompletableFuture<ListAnchorResponse> listAnchor(ListAnchorRequest request);
+
     CompletableFuture<ListTextThemesResponse> listTextThemes(ListTextThemesRequest request);
 
     CompletableFuture<ListTextsResponse> listTexts(ListTextsRequest request);
+
+    CompletableFuture<ListVoiceModelsResponse> listVoiceModels(ListVoiceModelsRequest request);
+
+    CompletableFuture<QueryAvatarProjectResponse> queryAvatarProject(QueryAvatarProjectRequest request);
+
+    CompletableFuture<QueryAvatarResourceResponse> queryAvatarResource(QueryAvatarResourceRequest request);
+
+    CompletableFuture<SelectResourceResponse> selectResource(SelectResourceRequest request);
+
+    CompletableFuture<SendTextMsgResponse> sendTextMsg(SendTextMsgRequest request);
+
+    CompletableFuture<StartAvatarSessionResponse> startAvatarSession(StartAvatarSessionRequest request);
+
+    CompletableFuture<StopAvatarSessionResponse> stopAvatarSession(StopAvatarSessionRequest request);
+
+    CompletableFuture<StopProjectTaskResponse> stopProjectTask(StopProjectTaskRequest request);
+
+    CompletableFuture<SubmitProjectTaskResponse> submitProjectTask(SubmitProjectTaskRequest request);
 
 }

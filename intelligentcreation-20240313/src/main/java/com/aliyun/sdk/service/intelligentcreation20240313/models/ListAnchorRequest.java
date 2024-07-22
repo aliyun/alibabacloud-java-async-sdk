@@ -1,0 +1,186 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.intelligentcreation20240313.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListAnchorRequest} extends {@link RequestModel}
+ *
+ * <p>ListAnchorRequest</p>
+ */
+public class ListAnchorRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("anchorType")
+    private String anchorType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("coverRate")
+    private String coverRate;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("digitalHumanType")
+    private String digitalHumanType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("useScene")
+    private String useScene;
+
+    private ListAnchorRequest(Builder builder) {
+        super(builder);
+        this.anchorType = builder.anchorType;
+        this.coverRate = builder.coverRate;
+        this.digitalHumanType = builder.digitalHumanType;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.useScene = builder.useScene;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListAnchorRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return anchorType
+     */
+    public String getAnchorType() {
+        return this.anchorType;
+    }
+
+    /**
+     * @return coverRate
+     */
+    public String getCoverRate() {
+        return this.coverRate;
+    }
+
+    /**
+     * @return digitalHumanType
+     */
+    public String getDigitalHumanType() {
+        return this.digitalHumanType;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return useScene
+     */
+    public String getUseScene() {
+        return this.useScene;
+    }
+
+    public static final class Builder extends Request.Builder<ListAnchorRequest, Builder> {
+        private String anchorType; 
+        private String coverRate; 
+        private String digitalHumanType; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String useScene; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(ListAnchorRequest request) {
+            super(request);
+            this.anchorType = request.anchorType;
+            this.coverRate = request.coverRate;
+            this.digitalHumanType = request.digitalHumanType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.useScene = request.useScene;
+        } 
+
+        /**
+         * anchorType.
+         */
+        public Builder anchorType(String anchorType) {
+            this.putQueryParameter("anchorType", anchorType);
+            this.anchorType = anchorType;
+            return this;
+        }
+
+        /**
+         * coverRate.
+         */
+        public Builder coverRate(String coverRate) {
+            this.putQueryParameter("coverRate", coverRate);
+            this.coverRate = coverRate;
+            return this;
+        }
+
+        /**
+         * digitalHumanType.
+         */
+        public Builder digitalHumanType(String digitalHumanType) {
+            this.putQueryParameter("digitalHumanType", digitalHumanType);
+            this.digitalHumanType = digitalHumanType;
+            return this;
+        }
+
+        /**
+         * pageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("pageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * pageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("pageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * useScene.
+         */
+        public Builder useScene(String useScene) {
+            this.putQueryParameter("useScene", useScene);
+            this.useScene = useScene;
+            return this;
+        }
+
+        @Override
+        public ListAnchorRequest build() {
+            return new ListAnchorRequest(this);
+        } 
+
+    } 
+
+}
