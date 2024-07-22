@@ -99,6 +99,10 @@ public class CreateDesktopsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotPolicyId")
+    private String snapshotPolicyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -149,6 +153,7 @@ public class CreateDesktopsRequest extends Request {
         this.policyGroupId = builder.policyGroupId;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
+        this.snapshotPolicyId = builder.snapshotPolicyId;
         this.tag = builder.tag;
         this.userAssignMode = builder.userAssignMode;
         this.userCommands = builder.userCommands;
@@ -319,6 +324,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return snapshotPolicyId
+     */
+    public String getSnapshotPolicyId() {
+        return this.snapshotPolicyId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -389,6 +401,7 @@ public class CreateDesktopsRequest extends Request {
         private String policyGroupId; 
         private String promotionId; 
         private String regionId; 
+        private String snapshotPolicyId; 
         private java.util.List < Tag> tag; 
         private String userAssignMode; 
         private java.util.List < UserCommands> userCommands; 
@@ -424,6 +437,7 @@ public class CreateDesktopsRequest extends Request {
             this.policyGroupId = request.policyGroupId;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
+            this.snapshotPolicyId = request.snapshotPolicyId;
             this.tag = request.tag;
             this.userAssignMode = request.userAssignMode;
             this.userCommands = request.userCommands;
@@ -690,6 +704,15 @@ public class CreateDesktopsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SnapshotPolicyId.
+         */
+        public Builder snapshotPolicyId(String snapshotPolicyId) {
+            this.putQueryParameter("SnapshotPolicyId", snapshotPolicyId);
+            this.snapshotPolicyId = snapshotPolicyId;
             return this;
         }
 

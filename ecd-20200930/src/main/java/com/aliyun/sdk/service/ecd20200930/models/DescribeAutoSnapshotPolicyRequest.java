@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeAutoSnapshotPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 50)
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
