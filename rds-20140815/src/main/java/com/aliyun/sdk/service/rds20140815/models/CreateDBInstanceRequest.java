@@ -16,6 +16,10 @@ public class CreateDBInstanceRequest extends Request {
     private Integer amount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoCreateProxy")
+    private Boolean autoCreateProxy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
@@ -246,6 +250,7 @@ public class CreateDBInstanceRequest extends Request {
     private CreateDBInstanceRequest(Builder builder) {
         super(builder);
         this.amount = builder.amount;
+        this.autoCreateProxy = builder.autoCreateProxy;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.babelfishConfig = builder.babelfishConfig;
@@ -321,6 +326,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public Integer getAmount() {
         return this.amount;
+    }
+
+    /**
+     * @return autoCreateProxy
+     */
+    public Boolean getAutoCreateProxy() {
+        return this.autoCreateProxy;
     }
 
     /**
@@ -710,6 +722,7 @@ public class CreateDBInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
         private Integer amount; 
+        private Boolean autoCreateProxy; 
         private Boolean autoPay; 
         private String autoRenew; 
         private String babelfishConfig; 
@@ -773,6 +786,7 @@ public class CreateDBInstanceRequest extends Request {
         private Builder(CreateDBInstanceRequest request) {
             super(request);
             this.amount = request.amount;
+            this.autoCreateProxy = request.autoCreateProxy;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.babelfishConfig = request.babelfishConfig;
@@ -843,6 +857,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
             this.amount = amount;
+            return this;
+        }
+
+        /**
+         * AutoCreateProxy.
+         */
+        public Builder autoCreateProxy(Boolean autoCreateProxy) {
+            this.putQueryParameter("AutoCreateProxy", autoCreateProxy);
+            this.autoCreateProxy = autoCreateProxy;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateReadOnlyDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoCreateProxy")
+    private Boolean autoCreateProxy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
@@ -160,6 +164,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
 
     private CreateReadOnlyDBInstanceRequest(Builder builder) {
         super(builder);
+        this.autoCreateProxy = builder.autoCreateProxy;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.bpeEnabled = builder.bpeEnabled;
@@ -208,6 +213,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoCreateProxy
+     */
+    public Boolean getAutoCreateProxy() {
+        return this.autoCreateProxy;
     }
 
     /**
@@ -456,6 +468,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateReadOnlyDBInstanceRequest, Builder> {
+        private Boolean autoCreateProxy; 
         private Boolean autoPay; 
         private String autoRenew; 
         private String bpeEnabled; 
@@ -498,6 +511,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
 
         private Builder(CreateReadOnlyDBInstanceRequest request) {
             super(request);
+            this.autoCreateProxy = request.autoCreateProxy;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.bpeEnabled = request.bpeEnabled;
@@ -534,6 +548,15 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * AutoCreateProxy.
+         */
+        public Builder autoCreateProxy(Boolean autoCreateProxy) {
+            this.putQueryParameter("AutoCreateProxy", autoCreateProxy);
+            this.autoCreateProxy = autoCreateProxy;
+            return this;
+        }
 
         /**
          * Specifies whether to enable the automatic payment feature. Valid values:
