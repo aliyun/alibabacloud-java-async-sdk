@@ -93,7 +93,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the task.
+         * The details of the cache analysis task.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -264,7 +264,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -280,7 +280,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             * The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -288,7 +288,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * The key name.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -486,7 +486,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -502,7 +502,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             * The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -510,7 +510,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * The key name.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -644,7 +644,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             private Long totalKeys; 
 
             /**
-             * AnalysisTs.
+             * The time when the cache analysis task was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder analysisTs(Long analysisTs) {
                 this.analysisTs = analysisTs;
@@ -652,7 +652,18 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The expiration level. Valid values:
+             * <p>
+             * 
+             * *   **0**: The key never expires.
+             * *   **1**: The key has expired.
+             * *   **2**: The key has expired for 0 to 1 hour.
+             * *   **3**: The key has expired for 1 to 3 hours.
+             * *   **4**: The key has expired for 3 to 12 hours.
+             * *   **5**: The key has expired for 12 to 24 hours.
+             * *   **6**: The key has expired for one to two days.
+             * *   **7**: The key has expired for three to seven days.
+             * *   **8**: The key has expired for more than seven days.
              */
             public Builder level(Integer level) {
                 this.level = level;
@@ -660,7 +671,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * The number of bytes occupied by the keys that have expired.
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;
@@ -668,7 +679,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * TotalKeys.
+             * The total number of the keys that have expired.
              */
             public Builder totalKeys(Long totalKeys) {
                 this.totalKeys = totalKeys;
@@ -1012,7 +1023,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -1028,7 +1039,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             * The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -1036,7 +1047,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * The key name.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1234,7 +1245,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder db(Integer db) {
                 this.db = db;
@@ -1250,7 +1261,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration period of the key. Unit: milliseconds. A value of 0 indicates that the key does not expire.
+             * The time when the key expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. A value of 0 indicates that the key never expires.
              */
             public Builder expirationTimeMillis(Long expirationTimeMillis) {
                 this.expirationTimeMillis = expirationTimeMillis;
@@ -1258,7 +1269,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * The key name.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1492,7 +1503,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiryKeysLevelCount.
+             * The statistics of the keys that have expired.
              */
             public Builder expiryKeysLevelCount(ExpiryKeysLevelCount expiryKeysLevelCount) {
                 this.expiryKeysLevelCount = expiryKeysLevelCount;

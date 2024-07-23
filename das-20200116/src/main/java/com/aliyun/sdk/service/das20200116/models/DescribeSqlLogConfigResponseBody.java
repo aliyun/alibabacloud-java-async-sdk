@@ -177,11 +177,17 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SqlLogEnable")
         private Boolean sqlLogEnable;
 
+        @com.aliyun.core.annotation.NameInMap("SqlLogSource")
+        private String sqlLogSource;
+
         @com.aliyun.core.annotation.NameInMap("SqlLogState")
         private String sqlLogState;
 
         @com.aliyun.core.annotation.NameInMap("SqlLogVisibleTime")
         private Long sqlLogVisibleTime;
+
+        @com.aliyun.core.annotation.NameInMap("SupportMigration")
+        private Boolean supportMigration;
 
         @com.aliyun.core.annotation.NameInMap("SupportVersion")
         private String supportVersion;
@@ -203,8 +209,10 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
             this.requestStopTime = builder.requestStopTime;
             this.retention = builder.retention;
             this.sqlLogEnable = builder.sqlLogEnable;
+            this.sqlLogSource = builder.sqlLogSource;
             this.sqlLogState = builder.sqlLogState;
             this.sqlLogVisibleTime = builder.sqlLogVisibleTime;
+            this.supportMigration = builder.supportMigration;
             this.supportVersion = builder.supportVersion;
             this.version = builder.version;
         }
@@ -309,6 +317,13 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return sqlLogSource
+         */
+        public String getSqlLogSource() {
+            return this.sqlLogSource;
+        }
+
+        /**
          * @return sqlLogState
          */
         public String getSqlLogState() {
@@ -320,6 +335,13 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
          */
         public Long getSqlLogVisibleTime() {
             return this.sqlLogVisibleTime;
+        }
+
+        /**
+         * @return supportMigration
+         */
+        public Boolean getSupportMigration() {
+            return this.supportMigration;
         }
 
         /**
@@ -350,8 +372,10 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
             private Long requestStopTime; 
             private Integer retention; 
             private Boolean sqlLogEnable; 
+            private String sqlLogSource; 
             private String sqlLogState; 
             private Long sqlLogVisibleTime; 
+            private Boolean supportMigration; 
             private String supportVersion; 
             private String version; 
 
@@ -485,6 +509,14 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
+             * SqlLogSource.
+             */
+            public Builder sqlLogSource(String sqlLogSource) {
+                this.sqlLogSource = sqlLogSource;
+                return this;
+            }
+
+            /**
              * The state of data migration. Valid values:
              * <p>
              * 
@@ -502,6 +534,14 @@ public class DescribeSqlLogConfigResponseBody extends TeaModel {
              */
             public Builder sqlLogVisibleTime(Long sqlLogVisibleTime) {
                 this.sqlLogVisibleTime = sqlLogVisibleTime;
+                return this;
+            }
+
+            /**
+             * SupportMigration.
+             */
+            public Builder supportMigration(Boolean supportMigration) {
+                this.supportMigration = supportMigration;
                 return this;
             }
 
