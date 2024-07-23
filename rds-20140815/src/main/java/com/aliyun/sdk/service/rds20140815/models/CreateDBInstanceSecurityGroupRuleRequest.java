@@ -167,7 +167,7 @@ public class CreateDBInstanceSecurityGroupRuleRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~2628785~~) operation to query the IDs of instances.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -176,7 +176,7 @@ public class CreateDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the security group rule.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -185,7 +185,11 @@ public class CreateDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * IpProtocol.
+         * The type of the transport layer protocol. Valid values:
+         * <p>
+         * 
+         * *   TCP
+         * *   UDP
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -212,7 +216,10 @@ public class CreateDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * PortRange.
+         * The range of destination ports over which TCP and UDP traffic is allowed in the security group rule.
+         * <p>
+         * 
+         * Valid values: 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -239,7 +246,7 @@ public class CreateDBInstanceSecurityGroupRuleRequest extends Request {
         }
 
         /**
-         * SourceCidrIp.
+         * The range of source IP addresses. CIDR blocks and IPv4 addresses are supported.
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);

@@ -97,7 +97,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * The queried backup sets.
+         * The returned backup sets.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -755,7 +755,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The type of the database engine. Valid values:
+             * <p>
+             * 
+             * *   MySQL
+             * *   SQLServer
+             * *   PostgreSQL
+             * *   MariaDB
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -763,7 +769,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The version of the database engine.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;

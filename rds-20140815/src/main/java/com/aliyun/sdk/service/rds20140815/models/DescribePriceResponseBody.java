@@ -471,7 +471,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private Float discountPrice;
 
         @com.aliyun.core.annotation.NameInMap("OrderLines")
-        private String orderLines;
+        private Object orderLines;
 
         @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
@@ -540,7 +540,7 @@ public class DescribePriceResponseBody extends TeaModel {
         /**
          * @return orderLines
          */
-        public String getOrderLines() {
+        public Object getOrderLines() {
             return this.orderLines;
         }
 
@@ -584,7 +584,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Coupons coupons; 
             private String currency; 
             private Float discountPrice; 
-            private String orderLines; 
+            private Object orderLines; 
             private Float originalPrice; 
             private RuleIds ruleIds; 
             private Float tradeMaxRCUAmount; 
@@ -626,7 +626,7 @@ public class DescribePriceResponseBody extends TeaModel {
             /**
              * The order information.
              */
-            public Builder orderLines(String orderLines) {
+            public Builder orderLines(Object orderLines) {
                 this.orderLines = orderLines;
                 return this;
             }

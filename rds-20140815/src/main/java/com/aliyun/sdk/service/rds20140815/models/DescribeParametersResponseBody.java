@@ -140,7 +140,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The list of parameters that are in use.
+         * The parameters that are in use.
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -451,7 +451,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValueRange; 
 
             /**
-             * ParameterDefaultValue.
+             * The default value of the parameter.
              */
             public Builder parameterDefaultValue(String parameterDefaultValue) {
                 this.parameterDefaultValue = parameterDefaultValue;
@@ -483,7 +483,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValueRange.
+             * The valid values of the parameter.
              */
             public Builder parameterValueRange(String parameterValueRange) {
                 this.parameterValueRange = parameterValueRange;

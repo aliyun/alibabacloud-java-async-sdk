@@ -721,6 +721,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engine
+      * SQL Server
+      * ### [](#)References
+      * [Configure security group settings for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
+      *
+     */
     @Override
     public CompletableFuture<CreateDBInstanceSecurityGroupRuleResponse> createDBInstanceSecurityGroupRule(CreateDBInstanceSecurityGroupRuleRequest request) {
         try {
@@ -1304,6 +1311,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engine
+      * SQL Server
+      * ### [](#)References
+      * [Configure security group settings for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
+      *
+     */
     @Override
     public CompletableFuture<DeleteDBInstanceSecurityGroupRuleResponse> deleteDBInstanceSecurityGroupRule(DeleteDBInstanceSecurityGroupRuleRequest request) {
         try {
@@ -2506,6 +2520,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engine
+      * SQL Server
+      * ### [](#)References
+      * [Configure security group settings for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
+      *
+     */
     @Override
     public CompletableFuture<DescribeDBInstanceSecurityGroupRuleResponse> describeDBInstanceSecurityGroupRule(DescribeDBInstanceSecurityGroupRuleRequest request) {
         try {
@@ -3899,13 +3920,11 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ### [](#)Supported database engines
-      * *   RDS MySQL
-      *     **
-      *     **Note** This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
-      * *   RDS SQL Server
-      *     **
-      *     **Note** This operation is supported only for RDS instances that run SQL Server 2008 R2.
-      * *   RDS MariaDB
+      * *   MySQL
+      * > This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
+      * *   SQL Server
+      * > This operation is supported only for RDS instances that run SQL Server 2008 R2.
+      * *   MariaDB
       * ### [](#)Precautions
       * *   Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.
       * *   If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.
@@ -5070,6 +5089,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engine
+      * SQL Server
+      * ### [](#)References
+      * [Configure security group settings for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
+      *
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceSecurityGroupRuleResponse> modifyDBInstanceSecurityGroupRule(ModifyDBInstanceSecurityGroupRuleRequest request) {
         try {

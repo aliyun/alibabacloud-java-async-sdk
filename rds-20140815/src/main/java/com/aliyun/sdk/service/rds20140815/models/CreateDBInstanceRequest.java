@@ -1011,7 +1011,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * The instance type of the instance. You can specify a standard instance type or an economy instance type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
+         * The instance type of the instance. You can specify an instance type of the standard or YiTian product type. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~).
          * <p>
          * 
          * To create a serverless instance, set this parameter to one of the following values:

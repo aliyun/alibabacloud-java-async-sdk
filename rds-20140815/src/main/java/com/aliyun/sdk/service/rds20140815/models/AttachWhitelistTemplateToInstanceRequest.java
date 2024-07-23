@@ -134,7 +134,7 @@ public class AttachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

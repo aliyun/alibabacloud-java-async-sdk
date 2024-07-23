@@ -343,6 +343,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateDBInstanceForRebuildResponse> createDBInstanceForRebuild(CreateDBInstanceForRebuildRequest request);
 
+    /**
+      * ### [](#)Supported database engine
+      * SQL Server
+      * ### [](#)References
+      * [Configure security group settings for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
+      *
+     */
     CompletableFuture<CreateDBInstanceSecurityGroupRuleResponse> createDBInstanceSecurityGroupRule(CreateDBInstanceSecurityGroupRuleRequest request);
 
     /**
@@ -614,6 +621,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteDBInstanceEndpointAddressResponse> deleteDBInstanceEndpointAddress(DeleteDBInstanceEndpointAddressRequest request);
 
+    /**
+      * ### [](#)Supported database engine
+      * SQL Server
+      * ### [](#)References
+      * [Configure security group settings for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
+      *
+     */
     CompletableFuture<DeleteDBInstanceSecurityGroupRuleResponse> deleteDBInstanceSecurityGroupRule(DeleteDBInstanceSecurityGroupRuleRequest request);
 
     /**
@@ -1132,6 +1146,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDBInstanceSSLResponse> describeDBInstanceSSL(DescribeDBInstanceSSLRequest request);
 
+    /**
+      * ### [](#)Supported database engine
+      * SQL Server
+      * ### [](#)References
+      * [Configure security group settings for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
+      *
+     */
     CompletableFuture<DescribeDBInstanceSecurityGroupRuleResponse> describeDBInstanceSecurityGroupRule(DescribeDBInstanceSecurityGroupRuleRequest request);
 
     /**
@@ -1721,13 +1742,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * ### [](#)Supported database engines
-      * *   RDS MySQL
-      *     **
-      *     **Note** This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
-      * *   RDS SQL Server
-      *     **
-      *     **Note** This operation is supported only for RDS instances that run SQL Server 2008 R2.
-      * *   RDS MariaDB
+      * *   MySQL
+      * > This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
+      * *   SQL Server
+      * > This operation is supported only for RDS instances that run SQL Server 2008 R2.
+      * *   MariaDB
       * ### [](#)Precautions
       * *   Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.
       * *   If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.
@@ -2256,6 +2275,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyDBInstanceSSLResponse> modifyDBInstanceSSL(ModifyDBInstanceSSLRequest request);
 
+    /**
+      * ### [](#)Supported database engine
+      * SQL Server
+      * ### [](#)References
+      * [Configure security group settings for an ApsaraDB RDS for SQL Server instance](~~2392322~~)
+      *
+     */
     CompletableFuture<ModifyDBInstanceSecurityGroupRuleResponse> modifyDBInstanceSecurityGroupRule(ModifyDBInstanceSecurityGroupRuleRequest request);
 
     /**

@@ -248,11 +248,8 @@ public class ModifyParameterRequest extends Request {
          * The parameter template ID.
          * <p>
          * 
-         * > 
-         * 
-         * *   If you specify this parameter, you do not need to specify **Parameters**.
-         * 
-         * *   If the parameter template can be applied only after the instance is restarted, you must specify **Forcerestart**.
+         * > *   If you specify this parameter, you do not need to specify **Parameters**.
+         * > *   If the parameter template can be applied only after the instance is restarted, you must specify **Forcerestart**.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);

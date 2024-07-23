@@ -122,7 +122,7 @@ public class QueryNotifyRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any **non-zero** positive integer.
+         * The page number. Pages start from page 1. Default value: 1.****
          * <p>
          * 
          * Default value: **1**.
@@ -134,7 +134,7 @@ public class QueryNotifyRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
          * *   **30**

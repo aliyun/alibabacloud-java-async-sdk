@@ -49,7 +49,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the instance.
+         * The details of instances.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -485,7 +485,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RecoveryModel.
+             * The recovery model. Valid values: Simple and Full.
              */
             public Builder recoveryModel(String recoveryModel) {
                 this.recoveryModel = recoveryModel;

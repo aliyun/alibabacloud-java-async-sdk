@@ -170,7 +170,7 @@ public class DescribeBinlogFilesRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -209,7 +209,7 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: any non-zero positive integer.
+         * The page number. Pages start from 1.
          * <p>
          * 
          * Default value: **1**.
@@ -221,7 +221,7 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Valid values: **30** to **100**.

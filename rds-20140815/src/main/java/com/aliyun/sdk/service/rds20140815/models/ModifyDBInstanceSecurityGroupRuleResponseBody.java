@@ -61,7 +61,7 @@ public class ModifyDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -69,7 +69,7 @@ public class ModifyDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The information about the status code.
          */
         public Builder message(String message) {
             this.message = message;
@@ -77,7 +77,7 @@ public class ModifyDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

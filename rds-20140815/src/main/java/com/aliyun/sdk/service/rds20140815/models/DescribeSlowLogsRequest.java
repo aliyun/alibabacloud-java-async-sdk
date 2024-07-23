@@ -246,7 +246,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: any non-zero positive integer.
+         * The page number. Pages start from 1.
          * <p>
          * 
          * Default value: **1**.
@@ -258,7 +258,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30** to **100**. Default value: **30**.
+         * The number of entries per page. Valid values: **30** to **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
