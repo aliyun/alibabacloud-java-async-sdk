@@ -131,15 +131,35 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
     } 
 
     public static class AdminUserInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Email")
+        private String email;
+
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
+
+        @com.aliyun.core.annotation.NameInMap("JobNumber")
+        private String jobNumber;
 
         @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
+        @com.aliyun.core.annotation.NameInMap("Phone")
+        private String phone;
+
+        @com.aliyun.core.annotation.NameInMap("RealNickName")
+        private String realNickName;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
         private AdminUserInfos(Builder builder) {
+            this.email = builder.email;
             this.endUserId = builder.endUserId;
+            this.jobNumber = builder.jobNumber;
             this.nickName = builder.nickName;
+            this.phone = builder.phone;
+            this.realNickName = builder.realNickName;
+            this.remark = builder.remark;
         }
 
         public static Builder builder() {
@@ -151,10 +171,24 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
+        }
+
+        /**
          * @return endUserId
          */
         public String getEndUserId() {
             return this.endUserId;
+        }
+
+        /**
+         * @return jobNumber
+         */
+        public String getJobNumber() {
+            return this.jobNumber;
         }
 
         /**
@@ -164,9 +198,43 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             return this.nickName;
         }
 
+        /**
+         * @return phone
+         */
+        public String getPhone() {
+            return this.phone;
+        }
+
+        /**
+         * @return realNickName
+         */
+        public String getRealNickName() {
+            return this.realNickName;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
         public static final class Builder {
+            private String email; 
             private String endUserId; 
+            private String jobNumber; 
             private String nickName; 
+            private String phone; 
+            private String realNickName; 
+            private String remark; 
+
+            /**
+             * Email.
+             */
+            public Builder email(String email) {
+                this.email = email;
+                return this;
+            }
 
             /**
              * EndUserId.
@@ -177,10 +245,42 @@ public class DescribeCloudDriveGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * JobNumber.
+             */
+            public Builder jobNumber(String jobNumber) {
+                this.jobNumber = jobNumber;
+                return this;
+            }
+
+            /**
              * NickName.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
+                return this;
+            }
+
+            /**
+             * Phone.
+             */
+            public Builder phone(String phone) {
+                this.phone = phone;
+                return this;
+            }
+
+            /**
+             * RealNickName.
+             */
+            public Builder realNickName(String realNickName) {
+                this.realNickName = realNickName;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 
