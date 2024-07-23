@@ -25,7 +25,7 @@ public class SubmitTraceAbJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Level")
-    private String level;
+    private Long level;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Output")
@@ -98,7 +98,7 @@ public class SubmitTraceAbJobRequest extends Request {
     /**
      * @return level
      */
-    public String getLevel() {
+    public Long getLevel() {
         return this.level;
     }
 
@@ -141,7 +141,7 @@ public class SubmitTraceAbJobRequest extends Request {
         private String callBack; 
         private String cipherBase64ed; 
         private String input; 
-        private String level; 
+        private Long level; 
         private String output; 
         private String startTime; 
         private String totalTime; 
@@ -195,7 +195,7 @@ public class SubmitTraceAbJobRequest extends Request {
         /**
          * Level.
          */
-        public Builder level(String level) {
+        public Builder level(Long level) {
             this.putQueryParameter("Level", level);
             this.level = level;
             return this;

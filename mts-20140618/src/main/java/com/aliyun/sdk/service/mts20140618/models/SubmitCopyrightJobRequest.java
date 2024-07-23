@@ -25,7 +25,7 @@ public class SubmitCopyrightJobRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Level")
-    private String level;
+    private Long level;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Message")
@@ -109,7 +109,7 @@ public class SubmitCopyrightJobRequest extends Request {
     /**
      * @return level
      */
-    public String getLevel() {
+    public Long getLevel() {
         return this.level;
     }
 
@@ -166,7 +166,7 @@ public class SubmitCopyrightJobRequest extends Request {
         private String callBack; 
         private String description; 
         private String input; 
-        private String level; 
+        private Long level; 
         private String message; 
         private String output; 
         private String params; 
@@ -224,7 +224,7 @@ public class SubmitCopyrightJobRequest extends Request {
         /**
          * Level.
          */
-        public Builder level(String level) {
+        public Builder level(Long level) {
             this.putQueryParameter("Level", level);
             this.level = level;
             return this;
