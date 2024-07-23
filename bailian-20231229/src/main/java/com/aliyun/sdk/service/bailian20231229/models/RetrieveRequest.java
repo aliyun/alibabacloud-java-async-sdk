@@ -58,6 +58,10 @@ public class RetrieveRequest extends Request {
     private Boolean saveRetrieverHistory;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchFilters")
+    private java.util.List < java.util.Map<String, String>> searchFilters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SparseSimilarityTopK")
     private Integer sparseSimilarityTopK;
 
@@ -74,6 +78,7 @@ public class RetrieveRequest extends Request {
         this.rerankTopN = builder.rerankTopN;
         this.rewrite = builder.rewrite;
         this.saveRetrieverHistory = builder.saveRetrieverHistory;
+        this.searchFilters = builder.searchFilters;
         this.sparseSimilarityTopK = builder.sparseSimilarityTopK;
     }
 
@@ -168,6 +173,13 @@ public class RetrieveRequest extends Request {
     }
 
     /**
+     * @return searchFilters
+     */
+    public java.util.List < java.util.Map<String, String>> getSearchFilters() {
+        return this.searchFilters;
+    }
+
+    /**
      * @return sparseSimilarityTopK
      */
     public Integer getSparseSimilarityTopK() {
@@ -186,6 +198,7 @@ public class RetrieveRequest extends Request {
         private Integer rerankTopN; 
         private java.util.List < Rewrite> rewrite; 
         private Boolean saveRetrieverHistory; 
+        private java.util.List < java.util.Map<String, String>> searchFilters; 
         private Integer sparseSimilarityTopK; 
 
         private Builder() {
@@ -205,6 +218,7 @@ public class RetrieveRequest extends Request {
             this.rerankTopN = request.rerankTopN;
             this.rewrite = request.rewrite;
             this.saveRetrieverHistory = request.saveRetrieverHistory;
+            this.searchFilters = request.searchFilters;
             this.sparseSimilarityTopK = request.sparseSimilarityTopK;
         } 
 
@@ -306,6 +320,16 @@ public class RetrieveRequest extends Request {
         public Builder saveRetrieverHistory(Boolean saveRetrieverHistory) {
             this.putQueryParameter("SaveRetrieverHistory", saveRetrieverHistory);
             this.saveRetrieverHistory = saveRetrieverHistory;
+            return this;
+        }
+
+        /**
+         * SearchFilters.
+         */
+        public Builder searchFilters(java.util.List < java.util.Map<String, String>> searchFilters) {
+            String searchFiltersShrink = shrink(searchFilters, "SearchFilters", "json");
+            this.putQueryParameter("SearchFilters", searchFiltersShrink);
+            this.searchFilters = searchFilters;
             return this;
         }
 
