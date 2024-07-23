@@ -19,9 +19,13 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ApplyEngineConfigResponse> applyEngineConfig(ApplyEngineConfigRequest request);
+
     CompletableFuture<BackflowFeatureConsistencyCheckJobDataResponse> backflowFeatureConsistencyCheckJobData(BackflowFeatureConsistencyCheckJobDataRequest request);
 
     CompletableFuture<CheckInstanceResourcesResponse> checkInstanceResources(CheckInstanceResourcesRequest request);
+
+    CompletableFuture<CloneEngineConfigResponse> cloneEngineConfig(CloneEngineConfigRequest request);
 
     CompletableFuture<CloneExperimentResponse> cloneExperiment(CloneExperimentRequest request);
 
@@ -40,6 +44,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCalculationJobsResponse> createCalculationJobs(CreateCalculationJobsRequest request);
 
     CompletableFuture<CreateCrowdResponse> createCrowd(CreateCrowdRequest request);
+
+    CompletableFuture<CreateEngineConfigResponse> createEngineConfig(CreateEngineConfigRequest request);
 
     CompletableFuture<CreateExperimentResponse> createExperiment(CreateExperimentRequest request);
 
@@ -79,6 +85,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteCrowdResponse> deleteCrowd(DeleteCrowdRequest request);
 
+    CompletableFuture<DeleteEngineConfigResponse> deleteEngineConfig(DeleteEngineConfigRequest request);
+
     CompletableFuture<DeleteExperimentResponse> deleteExperiment(DeleteExperimentRequest request);
 
     CompletableFuture<DeleteExperimentGroupResponse> deleteExperimentGroup(DeleteExperimentGroupRequest request);
@@ -114,6 +122,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetABMetricGroupResponse> getABMetricGroup(GetABMetricGroupRequest request);
 
     CompletableFuture<GetCalculationJobResponse> getCalculationJob(GetCalculationJobRequest request);
+
+    CompletableFuture<GetEngineConfigResponse> getEngineConfig(GetEngineConfigRequest request);
 
     CompletableFuture<GetExperimentResponse> getExperiment(GetExperimentRequest request);
 
@@ -156,6 +166,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCrowdUsersResponse> listCrowdUsers(ListCrowdUsersRequest request);
 
     CompletableFuture<ListCrowdsResponse> listCrowds(ListCrowdsRequest request);
+
+    CompletableFuture<ListEngineConfigsResponse> listEngineConfigs(ListEngineConfigsRequest request);
 
     CompletableFuture<ListExperimentGroupsResponse> listExperimentGroups(ListExperimentGroupsRequest request);
 
@@ -230,6 +242,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateABMetricGroupResponse> updateABMetricGroup(UpdateABMetricGroupRequest request);
 
     CompletableFuture<UpdateCrowdResponse> updateCrowd(UpdateCrowdRequest request);
+
+    CompletableFuture<UpdateEngineConfigResponse> updateEngineConfig(UpdateEngineConfigRequest request);
 
     CompletableFuture<UpdateExperimentResponse> updateExperiment(UpdateExperimentRequest request);
 
