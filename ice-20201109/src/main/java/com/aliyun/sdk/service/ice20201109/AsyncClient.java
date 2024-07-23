@@ -303,6 +303,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SearchEditingProjectResponse> searchEditingProject(SearchEditingProjectRequest request);
 
+    /**
+      * If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).
+      *
+     */
     CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request);
 
     CompletableFuture<SearchMediaByAILabelResponse> searchMediaByAILabel(SearchMediaByAILabelRequest request);

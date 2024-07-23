@@ -78,7 +78,7 @@ public class ListDNADBResponseBody extends TeaModel {
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("Model")
-        private Integer model;
+        private String model;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -119,7 +119,7 @@ public class ListDNADBResponseBody extends TeaModel {
         /**
          * @return model
          */
-        public Integer getModel() {
+        public String getModel() {
             return this.model;
         }
 
@@ -140,7 +140,7 @@ public class ListDNADBResponseBody extends TeaModel {
         public static final class Builder {
             private String DBId; 
             private String description; 
-            private Integer model; 
+            private String model; 
             private String name; 
             private String status; 
 
@@ -163,7 +163,7 @@ public class ListDNADBResponseBody extends TeaModel {
             /**
              * Model.
              */
-            public Builder model(Integer model) {
+            public Builder model(String model) {
                 this.model = model;
                 return this;
             }

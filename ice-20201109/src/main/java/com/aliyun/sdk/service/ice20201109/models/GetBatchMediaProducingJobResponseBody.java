@@ -86,6 +86,9 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MediaURL")
         private String mediaURL;
 
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
+        private String projectId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -95,6 +98,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             this.jobId = builder.jobId;
             this.mediaId = builder.mediaId;
             this.mediaURL = builder.mediaURL;
+            this.projectId = builder.projectId;
             this.status = builder.status;
         }
 
@@ -142,6 +146,13 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return projectId
+         */
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -154,6 +165,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
             private String jobId; 
             private String mediaId; 
             private String mediaURL; 
+            private String projectId; 
             private String status; 
 
             /**
@@ -193,6 +205,14 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
              */
             public Builder mediaURL(String mediaURL) {
                 this.mediaURL = mediaURL;
+                return this;
+            }
+
+            /**
+             * ProjectId.
+             */
+            public Builder projectId(String projectId) {
+                this.projectId = projectId;
                 return this;
             }
 

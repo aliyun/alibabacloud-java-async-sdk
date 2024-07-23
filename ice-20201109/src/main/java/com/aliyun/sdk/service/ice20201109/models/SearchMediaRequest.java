@@ -160,7 +160,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * The ID of the entity.
          */
         public Builder entityId(String entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -169,7 +169,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * Match.
+         * The filter conditions. For more information about the parameter syntax, see [Media asset search protocols](~~2584256~~).
          */
         public Builder match(String match) {
             this.putQueryParameter("Match", match);
@@ -178,7 +178,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. Default value: 1.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -187,7 +187,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. Maximum value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -196,7 +196,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * ScrollToken.
+         * The pagination identifier. The value can be up to 32 characters in length. The first time you call this operation for each new search, you do not need to specify this parameter. The value of this parameter is returned each time data records that meet the specified filter condition are found. The value is used to record the current position of queried data. Record the returned parameter value and set this parameter according to the following requirements during the next search: If you need to traverse all data that meets the filter criteria, you must set the ScrollToken parameter. If the value of the PageNo parameter exceeds 200, we recommend that you set this parameter to optimize search performance. You can only page backward. You can page a maximum of 1,000 entries in an operation.
          */
         public Builder scrollToken(String scrollToken) {
             this.putQueryParameter("ScrollToken", scrollToken);
@@ -205,7 +205,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * SearchLibName.
+         * The search library.
          */
         public Builder searchLibName(String searchLibName) {
             this.putQueryParameter("SearchLibName", searchLibName);
@@ -214,7 +214,7 @@ public class SearchMediaRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * The sort field and order. Separate multiple parameters with commas (,).
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

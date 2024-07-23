@@ -2084,6 +2084,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).
+      *
+     */
     @Override
     public CompletableFuture<SearchMediaResponse> searchMedia(SearchMediaRequest request) {
         try {
