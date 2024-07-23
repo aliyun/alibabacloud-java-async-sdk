@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDebugAppInstanceResponseBody</p>
  */
 public class GetDebugAppInstanceResponseBody extends TeaModel {
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
     private String appInstanceGroupId;
 
-    @NameInMap("AppInstanceId")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceId")
     private String appInstanceId;
 
-    @NameInMap("AppVersion")
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
-    @NameInMap("AuthCode")
+    @com.aliyun.core.annotation.NameInMap("AuthCode")
     private String authCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private GetDebugAppInstanceResponseBody(Builder builder) {

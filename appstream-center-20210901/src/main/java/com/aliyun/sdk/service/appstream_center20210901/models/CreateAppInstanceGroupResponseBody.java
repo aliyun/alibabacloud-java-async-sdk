@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAppInstanceGroupResponseBody</p>
  */
 public class CreateAppInstanceGroupResponseBody extends TeaModel {
-    @NameInMap("AppInstanceGroupModel")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupModel")
     private AppInstanceGroupModel appInstanceGroupModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAppInstanceGroupResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class CreateAppInstanceGroupResponseBody extends TeaModel {
     } 
 
     public static class AppInstanceGroupModel extends TeaModel {
-        @NameInMap("AppInstanceGroupId")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;
 
-        @NameInMap("NodePoolId")
+        @com.aliyun.core.annotation.NameInMap("NodePoolId")
         private String nodePoolId;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
         private AppInstanceGroupModel(Builder builder) {

@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteAppInstanceGroupResponse} extends {@link TeaModel}
+ * {@link ModifyAppPolicyResponse} extends {@link TeaModel}
  *
- * <p>DeleteAppInstanceGroupResponse</p>
+ * <p>ModifyAppPolicyResponse</p>
  */
-public class DeleteAppInstanceGroupResponse extends Response {
+public class ModifyAppPolicyResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DeleteAppInstanceGroupResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteAppInstanceGroupResponseBody body;
+    private ModifyAppPolicyResponseBody body;
 
-    private DeleteAppInstanceGroupResponse(BuilderImpl builder) {
+    private ModifyAppPolicyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteAppInstanceGroupResponse create() {
+    public static ModifyAppPolicyResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DeleteAppInstanceGroupResponse extends Response {
     /**
      * @return body
      */
-    public DeleteAppInstanceGroupResponseBody getBody() {
+    public ModifyAppPolicyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteAppInstanceGroupResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyAppPolicyResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteAppInstanceGroupResponseBody body);
+        Builder body(ModifyAppPolicyResponseBody body);
 
         @Override
-        DeleteAppInstanceGroupResponse build();
+        ModifyAppPolicyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteAppInstanceGroupResponse, Builder>
+            extends Response.BuilderImpl<ModifyAppPolicyResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteAppInstanceGroupResponseBody body; 
+        private ModifyAppPolicyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteAppInstanceGroupResponse response) {
+        private BuilderImpl(ModifyAppPolicyResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DeleteAppInstanceGroupResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteAppInstanceGroupResponseBody body) {
+        public Builder body(ModifyAppPolicyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteAppInstanceGroupResponse build() {
-            return new DeleteAppInstanceGroupResponse(this);
+        public ModifyAppPolicyResponse build() {
+            return new ModifyAppPolicyResponse(this);
         } 
 
     } 

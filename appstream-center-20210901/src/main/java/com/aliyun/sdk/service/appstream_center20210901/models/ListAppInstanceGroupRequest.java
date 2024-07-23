@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAppInstanceGroupRequest</p>
  */
 public class ListAppInstanceGroupRequest extends Request {
-    @Query
-    @NameInMap("AppCenterImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppCenterImageId")
     private String appCenterImageId;
 
-    @Query
-    @NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
     private String appInstanceGroupId;
 
-    @Query
-    @NameInMap("AppInstanceGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupName")
     private String appInstanceGroupName;
 
-    @Query
-    @NameInMap("BizRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
-    @Query
-    @NameInMap("NodeInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeInstanceType")
     private String nodeInstanceType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @Deprecated
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private java.util.List < String > status;
 
     private ListAppInstanceGroupRequest(Builder builder) {
@@ -60,6 +64,7 @@ public class ListAppInstanceGroupRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.productType = builder.productType;
+        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -133,6 +138,13 @@ public class ListAppInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return status
      */
     public java.util.List < String > getStatus() {
@@ -148,6 +160,7 @@ public class ListAppInstanceGroupRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String productType; 
+        private String regionId; 
         private java.util.List < String > status; 
 
         private Builder() {
@@ -164,6 +177,7 @@ public class ListAppInstanceGroupRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.productType = request.productType;
+            this.regionId = request.regionId;
             this.status = request.status;
         } 
 
@@ -236,6 +250,15 @@ public class ListAppInstanceGroupRequest extends Request {
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
             this.productType = productType;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

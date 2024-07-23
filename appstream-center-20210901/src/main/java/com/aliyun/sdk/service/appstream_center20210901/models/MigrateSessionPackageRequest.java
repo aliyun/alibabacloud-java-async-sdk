@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MigrateSessionPackageRequest</p>
  */
 public class MigrateSessionPackageRequest extends Request {
-    @Body
-    @NameInMap("DestProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DestProjectId")
     private String destProjectId;
 
-    @Body
-    @NameInMap("SessionPackageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionPackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionPackageId;
 
-    @Body
-    @NameInMap("SourceProjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceProjectId")
     private String sourceProjectId;
 
     private MigrateSessionPackageRequest(Builder builder) {

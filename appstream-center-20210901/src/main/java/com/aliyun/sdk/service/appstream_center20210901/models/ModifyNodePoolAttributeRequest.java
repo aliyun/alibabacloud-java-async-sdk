@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyNodePoolAttributeRequest</p>
  */
 public class ModifyNodePoolAttributeRequest extends Request {
-    @Body
-    @NameInMap("BizRegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
-    @Body
-    @NameInMap("NodeCapacity")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeCapacity")
     private Integer nodeCapacity;
 
-    @Body
-    @NameInMap("NodePoolStrategy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodePoolStrategy")
     private NodePoolStrategy nodePoolStrategy;
 
-    @Body
-    @NameInMap("PoolId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PoolId")
     private String poolId;
 
-    @Body
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
     private ModifyNodePoolAttributeRequest(Builder builder) {
@@ -163,13 +162,13 @@ public class ModifyNodePoolAttributeRequest extends Request {
     } 
 
     public static class TimerPeriods extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private TimerPeriods(Builder builder) {
@@ -244,13 +243,13 @@ public class ModifyNodePoolAttributeRequest extends Request {
 
     }
     public static class RecurrenceSchedules extends TeaModel {
-        @NameInMap("RecurrenceType")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
         private String recurrenceType;
 
-        @NameInMap("RecurrenceValues")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValues")
         private java.util.List < Integer > recurrenceValues;
 
-        @NameInMap("TimerPeriods")
+        @com.aliyun.core.annotation.NameInMap("TimerPeriods")
         private java.util.List < TimerPeriods> timerPeriods;
 
         private RecurrenceSchedules(Builder builder) {
@@ -332,34 +331,34 @@ public class ModifyNodePoolAttributeRequest extends Request {
 
     }
     public static class NodePoolStrategy extends TeaModel {
-        @NameInMap("MaxScalingAmount")
+        @com.aliyun.core.annotation.NameInMap("MaxScalingAmount")
         private Integer maxScalingAmount;
 
-        @NameInMap("NodeAmount")
+        @com.aliyun.core.annotation.NameInMap("NodeAmount")
         private Integer nodeAmount;
 
-        @NameInMap("RecurrenceSchedules")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceSchedules")
         private java.util.List < RecurrenceSchedules> recurrenceSchedules;
 
-        @NameInMap("ScalingDownAfterIdleMinutes")
+        @com.aliyun.core.annotation.NameInMap("ScalingDownAfterIdleMinutes")
         private Integer scalingDownAfterIdleMinutes;
 
-        @NameInMap("ScalingStep")
+        @com.aliyun.core.annotation.NameInMap("ScalingStep")
         private Integer scalingStep;
 
-        @NameInMap("ScalingUsageThreshold")
+        @com.aliyun.core.annotation.NameInMap("ScalingUsageThreshold")
         private String scalingUsageThreshold;
 
-        @NameInMap("StrategyDisableDate")
+        @com.aliyun.core.annotation.NameInMap("StrategyDisableDate")
         private String strategyDisableDate;
 
-        @NameInMap("StrategyEnableDate")
+        @com.aliyun.core.annotation.NameInMap("StrategyEnableDate")
         private String strategyEnableDate;
 
-        @NameInMap("StrategyType")
+        @com.aliyun.core.annotation.NameInMap("StrategyType")
         private String strategyType;
 
-        @NameInMap("WarmUp")
+        @com.aliyun.core.annotation.NameInMap("WarmUp")
         private Boolean warmUp;
 
         private NodePoolStrategy(Builder builder) {

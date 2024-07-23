@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyProjectPolicyRequest</p>
  */
 public class ModifyProjectPolicyRequest extends Request {
-    @Query
-    @NameInMap("Clipboard")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Clipboard")
     private Integer clipboard;
 
-    @Query
-    @NameInMap("FileTransfer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileTransfer")
     private Integer fileTransfer;
 
-    @Query
-    @NameInMap("FrameRate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrameRate")
     private Integer frameRate;
 
-    @Query
-    @NameInMap("KeepAliveDuration")
-    @Validation(maximum = 300)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepAliveDuration")
+    @com.aliyun.core.annotation.Validation(maximum = 300)
     private Integer keepAliveDuration;
 
-    @Query
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @Query
-    @NameInMap("SessionResolutionHeight")
-    @Validation(maximum = 4096, minimum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionResolutionHeight")
+    @com.aliyun.core.annotation.Validation(maximum = 4096, minimum = 500)
     private Integer sessionResolutionHeight;
 
-    @Query
-    @NameInMap("SessionResolutionWidth")
-    @Validation(maximum = 4096, minimum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionResolutionWidth")
+    @com.aliyun.core.annotation.Validation(maximum = 4096, minimum = 500)
     private Integer sessionResolutionWidth;
 
-    @Query
-    @NameInMap("StreamingMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamingMode")
     private String streamingMode;
 
-    @Query
-    @NameInMap("TerminalResolutionAdaptation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminalResolutionAdaptation")
     private Boolean terminalResolutionAdaptation;
 
     private ModifyProjectPolicyRequest(Builder builder) {

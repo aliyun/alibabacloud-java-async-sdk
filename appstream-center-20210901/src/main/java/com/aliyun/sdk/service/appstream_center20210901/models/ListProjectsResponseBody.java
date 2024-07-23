@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectsResponseBody</p>
  */
 public class ListProjectsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListProjectsResponseBody(Builder builder) {
@@ -192,43 +191,43 @@ public class ListProjectsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccessPageId")
+        @com.aliyun.core.annotation.NameInMap("AccessPageId")
         private java.util.List < Long > accessPageId;
 
-        @NameInMap("AvailableHours")
+        @com.aliyun.core.annotation.NameInMap("AvailableHours")
         private Integer availableHours;
 
-        @NameInMap("ContentId")
+        @com.aliyun.core.annotation.NameInMap("ContentId")
         private String contentId;
 
-        @NameInMap("ContentName")
+        @com.aliyun.core.annotation.NameInMap("ContentName")
         private String contentName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InUseSessions")
+        @com.aliyun.core.annotation.NameInMap("InUseSessions")
         private Long inUseSessions;
 
-        @NameInMap("MaxHours")
+        @com.aliyun.core.annotation.NameInMap("MaxHours")
         private Long maxHours;
 
-        @NameInMap("MaxSessions")
+        @com.aliyun.core.annotation.NameInMap("MaxSessions")
         private Long maxSessions;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("ProjectState")
+        @com.aliyun.core.annotation.NameInMap("ProjectState")
         private String projectState;
 
-        @NameInMap("SessionSpec")
+        @com.aliyun.core.annotation.NameInMap("SessionSpec")
         private String sessionSpec;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BuySessionPackageRequest</p>
  */
 public class BuySessionPackageRequest extends Request {
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("MaxSessions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSessions")
     private Integer maxSessions;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("SessionPackageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionPackageName")
     private String sessionPackageName;
 
-    @Query
-    @NameInMap("SessionPackageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionPackageType")
     private String sessionPackageType;
 
-    @Query
-    @NameInMap("SessionSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionSpec;
 
-    @Query
-    @NameInMap("SessionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionType;
 
     private BuySessionPackageRequest(Builder builder) {
         super(builder);
+        this.autoPay = builder.autoPay;
         this.chargeType = builder.chargeType;
         this.maxSessions = builder.maxSessions;
         this.period = builder.period;
@@ -80,6 +84,13 @@ public class BuySessionPackageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -153,6 +164,7 @@ public class BuySessionPackageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<BuySessionPackageRequest, Builder> {
+        private Boolean autoPay; 
         private String chargeType; 
         private Integer maxSessions; 
         private Integer period; 
@@ -170,6 +182,7 @@ public class BuySessionPackageRequest extends Request {
 
         private Builder(BuySessionPackageRequest request) {
             super(request);
+            this.autoPay = request.autoPay;
             this.chargeType = request.chargeType;
             this.maxSessions = request.maxSessions;
             this.period = request.period;
@@ -181,6 +194,15 @@ public class BuySessionPackageRequest extends Request {
             this.sessionSpec = request.sessionSpec;
             this.sessionType = request.sessionType;
         } 
+
+        /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
 
         /**
          * ChargeType.

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAppInstancesResponseBody</p>
  */
 public class ListAppInstancesResponseBody extends TeaModel {
-    @NameInMap("AppInstanceModels")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceModels")
     private java.util.List < AppInstanceModels> appInstanceModels;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAppInstancesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListAppInstancesResponseBody extends TeaModel {
     } 
 
     public static class BindInfo extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("UsageDuration")
+        @com.aliyun.core.annotation.NameInMap("UsageDuration")
         private Long usageDuration;
 
         private BindInfo(Builder builder) {
@@ -193,28 +192,28 @@ public class ListAppInstancesResponseBody extends TeaModel {
 
     }
     public static class AppInstanceModels extends TeaModel {
-        @NameInMap("AppInstanceGroupId")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;
 
-        @NameInMap("AppInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceId")
         private String appInstanceId;
 
-        @NameInMap("BindInfo")
+        @com.aliyun.core.annotation.NameInMap("BindInfo")
         private BindInfo bindInfo;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("MainEthPublicIp")
+        @com.aliyun.core.annotation.NameInMap("MainEthPublicIp")
         private String mainEthPublicIp;
 
-        @NameInMap("SessionStatus")
+        @com.aliyun.core.annotation.NameInMap("SessionStatus")
         private String sessionStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AppInstanceModels(Builder builder) {

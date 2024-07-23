@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSessionPackagesResponseBody</p>
  */
 public class ListSessionPackagesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListSessionPackagesResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class ListSessionPackagesResponseBody extends TeaModel {
     } 
 
     public static class InstanceObject extends TeaModel {
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("TotalTime")
+        @com.aliyun.core.annotation.NameInMap("TotalTime")
         private Long totalTime;
 
-        @NameInMap("UsedTime")
+        @com.aliyun.core.annotation.NameInMap("UsedTime")
         private Long usedTime;
 
         private InstanceObject(Builder builder) {
@@ -313,58 +312,58 @@ public class ListSessionPackagesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AvailableHours")
+        @com.aliyun.core.annotation.NameInMap("AvailableHours")
         private Long availableHours;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("DeleteStatus")
+        @com.aliyun.core.annotation.NameInMap("DeleteStatus")
         private Integer deleteStatus;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("InstanceObject")
+        @com.aliyun.core.annotation.NameInMap("InstanceObject")
         private InstanceObject instanceObject;
 
-        @NameInMap("MaxHours")
+        @com.aliyun.core.annotation.NameInMap("MaxHours")
         private Long maxHours;
 
-        @NameInMap("MaxSessions")
+        @com.aliyun.core.annotation.NameInMap("MaxSessions")
         private Long maxSessions;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SessionPackageId")
+        @com.aliyun.core.annotation.NameInMap("SessionPackageId")
         private String sessionPackageId;
 
-        @NameInMap("SessionPackageName")
+        @com.aliyun.core.annotation.NameInMap("SessionPackageName")
         private String sessionPackageName;
 
-        @NameInMap("SessionPackageTypeId")
+        @com.aliyun.core.annotation.NameInMap("SessionPackageTypeId")
         private String sessionPackageTypeId;
 
-        @NameInMap("SessionSpec")
+        @com.aliyun.core.annotation.NameInMap("SessionSpec")
         private String sessionSpec;
 
-        @NameInMap("SessionUsageRate")
+        @com.aliyun.core.annotation.NameInMap("SessionUsageRate")
         private Long sessionUsageRate;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private Integer state;
 
-        @NameInMap("UserIdentification")
+        @com.aliyun.core.annotation.NameInMap("UserIdentification")
         private Long userIdentification;
 
         private Data(Builder builder) {

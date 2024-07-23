@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceRenewPriceResponseBody</p>
  */
 public class GetResourceRenewPriceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetResourceRenewPriceResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
     } 
 
     public static class Promotions extends TeaModel {
-        @NameInMap("OptionCode")
+        @com.aliyun.core.annotation.NameInMap("OptionCode")
         private String optionCode;
 
-        @NameInMap("PromotionDesc")
+        @com.aliyun.core.annotation.NameInMap("PromotionDesc")
         private String promotionDesc;
 
-        @NameInMap("PromotionId")
+        @com.aliyun.core.annotation.NameInMap("PromotionId")
         private String promotionId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
         private Promotions(Builder builder) {
@@ -193,19 +192,19 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
 
     }
     public static class Price extends TeaModel {
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private String discountPrice;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private String originalPrice;
 
-        @NameInMap("Promotions")
+        @com.aliyun.core.annotation.NameInMap("Promotions")
         private java.util.List < Promotions> promotions;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private String tradePrice;
 
         private Price(Builder builder) {
@@ -314,10 +313,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
         private Rules(Builder builder) {
@@ -375,10 +374,10 @@ public class GetResourceRenewPriceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTenantConfigRequest</p>
  */
 public class ModifyTenantConfigRequest extends Request {
-    @Body
-    @NameInMap("AppInstanceGroupExpireRemind")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupExpireRemind")
     private Boolean appInstanceGroupExpireRemind;
 
     private ModifyTenantConfigRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConnectionTicketRequest</p>
  */
 public class GetConnectionTicketRequest extends Request {
-    @Body
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Body
-    @NameInMap("AppInstanceGroupIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupIdList")
     private java.util.List < String > appInstanceGroupIdList;
 
-    @Body
-    @NameInMap("AppInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceId")
     private String appInstanceId;
 
-    @Body
-    @NameInMap("AppInstancePersistentId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstancePersistentId")
     private String appInstancePersistentId;
 
-    @Body
-    @NameInMap("AppStartParam")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppStartParam")
     private String appStartParam;
 
-    @Body
-    @NameInMap("AppVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
-    @Body
-    @NameInMap("BizRegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
-    @Body
-    @NameInMap("EndUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endUserId;
 
-    @Body
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
-    @Body
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private GetConnectionTicketRequest(Builder builder) {

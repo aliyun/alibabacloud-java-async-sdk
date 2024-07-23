@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyTenantConfigResponseBody} extends {@link TeaModel}
+ * {@link ModifyAppPolicyResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyTenantConfigResponseBody</p>
+ * <p>ModifyAppPolicyResponseBody</p>
  */
-public class ModifyTenantConfigResponseBody extends TeaModel {
+public class ModifyAppPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ModifyTenantConfigResponseBody(Builder builder) {
+    private ModifyAppPolicyResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class ModifyTenantConfigResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyTenantConfigResponseBody create() {
+    public static ModifyAppPolicyResponseBody create() {
         return builder().build();
     }
 
@@ -44,8 +44,8 @@ public class ModifyTenantConfigResponseBody extends TeaModel {
             return this;
         }
 
-        public ModifyTenantConfigResponseBody build() {
-            return new ModifyTenantConfigResponseBody(this);
+        public ModifyAppPolicyResponseBody build() {
+            return new ModifyAppPolicyResponseBody(this);
         } 
 
     } 

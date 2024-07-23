@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConnectionTicketResponseBody</p>
  */
 public class GetConnectionTicketResponseBody extends TeaModel {
-    @NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
     private String appInstanceGroupId;
 
-    @NameInMap("AppInstanceId")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceId")
     private String appInstanceId;
 
-    @NameInMap("AppInstancePersistentId")
+    @com.aliyun.core.annotation.NameInMap("AppInstancePersistentId")
     private String appInstancePersistentId;
 
-    @NameInMap("BizRegionId")
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
-    @NameInMap("OsType")
+    @com.aliyun.core.annotation.NameInMap("OsType")
     private String osType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private Long tenantId;
 
-    @NameInMap("Ticket")
+    @com.aliyun.core.annotation.NameInMap("Ticket")
     private String ticket;
 
     private GetConnectionTicketResponseBody(Builder builder) {

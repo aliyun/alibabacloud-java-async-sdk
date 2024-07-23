@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccessPageSessionRequest</p>
  */
 public class GetAccessPageSessionRequest extends Request {
-    @Query
-    @NameInMap("AccessPageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessPageId;
 
-    @Query
-    @NameInMap("AccessPageToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPageToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessPageToken;
 
-    @Query
-    @NameInMap("ExternalUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalUserId")
     private String externalUserId;
 
     private GetAccessPageSessionRequest(Builder builder) {

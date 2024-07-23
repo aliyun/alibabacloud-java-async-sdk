@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateProjectRequest</p>
  */
 public class CreateProjectRequest extends Request {
-    @Query
-    @NameInMap("Clipboard")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Clipboard")
     private Integer clipboard;
 
-    @Query
-    @NameInMap("CloudEnvId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudEnvId")
     private String cloudEnvId;
 
-    @Query
-    @NameInMap("ContentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentId")
     private String contentId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileTransfer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileTransfer")
     private Integer fileTransfer;
 
-    @Query
-    @NameInMap("FrameRate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FrameRate")
     private Integer frameRate;
 
-    @Query
-    @NameInMap("KeepAliveDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepAliveDuration")
     private Integer keepAliveDuration;
 
-    @Query
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @Query
-    @NameInMap("SessionResolutionHeight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionResolutionHeight")
     private Integer sessionResolutionHeight;
 
-    @Query
-    @NameInMap("SessionResolutionWidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionResolutionWidth")
     private Integer sessionResolutionWidth;
 
-    @Query
-    @NameInMap("SessionSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionSpec")
     private String sessionSpec;
 
-    @Query
-    @NameInMap("StreamingMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamingMode")
     private String streamingMode;
 
-    @Query
-    @NameInMap("TerminalResolutionAdaptation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminalResolutionAdaptation")
     private Boolean terminalResolutionAdaptation;
 
     private CreateProjectRequest(Builder builder) {

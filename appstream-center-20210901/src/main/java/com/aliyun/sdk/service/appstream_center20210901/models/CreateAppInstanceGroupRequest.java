@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,94 +11,102 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAppInstanceGroupRequest</p>
  */
 public class CreateAppInstanceGroupRequest extends Request {
-    @Body
-    @NameInMap("AppCenterImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppCenterImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appCenterImageId;
 
-    @Body
-    @NameInMap("AppInstanceGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceGroupName;
 
-    @Body
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Body
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Body
-    @NameInMap("BizRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizRegionId;
 
-    @Body
-    @NameInMap("ChargeResourceMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeResourceMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeResourceMode;
 
-    @Body
-    @NameInMap("ChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Body
-    @NameInMap("Network")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Network")
     private Network network;
 
-    @Body
-    @NameInMap("NodePool")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodePool")
     private NodePool nodePool;
 
-    @Body
-    @NameInMap("Period")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer period;
 
-    @Body
-    @NameInMap("PeriodUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String periodUnit;
 
-    @Body
-    @NameInMap("PreOpenAppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreOpenAppId")
     private String preOpenAppId;
 
-    @Body
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
-    @Body
-    @NameInMap("PromotionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
-    @Body
-    @NameInMap("RuntimePolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuntimePolicy")
     private RuntimePolicy runtimePolicy;
 
-    @Body
-    @NameInMap("SecurityPolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicy")
     private SecurityPolicy securityPolicy;
 
-    @Body
-    @NameInMap("SessionTimeout")
-    @Validation(required = true, maximum = 300)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionTimeout")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 300)
     private Integer sessionTimeout;
 
-    @Body
-    @NameInMap("StoragePolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StoragePolicy")
     private StoragePolicy storagePolicy;
 
-    @Body
-    @NameInMap("UserInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDefinePolicy")
+    private UserDefinePolicy userDefinePolicy;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
     private UserInfo userInfo;
 
-    @Body
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < String > users;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VideoPolicy")
+    private VideoPolicy videoPolicy;
 
     private CreateAppInstanceGroupRequest(Builder builder) {
         super(builder);
@@ -121,8 +128,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         this.securityPolicy = builder.securityPolicy;
         this.sessionTimeout = builder.sessionTimeout;
         this.storagePolicy = builder.storagePolicy;
+        this.userDefinePolicy = builder.userDefinePolicy;
         this.userInfo = builder.userInfo;
         this.users = builder.users;
+        this.videoPolicy = builder.videoPolicy;
     }
 
     public static Builder builder() {
@@ -265,6 +274,13 @@ public class CreateAppInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return userDefinePolicy
+     */
+    public UserDefinePolicy getUserDefinePolicy() {
+        return this.userDefinePolicy;
+    }
+
+    /**
      * @return userInfo
      */
     public UserInfo getUserInfo() {
@@ -276,6 +292,13 @@ public class CreateAppInstanceGroupRequest extends Request {
      */
     public java.util.List < String > getUsers() {
         return this.users;
+    }
+
+    /**
+     * @return videoPolicy
+     */
+    public VideoPolicy getVideoPolicy() {
+        return this.videoPolicy;
     }
 
     public static final class Builder extends Request.Builder<CreateAppInstanceGroupRequest, Builder> {
@@ -297,8 +320,10 @@ public class CreateAppInstanceGroupRequest extends Request {
         private SecurityPolicy securityPolicy; 
         private Integer sessionTimeout; 
         private StoragePolicy storagePolicy; 
+        private UserDefinePolicy userDefinePolicy; 
         private UserInfo userInfo; 
         private java.util.List < String > users; 
+        private VideoPolicy videoPolicy; 
 
         private Builder() {
             super();
@@ -324,8 +349,10 @@ public class CreateAppInstanceGroupRequest extends Request {
             this.securityPolicy = request.securityPolicy;
             this.sessionTimeout = request.sessionTimeout;
             this.storagePolicy = request.storagePolicy;
+            this.userDefinePolicy = request.userDefinePolicy;
             this.userInfo = request.userInfo;
             this.users = request.users;
+            this.videoPolicy = request.videoPolicy;
         } 
 
         /**
@@ -496,6 +523,16 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         /**
+         * UserDefinePolicy.
+         */
+        public Builder userDefinePolicy(UserDefinePolicy userDefinePolicy) {
+            String userDefinePolicyShrink = shrink(userDefinePolicy, "UserDefinePolicy", "json");
+            this.putQueryParameter("UserDefinePolicy", userDefinePolicyShrink);
+            this.userDefinePolicy = userDefinePolicy;
+            return this;
+        }
+
+        /**
          * UserInfo.
          */
         public Builder userInfo(UserInfo userInfo) {
@@ -514,6 +551,16 @@ public class CreateAppInstanceGroupRequest extends Request {
             return this;
         }
 
+        /**
+         * VideoPolicy.
+         */
+        public Builder videoPolicy(VideoPolicy videoPolicy) {
+            String videoPolicyShrink = shrink(videoPolicy, "VideoPolicy", "json");
+            this.putBodyParameter("VideoPolicy", videoPolicyShrink);
+            this.videoPolicy = videoPolicy;
+            return this;
+        }
+
         @Override
         public CreateAppInstanceGroupRequest build() {
             return new CreateAppInstanceGroupRequest(this);
@@ -522,10 +569,10 @@ public class CreateAppInstanceGroupRequest extends Request {
     } 
 
     public static class DomainRules extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
         private DomainRules(Builder builder) {
@@ -583,10 +630,10 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class Routes extends TeaModel {
-        @NameInMap("Destination")
+        @com.aliyun.core.annotation.NameInMap("Destination")
         private String destination;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
         private Routes(Builder builder) {
@@ -644,16 +691,16 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class Network extends TeaModel {
-        @NameInMap("DomainRules")
+        @com.aliyun.core.annotation.NameInMap("DomainRules")
         private java.util.List < DomainRules> domainRules;
 
-        @NameInMap("IpExpireMinutes")
+        @com.aliyun.core.annotation.NameInMap("IpExpireMinutes")
         private Integer ipExpireMinutes;
 
-        @NameInMap("Routes")
+        @com.aliyun.core.annotation.NameInMap("Routes")
         private java.util.List < Routes> routes;
 
-        @NameInMap("StrategyType")
+        @com.aliyun.core.annotation.NameInMap("StrategyType")
         private String strategyType;
 
         private Network(Builder builder) {
@@ -745,13 +792,13 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class TimerPeriods extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private TimerPeriods(Builder builder) {
@@ -826,13 +873,13 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class RecurrenceSchedules extends TeaModel {
-        @NameInMap("RecurrenceType")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
         private String recurrenceType;
 
-        @NameInMap("RecurrenceValues")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValues")
         private java.util.List < Integer > recurrenceValues;
 
-        @NameInMap("TimerPeriods")
+        @com.aliyun.core.annotation.NameInMap("TimerPeriods")
         private java.util.List < TimerPeriods> timerPeriods;
 
         private RecurrenceSchedules(Builder builder) {
@@ -907,40 +954,40 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class NodePool extends TeaModel {
-        @NameInMap("MaxScalingAmount")
+        @com.aliyun.core.annotation.NameInMap("MaxScalingAmount")
         private Integer maxScalingAmount;
 
-        @NameInMap("NodeAmount")
+        @com.aliyun.core.annotation.NameInMap("NodeAmount")
         private Integer nodeAmount;
 
-        @NameInMap("NodeCapacity")
+        @com.aliyun.core.annotation.NameInMap("NodeCapacity")
         private Integer nodeCapacity;
 
-        @NameInMap("NodeInstanceType")
+        @com.aliyun.core.annotation.NameInMap("NodeInstanceType")
         private String nodeInstanceType;
 
-        @NameInMap("RecurrenceSchedules")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceSchedules")
         private java.util.List < RecurrenceSchedules> recurrenceSchedules;
 
-        @NameInMap("ScalingDownAfterIdleMinutes")
+        @com.aliyun.core.annotation.NameInMap("ScalingDownAfterIdleMinutes")
         private Integer scalingDownAfterIdleMinutes;
 
-        @NameInMap("ScalingStep")
+        @com.aliyun.core.annotation.NameInMap("ScalingStep")
         private Integer scalingStep;
 
-        @NameInMap("ScalingUsageThreshold")
+        @com.aliyun.core.annotation.NameInMap("ScalingUsageThreshold")
         private String scalingUsageThreshold;
 
-        @NameInMap("StrategyDisableDate")
+        @com.aliyun.core.annotation.NameInMap("StrategyDisableDate")
         private String strategyDisableDate;
 
-        @NameInMap("StrategyEnableDate")
+        @com.aliyun.core.annotation.NameInMap("StrategyEnableDate")
         private String strategyEnableDate;
 
-        @NameInMap("StrategyType")
+        @com.aliyun.core.annotation.NameInMap("StrategyType")
         private String strategyType;
 
-        @NameInMap("WarmUp")
+        @com.aliyun.core.annotation.NameInMap("WarmUp")
         private Boolean warmUp;
 
         private NodePool(Builder builder) {
@@ -1168,10 +1215,10 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class RuntimePolicy extends TeaModel {
-        @NameInMap("DebugMode")
+        @com.aliyun.core.annotation.NameInMap("DebugMode")
         private String debugMode;
 
-        @NameInMap("SessionType")
+        @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
         private RuntimePolicy(Builder builder) {
@@ -1229,10 +1276,10 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class SecurityPolicy extends TeaModel {
-        @NameInMap("ResetAfterUnbind")
+        @com.aliyun.core.annotation.NameInMap("ResetAfterUnbind")
         private Boolean resetAfterUnbind;
 
-        @NameInMap("SkipUserAuthCheck")
+        @com.aliyun.core.annotation.NameInMap("SkipUserAuthCheck")
         private Boolean skipUserAuthCheck;
 
         private SecurityPolicy(Builder builder) {
@@ -1290,7 +1337,7 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class StoragePolicy extends TeaModel {
-        @NameInMap("StorageTypeList")
+        @com.aliyun.core.annotation.NameInMap("StorageTypeList")
         private java.util.List < String > storageTypeList;
 
         private StoragePolicy(Builder builder) {
@@ -1330,8 +1377,49 @@ public class CreateAppInstanceGroupRequest extends Request {
         } 
 
     }
+    public static class UserDefinePolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomConfig")
+        private String customConfig;
+
+        private UserDefinePolicy(Builder builder) {
+            this.customConfig = builder.customConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserDefinePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customConfig
+         */
+        public String getCustomConfig() {
+            return this.customConfig;
+        }
+
+        public static final class Builder {
+            private String customConfig; 
+
+            /**
+             * CustomConfig.
+             */
+            public Builder customConfig(String customConfig) {
+                this.customConfig = customConfig;
+                return this;
+            }
+
+            public UserDefinePolicy build() {
+                return new UserDefinePolicy(this);
+            } 
+
+        } 
+
+    }
     public static class UserInfo extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private UserInfo(Builder builder) {
@@ -1366,6 +1454,147 @@ public class CreateAppInstanceGroupRequest extends Request {
 
             public UserInfo build() {
                 return new UserInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class VideoPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FrameRate")
+        private Integer frameRate;
+
+        @com.aliyun.core.annotation.NameInMap("SessionResolutionHeight")
+        private Integer sessionResolutionHeight;
+
+        @com.aliyun.core.annotation.NameInMap("SessionResolutionWidth")
+        private Integer sessionResolutionWidth;
+
+        @com.aliyun.core.annotation.NameInMap("StreamingMode")
+        private String streamingMode;
+
+        @com.aliyun.core.annotation.NameInMap("TerminalResolutionAdaptive")
+        private Boolean terminalResolutionAdaptive;
+
+        @com.aliyun.core.annotation.NameInMap("Webrtc")
+        private Boolean webrtc;
+
+        private VideoPolicy(Builder builder) {
+            this.frameRate = builder.frameRate;
+            this.sessionResolutionHeight = builder.sessionResolutionHeight;
+            this.sessionResolutionWidth = builder.sessionResolutionWidth;
+            this.streamingMode = builder.streamingMode;
+            this.terminalResolutionAdaptive = builder.terminalResolutionAdaptive;
+            this.webrtc = builder.webrtc;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VideoPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return frameRate
+         */
+        public Integer getFrameRate() {
+            return this.frameRate;
+        }
+
+        /**
+         * @return sessionResolutionHeight
+         */
+        public Integer getSessionResolutionHeight() {
+            return this.sessionResolutionHeight;
+        }
+
+        /**
+         * @return sessionResolutionWidth
+         */
+        public Integer getSessionResolutionWidth() {
+            return this.sessionResolutionWidth;
+        }
+
+        /**
+         * @return streamingMode
+         */
+        public String getStreamingMode() {
+            return this.streamingMode;
+        }
+
+        /**
+         * @return terminalResolutionAdaptive
+         */
+        public Boolean getTerminalResolutionAdaptive() {
+            return this.terminalResolutionAdaptive;
+        }
+
+        /**
+         * @return webrtc
+         */
+        public Boolean getWebrtc() {
+            return this.webrtc;
+        }
+
+        public static final class Builder {
+            private Integer frameRate; 
+            private Integer sessionResolutionHeight; 
+            private Integer sessionResolutionWidth; 
+            private String streamingMode; 
+            private Boolean terminalResolutionAdaptive; 
+            private Boolean webrtc; 
+
+            /**
+             * FrameRate.
+             */
+            public Builder frameRate(Integer frameRate) {
+                this.frameRate = frameRate;
+                return this;
+            }
+
+            /**
+             * SessionResolutionHeight.
+             */
+            public Builder sessionResolutionHeight(Integer sessionResolutionHeight) {
+                this.sessionResolutionHeight = sessionResolutionHeight;
+                return this;
+            }
+
+            /**
+             * SessionResolutionWidth.
+             */
+            public Builder sessionResolutionWidth(Integer sessionResolutionWidth) {
+                this.sessionResolutionWidth = sessionResolutionWidth;
+                return this;
+            }
+
+            /**
+             * StreamingMode.
+             */
+            public Builder streamingMode(String streamingMode) {
+                this.streamingMode = streamingMode;
+                return this;
+            }
+
+            /**
+             * TerminalResolutionAdaptive.
+             */
+            public Builder terminalResolutionAdaptive(Boolean terminalResolutionAdaptive) {
+                this.terminalResolutionAdaptive = terminalResolutionAdaptive;
+                return this;
+            }
+
+            /**
+             * Webrtc.
+             */
+            public Builder webrtc(Boolean webrtc) {
+                this.webrtc = webrtc;
+                return this;
+            }
+
+            public VideoPolicy build() {
+                return new VideoPolicy(this);
             } 
 
         } 

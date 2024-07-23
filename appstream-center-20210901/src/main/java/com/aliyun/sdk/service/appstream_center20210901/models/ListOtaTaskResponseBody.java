@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOtaTaskResponseBody</p>
  */
 public class ListOtaTaskResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskList")
+    @com.aliyun.core.annotation.NameInMap("TaskList")
     private java.util.List < TaskList> taskList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListOtaTaskResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class ListOtaTaskResponseBody extends TeaModel {
     } 
 
     public static class TaskList extends TeaModel {
-        @NameInMap("OtaVersion")
+        @com.aliyun.core.annotation.NameInMap("OtaVersion")
         private String otaVersion;
 
-        @NameInMap("TaskDisplayStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskDisplayStatus")
         private String taskDisplayStatus;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskStartTime")
+        @com.aliyun.core.annotation.NameInMap("TaskStartTime")
         private String taskStartTime;
 
         private TaskList(Builder builder) {

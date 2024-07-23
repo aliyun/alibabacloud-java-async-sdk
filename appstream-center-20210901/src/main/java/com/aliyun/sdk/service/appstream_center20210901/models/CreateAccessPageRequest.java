@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAccessPageRequest</p>
  */
 public class CreateAccessPageRequest extends Request {
-    @Query
-    @NameInMap("AccessPageName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPageName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessPageName;
 
-    @Query
-    @NameInMap("CloudEnvId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudEnvId")
     private String cloudEnvId;
 
-    @Query
-    @NameInMap("EffectTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectTime")
     private Integer effectTime;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Query
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @Query
-    @NameInMap("Unit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Unit")
     private String unit;
 
     private CreateAccessPageRequest(Builder builder) {

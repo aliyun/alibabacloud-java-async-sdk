@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AuthorizeInstanceGroupRequest</p>
  */
 public class AuthorizeInstanceGroupRequest extends Request {
-    @Body
-    @NameInMap("AppInstanceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceGroupId;
 
-    @Body
-    @NameInMap("AuthorizeUserIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuthorizeUserIds")
     private java.util.List < String > authorizeUserIds;
 
-    @Body
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
-    @Body
-    @NameInMap("UnAuthorizeUserIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnAuthorizeUserIds")
     private java.util.List < String > unAuthorizeUserIds;
 
     private AuthorizeInstanceGroupRequest(Builder builder) {

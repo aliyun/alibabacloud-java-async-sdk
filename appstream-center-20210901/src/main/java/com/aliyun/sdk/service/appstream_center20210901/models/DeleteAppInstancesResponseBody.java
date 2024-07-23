@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAppInstancesResponseBody</p>
  */
 public class DeleteAppInstancesResponseBody extends TeaModel {
-    @NameInMap("DeleteAppInstanceModels")
+    @com.aliyun.core.annotation.NameInMap("DeleteAppInstanceModels")
     private java.util.List < DeleteAppInstanceModels> deleteAppInstanceModels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAppInstancesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DeleteAppInstancesResponseBody extends TeaModel {
     } 
 
     public static class DeleteAppInstanceModels extends TeaModel {
-        @NameInMap("AppInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceId")
         private String appInstanceId;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private DeleteAppInstanceModels(Builder builder) {

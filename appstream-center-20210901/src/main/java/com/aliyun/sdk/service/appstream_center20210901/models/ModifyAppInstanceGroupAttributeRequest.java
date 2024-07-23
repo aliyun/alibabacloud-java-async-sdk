@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAppInstanceGroupAttributeRequest</p>
  */
 public class ModifyAppInstanceGroupAttributeRequest extends Request {
-    @Query
-    @NameInMap("AppInstanceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appInstanceGroupId;
 
-    @Query
-    @NameInMap("AppInstanceGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupName")
     private String appInstanceGroupName;
 
-    @Body
-    @NameInMap("Network")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Network")
     private Network network;
 
-    @Query
-    @NameInMap("NodePool")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodePool")
     private NodePool nodePool;
 
-    @Body
-    @NameInMap("PreOpenAppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreOpenAppId")
     private String preOpenAppId;
 
-    @Body
-    @NameInMap("PreOpenMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreOpenMode")
     private String preOpenMode;
 
-    @Query
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
-    @Body
-    @NameInMap("SecurityPolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicy")
     private SecurityPolicy securityPolicy;
 
-    @Query
-    @NameInMap("SessionTimeout")
-    @Validation(maximum = 300)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 300)
     private Integer sessionTimeout;
 
-    @Body
-    @NameInMap("StoragePolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StoragePolicy")
     private StoragePolicy storagePolicy;
 
     private ModifyAppInstanceGroupAttributeRequest(Builder builder) {
@@ -284,10 +283,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
     } 
 
     public static class DomainRules extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
         private DomainRules(Builder builder) {
@@ -345,7 +344,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
 
     }
     public static class Network extends TeaModel {
-        @NameInMap("DomainRules")
+        @com.aliyun.core.annotation.NameInMap("DomainRules")
         private java.util.List < DomainRules> domainRules;
 
         private Network(Builder builder) {
@@ -386,10 +385,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
 
     }
     public static class NodePool extends TeaModel {
-        @NameInMap("NodeCapacity")
+        @com.aliyun.core.annotation.NameInMap("NodeCapacity")
         private Integer nodeCapacity;
 
-        @NameInMap("NodePoolId")
+        @com.aliyun.core.annotation.NameInMap("NodePoolId")
         private String nodePoolId;
 
         private NodePool(Builder builder) {
@@ -447,10 +446,10 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
 
     }
     public static class SecurityPolicy extends TeaModel {
-        @NameInMap("ResetAfterUnbind")
+        @com.aliyun.core.annotation.NameInMap("ResetAfterUnbind")
         private Boolean resetAfterUnbind;
 
-        @NameInMap("SkipUserAuthCheck")
+        @com.aliyun.core.annotation.NameInMap("SkipUserAuthCheck")
         private Boolean skipUserAuthCheck;
 
         private SecurityPolicy(Builder builder) {
@@ -508,7 +507,7 @@ public class ModifyAppInstanceGroupAttributeRequest extends Request {
 
     }
     public static class StoragePolicy extends TeaModel {
-        @NameInMap("StorageTypeList")
+        @com.aliyun.core.annotation.NameInMap("StorageTypeList")
         private java.util.List < String > storageTypeList;
 
         private StoragePolicy(Builder builder) {

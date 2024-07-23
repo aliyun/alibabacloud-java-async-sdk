@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNodeInstanceTypeResponseBody</p>
  */
 public class ListNodeInstanceTypeResponseBody extends TeaModel {
-    @NameInMap("NodeInstanceTypeModels")
+    @com.aliyun.core.annotation.NameInMap("NodeInstanceTypeModels")
     private java.util.List < NodeInstanceTypeModels> nodeInstanceTypeModels;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListNodeInstanceTypeResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class ListNodeInstanceTypeResponseBody extends TeaModel {
     } 
 
     public static class NodeInstanceTypeModels extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private String gpu;
 
-        @NameInMap("GpuMemory")
+        @com.aliyun.core.annotation.NameInMap("GpuMemory")
         private Long gpuMemory;
 
-        @NameInMap("MaxCapacity")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacity")
         private Integer maxCapacity;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("NodeInstanceType")
+        @com.aliyun.core.annotation.NameInMap("NodeInstanceType")
         private String nodeInstanceType;
 
-        @NameInMap("NodeInstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("NodeInstanceTypeFamily")
         private String nodeInstanceTypeFamily;
 
-        @NameInMap("NodeTypeName")
+        @com.aliyun.core.annotation.NameInMap("NodeTypeName")
         private String nodeTypeName;
 
         private NodeInstanceTypeModels(Builder builder) {

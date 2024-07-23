@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAccessPagesResponseBody</p>
  */
 public class ListAccessPagesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private String count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private ListAccessPagesResponseBody(Builder builder) {
@@ -192,43 +191,43 @@ public class ListAccessPagesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccessMode")
+        @com.aliyun.core.annotation.NameInMap("AccessMode")
         private String accessMode;
 
-        @NameInMap("AccessPageId")
+        @com.aliyun.core.annotation.NameInMap("AccessPageId")
         private String accessPageId;
 
-        @NameInMap("AccessPageName")
+        @com.aliyun.core.annotation.NameInMap("AccessPageName")
         private String accessPageName;
 
-        @NameInMap("AccessPageState")
+        @com.aliyun.core.annotation.NameInMap("AccessPageState")
         private String accessPageState;
 
-        @NameInMap("AccessUrl")
+        @com.aliyun.core.annotation.NameInMap("AccessUrl")
         private String accessUrl;
 
-        @NameInMap("ContentId")
+        @com.aliyun.core.annotation.NameInMap("ContentId")
         private String contentId;
 
-        @NameInMap("ContentName")
+        @com.aliyun.core.annotation.NameInMap("ContentName")
         private String contentName;
 
-        @NameInMap("EffectTime")
+        @com.aliyun.core.annotation.NameInMap("EffectTime")
         private Integer effectTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("UrlExpireTime")
+        @com.aliyun.core.annotation.NameInMap("UrlExpireTime")
         private String urlExpireTime;
 
         private Data(Builder builder) {

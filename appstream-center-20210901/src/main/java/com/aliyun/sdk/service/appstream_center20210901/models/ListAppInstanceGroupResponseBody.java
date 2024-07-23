@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAppInstanceGroupResponseBody</p>
  */
 public class ListAppInstanceGroupResponseBody extends TeaModel {
-    @NameInMap("AppInstanceGroupModels")
+    @com.aliyun.core.annotation.NameInMap("AppInstanceGroupModels")
     private java.util.List < AppInstanceGroupModels> appInstanceGroupModels;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAppInstanceGroupResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
     } 
 
     public static class Apps extends TeaModel {
-        @NameInMap("AppIcon")
+        @com.aliyun.core.annotation.NameInMap("AppIcon")
         private String appIcon;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("AppVersionName")
+        @com.aliyun.core.annotation.NameInMap("AppVersionName")
         private String appVersionName;
 
         private Apps(Builder builder) {
@@ -253,13 +252,13 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
     }
     public static class TimerPeriods extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private TimerPeriods(Builder builder) {
@@ -334,13 +333,13 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
     }
     public static class RecurrenceSchedules extends TeaModel {
-        @NameInMap("RecurrenceType")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
         private String recurrenceType;
 
-        @NameInMap("RecurrenceValues")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValues")
         private java.util.List < Integer > recurrenceValues;
 
-        @NameInMap("TimerPeriods")
+        @com.aliyun.core.annotation.NameInMap("TimerPeriods")
         private java.util.List < TimerPeriods> timerPeriods;
 
         private RecurrenceSchedules(Builder builder) {
@@ -415,58 +414,58 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
     }
     public static class NodePool extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("MaxScalingAmount")
+        @com.aliyun.core.annotation.NameInMap("MaxScalingAmount")
         private Integer maxScalingAmount;
 
-        @NameInMap("NodeAmount")
+        @com.aliyun.core.annotation.NameInMap("NodeAmount")
         private Integer nodeAmount;
 
-        @NameInMap("NodeCapacity")
+        @com.aliyun.core.annotation.NameInMap("NodeCapacity")
         private Integer nodeCapacity;
 
-        @NameInMap("NodeInstanceType")
+        @com.aliyun.core.annotation.NameInMap("NodeInstanceType")
         private String nodeInstanceType;
 
-        @NameInMap("NodePoolId")
+        @com.aliyun.core.annotation.NameInMap("NodePoolId")
         private String nodePoolId;
 
-        @NameInMap("NodeTypeName")
+        @com.aliyun.core.annotation.NameInMap("NodeTypeName")
         private String nodeTypeName;
 
-        @NameInMap("NodeUsed")
+        @com.aliyun.core.annotation.NameInMap("NodeUsed")
         private Integer nodeUsed;
 
-        @NameInMap("RecurrenceSchedules")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceSchedules")
         private java.util.List < RecurrenceSchedules> recurrenceSchedules;
 
-        @NameInMap("ScalingDownAfterIdleMinutes")
+        @com.aliyun.core.annotation.NameInMap("ScalingDownAfterIdleMinutes")
         private Integer scalingDownAfterIdleMinutes;
 
-        @NameInMap("ScalingNodeAmount")
+        @com.aliyun.core.annotation.NameInMap("ScalingNodeAmount")
         private Integer scalingNodeAmount;
 
-        @NameInMap("ScalingNodeUsed")
+        @com.aliyun.core.annotation.NameInMap("ScalingNodeUsed")
         private Integer scalingNodeUsed;
 
-        @NameInMap("ScalingStep")
+        @com.aliyun.core.annotation.NameInMap("ScalingStep")
         private Integer scalingStep;
 
-        @NameInMap("ScalingUsageThreshold")
+        @com.aliyun.core.annotation.NameInMap("ScalingUsageThreshold")
         private String scalingUsageThreshold;
 
-        @NameInMap("StrategyDisableDate")
+        @com.aliyun.core.annotation.NameInMap("StrategyDisableDate")
         private String strategyDisableDate;
 
-        @NameInMap("StrategyEnableDate")
+        @com.aliyun.core.annotation.NameInMap("StrategyEnableDate")
         private String strategyEnableDate;
 
-        @NameInMap("StrategyType")
+        @com.aliyun.core.annotation.NameInMap("StrategyType")
         private String strategyType;
 
-        @NameInMap("WarmUp")
+        @com.aliyun.core.annotation.NameInMap("WarmUp")
         private Boolean warmUp;
 
         private NodePool(Builder builder) {
@@ -796,13 +795,13 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
     }
     public static class OtaInfo extends TeaModel {
-        @NameInMap("NewOtaVersion")
+        @com.aliyun.core.annotation.NameInMap("NewOtaVersion")
         private String newOtaVersion;
 
-        @NameInMap("OtaVersion")
+        @com.aliyun.core.annotation.NameInMap("OtaVersion")
         private String otaVersion;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private OtaInfo(Builder builder) {
@@ -877,91 +876,91 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
     }
     public static class AppInstanceGroupModels extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("AppCenterImageId")
+        @com.aliyun.core.annotation.NameInMap("AppCenterImageId")
         private String appCenterImageId;
 
-        @NameInMap("AppInstanceGroupId")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;
 
-        @NameInMap("AppInstanceGroupName")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceGroupName")
         private String appInstanceGroupName;
 
-        @NameInMap("AppInstanceType")
+        @com.aliyun.core.annotation.NameInMap("AppInstanceType")
         private String appInstanceType;
 
-        @NameInMap("AppPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AppPolicyId")
         private String appPolicyId;
 
-        @NameInMap("Apps")
+        @com.aliyun.core.annotation.NameInMap("Apps")
         private java.util.List < Apps> apps;
 
-        @NameInMap("ChargeResourceMode")
+        @com.aliyun.core.annotation.NameInMap("ChargeResourceMode")
         private String chargeResourceMode;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("MaxAmount")
+        @com.aliyun.core.annotation.NameInMap("MaxAmount")
         private Integer maxAmount;
 
-        @NameInMap("MinAmount")
+        @com.aliyun.core.annotation.NameInMap("MinAmount")
         private Integer minAmount;
 
-        @NameInMap("NodePool")
+        @com.aliyun.core.annotation.NameInMap("NodePool")
         private java.util.List < NodePool> nodePool;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("OtaInfo")
+        @com.aliyun.core.annotation.NameInMap("OtaInfo")
         private OtaInfo otaInfo;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReserveAmountRatio")
+        @com.aliyun.core.annotation.NameInMap("ReserveAmountRatio")
         private String reserveAmountRatio;
 
-        @NameInMap("ReserveMaxAmount")
+        @com.aliyun.core.annotation.NameInMap("ReserveMaxAmount")
         private Integer reserveMaxAmount;
 
-        @NameInMap("ReserveMinAmount")
+        @com.aliyun.core.annotation.NameInMap("ReserveMinAmount")
         private Integer reserveMinAmount;
 
-        @NameInMap("ResourceStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceStatus")
         private String resourceStatus;
 
-        @NameInMap("ScalingDownAfterIdleMinutes")
+        @com.aliyun.core.annotation.NameInMap("ScalingDownAfterIdleMinutes")
         private Integer scalingDownAfterIdleMinutes;
 
-        @NameInMap("ScalingStep")
+        @com.aliyun.core.annotation.NameInMap("ScalingStep")
         private Integer scalingStep;
 
-        @NameInMap("ScalingUsageThreshold")
+        @com.aliyun.core.annotation.NameInMap("ScalingUsageThreshold")
         private String scalingUsageThreshold;
 
-        @NameInMap("SessionTimeout")
+        @com.aliyun.core.annotation.NameInMap("SessionTimeout")
         private String sessionTimeout;
 
-        @NameInMap("SkipUserAuthCheck")
+        @com.aliyun.core.annotation.NameInMap("SkipUserAuthCheck")
         private Boolean skipUserAuthCheck;
 
-        @NameInMap("SpecId")
+        @com.aliyun.core.annotation.NameInMap("SpecId")
         private String specId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AppInstanceGroupModels(Builder builder) {

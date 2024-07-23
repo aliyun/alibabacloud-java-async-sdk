@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.appstream_center20210901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AccessPageSetAclRequest</p>
  */
 public class AccessPageSetAclRequest extends Request {
-    @Query
-    @NameInMap("AccessMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessMode;
 
-    @Query
-    @NameInMap("AccessPageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessPageId;
 
-    @Query
-    @NameInMap("AccessPageName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPageName")
     private String accessPageName;
 
-    @Query
-    @NameInMap("EffectTime")
-    @Validation(required = true, maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 2147483647, minimum = 1)
     private Integer effectTime;
 
-    @Query
-    @NameInMap("Unit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Unit")
     private String unit;
 
     private AccessPageSetAclRequest(Builder builder) {

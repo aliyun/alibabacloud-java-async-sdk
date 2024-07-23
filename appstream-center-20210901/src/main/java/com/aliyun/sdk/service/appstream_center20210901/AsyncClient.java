@@ -91,6 +91,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyAppInstanceGroupAttributeResponse> modifyAppInstanceGroupAttribute(ModifyAppInstanceGroupAttributeRequest request);
 
+    CompletableFuture<ModifyAppPolicyResponse> modifyAppPolicy(ModifyAppPolicyRequest request);
+
     CompletableFuture<ModifyNodePoolAttributeResponse> modifyNodePoolAttribute(ModifyNodePoolAttributeRequest request);
 
     CompletableFuture<ModifyProjectPolicyResponse> modifyProjectPolicy(ModifyProjectPolicyRequest request);
