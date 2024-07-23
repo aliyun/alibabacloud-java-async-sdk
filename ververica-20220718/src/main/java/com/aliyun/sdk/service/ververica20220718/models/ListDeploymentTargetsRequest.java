@@ -98,7 +98,7 @@ public class ListDeploymentTargetsRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -107,7 +107,7 @@ public class ListDeploymentTargetsRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * The page number. Minimum value: 1. Default value: 1.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -116,7 +116,7 @@ public class ListDeploymentTargetsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -125,7 +125,7 @@ public class ListDeploymentTargetsRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

@@ -47,6 +47,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetJobResponse> getJob(GetJobRequest request);
 
+    CompletableFuture<GetLatestJobStartLogResponse> getLatestJobStartLog(GetLatestJobStartLogRequest request);
+
     CompletableFuture<GetMemberResponse> getMember(GetMemberRequest request);
 
     CompletableFuture<GetSavepointResponse> getSavepoint(GetSavepointRequest request);
@@ -80,5 +82,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDeploymentResponse> updateDeployment(UpdateDeploymentRequest request);
 
     CompletableFuture<UpdateMemberResponse> updateMember(UpdateMemberRequest request);
+
+    CompletableFuture<ValidateSqlStatementResponse> validateSqlStatement(ValidateSqlStatementRequest request);
 
 }

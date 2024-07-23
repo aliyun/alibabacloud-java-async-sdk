@@ -196,7 +196,7 @@ public class ListDeploymentsRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -205,7 +205,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * creator.
+         * The ID of the user who creates the deployment.
          */
         public Builder creator(String creator) {
             this.putQueryParameter("creator", creator);
@@ -214,7 +214,13 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * executionMode.
+         * The execution mode of the deployment.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   BATCH
+         * *   STREAMING
          */
         public Builder executionMode(String executionMode) {
             this.putQueryParameter("executionMode", executionMode);
@@ -223,7 +229,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * labelKey.
+         * The tag key.
          */
         public Builder labelKey(String labelKey) {
             this.putQueryParameter("labelKey", labelKey);
@@ -232,7 +238,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * labelValueArray.
+         * The tag value. Separate multiple values with semicolon (;).
          */
         public Builder labelValueArray(String labelValueArray) {
             this.putQueryParameter("labelValueArray", labelValueArray);
@@ -241,7 +247,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * modifier.
+         * The ID of the user who modifies the deployment.
          */
         public Builder modifier(String modifier) {
             this.putQueryParameter("modifier", modifier);
@@ -250,7 +256,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * name.
+         * The name of the deployment.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -259,7 +265,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * The page number. Minimum value: 1. Default value: 1.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -268,7 +274,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -277,7 +283,16 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * status.
+         * The latest status of the deployment.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   CANCELLED
+         * *   FAILED
+         * *   RUNNING
+         * *   TRANSITIONING
+         * *   FINISHED
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -286,7 +301,7 @@ public class ListDeploymentsRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

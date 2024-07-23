@@ -97,7 +97,7 @@ public class UpdateMemberResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * data.
+         * If the value of success was true, the member that was created was returned. If the value of success was false, a null value was returned.
          */
         public Builder data(Member data) {
             this.data = data;
@@ -105,7 +105,9 @@ public class UpdateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * *   If the value of success was false, an error code was returned.
+         * <p>
+         * *   If the value of success was true, a null value was returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +115,9 @@ public class UpdateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * *   If the value of success was false, an error message was returned.
+         * <p>
+         * *   If the value of success was true, a null value was returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +125,7 @@ public class UpdateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -129,7 +133,7 @@ public class UpdateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,7 @@ public class UpdateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

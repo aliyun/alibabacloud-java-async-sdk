@@ -83,7 +83,7 @@ public class StartJobWithParamsRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -92,7 +92,7 @@ public class StartJobWithParamsRequest extends Request {
         }
 
         /**
-         * body.
+         * The parameter that is used to start the job.
          */
         public Builder body(JobStartParameters body) {
             this.putBodyParameter("body", body);
@@ -101,7 +101,7 @@ public class StartJobWithParamsRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

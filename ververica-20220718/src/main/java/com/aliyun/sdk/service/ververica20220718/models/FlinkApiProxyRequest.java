@@ -114,7 +114,7 @@ public class FlinkApiProxyRequest extends Request {
         } 
 
         /**
-         * flinkApiPath.
+         * The path of the Flink UI.
          */
         public Builder flinkApiPath(String flinkApiPath) {
             this.putQueryParameter("flinkApiPath", flinkApiPath);
@@ -123,7 +123,7 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -132,7 +132,7 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * resourceId.
+         * The resource ID.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("resourceId", resourceId);
@@ -141,7 +141,11 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   jobs
+         * *   sessionclusters
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -150,7 +154,7 @@ public class FlinkApiProxyRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

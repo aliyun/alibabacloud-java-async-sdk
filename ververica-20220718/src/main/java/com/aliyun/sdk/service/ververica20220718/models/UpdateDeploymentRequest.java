@@ -99,7 +99,7 @@ public class UpdateDeploymentRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -108,7 +108,7 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * deploymentId.
+         * The deployment ID.
          */
         public Builder deploymentId(String deploymentId) {
             this.putPathParameter("deploymentId", deploymentId);
@@ -117,7 +117,7 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * body.
+         * The information about the deployment that you want to update.
          */
         public Builder body(Deployment body) {
             this.putBodyParameter("body", body);
@@ -126,7 +126,7 @@ public class UpdateDeploymentRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

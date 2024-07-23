@@ -126,7 +126,7 @@ public class ListSavepointsRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -135,7 +135,7 @@ public class ListSavepointsRequest extends Request {
         }
 
         /**
-         * deploymentId.
+         * The deployment ID. This parameter is optional.
          */
         public Builder deploymentId(String deploymentId) {
             this.putQueryParameter("deploymentId", deploymentId);
@@ -144,7 +144,7 @@ public class ListSavepointsRequest extends Request {
         }
 
         /**
-         * jobId.
+         * The job ID. This parameter is optional.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("jobId", jobId);
@@ -153,7 +153,7 @@ public class ListSavepointsRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * The page number. Minimum value: 1. Default value: 1.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -162,7 +162,7 @@ public class ListSavepointsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -171,7 +171,7 @@ public class ListSavepointsRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

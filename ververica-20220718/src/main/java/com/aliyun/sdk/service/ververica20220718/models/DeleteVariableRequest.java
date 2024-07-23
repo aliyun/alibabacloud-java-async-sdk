@@ -84,7 +84,7 @@ public class DeleteVariableRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +93,7 @@ public class DeleteVariableRequest extends Request {
         }
 
         /**
-         * name.
+         * The name of the variable that you want to delete.
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -102,7 +102,7 @@ public class DeleteVariableRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

@@ -6,35 +6,30 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListVariablesRequest} extends {@link RequestModel}
+ * {@link ValidateSqlStatementRequest} extends {@link RequestModel}
  *
- * <p>ListVariablesRequest</p>
+ * <p>ValidateSqlStatementRequest</p>
  */
-public class ListVariablesRequest extends Request {
+public class ValidateSqlStatementRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("namespace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("pageIndex")
-    private Integer pageIndex;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("pageSize")
-    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
-    private Integer pageSize;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private SqlStatementWithContext body;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("workspace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
-    private ListVariablesRequest(Builder builder) {
+    private ValidateSqlStatementRequest(Builder builder) {
         super(builder);
         this.namespace = builder.namespace;
-        this.pageIndex = builder.pageIndex;
-        this.pageSize = builder.pageSize;
+        this.body = builder.body;
         this.workspace = builder.workspace;
     }
 
@@ -42,7 +37,7 @@ public class ListVariablesRequest extends Request {
         return new Builder();
     }
 
-    public static ListVariablesRequest create() {
+    public static ValidateSqlStatementRequest create() {
         return builder().build();
     }
 
@@ -59,17 +54,10 @@ public class ListVariablesRequest extends Request {
     }
 
     /**
-     * @return pageIndex
+     * @return body
      */
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public SqlStatementWithContext getBody() {
+        return this.body;
     }
 
     /**
@@ -79,21 +67,19 @@ public class ListVariablesRequest extends Request {
         return this.workspace;
     }
 
-    public static final class Builder extends Request.Builder<ListVariablesRequest, Builder> {
+    public static final class Builder extends Request.Builder<ValidateSqlStatementRequest, Builder> {
         private String namespace; 
-        private Integer pageIndex; 
-        private Integer pageSize; 
+        private SqlStatementWithContext body; 
         private String workspace; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListVariablesRequest request) {
+        private Builder(ValidateSqlStatementRequest request) {
             super(request);
             this.namespace = request.namespace;
-            this.pageIndex = request.pageIndex;
-            this.pageSize = request.pageSize;
+            this.body = request.body;
             this.workspace = request.workspace;
         } 
 
@@ -107,20 +93,11 @@ public class ListVariablesRequest extends Request {
         }
 
         /**
-         * The page number. Minimum value: 1. Default value: 1.
+         * The content of the code that you want to verify.
          */
-        public Builder pageIndex(Integer pageIndex) {
-            this.putQueryParameter("pageIndex", pageIndex);
-            this.pageIndex = pageIndex;
-            return this;
-        }
-
-        /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("pageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder body(SqlStatementWithContext body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 
@@ -134,8 +111,8 @@ public class ListVariablesRequest extends Request {
         }
 
         @Override
-        public ListVariablesRequest build() {
-            return new ListVariablesRequest(this);
+        public ValidateSqlStatementRequest build() {
+            return new ValidateSqlStatementRequest(this);
         } 
 
     } 

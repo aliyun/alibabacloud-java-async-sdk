@@ -98,7 +98,7 @@ public class ListMembersRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -107,7 +107,7 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * The page number. Default value: 1.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -116,7 +116,7 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -125,7 +125,7 @@ public class ListMembersRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

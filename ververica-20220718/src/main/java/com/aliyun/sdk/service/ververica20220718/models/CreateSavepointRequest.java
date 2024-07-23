@@ -112,7 +112,7 @@ public class CreateSavepointRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -121,7 +121,7 @@ public class CreateSavepointRequest extends Request {
         }
 
         /**
-         * deploymentId.
+         * The deployment ID.
          */
         public Builder deploymentId(String deploymentId) {
             this.putBodyParameter("deploymentId", deploymentId);
@@ -130,7 +130,7 @@ public class CreateSavepointRequest extends Request {
         }
 
         /**
-         * description.
+         * The description of the savepoint.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -139,7 +139,11 @@ public class CreateSavepointRequest extends Request {
         }
 
         /**
-         * nativeFormat.
+         * Specifies whether to use the native format mode. Valid values:
+         * <p>
+         * 
+         * *   true: The native format mode is used.
+         * *   false: The native format mode is not used.
          */
         public Builder nativeFormat(Boolean nativeFormat) {
             this.putBodyParameter("nativeFormat", nativeFormat);
@@ -148,7 +152,7 @@ public class CreateSavepointRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

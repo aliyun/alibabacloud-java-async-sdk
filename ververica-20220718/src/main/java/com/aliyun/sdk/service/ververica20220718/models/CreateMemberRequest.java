@@ -83,7 +83,7 @@ public class CreateMemberRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -92,7 +92,7 @@ public class CreateMemberRequest extends Request {
         }
 
         /**
-         * body.
+         * The mappings between the ID and permissions of the member.
          */
         public Builder body(Member body) {
             this.putBodyParameter("body", body);
@@ -101,7 +101,7 @@ public class CreateMemberRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

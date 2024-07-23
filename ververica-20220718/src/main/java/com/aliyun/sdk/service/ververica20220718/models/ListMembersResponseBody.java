@@ -133,7 +133,9 @@ public class ListMembersResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * data.
+         * *   If the value of success was false, a null value was returned.
+         * <p>
+         * *   If the value of success was true, the authorization information was returned.
          */
         public Builder data(java.util.List < Member > data) {
             this.data = data;
@@ -141,7 +143,9 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * *   If the value of success was false, an error code was returned.
+         * <p>
+         * *   If the value of success was true, a null value was returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -149,7 +153,9 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * *   If the value of success was false, an error message was returned.
+         * <p>
+         * *   If the value of success was true, a null value was returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -157,7 +163,7 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -165,7 +171,7 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * pageIndex.
+         * The page number.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.pageIndex = pageIndex;
@@ -173,7 +179,7 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * pageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -181,7 +187,7 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +195,7 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -197,7 +203,7 @@ public class ListMembersResponseBody extends TeaModel {
         }
 
         /**
-         * totalSize.
+         * The total number of entries returned.
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;

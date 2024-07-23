@@ -84,7 +84,7 @@ public class CreateVariableRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +93,7 @@ public class CreateVariableRequest extends Request {
         }
 
         /**
-         * body.
+         * The parameter that is used to create the variable.
          */
         public Builder body(Variable body) {
             this.putBodyParameter("body", body);
@@ -102,7 +102,7 @@ public class CreateVariableRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

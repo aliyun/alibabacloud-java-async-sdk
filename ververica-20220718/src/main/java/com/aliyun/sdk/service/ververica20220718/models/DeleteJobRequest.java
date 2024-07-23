@@ -84,7 +84,7 @@ public class DeleteJobRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The namespace ID.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +93,7 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * jobId.
+         * The job ID.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);
@@ -102,7 +102,7 @@ public class DeleteJobRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

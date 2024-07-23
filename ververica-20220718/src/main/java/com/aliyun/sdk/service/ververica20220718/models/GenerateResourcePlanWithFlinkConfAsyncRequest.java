@@ -98,7 +98,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -107,7 +107,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         }
 
         /**
-         * deploymentId.
+         * The deployment ID, which is the unique identifier of the deployment.
          */
         public Builder deploymentId(String deploymentId) {
             this.putPathParameter("deploymentId", deploymentId);
@@ -116,7 +116,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         }
 
         /**
-         * body.
+         * The Flink configuration that is used to generate a resource plan.
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);
@@ -125,7 +125,7 @@ public class GenerateResourcePlanWithFlinkConfAsyncRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

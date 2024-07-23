@@ -84,7 +84,7 @@ public class GetMemberRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +93,7 @@ public class GetMemberRequest extends Request {
         }
 
         /**
-         * member.
+         * The display name of the member.
          */
         public Builder member(String member) {
             this.putPathParameter("member", member);
@@ -102,7 +102,7 @@ public class GetMemberRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

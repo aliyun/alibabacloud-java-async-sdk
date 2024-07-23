@@ -97,7 +97,9 @@ public class CreateMemberResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * data.
+         * *   If the value of success was false, a null value was returned.
+         * <p>
+         * *   If the value of success was true, the authorization information was returned.
          */
         public Builder data(Member data) {
             this.data = data;
@@ -105,7 +107,9 @@ public class CreateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * *   If the value of success was false, an error code was returned.
+         * <p>
+         * *   If the value of success was true, a null value was returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,9 @@ public class CreateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * *   If the value of success was false, an error message was returned.
+         * <p>
+         * *   If the value of success was true, a null value was returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +127,7 @@ public class CreateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -129,7 +135,7 @@ public class CreateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +143,7 @@ public class CreateMemberResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

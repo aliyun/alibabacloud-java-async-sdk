@@ -84,7 +84,7 @@ public class GetGenerateResourcePlanResultRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +93,7 @@ public class GetGenerateResourcePlanResultRequest extends Request {
         }
 
         /**
-         * ticketId.
+         * The ID of the asynchronous ticket. You can submit an application for an asynchronous operation to obtain this ticket ID.
          */
         public Builder ticketId(String ticketId) {
             this.putPathParameter("ticketId", ticketId);
@@ -102,7 +102,7 @@ public class GetGenerateResourcePlanResultRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

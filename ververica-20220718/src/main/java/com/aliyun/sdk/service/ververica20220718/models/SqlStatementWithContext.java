@@ -18,12 +18,6 @@ public class SqlStatementWithContext extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private Boolean batchMode;
 
-    @com.aliyun.core.annotation.NameInMap("catalog")
-    private String catalog;
-
-    @com.aliyun.core.annotation.NameInMap("database")
-    private String database;
-
     @com.aliyun.core.annotation.NameInMap("flinkConfiguration")
     private java.util.Map < String, ? > flinkConfiguration;
 
@@ -37,8 +31,6 @@ public class SqlStatementWithContext extends TeaModel {
     private SqlStatementWithContext(Builder builder) {
         this.additionalDependencies = builder.additionalDependencies;
         this.batchMode = builder.batchMode;
-        this.catalog = builder.catalog;
-        this.database = builder.database;
         this.flinkConfiguration = builder.flinkConfiguration;
         this.statement = builder.statement;
         this.versionName = builder.versionName;
@@ -67,20 +59,6 @@ public class SqlStatementWithContext extends TeaModel {
     }
 
     /**
-     * @return catalog
-     */
-    public String getCatalog() {
-        return this.catalog;
-    }
-
-    /**
-     * @return database
-     */
-    public String getDatabase() {
-        return this.database;
-    }
-
-    /**
      * @return flinkConfiguration
      */
     public java.util.Map < String, ? > getFlinkConfiguration() {
@@ -104,8 +82,6 @@ public class SqlStatementWithContext extends TeaModel {
     public static final class Builder {
         private java.util.List < String > additionalDependencies; 
         private Boolean batchMode; 
-        private String catalog; 
-        private String database; 
         private java.util.Map < String, ? > flinkConfiguration; 
         private String statement; 
         private String versionName; 
@@ -123,22 +99,6 @@ public class SqlStatementWithContext extends TeaModel {
          */
         public Builder batchMode(Boolean batchMode) {
             this.batchMode = batchMode;
-            return this;
-        }
-
-        /**
-         * catalog.
-         */
-        public Builder catalog(String catalog) {
-            this.catalog = catalog;
-            return this;
-        }
-
-        /**
-         * database.
-         */
-        public Builder database(String database) {
-            this.database = database;
             return this;
         }
 

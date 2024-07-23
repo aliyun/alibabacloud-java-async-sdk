@@ -97,7 +97,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * data.
+         * The details of the job of the deployment returned.
          */
         public Builder data(Job data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         }
 
         /**
-         * errorCode.
+         * If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         }
 
         /**
-         * errorMessage.
+         * If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * The status code returned. The value was fixed to 200. The status code 200 indicates that the request was successful.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -129,7 +129,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class StartJobWithParamsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

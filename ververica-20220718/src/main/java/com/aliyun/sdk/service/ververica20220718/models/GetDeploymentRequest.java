@@ -84,7 +84,7 @@ public class GetDeploymentRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +93,7 @@ public class GetDeploymentRequest extends Request {
         }
 
         /**
-         * deploymentId.
+         * The deployment ID.
          */
         public Builder deploymentId(String deploymentId) {
             this.putPathParameter("deploymentId", deploymentId);
@@ -102,7 +102,7 @@ public class GetDeploymentRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

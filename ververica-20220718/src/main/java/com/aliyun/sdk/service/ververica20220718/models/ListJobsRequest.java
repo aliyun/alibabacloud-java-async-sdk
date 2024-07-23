@@ -127,7 +127,7 @@ public class ListJobsRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -136,7 +136,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * deploymentId.
+         * The deployment ID.
          */
         public Builder deploymentId(String deploymentId) {
             this.putQueryParameter("deploymentId", deploymentId);
@@ -145,7 +145,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * pageIndex.
+         * The page number. Minimum value: 1. Default value: 1.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
@@ -154,7 +154,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -163,7 +163,14 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * sortName.
+         * The collation.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   gmt_create
+         * *   job_id
+         * *   status
          */
         public Builder sortName(String sortName) {
             this.putQueryParameter("sortName", sortName);
@@ -172,7 +179,7 @@ public class ListJobsRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

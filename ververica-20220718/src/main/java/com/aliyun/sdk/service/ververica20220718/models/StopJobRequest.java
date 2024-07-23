@@ -99,7 +99,7 @@ public class StopJobRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -108,7 +108,7 @@ public class StopJobRequest extends Request {
         }
 
         /**
-         * jobId.
+         * The job ID.
          */
         public Builder jobId(String jobId) {
             this.putPathParameter("jobId", jobId);
@@ -117,7 +117,7 @@ public class StopJobRequest extends Request {
         }
 
         /**
-         * body.
+         * The parameter that is used to stop the job.
          */
         public Builder body(StopJobRequestBody body) {
             this.putBodyParameter("body", body);
@@ -126,7 +126,7 @@ public class StopJobRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

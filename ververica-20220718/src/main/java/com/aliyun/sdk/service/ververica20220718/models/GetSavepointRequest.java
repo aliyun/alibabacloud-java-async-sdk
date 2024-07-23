@@ -84,7 +84,7 @@ public class GetSavepointRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +93,7 @@ public class GetSavepointRequest extends Request {
         }
 
         /**
-         * Savepoint ID。
+         * The savepoint ID.
          */
         public Builder savepointId(String savepointId) {
             this.putPathParameter("savepointId", savepointId);
@@ -102,7 +102,7 @@ public class GetSavepointRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

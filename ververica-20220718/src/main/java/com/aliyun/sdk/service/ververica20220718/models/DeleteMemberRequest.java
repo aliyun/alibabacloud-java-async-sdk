@@ -84,7 +84,7 @@ public class DeleteMemberRequest extends Request {
         } 
 
         /**
-         * namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,7 +93,7 @@ public class DeleteMemberRequest extends Request {
         }
 
         /**
-         * member.
+         * The member ID.
          */
         public Builder member(String member) {
             this.putPathParameter("member", member);
@@ -102,7 +102,7 @@ public class DeleteMemberRequest extends Request {
         }
 
         /**
-         * workspace.
+         * The workspace ID.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);

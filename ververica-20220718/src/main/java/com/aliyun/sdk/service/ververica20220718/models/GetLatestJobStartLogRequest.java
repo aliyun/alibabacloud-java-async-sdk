@@ -6,35 +6,30 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListVariablesRequest} extends {@link RequestModel}
+ * {@link GetLatestJobStartLogRequest} extends {@link RequestModel}
  *
- * <p>ListVariablesRequest</p>
+ * <p>GetLatestJobStartLogRequest</p>
  */
-public class ListVariablesRequest extends Request {
+public class GetLatestJobStartLogRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("namespace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("pageIndex")
-    private Integer pageIndex;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("pageSize")
-    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
-    private Integer pageSize;
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String deploymentId;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("workspace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
-    private ListVariablesRequest(Builder builder) {
+    private GetLatestJobStartLogRequest(Builder builder) {
         super(builder);
         this.namespace = builder.namespace;
-        this.pageIndex = builder.pageIndex;
-        this.pageSize = builder.pageSize;
+        this.deploymentId = builder.deploymentId;
         this.workspace = builder.workspace;
     }
 
@@ -42,7 +37,7 @@ public class ListVariablesRequest extends Request {
         return new Builder();
     }
 
-    public static ListVariablesRequest create() {
+    public static GetLatestJobStartLogRequest create() {
         return builder().build();
     }
 
@@ -59,17 +54,10 @@ public class ListVariablesRequest extends Request {
     }
 
     /**
-     * @return pageIndex
+     * @return deploymentId
      */
-    public Integer getPageIndex() {
-        return this.pageIndex;
-    }
-
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
+    public String getDeploymentId() {
+        return this.deploymentId;
     }
 
     /**
@@ -79,21 +67,19 @@ public class ListVariablesRequest extends Request {
         return this.workspace;
     }
 
-    public static final class Builder extends Request.Builder<ListVariablesRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetLatestJobStartLogRequest, Builder> {
         private String namespace; 
-        private Integer pageIndex; 
-        private Integer pageSize; 
+        private String deploymentId; 
         private String workspace; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListVariablesRequest request) {
+        private Builder(GetLatestJobStartLogRequest request) {
             super(request);
             this.namespace = request.namespace;
-            this.pageIndex = request.pageIndex;
-            this.pageSize = request.pageSize;
+            this.deploymentId = request.deploymentId;
             this.workspace = request.workspace;
         } 
 
@@ -107,20 +93,11 @@ public class ListVariablesRequest extends Request {
         }
 
         /**
-         * The page number. Minimum value: 1. Default value: 1.
+         * The deployment ID.
          */
-        public Builder pageIndex(Integer pageIndex) {
-            this.putQueryParameter("pageIndex", pageIndex);
-            this.pageIndex = pageIndex;
-            return this;
-        }
-
-        /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("pageSize", pageSize);
-            this.pageSize = pageSize;
+        public Builder deploymentId(String deploymentId) {
+            this.putPathParameter("deploymentId", deploymentId);
+            this.deploymentId = deploymentId;
             return this;
         }
 
@@ -134,8 +111,8 @@ public class ListVariablesRequest extends Request {
         }
 
         @Override
-        public ListVariablesRequest build() {
-            return new ListVariablesRequest(this);
+        public GetLatestJobStartLogRequest build() {
+            return new GetLatestJobStartLogRequest(this);
         } 
 
     } 

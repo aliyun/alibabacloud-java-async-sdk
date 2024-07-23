@@ -6,13 +6,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopJobResponseBody} extends {@link TeaModel}
+ * {@link ValidateSqlStatementResponseBody} extends {@link TeaModel}
  *
- * <p>StopJobResponseBody</p>
+ * <p>ValidateSqlStatementResponseBody</p>
  */
-public class StopJobResponseBody extends TeaModel {
+public class ValidateSqlStatementResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private Job data;
+    private SqlStatementValidationResult data;
 
     @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
@@ -29,7 +29,7 @@ public class StopJobResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private StopJobResponseBody(Builder builder) {
+    private ValidateSqlStatementResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -42,14 +42,14 @@ public class StopJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static StopJobResponseBody create() {
+    public static ValidateSqlStatementResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return data
      */
-    public Job getData() {
+    public SqlStatementValidationResult getData() {
         return this.data;
     }
 
@@ -89,7 +89,7 @@ public class StopJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Job data; 
+        private SqlStatementValidationResult data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpCode; 
@@ -97,19 +97,15 @@ public class StopJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * *   If the value of success was true, the job that you stopped was returned.
-         * <p>
-         * *   If the value of success was false, a null value was returned.
+         * The returned data, which represents the details of SQL validation results.
          */
-        public Builder data(Job data) {
+        public Builder data(SqlStatementValidationResult data) {
             this.data = data;
             return this;
         }
 
         /**
-         * *   If the value of success was false, an error code was returned.
-         * <p>
-         * *   If the value of success was true, a null value was returned.
+         * If the value of success was false, an error code was returned. If the value of success was true, a null value was returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -117,9 +113,7 @@ public class StopJobResponseBody extends TeaModel {
         }
 
         /**
-         * *   If the value of success was false, an error message was returned.
-         * <p>
-         * *   If the value of success was true, a null value was returned.
+         * If the value of success was false, an error message was returned. If the value of success was true, a null value was returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -127,7 +121,7 @@ public class StopJobResponseBody extends TeaModel {
         }
 
         /**
-         * The value was fixed to 200.
+         * The status code returned. The value was fixed to 200.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -150,8 +144,8 @@ public class StopJobResponseBody extends TeaModel {
             return this;
         }
 
-        public StopJobResponseBody build() {
-            return new StopJobResponseBody(this);
+        public ValidateSqlStatementResponseBody build() {
+            return new ValidateSqlStatementResponseBody(this);
         } 
 
     } 
