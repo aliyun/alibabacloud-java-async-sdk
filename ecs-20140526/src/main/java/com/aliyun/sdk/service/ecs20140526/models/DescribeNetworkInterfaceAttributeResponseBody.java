@@ -32,6 +32,9 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("EnhancedNetwork")
+    private EnhancedNetwork enhancedNetwork;
+
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -121,6 +124,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         this.creationTime = builder.creationTime;
         this.deleteOnRelease = builder.deleteOnRelease;
         this.description = builder.description;
+        this.enhancedNetwork = builder.enhancedNetwork;
         this.instanceId = builder.instanceId;
         this.ipv4PrefixSets = builder.ipv4PrefixSets;
         this.ipv6PrefixSets = builder.ipv6PrefixSets;
@@ -205,6 +209,13 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enhancedNetwork
+     */
+    public EnhancedNetwork getEnhancedNetwork() {
+        return this.enhancedNetwork;
     }
 
     /**
@@ -404,6 +415,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         private String creationTime; 
         private Boolean deleteOnRelease; 
         private String description; 
+        private EnhancedNetwork enhancedNetwork; 
         private String instanceId; 
         private Ipv4PrefixSets ipv4PrefixSets; 
         private Ipv6PrefixSets ipv6PrefixSets; 
@@ -457,7 +469,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionTrackingConfiguration.
+         * This parameter is not publicly available.
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
             this.connectionTrackingConfiguration = connectionTrackingConfiguration;
@@ -489,6 +501,14 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * This parameter is not publicly available.
+         */
+        public Builder enhancedNetwork(EnhancedNetwork enhancedNetwork) {
+            this.enhancedNetwork = enhancedNetwork;
             return this;
         }
 
@@ -552,7 +572,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkInterfaceTrafficConfig.
+         * The communication settings of the ENI.
          */
         public Builder networkInterfaceTrafficConfig(NetworkInterfaceTrafficConfig networkInterfaceTrafficConfig) {
             this.networkInterfaceTrafficConfig = networkInterfaceTrafficConfig;
@@ -1215,7 +1235,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private Integer udpTimeout; 
 
             /**
-             * TcpClosedAndTimeWaitTimeout.
+             * This parameter is not publicly available.
              */
             public Builder tcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
                 this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
@@ -1223,7 +1243,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TcpEstablishedTimeout.
+             * This parameter is not publicly available.
              */
             public Builder tcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
                 this.tcpEstablishedTimeout = tcpEstablishedTimeout;
@@ -1231,7 +1251,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * UdpTimeout.
+             * This parameter is not publicly available.
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;
@@ -1240,6 +1260,47 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
             public ConnectionTrackingConfiguration build() {
                 return new ConnectionTrackingConfiguration(this);
+            } 
+
+        } 
+
+    }
+    public static class EnhancedNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableSriov")
+        private Boolean enableSriov;
+
+        private EnhancedNetwork(Builder builder) {
+            this.enableSriov = builder.enableSriov;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EnhancedNetwork create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableSriov
+         */
+        public Boolean getEnableSriov() {
+            return this.enableSriov;
+        }
+
+        public static final class Builder {
+            private Boolean enableSriov; 
+
+            /**
+             * This parameter is not publicly available.
+             */
+            public Builder enableSriov(Boolean enableSriov) {
+                this.enableSriov = enableSriov;
+                return this;
+            }
+
+            public EnhancedNetwork build() {
+                return new EnhancedNetwork(this);
             } 
 
         } 
@@ -1542,13 +1603,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private Integer queuePairNumber; 
 
             /**
-             * The communication model of the ENI. Valid values:
-             * <p>
-             * 
-             * *   Standard: The TCP communication mode is used.
-             * *   HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
-             * 
-             * >  This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.
+             * The communication mode of the ENI.
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -1557,21 +1612,6 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
 
             /**
              * The number of queues supported by the ENI.
-             * <p>
-             * 
-             * *   For a primary ENI: The default number of queues that the instance type supports for the ENI is returned.
-             * 
-             * *   For a secondary ENI:
-             * 
-             *     *   When the ENI is in the InUse state, the following situations occur for the QueueNumber parameter:
-             * 
-             *         *   If the number of queues supported by the ENI has not been modified, the default number of queues that the instance type supports for the ENI is returned.
-             *         *   If the number of queues supported by the ENI has been modified, the new number of queues is returned.
-             * 
-             *     *   When the ENI is in the Available state, the following situations occur for the QueueNumber parameter:
-             * 
-             *         *   If the number of queues supported by the ENI has not been modified, the return value is empty.
-             *         *   If the number of queues supported by the ENI has been modified, the new number of queues is returned.
              */
             public Builder queueNumber(Integer queueNumber) {
                 this.queueNumber = queueNumber;
@@ -1579,7 +1619,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * >  This parameter is in invitational preview and unavailable for general users.
+             * The number of queues supported by the ERI.
              */
             public Builder queuePairNumber(Integer queuePairNumber) {
                 this.queuePairNumber = queuePairNumber;

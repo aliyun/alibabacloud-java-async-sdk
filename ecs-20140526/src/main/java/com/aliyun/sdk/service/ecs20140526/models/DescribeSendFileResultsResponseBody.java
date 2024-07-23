@@ -97,7 +97,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The queried file sending records.
+         * The file sending records.
          */
         public Builder invocations(Invocations invocations) {
             this.invocations = invocations;
@@ -261,7 +261,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time when the file sending task was created.
+             * The creation time of the file sending task.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -283,7 +283,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
              * *   ClientNeedUpgrade: Cloud Assistant Agent needs to be upgraded.
              * *   DeliveryTimeout: The file sending task timed out.
              * *   FileCreateFail: The file failed to be created.
-             * *   FileAlreadyExists: A file with the same name already exists in the specified directory.
+             * *   FileAlreadyExists: A file with the same name exists in the specified directory.
              * *   FileContentInvalid: The file content is invalid.
              * *   FileNameInvalid: The file name is invalid.
              * *   FilePathInvalid: The specified directory is invalid.
@@ -334,7 +334,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -342,7 +342,17 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the file sending task.
+             * The status of the file sending task. Valid values:
+             * <p>
+             * 
+             * *   Pending: The file is being verified or sent.
+             * *   Invalid: The file is invalid.
+             * *   Running: The file is being sent to the instance.
+             * *   Aborted: The file failed to be sent to the instance.
+             * *   Success: The file is sent.
+             * *   Failed: The file failed to be created on the instance.
+             * *   Error: An error occurred and interrupted the file sending task.
+             * *   Timeout: The file sending task timed out.
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -358,7 +368,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task status was updated.
+             * The time when the task status was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -718,11 +728,11 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The content type of the file. Valid values:
+             * The type of the file content. Valid values:
              * <p>
              * 
-             * *   PlainText
-             * *   Base64
+             * *   PlainText: The file content is not encoded.
+             * *   Base64: The file content is encoded in Base64.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -746,7 +756,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The user group of the file.
+             * The group of the file.
              */
             public Builder fileGroup(String fileGroup) {
                 this.fileGroup = fileGroup;
@@ -770,20 +780,24 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The overall sending state of the file. The overall sending state of the file depends on its sending state on all the destination instances. Valid values:
+             * The overall sending status of the file. The overall sending status of the file varies based on the sending status of the file on all destination instances. Valid values:
              * <p>
              * 
-             * *   Pending: The file is being verified or sent.
-             * *   Invalid: The file is invalid.
-             * *   Running: The file is being sent to the instances.
-             * *   Aborted: The file failed to be sent to the instances. To send a file to an instance, make sure that the instance is in the Running state and the file can be sent within 1 minute.
-             * *   Success: The file is sent.
-             * *   Failed: The file failed to be created on the instances.
-             * *   Error: An error occurs and interrupts the file sending task.
-             * *   Timeout: The file sending task times out.
-             * *   Cancelled: The file sending task is canceled.
-             * *   Stopping: The file sending task is being stopped.
-             * *   Terminated: The file sending task is terminated.
+             * *   Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.
+             * 
+             * *   Running: The file is being sent to the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.
+             * 
+             * *   Success: If the sending state of the file on all instances is Success, the overall sending state of the file is Success.
+             * 
+             * *   If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed. If the sending state of the file on one or more instances is one of the following values, the overall sending state of the file is Failed:
+             * 
+             *     *   Invalid: The file is invalid.
+             *     *   Aborted: The file failed to be sent to the instances.
+             *     *   Failed: The file failed to be created on the instances.
+             *     *   Timeout: The file sending task timed out.
+             *     *   Error: An error occurred and interrupted the file sending task.
+             * 
+             * *   PartialFailed: The file sending task was completed on some instances but failed on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
@@ -839,7 +853,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances to which the file was sent.
+             * The number of the destination instances.
              */
             public Builder vmCount(Integer vmCount) {
                 this.vmCount = vmCount;

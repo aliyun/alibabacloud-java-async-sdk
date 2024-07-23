@@ -162,18 +162,19 @@ public class DetachDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the system disk when the instance from which you want to detach the system disk is released. Valid values:
+         * Specifies whether to release the system disk or data disk when the instance from which you want to detach the disk is released. Valid values:
          * <p>
          * 
-         * *   true: releases the system disk when the instance is released.
-         * *   false: does not release the system disk when the instance is released. The system disk is retained as a pay-as-you-go data disk.
+         * *   true: releases the disk when the instance is released.
+         * *   false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.
          * 
          * Default value: true.
          * 
-         * If you specify this parameter, take note of the following items:
+         * Take note of the following items:
          * 
          * *   You cannot specify this parameter for disks for which the multi-attach feature is enabled.
-         * *   If you detach a data disk, the default value of this parameter is `false`.
+         * *   If a data disk is to be detached, the default value is `false`.
+         * *   If you want to detach an `elastic ephemeral disk`, you must set `DeleteWithInstance` to `true`.
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);

@@ -298,7 +298,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the custom parameter is required.
+             * Indicates whether the custom parameter is required. Valid values:
              * <p>
              * 
              * *   true
@@ -741,11 +741,11 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The Base64-encoded command content.
+             * The content of the command, which is Base64-encoded.
              * <p>
              * 
-             * *   If you set ContentEncoding to PlainText, the original command content is returned.
-             * *   If you set ContentEncoding to Base64, the Base64-encoded command content is returned.
+             * *   If ContentEncoding is set to PlainText in the request, the original command content is returned.
+             * *   If ContentEncoding is set to Base64 in the request, the Base64-encoded command content is returned.
              */
             public Builder commandContent(String commandContent) {
                 this.commandContent = commandContent;
@@ -753,7 +753,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the command.
+             * The command ID.
              */
             public Builder commandId(String commandId) {
                 this.commandId = commandId;
@@ -817,7 +817,7 @@ public class DescribeCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of custom parameter names that are parsed from the command content specified when the command was being created. If the custom parameter feature is disabled, an empty list is returned.
+             * The custom parameter names that are parsed from the command content specified when the command was created. If the custom parameter feature is disabled, an empty list is returned.
              */
             public Builder parameterNames(ParameterNames parameterNames) {
                 this.parameterNames = parameterNames;

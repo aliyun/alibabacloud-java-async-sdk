@@ -226,10 +226,10 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. If you specify InstanceId, this parameter does not take effect. 
+         * The maximum number of entries per page. If you specify **InstanceId**, this parameter does not take effect.
          * <p>
          * 
-         * Valid values: 1 to 50. 
+         * Valid values: 1 to 50.
          * 
          * Default value: 10.
          */

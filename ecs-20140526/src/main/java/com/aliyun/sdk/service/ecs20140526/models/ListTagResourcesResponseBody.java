@@ -77,7 +77,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the resources and tags, such as the resource ID, the resource type, tag keys, and tag values.
+         * The information about the resource and its tags, including the resource ID, the resource type, and the keys and values of the tags.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -161,7 +161,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of a resource. Valid values:
+             * The resource type. Valid values:
              * <p>
              * 
              * *   instance: ECS instance
@@ -181,6 +181,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
              * *   capacityreservation: capacity reservation
              * *   command: Cloud Assistant command
              * *   invocation: Cloud Assistant command execution result
+             * *   activation: activation code for a Cloud Assistant managed instance
+             * *   managedinstance: Cloud Assistant managed instance
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -188,7 +190,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * The tag key of the resource.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -196,7 +198,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value of the resource.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

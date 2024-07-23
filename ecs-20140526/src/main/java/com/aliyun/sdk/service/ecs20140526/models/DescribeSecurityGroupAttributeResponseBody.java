@@ -153,7 +153,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If the return value of this parameter is empty when you specify `MaxResults` and `NextToken` for a paged query, no more results are to be returned.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -517,7 +517,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             private String sourcePrefixListName; 
 
             /**
-             * The time at which the security group rule was created. The time is displayed in UTC.
+             * The time when the security group rule was created. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -557,7 +557,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account that manages the destination security group.
+             * The ID of the Alibaba Cloud account to which the destination security group belongs.
              */
             public Builder destGroupOwnerAccount(String destGroupOwnerAccount) {
                 this.destGroupOwnerAccount = destGroupOwnerAccount;
@@ -677,7 +677,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account that manages the source security group.
+             * The ID of the Alibaba Cloud account to which the source security group belongs.
              */
             public Builder sourceGroupOwnerAccount(String sourceGroupOwnerAccount) {
                 this.sourceGroupOwnerAccount = sourceGroupOwnerAccount;

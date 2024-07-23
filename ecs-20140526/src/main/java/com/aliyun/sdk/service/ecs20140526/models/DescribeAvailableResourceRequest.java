@@ -357,14 +357,15 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The type of the data disk. Valid values:
+         * The category of the data disk. Valid values:
          * <p>
          * 
-         * *   cloud: basic disk.
-         * *   cloud_efficiency: ultra disk.
-         * *   cloud_ssd: standard SSD.
-         * *   ephemeral_ssd: local SSD.
-         * *   cloud_essd: ESSD.
+         * *   cloud: basic disk
+         * *   cloud_efficiency: ultra disk
+         * *   cloud_ssd: standard SSD
+         * *   ephemeral_ssd: local SSD
+         * *   cloud_essd: ESSD
+         * *   cloud_auto: ESSD AutoPL disk
          */
         public Builder dataDiskCategory(String dataDiskCategory) {
             this.putQueryParameter("DataDiskCategory", dataDiskCategory);
@@ -545,13 +546,12 @@ public class DescribeAvailableResourceRequest extends Request {
          * The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:
          * <p>
          * 
-         * - 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bidding price with the market price and checks the resource inventory to determine whether to retain or release the instance.
+         * *   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
+         * *   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
          * 
-         * - 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the biding price with the market price and checks the resource inventory to determine whether to retain or release the instance.
+         * Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.
          * 
-         * Alibaba Cloud sends ECS system events to notify you 5 minutes before the instance is released. Preemptible instances are billed by the second. We recommend that you specify a protection period based on your business requirements.
-         * 
-         * >If you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo, this parameter takes effect.
+         * >  This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -581,15 +581,16 @@ public class DescribeAvailableResourceRequest extends Request {
          * The category of the system disk. Valid values:
          * <p>
          * 
-         * *   cloud: basic disk.
-         * *   cloud_efficiency: ultra disk.
-         * *   cloud_ssd: standard SSD.
-         * *   ephemeral_ssd: local SSD.
-         * *   cloud_essd: enhanced SSD (ESSD).
+         * *   cloud: basic disk
+         * *   cloud_efficiency: ultra disk
+         * *   cloud_ssd: standard SSD
+         * *   ephemeral_ssd: local SSD
+         * *   cloud_essd: Enterprise SSD (ESSD)
+         * *   cloud_auto: ESSD AutoPL disk
          * 
          * Default value: cloud_efficiency.
          * 
-         * > When the ResourceType parameter is set to instance and the DestinationResource parameter is set to DataDisk, you must set the SystemDiskCategory parameter. If you do not set this parameter, the default value takes effect.
+         * >  This parameter must be specified when ResourceType is set to instance and DestinationResource is set to DataDisk. If you do not specify this parameter, the default value takes effect.
          */
         public Builder systemDiskCategory(String systemDiskCategory) {
             this.putQueryParameter("SystemDiskCategory", systemDiskCategory);

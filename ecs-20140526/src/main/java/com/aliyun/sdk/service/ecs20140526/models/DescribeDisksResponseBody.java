@@ -97,7 +97,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the cloud disks or local disks.
+         * The details about the disks.
          */
         public Builder disks(Disks disks) {
             this.disks = disks;
@@ -113,7 +113,7 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
 
         /**
-         * The returned page number.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -421,7 +421,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * The security reason why the disk was locked.
+             * The reason why the disk was locked.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -503,7 +503,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String zoneIds; 
 
             /**
-             * ZoneIds.
+             * The IDs of the zones in which data is stored.
              */
             public Builder zoneIds(String zoneIds) {
                 this.zoneIds = zoneIds;
@@ -1222,7 +1222,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The time when the cloud disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
+             * The time when the disk was last attached. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
              */
             public Builder attachedTime(String attachedTime) {
                 this.attachedTime = attachedTime;
@@ -1230,7 +1230,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The attachment information about the cloud disk. The value is an array that contains a list of `Attachment` objects. The value is not returned when you query Shared Block Storage devices.
+             * The attachment information of the disk. The value is an array that consists of the `Attachment` values. This value is not returned when you query Shared Block Storage devices.
              */
             public Builder attachments(Attachments attachments) {
                 this.attachments = attachments;
@@ -1260,7 +1260,7 @@ public class DescribeDisksResponseBody extends TeaModel {
              * *   true
              * *   false
              * 
-             * This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
+             * This parameter is available only if you set `Category` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1279,6 +1279,8 @@ public class DescribeDisksResponseBody extends TeaModel {
              * *   local_ssd_pro: I/O-intensive local disk
              * *   local_hdd_pro: throughput-intensive local disk
              * *   cloud_essd_entry: ESSD Entry disk
+             * *   elastic_ephemeral_disk_standard: standard elastic ephemeral disk
+             * *   elastic_ephemeral_disk_premium: premium static ephemeral disk
              * *   ephemeral: retired local disk
              * *   ephemeral_ssd: retired local SSD
              */
@@ -1302,7 +1304,7 @@ public class DescribeDisksResponseBody extends TeaModel {
              * *   true: The automatic snapshots of the cloud disk are deleted when the disk is released.
              * *   false: The automatic snapshots of the cloud disk are retained when the disk is released.
              * 
-             * Snapshots that were created in the Elastic Compute Service (ECS) console or by calling the [CreateSnapshot](~~25524~~) operation are retained and not affected by this parameter.
+             * Snapshots that were created in the ECS console or by calling the [CreateSnapshot](~~25524~~) operation are retained and not affected by this parameter.
              */
             public Builder deleteAutoSnapshot(Boolean deleteAutoSnapshot) {
                 this.deleteAutoSnapshot = deleteAutoSnapshot;
@@ -1310,11 +1312,11 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud disk is released when the instance to which the disk is attached is released. Valid values:
+             * Indicates whether the disk is released when the instance to which the disk is attached is released. Valid values:
              * <p>
              * 
-             * *   true: The disk is released when the instance to which the disk is attached is released.
-             * *   false: The disk is retained when the instance to which the disk is attached is released.
+             * *   true: The disk is released when the associated instance is released.
+             * *   false: The disk is retained when the associated instance is released.
              */
             public Builder deleteWithInstance(Boolean deleteWithInstance) {
                 this.deleteWithInstance = deleteWithInstance;
@@ -1330,7 +1332,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cloud disk was last detached.
+             * The time when the disk was last detached.
              */
             public Builder detachedTime(String detachedTime) {
                 this.detachedTime = detachedTime;
@@ -1342,7 +1344,7 @@ public class DescribeDisksResponseBody extends TeaModel {
              * <p>
              * 
              * *   This parameter has a value only when the `Status` value is `In_use` or `Detaching`.
-             * *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the returned list of `Attachment` objects.
+             * *   This parameter is empty for cloud disks for which the multi-attach feature is enabled. You can query the attachment information of the cloud disk based on the returned list of `Attachment` objects.
              * 
              * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
@@ -1380,7 +1382,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the automatic snapshot policy feature is enabled for the cloud disk.
+             * Indicates whether the automatic snapshot policy feature is enabled for the disk.
              */
             public Builder enableAutoSnapshot(Boolean enableAutoSnapshot) {
                 this.enableAutoSnapshot = enableAutoSnapshot;
@@ -1404,7 +1406,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the subscription cloud disk expires.
+             * The time when the subscription disk expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1448,7 +1450,7 @@ public class DescribeDisksResponseBody extends TeaModel {
              * <p>
              * 
              * *   This parameter has a value only when the `Status` value is `In_use` or `Detaching`.
-             * *   This parameter is empty for disks that have the multi-attach feature enabled. You can query the attachment information of the disk based on the returned list of `Attachment` objects.
+             * *   This parameter is empty for cloud disks for which the multi-attach feature is enabled. You can query the attachment information of the cloud disk based on the returned `Attachment` objects.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1456,7 +1458,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used for the cloud disk.
+             * The ID of the KMS key that is used for the cloud disk.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -1510,7 +1512,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Placement.
+             * The locations in which data is stored.
              */
             public Builder placement(Placement placement) {
                 this.placement = placement;
@@ -1537,7 +1539,7 @@ public class DescribeDisksResponseBody extends TeaModel {
              * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × *Capacity, 50,000}
              * <p>
              * 
-             * This parameter is available only if you set `DiskCategory` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
+             * This parameter is available only if you set `Category` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -1545,7 +1547,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the disk.
+             * The ID of the region to which the disk belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1580,7 +1582,7 @@ public class DescribeDisksResponseBody extends TeaModel {
              * The ID of the snapshot that was used to create the cloud disk.
              * <p>
              * 
-             * This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the disk.
+             * This parameter is empty unless the cloud disk was created from a snapshot. The value of this parameter remains unchanged throughout the lifecycle of the cloud disk.
              */
             public Builder sourceSnapshotId(String sourceSnapshotId) {
                 this.sourceSnapshotId = sourceSnapshotId;
@@ -1588,7 +1590,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cloud disk. Valid values:
+             * The status of the disk. Valid values:
              * <p>
              * 
              * *   In_use
@@ -1672,7 +1674,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the disk.
+             * The ID of the zone to which the disk belongs.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

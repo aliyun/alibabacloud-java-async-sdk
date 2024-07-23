@@ -225,7 +225,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer totalVcpu; 
 
             /**
-             * The amount of available memory space. Unit: GiB.
+             * The amount of available memory. Unit: GiB.
              */
             public Builder availableMemory(Float availableMemory) {
                 this.availableMemory = availableMemory;
@@ -233,7 +233,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of vCPUs.
+             * The number of available vCPUs.
              */
             public Builder availableVcpu(Integer availableVcpu) {
                 this.availableVcpu = availableVcpu;
@@ -249,7 +249,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of the memory. Unit: GiB.
+             * The total amount of memory. Unit: GiB.
              */
             public Builder totalMemory(Float totalMemory) {
                 this.totalMemory = totalMemory;
@@ -257,7 +257,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available vCPUs.
+             * The total number of vCPUs.
              */
             public Builder totalVcpu(Integer totalVcpu) {
                 this.totalVcpu = totalVcpu;
@@ -455,7 +455,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of available memory space. Unit: GiB.
+             * The amount of available memory. Unit: GiB.
              */
             public Builder availableMemory(Float availableMemory) {
                 this.availableMemory = availableMemory;
@@ -479,7 +479,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the local disks.
+             * The category of local disks.
              */
             public Builder localStorageCategory(String localStorageCategory) {
                 this.localStorageCategory = localStorageCategory;
@@ -495,7 +495,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of the local disks. Unit: GiB.
+             * The total capacity of local disks. Unit: GiB.
              */
             public Builder totalLocalStorage(Integer totalLocalStorage) {
                 this.totalLocalStorage = totalLocalStorage;
@@ -503,7 +503,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of the memory. Unit: GiB.
+             * The total amount of memory. Unit: GiB.
              */
             public Builder totalMemory(Float totalMemory) {
                 this.totalMemory = totalMemory;
@@ -755,7 +755,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             private Integer udpTimeout; 
 
             /**
-             * The timeout period of the UDP session that was established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Only 60 is returned.
+             * The timeout period of the UDP session that is established between Server Load Balancer (SLB) and the dedicated host. Unit: seconds. Only 60 is returned.
              */
             public Builder slbUdpTimeout(Integer slbUdpTimeout) {
                 this.slbUdpTimeout = slbUdpTimeout;
@@ -763,7 +763,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of the UDP session that was established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Only 60 is returned.
+             * The timeout period of the UDP session that is established between a user and an Alibaba Cloud service on the dedicated host. Unit: seconds. Only 60 is returned.
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;
@@ -1503,7 +1503,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
              * <p>
              * 
              * *   Migrate: The instances are migrated to another physical machine. Instances that are not in the Stopped state when the dedicated host fails are restarted.
-             * *   Stop: The instances are stopped. If the dedicated host cannot be restored, the instances are migrated to another physical machine and then restarted.
+             * *   Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.
              * 
              * If the dedicated host has cloud disks attached, the default value is Migrate. If the dedicated host has local disks attached, the default value is Stop.
              */
@@ -1513,11 +1513,11 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the dedicated host was added to the resource pool for automatic deployment. Valid values:
+             * Indicates whether the dedicated host is added to the resource pool for automatic deployment. Valid values:
              * <p>
              * 
-             * *   on: The dedicated host was added to the resource pool for automatic deployment.
-             * *   off: The dedicated host was not added to the resource pool for automatic deployment.
+             * *   on: The dedicated host is added to the resource pool for automatic deployment.
+             * *   off: The dedicated host is not added to the resource pool for automatic deployment.
              * 
              * For information about automatic deployment, see the "Automatic deployment" section in [Functions and features](~~118938~~).
              */
@@ -1559,7 +1559,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU overcommit ratio.
+             * The CPU overcommit ratio.Valid values: 1 to 5.
              */
             public Builder cpuOverCommitRatio(Float cpuOverCommitRatio) {
                 this.cpuOverCommitRatio = cpuOverCommitRatio;
@@ -1731,12 +1731,12 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the dedicated host. Valid values:
+             * The status of the dedicated host. Valid values:
              * <p>
              * 
-             * *   Available: The dedicated host was running as expected.
-             * *   UnderAssessment: The dedicated host was available but had potential risks that may cause the ECS instances on the dedicated host to fail.
-             * *   PermanentFailure: The dedicated host had permanent failures and was unavailable.
+             * *   Available: The dedicated host is running as expected.
+             * *   UnderAssessment: The dedicated host is available but has potential risks that may cause the ECS instances on the dedicated host to fail.
+             * *   PermanentFailure: The dedicated host has permanent failures and is unavailable.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateSnapshotGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -74,6 +78,7 @@ public class CreateSnapshotGroupRequest extends Request {
 
     private CreateSnapshotGroupRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.diskId = builder.diskId;
         this.excludeDiskId = builder.excludeDiskId;
@@ -102,6 +107,13 @@ public class CreateSnapshotGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -210,6 +222,7 @@ public class CreateSnapshotGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSnapshotGroupRequest, Builder> {
+        private String clientToken; 
         private String description; 
         private java.util.List < String > diskId; 
         private java.util.List < String > excludeDiskId; 
@@ -232,6 +245,7 @@ public class CreateSnapshotGroupRequest extends Request {
 
         private Builder(CreateSnapshotGroupRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.diskId = request.diskId;
             this.excludeDiskId = request.excludeDiskId;
@@ -248,6 +262,15 @@ public class CreateSnapshotGroupRequest extends Request {
             this.storageLocationArn = request.storageLocationArn;
             this.tag = request.tag;
         } 
+
+        /**
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * The description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.

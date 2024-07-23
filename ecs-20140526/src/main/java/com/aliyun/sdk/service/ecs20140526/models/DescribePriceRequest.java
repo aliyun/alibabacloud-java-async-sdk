@@ -566,7 +566,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The image ID. An image contains the runtime environment to load when an instance is started. You can call the [DescribeImages](~~25534~~) operation to query the available images. If you do not specify this parameter, the system queries the prices of Linux images.
+         * This parameter takes effect only when ResourceType is set to instance.
+         * <p>
+         * 
+         * The image ID. Images contain the runtime environments to load when instances start. You can call the [DescribeImages](~~25534~~) operation to query available images. If you do not specify this parameter, the system queries the prices of Linux images.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -830,13 +833,12 @@ public class DescribePriceRequest extends Request {
          * The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:
          * <p>
          * 
-         * - 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bidding price with the market price and checks the resource inventory to determine whether to retain or release the instance.
+         * *   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
+         * *   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
          * 
-         * - 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the biding price with the market price and checks the resource inventory to determine whether to retain or release the instance.
+         * Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.
          * 
-         * Alibaba Cloud sends ECS system events to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.
-         * 
-         * >If you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo, this parameter takes effect.
+         * >  This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -845,16 +847,16 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The preemption policy for the pay-as-you-go instance. Valid values:
+         * The bidding policy for the pay-as-you-go instance. Valid values:
          * <p>
          * 
-         * *   NoSpot: The instance is created as a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
+         * *   NoSpot: The instance is a regular pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is created as a preemptible instance that has a user-defined maximum hourly price.
+         * *   SpotAsPriceGo: The instance is created as a preemptible instance whose bid price is based on the market price at the time of purchase. The market price can be up to the pay-as-you-go price.
          * 
-         * Default value: NoSpot
+         * Default value: NoSpot.
          * 
-         * > This parameter is valid only when `PriceUnit` is set to Hour and `Period` is set to 1. The default value of `PriceUnit` is `Hour` and the default value of `Period` is `1`. Therefore, you do not need to set `PriceUnit` and `Period` when you set SpotStrategy.
+         * >  This parameter takes effect only when `PriceUnit` is set to Hour and `Period` is set to 1. The default value of `PriceUnit` is `Hour` and the default value of `Period` is `1`. Therefore, you do not need to set `PriceUnit` or `Period` when you set SpotStrategy.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -932,7 +934,7 @@ public class DescribePriceRequest extends Request {
             private Long size; 
 
             /**
-             * The type of data disk N. Valid values:
+             * The category of data disk N. Valid values:
              * <p>
              * 
              * *   cloud: basic disk
@@ -940,6 +942,7 @@ public class DescribePriceRequest extends Request {
              * *   cloud_ssd: standard SSD
              * *   ephemeral_ssd: local SSD
              * *   cloud_essd: ESSD
+             * *   cloud_auto: ESSD AutoPL disk
              * 
              * Valid values of N: 1 to 16.
              */
@@ -949,7 +952,7 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The performance level of data disk N when the disk is an ESSD. This parameter is valid only when `DataDisk.N.Category` is set to cloud_essd. Valid values:
+             * The performance level of data disk N when the disk is an ESSD. This parameter takes effect only when `DataDisk.N.Category` is set to cloud_essd. Valid values:
              * <p>
              * 
              * *   PL0
@@ -968,18 +971,20 @@ public class DescribePriceRequest extends Request {
              * The size of data disk N. Unit: GiB. Valid values:
              * <p>
              * 
-             * *   Valid values when Category is set to cloud: 5 to 2000.
+             * *   Valid values when DataDisk.N.Category is set to cloud: 5 to 2000.
              * 
-             * *   Valid values when Category is set to cloud_efficiency: 20 to 32768.
+             * *   Valid values when DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.
              * 
              * *   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
              * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_essd: depend on the value of `DataDisk.N.PerformanceLevel`.
+             * *   Valid values when DataDisk.N.Category is set to cloud_auto: 1 to 32768.
              * 
-             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 40 to 32768.
+             * *   Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the value of `DataDisk.N.PerformanceLevel`.
+             * 
+             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.
              *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
              *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.
-             *     *   Valid values when DataDisk.4.PerformanceLevel is set to PL3: 1261 to 32768.
+             *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.
              * 
              * *   Valid values when DataDisk.N.Category is set to ephemeral_ssd: 5 to 800.
              * 
@@ -1024,7 +1029,10 @@ public class DescribePriceRequest extends Request {
             private String dedicatedHostId; 
 
             /**
-             * 专有宿主机ID。您可以通过[DescribeDedicatedHosts ](~~134242~~)查询专有宿主机ID列表。
+             * This parameter takes effect only when ResourceType is set to instance.
+             * <p>
+             * 
+             * The ID of the dedicated host. You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the dedicated host list.
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -1089,21 +1097,22 @@ public class DescribePriceRequest extends Request {
             private Integer size; 
 
             /**
-             * The type of the system disk. Valid values:
+             * The category of the system disk. Valid values:
              * <p>
              * 
              * *   cloud: basic disk
              * *   cloud_efficiency: ultra disk
              * *   cloud_ssd: standard SSD
              * *   ephemeral_ssd: local SSD
-             * *   cloud_essd: enhanced SSD (ESSD)
+             * *   cloud_essd: Enterprise SSD (ESSD)
+             * *   cloud_auto: ESSD AutoPL disk
              * 
-             * Description of the default values:
+             * Default value:
              * 
-             * *   When the InstanceType parameter is set to a retired instance type and `IoOptimized` is set to `none`, the default value of this parameter is `cloud`.
-             * *   In other cases, the default value of this parameter is `cloud_efficiency`.
+             * *   When InstanceType is set to a retired instance type and `IoOptimized` is set to `none`, the default value is `cloud`.
+             * *   In other cases, the default value is `cloud_efficiency`.
              * 
-             * > If you want to query the prices of system disks, you must also specify `ImageId`.
+             * >  If you want to query the price of a system disk, you must also specify `ImageId`.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1122,10 +1131,23 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * The size of the system disk. Unit: GiB. Valid values: 20 to 500.
+             * The size of the system disk. Unit: GiB. Valid values:
              * <p>
              * 
-             * Default value: 20 or the image size, whichever is greater.
+             * *   Basic disk (cloud): 20 to 500.
+             * 
+             * *   ESSD (cloud_essd): Valid values vary based on the SystemDisk.PerformanceLevel value.
+             * 
+             *     *   Valid values when SystemDisk.PerformanceLevel is set to PL0: 1 to 2048.
+             *     *   Valid values when SystemDisk.PerformanceLevel is set to PL1: 20 to 2048.
+             *     *   Valid values when SystemDisk.PerformanceLevel is set to PL2: 461 to 2048.
+             *     *   Valid values when SystemDisk.PerformanceLevel is set to PL3: 1261 to 2048.
+             * 
+             * *   ESSD AutoPL disk (cloud_auto): 1 to 2048.
+             * 
+             * *   Other disk categories: 20 to 2048.
+             * 
+             * Default value: 20 or the size of the image specified by ImageId, whichever is greater.
              */
             public Builder size(Integer size) {
                 this.size = size;

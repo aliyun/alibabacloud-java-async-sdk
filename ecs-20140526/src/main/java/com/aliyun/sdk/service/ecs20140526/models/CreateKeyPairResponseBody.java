@@ -93,7 +93,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the SSH key pair.
+         * The ID of the key pair.
          */
         public Builder keyPairId(String keyPairId) {
             this.keyPairId = keyPairId;
@@ -101,7 +101,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the SSH key pair.
+         * The name of the key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -117,7 +117,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

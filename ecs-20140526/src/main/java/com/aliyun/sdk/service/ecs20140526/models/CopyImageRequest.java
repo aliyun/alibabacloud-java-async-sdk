@@ -42,6 +42,7 @@ public class CopyImageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String KMSKeyId;
 
     @com.aliyun.core.annotation.Query

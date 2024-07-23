@@ -267,7 +267,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
+         * The resource type. Valid values:
          * <p>
          * 
          * *   instance: ECS instance
@@ -276,7 +276,7 @@ public class ListTagResourcesRequest extends Request {
          * *   image: image
          * *   securitygroup: security group
          * *   volume: storage volume
-         * *   eni: ENI
+         * *   eni: elastic network interface (ENI)
          * *   ddh: dedicated host
          * *   ddhcluster: dedicated host cluster
          * *   keypair: SSH key pair
@@ -286,7 +286,9 @@ public class ListTagResourcesRequest extends Request {
          * *   elasticityassurance: elasticity assurance
          * *   capacityreservation: capacity reservation
          * *   command: Cloud Assistant command
-         * *   invocation: Cloud Assistant command execution result
+         * *   invocation: Cloud Assistant command execution result or file delivery result
+         * *   activation: activation code for a Cloud Assistant managed instance
+         * *   managedinstance: Cloud Assistant managed instance
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

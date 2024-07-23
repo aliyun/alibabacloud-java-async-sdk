@@ -237,7 +237,7 @@ public class AttachDiskRequest extends Request {
          * 
          * Default value: false.
          * 
-         * > If you set `Bootable` to true, the instance must be in the No System Disk state.
+         * >  You can set `Bootable` to true only if the instance does not have a system disk.
          */
         public Builder bootable(Boolean bootable) {
             this.putQueryParameter("Bootable", bootable);
@@ -246,18 +246,19 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the disk when the instance is released. Valid values:
+         * Specifies whether to release the disk when the instance is released.
          * <p>
          * 
          * *   true: releases the disk when the instance is released.
-         * *   false: does not release the data disk when the instance is released. The disk is retained as a pay-as-you-go data disk.
+         * *   false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.
          * 
          * Default value: false.
          * 
          * When you specify this parameter, take note of the following items:
          * 
-         * *   If `OperationLocks` in the DescribeInstances response contains `"LockReason" : "security"` for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set `DeleteWithInstance` to `false`, the DeleteWithInstance parameter is ignored, and the disk is released when the instance is released.
-         * *   You cannot specify this parameter for disks for which the multi-attach feature is enabled.
+         * *   If `OperationLocks` in the DescribeInstances response contains `"LockReason" : "security"` for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set `DeleteWithInstance` to `false`, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.
+         * *   If you want to attach an `elastic ephemeral disk`, you must set `DeleteWithInstance` to `true`.
+         * *   This parameter is unavailable for disks for which the multi-attach feature is enabled.
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -269,7 +270,7 @@ public class AttachDiskRequest extends Request {
          * The device name of the disk.
          * <p>
          * 
-         * > This parameter will be removed in the future. We recommend that you use other parameters to ensure compatibility.
+         * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
          */
         public Builder device(String device) {
             this.putQueryParameter("Device", device);
@@ -278,10 +279,10 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the disk. The disk specified by the `DiskId` parameter and the instance specified by the `InstanceId` parameter must reside in the same zone.
+         * The ID of the disk. The disk specified by `DiskId` and the instance specified by `InstanceId` must reside in the same zone.
          * <p>
          * 
-         * > For more information about the limits on attaching a data disk and a system disk, see the "Usage notes" section of this topic.
+         * >  For more information about the limits on attaching a data disk and a system disk, see the "Usage notes" section of this topic.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
@@ -290,7 +291,13 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to forcefully attach the disk to the instance.
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);

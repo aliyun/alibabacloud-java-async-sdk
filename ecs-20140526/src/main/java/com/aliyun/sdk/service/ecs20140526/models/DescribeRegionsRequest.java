@@ -160,7 +160,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The natural language that is used to filter responses. For more information, visit [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
+         * The natural language that is used to filter responses. For more information, see [RFC 7231](https://tools.ietf.org/html/rfc7231). Valid values:
          * <p>
          * 
          * *   zh-CN: Chinese
@@ -176,10 +176,10 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
+         * The billing method of instances. For more information, see [Billing overview](~~25398~~). Valid values:
          * <p>
          * 
-         * *   PrePaid: subscription. If this parameter is set to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.
+         * *   PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient balance or credits in your account. Otherwise, the InvalidPayMethod error code is returned.
          * *   PostPaid: pay-as-you-go.
          * 
          * Default value: PostPaid.
@@ -227,7 +227,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
+         * The resource type. Valid value:
          * <p>
          * 
          * *   instance: Elastic Compute Service (ECS) instance

@@ -105,7 +105,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The query token returned in the call.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -192,9 +192,9 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
              * The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.
              * <p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned. To query more than 1,000 resources that have the specified tags, call the [ListTagResources](~~110425~~) operation.
              * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -445,8 +445,8 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
              * Indicates whether the managed instance is connected. Valid values:
              * <p>
              * 
-             * *   true: The managed instance is connected and you can manage the instance by using Cloud Assistant.
-             * *   false: The managed instance is not connected because the managed instance is down or because Cloud Assistant Agent is not installed correctly.
+             * *   true: The managed instance is connected. You can manage the instance by using Cloud Assistant.
+             * *   false: The managed instance is not connected. The managed instance may be down or Cloud Assistant Agent may be incorrectly installed.
              */
             public Builder connected(Boolean connected) {
                 this.connected = connected;
@@ -502,7 +502,7 @@ public class DescribeManagedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the Cloud Assistant task was last executed.
+             * The time when the last Cloud Assistant task was executed.
              */
             public Builder lastInvokedTime(String lastInvokedTime) {
                 this.lastInvokedTime = lastInvokedTime;

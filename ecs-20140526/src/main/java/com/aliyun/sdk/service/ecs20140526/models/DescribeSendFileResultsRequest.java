@@ -282,20 +282,14 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The overall sending state of the file. The overall sending state of the file depends on its sending state on all the destination instances. Valid values:
+         * The overall sending status of the file. The overall sending status of the file varies based on the sending status of the file on all destination instances. Valid values:
          * <p>
          * 
-         * - Pending: The file is being verified or sent.
-         * - Invalid: The file is invalid.
-         * - Running: The file is being sent to the instances.
-         * - Aborted: The file failed to be sent to the instances. To send a file to an instance, make sure that the instance is in the Running state and the file can be sent within 1 minute.
-         * - Success: The file is sent.
-         * - Failed: The file failed to be created on the instances.
-         * - Error: An error occurs and interrupts the file sending task.
-         * - Timeout: The file sending task times out.
-         * - Cancelled: The file sending task is canceled.
-         * - Stopping: The file sending task is being stopped.
-         * - Terminated: The file sending task is terminated.
+         * *   Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.
+         * *   Running: The file is being sent to the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.
+         * *   Success: The file is sent. If the sending state of the file on all instances is Success, the overall sending state of the file is Success.
+         * *   Failed: The file fails to be sent. If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed.
+         * *   PartialFailed: The file sending task succeeds on some instances and fails on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.
          */
         public Builder invocationStatus(String invocationStatus) {
             this.putQueryParameter("InvocationStatus", invocationStatus);
@@ -313,10 +307,10 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. 
+         * The maximum number of entries per page.
          * <p>
          * 
-         * Valid values: 1 to 50. 
+         * Valid values: 1 to 50.
          * 
          * Default value: 10.
          */
@@ -427,7 +421,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The tags list.
+         * The tags of the file sending task.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -484,9 +478,9 @@ public class DescribeSendFileResultsRequest extends Request {
              * The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
              * <p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all the tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
              * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;

@@ -224,7 +224,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of threads allocated. Valid value: 2.
+             * >  This parameter is deprecated.
              */
             public Builder numa(String numa) {
                 this.numa = numa;
@@ -243,8 +243,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * The CPU topology type of the instance. Valid values:
              * <p>
              * 
-             * *   ContinuousCoreToHTMapping: Hyper-Threading (HT) continuous mode
-             * *   DiscreteCoreToHTMapping: HT discrete mode
+             * *   ContinuousCoreToHTMapping: Hyper-Threading (HT) continuous CPU topology
+             * *   DiscreteCoreToHTMapping: HT discrete CPU topology
              */
             public Builder topologyType(String topologyType) {
                 this.topologyType = topologyType;
@@ -560,7 +560,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the EIP. Valid values:
+             * The metering method of the EIP. Valid values:
              * <p>
              * 
              * *   PayByBandwidth
@@ -1095,7 +1095,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String privateIpAddress; 
 
             /**
-             * Indicates whether the IP address is the primary private IP address.
+             * Indicates whether the IP address is the primary private IP address. Valid values:
              * <p>
              * 
              * *   true
@@ -1442,7 +1442,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * *   security: The instance was locked due to security reasons.
              * *   recycling: The preemptible instance was locked and pending release.
              * *   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-             * *   refunded: The instance was locked because a refund is made for the instance.
+             * *   refunded: The instance was locked because a refund was made for the instance.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -1490,7 +1490,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * *   security: The instance was locked due to security reasons.
              * *   recycling: The preemptible instance was locked and pending release.
              * *   dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.
-             * *   refunded: The instance was locked because a refund is made for the instance.
+             * *   refunded: The instance was locked because a refund was made for the instance.
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;
@@ -1849,7 +1849,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The ID of the vSwitch to which the instance is connected.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2665,7 +2665,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * The ID of the cluster to which the instance belongs.
              * <p>
              * 
-             * >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
+             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -2689,7 +2689,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+             * The time when the instance was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -2725,11 +2725,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether release protection was enabled for the instance. This parameter determines whether you can use the ECS console or call the DeleteInstance operation to release the instance.
+             * Indicates whether release protection is enabled for the instance. This parameter determines whether you can use the ECS console or call the DeleteInstance operation to release the instance. Valid values:
              * <p>
              * 
-             * *   true: Release protection was enabled for the instance.
-             * *   false: Release protection was disabled for the instance.
+             * *   true: Release protection is enabled for the instance.
+             * *   false: Release protection is disabled for the instance.
              * 
              * >  This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.
              */
@@ -2747,7 +2747,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the deployment set.
+             * The ID of the deployment set to which the instance belongs.
              */
             public Builder deploymentSetId(String deploymentSetId) {
                 this.deploymentSetId = deploymentSetId;
@@ -2791,7 +2791,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the instance. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+             * The expiration time of the instance. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -2883,7 +2883,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2891,7 +2891,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -2911,7 +2911,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * The instance type of the instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2919,7 +2919,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family.
+             * The instance family of the instance.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -2930,8 +2930,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * The billing method for network usage. Valid values:
              * <p>
              * 
-             * *   PayByBandwidth
-             * *   PayByTraffic
+             * *   PayByBandwidth: pay-by-bandwidth
+             * *   PayByTraffic: pay-by-traffic
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -2955,7 +2955,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance is an I/O optimized instance.
+             * Indicates whether the instance is an I/O optimized instance. Valid values:
              * <p>
              * 
              * *   true
@@ -2983,7 +2983,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of local disks attached to the instance. Unit: GiB
+             * The capacity of local disks attached to the instance. Unit: GiB.
              */
             public Builder localStorageCapacity(Long localStorageCapacity) {
                 this.localStorageCapacity = localStorageCapacity;
@@ -3007,7 +3007,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ENIs bound to the instance.
+             * The ENIs attached to the instance.
              */
             public Builder networkInterfaces(NetworkInterfaces networkInterfaces) {
                 this.networkInterfaces = networkInterfaces;
@@ -3034,8 +3034,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * The type of the operating system of the instance. Valid values:
              * <p>
              * 
-             * *   windows
-             * *   linux
+             * *   windows: Windows operating systems
+             * *   linux: Linux operating systems
              */
             public Builder OSType(String OSType) {
                 this.OSType = OSType;
@@ -3155,7 +3155,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * <p>
              * 
              * *   NoSpot: The instance is a regular pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.
+             * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
              * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
              */
             public Builder spotStrategy(String spotStrategy) {
@@ -3164,7 +3164,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
+             * The time when the instance was last started. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see [ISO 8601](~~25696~~).
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -3172,7 +3172,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance.
+             * The status of the instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -3204,7 +3204,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * The virtual LAN (VLAN) ID of the instance.
              * <p>
              * 
-             * >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
+             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
             public Builder vlanId(String vlanId) {
                 this.vlanId = vlanId;

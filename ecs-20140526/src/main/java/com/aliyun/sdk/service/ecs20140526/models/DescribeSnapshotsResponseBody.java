@@ -630,7 +630,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * The category of the snapshot.
              * <p>
              * 
-             * >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use `InstantAccess`.
+             * >  This parameter will be removed in the future. We recommend that you use `InstantAccess` to ensure future compatibility.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -679,7 +679,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * 
              * By default, the value of this parameter is the same as the value of `RetentionDays`.
              * 
-             * >  This parameter is deprecated. The normal snapshots of ESSDs are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see [Use the instant access feature](~~193667~~).
+             * >  This parameter is no longer used. The normal snapshots of ESSDs are upgraded to support the instant access feature by default. No additional configurations are required to enable the feature and you are not charged for the feature. For more information, see [Use the instant access feature](~~193667~~).
              */
             public Builder instantAccessRetentionDays(Integer instantAccessRetentionDays) {
                 this.instantAccessRetentionDays = instantAccessRetentionDays;
@@ -695,7 +695,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the snapshot was last changed. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The time when the snapshot was last modified. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder lastModifiedTime(String lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -759,7 +759,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotLinkId.
+             * The ID of the snapshot chain that is associated with the snapshot.
              */
             public Builder snapshotLinkId(String snapshotLinkId) {
                 this.snapshotLinkId = snapshotLinkId;
@@ -843,7 +843,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * The category of the source disk.
              * <p>
              * 
-             * >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you use other parameters.
+             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
              */
             public Builder sourceStorageType(String sourceStorageType) {
                 this.sourceStorageType = sourceStorageType;
@@ -851,7 +851,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the snapshot. Valid values:
+             * The status of the snapshot. Valid values:
              * <p>
              * 
              * *   progressing
@@ -872,7 +872,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the snapshot has been used to create images or disks. Valid values:
+             * Indicates whether the snapshot was used to create images or disks. Valid values:
              * <p>
              * 
              * *   image

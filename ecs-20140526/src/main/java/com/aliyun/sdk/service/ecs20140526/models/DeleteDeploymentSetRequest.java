@@ -148,7 +148,7 @@ public class DeleteDeploymentSetRequest extends Request {
         }
 
         /**
-         * The ID of the deployment set. You cannot delete a deployment set that contains instances.
+         * The ID of the deployment set. You cannot delete a deployment set if the deployment set contains instances.
          */
         public Builder deploymentSetId(String deploymentSetId) {
             this.putQueryParameter("DeploymentSetId", deploymentSetId);

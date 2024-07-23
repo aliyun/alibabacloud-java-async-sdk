@@ -57,6 +57,7 @@ public class CreateDiskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String KMSKeyId;
 
     @com.aliyun.core.annotation.Query
@@ -460,7 +461,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * Specifies whether to enable the performance burst feature. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * >  This parameter is available only when DiskCategory is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -481,7 +488,7 @@ public class CreateDiskRequest extends Request {
          * The description of the disk. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          * <p>
          * 
-         * This parameter is empty by default.
+         * This parameter is left empty by default.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -490,13 +497,17 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The category of the disk. Valid values:
+         * The category of the data disk. Valid values:
          * <p>
          * 
-         * *   cloud: basic disk.
-         * *   cloud_efficiency: ultra disk.
-         * *   cloud_ssd: standard SSD.
-         * *   cloud_essd: ESSD.
+         * *   cloud: basic disk
+         * *   cloud_efficiency: ultra disk
+         * *   cloud_ssd: standard SSD
+         * *   cloud_essd: ESSD
+         * *   cloud_auto: ESSD AutoPL disk
+         * *   cloud_essd_entry: ESSD Entry disk
+         * *   elastic_ephemeral_disk_standard: standard elastic ephemeral disk
+         * *   elastic_ephemeral_disk_premium: premium elastic ephemeral disk
          * 
          * Default value: cloud.
          */
@@ -507,10 +518,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The name of the disk. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The name of the disk. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).
          * <p>
          * 
-         * This parameter is empty by default.
+         * This parameter is left empty by default.
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -543,13 +554,13 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the created subscription disk is automatically attached.
+         * The ID of the subscription instance to which to attach the subscription disk.
          * <p>
          * 
-         * *   After you specify the instance ID, ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId are ignored.
-         * *   You cannot specify ZoneId and InstanceId at the same time.
+         * *   If you specify an instance ID, the following parameters are ignored: ResourceGroupId, Tag.N.Key, Tag.N.Value, ClientToken, and KMSKeyId.
+         * *   You cannot specify both ZoneId and InstanceId in a request.
          * 
-         * This parameter is empty by default. This indicates that a pay-as-you-go disk is created. RegionId and ZoneId specify where the disk resides.
+         * This parameter is empty by default, which indicates that a pay-as-you-go disk is created in the region and zone specified by RegionId and ZoneId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -558,7 +569,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the Key Management Service (KMS) key that you want to use for the disk.
+         * The ID of the Key Management Service (KMS) key that is used for the disk.
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -570,12 +581,12 @@ public class CreateDiskRequest extends Request {
          * Specifies whether to enable the multi-attach feature for the disk. Valid values:
          * <p>
          * 
-         * *   Disabled.
-         * *   Enabled. Set the value to `Enabled` only for ESSDs.
+         * *   Disabled
+         * *   Enabled Set the value to `Enabled` only for ESSDs.
          * 
          * Default value: Disabled.
          * 
-         * > Disks for which the multi-attach feature is enabled support only the pay-as-you-go billing method. When `MultiAttach` is set to Enabled, you cannot specify `InstanceId`. You can call the [AttachDisk](~~25515~~) operation to attach disks to instances after the disks are created. Disks for which the multi-attach feature is enabled can be attached only as data disks.
+         * >  Disks for which the multi-attach feature is enabled support only the pay-as-you-go billing method. When `MultiAttach` is set to Enabled, you cannot specify `InstanceId`. You can call the [AttachDisk](~~25515~~) operation to attach disks to instances after the disks are created. Disks for which the multi-attach feature is enabled can be attached only as data disks.
          */
         public Builder multiAttach(String multiAttach) {
             this.putQueryParameter("MultiAttach", multiAttach);
@@ -602,7 +613,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The performance level of the ESSD. Valid values:
+         * The performance level of the disk if the disk is an ESSD. Valid values:
          * <p>
          * 
          * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
@@ -612,7 +623,7 @@ public class CreateDiskRequest extends Request {
          * 
          * Default value: PL1.
          * 
-         * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
+         * For information about ESSD performance levels, see [ESSDs](~~122389~~).
          */
         public Builder performanceLevel(String performanceLevel) {
             this.putQueryParameter("PerformanceLevel", performanceLevel);
@@ -621,7 +632,12 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.
+         * <p>
+         * 
+         * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
+         * 
+         * >  This parameter is available only when DiskCategory is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -639,7 +655,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the disk.
+         * The ID of the resource group to which to add the disk.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -669,23 +685,31 @@ public class CreateDiskRequest extends Request {
          * The size of the disk. Unit: GiB. This parameter is required. Valid values:
          * <p>
          * 
-         * *   Valid values when DiskCategory is set to cloud: 5 to 2,000.
+         * *   Valid values when DiskCategory is set to cloud: 5 to 2000.
          * 
-         * *   Valid values when DiskCategory is set to cloud_efficiency: 20 to 32,768.
+         * *   Valid values when DiskCategory is set to cloud_efficiency: 20 to 32768.
          * 
-         * *   Valid values when DiskCategory is set to cloud_ssd: 20 to 32,768.
+         * *   Valid values when DiskCategory is set to cloud_ssd: 20 to 32768.
          * 
-         * *   Valid values when DiskCategory is set to cloud_essd: depends on the `PerformanceLevel` value.
+         * *   Valid values when DiskCategory is set to cloud_essd: vary based on the `PerformanceLevel` value.
          * 
-         *     *   Valid values when PerformanceLevel is set to PL0: 1 to 32,768.
-         *     *   Valid values when PerformanceLevel is set to PL1: 20 to 32,768.
-         *     *   Valid values when PerformanceLevel is set to PL2: 461 to 32,768.
-         *     *   Valid values when PerformanceLevel is set to PL3: 1,261 to 32,768.
+         *     *   Valid values when PerformanceLevel is set to PL0: 1 to 32768.
+         *     *   Valid values when PerformanceLevel is set to PL1: 20 to 32768.
+         *     *   Valid values when PerformanceLevel is set to PL2: 461 to 32768.
+         *     *   Valid values when PerformanceLevel is set to PL3: 1261 to 32768.
+         * 
+         * *   Valid values when DiskCategory is set to cloud_auto: 1 to 32768.
+         * 
+         * *   Valid values when DiskCategory is set to cloud_essd_entry: 10 to 32768.
+         * 
+         * *   Valid values when DiskCategory is set to elastic_ephemeral_disk_standard: 64 to 8192.
+         * 
+         * *   Valid values when DiskCategory is set to elastic_ephemeral_disk_premium: 64 to 8192.
          * 
          * If `SnapshotId` is specified, the following limits apply to `SnapshotId` and `Size`:
          * 
-         * *   If the size of the snapshot specified by `SnapshotId` is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
-         * *   If the size of the snapshot specified by `SnapshotId` is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
+         * *   If the size of the snapshot specified by `SnapshotId` is larger than the value of `Size`, the size of the created disk is equal to the specified snapshot size.
+         * *   If the size of the snapshot specified by `SnapshotId` is smaller than the value of `Size`, the size of the created disk is equal to the value of `Size`.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -694,13 +718,14 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the snapshot used to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.
+         * The ID of the snapshot to use to create the disk. Snapshots that were created on or before July 15, 2013 cannot be used to create disks.
          * <p>
          * 
          * The following limits apply to `SnapshotId` and `Size`:
          * 
-         * *   If the size of the snapshot specified by `SnapshotId` is greater than the specified `Size` value, the size of the created disk is equal to the specified snapshot size.
-         * *   If the size of the snapshot specified by `SnapshotId` is smaller than the specified `Size` value, the size of the created disk is equal to the specified `Size` value.
+         * *   If the size of the snapshot specified by `SnapshotId` is larger than the value of `Size`, the size of the created disk is equal to the specified snapshot size.
+         * *   If the size of the snapshot specified by `SnapshotId` is smaller than the value of `Size`, the size of the created disk is equal to the value of `Size`.
+         * *   You cannot create elastic ephemeral disks from snapshots.
          */
         public Builder snapshotId(String snapshotId) {
             this.putQueryParameter("SnapshotId", snapshotId);
@@ -709,10 +734,10 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated block storage cluster. To create a disk in a specific dedicated block storage cluster, specify this parameter.
+         * The ID of the dedicated block storage cluster in which to create the disk. To create a disk in a specific dedicated block storage cluster, you must specify this parameter.
          * <p>
          * 
-         * > You cannot specify storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) and the dedicated block storage cluster-related parameter (`StorageClusterId`) at the same time. Otherwise, the operation cannot be called.
+         * >  You can specify the storage set-related parameters (`StorageSetId` and `StorageSetPartitionNumber`) or the dedicated block storage cluster-related parameter (`StorageClusterId`), but not both. If you specify a storage set-related parameter and a dedicated block storage cluster-related parameter in a request, the request fails.
          */
         public Builder storageClusterId(String storageClusterId) {
             this.putQueryParameter("StorageClusterId", storageClusterId);
@@ -757,8 +782,8 @@ public class CreateDiskRequest extends Request {
          * The ID of the zone in which to create the pay-as-you-go disk.
          * <p>
          * 
-         * *   If InstanceId is not specified, ZoneId is required.
-         * *   You cannot specify ZoneId and InstanceId at the same time.
+         * *   If you do not specify InstanceId, you must specify ZoneId.
+         * *   You cannot specify both ZoneId and InstanceId in a request.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -901,7 +926,7 @@ public class CreateDiskRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the disk. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
+             * The value of tag N to add to the disk. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

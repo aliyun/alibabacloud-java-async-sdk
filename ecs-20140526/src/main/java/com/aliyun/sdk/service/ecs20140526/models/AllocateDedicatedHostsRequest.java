@@ -547,7 +547,7 @@ public class AllocateDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The name of the dedicated host. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The name of the dedicated host. The name must be 2 to 128 characters in length and can contain letters and digits. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).
          */
         public Builder dedicatedHostName(String dedicatedHostName) {
             this.putQueryParameter("DedicatedHostName", dedicatedHostName);
@@ -810,7 +810,7 @@ public class AllocateDedicatedHostsRequest extends Request {
              * The key of tag N to add to the dedicated host. Valid values of N: 1 to 20.
              * <p>
              * 
-             * The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
+             * The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -821,7 +821,7 @@ public class AllocateDedicatedHostsRequest extends Request {
              * The value of tag N to add to the dedicated host. Valid values of N: 1 to 20.
              * <p>
              * 
-             * The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain `http://` or `https://`.
+             * The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

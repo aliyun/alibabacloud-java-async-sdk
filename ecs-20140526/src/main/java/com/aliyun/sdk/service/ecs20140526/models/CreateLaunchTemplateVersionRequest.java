@@ -24,6 +24,14 @@ public class CreateLaunchTemplateVersionRequest extends Request {
     private String autoReleaseTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
+    private Integer autoRenewPeriod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreditSpecification")
     private String creditSpecification;
 
@@ -128,6 +136,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
     private Integer period;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+    private String periodUnit;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
@@ -206,6 +218,8 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         this.systemDisk = builder.systemDisk;
         this.sourceRegionId = builder.sourceRegionId;
         this.autoReleaseTime = builder.autoReleaseTime;
+        this.autoRenew = builder.autoRenew;
+        this.autoRenewPeriod = builder.autoRenewPeriod;
         this.creditSpecification = builder.creditSpecification;
         this.dataDisk = builder.dataDisk;
         this.deletionProtection = builder.deletionProtection;
@@ -232,6 +246,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         this.ownerId = builder.ownerId;
         this.passwordInherit = builder.passwordInherit;
         this.period = builder.period;
+        this.periodUnit = builder.periodUnit;
         this.privateIpAddress = builder.privateIpAddress;
         this.ramRoleName = builder.ramRoleName;
         this.regionId = builder.regionId;
@@ -284,6 +299,20 @@ public class CreateLaunchTemplateVersionRequest extends Request {
      */
     public String getAutoReleaseTime() {
         return this.autoReleaseTime;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
+     * @return autoRenewPeriod
+     */
+    public Integer getAutoRenewPeriod() {
+        return this.autoRenewPeriod;
     }
 
     /**
@@ -469,6 +498,13 @@ public class CreateLaunchTemplateVersionRequest extends Request {
     }
 
     /**
+     * @return periodUnit
+     */
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    /**
      * @return privateIpAddress
      */
     public String getPrivateIpAddress() {
@@ -598,6 +634,8 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         private SystemDisk systemDisk; 
         private String sourceRegionId; 
         private String autoReleaseTime; 
+        private Boolean autoRenew; 
+        private Integer autoRenewPeriod; 
         private String creditSpecification; 
         private java.util.List < DataDisk> dataDisk; 
         private Boolean deletionProtection; 
@@ -624,6 +662,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         private Long ownerId; 
         private Boolean passwordInherit; 
         private Integer period; 
+        private String periodUnit; 
         private String privateIpAddress; 
         private String ramRoleName; 
         private String regionId; 
@@ -652,6 +691,8 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             this.systemDisk = request.systemDisk;
             this.sourceRegionId = request.sourceRegionId;
             this.autoReleaseTime = request.autoReleaseTime;
+            this.autoRenew = request.autoRenew;
+            this.autoRenewPeriod = request.autoRenewPeriod;
             this.creditSpecification = request.creditSpecification;
             this.dataDisk = request.dataDisk;
             this.deletionProtection = request.deletionProtection;
@@ -678,6 +719,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             this.ownerId = request.ownerId;
             this.passwordInherit = request.passwordInherit;
             this.period = request.period;
+            this.periodUnit = request.periodUnit;
             this.privateIpAddress = request.privateIpAddress;
             this.ramRoleName = request.ramRoleName;
             this.regionId = request.regionId;
@@ -727,6 +769,35 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         public Builder autoReleaseTime(String autoReleaseTime) {
             this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
             this.autoReleaseTime = autoReleaseTime;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable auto-renewal for the instance. This parameter is valid only if `InstanceChargeType` is set to `PrePaid`. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * The auto-renewal period of the instance. Valid values:
+         * <p>
+         * 
+         * Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
+         * 
+         * Default value: 1.
+         */
+        public Builder autoRenewPeriod(Integer autoRenewPeriod) {
+            this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
+            this.autoRenewPeriod = autoRenewPeriod;
             return this;
         }
 
@@ -845,7 +916,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         }
 
         /**
-         * The name of the instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The instance name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
+         * <p>
+         * 
+         * When you create multiple ECS instances at a time, you can batch configure sequential names for the instances. The instance names can contain square brackets (\[]) and commas (,). For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -1015,6 +1089,18 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * The unit of the subscription period. Valid values:
+         * <p>
+         * 
+         * Month (default)
+         */
+        public Builder periodUnit(String periodUnit) {
+            this.putQueryParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
             return this;
         }
 

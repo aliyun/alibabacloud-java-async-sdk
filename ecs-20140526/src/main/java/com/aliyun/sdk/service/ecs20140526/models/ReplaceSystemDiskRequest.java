@@ -54,6 +54,7 @@ public class ReplaceSystemDiskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String KMSKeyId;
 
     @com.aliyun.core.annotation.Query
@@ -433,7 +434,7 @@ public class ReplaceSystemDiskRequest extends Request {
         }
 
         /**
-         * The ID of the KMS key that you want to use for the system disk.
+         * The ID of the KMS key to use for the system disk.
          */
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
@@ -591,15 +592,25 @@ public class ReplaceSystemDiskRequest extends Request {
             private Integer size; 
 
             /**
-             * The capacity of the new system disk. Unit: GiB. Valid values:
+             * The capacity of the new system disk. Unit: GiB. Valid values for different disk categories:
              * <p>
              * 
-             * *   Basic disk: Max{20, Size of the image corresponding to ImageId} to 500.
-             * *   Other disks: Max{20, Size of the image corresponding to ImageId} to 2,048.
+             * *   Basic disk: Max{20, Size of the image specified by ImageId} to 500.
              * 
-             * Default value: 40 or the size of the image corresponding to ImageId, whichever is greater.
+             * *   Enterprise SSD (ESSD):
              * 
-             * >  If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for excess capacity.
+             *     *   PL0: Max{1, Size of the image specified by ImageId} to 2048.
+             *     *   PL1: Max{20, Size of the image specified by ImageId} to 2048.
+             *     *   PL2: Max{461, Size of the image specified by ImageId} to 2048.
+             *     *   PL3: Max{1261, Size of the image specified by ImageId} to 2048.
+             * 
+             * *   ESSD AutoPL disk: Max{1, Size of the image specified by ImageId} to 2048.
+             * 
+             * *   Other disk categories: Max{20, Size of the image specified by ImageId} to 2048.
+             * 
+             * Default value: 40 or the size of the image specified by ImageId, whichever is greater.
+             * 
+             * >  If the capacity of the new system disk exceeds `Max{20, Capacity of the original system disk}`, you are charged for the excess capacity.
              */
             public Builder size(Integer size) {
                 this.size = size;

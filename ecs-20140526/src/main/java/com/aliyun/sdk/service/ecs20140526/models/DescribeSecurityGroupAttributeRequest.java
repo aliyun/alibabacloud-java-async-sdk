@@ -208,9 +208,9 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
          * The direction in which the security group rule is applied. Valid values:
          * <p>
          * 
-         * *   egress: outbound.
-         * *   ingress: inbound.
-         * *   all: outbound and inbound.
+         * *   egress: outbound
+         * *   ingress: inbound
+         * *   all: outbound and inbound
          * 
          * Default value: all.
          */
@@ -221,7 +221,13 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page.
+         * <p>
+         * 
+         * *   Minimum value: 10.
+         * *   Maximum value: 1000.
+         * 
+         * Default value: 500.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -230,7 +236,7 @@ public class DescribeSecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

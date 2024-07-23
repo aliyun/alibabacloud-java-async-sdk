@@ -157,7 +157,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The maximum number of available resources of a specific type. No value is returned when the parameter is empty.
+             * The maximum disk capacity.
+             * <p>
+             * 
+             * This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.
              */
             public Builder max(Integer max) {
                 this.max = max;
@@ -165,7 +168,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of available resources of a specific type. No value is returned when the parameter is empty.
+             * The minimum disk capacity.
+             * <p>
+             * 
+             * This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.
              */
             public Builder min(Integer min) {
                 this.min = min;
@@ -173,7 +179,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the resource. Valid values:
+             * The status of the resource. Valid values:
              * <p>
              * 
              * *   Available
@@ -185,13 +191,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The resource category based on the stock. Valid values:
+             * The resource category based on the stock level. Valid values:
              * <p>
              * 
              * *   WithStock: Resources are in sufficient stock.
-             * *   ClosedWithStock: Resources are insufficient. We recommend that you use other resources that are in sufficient stock.
-             * *   WithoutStock: Resources are sold out and will be replenished. We recommend that you use other resources that are in sufficient stock.
-             * *   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use other resources that are in sufficient stock.
+             * *   ClosedWithStock: Resources are in insufficient stock. We recommend that you use other resources that are in sufficient stock.
+             * *   WithoutStock: Resources are out of stock and will be replenished. We recommend that you use other resources that are in sufficient stock.
+             * *   ClosedWithoutStock: Resources are out of stock and will not be replenished. We recommend that you use other resources that are in sufficient stock.
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;
@@ -199,7 +205,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The unit of the resource type. No value is returned when the parameter is empty.
+             * The unit of the disk capacity.
+             * <p>
+             * 
+             * This parameter takes effect only if DestinationResource is set to SystemDisk or DataDisk.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -207,7 +216,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * The resource.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -301,7 +310,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Details about the resources.
+             * The information about the resources.
              */
             public Builder supportedResources(SupportedResources supportedResources) {
                 this.supportedResources = supportedResources;
@@ -309,16 +318,16 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of a resource. Valid values:
+             * The resource type. Valid values:
              * <p>
              * 
-             * *   Zone: zone.
-             * *   IoOptimized: I/O optimized resource.
-             * *   InstanceType: instance type.
-             * *   SystemDisk: system disk.
-             * *   DataDisk: data disk.
-             * *   Network: network type.
-             * *   ddh: dedicated host.
+             * *   Zone: zone
+             * *   IoOptimized: I/O optimized resource
+             * *   InstanceType: instance type
+             * *   SystemDisk: system disk
+             * *   DataDisk: data disk
+             * *   Network: network type
+             * *   ddh: dedicated host
              */
             public Builder type(String type) {
                 this.type = type;
@@ -448,7 +457,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Details about the resources that can be created in the zone.
+             * The resources that are available in the zone.
              */
             public Builder availableResources(AvailableResources availableResources) {
                 this.availableResources = availableResources;
@@ -456,7 +465,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the instance resides.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -464,7 +473,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of resources in the zone. Valid values:
+             * The status of resources in the zone. Valid values:
              * <p>
              * 
              * *   Available
@@ -476,13 +485,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The resource category based on the stock. Valid values:
+             * The resource category based on the stock level in the zone. Valid values:
              * <p>
              * 
              * *   WithStock: Resources are in sufficient stock.
-             * *   ClosedWithStock: Resources are insufficient. We recommend that you use other resources that are in sufficient stock.
-             * *   WithoutStock: Resources are sold out and will be replenished. We recommend that you use other resources that are in sufficient stock.
-             * *   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use other resources that are in sufficient stock.
+             * *   ClosedWithStock: Resources are in insufficient stock. We recommend that you use other resources that are in sufficient stock.
+             * *   WithoutStock: Resources are out of stock and will be replenished. We recommend that you use other resources that are in sufficient stock.
+             * *   ClosedWithoutStock: Resources are out of stock and will not be replenished. We recommend that you use other resources that are in sufficient stock.
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;
@@ -490,7 +499,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the instance resides.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

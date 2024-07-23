@@ -348,10 +348,13 @@ public class CreateImageRequest extends Request {
          * The boot mode of the image. Valid values:
          * <p>
          * 
-         * *   BIOS
-         * *   UEFI
+         * *   BIOS: Basic Input/Output System (BIOS)
+         * *   UEFI: Unified Extensible Firmware Interface (UEFI)
+         * *   UEFI-Preferred: BIOS and UEFI
          * 
-         * > You must be familiar with the boot modes supported by the specified image. When you use this parameter to change the boot mode of the image, specify a boot mode supported by the image to ensure that instances that use this image can be started as expected.
+         * >  Before you change the boot mode of an image, we recommend that you get familiar with the boot modes supported by the image to ensure that instances created from the image can start as expected. If you do not know which boot modes are supported by the image, we recommend that you use the image check feature to perform a check. For information about the image check feature, see [Overview of image check](~~439819~~).
+         * 
+         * >  For information about the UEFI-Preferred boot mode, see [Best practices for ECS instance boot modes](~~2244655~~).
          */
         public Builder bootMode(String bootMode) {
             this.putQueryParameter("BootMode", bootMode);

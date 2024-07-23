@@ -1200,8 +1200,18 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The number of ECS instances that you want to create. Valid values: 1 to 100.
+         * The desired number of ECS instances. Valid values: 1 to 100.
          * <p>
+         * 
+         * The number of ECS instances that can be created varies based on the Amount and MinAmount values.
+         * 
+         * *   If you do not specify MinAmount, the RunInstances operation creates ECS instances based on the Amount value. If the available resources are insufficient to create the desired number of ECS instances, the RunInstances operation returns an error response and no ECS instances are created.
+         * 
+         * *   If you specify MinAmount, take note of the following items:
+         * 
+         *     *   If the available resources are insufficient to create the minimum number of ECS instances, no ECS instances are created and the RunInstances operation returns an error response.
+         *     *   If the available resources are insufficient to create the desired number of ECS instances but are sufficient to create the minimum number of ECS instances, the RunInstances operation uses the available resources to create ECS instances and returns a success response. In this case, the number of ECS instances that can be created is less than the desired number of ECS instances.
+         *     *   If the available resources are sufficient to create the desired number of ECS instances, the RunInstances operation uses the available resources to create the desired number of ECS instances and returns a success response.
          * 
          * Default value: 1.
          */
@@ -1532,10 +1542,10 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The instance name. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
+         * The name of the instance. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-). The default value of this parameter is the `InstanceId` value.
          * <p>
          * 
-         * When you batch create instances, you can batch configure sequential names for the instances. For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
+         * When you batch create instances, you can batch configure sequential names for the instances. The sequential names can contain brackets (\[ ]) and commas (,). For more information, see [Batch configure sequential names or hostnames for multiple instances](~~196048~~).
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -1698,11 +1708,18 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The minimum number of instances that can be created. Valid values: 1 to 100.
+         * The minimum number of ECS instances to be created. Valid values: 1 to 100.
          * <p>
          * 
-         * *   If the number of instances that available resources are sufficient to create is smaller than the MinAmount value, instances cannot be created.
-         * *   If the number of ECS instances that available resources are sufficient to create is greater than or equal to the MinAmount value, instances are created based on the number of available resources.
+         * The number of ECS instances that can be created varies based on the Amount and MinAmount values.
+         * 
+         * *   If you do not specify MinAmount, the RunInstances operation creates ECS instances based on the Amount value. If the available resources are insufficient to create the desired number of ECS instances, the RunInstances operation returns an error response and no ECS instances are created.
+         * 
+         * *   If you specify MinAmount, take note of the following items:
+         * 
+         *     *   If the available resources are insufficient to create the minimum number of ECS instances, no ECS instances are created and the RunInstances operation returns an error response.
+         *     *   If the available resources are insufficient to create the desired number of ECS instances but are sufficient to create the minimum number of ECS instances, the RunInstances operation uses the available resources to create ECS instances and returns a success response. In this case, the number of ECS instances that can be created is less than the desired number of ECS instances.
+         *     *   If the available resources are sufficient to create the desired number of ECS instances, the RunInstances operation uses the available resources to create the desired number of ECS instances and returns a success response.
          */
         public Builder minAmount(Integer minAmount) {
             this.putQueryParameter("MinAmount", minAmount);
@@ -1711,7 +1728,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The information of the ENIs.
+         * The information of the elastic network interfaces (ENIs).
          */
         public Builder networkInterface(java.util.List < NetworkInterface> networkInterface) {
             this.putQueryParameter("NetworkInterface", networkInterface);
@@ -1899,14 +1916,14 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which you want to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances that a security group can contain depends on the type of the security group. For more information, see the "Security group limits" section in [Limits](~~25412~~#SecurityGroupQuota).
+         * The ID of the security group to which you want to assign the instance. Instances in the same security group can communicate with each other. The maximum number of instances allowed in a security group varies based on the type of the security group. For more information, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota~~).
          * <p>
          * 
-         * >  The network type of the new instance must be the same as that of the security group specified by the `SecurityGroupId` parameter. For example, if the specified security group is of the VPC type, the new instance is also of the VPC type and you must specify `VSwitchId`.
+         * >  The network type of the new instance is the same as the network type of the security group specified by `SecurityGroupId`. For example, if the specified security group is of the VPC type, the new instance is also of the VPC type and you must specify `VSwitchId`.
          * 
-         * If you do not use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template, you must specify SecurityGroupId. Take note of the following items:
+         * If you do not use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template, you must specify a security group ID. Take note of the following items:
          * 
-         * *   You can set `SecurityGroupId` to specify a single security group or set `SecurityGroupIds.N` to specify one or more security groups. However, you cannot specify both `SecurityGroupId` and `SecurityGroupIds.N`.
+         * *   You can set `SecurityGroupId` to specify a single security group or set `SecurityGroupIds.N` to specify one or more security groups. However, you cannot specify both `SecurityGroupId` and `SecurityGroupIds.N` in the same request.
          * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `SecurityGroupId` or `SecurityGroupIds.N` but can specify `NetworkInterface.N.SecurityGroupId` or `NetworkInterface.N.SecurityGroupIds.N`.
          */
         public Builder securityGroupId(String securityGroupId) {
@@ -1916,12 +1933,12 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of security group N to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see [Security group limits](~~101348~~).
+         * The ID of security group N to which to assign the instance. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the [Security group limits](~~101348~~) section of the "Limits" topic.
          * <p>
          * 
          * Take note of the following items:
          * 
-         * *   You cannot specify both `SecurityGroupId` and `SecurityGroupIds.N`.
+         * *   You cannot specify both `SecurityGroupId` and `SecurityGroupIds.N` in the same request.
          * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `SecurityGroupId` or `SecurityGroupIds.N` but can specify `NetworkInterface.N.SecurityGroupId` or `NetworkInterface.N.SecurityGroupIds.N`.
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
@@ -2050,10 +2067,12 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The user data of the instance. The user data must be encoded in Base64. The raw data can be up to 16 KB in size.
+         * The user data of the instance. You must specify Base64-encoded data. The instance user data cannot exceed 32 KB in size before Base64 encoding.
          * <p>
          * 
-         * >  If the instance type supports [user data](~~49121~~), you can use the UserData parameter to pass in user data. We recommend that you do not pass in confidential information (such as passwords or private keys) in plaintext as user data. This is because the system does not encrypt UserData values when API requests are transmitted. If you must pass in confidential information, we recommend that you encrypt and encode the information in Base64, and then decode and decrypt the information in the same way inside the instance.
+         * For information about the limits, formats, and running frequencies of instance user data, see [Instance user data](~~49121~~).
+         * 
+         * >  To ensure security, we recommend that you do not use plaintext to pass in confidential information, such as passwords or private keys, as user data. If you need to pass in confidential information, we recommend that you encrypt and encode the information in Base64 and then decode and decrypt the information in the same manner in the instance.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);
@@ -2494,6 +2513,7 @@ public class RunInstancesRequest extends Request {
         private String encrypted;
 
         @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String KMSKeyId;
 
         @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
@@ -2687,10 +2707,20 @@ public class RunInstancesRequest extends Request {
              * The size of the system disk. Unit: GiB. Valid values:
              * <p>
              * 
-             * *   Basic disks: 20 to 500.
-             * *   Other disks: 20 to 2048.
+             * *   Basic disk: 20 to 500.
              * 
-             * The value of this parameter must be at least 20 and greater than or equal to the image size.
+             * *   ESSD: Valid values vary based on the performance level of the ESSD.
+             * 
+             *     *   PL0 ESSD: 1 to 2048.
+             *     *   PL1 ESSD: 20 to 2048.
+             *     *   PL2 ESSD: 461 to 2048.
+             *     *   PL3 ESSD: 1261 to 2048.
+             * 
+             * *   ESSD AutoPL disk: 1 to 2048.
+             * 
+             * *   Other disk categories: 20 to 2048.
+             * 
+             * The value of this parameter must be at least 1 and greater than or equal to the image size.
              * 
              * Default value: 40 or the image size, whichever is greater.
              */
@@ -2703,10 +2733,10 @@ public class RunInstancesRequest extends Request {
              * Specifies whether to enable the performance burst feature for the system disk. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: enables the performance burst feature for the system disk.
+             * *   false: disables the performance burst feature for the system disk.
              * 
-             * >  This parameter is available only if you set the `SystemDisk.Category` parameter to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
+             * >  This parameter is available only if you set `SystemDisk.Category` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -2725,8 +2755,8 @@ public class RunInstancesRequest extends Request {
              * Specifies whether to encrypt the system disk. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: encrypts the system disk.
+             * *   false: does not encrypt the system disk.
              * 
              * Default value: false.
              * 
@@ -2749,9 +2779,9 @@ public class RunInstancesRequest extends Request {
              * The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.
              * <p>
              * 
-             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
+             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
              * 
-             * >  This parameter is available only if you set the `SystemDisk.Category` parameter to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
+             * >  This parameter is available only if you set `SystemDisk.Category` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -2759,7 +2789,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the dedicated block storage cluster. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, you need to specify this parameter.
+             * The ID of the dedicated block storage cluster to which the system disk belongs. If you want to use disks in a dedicated block storage cluster as system disks when you create instances, specify this parameter.
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -2883,6 +2913,7 @@ public class RunInstancesRequest extends Request {
         private String encrypted;
 
         @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String KMSKeyId;
 
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
@@ -3060,8 +3091,8 @@ public class RunInstancesRequest extends Request {
              * Specifies whether to enable the performance burst feature for data disk N. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: enables the performance burst feature for the data disk.
+             * *   false: disables the performance burst feature for the data disk.
              * 
              * >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
@@ -3074,14 +3105,25 @@ public class RunInstancesRequest extends Request {
              * The category of data disk N. Valid values:
              * <p>
              * 
-             * *   cloud_efficiency: utra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk
-             * *   cloud_auto: ESSD AutoPL disk
-             * *   cloud_essd_entry: ESSD Entry disk
+             * *   cloud_efficiency: ultra disk.
              * 
-             * >  This parameter can be set to `cloud_essd_entry` only when `InstanceType` is set to `ecs.u1` or `ecs.e`.
+             * *   cloud_ssd: standard SSD.
+             * 
+             * *   cloud_essd: ESSD.
+             * 
+             * *   cloud: basic disk.
+             * 
+             * *   cloud_auto: ESSD AutoPL disk.
+             * 
+             * *   cloud_essd_entry: ESSD Entry disk.
+             * 
+             *     **
+             * 
+             *     **Note** This parameter can be set to `cloud_essd_entry` only when `InstanceType` is set to `ecs.u1` or `ecs.e`.
+             * 
+             * *   elastic_ephemeral_disk_standard: standard elastic ephemeral disk.
+             * 
+             * *   elastic_ephemeral_disk_premium: premium elastic ephemeral disk.
              * 
              * For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
              */
@@ -3094,8 +3136,8 @@ public class RunInstancesRequest extends Request {
              * Specifies whether to release data disk N when the instance is released. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: releases data disk N when the instance is released.
+             * *   false: does not release data disk N when the instance is released.
              * 
              * Default value: true.
              */
@@ -3127,7 +3169,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of data disk N. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).
+             * The name of data disk N. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
              */
             public Builder diskName(String diskName) {
                 this.diskName = diskName;
@@ -3146,8 +3188,8 @@ public class RunInstancesRequest extends Request {
              * Specifies whether to encrypt data disk N. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: encrypts data disk N.
+             * *   false: does not encrypt data disk N.
              * 
              * Default value: false.
              */
@@ -3173,7 +3215,7 @@ public class RunInstancesRequest extends Request {
              * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
              * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              * 
-             * For information about ESSD performance levels, see [ESSDs](~~122389~~).
+             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -3201,7 +3243,7 @@ public class RunInstancesRequest extends Request {
              * 
              * *   Valid values when DataDisk.N.Category is set to cloud_ssd: 20 to 32768.
              * 
-             * *   Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the `DataDisk.N.PerformanceLevel` value.
+             * *   Valid values when DataDisk.N.Category is set to cloud_essd: vary based on the value of `DataDisk.N.PerformanceLevel`.
              * 
              *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.
              *     *   Valid values when DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.
@@ -3214,7 +3256,7 @@ public class RunInstancesRequest extends Request {
              * 
              * *   Valid values when DataDisk.N.Category is set to cloud_essd_entry: 10 to 32768.
              * 
-             * >  The value of this parameter must be greater than or equal to the size of the snapshot specified by `SnapshotId`.
+             * >  The value of this parameter must be greater than or equal to the size of the snapshot specified by `DataDisk.N.SnapshotId`.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -3225,7 +3267,7 @@ public class RunInstancesRequest extends Request {
              * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
              * <p>
              * 
-             * When `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created with the size of the specified snapshot. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+             * If `DataDisk.N.SnapshotId` is specified, `DataDisk.N.Size` is ignored. The data disk is created based on the size of the specified snapshot. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -3233,7 +3275,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, you must specify this parameter.
+             * The ID of the dedicated block storage cluster to which data disk N belongs. If you want to use a disk in a dedicated block storage cluster as data disk N when you create the instance, specify this parameter.
              */
             public Builder storageClusterId(String storageClusterId) {
                 this.storageClusterId = storageClusterId;
@@ -3514,8 +3556,8 @@ public class RunInstancesRequest extends Request {
              * Specifies whether to retain ENI N when the associated instance is released. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: releases the ENI when the associated instance is released.
+             * *   false: retains the ENI when the associated instance is released.
              * 
              * Default value: true.
              * 
@@ -3534,7 +3576,7 @@ public class RunInstancesRequest extends Request {
              * 
              * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
              * *   The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you do not need to set this parameter.
+             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you do not need to specify this parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -3547,8 +3589,8 @@ public class RunInstancesRequest extends Request {
              * 
              * Valid values:
              * 
-             * *   Primary
-             * *   Secondary
+             * *   Primary: the primary ENI.
+             * *   Secondary: the secondary ENI.
              * 
              * Default value: Secondary.
              */
@@ -3558,14 +3600,14 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * IPv6 address N to assign to the primary ENI. Up to 10 IPv6 addresses can be assigned to the primary ENI. Valid values of the second N: 1 to 10.
+             * IPv6 address N to assign to the primary ENI. You can assign up to 10 IPv6 addresses to the primary ENI. Valid values of the second N: 1 to 10.
              * <p>
              * 
              * Example: `Ipv6Address.1=2001:db8:1234:1a00::***`.
              * 
              * Take note of the following items:
              * 
-             * *   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.
+             * *   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot specify this parameter.
              * *   If you specify this parameter, you must set `Amount` to 1 and cannot specify `Ipv6AddressCount`, `Ipv6Address.N`, or `NetworkInterface.N.Ipv6AddressCount`.
              */
             public Builder ipv6Address(java.util.List < String > ipv6Address) {
@@ -3579,7 +3621,7 @@ public class RunInstancesRequest extends Request {
              * 
              * Take note of the following items:
              * 
-             * *   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot set this parameter.
+             * *   This parameter is valid only when `NetworkInterface.N.InstanceType` is set to `Primary`. If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you cannot specify this parameter.
              * *   If this parameter is specified, you cannot specify `Ipv6AddressCount`, `Ipv6Address.N`, or `NetworkInterface.N.Ipv6Address.N`.
              */
             public Builder ipv6AddressCount(Long ipv6AddressCount) {
@@ -3595,7 +3637,7 @@ public class RunInstancesRequest extends Request {
              * 
              * *   You can specify network card indexes only for instances of specific instance types.
              * *   When NetworkInterface.N.InstanceType is set to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.
-             * *   When NetworkInterface.N.InstanceType is set to Secondary or left empty, you can set NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see the [Overview of instance families](~~25378~~) topic.
+             * *   When NetworkInterface.N.InstanceType is set to Secondary or left empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see [Overview of instance families](~~25378~~).
              */
             public Builder networkCardIndex(Integer networkCardIndex) {
                 this.networkCardIndex = networkCardIndex;
@@ -3606,7 +3648,7 @@ public class RunInstancesRequest extends Request {
              * The ID of ENI N to attach to the instance.
              * <p>
              * 
-             * >  This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot configure other ENI creation parameters.
+             * >  This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot specify other ENI creation parameters.
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -3614,13 +3656,13 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The name of ENI N. The name must be 2 to 128 characters in length and support Unicode characters under the Decimal Number category and the categories whose names contain Letter. The name can contain colons (:), underscores (\_), periods (.), and hyphens (-).
+             * The name of ENI N. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
              * <p>
              * 
              * Take note of the following items:
              * 
              * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you do not need to set this parameter.
+             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you do not need to specify this parameter.
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
@@ -3631,8 +3673,8 @@ public class RunInstancesRequest extends Request {
              * The communication mode of ENI N. Valid values:
              * <p>
              * 
-             * *   Standard: The TCP communication mode is used.
-             * *   HighPerformance: The Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
+             * *   Standard: uses the TCP communication mode.
+             * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
              * 
              * Default value: Standard.
              * 
@@ -3651,10 +3693,10 @@ public class RunInstancesRequest extends Request {
              * 
              * *   Valid values of N: 1 and 2.
              * 
-             *     *   If the value of N is 1, you can configure a primary or secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified one are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.
+             *     *   If the value of N is 1, you can configure a primary or secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, the specified number of instances are created and consecutive primary IP addresses starting from the specified IP address are assigned to the instances. In this case, you cannot attach secondary ENIs to the instances.
              *     *   If the value of N is 2, you can configure a primary ENI and a secondary ENI. If this parameter is specified, `Amount` is set to a numeric value greater than 1, and NetworkInterface.N.InstanceType is set to Primary, you cannot set `NetworkInterface.2.InstanceType` to Secondary to attach a secondary ENI.
              * 
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, this parameter is equivalent to `PrivateIpAddress`. You cannot specify both NetworkInterface.N.PrimaryIpAddress and `PrivateIpAddress`.
+             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, this parameter is equivalent to `PrivateIpAddress`. You cannot specify both this parameter and `PrivateIpAddress` in the same request.
              * 
              * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, the specified primary IP address is assigned to the secondary ENI. The default value is an IP address that is randomly selected from within the CIDR block of the vSwitch to which to connect the secondary ENI.
              * 
@@ -3662,7 +3704,7 @@ public class RunInstancesRequest extends Request {
              * 
              * *   You can attach only a single secondary ENI when you create an ECS instance. After the instance is created, you can call the [CreateNetworkInterface](~~58504~~) and [AttachNetworkInterface](~~58515~~) operations to attach more secondary ENIs.
              * 
-             * *   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
+             * *   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. You cannot specify the IP addresses. For example, if a vSwitch CIDR block is 192.168.1.0/24, the following IP addresses are reserved: 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255.
              */
             public Builder primaryIpAddress(String primaryIpAddress) {
                 this.primaryIpAddress = primaryIpAddress;
@@ -3676,8 +3718,8 @@ public class RunInstancesRequest extends Request {
              * Take note of the following items:
              * 
              * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   The value of this parameter cannot exceed the maximum number of queues per ENI allowed for the instance type.
-             * *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To learn the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation to query the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` values.
+             * *   The value of this parameter cannot exceed the maximum number of queues allowed per ENI.
+             * *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and check the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` values in the response.
              * *   If this parameter is set and `NetworkInterface.N.InstanceType` is set to `Primary`, you cannot specify `NetworkInterfaceQueueNumber`.
              */
             public Builder queueNumber(Integer queueNumber) {
@@ -3714,8 +3756,8 @@ public class RunInstancesRequest extends Request {
              * Take note of the following items:
              * 
              * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `SecurityGroupId`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupIds.N`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which the instance belongs.
+             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must specify this parameter. In this case, this parameter is equivalent to `SecurityGroupId`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupIds.N`.
+             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -3727,12 +3769,12 @@ public class RunInstancesRequest extends Request {
              * <p>
              * 
              * *   Valid values of the first N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section in the "Limits" topic.
+             * *   The second N indicates that one or more security group IDs can be specified. The valid values of N vary based on the maximum number of security groups to which an instance can belong. For more information, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section of the "Limits" topic.
              * 
              * Take note of the following items:
              * 
              * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must specify this parameter or `NetworkInterface.N.SecurityGroupId`. In this case, this parameter is equivalent to `SecurityGroupIds.N`. You cannot specify `SecurityGroupId`, `SecurityGroupIds.N`, or `NetworkInterface.N.SecurityGroupId`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the ID of the security group to which the instance belongs.
+             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -3760,8 +3802,8 @@ public class RunInstancesRequest extends Request {
              * Take note of the following items:
              * 
              * *   Valid values of N: 1 and 2. If the value of N is 1, you can configure a primary or secondary ENI. If the value of N is 2, you must configure a primary ENI and a secondary ENI.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must set this parameter. In this case, this parameter is equivalent to `VSwitchId`. You cannot specify both NetworkInterface.N.VSwitchId and `VSwitchId`.
-             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, this parameter is optional. The default value is the VSwitchId value.
+             * *   If `NetworkInterface.N.InstanceType` is set to `Primary`, you must specify this parameter. In this case, this parameter is equivalent to `VSwitchId`. You cannot specify both NetworkInterface.N.VSwitchId and `VSwitchId` in the same request.
+             * *   If `NetworkInterface.N.InstanceType` is set to `Secondary` or left empty, you do not need to specify this parameter. The default value is the VSwitchId value.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

@@ -575,11 +575,13 @@ public class DescribeDisksRequest extends Request {
          * *   cloud: basic disk
          * *   cloud_efficiency: ultra disk
          * *   cloud_ssd: standard SSD
-         * *   cloud_essd: enhanced SSD (ESSD)
+         * *   cloud_essd: Enterprise SSD (ESSD)
          * *   cloud_auto: ESSD AutoPL disk
          * *   local_ssd_pro: I/O-intensive local disk
          * *   local_hdd_pro: throughput-intensive local disk
          * *   cloud_essd_entry: ESSD Entry disk
+         * *   elastic_ephemeral_disk_standard: standard elastic ephemeral disk
+         * *   elastic_ephemeral_disk_premium: premium elastic ephemeral disk
          * *   ephemeral: retired local disk
          * *   ephemeral_ssd: retired local SSD
          * 
@@ -607,13 +609,13 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * Specifies whether to release the cloud disk when its associated instance is released. Valid values:
+         * Specifies whether the disk is released when the associated instance is released. Valid values:
          * <p>
          * 
-         * *   true: The cloud disk is released when its associated instance is released.
-         * *   false: The cloud disk is not released but is retained as a pay-as-you-go data disk after its associated instance is released.
+         * *   true: The disk is released when the associated instance is released.
+         * *   false: The disk is retained as a pay-as-you-go data disk when the associated instance is released.
          * 
-         * Default value: false
+         * Default value: false.
          */
         public Builder deleteWithInstance(Boolean deleteWithInstance) {
             this.putQueryParameter("DeleteWithInstance", deleteWithInstance);
@@ -622,7 +624,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The disk billing method. Valid values:
+         * The billing method of the disk. Valid values:
          * <p>
          * 
          * *   PrePaid: subscription
@@ -635,7 +637,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The of disk IDs. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).
+         * The IDs of cloud disks, local disks, or elastic ephemeral disks. The value is a JSON array that consists of up to 100 disk IDs. Separate the disk IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -644,7 +646,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The cloud disk or local disk name.
+         * The name of the disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          */
         public Builder diskName(String diskName) {
             this.putQueryParameter("DiskName", diskName);
@@ -653,7 +655,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The disk type. Valid values:
+         * The type of the disk. Valid values:
          * <p>
          * 
          * *   all: system disk and data disk
@@ -661,6 +663,8 @@ public class DescribeDisksRequest extends Request {
          * *   data: data disk
          * 
          * Default value: all.
+         * 
+         * >  Elastic ephemeral disks cannot be used as system disks.
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -738,7 +742,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the cloud disk or local disk is attached.
+         * The ID of the Elastic Compute Service (ECS) instance to which the disk is attached.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -762,7 +766,7 @@ public class DescribeDisksRequest extends Request {
          * *   financial: The disk is locked due to overdue payments.
          * *   security: The disk is locked due to security reasons.
          * *   recycling: The preemptible instance is locked and pending release.
-         * *   dedicatedhostfinancial: The ECS instance is locked due to overdue payments of the dedicated host.
+         * *   dedicatedhostfinancial: The instance is locked due to overdue payments for the dedicated host.
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -832,7 +836,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The page number to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -864,9 +868,9 @@ public class DescribeDisksRequest extends Request {
          * <p>
          * 
          * *   true: The disk is removable. A removable disk can independently exist and can be attached to or detached from an instance within the same zone.
-         * *   false: The disk is not removable. A disk that is not removable cannot independently exist nor can it be attached to or detached from an instance within the same zone.
+         * *   false: The disk is not removable. A disk that is not removable cannot independently exist or be attached to or detached from an instance within the same zone.
          * 
-         * The `Portable` attribute of the following disks is `false`, and these disks share the same lifecycle with their associated instances:
+         * The `Portable` attribute of the following types of disks is `false`, and these types of disks share the same lifecycle with their associated instances:
          * 
          * *   Local disks
          * *   Local SSDs
@@ -888,10 +892,10 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the disk belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
+         * The ID of the resource group to which the disk belongs. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
          * <p>
          * 
-         * > Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.
+         * >  Resources in the default resource group are displayed in the response regardless of the value specified for this parameter.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -927,7 +931,7 @@ public class DescribeDisksRequest extends Request {
         }
 
         /**
-         * The state of the cloud disk. For more information, see [Disk states](~~25689~~). Valid values:
+         * The status of the disk. For more information, see [Disk states](~~25689~~). Valid values:
          * <p>
          * 
          * *   In_use
@@ -1071,10 +1075,10 @@ public class DescribeDisksRequest extends Request {
             private String value; 
 
             /**
-             * The disk tag key. Valid values of N: 1 to 20.
+             * The key of tag N of the disk. Valid values of N: 1 to 20.
              * <p>
              * 
-             * Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
+             * If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1082,7 +1086,7 @@ public class DescribeDisksRequest extends Request {
             }
 
             /**
-             * The disk tag value. Valid values of N: 1 to 20.
+             * The value of tag N of the disk. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

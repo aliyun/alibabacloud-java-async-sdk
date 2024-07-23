@@ -339,7 +339,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The description of the common command. This parameter takes effect and fuzzy search is supported by default only when `Provider` is specified.
+         * The description of the command.
+         * <p>
+         * 
+         * If you specify `Provider`, fuzzy search is supported by default.
+         * 
+         * If you do not specify `Provider`, prefix-based fuzzy search is supported. For example, if you specify `test*`, all commands whose descriptions start with `test` are queried.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -363,10 +368,10 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. 
+         * The maximum number of entries per page.
          * <p>
          * 
-         * Valid values: 1 to 50. 
+         * Valid values: 1 to 50.
          * 
          * Default value: 10.
          */
@@ -377,7 +382,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The name of the command. If you specify `Provider`, fuzzy search is supported by default.
+         * The name of the command.
+         * <p>
+         * 
+         * If you specify `Provider`, fuzzy search is supported by default.
+         * 
+         * If you do not specify `Provider`, prefix-based fuzzy search is supported. For example, if you specify `command*`, all commands whose names start with `command` are queried.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -386,7 +396,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

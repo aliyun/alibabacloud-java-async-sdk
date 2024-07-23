@@ -297,11 +297,11 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable the performance burst feature. Valid values:
+             * Indicates whether the performance burst feature is enabled. Valid values:
              * <p>
              * 
-             * *   true: enables the performance burst feature.
-             * *   false: does not enable the performance burst feature.
+             * *   true
+             * *   false
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -336,7 +336,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * The device name of the data disk.
              * <p>
              * 
-             * >  This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+             * >  This parameter will be removed in the future. To ensure future compatibility, we recommend that you do not use this parameter.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -352,7 +352,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to encrypt the data disk.
+             * Indicates whether the data disk is encrypted.
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -360,7 +360,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The performance level of ESSD to use as the data disk. This parameter is returned only when tne value of `Category` is cloud_essd. Valid values:
+             * The performance level of the ESSD to use as a data disk. This parameter is returned only when the value of `Category` is cloud_essd. Valid values:
              * <p>
              * 
              * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
@@ -374,12 +374,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
+             * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.
              * <p>
              * 
-             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
+             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
              * 
-             * >  This parameter is available only if the corresponding disk category parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+             * >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -610,7 +610,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * The instance type of the instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -626,13 +626,11 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The communication mode of the ENI. Valid values:
+             * The communication mode of the primary ENI. Valid values:
              * <p>
              * 
-             * *   Standard: The TCP communication mode is used.
-             * *   HighPerformance: Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
-             * 
-             * > This parameter can have a value of HighPerformance only when the ENI is attached to a c7re RDMA-enhanced instance that resides in Beijing Zone K.
+             * *   Standard: uses the TCP communication mode.
+             * *   HighPerformance: uses the remote direct memory access (RDMA) communication mode with Elastic RDMA Interface (ERI) enabled.
              */
             public Builder networkInterfaceTrafficMode(String networkInterfaceTrafficMode) {
                 this.networkInterfaceTrafficMode = networkInterfaceTrafficMode;
@@ -648,10 +646,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which to assign the ENI. The security group and the ENI must belong to the same VPC.
+             * The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.
              * <p>
              * 
-             * > You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.
+             * >  SecurityGroupId and SecurityGroupIds are mutually exclusive in the response.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -659,10 +657,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of security group *N* with which you want to associate the ECS instance. Valid values of *N* vary based on the maximum number of security groups with which the instance can be associated. For more information, see the "Security group limits" section in the [Limits](~~25412~~) topic.
+             * The IDs of the security groups to which to assign the secondary ENI.
              * <p>
              * 
-             * >  You cannot specify the **SecurityGroupId** and **SecurityGroupIds.N** parameters at the same time.
+             * >  SecurityGroupId and SecurityGroupIds are mutually exclusive in the response.
              */
             public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -670,7 +668,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch to which to connect the secondary ENI.
+             * The ID of the vSwitch to which to connect the ENI.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -752,10 +750,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private java.util.List < String > securityGroupId; 
 
             /**
-             * The ID of the security group to which to assign the ENI. The security group and the ENI must belong to the same VPC.
+             * The ID of the security group to which to assign the secondary ENI. The security group and the ENI must belong to the same VPC.
              * <p>
              * 
-             * > You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.
+             * >  SecurityGroupId and SecurityGroupIds are mutually exclusive in the response.
              */
             public Builder securityGroupId(java.util.List < String > securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -875,6 +873,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
 
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
+        private Integer autoRenewPeriod;
+
         @com.aliyun.core.annotation.NameInMap("CreditSpecification")
         private String creditSpecification;
 
@@ -940,6 +944,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+        private String periodUnit;
 
         @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
@@ -1018,6 +1025,8 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         private LaunchTemplateData(Builder builder) {
             this.autoReleaseTime = builder.autoReleaseTime;
+            this.autoRenew = builder.autoRenew;
+            this.autoRenewPeriod = builder.autoRenewPeriod;
             this.creditSpecification = builder.creditSpecification;
             this.dataDisks = builder.dataDisks;
             this.deletionProtection = builder.deletionProtection;
@@ -1040,6 +1049,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             this.networkType = builder.networkType;
             this.passwordInherit = builder.passwordInherit;
             this.period = builder.period;
+            this.periodUnit = builder.periodUnit;
             this.privateIpAddress = builder.privateIpAddress;
             this.ramRoleName = builder.ramRoleName;
             this.resourceGroupId = builder.resourceGroupId;
@@ -1080,6 +1090,20 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          */
         public String getAutoReleaseTime() {
             return this.autoReleaseTime;
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return autoRenewPeriod
+         */
+        public Integer getAutoRenewPeriod() {
+            return this.autoRenewPeriod;
         }
 
         /**
@@ -1234,6 +1258,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          */
         public Integer getPeriod() {
             return this.period;
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
         }
 
         /**
@@ -1413,6 +1444,8 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String autoReleaseTime; 
+            private Boolean autoRenew; 
+            private Integer autoRenewPeriod; 
             private String creditSpecification; 
             private DataDisks dataDisks; 
             private Boolean deletionProtection; 
@@ -1435,6 +1468,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String networkType; 
             private Boolean passwordInherit; 
             private Integer period; 
+            private String periodUnit; 
             private String privateIpAddress; 
             private String ramRoleName; 
             private String resourceGroupId; 
@@ -1470,11 +1504,38 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
+             * Indicates whether auto-renewal is enabled for the instance. This parameter is valid only if `InstanceChargeType` is set to `PrePaid`. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * Default value: false.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * The auto-renewal period of the instance. Valid values:
+             * <p>
+             * 
+             * Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.
+             * 
+             * Default value: 1.
+             */
+            public Builder autoRenewPeriod(Integer autoRenewPeriod) {
+                this.autoRenewPeriod = autoRenewPeriod;
+                return this;
+            }
+
+            /**
              * The performance mode of the burstable instance. Valid values:
              * <p>
              * 
-             * *   Standard: standard mode. For more information, see the "Standard mode" section in [Overview](~~59977#section-svb-w9d-dju~~).
-             * *   Unlimited: unlimited mode. For more information, see the "Unlimited mode" section in [Overview](~~59977#section-svb-w9d-dju~~).
+             * *   Standard: the standard mode. For more information, see the "Standard mode" section in [Overview of burstable instances](~~59977~~).
+             * *   Unlimited: the unlimited mode. For more information, see the "Unlimited mode" section in [Overview of burstable instances](~~59977~~).
              */
             public Builder creditSpecification(String creditSpecification) {
                 this.creditSpecification = creditSpecification;
@@ -1490,15 +1551,15 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to enable release protection for the instance. This parameter determines whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:
+             * Indicates whether release protection is enabled for the instance. This parameter indicates whether you can use the ECS console or call the [DeleteInstance](~~25507~~) operation to release the instance. Valid values:
              * <p>
              * 
-             * - true
-             * - false
+             * *   true
+             * *   false
              * 
              * Default value: false.
              * 
-             * >This parameter is applicable only to pay-as-you-go instances. It can protect instances against manual releases, but not against automatic releases.
+             * >  This parameter is applicable only to pay-as-you-go instances. The release protection feature can protect instances against manual releases, but not against automatic releases.
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -1514,7 +1575,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * The description of the system disk.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1522,7 +1583,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable the operating system configuration of the instance.
+             * Indicates whether the operating system configuration of the instance is enabled.
              */
             public Builder enableVmOsConfig(Boolean enableVmOsConfig) {
                 this.enableVmOsConfig = enableVmOsConfig;
@@ -1549,10 +1610,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * The source of the image. Valid values:
              * <p>
              * 
-             * *   system: public images provided by Alibaba Cloud
-             * *   self: custom images that you create
-             * *   others: shared images from other Alibaba Cloud accounts
-             * *   marketplace: Alibaba Cloud Marketplace images
+             * *   system: public image provided by Alibaba Cloud
+             * *   self: custom image that you created
+             * *   others: shared image from another Alibaba Cloud account
+             * *   marketplace: Alibaba Cloud Marketplace image
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -1580,7 +1641,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * The instance type of the instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1656,7 +1717,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to use the password preset in the image.
+             * Indicates whether the username and password preset in the image are used.
              */
             public Builder passwordInherit(Boolean passwordInherit) {
                 this.passwordInherit = passwordInherit;
@@ -1664,10 +1725,21 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The subscription duration.
+             * The subscription duration of the instance.
              */
             public Builder period(Integer period) {
                 this.period = period;
+                return this;
+            }
+
+            /**
+             * The unit of the subscription period. Valid values:
+             * <p>
+             * 
+             * Month (default)
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
                 return this;
             }
 
@@ -1680,7 +1752,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance RAM role.
+             * The name of the instance Resource Access Management (RAM) role.
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -1696,7 +1768,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable security hardening.
+             * Indicates whether Security Hardening is enabled.
              */
             public Builder securityEnhancementStrategy(String securityEnhancementStrategy) {
                 this.securityEnhancementStrategy = securityEnhancementStrategy;
@@ -1707,7 +1779,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * The ID of the security group to which to assign the instance.
              * <p>
              * 
-             * >  The `SecurityGroupId` and `SecurityGroupIds` parameters are mutually exclusive in the response.
+             * >  `SecurityGroupId` and `SecurityGroupIds` are mutually exclusive in the response.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1715,10 +1787,10 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the security groups to which to assign the instance. The valid values of N are based on the maximum number of security groups to which the instance can belong. For more information, see the "Security group limits" section in [Limits](~~25412~~).
+             * The IDs of the security groups to which to assign the instance.
              * <p>
              * 
-             * > You cannot specify both the `SecurityGroupId` and `SecurityGroupIds.N` parameters.
+             * >  `SecurityGroupId` and `SecurityGroupIds` are mutually exclusive in the response.
              */
             public Builder securityGroupIds(LaunchTemplateDataSecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -1729,12 +1801,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * The protection period of the preemptible instance. Unit: hours. Valid values:
              * <p>
              * 
-             * - 1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market prices and checks the resource inventory to determine whether to retain or release the instance. 
-             * - 0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance can run for one hour. The system compares the biding price with the market prices and checks the resource inventory to determine whether to retain or release the instance. 
+             * *   1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
+             * *   0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.
              * 
-             * Alibaba Cloud sent ECS system events to notify you 5 minutes before the instance is released. Preemptible instances were billed by second. We recommend that you specify an appropriate protection period based on your business requirements. 
+             * Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.
              * 
-             * >This parameter was returned when the SpotStrategy parameter was set to SpotWithPriceLimit or SpotAsPriceGo.
+             * >  This parameter is returned when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.
              */
             public Builder spotDuration(Integer spotDuration) {
                 this.spotDuration = spotDuration;
@@ -1753,9 +1825,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              * The bidding policy for the pay-as-you-go instance. Valid values:
              * <p>
              * 
-             * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
+             * *   NoSpot: The instance is a regular pay-as-you-go instance.
+             * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1883,7 +1955,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -2020,7 +2092,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private Long versionNumber; 
 
             /**
-             * The time when the launch template was created.
+             * The time when the launch template version was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -2028,7 +2100,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the launch template.
+             * The creator of the launch template version.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -2068,7 +2140,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the launch template was modified.
+             * The time when the launch template version was modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;

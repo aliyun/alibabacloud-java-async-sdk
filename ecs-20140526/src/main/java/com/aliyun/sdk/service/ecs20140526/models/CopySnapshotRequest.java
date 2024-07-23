@@ -16,6 +16,10 @@ public class CopySnapshotRequest extends Request {
     private java.util.List < Arn> arn;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String destinationRegionId;
@@ -40,6 +44,7 @@ public class CopySnapshotRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String KMSKeyId;
 
     @com.aliyun.core.annotation.Query
@@ -79,6 +84,7 @@ public class CopySnapshotRequest extends Request {
     private CopySnapshotRequest(Builder builder) {
         super(builder);
         this.arn = builder.arn;
+        this.clientToken = builder.clientToken;
         this.destinationRegionId = builder.destinationRegionId;
         this.destinationSnapshotDescription = builder.destinationSnapshotDescription;
         this.destinationSnapshotName = builder.destinationSnapshotName;
@@ -113,6 +119,13 @@ public class CopySnapshotRequest extends Request {
      */
     public java.util.List < Arn> getArn() {
         return this.arn;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -215,6 +228,7 @@ public class CopySnapshotRequest extends Request {
 
     public static final class Builder extends Request.Builder<CopySnapshotRequest, Builder> {
         private java.util.List < Arn> arn; 
+        private String clientToken; 
         private String destinationRegionId; 
         private String destinationSnapshotDescription; 
         private String destinationSnapshotName; 
@@ -237,6 +251,7 @@ public class CopySnapshotRequest extends Request {
         private Builder(CopySnapshotRequest request) {
             super(request);
             this.arn = request.arn;
+            this.clientToken = request.clientToken;
             this.destinationRegionId = request.destinationRegionId;
             this.destinationSnapshotDescription = request.destinationSnapshotDescription;
             this.destinationSnapshotName = request.destinationSnapshotName;
@@ -263,6 +278,15 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
          * The ID of the destination region to which to copy the source snapshot.
          */
         public Builder destinationRegionId(String destinationRegionId) {
@@ -284,10 +308,10 @@ public class CopySnapshotRequest extends Request {
         }
 
         /**
-         * The name of the new snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
+         * The name of the new snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          * <p>
          * 
-         * This parameter is empty by default.
+         * This parameter is left empty by default.
          */
         public Builder destinationSnapshotName(String destinationSnapshotName) {
             this.putQueryParameter("DestinationSnapshotName", destinationSnapshotName);

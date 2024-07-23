@@ -85,7 +85,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +93,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +101,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of Resource data.
+         * Details about the resources to which the tags are bound.
          */
         public Builder resources(Resources resources) {
             this.resources = resources;
@@ -189,7 +189,7 @@ public class DescribeResourceByTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

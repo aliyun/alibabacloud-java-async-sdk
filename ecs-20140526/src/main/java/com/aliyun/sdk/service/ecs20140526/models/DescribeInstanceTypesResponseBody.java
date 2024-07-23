@@ -90,6 +90,67 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     } 
 
+    public static class EnhancedNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SriovSupport")
+        private Boolean sriovSupport;
+
+        @com.aliyun.core.annotation.NameInMap("VfQueueNumberPerEni")
+        private Integer vfQueueNumberPerEni;
+
+        private EnhancedNetwork(Builder builder) {
+            this.sriovSupport = builder.sriovSupport;
+            this.vfQueueNumberPerEni = builder.vfQueueNumberPerEni;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EnhancedNetwork create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sriovSupport
+         */
+        public Boolean getSriovSupport() {
+            return this.sriovSupport;
+        }
+
+        /**
+         * @return vfQueueNumberPerEni
+         */
+        public Integer getVfQueueNumberPerEni() {
+            return this.vfQueueNumberPerEni;
+        }
+
+        public static final class Builder {
+            private Boolean sriovSupport; 
+            private Integer vfQueueNumberPerEni; 
+
+            /**
+             * This parameter is unavailable for public use.
+             */
+            public Builder sriovSupport(Boolean sriovSupport) {
+                this.sriovSupport = sriovSupport;
+                return this;
+            }
+
+            /**
+             * This parameter is unavailable for public use.
+             */
+            public Builder vfQueueNumberPerEni(Integer vfQueueNumberPerEni) {
+                this.vfQueueNumberPerEni = vfQueueNumberPerEni;
+                return this;
+            }
+
+            public EnhancedNetwork build() {
+                return new EnhancedNetwork(this);
+            } 
+
+        } 
+
+    }
     public static class NetworkCardInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkCardIndex")
         private Integer networkCardIndex;
@@ -232,6 +293,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskQuantity")
         private Integer diskQuantity;
 
+        @com.aliyun.core.annotation.NameInMap("EnhancedNetwork")
+        private EnhancedNetwork enhancedNetwork;
+
         @com.aliyun.core.annotation.NameInMap("EniIpv6AddressQuantity")
         private Integer eniIpv6AddressQuantity;
 
@@ -338,6 +402,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             this.cpuSpeedFrequency = builder.cpuSpeedFrequency;
             this.cpuTurboFrequency = builder.cpuTurboFrequency;
             this.diskQuantity = builder.diskQuantity;
+            this.enhancedNetwork = builder.enhancedNetwork;
             this.eniIpv6AddressQuantity = builder.eniIpv6AddressQuantity;
             this.eniPrivateIpAddressQuantity = builder.eniPrivateIpAddressQuantity;
             this.eniQuantity = builder.eniQuantity;
@@ -421,6 +486,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          */
         public Integer getDiskQuantity() {
             return this.diskQuantity;
+        }
+
+        /**
+         * @return enhancedNetwork
+         */
+        public EnhancedNetwork getEnhancedNetwork() {
+            return this.enhancedNetwork;
         }
 
         /**
@@ -661,6 +733,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Float cpuSpeedFrequency; 
             private Float cpuTurboFrequency; 
             private Integer diskQuantity; 
+            private EnhancedNetwork enhancedNetwork; 
             private Integer eniIpv6AddressQuantity; 
             private Integer eniPrivateIpAddressQuantity; 
             private Integer eniQuantity; 
@@ -744,6 +817,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              */
             public Builder diskQuantity(Integer diskQuantity) {
                 this.diskQuantity = diskQuantity;
+                return this;
+            }
+
+            /**
+             * This parameter is unavailable for public use.
+             */
+            public Builder enhancedNetwork(EnhancedNetwork enhancedNetwork) {
+                this.enhancedNetwork = enhancedNetwork;
                 return this;
             }
 

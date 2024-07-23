@@ -337,7 +337,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -351,6 +351,7 @@ public class DescribeManagedInstancesRequest extends Request {
          * 
          * *   windows
          * *   linux
+         * *   FreeBSD
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -405,7 +406,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the managed instance. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+         * The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).
          * <p>
          * 
          * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.

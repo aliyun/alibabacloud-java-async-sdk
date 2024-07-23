@@ -49,7 +49,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the prices and promotion rules.
+         * The information about the prices and promotion rules.
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -172,7 +172,7 @@ public class DescribePriceResponseBody extends TeaModel {
         } 
 
     }
-    public static class ResourcePriceModel extends TeaModel {
+    public static class DetailInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Float discountPrice;
 
@@ -188,7 +188,7 @@ public class DescribePriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
-        private ResourcePriceModel(Builder builder) {
+        private DetailInfo(Builder builder) {
             this.discountPrice = builder.discountPrice;
             this.originalPrice = builder.originalPrice;
             this.resource = builder.resource;
@@ -200,7 +200,7 @@ public class DescribePriceResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static ResourcePriceModel create() {
+        public static DetailInfo create() {
             return builder().build();
         }
 
@@ -263,7 +263,14 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The resource name.
+             * The resource name. Valid values:
+             * <p>
+             * 
+             * *   InstanceType
+             * *   bandwidth
+             * *   image
+             * *   SystemDisk
+             * *   DataDisk
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -286,19 +293,19 @@ public class DescribePriceResponseBody extends TeaModel {
                 return this;
             }
 
-            public ResourcePriceModel build() {
-                return new ResourcePriceModel(this);
+            public DetailInfo build() {
+                return new DetailInfo(this);
             } 
 
         } 
 
     }
     public static class DetailInfos extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ResourcePriceModel")
-        private java.util.List < ResourcePriceModel> resourcePriceModel;
+        @com.aliyun.core.annotation.NameInMap("DetailInfo")
+        private java.util.List < DetailInfo> detailInfo;
 
         private DetailInfos(Builder builder) {
-            this.resourcePriceModel = builder.resourcePriceModel;
+            this.detailInfo = builder.detailInfo;
         }
 
         public static Builder builder() {
@@ -310,20 +317,20 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourcePriceModel
+         * @return detailInfo
          */
-        public java.util.List < ResourcePriceModel> getResourcePriceModel() {
-            return this.resourcePriceModel;
+        public java.util.List < DetailInfo> getDetailInfo() {
+            return this.detailInfo;
         }
 
         public static final class Builder {
-            private java.util.List < ResourcePriceModel> resourcePriceModel; 
+            private java.util.List < DetailInfo> detailInfo; 
 
             /**
-             * ResourcePriceModel.
+             * DetailInfo.
              */
-            public Builder resourcePriceModel(java.util.List < ResourcePriceModel> resourcePriceModel) {
-                this.resourcePriceModel = resourcePriceModel;
+            public Builder detailInfo(java.util.List < DetailInfo> detailInfo) {
+                this.detailInfo = detailInfo;
                 return this;
             }
 
@@ -434,10 +441,10 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the price.
+             * The information about the price.
              * <p>
              * 
-             * > This parameter is in invitational preview and is unavailable for public use.
+             * >  This parameter is returned only when ResourceType is set to instance.
              */
             public Builder detailInfos(DetailInfos detailInfos) {
                 this.detailInfos = detailInfos;
@@ -478,6 +485,153 @@ public class DescribePriceResponseBody extends TeaModel {
 
             public Price build() {
                 return new Price(this);
+            } 
+
+        } 
+
+    }
+    public static class MarketplaceImagePrice extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Currency")
+        private String currency;
+
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
+        private Float discountPrice;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
+        private Float originalPrice;
+
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
+        private Float tradePrice;
+
+        private MarketplaceImagePrice(Builder builder) {
+            this.currency = builder.currency;
+            this.discountPrice = builder.discountPrice;
+            this.originalPrice = builder.originalPrice;
+            this.tradePrice = builder.tradePrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MarketplaceImagePrice create() {
+            return builder().build();
+        }
+
+        /**
+         * @return currency
+         */
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        /**
+         * @return discountPrice
+         */
+        public Float getDiscountPrice() {
+            return this.discountPrice;
+        }
+
+        /**
+         * @return originalPrice
+         */
+        public Float getOriginalPrice() {
+            return this.originalPrice;
+        }
+
+        /**
+         * @return tradePrice
+         */
+        public Float getTradePrice() {
+            return this.tradePrice;
+        }
+
+        public static final class Builder {
+            private String currency; 
+            private Float discountPrice; 
+            private Float originalPrice; 
+            private Float tradePrice; 
+
+            /**
+             * The currency unit.
+             * <p>
+             * 
+             * China site (aliyun.com): CNY
+             * 
+             * International site (alibabacloud.com): USD
+             */
+            public Builder currency(String currency) {
+                this.currency = currency;
+                return this;
+            }
+
+            /**
+             * The discount.
+             */
+            public Builder discountPrice(Float discountPrice) {
+                this.discountPrice = discountPrice;
+                return this;
+            }
+
+            /**
+             * The original price.
+             */
+            public Builder originalPrice(Float originalPrice) {
+                this.originalPrice = originalPrice;
+                return this;
+            }
+
+            /**
+             * The transaction price, which is equal to the original price minus the discount.
+             */
+            public Builder tradePrice(Float tradePrice) {
+                this.tradePrice = tradePrice;
+                return this;
+            }
+
+            public MarketplaceImagePrice build() {
+                return new MarketplaceImagePrice(this);
+            } 
+
+        } 
+
+    }
+    public static class RelatedPrice extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MarketplaceImagePrice")
+        private MarketplaceImagePrice marketplaceImagePrice;
+
+        private RelatedPrice(Builder builder) {
+            this.marketplaceImagePrice = builder.marketplaceImagePrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RelatedPrice create() {
+            return builder().build();
+        }
+
+        /**
+         * @return marketplaceImagePrice
+         */
+        public MarketplaceImagePrice getMarketplaceImagePrice() {
+            return this.marketplaceImagePrice;
+        }
+
+        public static final class Builder {
+            private MarketplaceImagePrice marketplaceImagePrice; 
+
+            /**
+             * The Alibaba Cloud Marketplace image price.
+             */
+            public Builder marketplaceImagePrice(MarketplaceImagePrice marketplaceImagePrice) {
+                this.marketplaceImagePrice = marketplaceImagePrice;
+                return this;
+            }
+
+            public RelatedPrice build() {
+                return new RelatedPrice(this);
             } 
 
         } 
@@ -589,11 +743,15 @@ public class DescribePriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Price")
         private Price price;
 
+        @com.aliyun.core.annotation.NameInMap("RelatedPrice")
+        private RelatedPrice relatedPrice;
+
         @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
         private PriceInfo(Builder builder) {
             this.price = builder.price;
+            this.relatedPrice = builder.relatedPrice;
             this.rules = builder.rules;
         }
 
@@ -613,6 +771,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return relatedPrice
+         */
+        public RelatedPrice getRelatedPrice() {
+            return this.relatedPrice;
+        }
+
+        /**
          * @return rules
          */
         public Rules getRules() {
@@ -621,6 +786,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Price price; 
+            private RelatedPrice relatedPrice; 
             private Rules rules; 
 
             /**
@@ -632,7 +798,15 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the promotion rules.
+             * The related price.
+             */
+            public Builder relatedPrice(RelatedPrice relatedPrice) {
+                this.relatedPrice = relatedPrice;
+                return this;
+            }
+
+            /**
+             * The information about the promotion rules.
              */
             public Builder rules(Rules rules) {
                 this.rules = rules;

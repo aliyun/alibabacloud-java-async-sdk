@@ -85,7 +85,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about instance system events.
+         * Details about the instance system events.
          */
         public Builder instanceSystemEventSet(InstanceSystemEventSet instanceSystemEventSet) {
             this.instanceSystemEventSet = instanceSystemEventSet;
@@ -341,7 +341,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              * *   cloud: basic disk
              * *   cloud_efficiency: ultra disk
              * *   cloud_ssd: standard SSD
-             * *   cloud_essd: enhanced SSD (ESSD)
+             * *   cloud_essd: Enterprise SSD (ESSD)
              * *   local_ssd_pro: I/O-intensive local disk
              * *   local_hdd_pro: throughput-intensive local disk
              * *   ephemeral: retired local disk
@@ -695,8 +695,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              * The type of the host. Valid values:
              * <p>
              * 
-             * - ddh: dedicated host
-             * - managehost: physical machine in a smart hosting pool
+             * *   ddh: dedicated host
+             * *   managehost: physical machine in a smart hosting pool
              */
             public Builder hostType(String hostType) {
                 this.hostType = hostType;
@@ -704,7 +704,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the inactive disks that have been released and must be cleared.
+             * The inactive disks that have been released and whose data must be cleared.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -712,7 +712,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The migration solution of the instance. Valid value: MigrationPlan, which indicates that instances can be migrated only by using migration plans.
+             * The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.
              */
             public Builder migrationOptions(MigrationOptions migrationOptions) {
                 this.migrationOptions = migrationOptions;
@@ -763,8 +763,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              * The response result of the event. Valid values:
              * <p>
              * 
-             * - true: The event was handled.
-             * - false: The event failed to be handled.
+             * *   true: The event was handled.
+             * *   false: The event failed to be handled.
              */
             public Builder responseResult(String responseResult) {
                 this.responseResult = responseResult;
@@ -925,7 +925,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The lifecycle state of the system event.
+             * The lifecycle status of the system event.
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;

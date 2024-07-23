@@ -190,12 +190,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * Take note of the following items:
-      * *   The instance to which you want to assign a public IP address must be in the **Running** or **Stopped** state.````
+      * *   The instance to which you want to assign a public IP address must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
       * *   If `OperationLocks` in the response of the DescribeInstances operation contains `"LockReason" : "security"` for an instance, the instance is [locked for security reasons](~~25695~~) and cannot be assigned a public IP address.
-      * *   You can assign only one public IP address to an instance. If the instance already has a public IP address, the `AllocatedAlready` error is returned.
-      * *   After you assign a public IP address to an instance, you must restart the instance ([RebootInstance](~~25502~~)) or start the instance ([StartInstance](~~25500~~)) to make the public IP address take effect.
-      * If an instance resides in a virtual private cloud (VPC), you can assign a public IP address to the instance or associate an elastic IP address (EIP) with the instance. For more information, see [AssociateEipAddress](~~36017~~).
-      * > After you associate an EIP with an instance that resides in a VPC, you cannot assign a public IP address to the instance.
+      * *   You can assign only one public IP address to an instance. If the instance already has a public IP address, the `AllocatedAlready` error code is returned.
+      * *   After you assign a public IP address to an instance, you must restart the instance ([RebootInstance](~~25502~~)) or start the instance ([StartInstance](~~25500~~)) for the public IP address to take effect.
+      * If an instance resides in a virtual private cloud (VPC), you can assign a public IP address to the instance or associate an elastic IP address (EIP) with the instance. For more information, see [AssociateEipAddress](~~2518064~~).
+      * >  After you associate an EIP with an instance that resides in a VPC, you cannot assign a public IP address to the instance.
       *
      */
     @Override
@@ -337,17 +337,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   The disk that you want to attach must be in the **Available** state.``
-      * *   When the disk is attached as a data disk, take note of the following items:
-      *     *   The instance must be in the **Running** or **Stopped** state.````
+      * ## [](#)Usage notes
+      * Take note of the following items:
+      * *   The disk must be in the **Unattached** (`Available`) state.
+      * *   When you attach the disk as a data disk to an ECS instance, take note of the following items:
+      *     *   The ECS instance must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
       *     *   If the disk was separately purchased, the billing method of the disk must be pay-as-you-go.
-      *     *   If the disk is a system disk detached from an instance, no limits apply to the billing method of the disk.
-      * *   When the disk is attached as a system disk, take note of the following items:
-      *     *   The instance must be the original instance from which the system disk was detached.
-      *     *   The instance must be in the **Stopped** state.``
-      *     *   The logon credentials must be configured.
-      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on the instance.
+      *     *   If the disk is a system disk that was detached from an ECS instance, no limits apply to the billing method of the disk.
+      *     *   If the disk is an elastic ephemeral disk that was detached from an ECS instance, the disk can be attached only to the instance.
+      * *   When you attach the disk as the system disk to an ECS instance, take note of the following items:
+      *     *   The ECS instance must be the original instance from which the system disk was detached.
+      *     *   The ECS instance must be in the **Stopped** (`Stopped`) state.
+      *     *   Logon credentials must be configured.
+      *     *   The disk cannot be an elastic ephemeral disk.
+      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query information about an ECS instance, the instance is locked for security reasons and no operations are allowed on the instance.
       *
      */
     @Override
@@ -938,12 +941,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   When you create a disk, you can enable the multi-attach (`MultiAttach`) feature for the disk. Before you enable the multi-attach feature, we recommend that you familiarize yourself with the multi-attach feature and its limits. For more information, see [NVMe protocol](~~256487~~) and [Use the multi-attach feature](~~262105~~).
-      * *   You can create a basic disk, an ultra disk, a standard SSD, or an enhanced SSD (ESSD).
-      * *   When you create disks, you may be charged for the resources used. We recommend that you familiarize yourself with the Elastic Compute Service (ECS) billing methods before you proceed. For more information, see [Billing overview](~~25398~~).
-      * *   By default, `DeleteAutoSnapshot` is set to `true` when a disk is created. This indicates that when the disk is released, the automatic snapshots of the disk are also deleted. You can call the [ModifyDiskAttribute](~~25517~~) operation to modify the parameter value.
-      * *   If you do not configure the performance level when you create an ESSD, the performance level for the ESSD is PL1 by default. You can call the [ModifyDiskSpec](~~123780~~) operation to modify the performance level of the ESSD.
-      * *   By default, for a disk that is created by calling this operation, the `Portable` attribute is set to `true` and the billing method is pay-as-you-go.
+      * ## [](#)Usage notes
+      * *   You can enable the multi-attach (`MultiAttach`) feature when you create a disk. Before you enable the multi-attach feature, we recommend that you familiarize yourself with the feature and its limits. For more information, see [NVMe disks](~~256487~~) and [Enable multi-attach](~~262105~~).
+      * *   You can create disks of the following disk categories: basic disks, ultra disks, standard SSDs, Enterprise SSDs (ESSDs), ESSD Entry disks, ESSD AutoPL disks, standard elastic ephemeral disks, and premium elastic ephemeral disks.
+      * *   Before you can create a disk, you must complete real-name verification. Complete real-name verification on the [Real-name Verification](https://account.console.aliyun.com/#/auth/home) page in the Alibaba Cloud Management Console.
+      * *   When you create disks, you may be charged for the resources used. We recommend that you familiarize yourself with the billing methods of Elastic Compute Service (ECS) resources before you create a disk. For more information, see [Billing overview](~~25398~~).
+      * *   By default, `DeleteAutoSnapshot` is set to `true` when a disk is created. This indicates that the automatic snapshots of the disk are deleted when the disk is released. You can call the [ModifyDiskAttribute](~~25517~~) operation to change the parameter value.
+      * *   If you do not specify a performance level when you create an ESSD, the performance level of the ESSD is automatically set to PL1. To change the performance level of the ESSD, you can call the [ModifyDiskSpec](~~123780~~) operation.
+      * *   By default, `Portable` is set to `true` and the billing method is pay-as-you-go for a disk that is created by calling the CreateDisk operation.
       *
      */
     @Override
@@ -1167,9 +1172,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
-      * In addition to calling CreateKeyPair, you can create a key pair by using a third-party key pair generation tool and call the [ImportKeyPair](~~51774~~) operation to upload the key pair to an Alibaba Cloud region.
-      * A maximum of 500 key pairs can be created in each region. For more information, see [Limits](~~25412~~).
+      * In addition to calling the CreateKeyPair operation to create a key pair, you can use a third-party tool to create a key pair and then call the [ImportKeyPair](~~51774~~) operation to upload the key pair to an Alibaba Cloud region.
+      * Up to 500 key pairs can be created in each region. For more information, see the "SSH key pair limits" section in [Limits](~~25412~~).
       *
      */
     @Override
@@ -2348,14 +2352,17 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The value of the `DestinationResource` parameter determines whether you need to specify additional parameters. The following sequence provides the order by which resources are filtered. You cannot query a higher order resource by specifying a lower order resource.
+      * ## [](#)Usage notes
+      * The value of `DestinationResource` determines whether you need to specify additional parameters. When you select a value in the following chain for DestinationResource, the more to the right the selected value is ordered, the more parameters you must specify.
       * *   Sequence: `Zone > IoOptimized > InstanceType = Network = ddh > SystemDisk > DataDisk`
       * *   Examples:
-      *     *   If you set `DestinationResource` to `DataDisk`, you must specify the `InstanceType` parameter or set the `ResourceType` parameter to `disk`.
-      *     *   If you set `DestinationResource` to `SystemDisk`, you must specify the `InstanceType` parameter.
-      *     *   If you set `DestinationResource` to `InstanceType`, you must specify the `IoOptimized` and `InstanceType` parameters.
-      *     *   If you want to query available ecs.g5.large resources in all zones of the China (Hangzhou) region, you must set RegionId to cn-hangzhou, DestinationResource to InstanceType, IoOptimized to optimized, and InstanceType to ecs.g5.large.``
-      *     *   If you want to query the zones where ecs.g5.large resources are available in the China (Hangzhou) region, you must set RegionId to cn-hangzhou, DestinationResource to Zone, IoOptimized to optimized, and InstanceType to ecs.g5.large.``
+      *     *   If you set `DestinationResource` to `DataDisk`, take note of the following items:
+      *         *   If you set `ResourceType` to `disk` to query the categories of data disks that are not attached to ECS instances, you do not need to specify `InstanceType`.
+      *         *   If you set `ResourceType` to `instance` to query the categories of data disks that are purchased together with ECS instances, you must specify `InstanceType` and `SystemDiskCategory` due to instance type-specific limits on system disks and data disks.
+      *     *   If you set `DestinationResource` to `SystemDisk` and `ResourceType` to `instance`, you must specify `InstanceType` due to instance type-specific limits on system disks.
+      *     *   If you set `DestinationResource` to `InstanceType`, we recommend that you specify `IoOptimized` and `InstanceType`.
+      *     *   If you want to query the available ecs.g5.large resources in all zones of the China (Hangzhou) region, set `RegionId to cn-hangzhou, DestinationResource to InstanceType, IoOptimized to optimized, and InstanceType to ecs.g5.large`.
+      *     *   If you want to query the zones where ecs.g5.large resources are available in the China (Hangzhou) region, set `RegionId to cn-hangzhou, DestinationResource to Zone, IoOptimized to optimized, and InstanceType to ecs.g5.large`.
       *
      */
     @Override
@@ -2468,10 +2475,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * - Before you run commands on or send files to instances, especially new instances, we recommend that you query the status of Cloud Assistant on the instances by calling this operation and checking the return value of CloudAssistantStatus. Run commands on or send files to the instances only when the return value is true.
-      * - You can use one of the following methods to check the responses:
-      *   - Method 1: When you call the DescribeCloudAssistantStatus operation to retrieve the first page of results during a paged query, use MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeCloudAssistantStatus operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call. 
-      *   - Method 2: Use PageSize to specify the number of entries to return on each page and then use PageNumber to specify the number of the page to return. You can use only one of the preceding methods. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+      * ## [](#)Usage notes
+      * *   Before you run commands on or send files to instances, especially new instances, we recommend that you query the status of Cloud Assistant on the instances by calling this operation and checking the return value of CloudAssistantStatus. Run commands on or send files to the instances only when the return value is true.
+      * *   You can use one of the following methods to check the responses:
+      *     *   Method 1: During a paged query, when you call the DescribeCloudAssistantStatus operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeCloudAssistantStatus operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
+      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return. You can use only one of the preceding methods. If you specify `MaxResults` or `NextToken`, the `PageSize` and `PageNumber` request parameters do not take effect and the `TotalCount` response parameter is invalid.
       *
      */
     @Override
@@ -2507,10 +2515,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you specify only the `Action` and `RegionId` parameters, all the available commands (`CommandId`) that you created in the specified region are queried by default. 
-      * You can use one of the following methods to check the responses:
-      * - Method 1: During a paged query, when you call the DescribeCommands operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeCommands operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call. 
-      * - Method 2: Use PageSize to specify the number of entries to return on each page and then use PageNumber to specify the number of the page to return. You can use only one of the preceding methods. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+      * ## [](#)Usage notes
+      * *   If you specify only `Action` and `RegionId`, all available commands (`CommandId`) that you created in the specified region are queried by default.
+      * *   You can use one of the following methods to check the responses:
+      *     *   Method 1: During a paged query, when you call the DescribeCommands operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeCommands operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
+      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return. You can use only one of the preceding methods. If you specify `MaxResults` or `NextToken`, the `PageSize` and `PageNumber` request parameters do not take effect and the `TotalCount` response parameter is invalid.
       *
      */
     @Override
@@ -2709,9 +2718,9 @@ public final class DefaultAsyncClient implements AsyncClient {
       * ## [](#)Usage notes
       * You can query the following monitoring data of a disk: the read IOPS, write IOPS, read bandwidth (byte/s), write bandwidth (byte/s), read latency (microseconds), and write latency (microseconds).
       * Take note of the following items:
-      * *   You can query the monitoring data only of the disks that are in the In Use (`In_Use`) state. For more information, see [Disk states](~~25689~~).
+      * *   You can query the monitoring data only of the disks that are in the In Use (`In_use`) state. For more information, see [Disk states](~~25689~~).
       *     **
-      *     **Note** Some information may be missing from the monitoring data of a disk because the disk is not in the In Use (`In_Use`) state and the system cannot obtain the relevant information.
+      *     **Note** Some information may be missing from the monitoring data of a disk because the disk is not in the In Use (`In_use`) state and the system cannot obtain the relevant information.
       * *   Up to 400 monitoring data entries can be returned at a time. Make sure that the `TotalCount` value does not exceed 400. The value is calculated by using the following formula: `TotalCount = (EndTime - StartTime)/Period`. If the TotalCount value is greater than 400, the `InvalidParameter.TooManyDataQueried` error is returned.
       * *   You can query the monitoring data in the last 30 days. If the value of `StartTime` is more than 30 days earlier than the current time, an error is returned.
       *
@@ -3338,11 +3347,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ## [](#)Usage notes
-      * *   After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results of a command.
+      * *   After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results.
       * *   You can query information about command executions within the last four weeks. Up to 100,000 pieces of execution information can be retained.
+      * *   You can [subscribe to Cloud Assistant task status events](~~2669130~~) to obtain command execution results from the events. This helps you reduce the number of times to poll API operations and improve efficiency.
       * *   You can use one of the following methods to check the responses:
       *     *   Method 1: During a paged query, when you call the DescribeInvocationResults operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeInvocationResults operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
-      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return. You can use only one of the preceding methods. If you specify `MaxResults` or `NextToken`, the `PageSize` and `PageNumber` request parameters do not take effect and the `TotalCount` response parameter is invalid.
+      *     *   Method 2: Use `PageSize` to specify the number of entries per page, and then use `PageNumber` to specify the page number. You can use only one of the preceding methods. If you specify `MaxResults` or `NextToken`, the `PageSize` and `PageNumber` request parameters do not take effect and the `TotalCount` response parameter is invalid.
+      * *   Comparison between the `DescribeInvocations` and `DescribeInvocationResults` operations:
+      *     *   Scenario in which the `RunCommand` or `InvokeCommand` operation is called to run a Cloud Assistant command on multiple instances:
+      *         *   The `DescribeInvocations` operation queries the execution status of the command on each instance and the overall execution status of the command on all instances.
+      *         *   The `DescribeInvocationResults` operation queries only the execution status of the command on each instance.
+      *     *   Scenario in which the `RunCommand` or `InvokeCommand` operation is called to run a Cloud Assistant command on a single instance:
+      *         *   The `DescribeInvocations` operation is equivalent to the `DescribeInvocationResults` operation.
+      *     *   If you want to query the status of each execution for a scheduled (recurring) task or a task that is automatically executed on instance startup (`RepeatMode is set to Period or EveryReboot`), you can call only the `DescribeInvocationResults` operation and must set `IncludeHistory` to true. The `DescribeInvocations` operation queries only the most recent execution status of the command.
+      *     *   If you want to view the command content and parameters, you can call only the `DescribeInvocations` operation and check the `CommandContent` value in the response.
       *
      */
     @Override
@@ -3361,11 +3379,20 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ## [](#)Usage notes
-      * *   After you run a command, the command may not succeed or return the expected results. You can call this operation to query the execution results.
+      * *   After you run a command, the command may fail to run or may return unexpected results. You can call this operation to query the execution results.
       * *   You can query information about command executions within the last four weeks. Up to 100,000 pieces of execution information can be retained.
+      * *   You can [subscribe to Cloud Assistant task status events](~~2669130~~) to obtain command execution results from the events. This helps you reduce the number of times to poll API operations and improve efficiency.
       * *   You can use one of the following methods to check the responses:
       *     *   Method 1: During a paged query, when you call the DescribeInvocations operation to retrieve the first page of results, use `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeInvocations operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
-      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page, and then use `PageNumber` to specify the number of the page to return. You can use only one of the preceding methods. If you specify `MaxResults` or `NextToken`, the `PageSize` and `PageNumber` request parameters do not take effect and the `TotalCount` response parameter is invalid.
+      *     *   Method 2: Use `PageSize` to specify the number of entries per page, and then use `PageNumber` to specify the page number. You can use only one of the preceding methods. If you specify `MaxResults` or `NextToken`, the `PageSize` and `PageNumber` request parameters do not take effect and the `TotalCount` response parameter is invalid.
+      * *   Comparison between the `DescribeInvocations` and `DescribeInvocationResults` operations:
+      *     *   Scenario in which the `RunCommand` or `InvokeCommand` operation is called to run a Cloud Assistant command on multiple instances:
+      *         *   The `DescribeInvocations` operation queries the execution status of the command on each instance and the overall execution status of the command on all instances.
+      *         *   The `DescribeInvocationResults` operation queries only the execution status of the command on each instance.
+      *     *   Scenario in which the `RunCommand` or `InvokeCommand` operation is called to run a Cloud Assistant command on a single instance:
+      *         *   The `DescribeInvocations` operation is equivalent to the `DescribeInvocationResults` operation.
+      *     *   If you want to query the status of each execution for a scheduled (recurring) task or a task that is automatically executed on instance startup (`RepeatMode is set to Period or EveryReboot`), you can call only the `DescribeInvocationResults` operation and must set `IncludeHistory` to true. The `DescribeInvocations` operation queries only the most recent execution status of the command.
+      *     *   If you want to view the command content and parameters, you can call only the `DescribeInvocations` operation and check the `CommandContent` value in the response.
       *
      */
     @Override
@@ -3448,9 +3475,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ## [](#)Usage notes
       * You can use one of the following methods to check the responses:
-      * - Method 1: When you call the DescribeInstances operation to retrieve the first page of results during a paged query, use MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which you can use in the next request to retrieve a new page of results. When you call the DescribeInstances operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and use MaxResults to specify the maximum number of entries to return in the call.
-      * - Method 2: Use PageSize to specify the number of entries to return on each page, and then use PageNumber to specify the number of the page to return. You can use only one of the preceding methods. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+      * *   Method 1: During a paged query, when you call the DescribeManagedInstances operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeManagedInstances operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
+      * *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return. You can use only one of the preceding methods. If you specify `MaxResults` or `NextToken`, the `PageSize` and `PageNumber` request parameters do not take effect and the `TotalCount` response parameter is invalid.
       *
      */
     @Override
@@ -3622,15 +3650,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The required parameters vary based on the type of resource whose prices you want to query.
+      * # [](#)Usage notes
+      * *   The required parameters vary based on the types of resources whose prices you want to query.
       *     *   When `ResourceType` is set to instance, you must specify `InstanceType`.
-      *     *   When `ResourceType` is set to disk, you must specify `DataDisk.1.Category` and `DataDisk.1.Size`. When `ResourceType` is set to disk, only pay-as-you-go prices of cloud disks are returned. In this case, `PriceUnit` can be set only to `Hour`.
+      *     *   When `ResourceType` is set to disk, you must specify both `DataDisk.1.Category` and `DataDisk.1.Size`. When `ResourceType` is set to disk, only pay-as-you-go prices of cloud disks are returned. In this scenario, `PriceUnit` can be set only to `Hour`.
       *     *   When `ResourceType` is set to ddh, you must specify `DedicatedHostType`.
       *     *   When `ResourceType` is set to ElasticityAssurance, you must specify `InstanceType`.
       *     *   When `ResourceType` is set to CapacityReservation, you must specify `InstanceType`.
-      * *   When `ResourceType` is set to bandwidth, only the pay-by-traffic (`PayByTraffic`) prices of network usage is returned.
+      * *   When `ResourceType` is set to bandwidth, only the pay-by-traffic (`PayByTraffic`) price for network usage is returned.
       * *   When `ResourceType` is set to instance, the prices of up to four data disks can be queried.
-      * *   By default, `ChargeType` is set to `PostPaid`. You can specify `PriceUnit` to query the prices of ECS resources that have different billing cycles.
+      * *   By default, `ChargeType` is set to `PostPaid`. You can specify `PriceUnit` to query prices of ECS resources that have different billing cycles.
       *
      */
     @Override
@@ -3883,12 +3912,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Usage notes
-      * *   When you send a file, the file may fail to be sent to specified Elastic Compute Service (ECS) instances. You can call this operation to check the file sending results.
+      * ## [](#)Usage notes:
+      * *   When you send a file, the file may fail to be sent to specific Elastic Compute Service (ECS) instances. You can call this operation to check the file sending results.
       * *   You can call this operation to query the file sending records within the last six weeks.
-      * - You can use one of the following methods to check the responses:
-      *   - Method 1: During a paged query, when you call the DescribeSendFileResults operation to retrieve the first page of results, set MaxResults to specify the maximum number of entries to return in the call. The return value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeSendFileResults operation to retrieve a new page of results, set NextToken to the NextToken value returned in the previous call and set MaxResults to specify the maximum number of entries to return in this call. 
-      *   - Method 2: Use PageSize to specify the number of entries to return on each page and then use PageNumber to specify the number of the page to return. You can use only one of the preceding methods. If you specify MaxResults or NextToken, the PageSize and PageNumber request parameters do not take effect and the TotalCount response parameter is invalid.
+      * *   You can use one of the following methods to check the responses:
+      *     *   Method 1: During a paged query, when you call the DescribeSendFileResults operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token, which can be used in the next request to retrieve a new page of results. When you call the DescribeSendFileResults operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
+      *     *   Method 2: Use `PageSize` to specify the number of entries to return on each page and then use `PageNumber` to specify the number of the page to return. You can use only one of the preceding methods. If you specify `MaxResults` or `NextToken`, the `PageSize` and `PageNumber` request parameters do not take effect and the `TotalCount` response parameter is invalid.
       *
      */
     @Override
@@ -4330,12 +4359,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following items:
-      * *   The disk that you want to detach must be in the `In_Use` state.
-      * *   The instance from which you want to detach a pay-as-you-go data disk must be in the **Running** or **Stopped** state.````
+      * Take note of the following items:
+      * *   The disk that you want to detach must be attached to an ECS instance and in the In Use (`In_use`) state.
+      * *   The instance from which you want to detach a data disk must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
       * *   The instance from which you want to detach a system disk must be in the **Stopped** state.``
-      * *   If the `OperationLocks` parameter in the response contains `"LockReason" : "security"`, the instance is locked for security reasons and no operations are allowed on the instance.
-      * *   DetachDisk is an asynchronous operation. After you call the operation, a disk is detached from an instance in approximately 1 minute.
+      * *   If the `OperationLocks` parameter in the response contains `"LockReason" : "security"` when you query the instance information, the instance is locked for security reasons and all operations are prohibited on the instance.
+      * *   DetachDisk is an asynchronous operation. After you call the operation to detach a disk from an ECS instance, the disk is detached in approximately 1 minute.
+      * *   If you want to attach an elastic ephemeral disk that you detached from an instance, you can attach the disk only to the instance.
       *
      */
     @Override
@@ -4506,10 +4536,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * ## [](#)Usage notes
       * Before you export images, take note of the following items:
-      * *   Make sure that you are familiar with the prerequisites and precautions. For more information, see [Export a custom image](~~58181~~).
-      * *   The `ImageFormat` parameter is available only for the following regions: India (Mumbai), Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). By default, custom images are exported in the RAW format in regions where ImageFormat is unsupported.
-      * *   Use Resource Access Management (RAM) to grant Elastic Compute Service (ECS) the permissions to write data to OSS. To complete the authorization, perform the following operations:
-      *     *   Create a role named `AliyunECSImageExportDefaultRole`, and attach the following policy to the role:
+      * *   Make sure that you are familiar with the prerequisites and considerations. For more information, see [Export a custom image](~~58181~~).
+      * *   The `ImageFormat` parameter is available only for the following regions: India (Mumbai) Closing Down, Japan (Tokyo), Australia (Sydney), Indonesia (Jakarta), Germany (Frankfurt), UAE (Dubai), US (Virginia), UK (London), Singapore, Malaysia (Kuala Lumpur), and US (Silicon Valley). Alibaba Cloud services will be discontinued in the India (Mumbai) region. By default, custom images are exported in the RAW format in regions where the ImageFormat parameter is unsupported.
+      * *   Use Resource Access Management (RAM) to authorize Elastic Compute Service (ECS) to write data to OSS. To complete the authorization, perform the following operations:
+      *     *   Create a role named `AliyunECSImageExportDefaultRole` and attach the following policy to the role:
       *                {
       *                  "Statement": [
       *                    {
@@ -4524,7 +4554,7 @@ public final class DefaultAsyncClient implements AsyncClient {
       *                  ],
       *                  "Version": "1"
       *                }
-      *     *   Attach the `AliyunECSImageExportRolePolicy` system policy to the `AliyunECSImageExportDefaultRole` role. This policy is the default policy that grants ECS the permissions to export images. For more information, go to the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101.0.0.64c64df5dfpmdY#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunECSImageImportDefaultRole%22,%20%22TemplateId%22:%20%22ECSImportRole%22%7D,%20%22request2%22:%20%7B%22RoleName%22:%20%22AliyunECSImageExportDefaultRole%22,%20%22TemplateId%22:%20%22ECSExportRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fecs.console.aliyun.com%2F%22,%20%22Service%22:%20%22ECS%22%7D) page. You can also create a custom policy that contains the following content and attach the policy to the role:
+      *     *   Attach the `AliyunECSImageExportRolePolicy` system policy, which is the default policy that grants ECS the permissions to export images, to the `AliyunECSImageExportDefaultRole` role. For more information, go to the [Cloud Resource Access Authorization](https://ram.console.aliyun.com/?spm=5176.2020520101.0.0.64c64df5dfpmdY#/role/authorize?request=%7B%22Requests%22:%20%7B%22request1%22:%20%7B%22RoleName%22:%20%22AliyunECSImageImportDefaultRole%22,%20%22TemplateId%22:%20%22ECSImportRole%22%7D,%20%22request2%22:%20%7B%22RoleName%22:%20%22AliyunECSImageExportDefaultRole%22,%20%22TemplateId%22:%20%22ECSExportRole%22%7D%7D,%20%22ReturnUrl%22:%20%22https:%2F%2Fecs.console.aliyun.com%2F%22,%20%22Service%22:%20%22ECS%22%7D) page. You can also create a custom policy that contains the following content and attach the policy to the role:
       *                  {
       *                    "Version": "1",
       *                    "Statement": [
@@ -4900,13 +4930,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
+      * ## [](#)Usage notes
+      * Specify at least one of the following parameters or parameter pairs in a request to determine a query object:
       * *   `ResourceId.N`
       * *   `Tag.N` parameter pair (`Tag.N.Key` and `Tag.N.Value`)
       * *   `TagFilter.N`
-      * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all of the specified filter conditions are returned:
-      * *   Set 1: `Tag.N.Key, Tag.N.Value`, and `ResourceId.N`
-      * *   Set 2: `TagFilter.N.TagKey, TagFilter.N.TagValues.N`, and `ResourceId.N`
+      * If one of the following sets of request parameters is specified as filter conditions, only ECS resources that meet all the specified filter conditions are returned:
+      * *   Set 1: `Tag.N.Key, Tag.N.Value` and `ResourceId.N`
+      * *   Set 2: `TagFilter.N.TagKey, TagFilter.N.TagValues.N` and `ResourceId.N`
       *
      */
     @Override
@@ -5041,9 +5072,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Description
-      * *   All the Elastic Compute Service (ECS) instances that are hosted on a dedicated host must be in the Stopped (`Stopped`) state before you can modify the CPU overcommit ratio of the dedicated host.
-      * *   Modifications to the CPU overcommit ratio of a dedicated host do not affect the operation of the dedicated host. After the CPU overcommit ratio is modified, the number of allocated vCPUs on the dedicated host cannot exceed the new total number of vCPUs. Otherwise, ECS instances that use the excess vCPUs cannot start.
+      * ## [](#)Usage notes
+      * *   All Elastic Compute Service (ECS) instances that are hosted on a dedicated host must be in the Stopped (`Stopped`) state before you can modify the CPU overcommit ratio of the dedicated host.
+      * *   Changes to the CPU overcommit ratio of a dedicated host do not affect the running status of the dedicated host. After the CPU overcommit ratio is changed, the number of allocated vCPUs on the dedicated host cannot exceed the new total number of vCPUs. Otherwise, ECS instances that use the excess vCPUs cannot start.
       *
      */
     @Override
@@ -5445,26 +5476,24 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ## [](#)Usage notes
-      * If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of an instance, the instance is locked for security reasons. No operations are allowed on the instance.
+      * If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and no operations are allowed on the instance.
       * Take note of the following items:
       * *   If you change the hostname (`HostName`), restart the instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new hostname to take effect. For information about how to restart an instance in the ECS console, see [Restart an instance](~~25440~~). The new hostname may not take effect if you restart the instance from within the operating system.
       * *   If you reset the password (`Password`), take note of the following items:
       *     *   The instance cannot be in the **Starting** (`Starting`) state.
       *     *   After you reset the password, restart the instance in the ECS console or by calling the [RebootInstance](~~25502~~) operation for the new password to take effect. For information about how to restart an instance in the ECS console, see [Restart an instance](~~25440~~). The new password does not take effect if you restart the instance from within the operating system.
-      * *   If you modify user data (`UserData`), take note of the following items:
-      *     *   The instance must be in the **Stopped** (`Stopped`) state.
-      *     *   The instance must meet the limits for user data. For more information, see [Instance user data](~~49121~~).
+      * *   If you modify user data (`UserData`), take note of the following items: The instance must meet the limits for user data. For more information, see [Instance user data](~~49121~~).
       *     **
       *     **Note** After you restart the instance, the new user data is displayed but not run as scripts.
       * *   If you change the security groups (`SecurityGroupIds.N`), take note of the following items:
-      *     *   You can move an instance to a security group of a different type. If you want to move an instance to a security group of a different type, you must familiarize yourself with the differences between the rule configurations of the two security group types to prevent impacts on the instance network.
+      *     *   You can move the instance to a security group of a different type. If you want to move the instance to a security group of a different type, you must familiarize yourself with the differences between the rule configurations of the two security group types to prevent impacts on the instance network.
       *     *   Security groups of instances in the classic network cannot be changed. For more information, see the description of `SecurityGroupIds.N`.
       * *   If you change the number of queues supported by the primary elastic network interface (ENI) (`NetworkInterfaceQueueNumber`), take note of the following items:
       *     *   The instance must be in the Stopped (`Stopped`) state.
       *     *   The value of this parameter cannot exceed the maximum number of queues allowed per ENI.
       *     *   The total number of queues for all ENIs on the instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and view the values of the `MaximumQueueNumberPerEni` and `TotalEniQueueQuantity` response parameters.
       *     *   If you set this parameter to -1, the value is reset to the default value for the instance type. To query the default number of queues supported per primary ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and view the value of the `PrimaryEniQueueNumber` response parameter.
-      * *   If you enable or disable the Jumbo Frames feature (`EnableJumboFrame`), take note of the following items: For more information, see [MTUs](~~200512~~).
+      * *   If you enable or disable the Jumbo Frames feature (`EnableJumboFrame`), take note of the following items. For more information, see [MTUs](~~200512~~).
       *     *   The instance must be in the Running (`Running`) or Stopped (`Stopped`) state.
       *     *   The instance must reside in a virtual private cloud (VPC).
       *     *   After the Jumbo Frames feature is enabled, the MTU value of the instance is set to 8500. After the Jumbo Frames feature is disabled, the MTU value of the instance is set to 1500.
@@ -5826,11 +5855,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The specified CIDR block must be valid. For example, 10.0.0.0/8 is a valid CIDR block while 10.0.0.1/8 is not. For more information, see the [What is CIDR?](~~40637~~#section-jua-0tj-q5m) section in the "Network FAQ" topic.
+      * ## [](#)Usage notes
+      * *   The specified CIDR block must be valid. For example, 10.0.0.0/8 is a valid CIDR block while 10.0.0.1/8 is not. For more information, see the [What is CIDR?](~~40637#section-jua-0tj-q5m~~) section in the "Network FAQ" topic.
       * *   When you add or delete an entry, you cannot specify duplicate CIDR blocks. Examples:
       *     *   For IPv4 CIDR blocks, you cannot specify the 10.0.0.0/8 CIDR block in two entries. You cannot specify the 10.0.0.1/32 CIDR block in one entry and the 10.0.0.1 CIDR block in another entry. The two CIDR blocks are the same.
       *     *   For IPv6 CIDR blocks, you cannot specify the 2001:fd01:0:0:0:0:0:0/32 CIDR block in one entry and the 2001:fd01::/32 CIDR block in another entry. The two CIDR blocks are the same.
-      * *   The CIDR block in an entry to be added cannot the same as that in an entry to be deleted. For example, when you add an entry in which the 10.0.0.0/8 CIDR block is specified, make sure the 10.0.0.0/8 CIDR block is not specified in an entry to be deleted.
+      * *   The CIDR block in an entry to be added cannot the same as that in an entry to be deleted. For example, when you add an entry in which the 10.0.0.0/8 CIDR block is specified, make sure that the 10.0.0.0/8 CIDR block is not specified in an entry to be deleted.
       * *   If you want to modify the description of an entry, you must specify the CIDR block (`AddEntry.N.Cidr`) and new description (`AddEntry.N.Description`) for the entry.
       *
      */
@@ -6249,14 +6279,15 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * When you call this operation, take note of the following points:
+      * ## [](#)Usage notes
+      * Take note of the following items:
       * *   The disk that you want to re-initialize must be in the **In Use** (In_use) state and the instance to which the disk is attached must be in the **Stopped** (Stopped) state.
-      * *   If the instance has never been started since it was created, the disks attached to it cannot be re-initialized.
+      * *   If an instance has never been started since it was created, the disks attached to it cannot be re-initialized.
       * *   If a local snapshot has been created for a disk, the disk cannot be re-initialized.
-      * *   When a system disk is re-initialized, it is restored to the state of the image from which it was created. If the source image is deleted, the system disk cannot be re-initialized.
-      * *   When a separately created data disk is re-initialized, it is restored to an empty data disk.
-      * *   When a data disk that was created from a snapshot is re-initialized, the disk is restored to the state of the snapshot.
-      * > If the source snapshot is deleted, the disk cannot be re-initialized and an error is returned.
+      * *   If a system disk is re-initialized, the disk is restored to the state of the image from which it was created. If the image has been deleted, the disk cannot be re-initialized.
+      * *   If a separately created data disk is re-initialized, the disk is restored to an empty data disk.
+      * *   If a data disk that was created from a snapshot is re-initialized, the disk is restored to the state of the snapshot.
+      * >  If the source snapshot is deleted, the disk cannot be re-initialized and an error is returned.
       *
      */
     @Override
@@ -6295,10 +6326,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The ECS instances must be in the `Running` state.****
-      * *   You can use the `BatchOptimization` parameter to specify the batch operation mode and restart multiple instances at a time.
-      * *   Instances can be forcefully restarted. A forced restart (`ForceReboot`) is equivalent to powering off a traditional server and then restarting the server. If data in the instance operating system is not written to block storage devices when the operation is called, the data may be lost.
-      * *   If OperationLocks in the response of the DescribeInstances operation contains `"LockReason" : "security"` for an instance, the instance is locked for security reasons and all operations are prohibited on it.
+      * ## [](#)Usage notes
+      * *   The ECS instances to be restarted must be in the **Running** (`Running`) state.
+      * *   You can use `BatchOptimization` to specify the batch operation mode and restart multiple instances at a time.
+      * *   Instances can be forcefully restarted. A forced restart (`ForceReboot`) is equivalent to powering off a traditional server and then starting the server. If data in the instance operating system is not written to block storage devices when the operation is called, the data is lost.
+      * *   If the response contains `{"OperationLocks": {"LockReason" : "security"}}` when you query the information of the instance, the instance is locked for security reasons and all operations are prohibited on it.
       *
      */
     @Override
@@ -6634,11 +6666,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * ## [](#)Usage notes
       * >  Before you call this operation to resize a disk, you must check the partition format of the disk. A master boot record (MBR) disk cannot be resized to a size that is larger than 2 TiB. If you resize an MBR disk to a size that is larger than 2 TiB, data may be lost. If you want to resize an MBR disk to a size that is larger than 2 TiB, we recommend that you perform the following steps: Create another data disk that is larger than 2 TiB in size, partition and format the new data disk to GUID partition table (GPT), and then copy data from the MBR disk to the new GPT data disk. For more information, see [Step 1: Resize a disk to extend its capacity](~~44986~~).
-      * *   You can resize the following categories of disks: basic disks (`cloud`), ultra disks (`cloud_efficiency`), SSDs (`cloud_ssd`), enhanced SSDs (ESSDs)(`cloud_essd`), and ESSD AutoPL disks (cloud_auto).
-      * *   A disk cannot be resized when a snapshot is being created for the disk.
+      * *   You can resize disks of the following disk categories: basic disks (`cloud`), ultra disks (`cloud_efficiency`), standard SSDs (`cloud_ssd`), Enterprise SSDs (ESSDs) (`cloud_essd`), ESSD AutoPL disks (cloud_auto), standard elastic ephemeral disks (elastic_ephemeral_disk_standard), and premium elastic ephemeral disks (elastic_ephemeral_disk_premium).
+      * *   You cannot resize a disk when a snapshot is being created for the disk.
       * *   The Elastic Compute Service (ECS) instance to which the disk is attached must be in the **Running** (`Running`) or **Stopped** (`Stopped`) state.
-      * *   After you resize a disk, the partitions and file systems of the disk are not changed. You must allocate the storage space on the disk after the disk is resized.
-      * *   Disks for which the multi-attach feature is enabled support online resizing and offline resizing. Before you resize the disks offline, make sure that the instances to which the disks are attached are in the **Stopped** (`Stopped`) state.
+      * *   After you resize a disk, the partitions and file systems of the disk are not changed. You must allocate the increased storage space on the disk after the disk is resized.
+      * *   Disks for which the multi-attach feature is enabled support online and offline resizing. Before you resize the disks offline, make sure that the instances to which the disks are attached are in the **Stopped** (`Stopped`) state.
       *
      */
     @Override
@@ -6950,24 +6982,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SendFileResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-      * @deprecated
-      *
-     */
-    @Override
-    public CompletableFuture<StartElasticityAssuranceResponse> startElasticityAssurance(StartElasticityAssuranceRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("StartElasticityAssurance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartElasticityAssuranceResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<StartElasticityAssuranceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

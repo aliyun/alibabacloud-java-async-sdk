@@ -421,7 +421,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * >  This parameter is not publicly available.
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);

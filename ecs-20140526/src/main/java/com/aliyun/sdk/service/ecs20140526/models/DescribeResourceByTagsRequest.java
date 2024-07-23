@@ -185,7 +185,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: 1.
@@ -197,7 +197,7 @@ public class DescribeResourceByTagsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
+         * The number of entries per page. Valid values: 1 to 100.
          * <p>
          * 
          * Default value: 50.
@@ -239,7 +239,7 @@ public class DescribeResourceByTagsRequest extends Request {
          * The type of the resource. Valid values:
          * <p>
          * 
-         * *   instance: ECS instance
+         * *   instance: Elastic Compute Service (ECS) instance
          * *   disk: disk
          * *   snapshot: snapshot
          * *   image: image
@@ -313,7 +313,7 @@ public class DescribeResourceByTagsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the resource. Valid values of N: 1 to 20 The tag key cannot be an empty string. It can be up to 128 characters in length.
+             * The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -321,7 +321,7 @@ public class DescribeResourceByTagsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the resource. Valid values of N: 1 to 20 The tag value can be an empty string. It can be up to 128 characters in length.
+             * The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.
              */
             public Builder value(String value) {
                 this.value = value;
