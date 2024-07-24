@@ -49,7 +49,7 @@ public class DescribeSessionListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The object information.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class DescribeSessionListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class DescribeSessionListResponseBody extends TeaModel {
             private String sessionId; 
 
             /**
-             * Host.
+             * The address of the client, with the format ip:port.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -117,7 +117,7 @@ public class DescribeSessionListResponseBody extends TeaModel {
             }
 
             /**
-             * SessionId.
+             * The session ID of the proxy service.
              */
             public Builder sessionId(String sessionId) {
                 this.sessionId = sessionId;

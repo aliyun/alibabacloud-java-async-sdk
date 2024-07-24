@@ -92,7 +92,7 @@ public class DescribeSessionListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -101,7 +101,7 @@ public class DescribeSessionListRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

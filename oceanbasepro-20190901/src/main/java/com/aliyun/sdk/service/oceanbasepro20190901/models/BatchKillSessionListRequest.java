@@ -107,7 +107,7 @@ public class BatchKillSessionListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -116,7 +116,9 @@ public class BatchKillSessionListRequest extends Request {
         }
 
         /**
-         * SessionList.
+         * The list of sessions, which is concatenated with commas.
+         * <p>
+         * >The session information is obtained from the result returned by the DescribeSessionList API.
          */
         public Builder sessionList(String sessionList) {
             this.putBodyParameter("SessionList", sessionList);
@@ -125,7 +127,7 @@ public class BatchKillSessionListRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
