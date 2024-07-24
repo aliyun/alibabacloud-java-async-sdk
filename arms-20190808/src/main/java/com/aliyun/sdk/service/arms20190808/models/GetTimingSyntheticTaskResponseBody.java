@@ -81,7 +81,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -409,7 +409,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private java.util.Map < String, String > prometheusLabels; 
 
             /**
-             * PrometheusClusterId.
+             * A reserved parameter.
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -417,7 +417,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PrometheusClusterRegion.
+             * A reserved parameter.
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -425,7 +425,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PrometheusLabels.
+             * A reserved parameter.
              */
             public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
                 this.prometheusLabels = prometheusLabels;
@@ -502,7 +502,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -510,7 +510,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SecureGroupId.
+             * Security group ID. This security group is where the dial-up client is located. The security group limits the inbound and outbound rules of the dial-up client in the VPC. You need to set the inbound rules of the security group where your VPC is located to allow the security group where the dial-up client is located to access. Otherwise, the dial-up client cannot smoothly access the resources in your VPC.
              */
             public Builder secureGroupId(String secureGroupId) {
                 this.secureGroupId = secureGroupId;
@@ -518,7 +518,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -526,7 +526,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -659,7 +659,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CustomPrometheusSetting.
+             * The reserved parameters.
              */
             public Builder customPrometheusSetting(CustomPrometheusSetting customPrometheusSetting) {
                 this.customPrometheusSetting = customPrometheusSetting;
@@ -667,7 +667,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CustomVPCSetting.
+             * User VPC information. If the dial-up is to the Alibaba Cloud intranet address, you need to configure the VPC information.
              */
             public Builder customVPCSetting(CustomVPCSetting customVPCSetting) {
                 this.customVPCSetting = customVPCSetting;
@@ -688,7 +688,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启链路追踪。
+             * Whether to enable tracing.
              */
             public Builder isOpenTrace(Boolean isOpenTrace) {
                 this.isOpenTrace = isOpenTrace;
@@ -708,12 +708,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 链路追踪客户端类型：
+             * Tracing client type:
              * <p>
              * 
-             * - 0：ARMS Agent
-             * - 1：OpenTelemetry
-             * - 2：Jaeger
+             * - 0: ARMS Agent
+             * - 1: Open Telemetry
+             * - 2: Jaeger
              */
             public Builder traceClientType(Integer traceClientType) {
                 this.traceClientType = traceClientType;
@@ -721,7 +721,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 链路数据上报region。
+             * Tracing data reporting region.
              */
             public Builder xtraceRegion(String xtraceRegion) {
                 this.xtraceRegion = xtraceRegion;
@@ -968,7 +968,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Long timeout; 
 
             /**
-             * CheckCert.
+             * Whether to verify the certificate. The default is no.
              */
             public Builder checkCert(Boolean checkCert) {
                 this.checkCert = checkCert;
@@ -996,7 +996,16 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolAlpnProtocol.
+             * The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:
+             * <p>
+             * 
+             * 0: default
+             * 
+             * 1: HTTP/1.1
+             * 
+             * 2: HTTP/2
+             * 
+             * 3: disables the ALPN protocol
              */
             public Builder protocolAlpnProtocol(Integer protocolAlpnProtocol) {
                 this.protocolAlpnProtocol = protocolAlpnProtocol;
@@ -1402,7 +1411,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 验证关键词。
+             * Verify keywords.
              */
             public Builder validateKeywords(String validateKeywords) {
                 this.validateKeywords = validateKeywords;
@@ -1410,12 +1419,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 验证方式。
+             * Verification method.
              * <p>
              * 
-             * - 0：不验证 
-             * - 1：验证字符串 
-             * - 2：MD5验证
+             * - 0: No verification
+             * - 1: Verification string
+             * - 2: MD5 verification
              */
             public Builder verifyWay(Integer verifyWay) {
                 this.verifyWay = verifyWay;
@@ -1423,7 +1432,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DNS劫持白名单。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。
+             * DNS hijacking whitelist. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). For example: `www.aliyun.com:203.0.3.55|203.3.44.67`, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the www.aliyun.com domain name are hijacked.
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -2019,7 +2028,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * 自定义header，JSON Map格式。
+             * Custom header, JSON Map format.
              */
             public Builder customHeaderContent(java.util.Map < String, String > customHeaderContent) {
                 this.customHeaderContent = customHeaderContent;
@@ -2027,11 +2036,11 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 播放器，不传默认12。
+             * Player, default is 12 if not specified.
              * <p>
              * 
-             * - 12：VLC
-             * - 2：FlashPlayer
+             * - 12: VLC
+             * - 2: Flash Player
              */
             public Builder playerType(Integer playerType) {
                 this.playerType = playerType;
@@ -2039,11 +2048,11 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 资源地址类型：
+             * Resource address type:
              * <p>
              * 
-             * - 1：资源地址。
-             * - 0：页面地址。不传默认0。
+             * - 1: Resource address.
+             * - 0: Page address. If not passed, the default value is 0.
              */
             public Builder streamAddressType(Integer streamAddressType) {
                 this.streamAddressType = streamAddressType;
@@ -2051,7 +2060,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 监测时长，单位秒，最长支持60s，不传默认60。
+             * Monitoring duration, in seconds, supports up to 60 seconds. If not specified, the default value is 60 seconds.
              */
             public Builder streamMonitorTimeout(Integer streamMonitorTimeout) {
                 this.streamMonitorTimeout = streamMonitorTimeout;
@@ -2059,7 +2068,11 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 音视频标志：0-视频，1-音频。
+             * Audio and video flag:
+             * <p>
+             * 
+             * - 0: video
+             * - 1: audio
              */
             public Builder streamType(Integer streamType) {
                 this.streamType = streamType;
@@ -2067,7 +2080,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 流媒体资源地址。
+             * Streaming media resource address.
              */
             public Builder targetUrl(String targetUrl) {
                 this.targetUrl = targetUrl;
@@ -2075,7 +2088,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DNS劫持白名单。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。
+             * DNS hijacking whitelist. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). For example: `www.aliyun.com:203.0.3.55|203.3.44.67`, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the www.aliyun.com domain name are hijacked.
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -2356,10 +2369,12 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 域名（例如www.aliyun.com）解析时，解析出的IP地址或者CNAME不在DNS劫持白名单内，用户就会访问失败或者返回一个非Aliyun的目标IP；若解析结果中的IP或者CNAME在DNS白名单内，则会被认定为没有发生DNS劫持。
+             * When resolving a domain name (such as www.aliyun.com), if the resolved IP address or CNAME is not in the DNS hijacking whitelist, the user will fail to access or return a non-Aliyun target IP; if the IP or CNAME in the resolution result is in the DNS whitelist, it will be deemed that no DNS hijacking has occurred.
              * <p>
              * 
-             * 填写格式：域名:匹配规则。匹配规则支持IP、IP通配符、子网掩码和CNAME，可以填写多个匹配规则，多个匹配规则以竖线（|）隔开。例如：www.aliyun.com:203.0.3.55|203.3.44.67，表示www.aliyun.com域名下除203.0.3.55和203.3.44.67之外的其他IP都是被劫持的。
+             * Fill in the format: `domain name: matching rule`. Matching rules support IP, IP wildcard, subnet mask and CNAME. You can fill in multiple matching rules, and multiple matching rules are separated by vertical bars (|). 
+             * 
+             * For example: `www.aliyun.com:203.0.3.55|203.3.44.67`, which means that all IPs except 203.0.3.55 and 203.3.44.67 under the www.aliyun.com domain name are hijacked.
              */
             public Builder DNSHijackWhitelist(String DNSHijackWhitelist) {
                 this.DNSHijackWhitelist = DNSHijackWhitelist;
@@ -2383,7 +2398,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 在页面加载过程中如果出现元素黑名单中配置的元素，不会请求加载该元素 。
+             * If an element configured in the element blacklist appears during page loading, no request will be made to load the element.
              */
             public Builder elementBlacklist(String elementBlacklist) {
                 this.elementBlacklist = elementBlacklist;
@@ -2403,7 +2418,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 识别元素：设置浏览页面元素总个数。
+             * Identify elements: Set the total number of elements to browse the page.
              */
             public Builder flowHijackJumpTimes(Integer flowHijackJumpTimes) {
                 this.flowHijackJumpTimes = flowHijackJumpTimes;
@@ -2411,7 +2426,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 劫持标识：设置匹配的关键信息。填写劫持判断关键字或关键元素，允许带星号（*）。
+             * Hijacking flag: Set the key information for matching. Fill in the hijacking judgment keyword or key element, and asterisks (*) are allowed.
              */
             public Builder flowHijackLogo(String flowHijackLogo) {
                 this.flowHijackLogo = flowHijackLogo;
@@ -2435,10 +2450,10 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 监测页面出现了域名设置之外的元素都属于页面被篡改。常见的表现形式为弹出广告、浮动广告、跳转等。
+             * If any element other than the domain name setting appears on the monitoring page, it means that the page has been tampered. Common manifestations include pop-up ads, floating ads, jumps, etc.
              * <p>
              * 
-             * 填写格式：域名:元素。元素支持填写通配符，可以填写多个元素，多个元素以竖线（|）隔开。例如：www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg，表示www.aliyun.com域名下除基础文档、/cc/bb/a.gif和/vv/bb/cc.jpg之外的其他元素都属于页面被篡改。
+             * Fill in the format: `domain name: element`. Elements support wildcards, and multiple elements can be filled in. Multiple elements are separated by vertical bars (|). For example: `www.aliyun.com:|/cc/bb/a.gif|/vv/bb/cc.jpg`, which means that all elements except the basic document, /cc/bb/a.gif and /vv/bb/cc.jpg under the www.aliyun.com domain name are considered to be tampered with.
              */
             public Builder pageTamper(String pageTamper) {
                 this.pageTamper = pageTamper;
@@ -2470,7 +2485,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 验证字符串即监测页面源代码中的某个任意字符串。若客户端返回的源码中包含任一黑名单中的字符串则报650验证字符串失败的错误。多个字符串以竖线（|）隔开。
+             * The verification string is an arbitrary string in the source code of the monitoring page. If the source code returned by the client contains any string in the blacklist, an error 650 &quot;Verification string failed&quot; will be reported. Multiple strings are separated by vertical bars (|).
              */
             public Builder verifyStringBlacklist(String verifyStringBlacklist) {
                 this.verifyStringBlacklist = verifyStringBlacklist;
@@ -2478,7 +2493,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 验证字符串即监测页面源代码中的某个任意字符串。客户端返回的源码必须包含所有白名单中的字符串，否则报650验证字符串失败的错误。多个字符串以竖线（|）隔开。
+             * The verification string is an arbitrary string in the source code of the monitoring page. The source code returned by the client must contain all the strings in the whitelist, otherwise an error 650 &quot;Verification string failed&quot; will be reported. Multiple strings are separated by a vertical bar (|).
              */
             public Builder verifyStringWhitelist(String verifyStringWhitelist) {
                 this.verifyStringWhitelist = verifyStringWhitelist;
@@ -2599,7 +2614,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             private Website website; 
 
             /**
-             * The HTTP(S) synthetic test parameters.
+             * The parameters of the HTTP(S) synthetic test.
              */
             public Builder apiHTTP(ApiHTTP apiHTTP) {
                 this.apiHTTP = apiHTTP;
@@ -2639,7 +2654,7 @@ public class GetTimingSyntheticTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 流媒体拨测配置。
+             * Streaming media dial test configuration.
              */
             public Builder stream(Stream stream) {
                 this.stream = stream;

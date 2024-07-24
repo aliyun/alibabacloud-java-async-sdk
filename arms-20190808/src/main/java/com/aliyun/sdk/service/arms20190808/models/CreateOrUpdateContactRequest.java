@@ -188,7 +188,7 @@ public class CreateOrUpdateContactRequest extends Request {
         }
 
         /**
-         * CorpUserId.
+         * The ID of the alert contact that is shown to the enterprise when the contact is mentioned with the at sign (@) by a third-party instant messaging (IM) tool.
          */
         public Builder corpUserId(String corpUserId) {
             this.putBodyParameter("CorpUserId", corpUserId);

@@ -121,7 +121,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;

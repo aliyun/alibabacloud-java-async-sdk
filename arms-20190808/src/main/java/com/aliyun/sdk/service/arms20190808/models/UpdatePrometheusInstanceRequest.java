@@ -111,7 +111,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.
+         * The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
          */
         public Builder archiveDuration(Integer archiveDuration) {
             this.putQueryParameter("ArchiveDuration", archiveDuration);
@@ -129,7 +129,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * Storage duration (days).
+         * The data storage duration. Unit: days.
          */
         public Builder storageDuration(Integer storageDuration) {
             this.putQueryParameter("StorageDuration", storageDuration);

@@ -97,7 +97,13 @@ public class GetGrafanaWorkspaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code returned for the request. Valid values:
+         * <p>
+         * 
+         * *   `2XX`: The request is successful.
+         * *   `3XX`: A redirection message is returned.
+         * *   `4XX`: The request is invalid.
+         * *   `5XX`: A server error occurs.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +111,7 @@ public class GetGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the Grafana workspace.
          */
         public Builder data(GrafanaWorkspace data) {
             this.data = data;
@@ -113,7 +119,7 @@ public class GetGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned when the request parameters are invalid.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +135,11 @@ public class GetGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +147,7 @@ public class GetGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. The ID is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

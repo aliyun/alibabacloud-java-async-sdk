@@ -83,7 +83,7 @@ public class GetGrafanaWorkspaceRequest extends Request {
         } 
 
         /**
-         * AliyunLang.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -92,7 +92,7 @@ public class GetGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * GrafanaWorkspaceId.
+         * The ID of the workspace.
          */
         public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
             this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
@@ -101,7 +101,7 @@ public class GetGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Default value: cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

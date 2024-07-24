@@ -85,7 +85,7 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * The HTTP status code that is returned. The HTTP status code 200 indicates that the call was successful. Otherwise, the call fails.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -109,7 +109,7 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * Indicates whether the call was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;

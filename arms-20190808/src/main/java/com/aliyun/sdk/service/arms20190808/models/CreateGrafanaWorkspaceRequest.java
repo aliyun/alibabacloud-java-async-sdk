@@ -169,7 +169,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         } 
 
         /**
-         * AliyunLang.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -178,7 +178,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the workspace
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -205,7 +205,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * GrafanaWorkspaceName.
+         * The name of the Grafana workspace.
          */
         public Builder grafanaWorkspaceName(String grafanaWorkspaceName) {
             this.putQueryParameter("GrafanaWorkspaceName", grafanaWorkspaceName);
@@ -214,7 +214,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the workspace. The password must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letter, lowercase letter, digit, and special character. Special characters include () \" ~ ! @ # $ % ^ & \* - \_ + =.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -223,7 +223,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,7 +232,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -241,7 +241,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The list of tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -296,7 +296,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -304,7 +304,7 @@ public class CreateGrafanaWorkspaceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

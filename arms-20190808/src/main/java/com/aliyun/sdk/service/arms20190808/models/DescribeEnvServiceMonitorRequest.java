@@ -108,7 +108,7 @@ public class DescribeEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The namespace where the ServiceMonitor is located.
+         * The namespace where the ServiceMonitor resides.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

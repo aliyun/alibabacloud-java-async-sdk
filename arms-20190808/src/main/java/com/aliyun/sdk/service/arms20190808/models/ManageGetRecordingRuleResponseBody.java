@@ -73,7 +73,7 @@ public class ManageGetRecordingRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * 状态码。200为成功，其他状态码为异常。
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -89,7 +89,7 @@ public class ManageGetRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * 返回信息。
          */
         public Builder message(String message) {
             this.message = message;

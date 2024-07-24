@@ -97,7 +97,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the returned results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +129,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class UpdateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder success(String success) {
             this.success = success;
@@ -213,7 +217,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
             private Integer usage; 
 
             /**
-             * Config.
+             * The user configurations. This is a reserved parameter.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -221,7 +225,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
             }
 
             /**
-             * Limit.
+             * The QPS limit. Unit: bytes.
              */
             public Builder limit(Integer limit) {
                 this.limit = limit;
@@ -229,7 +233,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
             }
 
             /**
-             * Limited.
+             * Indicates whether the request is throttled due to the QPS limit. Valid values: true and false.
              */
             public Builder limited(Boolean limited) {
                 this.limited = limited;
@@ -237,7 +241,7 @@ public class UpdateRumAppResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * The usage. Unit: bytes.
              */
             public Builder usage(Integer usage) {
                 this.usage = usage;

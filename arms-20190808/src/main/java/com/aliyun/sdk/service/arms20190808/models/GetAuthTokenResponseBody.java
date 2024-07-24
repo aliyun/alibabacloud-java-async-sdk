@@ -85,7 +85,7 @@ public class GetAuthTokenResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * Status code. 200 means success, other status codes are exceptions.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +101,7 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * Additional Information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +117,10 @@ public class GetAuthTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * Whether the query was successful:
          * <p>
-         * 
-         * *   `true`
-         * *   `false`
+         * - true: Success
+         * - false: Failure
          */
         public Builder success(Boolean success) {
             this.success = success;

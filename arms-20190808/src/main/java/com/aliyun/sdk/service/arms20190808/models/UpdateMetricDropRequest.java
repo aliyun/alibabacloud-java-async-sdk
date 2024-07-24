@@ -81,7 +81,7 @@ public class UpdateMetricDropRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the Prometheus instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -90,7 +90,7 @@ public class UpdateMetricDropRequest extends Request {
         }
 
         /**
-         * MetricDrop.
+         * The list of discarded metrics. Specify one metric name in each line.
          */
         public Builder metricDrop(String metricDrop) {
             this.putQueryParameter("MetricDrop", metricDrop);
@@ -99,7 +99,7 @@ public class UpdateMetricDropRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

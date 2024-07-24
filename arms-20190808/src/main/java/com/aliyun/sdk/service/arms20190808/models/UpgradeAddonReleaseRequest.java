@@ -127,7 +127,7 @@ public class UpgradeAddonReleaseRequest extends Request {
         } 
 
         /**
-         * Version of Addon.
+         * The version of the add-on.
          */
         public Builder addonVersion(String addonVersion) {
             this.putQueryParameter("AddonVersion", addonVersion);
@@ -136,7 +136,7 @@ public class UpgradeAddonReleaseRequest extends Request {
         }
 
         /**
-         * Whether to pre-check this request.
+         * Specifies whether to perform only a dry run, without performing the actual request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -145,7 +145,7 @@ public class UpgradeAddonReleaseRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * The environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -154,7 +154,7 @@ public class UpgradeAddonReleaseRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +163,7 @@ public class UpgradeAddonReleaseRequest extends Request {
         }
 
         /**
-         * The name of Release.
+         * The name of the release.
          */
         public Builder releaseName(String releaseName) {
             this.putQueryParameter("ReleaseName", releaseName);
@@ -172,7 +172,7 @@ public class UpgradeAddonReleaseRequest extends Request {
         }
 
         /**
-         * Metadata information.
+         * The metadata information.
          */
         public Builder values(String values) {
             this.putQueryParameter("Values", values);

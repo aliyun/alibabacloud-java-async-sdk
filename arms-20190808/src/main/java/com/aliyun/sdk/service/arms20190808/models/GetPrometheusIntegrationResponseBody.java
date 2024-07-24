@@ -81,7 +81,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -377,7 +377,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The exporter ID.
+             * The ID of the exporter.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -393,7 +393,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the integration.
+             * The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
@@ -417,7 +417,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the exporter. The value is a JSON string.
+             * The parameters of the exporter. Format: JSON string.
              */
             public Builder param(String param) {
                 this.param = param;

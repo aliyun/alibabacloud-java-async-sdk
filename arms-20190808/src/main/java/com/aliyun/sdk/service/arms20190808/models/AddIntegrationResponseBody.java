@@ -73,7 +73,7 @@ public class AddIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 状态码。200为成功，其他状态码为异常。
+         * Status code. 200 means success, other status codes are exceptions.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class AddIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the integration was successful.
+         * Indicates whether the call was successful.
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class AddIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果的提示信息。
+         * The prompt information of the returned result.
          */
         public Builder message(String message) {
             this.message = message;

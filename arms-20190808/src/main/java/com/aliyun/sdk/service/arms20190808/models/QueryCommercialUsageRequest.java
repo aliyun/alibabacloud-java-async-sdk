@@ -207,7 +207,7 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * AdvancedFilters.
+         * The filter conditions.
          */
         public Builder advancedFilters(java.util.List < AdvancedFilters> advancedFilters) {
             this.putQueryParameter("AdvancedFilters", advancedFilters);
@@ -216,7 +216,14 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * Dimensions.
+         * The dimensions of the metric that you want to query. Valid values:
+         * <p>
+         * 
+         * *   dataType: data type
+         * *   productType: product type
+         * *   instanceId: instance ID
+         * *   instanceName: instance name
+         * *   instanceType: instance type
          */
         public Builder dimensions(java.util.List < String > dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -225,7 +232,7 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -234,7 +241,7 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * IntervalInSec.
+         * The time interval between data slices. Unit: seconds. Minimum value: 3600.
          */
         public Builder intervalInSec(Integer intervalInSec) {
             this.putQueryParameter("IntervalInSec", intervalInSec);
@@ -243,7 +250,7 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * Measures.
+         * The measures of the metric that you want to query.
          */
         public Builder measures(java.util.List < String > measures) {
             this.putQueryParameter("Measures", measures);
@@ -252,7 +259,7 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * Metric.
+         * The name of the metric. Valid value: USAGEFEE.STAT.
          */
         public Builder metric(String metric) {
             this.putQueryParameter("Metric", metric);
@@ -261,7 +268,11 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order in which data is sorted. Valid value:
+         * <p>
+         * 
+         * *   `ASC`: ascending order
+         * *   `DESC`: descending order
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -270,7 +281,18 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The dimension by which data is sorted.
+         * <p>
+         * 
+         * Valid value:
+         * 
+         * *   dataType
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -279,7 +301,11 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * The data type. Valid values:
+         * <p>
+         * 
+         * *   instantQuery: non-time series
+         * *   timeSeriesQuery: time series
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -288,7 +314,7 @@ public class QueryCommercialUsageRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -354,7 +380,7 @@ public class QueryCommercialUsageRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the filter condition.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -362,7 +388,7 @@ public class QueryCommercialUsageRequest extends Request {
             }
 
             /**
-             * OpType.
+             * The operator. Valid values: eq and in.
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -370,7 +396,7 @@ public class QueryCommercialUsageRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the filter condition.
              */
             public Builder value(String value) {
                 this.value = value;

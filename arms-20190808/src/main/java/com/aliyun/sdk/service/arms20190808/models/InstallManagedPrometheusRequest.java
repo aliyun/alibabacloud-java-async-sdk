@@ -183,7 +183,7 @@ public class InstallManagedPrometheusRequest extends Request {
         } 
 
         /**
-         * The ID of the ACK cluster.
+         * The ID of the ASK cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -192,7 +192,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The name of the ECS instance. If you set the ClusterType parameter to ecs, you must configure this parameter.
+         * The name of the cluster. This parameter is required if the ClusterType parameter is set to ecs.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -201,42 +201,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The cluster type.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   ecs
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   one
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   ask
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   pro
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * The type of the cluster. Valid values: ask and ecs.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -245,7 +210,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The ID of the Grafana workspace used by the ASK cluster or ECS instance. If you set the value to free or leave the parameter empty, a shared Grafana workspace is used.
+         * The ID of the Grafana workspace in which the cluster resides. If you set this parameter to free or leave this parameter empty, the cluster is deployed in a shared Grafana workspace.
          */
         public Builder grafanaInstanceId(String grafanaInstanceId) {
             this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
@@ -254,7 +219,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * This parameter is not supported.
+         * The parameter is not supported.
          */
         public Builder kubeConfig(String kubeConfig) {
             this.putQueryParameter("KubeConfig", kubeConfig);
@@ -272,7 +237,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Prometheus instance belongs.
+         * Prometheus实例的资源组ID。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -281,7 +246,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The security group of the ASK cluster or ECS instance.
+         * The ID of the security group to which the cluster belongs.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -290,7 +255,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The vSwitch used by the ASK cluster or ECS instance.
+         * The ID of the vSwitch that is used by the cluster.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -299,7 +264,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.
+         * The virtual private cloud (VPC) where the cluster resides.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

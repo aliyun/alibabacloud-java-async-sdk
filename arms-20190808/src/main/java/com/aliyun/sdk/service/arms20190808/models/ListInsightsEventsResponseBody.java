@@ -169,7 +169,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The time at which the event occurred. The value is a timestamp.
+             * The time when the event occurred. The value is a timestamp.
              */
             public Builder date(Long date) {
                 this.date = date;
@@ -201,7 +201,7 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 问题标识。
+             * The problem identifier.
              */
             public Builder problemId(String problemId) {
                 this.problemId = problemId;

@@ -49,7 +49,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The struct returned.
+         * The returned struct.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -215,7 +215,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the notification policy.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -223,7 +223,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the notification policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -444,7 +444,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private Long triggerCount; 
 
             /**
-             * The list of associated alerts.
+             * The associated alerts.
              */
             public Builder alarms(java.util.List < Alarms> alarms) {
                 this.alarms = alarms;
@@ -460,7 +460,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of annotations.
+             * The annotations.
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -476,7 +476,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the alert event.
+             * The end time.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -516,7 +516,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * The tags.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -524,7 +524,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * NotificationPolicies.
+             * The information about the notification policy.
              */
             public Builder notificationPolicies(java.util.List < NotificationPolicies> notificationPolicies) {
                 this.notificationPolicies = notificationPolicies;
@@ -540,7 +540,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of the alert. Valid value:
+             * The severity level of the alert. Valid values:
              * <p>
              * 
              * *   critical: P1
@@ -555,7 +555,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the alert event.
+             * The start time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -576,7 +576,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerCount.
+             * The number of times the alert is triggered.
              */
             public Builder triggerCount(Long triggerCount) {
                 this.triggerCount = triggerCount;
@@ -653,7 +653,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The list of information about historical alert events.
+             * The queried historical alert events.
              */
             public Builder events(java.util.List < Events> events) {
                 this.events = events;

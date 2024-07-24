@@ -92,7 +92,7 @@ public class EnableMetricRequest extends Request {
         }
 
         /**
-         * Enable metric name.
+         * The metric name.
          */
         public Builder dropMetric(String dropMetric) {
             this.putQueryParameter("DropMetric", dropMetric);

@@ -83,7 +83,7 @@ public class ClaimAlarmRequest extends Request {
         } 
 
         /**
-         * AlarmId.
+         * The alert ID.
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);
@@ -92,7 +92,7 @@ public class ClaimAlarmRequest extends Request {
         }
 
         /**
-         * HandlerId.
+         * The ID of the handler.
          */
         public Builder handlerId(Long handlerId) {
             this.putQueryParameter("HandlerId", handlerId);
@@ -101,7 +101,7 @@ public class ClaimAlarmRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

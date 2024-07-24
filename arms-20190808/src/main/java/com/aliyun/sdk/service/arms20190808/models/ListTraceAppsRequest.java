@@ -113,8 +113,8 @@ public class ListTraceAppsRequest extends Request {
          * The type of the application that is associated with the alert rule. Valid values:
          * <p>
          * 
-         * *   `TRACE`: Application Monitoring
-         * *   `EBPF`: Application Monitoring eBPF Edition
+         * - TRACE: Application Monitoring
+         * - EBPF: Application Monitoring eBPF Edition
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);

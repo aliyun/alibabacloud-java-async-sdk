@@ -81,7 +81,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         }
 
         /**
-         * The struct returned.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private String tagValue; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -157,7 +157,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -462,7 +462,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private String vpcId; 
 
             /**
-             * Auth Token string.
+             * The authorization token.
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -486,14 +486,15 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The type of the cluster. Valid values: remote-write: Prometheus instance for remote write.
+             * The instance type. Valid values:
              * <p>
              * 
-             * *   ecs: Prometheus instances for ECS.
-             * *   cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland.
-             * *   cloud-product: Prometheus instance for Alibaba Cloud services outside China.
-             * *   global-view: Prometheus instance for GlobalView.
-             * *   aliyun-cs: Prometheus instance for Container Service.
+             * *   remote-write: Prometheus instance for Remote Write
+             * *   ecs: Prometheus instances for ECS
+             * *   cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland
+             * *   cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland
+             * *   global-view: global aggregation instance
+             * *   aliyun-cs: Prometheus instance for Container Service
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -509,7 +510,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * HTTP Api internet url.
+             * The public URL for the HTTP API.
              */
             public Builder httpApiInterUrl(String httpApiInterUrl) {
                 this.httpApiInterUrl = httpApiInterUrl;
@@ -517,7 +518,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * HTTP Api intranet url.
+             * The internal URL for the HTTP API.
              */
             public Builder httpApiIntraUrl(String httpApiIntraUrl) {
                 this.httpApiIntraUrl = httpApiIntraUrl;
@@ -528,8 +529,8 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
              * The billing method. Valid values:
              * <p>
              * 
-             * *   PREPAY: subscription.
-             * *   POSTPAY: pay-as-you-go.
+             * *   PREPAY: subscription
+             * *   POSTPAY: pay-as-you-go
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -537,7 +538,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * Push Gateway internet url.
+             * The public URL for Pushgateway.
              */
             public Builder pushGatewayInterUrl(String pushGatewayInterUrl) {
                 this.pushGatewayInterUrl = pushGatewayInterUrl;
@@ -545,7 +546,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * Push Gateway intranet url.
+             * The internal URL for Pushgateway.
              */
             public Builder pushGatewayIntraUrl(String pushGatewayIntraUrl) {
                 this.pushGatewayIntraUrl = pushGatewayIntraUrl;
@@ -553,7 +554,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The region ID of the Prometheus instance.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -561,7 +562,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * Remote Read internet url.
+             * The public URL for remote read.
              */
             public Builder remoteReadInterUrl(String remoteReadInterUrl) {
                 this.remoteReadInterUrl = remoteReadInterUrl;
@@ -569,7 +570,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * Remote Read intranet url.
+             * The internal URL for remote read.
              */
             public Builder remoteReadIntraUrl(String remoteReadIntraUrl) {
                 this.remoteReadIntraUrl = remoteReadIntraUrl;
@@ -577,7 +578,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * Remote Write internet url.
+             * The public URL for remote write.
              */
             public Builder remoteWriteInterUrl(String remoteWriteInterUrl) {
                 this.remoteWriteInterUrl = remoteWriteInterUrl;
@@ -585,7 +586,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * Remote Write intranet url.
+             * The internal URL for remote write.
              */
             public Builder remoteWriteIntraUrl(String remoteWriteIntraUrl) {
                 this.remoteWriteIntraUrl = remoteWriteIntraUrl;
@@ -601,7 +602,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * Resource type.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -617,7 +618,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The child instances of the Prometheus instance for GlobalView instance. The value is a JSON string.
+             * The child instances of the global aggregation instance. The value is a JSON string.
              */
             public Builder subClustersJson(String subClustersJson) {
                 this.subClustersJson = subClustersJson;
@@ -625,7 +626,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * The tags.
+             * The list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

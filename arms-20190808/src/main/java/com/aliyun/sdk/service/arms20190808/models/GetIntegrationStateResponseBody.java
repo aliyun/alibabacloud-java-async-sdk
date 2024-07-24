@@ -73,7 +73,7 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         private Boolean state; 
 
         /**
-         * 状态码。200为成功，其他状态码为异常。
+         * Status code. 200 means success, other status codes are exceptions.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         }
 
         /**
-         * 返回结果的提示信息。
+         * The prompt information of the returned result.
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +89,7 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,11 @@ public class GetIntegrationStateResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * The integration state of Prometheus dashboards and collection rules. Valid values:
+         * <p>
+         * 
+         * *   `true`: The Prometheus dashboards and collection rules that monitor the software are integrated.
+         * *   `false`: The Prometheus dashboards and collection rules that monitor the software are not integrated.
          */
         public Builder state(Boolean state) {
             this.state = state;

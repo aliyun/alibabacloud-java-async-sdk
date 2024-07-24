@@ -97,7 +97,7 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the file is deleted. If the file is deleted, "success" is returned.
          */
         public Builder data(String data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +129,7 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class DeleteRumUploadFileResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder success(Boolean success) {
             this.success = success;

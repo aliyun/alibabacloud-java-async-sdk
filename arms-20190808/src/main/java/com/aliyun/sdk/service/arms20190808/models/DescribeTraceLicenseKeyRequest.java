@@ -53,7 +53,7 @@ public class DescribeTraceLicenseKeyRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

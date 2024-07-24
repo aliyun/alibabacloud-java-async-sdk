@@ -93,7 +93,7 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * The queried add-ons.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -185,7 +185,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Description of the dashboard.
+             * The description of the dashboard.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -193,7 +193,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Name of the dashboard.
+             * The name of the dashboard.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -201,7 +201,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * URL of the dashboard.
+             * The URL of the dashboard.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -274,7 +274,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Name of the Feature.
+             * The feature on which the environment depends.
              */
             public Builder features(java.util.Map < String, Boolean > features) {
                 this.features = features;
@@ -282,7 +282,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Service list.
+             * The services.
              */
             public Builder services(java.util.List < String > services) {
                 this.services = services;
@@ -323,7 +323,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private java.util.List < String > promQL; 
 
             /**
-             * PromQL list.
+             * The PromQL statements.
              */
             public Builder promQL(java.util.List < String > promQL) {
                 this.promQL = promQL;
@@ -400,7 +400,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Description of the Protocol.
+             * The description of the protocol.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -408,7 +408,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Icon address.
+             * The URL of the protocol icon.
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -416,7 +416,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Label of the Protocol.
+             * The tag of the protocol.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -424,7 +424,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Name of the Protocol.
+             * The name of the protocol.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -537,7 +537,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private String targetAddonName; 
 
             /**
-             * Default alert status.
+             * The default alert status.
              */
             public Builder alertDefaultStatus(String alertDefaultStatus) {
                 this.alertDefaultStatus = alertDefaultStatus;
@@ -545,7 +545,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Default install status.
+             * The default installation status.
              */
             public Builder defaultInstall(Boolean defaultInstall) {
                 this.defaultInstall = defaultInstall;
@@ -553,7 +553,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable a service account.
+             * Indicates whether a service account is enabled.
              */
             public Builder enableServiceAccount(Boolean enableServiceAccount) {
                 this.enableServiceAccount = enableServiceAccount;
@@ -561,7 +561,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Metric check rule PromQL.
+             * The metric check rule.
              */
             public Builder metricCheckRule(MetricCheckRule metricCheckRule) {
                 this.metricCheckRule = metricCheckRule;
@@ -569,7 +569,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to restart after integration.
+             * Indicates whether a restart is required after the installation.
              */
             public Builder needRestartAfterIntegration(Boolean needRestartAfterIntegration) {
                 this.needRestartAfterIntegration = needRestartAfterIntegration;
@@ -577,7 +577,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol list.
+             * The supported protocols.
              */
             public Builder protocols(java.util.List < Protocols> protocols) {
                 this.protocols = protocols;
@@ -585,7 +585,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Target Addon name.
+             * The target name of the add-on.
              */
             public Builder targetAddonName(String targetAddonName) {
                 this.targetAddonName = targetAddonName;
@@ -686,7 +686,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private Policies policies; 
 
             /**
-             * Dependency list.
+             * The dependencies of the environment.
              */
             public Builder dependencies(Dependencies dependencies) {
                 this.dependencies = dependencies;
@@ -694,7 +694,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Description of environment.
+             * The description of the environment.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -702,7 +702,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable it.
+             * Indicates whether the feature is enabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -710,7 +710,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Label of the environment.
+             * The tag of the environment.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -718,7 +718,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Name of the environment.
+             * The name of the environment.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -726,7 +726,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Policies list.
+             * The control policies in the environment.
              */
             public Builder policies(Policies policies) {
                 this.policies = policies;
@@ -923,7 +923,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Ailas of the Addon.
+             * The alias of the add-on.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -931,7 +931,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Categories list.
+             * The tags of the add-on.
              */
             public Builder categories(java.util.List < String > categories) {
                 this.categories = categories;
@@ -939,7 +939,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Dashboard list.
+             * The dashboards.
              */
             public Builder dashboards(java.util.List < Dashboards> dashboards) {
                 this.dashboards = dashboards;
@@ -947,7 +947,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Description of the Addon.
+             * The description of the add-on.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -955,7 +955,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Environment list.
+             * The supported environments.
              */
             public Builder environments(java.util.List < Environments> environments) {
                 this.environments = environments;
@@ -963,7 +963,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Icon address.
+             * The URL of the icon.
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -971,7 +971,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Keyword list.
+             * The collection of keywords.
              */
             public Builder keywords(java.util.List < String > keywords) {
                 this.keywords = keywords;
@@ -979,7 +979,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The language.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -987,7 +987,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Last installation time.
+             * The time when the instance was last created.
              */
             public Builder latestReleaseCreateTime(String latestReleaseCreateTime) {
                 this.latestReleaseCreateTime = latestReleaseCreateTime;
@@ -995,7 +995,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Name of the Addon.
+             * The name of the add-on.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1003,7 +1003,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to install it only once.
+             * Indicates whether the add-on can be installed only once.
              */
             public Builder once(Boolean once) {
                 this.once = once;
@@ -1011,7 +1011,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Scene of the Addon.
+             * The scenario.
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -1019,7 +1019,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Version of the Addon.
+             * The version of the agent.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1027,7 +1027,7 @@ public class ListAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * Weight of the Addon.
+             * The weight.
              */
             public Builder weight(String weight) {
                 this.weight = weight;

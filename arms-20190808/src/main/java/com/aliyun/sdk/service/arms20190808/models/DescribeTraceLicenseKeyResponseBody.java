@@ -49,7 +49,7 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LicenseKey.
+         * The license key for the application.
          */
         public Builder licenseKey(String licenseKey) {
             this.licenseKey = licenseKey;
@@ -57,7 +57,7 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -233,7 +233,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information.
+             * The returned message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -594,7 +594,7 @@ public class DescribeAddonReleaseResponseBody extends TeaModel {
             }
 
             /**
-             * Whether or not it is a managed component.
+             * Indicates whether the component is fully managed.
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;

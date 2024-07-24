@@ -138,7 +138,7 @@ public class UpdateRumFileStatusRequest extends Request {
         } 
 
         /**
-         * FileName.
+         * The file name.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -147,7 +147,7 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The application ID.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -156,7 +156,7 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -165,7 +165,7 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * Size.
+         * The size of the file. Unit: bytes.
          */
         public Builder size(String size) {
             this.putQueryParameter("Size", size);
@@ -174,7 +174,7 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the file. Valid values: SUCCESS and INIT.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -183,7 +183,7 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The unique ID of the file. If you do not set this parameter, the system automatically sets a UUID for you.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -192,7 +192,7 @@ public class UpdateRumFileStatusRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * The version number of the file.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

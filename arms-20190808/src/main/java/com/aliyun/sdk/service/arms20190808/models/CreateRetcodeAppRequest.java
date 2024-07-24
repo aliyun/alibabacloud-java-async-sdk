@@ -130,7 +130,7 @@ public class CreateRetcodeAppRequest extends Request {
         }
 
         /**
-         * The name of the application that is monitored by Browser Monitoring.
+         * The name of the application.
          */
         public Builder retcodeAppName(String retcodeAppName) {
             this.putQueryParameter("RetcodeAppName", retcodeAppName);
@@ -139,7 +139,15 @@ public class CreateRetcodeAppRequest extends Request {
         }
 
         /**
-         * The site type.
+         * The type of the application. Valid values:
+         * <p>
+         * 
+         * *   `web`: web application
+         * *   `weex`: Weex mobile app
+         * *   `mini_dd`: DingTalk mini program
+         * *   `mini_alipay`: Alipay mini program
+         * *   `mini_wx`: WeChat mini program
+         * *   `mini_common`: mini program on other platforms
          */
         public Builder retcodeAppType(String retcodeAppType) {
             this.putQueryParameter("RetcodeAppType", retcodeAppType);
@@ -148,7 +156,7 @@ public class CreateRetcodeAppRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The tags that you want to add to the task.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);

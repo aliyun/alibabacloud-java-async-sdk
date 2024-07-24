@@ -99,7 +99,7 @@ public class DeleteEnvPodMonitorRequest extends Request {
         } 
 
         /**
-         * Environment instance ID.
+         * The ID of the environment instance.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -108,7 +108,7 @@ public class DeleteEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The namespace where podMonitor is located
+         * The namespace where the PodMonitor is located.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -117,7 +117,7 @@ public class DeleteEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * PodMonitor name.
+         * The name of the PodMonitor.
          */
         public Builder podMonitorName(String podMonitorName) {
             this.putQueryParameter("PodMonitorName", podMonitorName);

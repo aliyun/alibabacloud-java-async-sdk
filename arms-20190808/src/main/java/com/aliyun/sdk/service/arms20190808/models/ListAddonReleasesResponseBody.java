@@ -85,7 +85,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Status code: 200 indicates success.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * The result of the operation.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -109,7 +109,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +117,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -221,7 +217,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * First transition time.
+             * The first transition time.
              */
             public Builder firstTransitionTime(String firstTransitionTime) {
                 this.firstTransitionTime = firstTransitionTime;
@@ -229,7 +225,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Last transition time.
+             * The last transition time.
              */
             public Builder lastTransitionTime(String lastTransitionTime) {
                 this.lastTransitionTime = lastTransitionTime;
@@ -237,7 +233,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Details.
+             * The detailed information.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -245,7 +241,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Reason of failure.
+             * The reason for the failure.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -253,7 +249,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Condition status.
+             * The status of the phase.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -261,7 +257,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Condition type.
+             * The type of the phase.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -518,7 +514,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Name of Addon.
+             * The name of the add-on.
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -526,7 +522,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Number of alarm groups.
+             * The number of alert rules.
              */
             public Builder alertRuleCount(Long alertRuleCount) {
                 this.alertRuleCount = alertRuleCount;
@@ -534,7 +530,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Condition list.
+             * The installation phase.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -542,7 +538,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Created time.
+             * The time when the add-on was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -550,7 +546,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Number of dashboard.
+             * The number of dashboards.
              */
             public Builder dashboardCount(Long dashboardCount) {
                 this.dashboardCount = dashboardCount;
@@ -558,7 +554,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Environment instance ID.
+             * The environment ID.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -566,7 +562,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Number of Exporter.
+             * The number of exporters.
              */
             public Builder exporterCount(Long exporterCount) {
                 this.exporterCount = exporterCount;
@@ -574,7 +570,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether there is configuration.
+             * Indicates whether the configuration is available.
              */
             public Builder haveConfig(Boolean haveConfig) {
                 this.haveConfig = haveConfig;
@@ -582,7 +578,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * User ID of the installation.
+             * The user ID.
              */
             public Builder installUserId(String installUserId) {
                 this.installUserId = installUserId;
@@ -590,7 +586,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The language.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -606,7 +602,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -614,7 +610,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Release ID.
+             * The release ID after installation.
              */
             public Builder releaseId(String releaseId) {
                 this.releaseId = releaseId;
@@ -622,7 +618,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Name of Release.
+             * The name of the release.
              */
             public Builder releaseName(String releaseName) {
                 this.releaseName = releaseName;
@@ -630,7 +626,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * The scenario.
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -638,7 +634,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Status of Release.
+             * The status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -646,7 +642,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Update time.
+             * The time when the add-on was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -654,7 +650,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * User ID.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -662,7 +658,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Version of Addon.
+             * The version of the add-on.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -715,7 +711,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Release list.
+             * The queried add-ons.
              */
             public Builder releases(java.util.List < Releases> releases) {
                 this.releases = releases;
@@ -723,7 +719,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The total number of entries.
              */
             public Builder total(Long total) {
                 this.total = total;

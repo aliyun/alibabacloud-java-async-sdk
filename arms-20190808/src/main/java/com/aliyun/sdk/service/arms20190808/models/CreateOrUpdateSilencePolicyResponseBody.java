@@ -57,7 +57,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * A list of silence policies.
+         * The silence policy.
          */
         public Builder silencePolicy(SilencePolicy silencePolicy) {
             this.silencePolicy = silencePolicy;
@@ -186,7 +186,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             private java.util.List < MatchingConditions> matchingConditions; 
 
             /**
-             * A list of matching conditions.
+             * The matching conditions.
              */
             public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
@@ -287,7 +287,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * Indicates whether the silence policy is enabled. Valid values: enable and disable.
              */
             public Builder state(String state) {
                 this.state = state;

@@ -15,7 +15,7 @@ public class CreateRumAppResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
@@ -60,7 +60,7 @@ public class CreateRumAppResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -101,7 +101,7 @@ public class CreateRumAppResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private String data; 
+        private Data data; 
         private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
@@ -109,7 +109,7 @@ public class CreateRumAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. 2XX indicates that the request was successful. 3XX indicates that the request was redirected. 4XX indicates that a request error occurred. 5XX indicates that a server error occurred.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -117,15 +117,15 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The application ID and domain names. This parameter is returned if the application is created. Multiple domain names are separated with commas (,).
          */
-        public Builder data(String data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -133,7 +133,7 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +141,7 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +149,7 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -157,7 +157,11 @@ public class CreateRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,4 +174,85 @@ public class CreateRumAppResponseBody extends TeaModel {
 
     } 
 
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CdnDomain")
+        private String cdnDomain;
+
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("Pid")
+        private String pid;
+
+        private Data(Builder builder) {
+            this.cdnDomain = builder.cdnDomain;
+            this.endpoint = builder.endpoint;
+            this.pid = builder.pid;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cdnDomain
+         */
+        public String getCdnDomain() {
+            return this.cdnDomain;
+        }
+
+        /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return pid
+         */
+        public String getPid() {
+            return this.pid;
+        }
+
+        public static final class Builder {
+            private String cdnDomain; 
+            private String endpoint; 
+            private String pid; 
+
+            /**
+             * The SDK Domain.
+             */
+            public Builder cdnDomain(String cdnDomain) {
+                this.cdnDomain = cdnDomain;
+                return this;
+            }
+
+            /**
+             * The endpoint of the event target.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * The application ID.
+             */
+            public Builder pid(String pid) {
+                this.pid = pid;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

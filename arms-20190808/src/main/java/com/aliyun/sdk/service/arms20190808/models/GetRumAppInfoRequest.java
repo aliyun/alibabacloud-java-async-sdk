@@ -82,7 +82,7 @@ public class GetRumAppInfoRequest extends Request {
         } 
 
         /**
-         * AppGroup.
+         * The group to which the application belongs.
          */
         public Builder appGroup(String appGroup) {
             this.putQueryParameter("AppGroup", appGroup);
@@ -91,7 +91,7 @@ public class GetRumAppInfoRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The application ID.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -100,7 +100,7 @@ public class GetRumAppInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

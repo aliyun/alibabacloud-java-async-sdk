@@ -49,7 +49,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
         private UserAndCommodityStatus userAndCommodityStatus; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
         }
 
         /**
-         * UserAndCommodityStatus.
+         * The commercialization status of the service.
          */
         public Builder userAndCommodityStatus(UserAndCommodityStatus userAndCommodityStatus) {
             this.userAndCommodityStatus = userAndCommodityStatus;
@@ -169,7 +169,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Basic.
+             * Indicates whether you are using the Basic Edition.
              */
             public Builder basic(Boolean basic) {
                 this.basic = basic;
@@ -177,7 +177,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -185,7 +185,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the service is activated.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -193,7 +193,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * The additional information.
              */
             public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
                 this.extraInfo = extraInfo;
@@ -201,7 +201,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FreeDays.
+             * The number of days during which the service is free of charge.
              */
             public Builder freeDays(Long freeDays) {
                 this.freeDays = freeDays;
@@ -209,7 +209,7 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Lable.
+             * The tags.
              */
             public Builder lable(String lable) {
                 this.lable = lable;
@@ -217,7 +217,14 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The commercialization status.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Normal: The service is activated.
+             * *   Abnormal: An exception occurs during activation.
+             * *   Free: The service is not activated.
              */
             public Builder status(String status) {
                 this.status = status;

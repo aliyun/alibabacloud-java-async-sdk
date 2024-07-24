@@ -363,7 +363,7 @@ public class SearchTracesByPageRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The list of tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -484,13 +484,12 @@ public class SearchTracesByPageRequest extends Request {
              * *   traceId: the ID of the trace.
              * *   serverApp: the name of the server application.
              * *   clientApp: the name of the client application.
-             * *   service: the name of the API operation.
+             * *   service: the name of the interface.
              * *   rpc: the type of the call.
              * *   msOfSpan: the duration exceeds a specific value.
              * *   clientIp: the IP address of the client.
              * *   serverIp: the IP address of the server.
              * *   isError: specifies whether the call is abnormal.
-             * *   hasTprof: contains only thread profiling.
              */
             public Builder key(String key) {
                 this.key = key;

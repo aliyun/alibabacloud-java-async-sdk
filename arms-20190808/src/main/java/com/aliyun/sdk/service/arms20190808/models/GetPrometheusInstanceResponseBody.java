@@ -81,7 +81,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -498,9 +498,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * 权限类型：
-             * <p>
-             * readWrite、readOnly、httpReadOnly
+             * Permission type: read Write, read Only, http Read Only
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -508,7 +506,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
+             * The number of days for which data is automatically archived after the storage duration expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
              */
             public Builder archiveDuration(Integer archiveDuration) {
                 this.archiveDuration = archiveDuration;
@@ -516,7 +514,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Authorization token.
+             * The authorization token.
              */
             public Builder authToken(String authToken) {
                 this.authToken = authToken;
@@ -562,7 +560,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Http API internet address.
+             * The public URL for the HTTP API.
              */
             public Builder httpApiInterUrl(String httpApiInterUrl) {
                 this.httpApiInterUrl = httpApiInterUrl;
@@ -570,7 +568,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Http API intranet address.
+             * The internal URL for the HTTP API.
              */
             public Builder httpApiIntraUrl(String httpApiIntraUrl) {
                 this.httpApiIntraUrl = httpApiIntraUrl;
@@ -590,7 +588,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Push gateway internet address.
+             * The public URL for Pushgateway.
              */
             public Builder pushGatewayInterUrl(String pushGatewayInterUrl) {
                 this.pushGatewayInterUrl = pushGatewayInterUrl;
@@ -598,7 +596,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Push gateway intranet address.
+             * The internal URL for Pushgateway.
              */
             public Builder pushGatewayIntraUrl(String pushGatewayIntraUrl) {
                 this.pushGatewayIntraUrl = pushGatewayIntraUrl;
@@ -614,7 +612,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Remote read internet address.
+             * The public URL for remote read.
              */
             public Builder remoteReadInterUrl(String remoteReadInterUrl) {
                 this.remoteReadInterUrl = remoteReadInterUrl;
@@ -622,7 +620,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Remote read intranet address.
+             * The internal URL for remote read.
              */
             public Builder remoteReadIntraUrl(String remoteReadIntraUrl) {
                 this.remoteReadIntraUrl = remoteReadIntraUrl;
@@ -630,7 +628,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Remote write internet address.
+             * The public URL for remote write.
              */
             public Builder remoteWriteInterUrl(String remoteWriteInterUrl) {
                 this.remoteWriteInterUrl = remoteWriteInterUrl;
@@ -638,7 +636,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Remote write intranet address.
+             * The internal URL for remote write.
              */
             public Builder remoteWriteIntraUrl(String remoteWriteIntraUrl) {
                 this.remoteWriteIntraUrl = remoteWriteIntraUrl;

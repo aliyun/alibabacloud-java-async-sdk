@@ -73,7 +73,7 @@ public class AddTagToFlinkClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,11 @@ public class AddTagToFlinkClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the business logic was executed. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +93,7 @@ public class AddTagToFlinkClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +101,11 @@ public class AddTagToFlinkClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

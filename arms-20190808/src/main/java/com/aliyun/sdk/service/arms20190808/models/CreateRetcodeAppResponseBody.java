@@ -121,7 +121,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * The return detail.
+         * The information of the Browser Monitoring task.
          */
         public Builder retcodeAppDataBean(RetcodeAppDataBean retcodeAppDataBean) {
             this.retcodeAppDataBean = retcodeAppDataBean;
@@ -140,8 +140,8 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
          * Indicates whether the call was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * - true: The call was successful.
+         * - false: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -327,7 +327,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * PID.
+             * The process identifier (PID) of the application.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -336,9 +336,6 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
 
             /**
              * The ID of the resource group.
-             * <p>
-             * 
-             * If this parameter is left empty, the default resource group is used. You can view the resource group ID on the Resource Group page in the Resource Management console.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -346,7 +343,7 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * The tags of the task.
              */
             public Builder tags(RetcodeAppDataBeanTags tags) {
                 this.tags = tags;

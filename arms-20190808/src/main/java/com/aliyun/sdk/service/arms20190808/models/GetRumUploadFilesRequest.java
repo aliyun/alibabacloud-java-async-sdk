@@ -82,7 +82,7 @@ public class GetRumUploadFilesRequest extends Request {
         } 
 
         /**
-         * AppType.
+         * The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -91,7 +91,7 @@ public class GetRumUploadFilesRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The application ID.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -100,7 +100,7 @@ public class GetRumUploadFilesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

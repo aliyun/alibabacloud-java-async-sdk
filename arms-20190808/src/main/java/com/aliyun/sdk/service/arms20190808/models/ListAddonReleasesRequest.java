@@ -82,7 +82,7 @@ public class ListAddonReleasesRequest extends Request {
         } 
 
         /**
-         * Name of Addon.
+         * The name of the add-on.
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);
@@ -91,7 +91,7 @@ public class ListAddonReleasesRequest extends Request {
         }
 
         /**
-         * Environment instance ID.
+         * The environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);

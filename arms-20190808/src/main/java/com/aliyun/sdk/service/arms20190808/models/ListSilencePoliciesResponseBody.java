@@ -49,7 +49,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The objects that were returned.
+         * The returned pages.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -186,7 +186,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private java.util.List < MatchingConditions> matchingConditions; 
 
             /**
-             * An array of matching condition objects.
+             * The matching conditions.
              */
             public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
@@ -271,7 +271,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * An array of matching rule objects.
+             * The matching rules.
              */
             public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
@@ -287,7 +287,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * Indicates whether the silence policy is enabled. Valid values: enable and disable.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -372,7 +372,7 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * An array of silence policy objects.
+             * The queried silence policies.
              */
             public Builder silencePolicies(java.util.List < SilencePolicies> silencePolicies) {
                 this.silencePolicies = silencePolicies;

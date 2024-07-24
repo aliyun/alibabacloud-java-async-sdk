@@ -129,7 +129,7 @@ public class OpenVClusterRequest extends Request {
         }
 
         /**
-         * The name of the cloud service. This parameter is required if you set ClusterType to `cloud-product-prometheus`. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.
+         * The name of the cloud service. This parameter must be specified when ClusterType is set to `cloud-product-prometheus`. Valid values: influxdb, mongodb, and DLA. You cannot specify multiple service names.
          */
         public Builder product(String product) {
             this.putQueryParameter("Product", product);

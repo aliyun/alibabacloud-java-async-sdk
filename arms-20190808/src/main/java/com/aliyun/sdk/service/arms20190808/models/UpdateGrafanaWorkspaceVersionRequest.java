@@ -98,7 +98,7 @@ public class UpdateGrafanaWorkspaceVersionRequest extends Request {
         } 
 
         /**
-         * AliyunLang.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -107,7 +107,7 @@ public class UpdateGrafanaWorkspaceVersionRequest extends Request {
         }
 
         /**
-         * GrafanaVersion.
+         * The Grafana version.
          */
         public Builder grafanaVersion(String grafanaVersion) {
             this.putQueryParameter("GrafanaVersion", grafanaVersion);
@@ -116,7 +116,7 @@ public class UpdateGrafanaWorkspaceVersionRequest extends Request {
         }
 
         /**
-         * GrafanaWorkspaceId.
+         * The ID of the workspace.
          */
         public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
             this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
@@ -125,7 +125,7 @@ public class UpdateGrafanaWorkspaceVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Default value: cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

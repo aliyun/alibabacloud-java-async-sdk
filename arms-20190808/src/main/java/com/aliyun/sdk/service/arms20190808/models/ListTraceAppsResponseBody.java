@@ -127,7 +127,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
         }
 
         /**
-         * The queried application monitoring tasks.
+         * The list of Application Monitoring tasks.
          */
         public Builder traceApps(java.util.List < TraceApps> traceApps) {
             this.traceApps = traceApps;
@@ -464,7 +464,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the application.
+             * The labels of the application.
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
@@ -524,7 +524,7 @@ public class ListTraceAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the application.
+             * The application source.
              */
             public Builder source(String source) {
                 this.source = source;

@@ -16,6 +16,10 @@ public class UpdateRumAppRequest extends Request {
     private Boolean autoRestart;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BonreeSDKConfigJson")
+    private String bonreeSDKConfigJson;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -52,6 +56,7 @@ public class UpdateRumAppRequest extends Request {
     private UpdateRumAppRequest(Builder builder) {
         super(builder);
         this.autoRestart = builder.autoRestart;
+        this.bonreeSDKConfigJson = builder.bonreeSDKConfigJson;
         this.description = builder.description;
         this.isSubscribe = builder.isSubscribe;
         this.nickname = builder.nickname;
@@ -80,6 +85,13 @@ public class UpdateRumAppRequest extends Request {
      */
     public Boolean getAutoRestart() {
         return this.autoRestart;
+    }
+
+    /**
+     * @return bonreeSDKConfigJson
+     */
+    public String getBonreeSDKConfigJson() {
+        return this.bonreeSDKConfigJson;
     }
 
     /**
@@ -140,6 +152,7 @@ public class UpdateRumAppRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateRumAppRequest, Builder> {
         private Boolean autoRestart; 
+        private String bonreeSDKConfigJson; 
         private String description; 
         private Boolean isSubscribe; 
         private String nickname; 
@@ -156,6 +169,7 @@ public class UpdateRumAppRequest extends Request {
         private Builder(UpdateRumAppRequest request) {
             super(request);
             this.autoRestart = request.autoRestart;
+            this.bonreeSDKConfigJson = request.bonreeSDKConfigJson;
             this.description = request.description;
             this.isSubscribe = request.isSubscribe;
             this.nickname = request.nickname;
@@ -167,7 +181,7 @@ public class UpdateRumAppRequest extends Request {
         } 
 
         /**
-         * AutoRestart.
+         * Specifies whether to restart the application the next day. Valid values: true and false.
          */
         public Builder autoRestart(Boolean autoRestart) {
             this.putQueryParameter("AutoRestart", autoRestart);
@@ -176,7 +190,16 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * BonreeSDKConfigJson.
+         */
+        public Builder bonreeSDKConfigJson(String bonreeSDKConfigJson) {
+            this.putQueryParameter("BonreeSDKConfigJson", bonreeSDKConfigJson);
+            this.bonreeSDKConfigJson = bonreeSDKConfigJson;
+            return this;
+        }
+
+        /**
+         * The description of the application.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -185,7 +208,7 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * IsSubscribe.
+         * Specifies whether you want to subscribe to the application. Valid values: true and false.
          */
         public Builder isSubscribe(Boolean isSubscribe) {
             this.putQueryParameter("IsSubscribe", isSubscribe);
@@ -194,7 +217,7 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * Nickname.
+         * The alias of the application.
          */
         public Builder nickname(String nickname) {
             this.putQueryParameter("Nickname", nickname);
@@ -203,7 +226,7 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The application ID.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -212,7 +235,7 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -221,7 +244,7 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * Restart.
+         * Specifies whether to restart the application. Valid values: true and false.
          */
         public Builder restart(Boolean restart) {
             this.putQueryParameter("Restart", restart);
@@ -230,7 +253,7 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * ServiceDomainOperationJson.
+         * Set the application service domain name, support creation, modification, and deletion of service domain name configuration.
          */
         public Builder serviceDomainOperationJson(String serviceDomainOperationJson) {
             this.putQueryParameter("ServiceDomainOperationJson", serviceDomainOperationJson);
@@ -239,7 +262,7 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * Stop.
+         * Specifies whether to stop the application. Valid values: true and false.
          */
         public Builder stop(Boolean stop) {
             this.putQueryParameter("Stop", stop);

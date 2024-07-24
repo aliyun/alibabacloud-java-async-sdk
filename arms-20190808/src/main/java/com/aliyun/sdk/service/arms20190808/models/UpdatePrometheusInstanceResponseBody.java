@@ -73,7 +73,7 @@ public class UpdatePrometheusInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * The returned status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class UpdatePrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * The result of the operation.
          */
         public Builder data(String data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class UpdatePrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

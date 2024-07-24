@@ -91,6 +91,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateEnvironmentResponse> createEnvironment(CreateEnvironmentRequest request);
 
+    /**
+      * Before you call the operation, make sure that you have learned about the billing methods and [pricing](https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt) of Managed Service for Grafana.
+      * > 
+      * *   To create workspaces, you must complete real-name verification.
+      * *   Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. `These editions charge fees.`
+      * *   Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. `These editions do not charge fees.`
+      *
+     */
     CompletableFuture<CreateGrafanaWorkspaceResponse> createGrafanaWorkspace(CreateGrafanaWorkspaceRequest request);
 
     CompletableFuture<CreateIntegrationResponse> createIntegration(CreateIntegrationRequest request);
@@ -121,6 +129,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateRumAppResponse> createRumApp(CreateRumAppRequest request);
 
+    /**
+      * This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url).
+      *
+     */
     CompletableFuture<CreateRumUploadFileUrlResponse> createRumUploadFileUrl(CreateRumUploadFileUrlRequest request);
 
     CompletableFuture<CreateSyntheticTaskResponse> createSyntheticTask(CreateSyntheticTaskRequest request);
@@ -173,6 +185,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteGrafanaResourceResponse> deleteGrafanaResource(DeleteGrafanaResourceRequest request);
 
+    /**
+      * >  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+      *
+     */
     CompletableFuture<DeleteGrafanaWorkspaceResponse> deleteGrafanaWorkspace(DeleteGrafanaWorkspaceRequest request);
 
     CompletableFuture<DeleteIMRobotResponse> deleteIMRobot(DeleteIMRobotRequest request);
@@ -201,6 +217,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteRumAppResponse> deleteRumApp(DeleteRumAppRequest request);
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     CompletableFuture<DeleteRumUploadFileResponse> deleteRumUploadFile(DeleteRumUploadFileRequest request);
 
     CompletableFuture<DeleteScenarioResponse> deleteScenario(DeleteScenarioRequest request);
@@ -243,6 +263,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeWebhookContactsResponse> describeWebhookContacts(DescribeWebhookContactsRequest request);
 
+    CompletableFuture<DoInsightsActionResponse> doInsightsAction(DoInsightsActionRequest request);
+
     CompletableFuture<EnableMetricResponse> enableMetric(EnableMetricRequest request);
 
     CompletableFuture<GetAgentDownloadUrlResponse> getAgentDownloadUrl(GetAgentDownloadUrlRequest request);
@@ -267,6 +289,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetExploreUrlResponse> getExploreUrl(GetExploreUrlRequest request);
 
+    /**
+      * Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
+      *
+     */
     CompletableFuture<GetGrafanaWorkspaceResponse> getGrafanaWorkspace(GetGrafanaWorkspaceRequest request);
 
     /**
@@ -307,14 +333,28 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRetcodeShareUrlResponse> getRetcodeShareUrl(GetRetcodeShareUrlRequest request);
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     CompletableFuture<GetRumAppInfoResponse> getRumAppInfo(GetRumAppInfoRequest request);
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     CompletableFuture<GetRumAppsResponse> getRumApps(GetRumAppsRequest request);
 
     CompletableFuture<GetRumDataForPageResponse> getRumDataForPage(GetRumDataForPageRequest request);
 
     CompletableFuture<GetRumExceptionStackResponse> getRumExceptionStack(GetRumExceptionStackRequest request);
 
+    CompletableFuture<GetRumOcuStatisticDataResponse> getRumOcuStatisticData(GetRumOcuStatisticDataRequest request);
+
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     CompletableFuture<GetRumUploadFilesResponse> getRumUploadFiles(GetRumUploadFilesRequest request);
 
     CompletableFuture<GetSourceMapInfoResponse> getSourceMapInfo(GetSourceMapInfoRequest request);
@@ -360,7 +400,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallEnvironmentFeatureResponse> installEnvironmentFeature(InstallEnvironmentFeatureRequest request);
 
     /**
-      * If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.
+      * You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
       *
      */
     CompletableFuture<InstallManagedPrometheusResponse> installManagedPrometheus(InstallManagedPrometheusRequest request);
@@ -589,6 +629,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateGrafanaWorkspaceResponse> updateGrafanaWorkspace(UpdateGrafanaWorkspaceRequest request);
 
+    /**
+      * Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
+      *
+     */
     CompletableFuture<UpdateGrafanaWorkspaceVersionResponse> updateGrafanaWorkspaceVersion(UpdateGrafanaWorkspaceVersionRequest request);
 
     CompletableFuture<UpdateIntegrationResponse> updateIntegration(UpdateIntegrationRequest request);
@@ -609,8 +653,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdatePrometheusRemoteWriteResponse> updatePrometheusRemoteWrite(UpdatePrometheusRemoteWriteRequest request);
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     CompletableFuture<UpdateRumAppResponse> updateRumApp(UpdateRumAppRequest request);
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     CompletableFuture<UpdateRumFileStatusResponse> updateRumFileStatus(UpdateRumFileStatusRequest request);
 
     CompletableFuture<UpdateTimingSyntheticTaskResponse> updateTimingSyntheticTask(UpdateTimingSyntheticTaskRequest request);

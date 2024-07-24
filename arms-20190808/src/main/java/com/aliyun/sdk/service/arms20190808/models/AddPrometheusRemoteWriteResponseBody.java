@@ -93,7 +93,7 @@ public class AddPrometheusRemoteWriteResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the remote write configuration item. If the request fails, an error message is returned.
+         * The name of the remote write configuration item that was added, or the exception information.
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class AddPrometheusRemoteWriteResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;

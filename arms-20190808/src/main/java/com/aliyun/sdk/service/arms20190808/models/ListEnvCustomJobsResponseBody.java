@@ -346,7 +346,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the component to which the custom job belongs.
+             * The name of the add-on to which the custom job belongs.
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -354,7 +354,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the component.
+             * The instance name of the add-on.
              */
             public Builder addonReleaseName(String addonReleaseName) {
                 this.addonReleaseName = addonReleaseName;
@@ -362,7 +362,7 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the component.
+             * The version of the add-on.
              */
             public Builder addonVersion(String addonVersion) {
                 this.addonVersion = addonVersion;

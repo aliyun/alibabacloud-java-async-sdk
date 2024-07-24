@@ -123,7 +123,7 @@ public class UpdatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The monitoring configuration. Specify a YAML string.
+         * The monitoring configuration. The value is a YAML string.
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);

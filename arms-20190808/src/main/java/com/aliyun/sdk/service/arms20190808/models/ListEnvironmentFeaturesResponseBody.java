@@ -93,7 +93,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned struct.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -277,7 +277,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Alias.
+             * The alias of the feature.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -285,7 +285,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * The feature configuration.
              */
             public Builder config(java.util.Map < String, String > config) {
                 this.config = config;
@@ -293,7 +293,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the feature.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -301,7 +301,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvironmentId.
+             * The ID of the environment instance.
              */
             public Builder environmentId(String environmentId) {
                 this.environmentId = environmentId;
@@ -309,7 +309,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * Icon.
+             * The URL of the icon.
              */
             public Builder icon(String icon) {
                 this.icon = icon;
@@ -317,7 +317,11 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The language. Valid values:
+             * <p>
+             * 
+             * *   zh: Chinese
+             * *   en: English
              */
             public Builder language(String language) {
                 this.language = language;
@@ -325,7 +329,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVersion.
+             * The latest version number.
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -341,7 +345,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the feature.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -349,7 +353,15 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the feature. Valid values:
+             * <p>
+             * 
+             * *   Installing: The agent is being installed.
+             * *   Success: The agent is installed.
+             * *   Failed: The agent failed to be installed.
+             * *   UnInstall: The agent is uninstalled.
+             * *   Uninstalling: The agent is being uninstalled.
+             * *   UnInstallFailed: The agent failed to be uninstalled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -357,7 +369,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the feature.
              */
             public Builder version(String version) {
                 this.version = version;

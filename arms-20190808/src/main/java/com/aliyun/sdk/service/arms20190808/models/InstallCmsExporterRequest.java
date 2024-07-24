@@ -111,7 +111,7 @@ public class InstallCmsExporterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -120,7 +120,7 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * CmsArgs.
+         * The cloud services that you want to monitor. The CmsArgs parameter is the startup parameter of the cms-exporter collector. Separate multiple cloud services with number signs (`#`).
          */
         public Builder cmsArgs(String cmsArgs) {
             this.putQueryParameter("CmsArgs", cmsArgs);
@@ -129,7 +129,7 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * DirectArgs.
+         * The recently monitored cloud services. Separate multiple cloud services with number signs (`#`).
          */
         public Builder directArgs(String directArgs) {
             this.putQueryParameter("DirectArgs", directArgs);
@@ -138,7 +138,7 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * EnableTag.
+         * Specifies whether to collect the aliyun tags attached to each cloud service. Default value: false.
          */
         public Builder enableTag(Boolean enableTag) {
             this.putQueryParameter("EnableTag", enableTag);
@@ -147,7 +147,7 @@ public class InstallCmsExporterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

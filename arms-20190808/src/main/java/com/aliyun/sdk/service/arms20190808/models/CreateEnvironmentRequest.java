@@ -230,34 +230,8 @@ public class CreateEnvironmentRequest extends Request {
          * <p>
          * 
          * Valid values:
-         * 
-         * *   en
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     English
-         * 
-         *     <!-- -->
-         * 
-         *     .
-         * 
-         * *   zh
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     Chinese
-         * 
-         *     <!-- -->
-         * 
-         *     .
+         * *   en: English
+         * *   zh: Chinese
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -287,8 +261,8 @@ public class CreateEnvironmentRequest extends Request {
          * The subtype of the environment. Valid values:
          * <p>
          * 
-         * *   CS: ACK
-         * *   ECS: ECS
+         * *   CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)
+         * *   ECS: Elastic Compute Service (ECS)
          * *   Cloud: cloud service
          */
         public Builder environmentSubType(String environmentSubType) {
@@ -325,7 +299,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * 环境绑定的grafana工作区id。传空时，表示使用默认的共享grafana。
+         * The ID of the Grafana workspace associated with the environment. If this parameter is left empty, the default shared Grafana workspace is used.
          */
         public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
             this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
@@ -334,7 +308,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * InitEnvironment.
+         * Whether to initialize the environment.
          */
         public Builder initEnvironment(Boolean initEnvironment) {
             this.putQueryParameter("InitEnvironment", initEnvironment);

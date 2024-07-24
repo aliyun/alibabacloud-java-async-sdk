@@ -82,7 +82,7 @@ public class ListRetcodeAppsRequest extends Request {
         } 
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +100,7 @@ public class ListRetcodeAppsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags that you want to add to the task.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);

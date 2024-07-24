@@ -85,7 +85,7 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 状态码。200为成功，其他状态码为异常。
+         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +101,7 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * 详细信息。
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +117,7 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * 操作是否成功：true：操作成功                                 false：操作失败
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;

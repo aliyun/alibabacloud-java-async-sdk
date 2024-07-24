@@ -68,7 +68,18 @@ public class GetCommercialStatusRequest extends Request {
         } 
 
         /**
-         * CommodityCode.
+         * The product code.
+         * <p>
+         * 
+         * *   arms_app_post
+         * *   arms_web_post
+         * *   arms_promethues_public_cn
+         * *   prometheus_pay_public_cn
+         * *   xtrace
+         * *   arms_serverless_public_cn
+         * *   arms_rumserverless_public_cn
+         * *   prometheus_serverless_public_cn
+         * *   xtrace_serverless_public_cn
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -77,7 +88,7 @@ public class GetCommercialStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

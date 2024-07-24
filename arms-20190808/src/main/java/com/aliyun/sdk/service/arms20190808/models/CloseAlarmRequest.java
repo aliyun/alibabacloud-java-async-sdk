@@ -97,7 +97,7 @@ public class CloseAlarmRequest extends Request {
         } 
 
         /**
-         * AlarmId.
+         * The alert ID.
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);
@@ -106,7 +106,7 @@ public class CloseAlarmRequest extends Request {
         }
 
         /**
-         * HandlerId.
+         * The ID of the handler.
          */
         public Builder handlerId(Long handlerId) {
             this.putQueryParameter("HandlerId", handlerId);
@@ -115,7 +115,7 @@ public class CloseAlarmRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class CloseAlarmRequest extends Request {
         }
 
         /**
-         * Solution.
+         * The solution to the alert.
          */
         public Builder solution(String solution) {
             this.putQueryParameter("Solution", solution);

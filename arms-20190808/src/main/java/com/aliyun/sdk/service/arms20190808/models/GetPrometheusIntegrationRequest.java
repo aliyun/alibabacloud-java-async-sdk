@@ -99,7 +99,7 @@ public class GetPrometheusIntegrationRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
+         * The ID of the Prometheus instance. Valid values: aliyun-cs and ecs.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,7 +108,7 @@ public class GetPrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The exporter ID.
+         * The ID of the exporter.
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +117,7 @@ public class GetPrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The type of the integration.
+         * The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);

@@ -83,7 +83,7 @@ public class DeleteEnvironmentRequest extends Request {
         } 
 
         /**
-         * cascade delete Prometheus instance.
+         * Specifies whether to delete the related Prometheus instance.
          */
         public Builder deletePromInstance(Boolean deletePromInstance) {
             this.putQueryParameter("DeletePromInstance", deletePromInstance);

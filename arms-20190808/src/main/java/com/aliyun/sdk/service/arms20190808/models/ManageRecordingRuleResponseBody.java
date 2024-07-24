@@ -97,7 +97,7 @@ public class ManageRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to troubleshoot issues.
+         * The ID of the request. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

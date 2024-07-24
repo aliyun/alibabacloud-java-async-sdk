@@ -107,7 +107,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the resource.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

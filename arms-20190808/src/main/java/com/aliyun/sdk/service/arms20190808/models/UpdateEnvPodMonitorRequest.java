@@ -142,7 +142,11 @@ public class UpdateEnvPodMonitorRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * The language. Valid values:
+         * <p>
+         * 
+         * *   zh (default value): Chinese
+         * *   en: English
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -151,7 +155,7 @@ public class UpdateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The YAML configuration string.
+         * The YAML configuration file of the ServiceMonitor.
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -160,7 +164,7 @@ public class UpdateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request.
+         * Checks whether the format is valid and whether targets are matched.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -178,7 +182,7 @@ public class UpdateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The namespace where the PodMonitor is located.
+         * The namespace where the PodMonitor resides.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

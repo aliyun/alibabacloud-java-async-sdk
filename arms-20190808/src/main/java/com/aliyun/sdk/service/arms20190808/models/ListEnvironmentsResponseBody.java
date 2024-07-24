@@ -772,7 +772,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
              * <p>
              * 
              * *   CS: Container Service
-             * *   ECS: Elastic Compute Service (ECS)
+             * *   ECS: Elastic Compute Service
              * *   Cloud: cloud service
              */
             public Builder environmentType(String environmentType) {
@@ -789,10 +789,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The payable resource plan. Valid values:
+             * The payable resource plan.
              * <p>
              * 
-             * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
+             * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.
              * *   Otherwise, leave the parameter empty.
              */
             public Builder feePackage(String feePackage) {
@@ -862,7 +862,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the Message Queue for RabbitMQ instance resides.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -878,7 +878,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -894,7 +894,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -947,7 +947,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The parameters of the environment instance.
+             * The queried environments.
              */
             public Builder environments(java.util.List < Environments> environments) {
                 this.environments = environments;

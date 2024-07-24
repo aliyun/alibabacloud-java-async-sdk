@@ -85,7 +85,7 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 状态码。200为成功，其他状态码为异常。
+         * Status code. 200 means success, other status codes are exceptions.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +105,10 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * 附加信息。取值说明如下：请求正常，返回success。请求异常，返回具体异常信息。
+         * Additional information. The value description is as follows:
+         * <p>
+         * - If the request is normal, return success.
+         * - If the request is abnormal, return specific abnormal information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,11 +124,10 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * 操作是否成功：
+         * Whether the operation was successful:
          * <p>
-         * 
-         * - `true`：操作成功
-         * - `false`：操作失败
+         * - `true`: The operation was successful
+         * - `false`: The operation failed
          */
         public Builder success(Boolean success) {
             this.success = success;

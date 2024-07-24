@@ -85,7 +85,15 @@ public class GetTraceAppConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   2xx: The request was successful.
+         * *   3xx: The request was redirected.
+         * *   4xx: A request error occurred.
+         * *   5xx: A server error occurred.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +101,7 @@ public class GetTraceAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The custom settings of the application, which is a JSON string. For more information, see **Additional description of response parameters**.
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +109,7 @@ public class GetTraceAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +117,7 @@ public class GetTraceAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +125,13 @@ public class GetTraceAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -197,7 +197,7 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The YAML configuration string of the PodMonitor.
+             * The YAML string of the PodMonitor.
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -237,7 +237,11 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the PodMonitor. Valid values: run and stop.
+             * The status. Valid values:
+             * <p>
+             * 
+             * *   run
+             * *   stop
              */
             public Builder status(String status) {
                 this.status = status;

@@ -85,7 +85,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * The response code. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Java VM info list.
+         * The list of JVM information.
          */
         public Builder jvmInfoList(java.util.List < JvmInfoList> jvmInfoList) {
             this.jvmInfoList = jvmInfoList;
@@ -101,7 +101,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,11 +117,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`
-         * *   `false`
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -221,7 +217,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             private String vmArgs; 
 
             /**
-             * Agent version.
+             * The version of the agent.
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -229,7 +225,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the elastic container instance.
+             * The hostname.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -237,7 +233,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Ip address.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -245,7 +241,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The PID.
+             * The application ID.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -253,7 +249,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Process Id.
+             * The process ID.
              */
             public Builder procId(String procId) {
                 this.procId = procId;
@@ -261,7 +257,7 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Java VM config.
+             * The VM parameters.
              */
             public Builder vmArgs(String vmArgs) {
                 this.vmArgs = vmArgs;

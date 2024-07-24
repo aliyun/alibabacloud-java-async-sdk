@@ -141,7 +141,7 @@ public class UpdatePrometheusMonitoringStatusRequest extends Request {
         }
 
         /**
-         * The status of the monitoring configuration. Valid values: run and stop.
+         * The status of the monitoring configuration. Valid values: run and stop. The status of Probe cannot be modified.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

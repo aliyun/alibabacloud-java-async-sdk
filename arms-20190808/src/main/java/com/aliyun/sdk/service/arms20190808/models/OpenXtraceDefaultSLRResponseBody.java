@@ -51,7 +51,7 @@ public class OpenXtraceDefaultSLRResponseBody extends TeaModel {
         /**
          * Indicates whether the request was successful. Valid values:
          * <p>
-         * 
+         *  
          * *   `true`
          * *   `false`
          */

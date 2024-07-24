@@ -85,7 +85,7 @@ public class SaveTraceAppConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * The HTTP status code. 2XX indicates that the request was successful. 3XX indicates that the request was redirected. 4XX indicates that a request error occurred. 5XX indicates that a server error occurred.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -120,8 +120,8 @@ public class SaveTraceAppConfigResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   `true`
-         * *   `false`
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

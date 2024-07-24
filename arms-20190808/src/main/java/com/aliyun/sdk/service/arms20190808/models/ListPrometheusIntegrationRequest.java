@@ -93,7 +93,7 @@ public class ListPrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * The integration type.
+         * The integration type. Valid values: kafka, mysql, redis, snmp, emr, nubela, and tidb.
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);

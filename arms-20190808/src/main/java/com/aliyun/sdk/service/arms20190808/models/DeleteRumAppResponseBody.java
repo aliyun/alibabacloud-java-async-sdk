@@ -125,7 +125,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -149,7 +149,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the application is deleted.
          */
         public Builder result(String result) {
             this.result = result;

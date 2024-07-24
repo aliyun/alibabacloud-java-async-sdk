@@ -101,7 +101,7 @@ public class QueryAppTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;

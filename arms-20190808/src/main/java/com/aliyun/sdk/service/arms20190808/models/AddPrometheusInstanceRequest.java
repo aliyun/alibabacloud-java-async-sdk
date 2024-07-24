@@ -84,7 +84,7 @@ public class AddPrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the Prometheus instance for Remote Write.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -93,7 +93,7 @@ public class AddPrometheusInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,7 @@ public class AddPrometheusInstanceRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the Prometheus instance. Only Prometheus instances for Remote Write is supported. Set the value to RW.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

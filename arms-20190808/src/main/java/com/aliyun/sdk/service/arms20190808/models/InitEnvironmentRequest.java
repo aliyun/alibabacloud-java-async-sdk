@@ -120,7 +120,7 @@ public class InitEnvironmentRequest extends Request {
         }
 
         /**
-         * Whether to create a Token in order to enhance the security of data retrieval.
+         * Specifies whether to create a token to improve data security.
          */
         public Builder createAuthToken(Boolean createAuthToken) {
             this.putQueryParameter("CreateAuthToken", createAuthToken);

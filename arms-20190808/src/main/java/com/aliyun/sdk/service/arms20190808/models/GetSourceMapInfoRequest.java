@@ -124,7 +124,11 @@ public class GetSourceMapInfoRequest extends Request {
         } 
 
         /**
-         * AscendingSequence.
+         * The order in which the files are sorted. Valid values:
+         * <p>
+         * 
+         * *   true: ascending order
+         * *   false: descending order
          */
         public Builder ascendingSequence(Boolean ascendingSequence) {
             this.putQueryParameter("AscendingSequence", ascendingSequence);
@@ -133,7 +137,7 @@ public class GetSourceMapInfoRequest extends Request {
         }
 
         /**
-         * Edition.
+         * The version of the SourceMap file.
          */
         public Builder edition(String edition) {
             this.putQueryParameter("Edition", edition);
@@ -142,7 +146,7 @@ public class GetSourceMapInfoRequest extends Request {
         }
 
         /**
-         * ID.
+         * The ID of the SourceMap file.
          */
         public Builder id(String id) {
             this.putQueryParameter("ID", id);
@@ -151,7 +155,7 @@ public class GetSourceMapInfoRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword in the file name. The files are searched by keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -160,7 +164,11 @@ public class GetSourceMapInfoRequest extends Request {
         }
 
         /**
-         * OrderField.
+         * The criterion by which the files are sorted. Valid values:
+         * <p>
+         * 
+         * *   version: The files are sorted by version.
+         * *   uploadTime: The files are sorted by upload time.
          */
         public Builder orderField(String orderField) {
             this.putQueryParameter("OrderField", orderField);
@@ -169,7 +177,7 @@ public class GetSourceMapInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

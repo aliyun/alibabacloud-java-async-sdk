@@ -185,7 +185,7 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * If the request parameter EncryptYaml is set to true, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.
+             * If the **encryptYaml** parameter is set to `true`, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -217,7 +217,11 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the custom job. Valid values: run and stop.
+             * The status. Valid values:
+             * <p>
+             * 
+             * *   run
+             * *   stop
              */
             public Builder status(String status) {
                 this.status = status;

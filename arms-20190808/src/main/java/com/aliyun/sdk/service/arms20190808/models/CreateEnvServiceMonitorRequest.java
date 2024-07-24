@@ -112,7 +112,11 @@ public class CreateEnvServiceMonitorRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * The language. Valid values:
+         * <p>
+         * 
+         * *   zh (default): Chinese
+         * *   en: English
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -121,7 +125,7 @@ public class CreateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * The YAML configuration string of the ServiceMonitor.
+         * The YAML configuration file of the ServiceMonitor.
          */
         public Builder configYaml(String configYaml) {
             this.putBodyParameter("ConfigYaml", configYaml);
@@ -130,7 +134,7 @@ public class CreateEnvServiceMonitorRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request.
+         * Specifies whether to perform only a dry run, without performing the actual request. The system checks whether the format is valid and whether targets are matched.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);

@@ -73,7 +73,10 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code. The status code 200 indicates that the request was successful.
+         * The response code.
+         * <p>
+         * 
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;

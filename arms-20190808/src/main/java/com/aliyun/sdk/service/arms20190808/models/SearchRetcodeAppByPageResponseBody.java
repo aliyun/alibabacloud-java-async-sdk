@@ -57,7 +57,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -322,7 +322,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The PID of the application.
+             * The process identifier (PID) of the application.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -330,7 +330,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -362,7 +362,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * The tag.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -390,7 +390,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -483,7 +483,7 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             }
 
             /**
-             * The Browser Monitoring tasks that are returned.
+             * The browser monitoring tasks that are returned.
              */
             public Builder retcodeApps(java.util.List < RetcodeApps> retcodeApps) {
                 this.retcodeApps = retcodeApps;

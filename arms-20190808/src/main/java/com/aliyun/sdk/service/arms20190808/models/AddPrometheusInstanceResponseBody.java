@@ -85,7 +85,7 @@ public class AddPrometheusInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class AddPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct. { "RequestId": the request ID, "Data": "{ "clusterType": the cluster type, "remoteWriteUrl": the public URL for remote write, "internetGrafanaUrl": the internal URL for Grafana, "authToken": indicates whether authentication is enabled, "internetPushGatewayUrl": the internal URL for Pushgateway, "clusterId": the cluster ID, "internetRemoteReadUrl": the internal URL for remote read, "remoteReadUrl": the public URL for remote read, "grafanaUrl": the public URL for Grafana, "pushGatewayUrl": the public URL for Pushgateway, "internetRemoteWriteUrl": the internal URL for remote write}" }
+         * The struct returned. { "RequestId": the request ID, "Data": "{ "clusterType": the cluster type, "remoteWriteUrl": the public URL for remote write, "internetGrafanaUrl": the internal URL for Grafana, "authToken": indicates whether authentication is enabled, "internetPushGatewayUrl": the internal URL for Pushgateway, "clusterId": the cluster ID, "internetRemoteReadUrl": the internal URL for remote read, "remoteReadUrl": the public URL for remote read, "grafanaUrl": the public URL for Grafana, "pushGatewayUrl": the public URL for Pushgateway, "internetRemoteWriteUrl": the internal URL for remote write}" }
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class AddPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +117,7 @@ public class AddPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

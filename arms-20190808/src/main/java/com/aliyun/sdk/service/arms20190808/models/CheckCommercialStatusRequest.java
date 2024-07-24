@@ -77,12 +77,13 @@ public class CheckCommercialStatusRequest extends Request {
         }
 
         /**
-         * Sub-services:
+         * The ARMS sub-service. Valid values:
          * <p>
-         * - apm: Application Monitoring
-         * - rum: Real User Monitoring
-         * - prometheus: Managed Service for Prometheus
-         * - xtrace: Managed Service for OpenTelemetry
+         * 
+         * *   apm: Application Monitoring
+         * *   rum: RUM
+         * *   prometheus: Managed Service for Prometheus
+         * *   xtrace: Managed Service for OpenTelemetry
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);

@@ -81,7 +81,7 @@ public class DeleteEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * The result of the operation.
          */
         public Builder data(String data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class DeleteEnvCustomJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -84,7 +84,7 @@ public class AddPrometheusRemoteWriteRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
+         * The ID of the Prometheus instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

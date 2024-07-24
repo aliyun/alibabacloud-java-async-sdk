@@ -85,7 +85,7 @@ public class GetManagedPrometheusStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code or error code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,13 +93,13 @@ public class GetManagedPrometheusStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the Prometheus instance.
+         * The installation status of the Prometheus agent.
          * <p>
          * 
-         * *   Installing: The Prometheus instance is created and the Prometheus agent has no registration information.
-         * *   Succeed: The Prometheus instance is created and the Prometheus agent is registered.
-         * *   Failure: The Prometheus instance failed to be created or the Prometheus agent failed to be registered.
-         * *   Unknown: No status of the Prometheus instance is available.
+         * *   Installing: The Prometheus agent is installed and no registration information is available.
+         * *   Succeed: The Prometheus agent is installed and registered.
+         * *   Failure: The Prometheus agent failed to be installed or registered.
+         * *   Unknown: The installation status of the Prometheus agent is unknown.
          */
         public Builder data(String data) {
             this.data = data;

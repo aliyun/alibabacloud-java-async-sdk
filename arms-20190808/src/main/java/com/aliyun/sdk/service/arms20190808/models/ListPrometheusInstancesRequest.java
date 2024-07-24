@@ -85,7 +85,8 @@ public class ListPrometheusInstancesRequest extends Request {
         /**
          * Optional instance types (if left blank, all types of instances will be queried):
          * <p>
-         * - cloud-product-prometheus 
+         * 
+         * - cloud-product-prometheus
          * - ManagedKubernetes
          * - satellite
          * - Ask
@@ -103,7 +104,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -112,7 +113,7 @@ public class ListPrometheusInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query global aggregation instances. Valid values:
+         * Specifies whether to obtain global aggregation instances. Valid values:
          * <p>
          * 
          * *   true

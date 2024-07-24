@@ -378,7 +378,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The name of the component to which the PodMonitor belongs.
+             * The name of the add-on to which the PodMonitor belongs.
              */
             public Builder addonName(String addonName) {
                 this.addonName = addonName;
@@ -386,7 +386,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name of the component.
+             * The instance name of the add-on.
              */
             public Builder addonReleaseName(String addonReleaseName) {
                 this.addonReleaseName = addonReleaseName;
@@ -394,7 +394,7 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the component.
+             * The version of the add-on.
              */
             public Builder addonVersion(String addonVersion) {
                 this.addonVersion = addonVersion;

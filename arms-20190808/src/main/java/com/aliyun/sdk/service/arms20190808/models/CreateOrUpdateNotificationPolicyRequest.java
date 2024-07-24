@@ -414,7 +414,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * State.
+         * Specifies whether to enable the notification policy. Valid values: enable and disable.
          */
         public Builder state(String state) {
             this.putBodyParameter("State", state);

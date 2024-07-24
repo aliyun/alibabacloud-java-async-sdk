@@ -101,7 +101,7 @@ public class GetTraceAppRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * 标签。
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -155,7 +155,7 @@ public class GetTraceAppRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * 标签的键（key）。
              */
             public Builder key(String key) {
                 this.key = key;
@@ -163,7 +163,7 @@ public class GetTraceAppRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * 标签的值（value）。
              */
             public Builder value(String value) {
                 this.value = value;

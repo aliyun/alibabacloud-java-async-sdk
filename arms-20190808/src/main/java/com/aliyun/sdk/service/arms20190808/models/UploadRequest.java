@@ -17,7 +17,6 @@ public class UploadRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("File")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String file;
 
     @com.aliyun.core.annotation.Query
@@ -136,7 +135,7 @@ public class UploadRequest extends Request {
         }
 
         /**
-         * The content of the SourceMap file.
+         * The string of the SourceMap file.
          */
         public Builder file(String file) {
             this.putBodyParameter("File", file);

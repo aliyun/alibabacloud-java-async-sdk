@@ -85,7 +85,7 @@ public class GetExploreUrlResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Status code. 200 means success, other status codes are exceptions.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +101,7 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The prompt information of the returned result.
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +117,10 @@ public class GetExploreUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Whether the operation was successful:
+         * <p>
+         * - true: the operation was successful
+         * - false: the operation failed
          */
         public Builder success(Boolean success) {
             this.success = success;

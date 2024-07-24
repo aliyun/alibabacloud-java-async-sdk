@@ -85,7 +85,7 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Status code. 200 means success, other status codes are exceptions.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +101,7 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The prompt information of the returned result.
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +117,10 @@ public class GetClusterAllUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Whether the query is successful:
+         * <p>
+         * - true: success
+         * - false: failure
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -161,7 +161,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private java.util.List < String > ips; 
 
             /**
-             * Domain.
+             * The destination domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -169,7 +169,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * IpType.
+             * The IP version. Valid values:
+             * <p>
+             * 
+             * *   0: A version is automatically selected.
+             * *   1: IPv4.
+             * *   2: IPv6.
              */
             public Builder ipType(Integer ipType) {
                 this.ipType = ipType;
@@ -177,7 +182,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * The IP address.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -230,7 +235,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private Integer selectType; 
 
             /**
-             * Hosts.
+             * The custom host settings.
              */
             public Builder hosts(java.util.List < Hosts> hosts) {
                 this.hosts = hosts;
@@ -238,7 +243,11 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SelectType.
+             * The selection mode. Valid values:
+             * <p>
+             * 
+             * *   0: random
+             * *   1: polling
              */
             public Builder selectType(Integer selectType) {
                 this.selectType = selectType;
@@ -303,7 +312,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private java.util.Map < String, String > prometheusLabels; 
 
             /**
-             * PrometheusClusterId.
+             * A reserved field.
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -311,7 +320,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PrometheusClusterRegion.
+             * A reserved field.
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -319,7 +328,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PrometheusLabels.
+             * A reserved field.
              */
             public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
                 this.prometheusLabels = prometheusLabels;
@@ -396,7 +405,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -404,7 +413,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SecureGroupId.
+             * The ID of the security group to which the client belongs. The security group specifies the inbound and outbound rules of the client for the VPC. You need to allow the security group to which the client belongs to access the security group to which the VPC belongs. Otherwise, the client cannot access resources in the VPC.
              */
             public Builder secureGroupId(String secureGroupId) {
                 this.secureGroupId = secureGroupId;
@@ -412,7 +421,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -420,7 +429,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -545,7 +554,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String xtraceRegion; 
 
             /**
-             * CustomHost.
+             * The custom host settings.
              */
             public Builder customHost(CustomHost customHost) {
                 this.customHost = customHost;
@@ -553,7 +562,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CustomPrometheusSetting.
+             * A reserved field.
              */
             public Builder customPrometheusSetting(CustomPrometheusSetting customPrometheusSetting) {
                 this.customPrometheusSetting = customPrometheusSetting;
@@ -561,7 +570,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CustomVPCSetting.
+             * The information about the virtual private cloud (VPC). If the destination URL is an Alibaba Cloud internal endpoint, you need to configure a VPC.
              */
             public Builder customVPCSetting(CustomVPCSetting customVPCSetting) {
                 this.customVPCSetting = customVPCSetting;
@@ -569,7 +578,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * IpType.
+             * The IP version. Valid values:
+             * <p>
+             * 
+             * *   0: A version is automatically selected.
+             * *   1: IPv4.
+             * *   2: IPv6.
              */
             public Builder ipType(Integer ipType) {
                 this.ipType = ipType;
@@ -577,7 +591,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * IsOpenTrace.
+             * Indicates whether tracing is enabled.
              */
             public Builder isOpenTrace(Boolean isOpenTrace) {
                 this.isOpenTrace = isOpenTrace;
@@ -585,7 +599,11 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorSamples.
+             * Indicates whether monitoring samples are evenly distributed. Valid values:
+             * <p>
+             * 
+             * *   0: No
+             * *   1: Yes
              */
             public Builder monitorSamples(Integer monitorSamples) {
                 this.monitorSamples = monitorSamples;
@@ -593,7 +611,12 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TraceClientType.
+             * The type of the client for tracing. Valid values:
+             * <p>
+             * 
+             * *   0: ARMS agent
+             * *   1: OpenTelemetry
+             * *   2: Jaeger
              */
             public Builder traceClientType(Integer traceClientType) {
                 this.traceClientType = traceClientType;
@@ -601,7 +624,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             }
 
             /**
-             * XtraceRegion.
+             * The region to which trace data is reported.
              */
             public Builder xtraceRegion(String xtraceRegion) {
                 this.xtraceRegion = xtraceRegion;
@@ -859,7 +882,7 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * CommonSetting.
+             * The general settings.
              */
             public Builder commonSetting(CommonSetting commonSetting) {
                 this.commonSetting = commonSetting;

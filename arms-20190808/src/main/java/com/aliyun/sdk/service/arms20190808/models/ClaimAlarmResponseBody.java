@@ -85,7 +85,7 @@ public class ClaimAlarmResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class ClaimAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +101,7 @@ public class ClaimAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,11 @@ public class ClaimAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -117,7 +121,7 @@ public class ClaimAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;

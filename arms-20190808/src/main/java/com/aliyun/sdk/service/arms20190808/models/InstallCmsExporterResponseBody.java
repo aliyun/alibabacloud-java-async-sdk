@@ -49,7 +49,7 @@ public class InstallCmsExporterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the call was successful.
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class InstallCmsExporterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

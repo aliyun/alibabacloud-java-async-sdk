@@ -152,7 +152,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * The application name.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -161,7 +161,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * ContentType.
+         * The type of the file. You can set this parameter to "application/zip", "text/plain", or an empty string.
          */
         public Builder contentType(String contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -170,7 +170,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * FileName.
+         * The file name.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -179,7 +179,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The application ID.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -188,7 +188,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -197,7 +197,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * SourcemapType.
+         * The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.
          */
         public Builder sourcemapType(String sourcemapType) {
             this.putQueryParameter("SourcemapType", sourcemapType);
@@ -206,7 +206,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The file ID.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -215,7 +215,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * The version number of the file.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

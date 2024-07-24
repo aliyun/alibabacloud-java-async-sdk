@@ -49,7 +49,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
         private java.util.List < SourceMapList> sourceMapList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SourceMapList.
+         * The details of the SourceMap file.
          */
         public Builder sourceMapList(java.util.List < SourceMapList> sourceMapList) {
             this.sourceMapList = sourceMapList;
@@ -145,7 +145,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Fid.
+             * The ID of the SourceMap file.
              */
             public Builder fid(String fid) {
                 this.fid = fid;
@@ -153,7 +153,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * The name of the SourceMap file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -161,7 +161,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the file. Unit: KB.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -169,7 +169,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UploadTime.
+             * The timestamp that indicates when the file was uploaded.
              */
             public Builder uploadTime(String uploadTime) {
                 this.uploadTime = uploadTime;
@@ -177,7 +177,7 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the file.
              */
             public Builder version(String version) {
                 this.version = version;

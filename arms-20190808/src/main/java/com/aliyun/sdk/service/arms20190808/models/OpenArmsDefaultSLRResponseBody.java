@@ -49,7 +49,11 @@ public class OpenArmsDefaultSLRResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned result.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The call was successful.
+         * *   `false`: The call failed.
          */
         public Builder data(String data) {
             this.data = data;

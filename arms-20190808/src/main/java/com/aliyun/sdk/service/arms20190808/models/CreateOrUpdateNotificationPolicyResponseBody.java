@@ -267,7 +267,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private java.util.List < MatchingConditions> matchingConditions; 
 
             /**
-             * An array of alert event matching condition objects.
+             * The matching conditions.
              */
             public Builder matchingConditions(java.util.List < MatchingConditions> matchingConditions) {
                 this.matchingConditions = matchingConditions;
@@ -344,7 +344,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private String notifyObjectType; 
 
             /**
-             * 通知对象为联系人时的单独的联系方式
+             * The notification methods specified for a contact.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -360,7 +360,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the notification contact.
+             * The name of the notification object.
              */
             public Builder notifyObjectName(String notifyObjectName) {
                 this.notifyObjectName = notifyObjectName;
@@ -368,13 +368,15 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the notification contact. Valid values: 
+             * The type of the notification object. Valid values:
              * <p>
              * 
-             * - CONTACT: an individual contact
-             * - CONTACT_GROUP: a contact group
-             * - DING_ROBOT: an instant messaging (IM) robot
-             * - CONTACT_SCHEDULE: a person on duty based on an established schedule
+             * *   CONTACT: individual contact
+             * *   CONTACT_GROUP: contact group
+             * *   ARMS_CONTACT: individual ARMS contact
+             * *   ARMS_CONTACT_GROUP: ARMS contact group
+             * *   DING_ROBOT_GROUP: DingTalk, Lark, or WeCom IM chatbot
+             * *   CONTACT_SCHEDULE: user on duty defined by a schedule
              */
             public Builder notifyObjectType(String notifyObjectType) {
                 this.notifyObjectType = notifyObjectType;
@@ -868,7 +870,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * 极简模式
+             * DirectedMode.
              */
             public Builder directedMode(Boolean directedMode) {
                 this.directedMode = directedMode;
@@ -972,7 +974,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * Indicates whether the notification policy is enabled. Valid values: enable and disable.
              */
             public Builder state(String state) {
                 this.state = state;

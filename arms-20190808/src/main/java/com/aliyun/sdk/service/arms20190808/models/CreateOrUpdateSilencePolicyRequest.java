@@ -163,7 +163,7 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         }
 
         /**
-         * State.
+         * Specifies whether to enable the silence policy. Valid values: enable and disable.
          */
         public Builder state(String state) {
             this.putBodyParameter("State", state);

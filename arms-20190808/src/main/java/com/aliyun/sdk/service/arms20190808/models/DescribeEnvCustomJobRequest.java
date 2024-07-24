@@ -107,7 +107,7 @@ public class DescribeEnvCustomJobRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the encrypted YAML string.
+         * Specifies whether to return an encrypted YAML string.
          */
         public Builder encryptYaml(Boolean encryptYaml) {
             this.putQueryParameter("EncryptYaml", encryptYaml);

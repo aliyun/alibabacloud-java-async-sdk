@@ -84,7 +84,7 @@ public class DeleteEnvCustomJobRequest extends Request {
         } 
 
         /**
-         * Custom job name.
+         * The name of the custom job.
          */
         public Builder customJobName(String customJobName) {
             this.putQueryParameter("CustomJobName", customJobName);
@@ -93,7 +93,7 @@ public class DeleteEnvCustomJobRequest extends Request {
         }
 
         /**
-         * Environment ID.
+         * The ID of the environment instance.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);

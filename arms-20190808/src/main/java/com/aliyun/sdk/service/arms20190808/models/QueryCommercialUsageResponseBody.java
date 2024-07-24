@@ -85,7 +85,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response status. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,11 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -169,7 +173,11 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, ?>> items; 
 
             /**
-             * Complete.
+             * Indicates whether a multi-region query is complete. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder complete(Boolean complete) {
                 this.complete = complete;
@@ -177,7 +185,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The returned struct.
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;

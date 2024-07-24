@@ -85,13 +85,7 @@ public class EnableMetricResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned for the request. Valid values:
-         * <p>
-         * 
-         * *   2XX: The request is successful.
-         * *   3XX: A redirection message is returned.
-         * *   4XX: The request is invalid.
-         * *   5XX: A server error occurs.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -123,11 +117,7 @@ public class EnableMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

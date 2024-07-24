@@ -197,7 +197,7 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The YAML configuration string of the ServiceMonitor.
+             * The YAML configuration file of the ServiceMonitor.
              */
             public Builder configYaml(String configYaml) {
                 this.configYaml = configYaml;
@@ -237,7 +237,11 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ServiceMonitor. Valid values: run and stop.
+             * The status. Valid values:
+             * <p>
+             * 
+             * *   run
+             * *   stop
              */
             public Builder status(String status) {
                 this.status = status;

@@ -85,7 +85,13 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned for the request. Valid values:
+         * <p>
+         * 
+         * *   2XX: The request was successful.
+         * *   3XX: A redirection message was returned.
+         * *   4XX: The request was invalid.
+         * *   5XX: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +99,7 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The Browser Monitoring data returned.
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +107,7 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the call fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +115,7 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +123,11 @@ public class GetRetcodeDataByQueryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

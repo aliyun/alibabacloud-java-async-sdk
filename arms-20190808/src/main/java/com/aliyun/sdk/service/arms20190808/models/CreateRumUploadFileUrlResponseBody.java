@@ -97,7 +97,7 @@ public class CreateRumUploadFileUrlResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class CreateRumUploadFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The file upload URL.
          */
         public Builder data(String data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class CreateRumUploadFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class CreateRumUploadFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +129,7 @@ public class CreateRumUploadFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class CreateRumUploadFileUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder success(Boolean success) {
             this.success = success;

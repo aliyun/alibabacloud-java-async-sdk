@@ -149,7 +149,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -157,7 +157,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -241,6 +241,9 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
@@ -249,6 +252,9 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
+
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
+        private String vswitchId;
 
         private Data(Builder builder) {
             this.bindResourceId = builder.bindResourceId;
@@ -274,9 +280,11 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             this.prometheusInstanceName = builder.prometheusInstanceName;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.securityGroupId = builder.securityGroupId;
             this.tags = builder.tags;
             this.userId = builder.userId;
             this.vpcId = builder.vpcId;
+            this.vswitchId = builder.vswitchId;
         }
 
         public static Builder builder() {
@@ -449,6 +457,13 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List < Tags> getTags() {
@@ -467,6 +482,13 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
          */
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
         public static final class Builder {
@@ -493,9 +515,11 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String prometheusInstanceName; 
             private String regionId; 
             private String resourceGroupId; 
+            private String securityGroupId; 
             private java.util.List < Tags> tags; 
             private String userId; 
             private String vpcId; 
+            private String vswitchId; 
 
             /**
              * The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.
@@ -690,7 +714,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * grafana工作区id
+             * The ID of the Grafana workspace.
              */
             public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
                 this.grafanaWorkspaceId = grafanaWorkspaceId;
@@ -742,6 +766,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
+             * The security group ID bound to the environment.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
              * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
@@ -762,6 +794,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * The switch ID bound to the environment.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
                 return this;
             }
 

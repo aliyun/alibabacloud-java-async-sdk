@@ -108,7 +108,7 @@ public class DescribeEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * The namespace where the PodMonitor is located.
+         * The namespace where the PodMonitor resides.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

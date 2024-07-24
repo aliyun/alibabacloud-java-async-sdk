@@ -125,7 +125,7 @@ public class ChangeAlarmSeverityRequest extends Request {
         }
 
         /**
-         * Severity.
+         * The severity level of the alert. Valid values: P1, P2, P3, and P4. P4 indicates the lowest severity, whereas P1 indicates the highest severity.
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);

@@ -203,11 +203,16 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * The payable resource plan. Valid values:
+         * The payable resource plan.
          * <p>
          * 
          * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
          * *   Otherwise, leave the parameter empty.
+         * 
+         * Valid values:
+         * 
+         * *   CS_Pro: Container Monitoring Pro
+         * *   CS_Basic: Container Monitoring Basic
          */
         public Builder feePackage(String feePackage) {
             this.putQueryParameter("FeePackage", feePackage);

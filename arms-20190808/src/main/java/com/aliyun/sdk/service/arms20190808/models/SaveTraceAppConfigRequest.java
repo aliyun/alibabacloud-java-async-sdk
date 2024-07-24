@@ -91,10 +91,10 @@ public class SaveTraceAppConfigRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * The process ID (PID) of the application.
          * <p>
          * 
-         * Log on to the **ARMS console**. In the left-side navigation pane, choose **Application Monitoring** > **Applications**. On the **Applications** page, click the name of an application. The URL in the address bar contains the process ID (PID) of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is eb4zdose6v%409781be0f44d\*\*\*\*, you must replace %40 with an at sign (@) to obtain eb4zdose6v@9781be0f44d\*\*\*\*.
+         * Log on to the ARMS console. In the left-side navigation pane, choose **Application Monitoring** > **Application List**. On the Application List page, click the name of an application. The URL in the address bar contains the PID of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is xxx%4074xxx, you must replace %40 with an at sign (@) to obtain xxx@74xxx.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -157,18 +157,17 @@ public class SaveTraceAppConfigRequest extends Request {
             private String value; 
 
             /**
-             * The values of the settings that you want to modify. For information about the supported settings, see the following items:
+             * The key of the settings that you want to modify. For more information about the supported settings, see the following sections.
              * <p>
              * 
              * *   Trace sampling settings
-             * *   Main switch settings
+             * *   Agent switch settings
              * *   Threshold settings
              * *   Advanced settings
              * *   Thread settings
              * *   Memory snapshot settings
              * *   URL convergence settings
              * *   Business log association settings
-             * *   Business monitoring settings
              */
             public Builder key(String key) {
                 this.key = key;
@@ -176,18 +175,17 @@ public class SaveTraceAppConfigRequest extends Request {
             }
 
             /**
-             * The values of the settings that you want to modify. For information about the supported settings, see the following items:
+             * The value of the settings that you want to modify. For more information about the supported settings, see the following sections.
              * <p>
              * 
              * *   Trace sampling settings
-             * *   Main switch settings
+             * *   Agent switch settings
              * *   Threshold settings
              * *   Advanced settings
              * *   Thread settings
              * *   Memory snapshot settings
              * *   URL convergence settings
              * *   Business log association settings
-             * *   Business monitoring settings
              */
             public Builder value(String value) {
                 this.value = value;

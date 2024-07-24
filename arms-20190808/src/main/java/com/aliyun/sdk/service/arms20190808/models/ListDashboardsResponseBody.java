@@ -93,7 +93,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * The environment ID.
+         * The ID of the environment instance.
          */
         public Builder environmentId(String environmentId) {
             this.environmentId = environmentId;
@@ -101,7 +101,7 @@ public class ListDashboardsResponseBody extends TeaModel {
         }
 
         /**
-         * Whether to enable Grafana service.
+         * Indicates whether Managed Service for Grafana is activated.
          */
         public Builder grafanaServiceOpened(String grafanaServiceOpened) {
             this.grafanaServiceOpened = grafanaServiceOpened;
@@ -407,11 +407,11 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the exporter was provided by ARMS. Valid values:
+             * Indicates whether the exporter is provided by ARMS.
              * <p>
              * 
-             * *   `true`: The exporter is provided by ARMS.
-             * *   `false`: The exporter is not provided by ARMS.
+             * *   `true:` The exporter is provided by ARMS.
+             * *   `false:`: The exporter is not provided by ARMS.
              */
             public Builder isArmsExporter(Boolean isArmsExporter) {
                 this.isArmsExporter = isArmsExporter;
@@ -443,7 +443,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Grafana dashboard has a new version that was available for upgrade.
+             * Indicates whether the Grafana dashboard has a new version that is available for upgrade.
              */
             public Builder needUpdate(Boolean needUpdate) {
                 this.needUpdate = needUpdate;
@@ -459,7 +459,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the Grafana dashboard was created.
+             * The time when the Grafana dashboard was created. The value is a timestamp.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -487,7 +487,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of a dashboard when multiple Grafana dashboards were installed. It is a unique business ID displayed on the page.
+             * The unique identifier of the Grafana dashboard.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -798,7 +798,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Grafana dashboards.
+             * The information about the Grafana dashboard.
              */
             public Builder i18nChild(I18nChild i18nChild) {
                 this.i18nChild = i18nChild;
@@ -814,11 +814,11 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the exporter was provided by ARMS. Valid values:
+             * Indicates whether the exporter is provided by Application Real-Time Monitoring Service (ARMS).
              * <p>
              * 
-             * *   `true`: The exporter is provided by ARMS.
-             * *   `false`: The exporter is not provided by ARMS.
+             * *   `true:` The exporter is provided by ARMS.
+             * *   `false:`: The exporter is not provided by ARMS.
              */
             public Builder isArmsExporter(Boolean isArmsExporter) {
                 this.isArmsExporter = isArmsExporter;
@@ -826,7 +826,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM. BASIC indicates a basic dashboard. THIRD indicates a third-party dashboard. LIMIT indicates a time-limited free dashboard. CUSTOM indicates a custom dashboard.
+             * The category of the Grafana dashboard. Valid values: BASIC, THIRD, LIMIT, and CUSTOM.
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -850,7 +850,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Grafana dashboard has a new version that was available for upgrade.
+             * Indicates whether the Grafana dashboard has a new version that is available for upgrade.
              */
             public Builder needUpdate(Boolean needUpdate) {
                 this.needUpdate = needUpdate;
@@ -866,7 +866,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the Grafana dashboard was created. Unit: seconds
+             * The time when the Grafana dashboard was created. The value is a timestamp. Unit: seconds.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -894,7 +894,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of a dashboard when multiple Grafana dashboards were installed. It is a unique business ID displayed on the page.
+             * The unique identifier of the Grafana dashboard.
              */
             public Builder uid(String uid) {
                 this.uid = uid;

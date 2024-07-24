@@ -49,7 +49,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
         private java.util.List < RetcodeApps> retcodeApps; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -254,7 +254,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The PID of the application.
+             * The process identifier (PID) of the application.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -286,7 +286,7 @@ public class ListRetcodeAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags.
+             * The tags of the task.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

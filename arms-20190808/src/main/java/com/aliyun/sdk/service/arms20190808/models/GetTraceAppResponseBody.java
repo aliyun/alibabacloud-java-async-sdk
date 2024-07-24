@@ -342,7 +342,7 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * Cluster ID, used only in K8s scenarios.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -366,7 +366,7 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * Coding Language.
              */
             public Builder language(String language) {
                 this.language = language;

@@ -111,7 +111,7 @@ public class DeleteAddonReleaseRequest extends Request {
         } 
 
         /**
-         * AddonName.
+         * The name of the add-on.
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);

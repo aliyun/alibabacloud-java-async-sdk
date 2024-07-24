@@ -246,7 +246,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.
+         * The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
          */
         public Builder archiveDuration(Integer archiveDuration) {
             this.putQueryParameter("ArchiveDuration", archiveDuration);
@@ -273,14 +273,16 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The type of the cluster to which the Prometheus instance belongs. Valid values: 
+         * The type of the Prometheus instance. Valid values:
          * <p>
-         * * remote-write: Prometheus instance for remote write.
-         * * ecs(Not supported): Prometheus instance for ECS.
-         * * cloud-monitor(Not supported): Prometheus instance for Alibaba Cloud services in China.
-         * * cloud-product(Not supported): Prometheus instance for Alibaba Cloud services outside China.
-         * * global-view: Prometheus instance for GlobalView.
-         * * aliyun-cs(Not supported): Prometheus instance for Container Service for Kubernetes (ACK).
+         * 
+         * *   remote-write: Prometheus instance for Remote Write
+         * *   ecs (unavailable): Prometheus instance for ECS
+         * *   global-view: Prometheus instance for GlobalView
+         * *   aliyun-cs: Prometheus instance for Container Service
+         * *   cloud-product (unavailable): Prometheus instance for Alibaba Cloud services
+         * *   cloud-monitor (unavailable): Prometheus instance for Hybrid Cloud Monitoring
+         * *   flink (unavailable): Prometheus instance for Flink
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -289,7 +291,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * Data storage duration (in days).
+         * The data storage duration. Unit: days.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);

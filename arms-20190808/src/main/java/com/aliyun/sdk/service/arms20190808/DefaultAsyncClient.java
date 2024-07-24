@@ -481,6 +481,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call the operation, make sure that you have learned about the billing methods and [pricing](https://www.alibabacloud.com/help/zh/grafana/product-overview/billing-4?spm=a2c4g.11186623.0.0.14c2d253B3SDbt) of Managed Service for Grafana.
+      * > 
+      * *   To create workspaces, you must complete real-name verification.
+      * *   Regular users can create workspaces only in Managed Service for Grafana Developer Edition, Pro Edition, and Advanced Edition. `These editions charge fees.`
+      * *   Internal users can create workspaces only in Managed Service for Grafana Beta Edition and Standard Edition. `These editions do not charge fees.`
+      *
+     */
     @Override
     public CompletableFuture<CreateGrafanaWorkspaceResponse> createGrafanaWorkspace(CreateGrafanaWorkspaceRequest request) {
         try {
@@ -691,6 +699,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url).
+      *
+     */
     @Override
     public CompletableFuture<CreateRumUploadFileUrlResponse> createRumUploadFileUrl(CreateRumUploadFileUrlRequest request) {
         try {
@@ -1007,6 +1019,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+      *
+     */
     @Override
     public CompletableFuture<DeleteGrafanaWorkspaceResponse> deleteGrafanaWorkspace(DeleteGrafanaWorkspaceRequest request) {
         try {
@@ -1179,6 +1195,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     @Override
     public CompletableFuture<DeleteRumUploadFileResponse> deleteRumUploadFile(DeleteRumUploadFileRequest request) {
         try {
@@ -1474,6 +1494,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DoInsightsActionResponse> doInsightsAction(DoInsightsActionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DoInsightsAction").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DoInsightsActionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DoInsightsActionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<EnableMetricResponse> enableMetric(EnableMetricRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1617,6 +1651,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
+      *
+     */
     @Override
     public CompletableFuture<GetGrafanaWorkspaceResponse> getGrafanaWorkspace(GetGrafanaWorkspaceRequest request) {
         try {
@@ -1849,6 +1887,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     @Override
     public CompletableFuture<GetRumAppInfoResponse> getRumAppInfo(GetRumAppInfoRequest request) {
         try {
@@ -1863,6 +1905,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     @Override
     public CompletableFuture<GetRumAppsResponse> getRumApps(GetRumAppsRequest request) {
         try {
@@ -1905,6 +1951,24 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<GetRumOcuStatisticDataResponse> getRumOcuStatisticData(GetRumOcuStatisticDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetRumOcuStatisticData").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetRumOcuStatisticDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetRumOcuStatisticDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     @Override
     public CompletableFuture<GetRumUploadFilesResponse> getRumUploadFiles(GetRumUploadFilesRequest request) {
         try {
@@ -2142,7 +2206,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.
+      * You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
       *
      */
     @Override
@@ -3391,6 +3455,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Note: The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
+      *
+     */
     @Override
     public CompletableFuture<UpdateGrafanaWorkspaceVersionResponse> updateGrafanaWorkspaceVersion(UpdateGrafanaWorkspaceVersionRequest request) {
         try {
@@ -3531,6 +3599,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     @Override
     public CompletableFuture<UpdateRumAppResponse> updateRumApp(UpdateRumAppRequest request) {
         try {
@@ -3545,6 +3617,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     @Override
     public CompletableFuture<UpdateRumFileStatusResponse> updateRumFileStatus(UpdateRumFileStatusRequest request) {
         try {

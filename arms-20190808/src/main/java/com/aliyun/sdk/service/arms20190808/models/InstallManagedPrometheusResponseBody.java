@@ -93,7 +93,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * The response content. The status of the Prometheus instance is returned.
+         * The response content. In most cases, the installation status of the Prometheus agent is returned.
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the Prometheus instance fails to be created.
+         * The error message returned if the Prometheus agent failed to be installed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +117,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the Prometheus instance was created.
+         * Indicates whether the Prometheus agent was installed.
          */
         public Builder success(Boolean success) {
             this.success = success;

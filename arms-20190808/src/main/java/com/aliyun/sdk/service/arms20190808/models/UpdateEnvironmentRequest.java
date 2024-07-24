@@ -129,7 +129,7 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * The environment name.
+         * The name of the environment instance.
          */
         public Builder environmentName(String environmentName) {
             this.putQueryParameter("EnvironmentName", environmentName);
@@ -138,10 +138,11 @@ public class UpdateEnvironmentRequest extends Request {
         }
 
         /**
-         * Fee package.
+         * The payable resource plan. Valid values:
          * <p>
-         * * When the EnvironmentType is CS: it can be specified as CS_Basic (default) or CS-Pro.
-         * * When the EnvironmentType is a different value, please enter a null value.
+         * 
+         * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
+         * *   Otherwise, leave the parameter empty.
          */
         public Builder feePackage(String feePackage) {
             this.putQueryParameter("FeePackage", feePackage);

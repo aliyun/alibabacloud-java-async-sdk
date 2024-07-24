@@ -128,7 +128,7 @@ public class AddTagToFlinkClusterRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the Prometheus instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -137,7 +137,7 @@ public class AddTagToFlinkClusterRequest extends Request {
         }
 
         /**
-         * FlinkWorkSpaceId.
+         * The ID of the Flink workspace.
          */
         public Builder flinkWorkSpaceId(String flinkWorkSpaceId) {
             this.putQueryParameter("FlinkWorkSpaceId", flinkWorkSpaceId);
@@ -146,7 +146,7 @@ public class AddTagToFlinkClusterRequest extends Request {
         }
 
         /**
-         * FlinkWorkSpaceName.
+         * The name of the Flink workspace.
          */
         public Builder flinkWorkSpaceName(String flinkWorkSpaceName) {
             this.putQueryParameter("FlinkWorkSpaceName", flinkWorkSpaceName);
@@ -155,7 +155,7 @@ public class AddTagToFlinkClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -164,7 +164,7 @@ public class AddTagToFlinkClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -173,7 +173,7 @@ public class AddTagToFlinkClusterRequest extends Request {
         }
 
         /**
-         * TargetUserId.
+         * The ID of the Alibaba Cloud account to which the Flink workspace belongs.
          */
         public Builder targetUserId(String targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);

@@ -49,7 +49,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The pages returned.
+         * The returned pages.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -167,7 +167,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the last N minutes.
+             * The last N minutes.
              */
             public Builder n(Long n) {
                 this.n = n;
@@ -175,17 +175,17 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The comparison operator that was used to compare the metric value with the threshold. Valid values:
+             * The operator that is used to compare the metric value with the threshold. Valid values:
              * <p>
              * 
              * *   CURRENT_GTE: greater than or equal to
              * *   CURRENT_LTE: less than or equal to
-             * *   PREVIOUS_UP: the increase percentage compared with the last period
-             * *   PREVIOUS_DOWN: the decrease percentage compared with the last period
-             * *   HOH_UP: the increase percentage compared with the last hour
-             * *   HOH_DOWN: the decrease percentage compared with the last hour
-             * *   DOD_UP: the increase percentage compared with the last day
-             * *   DOD_DOWN: the decrease percentage compared with the last day
+             * *   PREVIOUS_UP: increase in percentage compared with the previous period
+             * *   PREVIOUS_DOWN: decrease in percentage compared with the previous period
+             * *   HOH_UP: increase in percentage compared with the same period in the previous hour
+             * *   HOH_DOWN: decrease in percentage compared with the same period in the previous hour
+             * *   DOD_UP: increase in percentage compared with the same period in the previous day
+             * *   DOD_DOWN: decrease in percentage compared with the same period in the previous day
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -257,8 +257,8 @@ public class GetAlertRulesResponseBody extends TeaModel {
              * The relationship between multiple alert conditions specified for the Application Monitoring or Browser Monitoring alert rule. Valid values:
              * <p>
              * 
-             * *   OR: meets any of the specified conditions.
-             * *   AND: meets all the specified conditions.
+             * *   OR: The alert rule is triggered if one of the conditions is met.
+             * *   AND: The alert rule is triggered if all the conditions are met.
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -428,7 +428,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether this filter condition was displayed on the frontend.
+             * Indicates whether this filter condition is displayed on the frontend.
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -436,7 +436,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates the log type of Browser Monitoring. This field was not included in other filter conditions.
+             * The log type of Browser Monitoring. This field is not included in other filter conditions.
              */
             public Builder t(String t) {
                 this.t = t;
@@ -610,7 +610,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the aggregation dimension.
+             * The information about the aggregation dimension.
              */
             public Builder customSLSGroupByDimensions(java.util.List < String > customSLSGroupByDimensions) {
                 this.customSLSGroupByDimensions = customSLSGroupByDimensions;
@@ -1077,11 +1077,11 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * The alert check type of the Prometheus alert rule. Valid values:
+             * The alert check type of the Prometheus alert rule.
              * <p>
              * 
-             * *   STATIC: static threshold value
-             * *   CUSTOM: custom PromQL statement
+             * *   STATIC: static threshold
+             * *   CUSTOM: custom PromQL
              */
             public Builder alertCheckType(String alertCheckType) {
                 this.alertCheckType = alertCheckType;
@@ -1089,7 +1089,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert contact group to which the alert rule belongs. Valid values:
+             * The alert contact group ID of the Prometheus alert rule.
              * <p>
              * 
              * *   \-1: custom PromQL
@@ -1102,7 +1102,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert rule.
+             * The alert rule ID.
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -1133,7 +1133,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
              * *   STOPPED
              * *   PAUSED
              * 
-             * > The **PAUSED** status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.
+             * >  The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.
              */
             public Builder alertStatus(String alertStatus) {
                 this.alertStatus = alertStatus;
@@ -1141,12 +1141,12 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert rule.
+             * The type of the alert rule. Valid values:
              * <p>
              * 
              * *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
              * *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
-             * *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus
+             * *   PROMETHEUS_MONITORING_ALERT_RULE: Prometheus alert rule
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -1162,11 +1162,11 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert rule was applied to new applications that were created in Application Monitoring or Browser Monitoring. Valid values:
+             * Indicates whether the alert rule is applied to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:
              * <p>
              * 
-             * *   `true`
-             * *   `false`
+             * *   `true`: yes
+             * *   `false`: no
              */
             public Builder autoAddNewApplication(Boolean autoAddNewApplication) {
                 this.autoAddNewApplication = autoAddNewApplication;
@@ -1201,7 +1201,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
              * The extended fields.
              * <p>
              * 
-             * > For existing Application Monitoring alert rules, the fields contained information such as contacts, alert template, and notification content.
+             * >  For existing Application Monitoring alert rules, the fields contain information such as contacts, alert template, and notification content.
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -1264,7 +1264,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID (PID) that was associated with the Application Monitoring or Browser Monitoring alert rule.
+             * The process ID (PID) of the application to which the Application Monitoring or Browser Monitoring alert rule is applied.
              */
             public Builder pids(java.util.List < String > pids) {
                 this.pids = pids;
@@ -1288,7 +1288,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * The tags of the alert rule.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1304,7 +1304,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1381,7 +1381,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * The list of alert rules.
+             * The alert rules.
              */
             public Builder alertRules(java.util.List < AlertRules> alertRules) {
                 this.alertRules = alertRules;

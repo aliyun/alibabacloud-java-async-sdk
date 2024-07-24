@@ -97,7 +97,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The queried files.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +129,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +229,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * FileName.
+             * The file name.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -233,7 +237,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * The time when the file was last modified. The value is a timestamp.
              */
             public Builder lastModifiedTime(Object lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;
@@ -241,7 +245,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the file. Unit: bytes.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -249,7 +253,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The file ID.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -257,7 +261,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * The version number of the file.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;

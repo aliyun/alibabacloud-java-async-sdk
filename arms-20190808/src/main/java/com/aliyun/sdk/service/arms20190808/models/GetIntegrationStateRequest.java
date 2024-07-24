@@ -84,7 +84,7 @@ public class GetIntegrationStateRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the Container Service for Kubernetes (ACK) cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class GetIntegrationStateRequest extends Request {
         }
 
         /**
-         * Integration.
+         * The abbreviation of the software that is supported by ARMS. Valid values (case-insensitive): `ASM`, `IoT`, and `Flink`.
          */
         public Builder integration(String integration) {
             this.putQueryParameter("Integration", integration);
@@ -102,7 +102,7 @@ public class GetIntegrationStateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

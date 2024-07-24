@@ -121,7 +121,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private java.util.List < String > groupingFields; 
 
             /**
-             * The time interval of grouping. Unit: seconds. Default value: 30.
+             * The time interval for grouping. Unit: seconds. Default value: 30.
              */
             public Builder groupInterval(Long groupInterval) {
                 this.groupInterval = groupInterval;
@@ -921,7 +921,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The notification rules.
+             * The notification rule.
              */
             public Builder notifyRule(NotifyRule notifyRule) {
                 this.notifyRule = notifyRule;
@@ -929,7 +929,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The notification templates.
+             * The notification template.
              */
             public Builder notifyTemplate(NotifyTemplate notifyTemplate) {
                 this.notifyTemplate = notifyTemplate;
@@ -969,7 +969,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * Indicates whether the notification policy is enabled. Valid values: enable and disable.
              */
             public Builder state(String state) {
                 this.state = state;

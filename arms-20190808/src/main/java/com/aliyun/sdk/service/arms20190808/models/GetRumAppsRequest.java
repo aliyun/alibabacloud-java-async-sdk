@@ -124,7 +124,7 @@ public class GetRumAppsRequest extends Request {
         } 
 
         /**
-         * AppGroup.
+         * The group to which the application belongs.
          */
         public Builder appGroup(String appGroup) {
             this.putQueryParameter("AppGroup", appGroup);
@@ -133,7 +133,7 @@ public class GetRumAppsRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -142,7 +142,7 @@ public class GetRumAppsRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application. You can specify only one application name in each request.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -151,7 +151,7 @@ public class GetRumAppsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -160,7 +160,7 @@ public class GetRumAppsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -169,10 +169,11 @@ public class GetRumAppsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
-            this.putQueryParameter("Tags", tags);
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
             return this;
         }
@@ -223,7 +224,7 @@ public class GetRumAppsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +232,7 @@ public class GetRumAppsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

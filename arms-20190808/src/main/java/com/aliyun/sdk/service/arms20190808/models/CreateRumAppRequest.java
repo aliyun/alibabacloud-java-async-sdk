@@ -25,6 +25,10 @@ public class CreateRumAppRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NickName")
+    private String nickName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PackageName")
     private String packageName;
 
@@ -55,6 +59,7 @@ public class CreateRumAppRequest extends Request {
         this.appGroup = builder.appGroup;
         this.appName = builder.appName;
         this.description = builder.description;
+        this.nickName = builder.nickName;
         this.packageName = builder.packageName;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -95,6 +100,13 @@ public class CreateRumAppRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return nickName
+     */
+    public String getNickName() {
+        return this.nickName;
     }
 
     /**
@@ -143,6 +155,7 @@ public class CreateRumAppRequest extends Request {
         private String appGroup; 
         private String appName; 
         private String description; 
+        private String nickName; 
         private String packageName; 
         private String regionId; 
         private String resourceGroupId; 
@@ -159,6 +172,7 @@ public class CreateRumAppRequest extends Request {
             this.appGroup = request.appGroup;
             this.appName = request.appName;
             this.description = request.description;
+            this.nickName = request.nickName;
             this.packageName = request.packageName;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -168,7 +182,7 @@ public class CreateRumAppRequest extends Request {
         } 
 
         /**
-         * AppGroup.
+         * The name of the application group.
          */
         public Builder appGroup(String appGroup) {
             this.putQueryParameter("AppGroup", appGroup);
@@ -177,7 +191,7 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The application name.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -186,7 +200,7 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the application.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -195,7 +209,16 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * PackageName.
+         * The nick name.
+         */
+        public Builder nickName(String nickName) {
+            this.putQueryParameter("NickName", nickName);
+            this.nickName = nickName;
+            return this;
+        }
+
+        /**
+         * The name of the Android application package. This parameter is required if you create an Android application.
          */
         public Builder packageName(String packageName) {
             this.putQueryParameter("PackageName", packageName);
@@ -204,7 +227,7 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,7 +236,7 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -222,7 +245,7 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * SiteType.
+         * The application type. Valid values: web, miniapp, ios, and android.
          */
         public Builder siteType(String siteType) {
             this.putQueryParameter("SiteType", siteType);
@@ -231,7 +254,7 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source. This is a reserved parameter.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -240,10 +263,11 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags. You can specify a maximum of 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
             this.tag = tag;
             return this;
         }
@@ -294,7 +318,7 @@ public class CreateRumAppRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -302,7 +326,7 @@ public class CreateRumAppRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

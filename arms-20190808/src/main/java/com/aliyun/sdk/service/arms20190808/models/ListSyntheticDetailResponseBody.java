@@ -81,7 +81,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -185,7 +185,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * Items.
+             * The list of results.
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;

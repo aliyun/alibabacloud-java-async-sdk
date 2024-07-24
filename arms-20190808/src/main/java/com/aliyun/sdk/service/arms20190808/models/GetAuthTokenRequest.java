@@ -69,7 +69,7 @@ public class GetAuthTokenRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The ID of the ACK cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class GetAuthTokenRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -110,7 +110,7 @@ public class DeleteRumUploadFileRequest extends Request {
         } 
 
         /**
-         * FileName.
+         * The file name, with the extension.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -119,7 +119,7 @@ public class DeleteRumUploadFileRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The application ID.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -128,7 +128,7 @@ public class DeleteRumUploadFileRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -137,7 +137,7 @@ public class DeleteRumUploadFileRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The file ID.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -146,7 +146,7 @@ public class DeleteRumUploadFileRequest extends Request {
         }
 
         /**
-         * VersionId.
+         * The version number of the file.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

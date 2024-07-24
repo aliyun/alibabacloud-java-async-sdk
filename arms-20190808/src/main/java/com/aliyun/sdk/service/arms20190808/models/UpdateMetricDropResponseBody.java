@@ -85,7 +85,7 @@ public class UpdateMetricDropResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response status. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class UpdateMetricDropResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the request was successful.
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class UpdateMetricDropResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class UpdateMetricDropResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,11 @@ public class UpdateMetricDropResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

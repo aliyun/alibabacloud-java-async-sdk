@@ -85,7 +85,7 @@ public class UpgradeAddonReleaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code. 200 indicates success.
+         * The status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class UpgradeAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * Return a message.
+         * The returned message.
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class UpgradeAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * The information returned when the request parameter is incorrect.
+         * The error message returned if the request parameters are invalid.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class UpgradeAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class UpgradeAddonReleaseResponseBody extends TeaModel {
         }
 
         /**
-         * Whether the call was successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

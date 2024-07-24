@@ -97,7 +97,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AppList.
+         * The queried applications.
          */
         public Builder appList(java.util.List < AppList> appList) {
             this.appList = appList;
@@ -105,7 +105,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -113,7 +113,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +129,7 @@ public class GetRumAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class GetRumAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -221,7 +225,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * Domain name or IP.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -229,7 +233,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * PropagatorTypes.
+             * Trace transparent transmission protocol list, which must be transmitted when link tracing is enabled.
              */
             public Builder propagatorTypes(java.util.List < String > propagatorTypes) {
                 this.propagatorTypes = propagatorTypes;
@@ -237,7 +241,10 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Tracing.
+             * Whether to enable link tracking (need to enable the observable link Open Telemetry version), value:
+             * <p>
+             * - `true`: Enable link tracking (after enabling, the relevant header will be inserted into the domain name request).
+             * - `false`: Do not enable link tracking.
              */
             public Builder tracing(String tracing) {
                 this.tracing = tracing;
@@ -290,7 +297,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -298,7 +305,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -531,7 +538,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AppType.
+             * The application type. Valid values: web, miniapp, ios, and android.
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -539,7 +546,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the application was created. The value is a timestamp.
              */
             public Builder createTime(Object createTime) {
                 this.createTime = createTime;
@@ -547,7 +554,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -555,7 +562,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * The endpoint that is used to report application data.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -563,7 +570,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * IsSubscription.
+             * Indicates whether the application is subscribed. Valid values: true and false.
              */
             public Builder isSubscription(Boolean isSubscription) {
                 this.isSubscription = isSubscription;
@@ -571,7 +578,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The application name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -579,7 +586,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * The alias of the application.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -587,7 +594,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * PackageName.
+             * The package name of the Android application.
              */
             public Builder packageName(String packageName) {
                 this.packageName = packageName;
@@ -595,7 +602,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * The application ID.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -603,7 +610,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -611,7 +618,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -619,7 +626,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDomainConfigs.
+             * Service domain name configuration list. Currently only supports mobile applications.
              */
             public Builder serviceDomainConfigs(java.util.List < ServiceDomainConfigs> serviceDomainConfigs) {
                 this.serviceDomainConfigs = serviceDomainConfigs;
@@ -627,7 +634,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * SlsLogstore.
+             * The name of the Simple Log Service Logstore that stores application data.
              */
             public Builder slsLogstore(String slsLogstore) {
                 this.slsLogstore = slsLogstore;
@@ -635,7 +642,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * SlsProject.
+             * The name of the Simple Log Service project that stores application data.
              */
             public Builder slsProject(String slsProject) {
                 this.slsProject = slsProject;
@@ -643,7 +650,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the application. Valid values: created, running, and stopped.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -651,7 +658,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -659,7 +666,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the application. Valid value: RUM.
              */
             public Builder type(String type) {
                 this.type = type;
