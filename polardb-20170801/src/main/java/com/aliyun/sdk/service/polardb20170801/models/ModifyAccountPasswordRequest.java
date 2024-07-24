@@ -204,7 +204,7 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * PasswordType.
+         * The password type.
          */
         public Builder passwordType(String passwordType) {
             this.putQueryParameter("PasswordType", passwordType);

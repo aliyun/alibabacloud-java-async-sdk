@@ -206,7 +206,11 @@ public class FailoverDBClusterRequest extends Request {
         }
 
         /**
-         * RollBackForDisaster.
+         * Specifies whether to fail back to the original primary zone after a failover. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder rollBackForDisaster(Boolean rollBackForDisaster) {
             this.putQueryParameter("RollBackForDisaster", rollBackForDisaster);

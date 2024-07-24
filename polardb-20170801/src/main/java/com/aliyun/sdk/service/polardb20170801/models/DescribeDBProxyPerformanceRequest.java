@@ -168,7 +168,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400, in seconds.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -195,7 +195,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         }
 
         /**
-         * Type.
+         * Special metric. Set the value to tair, which indicates the PolarTair architecture.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

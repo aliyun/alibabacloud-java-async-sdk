@@ -310,7 +310,13 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyRevisionVersionList.
+         * The release status of the PolarProxy version. Valid values:
+         * <p>
+         * 
+         * *   **Stable**: The PolarProxy revision version is stable.
+         * *   **Old**: The PolarProxy revision version is outdated. We recommend that you do not update the PolarProxy to this revision version.
+         * *   **HighRisk**: The PolarProxy revision version has critical defects. We recommend that you do not update the PolarProxy to this revision version.
+         * *   **Beta**: The PolarProxy revision version is a Beta version.
          */
         public Builder proxyRevisionVersionList(java.util.List < ProxyRevisionVersionList> proxyRevisionVersionList) {
             this.proxyRevisionVersionList = proxyRevisionVersionList;
@@ -408,7 +414,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             private String revisionVersionName; 
 
             /**
-             * The release notes for the revision version.
+             * The release notes for the database engine revision version.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -416,12 +422,13 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The release status of the revision version. Valid values:
+             * The release status of the database engine revision version. Valid values:
              * <p>
              * 
-             * *   **Stable**: The revision version is stable.
-             * *   **Old**: The revision version is outdated. We recommend that you do not update the cluster to this version.
-             * *   **HighRisk**: The revision version has critical defects. We recommend that you do not update the cluster to this version.
+             * *   **Stable**: The database engine revision version is stable.
+             * *   **Old**: The database engine revision version is outdated. We recommend that you do not update the database engine to this revision version.
+             * *   **HighRisk**: The database engine revision version has critical defects. We recommend that you do not update the database engine to this revision version.
+             * *   **Beta**: The database engine revision version is a Beta version.
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;
@@ -429,7 +436,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the revision version of the database engine to which the cluster can be upgraded.
+             * The code of the database engine revision version. You can use the code to specify the database engine revision version.
              */
             public Builder revisionVersionCode(String revisionVersionCode) {
                 this.revisionVersionCode = revisionVersionCode;
@@ -437,7 +444,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The revision version of the database engine.
+             * The database engine revision version number.
              */
             public Builder revisionVersionName(String revisionVersionName) {
                 this.revisionVersionName = revisionVersionName;
@@ -514,7 +521,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             private String revisionVersionName; 
 
             /**
-             * The release notes for the revision version.
+             * The release notes for the PolarProxy revision version.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -522,12 +529,11 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The release status of the revision version. Valid values:
+             * The release type. Valid values:
              * <p>
              * 
-             * *   **Stable**: The revision version is stable.
-             * *   **Old**: The revision version is outdated. We recommend that you do not update the cluster to this version.
-             * *   **HighRisk**: The revision version has critical defects. We recommend that you do not update the cluster to this version.
+             * *   **LTS**: a long-term version
+             * *   **BETA**: a preview version
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;
@@ -535,7 +541,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the revision version of the database engine to which the cluster can be upgraded.
+             * The PolarProxy revision version code. You can use this code to specify the PolarProxy revision version.
              */
             public Builder revisionVersionCode(String revisionVersionCode) {
                 this.revisionVersionCode = revisionVersionCode;
@@ -543,7 +549,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The revision version of the database engine.
+             * The PolarProxy revision version number.
              */
             public Builder revisionVersionName(String revisionVersionName) {
                 this.revisionVersionName = revisionVersionName;

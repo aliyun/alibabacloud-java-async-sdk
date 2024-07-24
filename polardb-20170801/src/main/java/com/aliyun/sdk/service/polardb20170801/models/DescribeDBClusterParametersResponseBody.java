@@ -129,7 +129,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine that the cluster runs. Valid values:
+         * The database engine that the clusters runs. Valid values:
          * <p>
          * 
          * *   **MySQL**
@@ -145,12 +145,14 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
          * The version of the database engine. 
          * <p>
          * 
-         * - Valid values for the MySQL database engine:    - **5.6**
+         * - Valid values for the MySQL database engine:   
+         *   - **5.6**
          *   - **5.7**
          *   - **8.0**
-         * - Valid value for the PostgreSQL database engine:    - **11**
+         * - Valid value for the PostgreSQL database engine:    
+         *   - **11**
          *   - **14**
-         * - Valid value for the Oracle database engine: **11**
+         * - Valid value for the Oracle database engine:  **11**
          */
         public Builder DBVersion(String DBVersion) {
             this.DBVersion = DBVersion;
@@ -174,7 +176,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * A comparison between the current parameters of the PolarDB cluster and the parameters of the source RDS instance before migration.
+         * A comparison of parameters between the source RDS instance and the destination PolarDB cluster.
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -190,7 +192,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The parameters that are in use.
+         * The parameters of the PolarDB cluster.
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -374,7 +376,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             private String rdsParameterValue; 
 
             /**
-             * Indicates whether the source parameters and current parameters have the same value.
+             * Indicates whether the source and current parameters have the same value.
              */
             public Builder isEqual(String isEqual) {
                 this.isEqual = isEqual;
@@ -382,7 +384,11 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * IsInstancePolarDBKey.
+             * Indicate whether the parameter is a primary parameter of the destination cluster. Valid values:
+             * <p>
+             * 
+             * *   **1**: The parameter is a primary parameter of the destination cluster.
+             * *   **0**: The parameter is not a primary parameter of the destination cluster.
              */
             public Builder isInstancePolarDBKey(String isInstancePolarDBKey) {
                 this.isInstancePolarDBKey = isInstancePolarDBKey;
@@ -390,7 +396,11 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * IsInstanceRdsKey.
+             * Indicate whether the parameter is a primary parameter of the source instance. Valid values:
+             * <p>
+             * 
+             * *   **1**: The parameter is a primary parameter of the source instance.
+             * *   **0**: The parameter is not a primary parameter of the source instance.
              */
             public Builder isInstanceRdsKey(String isInstanceRdsKey) {
                 this.isInstanceRdsKey = isInstanceRdsKey;
@@ -398,7 +408,11 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * IsPolarDBKey.
+             * Indicate whether the parameter is a primary parameter of the destination cluster. Valid values:
+             * <p>
+             * 
+             * *   **1**: The parameter is a primary parameter of the destination cluster.
+             * *   **0**: The parameter is not a primary parameter of the destination cluster.
              */
             public Builder isPolarDBKey(String isPolarDBKey) {
                 this.isPolarDBKey = isPolarDBKey;
@@ -406,7 +420,11 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * IsRdsKey.
+             * Indicate whether the parameter is a primary parameter of the source instance. Valid values:
+             * <p>
+             * 
+             * *   **1**: The parameter is a primary parameter of the source instance.
+             * *   **0**: The parameter is not a primary parameter of the source instance.
              */
             public Builder isRdsKey(String isRdsKey) {
                 this.isRdsKey = isRdsKey;
@@ -414,7 +432,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the parameter of the current cluster.
+             * The description of the parameter of the destination cluster.
              */
             public Builder distParameterDescription(String distParameterDescription) {
                 this.distParameterDescription = distParameterDescription;
@@ -422,7 +440,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter of the current cluster.
+             * The name of the parameter of the destination cluster.
              */
             public Builder distParameterName(String distParameterName) {
                 this.distParameterName = distParameterName;
@@ -430,7 +448,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The valid values of the parameter of the current cluster.
+             * The valid values of the parameter of the destination cluster.
              */
             public Builder distParameterOptional(String distParameterOptional) {
                 this.distParameterOptional = distParameterOptional;
@@ -438,7 +456,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter of the current cluster.
+             * The value of the parameter of the destination cluster.
              */
             public Builder distParameterValue(String distParameterValue) {
                 this.distParameterValue = distParameterValue;
@@ -511,7 +529,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             private java.util.List < ParametersParameters> parameters; 
 
             /**
-             * A comparison between the current parameters of the PolarDB cluster and the parameters of the source RDS instance before migration.
+             * A comparison of parameters between the source RDS instance and the destination PolarDB cluster.
              */
             public Builder parameters(java.util.List < ParametersParameters> parameters) {
                 this.parameters = parameters;
@@ -721,7 +739,7 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:
+             * Indicates whether a cluster restart is required for the parameter modification to take effect. Valid values:
              * <p>
              * 
              * *   **false**
@@ -748,8 +766,8 @@ public class DescribeDBClusterParametersResponseBody extends TeaModel {
              * Indicates whether the parameter is a global parameter. Valid values:
              * <p>
              * 
-             * *   **0**: yes. The modified parameter value is synchronized to other nodes.
-             * *   **1**: no. You can customize the nodes to which the modified parameter value can be synchronized.
+             * *   **0**: The parameter is a global parameter. The modified parameter value is synchronized to other nodes.
+             * *   **1**: The parameter is not a global parameter. You can specify the nodes to which the modified parameter value can be synchronized.
              */
             public Builder isNodeAvailable(String isNodeAvailable) {
                 this.isNodeAvailable = isNodeAvailable;

@@ -434,7 +434,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The connection string.
+             * The endpoint.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -589,7 +589,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
              * 
              * *   **Cluster**: the default cluster endpoint
              * *   **Primary**: the primary endpoint
-             * *   **Custom**: the custom cluster endpoint
+             * *   **Custom**: the custom endpoint
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -597,7 +597,11 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * ReadWriteMode.
+             * The read/write mode. Valid values:
+             * <p>
+             * 
+             * *   ReadWrite: receives and forwards read and write requests (automatic read-write splitting).
+             * *   ReadOnly (default): receives and forwards read requests only.
              */
             public Builder readWriteMode(String readWriteMode) {
                 this.readWriteMode = readWriteMode;
@@ -710,7 +714,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The connection string.
+             * The endpoint.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -852,7 +856,7 @@ public class DescribeDBClusterMigrationResponseBody extends TeaModel {
             }
 
             /**
-             * CustinsType.
+             * The type of the source database.
              */
             public Builder custinsType(String custinsType) {
                 this.custinsType = custinsType;

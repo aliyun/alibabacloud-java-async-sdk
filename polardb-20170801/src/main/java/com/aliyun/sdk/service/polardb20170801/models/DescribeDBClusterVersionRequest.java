@@ -133,11 +133,11 @@ public class DescribeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * Specify to return the latest version information or a list of upgradeable versions.Valid values:
+         * Specifies whether to query the information about the latest versions or the versions to which the cluster can be updated. Valid values:
          * <p>
          * 
-         * - AVAILABLE_VERSION
-         * - LATEST_VERSION
+         * *   LATEST_VERSION: the information about the latest versions.
+         * *   AVAILABLE_VERSION: the information about the versions to which the cluster can be updated.
          */
         public Builder describeType(String describeType) {
             this.putQueryParameter("DescribeType", describeType);

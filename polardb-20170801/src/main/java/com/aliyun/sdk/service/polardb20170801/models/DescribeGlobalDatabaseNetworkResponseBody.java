@@ -181,7 +181,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * The clusters that are included in the GDN.
+         * The clusters in the GDN.
          */
         public Builder DBClusters(java.util.List < DBClusters> DBClusters) {
             this.DBClusters = DBClusters;
@@ -314,7 +314,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             private String port; 
 
             /**
-             * The URL of the endpoint.
+             * The endpoint URL of the database service.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -322,7 +322,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The network type of the endpoint.
+             * The network type for the database connection.
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -330,7 +330,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of the endpoint.
+             * The port number for the database connection.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -475,7 +475,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the node in the cluster.
+             * The specifications of the node.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -483,7 +483,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder DBNodeId(String DBNodeId) {
                 this.DBNodeId = DBNodeId;
@@ -494,8 +494,8 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
              * The role of the node. Valid values:
              * <p>
              * 
-             * *   **Writer**: The node is the primary node.
-             * *   **Reader**: The node is a read-only node.
+             * *   **Writer**: the primary node
+             * *   **Reader**: a read-only node
              */
             public Builder DBNodeRole(String DBNodeRole) {
                 this.DBNodeRole = DBNodeRole;
@@ -506,18 +506,16 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
              * The status of the node. Valid values:
              * <p>
              * 
-             * *   **Creating**: The cluster is being created.
-             * *   **Running**: The cluster is running.
-             * *   **Deleting**: The cluster is being deleted.
-             * *   **Rebooting**: The cluster is restarting.
-             * *   **DBNodeCreating**: PolarProxy is being added.
-             * *   **DBNodeDeleting**: PolarProxy is being deleted.
-             * *   **ClassChanging**: The specifications of PolarProxy are being changed.
+             * *   **Creating**: The node is being created.
+             * *   **Running**: The node is running.
+             * *   **Deleting**: The node is being deleted.
+             * *   **Rebooting**: The node is restarting.
+             * *   **ClassChanging**: The specifications of the node are being changed.
              * *   **NetAddressCreating**: The network connection is being created.
              * *   **NetAddressDeleting**: The network connection is being deleted.
              * *   **NetAddressModifying**: The network connection is being modified.
-             * *   **MinorVersionUpgrading**: The minor version is being updated.
-             * *   **Maintaining**: The cluster is being maintained.
+             * *   **MinorVersionUpgrading**: The minor version of the node is being updated.
+             * *   **Maintaining**: The node is being maintained.
              * *   **Switching**: A failover is being performed.
              */
             public Builder DBNodeStatus(String DBNodeStatus) {
@@ -526,7 +524,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of failover. Each node is assigned a failover priority. If a failover occurs, a node can be selected as the primary node based on the priority. A larger value indicates a higher priority. Valid values: 1 to 15.
+             * The failover priority. Each node is assigned a failover priority. The failover priority determines which node is selected as the primary node when a failover occurs. A larger value indicates a higher priority. Valid values: 1 to 15.
              */
             public Builder failoverPriority(Integer failoverPriority) {
                 this.failoverPriority = failoverPriority;
@@ -534,7 +532,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of concurrent connections to the cluster.
+             * The maximum number of concurrent connections.
              */
             public Builder maxConnections(Integer maxConnections) {
                 this.maxConnections = maxConnections;
@@ -550,7 +548,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the cluster.
+             * The zone ID of the node.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -767,7 +765,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster in the GDN.
+             * The ID of the cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -775,7 +773,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster in the GDN. For more information, see [Cluster status table](~~99286~~).
+             * The status of the cluster. For more information, see [Cluster status table](~~99286~~).
              */
             public Builder DBClusterStatus(String DBClusterStatus) {
                 this.DBClusterStatus = DBClusterStatus;
@@ -783,7 +781,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the node in the cluster.
+             * The node specifications of the cluster.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -791,7 +789,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the node.
+             * The nodes of the cluster.
              */
             public Builder DBNodes(java.util.List < DBNodes> DBNodes) {
                 this.DBNodes = DBNodes;
@@ -799,7 +797,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database engine. Only MySQL is supported.
+             * The database engine type of the cluster. Only MySQL is supported.
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -818,7 +816,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
              * The expiration time of the cluster.
              * <p>
              * 
-             * > A specific value is returned only for subscription (**Prepaid**) clusters. For pay-as-you-go (**Postpaid**) clusters, an empty string is returned.
+             * >  A specific value is returned only for subscription (**Prepaid**) clusters. No value is returned for pay-as-you-go (**Postpaid**) clusters.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -826,13 +824,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster is expired. Valid values:
+             * Indicates whether the cluster has expired. Valid values:
              * <p>
              * 
-             * *   **true**
+             * *   **true** (default)
              * *   **false**
              * 
-             * > This parameter is returned only for subscription (**Prepaid**) clusters.
+             * >  This parameter is returned only for subscription (**Prepaid**) clusters.
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -843,8 +841,8 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
              * The billing method of the cluster. Valid values:
              * <p>
              * 
-             * *   **Postpaid**: pay-as-you-go.
-             * *   **Prepaid**: subscription.
+             * *   **Postpaid**: pay-as-you-go
+             * *   **Prepaid**: subscription
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -852,7 +850,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the cluster resides.
+             * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -860,7 +858,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The latency of cross-region data replication between the primary cluster and secondary clusters. Unit: seconds.
+             * The cross-region data replication latency between the primary cluster and secondary clusters. Unit: seconds.
              */
             public Builder replicaLag(String replicaLag) {
                 this.replicaLag = replicaLag;
@@ -872,9 +870,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Primary**: the primary cluster
-             * *   **standby**: the secondary cluster
+             * *   **standby**: a secondary cluster
              * 
-             * > A GDN consists of one primary cluster and up to four secondary clusters.
+             * >  A GDN consists of one primary cluster and up to four secondary clusters.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -882,7 +880,10 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * ServerlessType.
+             * Indicates whether the cluster is a serverless cluster. The value is fixed at AgileServerless.
+             * <p>
+             * 
+             * >  This parameter is returned only for serverless clusters.
              */
             public Builder serverlessType(String serverlessType) {
                 this.serverlessType = serverlessType;
@@ -890,7 +891,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The storage space that is occupied by the cluster. Unit: bytes.
+             * The storage usage of the cluster. Unit: bytes.
              */
             public Builder storageUsed(String storageUsed) {
                 this.storageUsed = storageUsed;

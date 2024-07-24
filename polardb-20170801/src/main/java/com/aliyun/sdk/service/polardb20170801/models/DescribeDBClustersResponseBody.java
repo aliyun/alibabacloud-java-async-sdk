@@ -295,7 +295,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the node.
+             * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -315,7 +315,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of node.
+             * The zone ID of the cluster.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -524,6 +524,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
+        @com.aliyun.core.annotation.NameInMap("HotStandbyCluster")
+        private String hotStandbyCluster;
+
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
@@ -593,6 +596,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             this.engine = builder.engine;
             this.expireTime = builder.expireTime;
             this.expired = builder.expired;
+            this.hotStandbyCluster = builder.hotStandbyCluster;
             this.lockMode = builder.lockMode;
             this.memorySize = builder.memorySize;
             this.payType = builder.payType;
@@ -740,6 +744,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return hotStandbyCluster
+         */
+        public String getHotStandbyCluster() {
+            return this.hotStandbyCluster;
+        }
+
+        /**
          * @return lockMode
          */
         public String getLockMode() {
@@ -876,6 +887,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String engine; 
             private String expireTime; 
             private String expired; 
+            private String hotStandbyCluster; 
             private String lockMode; 
             private String memorySize; 
             private String payType; 
@@ -975,7 +987,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The node specifications.
+             * The specifications of the node.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -1062,6 +1074,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
+             * HotStandbyCluster.
+             */
+            public Builder hotStandbyCluster(String hotStandbyCluster) {
+                this.hotStandbyCluster = hotStandbyCluster;
+                return this;
+            }
+
+            /**
              * The lock state of the cluster. Valid values:
              * <p>
              * 
@@ -1111,7 +1131,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1119,7 +1139,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster is a serverless cluster. **AgileServerless** indicates a serverless cluster. No value is returned for a common cluster.
+             * Indicates whether the cluster is a serverless cluster. **AgileServerless** indicates the cluster is a serverless cluster. No value is returned for a common cluster.
              */
             public Builder serverlessType(String serverlessType) {
                 this.serverlessType = serverlessType;
@@ -1147,7 +1167,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
