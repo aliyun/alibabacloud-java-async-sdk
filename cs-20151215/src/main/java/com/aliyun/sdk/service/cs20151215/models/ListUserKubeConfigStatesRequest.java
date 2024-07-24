@@ -81,7 +81,7 @@ public class ListUserKubeConfigStatesRequest extends Request {
         } 
 
         /**
-         * Uid.
+         * The ID of the specified Resource Access Management (RAM) user or RAM role within the Alibaba Cloud account.
          */
         public Builder uid(String uid) {
             this.putPathParameter("Uid", uid);
@@ -90,7 +90,11 @@ public class ListUserKubeConfigStatesRequest extends Request {
         }
 
         /**
-         * page_number.
+         * The page number.
+         * <p>
+         * 
+         * *   Valid values: ≥ 1.
+         * *   Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -99,7 +103,11 @@ public class ListUserKubeConfigStatesRequest extends Request {
         }
 
         /**
-         * page_size.
+         * The number of entries per page.
+         * <p>
+         * 
+         * *   Value values: 1 to 100.
+         * *   Default value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);

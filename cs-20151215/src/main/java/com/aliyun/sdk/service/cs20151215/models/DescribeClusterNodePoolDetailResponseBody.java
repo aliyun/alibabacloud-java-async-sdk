@@ -205,7 +205,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 节点配置
+         * node_config.
          */
         public Builder nodeConfig(NodeConfig nodeConfig) {
             this.nodeConfig = nodeConfig;
@@ -221,7 +221,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration of the scaling group.
+         * The configurations of the scaling group.
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
             this.scalingGroup = scalingGroup;
@@ -747,7 +747,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 扩容后的节点是否可调度。
+             * unschedulable.
              */
             public Builder unschedulable(Boolean unschedulable) {
                 this.unschedulable = unschedulable;
@@ -796,7 +796,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private Boolean restartNode; 
 
             /**
-             * 是否允许重启节点。
+             * restart_node.
              */
             public Builder restartNode(Boolean restartNode) {
                 this.restartNode = restartNode;
@@ -837,7 +837,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private Boolean autoUpgradeKubelet; 
 
             /**
-             * 是否允许自动升级kubelet。
+             * auto_upgrade_kubelet.
              */
             public Builder autoUpgradeKubelet(Boolean autoUpgradeKubelet) {
                 this.autoUpgradeKubelet = autoUpgradeKubelet;
@@ -890,7 +890,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String vulLevel; 
 
             /**
-             * 是否允许重启节点。
+             * restart_node.
              */
             public Builder restartNode(Boolean restartNode) {
                 this.restartNode = restartNode;
@@ -898,7 +898,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 允许自动修复的漏洞级别，以逗号分隔。
+             * vul_level.
              */
             public Builder vulLevel(String vulLevel) {
                 this.vulLevel = vulLevel;
@@ -1143,7 +1143,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 自动修复节点策略。
+             * auto_repair_policy.
              */
             public Builder autoRepairPolicy(AutoRepairPolicy autoRepairPolicy) {
                 this.autoRepairPolicy = autoRepairPolicy;
@@ -1151,7 +1151,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否自动升级。
+             * Indicates whether auto update is enabled. Valid values:
+             * <p>
+             * 
+             * *   `true`: Auto update is enabled.
+             * *   `false`: Auto update is disabled.
              */
             public Builder autoUpgrade(Boolean autoUpgrade) {
                 this.autoUpgrade = autoUpgrade;
@@ -1159,7 +1163,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 自动升级策略。
+             * auto_upgrade_policy.
              */
             public Builder autoUpgradePolicy(AutoUpgradePolicy autoUpgradePolicy) {
                 this.autoUpgradePolicy = autoUpgradePolicy;
@@ -1167,7 +1171,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否自动修复CVE。
+             * auto_vul_fix.
              */
             public Builder autoVulFix(Boolean autoVulFix) {
                 this.autoVulFix = autoVulFix;
@@ -1175,7 +1179,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 自动修复CVE策略。
+             * auto_vul_fix_policy.
              */
             public Builder autoVulFixPolicy(AutoVulFixPolicy autoVulFixPolicy) {
                 this.autoVulFixPolicy = autoVulFixPolicy;
@@ -1236,7 +1240,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private KubeletConfig kubeletConfiguration; 
 
             /**
-             * Kubelet参数配置。
+             * kubelet_configuration.
              */
             public Builder kubeletConfiguration(KubeletConfig kubeletConfiguration) {
                 this.kubeletConfiguration = kubeletConfiguration;
@@ -1539,7 +1543,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String priceLimit; 
 
             /**
-             * The instance type of preemptible instances.
+             * The instance type of the preemptible instances.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1547,7 +1551,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The price limit of a preemptible instance.
+             * The price cap of a preemptible instance of the type.
              * <p>
              * 
              * Unit: USD/hour.
@@ -2179,7 +2183,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 【已废弃】请使用参数security_hardening_os替代。
+             * cis_enabled.
              */
             public Builder cisEnabled(Boolean cisEnabled) {
                 this.cisEnabled = cisEnabled;
@@ -2231,7 +2235,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 操作系统镜像类型。
+             * image_type.
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -2251,7 +2255,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * instance_patterns.
+             * 实例属性
              */
             public Builder instancePatterns(java.util.List < InstancePatterns > instancePatterns) {
                 this.instancePatterns = instancePatterns;
@@ -2291,7 +2295,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 弹出的ECS实例是否使用以非root用户登录。
+             * login_as_non_root.
              */
             public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
                 this.loginAsNonRoot = loginAsNonRoot;
@@ -2399,7 +2403,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ram_role_name.
+             * Worker RAM角色名称。
              */
             public Builder ramRoleName(String ramRoleName) {
                 this.ramRoleName = ramRoleName;
@@ -2451,13 +2455,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 阿里云OS安全加固。取值：
-             * <p>
-             * 
-             * - `true`：开启阿里云OS安全加固。
-             * - `false`：不开启阿里云OS安全加固。
-             * 
-             * 默认值：`false`。
+             * security_hardening_os.
              */
             public Builder securityHardeningOs(Boolean securityHardeningOs) {
                 this.securityHardeningOs = securityHardeningOs;
@@ -2465,7 +2463,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。
+             * soc_enabled.
              */
             public Builder socEnabled(Boolean socEnabled) {
                 this.socEnabled = socEnabled;
@@ -2516,7 +2514,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 节点系统盘是否开启Burst（性能突发），磁盘类型为cloud_auto时配置。
+             * system_disk_bursting_enabled.
              */
             public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
                 this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
@@ -2524,16 +2522,17 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 系统盘的多磁盘类型。当无法使用高优先级的磁盘类型时，自动尝试下一优先级的磁盘类型创建系统盘。取值：
+             * The system disk types. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: Valid values:
              * <p>
-             * - `cloud`：普通云盘。
-             * - `cloud_efficiency`：高效云盘。
-             * - `cloud_ssd`：SSD云盘。
-             * - `cloud_essd`：ESSD云盘。
-             * - `cloud_auto`：ESSD AutoPL 云盘。
-             * - `cloud_essd_entry`：ESSD Entry 云盘。
              * 
-             * 默认值：`cloud_efficiency`
+             * *   `cloud`: basic disk
+             * *   `cloud_efficiency`: ultra disk
+             * *   `cloud_ssd`: standard SSD
+             * *   `cloud_essd`: ESSD
+             * *   `cloud_auto`: ESSD AutoPL disk
+             * *   `cloud_essd_entry`: ESSD Entry disk
+             * 
+             * Default value: `cloud_efficiency`.
              */
             public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
@@ -2541,11 +2540,17 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of system disk. Valid values:
+             * The system disk type. Valid values:
              * <p>
              * 
-             * *   `cloud_efficiency`: ultra disk.
-             * *   `cloud_ssd`: standard SSD.
+             * *   `cloud`: basic disk
+             * *   `cloud_efficiency`: ultra disk
+             * *   `cloud_ssd`: standard SSD
+             * *   `cloud_essd`: Enterprise SSD (ESSD)
+             * *   `cloud_auto`: ESSD AutoPL disk
+             * *   `cloud_essd_entry`: ESSD Entry disk
+             * 
+             * Default value: `cloud_efficiency`.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -2553,7 +2558,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 系统盘采用的加密算法。取值范围：aes-256。
+             * system_disk_encrypt_algorithm.
              */
             public Builder systemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
                 this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
@@ -2561,10 +2566,11 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否加密系统盘。取值：
+             * Specifies whether to encrypt the system disk. Valid values: Valid values:
              * <p>
-             * - `true`：加密。
-             * - `false`：不加密。
+             * 
+             * *   `true`: encrypts the system disk.
+             * *   `false`: does not encrypt the system disk.
              */
             public Builder systemDiskEncrypted(Boolean systemDiskEncrypted) {
                 this.systemDiskEncrypted = systemDiskEncrypted;
@@ -2572,7 +2578,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 系统盘使用的KMS密钥ID。
+             * system_disk_kms_key_id.
              */
             public Builder systemDiskKmsKeyId(String systemDiskKmsKeyId) {
                 this.systemDiskKmsKeyId = systemDiskKmsKeyId;
@@ -2588,7 +2594,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 节点系统盘预配置的读写IOPS，磁盘类型为cloud_auto时配置。
+             * system_disk_provisioned_iops.
              */
             public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
                 this.systemDiskProvisionedIops = systemDiskProvisionedIops;

@@ -83,7 +83,7 @@ public class CleanClusterUserPermissionsRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,7 +92,7 @@ public class CleanClusterUserPermissionsRequest extends Request {
         }
 
         /**
-         * Uid.
+         * The ID of the specified Resource Access Management (RAM) user or RAM role within the Alibaba Cloud account.
          */
         public Builder uid(String uid) {
             this.putPathParameter("Uid", uid);
@@ -101,7 +101,11 @@ public class CleanClusterUserPermissionsRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to forcefully delete the specified kubeconfig files. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): checks the cluster access records within the previous seven days before deleting the kubeconfig files. The kubeconfig files are not deleted if cluster access records are found or fail to be retrieved.
+         * *   **true**: forcefully deletes the kubeconfig files without checking cluster access records.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);

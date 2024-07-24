@@ -49,7 +49,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         private java.util.List < States> states; 
 
         /**
-         * page.
+         * The pagination information.
          */
         public Builder page(Page page) {
             this.page = page;
@@ -57,7 +57,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         }
 
         /**
-         * states.
+         * The status of the kubeconfig files associated with the cluster.
          */
         public Builder states(java.util.List < States> states) {
             this.states = states;
@@ -121,7 +121,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * page_number.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -129,7 +129,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * page_size.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -137,7 +137,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * total_count.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -262,7 +262,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             private Boolean revokable; 
 
             /**
-             * account_display_name.
+             * The display name of the account.
              */
             public Builder accountDisplayName(String accountDisplayName) {
                 this.accountDisplayName = accountDisplayName;
@@ -270,7 +270,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * account_id.
+             * The ID of an Alibaba Cloud account, RAM user, or RAM role.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -278,7 +278,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * account_name.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -286,7 +286,12 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * account_state.
+             * The status of the account. Valid values:
+             * <p>
+             * 
+             * *   Active: The account is active.
+             * *   InActive: The account is locked.
+             * *   Deleted: The account is deleted.
              */
             public Builder accountState(String accountState) {
                 this.accountState = accountState;
@@ -294,7 +299,12 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * account_type.
+             * The type of the account. Valid values:
+             * <p>
+             * 
+             * *   RootAccount: Alibaba Cloud account.
+             * *   RamUser: RAM user.
+             * *   RamRole: RAM role.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -302,7 +312,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * cert_expire_time.
+             * Expiration time of the certificate.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -310,7 +320,12 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * cert_state.
+             * The status of the certificate.
+             * <p>
+             * 
+             * *   Unexpired: The certificate is not expired.
+             * *   Expired: The certificate is expired.
+             * *   Unknown: The status of the certificate is unknown.
              */
             public Builder certState(String certState) {
                 this.certState = certState;
@@ -318,7 +333,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * revokable.
+             * Indicates whether the certificate can be revoked.
              */
             public Builder revokable(Boolean revokable) {
                 this.revokable = revokable;

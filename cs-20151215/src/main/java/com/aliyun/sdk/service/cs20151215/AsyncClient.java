@@ -49,8 +49,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckServiceRoleResponse> checkServiceRole(CheckServiceRoleRequest request);
 
+    /**
+      * > 
+      * *   To call this operation, make sure that you have the AliyunCSFullAccess permissions.
+      * *   You cannot revoke the permissions of an Alibaba Cloud account.
+      * *   You cannot revoke the permissions of the account that you use to call this operation.
+      *
+     */
     CompletableFuture<CleanClusterUserPermissionsResponse> cleanClusterUserPermissions(CleanClusterUserPermissionsRequest request);
 
+    /**
+      * >- To call this operation, make sure that you have the AliyunCSFullAccess permissions.
+      * >- You cannot revoke the permissions of an Alibaba Cloud account.
+      * >- You cannot revoke the permissions of the account that you use to call this operation.
+      *
+     */
     CompletableFuture<CleanUserPermissionsResponse> cleanUserPermissions(CleanUserPermissionsRequest request);
 
     CompletableFuture<CreateAutoscalingConfigResponse> createAutoscalingConfig(CreateAutoscalingConfigRequest request);
@@ -294,12 +307,22 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListClusterChecksResponse> listClusterChecks(ListClusterChecksRequest request);
 
+    /**
+      * > 
+      * *   To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.
+      * *   To call this operation, make sure that you have the AliyunCSFullAccess permissions.
+      *
+     */
     CompletableFuture<ListClusterKubeconfigStatesResponse> listClusterKubeconfigStates(ListClusterKubeconfigStatesRequest request);
 
     CompletableFuture<ListOperationPlansResponse> listOperationPlans(ListOperationPlansRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
+    /**
+      * >  To call this operation, make sure that you have the AliyunCSFullAccess permissions.
+      *
+     */
     CompletableFuture<ListUserKubeConfigStatesResponse> listUserKubeConfigStates(ListUserKubeConfigStatesRequest request);
 
     CompletableFuture<MigrateClusterResponse> migrateCluster(MigrateClusterRequest request);
@@ -428,6 +451,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
+    /**
+      * Before you call this operation, ensure that you understand the billing methods and pricing of [Simple Log Service](https://www.aliyun.com/price/product#/sls/detail/sls) (SLS).
+      *
+     */
     CompletableFuture<UpdateClusterAuditLogConfigResponse> updateClusterAuditLogConfig(UpdateClusterAuditLogConfigRequest request);
 
     CompletableFuture<UpdateContactGroupForAlertResponse> updateContactGroupForAlert(UpdateContactGroupForAlertRequest request);

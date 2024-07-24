@@ -82,7 +82,7 @@ public class DescribeClusterResourcesRequest extends Request {
         }
 
         /**
-         * with_addon_resources.
+         * Specifies whether to query the resources created by cluster components at the same time.
          */
         public Builder withAddonResources(Boolean withAddonResources) {
             this.putQueryParameter("with_addon_resources", withAddonResources);

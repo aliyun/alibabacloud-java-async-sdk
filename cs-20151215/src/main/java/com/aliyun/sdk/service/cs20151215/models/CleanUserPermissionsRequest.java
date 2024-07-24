@@ -82,7 +82,7 @@ public class CleanUserPermissionsRequest extends Request {
         } 
 
         /**
-         * Uid.
+         * The ID of the specified Resource Access Management (RAM) user or RAM role within the Alibaba Cloud account.
          */
         public Builder uid(String uid) {
             this.putPathParameter("Uid", uid);
@@ -91,7 +91,10 @@ public class CleanUserPermissionsRequest extends Request {
         }
 
         /**
-         * ClusterIds.
+         * The cluster IDs.
+         * <p>
+         * 
+         * *   If cluster IDs are specified, only the kubeconfig files of the specified clusters and the relevant RBAC permissions are deleted and revoked.
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             String clusterIdsShrink = shrink(clusterIds, "ClusterIds", "simple");
@@ -101,7 +104,11 @@ public class CleanUserPermissionsRequest extends Request {
         }
 
         /**
-         * Force.
+         * Specifies whether to forcefully delete the specified kubeconfig files. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): checks the cluster access records within the previous seven days before deleting the kubeconfig files. The kubeconfig files are not deleted if cluster access records are found or fail to be retrieved.
+         * *   **true**: forcefully deletes the kubeconfig files without checking cluster access records.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);

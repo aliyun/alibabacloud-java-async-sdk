@@ -208,6 +208,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   To call this operation, make sure that you have the AliyunCSFullAccess permissions.
+      * *   You cannot revoke the permissions of an Alibaba Cloud account.
+      * *   You cannot revoke the permissions of the account that you use to call this operation.
+      *
+     */
     @Override
     public CompletableFuture<CleanClusterUserPermissionsResponse> cleanClusterUserPermissions(CleanClusterUserPermissionsRequest request) {
         try {
@@ -222,6 +229,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >- To call this operation, make sure that you have the AliyunCSFullAccess permissions.
+      * >- You cannot revoke the permissions of an Alibaba Cloud account.
+      * >- You cannot revoke the permissions of the account that you use to call this operation.
+      *
+     */
     @Override
     public CompletableFuture<CleanUserPermissionsResponse> cleanUserPermissions(CleanUserPermissionsRequest request) {
         try {
@@ -1401,6 +1414,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.
+      * *   To call this operation, make sure that you have the AliyunCSFullAccess permissions.
+      *
+     */
     @Override
     public CompletableFuture<ListClusterKubeconfigStatesResponse> listClusterKubeconfigStates(ListClusterKubeconfigStatesRequest request) {
         try {
@@ -1443,6 +1462,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  To call this operation, make sure that you have the AliyunCSFullAccess permissions.
+      *
+     */
     @Override
     public CompletableFuture<ListUserKubeConfigStatesResponse> listUserKubeConfigStates(ListUserKubeConfigStatesRequest request) {
         try {
@@ -1955,6 +1978,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, ensure that you understand the billing methods and pricing of [Simple Log Service](https://www.aliyun.com/price/product#/sls/detail/sls) (SLS).
+      *
+     */
     @Override
     public CompletableFuture<UpdateClusterAuditLogConfigResponse> updateClusterAuditLogConfig(UpdateClusterAuditLogConfigRequest request) {
         try {
@@ -2081,7 +2108,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<UpgradeClusterAddonsResponse> upgradeClusterAddons(UpgradeClusterAddonsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpgradeClusterAddons").setMethod(HttpMethod.POST).setPathRegex("/clusters/{ClusterId}/components/upgrade").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpgradeClusterAddons").setMethod(HttpMethod.POST).setPathRegex("/clusters/{ClusterId}/components/upgrade").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpgradeClusterAddonsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

@@ -61,7 +61,7 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -69,7 +69,7 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class UpdateClusterAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

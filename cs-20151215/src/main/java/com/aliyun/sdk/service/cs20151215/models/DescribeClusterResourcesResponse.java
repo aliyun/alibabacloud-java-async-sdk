@@ -254,7 +254,7 @@ public class DescribeClusterResourcesResponse extends Response {
             private String name; 
 
             /**
-             * kind.
+             * The Kubernetes object type.
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -262,7 +262,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * namespace.
+             * The namespace in which the Kubernetes object resides.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -270,7 +270,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * name.
+             * The Kubernetes object name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -323,7 +323,7 @@ public class DescribeClusterResourcesResponse extends Response {
             private Boolean changeable; 
 
             /**
-             * delete_by_default.
+             * Specifies whether to delete the resource by default when the cluster is deleted.
              */
             public Builder deleteByDefault(Boolean deleteByDefault) {
                 this.deleteByDefault = deleteByDefault;
@@ -331,7 +331,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * changeable.
+             * Specifies whether the default behavior returned in delete_by_default can be changed.
              */
             public Builder changeable(Boolean changeable) {
                 this.changeable = changeable;
@@ -528,7 +528,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * The information about the resource. For more information about how to query the source information about a resource, see [ListStackResources](~~133836~~).
+             * The resource information. For more information about how to query the source information about the resource, see [ListStackResources](~~133836~~).
              */
             public Builder resourceInfo(String resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -547,14 +547,14 @@ public class DescribeClusterResourcesResponse extends Response {
              * The resource status. Valid values:
              * <p>
              * 
-             * *   `CREATE_COMPLETE`: The resource is created.
-             * *   `CREATE_FAILED`: The resource failed to be created.
-             * *   `CREATE_IN_PROGRESS`: The resource is being created.
-             * *   `DELETE_FAILED`: The resource failed to be deleted.
-             * *   `DELETE_IN_PROGRESS`: The resource is being deleted.
-             * *   `ROLLBACK_COMPLETE`: The resource is rolled back.
-             * *   `ROLLBACK_FAILED`: The resource failed to be rolled back.
-             * *   `ROLLBACK_IN_PROGRESS`: The resource is being rolled back.
+             * *   `CREATE_COMPLETE`: the resource is created.
+             * *   `CREATE_FAILED`: the resource failed to be created.
+             * *   `CREATE_IN_PROGRESS`: the resource is being created.
+             * *   `DELETE_FAILED`: the resource failed to be deleted.
+             * *   `DELETE_IN_PROGRESS`: the resource is being deleted.
+             * *   `ROLLBACK_COMPLETE`: the resource is rolled back.
+             * *   `ROLLBACK_FAILED`: the resource failed to be rolled back.
+             * *   `ROLLBACK_IN_PROGRESS`: the resource is being rolled back.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -562,11 +562,11 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * Indicates whether the resource is created by Container Service for Kubernetes (ACK). Valid values:
+             * Specifies whether the resource is created by Container Service for Kubernetes (ACK). Valid values:
              * <p>
              * 
-             * *   1: The resource is created by ACK.
-             * *   0: The resource is an existing resource.
+             * *   1: the resource is created by ACK.
+             * *   0: the resource is an existing resource.
              */
             public Builder autoCreate(Long autoCreate) {
                 this.autoCreate = autoCreate;
@@ -574,7 +574,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * dependencies.
+             * The dependent resources.
              */
             public Builder dependencies(java.util.List < Dependencies> dependencies) {
                 this.dependencies = dependencies;
@@ -582,7 +582,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * associated_object.
+             * The Kubernetes object with which the resource is associated.
              */
             public Builder associatedObject(AssociatedObject associatedObject) {
                 this.associatedObject = associatedObject;
@@ -590,7 +590,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * delete_behavior.
+             * The deletion behavior of the resource when the cluster is deleted.
              */
             public Builder deleteBehavior(DeleteBehavior deleteBehavior) {
                 this.deleteBehavior = deleteBehavior;
@@ -598,7 +598,12 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * creator_type.
+             * The type of the resource creator. Valid values:
+             * <p>
+             * 
+             * *   user: the resource is created by the user.
+             * *   system: the resource is created by the ACK management system.
+             * *   addon: the resource is created by a cluster component.
              */
             public Builder creatorType(String creatorType) {
                 this.creatorType = creatorType;
@@ -606,7 +611,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * extra_info.
+             * The additional information about the resource.
              */
             public Builder extraInfo(java.util.Map < String, ? > extraInfo) {
                 this.extraInfo = extraInfo;

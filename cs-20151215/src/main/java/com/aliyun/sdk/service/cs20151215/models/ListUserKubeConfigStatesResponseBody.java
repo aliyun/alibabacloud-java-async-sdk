@@ -49,7 +49,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         private java.util.List < States> states; 
 
         /**
-         * page.
+         * The pagination information.
          */
         public Builder page(Page page) {
             this.page = page;
@@ -57,7 +57,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
         }
 
         /**
-         * states.
+         * The status of the kubeconfig files.
          */
         public Builder states(java.util.List < States> states) {
             this.states = states;
@@ -121,7 +121,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * page_number.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -129,7 +129,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * page_size.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -137,7 +137,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * total_count.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -226,7 +226,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             private String clusterState; 
 
             /**
-             * cert_expire_time.
+             * The expiration date of the certificate used in a kubeconfig file. Format: the UTC time in the RFC3339 format.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -234,7 +234,14 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * cert_state.
+             * The current status of the certificate used in a kubeconfig file. Valid values:
+             * <p>
+             * 
+             * *   Expired: The certificate is expired.
+             * *   Unexpired: The certificate is not expired.
+             * *   Unissued: The certificate is not issued.
+             * *   Unknown: The status of the certificate is unknown.
+             * *   Removed: The certificate is removed. An issue record is found for the certificate.
              */
             public Builder certState(String certState) {
                 this.certState = certState;
@@ -242,7 +249,7 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * cluster_id.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -250,7 +257,10 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * cluster_name.
+             * The cluster name.
+             * <p>
+             * 
+             * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -258,7 +268,21 @@ public class ListUserKubeConfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * cluster_state.
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   `initial`: The cluster is being created.
+             * *   `failed`: The cluster failed to be created.
+             * *   `running`: The cluster is running.
+             * *   `updating`: The cluster is being upgraded.
+             * *   `updating_failed`: The cluster failed to be updated.
+             * *   `scaling`: The cluster is being scaled.
+             * *   `waiting`: The cluster is waiting for connection requests.
+             * *   `disconnected`: The cluster is disconnected.
+             * *   `stopped`: The cluster is stopped.
+             * *   `deleting`: The cluster is being deleted.
+             * *   `deleted`: The cluster is deleted.
+             * *   `delete_failed`: The cluster failed to be deleted.
              */
             public Builder clusterState(String clusterState) {
                 this.clusterState = clusterState;

@@ -6,18 +6,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CleanUserPermissionsResponseBody} extends {@link TeaModel}
+ * {@link UpgradeClusterAddonsResponseBody} extends {@link TeaModel}
  *
- * <p>CleanUserPermissionsResponseBody</p>
+ * <p>UpgradeClusterAddonsResponseBody</p>
  */
-public class CleanUserPermissionsResponseBody extends TeaModel {
+public class UpgradeClusterAddonsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("cluster_id")
+    private String clusterId;
+
     @com.aliyun.core.annotation.NameInMap("request_id")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("task_id")
     private String taskId;
 
-    private CleanUserPermissionsResponseBody(Builder builder) {
+    private UpgradeClusterAddonsResponseBody(Builder builder) {
+        this.clusterId = builder.clusterId;
         this.requestId = builder.requestId;
         this.taskId = builder.taskId;
     }
@@ -26,8 +30,15 @@ public class CleanUserPermissionsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CleanUserPermissionsResponseBody create() {
+    public static UpgradeClusterAddonsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return clusterId
+     */
+    public String getClusterId() {
+        return this.clusterId;
     }
 
     /**
@@ -45,11 +56,20 @@ public class CleanUserPermissionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String clusterId; 
         private String requestId; 
         private String taskId; 
 
         /**
-         * 请求ID。
+         * cluster_id.
+         */
+        public Builder clusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * request_id.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,15 +77,15 @@ public class CleanUserPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * 任务ID
+         * task_id.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
 
-        public CleanUserPermissionsResponseBody build() {
-            return new CleanUserPermissionsResponseBody(this);
+        public UpgradeClusterAddonsResponseBody build() {
+            return new UpgradeClusterAddonsResponseBody(this);
         } 
 
     } 
