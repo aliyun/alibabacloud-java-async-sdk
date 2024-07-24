@@ -71,11 +71,23 @@ public class AudioPreviewPlayInfo extends TeaModel {
     } 
 
     public static class Meta extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bitrate")
+        private Long bitrate;
+
+        @com.aliyun.core.annotation.NameInMap("channels")
+        private Long channels;
+
         @com.aliyun.core.annotation.NameInMap("duration")
         private Double duration;
 
+        @com.aliyun.core.annotation.NameInMap("sample_rate")
+        private Long sampleRate;
+
         private Meta(Builder builder) {
+            this.bitrate = builder.bitrate;
+            this.channels = builder.channels;
             this.duration = builder.duration;
+            this.sampleRate = builder.sampleRate;
         }
 
         public static Builder builder() {
@@ -87,20 +99,68 @@ public class AudioPreviewPlayInfo extends TeaModel {
         }
 
         /**
+         * @return bitrate
+         */
+        public Long getBitrate() {
+            return this.bitrate;
+        }
+
+        /**
+         * @return channels
+         */
+        public Long getChannels() {
+            return this.channels;
+        }
+
+        /**
          * @return duration
          */
         public Double getDuration() {
             return this.duration;
         }
 
+        /**
+         * @return sampleRate
+         */
+        public Long getSampleRate() {
+            return this.sampleRate;
+        }
+
         public static final class Builder {
+            private Long bitrate; 
+            private Long channels; 
             private Double duration; 
+            private Long sampleRate; 
+
+            /**
+             * bitrate.
+             */
+            public Builder bitrate(Long bitrate) {
+                this.bitrate = bitrate;
+                return this;
+            }
+
+            /**
+             * channels.
+             */
+            public Builder channels(Long channels) {
+                this.channels = channels;
+                return this;
+            }
 
             /**
              * duration.
              */
             public Builder duration(Double duration) {
                 this.duration = duration;
+                return this;
+            }
+
+            /**
+             * sample_rate.
+             */
+            public Builder sampleRate(Long sampleRate) {
+                this.sampleRate = sampleRate;
                 return this;
             }
 

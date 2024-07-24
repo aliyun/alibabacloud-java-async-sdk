@@ -11,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UserTag</p>
  */
 public class UserTag extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Value")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String value;
-
     @com.aliyun.core.annotation.NameInMap("key")
     @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
+    @com.aliyun.core.annotation.NameInMap("value")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String value;
+
     private UserTag(Builder builder) {
-        this.value = builder.value;
         this.key = builder.key;
+        this.value = builder.value;
     }
 
     public static Builder builder() {
@@ -33,36 +33,36 @@ public class UserTag extends TeaModel {
     }
 
     /**
-     * @return value
-     */
-    public String getValue() {
-        return this.value;
-    }
-
-    /**
      * @return key
      */
     public String getKey() {
         return this.key;
     }
 
-    public static final class Builder {
-        private String value; 
-        private String key; 
+    /**
+     * @return value
+     */
+    public String getValue() {
+        return this.value;
+    }
 
-        /**
-         * Value.
-         */
-        public Builder value(String value) {
-            this.value = value;
-            return this;
-        }
+    public static final class Builder {
+        private String key; 
+        private String value; 
 
         /**
          * key.
          */
         public Builder key(String key) {
             this.key = key;
+            return this;
+        }
+
+        /**
+         * value.
+         */
+        public Builder value(String value) {
+            this.value = value;
             return this;
         }
 

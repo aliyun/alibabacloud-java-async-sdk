@@ -35,6 +35,10 @@ public class GetDownloadUrlRequest extends Request {
     private String fileName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("response_content_type")
+    private String responseContentType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("share_id")
     private String shareId;
 
@@ -45,6 +49,7 @@ public class GetDownloadUrlRequest extends Request {
         this.expireSec = builder.expireSec;
         this.fileId = builder.fileId;
         this.fileName = builder.fileName;
+        this.responseContentType = builder.responseContentType;
         this.shareId = builder.shareId;
     }
 
@@ -97,6 +102,13 @@ public class GetDownloadUrlRequest extends Request {
     }
 
     /**
+     * @return responseContentType
+     */
+    public String getResponseContentType() {
+        return this.responseContentType;
+    }
+
+    /**
      * @return shareId
      */
     public String getShareId() {
@@ -109,6 +121,7 @@ public class GetDownloadUrlRequest extends Request {
         private Integer expireSec; 
         private String fileId; 
         private String fileName; 
+        private String responseContentType; 
         private String shareId; 
 
         private Builder() {
@@ -122,6 +135,7 @@ public class GetDownloadUrlRequest extends Request {
             this.expireSec = request.expireSec;
             this.fileId = request.fileId;
             this.fileName = request.fileName;
+            this.responseContentType = request.responseContentType;
             this.shareId = request.shareId;
         } 
 
@@ -167,6 +181,15 @@ public class GetDownloadUrlRequest extends Request {
         public Builder fileName(String fileName) {
             this.putBodyParameter("file_name", fileName);
             this.fileName = fileName;
+            return this;
+        }
+
+        /**
+         * response_content_type.
+         */
+        public Builder responseContentType(String responseContentType) {
+            this.putBodyParameter("response_content_type", responseContentType);
+            this.responseContentType = responseContentType;
             return this;
         }
 

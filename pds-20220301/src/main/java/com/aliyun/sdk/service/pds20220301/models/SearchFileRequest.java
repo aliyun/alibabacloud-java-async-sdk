@@ -43,6 +43,10 @@ public class SearchFileRequest extends Request {
     private String query;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("recursive")
+    private Boolean recursive;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("return_total_count")
     private Boolean returnTotalCount;
 
@@ -55,6 +59,7 @@ public class SearchFileRequest extends Request {
         this.marker = builder.marker;
         this.orderBy = builder.orderBy;
         this.query = builder.query;
+        this.recursive = builder.recursive;
         this.returnTotalCount = builder.returnTotalCount;
     }
 
@@ -121,6 +126,13 @@ public class SearchFileRequest extends Request {
     }
 
     /**
+     * @return recursive
+     */
+    public Boolean getRecursive() {
+        return this.recursive;
+    }
+
+    /**
      * @return returnTotalCount
      */
     public Boolean getReturnTotalCount() {
@@ -135,6 +147,7 @@ public class SearchFileRequest extends Request {
         private String marker; 
         private String orderBy; 
         private String query; 
+        private Boolean recursive; 
         private Boolean returnTotalCount; 
 
         private Builder() {
@@ -150,6 +163,7 @@ public class SearchFileRequest extends Request {
             this.marker = request.marker;
             this.orderBy = request.orderBy;
             this.query = request.query;
+            this.recursive = request.recursive;
             this.returnTotalCount = request.returnTotalCount;
         } 
 
@@ -235,6 +249,15 @@ public class SearchFileRequest extends Request {
         public Builder query(String query) {
             this.putBodyParameter("query", query);
             this.query = query;
+            return this;
+        }
+
+        /**
+         * recursive.
+         */
+        public Builder recursive(Boolean recursive) {
+            this.putBodyParameter("recursive", recursive);
+            this.recursive = recursive;
             return this;
         }
 
