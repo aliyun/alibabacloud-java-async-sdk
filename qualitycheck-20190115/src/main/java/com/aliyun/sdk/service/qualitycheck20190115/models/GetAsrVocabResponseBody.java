@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAsrVocabResponseBody</p>
  */
 public class GetAsrVocabResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetAsrVocabResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class GetAsrVocabResponseBody extends TeaModel {
     } 
 
     public static class Word extends TeaModel {
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
-        @NameInMap("Word")
+        @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
 
         private Word(Builder builder) {
@@ -193,7 +192,7 @@ public class GetAsrVocabResponseBody extends TeaModel {
 
     }
     public static class Words extends TeaModel {
-        @NameInMap("Word")
+        @com.aliyun.core.annotation.NameInMap("Word")
         private java.util.List < Word> word;
 
         private Words(Builder builder) {
@@ -234,10 +233,10 @@ public class GetAsrVocabResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private Words words;
 
         private Data(Builder builder) {

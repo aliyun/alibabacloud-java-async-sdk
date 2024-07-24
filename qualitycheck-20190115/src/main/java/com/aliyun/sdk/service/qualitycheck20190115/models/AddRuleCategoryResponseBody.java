@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddRuleCategoryResponseBody</p>
  */
 public class AddRuleCategoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private AddRuleCategoryResponseBody(Builder builder) {
@@ -132,11 +131,15 @@ public class AddRuleCategoryResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Select")
+        @com.aliyun.core.annotation.NameInMap("Select")
         private Boolean select;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private Integer type;
 
         private Data(Builder builder) {
             this.select = builder.select;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -154,14 +157,30 @@ public class AddRuleCategoryResponseBody extends TeaModel {
             return this.select;
         }
 
+        /**
+         * @return type
+         */
+        public Integer getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private Boolean select; 
+            private Integer type; 
 
             /**
              * Select.
              */
             public Builder select(Boolean select) {
                 this.select = select;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(Integer type) {
+                this.type = type;
                 return this;
             }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSetResponseBody</p>
  */
 public class ListDataSetResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Messages")
+    @com.aliyun.core.annotation.NameInMap("Messages")
     private Messages messages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListDataSetResponseBody(Builder builder) {
@@ -252,73 +251,73 @@ public class ListDataSetResponseBody extends TeaModel {
     } 
 
     public static class DataData extends TeaModel {
-        @NameInMap("AutoTranscoding")
+        @com.aliyun.core.annotation.NameInMap("AutoTranscoding")
         private Integer autoTranscoding;
 
-        @NameInMap("ChannelId0")
+        @com.aliyun.core.annotation.NameInMap("ChannelId0")
         private Integer channelId0;
 
-        @NameInMap("ChannelId1")
+        @com.aliyun.core.annotation.NameInMap("ChannelId1")
         private Integer channelId1;
 
-        @NameInMap("ChannelType")
+        @com.aliyun.core.annotation.NameInMap("ChannelType")
         private Integer channelType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateType")
+        @com.aliyun.core.annotation.NameInMap("CreateType")
         private Integer createType;
 
-        @NameInMap("DataSetType")
+        @com.aliyun.core.annotation.NameInMap("DataSetType")
         private Integer dataSetType;
 
-        @NameInMap("IsDelete")
+        @com.aliyun.core.annotation.NameInMap("IsDelete")
         private Integer isDelete;
 
-        @NameInMap("RoleConfigProp")
+        @com.aliyun.core.annotation.NameInMap("RoleConfigProp")
         private String roleConfigProp;
 
-        @NameInMap("RoleConfigStatus")
+        @com.aliyun.core.annotation.NameInMap("RoleConfigStatus")
         private Integer roleConfigStatus;
 
-        @NameInMap("RoleConfigTask")
+        @com.aliyun.core.annotation.NameInMap("RoleConfigTask")
         private String roleConfigTask;
 
-        @NameInMap("SetBucketName")
+        @com.aliyun.core.annotation.NameInMap("SetBucketName")
         private String setBucketName;
 
-        @NameInMap("SetDomain")
+        @com.aliyun.core.annotation.NameInMap("SetDomain")
         private String setDomain;
 
-        @NameInMap("SetFolderName")
+        @com.aliyun.core.annotation.NameInMap("SetFolderName")
         private String setFolderName;
 
-        @NameInMap("SetId")
+        @com.aliyun.core.annotation.NameInMap("SetId")
         private Long setId;
 
-        @NameInMap("SetName")
+        @com.aliyun.core.annotation.NameInMap("SetName")
         private String setName;
 
-        @NameInMap("SetNumber")
+        @com.aliyun.core.annotation.NameInMap("SetNumber")
         private Integer setNumber;
 
-        @NameInMap("SetRoleArn")
+        @com.aliyun.core.annotation.NameInMap("SetRoleArn")
         private String setRoleArn;
 
-        @NameInMap("SetType")
+        @com.aliyun.core.annotation.NameInMap("SetType")
         private Integer setType;
 
-        @NameInMap("SourceDataType")
+        @com.aliyun.core.annotation.NameInMap("SourceDataType")
         private Integer sourceDataType;
 
-        @NameInMap("SubDir")
+        @com.aliyun.core.annotation.NameInMap("SubDir")
         private String subDir;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserGroup")
+        @com.aliyun.core.annotation.NameInMap("UserGroup")
         private String userGroup;
 
         private DataData(Builder builder) {
@@ -733,7 +732,7 @@ public class ListDataSetResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < DataData> data;
 
         private Data(Builder builder) {
@@ -774,7 +773,7 @@ public class ListDataSetResponseBody extends TeaModel {
 
     }
     public static class Messages extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private java.util.List < String > message;
 
         private Messages(Builder builder) {

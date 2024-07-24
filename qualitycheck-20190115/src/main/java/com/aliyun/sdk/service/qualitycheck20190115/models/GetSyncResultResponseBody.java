@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSyncResultResponseBody</p>
  */
 public class GetSyncResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCountId")
+    @com.aliyun.core.annotation.NameInMap("ResultCountId")
     private String resultCountId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSyncResultResponseBody(Builder builder) {
@@ -212,13 +211,13 @@ public class GetSyncResultResponseBody extends TeaModel {
     } 
 
     public static class Agent extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SkillGroup")
+        @com.aliyun.core.annotation.NameInMap("SkillGroup")
         private String skillGroup;
 
         private Agent(Builder builder) {
@@ -293,25 +292,25 @@ public class GetSyncResultResponseBody extends TeaModel {
 
     }
     public static class AsrResult extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("EmotionValue")
+        @com.aliyun.core.annotation.NameInMap("EmotionValue")
         private Integer emotionValue;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("SilenceDuration")
+        @com.aliyun.core.annotation.NameInMap("SilenceDuration")
         private Integer silenceDuration;
 
-        @NameInMap("SpeechRate")
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Integer speechRate;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private AsrResult(Builder builder) {
@@ -454,16 +453,16 @@ public class GetSyncResultResponseBody extends TeaModel {
 
     }
     public static class KeyWords extends TeaModel {
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private String cid;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Integer to;
 
-        @NameInMap("Val")
+        @com.aliyun.core.annotation.NameInMap("Val")
         private String val;
 
         private KeyWords(Builder builder) {
@@ -555,25 +554,25 @@ public class GetSyncResultResponseBody extends TeaModel {
 
     }
     public static class Phrase extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("EmotionValue")
+        @com.aliyun.core.annotation.NameInMap("EmotionValue")
         private Integer emotionValue;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Integer end;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("SilenceDuration")
+        @com.aliyun.core.annotation.NameInMap("SilenceDuration")
         private Integer silenceDuration;
 
-        @NameInMap("SpeechRate")
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Integer speechRate;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private Phrase(Builder builder) {
@@ -716,13 +715,13 @@ public class GetSyncResultResponseBody extends TeaModel {
 
     }
     public static class Hits extends TeaModel {
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private java.util.List < String > cid;
 
-        @NameInMap("KeyWords")
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
         private java.util.List < KeyWords> keyWords;
 
-        @NameInMap("Phrase")
+        @com.aliyun.core.annotation.NameInMap("Phrase")
         private Phrase phrase;
 
         private Hits(Builder builder) {
@@ -797,19 +796,19 @@ public class GetSyncResultResponseBody extends TeaModel {
 
     }
     public static class HitResult extends TeaModel {
-        @NameInMap("Hits")
+        @com.aliyun.core.annotation.NameInMap("Hits")
         private java.util.List < Hits> hits;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReviewResult")
+        @com.aliyun.core.annotation.NameInMap("ReviewResult")
         private Integer reviewResult;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private String rid;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private HitResult(Builder builder) {
@@ -918,52 +917,52 @@ public class GetSyncResultResponseBody extends TeaModel {
 
     }
     public static class Recording extends TeaModel {
-        @NameInMap("Business")
+        @com.aliyun.core.annotation.NameInMap("Business")
         private String business;
 
-        @NameInMap("CallId")
+        @com.aliyun.core.annotation.NameInMap("CallId")
         private String callId;
 
-        @NameInMap("CallTime")
+        @com.aliyun.core.annotation.NameInMap("CallTime")
         private String callTime;
 
-        @NameInMap("CallType")
+        @com.aliyun.core.annotation.NameInMap("CallType")
         private Integer callType;
 
-        @NameInMap("Callee")
+        @com.aliyun.core.annotation.NameInMap("Callee")
         private String callee;
 
-        @NameInMap("Caller")
+        @com.aliyun.core.annotation.NameInMap("Caller")
         private String caller;
 
-        @NameInMap("DataSetName")
+        @com.aliyun.core.annotation.NameInMap("DataSetName")
         private String dataSetName;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("DurationAudio")
+        @com.aliyun.core.annotation.NameInMap("DurationAudio")
         private Long durationAudio;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PrimaryId")
+        @com.aliyun.core.annotation.NameInMap("PrimaryId")
         private String primaryId;
 
-        @NameInMap("Remark1")
+        @com.aliyun.core.annotation.NameInMap("Remark1")
         private String remark1;
 
-        @NameInMap("Remark2")
+        @com.aliyun.core.annotation.NameInMap("Remark2")
         private String remark2;
 
-        @NameInMap("Remark3")
+        @com.aliyun.core.annotation.NameInMap("Remark3")
         private String remark3;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Recording(Builder builder) {
@@ -1259,49 +1258,49 @@ public class GetSyncResultResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Agent")
+        @com.aliyun.core.annotation.NameInMap("Agent")
         private Agent agent;
 
-        @NameInMap("AsrResult")
+        @com.aliyun.core.annotation.NameInMap("AsrResult")
         private java.util.List < AsrResult> asrResult;
 
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("HitResult")
+        @com.aliyun.core.annotation.NameInMap("HitResult")
         private java.util.List < HitResult> hitResult;
 
-        @NameInMap("Recording")
+        @com.aliyun.core.annotation.NameInMap("Recording")
         private Recording recording;
 
-        @NameInMap("Resolver")
+        @com.aliyun.core.annotation.NameInMap("Resolver")
         private String resolver;
 
-        @NameInMap("ReviewResult")
+        @com.aliyun.core.annotation.NameInMap("ReviewResult")
         private Integer reviewResult;
 
-        @NameInMap("ReviewStatus")
+        @com.aliyun.core.annotation.NameInMap("ReviewStatus")
         private Integer reviewStatus;
 
-        @NameInMap("Reviewer")
+        @com.aliyun.core.annotation.NameInMap("Reviewer")
         private String reviewer;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
         private Data(Builder builder) {

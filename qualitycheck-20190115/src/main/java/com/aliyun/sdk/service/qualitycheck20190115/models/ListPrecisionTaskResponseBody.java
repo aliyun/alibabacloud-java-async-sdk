@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPrecisionTaskResponseBody</p>
  */
 public class ListPrecisionTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListPrecisionTaskResponseBody(Builder builder) {
@@ -192,22 +191,22 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
     } 
 
     public static class Precision extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModelId")
+        @com.aliyun.core.annotation.NameInMap("ModelId")
         private Long modelId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
-        @NameInMap("Precision")
+        @com.aliyun.core.annotation.NameInMap("Precision")
         private Float precision;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Precision(Builder builder) {
@@ -333,7 +332,7 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
 
     }
     public static class Precisions extends TeaModel {
-        @NameInMap("Precision")
+        @com.aliyun.core.annotation.NameInMap("Precision")
         private java.util.List < Precision> precision;
 
         private Precisions(Builder builder) {
@@ -374,43 +373,43 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
 
     }
     public static class PrecisionTask extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataSetId")
+        @com.aliyun.core.annotation.NameInMap("DataSetId")
         private Long dataSetId;
 
-        @NameInMap("DataSetName")
+        @com.aliyun.core.annotation.NameInMap("DataSetName")
         private String dataSetName;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("IncorrectWords")
+        @com.aliyun.core.annotation.NameInMap("IncorrectWords")
         private Integer incorrectWords;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Precisions")
+        @com.aliyun.core.annotation.NameInMap("Precisions")
         private Precisions precisions;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private Integer source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("VerifiedCount")
+        @com.aliyun.core.annotation.NameInMap("VerifiedCount")
         private Integer verifiedCount;
 
         private PrecisionTask(Builder builder) {
@@ -655,7 +654,7 @@ public class ListPrecisionTaskResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PrecisionTask")
+        @com.aliyun.core.annotation.NameInMap("PrecisionTask")
         private java.util.List < PrecisionTask> precisionTask;
 
         private Data(Builder builder) {

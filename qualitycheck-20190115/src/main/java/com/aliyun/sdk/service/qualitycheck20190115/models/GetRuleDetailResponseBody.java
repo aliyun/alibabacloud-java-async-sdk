@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRuleDetailResponseBody</p>
  */
 public class GetRuleDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetRuleDetailResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
     } 
 
     public static class Anchor extends TeaModel {
-        @NameInMap("AnchorCid")
+        @com.aliyun.core.annotation.NameInMap("AnchorCid")
         private String anchorCid;
 
-        @NameInMap("HitTime")
+        @com.aliyun.core.annotation.NameInMap("HitTime")
         private Integer hitTime;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
         private Anchor(Builder builder) {
@@ -213,10 +212,10 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class Range extends TeaModel {
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Integer to;
 
         private Range(Builder builder) {
@@ -274,16 +273,16 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class CheckRange extends TeaModel {
-        @NameInMap("Absolute")
+        @com.aliyun.core.annotation.NameInMap("Absolute")
         private Boolean absolute;
 
-        @NameInMap("Anchor")
+        @com.aliyun.core.annotation.NameInMap("Anchor")
         private Anchor anchor;
 
-        @NameInMap("Range")
+        @com.aliyun.core.annotation.NameInMap("Range")
         private Range range;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
         private CheckRange(Builder builder) {
@@ -375,7 +374,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class AntModelInfo extends TeaModel {
-        @NameInMap("AntModelInfo")
+        @com.aliyun.core.annotation.NameInMap("AntModelInfo")
         private java.util.List < String > antModelInfo;
 
         private AntModelInfo(Builder builder) {
@@ -416,7 +415,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class Excludes extends TeaModel {
-        @NameInMap("Excludes")
+        @com.aliyun.core.annotation.NameInMap("Excludes")
         private java.util.List < String > excludes;
 
         private Excludes(Builder builder) {
@@ -457,7 +456,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class OperKeyWords extends TeaModel {
-        @NameInMap("OperKeyWord")
+        @com.aliyun.core.annotation.NameInMap("OperKeyWord")
         private java.util.List < String > operKeyWord;
 
         private OperKeyWords(Builder builder) {
@@ -498,7 +497,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class Pvalues extends TeaModel {
-        @NameInMap("Pvalues")
+        @com.aliyun.core.annotation.NameInMap("Pvalues")
         private java.util.List < String > pvalues;
 
         private Pvalues(Builder builder) {
@@ -539,7 +538,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class References extends TeaModel {
-        @NameInMap("Reference")
+        @com.aliyun.core.annotation.NameInMap("Reference")
         private java.util.List < String > reference;
 
         private References(Builder builder) {
@@ -580,7 +579,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class SimilarlySentences extends TeaModel {
-        @NameInMap("SimilarlySentence")
+        @com.aliyun.core.annotation.NameInMap("SimilarlySentence")
         private java.util.List < String > similarlySentence;
 
         private SimilarlySentences(Builder builder) {
@@ -621,97 +620,97 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class Param extends TeaModel {
-        @NameInMap("AntModelInfo")
+        @com.aliyun.core.annotation.NameInMap("AntModelInfo")
         private AntModelInfo antModelInfo;
 
-        @NameInMap("Average")
+        @com.aliyun.core.annotation.NameInMap("Average")
         private Boolean average;
 
-        @NameInMap("BeginType")
+        @com.aliyun.core.annotation.NameInMap("BeginType")
         private String beginType;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
-        @NameInMap("CompareOperator")
+        @com.aliyun.core.annotation.NameInMap("CompareOperator")
         private String compareOperator;
 
-        @NameInMap("ContextChatMatch")
+        @com.aliyun.core.annotation.NameInMap("ContextChatMatch")
         private Boolean contextChatMatch;
 
-        @NameInMap("DelayTime")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
         private Integer delayTime;
 
-        @NameInMap("DifferentRole")
+        @com.aliyun.core.annotation.NameInMap("DifferentRole")
         private Boolean differentRole;
 
-        @NameInMap("Excludes")
+        @com.aliyun.core.annotation.NameInMap("Excludes")
         private Excludes excludes;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("FromEnd")
+        @com.aliyun.core.annotation.NameInMap("FromEnd")
         private Boolean fromEnd;
 
-        @NameInMap("HitTime")
+        @com.aliyun.core.annotation.NameInMap("HitTime")
         private Integer hitTime;
 
-        @NameInMap("InSentence")
+        @com.aliyun.core.annotation.NameInMap("InSentence")
         private Boolean inSentence;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("KeywordExtension")
+        @com.aliyun.core.annotation.NameInMap("KeywordExtension")
         private Boolean keywordExtension;
 
-        @NameInMap("KeywordMatchSize")
+        @com.aliyun.core.annotation.NameInMap("KeywordMatchSize")
         private Integer keywordMatchSize;
 
-        @NameInMap("MaxEmotionChangeValue")
+        @com.aliyun.core.annotation.NameInMap("MaxEmotionChangeValue")
         private Integer maxEmotionChangeValue;
 
-        @NameInMap("MinWordSize")
+        @com.aliyun.core.annotation.NameInMap("MinWordSize")
         private Integer minWordSize;
 
-        @NameInMap("NotRegex")
+        @com.aliyun.core.annotation.NameInMap("NotRegex")
         private String notRegex;
 
-        @NameInMap("OperKeyWords")
+        @com.aliyun.core.annotation.NameInMap("OperKeyWords")
         private OperKeyWords operKeyWords;
 
-        @NameInMap("Phrase")
+        @com.aliyun.core.annotation.NameInMap("Phrase")
         private String phrase;
 
-        @NameInMap("Pvalues")
+        @com.aliyun.core.annotation.NameInMap("Pvalues")
         private Pvalues pvalues;
 
-        @NameInMap("References")
+        @com.aliyun.core.annotation.NameInMap("References")
         private References references;
 
-        @NameInMap("Regex")
+        @com.aliyun.core.annotation.NameInMap("Regex")
         private String regex;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("Similarity_threshold")
+        @com.aliyun.core.annotation.NameInMap("Similarity_threshold")
         private Float similarityThreshold;
 
-        @NameInMap("SimilarlySentences")
+        @com.aliyun.core.annotation.NameInMap("SimilarlySentences")
         private SimilarlySentences similarlySentences;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private Integer target;
 
-        @NameInMap("TargetRole")
+        @com.aliyun.core.annotation.NameInMap("TargetRole")
         private String targetRole;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
-        @NameInMap("VelocityInMint")
+        @com.aliyun.core.annotation.NameInMap("VelocityInMint")
         private Integer velocityInMint;
 
         private Param(Builder builder) {
@@ -1262,16 +1261,16 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class OperatorBasicInfo extends TeaModel {
-        @NameInMap("Oid")
+        @com.aliyun.core.annotation.NameInMap("Oid")
         private String oid;
 
-        @NameInMap("OperName")
+        @com.aliyun.core.annotation.NameInMap("OperName")
         private String operName;
 
-        @NameInMap("Param")
+        @com.aliyun.core.annotation.NameInMap("Param")
         private Param param;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private OperatorBasicInfo(Builder builder) {
@@ -1363,7 +1362,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class Operators extends TeaModel {
-        @NameInMap("OperatorBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("OperatorBasicInfo")
         private java.util.List < OperatorBasicInfo> operatorBasicInfo;
 
         private Operators(Builder builder) {
@@ -1404,16 +1403,16 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class ConditionBasicInfo extends TeaModel {
-        @NameInMap("CheckRange")
+        @com.aliyun.core.annotation.NameInMap("CheckRange")
         private CheckRange checkRange;
 
-        @NameInMap("ConditionInfoCid")
+        @com.aliyun.core.annotation.NameInMap("ConditionInfoCid")
         private String conditionInfoCid;
 
-        @NameInMap("OperLambda")
+        @com.aliyun.core.annotation.NameInMap("OperLambda")
         private String operLambda;
 
-        @NameInMap("Operators")
+        @com.aliyun.core.annotation.NameInMap("Operators")
         private Operators operators;
 
         private ConditionBasicInfo(Builder builder) {
@@ -1505,7 +1504,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class Conditions extends TeaModel {
-        @NameInMap("ConditionBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("ConditionBasicInfo")
         private java.util.List < ConditionBasicInfo> conditionBasicInfo;
 
         private Conditions(Builder builder) {
@@ -1546,13 +1545,13 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class BusinessCategoryBasicInfo extends TeaModel {
-        @NameInMap("Bid")
+        @com.aliyun.core.annotation.NameInMap("Bid")
         private Integer bid;
 
-        @NameInMap("BusinessName")
+        @com.aliyun.core.annotation.NameInMap("BusinessName")
         private String businessName;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private Integer serviceType;
 
         private BusinessCategoryBasicInfo(Builder builder) {
@@ -1627,7 +1626,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class BusinessCategories extends TeaModel {
-        @NameInMap("BusinessCategoryBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("BusinessCategoryBasicInfo")
         private java.util.List < BusinessCategoryBasicInfo> businessCategoryBasicInfo;
 
         private BusinessCategories(Builder builder) {
@@ -1668,7 +1667,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class Triggers extends TeaModel {
-        @NameInMap("Trigger")
+        @com.aliyun.core.annotation.NameInMap("Trigger")
         private java.util.List < String > trigger;
 
         private Triggers(Builder builder) {
@@ -1709,16 +1708,16 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class RuleBasicInfo extends TeaModel {
-        @NameInMap("BusinessCategories")
+        @com.aliyun.core.annotation.NameInMap("BusinessCategories")
         private BusinessCategories businessCategories;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private String rid;
 
-        @NameInMap("RuleLambda")
+        @com.aliyun.core.annotation.NameInMap("RuleLambda")
         private String ruleLambda;
 
-        @NameInMap("Triggers")
+        @com.aliyun.core.annotation.NameInMap("Triggers")
         private Triggers triggers;
 
         private RuleBasicInfo(Builder builder) {
@@ -1810,7 +1809,7 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("RuleBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("RuleBasicInfo")
         private java.util.List < RuleBasicInfo> ruleBasicInfo;
 
         private Rules(Builder builder) {
@@ -1851,19 +1850,19 @@ public class GetRuleDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private Conditions conditions;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
         private Data(Builder builder) {

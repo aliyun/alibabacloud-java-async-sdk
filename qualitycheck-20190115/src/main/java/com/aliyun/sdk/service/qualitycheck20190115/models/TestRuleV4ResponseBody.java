@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TestRuleV4ResponseBody</p>
  */
 public class TestRuleV4ResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private TestRuleV4ResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class TestRuleV4ResponseBody extends TeaModel {
     } 
 
     public static class BranchInfoList extends TeaModel {
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Lambda")
+        @com.aliyun.core.annotation.NameInMap("Lambda")
         private String lambda;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NextNodeId")
+        @com.aliyun.core.annotation.NameInMap("NextNodeId")
         private Long nextNodeId;
 
-        @NameInMap("Situation")
+        @com.aliyun.core.annotation.NameInMap("Situation")
         private NextNodeSituations situation;
 
-        @NameInMap("Triggers")
+        @com.aliyun.core.annotation.NameInMap("Triggers")
         private java.util.List < String > triggers;
 
         private BranchInfoList(Builder builder) {
@@ -313,37 +312,37 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     }
     public static class KeyWords extends TeaModel {
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private String cid;
 
-        @NameInMap("CustomizeCode")
+        @com.aliyun.core.annotation.NameInMap("CustomizeCode")
         private String customizeCode;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("Oid")
+        @com.aliyun.core.annotation.NameInMap("Oid")
         private String oid;
 
-        @NameInMap("OperatorKey")
+        @com.aliyun.core.annotation.NameInMap("OperatorKey")
         private String operatorKey;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
 
-        @NameInMap("SimilarPhrase")
+        @com.aliyun.core.annotation.NameInMap("SimilarPhrase")
         private String similarPhrase;
 
-        @NameInMap("Tid")
+        @com.aliyun.core.annotation.NameInMap("Tid")
         private String tid;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Integer to;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("Val")
+        @com.aliyun.core.annotation.NameInMap("Val")
         private String val;
 
         private KeyWords(Builder builder) {
@@ -554,55 +553,55 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     }
     public static class Phrase extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private Integer channelId;
 
-        @NameInMap("EmotionFineGrainedValue")
+        @com.aliyun.core.annotation.NameInMap("EmotionFineGrainedValue")
         private Integer emotionFineGrainedValue;
 
-        @NameInMap("EmotionValue")
+        @com.aliyun.core.annotation.NameInMap("EmotionValue")
         private Integer emotionValue;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("HitStatus")
+        @com.aliyun.core.annotation.NameInMap("HitStatus")
         private Integer hitStatus;
 
-        @NameInMap("HourMinSec")
+        @com.aliyun.core.annotation.NameInMap("HourMinSec")
         private String hourMinSec;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
 
-        @NameInMap("RenterId")
+        @com.aliyun.core.annotation.NameInMap("RenterId")
         private Long renterId;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Sid")
+        @com.aliyun.core.annotation.NameInMap("Sid")
         private Long sid;
 
-        @NameInMap("SilenceDuration")
+        @com.aliyun.core.annotation.NameInMap("SilenceDuration")
         private Integer silenceDuration;
 
-        @NameInMap("SpeechRate")
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Integer speechRate;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private Phrase(Builder builder) {
@@ -915,13 +914,13 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     }
     public static class ConditionHitInfoList extends TeaModel {
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private java.util.List < String > cid;
 
-        @NameInMap("KeyWords")
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
         private java.util.List < KeyWords> keyWords;
 
-        @NameInMap("Phrase")
+        @com.aliyun.core.annotation.NameInMap("Phrase")
         private Phrase phrase;
 
         private ConditionHitInfoList(Builder builder) {
@@ -996,43 +995,43 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     }
     public static class HitRuleReviewInfoList extends TeaModel {
-        @NameInMap("BranchHitId")
+        @com.aliyun.core.annotation.NameInMap("BranchHitId")
         private Long branchHitId;
 
-        @NameInMap("BranchInfoList")
+        @com.aliyun.core.annotation.NameInMap("BranchInfoList")
         private java.util.List < BranchInfoList> branchInfoList;
 
-        @NameInMap("ConditionHitInfoList")
+        @com.aliyun.core.annotation.NameInMap("ConditionHitInfoList")
         private java.util.List < ConditionHitInfoList> conditionHitInfoList;
 
-        @NameInMap("ConditionInfoList")
+        @com.aliyun.core.annotation.NameInMap("ConditionInfoList")
         private java.util.List < ConditionBasicInfo > conditionInfoList;
 
-        @NameInMap("JudgeNodeName")
+        @com.aliyun.core.annotation.NameInMap("JudgeNodeName")
         private String judgeNodeName;
 
-        @NameInMap("Lambda")
+        @com.aliyun.core.annotation.NameInMap("Lambda")
         private String lambda;
 
-        @NameInMap("Matched")
+        @com.aliyun.core.annotation.NameInMap("Matched")
         private Boolean matched;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("RuleScoreType")
+        @com.aliyun.core.annotation.NameInMap("RuleScoreType")
         private Integer ruleScoreType;
 
-        @NameInMap("ScoreNumType")
+        @com.aliyun.core.annotation.NameInMap("ScoreNumType")
         private Integer scoreNumType;
 
-        @NameInMap("TaskFlowId")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowId")
         private Long taskFlowId;
 
         private HitRuleReviewInfoList(Builder builder) {
@@ -1277,13 +1276,13 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     }
     public static class HitTaskFlowList extends TeaModel {
-        @NameInMap("GraphFlow")
+        @com.aliyun.core.annotation.NameInMap("GraphFlow")
         private TaskGraphFlow graphFlow;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
-        @NameInMap("TaskFlowType")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowType")
         private Integer taskFlowType;
 
         private HitTaskFlowList(Builder builder) {
@@ -1358,16 +1357,16 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     }
     public static class UnhitRuleReviewInfoList extends TeaModel {
-        @NameInMap("ConditionInfoList")
+        @com.aliyun.core.annotation.NameInMap("ConditionInfoList")
         private java.util.List < ConditionBasicInfo > conditionInfoList;
 
-        @NameInMap("Matched")
+        @com.aliyun.core.annotation.NameInMap("Matched")
         private Boolean matched;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
-        @NameInMap("TaskFlowType")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowType")
         private Integer taskFlowType;
 
         private UnhitRuleReviewInfoList(Builder builder) {
@@ -1459,13 +1458,13 @@ public class TestRuleV4ResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("HitRuleReviewInfoList")
+        @com.aliyun.core.annotation.NameInMap("HitRuleReviewInfoList")
         private java.util.List < HitRuleReviewInfoList> hitRuleReviewInfoList;
 
-        @NameInMap("HitTaskFlowList")
+        @com.aliyun.core.annotation.NameInMap("HitTaskFlowList")
         private java.util.List < HitTaskFlowList> hitTaskFlowList;
 
-        @NameInMap("UnhitRuleReviewInfoList")
+        @com.aliyun.core.annotation.NameInMap("UnhitRuleReviewInfoList")
         private java.util.List < UnhitRuleReviewInfoList> unhitRuleReviewInfoList;
 
         private Data(Builder builder) {

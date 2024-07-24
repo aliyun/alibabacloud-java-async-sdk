@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNextResultToVerifyResponseBody</p>
  */
 public class GetNextResultToVerifyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetNextResultToVerifyResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
     } 
 
     public static class Line extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < String > line;
 
         private Line(Builder builder) {
@@ -173,10 +172,10 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private Line line;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
         private Source(Builder builder) {
@@ -234,7 +233,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
     }
     public static class TargetLine extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < String > line;
 
         private TargetLine(Builder builder) {
@@ -275,10 +274,10 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
     }
     public static class Target extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private TargetLine line;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
         private Target(Builder builder) {
@@ -336,13 +335,13 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
     }
     public static class Delta extends TeaModel {
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private Source source;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private Target target;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Delta(Builder builder) {
@@ -417,7 +416,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
     }
     public static class Deltas extends TeaModel {
-        @NameInMap("Delta")
+        @com.aliyun.core.annotation.NameInMap("Delta")
         private java.util.List < Delta> delta;
 
         private Deltas(Builder builder) {
@@ -458,46 +457,46 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
     }
     public static class Dialogue extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("Deltas")
+        @com.aliyun.core.annotation.NameInMap("Deltas")
         private Deltas deltas;
 
-        @NameInMap("EmotionValue")
+        @com.aliyun.core.annotation.NameInMap("EmotionValue")
         private Integer emotionValue;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("HourMinSec")
+        @com.aliyun.core.annotation.NameInMap("HourMinSec")
         private String hourMinSec;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("IncorrectWords")
+        @com.aliyun.core.annotation.NameInMap("IncorrectWords")
         private Integer incorrectWords;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("SilenceDuration")
+        @com.aliyun.core.annotation.NameInMap("SilenceDuration")
         private Integer silenceDuration;
 
-        @NameInMap("SourceRole")
+        @com.aliyun.core.annotation.NameInMap("SourceRole")
         private String sourceRole;
 
-        @NameInMap("SourceWords")
+        @com.aliyun.core.annotation.NameInMap("SourceWords")
         private String sourceWords;
 
-        @NameInMap("SpeechRate")
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Integer speechRate;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private Dialogue(Builder builder) {
@@ -759,7 +758,7 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
     }
     public static class Dialogues extends TeaModel {
-        @NameInMap("Dialogue")
+        @com.aliyun.core.annotation.NameInMap("Dialogue")
         private java.util.List < Dialogue> dialogue;
 
         private Dialogues(Builder builder) {
@@ -800,46 +799,46 @@ public class GetNextResultToVerifyResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AudioScheme")
+        @com.aliyun.core.annotation.NameInMap("AudioScheme")
         private String audioScheme;
 
-        @NameInMap("AudioURL")
+        @com.aliyun.core.annotation.NameInMap("AudioURL")
         private String audioURL;
 
-        @NameInMap("Dialogues")
+        @com.aliyun.core.annotation.NameInMap("Dialogues")
         private Dialogues dialogues;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("IncorrectWords")
+        @com.aliyun.core.annotation.NameInMap("IncorrectWords")
         private Integer incorrectWords;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Precision")
+        @com.aliyun.core.annotation.NameInMap("Precision")
         private Float precision;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("Verified")
+        @com.aliyun.core.annotation.NameInMap("Verified")
         private Boolean verified;
 
-        @NameInMap("VerifiedCount")
+        @com.aliyun.core.annotation.NameInMap("VerifiedCount")
         private Integer verifiedCount;
 
         private Data(Builder builder) {

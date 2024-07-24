@@ -25,8 +25,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddRuleV4Response> addRuleV4(AddRuleV4Request request);
 
-    CompletableFuture<AddThesaurusForApiResponse> addThesaurusForApi(AddThesaurusForApiRequest request);
-
     CompletableFuture<AssignReviewerResponse> assignReviewer(AssignReviewerRequest request);
 
     CompletableFuture<AssignReviewerBySessionGroupResponse> assignReviewerBySessionGroup(AssignReviewerBySessionGroupRequest request);
@@ -57,8 +55,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DelRuleCategoryResponse> delRuleCategory(DelRuleCategoryRequest request);
 
-    CompletableFuture<DelThesaurusForApiResponse> delThesaurusForApi(DelThesaurusForApiRequest request);
-
     CompletableFuture<DeleteAsrVocabResponse> deleteAsrVocab(DeleteAsrVocabRequest request);
 
     CompletableFuture<DeleteBusinessCategoryResponse> deleteBusinessCategory(DeleteBusinessCategoryRequest request);
@@ -71,39 +67,41 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteQualityCheckSchemeResponse> deleteQualityCheckScheme(DeleteQualityCheckSchemeRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DeleteRuleResponse> deleteRule(DeleteRuleRequest request);
 
     CompletableFuture<DeleteRuleV4Response> deleteRuleV4(DeleteRuleV4Request request);
 
     CompletableFuture<DeleteSchemeTaskConfigResponse> deleteSchemeTaskConfig(DeleteSchemeTaskConfigRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DeleteScoreForApiResponse> deleteScoreForApi(DeleteScoreForApiRequest request);
 
     CompletableFuture<DeleteSkillGroupConfigResponse> deleteSkillGroupConfig(DeleteSkillGroupConfigRequest request);
-
-    CompletableFuture<DeleteSubScoreForApiResponse> deleteSubScoreForApi(DeleteSubScoreForApiRequest request);
-
-    CompletableFuture<DeleteTaskAssignRuleResponse> deleteTaskAssignRule(DeleteTaskAssignRuleRequest request);
 
     /**
       * @deprecated
       *
      */
-    CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request);
+    CompletableFuture<DeleteSubScoreForApiResponse> deleteSubScoreForApi(DeleteSubScoreForApiRequest request);
+
+    CompletableFuture<DeleteTaskAssignRuleResponse> deleteTaskAssignRule(DeleteTaskAssignRuleRequest request);
 
     CompletableFuture<DeleteWarningConfigResponse> deleteWarningConfig(DeleteWarningConfigRequest request);
 
     CompletableFuture<DeleteWarningStrategyConfigResponse> deleteWarningStrategyConfig(DeleteWarningStrategyConfigRequest request);
-
-    CompletableFuture<EditThesaurusForApiResponse> editThesaurusForApi(EditThesaurusForApiRequest request);
 
     CompletableFuture<GetAsrVocabResponse> getAsrVocab(GetAsrVocabRequest request);
 
     CompletableFuture<GetBusinessCategoryListResponse> getBusinessCategoryList(GetBusinessCategoryListRequest request);
 
     CompletableFuture<GetCustomizationConfigListResponse> getCustomizationConfigList(GetCustomizationConfigListRequest request);
-
-    CompletableFuture<GetHitResultResponse> getHitResult(GetHitResultRequest request);
 
     CompletableFuture<GetNextResultToVerifyResponse> getNextResultToVerify(GetNextResultToVerifyRequest request);
 
@@ -115,49 +113,67 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetResultToReviewResponse> getResultToReview(GetResultToReviewRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetRuleResponse> getRule(GetRuleRequest request);
-
-    CompletableFuture<GetRuleByIdResponse> getRuleById(GetRuleByIdRequest request);
-
-    CompletableFuture<GetRuleCategoryResponse> getRuleCategory(GetRuleCategoryRequest request);
-
-    CompletableFuture<GetRuleDetailResponse> getRuleDetail(GetRuleDetailRequest request);
-
-    CompletableFuture<GetRuleV4Response> getRuleV4(GetRuleV4Request request);
 
     /**
       * @deprecated
       *
      */
-    CompletableFuture<GetRuleV4StrResponse> getRuleV4Str(GetRuleV4StrRequest request);
+    CompletableFuture<GetRuleByIdResponse> getRuleById(GetRuleByIdRequest request);
+
+    CompletableFuture<GetRuleCategoryResponse> getRuleCategory(GetRuleCategoryRequest request);
+
+    /**
+      * @deprecated
+      *
+     */
+    CompletableFuture<GetRuleDetailResponse> getRuleDetail(GetRuleDetailRequest request);
+
+    CompletableFuture<GetRuleV4Response> getRuleV4(GetRuleV4Request request);
 
     CompletableFuture<GetRulesCountListResponse> getRulesCountList(GetRulesCountListRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetScoreInfoResponse> getScoreInfo(GetScoreInfoRequest request);
 
     CompletableFuture<GetSkillGroupConfigResponse> getSkillGroupConfig(GetSkillGroupConfigRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetSyncResultResponse> getSyncResult(GetSyncResultRequest request);
-
-    CompletableFuture<GetThesaurusBySynonymForApiResponse> getThesaurusBySynonymForApi(GetThesaurusBySynonymForApiRequest request);
 
     CompletableFuture<GetWarningStrategyConfigResponse> getWarningStrategyConfig(GetWarningStrategyConfigRequest request);
 
     CompletableFuture<HandleComplaintResponse> handleComplaint(HandleComplaintRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<InsertScoreForApiResponse> insertScoreForApi(InsertScoreForApiRequest request);
-
-    CompletableFuture<InsertSubScoreForApiResponse> insertSubScoreForApi(InsertSubScoreForApiRequest request);
-
-    CompletableFuture<InvalidRuleResponse> invalidRule(InvalidRuleRequest request);
-
-    CompletableFuture<ListAsrVocabResponse> listAsrVocab(ListAsrVocabRequest request);
 
     /**
       * @deprecated
       *
      */
-    CompletableFuture<ListBusinessSpacesResponse> listBusinessSpaces(ListBusinessSpacesRequest request);
+    CompletableFuture<InsertSubScoreForApiResponse> insertSubScoreForApi(InsertSubScoreForApiRequest request);
+
+    /**
+      * @deprecated
+      *
+     */
+    CompletableFuture<InvalidRuleResponse> invalidRule(InvalidRuleRequest request);
+
+    CompletableFuture<ListAsrVocabResponse> listAsrVocab(ListAsrVocabRequest request);
 
     CompletableFuture<ListDataSetResponse> listDataSet(ListDataSetRequest request);
 
@@ -165,8 +181,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListQualityCheckSchemeResponse> listQualityCheckScheme(ListQualityCheckSchemeRequest request);
 
-    CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
-
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListRulesResponse> listRules(ListRulesRequest request);
 
     CompletableFuture<ListRulesV4Response> listRulesV4(ListRulesV4Request request);
@@ -184,8 +202,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWarningConfigResponse> listWarningConfig(ListWarningConfigRequest request);
 
     CompletableFuture<ListWarningStrategyConfigResponse> listWarningStrategyConfig(ListWarningStrategyConfigRequest request);
-
-    CompletableFuture<RestartAsrTaskResponse> restartAsrTask(RestartAsrTaskRequest request);
 
     CompletableFuture<RevertAssignedSessionResponse> revertAssignedSession(RevertAssignedSessionRequest request);
 
@@ -213,8 +229,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateQualityCheckSchemeResponse> updateQualityCheckScheme(UpdateQualityCheckSchemeRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<UpdateRuleResponse> updateRule(UpdateRuleRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<UpdateRuleByIdResponse> updateRuleById(UpdateRuleByIdRequest request);
 
     CompletableFuture<UpdateRuleToSchemeResponse> updateRuleToScheme(UpdateRuleToSchemeRequest request);
@@ -223,10 +247,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateSchemeTaskConfigResponse> updateSchemeTaskConfig(UpdateSchemeTaskConfigRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<UpdateScoreForApiResponse> updateScoreForApi(UpdateScoreForApiRequest request);
 
     CompletableFuture<UpdateSkillGroupConfigResponse> updateSkillGroupConfig(UpdateSkillGroupConfigRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<UpdateSubScoreForApiResponse> updateSubScoreForApi(UpdateSubScoreForApiRequest request);
 
     CompletableFuture<UpdateSyncQualityCheckDataResponse> updateSyncQualityCheckData(UpdateSyncQualityCheckDataRequest request);
@@ -234,8 +266,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTaskAssignRuleResponse> updateTaskAssignRule(UpdateTaskAssignRuleRequest request);
 
     CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request);
-
-    CompletableFuture<UpdateUserConfigResponse> updateUserConfig(UpdateUserConfigRequest request);
 
     CompletableFuture<UpdateWarningConfigResponse> updateWarningConfig(UpdateWarningConfigRequest request);
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResultToReviewResponseBody</p>
  */
 public class GetResultToReviewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetResultToReviewResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class GetResultToReviewResponseBody extends TeaModel {
     } 
 
     public static class Dialogue extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("EmotionValue")
+        @com.aliyun.core.annotation.NameInMap("EmotionValue")
         private Integer emotionValue;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("HourMinSec")
+        @com.aliyun.core.annotation.NameInMap("HourMinSec")
         private String hourMinSec;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("SilenceDuration")
+        @com.aliyun.core.annotation.NameInMap("SilenceDuration")
         private Integer silenceDuration;
 
-        @NameInMap("SpeechRate")
+        @com.aliyun.core.annotation.NameInMap("SpeechRate")
         private Integer speechRate;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private Dialogue(Builder builder) {
@@ -353,7 +352,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class Dialogues extends TeaModel {
-        @NameInMap("Dialogue")
+        @com.aliyun.core.annotation.NameInMap("Dialogue")
         private java.util.List < Dialogue> dialogue;
 
         private Dialogues(Builder builder) {
@@ -394,19 +393,19 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class ComplainHistories extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("OperationTime")
+        @com.aliyun.core.annotation.NameInMap("OperationTime")
         private String operationTime;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private Integer operationType;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private Long operator;
 
-        @NameInMap("OperatorName")
+        @com.aliyun.core.annotation.NameInMap("OperatorName")
         private String operatorName;
 
         private ComplainHistories(Builder builder) {
@@ -515,7 +514,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class HitRuleReviewInfoComplainHistories extends TeaModel {
-        @NameInMap("ComplainHistories")
+        @com.aliyun.core.annotation.NameInMap("ComplainHistories")
         private java.util.List < ComplainHistories> complainHistories;
 
         private HitRuleReviewInfoComplainHistories(Builder builder) {
@@ -556,7 +555,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class Cid extends TeaModel {
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private java.util.List < String > cid;
 
         private Cid(Builder builder) {
@@ -597,25 +596,25 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class KeyWord extends TeaModel {
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private String cid;
 
-        @NameInMap("CustomizeCode")
+        @com.aliyun.core.annotation.NameInMap("CustomizeCode")
         private String customizeCode;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
 
-        @NameInMap("Tid")
+        @com.aliyun.core.annotation.NameInMap("Tid")
         private String tid;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Integer to;
 
-        @NameInMap("Val")
+        @com.aliyun.core.annotation.NameInMap("Val")
         private String val;
 
         private KeyWord(Builder builder) {
@@ -758,7 +757,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class KeyWords extends TeaModel {
-        @NameInMap("KeyWord")
+        @com.aliyun.core.annotation.NameInMap("KeyWord")
         private java.util.List < KeyWord> keyWord;
 
         private KeyWords(Builder builder) {
@@ -799,25 +798,25 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class Phrase extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("EmotionValue")
+        @com.aliyun.core.annotation.NameInMap("EmotionValue")
         private Integer emotionValue;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private Phrase(Builder builder) {
@@ -960,13 +959,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class ConditionHitInfo extends TeaModel {
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private Cid cid;
 
-        @NameInMap("KeyWords")
+        @com.aliyun.core.annotation.NameInMap("KeyWords")
         private KeyWords keyWords;
 
-        @NameInMap("Phrase")
+        @com.aliyun.core.annotation.NameInMap("Phrase")
         private Phrase phrase;
 
         private ConditionHitInfo(Builder builder) {
@@ -1041,7 +1040,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class ConditionHitInfoList extends TeaModel {
-        @NameInMap("ConditionHitInfo")
+        @com.aliyun.core.annotation.NameInMap("ConditionHitInfo")
         private java.util.List < ConditionHitInfo> conditionHitInfo;
 
         private ConditionHitInfoList(Builder builder) {
@@ -1082,19 +1081,19 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class ReviewInfo extends TeaModel {
-        @NameInMap("HitId")
+        @com.aliyun.core.annotation.NameInMap("HitId")
         private String hitId;
 
-        @NameInMap("ReviewResult")
+        @com.aliyun.core.annotation.NameInMap("ReviewResult")
         private Integer reviewResult;
 
-        @NameInMap("ReviewTime")
+        @com.aliyun.core.annotation.NameInMap("ReviewTime")
         private String reviewTime;
 
-        @NameInMap("Reviewer")
+        @com.aliyun.core.annotation.NameInMap("Reviewer")
         private String reviewer;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
         private ReviewInfo(Builder builder) {
@@ -1203,37 +1202,37 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class HitRuleReviewInfo extends TeaModel {
-        @NameInMap("AutoReview")
+        @com.aliyun.core.annotation.NameInMap("AutoReview")
         private Integer autoReview;
 
-        @NameInMap("ComplainHistories")
+        @com.aliyun.core.annotation.NameInMap("ComplainHistories")
         private HitRuleReviewInfoComplainHistories complainHistories;
 
-        @NameInMap("Complainable")
+        @com.aliyun.core.annotation.NameInMap("Complainable")
         private Boolean complainable;
 
-        @NameInMap("ConditionHitInfoList")
+        @com.aliyun.core.annotation.NameInMap("ConditionHitInfoList")
         private ConditionHitInfoList conditionHitInfoList;
 
-        @NameInMap("ReviewInfo")
+        @com.aliyun.core.annotation.NameInMap("ReviewInfo")
         private ReviewInfo reviewInfo;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("ScoreId")
+        @com.aliyun.core.annotation.NameInMap("ScoreId")
         private Long scoreId;
 
-        @NameInMap("ScoreNum")
+        @com.aliyun.core.annotation.NameInMap("ScoreNum")
         private Integer scoreNum;
 
-        @NameInMap("ScoreSubId")
+        @com.aliyun.core.annotation.NameInMap("ScoreSubId")
         private Long scoreSubId;
 
-        @NameInMap("ScoreSubName")
+        @com.aliyun.core.annotation.NameInMap("ScoreSubName")
         private String scoreSubName;
 
         private HitRuleReviewInfo(Builder builder) {
@@ -1444,7 +1443,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class HitRuleReviewInfoList extends TeaModel {
-        @NameInMap("HitRuleReviewInfo")
+        @com.aliyun.core.annotation.NameInMap("HitRuleReviewInfo")
         private java.util.List < HitRuleReviewInfo> hitRuleReviewInfo;
 
         private HitRuleReviewInfoList(Builder builder) {
@@ -1485,19 +1484,19 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class ComplainHistoriesComplainHistories extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("OperationTime")
+        @com.aliyun.core.annotation.NameInMap("OperationTime")
         private String operationTime;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private Integer operationType;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private Long operator;
 
-        @NameInMap("OperatorName")
+        @com.aliyun.core.annotation.NameInMap("OperatorName")
         private String operatorName;
 
         private ComplainHistoriesComplainHistories(Builder builder) {
@@ -1606,7 +1605,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class ManualScoreInfoComplainHistories extends TeaModel {
-        @NameInMap("ComplainHistories")
+        @com.aliyun.core.annotation.NameInMap("ComplainHistories")
         private java.util.List < ComplainHistoriesComplainHistories> complainHistories;
 
         private ManualScoreInfoComplainHistories(Builder builder) {
@@ -1647,22 +1646,22 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class ManualScoreInfo extends TeaModel {
-        @NameInMap("ComplainHistories")
+        @com.aliyun.core.annotation.NameInMap("ComplainHistories")
         private ManualScoreInfoComplainHistories complainHistories;
 
-        @NameInMap("Complainable")
+        @com.aliyun.core.annotation.NameInMap("Complainable")
         private Boolean complainable;
 
-        @NameInMap("ScoreId")
+        @com.aliyun.core.annotation.NameInMap("ScoreId")
         private Long scoreId;
 
-        @NameInMap("ScoreNum")
+        @com.aliyun.core.annotation.NameInMap("ScoreNum")
         private Integer scoreNum;
 
-        @NameInMap("ScoreSubId")
+        @com.aliyun.core.annotation.NameInMap("ScoreSubId")
         private Long scoreSubId;
 
-        @NameInMap("ScoreSubName")
+        @com.aliyun.core.annotation.NameInMap("ScoreSubName")
         private String scoreSubName;
 
         private ManualScoreInfo(Builder builder) {
@@ -1788,7 +1787,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class ManualScoreInfoList extends TeaModel {
-        @NameInMap("ManualScoreInfo")
+        @com.aliyun.core.annotation.NameInMap("ManualScoreInfo")
         private java.util.List < ManualScoreInfo> manualScoreInfo;
 
         private ManualScoreInfoList(Builder builder) {
@@ -1828,34 +1827,156 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    public static class ReviewRightRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("rid")
+        private Long rid;
+
+        @com.aliyun.core.annotation.NameInMap("ruleName")
+        private String ruleName;
+
+        private ReviewRightRule(Builder builder) {
+            this.rid = builder.rid;
+            this.ruleName = builder.ruleName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReviewRightRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return rid
+         */
+        public Long getRid() {
+            return this.rid;
+        }
+
+        /**
+         * @return ruleName
+         */
+        public String getRuleName() {
+            return this.ruleName;
+        }
+
+        public static final class Builder {
+            private Long rid; 
+            private String ruleName; 
+
+            /**
+             * rid.
+             */
+            public Builder rid(Long rid) {
+                this.rid = rid;
+                return this;
+            }
+
+            /**
+             * ruleName.
+             */
+            public Builder ruleName(String ruleName) {
+                this.ruleName = ruleName;
+                return this;
+            }
+
+            public ReviewRightRule build() {
+                return new ReviewRightRule(this);
+            } 
+
+        } 
+
+    }
+    public static class ReviewHistoryReviewRightRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ReviewRightRule")
+        private java.util.List < ReviewRightRule> reviewRightRule;
+
+        private ReviewHistoryReviewRightRule(Builder builder) {
+            this.reviewRightRule = builder.reviewRightRule;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReviewHistoryReviewRightRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reviewRightRule
+         */
+        public java.util.List < ReviewRightRule> getReviewRightRule() {
+            return this.reviewRightRule;
+        }
+
+        public static final class Builder {
+            private java.util.List < ReviewRightRule> reviewRightRule; 
+
+            /**
+             * ReviewRightRule.
+             */
+            public Builder reviewRightRule(java.util.List < ReviewRightRule> reviewRightRule) {
+                this.reviewRightRule = reviewRightRule;
+                return this;
+            }
+
+            public ReviewHistoryReviewRightRule build() {
+                return new ReviewHistoryReviewRightRule(this);
+            } 
+
+        } 
+
+    }
     public static class ReviewHistory extends TeaModel {
-        @NameInMap("ComplainResult")
+        @com.aliyun.core.annotation.NameInMap("Comments")
+        private String comments;
+
+        @com.aliyun.core.annotation.NameInMap("ComplainResult")
         private Integer complainResult;
 
-        @NameInMap("OldScore")
+        @com.aliyun.core.annotation.NameInMap("OldScore")
         private Integer oldScore;
 
-        @NameInMap("OperatorName")
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        private Long operator;
+
+        @com.aliyun.core.annotation.NameInMap("OperatorName")
         private String operatorName;
 
-        @NameInMap("ReviewResult")
+        @com.aliyun.core.annotation.NameInMap("ReviewManagerType")
+        private String reviewManagerType;
+
+        @com.aliyun.core.annotation.NameInMap("ReviewResult")
         private Integer reviewResult;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("ReviewRightRule")
+        private ReviewHistoryReviewRightRule reviewRightRule;
+
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("TimeStr")
+        @com.aliyun.core.annotation.NameInMap("Time")
+        private Long time;
+
+        @com.aliyun.core.annotation.NameInMap("TimeStr")
         private String timeStr;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private ReviewHistory(Builder builder) {
+            this.comments = builder.comments;
             this.complainResult = builder.complainResult;
             this.oldScore = builder.oldScore;
+            this.operator = builder.operator;
             this.operatorName = builder.operatorName;
+            this.reviewManagerType = builder.reviewManagerType;
             this.reviewResult = builder.reviewResult;
+            this.reviewRightRule = builder.reviewRightRule;
             this.score = builder.score;
+            this.time = builder.time;
             this.timeStr = builder.timeStr;
             this.type = builder.type;
         }
@@ -1866,6 +1987,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
         public static ReviewHistory create() {
             return builder().build();
+        }
+
+        /**
+         * @return comments
+         */
+        public String getComments() {
+            return this.comments;
         }
 
         /**
@@ -1883,10 +2011,24 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         /**
+         * @return operator
+         */
+        public Long getOperator() {
+            return this.operator;
+        }
+
+        /**
          * @return operatorName
          */
         public String getOperatorName() {
             return this.operatorName;
+        }
+
+        /**
+         * @return reviewManagerType
+         */
+        public String getReviewManagerType() {
+            return this.reviewManagerType;
         }
 
         /**
@@ -1897,10 +2039,24 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         /**
+         * @return reviewRightRule
+         */
+        public ReviewHistoryReviewRightRule getReviewRightRule() {
+            return this.reviewRightRule;
+        }
+
+        /**
          * @return score
          */
         public Integer getScore() {
             return this.score;
+        }
+
+        /**
+         * @return time
+         */
+        public Long getTime() {
+            return this.time;
         }
 
         /**
@@ -1918,13 +2074,26 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String comments; 
             private Integer complainResult; 
             private Integer oldScore; 
+            private Long operator; 
             private String operatorName; 
+            private String reviewManagerType; 
             private Integer reviewResult; 
+            private ReviewHistoryReviewRightRule reviewRightRule; 
             private Integer score; 
+            private Long time; 
             private String timeStr; 
             private Integer type; 
+
+            /**
+             * Comments.
+             */
+            public Builder comments(String comments) {
+                this.comments = comments;
+                return this;
+            }
 
             /**
              * ComplainResult.
@@ -1943,10 +2112,26 @@ public class GetResultToReviewResponseBody extends TeaModel {
             }
 
             /**
+             * Operator.
+             */
+            public Builder operator(Long operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
              * OperatorName.
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
+                return this;
+            }
+
+            /**
+             * ReviewManagerType.
+             */
+            public Builder reviewManagerType(String reviewManagerType) {
+                this.reviewManagerType = reviewManagerType;
                 return this;
             }
 
@@ -1959,10 +2144,26 @@ public class GetResultToReviewResponseBody extends TeaModel {
             }
 
             /**
+             * ReviewRightRule.
+             */
+            public Builder reviewRightRule(ReviewHistoryReviewRightRule reviewRightRule) {
+                this.reviewRightRule = reviewRightRule;
+                return this;
+            }
+
+            /**
              * Score.
              */
             public Builder score(Integer score) {
                 this.score = score;
+                return this;
+            }
+
+            /**
+             * Time.
+             */
+            public Builder time(Long time) {
+                this.time = time;
                 return this;
             }
 
@@ -1990,7 +2191,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
 
     }
     public static class ReviewHistoryList extends TeaModel {
-        @NameInMap("ReviewHistory")
+        @com.aliyun.core.annotation.NameInMap("ReviewHistory")
         private java.util.List < ReviewHistory> reviewHistory;
 
         private ReviewHistoryList(Builder builder) {
@@ -2030,41 +2231,187 @@ public class GetResultToReviewResponseBody extends TeaModel {
         } 
 
     }
+    public static class ReviewKeyIdList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ReviewKeyIdList")
+        private java.util.List < Long > reviewKeyIdList;
+
+        private ReviewKeyIdList(Builder builder) {
+            this.reviewKeyIdList = builder.reviewKeyIdList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReviewKeyIdList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reviewKeyIdList
+         */
+        public java.util.List < Long > getReviewKeyIdList() {
+            return this.reviewKeyIdList;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > reviewKeyIdList; 
+
+            /**
+             * ReviewKeyIdList.
+             */
+            public Builder reviewKeyIdList(java.util.List < Long > reviewKeyIdList) {
+                this.reviewKeyIdList = reviewKeyIdList;
+                return this;
+            }
+
+            public ReviewKeyIdList build() {
+                return new ReviewKeyIdList(this);
+            } 
+
+        } 
+
+    }
+    public static class ReviewTypeIdList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ReviewKeyIdList")
+        private ReviewKeyIdList reviewKeyIdList;
+
+        @com.aliyun.core.annotation.NameInMap("ReviewTypeId")
+        private Long reviewTypeId;
+
+        private ReviewTypeIdList(Builder builder) {
+            this.reviewKeyIdList = builder.reviewKeyIdList;
+            this.reviewTypeId = builder.reviewTypeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReviewTypeIdList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reviewKeyIdList
+         */
+        public ReviewKeyIdList getReviewKeyIdList() {
+            return this.reviewKeyIdList;
+        }
+
+        /**
+         * @return reviewTypeId
+         */
+        public Long getReviewTypeId() {
+            return this.reviewTypeId;
+        }
+
+        public static final class Builder {
+            private ReviewKeyIdList reviewKeyIdList; 
+            private Long reviewTypeId; 
+
+            /**
+             * ReviewKeyIdList.
+             */
+            public Builder reviewKeyIdList(ReviewKeyIdList reviewKeyIdList) {
+                this.reviewKeyIdList = reviewKeyIdList;
+                return this;
+            }
+
+            /**
+             * ReviewTypeId.
+             */
+            public Builder reviewTypeId(Long reviewTypeId) {
+                this.reviewTypeId = reviewTypeId;
+                return this;
+            }
+
+            public ReviewTypeIdList build() {
+                return new ReviewTypeIdList(this);
+            } 
+
+        } 
+
+    }
+    public static class DataReviewTypeIdList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ReviewTypeIdList")
+        private java.util.List < ReviewTypeIdList> reviewTypeIdList;
+
+        private DataReviewTypeIdList(Builder builder) {
+            this.reviewTypeIdList = builder.reviewTypeIdList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataReviewTypeIdList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reviewTypeIdList
+         */
+        public java.util.List < ReviewTypeIdList> getReviewTypeIdList() {
+            return this.reviewTypeIdList;
+        }
+
+        public static final class Builder {
+            private java.util.List < ReviewTypeIdList> reviewTypeIdList; 
+
+            /**
+             * ReviewTypeIdList.
+             */
+            public Builder reviewTypeIdList(java.util.List < ReviewTypeIdList> reviewTypeIdList) {
+                this.reviewTypeIdList = reviewTypeIdList;
+                return this;
+            }
+
+            public DataReviewTypeIdList build() {
+                return new DataReviewTypeIdList(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
-        @NameInMap("AudioScheme")
+        @com.aliyun.core.annotation.NameInMap("AudioScheme")
         private String audioScheme;
 
-        @NameInMap("AudioURL")
+        @com.aliyun.core.annotation.NameInMap("AudioURL")
         private String audioURL;
 
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("Dialogues")
+        @com.aliyun.core.annotation.NameInMap("Dialogues")
         private Dialogues dialogues;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("FileMergeName")
+        @com.aliyun.core.annotation.NameInMap("FileMergeName")
         private String fileMergeName;
 
-        @NameInMap("HitRuleReviewInfoList")
+        @com.aliyun.core.annotation.NameInMap("HitRuleReviewInfoList")
         private HitRuleReviewInfoList hitRuleReviewInfoList;
 
-        @NameInMap("ManualScoreInfoList")
+        @com.aliyun.core.annotation.NameInMap("ManualScoreInfoList")
         private ManualScoreInfoList manualScoreInfoList;
 
-        @NameInMap("ReviewHistoryList")
+        @com.aliyun.core.annotation.NameInMap("ReviewHistoryList")
         private ReviewHistoryList reviewHistoryList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("ReviewTypeIdList")
+        private DataReviewTypeIdList reviewTypeIdList;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TotalScore")
+        @com.aliyun.core.annotation.NameInMap("TotalScore")
         private Integer totalScore;
 
-        @NameInMap("Vid")
+        @com.aliyun.core.annotation.NameInMap("Vid")
         private String vid;
 
         private Data(Builder builder) {
@@ -2077,6 +2424,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             this.hitRuleReviewInfoList = builder.hitRuleReviewInfoList;
             this.manualScoreInfoList = builder.manualScoreInfoList;
             this.reviewHistoryList = builder.reviewHistoryList;
+            this.reviewTypeIdList = builder.reviewTypeIdList;
             this.status = builder.status;
             this.totalScore = builder.totalScore;
             this.vid = builder.vid;
@@ -2154,6 +2502,13 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
 
         /**
+         * @return reviewTypeIdList
+         */
+        public DataReviewTypeIdList getReviewTypeIdList() {
+            return this.reviewTypeIdList;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -2184,6 +2539,7 @@ public class GetResultToReviewResponseBody extends TeaModel {
             private HitRuleReviewInfoList hitRuleReviewInfoList; 
             private ManualScoreInfoList manualScoreInfoList; 
             private ReviewHistoryList reviewHistoryList; 
+            private DataReviewTypeIdList reviewTypeIdList; 
             private Integer status; 
             private Integer totalScore; 
             private String vid; 
@@ -2257,6 +2613,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
              */
             public Builder reviewHistoryList(ReviewHistoryList reviewHistoryList) {
                 this.reviewHistoryList = reviewHistoryList;
+                return this;
+            }
+
+            /**
+             * ReviewTypeIdList.
+             */
+            public Builder reviewTypeIdList(DataReviewTypeIdList reviewTypeIdList) {
+                this.reviewTypeIdList = reviewTypeIdList;
                 return this;
             }
 

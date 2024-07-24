@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GraphFlowNode</p>
  */
 public class GraphFlowNode extends TeaModel {
-    @NameInMap("Conditions")
+    @com.aliyun.core.annotation.NameInMap("Conditions")
     private java.util.List < ConditionBasicInfo > conditions;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("Index")
+    @com.aliyun.core.annotation.NameInMap("Index")
     private Integer index;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("NextNodes")
+    @com.aliyun.core.annotation.NameInMap("NextNodes")
     private java.util.List < NextNodes> nextNodes;
 
-    @NameInMap("NodeType")
+    @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
-    @NameInMap("Properties")
+    @com.aliyun.core.annotation.NameInMap("Properties")
     private Properties properties;
 
-    @NameInMap("Rid")
+    @com.aliyun.core.annotation.NameInMap("Rid")
     private Long rid;
 
-    @NameInMap("UseConditions")
+    @com.aliyun.core.annotation.NameInMap("UseConditions")
     private Boolean useConditions;
 
     private GraphFlowNode(Builder builder) {
@@ -232,22 +231,22 @@ public class GraphFlowNode extends TeaModel {
     } 
 
     public static class NextNodes extends TeaModel {
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Lambda")
+        @com.aliyun.core.annotation.NameInMap("Lambda")
         private String lambda;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NextNodeId")
+        @com.aliyun.core.annotation.NameInMap("NextNodeId")
         private Long nextNodeId;
 
-        @NameInMap("Triggers")
+        @com.aliyun.core.annotation.NameInMap("Triggers")
         private java.util.List < String > triggers;
 
         private NextNodes(Builder builder) {
@@ -373,46 +372,46 @@ public class GraphFlowNode extends TeaModel {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("AutoReview")
+        @com.aliyun.core.annotation.NameInMap("AutoReview")
         private Integer autoReview;
 
-        @NameInMap("BranchJudge")
+        @com.aliyun.core.annotation.NameInMap("BranchJudge")
         private Boolean branchJudge;
 
-        @NameInMap("CheckMoreSize")
+        @com.aliyun.core.annotation.NameInMap("CheckMoreSize")
         private Integer checkMoreSize;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
-        @NameInMap("Lambda")
+        @com.aliyun.core.annotation.NameInMap("Lambda")
         private String lambda;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("RuleScoreType")
+        @com.aliyun.core.annotation.NameInMap("RuleScoreType")
         private Integer ruleScoreType;
 
-        @NameInMap("SayType")
+        @com.aliyun.core.annotation.NameInMap("SayType")
         private String sayType;
 
-        @NameInMap("ScoreNum")
+        @com.aliyun.core.annotation.NameInMap("ScoreNum")
         private Integer scoreNum;
 
-        @NameInMap("ScoreNumType")
+        @com.aliyun.core.annotation.NameInMap("ScoreNumType")
         private Integer scoreNumType;
 
-        @NameInMap("ScoreRuleHitType")
+        @com.aliyun.core.annotation.NameInMap("ScoreRuleHitType")
         private Integer scoreRuleHitType;
 
-        @NameInMap("ScoreType")
+        @com.aliyun.core.annotation.NameInMap("ScoreType")
         private Integer scoreType;
 
-        @NameInMap("Triggers")
+        @com.aliyun.core.annotation.NameInMap("Triggers")
         private java.util.List < String > triggers;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Properties(Builder builder) {

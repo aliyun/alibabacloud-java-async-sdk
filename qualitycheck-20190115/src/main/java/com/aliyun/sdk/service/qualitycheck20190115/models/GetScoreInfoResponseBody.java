@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetScoreInfoResponseBody</p>
  */
 public class GetScoreInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetScoreInfoResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class GetScoreInfoResponseBody extends TeaModel {
     } 
 
     public static class ScoreParam extends TeaModel {
-        @NameInMap("ScoreNum")
+        @com.aliyun.core.annotation.NameInMap("ScoreNum")
         private Integer scoreNum;
 
-        @NameInMap("ScoreSubId")
+        @com.aliyun.core.annotation.NameInMap("ScoreSubId")
         private Integer scoreSubId;
 
-        @NameInMap("ScoreSubName")
+        @com.aliyun.core.annotation.NameInMap("ScoreSubName")
         private String scoreSubName;
 
-        @NameInMap("ScoreType")
+        @com.aliyun.core.annotation.NameInMap("ScoreType")
         private Integer scoreType;
 
         private ScoreParam(Builder builder) {
@@ -233,7 +232,7 @@ public class GetScoreInfoResponseBody extends TeaModel {
 
     }
     public static class ScoreInfos extends TeaModel {
-        @NameInMap("ScoreParam")
+        @com.aliyun.core.annotation.NameInMap("ScoreParam")
         private java.util.List < ScoreParam> scoreParam;
 
         private ScoreInfos(Builder builder) {
@@ -274,13 +273,13 @@ public class GetScoreInfoResponseBody extends TeaModel {
 
     }
     public static class ScorePo extends TeaModel {
-        @NameInMap("ScoreId")
+        @com.aliyun.core.annotation.NameInMap("ScoreId")
         private Integer scoreId;
 
-        @NameInMap("ScoreInfos")
+        @com.aliyun.core.annotation.NameInMap("ScoreInfos")
         private ScoreInfos scoreInfos;
 
-        @NameInMap("ScoreName")
+        @com.aliyun.core.annotation.NameInMap("ScoreName")
         private String scoreName;
 
         private ScorePo(Builder builder) {
@@ -355,7 +354,7 @@ public class GetScoreInfoResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ScorePo")
+        @com.aliyun.core.annotation.NameInMap("ScorePo")
         private java.util.List < ScorePo> scorePo;
 
         private Data(Builder builder) {

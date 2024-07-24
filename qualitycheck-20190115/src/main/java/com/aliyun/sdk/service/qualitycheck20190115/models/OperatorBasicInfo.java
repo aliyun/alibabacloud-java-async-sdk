@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OperatorBasicInfo</p>
  */
 public class OperatorBasicInfo extends TeaModel {
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Oid")
+    @com.aliyun.core.annotation.NameInMap("Oid")
     private String oid;
 
-    @NameInMap("Param")
+    @com.aliyun.core.annotation.NameInMap("Param")
     private Param param;
 
-    @NameInMap("QualityCheckType")
+    @com.aliyun.core.annotation.NameInMap("QualityCheckType")
     private Integer qualityCheckType;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UserGroup")
+    @com.aliyun.core.annotation.NameInMap("UserGroup")
     private String userGroup;
 
     private OperatorBasicInfo(Builder builder) {
@@ -172,163 +171,163 @@ public class OperatorBasicInfo extends TeaModel {
     } 
 
     public static class Param extends TeaModel {
-        @NameInMap("AnswerThreshold")
+        @com.aliyun.core.annotation.NameInMap("AnswerThreshold")
         private String answerThreshold;
 
-        @NameInMap("AntModelInfo")
+        @com.aliyun.core.annotation.NameInMap("AntModelInfo")
         private java.util.Map < String, String > antModelInfo;
 
-        @NameInMap("Average")
+        @com.aliyun.core.annotation.NameInMap("Average")
         private Boolean average;
 
-        @NameInMap("BeginType")
+        @com.aliyun.core.annotation.NameInMap("BeginType")
         private String beginType;
 
-        @NameInMap("BotId")
+        @com.aliyun.core.annotation.NameInMap("BotId")
         private String botId;
 
-        @NameInMap("Case_sensitive")
+        @com.aliyun.core.annotation.NameInMap("Case_sensitive")
         private Boolean caseSensitive;
 
-        @NameInMap("CategoryPathCode")
+        @com.aliyun.core.annotation.NameInMap("CategoryPathCode")
         private String categoryPathCode;
 
-        @NameInMap("CheckFirstSentence")
+        @com.aliyun.core.annotation.NameInMap("CheckFirstSentence")
         private Boolean checkFirstSentence;
 
-        @NameInMap("CheckType")
+        @com.aliyun.core.annotation.NameInMap("CheckType")
         private Integer checkType;
 
-        @NameInMap("CompareOperator")
+        @com.aliyun.core.annotation.NameInMap("CompareOperator")
         private String compareOperator;
 
-        @NameInMap("ContextChatMatch")
+        @com.aliyun.core.annotation.NameInMap("ContextChatMatch")
         private Boolean contextChatMatch;
 
-        @NameInMap("CustomerParam")
+        @com.aliyun.core.annotation.NameInMap("CustomerParam")
         private JudgeNodeMetaDesc customerParam;
 
-        @NameInMap("DelayTime")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
         private Integer delayTime;
 
-        @NameInMap("Different_role")
+        @com.aliyun.core.annotation.NameInMap("Different_role")
         private Boolean differentRole;
 
-        @NameInMap("EndType")
+        @com.aliyun.core.annotation.NameInMap("EndType")
         private String endType;
 
-        @NameInMap("Excludes")
+        @com.aliyun.core.annotation.NameInMap("Excludes")
         private java.util.List < String > excludes;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("From_end")
+        @com.aliyun.core.annotation.NameInMap("From_end")
         private Boolean fromEnd;
 
-        @NameInMap("Hit_time")
+        @com.aliyun.core.annotation.NameInMap("Hit_time")
         private Integer hitTime;
 
-        @NameInMap("In_sentence")
+        @com.aliyun.core.annotation.NameInMap("In_sentence")
         private Boolean inSentence;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("IntervalEnd")
+        @com.aliyun.core.annotation.NameInMap("IntervalEnd")
         private Integer intervalEnd;
 
-        @NameInMap("KeywordExtension")
+        @com.aliyun.core.annotation.NameInMap("KeywordExtension")
         private Integer keywordExtension;
 
-        @NameInMap("KeywordMatchSize")
+        @com.aliyun.core.annotation.NameInMap("KeywordMatchSize")
         private Integer keywordMatchSize;
 
-        @NameInMap("Keywords")
+        @com.aliyun.core.annotation.NameInMap("Keywords")
         private java.util.List < String > keywords;
 
-        @NameInMap("KnowledgeInfo")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeInfo")
         private String knowledgeInfo;
 
-        @NameInMap("KnowledgeSentenceNum")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeSentenceNum")
         private Integer knowledgeSentenceNum;
 
-        @NameInMap("KnowledgeTargetId")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeTargetId")
         private String knowledgeTargetId;
 
-        @NameInMap("KnowledgeTargetName")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeTargetName")
         private String knowledgeTargetName;
 
-        @NameInMap("KnowledgeTargetType")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeTargetType")
         private Integer knowledgeTargetType;
 
-        @NameInMap("LgfSentences")
+        @com.aliyun.core.annotation.NameInMap("LgfSentences")
         private java.util.List < String > lgfSentences;
 
-        @NameInMap("MaxEmotionChangeValue")
+        @com.aliyun.core.annotation.NameInMap("MaxEmotionChangeValue")
         private Integer maxEmotionChangeValue;
 
-        @NameInMap("MinWordSize")
+        @com.aliyun.core.annotation.NameInMap("MinWordSize")
         private Integer minWordSize;
 
-        @NameInMap("Near_dialogue")
+        @com.aliyun.core.annotation.NameInMap("Near_dialogue")
         private Boolean nearDialogue;
 
-        @NameInMap("NotRegex")
+        @com.aliyun.core.annotation.NameInMap("NotRegex")
         private String notRegex;
 
-        @NameInMap("Phrase")
+        @com.aliyun.core.annotation.NameInMap("Phrase")
         private String phrase;
 
-        @NameInMap("Pkey")
+        @com.aliyun.core.annotation.NameInMap("Pkey")
         private String pkey;
 
-        @NameInMap("Poutput_type")
+        @com.aliyun.core.annotation.NameInMap("Poutput_type")
         private Integer poutputType;
 
-        @NameInMap("Pvalues")
+        @com.aliyun.core.annotation.NameInMap("Pvalues")
         private java.util.List < String > pvalues;
 
-        @NameInMap("QuestionThreshold")
+        @com.aliyun.core.annotation.NameInMap("QuestionThreshold")
         private String questionThreshold;
 
-        @NameInMap("References")
+        @com.aliyun.core.annotation.NameInMap("References")
         private java.util.List < String > references;
 
-        @NameInMap("Regex")
+        @com.aliyun.core.annotation.NameInMap("Regex")
         private String regex;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private Integer roleId;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("Similarity_threshold")
+        @com.aliyun.core.annotation.NameInMap("Similarity_threshold")
         private Double similarityThreshold;
 
-        @NameInMap("SimilarlySentences")
+        @com.aliyun.core.annotation.NameInMap("SimilarlySentences")
         private java.util.List < String > similarlySentences;
 
-        @NameInMap("Synonyms")
+        @com.aliyun.core.annotation.NameInMap("Synonyms")
         private java.util.Map < String, java.util.List<String>> synonyms;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private Integer target;
 
-        @NameInMap("Target_role")
+        @com.aliyun.core.annotation.NameInMap("Target_role")
         private String targetRole;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
-        @NameInMap("UseEasAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("UseEasAlgorithm")
         private Boolean useEasAlgorithm;
 
-        @NameInMap("Velocity")
+        @com.aliyun.core.annotation.NameInMap("Velocity")
         private Double velocity;
 
-        @NameInMap("VelocityInMint")
+        @com.aliyun.core.annotation.NameInMap("VelocityInMint")
         private Integer velocityInMint;
 
         private Param(Builder builder) {

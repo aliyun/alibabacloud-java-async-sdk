@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWarningConfigResponseBody</p>
  */
 public class ListWarningConfigResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListWarningConfigResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListWarningConfigResponseBody extends TeaModel {
     } 
 
     public static class Channel extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Channel(Builder builder) {
@@ -193,7 +192,7 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
     }
     public static class Channels extends TeaModel {
-        @NameInMap("Channel")
+        @com.aliyun.core.annotation.NameInMap("Channel")
         private java.util.List < Channel> channel;
 
         private Channels(Builder builder) {
@@ -234,7 +233,7 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
     }
     public static class RidList extends TeaModel {
-        @NameInMap("RidList")
+        @com.aliyun.core.annotation.NameInMap("RidList")
         private java.util.List < String > ridList;
 
         private RidList(Builder builder) {
@@ -275,10 +274,10 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
     }
     public static class WarningRule extends TeaModel {
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private WarningRule(Builder builder) {
@@ -336,7 +335,7 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
     }
     public static class RuleList extends TeaModel {
-        @NameInMap("WarningRule")
+        @com.aliyun.core.annotation.NameInMap("WarningRule")
         private java.util.List < WarningRule> warningRule;
 
         private RuleList(Builder builder) {
@@ -377,28 +376,28 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
     }
     public static class WarningConfigInfo extends TeaModel {
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private Channels channels;
 
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private Long configId;
 
-        @NameInMap("ConfigName")
+        @com.aliyun.core.annotation.NameInMap("ConfigName")
         private String configName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("RidList")
+        @com.aliyun.core.annotation.NameInMap("RidList")
         private RidList ridList;
 
-        @NameInMap("RuleList")
+        @com.aliyun.core.annotation.NameInMap("RuleList")
         private RuleList ruleList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private WarningConfigInfo(Builder builder) {
@@ -558,7 +557,7 @@ public class ListWarningConfigResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("WarningConfigInfo")
+        @com.aliyun.core.annotation.NameInMap("WarningConfigInfo")
         private java.util.List < WarningConfigInfo> warningConfigInfo;
 
         private Data(Builder builder) {

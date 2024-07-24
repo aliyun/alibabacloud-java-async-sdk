@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRuleByIdRequest</p>
  */
 public class UpdateRuleByIdRequest extends Request {
-    @Query
-    @NameInMap("BaseMeAgentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BaseMeAgentId")
     private Long baseMeAgentId;
 
-    @Body
-    @NameInMap("IsCopy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsCopy")
     private Boolean isCopy;
 
-    @Body
-    @NameInMap("JsonStrForRule")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JsonStrForRule")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jsonStrForRule;
 
-    @Body
-    @NameInMap("ReturnRelatedSchemes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReturnRelatedSchemes")
     private Boolean returnRelatedSchemes;
 
-    @Body
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private Long ruleId;
 
     private UpdateRuleByIdRequest(Builder builder) {

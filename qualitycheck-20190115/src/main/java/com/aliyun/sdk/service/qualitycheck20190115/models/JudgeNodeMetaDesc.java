@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JudgeNodeMetaDesc</p>
  */
 public class JudgeNodeMetaDesc extends TeaModel {
-    @NameInMap("ActualValue")
+    @com.aliyun.core.annotation.NameInMap("ActualValue")
     private String actualValue;
 
-    @NameInMap("DataType")
+    @com.aliyun.core.annotation.NameInMap("DataType")
     private Integer dataType;
 
-    @NameInMap("Field")
+    @com.aliyun.core.annotation.NameInMap("Field")
     private String field;
 
-    @NameInMap("FieldType")
+    @com.aliyun.core.annotation.NameInMap("FieldType")
     private Integer fieldType;
 
-    @NameInMap("Symbol")
+    @com.aliyun.core.annotation.NameInMap("Symbol")
     private Integer symbol;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private JudgeNodeMetaDesc(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadDataSyncResponseBody</p>
  */
 public class UploadDataSyncResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private UploadDataSyncResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
     } 
 
     public static class HandScoreIdList extends TeaModel {
-        @NameInMap("HandScoreIdList")
+        @com.aliyun.core.annotation.NameInMap("HandScoreIdList")
         private java.util.List < String > handScoreIdList;
 
         private HandScoreIdList(Builder builder) {
@@ -173,7 +172,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class ConditionBasicInfo extends TeaModel {
-        @NameInMap("ConditionInfoCid")
+        @com.aliyun.core.annotation.NameInMap("ConditionInfoCid")
         private String conditionInfoCid;
 
         private ConditionBasicInfo(Builder builder) {
@@ -214,7 +213,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class ConditionInfo extends TeaModel {
-        @NameInMap("ConditionBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("ConditionBasicInfo")
         private java.util.List < ConditionBasicInfo> conditionBasicInfo;
 
         private ConditionInfo(Builder builder) {
@@ -255,7 +254,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class HitCids extends TeaModel {
-        @NameInMap("CidItem")
+        @com.aliyun.core.annotation.NameInMap("CidItem")
         private java.util.List < String > cidItem;
 
         private HitCids(Builder builder) {
@@ -296,19 +295,19 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class HitKeyWord extends TeaModel {
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Integer from;
 
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private Integer pid;
 
-        @NameInMap("Tid")
+        @com.aliyun.core.annotation.NameInMap("Tid")
         private String tid;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Integer to;
 
-        @NameInMap("Val")
+        @com.aliyun.core.annotation.NameInMap("Val")
         private String val;
 
         private HitKeyWord(Builder builder) {
@@ -417,7 +416,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class HitKeyWords extends TeaModel {
-        @NameInMap("HitKeyWord")
+        @com.aliyun.core.annotation.NameInMap("HitKeyWord")
         private java.util.List < HitKeyWord> hitKeyWord;
 
         private HitKeyWords(Builder builder) {
@@ -458,22 +457,22 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class Phrase extends TeaModel {
-        @NameInMap("Begin")
+        @com.aliyun.core.annotation.NameInMap("Begin")
         private Long begin;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Words")
+        @com.aliyun.core.annotation.NameInMap("Words")
         private String words;
 
         private Phrase(Builder builder) {
@@ -599,13 +598,13 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class ConditionHitInfo extends TeaModel {
-        @NameInMap("HitCids")
+        @com.aliyun.core.annotation.NameInMap("HitCids")
         private HitCids hitCids;
 
-        @NameInMap("HitKeyWords")
+        @com.aliyun.core.annotation.NameInMap("HitKeyWords")
         private HitKeyWords hitKeyWords;
 
-        @NameInMap("Phrase")
+        @com.aliyun.core.annotation.NameInMap("Phrase")
         private Phrase phrase;
 
         private ConditionHitInfo(Builder builder) {
@@ -680,7 +679,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class Hit extends TeaModel {
-        @NameInMap("ConditionHitInfo")
+        @com.aliyun.core.annotation.NameInMap("ConditionHitInfo")
         private java.util.List < ConditionHitInfo> conditionHitInfo;
 
         private Hit(Builder builder) {
@@ -721,16 +720,16 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class RuleHitInfo extends TeaModel {
-        @NameInMap("ConditionInfo")
+        @com.aliyun.core.annotation.NameInMap("ConditionInfo")
         private ConditionInfo conditionInfo;
 
-        @NameInMap("Hit")
+        @com.aliyun.core.annotation.NameInMap("Hit")
         private Hit hit;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private String rid;
 
-        @NameInMap("Tid")
+        @com.aliyun.core.annotation.NameInMap("Tid")
         private String tid;
 
         private RuleHitInfo(Builder builder) {
@@ -822,7 +821,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("RuleHitInfo")
+        @com.aliyun.core.annotation.NameInMap("RuleHitInfo")
         private java.util.List < RuleHitInfo> ruleHitInfo;
 
         private Rules(Builder builder) {
@@ -863,13 +862,13 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class ResultInfo extends TeaModel {
-        @NameInMap("HandScoreIdList")
+        @com.aliyun.core.annotation.NameInMap("HandScoreIdList")
         private HandScoreIdList handScoreIdList;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private Rules rules;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
         private ResultInfo(Builder builder) {
@@ -944,7 +943,7 @@ public class UploadDataSyncResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ResultInfo")
+        @com.aliyun.core.annotation.NameInMap("ResultInfo")
         private java.util.List < ResultInfo> resultInfo;
 
         private Data(Builder builder) {

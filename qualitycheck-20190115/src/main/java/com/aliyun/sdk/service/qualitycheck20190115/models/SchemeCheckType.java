@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SchemeCheckType</p>
  */
 public class SchemeCheckType extends TeaModel {
-    @NameInMap("CheckName")
+    @com.aliyun.core.annotation.NameInMap("CheckName")
     private String checkName;
 
-    @NameInMap("CheckType")
+    @com.aliyun.core.annotation.NameInMap("CheckType")
     private Long checkType;
 
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Integer enable;
 
-    @NameInMap("SchemeId")
+    @com.aliyun.core.annotation.NameInMap("SchemeId")
     private Long schemeId;
 
-    @NameInMap("SchemeScoreInfoList")
+    @com.aliyun.core.annotation.NameInMap("SchemeScoreInfoList")
     private java.util.List < SchemeScoreInfoList> schemeScoreInfoList;
 
-    @NameInMap("Score")
+    @com.aliyun.core.annotation.NameInMap("Score")
     private Integer score;
 
-    @NameInMap("SourceScore")
+    @com.aliyun.core.annotation.NameInMap("SourceScore")
     private Integer sourceScore;
 
-    @NameInMap("TaskFlowScoreInfoList")
+    @com.aliyun.core.annotation.NameInMap("TaskFlowScoreInfoList")
     private java.util.List < TaskFlowScoreInfoList> taskFlowScoreInfoList;
 
     private SchemeCheckType(Builder builder) {
@@ -192,28 +191,28 @@ public class SchemeCheckType extends TeaModel {
     } 
 
     public static class SchemeScoreInfoList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
-        @NameInMap("ScoreNum")
+        @com.aliyun.core.annotation.NameInMap("ScoreNum")
         private Integer scoreNum;
 
-        @NameInMap("ScoreNumType")
+        @com.aliyun.core.annotation.NameInMap("ScoreNumType")
         private Integer scoreNumType;
 
-        @NameInMap("ScoreRuleHitType")
+        @com.aliyun.core.annotation.NameInMap("ScoreRuleHitType")
         private Integer scoreRuleHitType;
 
-        @NameInMap("ScoreType")
+        @com.aliyun.core.annotation.NameInMap("ScoreType")
         private Integer scoreType;
 
-        @NameInMap("TaskFlowId")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowId")
         private Long taskFlowId;
 
-        @NameInMap("TaskFlowName")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowName")
         private String taskFlowName;
 
         private SchemeScoreInfoList(Builder builder) {
@@ -373,28 +372,28 @@ public class SchemeCheckType extends TeaModel {
 
     }
     public static class TaskFlowScoreInfoListSchemeScoreInfoList extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Rid")
+        @com.aliyun.core.annotation.NameInMap("Rid")
         private Long rid;
 
-        @NameInMap("ScoreNum")
+        @com.aliyun.core.annotation.NameInMap("ScoreNum")
         private Integer scoreNum;
 
-        @NameInMap("ScoreNumType")
+        @com.aliyun.core.annotation.NameInMap("ScoreNumType")
         private Integer scoreNumType;
 
-        @NameInMap("ScoreRuleHitType")
+        @com.aliyun.core.annotation.NameInMap("ScoreRuleHitType")
         private Integer scoreRuleHitType;
 
-        @NameInMap("ScoreType")
+        @com.aliyun.core.annotation.NameInMap("ScoreType")
         private Integer scoreType;
 
-        @NameInMap("TaskFlowId")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowId")
         private Long taskFlowId;
 
-        @NameInMap("TaskFlowName")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowName")
         private String taskFlowName;
 
         private TaskFlowScoreInfoListSchemeScoreInfoList(Builder builder) {
@@ -554,16 +553,16 @@ public class SchemeCheckType extends TeaModel {
 
     }
     public static class TaskFlowScoreInfoList extends TeaModel {
-        @NameInMap("SchemeScoreInfoList")
+        @com.aliyun.core.annotation.NameInMap("SchemeScoreInfoList")
         private java.util.List < TaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList;
 
-        @NameInMap("TaskFlowId")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowId")
         private Long taskFlowId;
 
-        @NameInMap("TaskFlowName")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowName")
         private String taskFlowName;
 
-        @NameInMap("TaskFlowType")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowType")
         private Integer taskFlowType;
 
         private TaskFlowScoreInfoList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NextNodeSituations</p>
  */
 public class NextNodeSituations extends TeaModel {
-    @NameInMap("ConditionGroup")
+    @com.aliyun.core.annotation.NameInMap("ConditionGroup")
     private java.util.List < ConditionGroup> conditionGroup;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private NextNodeSituations(Builder builder) {
@@ -72,10 +71,10 @@ public class NextNodeSituations extends TeaModel {
     } 
 
     public static class ConditionGroup extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < JudgeNodeMetaDesc > conditions;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ConditionGroup(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TaskGraphFlow</p>
  */
 public class TaskGraphFlow extends TeaModel {
-    @NameInMap("FlowRuleScoreType")
+    @com.aliyun.core.annotation.NameInMap("FlowRuleScoreType")
     private Integer flowRuleScoreType;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("Nodes")
+    @com.aliyun.core.annotation.NameInMap("Nodes")
     private java.util.List < GraphFlowNode > nodes;
 
-    @NameInMap("Rid")
+    @com.aliyun.core.annotation.NameInMap("Rid")
     private Long rid;
 
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @NameInMap("ShowProperties")
+    @com.aliyun.core.annotation.NameInMap("ShowProperties")
     private String showProperties;
 
-    @NameInMap("SkipWhenFirstSessionNodeMiss")
+    @com.aliyun.core.annotation.NameInMap("SkipWhenFirstSessionNodeMiss")
     private Boolean skipWhenFirstSessionNodeMiss;
 
     private TaskGraphFlow(Builder builder) {

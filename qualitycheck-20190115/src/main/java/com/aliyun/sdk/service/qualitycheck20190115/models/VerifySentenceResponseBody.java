@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.qualitycheck20190115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifySentenceResponseBody</p>
  */
 public class VerifySentenceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("IncorrectWords")
+    @com.aliyun.core.annotation.NameInMap("IncorrectWords")
     private Integer incorrectWords;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceRole")
+    @com.aliyun.core.annotation.NameInMap("SourceRole")
     private Integer sourceRole;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TargetRole")
+    @com.aliyun.core.annotation.NameInMap("TargetRole")
     private Integer targetRole;
 
     private VerifySentenceResponseBody(Builder builder) {
@@ -192,7 +191,7 @@ public class VerifySentenceResponseBody extends TeaModel {
     } 
 
     public static class Line extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < String > line;
 
         private Line(Builder builder) {
@@ -233,10 +232,10 @@ public class VerifySentenceResponseBody extends TeaModel {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private Line line;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
         private Source(Builder builder) {
@@ -294,7 +293,7 @@ public class VerifySentenceResponseBody extends TeaModel {
 
     }
     public static class TargetLine extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < String > line;
 
         private TargetLine(Builder builder) {
@@ -335,10 +334,10 @@ public class VerifySentenceResponseBody extends TeaModel {
 
     }
     public static class Target extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private TargetLine line;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
         private Target(Builder builder) {
@@ -396,13 +395,13 @@ public class VerifySentenceResponseBody extends TeaModel {
 
     }
     public static class Delta extends TeaModel {
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private Source source;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private Target target;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Delta(Builder builder) {
@@ -477,7 +476,7 @@ public class VerifySentenceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Delta")
+        @com.aliyun.core.annotation.NameInMap("Delta")
         private java.util.List < Delta> delta;
 
         private Data(Builder builder) {
