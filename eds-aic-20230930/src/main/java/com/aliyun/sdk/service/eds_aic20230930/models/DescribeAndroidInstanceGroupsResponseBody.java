@@ -235,6 +235,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("RenderingType")
+        private String renderingType;
+
         @com.aliyun.core.annotation.NameInMap("ResolutionHeight")
         private Integer resolutionHeight;
 
@@ -272,6 +275,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             this.officeSiteId = builder.officeSiteId;
             this.policyGroupId = builder.policyGroupId;
             this.regionId = builder.regionId;
+            this.renderingType = builder.renderingType;
             this.resolutionHeight = builder.resolutionHeight;
             this.resolutionWidth = builder.resolutionWidth;
             this.saleMode = builder.saleMode;
@@ -435,6 +439,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return renderingType
+         */
+        public String getRenderingType() {
+            return this.renderingType;
+        }
+
+        /**
          * @return resolutionHeight
          */
         public Integer getResolutionHeight() {
@@ -491,6 +502,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String officeSiteId; 
             private String policyGroupId; 
             private String regionId; 
+            private String renderingType; 
             private Integer resolutionHeight; 
             private Integer resolutionWidth; 
             private String saleMode; 
@@ -662,6 +674,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RenderingType.
+             */
+            public Builder renderingType(String renderingType) {
+                this.renderingType = renderingType;
                 return this;
             }
 

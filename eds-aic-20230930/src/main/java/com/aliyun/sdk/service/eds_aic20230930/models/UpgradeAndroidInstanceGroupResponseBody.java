@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpgradeAndroidInstanceGroupResponseBody</p>
  */
 public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private String instanceIds;
+
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
@@ -18,6 +21,7 @@ public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
     private String requestId;
 
     private UpgradeAndroidInstanceGroupResponseBody(Builder builder) {
+        this.instanceIds = builder.instanceIds;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
@@ -28,6 +32,13 @@ public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
 
     public static UpgradeAndroidInstanceGroupResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public String getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -45,8 +56,17 @@ public class UpgradeAndroidInstanceGroupResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String instanceIds; 
         private String orderId; 
         private String requestId; 
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(String instanceIds) {
+            this.instanceIds = instanceIds;
+            return this;
+        }
 
         /**
          * OrderId.

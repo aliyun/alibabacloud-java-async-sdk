@@ -159,6 +159,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("RenderingType")
+        private String renderingType;
+
         private InstanceModel(Builder builder) {
             this.androidInstanceGroupId = builder.androidInstanceGroupId;
             this.androidInstanceId = builder.androidInstanceId;
@@ -176,6 +179,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.persistentAppInstanceId = builder.persistentAppInstanceId;
             this.rate = builder.rate;
             this.regionId = builder.regionId;
+            this.renderingType = builder.renderingType;
         }
 
         public static Builder builder() {
@@ -298,6 +302,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        /**
+         * @return renderingType
+         */
+        public String getRenderingType() {
+            return this.renderingType;
+        }
+
         public static final class Builder {
             private String androidInstanceGroupId; 
             private String androidInstanceId; 
@@ -315,6 +326,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String persistentAppInstanceId; 
             private Integer rate; 
             private String regionId; 
+            private String renderingType; 
 
             /**
              * AndroidInstanceGroupId.
@@ -441,6 +453,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RenderingType.
+             */
+            public Builder renderingType(String renderingType) {
+                this.renderingType = renderingType;
                 return this;
             }
 

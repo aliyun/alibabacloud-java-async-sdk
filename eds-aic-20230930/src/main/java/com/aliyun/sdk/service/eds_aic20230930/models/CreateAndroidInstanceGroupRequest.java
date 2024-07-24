@@ -33,6 +33,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     private String chargeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
+    private Boolean gpuAcceleration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
@@ -79,6 +83,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
+        this.gpuAcceleration = builder.gpuAcceleration;
         this.imageId = builder.imageId;
         this.instanceGroupName = builder.instanceGroupName;
         this.instanceGroupSpec = builder.instanceGroupSpec;
@@ -136,6 +141,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return gpuAcceleration
+     */
+    public Boolean getGpuAcceleration() {
+        return this.gpuAcceleration;
     }
 
     /**
@@ -207,6 +219,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private Boolean autoRenew; 
         private String bizRegionId; 
         private String chargeType; 
+        private Boolean gpuAcceleration; 
         private String imageId; 
         private String instanceGroupName; 
         private String instanceGroupSpec; 
@@ -228,6 +241,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
+            this.gpuAcceleration = request.gpuAcceleration;
             this.imageId = request.imageId;
             this.instanceGroupName = request.instanceGroupName;
             this.instanceGroupSpec = request.instanceGroupSpec;
@@ -281,6 +295,15 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * GpuAcceleration.
+         */
+        public Builder gpuAcceleration(Boolean gpuAcceleration) {
+            this.putQueryParameter("GpuAcceleration", gpuAcceleration);
+            this.gpuAcceleration = gpuAcceleration;
             return this;
         }
 

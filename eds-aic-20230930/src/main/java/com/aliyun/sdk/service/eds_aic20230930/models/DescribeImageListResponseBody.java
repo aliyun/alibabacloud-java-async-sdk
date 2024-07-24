@@ -141,6 +141,12 @@ public class DescribeImageListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
+        private String releaseTime;
+
+        @com.aliyun.core.annotation.NameInMap("RenderingType")
+        private String renderingType;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -158,6 +164,8 @@ public class DescribeImageListResponseBody extends TeaModel {
             this.imageRegionList = builder.imageRegionList;
             this.imageType = builder.imageType;
             this.language = builder.language;
+            this.releaseTime = builder.releaseTime;
+            this.renderingType = builder.renderingType;
             this.status = builder.status;
             this.systemType = builder.systemType;
         }
@@ -241,6 +249,20 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
 
         /**
+         * @return releaseTime
+         */
+        public String getReleaseTime() {
+            return this.releaseTime;
+        }
+
+        /**
+         * @return renderingType
+         */
+        public String getRenderingType() {
+            return this.renderingType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -265,6 +287,8 @@ public class DescribeImageListResponseBody extends TeaModel {
             private java.util.List < String > imageRegionList; 
             private String imageType; 
             private String language; 
+            private String releaseTime; 
+            private String renderingType; 
             private String status; 
             private String systemType; 
 
@@ -345,6 +369,22 @@ public class DescribeImageListResponseBody extends TeaModel {
              */
             public Builder language(String language) {
                 this.language = language;
+                return this;
+            }
+
+            /**
+             * ReleaseTime.
+             */
+            public Builder releaseTime(String releaseTime) {
+                this.releaseTime = releaseTime;
+                return this;
+            }
+
+            /**
+             * RenderingType.
+             */
+            public Builder renderingType(String renderingType) {
+                this.renderingType = renderingType;
                 return this;
             }
 
