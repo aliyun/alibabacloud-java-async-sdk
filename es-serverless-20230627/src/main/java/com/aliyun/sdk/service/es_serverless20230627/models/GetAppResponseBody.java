@@ -481,6 +481,9 @@ public class GetAppResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("appType")
+        private String appType;
+
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
@@ -514,6 +517,7 @@ public class GetAppResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.appType = builder.appType;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.instanceId = builder.instanceId;
@@ -546,6 +550,13 @@ public class GetAppResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return appType
+         */
+        public String getAppType() {
+            return this.appType;
         }
 
         /**
@@ -621,6 +632,7 @@ public class GetAppResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String appName; 
+            private String appType; 
             private String createTime; 
             private String description; 
             private String instanceId; 
@@ -645,6 +657,14 @@ public class GetAppResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * appType.
+             */
+            public Builder appType(String appType) {
+                this.appType = appType;
                 return this;
             }
 
