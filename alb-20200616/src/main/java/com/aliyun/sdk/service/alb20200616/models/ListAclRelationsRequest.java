@@ -54,7 +54,7 @@ public class ListAclRelationsRequest extends Request {
         } 
 
         /**
-         * The ACL IDs.
+         * Array of ACL ID.
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.putQueryParameter("AclIds", aclIds);

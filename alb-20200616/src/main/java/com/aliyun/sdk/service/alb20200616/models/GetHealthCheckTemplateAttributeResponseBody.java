@@ -205,7 +205,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         private Integer unhealthyThreshold; 
 
         /**
-         * The HTTP status codes that indicate healthy backend servers.
+         * The HTTP status codes that indicate a healthy backend server.
          */
         public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
             this.healthCheckCodes = healthCheckCodes;
@@ -224,13 +224,13 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The domain name that you want to use for health checks. Valid values:
+         * The domain name that is used for health checks. Valid values:
          * <p>
          * 
-         * *   **$SERVER_IP**: the private IP addresses of backend servers. If you do not set the HealthCheckHost parameter or set the parameter to $SERVER_IP, the Application Load Balancer (ALB) instance uses the private IP addresses of backend servers for health checks.
+         * *   **$SERVER_IP**: the private IP addresses of backend servers. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP addresses of backend servers as domain names for health checks.
          * *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
          * 
-         * > This parameter takes effect only when the `HealthCheckProtocol` parameter is set to **HTTP**.
+         * >  This parameter takes effect only if `HealthCheckProtocol` is set to **HTTP** or **HTTPS**.
          */
         public Builder healthCheckHost(String healthCheckHost) {
             this.healthCheckHost = healthCheckHost;
@@ -238,12 +238,12 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP version that is used for health checks.
+         * The HTTP version for health checks.
          * <p>
          * 
          * Valid values: **HTTP1.0** and **HTTP1.1**.
          * 
-         * > This parameter takes effect only when the `HealthCheckProtocol` parameter is set to **HTTP**.
+         * >  This parameter takes effect only if you set `HealthCheckProtocol` to **HTTP** or **HTTPS**.
          */
         public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
             this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -259,14 +259,14 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The method that you want to use for the health check. Valid values:
+         * The HTTP method that is used for health checks. Valid values:
          * <p>
          * 
-         * *   **HEAD**: By default, the ALB instance sends HEAD requests to a backend server to perform HTTP health checks.
+         * *   **HEAD** (default): By default, HTTP and HTTPS health checks use the HEAD method.
          * *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-         * *   **POST**: gRPC health checks automatically use the POST method.
+         * *   **POST**: gRPC health checks use the POST method by default.
          * 
-         * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+         * >  This parameter takes effect only if you set **HealthCheckProtocol** to **HTTP**, **HTTPS**, or **gRPC**.
          */
         public Builder healthCheckMethod(String healthCheckMethod) {
             this.healthCheckMethod = healthCheckMethod;
@@ -277,9 +277,9 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
          * The URL that is used for health checks.
          * <p>
          * 
-         * The URL must be 1 to 80 characters in length, and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).
+         * The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &, and the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).
          * 
-         * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+         * >  This parameter takes effect only if you set **HealthCheckProtocol** to **HTTP**, **HTTPS**, or **gRPC**.
          */
         public Builder healthCheckPath(String healthCheckPath) {
             this.healthCheckPath = healthCheckPath;
@@ -287,12 +287,13 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The protocol that you want to use for health checks. Valid values:
+         * The protocol that is used for health checks. Valid values:
          * <p>
          * 
-         * *   **HTTP** (default): To perform HTTP health checks, ALB sends HEAD or GET requests to a backend server to check whether the backend server is healthy.
-         * *   **TCP**: To perform TCP health checks, ALB sends SYN packets to a backend server to check whether the port of the backend server is available to receive requests.
-         * *   **gRPC**: To perform gRPC health checks, ALB sends POST or GET requests to a backend server to check whether the backend server is healthy.
+         * *   **HTTP** (default): HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.
+         * *   **HTTPS**: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS supports encryption and provides higher security than HTTP.
+         * *   **TCP**: TCP health checks send TCP SYN packets to a backend server to probe the availability of backend servers.
+         * *   **gRPC**: gRPC health checks send POST or GET requests to a backend server to probe the availability of backend servers.
          */
         public Builder healthCheckProtocol(String healthCheckProtocol) {
             this.healthCheckProtocol = healthCheckProtocol;

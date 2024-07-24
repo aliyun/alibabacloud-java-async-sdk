@@ -49,7 +49,7 @@ public class LoadBalancerLeaveSecurityGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * The ID of the asynchronous task.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +57,7 @@ public class LoadBalancerLeaveSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

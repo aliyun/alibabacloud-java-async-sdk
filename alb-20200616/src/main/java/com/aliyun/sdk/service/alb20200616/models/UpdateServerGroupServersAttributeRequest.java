@@ -102,7 +102,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The value of **RequestId** for each API request is different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -237,7 +237,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             private Integer weight; 
 
             /**
-             * The description of the backend server. The description must be 2 to 256 characters in length and can contain letters, digits, periods (.), underscores (\_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify at most 40 servers in each call.
+             * The description of the backend server. The description must be 2 to 256 characters in length, and can contain letters, digits, periods (.), underscores (\_), hyphens (-), commas (,), semicolons (;), forward slashes (/), and at signs (@). You can specify up to 40 servers in each call.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -245,10 +245,10 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             }
 
             /**
-             * The port used by the backend server. Valid values: **1** to **65535**. You can specify at most 40 servers in each call.
+             * The port that is used by the backend server. Valid values: **1** to **65535**. You can specify up to 40 servers in each call.
              * <p>
              * 
-             * > You do not need to set this parameter if **ServerType** is set to **Fc**.
+             * >  You do not need to set this parameter if ServerType is set to **Fc**.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -256,12 +256,12 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             }
 
             /**
-             * The ID of the backend server. You can specify up to 40 server IDs in each call.
+             * The ID of the backend server. You can specify up to 40 servers in each call.
              * <p>
              * 
-             * *   If **ServerType** is set to **Ecs**, **Eni**, or **Eci**, set the ServerId parameter to the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance.
-             * *   If **ServerType** is set to **Ip**, set the ServerId parameter to an IP address.
-             * *   If **ServerType** is set to **Fc**, set the ServerId parameter to the Alibaba Cloud Resource Name (ARN) of a function.
+             * *   Specify the ID of an Elastic Compute Service (ECS) instance, an elastic network interface (ENI), or an elastic container instance if you set **ServerType** to **Ecs**, **Eni**, or **Eci**.
+             * *   Specify an IP address if you set **ServerType** to **Ip**.
+             * *   Specify the Alibaba Cloud Resource Name (ARN) of a Function Compute function if you set **ServerType** to **Fc**.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -269,7 +269,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             }
 
             /**
-             * The IP address in inclusive ENI mode. You can specify at most 40 servers in each call.
+             * The IP address of the backend server. You can specify up to 40 servers in each call.
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -277,14 +277,14 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             }
 
             /**
-             * The type of the backend server. You can specify at most 40 servers in each call. Valid values:
+             * The type of backend server. You can specify up to 40 servers in each call. Valid values:
              * <p>
              * 
-             * *   **Ecs**
-             * *   **Eni**
-             * *   **Eci**
-             * *   **Ip**
-             * *   **Fc**
+             * *   **Ecs**: ECS instance
+             * *   **Eni**: ENI
+             * *   **Eci**: elastic container instance
+             * *   **Ip**: IP address
+             * *   **Fc**: Function Compute
              */
             public Builder serverType(String serverType) {
                 this.serverType = serverType;
@@ -292,10 +292,10 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             }
 
             /**
-             * The weight of the backend server. Valid values: **0** to **100**. Default value: **100**. If the weight of a backend server is set to **0**, no requests are forwarded to the backend server. You can specify at most 40 servers in each call.
+             * The weight of the backend server. Valid values: **0** to **100**. Default value: **100**. If the value is set to **0**, no requests are forwarded to the server. You can specify up to 40 servers in each call.
              * <p>
              * 
-             * > You do not need to set this parameter if **ServerType** is set to **Fc**.
+             * >  You do not need to set this parameter if ServerType is set to **Fc**.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

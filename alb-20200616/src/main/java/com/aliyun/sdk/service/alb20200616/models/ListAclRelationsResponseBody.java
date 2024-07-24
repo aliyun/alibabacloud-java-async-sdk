@@ -49,7 +49,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ACLs and the associated listeners.
+         * The relations between the specified ACL and the listeners.
          */
         public Builder aclRelations(java.util.List < AclRelations> aclRelations) {
             this.aclRelations = aclRelations;
@@ -169,7 +169,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Server Load Balancer (SLB) instance.
+             * The ID of the SLB instance.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -177,7 +177,7 @@ public class ListAclRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The association status between the ACL and the listener. Valid values:
+             * The association status between the ACL and the listener.
              * <p>
              * 
              * *   **Associating**

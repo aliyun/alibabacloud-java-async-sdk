@@ -133,7 +133,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         }
 
         /**
-         * The zones and the vSwitches. You must specify at least two zones. The specified zones overwrite the existing configurations.
+         * The zones and the vSwitches. You must specify at least two zones. The specified zones and vSwitches overwrite the existing configurations.
          */
         public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
             this.putQueryParameter("ZoneMappings", zoneMappings);
@@ -201,7 +201,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             private String zoneId; 
 
             /**
-             * IntranetAddress.
+             * The private IPv4 address. You must specify at least two zones. You can specify at most 10 zones.
              */
             public Builder intranetAddress(String intranetAddress) {
                 this.intranetAddress = intranetAddress;
@@ -209,7 +209,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch in the zone. By default, you can specify only one vSwitch (subnet) for each zone of an ALB instance. You can specify up to 10 zone IDs.
+             * The ID of the vSwitch in the zone. By default, each zone contains one vSwitch and one subnet. You can specify at least 10 zones.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -217,7 +217,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             }
 
             /**
-             * The name of the zone. You can call the [DescribeZones](~~189196~~) operation to query the zones. You can specify up to 10 zone IDs.
+             * The zone name. You can call the [DescribeZones](~~189196~~) operation to query the most recent zone list. You can specify at least 10 zones.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

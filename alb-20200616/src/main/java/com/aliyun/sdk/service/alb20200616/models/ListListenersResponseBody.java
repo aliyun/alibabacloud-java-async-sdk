@@ -1277,7 +1277,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of logs.
+             * The logging configurations.
              */
             public Builder logConfig(LogConfig logConfig) {
                 this.logConfig = logConfig;
@@ -1315,7 +1315,7 @@ public class ListListenersResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the dataset.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

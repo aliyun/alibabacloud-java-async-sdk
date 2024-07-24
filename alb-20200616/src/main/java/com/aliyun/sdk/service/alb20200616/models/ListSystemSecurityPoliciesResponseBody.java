@@ -121,7 +121,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             private java.util.List < String > TLSVersions; 
 
             /**
-             * The supported encryption algorithms.
+             * The supported cipher suite.
              */
             public Builder ciphers(java.util.List < String > ciphers) {
                 this.ciphers = ciphers;
@@ -137,7 +137,7 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The TLS versions that are supported.
+             * The supported TLS protocol versions.
              */
             public Builder TLSVersions(java.util.List < String > TLSVersions) {
                 this.TLSVersions = TLSVersions;

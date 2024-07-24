@@ -249,7 +249,11 @@ public class ListLoadBalancersRequest extends Request {
         } 
 
         /**
-         * AddressIpVersion.
+         * The IP version. Valid values:
+         * <p>
+         * 
+         * *   **IPv4**
+         * *   **DualStack**
          */
         public Builder addressIpVersion(String addressIpVersion) {
             this.putQueryParameter("AddressIpVersion", addressIpVersion);
@@ -271,7 +275,7 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * DNSName.
+         * The domain name.
          */
         public Builder DNSName(String DNSName) {
             this.putQueryParameter("DNSName", DNSName);
@@ -280,7 +284,11 @@ public class ListLoadBalancersRequest extends Request {
         }
 
         /**
-         * Ipv6AddressType.
+         * The type of IPv6 address that is used by the ALB instance. Valid values:
+         * <p>
+         * 
+         * *   **Internet**: The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
+         * *   **Intranet**: The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.
          */
         public Builder ipv6AddressType(String ipv6AddressType) {
             this.putQueryParameter("Ipv6AddressType", ipv6AddressType);

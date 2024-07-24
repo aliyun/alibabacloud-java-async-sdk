@@ -160,7 +160,10 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * The start time of the task. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * The timestamp that indicates the start time of the task. Unit: milliseconds.
+         * <p>
+         * 
+         * Specify the timestamp in the Unix format to indicate the total amount of time that is from 00:00:00 (UTC+0) on January 1, 1970 to when the status of the asynchronous task is queried.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -169,7 +172,10 @@ public class ListAsynJobsRequest extends Request {
         }
 
         /**
-         * The end time of the task. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
+         * The timestamp that indicates the end time of the task. Unit: milliseconds.
+         * <p>
+         * 
+         * Specify the timestamp in the Unix format to indicate the total amount of time that is from 00:00:00 (UTC+0) on January 1, 1970 to when the status of the asynchronous task is returned.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);

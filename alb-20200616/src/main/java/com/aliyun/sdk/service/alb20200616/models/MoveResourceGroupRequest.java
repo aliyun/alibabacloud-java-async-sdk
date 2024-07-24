@@ -84,10 +84,10 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which you want to move the resource.
+         * The ID of the resource group to which you want to transfer the cloud resource.
          * <p>
          * 
-         * > You can use resource groups to manage resources owned by your Alibaba Cloud account. Resource groups simplify resource and permission management in your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~)
+         * >  You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see [What is resource management?](~~94475~~)
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);

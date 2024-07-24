@@ -83,7 +83,7 @@ public class ListAclEntriesRequest extends Request {
         } 
 
         /**
-         * The ACL ID.
+         * The ID of the ACL.
          */
         public Builder aclId(String aclId) {
             this.putQueryParameter("AclId", aclId);

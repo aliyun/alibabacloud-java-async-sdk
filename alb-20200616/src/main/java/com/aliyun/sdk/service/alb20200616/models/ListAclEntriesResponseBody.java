@@ -193,7 +193,7 @@ public class ListAclEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block of the ACL entry.
+             * The CIDR block for the ACL entry.
              */
             public Builder entry(String entry) {
                 this.entry = entry;
@@ -204,9 +204,9 @@ public class ListAclEntriesResponseBody extends TeaModel {
              * The status of the ACL entry. Valid values:
              * <p>
              * 
-             * *   **Adding**
-             * *   **Available**
-             * *   **Removing**
+             * *   **Adding**: The ACL entry is being added.
+             * *   **Available**: The ACL entry is added and available.
+             * *   **Removing**: The ACL entry is being removed.
              */
             public Builder status(String status) {
                 this.status = status;

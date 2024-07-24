@@ -514,7 +514,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupIds.
+         * The IDs of the security groups to which the ALB instance is added.
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.securityGroupIds = securityGroupIds;
@@ -541,10 +541,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The zone ID of the ALB instance.
-         * <p>
-         * 
-         * You can call the [DescribeZones](~~189196~~) operation to query the zones of the ALB instance.
+         * The mapping between zones and the vSwitches. You must specify at least two zones.
          */
         public Builder zoneMappings(java.util.List < ZoneMappings> zoneMappings) {
             this.zoneMappings = zoneMappings;
@@ -713,7 +710,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
              * The billing method.
              * <p>
              * 
-             * Set the value to **PostPay**, which indicates the pay-as-you-go billing method.
+             * Only **PostPay** is returned, which indicates the pay-as-you-go billing method.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -774,7 +771,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the lock. Valid values:
+             * The lock type. Valid values:
              * <p>
              * 
              * *   **SecurityLocked**: The ALB instance is locked due to security reasons.
@@ -944,15 +941,23 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntranetAddress")
         private String intranetAddress;
 
+        @com.aliyun.core.annotation.NameInMap("IntranetAddressHcStatus")
+        private String intranetAddressHcStatus;
+
         @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
+
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressHcStatus")
+        private String ipv6AddressHcStatus;
 
         private LoadBalancerAddresses(Builder builder) {
             this.address = builder.address;
             this.allocationId = builder.allocationId;
             this.eipType = builder.eipType;
             this.intranetAddress = builder.intranetAddress;
+            this.intranetAddressHcStatus = builder.intranetAddressHcStatus;
             this.ipv6Address = builder.ipv6Address;
+            this.ipv6AddressHcStatus = builder.ipv6AddressHcStatus;
         }
 
         public static Builder builder() {
@@ -992,10 +997,24 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return intranetAddressHcStatus
+         */
+        public String getIntranetAddressHcStatus() {
+            return this.intranetAddressHcStatus;
+        }
+
+        /**
          * @return ipv6Address
          */
         public String getIpv6Address() {
             return this.ipv6Address;
+        }
+
+        /**
+         * @return ipv6AddressHcStatus
+         */
+        public String getIpv6AddressHcStatus() {
+            return this.ipv6AddressHcStatus;
         }
 
         public static final class Builder {
@@ -1003,7 +1022,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             private String allocationId; 
             private String eipType; 
             private String intranetAddress; 
+            private String intranetAddressHcStatus; 
             private String ipv6Address; 
+            private String ipv6AddressHcStatus; 
 
             /**
              * An IPv4 address.
@@ -1047,6 +1068,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * IntranetAddressHcStatus.
+             */
+            public Builder intranetAddressHcStatus(String intranetAddressHcStatus) {
+                this.intranetAddressHcStatus = intranetAddressHcStatus;
+                return this;
+            }
+
+            /**
              * An IPv6 address.
              * <p>
              * 
@@ -1054,6 +1083,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
+                return this;
+            }
+
+            /**
+             * Ipv6AddressHcStatus.
+             */
+            public Builder ipv6AddressHcStatus(String ipv6AddressHcStatus) {
+                this.ipv6AddressHcStatus = ipv6AddressHcStatus;
                 return this;
             }
 
@@ -1068,6 +1105,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LoadBalancerAddresses")
         private java.util.List < LoadBalancerAddresses> loadBalancerAddresses;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
@@ -1076,6 +1116,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
 
         private ZoneMappings(Builder builder) {
             this.loadBalancerAddresses = builder.loadBalancerAddresses;
+            this.status = builder.status;
             this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
         }
@@ -1096,6 +1137,13 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return vSwitchId
          */
         public String getVSwitchId() {
@@ -1111,14 +1159,29 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < LoadBalancerAddresses> loadBalancerAddresses; 
+            private String status; 
             private String vSwitchId; 
             private String zoneId; 
 
             /**
-             * The IP address of the ALB instance.
+             * The address of the ALB instance.
              */
             public Builder loadBalancerAddresses(java.util.List < LoadBalancerAddresses> loadBalancerAddresses) {
                 this.loadBalancerAddresses = loadBalancerAddresses;
+                return this;
+            }
+
+            /**
+             * The status of the configuration read-only mode. Valid values:
+             * <p>
+             * 
+             * *   **NonProtection**: The configuration read-only mode is disabled. In this case, you cannot specify ModificationProtectionReason. If you specify ModificationProtectionReason, the value of the parameter is cleared.
+             * *   **ConsoleProtection**: The configuration read-only mode is enabled. In this case, you can specify ModificationProtectionReason.
+             * 
+             * > If you set this parameter to **ConsoleProtection**, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

@@ -81,7 +81,7 @@ public class UpdateAScriptsRequest extends Request {
         } 
 
         /**
-         * The AScript rules.
+         * The information about the AScript rule.
          */
         public Builder aScripts(java.util.List < AScripts> aScripts) {
             this.putQueryParameter("AScripts", aScripts);
@@ -95,7 +95,7 @@ public class UpdateAScriptsRequest extends Request {
          * 
          * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -164,7 +164,10 @@ public class UpdateAScriptsRequest extends Request {
             private String attributeValue; 
 
             /**
-             * AttributeKey.
+             * The attribute name.
+             * <p>
+             * 
+             * Set the value to **EsDebug**, which specifies that when requests carry the \_es_dbg parameter whose value is the specified key, the debugging header is enabled to output the execution result.
              */
             public Builder attributeKey(String attributeKey) {
                 this.attributeKey = attributeKey;
@@ -172,7 +175,7 @@ public class UpdateAScriptsRequest extends Request {
             }
 
             /**
-             * AttributeValue.
+             * The attribute value, which must be 1 to 128 characters in length, and can contain letters and digits.
              */
             public Builder attributeValue(String attributeValue) {
                 this.attributeValue = attributeValue;
@@ -274,7 +277,7 @@ public class UpdateAScriptsRequest extends Request {
             private String scriptContent; 
 
             /**
-             * The AScript rule ID.
+             * The rule ID.
              */
             public Builder aScriptId(String aScriptId) {
                 this.aScriptId = aScriptId;
@@ -285,7 +288,7 @@ public class UpdateAScriptsRequest extends Request {
              * The name of the AScript rule.
              * <p>
              * 
-             * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+             * The name must be 2 to 128 character in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
              */
             public Builder aScriptName(String aScriptName) {
                 this.aScriptName = aScriptName;
@@ -305,7 +308,11 @@ public class UpdateAScriptsRequest extends Request {
             }
 
             /**
-             * ExtAttributeEnabled.
+             * Specifies whether to enable the extended attributes of the Ascript rule. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false (false)
              */
             public Builder extAttributeEnabled(Boolean extAttributeEnabled) {
                 this.extAttributeEnabled = extAttributeEnabled;
@@ -313,7 +320,7 @@ public class UpdateAScriptsRequest extends Request {
             }
 
             /**
-             * ExtAttributes.
+             * The extended attribute.
              */
             public Builder extAttributes(java.util.List < ExtAttributes> extAttributes) {
                 this.extAttributes = extAttributes;

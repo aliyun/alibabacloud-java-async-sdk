@@ -96,7 +96,7 @@ public class CreateAScriptsRequest extends Request {
         } 
 
         /**
-         * The AScript rules.
+         * The information about the AScript rules.
          */
         public Builder aScripts(java.util.List < AScripts> aScripts) {
             this.putQueryParameter("AScripts", aScripts);
@@ -184,7 +184,10 @@ public class CreateAScriptsRequest extends Request {
             private String attributeValue; 
 
             /**
-             * AttributeKey.
+             * The attribute name.
+             * <p>
+             * 
+             * Set the value to **EsDebug**, which specifies that if requests carry the \_es_dbg parameter and the value is the specified key, the debugging header is enabled to output the execution result.
              */
             public Builder attributeKey(String attributeKey) {
                 this.attributeKey = attributeKey;
@@ -192,7 +195,7 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * AttributeValue.
+             * The attribute value, which must be 1 to 128 characters in length, and can contain letters or digits.
              */
             public Builder attributeValue(String attributeValue) {
                 this.attributeValue = attributeValue;
@@ -286,7 +289,7 @@ public class CreateAScriptsRequest extends Request {
              * The name of the AScript rule.
              * <p>
              * 
-             * The name must be 2 to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+             * The name must be 2 to 128 character in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
              */
             public Builder aScriptName(String aScriptName) {
                 this.aScriptName = aScriptName;
@@ -306,7 +309,11 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * ExtAttributeEnabled.
+             * Specifies whether to enable the extended attributes of the AScript rule. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false (default)
              */
             public Builder extAttributeEnabled(Boolean extAttributeEnabled) {
                 this.extAttributeEnabled = extAttributeEnabled;
@@ -314,7 +321,7 @@ public class CreateAScriptsRequest extends Request {
             }
 
             /**
-             * ExtAttributes.
+             * The extended attributes.
              */
             public Builder extAttributes(java.util.List < ExtAttributes> extAttributes) {
                 this.extAttributes = extAttributes;
