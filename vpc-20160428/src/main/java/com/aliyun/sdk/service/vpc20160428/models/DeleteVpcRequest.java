@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteVpcRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
@@ -46,6 +50,7 @@ public class DeleteVpcRequest extends Request {
 
     private DeleteVpcRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.forceDelete = builder.forceDelete;
         this.ownerAccount = builder.ownerAccount;
@@ -67,6 +72,13 @@ public class DeleteVpcRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -126,6 +138,7 @@ public class DeleteVpcRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteVpcRequest, Builder> {
+        private String clientToken; 
         private Boolean dryRun; 
         private Boolean forceDelete; 
         private String ownerAccount; 
@@ -141,6 +154,7 @@ public class DeleteVpcRequest extends Request {
 
         private Builder(DeleteVpcRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.forceDelete = request.forceDelete;
             this.ownerAccount = request.ownerAccount;
@@ -150,6 +164,15 @@ public class DeleteVpcRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * Specifies whether to perform a dry run. Valid values:

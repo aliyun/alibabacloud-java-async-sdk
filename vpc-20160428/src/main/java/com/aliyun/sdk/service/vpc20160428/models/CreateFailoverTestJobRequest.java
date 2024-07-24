@@ -20,6 +20,10 @@ public class CreateFailoverTestJobRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobDuration")
     @com.aliyun.core.annotation.Validation(required = true, maximum = 4320, minimum = 1)
     private Integer jobDuration;
@@ -63,6 +67,7 @@ public class CreateFailoverTestJobRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.jobDuration = builder.jobDuration;
         this.jobType = builder.jobType;
         this.name = builder.name;
@@ -99,6 +104,13 @@ public class CreateFailoverTestJobRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -167,6 +179,7 @@ public class CreateFailoverTestJobRequest extends Request {
     public static final class Builder extends Request.Builder<CreateFailoverTestJobRequest, Builder> {
         private String clientToken; 
         private String description; 
+        private Boolean dryRun; 
         private Integer jobDuration; 
         private String jobType; 
         private String name; 
@@ -185,6 +198,7 @@ public class CreateFailoverTestJobRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.jobDuration = request.jobDuration;
             this.jobType = request.jobType;
             this.name = request.name;
@@ -211,6 +225,15 @@ public class CreateFailoverTestJobRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

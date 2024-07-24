@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribePublicIpAddressRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpVersion")
+    private String ipVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -42,6 +46,7 @@ public class DescribePublicIpAddressRequest extends Request {
 
     private DescribePublicIpAddressRequest(Builder builder) {
         super(builder);
+        this.ipVersion = builder.ipVersion;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -62,6 +67,13 @@ public class DescribePublicIpAddressRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ipVersion
+     */
+    public String getIpVersion() {
+        return this.ipVersion;
     }
 
     /**
@@ -114,6 +126,7 @@ public class DescribePublicIpAddressRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribePublicIpAddressRequest, Builder> {
+        private String ipVersion; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -128,6 +141,7 @@ public class DescribePublicIpAddressRequest extends Request {
 
         private Builder(DescribePublicIpAddressRequest request) {
             super(request);
+            this.ipVersion = request.ipVersion;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -136,6 +150,15 @@ public class DescribePublicIpAddressRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * IpVersion.
+         */
+        public Builder ipVersion(String ipVersion) {
+            this.putQueryParameter("IpVersion", ipVersion);
+            this.ipVersion = ipVersion;
+            return this;
+        }
 
         /**
          * OwnerAccount.

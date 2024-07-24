@@ -12,6 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyVSwitchCidrReservationAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -47,6 +55,8 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends Request {
 
     private ModifyVSwitchCidrReservationAttributeRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -68,6 +78,20 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -127,6 +151,8 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyVSwitchCidrReservationAttributeRequest, Builder> {
+        private String clientToken; 
+        private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -142,6 +168,8 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends Request {
 
         private Builder(ModifyVSwitchCidrReservationAttributeRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -151,6 +179,24 @@ public class ModifyVSwitchCidrReservationAttributeRequest extends Request {
             this.vSwitchCidrReservationId = request.vSwitchCidrReservationId;
             this.vSwitchCidrReservationName = request.vSwitchCidrReservationName;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * OwnerAccount.

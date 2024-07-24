@@ -12,8 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyIpv6GatewayAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6GatewayId")
@@ -47,7 +55,9 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
 
     private ModifyIpv6GatewayAttributeRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.ipv6GatewayId = builder.ipv6GatewayId;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
@@ -71,10 +81,24 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
     }
 
     /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -127,7 +151,9 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyIpv6GatewayAttributeRequest, Builder> {
+        private String clientToken; 
         private String description; 
+        private Boolean dryRun; 
         private String ipv6GatewayId; 
         private String name; 
         private String ownerAccount; 
@@ -142,7 +168,9 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
 
         private Builder(ModifyIpv6GatewayAttributeRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.ipv6GatewayId = request.ipv6GatewayId;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
@@ -153,11 +181,29 @@ public class ModifyIpv6GatewayAttributeRequest extends Request {
         } 
 
         /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
          * The description of the IPv6 gateway.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

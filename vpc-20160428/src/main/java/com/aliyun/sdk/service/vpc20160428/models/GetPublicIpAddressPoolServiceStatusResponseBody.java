@@ -49,7 +49,11 @@ public class GetPublicIpAddressPoolServiceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Enabled.
+         * Indicates whether the IP address pool feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** You can call OpenPublicIpAddressPoolService to enable the IP address pool feature.
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -57,7 +61,7 @@ public class GetPublicIpAddressPoolServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

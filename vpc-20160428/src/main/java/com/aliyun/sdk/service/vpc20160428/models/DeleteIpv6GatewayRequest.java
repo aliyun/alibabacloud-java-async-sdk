@@ -12,6 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteIpv6GatewayRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ipv6GatewayId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String ipv6GatewayId;
@@ -39,6 +47,8 @@ public class DeleteIpv6GatewayRequest extends Request {
 
     private DeleteIpv6GatewayRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
         this.ipv6GatewayId = builder.ipv6GatewayId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -58,6 +68,20 @@ public class DeleteIpv6GatewayRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -103,6 +127,8 @@ public class DeleteIpv6GatewayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteIpv6GatewayRequest, Builder> {
+        private String clientToken; 
+        private Boolean dryRun; 
         private String ipv6GatewayId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -116,6 +142,8 @@ public class DeleteIpv6GatewayRequest extends Request {
 
         private Builder(DeleteIpv6GatewayRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
             this.ipv6GatewayId = request.ipv6GatewayId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -123,6 +151,24 @@ public class DeleteIpv6GatewayRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * The ID of the IPv6 gateway that you want to delete.

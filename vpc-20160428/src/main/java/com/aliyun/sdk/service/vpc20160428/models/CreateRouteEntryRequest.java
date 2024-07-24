@@ -292,6 +292,9 @@ public class CreateRouteEntryRequest extends Request {
          * *   **NatGateway**: a NAT gateway.
          * *   **Attachment**: a transit router.
          * *   **VpcPeer**: a VPC peering connection.
+         * *   **Ipv4Gateway**: an IPv4 gateway.
+         * *   **GatewayEndpoint**: a gateway endpoint.
+         * *   **Ecr**: a Express Connect Router (ECR).
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);

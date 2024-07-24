@@ -322,13 +322,13 @@ public class CreateVpnGatewayRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment for the VPN gateway. Valid values:
+         * Specifies whether to enable automatic payment. Valid values:
          * <p>
          * 
          * *   **true**
          * *   **false** (default)
          * 
-         * >  We recommend that you enable automatic payment. If you disable automatic payment, you must manually pay the bill for creating the VPN gateway.
+         * > To create a VPN gateway, we recommend that you enable automatic payment. If you disable automatic payment, you must manually pay the bill to create the VPN gateway.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -343,7 +343,7 @@ public class CreateVpnGatewayRequest extends Request {
          * *   If you want to create a public VPN gateway, valid values are **10**, **100**, **200**, **500**, and **1000**.
          * *   If you want to create a private VPN gateway, valid values are **200** and **1000**.
          * 
-         * >  The maximum bandwidth supported by VPN gateways in some regions is 200 Mbit/s. For more information, see [VPN gateway limits](~~65290~~).
+         * >  The maximum bandwidth supported by VPN gateways in some regions is 500 Mbit/s. For more information, see [VPN gateway limits](~~65290~~).
          */
         public Builder bandwidth(Integer bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -382,7 +382,7 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the IPsec-VPN feature. Valid values:
+         * Specifies whether to enable IPsec-VPN for the VPN gateway. Valid values:
          * <p>
          * 
          * *   **true** (default)
@@ -395,7 +395,7 @@ public class CreateVpnGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the SSL-VPN feature for the VPN gateway. Valid values:
+         * Specifies whether to enable SSL-VPN. Valid values:
          * <p>
          * 
          * *   **true**

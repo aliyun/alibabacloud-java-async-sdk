@@ -430,7 +430,11 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * BusinessStatus.
+             * The status of the IP address pool.
+             * <p>
+             * 
+             * *   **Normal**
+             * *   **FinancialLocked**
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;

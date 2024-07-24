@@ -49,7 +49,7 @@ public class AddPublicIpAddressPoolCidrBlockResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The CIDR blocks.
+         * The CIDR block.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
