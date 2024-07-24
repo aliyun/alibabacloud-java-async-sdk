@@ -276,6 +276,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetClusterAddonInstanceResponse> getClusterAddonInstance(GetClusterAddonInstanceRequest request);
 
+    CompletableFuture<GetClusterAuditProjectResponse> getClusterAuditProject(GetClusterAuditProjectRequest request);
+
     CompletableFuture<GetClusterCheckResponse> getClusterCheck(GetClusterCheckRequest request);
 
     CompletableFuture<GetClusterDiagnosisCheckItemsResponse> getClusterDiagnosisCheckItems(GetClusterDiagnosisCheckItemsRequest request);
