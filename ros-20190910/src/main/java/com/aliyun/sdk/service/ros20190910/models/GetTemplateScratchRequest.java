@@ -82,7 +82,7 @@ public class GetTemplateScratchRequest extends Request {
         } 
 
         /**
-         * The region ID of the scenario.
+         * The region ID of the resource scenario.
          * <p>
          * 
          * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
@@ -113,7 +113,7 @@ public class GetTemplateScratchRequest extends Request {
         }
 
         /**
-         * The ID of the scenario.
+         * The ID of the resource scenario.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);

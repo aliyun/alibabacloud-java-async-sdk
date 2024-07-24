@@ -221,7 +221,7 @@ public class CreateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The description of the scenario.
+         * The description of the resource scenario.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -259,7 +259,7 @@ public class CreateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The preference parameters of the scenario.
+         * The preference parameters of the resource scenario.
          */
         public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
             String preferenceParametersShrink = shrink(preferenceParameters, "PreferenceParameters", "json");
@@ -269,7 +269,7 @@ public class CreateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The region ID of the scenario.
+         * The region ID of the resource scenario.
          * <p>
          * 
          * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
@@ -301,6 +301,11 @@ public class CreateTemplateScratchRequest extends Request {
 
         /**
          * The source resources.
+         * <p>
+         * 
+         * When you set TemplateScratchType to ArchitectureDetection, you can specify SourceResources to detect the architecture data of all resources associated with the specified source resources. For example, if you set SourceResources to the ID of a Classic Load Balancer (CLB) instance, the architecture data of all resources, such as the Elastic Compute Service (ECS) instance, vSwitch, and VPC, associated with the CLB instance is detected.
+         * 
+         * If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources. In other cases, you can specify up to 200 source resources.
          */
         public Builder sourceResources(java.util.List < SourceResources> sourceResources) {
             String sourceResourcesShrink = shrink(sourceResources, "SourceResources", "json");
@@ -320,7 +325,7 @@ public class CreateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The tags of the scenario.
+         * The tags of the resource scenario.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -329,12 +334,15 @@ public class CreateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The type of the scenario. Valid values:
+         * The type of the resource scenario. Valid values:
          * <p>
          * 
-         * *   ResourceImport: resource management
          * *   ArchitectureReplication: resource replication
+         * *   ArchitectureDetection: resource detection
+         * *   ResourceImport: resource management
          * *   ResourceMigration: resource migration
+         * 
+         * >  The valid values of the ParameterKey and ParameterValue request parameters vary based on the value of TemplateScratchType. For more information, see the "**Additional information about request parameters**" section of this topic.
          */
         public Builder templateScratchType(String templateScratchType) {
             this.putQueryParameter("TemplateScratchType", templateScratchType);
@@ -390,12 +398,16 @@ public class CreateTemplateScratchRequest extends Request {
             private String parameterValue; 
 
             /**
-             * The key of the parameter.
+             * The parameter name.
              * <p>
              * 
-             * For information about the valid values of ParameterKey, see the **Additional information about request parameters** section of this topic.
-             * > - PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.
-             * > -  If you set TemplateScratchType to ResourceImport, you must set ParameterKey to DeletionPolicy.
+             * For more information about the valid values of ParameterKey, see the "**Additional information about request parameters**" section of this topic.
+             * 
+             * > 
+             * 
+             * *   PreferenceParameters is optional. If you specify PreferenceParameters, you must specify ParameterKey and ParameterValue.
+             * 
+             * *   You must set ParameterKey to DeletionPolicy when TemplateScratchType is set to ResourceImport.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -403,12 +415,12 @@ public class CreateTemplateScratchRequest extends Request {
             }
 
             /**
-             * The value of the parameter. The value of ParameterValue varies based on the value of ParameterKey.
+             * The parameter value. The value is an assignment to the parameter key.
              * <p>
              * 
-             * For information about the valid values of ParameterValue, see the **Additional information about request parameters** section of this topic.
+             * For more information about the valid values of ParameterValue, see the "**Additional information about request parameters**" section of this topic.
              * 
-             * > PreferenceParameters is optional. If you want to specify PreferenceParameters, you must specify ParameterKey and ParameterValue.
+             * >  PreferenceParameters is optional. If you specify PreferenceParameters, you must specify ParameterKey and ParameterValue.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -470,7 +482,7 @@ public class CreateTemplateScratchRequest extends Request {
             }
 
             /**
-             * The resource types.
+             * The resource types for filtering resources.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -549,7 +561,16 @@ public class CreateTemplateScratchRequest extends Request {
             private String resourceType; 
 
             /**
-             * The region ID.
+             * The region ID of the resource.
+             * <p>
+             * 
+             * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+             * 
+             * > 
+             * 
+             * *   This parameter takes effect only when TemplateScratchType is set to ArchitectureDetection.
+             * 
+             * *   The region ID of a global resource is `global`. For example, the region ID of the ALIYUN::CDN::Domain global resource is `global`.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -557,7 +578,7 @@ public class CreateTemplateScratchRequest extends Request {
             }
 
             /**
-             * RelatedResourceTypeFilter.
+             * The related resource type filters.
              */
             public Builder relatedResourceTypeFilter(java.util.List < String > relatedResourceTypeFilter) {
                 this.relatedResourceTypeFilter = relatedResourceTypeFilter;
@@ -565,7 +586,7 @@ public class CreateTemplateScratchRequest extends Request {
             }
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -573,7 +594,7 @@ public class CreateTemplateScratchRequest extends Request {
             }
 
             /**
-             * The type of the resource.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -638,7 +659,7 @@ public class CreateTemplateScratchRequest extends Request {
             }
 
             /**
-             * The resource types.
+             * The resource types for filtering resources.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -692,7 +713,7 @@ public class CreateTemplateScratchRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the scenario.
+             * The tag key of the resource scenario.
              * <p>
              * 
              * > Tags is optional. If you want to specify Tags, you must specify Key.
@@ -703,7 +724,7 @@ public class CreateTemplateScratchRequest extends Request {
             }
 
             /**
-             * The tag value of the scenario.
+             * The tag value of the resource scenario.
              */
             public Builder value(String value) {
                 this.value = value;

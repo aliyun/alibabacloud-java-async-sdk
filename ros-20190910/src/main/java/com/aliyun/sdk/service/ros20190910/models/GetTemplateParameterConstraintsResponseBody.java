@@ -313,6 +313,87 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         } 
 
     }
+    public static class QueryTimeoutDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
+        private String resourceName;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
+        private QueryTimeoutDetails(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.resourceName = builder.resourceName;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueryTimeoutDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private String resourceName; 
+            private String resourceType; 
+
+            /**
+             * The error message.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * The resource name.
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * The resource type.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public QueryTimeoutDetails build() {
+                return new QueryTimeoutDetails(this);
+            } 
+
+        } 
+
+    }
     public static class ParameterConstraints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowedValues")
         private java.util.List < String > allowedValues;
@@ -344,6 +425,9 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QueryErrors")
         private java.util.List < QueryErrors> queryErrors;
 
+        @com.aliyun.core.annotation.NameInMap("QueryTimeoutDetails")
+        private java.util.List < QueryTimeoutDetails> queryTimeoutDetails;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -358,6 +442,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             this.originalConstraints = builder.originalConstraints;
             this.parameterKey = builder.parameterKey;
             this.queryErrors = builder.queryErrors;
+            this.queryTimeoutDetails = builder.queryTimeoutDetails;
             this.type = builder.type;
         }
 
@@ -440,6 +525,13 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
         }
 
         /**
+         * @return queryTimeoutDetails
+         */
+        public java.util.List < QueryTimeoutDetails> getQueryTimeoutDetails() {
+            return this.queryTimeoutDetails;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -457,6 +549,7 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
             private java.util.List < OriginalConstraints> originalConstraints; 
             private String parameterKey; 
             private java.util.List < QueryErrors> queryErrors; 
+            private java.util.List < QueryTimeoutDetails> queryTimeoutDetails; 
             private String type; 
 
             /**
@@ -549,6 +642,14 @@ public class GetTemplateParameterConstraintsResponseBody extends TeaModel {
              */
             public Builder queryErrors(java.util.List < QueryErrors> queryErrors) {
                 this.queryErrors = queryErrors;
+                return this;
+            }
+
+            /**
+             * QueryTimeoutDetails.
+             */
+            public Builder queryTimeoutDetails(java.util.List < QueryTimeoutDetails> queryTimeoutDetails) {
+                this.queryTimeoutDetails = queryTimeoutDetails;
                 return this;
             }
 

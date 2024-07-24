@@ -57,7 +57,7 @@ public class CreateTemplateScratchResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the scenario.
+         * The ID of the resource scenario.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.templateScratchId = templateScratchId;

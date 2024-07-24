@@ -109,7 +109,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The name of the parameter.
+             * The parameter name.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -117,7 +117,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * The parameter value.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -178,7 +178,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types.
+             * The resource type filters.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -243,7 +243,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * RelatedResourceTypeFilter.
+             * The related resource type filters.
              */
             public Builder relatedResourceTypeFilter(java.util.List < String > relatedResourceTypeFilter) {
                 this.relatedResourceTypeFilter = relatedResourceTypeFilter;
@@ -320,7 +320,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The resource types.
+             * The resource type filters.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -707,7 +707,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The time at which the scenario was created.
+             * The time at which the resource scenario was created.
              * <p>
              * 
              * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
@@ -718,7 +718,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the scenario.
+             * The description of the resource scenario.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -726,7 +726,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The status code of the scenario that fails to be created.
+             * The status code of the resource scenario that fails to be created.
              * <p>
              * 
              * > This parameter is returned only if you set Status to GENERATE_FAILED.
@@ -750,7 +750,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The preference parameters of the scenario.
+             * The preference parameters of the resource scenario.
              */
             public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
                 this.preferenceParameters = preferenceParameters;
@@ -798,7 +798,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The stacks that are associated with the scenario.
+             * The stacks that are associated with the resource scenario.
              */
             public Builder stacks(java.util.List < Stacks> stacks) {
                 this.stacks = stacks;
@@ -806,12 +806,12 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the scenario. Valid values:
+             * The state of the resource scenario. Valid values:
              * <p>
              * 
-             * *   GENERATE_IN_PROGRESS: The scenario is being created.
-             * *   GENERATE_COMPLETE: The scenario is created.
-             * *   GENERATE_FAILED: The scenario fails to be created.
+             * *   GENERATE_IN_PROGRESS: The resource scenario is being created.
+             * *   GENERATE_COMPLETE: The resource scenario is created.
+             * *   GENERATE_FAILED: The resource scenario fails to be created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -819,7 +819,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the scenario fails to be created.
+             * The reason why the resource scenario fails to be created.
              * <p>
              * 
              * > This parameter is returned only if you set Status to GENERATE_FAILED.
@@ -830,7 +830,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The scenario data.
+             * The resource scenario data.
              */
             public Builder templateScratchData(java.util.Map < String, ? > templateScratchData) {
                 this.templateScratchData = templateScratchData;
@@ -838,7 +838,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the scenario.
+             * The ID of the resource scenario.
              */
             public Builder templateScratchId(String templateScratchId) {
                 this.templateScratchId = templateScratchId;
@@ -846,7 +846,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scenario. Valid values:
+             * The type of the resource scenario. Valid values:
              * <p>
              * 
              * *   ResourceImport: resource management
@@ -858,7 +858,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the scenario was updated.
+             * The time at which the resource scenario was updated.
              * <p>
              * 
              * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
