@@ -749,6 +749,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<PreloadSparkAppMetricsResponse> preloadSparkAppMetrics(PreloadSparkAppMetricsRequest request);
 
+    /**
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
+      *
+     */
     CompletableFuture<ReleaseClusterPublicConnectionResponse> releaseClusterPublicConnection(ReleaseClusterPublicConnectionRequest request);
 
     /**

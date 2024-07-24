@@ -198,7 +198,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **AnalyticDB**: the AnalyticDB for MySQL engine.
+             * *   **Clickhouse**: the wide table engine.
              */
             public Builder engine(String engine) {
                 this.engine = engine;

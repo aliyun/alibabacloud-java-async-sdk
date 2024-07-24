@@ -2230,6 +2230,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
+      *
+     */
     @Override
     public CompletableFuture<ReleaseClusterPublicConnectionResponse> releaseClusterPublicConnection(ReleaseClusterPublicConnectionRequest request) {
         try {

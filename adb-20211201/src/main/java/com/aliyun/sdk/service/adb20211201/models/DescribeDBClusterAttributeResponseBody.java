@@ -658,7 +658,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * ClickhouseEngineCacheSize.
+             * The cache size of the ClickHouse wide table engine. Unit: GB. If a value of -1 is returned, the ClickHouse wide table engine is disabled. If a value other than -1 is returned, this parameter indicates the disk cache size.
              */
             public Builder clickhouseEngineCacheSize(Integer clickhouseEngineCacheSize) {
                 this.clickhouseEngineCacheSize = clickhouseEngineCacheSize;
@@ -666,7 +666,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ClickhouseEngineEnabled.
+             * Indicates whether the ClickHouse wide table engine is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder clickhouseEngineEnabled(Boolean clickhouseEngineEnabled) {
                 this.clickhouseEngineEnabled = clickhouseEngineEnabled;
@@ -823,7 +827,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * KmsId.
+             * The ID of the key that is used to encrypt disk data.
+             * <p>
+             * 
+             * >  This parameter is returned only when disk encryption is enabled.
              */
             public Builder kmsId(String kmsId) {
                 this.kmsId = kmsId;
@@ -894,7 +901,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ProductForm.
+             * A reserved parameter.
              */
             public Builder productForm(String productForm) {
                 this.productForm = productForm;
@@ -902,7 +909,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ProductVersion.
+             * The edition of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **BasicVersion**: Basic Edition.
+             * *   **EnterpriseVersion**: Enterprise Edition.
              */
             public Builder productVersion(String productVersion) {
                 this.productVersion = productVersion;
@@ -926,7 +937,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedNodeCount.
+             * A reserved parameter.
              */
             public Builder reservedNodeCount(Integer reservedNodeCount) {
                 this.reservedNodeCount = reservedNodeCount;
@@ -934,7 +945,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedNodeSize.
+             * A reserved parameter.
              */
             public Builder reservedNodeSize(String reservedNodeSize) {
                 this.reservedNodeSize = reservedNodeSize;
@@ -966,7 +977,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter.
+             * Reserved parameters.
              */
             public Builder supportedFeatures(java.util.Map < String, String > supportedFeatures) {
                 this.supportedFeatures = supportedFeatures;

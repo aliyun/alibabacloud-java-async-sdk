@@ -191,7 +191,11 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **AnalyticDB** (default): the AnalyticDB for MySQL engine.
+         * *   **Clickhouse**: the wide table engine.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);

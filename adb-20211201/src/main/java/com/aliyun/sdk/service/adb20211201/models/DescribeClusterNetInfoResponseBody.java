@@ -69,7 +69,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The network information about the cluster.
+         * The queried network information about the cluster.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -129,7 +129,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             private String protocol; 
 
             /**
-             * Port.
+             * The port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -137,7 +137,13 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **http**
+             * *   **https**
+             * *   **mysql**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -306,8 +312,8 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
              * The endpoint of the cluster.
              * <p>
              * 
-             * *   If the network type of the cluster is VPC, the VPC endpoint of the cluster is returned.
-             * *   If the network type of the cluster is Public, the public endpoint of the cluster is returned.
+             * *   If NetType is set to VPC, the VPC endpoint of the cluster is returned.
+             * *   If NetType is set to Public, the public endpoint of the cluster is returned.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -318,8 +324,8 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
              * The prefix of the endpoint.
              * <p>
              * 
-             * *   If the network type of the cluster is VPC, the prefix of the private endpoint is returned.
-             * *   If the network type of the cluster is Public, the prefix of the public endpoint is returned.
+             * *   If NetType is set to VPC, the prefix of the VPC endpoint is returned.
+             * *   If NetType is set to Public, the prefix of the public endpoint is returned.
              */
             public Builder connectionStringPrefix(String connectionStringPrefix) {
                 this.connectionStringPrefix = connectionStringPrefix;
@@ -330,8 +336,8 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
              * The IP address of the endpoint.
              * <p>
              * 
-             * *   If the network type of the cluster is VPC, the IP address of the private endpoint is returned.
-             * *   If the network type of the cluster is Public, the IP address of the public endpoint is returned.
+             * *   If NetType is set to VPC, the private IP address of the cluster is returned.
+             * *   If NetType is set to Public, the public IP address of the cluster is returned.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -359,7 +365,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The ports.
              */
             public Builder ports(AddressPorts ports) {
                 this.ports = ports;
@@ -370,7 +376,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
              * The VPC ID.
              * <p>
              * 
-             * > If NetType is set to Public, an empty string is returned for this parameter.
+             * >  If NetType is set to Public, an empty string is returned.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -381,7 +387,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
              * The vSwitch ID of the cluster.
              * <p>
              * 
-             * > If NetType is set to Public, an empty string is returned for this parameter.
+             * >  If NetType is set to Public, an empty string is returned.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
