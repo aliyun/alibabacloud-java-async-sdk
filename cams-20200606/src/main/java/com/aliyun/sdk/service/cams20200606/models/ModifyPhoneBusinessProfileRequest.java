@@ -33,6 +33,10 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
     private String email;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
@@ -40,6 +44,14 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProfilePictureUrl")
     private String profilePictureUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vertical")
@@ -56,8 +68,11 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         this.custSpaceId = builder.custSpaceId;
         this.description = builder.description;
         this.email = builder.email;
+        this.ownerId = builder.ownerId;
         this.phoneNumber = builder.phoneNumber;
         this.profilePictureUrl = builder.profilePictureUrl;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.vertical = builder.vertical;
         this.websites = builder.websites;
     }
@@ -111,6 +126,13 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return phoneNumber
      */
     public String getPhoneNumber() {
@@ -122,6 +144,20 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
      */
     public String getProfilePictureUrl() {
         return this.profilePictureUrl;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -144,8 +180,11 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         private String custSpaceId; 
         private String description; 
         private String email; 
+        private Long ownerId; 
         private String phoneNumber; 
         private String profilePictureUrl; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String vertical; 
         private java.util.List < String > websites; 
 
@@ -160,8 +199,11 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
             this.custSpaceId = request.custSpaceId;
             this.description = request.description;
             this.email = request.email;
+            this.ownerId = request.ownerId;
             this.phoneNumber = request.phoneNumber;
             this.profilePictureUrl = request.profilePictureUrl;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.vertical = request.vertical;
             this.websites = request.websites;
         } 
@@ -212,6 +254,15 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
          * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          */
         public Builder phoneNumber(String phoneNumber) {
@@ -229,6 +280,24 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         public Builder profilePictureUrl(String profilePictureUrl) {
             this.putQueryParameter("ProfilePictureUrl", profilePictureUrl);
             this.profilePictureUrl = profilePictureUrl;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

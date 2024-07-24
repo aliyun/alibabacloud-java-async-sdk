@@ -17,7 +17,6 @@ public class DeleteChatappTemplateRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustWabaId")
-    @Deprecated
     private String custWabaId;
 
     @com.aliyun.core.annotation.Query
@@ -27,6 +26,18 @@ public class DeleteChatappTemplateRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateCode")
@@ -46,6 +57,9 @@ public class DeleteChatappTemplateRequest extends Request {
         this.custWabaId = builder.custWabaId;
         this.isvCode = builder.isvCode;
         this.language = builder.language;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.templateCode = builder.templateCode;
         this.templateName = builder.templateName;
         this.templateType = builder.templateType;
@@ -93,6 +107,27 @@ public class DeleteChatappTemplateRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
      * @return templateCode
      */
     public String getTemplateCode() {
@@ -118,6 +153,9 @@ public class DeleteChatappTemplateRequest extends Request {
         private String custWabaId; 
         private String isvCode; 
         private String language; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String templateCode; 
         private String templateName; 
         private String templateType; 
@@ -132,6 +170,9 @@ public class DeleteChatappTemplateRequest extends Request {
             this.custWabaId = request.custWabaId;
             this.isvCode = request.isvCode;
             this.language = request.language;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.templateCode = request.templateCode;
             this.templateName = request.templateName;
             this.templateType = request.templateType;
@@ -173,6 +214,33 @@ public class DeleteChatappTemplateRequest extends Request {
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

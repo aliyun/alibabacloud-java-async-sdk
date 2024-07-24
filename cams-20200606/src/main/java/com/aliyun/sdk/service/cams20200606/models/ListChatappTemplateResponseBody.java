@@ -164,6 +164,9 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
+        private Long lastUpdateTime;
+
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
@@ -180,6 +183,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             this.auditStatus = builder.auditStatus;
             this.category = builder.category;
             this.language = builder.language;
+            this.lastUpdateTime = builder.lastUpdateTime;
             this.reason = builder.reason;
             this.templateCode = builder.templateCode;
             this.templateName = builder.templateName;
@@ -216,6 +220,13 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastUpdateTime
+         */
+        public Long getLastUpdateTime() {
+            return this.lastUpdateTime;
+        }
+
+        /**
          * @return reason
          */
         public String getReason() {
@@ -247,6 +258,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
             private String auditStatus; 
             private String category; 
             private String language; 
+            private Long lastUpdateTime; 
             private String reason; 
             private String templateCode; 
             private String templateName; 
@@ -296,6 +308,14 @@ public class ListChatappTemplateResponseBody extends TeaModel {
              */
             public Builder language(String language) {
                 this.language = language;
+                return this;
+            }
+
+            /**
+             * LastUpdateTime.
+             */
+            public Builder lastUpdateTime(Long lastUpdateTime) {
+                this.lastUpdateTime = lastUpdateTime;
                 return this;
             }
 

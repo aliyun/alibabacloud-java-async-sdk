@@ -23,11 +23,15 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
     private ModifyPhoneBusinessProfileResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -66,11 +70,19 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
          * AccessDeniedDetail.
@@ -101,6 +113,14 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 

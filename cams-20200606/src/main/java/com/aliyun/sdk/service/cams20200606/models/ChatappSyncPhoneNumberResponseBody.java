@@ -26,12 +26,16 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
     private ChatappSyncPhoneNumberResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
         this.phoneNumbers = builder.phoneNumbers;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -77,12 +81,20 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
         private String message; 
         private java.util.List < PhoneNumbers> phoneNumbers; 
         private String requestId; 
+        private Boolean success; 
 
         /**
          * AccessDeniedDetail.
@@ -125,6 +137,14 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 

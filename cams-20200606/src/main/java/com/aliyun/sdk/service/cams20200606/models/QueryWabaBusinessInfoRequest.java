@@ -17,6 +17,18 @@ public class QueryWabaBusinessInfoRequest extends Request {
     private String custSpaceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WabaId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String wabaId;
@@ -24,6 +36,9 @@ public class QueryWabaBusinessInfoRequest extends Request {
     private QueryWabaBusinessInfoRequest(Builder builder) {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.wabaId = builder.wabaId;
     }
 
@@ -48,6 +63,27 @@ public class QueryWabaBusinessInfoRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
      * @return wabaId
      */
     public String getWabaId() {
@@ -56,6 +92,9 @@ public class QueryWabaBusinessInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryWabaBusinessInfoRequest, Builder> {
         private String custSpaceId; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String wabaId; 
 
         private Builder() {
@@ -65,6 +104,9 @@ public class QueryWabaBusinessInfoRequest extends Request {
         private Builder(QueryWabaBusinessInfoRequest request) {
             super(request);
             this.custSpaceId = request.custSpaceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.wabaId = request.wabaId;
         } 
 
@@ -74,6 +116,33 @@ public class QueryWabaBusinessInfoRequest extends Request {
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
             this.custSpaceId = custSpaceId;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

@@ -11,32 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetChatappVerifyCodeRequest</p>
  */
 public class GetChatappVerifyCodeRequest extends Request {
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String custSpaceId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Locale")
     @com.aliyun.core.annotation.Validation(required = true)
     private String locale;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Method")
     @com.aliyun.core.annotation.Validation(required = true)
     private String method;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     private GetChatappVerifyCodeRequest(Builder builder) {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
         this.locale = builder.locale;
         this.method = builder.method;
+        this.ownerId = builder.ownerId;
         this.phoneNumber = builder.phoneNumber;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -74,17 +89,41 @@ public class GetChatappVerifyCodeRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return phoneNumber
      */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
 
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<GetChatappVerifyCodeRequest, Builder> {
         private String custSpaceId; 
         private String locale; 
         private String method; 
+        private Long ownerId; 
         private String phoneNumber; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -95,42 +134,72 @@ public class GetChatappVerifyCodeRequest extends Request {
             this.custSpaceId = request.custSpaceId;
             this.locale = request.locale;
             this.method = request.method;
+            this.ownerId = request.ownerId;
             this.phoneNumber = request.phoneNumber;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * The space ID of the user under the independent software vendor (ISV) account.
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
-            this.putBodyParameter("CustSpaceId", custSpaceId);
+            this.putQueryParameter("CustSpaceId", custSpaceId);
             this.custSpaceId = custSpaceId;
             return this;
         }
 
         /**
-         * The language.
+         * Locale.
          */
         public Builder locale(String locale) {
-            this.putBodyParameter("Locale", locale);
+            this.putQueryParameter("Locale", locale);
             this.locale = locale;
             return this;
         }
 
         /**
-         * The method to obtain the verification code. Valid values: SMS and VOICE.
+         * Method.
          */
         public Builder method(String method) {
-            this.putBodyParameter("Method", method);
+            this.putQueryParameter("Method", method);
             this.method = method;
             return this;
         }
 
         /**
-         * The phone number.
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PhoneNumber.
          */
         public Builder phoneNumber(String phoneNumber) {
-            this.putBodyParameter("PhoneNumber", phoneNumber);
+            this.putQueryParameter("PhoneNumber", phoneNumber);
             this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
