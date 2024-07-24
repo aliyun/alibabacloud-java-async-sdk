@@ -45,6 +45,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelScheduleConferenceResponse> cancelScheduleConference(CancelScheduleConferenceRequest request);
 
+    CompletableFuture<CheckAlibabaStaffResponse> checkAlibabaStaff(CheckAlibabaStaffRequest request);
+
     CompletableFuture<CheckUserIsGroupMemberResponse> checkUserIsGroupMember(CheckUserIsGroupMemberRequest request);
 
     CompletableFuture<ClearResponse> clear(ClearRequest request);
@@ -388,6 +390,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateTodoTaskExecutorStatusResponse> updateTodoTaskExecutorStatus(UpdateTodoTaskExecutorStatusRequest request);
 
     CompletableFuture<UpdateUserAvatarResponse> updateUserAvatar(UpdateUserAvatarRequest request);
+
+    CompletableFuture<UpdateVideoConferenceSettingResponse> updateVideoConferenceSetting(UpdateVideoConferenceSettingRequest request);
 
     CompletableFuture<UpdateWorkspaceDocMembersResponse> updateWorkspaceDocMembers(UpdateWorkspaceDocMembersRequest request);
 
