@@ -1,0 +1,140 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.apig20240327.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link AddGatewaySecurityGroupRuleRequest} extends {@link RequestModel}
+ *
+ * <p>AddGatewaySecurityGroupRuleRequest</p>
+ */
+public class AddGatewaySecurityGroupRuleRequest extends Request {
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
+    private String description;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("portRanges")
+    private java.util.List < String > portRanges;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("securityGroupId")
+    private String securityGroupId;
+
+    private AddGatewaySecurityGroupRuleRequest(Builder builder) {
+        super(builder);
+        this.gatewayId = builder.gatewayId;
+        this.description = builder.description;
+        this.portRanges = builder.portRanges;
+        this.securityGroupId = builder.securityGroupId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static AddGatewaySecurityGroupRuleRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return portRanges
+     */
+    public java.util.List < String > getPortRanges() {
+        return this.portRanges;
+    }
+
+    /**
+     * @return securityGroupId
+     */
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public static final class Builder extends Request.Builder<AddGatewaySecurityGroupRuleRequest, Builder> {
+        private String gatewayId; 
+        private String description; 
+        private java.util.List < String > portRanges; 
+        private String securityGroupId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(AddGatewaySecurityGroupRuleRequest request) {
+            super(request);
+            this.gatewayId = request.gatewayId;
+            this.description = request.description;
+            this.portRanges = request.portRanges;
+            this.securityGroupId = request.securityGroupId;
+        } 
+
+        /**
+         * gatewayId.
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.putPathParameter("gatewayId", gatewayId);
+            this.gatewayId = gatewayId;
+            return this;
+        }
+
+        /**
+         * description.
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * portRanges.
+         */
+        public Builder portRanges(java.util.List < String > portRanges) {
+            this.putBodyParameter("portRanges", portRanges);
+            this.portRanges = portRanges;
+            return this;
+        }
+
+        /**
+         * securityGroupId.
+         */
+        public Builder securityGroupId(String securityGroupId) {
+            this.putBodyParameter("securityGroupId", securityGroupId);
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        @Override
+        public AddGatewaySecurityGroupRuleRequest build() {
+            return new AddGatewaySecurityGroupRuleRequest(this);
+        } 
+
+    } 
+
+}
