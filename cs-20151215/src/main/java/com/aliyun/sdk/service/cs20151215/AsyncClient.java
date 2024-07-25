@@ -416,6 +416,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ResumeUpgradeClusterResponse> resumeUpgradeCluster(ResumeUpgradeClusterRequest request);
 
+    CompletableFuture<RevokeK8sClusterKubeConfigResponse> revokeK8sClusterKubeConfig(RevokeK8sClusterKubeConfigRequest request);
+
     CompletableFuture<RunClusterCheckResponse> runClusterCheck(RunClusterCheckRequest request);
 
     /**
