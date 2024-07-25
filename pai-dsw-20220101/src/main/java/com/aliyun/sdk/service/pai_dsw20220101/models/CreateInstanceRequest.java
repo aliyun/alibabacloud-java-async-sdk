@@ -40,6 +40,10 @@ public class CreateInstanceRequest extends Request {
     private java.util.Map < String, String > environmentVariables;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageAuth")
+    private String imageAuth;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
@@ -92,6 +96,7 @@ public class CreateInstanceRequest extends Request {
         this.driver = builder.driver;
         this.ecsSpec = builder.ecsSpec;
         this.environmentVariables = builder.environmentVariables;
+        this.imageAuth = builder.imageAuth;
         this.imageId = builder.imageId;
         this.imageUrl = builder.imageUrl;
         this.instanceName = builder.instanceName;
@@ -165,6 +170,13 @@ public class CreateInstanceRequest extends Request {
      */
     public java.util.Map < String, String > getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    /**
+     * @return imageAuth
+     */
+    public String getImageAuth() {
+        return this.imageAuth;
     }
 
     /**
@@ -252,6 +264,7 @@ public class CreateInstanceRequest extends Request {
         private String driver; 
         private String ecsSpec; 
         private java.util.Map < String, String > environmentVariables; 
+        private String imageAuth; 
         private String imageId; 
         private String imageUrl; 
         private String instanceName; 
@@ -277,6 +290,7 @@ public class CreateInstanceRequest extends Request {
             this.driver = request.driver;
             this.ecsSpec = request.ecsSpec;
             this.environmentVariables = request.environmentVariables;
+            this.imageAuth = request.imageAuth;
             this.imageId = request.imageId;
             this.imageUrl = request.imageUrl;
             this.instanceName = request.instanceName;
@@ -350,6 +364,15 @@ public class CreateInstanceRequest extends Request {
         public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
             this.putBodyParameter("EnvironmentVariables", environmentVariables);
             this.environmentVariables = environmentVariables;
+            return this;
+        }
+
+        /**
+         * ImageAuth.
+         */
+        public Builder imageAuth(String imageAuth) {
+            this.putBodyParameter("ImageAuth", imageAuth);
+            this.imageAuth = imageAuth;
             return this;
         }
 

@@ -1478,6 +1478,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IdleInstanceCuller")
         private IdleInstanceCuller idleInstanceCuller;
 
+        @com.aliyun.core.annotation.NameInMap("ImageAuth")
+        private String imageAuth;
+
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
@@ -1572,6 +1575,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtModifiedTime = builder.gmtModifiedTime;
             this.idleInstanceCuller = builder.idleInstanceCuller;
+            this.imageAuth = builder.imageAuth;
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
             this.imageUrl = builder.imageUrl;
@@ -1691,6 +1695,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public IdleInstanceCuller getIdleInstanceCuller() {
             return this.idleInstanceCuller;
+        }
+
+        /**
+         * @return imageAuth
+         */
+        public String getImageAuth() {
+            return this.imageAuth;
         }
 
         /**
@@ -1895,6 +1906,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
             private IdleInstanceCuller idleInstanceCuller; 
+            private String imageAuth; 
             private String imageId; 
             private String imageName; 
             private String imageUrl; 
@@ -2016,6 +2028,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder idleInstanceCuller(IdleInstanceCuller idleInstanceCuller) {
                 this.idleInstanceCuller = idleInstanceCuller;
+                return this;
+            }
+
+            /**
+             * ImageAuth.
+             */
+            public Builder imageAuth(String imageAuth) {
+                this.imageAuth = imageAuth;
                 return this;
             }
 

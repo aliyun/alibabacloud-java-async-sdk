@@ -57,6 +57,10 @@ public class UpdateInstanceRequest extends Request {
     private String ecsSpec;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageAuth")
+    private String imageAuth;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
@@ -101,6 +105,7 @@ public class UpdateInstanceRequest extends Request {
         this.disassociateVpc = builder.disassociateVpc;
         this.driver = builder.driver;
         this.ecsSpec = builder.ecsSpec;
+        this.imageAuth = builder.imageAuth;
         this.imageId = builder.imageId;
         this.imageUrl = builder.imageUrl;
         this.instanceName = builder.instanceName;
@@ -202,6 +207,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return imageAuth
+     */
+    public String getImageAuth() {
+        return this.imageAuth;
+    }
+
+    /**
      * @return imageId
      */
     public String getImageId() {
@@ -269,6 +281,7 @@ public class UpdateInstanceRequest extends Request {
         private Boolean disassociateVpc; 
         private String driver; 
         private String ecsSpec; 
+        private String imageAuth; 
         private String imageId; 
         private String imageUrl; 
         private String instanceName; 
@@ -295,6 +308,7 @@ public class UpdateInstanceRequest extends Request {
             this.disassociateVpc = request.disassociateVpc;
             this.driver = request.driver;
             this.ecsSpec = request.ecsSpec;
+            this.imageAuth = request.imageAuth;
             this.imageId = request.imageId;
             this.imageUrl = request.imageUrl;
             this.instanceName = request.instanceName;
@@ -401,6 +415,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder ecsSpec(String ecsSpec) {
             this.putBodyParameter("EcsSpec", ecsSpec);
             this.ecsSpec = ecsSpec;
+            return this;
+        }
+
+        /**
+         * ImageAuth.
+         */
+        public Builder imageAuth(String imageAuth) {
+            this.putBodyParameter("ImageAuth", imageAuth);
+            this.imageAuth = imageAuth;
             return this;
         }
 

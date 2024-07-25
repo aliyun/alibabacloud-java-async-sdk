@@ -20,6 +20,10 @@ public class ListInstancesRequest extends Request {
     private String accessibility;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateUserId")
+    private String createUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -67,6 +71,7 @@ public class ListInstancesRequest extends Request {
         super(builder);
         this.acceleratorType = builder.acceleratorType;
         this.accessibility = builder.accessibility;
+        this.createUserId = builder.createUserId;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.labels = builder.labels;
@@ -105,6 +110,13 @@ public class ListInstancesRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return createUserId
+     */
+    public String getCreateUserId() {
+        return this.createUserId;
     }
 
     /**
@@ -187,6 +199,7 @@ public class ListInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String acceleratorType; 
         private String accessibility; 
+        private String createUserId; 
         private String instanceId; 
         private String instanceName; 
         private java.util.Map < String, ? > labels; 
@@ -207,6 +220,7 @@ public class ListInstancesRequest extends Request {
             super(request);
             this.acceleratorType = request.acceleratorType;
             this.accessibility = request.accessibility;
+            this.createUserId = request.createUserId;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.labels = request.labels;
@@ -235,6 +249,15 @@ public class ListInstancesRequest extends Request {
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * CreateUserId.
+         */
+        public Builder createUserId(String createUserId) {
+            this.putQueryParameter("CreateUserId", createUserId);
+            this.createUserId = createUserId;
             return this;
         }
 
