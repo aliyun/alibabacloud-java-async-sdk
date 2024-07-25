@@ -47,6 +47,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Property")
     private String property;
 
+    @com.aliyun.core.annotation.NameInMap("Provider")
+    private String provider;
+
     @com.aliyun.core.annotation.NameInMap("ProviderType")
     private String providerType;
 
@@ -81,6 +84,7 @@ public class GetDatasetResponseBody extends TeaModel {
         this.options = builder.options;
         this.ownerId = builder.ownerId;
         this.property = builder.property;
+        this.provider = builder.provider;
         this.providerType = builder.providerType;
         this.requestId = builder.requestId;
         this.sourceId = builder.sourceId;
@@ -183,6 +187,13 @@ public class GetDatasetResponseBody extends TeaModel {
     }
 
     /**
+     * @return provider
+     */
+    public String getProvider() {
+        return this.provider;
+    }
+
+    /**
      * @return providerType
      */
     public String getProviderType() {
@@ -244,6 +255,7 @@ public class GetDatasetResponseBody extends TeaModel {
         private String options; 
         private String ownerId; 
         private String property; 
+        private String provider; 
         private String providerType; 
         private String requestId; 
         private String sourceId; 
@@ -345,6 +357,14 @@ public class GetDatasetResponseBody extends TeaModel {
          */
         public Builder property(String property) {
             this.property = property;
+            return this;
+        }
+
+        /**
+         * Provider.
+         */
+        public Builder provider(String provider) {
+            this.provider = provider;
             return this;
         }
 
