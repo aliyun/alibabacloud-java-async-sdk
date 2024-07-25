@@ -104,9 +104,6 @@ public class File extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileModifiedTime")
     private String fileModifiedTime;
 
-    @com.aliyun.core.annotation.NameInMap("FileStatus")
-    private String fileStatus;
-
     @com.aliyun.core.annotation.NameInMap("Filename")
     private String filename;
 
@@ -178,6 +175,9 @@ public class File extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ObjectId")
     private String objectId;
+
+    @com.aliyun.core.annotation.NameInMap("ObjectStatus")
+    private String objectStatus;
 
     @com.aliyun.core.annotation.NameInMap("ObjectType")
     private String objectType;
@@ -292,7 +292,6 @@ public class File extends TeaModel {
         this.fileCreateTime = builder.fileCreateTime;
         this.fileHash = builder.fileHash;
         this.fileModifiedTime = builder.fileModifiedTime;
-        this.fileStatus = builder.fileStatus;
         this.filename = builder.filename;
         this.formatLongName = builder.formatLongName;
         this.formatName = builder.formatName;
@@ -317,6 +316,7 @@ public class File extends TeaModel {
         this.OSSVersionId = builder.OSSVersionId;
         this.objectACL = builder.objectACL;
         this.objectId = builder.objectId;
+        this.objectStatus = builder.objectStatus;
         this.objectType = builder.objectType;
         this.orientation = builder.orientation;
         this.ownerId = builder.ownerId;
@@ -572,13 +572,6 @@ public class File extends TeaModel {
     }
 
     /**
-     * @return fileStatus
-     */
-    public String getFileStatus() {
-        return this.fileStatus;
-    }
-
-    /**
      * @return filename
      */
     public String getFilename() {
@@ -744,6 +737,13 @@ public class File extends TeaModel {
      */
     public String getObjectId() {
         return this.objectId;
+    }
+
+    /**
+     * @return objectStatus
+     */
+    public String getObjectStatus() {
+        return this.objectStatus;
     }
 
     /**
@@ -967,7 +967,6 @@ public class File extends TeaModel {
         private String fileCreateTime; 
         private String fileHash; 
         private String fileModifiedTime; 
-        private String fileStatus; 
         private String filename; 
         private String formatLongName; 
         private String formatName; 
@@ -992,6 +991,7 @@ public class File extends TeaModel {
         private String OSSVersionId; 
         private String objectACL; 
         private String objectId; 
+        private String objectStatus; 
         private String objectType; 
         private Long orientation; 
         private String ownerId; 
@@ -1269,14 +1269,6 @@ public class File extends TeaModel {
         }
 
         /**
-         * FileStatus.
-         */
-        public Builder fileStatus(String fileStatus) {
-            this.fileStatus = fileStatus;
-            return this;
-        }
-
-        /**
          * Filename.
          */
         public Builder filename(String filename) {
@@ -1465,6 +1457,14 @@ public class File extends TeaModel {
          */
         public Builder objectId(String objectId) {
             this.objectId = objectId;
+            return this;
+        }
+
+        /**
+         * ObjectStatus.
+         */
+        public Builder objectStatus(String objectStatus) {
+            this.objectStatus = objectStatus;
             return this;
         }
 
