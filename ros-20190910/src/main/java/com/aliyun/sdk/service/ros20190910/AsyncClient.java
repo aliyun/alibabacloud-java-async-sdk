@@ -29,6 +29,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ContinueCreateStackResponse> continueCreateStack(ContinueCreateStackRequest request);
 
+    CompletableFuture<CreateAITaskResponse> createAITask(CreateAITaskRequest request);
+
     /**
       * ### [](#)Scenarios
       * #### [](#)Use a change set to create a stack
@@ -181,6 +183,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<GenerateTemplatePolicyResponse> generateTemplatePolicy(GenerateTemplatePolicyRequest request);
+
+    CompletableFuture<GetAITaskResponse> getAITask(GetAITaskRequest request);
 
     /**
       * In this example, the details of a change set whose ID is `4c11658d-bd47-4dd0-ba64-727edc62****` is queried. The change set is created in the China (Hangzhou) region.
@@ -336,6 +340,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTemplateScratchResponse> getTemplateScratch(GetTemplateScratchRequest request);
 
     CompletableFuture<GetTemplateSummaryResponse> getTemplateSummary(GetTemplateSummaryRequest request);
+
+    CompletableFuture<ListAITaskEventsResponse> listAITaskEvents(ListAITaskEventsRequest request);
+
+    CompletableFuture<ListAITasksResponse> listAITasks(ListAITasksRequest request);
 
     CompletableFuture<ListChangeSetsResponse> listChangeSets(ListChangeSetsRequest request);
 
