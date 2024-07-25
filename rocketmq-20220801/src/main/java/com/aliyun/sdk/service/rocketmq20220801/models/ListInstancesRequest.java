@@ -30,6 +30,10 @@ public class ListInstancesRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("seriesCodes")
+    private java.util.List < String > seriesCodes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
@@ -39,6 +43,7 @@ public class ListInstancesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
+        this.seriesCodes = builder.seriesCodes;
         this.tags = builder.tags;
     }
 
@@ -84,6 +89,13 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return seriesCodes
+     */
+    public java.util.List < String > getSeriesCodes() {
+        return this.seriesCodes;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -95,6 +107,7 @@ public class ListInstancesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
+        private java.util.List < String > seriesCodes; 
         private String tags; 
 
         private Builder() {
@@ -107,6 +120,7 @@ public class ListInstancesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
+            this.seriesCodes = request.seriesCodes;
             this.tags = request.tags;
         } 
 
@@ -153,6 +167,16 @@ public class ListInstancesRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * seriesCodes.
+         */
+        public Builder seriesCodes(java.util.List < String > seriesCodes) {
+            String seriesCodesShrink = shrink(seriesCodes, "seriesCodes", "simple");
+            this.putQueryParameter("seriesCodes", seriesCodesShrink);
+            this.seriesCodes = seriesCodes;
             return this;
         }
 
