@@ -105,7 +105,7 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -606,7 +606,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AuthEnabled.
+             * Indicates whether Simple Authentication and Security Layer (SASL) forced identity authentication is enabled for the ZooKeeper instance.
              */
             public Builder authEnabled(Boolean authEnabled) {
                 this.authEnabled = authEnabled;

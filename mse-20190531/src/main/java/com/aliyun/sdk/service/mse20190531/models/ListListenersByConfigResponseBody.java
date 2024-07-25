@@ -297,7 +297,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The label of the listener.
              */
             public Builder labels(java.util.Map < String, String > labels) {
                 this.labels = labels;
@@ -321,7 +321,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The current version of the listener. Valid values: gray and normal.
              */
             public Builder version(String version) {
                 this.version = version;

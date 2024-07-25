@@ -1384,7 +1384,7 @@ public class UpdateGatewayRouteWafStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The source type.
+             * The source type of the service.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;

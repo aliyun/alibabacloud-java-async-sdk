@@ -6,19 +6,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateGatewayFlowRuleResponseBody} extends {@link TeaModel}
+ * {@link CreatePluginConfigResponseBody} extends {@link TeaModel}
  *
- * <p>CreateGatewayFlowRuleResponseBody</p>
+ * <p>CreatePluginConfigResponseBody</p>
  */
-public class CreateGatewayFlowRuleResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private Long data;
+public class CreatePluginConfigResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("PluginConfigID")
+    private Long pluginConfigID;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateGatewayFlowRuleResponseBody(Builder builder) {
-        this.data = builder.data;
+    private CreatePluginConfigResponseBody(Builder builder) {
+        this.pluginConfigID = builder.pluginConfigID;
         this.requestId = builder.requestId;
     }
 
@@ -26,15 +26,15 @@ public class CreateGatewayFlowRuleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateGatewayFlowRuleResponseBody create() {
+    public static CreatePluginConfigResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return data
+     * @return pluginConfigID
      */
-    public Long getData() {
-        return this.data;
+    public Long getPluginConfigID() {
+        return this.pluginConfigID;
     }
 
     /**
@@ -45,27 +45,27 @@ public class CreateGatewayFlowRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long data; 
+        private Long pluginConfigID; 
         private String requestId; 
 
         /**
-         * The ID of the rule.
+         * PluginConfigID.
          */
-        public Builder data(Long data) {
-            this.data = data;
+        public Builder pluginConfigID(Long pluginConfigID) {
+            this.pluginConfigID = pluginConfigID;
             return this;
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateGatewayFlowRuleResponseBody build() {
-            return new CreateGatewayFlowRuleResponseBody(this);
+        public CreatePluginConfigResponseBody build() {
+            return new CreatePluginConfigResponseBody(this);
         } 
 
     } 

@@ -119,6 +119,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateOrUpdateSwimmingLaneGroupResponse> createOrUpdateSwimmingLaneGroup(CreateOrUpdateSwimmingLaneGroupRequest request);
 
+    CompletableFuture<CreatePluginConfigResponse> createPluginConfig(CreatePluginConfigRequest request);
+
     CompletableFuture<CreateZnodeResponse> createZnode(CreateZnodeRequest request);
 
     CompletableFuture<DeleteAuthResourceResponse> deleteAuthResource(DeleteAuthResourceRequest request);
@@ -182,6 +184,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
 
+    CompletableFuture<DeletePluginConfigResponse> deletePluginConfig(DeletePluginConfigRequest request);
+
     CompletableFuture<DeleteSecurityGroupRuleResponse> deleteSecurityGroupRule(DeleteSecurityGroupRuleRequest request);
 
     CompletableFuture<DeleteServiceSourceResponse> deleteServiceSource(DeleteServiceSourceRequest request);
@@ -191,6 +195,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSwimmingLaneGroupResponse> deleteSwimmingLaneGroup(DeleteSwimmingLaneGroupRequest request);
 
     CompletableFuture<DeleteZnodeResponse> deleteZnode(DeleteZnodeRequest request);
+
+    CompletableFuture<EnableHttp2Response> enableHttp2(EnableHttp2Request request);
 
     CompletableFuture<EnableProxyProtocolResponse> enableProxyProtocol(EnableProxyProtocolRequest request);
 
@@ -458,6 +464,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OfflineGatewayRouteResponse> offlineGatewayRoute(OfflineGatewayRouteRequest request);
 
     CompletableFuture<OrderClusterHealthCheckRiskNoticeResponse> orderClusterHealthCheckRiskNotice(OrderClusterHealthCheckRiskNoticeRequest request);
+
+    CompletableFuture<PreserveHeaderFormatResponse> preserveHeaderFormat(PreserveHeaderFormatRequest request);
 
     CompletableFuture<PullServicesResponse> pullServices(PullServicesRequest request);
 

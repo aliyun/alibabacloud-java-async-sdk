@@ -6,16 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListGatewayZoneResponseBody} extends {@link TeaModel}
+ * {@link PreserveHeaderFormatResponseBody} extends {@link TeaModel}
  *
- * <p>ListGatewayZoneResponseBody</p>
+ * <p>PreserveHeaderFormatResponseBody</p>
  */
-public class ListGatewayZoneResponseBody extends TeaModel {
+public class PreserveHeaderFormatResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private Boolean data;
 
     @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
@@ -38,7 +38,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ListGatewayZoneResponseBody(Builder builder) {
+    private PreserveHeaderFormatResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.dynamicCode = builder.dynamicCode;
@@ -54,7 +54,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListGatewayZoneResponseBody create() {
+    public static PreserveHeaderFormatResponseBody create() {
         return builder().build();
     }
 
@@ -68,7 +68,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Boolean getData() {
         return this.data;
     }
 
@@ -123,7 +123,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private Boolean data; 
         private String dynamicCode; 
         private String dynamicMessage; 
         private String errorCode; 
@@ -133,7 +133,7 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code. The status code 200 indicates that the request was successful.
+         * The status code. A value of 200 is returned if the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,9 +141,9 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The queried zones.
+         * The returned data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Boolean data) {
             this.data = data;
             return this;
         }
@@ -157,7 +157,10 @@ public class ListGatewayZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message. This parameter is used to replace %s in **ErrMessage**.
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  The request parameter **DtsJobId** is invalid if **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **DtsJobId** is returned for **DynamicMessage**.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -200,79 +203,18 @@ public class ListGatewayZoneResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * *   `true`
+         * *   `false`
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public ListGatewayZoneResponseBody build() {
-            return new ListGatewayZoneResponseBody(this);
+        public PreserveHeaderFormatResponseBody build() {
+            return new PreserveHeaderFormatResponseBody(this);
         } 
 
     } 
 
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("LocalName")
-        private String localName;
-
-        @com.aliyun.core.annotation.NameInMap("ZoneId")
-        private String zoneId;
-
-        private Data(Builder builder) {
-            this.localName = builder.localName;
-            this.zoneId = builder.zoneId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return localName
-         */
-        public String getLocalName() {
-            return this.localName;
-        }
-
-        /**
-         * @return zoneId
-         */
-        public String getZoneId() {
-            return this.zoneId;
-        }
-
-        public static final class Builder {
-            private String localName; 
-            private String zoneId; 
-
-            /**
-             * The local name of the zone.
-             */
-            public Builder localName(String localName) {
-                this.localName = localName;
-                return this;
-            }
-
-            /**
-             * The zone ID.
-             */
-            public Builder zoneId(String zoneId) {
-                this.zoneId = zoneId;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }

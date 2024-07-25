@@ -224,7 +224,7 @@ public class GetServiceListenersRequest extends Request {
          * The ID of the MSE instance to which the service belongs.
          * <p>
          * 
-         * > You must specify InstanceId or ClusterId.
+         * >  You must specify InstanceId or ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

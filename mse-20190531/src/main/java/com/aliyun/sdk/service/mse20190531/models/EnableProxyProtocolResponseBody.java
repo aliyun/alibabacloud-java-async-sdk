@@ -133,7 +133,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code. A value of 200 is returned if the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,7 +141,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the request was successful. Valid values:
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -149,7 +149,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * The dynamic part in the error message.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -157,7 +157,10 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  For example, if the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the **DtsJobId** parameter in the request is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -165,7 +168,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The status code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -173,7 +176,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -181,7 +184,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -189,7 +192,7 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +200,11 @@ public class EnableProxyProtocolResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

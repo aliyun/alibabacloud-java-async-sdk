@@ -6,37 +6,37 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EnableProxyProtocolRequest} extends {@link RequestModel}
+ * {@link PreserveHeaderFormatRequest} extends {@link RequestModel}
  *
- * <p>EnableProxyProtocolRequest</p>
+ * <p>PreserveHeaderFormatRequest</p>
  */
-public class EnableProxyProtocolRequest extends Request {
+public class PreserveHeaderFormatRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("EnableProxyProtocol")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Boolean enableProxyProtocol;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    private EnableProxyProtocolRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreserveHeaderFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Boolean preserveHeaderFormat;
+
+    private PreserveHeaderFormatRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
-        this.enableProxyProtocol = builder.enableProxyProtocol;
         this.gatewayUniqueId = builder.gatewayUniqueId;
+        this.preserveHeaderFormat = builder.preserveHeaderFormat;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static EnableProxyProtocolRequest create() {
+    public static PreserveHeaderFormatRequest create() {
         return builder().build();
     }
 
@@ -53,33 +53,33 @@ public class EnableProxyProtocolRequest extends Request {
     }
 
     /**
-     * @return enableProxyProtocol
-     */
-    public Boolean getEnableProxyProtocol() {
-        return this.enableProxyProtocol;
-    }
-
-    /**
      * @return gatewayUniqueId
      */
     public String getGatewayUniqueId() {
         return this.gatewayUniqueId;
     }
 
-    public static final class Builder extends Request.Builder<EnableProxyProtocolRequest, Builder> {
+    /**
+     * @return preserveHeaderFormat
+     */
+    public Boolean getPreserveHeaderFormat() {
+        return this.preserveHeaderFormat;
+    }
+
+    public static final class Builder extends Request.Builder<PreserveHeaderFormatRequest, Builder> {
         private String acceptLanguage; 
-        private Boolean enableProxyProtocol; 
         private String gatewayUniqueId; 
+        private Boolean preserveHeaderFormat; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(EnableProxyProtocolRequest request) {
+        private Builder(PreserveHeaderFormatRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
-            this.enableProxyProtocol = request.enableProxyProtocol;
             this.gatewayUniqueId = request.gatewayUniqueId;
+            this.preserveHeaderFormat = request.preserveHeaderFormat;
         } 
 
         /**
@@ -92,19 +92,6 @@ public class EnableProxyProtocolRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:
-         * <p>
-         * 
-         * *   **true**
-         * *   **false** (default)
-         */
-        public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
-            this.putQueryParameter("EnableProxyProtocol", enableProxyProtocol);
-            this.enableProxyProtocol = enableProxyProtocol;
-            return this;
-        }
-
-        /**
          * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
@@ -113,9 +100,22 @@ public class EnableProxyProtocolRequest extends Request {
             return this;
         }
 
+        /**
+         * Specifies whether the request header is case-sensitive. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         */
+        public Builder preserveHeaderFormat(Boolean preserveHeaderFormat) {
+            this.putQueryParameter("PreserveHeaderFormat", preserveHeaderFormat);
+            this.preserveHeaderFormat = preserveHeaderFormat;
+            return this;
+        }
+
         @Override
-        public EnableProxyProtocolRequest build() {
-            return new EnableProxyProtocolRequest(this);
+        public PreserveHeaderFormatRequest build() {
+            return new PreserveHeaderFormatRequest(this);
         } 
 
     } 

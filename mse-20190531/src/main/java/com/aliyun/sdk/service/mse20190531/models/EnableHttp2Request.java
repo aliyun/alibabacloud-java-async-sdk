@@ -6,29 +6,29 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link EnableProxyProtocolRequest} extends {@link RequestModel}
+ * {@link EnableHttp2Request} extends {@link RequestModel}
  *
- * <p>EnableProxyProtocolRequest</p>
+ * <p>EnableHttp2Request</p>
  */
-public class EnableProxyProtocolRequest extends Request {
+public class EnableHttp2Request extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("EnableProxyProtocol")
+    @com.aliyun.core.annotation.NameInMap("EnableHttp2")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Boolean enableProxyProtocol;
+    private Boolean enableHttp2;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
-    private EnableProxyProtocolRequest(Builder builder) {
+    private EnableHttp2Request(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
-        this.enableProxyProtocol = builder.enableProxyProtocol;
+        this.enableHttp2 = builder.enableHttp2;
         this.gatewayUniqueId = builder.gatewayUniqueId;
     }
 
@@ -36,7 +36,7 @@ public class EnableProxyProtocolRequest extends Request {
         return new Builder();
     }
 
-    public static EnableProxyProtocolRequest create() {
+    public static EnableHttp2Request create() {
         return builder().build();
     }
 
@@ -53,10 +53,10 @@ public class EnableProxyProtocolRequest extends Request {
     }
 
     /**
-     * @return enableProxyProtocol
+     * @return enableHttp2
      */
-    public Boolean getEnableProxyProtocol() {
-        return this.enableProxyProtocol;
+    public Boolean getEnableHttp2() {
+        return this.enableHttp2;
     }
 
     /**
@@ -66,19 +66,19 @@ public class EnableProxyProtocolRequest extends Request {
         return this.gatewayUniqueId;
     }
 
-    public static final class Builder extends Request.Builder<EnableProxyProtocolRequest, Builder> {
+    public static final class Builder extends Request.Builder<EnableHttp2Request, Builder> {
         private String acceptLanguage; 
-        private Boolean enableProxyProtocol; 
+        private Boolean enableHttp2; 
         private String gatewayUniqueId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(EnableProxyProtocolRequest request) {
+        private Builder(EnableHttp2Request request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
-            this.enableProxyProtocol = request.enableProxyProtocol;
+            this.enableHttp2 = request.enableHttp2;
             this.gatewayUniqueId = request.gatewayUniqueId;
         } 
 
@@ -92,15 +92,15 @@ public class EnableProxyProtocolRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:
+         * Specifies whether to enable HTTP/2 for negotiation between the server and client. This parameter applies to requests. Valid values:
          * <p>
          * 
          * *   **true**
-         * *   **false** (default)
+         * *   **false**
          */
-        public Builder enableProxyProtocol(Boolean enableProxyProtocol) {
-            this.putQueryParameter("EnableProxyProtocol", enableProxyProtocol);
-            this.enableProxyProtocol = enableProxyProtocol;
+        public Builder enableHttp2(Boolean enableHttp2) {
+            this.putQueryParameter("EnableHttp2", enableHttp2);
+            this.enableHttp2 = enableHttp2;
             return this;
         }
 
@@ -114,8 +114,8 @@ public class EnableProxyProtocolRequest extends Request {
         }
 
         @Override
-        public EnableProxyProtocolRequest build() {
-            return new EnableProxyProtocolRequest(this);
+        public EnableHttp2Request build() {
+            return new EnableHttp2Request(this);
         } 
 
     } 

@@ -234,29 +234,8 @@ public class CreateFlowRuleRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   0
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     fast failure
-         * 
-         *     <!-- -->
-         * 
-         * *   2
-         * 
-         *     <!-- -->
-         * 
-         *     :
-         * 
-         *     <!-- -->
-         * 
-         *     in queue
-         * 
-         *     <!-- -->
+         * *   0: fast failure
+         * *   2: in queue
          */
         public Builder controlBehavior(Integer controlBehavior) {
             this.putQueryParameter("ControlBehavior", controlBehavior);

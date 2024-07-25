@@ -391,7 +391,16 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   0: custom interface
+         * *   1: web
+         * *   2: RPC
+         * *   3: route
+         * *   4: SQL
          */
         public Builder resourceType(Integer resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

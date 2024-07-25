@@ -53,7 +53,7 @@ public class ListGatewayZoneRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

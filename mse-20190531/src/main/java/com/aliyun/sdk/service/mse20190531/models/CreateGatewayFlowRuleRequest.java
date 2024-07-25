@@ -213,7 +213,7 @@ public class CreateGatewayFlowRuleRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -222,7 +222,12 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * BehaviorType.
+         * The type of the web fallback behavior.
+         * <p>
+         * 
+         * 0: returns the specified content.
+         * 
+         * 1: redirects to the specified page.
          */
         public Builder behaviorType(Integer behaviorType) {
             this.putQueryParameter("BehaviorType", behaviorType);
@@ -231,7 +236,12 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * BodyEncoding.
+         * The encoding format.
+         * <p>
+         * 
+         * 0: normal text
+         * 
+         * 1: JSON
          */
         public Builder bodyEncoding(Integer bodyEncoding) {
             this.putQueryParameter("BodyEncoding", bodyEncoding);
@@ -240,7 +250,12 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the throttling rule.
+         * <p>
+         * 
+         * 0: disables the throttling rule.
+         * 
+         * 1: enables the throttling rule.
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);
@@ -249,7 +264,7 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The ID of the gateway.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -258,7 +273,7 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -267,7 +282,7 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * ResponseContentBody.
+         * The HTTP text to be returned.
          */
         public Builder responseContentBody(String responseContentBody) {
             this.putQueryParameter("ResponseContentBody", responseContentBody);
@@ -276,7 +291,7 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * ResponseRedirectUrl.
+         * The address to be redirected to.
          */
         public Builder responseRedirectUrl(String responseRedirectUrl) {
             this.putQueryParameter("ResponseRedirectUrl", responseRedirectUrl);
@@ -285,7 +300,7 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * ResponseStatusCode.
+         * The HTTP status code.
          */
         public Builder responseStatusCode(Integer responseStatusCode) {
             this.putQueryParameter("ResponseStatusCode", responseStatusCode);
@@ -294,7 +309,7 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * RouteId.
+         * The ID of the route.
          */
         public Builder routeId(Long routeId) {
             this.putQueryParameter("RouteId", routeId);
@@ -303,7 +318,7 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * RouteName.
+         * The name of the routing rule.
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("RouteName", routeName);
@@ -312,7 +327,7 @@ public class CreateGatewayFlowRuleRequest extends Request {
         }
 
         /**
-         * Threshold.
+         * The overall queries per second (QPS) threshold.
          */
         public Builder threshold(Integer threshold) {
             this.putQueryParameter("Threshold", threshold);
