@@ -82,7 +82,7 @@ public class GetServiceInstanceRequest extends Request {
         } 
 
         /**
-         * MarketInstanceId.
+         * The MarketInstance ID.
          */
         public Builder marketInstanceId(String marketInstanceId) {
             this.putQueryParameter("MarketInstanceId", marketInstanceId);
@@ -91,7 +91,7 @@ public class GetServiceInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +100,10 @@ public class GetServiceInstanceRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The service instance ID.
+         * <p>
+         * 
+         * >  You must specify either `ServiceInstanceId` or `MarketInstanceId`. Otherwise, the operation fails.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);

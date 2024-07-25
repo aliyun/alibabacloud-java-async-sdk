@@ -124,7 +124,7 @@ public class ListServiceInstancesRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The filter.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -133,7 +133,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -142,7 +142,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -151,7 +151,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -160,7 +160,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -169,7 +169,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag key and value.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -223,7 +223,17 @@ public class ListServiceInstancesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Name.
+             * The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:
+             * <p>
+             * 
+             * - Name：Query by service name.
+             * - ServiceInstanceName：Query by service  instance name.
+             * - ServiceInstanceId：Query by service  instance ID.
+             * - ServiceId：Query by service ID.
+             * - Version：Query by service version.
+             * - Status：Query by service status.
+             * - DeployType: Query by service deployType.
+             * - ServiceType：Query by service deployType.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -231,7 +241,7 @@ public class ListServiceInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The parameter values of the filter.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -284,7 +294,7 @@ public class ListServiceInstancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -292,7 +302,7 @@ public class ListServiceInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

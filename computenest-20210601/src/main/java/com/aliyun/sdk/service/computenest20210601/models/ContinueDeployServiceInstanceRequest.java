@@ -125,7 +125,7 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -134,7 +134,11 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:
+         * <p>
+         * 
+         * *   true: performs a dry run for the request, but does not create a service instance.
+         * *   false: performs a dry run for the request, and creates a service instance if the request passes the dry run.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -143,7 +147,7 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * Option.
+         * The options that the system adopts when the system continues to create the service instance.
          */
         public Builder option(java.util.List < String > option) {
             this.putQueryParameter("Option", option);
@@ -152,7 +156,7 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The parameters configured for the service instance.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -161,7 +165,7 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +174,7 @@ public class ContinueDeployServiceInstanceRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);

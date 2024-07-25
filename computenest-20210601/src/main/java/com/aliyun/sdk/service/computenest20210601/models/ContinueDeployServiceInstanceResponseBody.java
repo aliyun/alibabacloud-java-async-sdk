@@ -61,7 +61,7 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         private String serviceInstanceId; 
 
         /**
-         * DryRunResult.
+         * The dry run result.
          */
         public Builder dryRunResult(DryRunResult dryRunResult) {
             this.dryRunResult = dryRunResult;
@@ -69,7 +69,7 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.serviceInstanceId = serviceInstanceId;
@@ -141,7 +141,10 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
             private java.util.List < String > parametersNotAllowedToBeModified; 
 
             /**
-             * ParametersAllowedToBeModified.
+             * The parameters that can be modified. The operation that is performed to modify the parameters does not cause a validation error.
+             * <p>
+             * 
+             * > This parameter is returned only if DryRun is set to true.
              */
             public Builder parametersAllowedToBeModified(java.util.List < String > parametersAllowedToBeModified) {
                 this.parametersAllowedToBeModified = parametersAllowedToBeModified;
@@ -149,7 +152,10 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersConditionallyAllowedToBeModified.
+             * The parameters that can be modified under specific conditions. The new values of the parameters determine whether the operation that is performed to modify the parameters causes a validation error.
+             * <p>
+             * 
+             * > This parameter is returned only if DryRun is set to true.
              */
             public Builder parametersConditionallyAllowedToBeModified(java.util.List < String > parametersConditionallyAllowedToBeModified) {
                 this.parametersConditionallyAllowedToBeModified = parametersConditionallyAllowedToBeModified;
@@ -157,7 +163,10 @@ public class ContinueDeployServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ParametersNotAllowedToBeModified.
+             * The parameters that cannot be modified. The operation that is performed to modify the parameters causes a validation error.
+             * <p>
+             * 
+             * > This parameter is returned only if DryRun is set to true.
              */
             public Builder parametersNotAllowedToBeModified(java.util.List < String > parametersNotAllowedToBeModified) {
                 this.parametersNotAllowedToBeModified = parametersNotAllowedToBeModified;

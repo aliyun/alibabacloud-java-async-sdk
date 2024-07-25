@@ -180,7 +180,9 @@ public class ListServiceInstanceResourcesRequest extends Request {
         } 
 
         /**
-         * ExpireTimeEnd.
+         * End time of resource usage. 
+         * <p>
+         * <notice>Note: Only supports querying service instances on private deployments.></notice>
          */
         public Builder expireTimeEnd(String expireTimeEnd) {
             this.putQueryParameter("ExpireTimeEnd", expireTimeEnd);
@@ -189,7 +191,9 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * ExpireTimeStart.
+         * Start time of resource usage. 
+         * <p>
+         * <notice>Note: Only supports querying service instances on private deployments.></notice>
          */
         public Builder expireTimeStart(String expireTimeStart) {
             this.putQueryParameter("ExpireTimeStart", expireTimeStart);
@@ -198,7 +202,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -207,7 +211,11 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query. Valid values:
+         * <p>
+         * 
+         * *   If **NextToken** is not returned, it indicates that no additional results exist.
+         * *   If **NextToken** was returned in the previous query, specify the value to obtain the next set of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -216,7 +224,11 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the read-only instance. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Prepaid**: subscription
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -225,7 +237,11 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: China (Hangzhou).
+         * *   ap-southeast-1: Singapore.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,7 +250,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * ResourceARN.
+         * The Alibaba Cloud Resource Name (ARN) of a resource.
          */
         public Builder resourceARN(java.util.List < String > resourceARN) {
             this.putQueryParameter("ResourceARN", resourceARN);
@@ -243,7 +259,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -252,7 +268,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * ServiceInstanceResourceType.
+         * Service Instance resource type，include AliyunResource and ContainerResource.
          */
         public Builder serviceInstanceResourceType(String serviceInstanceResourceType) {
             this.putQueryParameter("ServiceInstanceResourceType", serviceInstanceResourceType);
@@ -261,7 +277,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag key and value.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -315,7 +331,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -323,7 +339,7 @@ public class ListServiceInstanceResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

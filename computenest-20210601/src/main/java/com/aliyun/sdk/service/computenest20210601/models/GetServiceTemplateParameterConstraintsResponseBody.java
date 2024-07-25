@@ -61,7 +61,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * FamilyConstraints.
+         * The package family constraints.
          */
         public Builder familyConstraints(java.util.List < String > familyConstraints) {
             this.familyConstraints = familyConstraints;
@@ -69,7 +69,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         }
 
         /**
-         * ParameterConstraints.
+         * The constraints on the parameters.
          */
         public Builder parameterConstraints(java.util.List < ParameterConstraints> parameterConstraints) {
             this.parameterConstraints = parameterConstraints;
@@ -77,7 +77,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,7 +153,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             private String resourceType; 
 
             /**
-             * AllowedValues.
+             * The valid values of the parameter.
              */
             public Builder allowedValues(java.util.List < String > allowedValues) {
                 this.allowedValues = allowedValues;
@@ -161,7 +161,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * PropertyName.
+             * The property name.
              */
             public Builder propertyName(String propertyName) {
                 this.propertyName = propertyName;
@@ -169,7 +169,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * ResourceName.
+             * The name of the resource that is defined in the template.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -177,7 +177,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * ResourceType.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -242,7 +242,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             private String resourceType; 
 
             /**
-             * ErrorMessage.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -250,7 +250,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * ResourceName.
+             * The resource name.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -258,7 +258,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * ResourceType.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -383,7 +383,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             private String type; 
 
             /**
-             * AllowedValues.
+             * The valid values of the parameter.
              */
             public Builder allowedValues(java.util.List < String > allowedValues) {
                 this.allowedValues = allowedValues;
@@ -391,7 +391,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * AssociationParameterNames.
+             * The names of the associated parameters.
              */
             public Builder associationParameterNames(java.util.List < String > associationParameterNames) {
                 this.associationParameterNames = associationParameterNames;
@@ -399,7 +399,14 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * Behavior.
+             * The behavior of the parameter. Valid values:
+             * <p>
+             * 
+             * *   NoLimit: No limit is imposed on the value of this parameter.
+             * *   NotSupport: The value of this parameter cannot be queried.
+             * *   QueryError: This parameter failed to be queried.
+             * 
+             * >  If AllowedValues is not returned, Behavior and BehaviorReason are returned, which indicate the behavior of the parameter and the reason for the behavior.
              */
             public Builder behavior(String behavior) {
                 this.behavior = behavior;
@@ -407,7 +414,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * BehaviorReason.
+             * The reason why the behavior of the parameter is returned.
              */
             public Builder behaviorReason(String behaviorReason) {
                 this.behaviorReason = behaviorReason;
@@ -415,7 +422,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * OriginalConstraints.
+             * The original constraint information.
              */
             public Builder originalConstraints(java.util.List < OriginalConstraints> originalConstraints) {
                 this.originalConstraints = originalConstraints;
@@ -423,7 +430,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * ParameterKey.
+             * The name of the parameter.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -431,7 +438,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * QueryErrors.
+             * The error details that are returned if the request fails.
              */
             public Builder queryErrors(java.util.List < QueryErrors> queryErrors) {
                 this.queryErrors = queryErrors;
@@ -439,7 +446,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             }
 
             /**
-             * Type.
+             * The data type of the parameter.
              */
             public Builder type(String type) {
                 this.type = type;

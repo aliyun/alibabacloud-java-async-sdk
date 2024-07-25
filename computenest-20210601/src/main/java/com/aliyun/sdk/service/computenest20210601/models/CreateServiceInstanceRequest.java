@@ -307,7 +307,7 @@ public class CreateServiceInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -316,7 +316,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Commodity.
+         * The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.
          */
         public Builder commodity(Commodity commodity) {
             this.putQueryParameter("Commodity", commodity);
@@ -325,7 +325,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * 接收告警的云监控联系人组。
+         * The alert contact group.
          */
         public Builder contactGroup(String contactGroup) {
             this.putQueryParameter("ContactGroup", contactGroup);
@@ -334,7 +334,11 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. 
+         * *   **false** (default): sends the request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -343,7 +347,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * EnableInstanceOps.
+         * Indicates whether the service instance supports the operation feature.
          */
         public Builder enableInstanceOps(Boolean enableInstanceOps) {
             this.putQueryParameter("EnableInstanceOps", enableInstanceOps);
@@ -352,7 +356,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * EnableUserPrometheus.
+         * Whether to enable Prometheus monitoring.
          */
         public Builder enableUserPrometheus(Boolean enableUserPrometheus) {
             this.putQueryParameter("EnableUserPrometheus", enableUserPrometheus);
@@ -361,12 +365,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * 服务实例名称。格式要求如下：
-         * <p>
-         * 
-         * - 长度不超过64个字符。
-         * 
-         * - 必须以数字或英文字母开头，可包含数字、英文字母、短划线（-）和下划线（_）。
+         * The serviceInstance name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -375,7 +374,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * OperationMetadata.
+         * The operation metadata.
          */
         public Builder operationMetadata(OperationMetadata operationMetadata) {
             this.putQueryParameter("OperationMetadata", operationMetadata);
@@ -384,7 +383,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The parameters that the customer specifies to deploy the service instance.
+         * <p>
+         * 
+         * >  If region information is required to create a service instance, you must specify the region ID in the value of Parameters.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -394,7 +396,11 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Valid values:
+         * <p>
+         * 
+         * *   cn-hangzhou: China (Hangzhou).
+         * *   ap-southeast-1: Singapore.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -403,7 +409,10 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * ResourceAutoPay.
+         * Whether the resource pays automatically.Valid values:
+         * <p>
+         * - true
+         * - false
          */
         public Builder resourceAutoPay(Boolean resourceAutoPay) {
             this.putQueryParameter("ResourceAutoPay", resourceAutoPay);
@@ -412,7 +421,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -421,7 +430,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -430,7 +439,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * The service version.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -439,7 +448,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * SpecificationCode.
+         * Specification code.
          */
         public Builder specificationCode(String specificationCode) {
             this.putQueryParameter("SpecificationCode", specificationCode);
@@ -448,7 +457,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * 套餐规格名称。
+         * The package name.
          */
         public Builder specificationName(String specificationName) {
             this.putQueryParameter("SpecificationName", specificationName);
@@ -457,7 +466,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * 用户自定义标签。
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -466,7 +475,7 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -475,12 +484,14 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
-         * 使用类型。可选值：
+         * The trial type of serviceInstance. 
          * <p>
+         * Valid values:
          * 
-         * - Trial：支持试用。
-         * 
-         * - NotTrial：不支持试用。
+         * - Created: 
+         * - Deploying
+         * - DeployedFailed
+         * - Deployed
          */
         public Builder trialType(String trialType) {
             this.putQueryParameter("TrialType", trialType);
@@ -502,6 +513,9 @@ public class CreateServiceInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private Boolean autoRenew;
 
+        @com.aliyun.core.annotation.NameInMap("CouponId")
+        private String couponId;
+
         @com.aliyun.core.annotation.NameInMap("PayPeriod")
         private Long payPeriod;
 
@@ -511,6 +525,7 @@ public class CreateServiceInstanceRequest extends Request {
         private Commodity(Builder builder) {
             this.autoPay = builder.autoPay;
             this.autoRenew = builder.autoRenew;
+            this.couponId = builder.couponId;
             this.payPeriod = builder.payPeriod;
             this.payPeriodUnit = builder.payPeriodUnit;
         }
@@ -538,6 +553,13 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
+         * @return couponId
+         */
+        public String getCouponId() {
+            return this.couponId;
+        }
+
+        /**
          * @return payPeriod
          */
         public Long getPayPeriod() {
@@ -554,11 +576,16 @@ public class CreateServiceInstanceRequest extends Request {
         public static final class Builder {
             private Boolean autoPay; 
             private Boolean autoRenew; 
+            private String couponId; 
             private Long payPeriod; 
             private String payPeriodUnit; 
 
             /**
-             * AutoPay.
+             * Specifies whether to automatically complete the payment. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder autoPay(Boolean autoPay) {
                 this.autoPay = autoPay;
@@ -566,7 +593,11 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * AutoRenew.
+             * Specifies whether to enable auto-renewal for the instance. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -574,7 +605,15 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * PayPeriod.
+             * CouponId.
+             */
+            public Builder couponId(String couponId) {
+                this.couponId = couponId;
+                return this;
+            }
+
+            /**
+             * The subscription duration.
              */
             public Builder payPeriod(Long payPeriod) {
                 this.payPeriod = payPeriod;
@@ -582,7 +621,12 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * PayPeriodUnit.
+             * The unit of the subscription duration. Valid values:
+             * <p>
+             * 
+             * *   Year
+             * *   Month
+             * *   Day
              */
             public Builder payPeriodUnit(String payPeriodUnit) {
                 this.payPeriodUnit = payPeriodUnit;
@@ -671,7 +715,7 @@ public class CreateServiceInstanceRequest extends Request {
             private String startTime; 
 
             /**
-             * EndTime.
+             * The operation end time.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -679,7 +723,7 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * ExtraInfo.
+             * The additional information.
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -687,7 +731,7 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * Resources.
+             * Imported resource.
              */
             public Builder resources(String resources) {
                 this.resources = resources;
@@ -695,7 +739,7 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * ServiceInstanceId.
+             * The ID of the service instance.
              */
             public Builder serviceInstanceId(String serviceInstanceId) {
                 this.serviceInstanceId = serviceInstanceId;
@@ -703,7 +747,7 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * The operation start time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -756,7 +800,7 @@ public class CreateServiceInstanceRequest extends Request {
             private String value; 
 
             /**
-             * 标签键。
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -764,7 +808,7 @@ public class CreateServiceInstanceRequest extends Request {
             }
 
             /**
-             * 标签值。
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

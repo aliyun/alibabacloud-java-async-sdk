@@ -197,7 +197,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -206,7 +206,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * DeployRegionId.
+         * The region ID of the service instance.
          */
         public Builder deployRegionId(String deployRegionId) {
             this.putQueryParameter("DeployRegionId", deployRegionId);
@@ -215,7 +215,11 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * EnablePrivateVpcConnection.
+         * Specifies whether to enable the private connection. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder enablePrivateVpcConnection(Boolean enablePrivateVpcConnection) {
             this.putQueryParameter("EnablePrivateVpcConnection", enablePrivateVpcConnection);
@@ -224,7 +228,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The configuration parameters of the service instance.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -233,7 +237,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,7 +246,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -251,7 +255,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The service instance ID.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -260,7 +264,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * The service version.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -269,7 +273,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * SpecificationName.
+         * The name of the specification package.
          */
         public Builder specificationName(String specificationName) {
             this.putQueryParameter("SpecificationName", specificationName);
@@ -278,7 +282,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The template name.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -287,7 +291,11 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * TrialType.
+         * The trial policy. Valid values:
+         * <p>
+         * 
+         * *   Trial: Trials are supported.
+         * *   NotTrial: Trials are not supported.
          */
         public Builder trialType(String trialType) {
             this.putQueryParameter("TrialType", trialType);
@@ -341,7 +349,10 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
             private String parameterValue; 
 
             /**
-             * ParameterKey.
+             * The name of the parameter. If you do not specify Parameters, the parameters and values in the template are used.
+             * <p>
+             * 
+             * >  Parameters is an optional parameter. ParameterKey is required if you specify Parameters.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -349,7 +360,10 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
             }
 
             /**
-             * ParameterValue.
+             * The parameter value that is defined in the template.
+             * <p>
+             * 
+             * >  Parameters is an optional parameter. ParameterValue is required if you specify Parameters.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

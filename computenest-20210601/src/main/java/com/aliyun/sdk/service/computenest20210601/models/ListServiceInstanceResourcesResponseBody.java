@@ -73,7 +73,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         private java.util.List < Resources> resources; 
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -81,7 +81,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +89,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * The resources.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -245,7 +245,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The time when the resource was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -253,7 +253,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the resource expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -261,7 +261,11 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   Subscription
+             * *   PayAsYouGo
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -269,7 +273,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of the cloud service.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -277,7 +281,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * The type of the cloud service.
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -285,7 +289,12 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RenewStatus.
+             * The renewal state. Valid values:
+             * <p>
+             * 
+             * *   AutoRenewal
+             * *   ManualRenewal
+             * *   NotRenewal
              */
             public Builder renewStatus(String renewStatus) {
                 this.renewStatus = renewStatus;
@@ -293,7 +302,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RenewalPeriod.
+             * The renewal period.
              */
             public Builder renewalPeriod(Integer renewalPeriod) {
                 this.renewalPeriod = renewalPeriod;
@@ -301,7 +310,11 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * RenewalPeriodUnit.
+             * The unit of the renewal period. Valid values:
+             * <p>
+             * 
+             * *   Month
+             * *   Year
              */
             public Builder renewalPeriodUnit(String renewalPeriodUnit) {
                 this.renewalPeriodUnit = renewalPeriodUnit;
@@ -309,7 +322,7 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceARN.
+             * The ARN of the resource.
              */
             public Builder resourceARN(String resourceARN) {
                 this.resourceARN = resourceARN;
@@ -317,7 +330,14 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the resource. Valid values:
+             * <p>
+             * 
+             * *   running
+             * *   waiting
+             * *   terminated
+             * 
+             * >  This parameter is returned only for containers.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -85,7 +85,7 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * MarketInstanceId.
+         * The MartketInstance ID.
          */
         public Builder marketInstanceId(String marketInstanceId) {
             this.marketInstanceId = marketInstanceId;
@@ -93,7 +93,7 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -101,7 +101,7 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceInstanceId.
+         * The service instance ID.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.serviceInstanceId = serviceInstanceId;
@@ -117,7 +117,12 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the synchronization task was created. Valid values:
+         * <p>
+         * 
+         * *   **1**: Created.
+         * *   **0**: Creation failed. The tables in the synchronization task are duplicate. The duplicate tables are returned for the **RepeatedDbs** parameter.
+         * *   **-1**: Creation failed. The cause why the creation failed is returned for the **ErrorMsg** parameter.
          */
         public Builder status(String status) {
             this.status = status;
