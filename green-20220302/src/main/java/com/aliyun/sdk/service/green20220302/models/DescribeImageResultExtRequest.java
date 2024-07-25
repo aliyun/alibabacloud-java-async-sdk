@@ -67,7 +67,7 @@ public class DescribeImageResultExtRequest extends Request {
         } 
 
         /**
-         * InfoType.
+         * The content of the information to be obtained. Multiple values are separated by commas.
          */
         public Builder infoType(String infoType) {
             this.putBodyParameter("InfoType", infoType);
@@ -76,7 +76,7 @@ public class DescribeImageResultExtRequest extends Request {
         }
 
         /**
-         * ReqId.
+         * The reqId field returned by the Url Async Moderation API.
          */
         public Builder reqId(String reqId) {
             this.putBodyParameter("ReqId", reqId);

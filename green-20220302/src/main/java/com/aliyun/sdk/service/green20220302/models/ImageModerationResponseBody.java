@@ -73,7 +73,7 @@ public class ImageModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * The message that is returned in response to the request.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +97,7 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +161,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String libName; 
 
             /**
-             * ImageId.
+             * The image ID.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -169,7 +169,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * LibId.
+             * The image library ID.
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -177,7 +177,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * LibName.
+             * The image library name.
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -254,7 +254,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * H.
+             * The height of the text area, in pixels.
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -262,7 +262,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * W.
+             * The width of the text area, in pixels.
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -270,7 +270,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -278,7 +278,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -343,7 +343,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Confidence.
+             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -351,7 +351,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * Logo category.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -359,7 +359,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * Logo name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -412,7 +412,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private java.util.List < Logo> logo; 
 
             /**
-             * Location.
+             * Location information.
              */
             public Builder location(Location location) {
                 this.location = location;
@@ -420,7 +420,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Logo.
+             * Logo information.
              */
             public Builder logo(java.util.List < Logo> logo) {
                 this.logo = logo;
@@ -497,7 +497,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * H.
+             * The height of the text area, in pixels.
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -505,7 +505,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * W.
+             * The width of the text area, in pixels.
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -513,7 +513,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -521,7 +521,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -574,7 +574,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * Location.
+             * Location information.
              */
             public Builder location(OcrResultLocation location) {
                 this.location = location;
@@ -582,7 +582,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * The text information in the recognized image.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -596,6 +596,107 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    public static class PublicFigureLocation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("H")
+        private Integer h;
+
+        @com.aliyun.core.annotation.NameInMap("W")
+        private Integer w;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Integer x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Integer y;
+
+        private PublicFigureLocation(Builder builder) {
+            this.h = builder.h;
+            this.w = builder.w;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PublicFigureLocation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return h
+         */
+        public Integer getH() {
+            return this.h;
+        }
+
+        /**
+         * @return w
+         */
+        public Integer getW() {
+            return this.w;
+        }
+
+        /**
+         * @return x
+         */
+        public Integer getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Integer getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Integer h; 
+            private Integer w; 
+            private Integer x; 
+            private Integer y; 
+
+            /**
+             * The height of the text area, in pixels.
+             */
+            public Builder h(Integer h) {
+                this.h = h;
+                return this;
+            }
+
+            /**
+             * The width of the text area, in pixels.
+             */
+            public Builder w(Integer w) {
+                this.w = w;
+                return this;
+            }
+
+            /**
+             * The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.
+             */
+            public Builder x(Integer x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.
+             */
+            public Builder y(Integer y) {
+                this.y = y;
+                return this;
+            }
+
+            public PublicFigureLocation build() {
+                return new PublicFigureLocation(this);
+            } 
+
+        } 
+
+    }
     public static class PublicFigure extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FigureId")
         private String figureId;
@@ -603,9 +704,13 @@ public class ImageModerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FigureName")
         private String figureName;
 
+        @com.aliyun.core.annotation.NameInMap("Location")
+        private java.util.List < PublicFigureLocation> location;
+
         private PublicFigure(Builder builder) {
             this.figureId = builder.figureId;
             this.figureName = builder.figureName;
+            this.location = builder.location;
         }
 
         public static Builder builder() {
@@ -630,12 +735,20 @@ public class ImageModerationResponseBody extends TeaModel {
             return this.figureName;
         }
 
+        /**
+         * @return location
+         */
+        public java.util.List < PublicFigureLocation> getLocation() {
+            return this.location;
+        }
+
         public static final class Builder {
             private String figureId; 
             private String figureName; 
+            private java.util.List < PublicFigureLocation> location; 
 
             /**
-             * FigureId.
+             * Identified person coding information.
              */
             public Builder figureId(String figureId) {
                 this.figureId = figureId;
@@ -643,10 +756,18 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * FigureName.
+             * Identified person name information.
              */
             public Builder figureName(String figureName) {
                 this.figureName = figureName;
+                return this;
+            }
+
+            /**
+             * Location information.
+             */
+            public Builder location(java.util.List < PublicFigureLocation> location) {
+                this.location = location;
                 return this;
             }
 
@@ -696,7 +817,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private Float confidence; 
 
             /**
-             * Classification.
+             * The category of image recognition.
              */
             public Builder classification(String classification) {
                 this.classification = classification;
@@ -704,7 +825,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Confidence.
+             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -769,7 +890,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String libName; 
 
             /**
-             * KeyWords.
+             * Custom words, multiple words separated by commas.
              */
             public Builder keyWords(String keyWords) {
                 this.keyWords = keyWords;
@@ -777,7 +898,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * LibId.
+             * Custom library ID.
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -785,7 +906,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * LibName.
+             * Custom library name.
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -862,7 +983,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * H.
+             * The height of the text area, in pixels.
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -870,7 +991,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * W.
+             * The width of the text area, in pixels.
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -878,7 +999,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -886,7 +1007,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -939,7 +1060,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String text; 
 
             /**
-             * Location.
+             * Location information.
              */
             public Builder location(TextInImageOcrResultLocation location) {
                 this.location = location;
@@ -947,7 +1068,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * The text information in the recognized image.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -1012,7 +1133,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private java.util.List < String > riskWord; 
 
             /**
-             * CustomText.
+             * When a custom text library is hit, the custom library ID, custom library name, and custom word are returned.
              */
             public Builder customText(java.util.List < CustomText> customText) {
                 this.customText = customText;
@@ -1020,7 +1141,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * OcrResult.
+             * Returns the text information in the recognized image.
              */
             public Builder ocrResult(java.util.List < TextInImageOcrResult> ocrResult) {
                 this.ocrResult = ocrResult;
@@ -1028,7 +1149,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWord.
+             * The risk words that are hit. Multiple words are separated by commas (,).
              */
             public Builder riskWord(java.util.List < String > riskWord) {
                 this.riskWord = riskWord;
@@ -1129,7 +1250,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private TextInImage textInImage; 
 
             /**
-             * CustomImage.
+             * If a custom image library is hit, information about the hit custom image library is returned.
              */
             public Builder customImage(java.util.List < CustomImage> customImage) {
                 this.customImage = customImage;
@@ -1137,7 +1258,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * LogoData.
+             * Logo information.
              */
             public Builder logoData(java.util.List < LogoData> logoData) {
                 this.logoData = logoData;
@@ -1145,7 +1266,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * OcrResult.
+             * Returns the text information in the recognized image.
              */
             public Builder ocrResult(java.util.List < OcrResult> ocrResult) {
                 this.ocrResult = ocrResult;
@@ -1153,7 +1274,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * PublicFigure.
+             * Person information list.
              */
             public Builder publicFigure(java.util.List < PublicFigure> publicFigure) {
                 this.publicFigure = publicFigure;
@@ -1161,7 +1282,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Recognition.
+             * The result of image recognition.
              */
             public Builder recognition(java.util.List < Recognition> recognition) {
                 this.recognition = recognition;
@@ -1169,7 +1290,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * TextInImage.
+             * Returns the text information in the hit image.
              */
             public Builder textInImage(TextInImage textInImage) {
                 this.textInImage = textInImage;
@@ -1222,7 +1343,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * Confidence.
+             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -1230,7 +1351,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * The labels returned after the image moderation.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1307,7 +1428,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * DataId.
+             * The ID of the moderated object.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -1315,7 +1436,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Ext.
+             * Auxiliary reference information.
              */
             public Builder ext(Ext ext) {
                 this.ext = ext;
@@ -1323,7 +1444,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The results of image moderation parameters such as the label parameter and the confidence parameter.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -1331,7 +1452,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * Risk Level.
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

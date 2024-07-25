@@ -73,7 +73,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned in response to the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +97,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -269,7 +269,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * EndTime.
+             * The end time of the text after audio-to-text conversion. Unit: seconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -277,7 +277,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestamp.
+             * The end timestamp of the segment. Unit: milliseconds.
              */
             public Builder endTimestamp(Long endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -285,7 +285,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * A reserved parameter.
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -293,7 +293,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The details of the labels.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -301,7 +301,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * OriginAlgoResult.
+             * Reserved field.
              */
             public Builder originAlgoResult(java.util.Map < String, ? > originAlgoResult) {
                 this.originAlgoResult = originAlgoResult;
@@ -309,7 +309,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskTips.
+             * The risk details that are hit.
              */
             public Builder riskTips(String riskTips) {
                 this.riskTips = riskTips;
@@ -317,7 +317,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWords.
+             * The risk words that are hit.
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -325,7 +325,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * Risk score, default range 0-99.
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -333,7 +333,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the text after audio-to-text conversion. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -341,7 +341,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartTimestamp.
+             * The start timestamp of the segment. Unit: milliseconds.
              */
             public Builder startTimestamp(Long startTimestamp) {
                 this.startTimestamp = startTimestamp;
@@ -349,7 +349,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * The text converted from voice.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -357,7 +357,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The temporary access address of the audio segment. The validity period of the URL is 30 minutes. You must prepare another URL to store the audio segment at the earliest opportunity.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -446,7 +446,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * DataId.
+             * The ID of the moderated object.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -454,7 +454,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * LiveId.
+             * The unique ID of the live stream.
              */
             public Builder liveId(String liveId) {
                 this.liveId = liveId;
@@ -462,7 +462,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * SliceDetails.
+             * The details about the audio segments.
              */
             public Builder sliceDetails(java.util.List < SliceDetails> sliceDetails) {
                 this.sliceDetails = sliceDetails;
@@ -470,7 +470,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -478,7 +478,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL of the moderation object.
              */
             public Builder url(String url) {
                 this.url = url;

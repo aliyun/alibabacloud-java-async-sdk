@@ -73,7 +73,7 @@ public class FileModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class FileModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class FileModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned in response to the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +97,7 @@ public class FileModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class FileModerationResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

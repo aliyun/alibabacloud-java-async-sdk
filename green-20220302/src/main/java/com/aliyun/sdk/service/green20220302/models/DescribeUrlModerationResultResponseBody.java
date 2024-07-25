@@ -73,7 +73,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * The message that is returned in response to the request.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +97,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,9 +117,13 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IcpType")
         private String icpType;
 
+        @com.aliyun.core.annotation.NameInMap("SiteType")
+        private String siteType;
+
         private ExtraInfo(Builder builder) {
             this.icpNo = builder.icpNo;
             this.icpType = builder.icpType;
+            this.siteType = builder.siteType;
         }
 
         public static Builder builder() {
@@ -144,12 +148,20 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             return this.icpType;
         }
 
+        /**
+         * @return siteType
+         */
+        public String getSiteType() {
+            return this.siteType;
+        }
+
         public static final class Builder {
             private String icpNo; 
             private String icpType; 
+            private String siteType; 
 
             /**
-             * IcpNo.
+             * ICP record number.
              */
             public Builder icpNo(String icpNo) {
                 this.icpNo = icpNo;
@@ -157,10 +169,18 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * IcpType.
+             * ICP filing type.
              */
             public Builder icpType(String icpType) {
                 this.icpType = icpType;
+                return this;
+            }
+
+            /**
+             * SiteType.
+             */
+            public Builder siteType(String siteType) {
+                this.siteType = siteType;
                 return this;
             }
 
@@ -210,7 +230,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * Confidence.
+             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -218,7 +238,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * The labels returned after the url async moderation.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -295,7 +315,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             private java.util.List < Result> result; 
 
             /**
-             * DataId.
+             * The ID of the moderated object.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -303,7 +323,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * Supplementary information.
              */
             public Builder extraInfo(ExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -311,7 +331,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReqId.
+             * The reqId field returned by the Url Async Moderation API.
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
@@ -319,7 +339,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The results of url async moderation parameters such as the label parameter and the confidence parameter.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

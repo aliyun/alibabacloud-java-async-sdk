@@ -73,7 +73,7 @@ public class TextModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class TextModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The moderation results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class TextModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned in response to the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +97,7 @@ public class TextModerationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +173,7 @@ public class TextModerationResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * accountId.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -181,7 +181,7 @@ public class TextModerationResponseBody extends TeaModel {
             }
 
             /**
-             * deviceId.
+             * The device ID.
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -189,7 +189,7 @@ public class TextModerationResponseBody extends TeaModel {
             }
 
             /**
-             * labels.
+             * Labels.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -197,7 +197,7 @@ public class TextModerationResponseBody extends TeaModel {
             }
 
             /**
-             * reason.
+             * The JSON string used to locate the cause.
              */
             public Builder reason(String reason) {
                 this.reason = reason;

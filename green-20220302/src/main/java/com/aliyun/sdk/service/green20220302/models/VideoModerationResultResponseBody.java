@@ -73,7 +73,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned in response to the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +97,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +149,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Integer labelSum; 
 
             /**
-             * Label.
+             * Voice label.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -157,7 +157,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * LabelSum.
+             * The number of times that the label is matched.
              */
             public Builder labelSum(Integer labelSum) {
                 this.labelSum = labelSum;
@@ -318,7 +318,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * EndTime.
+             * The end time of the text after voice-to-text conversion. Unit: seconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -326,7 +326,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestamp.
+             * The end timestamp of the segment. Unit: milliseconds.
              */
             public Builder endTimestamp(Long endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -334,7 +334,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * A reserved parameter.
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -342,7 +342,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The details of the labels.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -350,7 +350,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskTips.
+             * Subcategory labels. Multiple labels are separated by commas (,).
              */
             public Builder riskTips(String riskTips) {
                 this.riskTips = riskTips;
@@ -358,7 +358,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWords.
+             * The risk words that are hit. Multiple words are separated by commas (,).
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -366,7 +366,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * Risk score, default range 0-99.
              */
             public Builder score(Float score) {
                 this.score = score;
@@ -374,7 +374,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the text after voice-to-text conversion. Unit: seconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -382,7 +382,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * StartTimestamp.
+             * The start timestamp of the segment. Unit: milliseconds.
              */
             public Builder startTimestamp(Long startTimestamp) {
                 this.startTimestamp = startTimestamp;
@@ -390,7 +390,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * The text converted from voice.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -398,7 +398,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * If the moderation object is a voice stream, this parameter indicates the temporary access URL of the voice stream to which the text entry corresponds. The validity period of the URL is 30 minutes. You must prepare another URL to store the audio stream at the earliest opportunity.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -451,7 +451,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private java.util.List < SliceDetails> sliceDetails; 
 
             /**
-             * AudioSummarys.
+             * Summary of voice labels.
              */
             public Builder audioSummarys(java.util.List < AudioSummarys> audioSummarys) {
                 this.audioSummarys = audioSummarys;
@@ -459,7 +459,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * SliceDetails.
+             * The details about the text in the moderated voice. The value is a JSON array that contains one or more elements. Each element corresponds to a text entry.
              */
             public Builder sliceDetails(java.util.List < SliceDetails> sliceDetails) {
                 this.sliceDetails = sliceDetails;
@@ -512,7 +512,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Integer labelSum; 
 
             /**
-             * Label.
+             * The label against which a captured frame is matched.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -520,7 +520,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * LabelSum.
+             * The number of times that the label is matched.
              */
             public Builder labelSum(Integer labelSum) {
                 this.labelSum = labelSum;
@@ -573,7 +573,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String libId; 
 
             /**
-             * ImageId.
+             * The ID of the hit custom image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -581,7 +581,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * LibId.
+             * The custom image library ID of the hit.
              */
             public Builder libId(String libId) {
                 this.libId = libId;
@@ -622,7 +622,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String figureId; 
 
             /**
-             * FigureId.
+             * Identified person coding information.
              */
             public Builder figureId(String figureId) {
                 this.figureId = figureId;
@@ -675,7 +675,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * Confidence.
+             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -683,7 +683,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * The label returned after a frame is moderated. Multiple risk labels and the corresponding scores of confidence levels may be returned for a frame.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -772,7 +772,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private java.util.Map < String, ? > textInImage; 
 
             /**
-             * CustomImage.
+             * If a custom image library is hit, information about the hit custom image library is returned.
              */
             public Builder customImage(java.util.List < CustomImage> customImage) {
                 this.customImage = customImage;
@@ -780,7 +780,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * PublicFigure.
+             * If the video contains a specific person, the recognized person code is returned.
              */
             public Builder publicFigure(java.util.List < PublicFigure> publicFigure) {
                 this.publicFigure = publicFigure;
@@ -788,7 +788,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The results of frame moderation parameters such as the label parameter and the confidence parameter.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -796,7 +796,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Service.
+             * The moderation service that is called.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -804,7 +804,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TextInImage.
+             * Returns the text information in the hit image.
              */
             public Builder textInImage(java.util.Map < String, ? > textInImage) {
                 this.textInImage = textInImage;
@@ -881,7 +881,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * Offset.
+             * The interval between the start of the video file and the captured frame. Unit: seconds.
              */
             public Builder offset(Float offset) {
                 this.offset = offset;
@@ -889,7 +889,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * The results of frame moderation parameters such as the label parameter and the confidence parameter.
              */
             public Builder results(java.util.List < Results> results) {
                 this.results = results;
@@ -897,7 +897,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TempUrl.
+             * The temporary URL of a captured frame. This URL is valid for 30 minutes.
              */
             public Builder tempUrl(String tempUrl) {
                 this.tempUrl = tempUrl;
@@ -905,7 +905,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The absolute timestamp. Unit: milliseconds.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -970,7 +970,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private java.util.List < Frames> frames; 
 
             /**
-             * FrameNum.
+             * The number of captured frames that are returned for the video file.
              */
             public Builder frameNum(Integer frameNum) {
                 this.frameNum = frameNum;
@@ -978,7 +978,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * FrameSummarys.
+             * The summary of the labels against which captured frames are matched.
              */
             public Builder frameSummarys(java.util.List < FrameSummarys> frameSummarys) {
                 this.frameSummarys = frameSummarys;
@@ -986,7 +986,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Frames.
+             * The information about the frames that match the labels.
              */
             public Builder frames(java.util.List < Frames> frames) {
                 this.frames = frames;
@@ -1075,7 +1075,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * AudioResult.
+             * The voice moderation results. The moderation results contain a structure.
              */
             public Builder audioResult(AudioResult audioResult) {
                 this.audioResult = audioResult;
@@ -1083,7 +1083,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * DataId.
+             * The ID of the moderated object.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -1091,7 +1091,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * FrameResult.
+             * The image moderation results. If the call is successful, the HTTP status code 200 and moderation results are returned. The moderation results contain a structure.
              */
             public Builder frameResult(FrameResult frameResult) {
                 this.frameResult = frameResult;
@@ -1099,7 +1099,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * LiveId.
+             * The unique ID of the live stream.
              */
             public Builder liveId(String liveId) {
                 this.liveId = liveId;
@@ -1107,7 +1107,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

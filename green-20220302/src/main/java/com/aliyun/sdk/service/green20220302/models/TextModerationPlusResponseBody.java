@@ -73,7 +73,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned in response to the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +97,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +161,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String hitLibName; 
 
             /**
-             * Answer.
+             * Answer
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -169,7 +169,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * HitLabel.
+             * Hit Label
              */
             public Builder hitLabel(String hitLabel) {
                 this.hitLabel = hitLabel;
@@ -177,7 +177,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * HitLibName.
+             * Hit Library Name
              */
             public Builder hitLibName(String hitLibName) {
                 this.hitLibName = hitLibName;
@@ -230,7 +230,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String libName; 
 
             /**
-             * KeyWords.
+             * Hit keywords, comma separated.
              */
             public Builder keyWords(String keyWords) {
                 this.keyWords = keyWords;
@@ -238,7 +238,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * LibName.
+             * Library Name
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -315,7 +315,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String riskWords; 
 
             /**
-             * Confidence.
+             * Confidence score, 0 to 100, reserved to 2 decimal places.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -323,7 +323,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * CustomizedHit.
+             * Custom keyword hits
              */
             public Builder customizedHit(java.util.List < CustomizedHit> customizedHit) {
                 this.customizedHit = customizedHit;
@@ -331,7 +331,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * Labels.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -339,7 +339,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * RiskWords.
+             * Risk words
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -416,7 +416,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private Float score; 
 
             /**
-             * Advice.
+             * Advice
              */
             public Builder advice(java.util.List < Advice> advice) {
                 this.advice = advice;
@@ -424,7 +424,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The moderation results.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -432,7 +432,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * Risk Level
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

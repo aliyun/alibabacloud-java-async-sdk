@@ -73,7 +73,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * The message that is returned in response to the request.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +97,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +149,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * Confidence.
+             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -157,7 +157,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * The labels returned after the image moderation.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -258,7 +258,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * DataId.
+             * The ID of the moderated object.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -266,7 +266,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Frame.
+             * Image frame information.
              */
             public Builder frame(String frame) {
                 this.frame = frame;
@@ -274,7 +274,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * FrameNum.
+             * Number of result frames
              */
             public Builder frameNum(Integer frameNum) {
                 this.frameNum = frameNum;
@@ -282,7 +282,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ReqId.
+             * The reqId field returned by the Image Async Moderation API.
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
@@ -290,7 +290,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The results of image moderation parameters such as the label parameter and the confidence parameter.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -298,7 +298,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * Risk Level.
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;

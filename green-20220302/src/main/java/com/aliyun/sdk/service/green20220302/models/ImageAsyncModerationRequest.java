@@ -67,7 +67,7 @@ public class ImageAsyncModerationRequest extends Request {
         } 
 
         /**
-         * Service.
+         * The type of the moderation service.
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);
@@ -76,7 +76,7 @@ public class ImageAsyncModerationRequest extends Request {
         }
 
         /**
-         * ServiceParameters.
+         * The parameters required by the moderation service. The value is a JSON string.
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putQueryParameter("ServiceParameters", serviceParameters);

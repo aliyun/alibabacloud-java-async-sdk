@@ -73,7 +73,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * The message that is returned in response to the request.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +97,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -221,7 +221,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * AccessKeyId.
+             * The AccessKey ID.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -229,7 +229,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * The AccessKey secret.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -237,7 +237,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * BucketName.
+             * The bucket name.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -245,7 +245,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Expiration.
+             * The time when the file sharing link expires.
              */
             public Builder expiration(Integer expiration) {
                 this.expiration = expiration;
@@ -253,7 +253,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * FileNamePrefix.
+             * The file prefix.
              */
             public Builder fileNamePrefix(String fileNamePrefix) {
                 this.fileNamePrefix = fileNamePrefix;
@@ -261,7 +261,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * OssInternalEndPoint.
+             * the oss intranet point.
              */
             public Builder ossInternalEndPoint(String ossInternalEndPoint) {
                 this.ossInternalEndPoint = ossInternalEndPoint;
@@ -269,7 +269,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * OssInternetEndPoint.
+             * the oss internet point.
              */
             public Builder ossInternetEndPoint(String ossInternetEndPoint) {
                 this.ossInternetEndPoint = ossInternetEndPoint;
@@ -277,7 +277,7 @@ public class DescribeUploadTokenResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * The security token.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

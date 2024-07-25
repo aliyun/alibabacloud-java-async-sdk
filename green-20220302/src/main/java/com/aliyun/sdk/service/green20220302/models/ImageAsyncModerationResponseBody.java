@@ -73,7 +73,7 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The returned HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * The message that is returned in response to the request.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +97,7 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +149,7 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
             private String reqId; 
 
             /**
-             * DataId.
+             * The ID of the moderated object.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -157,7 +157,7 @@ public class ImageAsyncModerationResponseBody extends TeaModel {
             }
 
             /**
-             * ReqId.
+             * The reqId field returned by the Image Async Moderation API. You can use this field to query the detection results.
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
