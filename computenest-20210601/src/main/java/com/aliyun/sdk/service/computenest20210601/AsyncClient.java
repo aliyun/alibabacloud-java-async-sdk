@@ -51,6 +51,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListServiceInstanceResourcesResponse> listServiceInstanceResources(ListServiceInstanceResourcesRequest request);
 
+    CompletableFuture<ListServiceInstanceUpgradeHistoryResponse> listServiceInstanceUpgradeHistory(ListServiceInstanceUpgradeHistoryRequest request);
+
     CompletableFuture<ListServiceInstancesResponse> listServiceInstances(ListServiceInstancesRequest request);
 
     CompletableFuture<ListServiceUsagesResponse> listServiceUsages(ListServiceUsagesRequest request);
@@ -61,6 +63,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RestartServiceInstanceResponse> restartServiceInstance(RestartServiceInstanceRequest request);
 
+    CompletableFuture<RollbackServiceInstanceResponse> rollbackServiceInstance(RollbackServiceInstanceRequest request);
+
     CompletableFuture<StartServiceInstanceResponse> startServiceInstance(StartServiceInstanceRequest request);
 
     CompletableFuture<StopServiceInstanceResponse> stopServiceInstance(StopServiceInstanceRequest request);
@@ -69,8 +73,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
 
+    CompletableFuture<UpdateServiceInstanceAttributesResponse> updateServiceInstanceAttributes(UpdateServiceInstanceAttributesRequest request);
+
     CompletableFuture<UpdateServiceInstanceSpecResponse> updateServiceInstanceSpec(UpdateServiceInstanceSpecRequest request);
 
     CompletableFuture<UpdateServiceUsageResponse> updateServiceUsage(UpdateServiceUsageRequest request);
+
+    CompletableFuture<UpgradeServiceInstanceResponse> upgradeServiceInstance(UpgradeServiceInstanceRequest request);
 
 }
