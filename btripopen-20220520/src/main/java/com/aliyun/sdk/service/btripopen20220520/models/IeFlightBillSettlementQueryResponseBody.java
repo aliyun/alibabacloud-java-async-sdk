@@ -210,6 +210,12 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
+        @com.aliyun.core.annotation.NameInMap("arr_country")
+        private String arrCountry;
+
+        @com.aliyun.core.annotation.NameInMap("arr_country_code")
+        private String arrCountryCode;
+
         @com.aliyun.core.annotation.NameInMap("arr_date")
         private String arrDate;
 
@@ -278,6 +284,12 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("dep_city_code")
         private String depCityCode;
+
+        @com.aliyun.core.annotation.NameInMap("dep_country")
+        private String depCountry;
+
+        @com.aliyun.core.annotation.NameInMap("dep_country_code")
+        private String depCountryCode;
 
         @com.aliyun.core.annotation.NameInMap("department")
         private String department;
@@ -449,6 +461,8 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.arrAirportCode = builder.arrAirportCode;
             this.arrCity = builder.arrCity;
             this.arrCityCode = builder.arrCityCode;
+            this.arrCountry = builder.arrCountry;
+            this.arrCountryCode = builder.arrCountryCode;
             this.arrDate = builder.arrDate;
             this.arrStation = builder.arrStation;
             this.arrTime = builder.arrTime;
@@ -472,6 +486,8 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.coupon = builder.coupon;
             this.depAirportCode = builder.depAirportCode;
             this.depCityCode = builder.depCityCode;
+            this.depCountry = builder.depCountry;
+            this.depCountryCode = builder.depCountryCode;
             this.department = builder.department;
             this.departmentId = builder.departmentId;
             this.deptCity = builder.deptCity;
@@ -623,6 +639,20 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getArrCityCode() {
             return this.arrCityCode;
+        }
+
+        /**
+         * @return arrCountry
+         */
+        public String getArrCountry() {
+            return this.arrCountry;
+        }
+
+        /**
+         * @return arrCountryCode
+         */
+        public String getArrCountryCode() {
+            return this.arrCountryCode;
         }
 
         /**
@@ -784,6 +814,20 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getDepCityCode() {
             return this.depCityCode;
+        }
+
+        /**
+         * @return depCountry
+         */
+        public String getDepCountry() {
+            return this.depCountry;
+        }
+
+        /**
+         * @return depCountryCode
+         */
+        public String getDepCountryCode() {
+            return this.depCountryCode;
         }
 
         /**
@@ -1164,6 +1208,8 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String arrAirportCode; 
             private String arrCity; 
             private String arrCityCode; 
+            private String arrCountry; 
+            private String arrCountryCode; 
             private String arrDate; 
             private String arrStation; 
             private String arrTime; 
@@ -1187,6 +1233,8 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private Double coupon; 
             private String depAirportCode; 
             private String depCityCode; 
+            private String depCountry; 
+            private String depCountryCode; 
             private String department; 
             private String departmentId; 
             private String deptCity; 
@@ -1341,6 +1389,22 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder arrCityCode(String arrCityCode) {
                 this.arrCityCode = arrCityCode;
+                return this;
+            }
+
+            /**
+             * arr_country.
+             */
+            public Builder arrCountry(String arrCountry) {
+                this.arrCountry = arrCountry;
+                return this;
+            }
+
+            /**
+             * arr_country_code.
+             */
+            public Builder arrCountryCode(String arrCountryCode) {
+                this.arrCountryCode = arrCountryCode;
                 return this;
             }
 
@@ -1525,6 +1589,22 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder depCityCode(String depCityCode) {
                 this.depCityCode = depCityCode;
+                return this;
+            }
+
+            /**
+             * dep_country.
+             */
+            public Builder depCountry(String depCountry) {
+                this.depCountry = depCountry;
+                return this;
+            }
+
+            /**
+             * dep_country_code.
+             */
+            public Builder depCountryCode(String depCountryCode) {
+                this.depCountryCode = depCountryCode;
                 return this;
             }
 

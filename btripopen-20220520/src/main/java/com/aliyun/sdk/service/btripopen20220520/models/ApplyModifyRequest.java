@@ -28,6 +28,10 @@ public class ApplyModifyRequest extends Request {
     private String corpName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("default_standard")
+    private DefaultStandard defaultStandard;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("depart_id")
     private String departId;
 
@@ -161,6 +165,7 @@ public class ApplyModifyRequest extends Request {
         this.budgetMerge = builder.budgetMerge;
         this.carRule = builder.carRule;
         this.corpName = builder.corpName;
+        this.defaultStandard = builder.defaultStandard;
         this.departId = builder.departId;
         this.departName = builder.departName;
         this.extendField = builder.extendField;
@@ -233,6 +238,13 @@ public class ApplyModifyRequest extends Request {
      */
     public String getCorpName() {
         return this.corpName;
+    }
+
+    /**
+     * @return defaultStandard
+     */
+    public DefaultStandard getDefaultStandard() {
+        return this.defaultStandard;
     }
 
     /**
@@ -457,6 +469,7 @@ public class ApplyModifyRequest extends Request {
         private Integer budgetMerge; 
         private CarRule carRule; 
         private String corpName; 
+        private DefaultStandard defaultStandard; 
         private String departId; 
         private String departName; 
         private String extendField; 
@@ -499,6 +512,7 @@ public class ApplyModifyRequest extends Request {
             this.budgetMerge = request.budgetMerge;
             this.carRule = request.carRule;
             this.corpName = request.corpName;
+            this.defaultStandard = request.defaultStandard;
             this.departId = request.departId;
             this.departName = request.departName;
             this.extendField = request.extendField;
@@ -566,6 +580,16 @@ public class ApplyModifyRequest extends Request {
         public Builder corpName(String corpName) {
             this.putBodyParameter("corp_name", corpName);
             this.corpName = corpName;
+            return this;
+        }
+
+        /**
+         * default_standard.
+         */
+        public Builder defaultStandard(DefaultStandard defaultStandard) {
+            String defaultStandardShrink = shrink(defaultStandard, "default_standard", "json");
+            this.putBodyParameter("default_standard", defaultStandardShrink);
+            this.defaultStandard = defaultStandard;
             return this;
         }
 
@@ -923,6 +947,469 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
+    public static class HotelCitys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("city_code")
+        private String cityCode;
+
+        @com.aliyun.core.annotation.NameInMap("city_name")
+        private String cityName;
+
+        @com.aliyun.core.annotation.NameInMap("fee")
+        private Long fee;
+
+        private HotelCitys(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+            this.fee = builder.fee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HotelCitys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        /**
+         * @return fee
+         */
+        public Long getFee() {
+            return this.fee;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+            private Long fee; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            /**
+             * fee.
+             */
+            public Builder fee(Long fee) {
+                this.fee = fee;
+                return this;
+            }
+
+            public HotelCitys build() {
+                return new HotelCitys(this);
+            } 
+
+        } 
+
+    }
+    public static class HotelIntlCitys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("city_code")
+        private String cityCode;
+
+        @com.aliyun.core.annotation.NameInMap("city_name")
+        private String cityName;
+
+        @com.aliyun.core.annotation.NameInMap("fee")
+        private Long fee;
+
+        private HotelIntlCitys(Builder builder) {
+            this.cityCode = builder.cityCode;
+            this.cityName = builder.cityName;
+            this.fee = builder.fee;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HotelIntlCitys create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cityCode
+         */
+        public String getCityCode() {
+            return this.cityCode;
+        }
+
+        /**
+         * @return cityName
+         */
+        public String getCityName() {
+            return this.cityName;
+        }
+
+        /**
+         * @return fee
+         */
+        public Long getFee() {
+            return this.fee;
+        }
+
+        public static final class Builder {
+            private String cityCode; 
+            private String cityName; 
+            private Long fee; 
+
+            /**
+             * city_code.
+             */
+            public Builder cityCode(String cityCode) {
+                this.cityCode = cityCode;
+                return this;
+            }
+
+            /**
+             * city_name.
+             */
+            public Builder cityName(String cityName) {
+                this.cityName = cityName;
+                return this;
+            }
+
+            /**
+             * fee.
+             */
+            public Builder fee(Long fee) {
+                this.fee = fee;
+                return this;
+            }
+
+            public HotelIntlCitys build() {
+                return new HotelIntlCitys(this);
+            } 
+
+        } 
+
+    }
+    public static class DefaultStandard extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("business_discount")
+        private Integer businessDiscount;
+
+        @com.aliyun.core.annotation.NameInMap("economy_discount")
+        private Integer economyDiscount;
+
+        @com.aliyun.core.annotation.NameInMap("first_discount")
+        private Integer firstDiscount;
+
+        @com.aliyun.core.annotation.NameInMap("flight_cabins")
+        private String flightCabins;
+
+        @com.aliyun.core.annotation.NameInMap("flight_intl_rule_code")
+        private Long flightIntlRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("flight_rule_code")
+        private Long flightRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_citys")
+        private java.util.List < HotelCitys> hotelCitys;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_intl_citys")
+        private java.util.List < HotelIntlCitys> hotelIntlCitys;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_intl_rule_code")
+        private Long hotelIntlRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("hotel_rule_code")
+        private Long hotelRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("premium_economy_discount")
+        private Integer premiumEconomyDiscount;
+
+        @com.aliyun.core.annotation.NameInMap("reserve_type")
+        private Integer reserveType;
+
+        @com.aliyun.core.annotation.NameInMap("train_rule_code")
+        private Long trainRuleCode;
+
+        @com.aliyun.core.annotation.NameInMap("train_seats")
+        private String trainSeats;
+
+        private DefaultStandard(Builder builder) {
+            this.businessDiscount = builder.businessDiscount;
+            this.economyDiscount = builder.economyDiscount;
+            this.firstDiscount = builder.firstDiscount;
+            this.flightCabins = builder.flightCabins;
+            this.flightIntlRuleCode = builder.flightIntlRuleCode;
+            this.flightRuleCode = builder.flightRuleCode;
+            this.hotelCitys = builder.hotelCitys;
+            this.hotelIntlCitys = builder.hotelIntlCitys;
+            this.hotelIntlRuleCode = builder.hotelIntlRuleCode;
+            this.hotelRuleCode = builder.hotelRuleCode;
+            this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
+            this.reserveType = builder.reserveType;
+            this.trainRuleCode = builder.trainRuleCode;
+            this.trainSeats = builder.trainSeats;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DefaultStandard create() {
+            return builder().build();
+        }
+
+        /**
+         * @return businessDiscount
+         */
+        public Integer getBusinessDiscount() {
+            return this.businessDiscount;
+        }
+
+        /**
+         * @return economyDiscount
+         */
+        public Integer getEconomyDiscount() {
+            return this.economyDiscount;
+        }
+
+        /**
+         * @return firstDiscount
+         */
+        public Integer getFirstDiscount() {
+            return this.firstDiscount;
+        }
+
+        /**
+         * @return flightCabins
+         */
+        public String getFlightCabins() {
+            return this.flightCabins;
+        }
+
+        /**
+         * @return flightIntlRuleCode
+         */
+        public Long getFlightIntlRuleCode() {
+            return this.flightIntlRuleCode;
+        }
+
+        /**
+         * @return flightRuleCode
+         */
+        public Long getFlightRuleCode() {
+            return this.flightRuleCode;
+        }
+
+        /**
+         * @return hotelCitys
+         */
+        public java.util.List < HotelCitys> getHotelCitys() {
+            return this.hotelCitys;
+        }
+
+        /**
+         * @return hotelIntlCitys
+         */
+        public java.util.List < HotelIntlCitys> getHotelIntlCitys() {
+            return this.hotelIntlCitys;
+        }
+
+        /**
+         * @return hotelIntlRuleCode
+         */
+        public Long getHotelIntlRuleCode() {
+            return this.hotelIntlRuleCode;
+        }
+
+        /**
+         * @return hotelRuleCode
+         */
+        public Long getHotelRuleCode() {
+            return this.hotelRuleCode;
+        }
+
+        /**
+         * @return premiumEconomyDiscount
+         */
+        public Integer getPremiumEconomyDiscount() {
+            return this.premiumEconomyDiscount;
+        }
+
+        /**
+         * @return reserveType
+         */
+        public Integer getReserveType() {
+            return this.reserveType;
+        }
+
+        /**
+         * @return trainRuleCode
+         */
+        public Long getTrainRuleCode() {
+            return this.trainRuleCode;
+        }
+
+        /**
+         * @return trainSeats
+         */
+        public String getTrainSeats() {
+            return this.trainSeats;
+        }
+
+        public static final class Builder {
+            private Integer businessDiscount; 
+            private Integer economyDiscount; 
+            private Integer firstDiscount; 
+            private String flightCabins; 
+            private Long flightIntlRuleCode; 
+            private Long flightRuleCode; 
+            private java.util.List < HotelCitys> hotelCitys; 
+            private java.util.List < HotelIntlCitys> hotelIntlCitys; 
+            private Long hotelIntlRuleCode; 
+            private Long hotelRuleCode; 
+            private Integer premiumEconomyDiscount; 
+            private Integer reserveType; 
+            private Long trainRuleCode; 
+            private String trainSeats; 
+
+            /**
+             * business_discount.
+             */
+            public Builder businessDiscount(Integer businessDiscount) {
+                this.businessDiscount = businessDiscount;
+                return this;
+            }
+
+            /**
+             * economy_discount.
+             */
+            public Builder economyDiscount(Integer economyDiscount) {
+                this.economyDiscount = economyDiscount;
+                return this;
+            }
+
+            /**
+             * first_discount.
+             */
+            public Builder firstDiscount(Integer firstDiscount) {
+                this.firstDiscount = firstDiscount;
+                return this;
+            }
+
+            /**
+             * flight_cabins.
+             */
+            public Builder flightCabins(String flightCabins) {
+                this.flightCabins = flightCabins;
+                return this;
+            }
+
+            /**
+             * flight_intl_rule_code.
+             */
+            public Builder flightIntlRuleCode(Long flightIntlRuleCode) {
+                this.flightIntlRuleCode = flightIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * flight_rule_code.
+             */
+            public Builder flightRuleCode(Long flightRuleCode) {
+                this.flightRuleCode = flightRuleCode;
+                return this;
+            }
+
+            /**
+             * hotel_citys.
+             */
+            public Builder hotelCitys(java.util.List < HotelCitys> hotelCitys) {
+                this.hotelCitys = hotelCitys;
+                return this;
+            }
+
+            /**
+             * hotel_intl_citys.
+             */
+            public Builder hotelIntlCitys(java.util.List < HotelIntlCitys> hotelIntlCitys) {
+                this.hotelIntlCitys = hotelIntlCitys;
+                return this;
+            }
+
+            /**
+             * hotel_intl_rule_code.
+             */
+            public Builder hotelIntlRuleCode(Long hotelIntlRuleCode) {
+                this.hotelIntlRuleCode = hotelIntlRuleCode;
+                return this;
+            }
+
+            /**
+             * hotel_rule_code.
+             */
+            public Builder hotelRuleCode(Long hotelRuleCode) {
+                this.hotelRuleCode = hotelRuleCode;
+                return this;
+            }
+
+            /**
+             * premium_economy_discount.
+             */
+            public Builder premiumEconomyDiscount(Integer premiumEconomyDiscount) {
+                this.premiumEconomyDiscount = premiumEconomyDiscount;
+                return this;
+            }
+
+            /**
+             * reserve_type.
+             */
+            public Builder reserveType(Integer reserveType) {
+                this.reserveType = reserveType;
+                return this;
+            }
+
+            /**
+             * train_rule_code.
+             */
+            public Builder trainRuleCode(Long trainRuleCode) {
+                this.trainRuleCode = trainRuleCode;
+                return this;
+            }
+
+            /**
+             * train_seats.
+             */
+            public Builder trainSeats(String trainSeats) {
+                this.trainSeats = trainSeats;
+                return this;
+            }
+
+            public DefaultStandard build() {
+                return new DefaultStandard(this);
+            } 
+
+        } 
+
+    }
     public static class ExternalTravelerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
@@ -1184,7 +1671,7 @@ public class ApplyModifyRequest extends Request {
         } 
 
     }
-    public static class HotelCitys extends TeaModel {
+    public static class ExternalTravelerStandardHotelCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
@@ -1194,7 +1681,7 @@ public class ApplyModifyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("fee")
         private Long fee;
 
-        private HotelCitys(Builder builder) {
+        private ExternalTravelerStandardHotelCitys(Builder builder) {
             this.cityCode = builder.cityCode;
             this.cityName = builder.cityName;
             this.fee = builder.fee;
@@ -1204,7 +1691,7 @@ public class ApplyModifyRequest extends Request {
             return new Builder();
         }
 
-        public static HotelCitys create() {
+        public static ExternalTravelerStandardHotelCitys create() {
             return builder().build();
         }
 
@@ -1258,14 +1745,14 @@ public class ApplyModifyRequest extends Request {
                 return this;
             }
 
-            public HotelCitys build() {
-                return new HotelCitys(this);
+            public ExternalTravelerStandardHotelCitys build() {
+                return new ExternalTravelerStandardHotelCitys(this);
             } 
 
         } 
 
     }
-    public static class HotelIntlCitys extends TeaModel {
+    public static class ExternalTravelerStandardHotelIntlCitys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("city_code")
         private String cityCode;
 
@@ -1275,7 +1762,7 @@ public class ApplyModifyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("fee")
         private Long fee;
 
-        private HotelIntlCitys(Builder builder) {
+        private ExternalTravelerStandardHotelIntlCitys(Builder builder) {
             this.cityCode = builder.cityCode;
             this.cityName = builder.cityName;
             this.fee = builder.fee;
@@ -1285,7 +1772,7 @@ public class ApplyModifyRequest extends Request {
             return new Builder();
         }
 
-        public static HotelIntlCitys create() {
+        public static ExternalTravelerStandardHotelIntlCitys create() {
             return builder().build();
         }
 
@@ -1339,8 +1826,8 @@ public class ApplyModifyRequest extends Request {
                 return this;
             }
 
-            public HotelIntlCitys build() {
-                return new HotelIntlCitys(this);
+            public ExternalTravelerStandardHotelIntlCitys build() {
+                return new ExternalTravelerStandardHotelIntlCitys(this);
             } 
 
         } 
@@ -1366,10 +1853,10 @@ public class ApplyModifyRequest extends Request {
         private Long flightRuleCode;
 
         @com.aliyun.core.annotation.NameInMap("hotel_citys")
-        private java.util.List < HotelCitys> hotelCitys;
+        private java.util.List < ExternalTravelerStandardHotelCitys> hotelCitys;
 
         @com.aliyun.core.annotation.NameInMap("hotel_intl_citys")
-        private java.util.List < HotelIntlCitys> hotelIntlCitys;
+        private java.util.List < ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys;
 
         @com.aliyun.core.annotation.NameInMap("hotel_intl_rule_code")
         private Long hotelIntlRuleCode;
@@ -1459,14 +1946,14 @@ public class ApplyModifyRequest extends Request {
         /**
          * @return hotelCitys
          */
-        public java.util.List < HotelCitys> getHotelCitys() {
+        public java.util.List < ExternalTravelerStandardHotelCitys> getHotelCitys() {
             return this.hotelCitys;
         }
 
         /**
          * @return hotelIntlCitys
          */
-        public java.util.List < HotelIntlCitys> getHotelIntlCitys() {
+        public java.util.List < ExternalTravelerStandardHotelIntlCitys> getHotelIntlCitys() {
             return this.hotelIntlCitys;
         }
 
@@ -1519,8 +2006,8 @@ public class ApplyModifyRequest extends Request {
             private String flightCabins; 
             private Long flightIntlRuleCode; 
             private Long flightRuleCode; 
-            private java.util.List < HotelCitys> hotelCitys; 
-            private java.util.List < HotelIntlCitys> hotelIntlCitys; 
+            private java.util.List < ExternalTravelerStandardHotelCitys> hotelCitys; 
+            private java.util.List < ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys; 
             private Long hotelIntlRuleCode; 
             private Long hotelRuleCode; 
             private Integer premiumEconomyDiscount; 
@@ -1579,7 +2066,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * hotel_citys.
              */
-            public Builder hotelCitys(java.util.List < HotelCitys> hotelCitys) {
+            public Builder hotelCitys(java.util.List < ExternalTravelerStandardHotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
                 return this;
             }
@@ -1587,7 +2074,7 @@ public class ApplyModifyRequest extends Request {
             /**
              * hotel_intl_citys.
              */
-            public Builder hotelIntlCitys(java.util.List < HotelIntlCitys> hotelIntlCitys) {
+            public Builder hotelIntlCitys(java.util.List < ExternalTravelerStandardHotelIntlCitys> hotelIntlCitys) {
                 this.hotelIntlCitys = hotelIntlCitys;
                 return this;
             }
@@ -1800,6 +2287,9 @@ public class ApplyModifyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
+        @com.aliyun.core.annotation.NameInMap("province_travel_city_adcodes")
+        private java.util.List < String > provinceTravelCityAdcodes;
+
         @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
         private String thirdPartInvoiceId;
 
@@ -1830,6 +2320,7 @@ public class ApplyModifyRequest extends Request {
             this.needTraffic = builder.needTraffic;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.provinceTravelCityAdcodes = builder.provinceTravelCityAdcodes;
             this.thirdPartInvoiceId = builder.thirdPartInvoiceId;
             this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
             this.trafficType = builder.trafficType;
@@ -1950,6 +2441,13 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * @return provinceTravelCityAdcodes
+         */
+        public java.util.List < String > getProvinceTravelCityAdcodes() {
+            return this.provinceTravelCityAdcodes;
+        }
+
+        /**
          * @return thirdPartInvoiceId
          */
         public String getThirdPartInvoiceId() {
@@ -1993,6 +2491,7 @@ public class ApplyModifyRequest extends Request {
             private Boolean needTraffic; 
             private String projectCode; 
             private String projectTitle; 
+            private java.util.List < String > provinceTravelCityAdcodes; 
             private String thirdPartInvoiceId; 
             private String thirdpartCostCenterId; 
             private Integer trafficType; 
@@ -2119,6 +2618,14 @@ public class ApplyModifyRequest extends Request {
             }
 
             /**
+             * province_travel_city_adcodes.
+             */
+            public Builder provinceTravelCityAdcodes(java.util.List < String > provinceTravelCityAdcodes) {
+                this.provinceTravelCityAdcodes = provinceTravelCityAdcodes;
+                return this;
+            }
+
+            /**
              * third_part_invoice_id.
              */
             public Builder thirdPartInvoiceId(String thirdPartInvoiceId) {
@@ -2232,6 +2739,9 @@ public class ApplyModifyRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("project_title")
         private String projectTitle;
 
+        @com.aliyun.core.annotation.NameInMap("province_travel_city_adcodes")
+        private java.util.List < String > provinceTravelCityAdcodes;
+
         @com.aliyun.core.annotation.NameInMap("third_part_invoice_id")
         private String thirdPartInvoiceId;
 
@@ -2253,6 +2763,7 @@ public class ApplyModifyRequest extends Request {
             this.itineraryTravelStandard = builder.itineraryTravelStandard;
             this.projectCode = builder.projectCode;
             this.projectTitle = builder.projectTitle;
+            this.provinceTravelCityAdcodes = builder.provinceTravelCityAdcodes;
             this.thirdPartInvoiceId = builder.thirdPartInvoiceId;
             this.thirdpartCostCenterId = builder.thirdpartCostCenterId;
             this.trafficType = builder.trafficType;
@@ -2344,6 +2855,13 @@ public class ApplyModifyRequest extends Request {
         }
 
         /**
+         * @return provinceTravelCityAdcodes
+         */
+        public java.util.List < String > getProvinceTravelCityAdcodes() {
+            return this.provinceTravelCityAdcodes;
+        }
+
+        /**
          * @return thirdPartInvoiceId
          */
         public String getThirdPartInvoiceId() {
@@ -2376,6 +2894,7 @@ public class ApplyModifyRequest extends Request {
             private ItinerarySetListItineraryTravelStandard itineraryTravelStandard; 
             private String projectCode; 
             private String projectTitle; 
+            private java.util.List < String > provinceTravelCityAdcodes; 
             private String thirdPartInvoiceId; 
             private String thirdpartCostCenterId; 
             private Integer trafficType; 
@@ -2465,6 +2984,14 @@ public class ApplyModifyRequest extends Request {
              */
             public Builder projectTitle(String projectTitle) {
                 this.projectTitle = projectTitle;
+                return this;
+            }
+
+            /**
+             * province_travel_city_adcodes.
+             */
+            public Builder provinceTravelCityAdcodes(java.util.List < String > provinceTravelCityAdcodes) {
+                this.provinceTravelCityAdcodes = provinceTravelCityAdcodes;
                 return this;
             }
 

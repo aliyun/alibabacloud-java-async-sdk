@@ -776,6 +776,12 @@ public class CarApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("itinerary_list")
         private java.util.List < ItineraryList> itineraryList;
 
+        @com.aliyun.core.annotation.NameInMap("order_id")
+        private Long orderId;
+
+        @com.aliyun.core.annotation.NameInMap("related_third_apply_id")
+        private String relatedThirdApplyId;
+
         @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
@@ -808,6 +814,8 @@ public class CarApplyQueryResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.itineraryList = builder.itineraryList;
+            this.orderId = builder.orderId;
+            this.relatedThirdApplyId = builder.relatedThirdApplyId;
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
             this.thirdpartId = builder.thirdpartId;
@@ -876,6 +884,20 @@ public class CarApplyQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderId
+         */
+        public Long getOrderId() {
+            return this.orderId;
+        }
+
+        /**
+         * @return relatedThirdApplyId
+         */
+        public String getRelatedThirdApplyId() {
+            return this.relatedThirdApplyId;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -939,6 +961,8 @@ public class CarApplyQueryResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private java.util.List < ItineraryList> itineraryList; 
+            private Long orderId; 
+            private String relatedThirdApplyId; 
             private Integer status; 
             private String statusDesc; 
             private String thirdpartId; 
@@ -1001,6 +1025,22 @@ public class CarApplyQueryResponseBody extends TeaModel {
              */
             public Builder itineraryList(java.util.List < ItineraryList> itineraryList) {
                 this.itineraryList = itineraryList;
+                return this;
+            }
+
+            /**
+             * order_id.
+             */
+            public Builder orderId(Long orderId) {
+                this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * related_third_apply_id.
+             */
+            public Builder relatedThirdApplyId(String relatedThirdApplyId) {
+                this.relatedThirdApplyId = relatedThirdApplyId;
                 return this;
             }
 

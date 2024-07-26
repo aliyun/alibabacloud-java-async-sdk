@@ -43,6 +43,10 @@ public class ChannelCorpCreateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 50, minLength = 5)
     private String thirdCorpId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("user_id")
+    private String userId;
+
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
@@ -56,6 +60,7 @@ public class ChannelCorpCreateRequest extends Request {
         this.province = builder.province;
         this.scope = builder.scope;
         this.thirdCorpId = builder.thirdCorpId;
+        this.userId = builder.userId;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
@@ -122,6 +127,13 @@ public class ChannelCorpCreateRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
      * @return xAcsBtripCorpToken
      */
     public String getXAcsBtripCorpToken() {
@@ -136,6 +148,7 @@ public class ChannelCorpCreateRequest extends Request {
         private String province; 
         private Integer scope; 
         private String thirdCorpId; 
+        private String userId; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -151,6 +164,7 @@ public class ChannelCorpCreateRequest extends Request {
             this.province = request.province;
             this.scope = request.scope;
             this.thirdCorpId = request.thirdCorpId;
+            this.userId = request.userId;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
@@ -214,6 +228,15 @@ public class ChannelCorpCreateRequest extends Request {
         public Builder thirdCorpId(String thirdCorpId) {
             this.putBodyParameter("third_corp_id", thirdCorpId);
             this.thirdCorpId = thirdCorpId;
+            return this;
+        }
+
+        /**
+         * user_id.
+         */
+        public Builder userId(String userId) {
+            this.putBodyParameter("user_id", userId);
+            this.userId = userId;
             return this;
         }
 

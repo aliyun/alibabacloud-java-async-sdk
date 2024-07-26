@@ -166,12 +166,16 @@ public class ChannelCorpCreateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("open_agent_id")
         private String openAgentId;
 
+        @com.aliyun.core.annotation.NameInMap("user_id")
+        private String userId;
+
         private Module(Builder builder) {
             this.administratorName = builder.administratorName;
             this.administratorPhone = builder.administratorPhone;
             this.corpId = builder.corpId;
             this.corpName = builder.corpName;
             this.openAgentId = builder.openAgentId;
+            this.userId = builder.userId;
         }
 
         public static Builder builder() {
@@ -217,12 +221,20 @@ public class ChannelCorpCreateResponseBody extends TeaModel {
             return this.openAgentId;
         }
 
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
         public static final class Builder {
             private String administratorName; 
             private String administratorPhone; 
             private String corpId; 
             private String corpName; 
             private String openAgentId; 
+            private String userId; 
 
             /**
              * administrator_name.
@@ -261,6 +273,14 @@ public class ChannelCorpCreateResponseBody extends TeaModel {
              */
             public Builder openAgentId(String openAgentId) {
                 this.openAgentId = openAgentId;
+                return this;
+            }
+
+            /**
+             * user_id.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
                 return this;
             }
 
