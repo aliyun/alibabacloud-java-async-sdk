@@ -27,6 +27,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddWebhookResponse> addWebhook(AddWebhookRequest request);
 
+    CompletableFuture<CancelExecutionReleaseStageResponse> cancelExecutionReleaseStage(CancelExecutionReleaseStageRequest request);
+
     CompletableFuture<CloseMergeRequestResponse> closeMergeRequest(CloseMergeRequestRequest request);
 
     CompletableFuture<CreateAppMembersResponse> createAppMembers(CreateAppMembersRequest request);
@@ -157,6 +159,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EnableDeployKeyResponse> enableDeployKey(EnableDeployKeyRequest request);
 
+    CompletableFuture<ExecuteChangeRequestReleaseStageResponse> executeChangeRequestReleaseStage(ExecuteChangeRequestReleaseStageRequest request);
+
     CompletableFuture<ExportInsightCustomValueResponse> exportInsightCustomValue(ExportInsightCustomValueRequest request);
 
     CompletableFuture<ExportInsightExpectedWorkTimeResponse> exportInsightExpectedWorkTime(ExportInsightExpectedWorkTimeRequest request);
@@ -230,6 +234,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectMemberResponse> getProjectMember(GetProjectMemberRequest request);
 
     CompletableFuture<GetPushRuleResponse> getPushRule(GetPushRuleRequest request);
+
+    CompletableFuture<GetReleaseStagePipelineRunResponse> getReleaseStagePipelineRun(GetReleaseStagePipelineRunRequest request);
 
     CompletableFuture<GetRepositoryResponse> getRepository(GetRepositoryRequest request);
 
