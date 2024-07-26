@@ -31,6 +31,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
 
+    CompletableFuture<DeleteInstanceLabelsResponse> deleteInstanceLabels(DeleteInstanceLabelsRequest request);
+
     CompletableFuture<DeleteInstanceShutdownTimerResponse> deleteInstanceShutdownTimer(DeleteInstanceShutdownTimerRequest request);
 
     CompletableFuture<DeleteInstanceSnapshotResponse> deleteInstanceSnapshot(DeleteInstanceSnapshotRequest request);
@@ -70,5 +72,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
 
     CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request);
+
+    CompletableFuture<UpdateInstanceLabelsResponse> updateInstanceLabels(UpdateInstanceLabelsRequest request);
 
 }
