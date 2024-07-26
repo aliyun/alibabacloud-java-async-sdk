@@ -23,11 +23,16 @@ public class ListHttpApisRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("publishedOnly")
+    private Boolean publishedOnly;
+
     private ListHttpApisRequest(Builder builder) {
         super(builder);
         this.keyword = builder.keyword;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.publishedOnly = builder.publishedOnly;
     }
 
     public static Builder builder() {
@@ -64,10 +69,18 @@ public class ListHttpApisRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return publishedOnly
+     */
+    public Boolean getPublishedOnly() {
+        return this.publishedOnly;
+    }
+
     public static final class Builder extends Request.Builder<ListHttpApisRequest, Builder> {
         private String keyword; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Boolean publishedOnly; 
 
         private Builder() {
             super();
@@ -78,6 +91,7 @@ public class ListHttpApisRequest extends Request {
             this.keyword = request.keyword;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.publishedOnly = request.publishedOnly;
         } 
 
         /**
@@ -104,6 +118,15 @@ public class ListHttpApisRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * publishedOnly.
+         */
+        public Builder publishedOnly(Boolean publishedOnly) {
+            this.putQueryParameter("publishedOnly", publishedOnly);
+            this.publishedOnly = publishedOnly;
             return this;
         }
 
