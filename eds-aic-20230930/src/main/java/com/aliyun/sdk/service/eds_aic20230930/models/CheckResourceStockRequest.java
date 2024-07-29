@@ -21,6 +21,10 @@ public class CheckResourceStockRequest extends Request {
     private String bizRegionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
+    private Boolean gpuAcceleration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
@@ -28,6 +32,7 @@ public class CheckResourceStockRequest extends Request {
         super(builder);
         this.acpSpecId = builder.acpSpecId;
         this.bizRegionId = builder.bizRegionId;
+        this.gpuAcceleration = builder.gpuAcceleration;
         this.zoneId = builder.zoneId;
     }
 
@@ -59,6 +64,13 @@ public class CheckResourceStockRequest extends Request {
     }
 
     /**
+     * @return gpuAcceleration
+     */
+    public Boolean getGpuAcceleration() {
+        return this.gpuAcceleration;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -68,6 +80,7 @@ public class CheckResourceStockRequest extends Request {
     public static final class Builder extends Request.Builder<CheckResourceStockRequest, Builder> {
         private String acpSpecId; 
         private String bizRegionId; 
+        private Boolean gpuAcceleration; 
         private String zoneId; 
 
         private Builder() {
@@ -78,6 +91,7 @@ public class CheckResourceStockRequest extends Request {
             super(request);
             this.acpSpecId = request.acpSpecId;
             this.bizRegionId = request.bizRegionId;
+            this.gpuAcceleration = request.gpuAcceleration;
             this.zoneId = request.zoneId;
         } 
 
@@ -96,6 +110,15 @@ public class CheckResourceStockRequest extends Request {
         public Builder bizRegionId(String bizRegionId) {
             this.putQueryParameter("BizRegionId", bizRegionId);
             this.bizRegionId = bizRegionId;
+            return this;
+        }
+
+        /**
+         * GpuAcceleration.
+         */
+        public Builder gpuAcceleration(Boolean gpuAcceleration) {
+            this.putQueryParameter("GpuAcceleration", gpuAcceleration);
+            this.gpuAcceleration = gpuAcceleration;
             return this;
         }
 
