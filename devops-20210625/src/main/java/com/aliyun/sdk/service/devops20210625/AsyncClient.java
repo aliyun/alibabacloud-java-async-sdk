@@ -415,7 +415,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PassPipelineValidateResponse> passPipelineValidate(PassPipelineValidateRequest request);
 
+    CompletableFuture<PassReleaseStagePipelineValidateResponse> passReleaseStagePipelineValidate(PassReleaseStagePipelineValidateRequest request);
+
     CompletableFuture<RefusePipelineValidateResponse> refusePipelineValidate(RefusePipelineValidateRequest request);
+
+    CompletableFuture<RefuseReleaseStagePipelineValidateResponse> refuseReleaseStagePipelineValidate(RefuseReleaseStagePipelineValidateRequest request);
 
     CompletableFuture<ReleaseWorkspaceResponse> releaseWorkspace(ReleaseWorkspaceRequest request);
 
