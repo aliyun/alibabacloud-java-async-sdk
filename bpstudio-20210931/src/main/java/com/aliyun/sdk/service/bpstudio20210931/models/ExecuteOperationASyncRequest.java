@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExecuteOperationASyncRequest</p>
  */
 public class ExecuteOperationASyncRequest extends Request {
-    @Body
-    @NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
     private String applicationId;
 
-    @Body
-    @NameInMap("Attributes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Attributes")
     private java.util.Map < String, ? > attributes;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("Operation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Operation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operation;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("ServiceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceType;
 
     private ExecuteOperationASyncRequest(Builder builder) {
@@ -166,7 +165,7 @@ public class ExecuteOperationASyncRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);

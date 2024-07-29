@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPotentialFailZonesRequest</p>
  */
 public class GetPotentialFailZonesRequest extends Request {
-    @Body
-    @NameInMap("IsPlanId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsPlanId")
     private Boolean isPlanId;
 
-    @Body
-    @NameInMap("ObjectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ObjectId")
     private String objectId;
 
     private GetPotentialFailZonesRequest(Builder builder) {

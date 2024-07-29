@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTemplateResponseBody</p>
  */
 public class GetTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTemplateResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class GetTemplateResponseBody extends TeaModel {
     } 
 
     public static class Variables extends TeaModel {
-        @NameInMap("Attribute")
+        @com.aliyun.core.annotation.NameInMap("Attribute")
         private String attribute;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("Variable")
+        @com.aliyun.core.annotation.NameInMap("Variable")
         private String variable;
 
         private Variables(Builder builder) {
@@ -213,25 +212,25 @@ public class GetTemplateResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageURL")
+        @com.aliyun.core.annotation.NameInMap("ImageURL")
         private String imageURL;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Variables")
+        @com.aliyun.core.annotation.NameInMap("Variables")
         private java.util.List < Variables> variables;
 
         private Data(Builder builder) {

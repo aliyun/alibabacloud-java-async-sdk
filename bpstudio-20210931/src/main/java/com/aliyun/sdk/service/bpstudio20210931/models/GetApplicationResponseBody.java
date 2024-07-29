@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationResponseBody</p>
  */
 public class GetApplicationResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetApplicationResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class GetApplicationResponseBody extends TeaModel {
     } 
 
     public static class Checklist extends TeaModel {
-        @NameInMap("Lifecycle")
+        @com.aliyun.core.annotation.NameInMap("Lifecycle")
         private String lifecycle;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ResourceCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceCode")
         private String resourceCode;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private String specification;
 
         private Checklist(Builder builder) {
@@ -273,46 +272,46 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class PriceList extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Lifecycle")
+        @com.aliyun.core.annotation.NameInMap("Lifecycle")
         private String lifecycle;
 
-        @NameInMap("OnePrice")
+        @com.aliyun.core.annotation.NameInMap("OnePrice")
         private Double onePrice;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Double originalPrice;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Double price;
 
-        @NameInMap("PriceUnit")
+        @com.aliyun.core.annotation.NameInMap("PriceUnit")
         private String priceUnit;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ResourceCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceCode")
         private String resourceCode;
 
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private String specification;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private PriceList(Builder builder) {
@@ -577,28 +576,28 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class ResourceList extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Lifecycle")
+        @com.aliyun.core.annotation.NameInMap("Lifecycle")
         private String lifecycle;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ResourceCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceCode")
         private String resourceCode;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ResourceList(Builder builder) {
@@ -758,40 +757,40 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("Checklist")
+        @com.aliyun.core.annotation.NameInMap("Checklist")
         private java.util.List < Checklist> checklist;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("ImageURL")
+        @com.aliyun.core.annotation.NameInMap("ImageURL")
         private String imageURL;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PriceList")
+        @com.aliyun.core.annotation.NameInMap("PriceList")
         private java.util.List < PriceList> priceList;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceList")
+        @com.aliyun.core.annotation.NameInMap("ResourceList")
         private java.util.List < ResourceList> resourceList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTemplateRequest</p>
  */
 public class ListTemplateRequest extends Request {
-    @Body
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Body
-    @NameInMap("MaxResults")
-    @Validation(required = true, maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 50, minimum = 1)
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
-    @Validation(required = true, maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000, minimum = 1)
     private Integer nextToken;
 
-    @Body
-    @NameInMap("OrderType")
-    @Validation(maximum = 5, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    @com.aliyun.core.annotation.Validation(maximum = 5, minimum = 1)
     private Long orderType;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("TagList")
-    @Validation()
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagList")
+    @com.aliyun.core.annotation.Validation()
     private Integer tagList;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private ListTemplateRequest(Builder builder) {

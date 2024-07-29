@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ValuateTemplateResponseBody</p>
  */
 public class ValuateTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ValuateTemplateResponseBody(Builder builder) {
@@ -112,31 +111,31 @@ public class ValuateTemplateResponseBody extends TeaModel {
     } 
 
     public static class PriceList extends TeaModel {
-        @NameInMap("DiscountAmount")
+        @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Float discountAmount;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("PriceUnit")
+        @com.aliyun.core.annotation.NameInMap("PriceUnit")
         private String priceUnit;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private PriceList(Builder builder) {
@@ -317,28 +316,28 @@ public class ValuateTemplateResponseBody extends TeaModel {
 
     }
     public static class ResourceList extends TeaModel {
-        @NameInMap("DiscountAmount")
+        @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Double discountAmount;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Double originalPrice;
 
-        @NameInMap("PriceList")
+        @com.aliyun.core.annotation.NameInMap("PriceList")
         private java.util.List < PriceList> priceList;
 
-        @NameInMap("PriceUnit")
+        @com.aliyun.core.annotation.NameInMap("PriceUnit")
         private String priceUnit;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Double tradePrice;
 
         private ResourceList(Builder builder) {
@@ -498,7 +497,7 @@ public class ValuateTemplateResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ResourceList")
+        @com.aliyun.core.annotation.NameInMap("ResourceList")
         private java.util.List < ResourceList> resourceList;
 
         private Data(Builder builder) {

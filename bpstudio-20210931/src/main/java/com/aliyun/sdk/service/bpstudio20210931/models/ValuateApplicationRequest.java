@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ValuateApplicationRequest</p>
  */
 public class ValuateApplicationRequest extends Request {
-    @Body
-    @NameInMap("ApplicationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private ValuateApplicationRequest(Builder builder) {
@@ -83,7 +82,7 @@ public class ValuateApplicationRequest extends Request {
         } 
 
         /**
-         * The ID of the application.
+         * The operation that you want to perform. Set the value to ValuateApplication.
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -92,7 +91,7 @@ public class ValuateApplicationRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The ID of the resource group to which the application you want to query belongs.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -101,7 +100,7 @@ public class ValuateApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the application.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

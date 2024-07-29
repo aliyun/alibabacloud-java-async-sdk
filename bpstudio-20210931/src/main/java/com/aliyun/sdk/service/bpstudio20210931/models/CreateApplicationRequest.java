@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20210931.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateApplicationRequest</p>
  */
 public class CreateApplicationRequest extends Request {
-    @Body
-    @NameInMap("AreaId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AreaId")
     private String areaId;
 
-    @Body
-    @NameInMap("ClientToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("Configuration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Configuration")
     private java.util.Map < String, String > configuration;
 
-    @Body
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Body
-    @NameInMap("Variables")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Variables")
     private java.util.Map < String, String > variables;
 
     private CreateApplicationRequest(Builder builder) {
@@ -241,13 +239,13 @@ public class CreateApplicationRequest extends Request {
     } 
 
     public static class Instances extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         private Instances(Builder builder) {
