@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDomainsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("gatewayId")
+    private String gatewayId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nameLike")
     private String nameLike;
 
@@ -25,6 +29,7 @@ public class ListDomainsRequest extends Request {
 
     private ListDomainsRequest(Builder builder) {
         super(builder);
+        this.gatewayId = builder.gatewayId;
         this.nameLike = builder.nameLike;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -41,6 +46,13 @@ public class ListDomainsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return gatewayId
+     */
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     /**
@@ -65,6 +77,7 @@ public class ListDomainsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDomainsRequest, Builder> {
+        private String gatewayId; 
         private String nameLike; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -75,10 +88,20 @@ public class ListDomainsRequest extends Request {
 
         private Builder(ListDomainsRequest request) {
             super(request);
+            this.gatewayId = request.gatewayId;
             this.nameLike = request.nameLike;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
+
+        /**
+         * gatewayId.
+         */
+        public Builder gatewayId(String gatewayId) {
+            this.putQueryParameter("gatewayId", gatewayId);
+            this.gatewayId = gatewayId;
+            return this;
+        }
 
         /**
          * nameLike.
