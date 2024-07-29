@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddRecordTemplateResponse> addRecordTemplate(AddRecordTemplateRequest request);
 
+    CompletableFuture<CreateAppRecordTemplateResponse> createAppRecordTemplate(CreateAppRecordTemplateRequest request);
+
     CompletableFuture<CreateAppStreamingOutTemplateResponse> createAppStreamingOutTemplate(CreateAppStreamingOutTemplateRequest request);
 
     CompletableFuture<CreateAutoLiveStreamRuleResponse> createAutoLiveStreamRule(CreateAutoLiveStreamRuleRequest request);
@@ -28,6 +30,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEventSubscribeResponse> createEventSubscribe(CreateEventSubscribeRequest request);
 
     CompletableFuture<CreateMPULayoutResponse> createMPULayout(CreateMPULayoutRequest request);
+
+    CompletableFuture<DeleteAppRecordTemplateResponse> deleteAppRecordTemplate(DeleteAppRecordTemplateRequest request);
 
     CompletableFuture<DeleteAppStreamingOutTemplateResponse> deleteAppStreamingOutTemplate(DeleteAppStreamingOutTemplateRequest request);
 
@@ -41,7 +45,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteRecordTemplateResponse> deleteRecordTemplate(DeleteRecordTemplateRequest request);
 
+    CompletableFuture<DescribeAllCallbackResponse> describeAllCallback(DescribeAllCallbackRequest request);
+
+    CompletableFuture<DescribeAppCallStatusResponse> describeAppCallStatus(DescribeAppCallStatusRequest request);
+
+    CompletableFuture<DescribeAppCallbackSecretKeyResponse> describeAppCallbackSecretKey(DescribeAppCallbackSecretKeyRequest request);
+
     CompletableFuture<DescribeAppKeyResponse> describeAppKey(DescribeAppKeyRequest request);
+
+    CompletableFuture<DescribeAppLayoutsResponse> describeAppLayouts(DescribeAppLayoutsRequest request);
+
+    CompletableFuture<DescribeAppLiveStreamStatusResponse> describeAppLiveStreamStatus(DescribeAppLiveStreamStatusRequest request);
+
+    CompletableFuture<DescribeAppRecordStatusResponse> describeAppRecordStatus(DescribeAppRecordStatusRequest request);
+
+    CompletableFuture<DescribeAppRecordTemplatesResponse> describeAppRecordTemplates(DescribeAppRecordTemplatesRequest request);
 
     CompletableFuture<DescribeAppRecordingFilesResponse> describeAppRecordingFiles(DescribeAppRecordingFilesRequest request);
 
@@ -54,6 +72,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCallResponse> describeCall(DescribeCallRequest request);
 
     CompletableFuture<DescribeCallListResponse> describeCallList(DescribeCallListRequest request);
+
+    CompletableFuture<DescribeCallbacksResponse> describeCallbacks(DescribeCallbacksRequest request);
 
     CompletableFuture<DescribeChannelResponse> describeChannel(DescribeChannelRequest request);
 
@@ -74,6 +94,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeChannelUserMetricsResponse> describeChannelUserMetrics(DescribeChannelUserMetricsRequest request);
 
     CompletableFuture<DescribeChannelUsersResponse> describeChannelUsers(DescribeChannelUsersRequest request);
+
+    CompletableFuture<DescribeChannelsResponse> describeChannels(DescribeChannelsRequest request);
 
     CompletableFuture<DescribeEndPointEventListResponse> describeEndPointEventList(DescribeEndPointEventListRequest request);
 
@@ -115,6 +137,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeRtcUserCntDataResponse> describeRtcUserCntData(DescribeRtcUserCntDataRequest request);
 
+    CompletableFuture<DescribeStreamingOutStatusResponse> describeStreamingOutStatus(DescribeStreamingOutStatusRequest request);
+
+    CompletableFuture<DescribeSystemLayoutListResponse> describeSystemLayoutList(DescribeSystemLayoutListRequest request);
+
     CompletableFuture<DescribeUsageAreaDistributionStatDataResponse> describeUsageAreaDistributionStatData(DescribeUsageAreaDistributionStatDataRequest request);
 
     CompletableFuture<DescribeUsageDistributionStatDataResponse> describeUsageDistributionStatData(DescribeUsageDistributionStatDataRequest request);
@@ -133,13 +159,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyAppResponse> modifyApp(ModifyAppRequest request);
 
+    CompletableFuture<ModifyAppCallbackStatusResponse> modifyAppCallbackStatus(ModifyAppCallbackStatusRequest request);
+
+    CompletableFuture<ModifyAppLiveStreamStatusResponse> modifyAppLiveStreamStatus(ModifyAppLiveStreamStatusRequest request);
+
+    CompletableFuture<ModifyAppRecordStatusResponse> modifyAppRecordStatus(ModifyAppRecordStatusRequest request);
+
+    CompletableFuture<ModifyAppRecordTemplateResponse> modifyAppRecordTemplate(ModifyAppRecordTemplateRequest request);
+
     CompletableFuture<ModifyAppStreamingOutTemplateResponse> modifyAppStreamingOutTemplate(ModifyAppStreamingOutTemplateRequest request);
+
+    CompletableFuture<ModifyCallbackMetaResponse> modifyCallbackMeta(ModifyCallbackMetaRequest request);
 
     CompletableFuture<ModifyMPULayoutResponse> modifyMPULayout(ModifyMPULayoutRequest request);
 
     CompletableFuture<RemoveTerminalsResponse> removeTerminals(RemoveTerminalsRequest request);
 
     CompletableFuture<RemoveUsersResponse> removeUsers(RemoveUsersRequest request);
+
+    CompletableFuture<StartCategoryCallbackResponse> startCategoryCallback(StartCategoryCallbackRequest request);
 
     CompletableFuture<StartCloudRecordResponse> startCloudRecord(StartCloudRecordRequest request);
 
@@ -148,6 +186,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartRecordTaskResponse> startRecordTask(StartRecordTaskRequest request);
 
     CompletableFuture<StartStreamingOutResponse> startStreamingOut(StartStreamingOutRequest request);
+
+    CompletableFuture<StopCategoryCallbackResponse> stopCategoryCallback(StopCategoryCallbackRequest request);
 
     CompletableFuture<StopChannelResponse> stopChannel(StopChannelRequest request);
 
