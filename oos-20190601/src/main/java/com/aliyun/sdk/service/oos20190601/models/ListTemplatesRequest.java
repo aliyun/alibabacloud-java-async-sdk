@@ -346,7 +346,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * IsExample.
+         * Specifies whether the template is an example template
          */
         public Builder isExample(Boolean isExample) {
             this.putQueryParameter("IsExample", isExample);
@@ -355,7 +355,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The template is favorite or not.
+         * Specifies whether the template is added to favorites.
          */
         public Builder isFavorite(Boolean isFavorite) {
             this.putQueryParameter("IsFavorite", isFavorite);
@@ -364,7 +364,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
+         * The number of entries per page. Valid values: 10 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);

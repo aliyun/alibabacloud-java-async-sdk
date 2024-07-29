@@ -113,6 +113,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListGitRepositoriesResponse> listGitRepositories(ListGitRepositoriesRequest request);
 
+    CompletableFuture<ListInstancePackageStatesResponse> listInstancePackageStates(ListInstancePackageStatesRequest request);
+
     CompletableFuture<ListInstancePatchStatesResponse> listInstancePatchStates(ListInstancePatchStatesRequest request);
 
     CompletableFuture<ListInstancePatchesResponse> listInstancePatches(ListInstancePatchesRequest request);
@@ -179,6 +181,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateApplicationGroupResponse> updateApplicationGroup(UpdateApplicationGroupRequest request);
 
     CompletableFuture<UpdateExecutionResponse> updateExecution(UpdateExecutionRequest request);
+
+    CompletableFuture<UpdateInstancePackageStateResponse> updateInstancePackageState(UpdateInstancePackageStateRequest request);
 
     CompletableFuture<UpdateOpsItemResponse> updateOpsItem(UpdateOpsItemRequest request);
 

@@ -385,7 +385,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The constraints of template
+             * The template constraints.
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -401,7 +401,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the template was created.
+             * The creation time of the template.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -425,7 +425,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The SHA-256 value of the template content.
+             * The SHA256 value of the template content.
              */
             public Builder hash(String hash) {
                 this.hash = hash;
@@ -433,7 +433,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template is favorite or not.
+             * Indicates whether the template is added to favorites.
              */
             public Builder isFavorite(Boolean isFavorite) {
                 this.isFavorite = isFavorite;
@@ -444,7 +444,7 @@ public class ListTemplatesResponseBody extends TeaModel {
              * The popularity of the public template. Valid values: **1-10**. A greater value indicates higher popularity. If **ShareType** is set to **Private**, the value of this parameter is `-1`.
              * <p>
              * 
-             * >  This parameter is valid only if the value of **ShareType** is set to **Public**.
+             * >  This parameter is valid only if **ShareType** is set to **Public**.
              */
             public Builder popularity(Integer popularity) {
                 this.popularity = popularity;
@@ -452,7 +452,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The publisher of template.
+             * The user who published the template.
              */
             public Builder publisher(String publisher) {
                 this.publisher = publisher;
@@ -460,7 +460,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -488,7 +488,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template format. The system automatically determines whether the format is JSON or YAML.
+             * The template format. The system automatically determines whether the format of the template is JSON or YAML.
              */
             public Builder templateFormat(String templateFormat) {
                 this.templateFormat = templateFormat;
@@ -520,7 +520,7 @@ public class ListTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The template version. The name of the version consists of the letter v and a number. The number starts from 1.
+             * The template version. The version contains the letter v and a number. The number starts from 1.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -531,7 +531,7 @@ public class ListTemplatesResponseBody extends TeaModel {
              * The number of times for which the private template is executed. If **ShareType** is set to **Public**, the value of this parameter is `-1`.
              * <p>
              * 
-             * >  This parameter is valid only if the value of **ShareType** is **Private**.
+             * >  This parameter is valid only if **ShareType** is set to **Private**.
              */
             public Builder totalExecutionCount(Integer totalExecutionCount) {
                 this.totalExecutionCount = totalExecutionCount;
