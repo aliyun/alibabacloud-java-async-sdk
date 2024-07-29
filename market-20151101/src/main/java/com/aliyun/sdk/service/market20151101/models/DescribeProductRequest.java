@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProductRequest</p>
  */
 public class DescribeProductRequest extends Request {
-    @Query
-    @NameInMap("AliUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliUid")
     private String aliUid;
 
-    @Query
-    @NameInMap("Code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String code;
 
-    @Query
-    @NameInMap("QueryDraft")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryDraft")
     private Boolean queryDraft;
 
     private DescribeProductRequest(Builder builder) {

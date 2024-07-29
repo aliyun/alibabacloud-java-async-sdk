@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDistributionProductsResponseBody</p>
  */
 public class DescribeDistributionProductsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List < Results> results;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDistributionProductsResponseBody(Builder builder) {
@@ -132,46 +131,46 @@ public class DescribeDistributionProductsResponseBody extends TeaModel {
     } 
 
     public static class Results extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("FirstCategoryName")
+        @com.aliyun.core.annotation.NameInMap("FirstCategoryName")
         private String firstCategoryName;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private String price;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("SecondCategoryName")
+        @com.aliyun.core.annotation.NameInMap("SecondCategoryName")
         private String secondCategoryName;
 
-        @NameInMap("ShortDescription")
+        @com.aliyun.core.annotation.NameInMap("ShortDescription")
         private String shortDescription;
 
-        @NameInMap("SubmissionRadio")
+        @com.aliyun.core.annotation.NameInMap("SubmissionRadio")
         private String submissionRadio;
 
-        @NameInMap("SupplierName")
+        @com.aliyun.core.annotation.NameInMap("SupplierName")
         private String supplierName;
 
-        @NameInMap("SupplierUId")
+        @com.aliyun.core.annotation.NameInMap("SupplierUId")
         private String supplierUId;
 
-        @NameInMap("TradeCount")
+        @com.aliyun.core.annotation.NameInMap("TradeCount")
         private String tradeCount;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UserCommentCount")
+        @com.aliyun.core.annotation.NameInMap("UserCommentCount")
         private String userCommentCount;
 
         private Results(Builder builder) {

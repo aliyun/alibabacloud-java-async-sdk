@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AutoRenewInstanceRequest</p>
  */
 public class AutoRenewInstanceRequest extends Request {
-    @Body
-    @NameInMap("AutoRenewCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenewCycle")
     private String autoRenewCycle;
 
-    @Body
-    @NameInMap("AutoRenewDuration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDuration")
     private Integer autoRenewDuration;
 
-    @Body
-    @NameInMap("OrderBizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderBizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long orderBizId;
 
-    @Body
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private AutoRenewInstanceRequest(Builder builder) {

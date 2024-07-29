@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProjectAttachmentsResponseBody</p>
  */
 public class DescribeProjectAttachmentsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeProjectAttachmentsResponseBody(Builder builder) {
@@ -92,49 +91,49 @@ public class DescribeProjectAttachmentsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AttachmentToken")
+        @com.aliyun.core.annotation.NameInMap("AttachmentToken")
         private String attachmentToken;
 
-        @NameInMap("AttachmentType")
+        @com.aliyun.core.annotation.NameInMap("AttachmentType")
         private String attachmentType;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("FileLink")
+        @com.aliyun.core.annotation.NameInMap("FileLink")
         private String fileLink;
 
-        @NameInMap("FileLinkGmtExpired")
+        @com.aliyun.core.annotation.NameInMap("FileLinkGmtExpired")
         private Long fileLinkGmtExpired;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Long fileSize;
 
-        @NameInMap("FileSuffix")
+        @com.aliyun.core.annotation.NameInMap("FileSuffix")
         private String fileSuffix;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private Long operator;
 
-        @NameInMap("OperatorName")
+        @com.aliyun.core.annotation.NameInMap("OperatorName")
         private String operatorName;
 
-        @NameInMap("OperatorRole")
+        @com.aliyun.core.annotation.NameInMap("OperatorRole")
         private String operatorRole;
 
-        @NameInMap("StepNo")
+        @com.aliyun.core.annotation.NameInMap("StepNo")
         private Integer stepNo;
 
         private Result(Builder builder) {

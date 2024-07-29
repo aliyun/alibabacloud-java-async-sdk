@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProductsResponseBody</p>
  */
 public class DescribeProductsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("ProductItems")
+    @com.aliyun.core.annotation.NameInMap("ProductItems")
     private ProductItems productItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeProductsResponseBody(Builder builder) {
@@ -132,52 +131,52 @@ public class DescribeProductsResponseBody extends TeaModel {
     } 
 
     public static class ProductItem extends TeaModel {
-        @NameInMap("CategoryId")
+        @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DeliveryDate")
+        @com.aliyun.core.annotation.NameInMap("DeliveryDate")
         private String deliveryDate;
 
-        @NameInMap("DeliveryWay")
+        @com.aliyun.core.annotation.NameInMap("DeliveryWay")
         private String deliveryWay;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OperationSystem")
+        @com.aliyun.core.annotation.NameInMap("OperationSystem")
         private String operationSystem;
 
-        @NameInMap("PriceInfo")
+        @com.aliyun.core.annotation.NameInMap("PriceInfo")
         private String priceInfo;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("ShortDescription")
+        @com.aliyun.core.annotation.NameInMap("ShortDescription")
         private String shortDescription;
 
-        @NameInMap("SuggestedPrice")
+        @com.aliyun.core.annotation.NameInMap("SuggestedPrice")
         private String suggestedPrice;
 
-        @NameInMap("SupplierId")
+        @com.aliyun.core.annotation.NameInMap("SupplierId")
         private Long supplierId;
 
-        @NameInMap("SupplierName")
+        @com.aliyun.core.annotation.NameInMap("SupplierName")
         private String supplierName;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("TargetUrl")
+        @com.aliyun.core.annotation.NameInMap("TargetUrl")
         private String targetUrl;
 
-        @NameInMap("WarrantyDate")
+        @com.aliyun.core.annotation.NameInMap("WarrantyDate")
         private String warrantyDate;
 
         private ProductItem(Builder builder) {
@@ -473,7 +472,7 @@ public class DescribeProductsResponseBody extends TeaModel {
 
     }
     public static class ProductItems extends TeaModel {
-        @NameInMap("ProductItem")
+        @com.aliyun.core.annotation.NameInMap("ProductItem")
         private java.util.List < ProductItem> productItem;
 
         private ProductItems(Builder builder) {

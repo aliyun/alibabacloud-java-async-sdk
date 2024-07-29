@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ActivateLicenseRequest</p>
  */
 public class ActivateLicenseRequest extends Request {
-    @Query
-    @NameInMap("Identification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identification")
     private String identification;
 
-    @Query
-    @NameInMap("LicenseCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String licenseCode;
 
     private ActivateLicenseRequest(Builder builder) {

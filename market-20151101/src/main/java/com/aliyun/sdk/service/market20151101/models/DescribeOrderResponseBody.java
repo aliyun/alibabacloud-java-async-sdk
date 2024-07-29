@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOrderResponseBody</p>
  */
 public class DescribeOrderResponseBody extends TeaModel {
-    @NameInMap("AccountQuantity")
+    @com.aliyun.core.annotation.NameInMap("AccountQuantity")
     private Long accountQuantity;
 
-    @NameInMap("AliUid")
+    @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
-    @NameInMap("Components")
+    @com.aliyun.core.annotation.NameInMap("Components")
     private java.util.Map < String, ? > components;
 
-    @NameInMap("CouponPrice")
+    @com.aliyun.core.annotation.NameInMap("CouponPrice")
     private Float couponPrice;
 
-    @NameInMap("CreatedOn")
+    @com.aliyun.core.annotation.NameInMap("CreatedOn")
     private Long createdOn;
 
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private InstanceIds instanceIds;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("OrderStatus")
+    @com.aliyun.core.annotation.NameInMap("OrderStatus")
     private String orderStatus;
 
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @NameInMap("OriginalPrice")
+    @com.aliyun.core.annotation.NameInMap("OriginalPrice")
     private Float originalPrice;
 
-    @NameInMap("PaidOn")
+    @com.aliyun.core.annotation.NameInMap("PaidOn")
     private Long paidOn;
 
-    @NameInMap("PayStatus")
+    @com.aliyun.core.annotation.NameInMap("PayStatus")
     private String payStatus;
 
-    @NameInMap("PaymentPrice")
+    @com.aliyun.core.annotation.NameInMap("PaymentPrice")
     private Float paymentPrice;
 
-    @NameInMap("PeriodType")
+    @com.aliyun.core.annotation.NameInMap("PeriodType")
     private String periodType;
 
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @NameInMap("ProductName")
+    @com.aliyun.core.annotation.NameInMap("ProductName")
     private String productName;
 
-    @NameInMap("ProductSkuCode")
+    @com.aliyun.core.annotation.NameInMap("ProductSkuCode")
     private String productSkuCode;
 
-    @NameInMap("Quantity")
+    @com.aliyun.core.annotation.NameInMap("Quantity")
     private Integer quantity;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupplierCompanyName")
+    @com.aliyun.core.annotation.NameInMap("SupplierCompanyName")
     private String supplierCompanyName;
 
-    @NameInMap("SupplierTelephones")
+    @com.aliyun.core.annotation.NameInMap("SupplierTelephones")
     private SupplierTelephones supplierTelephones;
 
-    @NameInMap("TotalPrice")
+    @com.aliyun.core.annotation.NameInMap("TotalPrice")
     private Float totalPrice;
 
     private DescribeOrderResponseBody(Builder builder) {
@@ -472,7 +471,7 @@ public class DescribeOrderResponseBody extends TeaModel {
     } 
 
     public static class InstanceIds extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private java.util.List < String > instanceId;
 
         private InstanceIds(Builder builder) {
@@ -513,7 +512,7 @@ public class DescribeOrderResponseBody extends TeaModel {
 
     }
     public static class SupplierTelephones extends TeaModel {
-        @NameInMap("Telephone")
+        @com.aliyun.core.annotation.NameInMap("Telephone")
         private java.util.List < String > telephone;
 
         private SupplierTelephones(Builder builder) {

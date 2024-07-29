@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CrossAccountVerifyTokenResponse</p>
  */
 public class CrossAccountVerifyTokenResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private CrossAccountVerifyTokenResponseBody body;
 
     private CrossAccountVerifyTokenResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +44,13 @@ public class CrossAccountVerifyTokenResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CrossAccountVerifyTokenResponseBody getBody() {
@@ -52,6 +60,8 @@ public class CrossAccountVerifyTokenResponse extends Response {
     public interface Builder extends Response.Builder<CrossAccountVerifyTokenResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CrossAccountVerifyTokenResponseBody body);
 
@@ -64,6 +74,7 @@ public class CrossAccountVerifyTokenResponse extends Response {
             extends Response.BuilderImpl<CrossAccountVerifyTokenResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CrossAccountVerifyTokenResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +84,7 @@ public class CrossAccountVerifyTokenResponse extends Response {
         private BuilderImpl(CrossAccountVerifyTokenResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +94,15 @@ public class CrossAccountVerifyTokenResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

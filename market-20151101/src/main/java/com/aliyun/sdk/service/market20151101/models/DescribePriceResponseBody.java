@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePriceResponseBody</p>
  */
 public class DescribePriceResponseBody extends TeaModel {
-    @NameInMap("Coupons")
+    @com.aliyun.core.annotation.NameInMap("Coupons")
     private Coupons coupons;
 
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @NameInMap("Cuxiao")
+    @com.aliyun.core.annotation.NameInMap("Cuxiao")
     private Boolean cuxiao;
 
-    @NameInMap("Cycle")
+    @com.aliyun.core.annotation.NameInMap("Cycle")
     private String cycle;
 
-    @NameInMap("DiscountPrice")
+    @com.aliyun.core.annotation.NameInMap("DiscountPrice")
     private Float discountPrice;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @NameInMap("ExpressionCode")
+    @com.aliyun.core.annotation.NameInMap("ExpressionCode")
     private String expressionCode;
 
-    @NameInMap("ExpressionMessage")
+    @com.aliyun.core.annotation.NameInMap("ExpressionMessage")
     private String expressionMessage;
 
-    @NameInMap("InfoTitle")
+    @com.aliyun.core.annotation.NameInMap("InfoTitle")
     private String infoTitle;
 
-    @NameInMap("OriginalPrice")
+    @com.aliyun.core.annotation.NameInMap("OriginalPrice")
     private Float originalPrice;
 
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @NameInMap("PromotionRules")
+    @com.aliyun.core.annotation.NameInMap("PromotionRules")
     private PromotionRules promotionRules;
 
-    @NameInMap("TradePrice")
+    @com.aliyun.core.annotation.NameInMap("TradePrice")
     private Float tradePrice;
 
     private DescribePriceResponseBody(Builder builder) {
@@ -292,22 +291,22 @@ public class DescribePriceResponseBody extends TeaModel {
     } 
 
     public static class Coupon extends TeaModel {
-        @NameInMap("CanPromFee")
+        @com.aliyun.core.annotation.NameInMap("CanPromFee")
         private Float canPromFee;
 
-        @NameInMap("CouponDesc")
+        @com.aliyun.core.annotation.NameInMap("CouponDesc")
         private String couponDesc;
 
-        @NameInMap("CouponName")
+        @com.aliyun.core.annotation.NameInMap("CouponName")
         private String couponName;
 
-        @NameInMap("CouponOptionCode")
+        @com.aliyun.core.annotation.NameInMap("CouponOptionCode")
         private String couponOptionCode;
 
-        @NameInMap("CouponOptionNo")
+        @com.aliyun.core.annotation.NameInMap("CouponOptionNo")
         private String couponOptionNo;
 
-        @NameInMap("IsSelected")
+        @com.aliyun.core.annotation.NameInMap("IsSelected")
         private Boolean isSelected;
 
         private Coupon(Builder builder) {
@@ -433,7 +432,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class Coupons extends TeaModel {
-        @NameInMap("Coupon")
+        @com.aliyun.core.annotation.NameInMap("Coupon")
         private java.util.List < Coupon> coupon;
 
         private Coupons(Builder builder) {
@@ -474,13 +473,13 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class PromotionRule extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private PromotionRule(Builder builder) {
@@ -555,7 +554,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     }
     public static class PromotionRules extends TeaModel {
-        @NameInMap("PromotionRule")
+        @com.aliyun.core.annotation.NameInMap("PromotionRule")
         private java.util.List < PromotionRule> promotionRule;
 
         private PromotionRules(Builder builder) {

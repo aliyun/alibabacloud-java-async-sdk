@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.market20151101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiMeteringResponseBody</p>
  */
 public class DescribeApiMeteringResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @NameInMap("Fatal")
+    @com.aliyun.core.annotation.NameInMap("Fatal")
     private Boolean fatal;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
 
     private DescribeApiMeteringResponseBody(Builder builder) {
@@ -232,28 +231,32 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AliyunPk")
+        @com.aliyun.core.annotation.NameInMap("AliyunPk")
         private Long aliyunPk;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("TotalQuota")
+        @com.aliyun.core.annotation.NameInMap("TotalCapacity")
+        private Long totalCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("TotalQuota")
         private Long totalQuota;
 
-        @NameInMap("TotalUsage")
+        @com.aliyun.core.annotation.NameInMap("TotalUsage")
         private Long totalUsage;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
         private Result(Builder builder) {
             this.aliyunPk = builder.aliyunPk;
             this.productCode = builder.productCode;
             this.productName = builder.productName;
+            this.totalCapacity = builder.totalCapacity;
             this.totalQuota = builder.totalQuota;
             this.totalUsage = builder.totalUsage;
             this.unit = builder.unit;
@@ -289,6 +292,13 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalCapacity
+         */
+        public Long getTotalCapacity() {
+            return this.totalCapacity;
+        }
+
+        /**
          * @return totalQuota
          */
         public Long getTotalQuota() {
@@ -313,6 +323,7 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
             private Long aliyunPk; 
             private String productCode; 
             private String productName; 
+            private Long totalCapacity; 
             private Long totalQuota; 
             private Long totalUsage; 
             private String unit; 
@@ -338,6 +349,14 @@ public class DescribeApiMeteringResponseBody extends TeaModel {
              */
             public Builder productName(String productName) {
                 this.productName = productName;
+                return this;
+            }
+
+            /**
+             * TotalCapacity.
+             */
+            public Builder totalCapacity(Long totalCapacity) {
+                this.totalCapacity = totalCapacity;
                 return this;
             }
 
