@@ -669,6 +669,168 @@ public class CreateTaskRequest extends Request {
         } 
 
     }
+    public static class InspectionContents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
+
+        private InspectionContents(Builder builder) {
+            this.content = builder.content;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InspectionContents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String title; 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public InspectionContents build() {
+                return new InspectionContents(this);
+            } 
+
+        } 
+
+    }
+    public static class ServiceInspection extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InspectionContents")
+        private java.util.List < InspectionContents> inspectionContents;
+
+        @com.aliyun.core.annotation.NameInMap("InspectionIntroduction")
+        private String inspectionIntroduction;
+
+        @com.aliyun.core.annotation.NameInMap("SceneIntroduction")
+        private String sceneIntroduction;
+
+        @com.aliyun.core.annotation.NameInMap("SpeakerMap")
+        private java.util.Map < String, ? > speakerMap;
+
+        private ServiceInspection(Builder builder) {
+            this.inspectionContents = builder.inspectionContents;
+            this.inspectionIntroduction = builder.inspectionIntroduction;
+            this.sceneIntroduction = builder.sceneIntroduction;
+            this.speakerMap = builder.speakerMap;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceInspection create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inspectionContents
+         */
+        public java.util.List < InspectionContents> getInspectionContents() {
+            return this.inspectionContents;
+        }
+
+        /**
+         * @return inspectionIntroduction
+         */
+        public String getInspectionIntroduction() {
+            return this.inspectionIntroduction;
+        }
+
+        /**
+         * @return sceneIntroduction
+         */
+        public String getSceneIntroduction() {
+            return this.sceneIntroduction;
+        }
+
+        /**
+         * @return speakerMap
+         */
+        public java.util.Map < String, ? > getSpeakerMap() {
+            return this.speakerMap;
+        }
+
+        public static final class Builder {
+            private java.util.List < InspectionContents> inspectionContents; 
+            private String inspectionIntroduction; 
+            private String sceneIntroduction; 
+            private java.util.Map < String, ? > speakerMap; 
+
+            /**
+             * InspectionContents.
+             */
+            public Builder inspectionContents(java.util.List < InspectionContents> inspectionContents) {
+                this.inspectionContents = inspectionContents;
+                return this;
+            }
+
+            /**
+             * InspectionIntroduction.
+             */
+            public Builder inspectionIntroduction(String inspectionIntroduction) {
+                this.inspectionIntroduction = inspectionIntroduction;
+                return this;
+            }
+
+            /**
+             * SceneIntroduction.
+             */
+            public Builder sceneIntroduction(String sceneIntroduction) {
+                this.sceneIntroduction = sceneIntroduction;
+                return this;
+            }
+
+            /**
+             * SpeakerMap.
+             */
+            public Builder speakerMap(java.util.Map < String, ? > speakerMap) {
+                this.speakerMap = speakerMap;
+                return this;
+            }
+
+            public ServiceInspection build() {
+                return new ServiceInspection(this);
+            } 
+
+        } 
+
+    }
     public static class Summarization extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Types")
         private java.util.List < String > types;
@@ -1116,6 +1278,12 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PptExtractionEnabled")
         private Boolean pptExtractionEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceInspection")
+        private ServiceInspection serviceInspection;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceInspectionEnabled")
+        private Boolean serviceInspectionEnabled;
+
         @com.aliyun.core.annotation.NameInMap("Summarization")
         private Summarization summarization;
 
@@ -1145,6 +1313,8 @@ public class CreateTaskRequest extends Request {
             this.meetingAssistance = builder.meetingAssistance;
             this.meetingAssistanceEnabled = builder.meetingAssistanceEnabled;
             this.pptExtractionEnabled = builder.pptExtractionEnabled;
+            this.serviceInspection = builder.serviceInspection;
+            this.serviceInspectionEnabled = builder.serviceInspectionEnabled;
             this.summarization = builder.summarization;
             this.summarizationEnabled = builder.summarizationEnabled;
             this.textPolishEnabled = builder.textPolishEnabled;
@@ -1212,6 +1382,20 @@ public class CreateTaskRequest extends Request {
         }
 
         /**
+         * @return serviceInspection
+         */
+        public ServiceInspection getServiceInspection() {
+            return this.serviceInspection;
+        }
+
+        /**
+         * @return serviceInspectionEnabled
+         */
+        public Boolean getServiceInspectionEnabled() {
+            return this.serviceInspectionEnabled;
+        }
+
+        /**
          * @return summarization
          */
         public Summarization getSummarization() {
@@ -1268,6 +1452,8 @@ public class CreateTaskRequest extends Request {
             private MeetingAssistance meetingAssistance; 
             private Boolean meetingAssistanceEnabled; 
             private Boolean pptExtractionEnabled; 
+            private ServiceInspection serviceInspection; 
+            private Boolean serviceInspectionEnabled; 
             private Summarization summarization; 
             private Boolean summarizationEnabled; 
             private Boolean textPolishEnabled; 
@@ -1329,6 +1515,22 @@ public class CreateTaskRequest extends Request {
              */
             public Builder pptExtractionEnabled(Boolean pptExtractionEnabled) {
                 this.pptExtractionEnabled = pptExtractionEnabled;
+                return this;
+            }
+
+            /**
+             * ServiceInspection.
+             */
+            public Builder serviceInspection(ServiceInspection serviceInspection) {
+                this.serviceInspection = serviceInspection;
+                return this;
+            }
+
+            /**
+             * ServiceInspectionEnabled.
+             */
+            public Builder serviceInspectionEnabled(Boolean serviceInspectionEnabled) {
+                this.serviceInspectionEnabled = serviceInspectionEnabled;
                 return this;
             }
 
