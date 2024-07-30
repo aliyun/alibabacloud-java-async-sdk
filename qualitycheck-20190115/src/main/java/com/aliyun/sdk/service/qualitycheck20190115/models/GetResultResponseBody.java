@@ -301,6 +301,9 @@ public class GetResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
+        @com.aliyun.core.annotation.NameInMap("Identity")
+        private String identity;
+
         @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
@@ -314,6 +317,7 @@ public class GetResultResponseBody extends TeaModel {
             this.begin = builder.begin;
             this.emotionValue = builder.emotionValue;
             this.end = builder.end;
+            this.identity = builder.identity;
             this.role = builder.role;
             this.speechRate = builder.speechRate;
             this.words = builder.words;
@@ -349,6 +353,13 @@ public class GetResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return identity
+         */
+        public String getIdentity() {
+            return this.identity;
+        }
+
+        /**
          * @return role
          */
         public String getRole() {
@@ -373,6 +384,7 @@ public class GetResultResponseBody extends TeaModel {
             private Long begin; 
             private Integer emotionValue; 
             private Long end; 
+            private String identity; 
             private String role; 
             private Integer speechRate; 
             private String words; 
@@ -398,6 +410,14 @@ public class GetResultResponseBody extends TeaModel {
              */
             public Builder end(Long end) {
                 this.end = end;
+                return this;
+            }
+
+            /**
+             * Identity.
+             */
+            public Builder identity(String identity) {
+                this.identity = identity;
                 return this;
             }
 
