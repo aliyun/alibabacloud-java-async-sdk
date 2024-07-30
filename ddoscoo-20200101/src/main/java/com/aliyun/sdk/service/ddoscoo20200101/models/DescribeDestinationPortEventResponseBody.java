@@ -49,7 +49,7 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PortList.
+         * The ports.
          */
         public Builder portList(java.util.List < PortList> portList) {
             this.portList = portList;
@@ -57,7 +57,7 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
             private Long inPkts; 
 
             /**
-             * DstPort.
+             * The destination port.
              */
             public Builder dstPort(String dstPort) {
                 this.dstPort = dstPort;
@@ -117,7 +117,7 @@ public class DescribeDestinationPortEventResponseBody extends TeaModel {
             }
 
             /**
-             * InPkts.
+             * The number of request packets received by the destination port.
              */
             public Builder inPkts(Long inPkts) {
                 this.inPkts = inPkts;

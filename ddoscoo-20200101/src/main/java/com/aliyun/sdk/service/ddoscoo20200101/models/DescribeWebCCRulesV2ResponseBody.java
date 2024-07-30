@@ -114,6 +114,9 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
+        @com.aliyun.core.annotation.NameInMap("ContentList")
+        private String contentList;
+
         @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
@@ -125,6 +128,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
         private Condition(Builder builder) {
             this.content = builder.content;
+            this.contentList = builder.contentList;
             this.field = builder.field;
             this.headerName = builder.headerName;
             this.matchMethod = builder.matchMethod;
@@ -143,6 +147,13 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
          */
         public String getContent() {
             return this.content;
+        }
+
+        /**
+         * @return contentList
+         */
+        public String getContentList() {
+            return this.contentList;
         }
 
         /**
@@ -168,6 +179,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
 
         public static final class Builder {
             private String content; 
+            private String contentList; 
             private String field; 
             private String headerName; 
             private String matchMethod; 
@@ -177,6 +189,14 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * ContentList.
+             */
+            public Builder contentList(String contentList) {
+                this.contentList = contentList;
                 return this;
             }
 

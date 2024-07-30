@@ -114,7 +114,11 @@ public class DescribeDestinationPortEventRequest extends Request {
         } 
 
         /**
-         * EventType.
+         * The type of the attack event that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **defense**: attack events that trigger traffic scrubbing.
+         * *   **blackhole**: attack events that trigger blackhole filtering.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -123,7 +127,7 @@ public class DescribeDestinationPortEventRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address of the attacker.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -132,7 +136,7 @@ public class DescribeDestinationPortEventRequest extends Request {
         }
 
         /**
-         * Range.
+         * The number of destination ports to return. The ports are sorted in descending order of the number of received request packets. By default, the first **10** ports are returned.
          */
         public Builder range(Long range) {
             this.putQueryParameter("Range", range);
@@ -141,7 +145,11 @@ public class DescribeDestinationPortEventRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region in which your service is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn**: a region in the Chinese mainland.
+         * *   **cn-hongkong**: a region outside the Chinese mainland.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -150,7 +158,10 @@ public class DescribeDestinationPortEventRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * >  This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
