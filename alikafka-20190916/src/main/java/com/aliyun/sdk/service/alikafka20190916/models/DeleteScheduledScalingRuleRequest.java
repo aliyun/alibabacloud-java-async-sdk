@@ -84,7 +84,7 @@ public class DeleteScheduledScalingRuleRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -93,7 +93,7 @@ public class DeleteScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,7 +102,10 @@ public class DeleteScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the scheduled scaling rule.
+         * <p>
+         * 
+         * >  You can delete only rules that are disabled and rules that are scheduled only once and have been executed.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

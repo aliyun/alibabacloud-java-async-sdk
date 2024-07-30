@@ -17,6 +17,10 @@ public class GetConsumerProgressRequest extends Request {
     private String consumerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HideLastTimestamp")
+    private Boolean hideLastTimestamp;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -29,6 +33,7 @@ public class GetConsumerProgressRequest extends Request {
     private GetConsumerProgressRequest(Builder builder) {
         super(builder);
         this.consumerId = builder.consumerId;
+        this.hideLastTimestamp = builder.hideLastTimestamp;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
     }
@@ -54,6 +59,13 @@ public class GetConsumerProgressRequest extends Request {
     }
 
     /**
+     * @return hideLastTimestamp
+     */
+    public Boolean getHideLastTimestamp() {
+        return this.hideLastTimestamp;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -69,6 +81,7 @@ public class GetConsumerProgressRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetConsumerProgressRequest, Builder> {
         private String consumerId; 
+        private Boolean hideLastTimestamp; 
         private String instanceId; 
         private String regionId; 
 
@@ -79,6 +92,7 @@ public class GetConsumerProgressRequest extends Request {
         private Builder(GetConsumerProgressRequest request) {
             super(request);
             this.consumerId = request.consumerId;
+            this.hideLastTimestamp = request.hideLastTimestamp;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
         } 
@@ -89,6 +103,15 @@ public class GetConsumerProgressRequest extends Request {
         public Builder consumerId(String consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
             this.consumerId = consumerId;
+            return this;
+        }
+
+        /**
+         * HideLastTimestamp.
+         */
+        public Builder hideLastTimestamp(Boolean hideLastTimestamp) {
+            this.putQueryParameter("HideLastTimestamp", hideLastTimestamp);
+            this.hideLastTimestamp = hideLastTimestamp;
             return this;
         }
 

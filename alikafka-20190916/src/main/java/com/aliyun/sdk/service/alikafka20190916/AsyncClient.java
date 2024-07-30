@@ -42,6 +42,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSaslUserResponse> createSaslUser(CreateSaslUserRequest request);
 
+    /**
+      * ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
+      *
+     */
     CompletableFuture<CreateScheduledScalingRuleResponse> createScheduledScalingRule(CreateScheduledScalingRuleRequest request);
 
     /**
@@ -59,6 +63,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteSaslUserResponse> deleteSaslUser(DeleteSaslUserRequest request);
 
+    /**
+      * ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instance.
+      *
+     */
     CompletableFuture<DeleteScheduledScalingRuleResponse> deleteScheduledScalingRule(DeleteScheduledScalingRuleRequest request);
 
     CompletableFuture<DeleteTopicResponse> deleteTopic(DeleteTopicRequest request);
@@ -75,6 +83,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAllowedIpListResponse> getAllowedIpList(GetAllowedIpListRequest request);
 
+    /**
+      * ###### [](#-v3-serverless-)**This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
+      *
+     */
     CompletableFuture<GetAutoScalingConfigurationResponse> getAutoScalingConfiguration(GetAutoScalingConfigurationRequest request);
 
     CompletableFuture<GetConsumerListResponse> getConsumerList(GetConsumerListRequest request);
@@ -97,6 +109,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyPartitionNumResponse> modifyPartitionNum(ModifyPartitionNumRequest request);
 
+    /**
+      * ###### [](#-v3-serverless-)This operation is supported only by serverless ApsaraMQ for Kafka V3 instances.
+      *
+     */
     CompletableFuture<ModifyScheduledScalingRuleResponse> modifyScheduledScalingRule(ModifyScheduledScalingRuleRequest request);
 
     CompletableFuture<ModifyTopicRemarkResponse> modifyTopicRemark(ModifyTopicRemarkRequest request);

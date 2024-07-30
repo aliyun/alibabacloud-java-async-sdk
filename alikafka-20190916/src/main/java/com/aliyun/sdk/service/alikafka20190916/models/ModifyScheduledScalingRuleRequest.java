@@ -99,7 +99,13 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         } 
 
         /**
-         * Enable.
+         * Specifies whether to enable the scheduled scaling rule. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * >  If the scaling task is scheduled to execute only once and you want to enable the scheduled scaling rule, make sure that the value of this parameter is at least 30 minutes later than the current point in time.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -108,7 +114,7 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -117,7 +123,7 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -126,7 +132,7 @@ public class ModifyScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the scheduled scaling rule.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

@@ -396,7 +396,6 @@ public class CreatePostPayOrderRequest extends Request {
          * Valid values if you set PaidType to 3:
          * 
          * *   normal: Serverless Standard Edition
-         * *   professional: Serverless Professional Edition
          * 
          * For more information about the instance editions, see [Billing](~~84737~~).
          */

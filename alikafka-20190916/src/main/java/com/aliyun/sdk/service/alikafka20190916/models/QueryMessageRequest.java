@@ -182,20 +182,6 @@ public class QueryMessageRequest extends Request {
          * 
          * *   byOffset: queries messages by offset. If you select this value, you must configure Partition and Offset.
          * *   byTimestamp: queries messages by time. If you select this value, you must configure BeginTime.
-         * 
-         * <!---->
-         * 
-         * *   <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);

@@ -131,7 +131,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs.
+         * The resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -211,11 +211,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of the resource tag.
              * <p>
              * 
              * *   You must specify this parameter.
-             * *   The tag key must be 1 to 128 characters in length and cannot start with `acs:` or `aliyun`. The tag key cannot contain `http://` or `https://`.
+             * *   The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -223,11 +223,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * The value of the resource tag.
              * <p>
              * 
              * *   You can leave this parameter empty.
-             * *   The tag value must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag key cannot contain http:// or https://.
+             * *   The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.
              */
             public Builder value(String value) {
                 this.value = value;

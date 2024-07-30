@@ -229,11 +229,16 @@ public class DescribeAclsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * The operation type. Valid values:
+             * The types of operations allowed by the ACL. Separate multiple operation types with commas (,).
              * <p>
-             * 
-             * *   **Write**
-             * *   **Read**
+             * - Valid values:
+             * - Write
+             * - Read
+             * - Describe: reads of transactional IDs.
+             * - IdempotentWrite: idempotent data writes to clusters.
+             * - IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
+             * - DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.
+             * > This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
              */
             public Builder aclOperationType(String aclOperationType) {
                 this.aclOperationType = aclOperationType;
@@ -241,7 +246,11 @@ public class DescribeAclsResponseBody extends TeaModel {
             }
 
             /**
-             * AclPermissionType.
+             * The authorization method. Valid values:
+             * <p>
+             * - DENY
+             * - ALLOW
+             * > This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
              */
             public Builder aclPermissionType(String aclPermissionType) {
                 this.aclPermissionType = aclPermissionType;

@@ -170,7 +170,16 @@ public class DescribeAclsRequest extends Request {
         } 
 
         /**
-         * AclOperationType.
+         * The types of operations allowed by the ACL. Separate multiple operation types with commas (,).
+         * <p>
+         * - Valid values:
+         * - Write
+         * - Read
+         * - Describe: reads of transactional IDs.
+         * - IdempotentWrite: idempotent data writes to clusters.
+         * - IDEMPOTENT_WRITE: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
+         * - DESCRIBE_CONFIGS: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.
+         * > This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
          */
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
@@ -179,7 +188,11 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * AclPermissionType.
+         * The authorization method. Valid values:
+         * <p>
+         * - DENY
+         * - ALLOW
+         * > This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
          */
         public Builder aclPermissionType(String aclPermissionType) {
             this.putQueryParameter("AclPermissionType", aclPermissionType);
@@ -188,11 +201,13 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * The name or ID of the resource.
+         * The resource name.
          * <p>
          * 
-         * *   The value can be the name of a topic or a consumer group.
-         * *   You can use an asterisk (\*) to represent the names of all topics or consumer groups.
+         * *   The value can be the name of a topic or consumer group.
+         * *   You can use an asterisk (\*) to specify the names of all topics or consumer groups.
+         * 
+         * > You can query the resources on which permissions are granted only after you grant the user the required permissions on all resources.
          */
         public Builder aclResourceName(String aclResourceName) {
             this.putQueryParameter("AclResourceName", aclResourceName);
@@ -227,7 +242,10 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * Host.
+         * The source IP address.
+         * <p>
+         * >-  You can specify only a specific IP address or use the asterisk (*) wildcard character to specify all IP addresses. CIDR blocks are not supported.
+         * > - This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);
@@ -254,7 +272,12 @@ public class DescribeAclsRequest extends Request {
         }
 
         /**
-         * The name of the user.
+         * The username.
+         * <p>
+         * 
+         * *   You can use an asterisk (\*) to specify all users.
+         * 
+         * > You can use an asterisk (\*) to query the authorized users only after you grant the required permissions to all users.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

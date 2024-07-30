@@ -129,16 +129,16 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The resource ID. The following items describe the formats of resource IDs:
+         * The ID of the resource whose tags you want to query. The resource ID follows the following rules:
          * <p>
          * 
          * *   Instance ID: instanceId
          * *   Topic ID: Kafka_alikafka_instanceId_topic
          * *   Group ID: Kafka_alikafka_instanceId_consumerGroup
          * 
-         * For example, you create an instance whose ID is alikafka_post-cn-v0h1fgs2xxxx, a topic whose name is test-topic, and a group whose ID is test-consumer-group. In this case, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.
+         * For example, if the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the topic name is test-topic, and the group name is test-consumer-group, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group, respectively.
          * 
-         * >  You must specify one of the **ResourceId** and **Tag** parameters to query the tags that are attached to a resource. Otherwise, the call fails.
+         * >  You must configure one of **ResourceId** and **Tag** to query the tags that are bound to a resource. Otherwise, the request fails.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -215,11 +215,11 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of the resource tag.
              * <p>
              * 
              * *   If you leave this parameter empty, the keys of all tags are matched.
-             * *   The tag key must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag key cannot contain http:// or https://.
+             * *   The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -227,11 +227,11 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * The value of the resource tag.
              * <p>
              * 
-             * *   If you do not specify the tag key, you cannot specify the tag value. If you leave this parameter empty, the values of all tags are matched.
-             * *   The tag value must be 1 to 128 characters in length and cannot start with acs: or aliyun. The tag value cannot contain http:// or https://.
+             * *   If you leave Key empty, you must also leave this parameter empty. If you leave this parameter empty, the values of all tags are matched.
+             * *   The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs: or aliyun.
              */
             public Builder value(String value) {
                 this.value = value;

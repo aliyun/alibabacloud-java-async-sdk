@@ -216,7 +216,10 @@ public class CreateScheduledScalingRuleRequest extends Request {
         } 
 
         /**
-         * DurationMinutes.
+         * The duration of each scheduled scaling task. Unit: minutes.
+         * <p>
+         * 
+         * >  The value of this parameter must be greater than or equal to 15.
          */
         public Builder durationMinutes(Integer durationMinutes) {
             this.putQueryParameter("DurationMinutes", durationMinutes);
@@ -225,7 +228,11 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the scheduled scaling rule. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -234,7 +241,12 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * FirstScheduledTime.
+         * The time when the scheduled scaling task is executed.
+         * <p>
+         * 
+         * If you set ScheduleType to at, make sure that the value of this parameter is at least 30 minutes later than the current point in time.
+         * 
+         * ><notice>To prevent the broker from repeatedly executing instance upgrade and downgrade tasks, make sure that the interval between two consecutive scheduled scaling tasks is at least 60 minutes.></notice>
          */
         public Builder firstScheduledTime(Long firstScheduledTime) {
             this.putQueryParameter("FirstScheduledTime", firstScheduledTime);
@@ -243,7 +255,7 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -252,7 +264,7 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -261,7 +273,12 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * RepeatType.
+         * The frequency to execute the scheduled scaling task. This parameter is required only if you set ScheduleType to repeat. Valid values:
+         * <p>
+         * 
+         * *   Daily: The scheduled scaling task is executed every day.
+         * 
+         * *   Weekly: The scheduled scaling task is executed every week.
          */
         public Builder repeatType(String repeatType) {
             this.putQueryParameter("RepeatType", repeatType);
@@ -270,7 +287,10 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * ReservedPubFlow.
+         * The reserved production capacity for scheduled scaling. Unit: MB/s.
+         * <p>
+         * 
+         * >  You must specify a higher value than the instance specification for at least one of ReservedPubFlow and ReservedSubFlow.
          */
         public Builder reservedPubFlow(Integer reservedPubFlow) {
             this.putQueryParameter("ReservedPubFlow", reservedPubFlow);
@@ -279,7 +299,10 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * ReservedSubFlow.
+         * The reserved consumption capacity for scheduled scaling. Unit: MB/s.
+         * <p>
+         * 
+         * >  You must specify a higher value than the instance specification for at least one of ReservedPubFlow and ReservedSubFlow.
          */
         public Builder reservedSubFlow(Integer reservedSubFlow) {
             this.putQueryParameter("ReservedSubFlow", reservedSubFlow);
@@ -288,7 +311,10 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the scheduled scaling rule.
+         * <p>
+         * 
+         * >  The name of the scheduled scaling rule cannot be the same as the names of other rules for the instance.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -297,7 +323,11 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * ScheduleType.
+         * The type of the scheduled scaling task. Valid values:
+         * <p>
+         * 
+         * *   at: The scheduled scaling task is executed only once.
+         * *   repeat: The scheduled scaling task is repeatedly executed.
          */
         public Builder scheduleType(String scheduleType) {
             this.putQueryParameter("ScheduleType", scheduleType);
@@ -306,7 +336,7 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * TimeZone.
+         * The time zone in Coordinated Universal Time (UTC).
          */
         public Builder timeZone(String timeZone) {
             this.putQueryParameter("TimeZone", timeZone);
@@ -315,7 +345,7 @@ public class CreateScheduledScalingRuleRequest extends Request {
         }
 
         /**
-         * WeeklyTypes.
+         * The day on which the scheduled scaling task is executed every week. You can specify multiple days.
          */
         public Builder weeklyTypes(java.util.List < String > weeklyTypes) {
             String weeklyTypesShrink = shrink(weeklyTypes, "WeeklyTypes", "json");

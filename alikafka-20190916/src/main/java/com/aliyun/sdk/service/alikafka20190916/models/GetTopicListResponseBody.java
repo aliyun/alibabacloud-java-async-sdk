@@ -585,7 +585,7 @@ public class GetTopicListResponseBody extends TeaModel {
             }
 
             /**
-             * TopicConfig.
+             * The topic configuration.
              */
             public Builder topicConfig(String topicConfig) {
                 this.topicConfig = topicConfig;

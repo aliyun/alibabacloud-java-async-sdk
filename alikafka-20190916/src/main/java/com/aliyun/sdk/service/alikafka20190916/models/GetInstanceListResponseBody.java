@@ -1205,7 +1205,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The disk type. Valid values:
+             * The disk type of the instance. Valid values:
              * <p>
              * 
              * *   **0**: ultra disk
@@ -1365,7 +1365,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1397,7 +1397,7 @@ public class GetInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * 实例系列标识。返回值有 v2 ，v3，confluent。
+             * The instance version. Valid values: v2, v3, and confluent.
              */
             public Builder series(String series) {
                 this.series = series;

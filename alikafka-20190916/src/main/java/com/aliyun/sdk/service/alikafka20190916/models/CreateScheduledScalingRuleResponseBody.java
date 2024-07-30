@@ -73,7 +73,7 @@ public class CreateScheduledScalingRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code. The value 200 indicates that the request was successful.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class CreateScheduledScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +89,7 @@ public class CreateScheduledScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,11 @@ public class CreateScheduledScalingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

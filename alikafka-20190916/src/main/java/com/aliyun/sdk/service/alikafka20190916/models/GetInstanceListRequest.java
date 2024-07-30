@@ -160,11 +160,12 @@ public class GetInstanceListRequest extends Request {
         }
 
         /**
-         * 实例系列标识，可根据系列号来过滤不同系列的实例。取值如下：
+         * The instance version. You can use instance versions to filter different versions of instances. Valid values:
          * <p>
-         * - v2
-         * - v3
-         * - confluent
+         * 
+         * *   v2
+         * *   v3
+         * *   confluent
          */
         public Builder series(String series) {
             this.putQueryParameter("Series", series);

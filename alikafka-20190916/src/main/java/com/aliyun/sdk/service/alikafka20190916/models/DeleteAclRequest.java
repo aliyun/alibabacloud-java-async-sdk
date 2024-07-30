@@ -189,10 +189,12 @@ public class DeleteAclRequest extends Request {
          * The operation allowed by the access control list (ACL). Valid values:
          * <p>
          * 
-         * *   **Write**: data writes
-         * *   **Read**: data reads
+         * *   **Write**
+         * *   **Read**
          * *   **Describe**: reads of transactional IDs
          * *   **IdempotentWrite**: idempotent data writes to clusters
+         * *   **IDEMPOTENT_WRITE**: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
+         * *   **DESCRIBE_CONFIGS**: configuration queries. This value is available only for ApsaraMQ for Kafka V3 instances.
          */
         public Builder aclOperationType(String aclOperationType) {
             this.putQueryParameter("AclOperationType", aclOperationType);
@@ -208,8 +210,10 @@ public class DeleteAclRequest extends Request {
          * 
          * *   **Write**: data writes
          * *   **Read**: data reads
-         * *   **Describe**: reads of **transactional IDs**
-         * *   **IdempotentWrite**: idempotent data writes to **clusters**
+         * *   **Describe**: reads of transactional IDs
+         * *   **IdempotentWrite**: idempotent data writes to clusters
+         * *   **IDEMPOTENT_WRITE**: idempotent data writes to clusters. This value is available only for ApsaraMQ for Kafka V3 instances.
+         * *   **DESCRIBE_CONFIGS**: queries of configurations. This value is available only for ApsaraMQ for Kafka V3 instances.
          * 
          * >  This parameter is available only for ApsaraMQ for Kafka V3 serverless instances.
          */
@@ -277,6 +281,10 @@ public class DeleteAclRequest extends Request {
 
         /**
          * The IP address of the source.
+         * <p>
+         * 
+         * > - You can specify only a specific IP address or use the asterisk (\*) wildcard character to specify all IP addresses. CIDR blocks are not supported.
+         * >- This parameter is available only for serverless ApsaraMQ for Kafka V3 instances.
          */
         public Builder host(String host) {
             this.putQueryParameter("Host", host);

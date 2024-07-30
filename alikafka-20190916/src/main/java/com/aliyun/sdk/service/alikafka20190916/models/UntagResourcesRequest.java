@@ -155,7 +155,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The tag key.
+         * The key of the resource tag.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

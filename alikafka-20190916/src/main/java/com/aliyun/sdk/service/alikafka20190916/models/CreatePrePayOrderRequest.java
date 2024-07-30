@@ -250,7 +250,10 @@ public class CreatePrePayOrderRequest extends Request {
         } 
 
         /**
-         * The configurations of ApsaraMQ for Confluent components.
+         * The configurations of Confluent.
+         * <p>
+         * 
+         * >  When you create an ApsaraMQ for Confluent instance, you must configure this parameter.
          */
         public Builder confluentConfig(ConfluentConfig confluentConfig) {
             String confluentConfigShrink = shrink(confluentConfig, "ConfluentConfig", "json");
@@ -260,11 +263,13 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The deployment mode of the instance. Valid values:
+         * The type of the network in which the instance is deployed. Valid values:
          * <p>
          * 
-         * *   **4**: deploys the instance that allows access from the Internet and a VPC.
-         * *   **5**: deploys the instance that allows access only from a VPC.
+         * *   **4**: Internet and virtual private cloud (VPC)
+         * *   **5**: VPC
+         * 
+         * >  If you create an ApsaraMQ for Confluent instance, set the value to 5. After the instance is created, you can specify whether to enable each component.
          */
         public Builder deployType(Integer deployType) {
             this.putQueryParameter("DeployType", deployType);
@@ -273,10 +278,12 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The disk size. Unit: GB.
+         * The disk size. Unit: GB
          * <p>
          * 
-         * For more information about the valid values, see [Billing](~~84737~~).
+         * For information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
          */
         public Builder diskSize(Integer diskSize) {
             this.putQueryParameter("DiskSize", diskSize);
@@ -290,6 +297,8 @@ public class CreatePrePayOrderRequest extends Request {
          * 
          * *   **0**: ultra disk
          * *   **1**: standard SSD
+         * 
+         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -310,11 +319,13 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The Internet traffic for the instance.
+         * The maximum Internet traffic in the instance.
          * <p>
          * 
-         * *   This parameter is required if the **DeployType** parameter is set to **4**.
-         * *   For more information about the valid values, see [Pay-as-you-go](~~72142~~).
+         * *   If you set **DeployType** to **4**, you must configure this parameter.
+         * *   For information about the valid values, see [Pay-as-you-go](~~72142~~).
+         * 
+         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
          */
         public Builder eipMax(Integer eipMax) {
             this.putQueryParameter("EipMax", eipMax);
@@ -323,11 +334,13 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The maximum traffic for the instance. We recommend that you do not configure this parameter.
+         * The maximum traffic in the instance. We recommend that you do not configure this parameter.
          * <p>
          * 
-         * *   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.
-         * *   For more information about the valid values, see [Billing](~~84737~~).
+         * *   You must set one of **IoMax** and **IoMaxSpec**. If both parameters are configured, the value of **IoMaxSpec** is used. We recommend that you configure only **IoMaxSpec**.
+         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
          */
         public Builder ioMax(Integer ioMax) {
             this.putQueryParameter("IoMax", ioMax);
@@ -339,8 +352,10 @@ public class CreatePrePayOrderRequest extends Request {
          * The traffic specification of the instance. We recommend that you configure this parameter.
          * <p>
          * 
-         * *   You must configure at least one of the **IoMax** and **IoMaxSpec** parameters. If both parameters are configured, the value of the **IoMaxSpec** parameter takes effect. We recommend that you configure only the **IoMaxSpec** parameter.
-         * *   For more information about the valid values, see [Billing](~~84737~~).
+         * *   You must configure one of **IoMax** and **IoMaxSpec**. If both parameters are configured, the value of **IoMaxSpec** is used. We recommend that you configure only **IoMaxSpec**.
+         * *   For more information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
          */
         public Builder ioMaxSpec(String ioMaxSpec) {
             this.putQueryParameter("IoMaxSpec", ioMaxSpec);
@@ -365,9 +380,11 @@ public class CreatePrePayOrderRequest extends Request {
          * The number of partitions. We recommend that you configure this parameter.
          * <p>
          * 
-         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
-         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
-         * *   For more information about the valid values, see [Billing](~~84737~~).
+         * *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.
+         * *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
+         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
          */
         public Builder partitionNum(Integer partitionNum) {
             this.putQueryParameter("PartitionNum", partitionNum);
@@ -397,7 +414,7 @@ public class CreatePrePayOrderRequest extends Request {
         }
 
         /**
-         * The edition of the instance. Valid values:
+         * The instance edition. Valid values:
          * <p>
          * 
          * *   **normal**: Standard Edition (High Write)
@@ -405,6 +422,8 @@ public class CreatePrePayOrderRequest extends Request {
          * *   **professionalForHighRead**: Professional Edition (High Read)
          * 
          * For more information, see [Billing](~~84737~~).
+         * 
+         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -425,10 +444,12 @@ public class CreatePrePayOrderRequest extends Request {
          * The number of topics. We recommend that you do not configure this parameter.
          * <p>
          * 
-         * *   You must specify at least one of the PartitionNum and TopicQuota parameters. We recommend that you configure only the PartitionNum parameter.
-         * *   If you specify both parameters, the topic-based sales model is used to check whether the PartitionNum value and the TopicQuota value are the same. If they are not the same, a failure response is returned. If they are the same, the order is placed based on the PartitionNum value.
-         * *   The default value of the TopicQuota parameter varies based on the value of the IoMaxSpec parameter. If the number of topics that you consume exceeds the default value, you are charged additional fees.
-         * *   For more information about the valid values, see [Billing](~~84737~~).
+         * *   You must configure one of PartitionNum and TopicQuota. We recommend that you configure only PartitionNum.
+         * *   If you configure PartitionNum and TopicQuota at the same time, the system verifies whether the price of the partitions equals the price of the topics based on the previous topic-based selling mode. If the price of the partitions does not equal the price of the topics, an error is returned. If the price of the partitions equals the price of the topics, the instance is purchased based on the partition number.
+         * *   The default value of TopicQuota varies based on the value of IoMaxSpec. If the number of topics that you use exceeds the default value, you are charged additional fees.
+         * *   For information about the valid values of this parameter, see [Billing](~~84737~~).
+         * 
+         * >  If you create an ApsaraMQ for Confluent instance, you do not need to configure this parameter.
          */
         public Builder topicQuota(Integer topicQuota) {
             this.putQueryParameter("TopicQuota", topicQuota);
