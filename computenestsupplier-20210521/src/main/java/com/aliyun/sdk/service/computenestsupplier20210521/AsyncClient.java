@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddServiceSharedAccountsResponse> addServiceSharedAccounts(AddServiceSharedAccountsRequest request);
 
+    CompletableFuture<ApproveServiceUsageResponse> approveServiceUsage(ApproveServiceUsageRequest request);
+
     CompletableFuture<ContinueDeployServiceInstanceResponse> continueDeployServiceInstance(ContinueDeployServiceInstanceRequest request);
 
     CompletableFuture<CreateArtifactResponse> createArtifact(CreateArtifactRequest request);
@@ -28,6 +30,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
 
     CompletableFuture<CreateServiceInstanceResponse> createServiceInstance(CreateServiceInstanceRequest request);
+
+    CompletableFuture<CreateServiceUsageResponse> createServiceUsage(CreateServiceUsageRequest request);
 
     CompletableFuture<DeleteArtifactResponse> deleteArtifact(DeleteArtifactRequest request);
 
@@ -59,7 +63,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListArtifactsResponse> listArtifacts(ListArtifactsRequest request);
 
+    CompletableFuture<ListServiceCategoriesResponse> listServiceCategories(ListServiceCategoriesRequest request);
+
     CompletableFuture<ListServiceInstancesResponse> listServiceInstances(ListServiceInstancesRequest request);
+
+    CompletableFuture<ListServiceSharedAccountsResponse> listServiceSharedAccounts(ListServiceSharedAccountsRequest request);
 
     CompletableFuture<ListServiceUsagesResponse> listServiceUsages(ListServiceUsagesRequest request);
 
@@ -71,7 +79,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RegisterServiceResponse> registerService(RegisterServiceRequest request);
 
+    CompletableFuture<RejectServiceUsageResponse> rejectServiceUsage(RejectServiceUsageRequest request);
+
     CompletableFuture<ReleaseArtifactResponse> releaseArtifact(ReleaseArtifactRequest request);
+
+    CompletableFuture<RemoveServiceSharedAccountsResponse> removeServiceSharedAccounts(RemoveServiceSharedAccountsRequest request);
 
     CompletableFuture<RestartServiceInstanceResponse> restartServiceInstance(RestartServiceInstanceRequest request);
 

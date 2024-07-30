@@ -47,6 +47,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OperationEndTime")
     private String operationEndTime;
 
+    @com.aliyun.core.annotation.NameInMap("OperationExtraInfo")
+    private String operationExtraInfo;
+
     @com.aliyun.core.annotation.NameInMap("OperationStartTime")
     private String operationStartTime;
 
@@ -123,6 +126,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         this.networkConfig = builder.networkConfig;
         this.operatedServiceInstanceId = builder.operatedServiceInstanceId;
         this.operationEndTime = builder.operationEndTime;
+        this.operationExtraInfo = builder.operationExtraInfo;
         this.operationStartTime = builder.operationStartTime;
         this.outputs = builder.outputs;
         this.parameters = builder.parameters;
@@ -236,6 +240,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      */
     public String getOperationEndTime() {
         return this.operationEndTime;
+    }
+
+    /**
+     * @return operationExtraInfo
+     */
+    public String getOperationExtraInfo() {
+        return this.operationExtraInfo;
     }
 
     /**
@@ -398,6 +409,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private NetworkConfig networkConfig; 
         private String operatedServiceInstanceId; 
         private String operationEndTime; 
+        private String operationExtraInfo; 
         private String operationStartTime; 
         private String outputs; 
         private String parameters; 
@@ -530,6 +542,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          */
         public Builder operationEndTime(String operationEndTime) {
             this.operationEndTime = operationEndTime;
+            return this;
+        }
+
+        /**
+         * OperationExtraInfo.
+         */
+        public Builder operationExtraInfo(String operationExtraInfo) {
+            this.operationExtraInfo = operationExtraInfo;
             return this;
         }
 

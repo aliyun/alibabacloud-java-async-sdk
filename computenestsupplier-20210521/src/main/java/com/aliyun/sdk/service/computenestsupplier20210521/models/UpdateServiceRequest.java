@@ -411,7 +411,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * Commodity.
+         * Bind Commodity Information
          */
         public Builder commodity(Commodity commodity) {
             String commodityShrink = shrink(commodity, "Commodity", "json");
@@ -682,7 +682,7 @@ public class UpdateServiceRequest extends Request {
             private String templateName; 
 
             /**
-             * Mappings.
+             * This parameter is not publicly accessible.
              */
             public Builder mappings(String mappings) {
                 this.mappings = mappings;
@@ -690,7 +690,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * TemplateName.
+             * This parameter is not publicly accessible.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -767,7 +767,7 @@ public class UpdateServiceRequest extends Request {
             private String type; 
 
             /**
-             * EntityId.
+             * The ID of the entity.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -775,7 +775,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * MetricName.
+             * Metric Name, filled in when Type is ComputeNestBill or ComputeNestPrometheus
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -783,7 +783,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * Promql.
+             * Custom prometheus query
              */
             public Builder promql(String promql) {
                 this.promql = promql;
@@ -791,7 +791,13 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * Type.
+             * Type, value：
+             * <p>
+             * 
+             * * **Custom**
+             * * **ComputeNestBill**
+             * * **ComputeNestPrometheus**
+             * * **ComputeNestTime**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -856,7 +862,7 @@ public class UpdateServiceRequest extends Request {
             private String templateName; 
 
             /**
-             * EntityIds.
+             * The ID of the entity.
              */
             public Builder entityIds(java.util.List < String > entityIds) {
                 this.entityIds = entityIds;
@@ -864,7 +870,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * SpecificationName.
+             * The package name.
              */
             public Builder specificationName(String specificationName) {
                 this.specificationName = specificationName;
@@ -872,7 +878,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * TemplateName.
+             * The template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -937,7 +943,7 @@ public class UpdateServiceRequest extends Request {
             private String templateName; 
 
             /**
-             * SpecificationCode.
+             * Specification code.
              */
             public Builder specificationCode(String specificationCode) {
                 this.specificationCode = specificationCode;
@@ -945,7 +951,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * SpecificationName.
+             * The package name.
              */
             public Builder specificationName(String specificationName) {
                 this.specificationName = specificationName;
@@ -953,7 +959,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * TemplateName.
+             * The template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1042,7 +1048,7 @@ public class UpdateServiceRequest extends Request {
             private java.util.List < SpecificationMappings> specificationMappings; 
 
             /**
-             * ComponentsMappings.
+             * This parameter is not publicly accessible.
              */
             public Builder componentsMappings(java.util.List < ComponentsMappings> componentsMappings) {
                 this.componentsMappings = componentsMappings;
@@ -1050,7 +1056,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * MeteringEntityExtraInfos.
+             * Metering Item Configuration Information (Cloud Marketplace - Pay-As-You-Go Use)
              */
             public Builder meteringEntityExtraInfos(java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos) {
                 this.meteringEntityExtraInfos = meteringEntityExtraInfos;
@@ -1058,7 +1064,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * MeteringEntityMappings.
+             * Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Pay-As-You-Go Use)
              */
             public Builder meteringEntityMappings(java.util.List < MeteringEntityMappings> meteringEntityMappings) {
                 this.meteringEntityMappings = meteringEntityMappings;
@@ -1066,7 +1072,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * SaasBoostConfig.
+             * Saas boost config information
              */
             public Builder saasBoostConfig(String saasBoostConfig) {
                 this.saasBoostConfig = saasBoostConfig;
@@ -1074,7 +1080,7 @@ public class UpdateServiceRequest extends Request {
             }
 
             /**
-             * SpecificationMappings.
+             * Product Specifications and Template/specification mapping Relationships (Cloud Marketplace - Subscription/Permanent Use)
              */
             public Builder specificationMappings(java.util.List < SpecificationMappings> specificationMappings) {
                 this.specificationMappings = specificationMappings;
@@ -1295,10 +1301,14 @@ public class UpdateServiceRequest extends Request {
 
     }
     public static class UpdateOption extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("UpdateArtifact")
+        private Boolean updateArtifact;
+
         @com.aliyun.core.annotation.NameInMap("UpdateFrom")
         private String updateFrom;
 
         private UpdateOption(Builder builder) {
+            this.updateArtifact = builder.updateArtifact;
             this.updateFrom = builder.updateFrom;
         }
 
@@ -1311,6 +1321,13 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
+         * @return updateArtifact
+         */
+        public Boolean getUpdateArtifact() {
+            return this.updateArtifact;
+        }
+
+        /**
          * @return updateFrom
          */
         public String getUpdateFrom() {
@@ -1318,7 +1335,16 @@ public class UpdateServiceRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean updateArtifact; 
             private String updateFrom; 
+
+            /**
+             * UpdateArtifact.
+             */
+            public Builder updateArtifact(Boolean updateArtifact) {
+                this.updateArtifact = updateArtifact;
+                return this;
+            }
 
             /**
              * The options for update the service. Valid values:

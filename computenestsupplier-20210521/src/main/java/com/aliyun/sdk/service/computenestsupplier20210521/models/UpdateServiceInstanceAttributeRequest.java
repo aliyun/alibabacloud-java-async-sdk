@@ -106,7 +106,7 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
         }
 
         /**
-         * LicenseData.
+         * The License Data
          */
         public Builder licenseData(LicenseData licenseData) {
             String licenseDataShrink = shrink(licenseData, "LicenseData", "json");
@@ -167,7 +167,7 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
             private String customData; 
 
             /**
-             * CustomData.
+             * The Custom Data
              */
             public Builder customData(String customData) {
                 this.customData = customData;
