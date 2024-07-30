@@ -286,8 +286,17 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Nodes")
         private String nodes;
 
+        @com.aliyun.core.annotation.NameInMap("PolarSccTimeoutAction")
+        private String polarSccTimeoutAction;
+
+        @com.aliyun.core.annotation.NameInMap("PolarSccWaitTimeout")
+        private String polarSccWaitTimeout;
+
         @com.aliyun.core.annotation.NameInMap("ReadWriteMode")
         private String readWriteMode;
+
+        @com.aliyun.core.annotation.NameInMap("SccMode")
+        private String sccMode;
 
         private Items(Builder builder) {
             this.addressItems = builder.addressItems;
@@ -299,7 +308,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             this.endpointType = builder.endpointType;
             this.nodeWithRoles = builder.nodeWithRoles;
             this.nodes = builder.nodes;
+            this.polarSccTimeoutAction = builder.polarSccTimeoutAction;
+            this.polarSccWaitTimeout = builder.polarSccWaitTimeout;
             this.readWriteMode = builder.readWriteMode;
+            this.sccMode = builder.sccMode;
         }
 
         public static Builder builder() {
@@ -374,10 +386,31 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
         }
 
         /**
+         * @return polarSccTimeoutAction
+         */
+        public String getPolarSccTimeoutAction() {
+            return this.polarSccTimeoutAction;
+        }
+
+        /**
+         * @return polarSccWaitTimeout
+         */
+        public String getPolarSccWaitTimeout() {
+            return this.polarSccWaitTimeout;
+        }
+
+        /**
          * @return readWriteMode
          */
         public String getReadWriteMode() {
             return this.readWriteMode;
+        }
+
+        /**
+         * @return sccMode
+         */
+        public String getSccMode() {
+            return this.sccMode;
         }
 
         public static final class Builder {
@@ -390,7 +423,10 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             private String endpointType; 
             private String nodeWithRoles; 
             private String nodes; 
+            private String polarSccTimeoutAction; 
+            private String polarSccWaitTimeout; 
             private String readWriteMode; 
+            private String sccMode; 
 
             /**
              * The details of the endpoint.
@@ -496,6 +532,22 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
             }
 
             /**
+             * PolarSccTimeoutAction.
+             */
+            public Builder polarSccTimeoutAction(String polarSccTimeoutAction) {
+                this.polarSccTimeoutAction = polarSccTimeoutAction;
+                return this;
+            }
+
+            /**
+             * PolarSccWaitTimeout.
+             */
+            public Builder polarSccWaitTimeout(String polarSccWaitTimeout) {
+                this.polarSccWaitTimeout = polarSccWaitTimeout;
+                return this;
+            }
+
+            /**
              * The read/write mode. Valid values:
              * <p>
              * 
@@ -504,6 +556,14 @@ public class DescribeDBClusterEndpointsResponseBody extends TeaModel {
              */
             public Builder readWriteMode(String readWriteMode) {
                 this.readWriteMode = readWriteMode;
+                return this;
+            }
+
+            /**
+             * SccMode.
+             */
+            public Builder sccMode(String sccMode) {
+                this.sccMode = sccMode;
                 return this;
             }
 

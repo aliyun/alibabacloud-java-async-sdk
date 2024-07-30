@@ -46,6 +46,14 @@ public class ModifyDBClusterEndpointRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolarSccTimeoutAction")
+    private String polarSccTimeoutAction;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolarSccWaitTimeout")
+    private String polarSccWaitTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ReadWriteMode")
     private String readWriteMode;
 
@@ -57,6 +65,10 @@ public class ModifyDBClusterEndpointRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SccMode")
+    private String sccMode;
+
     private ModifyDBClusterEndpointRequest(Builder builder) {
         super(builder);
         this.autoAddNewNodes = builder.autoAddNewNodes;
@@ -67,9 +79,12 @@ public class ModifyDBClusterEndpointRequest extends Request {
         this.nodes = builder.nodes;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.polarSccTimeoutAction = builder.polarSccTimeoutAction;
+        this.polarSccWaitTimeout = builder.polarSccWaitTimeout;
         this.readWriteMode = builder.readWriteMode;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.sccMode = builder.sccMode;
     }
 
     public static Builder builder() {
@@ -142,6 +157,20 @@ public class ModifyDBClusterEndpointRequest extends Request {
     }
 
     /**
+     * @return polarSccTimeoutAction
+     */
+    public String getPolarSccTimeoutAction() {
+        return this.polarSccTimeoutAction;
+    }
+
+    /**
+     * @return polarSccWaitTimeout
+     */
+    public String getPolarSccWaitTimeout() {
+        return this.polarSccWaitTimeout;
+    }
+
+    /**
      * @return readWriteMode
      */
     public String getReadWriteMode() {
@@ -162,6 +191,13 @@ public class ModifyDBClusterEndpointRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return sccMode
+     */
+    public String getSccMode() {
+        return this.sccMode;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBClusterEndpointRequest, Builder> {
         private String autoAddNewNodes; 
         private String DBClusterId; 
@@ -171,9 +207,12 @@ public class ModifyDBClusterEndpointRequest extends Request {
         private String nodes; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String polarSccTimeoutAction; 
+        private String polarSccWaitTimeout; 
         private String readWriteMode; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String sccMode; 
 
         private Builder() {
             super();
@@ -189,9 +228,12 @@ public class ModifyDBClusterEndpointRequest extends Request {
             this.nodes = request.nodes;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.polarSccTimeoutAction = request.polarSccTimeoutAction;
+            this.polarSccWaitTimeout = request.polarSccWaitTimeout;
             this.readWriteMode = request.readWriteMode;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.sccMode = request.sccMode;
         } 
 
         /**
@@ -339,6 +381,24 @@ public class ModifyDBClusterEndpointRequest extends Request {
         }
 
         /**
+         * PolarSccTimeoutAction.
+         */
+        public Builder polarSccTimeoutAction(String polarSccTimeoutAction) {
+            this.putQueryParameter("PolarSccTimeoutAction", polarSccTimeoutAction);
+            this.polarSccTimeoutAction = polarSccTimeoutAction;
+            return this;
+        }
+
+        /**
+         * PolarSccWaitTimeout.
+         */
+        public Builder polarSccWaitTimeout(String polarSccWaitTimeout) {
+            this.putQueryParameter("PolarSccWaitTimeout", polarSccWaitTimeout);
+            this.polarSccWaitTimeout = polarSccWaitTimeout;
+            return this;
+        }
+
+        /**
          * The read/write mode. Valid values:
          * <p>
          * 
@@ -366,6 +426,15 @@ public class ModifyDBClusterEndpointRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SccMode.
+         */
+        public Builder sccMode(String sccMode) {
+            this.putQueryParameter("SccMode", sccMode);
+            this.sccMode = sccMode;
             return this;
         }
 

@@ -1353,6 +1353,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
+        @com.aliyun.core.annotation.NameInMap("MirrorInsName")
+        private String mirrorInsName;
+
         @com.aliyun.core.annotation.NameInMap("Orca")
         private String orca;
 
@@ -1390,6 +1393,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
             this.memorySize = builder.memorySize;
+            this.mirrorInsName = builder.mirrorInsName;
             this.orca = builder.orca;
             this.remoteMemorySize = builder.remoteMemorySize;
             this.sccMode = builder.sccMode;
@@ -1506,6 +1510,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return mirrorInsName
+         */
+        public String getMirrorInsName() {
+            return this.mirrorInsName;
+        }
+
+        /**
          * @return orca
          */
         public String getOrca() {
@@ -1569,6 +1580,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Integer maxConnections; 
             private Integer maxIOPS; 
             private String memorySize; 
+            private String mirrorInsName; 
             private String orca; 
             private String remoteMemorySize; 
             private String sccMode; 
@@ -1713,6 +1725,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
+                return this;
+            }
+
+            /**
+             * MirrorInsName.
+             */
+            public Builder mirrorInsName(String mirrorInsName) {
+                this.mirrorInsName = mirrorInsName;
                 return this;
             }
 

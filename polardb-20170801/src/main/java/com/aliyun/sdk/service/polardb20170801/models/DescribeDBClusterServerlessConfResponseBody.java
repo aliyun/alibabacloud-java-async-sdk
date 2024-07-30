@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterServerlessConfResponseBody</p>
  */
 public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AgileScaleMax")
+    private String agileScaleMax;
+
     @com.aliyun.core.annotation.NameInMap("AllowShutDown")
     private String allowShutDown;
 
@@ -53,7 +56,11 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Switchs")
     private String switchs;
 
+    @com.aliyun.core.annotation.NameInMap("TraditionalScaleMaxThreshold")
+    private String traditionalScaleMaxThreshold;
+
     private DescribeDBClusterServerlessConfResponseBody(Builder builder) {
+        this.agileScaleMax = builder.agileScaleMax;
         this.allowShutDown = builder.allowShutDown;
         this.DBClusterId = builder.DBClusterId;
         this.requestId = builder.requestId;
@@ -68,6 +75,7 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         this.serverlessRuleCpuShrinkThreshold = builder.serverlessRuleCpuShrinkThreshold;
         this.serverlessRuleMode = builder.serverlessRuleMode;
         this.switchs = builder.switchs;
+        this.traditionalScaleMaxThreshold = builder.traditionalScaleMaxThreshold;
     }
 
     public static Builder builder() {
@@ -76,6 +84,13 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
 
     public static DescribeDBClusterServerlessConfResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return agileScaleMax
+     */
+    public String getAgileScaleMax() {
+        return this.agileScaleMax;
     }
 
     /**
@@ -176,7 +191,15 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         return this.switchs;
     }
 
+    /**
+     * @return traditionalScaleMaxThreshold
+     */
+    public String getTraditionalScaleMaxThreshold() {
+        return this.traditionalScaleMaxThreshold;
+    }
+
     public static final class Builder {
+        private String agileScaleMax; 
         private String allowShutDown; 
         private String DBClusterId; 
         private String requestId; 
@@ -191,6 +214,15 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
         private String serverlessRuleCpuShrinkThreshold; 
         private String serverlessRuleMode; 
         private String switchs; 
+        private String traditionalScaleMaxThreshold; 
+
+        /**
+         * AgileScaleMax.
+         */
+        public Builder agileScaleMax(String agileScaleMax) {
+            this.agileScaleMax = agileScaleMax;
+            return this;
+        }
 
         /**
          * Indicates whether the no-activity suspension feature is enabled. Default value: false. Valid values:
@@ -305,6 +337,14 @@ public class DescribeDBClusterServerlessConfResponseBody extends TeaModel {
          */
         public Builder switchs(String switchs) {
             this.switchs = switchs;
+            return this;
+        }
+
+        /**
+         * TraditionalScaleMaxThreshold.
+         */
+        public Builder traditionalScaleMaxThreshold(String traditionalScaleMaxThreshold) {
+            this.traditionalScaleMaxThreshold = traditionalScaleMaxThreshold;
             return this;
         }
 
