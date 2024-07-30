@@ -19,11 +19,15 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddCategoryResponse> addCategory(AddCategoryRequest request);
+
     CompletableFuture<AddFileResponse> addFile(AddFileRequest request);
 
     CompletableFuture<ApplyFileUploadLeaseResponse> applyFileUploadLease(ApplyFileUploadLeaseRequest request);
 
     CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
+
+    CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
 
     CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request);
 
@@ -34,6 +38,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFileResponse> describeFile(DescribeFileRequest request);
 
     CompletableFuture<GetIndexJobStatusResponse> getIndexJobStatus(GetIndexJobStatusRequest request);
+
+    CompletableFuture<ListCategoryResponse> listCategory(ListCategoryRequest request);
 
     CompletableFuture<ListChunksResponse> listChunks(ListChunksRequest request);
 
