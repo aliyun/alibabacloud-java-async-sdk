@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetEnrolledAccountResponseBody</p>
  */
 public class GetEnrolledAccountResponseBody extends TeaModel {
-    @NameInMap("AccountUid")
+    @com.aliyun.core.annotation.NameInMap("AccountUid")
     private Long accountUid;
 
-    @NameInMap("BaselineId")
+    @com.aliyun.core.annotation.NameInMap("BaselineId")
     private String baselineId;
 
-    @NameInMap("BaselineItems")
+    @com.aliyun.core.annotation.NameInMap("BaselineItems")
     private java.util.List < BaselineItems> baselineItems;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("ErrorInfo")
+    @com.aliyun.core.annotation.NameInMap("ErrorInfo")
     private ErrorInfo errorInfo;
 
-    @NameInMap("FolderId")
+    @com.aliyun.core.annotation.NameInMap("FolderId")
     private String folderId;
 
-    @NameInMap("Initialized")
+    @com.aliyun.core.annotation.NameInMap("Initialized")
     private Boolean initialized;
 
-    @NameInMap("Inputs")
+    @com.aliyun.core.annotation.NameInMap("Inputs")
     private Inputs inputs;
 
-    @NameInMap("MasterAccountUid")
+    @com.aliyun.core.annotation.NameInMap("MasterAccountUid")
     private Long masterAccountUid;
 
-    @NameInMap("PayerAccountUid")
+    @com.aliyun.core.annotation.NameInMap("PayerAccountUid")
     private Long payerAccountUid;
 
-    @NameInMap("Progress")
+    @com.aliyun.core.annotation.NameInMap("Progress")
     private java.util.List < Progress> progress;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private GetEnrolledAccountResponseBody(Builder builder) {
@@ -214,7 +213,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the baseline that was applied to the account.
+         * The ID of the baseline that is implemented.
          */
         public Builder baselineId(String baselineId) {
             this.baselineId = baselineId;
@@ -222,7 +221,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * BaselineItems.
+         * An array that contains baseline items.
          */
         public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
             this.baselineItems = baselineItems;
@@ -230,7 +229,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The time at which the account was created.
+         * The time when the account was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -246,7 +245,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
+         * <p>
+         * 
+         * >  This parameter is returned if the value of `Status` is `Failed` or `ScheduleFailed`.
          */
         public Builder errorInfo(ErrorInfo errorInfo) {
             this.errorInfo = errorInfo;
@@ -262,7 +264,11 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the account was initialized.
+         * Indicates whether the initialization is complete. Valid values:
+         * <p>
+         * 
+         * *   false
+         * *   true
          */
         public Builder initialized(Boolean initialized) {
             this.initialized = initialized;
@@ -270,7 +276,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The input parameters that are used when you enrolled the account.
+         * The input parameters that are used when the account was registered.
          */
         public Builder inputs(Inputs inputs) {
             this.inputs = inputs;
@@ -278,7 +284,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the master account to which the account belongs.
+         * The ID of the management account of the resource directory to which the account belongs.
          */
         public Builder masterAccountUid(Long masterAccountUid) {
             this.masterAccountUid = masterAccountUid;
@@ -286,7 +292,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the billing account.
+         * The ID of the settlement account.
          */
         public Builder payerAccountUid(Long payerAccountUid) {
             this.payerAccountUid = payerAccountUid;
@@ -294,7 +300,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The progress of applying the account baseline to the account.
+         * The progress of the applying the baseline to the account.
          */
         public Builder progress(java.util.List < Progress> progress) {
             this.progress = progress;
@@ -310,15 +316,15 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
         }
 
         /**
-         * The creation status of the account. Valid values:
+         * The status of the account. Valid values:
          * <p>
          * 
-         * *   Pending: The account is waiting to be created.
+         * *   Pending: The account is pending to be created.
          * *   Running: The account is being created.
          * *   Finished: The account is created.
-         * *   Failed: The account failed to be created.
+         * *   Failed: The account fails to be created.
          * *   Scheduling: The account is being scheduled.
-         * *   ScheduleFailed: The account failed to be scheduled.
+         * *   ScheduleFailed: The account fails to be scheduled.
          */
         public Builder status(String status) {
             this.status = status;
@@ -340,16 +346,16 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
     } 
 
     public static class BaselineItems extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Skip")
+        @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private BaselineItems(Builder builder) {
@@ -402,7 +408,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Config.
+             * The configurations of the baseline item.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -410,7 +416,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the baseline item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -418,7 +424,11 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Skip.
+             * Indicates whether baseline item is skipped. Valid values:
+             * <p>
+             * 
+             * *   false
+             * *   true
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
@@ -426,7 +436,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the baseline item.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -441,16 +451,16 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     }
     public static class ErrorInfo extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Recommend")
+        @com.aliyun.core.annotation.NameInMap("Recommend")
         private String recommend;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
         private ErrorInfo(Builder builder) {
@@ -503,7 +513,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private String requestId; 
 
             /**
-             * The error code returned.
+             * The error code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -511,7 +521,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -519,7 +529,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestions that are used to resolve the issue.
+             * The recommended solution.
              */
             public Builder recommend(String recommend) {
                 this.recommend = recommend;
@@ -542,16 +552,16 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     }
     public static class InputsBaselineItems extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Skip")
+        @com.aliyun.core.annotation.NameInMap("Skip")
         private Boolean skip;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private InputsBaselineItems(Builder builder) {
@@ -620,7 +630,11 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to skip the baseline item.
+             * Indicates whether baseline item is skipped. Valid values:
+             * <p>
+             * 
+             * *   false
+             * *   true
              */
             public Builder skip(Boolean skip) {
                 this.skip = skip;
@@ -643,22 +657,22 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     }
     public static class Inputs extends TeaModel {
-        @NameInMap("AccountNamePrefix")
+        @com.aliyun.core.annotation.NameInMap("AccountNamePrefix")
         private String accountNamePrefix;
 
-        @NameInMap("AccountUid")
+        @com.aliyun.core.annotation.NameInMap("AccountUid")
         private Long accountUid;
 
-        @NameInMap("BaselineItems")
+        @com.aliyun.core.annotation.NameInMap("BaselineItems")
         private java.util.List < InputsBaselineItems> baselineItems;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("PayerAccountUid")
+        @com.aliyun.core.annotation.NameInMap("PayerAccountUid")
         private Long payerAccountUid;
 
         private Inputs(Builder builder) {
@@ -729,7 +743,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             private Long payerAccountUid; 
 
             /**
-             * The prefix for the account name of the member.
+             * The prefix of the account name.
              */
             public Builder accountNamePrefix(String accountNamePrefix) {
                 this.accountNamePrefix = accountNamePrefix;
@@ -745,7 +759,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * An array that contains baseline items.
+             * The baseline items.
              */
             public Builder baselineItems(java.util.List < InputsBaselineItems> baselineItems) {
                 this.baselineItems = baselineItems;
@@ -769,7 +783,7 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the billing account.
+             * The ID of the settlement account.
              */
             public Builder payerAccountUid(Long payerAccountUid) {
                 this.payerAccountUid = payerAccountUid;
@@ -784,10 +798,10 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
 
     }
     public static class Progress extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Progress(Builder builder) {
@@ -830,13 +844,13 @@ public class GetEnrolledAccountResponseBody extends TeaModel {
             }
 
             /**
-             * The status of applying the account baseline to the account. Valid values:
+             * The status of applying the baseline to the account. Valid values:
              * <p>
              * 
-             * *   Pending: The account is waiting to be created.
-             * *   Running: The account baseline is being applied to the account.
-             * *   Finished: The account baseline is applied to the account.
-             * *   Failed: The account baseline failed to be applied to the account.
+             * *   Pending: The baseline is pending to be applied to the account.
+             * *   Running: The baseline is being applied to the account.
+             * *   Finished: : The baseline is applied to the account.
+             * *   Failed: : The baseline fails to be applied to the account.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -34,4 +34,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListEnrolledAccountsResponse> listEnrolledAccounts(ListEnrolledAccountsRequest request);
 
+    CompletableFuture<UpdateAccountFactoryBaselineResponse> updateAccountFactoryBaseline(UpdateAccountFactoryBaselineRequest request);
+
 }

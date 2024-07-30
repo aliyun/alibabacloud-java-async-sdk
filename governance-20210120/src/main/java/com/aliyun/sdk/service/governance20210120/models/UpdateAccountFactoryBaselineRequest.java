@@ -6,52 +6,51 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetAccountFactoryBaselineResponseBody} extends {@link TeaModel}
+ * {@link UpdateAccountFactoryBaselineRequest} extends {@link RequestModel}
  *
- * <p>GetAccountFactoryBaselineResponseBody</p>
+ * <p>UpdateAccountFactoryBaselineRequest</p>
  */
-public class GetAccountFactoryBaselineResponseBody extends TeaModel {
+public class UpdateAccountFactoryBaselineRequest extends Request {
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BaselineId")
     private String baselineId;
 
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BaselineItems")
     private java.util.List < BaselineItems> baselineItems;
 
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BaselineName")
     private String baselineName;
 
-    @com.aliyun.core.annotation.NameInMap("CreateTime")
-    private String createTime;
-
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @com.aliyun.core.annotation.NameInMap("RequestId")
-    private String requestId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
-    @com.aliyun.core.annotation.NameInMap("Type")
-    private String type;
-
-    @com.aliyun.core.annotation.NameInMap("UpdateTime")
-    private String updateTime;
-
-    private GetAccountFactoryBaselineResponseBody(Builder builder) {
+    private UpdateAccountFactoryBaselineRequest(Builder builder) {
+        super(builder);
         this.baselineId = builder.baselineId;
         this.baselineItems = builder.baselineItems;
         this.baselineName = builder.baselineName;
-        this.createTime = builder.createTime;
         this.description = builder.description;
-        this.requestId = builder.requestId;
-        this.type = builder.type;
-        this.updateTime = builder.updateTime;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetAccountFactoryBaselineResponseBody create() {
+    public static UpdateAccountFactoryBaselineRequest create() {
         return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -76,13 +75,6 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
     }
 
     /**
-     * @return createTime
-     */
-    public String getCreateTime() {
-        return this.createTime;
-    }
-
-    /**
      * @return description
      */
     public String getDescription() {
@@ -90,106 +82,80 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return regionId
      */
-    public String getRequestId() {
-        return this.requestId;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
-    /**
-     * @return updateTime
-     */
-    public String getUpdateTime() {
-        return this.updateTime;
-    }
-
-    public static final class Builder {
+    public static final class Builder extends Request.Builder<UpdateAccountFactoryBaselineRequest, Builder> {
         private String baselineId; 
         private java.util.List < BaselineItems> baselineItems; 
         private String baselineName; 
-        private String createTime; 
         private String description; 
-        private String requestId; 
-        private String type; 
-        private String updateTime; 
+        private String regionId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(UpdateAccountFactoryBaselineRequest request) {
+            super(request);
+            this.baselineId = request.baselineId;
+            this.baselineItems = request.baselineItems;
+            this.baselineName = request.baselineName;
+            this.description = request.description;
+            this.regionId = request.regionId;
+        } 
 
         /**
-         * The baseline ID.
+         * BaselineId.
          */
         public Builder baselineId(String baselineId) {
+            this.putQueryParameter("BaselineId", baselineId);
             this.baselineId = baselineId;
             return this;
         }
 
         /**
-         * The baseline items.
+         * BaselineItems.
          */
         public Builder baselineItems(java.util.List < BaselineItems> baselineItems) {
+            this.putQueryParameter("BaselineItems", baselineItems);
             this.baselineItems = baselineItems;
             return this;
         }
 
         /**
-         * The name of the baseline.
+         * BaselineName.
          */
         public Builder baselineName(String baselineName) {
+            this.putQueryParameter("BaselineName", baselineName);
             this.baselineName = baselineName;
             return this;
         }
 
         /**
-         * The time when the baseline was created.
-         */
-        public Builder createTime(String createTime) {
-            this.createTime = createTime;
-            return this;
-        }
-
-        /**
-         * The description of the baseline.
+         * Description.
          */
         public Builder description(String description) {
+            this.putQueryParameter("Description", description);
             this.description = description;
             return this;
         }
 
         /**
-         * The request ID.
+         * RegionId
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
-        /**
-         * The type of the baseline. Valid values:
-         * <p>
-         * 
-         * *   System: default baseline.
-         * *   Custom: custom baseline.
-         */
-        public Builder type(String type) {
-            this.type = type;
-            return this;
-        }
-
-        /**
-         * The time when the baseline was updated.
-         */
-        public Builder updateTime(String updateTime) {
-            this.updateTime = updateTime;
-            return this;
-        }
-
-        public GetAccountFactoryBaselineResponseBody build() {
-            return new GetAccountFactoryBaselineResponseBody(this);
+        @Override
+        public UpdateAccountFactoryBaselineRequest build() {
+            return new UpdateAccountFactoryBaselineRequest(this);
         } 
 
     } 
@@ -245,10 +211,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The configuration of the baseline item.
-             * <p>
-             * 
-             * The value is a JSON string.
+             * Config.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -256,7 +219,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the baseline item.
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -264,7 +227,7 @@ public class GetAccountFactoryBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the baseline item.
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;

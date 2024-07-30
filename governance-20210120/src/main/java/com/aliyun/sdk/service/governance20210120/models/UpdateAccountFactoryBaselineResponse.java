@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetAccountFactoryBaselineResponse} extends {@link TeaModel}
+ * {@link UpdateAccountFactoryBaselineResponse} extends {@link TeaModel}
  *
- * <p>GetAccountFactoryBaselineResponse</p>
+ * <p>UpdateAccountFactoryBaselineResponse</p>
  */
-public class GetAccountFactoryBaselineResponse extends Response {
+public class UpdateAccountFactoryBaselineResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class GetAccountFactoryBaselineResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetAccountFactoryBaselineResponseBody body;
+    private UpdateAccountFactoryBaselineResponseBody body;
 
-    private GetAccountFactoryBaselineResponse(BuilderImpl builder) {
+    private UpdateAccountFactoryBaselineResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetAccountFactoryBaselineResponse create() {
+    public static UpdateAccountFactoryBaselineResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class GetAccountFactoryBaselineResponse extends Response {
     /**
      * @return body
      */
-    public GetAccountFactoryBaselineResponseBody getBody() {
+    public UpdateAccountFactoryBaselineResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetAccountFactoryBaselineResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateAccountFactoryBaselineResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetAccountFactoryBaselineResponseBody body);
+        Builder body(UpdateAccountFactoryBaselineResponseBody body);
 
         @Override
-        GetAccountFactoryBaselineResponse build();
+        UpdateAccountFactoryBaselineResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetAccountFactoryBaselineResponse, Builder>
+            extends Response.BuilderImpl<UpdateAccountFactoryBaselineResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetAccountFactoryBaselineResponseBody body; 
+        private UpdateAccountFactoryBaselineResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetAccountFactoryBaselineResponse response) {
+        private BuilderImpl(UpdateAccountFactoryBaselineResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class GetAccountFactoryBaselineResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetAccountFactoryBaselineResponseBody body) {
+        public Builder body(UpdateAccountFactoryBaselineResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetAccountFactoryBaselineResponse build() {
-            return new GetAccountFactoryBaselineResponse(this);
+        public UpdateAccountFactoryBaselineResponse build() {
+            return new UpdateAccountFactoryBaselineResponse(this);
         } 
 
     } 

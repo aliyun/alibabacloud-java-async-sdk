@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.governance20210120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEnrolledAccountsResponseBody</p>
  */
 public class ListEnrolledAccountsResponseBody extends TeaModel {
-    @NameInMap("EnrolledAccounts")
+    @com.aliyun.core.annotation.NameInMap("EnrolledAccounts")
     private java.util.List < EnrolledAccounts> enrolledAccounts;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListEnrolledAccountsResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class ListEnrolledAccountsResponseBody extends TeaModel {
     } 
 
     public static class EnrolledAccounts extends TeaModel {
-        @NameInMap("AccountUid")
+        @com.aliyun.core.annotation.NameInMap("AccountUid")
         private Long accountUid;
 
-        @NameInMap("BaselineId")
+        @com.aliyun.core.annotation.NameInMap("BaselineId")
         private String baselineId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("PayerAccountUid")
+        @com.aliyun.core.annotation.NameInMap("PayerAccountUid")
         private Long payerAccountUid;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private EnrolledAccounts(Builder builder) {
