@@ -80,6 +80,9 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
+        @com.aliyun.core.annotation.NameInMap("SupportSampleRate")
+        private String supportSampleRate;
+
         @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
@@ -96,6 +99,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             this.desc = builder.desc;
             this.name = builder.name;
             this.remark = builder.remark;
+            this.supportSampleRate = builder.supportSampleRate;
             this.tag = builder.tag;
             this.voice = builder.voice;
             this.voiceType = builder.voiceType;
@@ -132,6 +136,13 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportSampleRate
+         */
+        public String getSupportSampleRate() {
+            return this.supportSampleRate;
+        }
+
+        /**
          * @return tag
          */
         public String getTag() {
@@ -163,6 +174,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
             private String desc; 
             private String name; 
             private String remark; 
+            private String supportSampleRate; 
             private String tag; 
             private String voice; 
             private String voiceType; 
@@ -189,6 +201,14 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * SupportSampleRate.
+             */
+            public Builder supportSampleRate(String supportSampleRate) {
+                this.supportSampleRate = supportSampleRate;
                 return this;
             }
 
