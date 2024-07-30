@@ -22,7 +22,7 @@ public class ListExchangesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
