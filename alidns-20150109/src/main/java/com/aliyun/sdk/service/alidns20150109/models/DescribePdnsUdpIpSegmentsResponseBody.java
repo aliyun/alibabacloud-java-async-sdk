@@ -26,12 +26,16 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
+    private String totalPages;
+
     private DescribePdnsUdpIpSegmentsResponseBody(Builder builder) {
         this.ipSegments = builder.ipSegments;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
+        this.totalPages = builder.totalPages;
     }
 
     public static Builder builder() {
@@ -77,12 +81,20 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    /**
+     * @return totalPages
+     */
+    public String getTotalPages() {
+        return this.totalPages;
+    }
+
     public static final class Builder {
         private java.util.List < IpSegments> ipSegments; 
         private Long pageNumber; 
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+        private String totalPages; 
 
         /**
          * IpSegments.
@@ -121,6 +133,14 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
+            return this;
+        }
+
+        /**
+         * TotalPages.
+         */
+        public Builder totalPages(String totalPages) {
+            this.totalPages = totalPages;
             return this;
         }
 

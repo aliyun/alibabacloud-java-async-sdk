@@ -73,7 +73,7 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceTotalCount.
+         * The total number of instances within the current account.
          */
         public Builder instanceTotalCount(Integer instanceTotalCount) {
             this.instanceTotalCount = instanceTotalCount;
@@ -81,7 +81,7 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorTaskTotalCount.
+         * The total number of configured health check tasks.
          */
         public Builder monitorTaskTotalCount(Integer monitorTaskTotalCount) {
             this.monitorTaskTotalCount = monitorTaskTotalCount;
@@ -89,7 +89,7 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorTaskTotalQuota.
+         * The quota on the number of health check tasks.
          */
         public Builder monitorTaskTotalQuota(Integer monitorTaskTotalQuota) {
             this.monitorTaskTotalQuota = monitorTaskTotalQuota;
@@ -97,7 +97,7 @@ public class DescribeCloudGtmSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

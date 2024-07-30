@@ -14,6 +14,9 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
+    @com.aliyun.core.annotation.NameInMap("ParentDomainName")
+    private String parentDomainName;
+
     @com.aliyun.core.annotation.NameInMap("RR")
     private String rr;
 
@@ -25,6 +28,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
 
     private GetTxtRecordForVerifyResponseBody(Builder builder) {
         this.domainName = builder.domainName;
+        this.parentDomainName = builder.parentDomainName;
         this.rr = builder.rr;
         this.requestId = builder.requestId;
         this.value = builder.value;
@@ -43,6 +47,13 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
      */
     public String getDomainName() {
         return this.domainName;
+    }
+
+    /**
+     * @return parentDomainName
+     */
+    public String getParentDomainName() {
+        return this.parentDomainName;
     }
 
     /**
@@ -68,6 +79,7 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
 
     public static final class Builder {
         private String domainName; 
+        private String parentDomainName; 
         private String rr; 
         private String requestId; 
         private String value; 
@@ -80,6 +92,14 @@ public class GetTxtRecordForVerifyResponseBody extends TeaModel {
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * ParentDomainName.
+         */
+        public Builder parentDomainName(String parentDomainName) {
+            this.parentDomainName = parentDomainName;
             return this;
         }
 

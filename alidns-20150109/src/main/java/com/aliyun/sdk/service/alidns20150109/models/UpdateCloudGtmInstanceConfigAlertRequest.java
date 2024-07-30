@@ -137,7 +137,11 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh-CN: Chinese
+         * *   en-US: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -146,7 +150,7 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * AlertConfig.
+         * The alert configurations.
          */
         public Builder alertConfig(java.util.List < AlertConfig> alertConfig) {
             String alertConfigShrink = shrink(alertConfig, "AlertConfig", "json");
@@ -156,7 +160,7 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * AlertGroup.
+         * The alert contact groups.
          */
         public Builder alertGroup(java.util.List < String > alertGroup) {
             String alertGroupShrink = shrink(alertGroup, "AlertGroup", "json");
@@ -166,7 +170,11 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * AlertMode.
+         * The alert configuration mode of the instance. Valid values:
+         * <p>
+         * 
+         * *   global: global alert configuration
+         * *   instance_config: custom alert configuration
          */
         public Builder alertMode(String alertMode) {
             this.putQueryParameter("AlertMode", alertMode);
@@ -175,7 +183,7 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -184,7 +192,7 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * ConfigId.
+         * The configuration ID of the access domain name. Two configuration IDs exist when an A record and an AAAA record are configured for the access domain name that is bound to the GTM instance. This ID uniquely identifies a configuration.
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -193,7 +201,7 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Global Traffic Manager (GTM) 3.0 instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -271,7 +279,11 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
             private Boolean smsNotice; 
 
             /**
-             * DingtalkNotice.
+             * Specifies whether to configure DingTalk notifications. Valid values:
+             * <p>
+             * 
+             * *   true: DingTalk notifications are configured. DingTalk notifications are sent when alerts are triggered.
+             * *   false: DingTalk notifications are not configured.
              */
             public Builder dingtalkNotice(Boolean dingtalkNotice) {
                 this.dingtalkNotice = dingtalkNotice;
@@ -279,7 +291,11 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
             }
 
             /**
-             * EmailNotice.
+             * Specifies whether to configure email notifications. Valid values:
+             * <p>
+             * 
+             * *   true: Email notifications are configured. Emails are sent when alerts are triggered.
+             * *   false: Email notifications are not configured.
              */
             public Builder emailNotice(Boolean emailNotice) {
                 this.emailNotice = emailNotice;
@@ -287,7 +303,13 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
             }
 
             /**
-             * NoticeType.
+             * The type of the alert event. Valid values:
+             * <p>
+             * 
+             * *   addr_alert: The address is unavailable.
+             * *   addr_resume: The address becomes available.
+             * *   addr_pool_unavailable: The address pool is unavailable.
+             * *   addr_pool_available: The address pool becomes available.
              */
             public Builder noticeType(String noticeType) {
                 this.noticeType = noticeType;
@@ -295,7 +317,13 @@ public class UpdateCloudGtmInstanceConfigAlertRequest extends Request {
             }
 
             /**
-             * SmsNotice.
+             * Specifies whether to configure text message notifications. Valid values:
+             * <p>
+             * 
+             * *   true: Text message notifications are configured. Text messages are sent when alerts are triggered.
+             * *   false: Text message notifications are not configured.
+             * 
+             * Only the China site (aliyun.com) supports text message notifications.
              */
             public Builder smsNotice(Boolean smsNotice) {
                 this.smsNotice = smsNotice;

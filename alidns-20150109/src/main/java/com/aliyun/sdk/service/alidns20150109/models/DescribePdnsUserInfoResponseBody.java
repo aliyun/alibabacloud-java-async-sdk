@@ -83,6 +83,9 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
+        @com.aliyun.core.annotation.NameInMap("StatisticSwitchStatus")
+        private String statisticSwitchStatus;
+
         @com.aliyun.core.annotation.NameInMap("StoppedService")
         private String stoppedService;
 
@@ -91,6 +94,7 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             this.pdnsId = builder.pdnsId;
             this.serviceType = builder.serviceType;
             this.state = builder.state;
+            this.statisticSwitchStatus = builder.statisticSwitchStatus;
             this.stoppedService = builder.stoppedService;
         }
 
@@ -131,6 +135,13 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return statisticSwitchStatus
+         */
+        public String getStatisticSwitchStatus() {
+            return this.statisticSwitchStatus;
+        }
+
+        /**
          * @return stoppedService
          */
         public String getStoppedService() {
@@ -142,6 +153,7 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
             private Long pdnsId; 
             private String serviceType; 
             private String state; 
+            private String statisticSwitchStatus; 
             private String stoppedService; 
 
             /**
@@ -173,6 +185,14 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * StatisticSwitchStatus.
+             */
+            public Builder statisticSwitchStatus(String statisticSwitchStatus) {
+                this.statisticSwitchStatus = statisticSwitchStatus;
                 return this;
             }
 
