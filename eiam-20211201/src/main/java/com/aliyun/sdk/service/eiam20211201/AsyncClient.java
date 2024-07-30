@@ -147,6 +147,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRootOrganizationalUnitResponse> getRootOrganizationalUnit(GetRootOrganizationalUnitRequest request);
 
+    CompletableFuture<GetSynchronizationJobResponse> getSynchronizationJob(GetSynchronizationJobRequest request);
+
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
     CompletableFuture<ListApplicationClientSecretsResponse> listApplicationClientSecrets(ListApplicationClientSecretsRequest request);
@@ -193,6 +195,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
 
+    CompletableFuture<ListSynchronizationJobsResponse> listSynchronizationJobs(ListSynchronizationJobsRequest request);
+
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
 
     CompletableFuture<ListUsersForApplicationResponse> listUsersForApplication(ListUsersForApplicationRequest request);
@@ -212,6 +216,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RevokeApplicationFromOrganizationalUnitsResponse> revokeApplicationFromOrganizationalUnits(RevokeApplicationFromOrganizationalUnitsRequest request);
 
     CompletableFuture<RevokeApplicationFromUsersResponse> revokeApplicationFromUsers(RevokeApplicationFromUsersRequest request);
+
+    CompletableFuture<RunSynchronizationJobResponse> runSynchronizationJob(RunSynchronizationJobRequest request);
 
     CompletableFuture<SetApplicationGrantScopeResponse> setApplicationGrantScope(SetApplicationGrantScopeRequest request);
 

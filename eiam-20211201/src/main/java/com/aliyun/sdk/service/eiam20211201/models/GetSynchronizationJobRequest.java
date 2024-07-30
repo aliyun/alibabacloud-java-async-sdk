@@ -6,37 +6,37 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetApplicationProvisioningConfigRequest} extends {@link RequestModel}
+ * {@link GetSynchronizationJobRequest} extends {@link RequestModel}
  *
- * <p>GetApplicationProvisioningConfigRequest</p>
+ * <p>GetSynchronizationJobRequest</p>
  */
-public class GetApplicationProvisioningConfigRequest extends Request {
+public class GetSynchronizationJobRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ApplicationId")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
-    private String applicationId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    private GetApplicationProvisioningConfigRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SynchronizationJobId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
+    private String synchronizationJobId;
+
+    private GetSynchronizationJobRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.applicationId = builder.applicationId;
         this.instanceId = builder.instanceId;
+        this.synchronizationJobId = builder.synchronizationJobId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetApplicationProvisioningConfigRequest create() {
+    public static GetSynchronizationJobRequest create() {
         return builder().build();
     }
 
@@ -53,33 +53,33 @@ public class GetApplicationProvisioningConfigRequest extends Request {
     }
 
     /**
-     * @return applicationId
-     */
-    public String getApplicationId() {
-        return this.applicationId;
-    }
-
-    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<GetApplicationProvisioningConfigRequest, Builder> {
+    /**
+     * @return synchronizationJobId
+     */
+    public String getSynchronizationJobId() {
+        return this.synchronizationJobId;
+    }
+
+    public static final class Builder extends Request.Builder<GetSynchronizationJobRequest, Builder> {
         private String regionId; 
-        private String applicationId; 
         private String instanceId; 
+        private String synchronizationJobId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetApplicationProvisioningConfigRequest request) {
+        private Builder(GetSynchronizationJobRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.applicationId = request.applicationId;
             this.instanceId = request.instanceId;
+            this.synchronizationJobId = request.synchronizationJobId;
         } 
 
         /**
@@ -92,16 +92,7 @@ public class GetApplicationProvisioningConfigRequest extends Request {
         }
 
         /**
-         * The ID of the application.
-         */
-        public Builder applicationId(String applicationId) {
-            this.putQueryParameter("ApplicationId", applicationId);
-            this.applicationId = applicationId;
-            return this;
-        }
-
-        /**
-         * The instance ID.
+         * IDaaS EIAM实例的ID。
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -109,9 +100,18 @@ public class GetApplicationProvisioningConfigRequest extends Request {
             return this;
         }
 
+        /**
+         * 同步任务ID
+         */
+        public Builder synchronizationJobId(String synchronizationJobId) {
+            this.putQueryParameter("SynchronizationJobId", synchronizationJobId);
+            this.synchronizationJobId = synchronizationJobId;
+            return this;
+        }
+
         @Override
-        public GetApplicationProvisioningConfigRequest build() {
-            return new GetApplicationProvisioningConfigRequest(this);
+        public GetSynchronizationJobRequest build() {
+            return new GetSynchronizationJobRequest(this);
         } 
 
     } 

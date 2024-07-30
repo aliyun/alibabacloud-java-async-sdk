@@ -244,7 +244,7 @@ public class GetGroupResponseBody extends TeaModel {
              * The source type of the group. Only build_in may be returned, which indicates that the group was created in IDaaS.
              * <p>
              * 
-             * *build_in：Create By Self。
+             * *build_in:Create By Self.
              */
             public Builder groupSourceType(String groupSourceType) {
                 this.groupSourceType = groupSourceType;

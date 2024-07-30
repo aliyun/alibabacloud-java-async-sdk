@@ -262,9 +262,6 @@ public class ListGroupsResponseBody extends TeaModel {
 
             /**
              * The source type of the group. Only build_in may be returned, which indicates that the group was created in IDaaS.
-             * <p>
-             * 
-             * *
              */
             public Builder groupSourceType(String groupSourceType) {
                 this.groupSourceType = groupSourceType;

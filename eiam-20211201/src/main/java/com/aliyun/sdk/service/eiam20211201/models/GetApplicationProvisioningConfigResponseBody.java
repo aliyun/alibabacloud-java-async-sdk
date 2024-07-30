@@ -57,7 +57,7 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -640,10 +640,11 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Client-side rendering, Valid values: 
+             * The rendering mode of the account synchronization page. Valid values:
              * <p>
-             * - standard：standard mode.
-             * - template：template mode.
+             * 
+             * *   standard: standard mode
+             * *   template: template mode
              */
             public Builder configOperateMode(String configOperateMode) {
                 this.configOperateMode = configOperateMode;
