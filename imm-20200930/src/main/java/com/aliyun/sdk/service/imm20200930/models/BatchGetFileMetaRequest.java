@@ -30,12 +30,17 @@ public class BatchGetFileMetaRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > URIs;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithFields")
+    private java.util.List < String > withFields;
+
     private BatchGetFileMetaRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.datasetName = builder.datasetName;
         this.projectName = builder.projectName;
         this.URIs = builder.URIs;
+        this.withFields = builder.withFields;
     }
 
     public static Builder builder() {
@@ -79,11 +84,19 @@ public class BatchGetFileMetaRequest extends Request {
         return this.URIs;
     }
 
+    /**
+     * @return withFields
+     */
+    public java.util.List < String > getWithFields() {
+        return this.withFields;
+    }
+
     public static final class Builder extends Request.Builder<BatchGetFileMetaRequest, Builder> {
         private String regionId; 
         private String datasetName; 
         private String projectName; 
         private java.util.List < String > URIs; 
+        private java.util.List < String > withFields; 
 
         private Builder() {
             super();
@@ -95,6 +108,7 @@ public class BatchGetFileMetaRequest extends Request {
             this.datasetName = request.datasetName;
             this.projectName = request.projectName;
             this.URIs = request.URIs;
+            this.withFields = request.withFields;
         } 
 
         /**
@@ -131,6 +145,16 @@ public class BatchGetFileMetaRequest extends Request {
             String URIsShrink = shrink(URIs, "URIs", "json");
             this.putQueryParameter("URIs", URIsShrink);
             this.URIs = URIs;
+            return this;
+        }
+
+        /**
+         * WithFields.
+         */
+        public Builder withFields(java.util.List < String > withFields) {
+            String withFieldsShrink = shrink(withFields, "WithFields", "json");
+            this.putQueryParameter("WithFields", withFieldsShrink);
+            this.withFields = withFields;
             return this;
         }
 

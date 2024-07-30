@@ -30,12 +30,17 @@ public class GetFileMetaRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String URI;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithFields")
+    private java.util.List < String > withFields;
+
     private GetFileMetaRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.datasetName = builder.datasetName;
         this.projectName = builder.projectName;
         this.URI = builder.URI;
+        this.withFields = builder.withFields;
     }
 
     public static Builder builder() {
@@ -79,11 +84,19 @@ public class GetFileMetaRequest extends Request {
         return this.URI;
     }
 
+    /**
+     * @return withFields
+     */
+    public java.util.List < String > getWithFields() {
+        return this.withFields;
+    }
+
     public static final class Builder extends Request.Builder<GetFileMetaRequest, Builder> {
         private String regionId; 
         private String datasetName; 
         private String projectName; 
         private String URI; 
+        private java.util.List < String > withFields; 
 
         private Builder() {
             super();
@@ -95,6 +108,7 @@ public class GetFileMetaRequest extends Request {
             this.datasetName = request.datasetName;
             this.projectName = request.projectName;
             this.URI = request.URI;
+            this.withFields = request.withFields;
         } 
 
         /**
@@ -130,6 +144,16 @@ public class GetFileMetaRequest extends Request {
         public Builder URI(String URI) {
             this.putQueryParameter("URI", URI);
             this.URI = URI;
+            return this;
+        }
+
+        /**
+         * WithFields.
+         */
+        public Builder withFields(java.util.List < String > withFields) {
+            String withFieldsShrink = shrink(withFields, "WithFields", "json");
+            this.putQueryParameter("WithFields", withFieldsShrink);
+            this.withFields = withFields;
             return this;
         }
 
