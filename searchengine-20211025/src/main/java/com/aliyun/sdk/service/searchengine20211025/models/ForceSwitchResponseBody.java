@@ -49,7 +49,7 @@ public class ForceSwitchResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * id of request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class ForceSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the index
+         * The index information.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

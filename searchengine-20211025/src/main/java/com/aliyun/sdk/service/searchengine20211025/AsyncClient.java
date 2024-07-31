@@ -143,11 +143,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteSqlInstanceResponse> executeSqlInstance(ExecuteSqlInstanceRequest request);
 
     /**
-      * \\### Method
+      * ### [](#)Method
       * ```java
       * PUT
       * ```
-      * ### URI
+      * ### [](#uri)URI
       * ```java
       * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
       * ```

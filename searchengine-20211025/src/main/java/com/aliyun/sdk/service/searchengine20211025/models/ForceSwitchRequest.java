@@ -78,7 +78,7 @@ public class ForceSwitchRequest extends Request {
         }
 
         /**
-         * The ID of the finite state machine (FSM).
+         * The task ID.
          */
         public Builder fsmId(String fsmId) {
             this.putPathParameter("fsmId", fsmId);

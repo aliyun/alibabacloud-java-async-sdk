@@ -117,7 +117,7 @@ public class GetIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * The data center in which the data source is deployed.
+         * The name of the data center in which the data source is deployed.
          */
         public Builder deployName(String deployName) {
             this.putPathParameter("deployName", deployName);

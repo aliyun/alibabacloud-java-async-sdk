@@ -77,6 +77,9 @@ public class GetFileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dataSource")
         private String dataSource;
 
+        @com.aliyun.core.annotation.NameInMap("extend")
+        private java.util.Map < String, java.util.List<String>> extend;
+
         @com.aliyun.core.annotation.NameInMap("fullPathName")
         private String fullPathName;
 
@@ -92,6 +95,7 @@ public class GetFileResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.content = builder.content;
             this.dataSource = builder.dataSource;
+            this.extend = builder.extend;
             this.fullPathName = builder.fullPathName;
             this.isDir = builder.isDir;
             this.name = builder.name;
@@ -118,6 +122,13 @@ public class GetFileResponseBody extends TeaModel {
          */
         public String getDataSource() {
             return this.dataSource;
+        }
+
+        /**
+         * @return extend
+         */
+        public java.util.Map < String, java.util.List<String>> getExtend() {
+            return this.extend;
         }
 
         /**
@@ -151,6 +162,7 @@ public class GetFileResponseBody extends TeaModel {
         public static final class Builder {
             private String content; 
             private String dataSource; 
+            private java.util.Map < String, java.util.List<String>> extend; 
             private String fullPathName; 
             private Boolean isDir; 
             private String name; 
@@ -169,6 +181,14 @@ public class GetFileResponseBody extends TeaModel {
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
+                return this;
+            }
+
+            /**
+             * extend.
+             */
+            public Builder extend(java.util.Map < String, java.util.List<String>> extend) {
+                this.extend = extend;
                 return this;
             }
 

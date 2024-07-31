@@ -78,7 +78,13 @@ public class ListInstanceSpecsRequest extends Request {
         }
 
         /**
-         * The node type. Valid values: qrs, search, index, and cluster. qrs indicates a query node, search indicates a data node, index indicates an index node, and cluster indicates a cluster.
+         * The node type. Valid values:
+         * <p>
+         * 
+         * *   qrs: Query Result Searcher (QRS) Worker
+         * *   search: Searcher Worker
+         * *   index: index node
+         * *   cluster: cluster
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

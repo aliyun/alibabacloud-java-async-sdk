@@ -49,7 +49,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * id of request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * The instance types.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -133,7 +133,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             private Integer minDisk; 
 
             /**
-             * The number of CPU cores.
+             * The number of vCPUs.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -141,7 +141,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum storage space of a Searcher worker.
+             * The maximum storage of a single data node. Unit: GB.
              */
             public Builder maxDisk(Integer maxDisk) {
                 this.maxDisk = maxDisk;
@@ -149,7 +149,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory. Unit: GB.
+             * The memory of the instance. Unit: GB.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -157,7 +157,7 @@ public class ListInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum storage space of a Searcher worker.
+             * The minimum storage of a single data node. Unit: GB.
              */
             public Builder minDisk(Integer minDisk) {
                 this.minDisk = minDisk;

@@ -499,11 +499,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * \\### Method
+      * ### [](#)Method
       * ```java
       * PUT
       * ```
-      * ### URI
+      * ### [](#uri)URI
       * ```java
       * /openapi/ha3/instances/{instanceId}/force-switch/{fsmId}
       * ```

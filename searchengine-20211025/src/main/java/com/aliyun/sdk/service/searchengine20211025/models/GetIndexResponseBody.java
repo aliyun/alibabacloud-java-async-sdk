@@ -809,6 +809,9 @@ public class GetIndexResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
+        @com.aliyun.core.annotation.NameInMap("extend")
+        private java.util.Map < String, java.util.List<String>> extend;
+
         @com.aliyun.core.annotation.NameInMap("fullUpdateTime")
         private String fullUpdateTime;
 
@@ -842,6 +845,7 @@ public class GetIndexResponseBody extends TeaModel {
             this.dataSourceInfo = builder.dataSourceInfo;
             this.description = builder.description;
             this.domain = builder.domain;
+            this.extend = builder.extend;
             this.fullUpdateTime = builder.fullUpdateTime;
             this.fullVersion = builder.fullVersion;
             this.incUpdateTime = builder.incUpdateTime;
@@ -917,6 +921,13 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend
+         */
+        public java.util.Map < String, java.util.List<String>> getExtend() {
+            return this.extend;
+        }
+
+        /**
          * @return fullUpdateTime
          */
         public String getFullUpdateTime() {
@@ -981,6 +992,7 @@ public class GetIndexResponseBody extends TeaModel {
             private DataSourceInfo dataSourceInfo; 
             private String description; 
             private String domain; 
+            private java.util.Map < String, java.util.List<String>> extend; 
             private String fullUpdateTime; 
             private Long fullVersion; 
             private String incUpdateTime; 
@@ -1051,6 +1063,14 @@ public class GetIndexResponseBody extends TeaModel {
              */
             public Builder domain(String domain) {
                 this.domain = domain;
+                return this;
+            }
+
+            /**
+             * extend.
+             */
+            public Builder extend(java.util.Map < String, java.util.List<String>> extend) {
+                this.extend = extend;
                 return this;
             }
 

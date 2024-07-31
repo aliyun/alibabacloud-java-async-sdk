@@ -77,7 +77,7 @@ public class ModifyPublicUrlIpListRequest extends Request {
         }
 
         /**
-         * The request parameters.
+         * The request body.
          */
         public Builder body(java.util.Map < String, String > body) {
             this.putBodyParameter("body", body);

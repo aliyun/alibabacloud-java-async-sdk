@@ -57,7 +57,7 @@ public class StartIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The result.
+         * The index map.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;
