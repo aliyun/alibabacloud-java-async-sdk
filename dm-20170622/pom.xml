@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-dm20170622</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.8</version>
   <packaging>jar</packaging>
   <name>alibabacloud-dm20170622</name>
   <description>Alibaba Cloud Dm (20170622) Async SDK for Java
@@ -41,7 +41,7 @@
     <java.version>1.8</java.version>
     <maven.compiler.source>8</maven.compiler.source>
     <maven.compiler.target>8</maven.compiler.target>
-    <service.version>0.2.10-beta</service.version>
+    <service.version>0.2.12-beta</service.version>
   </properties>
   <dependencies>
     <dependency>

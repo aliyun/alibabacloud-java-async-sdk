@@ -14,6 +14,9 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DailyQuota")
     private Integer dailyQuota;
 
+    @com.aliyun.core.annotation.NameInMap("DailyRemainFreeQuota")
+    private String dailyRemainFreeQuota;
+
     @com.aliyun.core.annotation.NameInMap("DayuStatus")
     private Integer dayuStatus;
 
@@ -64,6 +67,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
 
     private DescAccountSummaryResponseBody(Builder builder) {
         this.dailyQuota = builder.dailyQuota;
+        this.dailyRemainFreeQuota = builder.dailyRemainFreeQuota;
         this.dayuStatus = builder.dayuStatus;
         this.domains = builder.domains;
         this.enableTimes = builder.enableTimes;
@@ -95,6 +99,13 @@ public class DescAccountSummaryResponseBody extends TeaModel {
      */
     public Integer getDailyQuota() {
         return this.dailyQuota;
+    }
+
+    /**
+     * @return dailyRemainFreeQuota
+     */
+    public String getDailyRemainFreeQuota() {
+        return this.dailyRemainFreeQuota;
     }
 
     /**
@@ -211,6 +222,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer dailyQuota; 
+        private String dailyRemainFreeQuota; 
         private Integer dayuStatus; 
         private Integer domains; 
         private Integer enableTimes; 
@@ -233,6 +245,14 @@ public class DescAccountSummaryResponseBody extends TeaModel {
          */
         public Builder dailyQuota(Integer dailyQuota) {
             this.dailyQuota = dailyQuota;
+            return this;
+        }
+
+        /**
+         * DailyRemainFreeQuota.
+         */
+        public Builder dailyRemainFreeQuota(String dailyRemainFreeQuota) {
+            this.dailyRemainFreeQuota = dailyRemainFreeQuota;
             return this;
         }
 
