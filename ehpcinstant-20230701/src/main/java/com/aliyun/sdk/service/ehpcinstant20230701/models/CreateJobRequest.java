@@ -25,6 +25,10 @@ public class CreateJobRequest extends Request {
     private String jobName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobScheduler")
+    private String jobScheduler;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tasks")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Tasks> tasks;
@@ -34,6 +38,7 @@ public class CreateJobRequest extends Request {
         this.deploymentPolicy = builder.deploymentPolicy;
         this.jobDescription = builder.jobDescription;
         this.jobName = builder.jobName;
+        this.jobScheduler = builder.jobScheduler;
         this.tasks = builder.tasks;
     }
 
@@ -72,6 +77,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return jobScheduler
+     */
+    public String getJobScheduler() {
+        return this.jobScheduler;
+    }
+
+    /**
      * @return tasks
      */
     public java.util.List < Tasks> getTasks() {
@@ -82,6 +94,7 @@ public class CreateJobRequest extends Request {
         private DeploymentPolicy deploymentPolicy; 
         private String jobDescription; 
         private String jobName; 
+        private String jobScheduler; 
         private java.util.List < Tasks> tasks; 
 
         private Builder() {
@@ -93,6 +106,7 @@ public class CreateJobRequest extends Request {
             this.deploymentPolicy = request.deploymentPolicy;
             this.jobDescription = request.jobDescription;
             this.jobName = request.jobName;
+            this.jobScheduler = request.jobScheduler;
             this.tasks = request.tasks;
         } 
 
@@ -121,6 +135,15 @@ public class CreateJobRequest extends Request {
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
             this.jobName = jobName;
+            return this;
+        }
+
+        /**
+         * JobScheduler.
+         */
+        public Builder jobScheduler(String jobScheduler) {
+            this.putQueryParameter("JobScheduler", jobScheduler);
+            this.jobScheduler = jobScheduler;
             return this;
         }
 

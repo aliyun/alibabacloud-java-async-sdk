@@ -920,6 +920,9 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
+        @com.aliyun.core.annotation.NameInMap("JobScheduler")
+        private String jobScheduler;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -936,6 +939,7 @@ public class GetJobResponseBody extends TeaModel {
             this.jobDescription = builder.jobDescription;
             this.jobId = builder.jobId;
             this.jobName = builder.jobName;
+            this.jobScheduler = builder.jobScheduler;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.tasks = builder.tasks;
@@ -992,6 +996,13 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobScheduler
+         */
+        public String getJobScheduler() {
+            return this.jobScheduler;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -1019,6 +1030,7 @@ public class GetJobResponseBody extends TeaModel {
             private String jobDescription; 
             private String jobId; 
             private String jobName; 
+            private String jobScheduler; 
             private String startTime; 
             private String status; 
             private java.util.List < Tasks> tasks; 
@@ -1068,6 +1080,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
+                return this;
+            }
+
+            /**
+             * JobScheduler.
+             */
+            public Builder jobScheduler(String jobScheduler) {
+                this.jobScheduler = jobScheduler;
                 return this;
             }
 
