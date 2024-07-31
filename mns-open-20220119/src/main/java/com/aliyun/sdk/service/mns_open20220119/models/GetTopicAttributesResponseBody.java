@@ -97,7 +97,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +121,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The response status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +137,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -322,7 +322,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             private String topicName; 
 
             /**
-             * CreateTime.
+             * The time when the topic was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -330,7 +330,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * The time when the topic was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -338,7 +338,11 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * LoggingEnabled.
+             * Indicates whether the logging feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   True
+             * *   False
              */
             public Builder loggingEnabled(Boolean loggingEnabled) {
                 this.loggingEnabled = loggingEnabled;
@@ -346,7 +350,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxMessageSize.
+             * The maximum length of the message that is sent to the topic. Unit: bytes.
              */
             public Builder maxMessageSize(Long maxMessageSize) {
                 this.maxMessageSize = maxMessageSize;
@@ -354,7 +358,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * MessageCount.
+             * The number of messages in the topic.
              */
             public Builder messageCount(Long messageCount) {
                 this.messageCount = messageCount;
@@ -362,7 +366,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * MessageRetentionPeriod.
+             * The maximum duration for which a message is retained in the topic. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.
              */
             public Builder messageRetentionPeriod(Long messageRetentionPeriod) {
                 this.messageRetentionPeriod = messageRetentionPeriod;
@@ -378,7 +382,7 @@ public class GetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * The name of the topic.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;

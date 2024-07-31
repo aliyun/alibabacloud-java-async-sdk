@@ -105,7 +105,11 @@ public class SetTopicAttributesRequest extends Request {
         }
 
         /**
-         * EnableLogging.
+         * Specifies whether to enable the logging feature. Valid values:
+         * <p>
+         * 
+         * *   True
+         * *   False (default)
          */
         public Builder enableLogging(Boolean enableLogging) {
             this.putQueryParameter("EnableLogging", enableLogging);
@@ -114,7 +118,7 @@ public class SetTopicAttributesRequest extends Request {
         }
 
         /**
-         * MaxMessageSize.
+         * The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.
          */
         public Builder maxMessageSize(Long maxMessageSize) {
             this.putQueryParameter("MaxMessageSize", maxMessageSize);
@@ -123,7 +127,7 @@ public class SetTopicAttributesRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * The name of the topic.
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

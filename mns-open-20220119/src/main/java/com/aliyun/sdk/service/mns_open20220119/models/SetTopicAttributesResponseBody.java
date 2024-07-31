@@ -97,7 +97,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +121,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The response status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +137,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +201,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Code.
+             * The response code.
              */
             public Builder code(Long code) {
                 this.code = code;
@@ -209,7 +209,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The returned message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -217,7 +217,7 @@ public class SetTopicAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether the request was successful.
              */
             public Builder success(Boolean success) {
                 this.success = success;

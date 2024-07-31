@@ -97,7 +97,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +121,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The response status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +137,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -273,7 +273,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             private String topicOwner; 
 
             /**
-             * CreateTime.
+             * The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -281,7 +281,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoint.
+             * The endpoint to which the messages are pushed.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -289,7 +289,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * FilterTag.
+             * The tag that is used to filter messages. Only the messages that are attached with the specified tag can be pushed.
              */
             public Builder filterTag(String filterTag) {
                 this.filterTag = filterTag;
@@ -297,7 +297,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * The time when the subscription was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -305,7 +305,12 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyContentFormat.
+             * The content format of the messages that are pushed to the endpoint. Valid values:
+             * <p>
+             * 
+             * *   XML
+             * *   JSON
+             * *   SIMPLIFIED
              */
             public Builder notifyContentFormat(String notifyContentFormat) {
                 this.notifyContentFormat = notifyContentFormat;
@@ -313,7 +318,11 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyStrategy.
+             * The retry policy that is applied if an error occurs when Message Service (MNS) pushes messages to the endpoint. Valid values:
+             * <p>
+             * 
+             * *   BACKOFF_RETRY
+             * *   EXPONENTIAL_DECAY_RETRY
              */
             public Builder notifyStrategy(String notifyStrategy) {
                 this.notifyStrategy = notifyStrategy;
@@ -321,7 +330,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionName.
+             * The name of the subscription.
              */
             public Builder subscriptionName(String subscriptionName) {
                 this.subscriptionName = subscriptionName;
@@ -329,7 +338,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * The name of the topic.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -337,7 +346,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicOwner.
+             * The Alibaba Cloud account ID of the topic owner.
              */
             public Builder topicOwner(String topicOwner) {
                 this.topicOwner = topicOwner;
@@ -438,7 +447,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * PageData.
+             * The data returned on the current page.
              */
             public Builder pageData(java.util.List < PageData> pageData) {
                 this.pageData = pageData;
@@ -446,7 +455,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number.
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -454,7 +463,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -462,7 +471,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Pages.
+             * The total number of pages returned.
              */
             public Builder pages(Long pages) {
                 this.pages = pages;
@@ -470,7 +479,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of entries on the current page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -478,7 +487,7 @@ public class ListSubscriptionByTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

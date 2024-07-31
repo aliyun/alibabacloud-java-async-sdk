@@ -119,7 +119,11 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * EnableLogging.
+         * Specifies whether to enable the logging feature. Valid values:
+         * <p>
+         * 
+         * *   True
+         * *   False (default)
          */
         public Builder enableLogging(Boolean enableLogging) {
             this.putBodyParameter("EnableLogging", enableLogging);
@@ -128,7 +132,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * MaxMessageSize.
+         * The maximum length of the message that is sent to the topic. Valid values: 1024 to 65536. Unit: bytes. Default value: 65536.
          */
         public Builder maxMessageSize(Long maxMessageSize) {
             this.putBodyParameter("MaxMessageSize", maxMessageSize);
@@ -137,7 +141,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -146,7 +150,7 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * The name of the topic that you want to create.
          */
         public Builder topicName(String topicName) {
             this.putBodyParameter("TopicName", topicName);
@@ -200,7 +204,7 @@ public class CreateTopicRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -208,7 +212,7 @@ public class CreateTopicRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -29,7 +29,6 @@ public class ListSubscriptionByTopicRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopicName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
 
     private ListSubscriptionByTopicRequest(Builder builder) {
@@ -119,7 +118,7 @@ public class ListSubscriptionByTopicRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -128,7 +127,7 @@ public class ListSubscriptionByTopicRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Value values: 10 to 50. If you set this parameter to a value smaller than 10, the value of this parameter is 10 by default. If you set this parameter to a value greater than 50, the value of this parameter is 50 by default.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -137,7 +136,7 @@ public class ListSubscriptionByTopicRequest extends Request {
         }
 
         /**
-         * SubscriptionName.
+         * The name of the subscription.
          */
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("SubscriptionName", subscriptionName);
@@ -146,7 +145,7 @@ public class ListSubscriptionByTopicRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * The name of the topic.
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

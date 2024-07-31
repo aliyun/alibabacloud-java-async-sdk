@@ -92,7 +92,7 @@ public class GetSubscriptionAttributesRequest extends Request {
         }
 
         /**
-         * SubscriptionName.
+         * The name of the subscription.
          */
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("SubscriptionName", subscriptionName);
@@ -101,7 +101,7 @@ public class GetSubscriptionAttributesRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * The name of the topic.
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

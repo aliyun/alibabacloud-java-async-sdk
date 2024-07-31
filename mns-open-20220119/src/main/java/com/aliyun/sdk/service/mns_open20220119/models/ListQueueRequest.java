@@ -118,7 +118,7 @@ public class ListQueueRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -127,7 +127,7 @@ public class ListQueueRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Value values: 10 to 50. If you set this parameter to a value smaller than 10, the value of this parameter is 10 by default. If you set this parameter to a value greater than 50, the value of this parameter is 50 by default.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -136,7 +136,7 @@ public class ListQueueRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * The name of the queue.
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);

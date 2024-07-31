@@ -106,7 +106,11 @@ public class SetSubscriptionAttributesRequest extends Request {
         }
 
         /**
-         * NotifyStrategy.
+         * The retry policy that is applied if an error occurs when Message Service (MNS) pushes messages to the endpoint. Valid values:
+         * <p>
+         * 
+         * *   BACKOFF_RETRY
+         * *   EXPONENTIAL_DECAY_RETRY
          */
         public Builder notifyStrategy(String notifyStrategy) {
             this.putQueryParameter("NotifyStrategy", notifyStrategy);
@@ -115,7 +119,7 @@ public class SetSubscriptionAttributesRequest extends Request {
         }
 
         /**
-         * SubscriptionName.
+         * The name of the subscription.
          */
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("SubscriptionName", subscriptionName);
@@ -124,7 +128,7 @@ public class SetSubscriptionAttributesRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * The name of the topic.
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

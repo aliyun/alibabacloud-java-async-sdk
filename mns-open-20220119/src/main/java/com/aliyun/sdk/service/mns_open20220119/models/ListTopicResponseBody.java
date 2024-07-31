@@ -97,7 +97,7 @@ public class ListTopicResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +121,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The response status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +137,7 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -346,7 +346,7 @@ public class ListTopicResponseBody extends TeaModel {
             private String topicUrl; 
 
             /**
-             * CreateTime.
+             * The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -354,7 +354,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * The time when the subscription was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -362,7 +362,11 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * LoggingEnabled.
+             * Indicates whether the logging feature is enabled.
+             * <p>
+             * 
+             * *   True
+             * *   False
              */
             public Builder loggingEnabled(Boolean loggingEnabled) {
                 this.loggingEnabled = loggingEnabled;
@@ -370,7 +374,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * MaxMessageSize.
+             * The maximum length of the message that is sent to the topic. Unit: bytes.
              */
             public Builder maxMessageSize(Long maxMessageSize) {
                 this.maxMessageSize = maxMessageSize;
@@ -378,7 +382,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * MessageCount.
+             * The number of messages in the topic.
              */
             public Builder messageCount(Long messageCount) {
                 this.messageCount = messageCount;
@@ -386,7 +390,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * MessageRetentionPeriod.
+             * The maximum duration for which a message is retained in the topic. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.
              */
             public Builder messageRetentionPeriod(Long messageRetentionPeriod) {
                 this.messageRetentionPeriod = messageRetentionPeriod;
@@ -410,7 +414,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * The name of the topic.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -495,7 +499,7 @@ public class ListTopicResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * PageData.
+             * The data returned on the current page.
              */
             public Builder pageData(java.util.List < PageData> pageData) {
                 this.pageData = pageData;
@@ -503,7 +507,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number.
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -511,7 +515,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -519,7 +523,7 @@ public class ListTopicResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -77,7 +77,7 @@ public class DeleteTopicRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * The name of the topic that you want to delete.
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

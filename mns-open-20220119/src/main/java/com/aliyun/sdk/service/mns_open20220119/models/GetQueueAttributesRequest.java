@@ -91,7 +91,7 @@ public class GetQueueAttributesRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * The name of the queue.
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);

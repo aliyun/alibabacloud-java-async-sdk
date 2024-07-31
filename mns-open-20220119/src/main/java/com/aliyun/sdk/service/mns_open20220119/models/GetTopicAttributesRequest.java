@@ -100,7 +100,7 @@ public class GetTopicAttributesRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * The name of the topic.
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

@@ -164,7 +164,14 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * The receiver endpoint. The format of the endpoint varies based on the terminal type.
+         * <p>
+         * 
+         * *   If you set PushType to http, set Endpoint to an `HTTP URL that starts with http:// or https://`.
+         * *   If you set PushType to queue, set Endpoint to a `queue name`.
+         * *   If you set PushType to mpush, set Endpoint to an `AppKey`.
+         * *   If you set PushType to alisms, set Endpoint to a `mobile number`.
+         * *   If you set PushType to email, set Endpoint to an `email address`.
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("Endpoint", endpoint);
@@ -173,7 +180,10 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * MessageTag.
+         * The tag that is used to filter messages. Only messages that have the same tag can be pushed. Set the value to a string of no more than 16 characters.
+         * <p>
+         * 
+         * By default, no tag is specified to filter messages.
          */
         public Builder messageTag(String messageTag) {
             this.putQueryParameter("MessageTag", messageTag);
@@ -182,7 +192,12 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * NotifyContentFormat.
+         * The content format of the messages that are pushed to the endpoint. Valid values:
+         * <p>
+         * 
+         * *   XML
+         * *   JSON
+         * *   SIMPLIFIED
          */
         public Builder notifyContentFormat(String notifyContentFormat) {
             this.putQueryParameter("NotifyContentFormat", notifyContentFormat);
@@ -191,7 +206,11 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * NotifyStrategy.
+         * The retry policy that is applied if an error occurs when Message Service (MNS) pushes messages to the endpoint. Valid values:
+         * <p>
+         * 
+         * *   BACKOFF_RETRY
+         * *   EXPONENTIAL_DECAY_RETRY
          */
         public Builder notifyStrategy(String notifyStrategy) {
             this.putQueryParameter("NotifyStrategy", notifyStrategy);
@@ -200,7 +219,14 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * PushType.
+         * The terminal type. Valid values:
+         * <p>
+         * 
+         * *   http: HTTP services
+         * *   queue: queues
+         * *   mpush: mobile devices
+         * *   alisms: Alibaba Cloud Short Message Service (SMS)
+         * *   email: emails
          */
         public Builder pushType(String pushType) {
             this.putQueryParameter("PushType", pushType);
@@ -209,7 +235,7 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * SubscriptionName.
+         * The name of the subscription.
          */
         public Builder subscriptionName(String subscriptionName) {
             this.putQueryParameter("SubscriptionName", subscriptionName);
@@ -218,7 +244,7 @@ public class SubscribeRequest extends Request {
         }
 
         /**
-         * TopicName.
+         * The name of the topic.
          */
         public Builder topicName(String topicName) {
             this.putQueryParameter("TopicName", topicName);

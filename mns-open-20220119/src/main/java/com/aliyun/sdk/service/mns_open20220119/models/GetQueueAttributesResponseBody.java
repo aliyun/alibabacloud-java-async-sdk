@@ -97,7 +97,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +121,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The response status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +137,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -382,7 +382,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             private Long visibilityTimeout; 
 
             /**
-             * ActiveMessages.
+             * The total number of messages that are in the Active state in the queue. The value is an approximate number.
              */
             public Builder activeMessages(Long activeMessages) {
                 this.activeMessages = activeMessages;
@@ -390,7 +390,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the queue was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -398,7 +398,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * DelayMessages.
+             * The total number of the messages that are in the Delayed state in the queue. The value is an approximate number.
              */
             public Builder delayMessages(Long delayMessages) {
                 this.delayMessages = delayMessages;
@@ -406,7 +406,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * DelaySeconds.
+             * The period after which all messages sent to the queue are consumed. Unit: seconds.
              */
             public Builder delaySeconds(Long delaySeconds) {
                 this.delaySeconds = delaySeconds;
@@ -414,7 +414,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * InactiveMessages.
+             * The total number of the messages that are in the Inactive state in the queue. The value is an approximate number.
              */
             public Builder inactiveMessages(Long inactiveMessages) {
                 this.inactiveMessages = inactiveMessages;
@@ -422,7 +422,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * The time when the queue was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -430,7 +430,11 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * LoggingEnabled.
+             * Indicates whether the logging feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   True
+             * *   False
              */
             public Builder loggingEnabled(Boolean loggingEnabled) {
                 this.loggingEnabled = loggingEnabled;
@@ -438,7 +442,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * MaximumMessageSize.
+             * The maximum length of the message that is sent to the queue. Unit: bytes.
              */
             public Builder maximumMessageSize(Long maximumMessageSize) {
                 this.maximumMessageSize = maximumMessageSize;
@@ -446,7 +450,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * MessageRetentionPeriod.
+             * The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.
              */
             public Builder messageRetentionPeriod(Long messageRetentionPeriod) {
                 this.messageRetentionPeriod = messageRetentionPeriod;
@@ -454,7 +458,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * PollingWaitSeconds.
+             * The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Unit: seconds.
              */
             public Builder pollingWaitSeconds(Long pollingWaitSeconds) {
                 this.pollingWaitSeconds = pollingWaitSeconds;
@@ -462,7 +466,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * The name of the queue.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -478,7 +482,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * VisibilityTimeout.
+             * The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.
              */
             public Builder visibilityTimeout(Long visibilityTimeout) {
                 this.visibilityTimeout = visibilityTimeout;

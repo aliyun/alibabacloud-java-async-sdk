@@ -77,7 +77,7 @@ public class DeleteQueueRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * The name of the queue.
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);

@@ -97,7 +97,7 @@ public class ListQueueResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +121,7 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The response status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +137,7 @@ public class ListQueueResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -382,7 +382,7 @@ public class ListQueueResponseBody extends TeaModel {
             private Long visibilityTimeout; 
 
             /**
-             * ActiveMessages.
+             * The total number of messages that are in the Active state in the queue. The value is an approximate number.
              */
             public Builder activeMessages(Long activeMessages) {
                 this.activeMessages = activeMessages;
@@ -390,7 +390,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the queue was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -398,7 +398,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * DelayMessages.
+             * The total number of the messages that are in the Delayed state in the queue. The value is an approximate number.
              */
             public Builder delayMessages(Long delayMessages) {
                 this.delayMessages = delayMessages;
@@ -406,7 +406,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * DelaySeconds.
+             * The period after which all messages sent to the queue are consumed. Unit: seconds.
              */
             public Builder delaySeconds(Long delaySeconds) {
                 this.delaySeconds = delaySeconds;
@@ -414,7 +414,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * InactiveMessages.
+             * The total number of the messages that are in the Inactive state in the queue. The value is an approximate number.
              */
             public Builder inactiveMessages(Long inactiveMessages) {
                 this.inactiveMessages = inactiveMessages;
@@ -422,7 +422,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifyTime.
+             * The time when the queue was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder lastModifyTime(Long lastModifyTime) {
                 this.lastModifyTime = lastModifyTime;
@@ -430,7 +430,11 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * LoggingEnabled.
+             * Indicates whether the logging feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   True
+             * *   False
              */
             public Builder loggingEnabled(Boolean loggingEnabled) {
                 this.loggingEnabled = loggingEnabled;
@@ -438,7 +442,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * MaximumMessageSize.
+             * The maximum length of the message that is sent to the queue. Unit: bytes.
              */
             public Builder maximumMessageSize(Long maximumMessageSize) {
                 this.maximumMessageSize = maximumMessageSize;
@@ -446,7 +450,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * MessageRetentionPeriod.
+             * The maximum duration for which a message is retained in the queue. After the specified retention period ends, the message is deleted regardless of whether the message is received. Unit: seconds.
              */
             public Builder messageRetentionPeriod(Long messageRetentionPeriod) {
                 this.messageRetentionPeriod = messageRetentionPeriod;
@@ -454,7 +458,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * PollingWaitSeconds.
+             * The maximum duration for which long polling requests are held after the ReceiveMessage operation is called. Unit: seconds.
              */
             public Builder pollingWaitSeconds(Long pollingWaitSeconds) {
                 this.pollingWaitSeconds = pollingWaitSeconds;
@@ -462,7 +466,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * The name of the queue.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -478,7 +482,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * VisibilityTimeout.
+             * The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.
              */
             public Builder visibilityTimeout(Long visibilityTimeout) {
                 this.visibilityTimeout = visibilityTimeout;
@@ -579,7 +583,7 @@ public class ListQueueResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * PageData.
+             * The data returned on the current page.
              */
             public Builder pageData(java.util.List < PageData> pageData) {
                 this.pageData = pageData;
@@ -587,7 +591,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number.
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -595,7 +599,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -603,7 +607,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * Pages.
+             * The total number of pages returned.
              */
             public Builder pages(Long pages) {
                 this.pages = pages;
@@ -611,7 +615,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of entries on the current page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -619,7 +623,7 @@ public class ListQueueResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries.
              */
             public Builder total(Long total) {
                 this.total = total;
