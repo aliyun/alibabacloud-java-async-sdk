@@ -25,7 +25,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyFileUploadLeaseResponse> applyFileUploadLease(ApplyFileUploadLeaseRequest request);
 
+    CompletableFuture<CreateAndPulishAgentResponse> createAndPulishAgent(CreateAndPulishAgentRequest request);
+
     CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
+
+    CompletableFuture<DeleteAgentResponse> deleteAgent(DeleteAgentRequest request);
 
     CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
 
@@ -39,6 +43,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetIndexJobStatusResponse> getIndexJobStatus(GetIndexJobStatusRequest request);
 
+    CompletableFuture<GetPublishedAgentResponse> getPublishedAgent(GetPublishedAgentRequest request);
+
     CompletableFuture<ListCategoryResponse> listCategory(ListCategoryRequest request);
 
     CompletableFuture<ListChunksResponse> listChunks(ListChunksRequest request);
@@ -47,10 +53,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListIndicesResponse> listIndices(ListIndicesRequest request);
 
+    CompletableFuture<ListPublishedAgentResponse> listPublishedAgent(ListPublishedAgentRequest request);
+
     CompletableFuture<RetrieveResponse> retrieve(RetrieveRequest request);
 
     CompletableFuture<SubmitIndexAddDocumentsJobResponse> submitIndexAddDocumentsJob(SubmitIndexAddDocumentsJobRequest request);
 
     CompletableFuture<SubmitIndexJobResponse> submitIndexJob(SubmitIndexJobRequest request);
+
+    CompletableFuture<UpdateAndPublishAgentResponse> updateAndPublishAgent(UpdateAndPublishAgentRequest request);
 
 }
