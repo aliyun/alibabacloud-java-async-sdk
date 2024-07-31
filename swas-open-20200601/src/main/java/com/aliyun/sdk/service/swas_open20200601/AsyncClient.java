@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.swas_open20200601;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.swas_open20200601.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -18,6 +19,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddCustomImageShareAccountResponse> addCustomImageShareAccount(AddCustomImageShareAccountRequest request);
+
     /**
       * By default, no public endpoints are assigned to Simple Database Service instances. If you want to access the databases of a Simple Database Service instance over the Internet by using Simple Container Service or Data Management (DMS), you must apply for a public endpoint for the Simple Database Service instance.
       * ### QPS limit
@@ -25,6 +28,18 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<AllocatePublicConnectionResponse> allocatePublicConnection(AllocatePublicConnectionRequest request);
+
+    /**
+      * If the port range, protocol, and source IP address of a firewall rule in a firewall template are the same as the port range, protocol, and source IP address of an existing rule, the new rule overwrites the existing rule regardless of whether the existing rule is enabled or disabled.
+      *
+     */
+    CompletableFuture<ApplyFirewallTemplateResponse> applyFirewallTemplate(ApplyFirewallTemplateRequest request);
+
+    /**
+      * You can bind only one key pair to a simple application server in the Simple Application Server console. If a simple application server has a key pair bound, the new key pair overwrites the original key pair.
+      *
+     */
+    CompletableFuture<AttachKeyPairResponse> attachKeyPair(AttachKeyPairRequest request);
 
     CompletableFuture<CreateCommandResponse> createCommand(CreateCommandRequest request);
 
@@ -58,6 +73,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateFirewallRulesResponse> createFirewallRules(CreateFirewallRulesRequest request);
 
+    /**
+      * Simple Application Server supports the firewall template feature that provides multiple firewall rules. You can use a template to add a group of firewall rules to one or more simple application servers at a time. This improves the efficiency of setting firewall rules.
+      *
+     */
+    CompletableFuture<CreateFirewallTemplateResponse> createFirewallTemplate(CreateFirewallTemplateRequest request);
+
+    /**
+      * Adding firewall rules to a firewall template does not affect the firewall rules that have been applied to simple application servers..
+      *
+     */
+    CompletableFuture<CreateFirewallTemplateRulesResponse> createFirewallTemplateRules(CreateFirewallTemplateRulesRequest request);
+
     CompletableFuture<CreateInstanceKeyPairResponse> createInstanceKeyPair(CreateInstanceKeyPairRequest request);
 
     /**
@@ -69,6 +96,15 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<CreateInstancesResponse> createInstances(CreateInstancesRequest request);
+
+    /**
+      * Alibaba Cloud SSH key pairs offer a secure and efficient logon authentication mechanism, facilitating both verification and encrypted communication within the SSH protocol framework. An SSH key pair is essentially constituted by a public key and a private key. Tailored for Linux-based simple application servers, this security measure enhances security and convenience, effectively addressing your heightened security requirements.
+      * *   The key pair logon method is only valid for Linux-based simple application servers.
+      * *   A maximum of 10 key pairs can be created in a region for an Alibaba Cloud account.
+      * *   Only RSA 2048-bit key pairs can be created in the Simple Application Server console.
+      *
+     */
+    CompletableFuture<CreateKeyPairResponse> createKeyPair(CreateKeyPairRequest request);
 
     /**
       * A snapshot is a point-in-time backup of a disk. Snapshots can be used to back up data, recover data after accidental operations on instances, recover data after network attacks, and create custom images.
@@ -84,6 +120,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request);
 
+    /**
+      * You cannot delete commands that are being run.
+      *
+     */
     CompletableFuture<DeleteCommandResponse> deleteCommand(DeleteCommandRequest request);
 
     /**
@@ -96,6 +136,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCustomImageResponse> deleteCustomImage(DeleteCustomImageRequest request);
 
     /**
+      * If a custom image is shared, you must unshare the image before you can delete it. After a custom image is unshared, you cannot query the custom image by using the Elastic Compute Service (ECS) console or by calling an ECS API operation. If you want to use a custom image to create ECS instances, we recommend that you copy the custom image before you delete it. For more information, see the "Copy custom images" topic.
+      *
+     */
+    CompletableFuture<DeleteCustomImagesResponse> deleteCustomImages(DeleteCustomImagesRequest request);
+
+    /**
       * After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.
       * ### QPS limit
       * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
@@ -103,7 +149,31 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteFirewallRuleResponse> deleteFirewallRule(DeleteFirewallRuleRequest request);
 
+    /**
+      * After a firewall rule is deleted, your business deployed on the simple application server may become inaccessible. Before you delete a firewall rule, make sure that the firewall rule is no longer needed by the simple application server.
+      *
+     */
+    CompletableFuture<DeleteFirewallRulesResponse> deleteFirewallRules(DeleteFirewallRulesRequest request);
+
+    /**
+      * Deletion of firewall rules does not affect the firewall rules that have been applied to simple application servers.
+      *
+     */
+    CompletableFuture<DeleteFirewallTemplateRulesResponse> deleteFirewallTemplateRules(DeleteFirewallTemplateRulesRequest request);
+
+    /**
+      * Deleting a firewall template does not affect the firewall rules that have been applied to simple application servers. You can delete firewall templates that you no longer need.
+      *
+     */
+    CompletableFuture<DeleteFirewallTemplatesResponse> deleteFirewallTemplates(DeleteFirewallTemplatesRequest request);
+
     CompletableFuture<DeleteInstanceKeyPairResponse> deleteInstanceKeyPair(DeleteInstanceKeyPairRequest request);
+
+    /**
+      * You must unbind SSH key pairs that you no longer use from simple application servers before you delete the SSH key pairs.
+      *
+     */
+    CompletableFuture<DeleteKeyPairsResponse> deleteKeyPairs(DeleteKeyPairsRequest request);
 
     /**
       * You can delete a snapshot if you no longer need it.
@@ -115,6 +185,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request);
 
     CompletableFuture<DeleteSnapshotsResponse> deleteSnapshots(DeleteSnapshotsRequest request);
+
+    CompletableFuture<DescribeCloudAssistantAttributesResponse> describeCloudAssistantAttributes(DescribeCloudAssistantAttributesRequest request);
 
     /**
       * By default, the Cloud Assistant client is installed on simple application servers. If you have manually uninstalled the client, you must reinstall the client. Otherwise, you cannot run commands on the servers.
@@ -166,6 +238,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDatabaseSlowLogRecordsResponse> describeDatabaseSlowLogRecords(DescribeDatabaseSlowLogRecordsRequest request);
 
+    CompletableFuture<DescribeFirewallTemplateApplyResultsResponse> describeFirewallTemplateApplyResults(DescribeFirewallTemplateApplyResultsRequest request);
+
+    CompletableFuture<DescribeFirewallTemplateRulesApplyResultResponse> describeFirewallTemplateRulesApplyResult(DescribeFirewallTemplateRulesApplyResultRequest request);
+
+    CompletableFuture<DescribeFirewallTemplatesResponse> describeFirewallTemplates(DescribeFirewallTemplatesRequest request);
+
     CompletableFuture<DescribeInstanceKeyPairResponse> describeInstanceKeyPair(DescribeInstanceKeyPairRequest request);
 
     CompletableFuture<DescribeInstancePasswordsSettingResponse> describeInstancePasswordsSetting(DescribeInstancePasswordsSettingRequest request);
@@ -190,9 +268,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSecurityAgentStatusResponse> describeSecurityAgentStatus(DescribeSecurityAgentStatusRequest request);
 
+    /**
+      * If you want to change the SSH key pairs that are bound to your simple application servers or your end user no longer needs to access a specific simple application server, you can unbind the SSH key pairs from simple application servers to improve the security of the simple application servers or restrict access to the specific simple application server.
+      *
+     */
+    CompletableFuture<DetachKeyPairResponse> detachKeyPair(DetachKeyPairRequest request);
+
     CompletableFuture<DisableFirewallRuleResponse> disableFirewallRule(DisableFirewallRuleRequest request);
 
     CompletableFuture<EnableFirewallRuleResponse> enableFirewallRule(EnableFirewallRuleRequest request);
+
+    /**
+      * You can call this operation to import an existing key pair to the Simple Application Server console. This way, you can use the key pair to log on to simple application servers. The existing key pair that you want to import must use a supported encryption method. For more information, see [Q2: Which encryption methods must be used by key pairs when I import existing key pairs to the Simple Application Server console?](~~59085~~)
+      *
+     */
+    CompletableFuture<ImportKeyPairResponse> importKeyPair(ImportKeyPairRequest request);
 
     /**
       * To run commands on your simple application servers, you must install the Cloud Assistant client on your servers. You can call the [DescribeCloudAssistantStatus](~~439512~~) operation to check whether the Cloud Assistant client is installed on your simple application servers. If you have not installed the Cloud Assistant client, you can call the InstallCloudAssistant operation to install the client. Then, you can call the [RebootInstance](~~190443~~) operation to restart the servers to allow the client to take effect.
@@ -202,14 +292,26 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InstallCloudMonitorAgentResponse> installCloudMonitorAgent(InstallCloudMonitorAgentRequest request);
 
+    /**
+      * *   The simple application servers for which you want to call the operation must meet the following conditions. If a simple application server cannot meet the conditions, you must call this operation again.
+      *     *   The simple application servers are in the `Running` state. You can call the [ListInstances](~~2361065~~) operation to query the status of simple application servers.
+      *     *   Cloud Assistant Agent is installed on the simple application servers. For more information, see [InstallCloudAssistant](~~2361030~~).
+      *     *   If you run a PowerShell command, make sure that the PowerShell module is configured for the simple application servers.
+      * *   The command may fail to be run due to the abnormal states of simple application servers, network exceptions, or exceptions in Cloud Assistant Agent. If the command fails to be run, no execution information is generated.
+      * *   If you enable the custom parameter feature when you create a command, you must set the `Parameters` parameter to specify custom parameters when you run the command.
+      * *   When you call this operation, you can select only one common command or a custom command that you have created.
+      *
+     */
     CompletableFuture<InvokeCommandResponse> invokeCommand(InvokeCommandRequest request);
+
+    CompletableFuture<ListCustomImageShareAccountsResponse> listCustomImageShareAccounts(ListCustomImageShareAccountsRequest request);
 
     CompletableFuture<ListCustomImagesResponse> listCustomImages(ListCustomImagesRequest request);
 
     /**
-      * You can specify multiple request parameters such as `InstanceId` and `DiskIds`. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit](~~347607~~).
+      * You can specify multiple request parameters that you want to query, such as `InstanceId`, `DiskIds`, and `ResourceGroupId`. Specified request parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+      * ### [](#qps-)QPS limits
+      * You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
       *
      */
     CompletableFuture<ListDisksResponse> listDisks(ListDisksRequest request);
@@ -263,6 +365,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListInstancesTrafficPackagesResponse> listInstancesTrafficPackages(ListInstancesTrafficPackagesRequest request);
 
+    CompletableFuture<ListKeyPairsResponse> listKeyPairs(ListKeyPairsRequest request);
+
     /**
       * You can query the details of all plans provided by Simple Application Server in a region, including the IDs, prices, disk sizes, and disk categories of the plans.
       * ### QPS limit
@@ -280,15 +384,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
 
     /**
-      * You can specify multiple request parameters such as `InstanceId`, `DiskId`, and `SnapshotIds` to query snapshots. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
-      * ### QPS limit
-      * You can call this API operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
+      * You can specify multiple request parameters that you want to query, such as `InstanceId`, `DiskId`, `SnapshotIds`, and `ResourceGroupId`. Specified parameters have logical AND relations. Only the specified parameters are included in the filter conditions.
+      * ### [](#qps-)QPS limits
+      * You can call this operation up to 10 times per minute per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits](~~347607~~).
       *
      */
     CompletableFuture<ListSnapshotsResponse> listSnapshots(ListSnapshotsRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     /**
-      * ##
       * After you create a simple application server, you can log on to the simple application server to build environments and applications on the server.
       *
      */
@@ -311,6 +416,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDatabaseInstanceParameterResponse> modifyDatabaseInstanceParameter(ModifyDatabaseInstanceParameterRequest request);
 
     CompletableFuture<ModifyFirewallRuleResponse> modifyFirewallRule(ModifyFirewallRuleRequest request);
+
+    /**
+      * Modifying a firewall template does not affect the firewall rules that have been applied to simple application servers.
+      *
+     */
+    CompletableFuture<ModifyFirewallTemplateResponse> modifyFirewallTemplate(ModifyFirewallTemplateRequest request);
 
     /**
       * You can share a custom image with ECS. If the configurations of your simple application server cannot meet your business requirements, or you want to use ECS instances to deploy your business, you can share your custom image with ECS to transfer your business from Simple Application Server to ECS.
@@ -344,6 +455,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ReleasePublicConnectionResponse> releasePublicConnection(ReleasePublicConnectionRequest request);
+
+    CompletableFuture<RemoveCustomImageShareAccountResponse> removeCustomImageShareAccount(RemoveCustomImageShareAccountRequest request);
 
     /**
       * *   Before you call this operation, we recommend that you understand the billing of Simple Application Server. For more information, see [Billable items](~~58623~~).
@@ -456,6 +569,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
 
     CompletableFuture<StopInstancesResponse> stopInstances(StopInstancesRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     CompletableFuture<UpdateCommandAttributeResponse> updateCommandAttribute(UpdateCommandAttributeRequest request);
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatabaseInstanceParametersResponseBody</p>
  */
 public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
-    @NameInMap("ConfigParameters")
+    @com.aliyun.core.annotation.NameInMap("ConfigParameters")
     private java.util.List < ConfigParameters> configParameters;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningParameters")
+    @com.aliyun.core.annotation.NameInMap("RunningParameters")
     private java.util.List < RunningParameters> runningParameters;
 
     private DescribeDatabaseInstanceParametersResponseBody(Builder builder) {
@@ -142,22 +141,22 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
     } 
 
     public static class ConfigParameters extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("ForceModify")
+        @com.aliyun.core.annotation.NameInMap("ForceModify")
         private String forceModify;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private String forceRestart;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private ConfigParameters(Builder builder) {
@@ -228,7 +227,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CheckingCode.
+             * The check code that indicates the valid values of the parameter.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -236,7 +235,12 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceModify.
+             * Does it support modifying parameter values. Possible values:
+             * <p>
+             * 
+             * - true:Support modifying parameter values.
+             * 
+             * - false:Modifying parameter values is not supported.
              */
             public Builder forceModify(String forceModify) {
                 this.forceModify = forceModify;
@@ -244,7 +248,13 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * Specifies whether to forcibly restart the instance after parameters are modified. Valid values:
+             * <p>
+             * 
+             * *   true: forcibly restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.
+             * *   false: does not forcibly restart the instance.
+             * 
+             * Default value: false.
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -252,7 +262,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -260,7 +270,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -268,7 +278,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -283,22 +293,22 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
 
     }
     public static class RunningParameters extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("ForceModify")
+        @com.aliyun.core.annotation.NameInMap("ForceModify")
         private String forceModify;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private String forceRestart;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private RunningParameters(Builder builder) {
@@ -369,7 +379,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CheckingCode.
+             * The check code that indicates the valid values of the parameter.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -377,7 +387,12 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceModify.
+             * Does it support modifying parameter values. Possible values:
+             * <p>
+             * 
+             * - true:Support modifying parameter values.
+             * 
+             * - false:Modifying parameter values is not supported.
              */
             public Builder forceModify(String forceModify) {
                 this.forceModify = forceModify;
@@ -385,7 +400,13 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * Specifies whether to forcibly restart the instance after parameters are modified. Valid values:
+             * <p>
+             * 
+             * *   true: forcibly restarts the instance. If a new parameter value takes effect only after the instance restarts, you must set this parameter to true. Otherwise, the new parameter value cannot take effect.
+             * *   false: does not forcibly restart the instance.
+             * 
+             * Default value: false.
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -393,7 +414,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -401,7 +422,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -409,7 +430,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

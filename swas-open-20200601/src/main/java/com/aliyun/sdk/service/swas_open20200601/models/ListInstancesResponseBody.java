@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesResponseBody</p>
  */
 public class ListInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListInstancesResponseBody(Builder builder) {
@@ -131,23 +130,382 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    public static class DiskTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private DiskTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public DiskTags build() {
+                return new DiskTags(this);
+            } 
+
+        } 
+
+    }
+    public static class Disks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
+        private String creationTime;
+
+        @com.aliyun.core.annotation.NameInMap("Device")
+        private String device;
+
+        @com.aliyun.core.annotation.NameInMap("DiskChargeType")
+        private String diskChargeType;
+
+        @com.aliyun.core.annotation.NameInMap("DiskId")
+        private String diskId;
+
+        @com.aliyun.core.annotation.NameInMap("DiskName")
+        private String diskName;
+
+        @com.aliyun.core.annotation.NameInMap("DiskTags")
+        private java.util.List < DiskTags> diskTags;
+
+        @com.aliyun.core.annotation.NameInMap("DiskType")
+        private String diskType;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
+        private Integer size;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private Disks(Builder builder) {
+            this.category = builder.category;
+            this.creationTime = builder.creationTime;
+            this.device = builder.device;
+            this.diskChargeType = builder.diskChargeType;
+            this.diskId = builder.diskId;
+            this.diskName = builder.diskName;
+            this.diskTags = builder.diskTags;
+            this.diskType = builder.diskType;
+            this.regionId = builder.regionId;
+            this.remark = builder.remark;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.size = builder.size;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Disks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        /**
+         * @return device
+         */
+        public String getDevice() {
+            return this.device;
+        }
+
+        /**
+         * @return diskChargeType
+         */
+        public String getDiskChargeType() {
+            return this.diskChargeType;
+        }
+
+        /**
+         * @return diskId
+         */
+        public String getDiskId() {
+            return this.diskId;
+        }
+
+        /**
+         * @return diskName
+         */
+        public String getDiskName() {
+            return this.diskName;
+        }
+
+        /**
+         * @return diskTags
+         */
+        public java.util.List < DiskTags> getDiskTags() {
+            return this.diskTags;
+        }
+
+        /**
+         * @return diskType
+         */
+        public String getDiskType() {
+            return this.diskType;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return size
+         */
+        public Integer getSize() {
+            return this.size;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String category; 
+            private String creationTime; 
+            private String device; 
+            private String diskChargeType; 
+            private String diskId; 
+            private String diskName; 
+            private java.util.List < DiskTags> diskTags; 
+            private String diskType; 
+            private String regionId; 
+            private String remark; 
+            private String resourceGroupId; 
+            private Integer size; 
+            private String status; 
+
+            /**
+             * The category of the disk. Valid values:
+             * <p>
+             * 
+             * *   ESSD: ESSD of PL0
+             * *   SSD: standard SSD
+             * *   CLOUD_EFFICIENCY: an ultra disk.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * The time when the simple application server was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * The device name of the disk after the disk is attached to the simple application server.
+             */
+            public Builder device(String device) {
+                this.device = device;
+                return this;
+            }
+
+            /**
+             * The billing method of the disk.
+             */
+            public Builder diskChargeType(String diskChargeType) {
+                this.diskChargeType = diskChargeType;
+                return this;
+            }
+
+            /**
+             * The disk ID.
+             */
+            public Builder diskId(String diskId) {
+                this.diskId = diskId;
+                return this;
+            }
+
+            /**
+             * The disk name.
+             */
+            public Builder diskName(String diskName) {
+                this.diskName = diskName;
+                return this;
+            }
+
+            /**
+             * The tags that are added to the disk.
+             */
+            public Builder diskTags(java.util.List < DiskTags> diskTags) {
+                this.diskTags = diskTags;
+                return this;
+            }
+
+            /**
+             * The disk type. Valid values:
+             * <p>
+             * 
+             * *   system: system disk
+             * *   data: data disk
+             */
+            public Builder diskType(String diskType) {
+                this.diskType = diskType;
+                return this;
+            }
+
+            /**
+             * The region ID.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The remarks of the disk.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group to which the disk belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The disk size. Unit: GB.
+             */
+            public Builder size(Integer size) {
+                this.size = size;
+                return this;
+            }
+
+            /**
+             * The status of the disk. Valid values:
+             * <p>
+             * 
+             * *   ReIniting: The disk is being initialized.
+             * *   Creating: The disk is being created.
+             * *   In_use: The disk is in use.
+             * *   Available: The disk can be attached.
+             * *   Attaching: The disk is being attached.
+             * *   Detaching: The disk is being detached.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public Disks build() {
+                return new Disks(this);
+            } 
+
+        } 
+
+    }
     public static class Image extends TeaModel {
-        @NameInMap("ImageContact")
+        @com.aliyun.core.annotation.NameInMap("ImageContact")
         private String imageContact;
 
-        @NameInMap("ImageIconUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageIconUrl")
         private String imageIconUrl;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageType")
+        @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
 
-        @NameInMap("ImageVersion")
+        @com.aliyun.core.annotation.NameInMap("ImageVersion")
         private String imageVersion;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
         private Image(Builder builder) {
@@ -234,7 +592,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The image name.
+             * The name of the image.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -242,7 +600,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The image type. Valid values:
+             * The type of the image. Valid values:
              * <p>
              * 
              * *   system
@@ -278,22 +636,22 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("DiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DiskCategory")
         private String diskCategory;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private Double flow;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Double memory;
 
         private ResourceSpec(Builder builder) {
@@ -372,7 +730,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vCPUs.
+             * The number of vCPUs of the simple application server.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -383,9 +741,9 @@ public class ListInstancesResponseBody extends TeaModel {
              * The category of the disk. Valid values:
              * <p>
              * 
-             * *   ESSD: an enhanced SSD (ESSD) at performance level 0 (PL0).
-             * *   SSD: a standard SSD.
-             * *   CLOUD_EFFICIENCY: an ultra disk.
+             * *   ESSD: enhanced SSD (ESSD) of PL0
+             * *   SSD: standard SSD
+             * *   CLOUD_EFFICIENCY: ultra disk
              */
             public Builder diskCategory(String diskCategory) {
                 this.diskCategory = diskCategory;
@@ -404,8 +762,8 @@ public class ListInstancesResponseBody extends TeaModel {
              * The amount of the traffic.
              * <p>
              * 
-             * *   A value of 0 indicates that the server is a bandwidth-based server.
-             * *   A value of none-zero indicates that the server is a data transfer plan-based server.
+             * *   A value of 0 indicates the traffic amount of a bandwidth-based simple application server.
+             * *   A non-zero value indicates the traffic amount of a data transfer plan-based simple application server.
              */
             public Builder flow(Double flow) {
                 this.flow = flow;
@@ -413,7 +771,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size.
+             * The memory size of the server.
              */
             public Builder memory(Double memory) {
                 this.memory = memory;
@@ -427,62 +785,132 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the simple application server.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the simple application server.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Instances extends TeaModel {
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Combination")
+        @com.aliyun.core.annotation.NameInMap("Combination")
         private Boolean combination;
 
-        @NameInMap("CombinationInstanceId")
+        @com.aliyun.core.annotation.NameInMap("CombinationInstanceId")
         private String combinationInstanceId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DdosStatus")
+        @com.aliyun.core.annotation.NameInMap("DdosStatus")
         private String ddosStatus;
 
-        @NameInMap("DisableReason")
+        @com.aliyun.core.annotation.NameInMap("DisableReason")
         private String disableReason;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("Disks")
+        private java.util.List < Disks> disks;
+
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private Image image;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("InnerIpAddress")
+        @com.aliyun.core.annotation.NameInMap("InnerIpAddress")
         private String innerIpAddress;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("PlanId")
+        @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
 
-        @NameInMap("PublicIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private String publicIpAddress;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceSpec")
         private ResourceSpec resourceSpec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Instances(Builder builder) {
@@ -493,6 +921,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.ddosStatus = builder.ddosStatus;
             this.disableReason = builder.disableReason;
+            this.disks = builder.disks;
             this.expiredTime = builder.expiredTime;
             this.image = builder.image;
             this.imageId = builder.imageId;
@@ -502,8 +931,10 @@ public class ListInstancesResponseBody extends TeaModel {
             this.planId = builder.planId;
             this.publicIpAddress = builder.publicIpAddress;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resourceSpec = builder.resourceSpec;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.uuid = builder.uuid;
         }
 
@@ -562,6 +993,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getDisableReason() {
             return this.disableReason;
+        }
+
+        /**
+         * @return disks
+         */
+        public java.util.List < Disks> getDisks() {
+            return this.disks;
         }
 
         /**
@@ -628,6 +1066,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return resourceSpec
          */
         public ResourceSpec getResourceSpec() {
@@ -639,6 +1084,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -656,6 +1108,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String creationTime; 
             private String ddosStatus; 
             private String disableReason; 
+            private java.util.List < Disks> disks; 
             private String expiredTime; 
             private Image image; 
             private String imageId; 
@@ -665,8 +1118,10 @@ public class ListInstancesResponseBody extends TeaModel {
             private String planId; 
             private String publicIpAddress; 
             private String regionId; 
+            private String resourceGroupId; 
             private ResourceSpec resourceSpec; 
             private String status; 
+            private java.util.List < Tags> tags; 
             private String uuid; 
 
             /**
@@ -691,7 +1146,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the plan is a bundle plan.
+             * Indicates whether the simple application server uses a bundle plan.
              */
             public Builder combination(Boolean combination) {
                 this.combination = combination;
@@ -699,7 +1154,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the bundle plan.
+             * The ID of the simple application server that uses a bundle plan.
              */
             public Builder combinationInstanceId(String combinationInstanceId) {
                 this.combinationInstanceId = combinationInstanceId;
@@ -732,8 +1187,8 @@ public class ListInstancesResponseBody extends TeaModel {
              * <p>
              * 
              * *   FINANCIAL: The server is locked due to overdue payments.
-             * *   SECURITY: The server is locked due to security reasons.
-             * *   EXPIRED: The server has expired.
+             * *   SECURITY: The server is locked for security reasons.
+             * *   EXPIRED: The server is expired.
              */
             public Builder disableReason(String disableReason) {
                 this.disableReason = disableReason;
@@ -741,7 +1196,15 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the server expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The disks that are attached to the simple application server.
+             */
+            public Builder disks(java.util.List < Disks> disks) {
+                this.disks = disks;
+                return this;
+            }
+
+            /**
+             * The time when the simple application server expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -757,7 +1220,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of an image.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -765,7 +1228,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP address of the simple application server.
+             * The private IP address of the simple application server.
              */
             public Builder innerIpAddress(String innerIpAddress) {
                 this.innerIpAddress = innerIpAddress;
@@ -781,7 +1244,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The name of the simple application server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -789,7 +1252,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The plan ID.
+             * The ID of the instance plan.
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -797,7 +1260,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the server.
+             * The public IP address.
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -805,10 +1268,18 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the servers.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group to which the server belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -824,14 +1295,14 @@ public class ListInstancesResponseBody extends TeaModel {
              * The status of the simple application server. Valid values:
              * <p>
              * 
-             * *   Pending
-             * *   Starting
-             * *   Running
-             * *   Stopping
-             * *   Stopped
-             * *   Resetting
-             * *   Upgrading
-             * *   Disabled
+             * *   Pending: The server is being prepared.
+             * *   Starting: The server is being started.
+             * *   Running: The server is running.
+             * *   Stopping: The server is being stopped.
+             * *   Stopped: The server is stopped.
+             * *   Resetting: The server is being reset.
+             * *   Upgrading: The server is being upgraded.
+             * *   Disabled: The server is not available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -839,7 +1310,15 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The universally unique identifier (UUID) of the server.
+             * The tags that are added to the simple application server.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The universally unique identifier (UUID) of the simple application server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

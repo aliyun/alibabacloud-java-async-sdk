@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LoginInstanceRequest</p>
  */
 public class LoginInstanceRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    private Integer port;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
     private LoginInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.password = builder.password;
+        this.port = builder.port;
         this.regionId = builder.regionId;
         this.username = builder.username;
     }
@@ -66,6 +70,13 @@ public class LoginInstanceRequest extends Request {
     }
 
     /**
+     * @return port
+     */
+    public Integer getPort() {
+        return this.port;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -82,6 +93,7 @@ public class LoginInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<LoginInstanceRequest, Builder> {
         private String instanceId; 
         private String password; 
+        private Integer port; 
         private String regionId; 
         private String username; 
 
@@ -93,6 +105,7 @@ public class LoginInstanceRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.password = request.password;
+            this.port = request.port;
             this.regionId = request.regionId;
             this.username = request.username;
         } 
@@ -120,6 +133,15 @@ public class LoginInstanceRequest extends Request {
         }
 
         /**
+         * Port.
+         */
+        public Builder port(Integer port) {
+            this.putQueryParameter("Port", port);
+            this.port = port;
+            return this;
+        }
+
+        /**
          * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
@@ -133,7 +155,7 @@ public class LoginInstanceRequest extends Request {
          * <p>
          * 
          * *   For a Linux server, you do not need to enter a username.
-         * *   For a Windows server, the default username is `administrator`.
+         * *   For a Windows server, the default username `administrator` is used.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

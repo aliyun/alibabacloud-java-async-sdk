@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InvokeCommandResponseBody</p>
  */
 public class InvokeCommandResponseBody extends TeaModel {
-    @NameInMap("InvokeId")
+    @com.aliyun.core.annotation.NameInMap("InvokeId")
     private String invokeId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private InvokeCommandResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class InvokeCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InvokeId.
+         * The execution ID of the command.
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;
@@ -58,7 +57,7 @@ public class InvokeCommandResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

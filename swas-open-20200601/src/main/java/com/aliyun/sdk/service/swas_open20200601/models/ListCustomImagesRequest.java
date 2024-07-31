@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCustomImagesRequest</p>
  */
 public class ListCustomImagesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DataSnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSnapshotId")
     private String dataSnapshotId;
 
-    @Query
-    @NameInMap("ImageIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageIds")
     private String imageIds;
 
-    @Query
-    @NameInMap("ImageNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageNames")
     private String imageNames;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SystemSnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Share")
+    private Boolean share;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemSnapshotId")
     private String systemSnapshotId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private ListCustomImagesRequest(Builder builder) {
         super(builder);
@@ -51,10 +66,14 @@ public class ListCustomImagesRequest extends Request {
         this.dataSnapshotId = builder.dataSnapshotId;
         this.imageIds = builder.imageIds;
         this.imageNames = builder.imageNames;
+        this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.share = builder.share;
         this.systemSnapshotId = builder.systemSnapshotId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -99,6 +118,13 @@ public class ListCustomImagesRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -120,10 +146,31 @@ public class ListCustomImagesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return share
+     */
+    public Boolean getShare() {
+        return this.share;
+    }
+
+    /**
      * @return systemSnapshotId
      */
     public String getSystemSnapshotId() {
         return this.systemSnapshotId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<ListCustomImagesRequest, Builder> {
@@ -131,10 +178,14 @@ public class ListCustomImagesRequest extends Request {
         private String dataSnapshotId; 
         private String imageIds; 
         private String imageNames; 
+        private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
+        private Boolean share; 
         private String systemSnapshotId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -146,10 +197,14 @@ public class ListCustomImagesRequest extends Request {
             this.dataSnapshotId = request.dataSnapshotId;
             this.imageIds = request.imageIds;
             this.imageNames = request.imageNames;
+            this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.share = request.share;
             this.systemSnapshotId = request.systemSnapshotId;
+            this.tag = request.tag;
         } 
 
         /**
@@ -189,6 +244,15 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
          * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -220,11 +284,38 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
+         * The ID of the resource group.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * Share.
+         */
+        public Builder share(Boolean share) {
+            this.putQueryParameter("Share", share);
+            this.share = share;
+            return this;
+        }
+
+        /**
          * The ID of the system disk snapshot.
          */
         public Builder systemSnapshotId(String systemSnapshotId) {
             this.putQueryParameter("SystemSnapshotId", systemSnapshotId);
             this.systemSnapshotId = systemSnapshotId;
+            return this;
+        }
+
+        /**
+         * Tag N of the custom image.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -235,4 +326,65 @@ public class ListCustomImagesRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of tag N. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of tag N. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatabaseSlowLogRecordsRequest</p>
  */
 public class DescribeDatabaseSlowLogRecordsRequest extends Request {
-    @Query
-    @NameInMap("AcsProduct")
-    private String acsProduct;
-
-    @Query
-    @NameInMap("DatabaseInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String databaseInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeDatabaseSlowLogRecordsRequest(Builder builder) {
         super(builder);
-        this.acsProduct = builder.acsProduct;
         this.databaseInstanceId = builder.databaseInstanceId;
         this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
@@ -66,13 +60,6 @@ public class DescribeDatabaseSlowLogRecordsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return acsProduct
-     */
-    public String getAcsProduct() {
-        return this.acsProduct;
     }
 
     /**
@@ -118,7 +105,6 @@ public class DescribeDatabaseSlowLogRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDatabaseSlowLogRecordsRequest, Builder> {
-        private String acsProduct; 
         private String databaseInstanceId; 
         private String endTime; 
         private Integer pageNumber; 
@@ -132,7 +118,6 @@ public class DescribeDatabaseSlowLogRecordsRequest extends Request {
 
         private Builder(DescribeDatabaseSlowLogRecordsRequest request) {
             super(request);
-            this.acsProduct = request.acsProduct;
             this.databaseInstanceId = request.databaseInstanceId;
             this.endTime = request.endTime;
             this.pageNumber = request.pageNumber;
@@ -140,15 +125,6 @@ public class DescribeDatabaseSlowLogRecordsRequest extends Request {
             this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
-
-        /**
-         * AcsProduct.
-         */
-        public Builder acsProduct(String acsProduct) {
-            this.putQueryParameter("AcsProduct", acsProduct);
-            this.acsProduct = acsProduct;
-            return this;
-        }
 
         /**
          * The ID of the Simple Database Service instance.

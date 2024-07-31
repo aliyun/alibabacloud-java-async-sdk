@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCustomImagesResponseBody</p>
  */
 public class ListCustomImagesResponseBody extends TeaModel {
-    @NameInMap("CustomImages")
+    @com.aliyun.core.annotation.NameInMap("CustomImages")
     private java.util.List < CustomImages> customImages;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListCustomImagesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The queried custom images.
+         * The array of queried custom images.
          */
         public Builder customImages(java.util.List < CustomImages> customImages) {
             this.customImages = customImages;
@@ -131,60 +130,145 @@ public class ListCustomImagesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the custom image.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the custom image.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class CustomImages extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreateInstances")
+        private java.util.List < String > createInstances;
+
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DataSnapshotId")
+        @com.aliyun.core.annotation.NameInMap("DataSnapshotId")
         private String dataSnapshotId;
 
-        @NameInMap("DataSnapshotName")
+        @com.aliyun.core.annotation.NameInMap("DataSnapshotName")
         private String dataSnapshotName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("InShare")
+        @com.aliyun.core.annotation.NameInMap("InShare")
         private Boolean inShare;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InShareUser")
+        private Boolean inShareUser;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("OsType")
+        private String osType;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SystemSnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SystemSnapshotId")
         private String systemSnapshotId;
 
-        @NameInMap("SystemSnapshotName")
+        @com.aliyun.core.annotation.NameInMap("SystemSnapshotName")
         private String systemSnapshotName;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private Long userId;
+
         private CustomImages(Builder builder) {
+            this.createInstances = builder.createInstances;
             this.creationTime = builder.creationTime;
             this.dataSnapshotId = builder.dataSnapshotId;
             this.dataSnapshotName = builder.dataSnapshotName;
             this.description = builder.description;
             this.imageId = builder.imageId;
             this.inShare = builder.inShare;
+            this.inShareUser = builder.inShareUser;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.name = builder.name;
+            this.osType = builder.osType;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.systemSnapshotId = builder.systemSnapshotId;
             this.systemSnapshotName = builder.systemSnapshotName;
+            this.tags = builder.tags;
+            this.userId = builder.userId;
         }
 
         public static Builder builder() {
@@ -193,6 +277,13 @@ public class ListCustomImagesResponseBody extends TeaModel {
 
         public static CustomImages create() {
             return builder().build();
+        }
+
+        /**
+         * @return createInstances
+         */
+        public java.util.List < String > getCreateInstances() {
+            return this.createInstances;
         }
 
         /**
@@ -238,6 +329,13 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return inShareUser
+         */
+        public Boolean getInShareUser() {
+            return this.inShareUser;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -259,10 +357,24 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return osType
+         */
+        public String getOsType() {
+            return this.osType;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -286,23 +398,51 @@ public class ListCustomImagesResponseBody extends TeaModel {
             return this.systemSnapshotName;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
+         * @return userId
+         */
+        public Long getUserId() {
+            return this.userId;
+        }
+
         public static final class Builder {
+            private java.util.List < String > createInstances; 
             private String creationTime; 
             private String dataSnapshotId; 
             private String dataSnapshotName; 
             private String description; 
             private String imageId; 
             private Boolean inShare; 
+            private Boolean inShareUser; 
             private String instanceId; 
             private String instanceName; 
             private String name; 
+            private String osType; 
             private String regionId; 
+            private String resourceGroupId; 
             private String status; 
             private String systemSnapshotId; 
             private String systemSnapshotName; 
+            private java.util.List < Tags> tags; 
+            private Long userId; 
 
             /**
-             * The time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * CreateInstances.
+             */
+            public Builder createInstances(java.util.List < String > createInstances) {
+                this.createInstances = createInstances;
+                return this;
+            }
+
+            /**
+             * The time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -342,10 +482,18 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the custom image is shared with Elastic Compute Service (ECS).
+             * Indicates whether the custom image is shared to Elastic Compute Service (ECS).
              */
             public Builder inShare(Boolean inShare) {
                 this.inShare = inShare;
+                return this;
+            }
+
+            /**
+             * InShareUser.
+             */
+            public Builder inShareUser(Boolean inShareUser) {
+                this.inShareUser = inShareUser;
                 return this;
             }
 
@@ -374,10 +522,26 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the custom images.
+             * OsType.
+             */
+            public Builder osType(String osType) {
+                this.osType = osType;
+                return this;
+            }
+
+            /**
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -402,6 +566,22 @@ public class ListCustomImagesResponseBody extends TeaModel {
              */
             public Builder systemSnapshotName(String systemSnapshotName) {
                 this.systemSnapshotName = systemSnapshotName;
+                return this;
+            }
+
+            /**
+             * The tags of the custom image.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(Long userId) {
+                this.userId = userId;
                 return this;
             }
 

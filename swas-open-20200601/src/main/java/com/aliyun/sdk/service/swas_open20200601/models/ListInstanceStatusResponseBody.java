@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceStatusResponseBody</p>
  */
 public class ListInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("InstanceStatuses")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatuses")
     private java.util.List < InstanceStatuses> instanceStatuses;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListInstanceStatusResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListInstanceStatusResponseBody extends TeaModel {
     } 
 
     public static class InstanceStatuses extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private InstanceStatuses(Builder builder) {
@@ -170,7 +169,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * InstanceId.
+             * The ID of the simple application server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -178,7 +177,17 @@ public class ListInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the simple application server. Valid values:
+             * <p>
+             * 
+             * *   Pending
+             * *   Starting
+             * *   Running
+             * *   Stopping
+             * *   Stopped
+             * *   Resetting
+             * *   Upgrading
+             * *   Disabled
              */
             public Builder status(String status) {
                 this.status = status;

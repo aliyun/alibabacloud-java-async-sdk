@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartTerminalSessionResponseBody</p>
  */
 public class StartTerminalSessionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
-    @NameInMap("WebSocketUrl")
+    @com.aliyun.core.annotation.NameInMap("WebSocketUrl")
     private String webSocketUrl;
 
     private StartTerminalSessionResponseBody(Builder builder) {

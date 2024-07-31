@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatabaseInstanceMetricDataResponseBody</p>
  */
 public class DescribeDatabaseInstanceMetricDataResponseBody extends TeaModel {
-    @NameInMap("DataFormat")
+    @com.aliyun.core.annotation.NameInMap("DataFormat")
     private String dataFormat;
 
-    @NameInMap("MetricData")
+    @com.aliyun.core.annotation.NameInMap("MetricData")
     private String metricData;
 
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Unit")
+    @com.aliyun.core.annotation.NameInMap("Unit")
     private String unit;
 
     private DescribeDatabaseInstanceMetricDataResponseBody(Builder builder) {

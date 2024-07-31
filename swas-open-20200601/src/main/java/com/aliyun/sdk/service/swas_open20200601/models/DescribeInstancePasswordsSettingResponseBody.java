@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancePasswordsSettingResponseBody</p>
  */
 public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
-    @NameInMap("InstancePasswordSetting")
+    @com.aliyun.core.annotation.NameInMap("InstancePasswordSetting")
     private Boolean instancePasswordSetting;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VncPasswordSetting")
+    @com.aliyun.core.annotation.NameInMap("VncPasswordSetting")
     private Boolean vncPasswordSetting;
 
     private DescribeInstancePasswordsSettingResponseBody(Builder builder) {

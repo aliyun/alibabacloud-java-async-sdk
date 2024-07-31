@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCommandRequest</p>
  */
 public class DeleteCommandRequest extends Request {
-    @Query
-    @NameInMap("CommandId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private DeleteCommandRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class DeleteCommandRequest extends Request {
         } 
 
         /**
-         * CommandId.
+         * The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -79,7 +78,7 @@ public class DeleteCommandRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommandsRequest</p>
  */
 public class DescribeCommandsRequest extends Request {
-    @Query
-    @NameInMap("CommandId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandId")
     private String commandId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("Provider")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Provider")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String provider;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeCommandsRequest(Builder builder) {
@@ -50,6 +57,8 @@ public class DescribeCommandsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.provider = builder.provider;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
         this.type = builder.type;
     }
 
@@ -109,6 +118,20 @@ public class DescribeCommandsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -122,6 +145,8 @@ public class DescribeCommandsRequest extends Request {
         private String pageSize; 
         private String provider; 
         private String regionId; 
+        private String resourceGroupId; 
+        private java.util.List < Tag> tag; 
         private String type; 
 
         private Builder() {
@@ -136,11 +161,13 @@ public class DescribeCommandsRequest extends Request {
             this.pageSize = request.pageSize;
             this.provider = request.provider;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
             this.type = request.type;
         } 
 
         /**
-         * CommandId.
+         * The command ID.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -149,7 +176,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The command name. Fuzzy match is not supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -158,7 +185,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +199,12 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Maximum value: 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +213,11 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Provider.
+         * The provider of the common command. Take note of the following items:
+         * <p>
+         * 
+         * *   If you set this parameter to `AlibabaCloud`, all the common commands provided by Alibaba Cloud are queried.
+         * *   If you set this parameter to `User`, all the custom commands created by you are queried.
          */
         public Builder provider(String provider) {
             this.putQueryParameter("Provider", provider);
@@ -185,7 +226,7 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -194,7 +235,30 @@ public class DescribeCommandsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The resource group ID.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The tags that are bound to the command.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The language type of the command. Valid values:
+         * <p>
+         * 
+         * *   RunBatScript: batch command, applicable to Windows instances
+         * *   RunPowerShellScript: PowerShell command, applicable to Windows instances
+         * *   RunShellScript: shell command, applicable to Linux instances
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -209,4 +273,65 @@ public class DescribeCommandsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the command. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the command. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

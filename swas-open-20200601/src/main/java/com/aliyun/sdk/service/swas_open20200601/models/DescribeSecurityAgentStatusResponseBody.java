@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityAgentStatusResponseBody</p>
  */
 public class DescribeSecurityAgentStatusResponseBody extends TeaModel {
-    @NameInMap("ClientStatus")
+    @com.aliyun.core.annotation.NameInMap("ClientStatus")
     private String clientStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSecurityAgentStatusResponseBody(Builder builder) {

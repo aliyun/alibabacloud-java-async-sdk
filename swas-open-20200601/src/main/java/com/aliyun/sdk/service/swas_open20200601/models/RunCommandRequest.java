@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunCommandRequest</p>
  */
 public class RunCommandRequest extends Request {
-    @Query
-    @NameInMap("CommandContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandContent;
 
-    @Query
-    @NameInMap("EnableParameter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableParameter")
     private Boolean enableParameter;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.Map < String, ? > parameters;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("WindowsPasswordName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WindowsPasswordName")
     private String windowsPasswordName;
 
-    @Query
-    @NameInMap("WorkingDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkingDir")
     private String workingDir;
 
-    @Query
-    @NameInMap("WorkingUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkingUser")
     private String workingUser;
 
     private RunCommandRequest(Builder builder) {
@@ -314,11 +313,11 @@ public class RunCommandRequest extends Request {
         }
 
         /**
-         * The execution path of the command. You can specify a value for the parameter. Default execution paths vary based on the operating systems of the servers.
+         * The execution path of the command. Custom paths are supported. Default execution paths vary based on the operating systems of the servers.
          * <p>
          * 
-         * *   For Linux servers, the default execution path is the /home directory of the root user.
-         * *   For Windows servers, the default execution path is C:\Windows\system32.
+         * *   For Linux servers, the default path is /root of the root user.
+         * *   For Windows servers, the default path is C:\Windows\system32.
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);

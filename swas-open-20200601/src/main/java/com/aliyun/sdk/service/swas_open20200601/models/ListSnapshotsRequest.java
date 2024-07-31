@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSnapshotsRequest</p>
  */
 public class ListSnapshotsRequest extends Request {
-    @Query
-    @NameInMap("AcsProduct")
-    private String acsProduct;
-
-    @Query
-    @NameInMap("DiskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
     private String diskId;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SnapshotIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotIds")
     private String snapshotIds;
 
-    @Query
-    @NameInMap("SourceDiskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDiskType")
     private String sourceDiskType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private ListSnapshotsRequest(Builder builder) {
         super(builder);
-        this.acsProduct = builder.acsProduct;
         this.diskId = builder.diskId;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.snapshotIds = builder.snapshotIds;
         this.sourceDiskType = builder.sourceDiskType;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -70,13 +74,6 @@ public class ListSnapshotsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return acsProduct
-     */
-    public String getAcsProduct() {
-        return this.acsProduct;
     }
 
     /**
@@ -115,6 +112,13 @@ public class ListSnapshotsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return snapshotIds
      */
     public String getSnapshotIds() {
@@ -128,15 +132,23 @@ public class ListSnapshotsRequest extends Request {
         return this.sourceDiskType;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListSnapshotsRequest, Builder> {
-        private String acsProduct; 
         private String diskId; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String snapshotIds; 
         private String sourceDiskType; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -144,24 +156,16 @@ public class ListSnapshotsRequest extends Request {
 
         private Builder(ListSnapshotsRequest request) {
             super(request);
-            this.acsProduct = request.acsProduct;
             this.diskId = request.diskId;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.snapshotIds = request.snapshotIds;
             this.sourceDiskType = request.sourceDiskType;
+            this.tag = request.tag;
         } 
-
-        /**
-         * AcsProduct.
-         */
-        public Builder acsProduct(String acsProduct) {
-            this.putQueryParameter("AcsProduct", acsProduct);
-            this.acsProduct = acsProduct;
-            return this;
-        }
 
         /**
          * The disk ID.
@@ -215,6 +219,15 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
+         * The ID of the resource group.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * The snapshot IDs. The value can be a JSON array that consists of up to 100 snapshot IDs. Separate multiple snapshot IDs with commas (,).
          */
         public Builder snapshotIds(String snapshotIds) {
@@ -236,6 +249,15 @@ public class ListSnapshotsRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag N that you want to add to the snapshot.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public ListSnapshotsRequest build() {
             return new ListSnapshotsRequest(this);
@@ -243,4 +265,65 @@ public class ListSnapshotsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of tag N that you want to add to the snapshot. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of tag N that you want to add to the snapshot. A tag value can be up to 64 characters in length. Valid values of N: 1 to 20.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

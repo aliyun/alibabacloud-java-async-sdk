@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancePlansModificationResponseBody</p>
  */
 public class ListInstancePlansModificationResponseBody extends TeaModel {
-    @NameInMap("Plans")
+    @com.aliyun.core.annotation.NameInMap("Plans")
     private java.util.List < Plans> plans;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstancePlansModificationResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class ListInstancePlansModificationResponseBody extends TeaModel {
     } 
 
     public static class Plans extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("Core")
+        @com.aliyun.core.annotation.NameInMap("Core")
         private Integer core;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private Integer flow;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("OriginPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginPrice")
         private Double originPrice;
 
-        @NameInMap("PlanId")
+        @com.aliyun.core.annotation.NameInMap("PlanId")
         private String planId;
 
-        @NameInMap("SupportPlatform")
+        @com.aliyun.core.annotation.NameInMap("SupportPlatform")
         private String supportPlatform;
 
         private Plans(Builder builder) {

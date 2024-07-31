@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatabaseInstancesResponseBody</p>
  */
 public class DescribeDatabaseInstancesResponseBody extends TeaModel {
-    @NameInMap("DatabaseInstances")
+    @com.aliyun.core.annotation.NameInMap("DatabaseInstances")
     private java.util.List < DatabaseInstances> databaseInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDatabaseInstancesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The name of the super administrator account of the Simple Database Service instance.
+         * The information about the Simple Database Service instances.
          */
         public Builder databaseInstances(java.util.List < DatabaseInstances> databaseInstances) {
             this.databaseInstances = databaseInstances;
@@ -132,52 +131,52 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
     } 
 
     public static class DatabaseInstances extends TeaModel {
-        @NameInMap("BusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
         private String businessStatus;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DatabaseInstanceEdition")
+        @com.aliyun.core.annotation.NameInMap("DatabaseInstanceEdition")
         private String databaseInstanceEdition;
 
-        @NameInMap("DatabaseInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DatabaseInstanceId")
         private String databaseInstanceId;
 
-        @NameInMap("DatabaseInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DatabaseInstanceName")
         private String databaseInstanceName;
 
-        @NameInMap("DatabaseInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DatabaseInstanceStatus")
         private String databaseInstanceStatus;
 
-        @NameInMap("DatabaseVersion")
+        @com.aliyun.core.annotation.NameInMap("DatabaseVersion")
         private String databaseVersion;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
-        @NameInMap("PrivateConnection")
+        @com.aliyun.core.annotation.NameInMap("PrivateConnection")
         private String privateConnection;
 
-        @NameInMap("PublicConnection")
+        @com.aliyun.core.annotation.NameInMap("PublicConnection")
         private String publicConnection;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Storage")
+        @com.aliyun.core.annotation.NameInMap("Storage")
         private Integer storage;
 
-        @NameInMap("SuperAccountName")
+        @com.aliyun.core.annotation.NameInMap("SuperAccountName")
         private String superAccountName;
 
         private DatabaseInstances(Builder builder) {
@@ -338,7 +337,12 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             private String superAccountName; 
 
             /**
-             * BusinessStatus.
+             * The business status of the instance. Valid values:
+             * <p>
+             * 
+             * *   normal
+             * *   expired
+             * *   overdue
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -346,7 +350,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method of the Simple Database Service instance. Set the value to PrePaid. This value indicates the subscription billing method.
+             * <p>
+             * 
+             * Default value: PrePaid.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -354,7 +361,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs.
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -362,7 +369,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the instance was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -370,7 +377,13 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseInstanceEdition.
+             * The plan edition ID of the Simple Database Service instance. Valid values:
+             * <p>
+             * 
+             * *   swas.db.c1m1s25: CNY 35/month.
+             * *   swas.db.c1m2s80: CNY 100/month.
+             * *   swas.db.c2m4s120: CNY 200/month.
+             * *   swas.db.c2m8s240: CNY 300/month.
              */
             public Builder databaseInstanceEdition(String databaseInstanceEdition) {
                 this.databaseInstanceEdition = databaseInstanceEdition;
@@ -378,7 +391,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseInstanceId.
+             * The ID of the Simple Database Service instance.
              */
             public Builder databaseInstanceId(String databaseInstanceId) {
                 this.databaseInstanceId = databaseInstanceId;
@@ -386,7 +399,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseInstanceName.
+             * The name of the Simple Database Service instance.
              */
             public Builder databaseInstanceName(String databaseInstanceName) {
                 this.databaseInstanceName = databaseInstanceName;
@@ -394,7 +407,16 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseInstanceStatus.
+             * The status of the Simple Database Service instance. Valid values:
+             * <p>
+             * 
+             * *   Pending: The instance is being created.
+             * *   Restarting: The instance is being restarted.
+             * *   Running: The instance is running.
+             * *   Stopping: The instance is being stopped.
+             * *   Stopped: The instance is stopped.
+             * *   UPGRADING: The instance is being upgraded.
+             * *   DISABLED: The instance is disabled.
              */
             public Builder databaseInstanceStatus(String databaseInstanceStatus) {
                 this.databaseInstanceStatus = databaseInstanceStatus;
@@ -402,7 +424,11 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseVersion.
+             * The database engine version of the instance. Valid values:
+             * <p>
+             * 
+             * *   5.7: MySQL 5.7.
+             * *   8.0: MySQL 8.0.
              */
             public Builder databaseVersion(String databaseVersion) {
                 this.databaseVersion = databaseVersion;
@@ -410,7 +436,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the instance expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>
+             * 
+             * >  The time displayed in the Simple Application Server console is in the format of UTC+8.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -418,7 +447,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size of the instance. Unit: GB.
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -426,7 +455,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateConnection.
+             * The private endpoint.
              */
             public Builder privateConnection(String privateConnection) {
                 this.privateConnection = privateConnection;
@@ -434,7 +463,10 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicConnection.
+             * The public endpoint.
+             * <p>
+             * 
+             * >  This parameter is displayed only after you apply for a public endpoint for the instance and a public endpoint is assigned to the instance. You can call [AllocatePublicConnection](~~451413~~) to apply for a public endpoint for the instance.
              */
             public Builder publicConnection(String publicConnection) {
                 this.publicConnection = publicConnection;
@@ -442,7 +474,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the Simple Database Service instances.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -450,7 +482,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Storage.
+             * The size of the enhanced SSD (ESSD). Unit: GB.
              */
             public Builder storage(Integer storage) {
                 this.storage = storage;
@@ -458,7 +490,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SuperAccountName.
+             * The name of the super administrator account of the Simple Database Service instance.
              */
             public Builder superAccountName(String superAccountName) {
                 this.superAccountName = superAccountName;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSnapshotsResponseBody</p>
  */
 public class ListSnapshotsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Snapshots")
+    @com.aliyun.core.annotation.NameInMap("Snapshots")
     private java.util.List < Snapshots> snapshots;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSnapshotsResponseBody(Builder builder) {
@@ -131,39 +130,106 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the snapshot.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the snapshot.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Snapshots extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("RollbackTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("RollbackTime")
         private String rollbackTime;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SnapshotName")
+        @com.aliyun.core.annotation.NameInMap("SnapshotName")
         private String snapshotName;
 
-        @NameInMap("SourceDiskId")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskId")
         private String sourceDiskId;
 
-        @NameInMap("SourceDiskType")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskType")
         private String sourceDiskType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         private Snapshots(Builder builder) {
             this.creationTime = builder.creationTime;
@@ -171,12 +237,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
             this.progress = builder.progress;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
+            this.resourceGroupId = builder.resourceGroupId;
             this.rollbackTime = builder.rollbackTime;
             this.snapshotId = builder.snapshotId;
             this.snapshotName = builder.snapshotName;
             this.sourceDiskId = builder.sourceDiskId;
             this.sourceDiskType = builder.sourceDiskType;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -223,6 +291,13 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return rollbackTime
          */
         public String getRollbackTime() {
@@ -264,18 +339,27 @@ public class ListSnapshotsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String creationTime; 
             private String instanceId; 
             private String progress; 
             private String regionId; 
             private String remark; 
+            private String resourceGroupId; 
             private String rollbackTime; 
             private String snapshotId; 
             private String snapshotName; 
             private String sourceDiskId; 
             private String sourceDiskType; 
             private String status; 
+            private java.util.List < Tags> tags; 
 
             /**
              * The time when the snapshot was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
@@ -289,7 +373,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
              * The ID of the simple application server.
              * <p>
              * 
-             * Note: This parameter has a value for system disk snapshots. This parameter is left empty for data disk snapshots.
+             * Note: This parameter has a value returned for only system disk snapshots.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -305,7 +389,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the snapshots.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -317,6 +401,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group to which the snapshot belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -345,7 +437,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source disk based on which the snapshot is created. This parameter has a value even if the source disk is released.
+             * The ID of the source disk. This parameter has a value even after the source disk is released.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -374,6 +466,14 @@ public class ListSnapshotsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * The tags of the snapshot.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

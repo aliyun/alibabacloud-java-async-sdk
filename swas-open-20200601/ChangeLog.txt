@@ -1,3 +1,6 @@
+2024-07-31 Version: 2.0.0
+- Generated java-async 2020-06-01 for SWAS-OPEN.
+
 2023-09-18 Version: 1.0.8
 - Generated java-async 2020-06-01 for SWAS-OPEN.
 

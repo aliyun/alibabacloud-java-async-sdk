@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCommandAttributeRequest</p>
  */
 public class UpdateCommandAttributeRequest extends Request {
-    @Query
-    @NameInMap("CommandId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commandId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Long timeout;
 
-    @Query
-    @NameInMap("WorkingDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkingDir")
     private String workingDir;
 
     private UpdateCommandAttributeRequest(Builder builder) {
@@ -126,7 +125,7 @@ public class UpdateCommandAttributeRequest extends Request {
         } 
 
         /**
-         * CommandId.
+         * The command ID. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -135,7 +134,7 @@ public class UpdateCommandAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the command. The description supports all character sets and can be up to 512 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -144,7 +143,7 @@ public class UpdateCommandAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the command. The name supports all character sets and can be up to 128 characters in length.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -153,7 +152,7 @@ public class UpdateCommandAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +161,7 @@ public class UpdateCommandAttributeRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The maximum timeout period for the command execution on the ECS instance. Unit: seconds. When a command that you created cannot be run, the command execution times out. When the execution times out, the command process is forcefully terminated and the PID of the command is canceled. Default value: 60.
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);
@@ -171,7 +170,7 @@ public class UpdateCommandAttributeRequest extends Request {
         }
 
         /**
-         * WorkingDir.
+         * The working directory of the command. The directory can be up to 200 characters in length.
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceKeyPairResponseBody</p>
  */
 public class CreateInstanceKeyPairResponseBody extends TeaModel {
-    @NameInMap("Fingerprint")
+    @com.aliyun.core.annotation.NameInMap("Fingerprint")
     private String fingerprint;
 
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @NameInMap("PrivateKey")
+    @com.aliyun.core.annotation.NameInMap("PrivateKey")
     private String privateKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateInstanceKeyPairResponseBody(Builder builder) {

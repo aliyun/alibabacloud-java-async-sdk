@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomImageRequest</p>
  */
 public class CreateCustomImageRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DataSnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSnapshotId")
     private String dataSnapshotId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ImageName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SystemSnapshotId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResoureGroupId")
+    private String resoureGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemSnapshotId")
     private String systemSnapshotId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private CreateCustomImageRequest(Builder builder) {
         super(builder);
@@ -52,7 +58,9 @@ public class CreateCustomImageRequest extends Request {
         this.imageName = builder.imageName;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.resoureGroupId = builder.resoureGroupId;
         this.systemSnapshotId = builder.systemSnapshotId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -111,10 +119,24 @@ public class CreateCustomImageRequest extends Request {
     }
 
     /**
+     * @return resoureGroupId
+     */
+    public String getResoureGroupId() {
+        return this.resoureGroupId;
+    }
+
+    /**
      * @return systemSnapshotId
      */
     public String getSystemSnapshotId() {
         return this.systemSnapshotId;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
     }
 
     public static final class Builder extends Request.Builder<CreateCustomImageRequest, Builder> {
@@ -124,7 +146,9 @@ public class CreateCustomImageRequest extends Request {
         private String imageName; 
         private String instanceId; 
         private String regionId; 
+        private String resoureGroupId; 
         private String systemSnapshotId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -138,7 +162,9 @@ public class CreateCustomImageRequest extends Request {
             this.imageName = request.imageName;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.resoureGroupId = request.resoureGroupId;
             this.systemSnapshotId = request.systemSnapshotId;
+            this.tag = request.tag;
         } 
 
         /**
@@ -196,11 +222,29 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
+         * The ID of the resource group.
+         */
+        public Builder resoureGroupId(String resoureGroupId) {
+            this.putQueryParameter("ResoureGroupId", resoureGroupId);
+            this.resoureGroupId = resoureGroupId;
+            return this;
+        }
+
+        /**
          * The ID of the system disk snapshot.
          */
         public Builder systemSnapshotId(String systemSnapshotId) {
             this.putQueryParameter("SystemSnapshotId", systemSnapshotId);
             this.systemSnapshotId = systemSnapshotId;
+            return this;
+        }
+
+        /**
+         * The tags that you want to add to the custom image. You can specify up to 20 tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -211,4 +255,71 @@ public class CreateCustomImageRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of tag N that you want to add to the custom image. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of tag N that you want to add to the custom image. Valid values of N: 1 to 20.
+             * <p>
+             * 
+             * The tag value can be an empty string. The tag value can be up to 64 characters in length and cannot contain http:// or https://.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

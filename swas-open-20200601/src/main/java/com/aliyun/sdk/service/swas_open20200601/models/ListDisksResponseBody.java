@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDisksResponseBody</p>
  */
 public class ListDisksResponseBody extends TeaModel {
-    @NameInMap("Disks")
+    @com.aliyun.core.annotation.NameInMap("Disks")
     private java.util.List < Disks> disks;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDisksResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListDisksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the disks.
+         * The queried disks.
          */
         public Builder disks(java.util.List < Disks> disks) {
             this.disks = disks;
@@ -131,45 +130,112 @@ public class ListDisksResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Disks extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskChargeType")
+        @com.aliyun.core.annotation.NameInMap("DiskChargeType")
         private String diskChargeType;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         private Disks(Builder builder) {
             this.category = builder.category;
@@ -183,8 +249,10 @@ public class ListDisksResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.regionId = builder.regionId;
             this.remark = builder.remark;
+            this.resourceGroupId = builder.resourceGroupId;
             this.size = builder.size;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -273,6 +341,13 @@ public class ListDisksResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return size
          */
         public Integer getSize() {
@@ -284,6 +359,13 @@ public class ListDisksResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
         }
 
         public static final class Builder {
@@ -298,15 +380,18 @@ public class ListDisksResponseBody extends TeaModel {
             private String instanceName; 
             private String regionId; 
             private String remark; 
+            private String resourceGroupId; 
             private Integer size; 
             private String status; 
+            private java.util.List < Tags> tags; 
 
             /**
              * The category of the disk. Valid values:
              * <p>
              * 
-             * *   ESSD: an enhanced SSD (ESSD) at performance level 0 (PL0).
-             * *   SSD: a standard SSD.
+             * *   ESSD: enhanced SSD (ESSD) of PL0
+             * *   SSD: standard SSD
+             * *   CLOUD_EFFICIENCY: ultra disk
              */
             public Builder category(String category) {
                 this.category = category;
@@ -322,7 +407,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The device name of the disk on the simple application server.
+             * The device name of the disk after the disk is attached to the simple application server.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -338,7 +423,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disk.
+             * The disk ID.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -354,11 +439,11 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk. Valid values:
+             * The disk type. Valid values:
              * <p>
              * 
-             * *   System: system disk.
-             * *   Data: data disk.
+             * *   system: system disk
+             * *   data: data disk
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -374,7 +459,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Name of the simple application server.
+             * The name of the simple application server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -382,7 +467,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the disks.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -390,10 +475,18 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Description about the disk.
+             * The remarks of the disk.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group to which the disk belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -411,13 +504,21 @@ public class ListDisksResponseBody extends TeaModel {
              * 
              * *   ReIniting: The disk is being initialized.
              * *   Creating: The disk is being created.
-             * *   In_Use: The disk is being used.
+             * *   In_use: The disk is in use.
              * *   Available: The disk can be attached.
              * *   Attaching: The disk is being attached.
              * *   Detaching: The disk is being detached.
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * The tags that are added to the disks.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

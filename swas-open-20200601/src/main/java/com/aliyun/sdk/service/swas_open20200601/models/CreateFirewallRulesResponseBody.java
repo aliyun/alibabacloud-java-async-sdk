@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFirewallRulesResponseBody</p>
  */
 public class CreateFirewallRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("FirewallRuleIds")
+    private java.util.List < String > firewallRuleIds;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateFirewallRulesResponseBody(Builder builder) {
+        this.firewallRuleIds = builder.firewallRuleIds;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +31,13 @@ public class CreateFirewallRulesResponseBody extends TeaModel {
     }
 
     /**
+     * @return firewallRuleIds
+     */
+    public java.util.List < String > getFirewallRuleIds() {
+        return this.firewallRuleIds;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +45,16 @@ public class CreateFirewallRulesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < String > firewallRuleIds; 
         private String requestId; 
+
+        /**
+         * The IDs of the firewall rules that you created.
+         */
+        public Builder firewallRuleIds(java.util.List < String > firewallRuleIds) {
+            this.firewallRuleIds = firewallRuleIds;
+            return this;
+        }
 
         /**
          * The request ID.

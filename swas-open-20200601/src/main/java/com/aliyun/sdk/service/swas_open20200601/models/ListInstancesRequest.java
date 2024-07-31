@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesRequest</p>
  */
 public class ListInstancesRequest extends Request {
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PublicIpAddresses")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicIpAddresses")
     private String publicIpAddresses;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
         this.chargeType = builder.chargeType;
         this.instanceIds = builder.instanceIds;
+        this.instanceName = builder.instanceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.publicIpAddresses = builder.publicIpAddresses;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -79,6 +93,13 @@ public class ListInstancesRequest extends Request {
      */
     public String getInstanceIds() {
         return this.instanceIds;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -110,20 +131,37 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
         return this.status;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String chargeType; 
         private String instanceIds; 
+        private String instanceName; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String publicIpAddresses; 
         private String regionId; 
+        private String resourceGroupId; 
         private String status; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -133,11 +171,14 @@ public class ListInstancesRequest extends Request {
             super(request);
             this.chargeType = request.chargeType;
             this.instanceIds = request.instanceIds;
+            this.instanceName = request.instanceName;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.publicIpAddresses = request.publicIpAddresses;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.status = request.status;
+            this.tag = request.tag;
         } 
 
         /**
@@ -161,6 +202,15 @@ public class ListInstancesRequest extends Request {
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
             this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * The name of the simple application servers, which supports fuzzy search using wildcard *.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 
@@ -210,21 +260,39 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 实例状态，可能值：
+         * The ID of the resource group to which the simple application servers belong.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The status of the simple application servers. Valid values:
          * <p>
          * 
-         * - Pending：准备中
-         * - Starting：启动中
-         * - Running：运行中
-         * - Stopping：停止中
-         * - Stopped：停止
-         * - Resetting：重置中
-         * - Upgrading：升级中
-         * - Disabled：不可用
+         * *   Pending
+         * *   Starting
+         * *   Running
+         * *   Stopping
+         * *   Stopped
+         * *   Resetting
+         * *   Upgrading
+         * *   Disabled
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * The tags that are added to the simple application servers.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -235,4 +303,65 @@ public class ListInstancesRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key of the simple application servers. A tag key can be 1 to 64 characters in length. Valid values of N: 1 to 20.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value of the simple application servers. A tag value can be 1 to 64 characters in length. Valid values of N: 1 to 20.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

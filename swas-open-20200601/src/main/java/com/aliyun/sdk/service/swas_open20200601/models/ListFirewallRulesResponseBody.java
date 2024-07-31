@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFirewallRulesResponseBody</p>
  */
 public class ListFirewallRulesResponseBody extends TeaModel {
-    @NameInMap("FirewallRules")
+    @com.aliyun.core.annotation.NameInMap("FirewallRules")
     private java.util.List < FirewallRules> firewallRules;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListFirewallRulesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the firewall rules.
+         * The array of firewall rules.
          */
         public Builder firewallRules(java.util.List < FirewallRules> firewallRules) {
             this.firewallRules = firewallRules;
@@ -131,24 +130,88 @@ public class ListFirewallRulesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of tag N to be added to the firewall rule. Valid values of N: 1 to 20.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of tag N to be added to the firewall rule. Valid values of N: 1 to 20.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class FirewallRules extends TeaModel {
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleProtocol")
+        @com.aliyun.core.annotation.NameInMap("RuleProtocol")
         private String ruleProtocol;
 
-        @NameInMap("SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
         private String sourceCidrIp;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
 
         private FirewallRules(Builder builder) {
             this.policy = builder.policy;
@@ -157,6 +220,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             this.ruleId = builder.ruleId;
             this.ruleProtocol = builder.ruleProtocol;
             this.sourceCidrIp = builder.sourceCidrIp;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -209,6 +273,13 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             return this.sourceCidrIp;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String policy; 
             private String port; 
@@ -216,9 +287,10 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             private String ruleId; 
             private String ruleProtocol; 
             private String sourceCidrIp; 
+            private java.util.List < Tags> tags; 
 
             /**
-             * The firewall policy.
+             * The firewall policy. Valid values:
              * <p>
              * 
              * *   accept: Access is allowed.
@@ -257,9 +329,9 @@ public class ListFirewallRulesResponseBody extends TeaModel {
              * The transport layer protocol. Valid values:
              * <p>
              * 
-             * *   TCP: the TCP protocol.
-             * *   UDP: the UDP protocol
-             * *   TCP+UDP: the TCP and UDP protocols
+             * *   TCP
+             * *   UDP
+             * *   TCP+UDP
              */
             public Builder ruleProtocol(String ruleProtocol) {
                 this.ruleProtocol = ruleProtocol;
@@ -267,10 +339,18 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address or CIDR block that is allowed by the firewall rule.
+             * The source CIDR block.
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
+                return this;
+            }
+
+            /**
+             * The tags of the firewall rule.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

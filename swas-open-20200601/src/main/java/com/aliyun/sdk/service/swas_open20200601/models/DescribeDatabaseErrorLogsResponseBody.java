@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatabaseErrorLogsResponseBody</p>
  */
 public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
-    @NameInMap("ErrorLogs")
+    @com.aliyun.core.annotation.NameInMap("ErrorLogs")
     private java.util.List < ErrorLogs> errorLogs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDatabaseErrorLogsResponseBody(Builder builder) {
@@ -135,10 +134,10 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
     } 
 
     public static class ErrorLogs extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
         private ErrorLogs(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
             private String errorInfo; 
 
             /**
-             * CreateTime.
+             * The time when the resource was created. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -181,7 +180,7 @@ public class DescribeDatabaseErrorLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorInfo.
+             * The error message returned.
              */
             public Builder errorInfo(String errorInfo) {
                 this.errorInfo = errorInfo;

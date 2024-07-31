@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDatabaseSlowLogRecordsResponseBody</p>
  */
 public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PhysicalIORead")
+    @com.aliyun.core.annotation.NameInMap("PhysicalIORead")
     private Long physicalIORead;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlowLogs")
+    @com.aliyun.core.annotation.NameInMap("SlowLogs")
     private java.util.List < SlowLogs> slowLogs;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDatabaseSlowLogRecordsResponseBody(Builder builder) {
@@ -158,7 +157,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The database name.
+         * The slow query logs returned.
          */
         public Builder slowLogs(java.util.List < SlowLogs> slowLogs) {
             this.slowLogs = slowLogs;
@@ -180,31 +179,31 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
     } 
 
     public static class SlowLogs extends TeaModel {
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
-        @NameInMap("ExecutionStartTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStartTime")
         private String executionStartTime;
 
-        @NameInMap("HostAddress")
+        @com.aliyun.core.annotation.NameInMap("HostAddress")
         private String hostAddress;
 
-        @NameInMap("LockTimes")
+        @com.aliyun.core.annotation.NameInMap("LockTimes")
         private Long lockTimes;
 
-        @NameInMap("ParseRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ParseRowCounts")
         private Long parseRowCounts;
 
-        @NameInMap("QueryTimeMS")
+        @com.aliyun.core.annotation.NameInMap("QueryTimeMS")
         private Long queryTimeMS;
 
-        @NameInMap("QueryTimes")
+        @com.aliyun.core.annotation.NameInMap("QueryTimes")
         private Long queryTimes;
 
-        @NameInMap("ReturnRowCounts")
+        @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
         private SlowLogs(Builder builder) {
@@ -302,7 +301,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
             private String SQLText; 
 
             /**
-             * DBName.
+             * The name of the database.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -310,7 +309,10 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionStartTime.
+             * The time when the execution of the SQL statement started. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * <p>
+             * 
+             * >  The time displayed in the Simple Application Server console is in the format of UTC+8.
              */
             public Builder executionStartTime(String executionStartTime) {
                 this.executionStartTime = executionStartTime;
@@ -318,7 +320,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddress.
+             * The name and IP address of the client that is connected to the database.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -326,7 +328,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * LockTimes.
+             * The lock duration of the SQL statement. Unit: seconds.
              */
             public Builder lockTimes(Long lockTimes) {
                 this.lockTimes = lockTimes;
@@ -334,7 +336,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ParseRowCounts.
+             * The number of rows parsed by the SQL statement.
              */
             public Builder parseRowCounts(Long parseRowCounts) {
                 this.parseRowCounts = parseRowCounts;
@@ -342,7 +344,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeMS.
+             * The execution duration of the slow query. Unit: millisecond.
              */
             public Builder queryTimeMS(Long queryTimeMS) {
                 this.queryTimeMS = queryTimeMS;
@@ -350,7 +352,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimes.
+             * The execution duration of the slow query. Unit: seconds.
              */
             public Builder queryTimes(Long queryTimes) {
                 this.queryTimes = queryTimes;
@@ -358,7 +360,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnRowCounts.
+             * The number of rows returned by the SQL statement.
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
@@ -366,7 +368,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * The details of the SQL statement.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;

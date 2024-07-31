@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRegionsRequest</p>
  */
 public class ListRegionsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
     private ListRegionsRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
     }
 
     public static Builder builder() {
@@ -29,7 +33,15 @@ public class ListRegionsRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
+    }
+
     public static final class Builder extends Request.Builder<ListRegionsRequest, Builder> {
+        private String acceptLanguage; 
 
         private Builder() {
             super();
@@ -37,7 +49,21 @@ public class ListRegionsRequest extends Request {
 
         private Builder(ListRegionsRequest request) {
             super(request);
+            this.acceptLanguage = request.acceptLanguage;
         } 
+
+        /**
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN** (default): Chinese
+         * *   **en-US**: English
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
 
         @Override
         public ListRegionsRequest build() {

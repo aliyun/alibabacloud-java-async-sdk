@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesTrafficPackagesResponseBody</p>
  */
 public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
-    @NameInMap("InstanceTrafficPackageUsages")
+    @com.aliyun.core.annotation.NameInMap("InstanceTrafficPackageUsages")
     private java.util.List < InstanceTrafficPackageUsages> instanceTrafficPackageUsages;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstancesTrafficPackagesResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
     } 
 
     public static class InstanceTrafficPackageUsages extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TrafficOverflow")
+        @com.aliyun.core.annotation.NameInMap("TrafficOverflow")
         private Long trafficOverflow;
 
-        @NameInMap("TrafficPackageRemaining")
+        @com.aliyun.core.annotation.NameInMap("TrafficPackageRemaining")
         private Long trafficPackageRemaining;
 
-        @NameInMap("TrafficPackageTotal")
+        @com.aliyun.core.annotation.NameInMap("TrafficPackageTotal")
         private Long trafficPackageTotal;
 
-        @NameInMap("TrafficUsed")
+        @com.aliyun.core.annotation.NameInMap("TrafficUsed")
         private Long trafficUsed;
 
         private InstanceTrafficPackageUsages(Builder builder) {

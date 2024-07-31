@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.swas_open20200601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesTrafficPackagesRequest</p>
  */
 public class ListInstancesTrafficPackagesRequest extends Request {
-    @Query
-    @NameInMap("AcsProduct")
-    private String acsProduct;
-
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ListInstancesTrafficPackagesRequest(Builder builder) {
         super(builder);
-        this.acsProduct = builder.acsProduct;
         this.instanceIds = builder.instanceIds;
         this.regionId = builder.regionId;
     }
@@ -47,13 +41,6 @@ public class ListInstancesTrafficPackagesRequest extends Request {
     }
 
     /**
-     * @return acsProduct
-     */
-    public String getAcsProduct() {
-        return this.acsProduct;
-    }
-
-    /**
      * @return instanceIds
      */
     public String getInstanceIds() {
@@ -68,7 +55,6 @@ public class ListInstancesTrafficPackagesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstancesTrafficPackagesRequest, Builder> {
-        private String acsProduct; 
         private String instanceIds; 
         private String regionId; 
 
@@ -78,19 +64,9 @@ public class ListInstancesTrafficPackagesRequest extends Request {
 
         private Builder(ListInstancesTrafficPackagesRequest request) {
             super(request);
-            this.acsProduct = request.acsProduct;
             this.instanceIds = request.instanceIds;
             this.regionId = request.regionId;
         } 
-
-        /**
-         * AcsProduct.
-         */
-        public Builder acsProduct(String acsProduct) {
-            this.putQueryParameter("AcsProduct", acsProduct);
-            this.acsProduct = acsProduct;
-            return this;
-        }
 
         /**
          * The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).
