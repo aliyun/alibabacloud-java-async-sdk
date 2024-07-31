@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancesResponseBody</p>
  */
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("PageIndex")
+    @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Integer pageIndex;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeInstancesResponseBody(Builder builder) {
@@ -171,11 +170,72 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    public static class ClusterUsedStorage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
+        @com.aliyun.core.annotation.NameInMap("UsedStorage")
+        private Float usedStorage;
+
+        private ClusterUsedStorage(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.usedStorage = builder.usedStorage;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClusterUsedStorage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return usedStorage
+         */
+        public Float getUsedStorage() {
+            return this.usedStorage;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private Float usedStorage; 
+
+            /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * UsedStorage.
+             */
+            public Builder usedStorage(Float usedStorage) {
+                this.usedStorage = usedStorage;
+                return this;
+            }
+
+            public ClusterUsedStorage build() {
+                return new ClusterUsedStorage(this);
+            } 
+
+        } 
+
+    }
     public static class HaResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private HaResourceSpec(Builder builder) {
@@ -233,12 +293,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class HostAliases extends TeaModel {
-        @NameInMap("HostNames")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HostNames")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > hostNames;
 
-        @NameInMap("Ip")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Ip")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ip;
 
         private HostAliases(Builder builder) {
@@ -296,10 +356,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {
@@ -357,7 +417,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Oss extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
         private Oss(Builder builder) {
@@ -398,10 +458,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Storage extends TeaModel {
-        @NameInMap("Oss")
+        @com.aliyun.core.annotation.NameInMap("FullyManaged")
+        private Boolean fullyManaged;
+
+        @com.aliyun.core.annotation.NameInMap("OrderState")
+        private String orderState;
+
+        @com.aliyun.core.annotation.NameInMap("Oss")
         private Oss oss;
 
         private Storage(Builder builder) {
+            this.fullyManaged = builder.fullyManaged;
+            this.orderState = builder.orderState;
             this.oss = builder.oss;
         }
 
@@ -414,6 +482,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return fullyManaged
+         */
+        public Boolean getFullyManaged() {
+            return this.fullyManaged;
+        }
+
+        /**
+         * @return orderState
+         */
+        public String getOrderState() {
+            return this.orderState;
+        }
+
+        /**
          * @return oss
          */
         public Oss getOss() {
@@ -421,7 +503,25 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean fullyManaged; 
+            private String orderState; 
             private Oss oss; 
+
+            /**
+             * FullyManaged.
+             */
+            public Builder fullyManaged(Boolean fullyManaged) {
+                this.fullyManaged = fullyManaged;
+                return this;
+            }
+
+            /**
+             * OrderState.
+             */
+            public Builder orderState(String orderState) {
+                this.orderState = orderState;
+                return this;
+            }
 
             /**
              * Oss.
@@ -439,10 +539,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -500,80 +600,83 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("ArchitectureType")
+        @com.aliyun.core.annotation.NameInMap("ArchitectureType")
         private String architectureType;
 
-        @NameInMap("AskClusterId")
+        @com.aliyun.core.annotation.NameInMap("AskClusterId")
         private String askClusterId;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("ClusterStatus")
         private String clusterStatus;
 
-        @NameInMap("Ha")
+        @com.aliyun.core.annotation.NameInMap("ClusterUsedStorage")
+        private ClusterUsedStorage clusterUsedStorage;
+
+        @com.aliyun.core.annotation.NameInMap("Ha")
         private Boolean ha;
 
-        @NameInMap("HaResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("HaResourceSpec")
         private HaResourceSpec haResourceSpec;
 
-        @NameInMap("HaVSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("HaVSwitchIds")
         private java.util.List < String > haVSwitchIds;
 
-        @NameInMap("HaZoneId")
+        @com.aliyun.core.annotation.NameInMap("HaZoneId")
         private String haZoneId;
 
-        @NameInMap("HostAliases")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HostAliases")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < HostAliases> hostAliases;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("MonitorType")
+        @com.aliyun.core.annotation.NameInMap("MonitorType")
         private String monitorType;
 
-        @NameInMap("OrderState")
+        @com.aliyun.core.annotation.NameInMap("OrderState")
         private String orderState;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceCreateTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceCreateTime")
         private Long resourceCreateTime;
 
-        @NameInMap("ResourceExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceExpiredTime")
         private Long resourceExpiredTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceSpec")
+        @com.aliyun.core.annotation.NameInMap("ResourceSpec")
         private ResourceSpec resourceSpec;
 
-        @NameInMap("Storage")
+        @com.aliyun.core.annotation.NameInMap("Storage")
         private Storage storage;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private java.util.List < String > vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Instances(Builder builder) {
@@ -581,6 +684,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.askClusterId = builder.askClusterId;
             this.chargeType = builder.chargeType;
             this.clusterStatus = builder.clusterStatus;
+            this.clusterUsedStorage = builder.clusterUsedStorage;
             this.ha = builder.ha;
             this.haResourceSpec = builder.haResourceSpec;
             this.haVSwitchIds = builder.haVSwitchIds;
@@ -638,6 +742,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getClusterStatus() {
             return this.clusterStatus;
+        }
+
+        /**
+         * @return clusterUsedStorage
+         */
+        public ClusterUsedStorage getClusterUsedStorage() {
+            return this.clusterUsedStorage;
         }
 
         /**
@@ -792,6 +903,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String askClusterId; 
             private String chargeType; 
             private String clusterStatus; 
+            private ClusterUsedStorage clusterUsedStorage; 
             private Boolean ha; 
             private HaResourceSpec haResourceSpec; 
             private java.util.List < String > haVSwitchIds; 
@@ -843,6 +955,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder clusterStatus(String clusterStatus) {
                 this.clusterStatus = clusterStatus;
+                return this;
+            }
+
+            /**
+             * ClusterUsedStorage.
+             */
+            public Builder clusterUsedStorage(ClusterUsedStorage clusterUsedStorage) {
+                this.clusterUsedStorage = clusterUsedStorage;
                 return this;
             }
 

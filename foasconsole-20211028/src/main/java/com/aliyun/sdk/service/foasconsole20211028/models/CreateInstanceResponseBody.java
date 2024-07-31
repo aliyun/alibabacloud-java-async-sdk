@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceResponseBody</p>
  */
 public class CreateInstanceResponseBody extends TeaModel {
-    @NameInMap("OrderInfo")
+    @com.aliyun.core.annotation.NameInMap("OrderInfo")
     private OrderInfo orderInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateInstanceResponseBody(Builder builder) {
@@ -92,15 +91,23 @@ public class CreateInstanceResponseBody extends TeaModel {
     } 
 
     public static class OrderInfo extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private Long orderId;
+
+        @com.aliyun.core.annotation.NameInMap("StorageInstanceId")
+        private String storageInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("StorageOrderId")
+        private Long storageOrderId;
 
         private OrderInfo(Builder builder) {
             this.instanceId = builder.instanceId;
             this.orderId = builder.orderId;
+            this.storageInstanceId = builder.storageInstanceId;
+            this.storageOrderId = builder.storageOrderId;
         }
 
         public static Builder builder() {
@@ -125,9 +132,25 @@ public class CreateInstanceResponseBody extends TeaModel {
             return this.orderId;
         }
 
+        /**
+         * @return storageInstanceId
+         */
+        public String getStorageInstanceId() {
+            return this.storageInstanceId;
+        }
+
+        /**
+         * @return storageOrderId
+         */
+        public Long getStorageOrderId() {
+            return this.storageOrderId;
+        }
+
         public static final class Builder {
             private String instanceId; 
             private Long orderId; 
+            private String storageInstanceId; 
+            private Long storageOrderId; 
 
             /**
              * InstanceId.
@@ -142,6 +165,22 @@ public class CreateInstanceResponseBody extends TeaModel {
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * StorageInstanceId.
+             */
+            public Builder storageInstanceId(String storageInstanceId) {
+                this.storageInstanceId = storageInstanceId;
+                return this;
+            }
+
+            /**
+             * StorageOrderId.
+             */
+            public Builder storageOrderId(Long storageOrderId) {
+                this.storageOrderId = storageOrderId;
                 return this;
             }
 

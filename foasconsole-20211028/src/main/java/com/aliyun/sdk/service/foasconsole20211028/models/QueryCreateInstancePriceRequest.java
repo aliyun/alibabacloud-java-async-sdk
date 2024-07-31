@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCreateInstancePriceRequest</p>
  */
 public class QueryCreateInstancePriceRequest extends Request {
-    @Body
-    @NameInMap("ArchitectureType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ArchitectureType")
     private String architectureType;
 
-    @Body
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Body
-    @NameInMap("ChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Body
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @Body
-    @NameInMap("Extra")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Extra")
     private String extra;
 
-    @Body
-    @NameInMap("Ha")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ha")
     private Boolean ha;
 
-    @Body
-    @NameInMap("HaResourceSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HaResourceSpec")
     private HaResourceSpec haResourceSpec;
 
-    @Body
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Body
-    @NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
-    @Body
-    @NameInMap("PromotionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
     private String promotionCode;
 
-    @Body
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Body
-    @NameInMap("ResourceSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceSpec")
     private ResourceSpec resourceSpec;
 
-    @Body
-    @NameInMap("Storage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Storage")
     private Storage storage;
 
-    @Body
-    @NameInMap("UsePromotionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UsePromotionCode")
     private Boolean usePromotionCode;
 
-    @Body
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private java.util.List < String > vSwitchIds;
 
-    @Body
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Body
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private QueryCreateInstancePriceRequest(Builder builder) {
@@ -444,10 +443,10 @@ public class QueryCreateInstancePriceRequest extends Request {
     } 
 
     public static class HaResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private HaResourceSpec(Builder builder) {
@@ -505,10 +504,10 @@ public class QueryCreateInstancePriceRequest extends Request {
 
     }
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {
@@ -566,7 +565,7 @@ public class QueryCreateInstancePriceRequest extends Request {
 
     }
     public static class Oss extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
         private Oss(Builder builder) {
@@ -607,7 +606,7 @@ public class QueryCreateInstancePriceRequest extends Request {
 
     }
     public static class Storage extends TeaModel {
-        @NameInMap("Oss")
+        @com.aliyun.core.annotation.NameInMap("Oss")
         private Oss oss;
 
         private Storage(Builder builder) {

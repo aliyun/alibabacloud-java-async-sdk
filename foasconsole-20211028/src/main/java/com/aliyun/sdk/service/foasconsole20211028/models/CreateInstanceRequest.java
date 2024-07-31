@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,99 +11,99 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Body
-    @NameInMap("ArchitectureType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ArchitectureType")
     private String architectureType;
 
-    @Body
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Body
-    @NameInMap("ChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Body
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @Body
-    @NameInMap("Extra")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Extra")
     private String extra;
 
-    @Body
-    @NameInMap("Ha")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ha")
     private Boolean ha;
 
-    @Body
-    @NameInMap("HaResourceSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HaResourceSpec")
     private HaResourceSpec haResourceSpec;
 
-    @Body
-    @NameInMap("HaVSwitchIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HaVSwitchIds")
     private java.util.List < String > haVSwitchIds;
 
-    @Body
-    @NameInMap("HaZoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HaZoneId")
     private String haZoneId;
 
-    @Body
-    @NameInMap("InstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Body
-    @NameInMap("MonitorType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MonitorType")
     private String monitorType;
 
-    @Body
-    @NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
-    @Body
-    @NameInMap("PromotionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PromotionCode")
     private String promotionCode;
 
-    @Body
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("ResourceSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceSpec")
     private ResourceSpec resourceSpec;
 
-    @Body
-    @NameInMap("Storage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Storage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Storage storage;
 
-    @Body
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Body
-    @NameInMap("UsePromotionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UsePromotionCode")
     private Boolean usePromotionCode;
 
-    @Body
-    @NameInMap("VSwitchIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > vSwitchIds;
 
-    @Body
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Body
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateInstanceRequest(Builder builder) {
@@ -566,10 +565,10 @@ public class CreateInstanceRequest extends Request {
     } 
 
     public static class HaResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private HaResourceSpec(Builder builder) {
@@ -627,10 +626,10 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {
@@ -688,8 +687,7 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class Oss extends TeaModel {
-        @NameInMap("Bucket")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
         private Oss(Builder builder) {
@@ -730,11 +728,14 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class Storage extends TeaModel {
-        @NameInMap("Oss")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FullyManaged")
+        private Boolean fullyManaged;
+
+        @com.aliyun.core.annotation.NameInMap("Oss")
         private Oss oss;
 
         private Storage(Builder builder) {
+            this.fullyManaged = builder.fullyManaged;
             this.oss = builder.oss;
         }
 
@@ -747,6 +748,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * @return fullyManaged
+         */
+        public Boolean getFullyManaged() {
+            return this.fullyManaged;
+        }
+
+        /**
          * @return oss
          */
         public Oss getOss() {
@@ -754,7 +762,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean fullyManaged; 
             private Oss oss; 
+
+            /**
+             * FullyManaged.
+             */
+            public Builder fullyManaged(Boolean fullyManaged) {
+                this.fullyManaged = fullyManaged;
+                return this;
+            }
 
             /**
              * Oss.
@@ -772,10 +789,10 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryModifyInstancePriceRequest</p>
  */
 public class QueryModifyInstancePriceRequest extends Request {
-    @Body
-    @NameInMap("Ha")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ha")
     private Boolean ha;
 
-    @Body
-    @NameInMap("HaResourceSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HaResourceSpec")
     private HaResourceSpec haResourceSpec;
 
-    @Body
-    @NameInMap("HaVSwitchIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HaVSwitchIds")
     private java.util.List < String > haVSwitchIds;
 
-    @Body
-    @NameInMap("HaZoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HaZoneId")
     private String haZoneId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Body
-    @NameInMap("ResourceSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ResourceSpec resourceSpec;
 
     private QueryModifyInstancePriceRequest(Builder builder) {
@@ -214,10 +213,10 @@ public class QueryModifyInstancePriceRequest extends Request {
     } 
 
     public static class HaResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
         private Integer memoryGB;
 
         private HaResourceSpec(Builder builder) {
@@ -275,12 +274,12 @@ public class QueryModifyInstancePriceRequest extends Request {
 
     }
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {

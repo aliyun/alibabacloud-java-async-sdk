@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.foasconsole20211028.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConvertInstanceRequest</p>
  */
 public class ConvertInstanceRequest extends Request {
-    @Body
-    @NameInMap("Duration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Duration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer duration;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("IsAutoRenew")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsAutoRenew")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean isAutoRenew;
 
-    @Body
-    @NameInMap("NamespaceResourceSpecs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamespaceResourceSpecs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < NamespaceResourceSpecs> namespaceResourceSpecs;
 
-    @Body
-    @NameInMap("PricingCycle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pricingCycle;
 
-    @Body
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
     private ConvertInstanceRequest(Builder builder) {
@@ -192,12 +191,12 @@ public class ConvertInstanceRequest extends Request {
     } 
 
     public static class ResourceSpec extends TeaModel {
-        @NameInMap("Cpu")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer cpu;
 
-        @NameInMap("MemoryGB")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MemoryGB")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer memoryGB;
 
         private ResourceSpec(Builder builder) {
@@ -255,12 +254,12 @@ public class ConvertInstanceRequest extends Request {
 
     }
     public static class NamespaceResourceSpecs extends TeaModel {
-        @NameInMap("Namespace")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
-        @NameInMap("ResourceSpec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceSpec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ResourceSpec resourceSpec;
 
         private NamespaceResourceSpecs(Builder builder) {
