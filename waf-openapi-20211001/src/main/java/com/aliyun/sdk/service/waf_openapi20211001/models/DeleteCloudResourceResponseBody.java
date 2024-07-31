@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyPauseProtectionStatusResponseBody} extends {@link TeaModel}
+ * {@link DeleteCloudResourceResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyPauseProtectionStatusResponseBody</p>
+ * <p>DeleteCloudResourceResponseBody</p>
  */
-public class ModifyPauseProtectionStatusResponseBody extends TeaModel {
+public class DeleteCloudResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ModifyPauseProtectionStatusResponseBody(Builder builder) {
+    private DeleteCloudResourceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class ModifyPauseProtectionStatusResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyPauseProtectionStatusResponseBody create() {
+    public static DeleteCloudResourceResponseBody create() {
         return builder().build();
     }
 
@@ -37,15 +37,15 @@ public class ModifyPauseProtectionStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyPauseProtectionStatusResponseBody build() {
-            return new ModifyPauseProtectionStatusResponseBody(this);
+        public DeleteCloudResourceResponseBody build() {
+            return new DeleteCloudResourceResponseBody(this);
         } 
 
     } 

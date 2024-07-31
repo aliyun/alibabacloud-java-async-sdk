@@ -25,6 +25,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CopyDefenseTemplateResponse> copyDefenseTemplate(CopyDefenseTemplateRequest request);
 
+    CompletableFuture<CreateCloudResourceResponse> createCloudResource(CreateCloudResourceRequest request);
+
     CompletableFuture<CreateDefenseResourceGroupResponse> createDefenseResourceGroup(CreateDefenseResourceGroupRequest request);
 
     CompletableFuture<CreateDefenseRuleResponse> createDefenseRule(CreateDefenseRuleRequest request);
@@ -32,6 +34,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDefenseTemplateResponse> createDefenseTemplate(CreateDefenseTemplateRequest request);
 
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
+
+    CompletableFuture<CreateHybridCloudGroupResponse> createHybridCloudGroup(CreateHybridCloudGroupRequest request);
 
     /**
       * This operation is available only on the China site (aliyun.com).
@@ -48,6 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteApisecAbnormalResponse> deleteApisecAbnormal(DeleteApisecAbnormalRequest request);
 
     CompletableFuture<DeleteApisecEventResponse> deleteApisecEvent(DeleteApisecEventRequest request);
+
+    CompletableFuture<DeleteCloudResourceResponse> deleteCloudResource(DeleteCloudResourceRequest request);
 
     CompletableFuture<DeleteDefenseResourceGroupResponse> deleteDefenseResourceGroup(DeleteDefenseResourceGroupRequest request);
 
@@ -81,11 +87,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCertsResponse> describeCerts(DescribeCertsRequest request);
 
+    CompletableFuture<DescribeCloudResourceAccessPortDetailsResponse> describeCloudResourceAccessPortDetails(DescribeCloudResourceAccessPortDetailsRequest request);
+
+    CompletableFuture<DescribeCloudResourceAccessedPortsResponse> describeCloudResourceAccessedPorts(DescribeCloudResourceAccessedPortsRequest request);
+
     CompletableFuture<DescribeCloudResourcesResponse> describeCloudResources(DescribeCloudResourcesRequest request);
 
     CompletableFuture<DescribeCnameCountResponse> describeCnameCount(DescribeCnameCountRequest request);
 
     CompletableFuture<DescribeDDoSStatusResponse> describeDDoSStatus(DescribeDDoSStatusRequest request);
+
+    CompletableFuture<DescribeDefaultHttpsResponse> describeDefaultHttps(DescribeDefaultHttpsRequest request);
 
     CompletableFuture<DescribeDefenseResourceResponse> describeDefenseResource(DescribeDefenseResourceRequest request);
 
@@ -123,9 +135,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeFlowTopUrlResponse> describeFlowTopUrl(DescribeFlowTopUrlRequest request);
 
+    CompletableFuture<DescribeHybridCloudClusterRuleResponse> describeHybridCloudClusterRule(DescribeHybridCloudClusterRuleRequest request);
+
+    CompletableFuture<DescribeHybridCloudClustersResponse> describeHybridCloudClusters(DescribeHybridCloudClustersRequest request);
+
     CompletableFuture<DescribeHybridCloudGroupsResponse> describeHybridCloudGroups(DescribeHybridCloudGroupsRequest request);
 
     CompletableFuture<DescribeHybridCloudResourcesResponse> describeHybridCloudResources(DescribeHybridCloudResourcesRequest request);
+
+    CompletableFuture<DescribeHybridCloudServerRegionsResponse> describeHybridCloudServerRegions(DescribeHybridCloudServerRegionsRequest request);
+
+    CompletableFuture<DescribeHybridCloudUnassignedMachinesResponse> describeHybridCloudUnassignedMachines(DescribeHybridCloudUnassignedMachinesRequest request);
 
     CompletableFuture<DescribeHybridCloudUserResponse> describeHybridCloudUser(DescribeHybridCloudUserRequest request);
 
@@ -199,6 +219,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyApisecLogDeliveryStatusResponse> modifyApisecLogDeliveryStatus(ModifyApisecLogDeliveryStatusRequest request);
 
+    CompletableFuture<ModifyCloudResourceResponse> modifyCloudResource(ModifyCloudResourceRequest request);
+
+    CompletableFuture<ModifyDefaultHttpsResponse> modifyDefaultHttps(ModifyDefaultHttpsRequest request);
+
     CompletableFuture<ModifyDefenseResourceGroupResponse> modifyDefenseResourceGroup(ModifyDefenseResourceGroupRequest request);
 
     CompletableFuture<ModifyDefenseResourceXffResponse> modifyDefenseResourceXff(ModifyDefenseResourceXffRequest request);
@@ -218,6 +242,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDomainPunishStatusResponse> modifyDomainPunishStatus(ModifyDomainPunishStatusRequest request);
 
     CompletableFuture<ModifyHybridCloudClusterBypassStatusResponse> modifyHybridCloudClusterBypassStatus(ModifyHybridCloudClusterBypassStatusRequest request);
+
+    CompletableFuture<ModifyHybridCloudClusterRuleResponse> modifyHybridCloudClusterRule(ModifyHybridCloudClusterRuleRequest request);
+
+    CompletableFuture<ModifyHybridCloudGroupResponse> modifyHybridCloudGroup(ModifyHybridCloudGroupRequest request);
+
+    CompletableFuture<ModifyHybridCloudGroupExpansionServerResponse> modifyHybridCloudGroupExpansionServer(ModifyHybridCloudGroupExpansionServerRequest request);
+
+    CompletableFuture<ModifyHybridCloudGroupShrinkServerResponse> modifyHybridCloudGroupShrinkServer(ModifyHybridCloudGroupShrinkServerRequest request);
+
+    CompletableFuture<ModifyHybridCloudSdkPullinStatusResponse> modifyHybridCloudSdkPullinStatus(ModifyHybridCloudSdkPullinStatusRequest request);
+
+    CompletableFuture<ModifyHybridCloudServerResponse> modifyHybridCloudServer(ModifyHybridCloudServerRequest request);
 
     CompletableFuture<ModifyMajorProtectionBlackIpResponse> modifyMajorProtectionBlackIp(ModifyMajorProtectionBlackIpRequest request);
 

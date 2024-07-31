@@ -185,7 +185,7 @@ public class CreateDefenseRuleRequest extends Request {
          * The configurations of the protection rule. Specify a string that contains multiple parameters in the JSON format.
          * <p>
          * 
-         * >  The parameters vary based on the value of the **DefenseScene** parameter. For more information, see the "**Protection rule parameters**" section in this topic.
+         * >  The parameters vary based on the value of the **DefenseScene** parameter.**** For more information, see the "**Protection rule parameters**" section in this topic.
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);
@@ -194,7 +194,7 @@ public class CreateDefenseRuleRequest extends Request {
         }
 
         /**
-         * The ID of the protection rule template for which you want to create a protection rule.
+         * The ID of the rule template for which you want to create a protection rule.
          */
         public Builder templateId(Long templateId) {
             this.putQueryParameter("TemplateId", templateId);

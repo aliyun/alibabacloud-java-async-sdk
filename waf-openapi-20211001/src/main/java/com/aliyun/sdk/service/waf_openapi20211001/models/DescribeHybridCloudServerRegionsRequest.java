@@ -6,34 +6,39 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyPauseProtectionStatusRequest} extends {@link RequestModel}
+ * {@link DescribeHybridCloudServerRegionsRequest} extends {@link RequestModel}
  *
- * <p>ModifyPauseProtectionStatusRequest</p>
+ * <p>DescribeHybridCloudServerRegionsRequest</p>
  */
-public class ModifyPauseProtectionStatusRequest extends Request {
+public class DescribeHybridCloudServerRegionsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PauseStatus")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Integer pauseStatus;
+    @com.aliyun.core.annotation.NameInMap("RegionCode")
+    private String regionCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String regionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private ModifyPauseProtectionStatusRequest(Builder builder) {
+    private DescribeHybridCloudServerRegionsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.pauseStatus = builder.pauseStatus;
+        this.regionCode = builder.regionCode;
         this.regionId = builder.regionId;
+        this.regionType = builder.regionType;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
     }
 
@@ -41,7 +46,7 @@ public class ModifyPauseProtectionStatusRequest extends Request {
         return new Builder();
     }
 
-    public static ModifyPauseProtectionStatusRequest create() {
+    public static DescribeHybridCloudServerRegionsRequest create() {
         return builder().build();
     }
 
@@ -58,10 +63,10 @@ public class ModifyPauseProtectionStatusRequest extends Request {
     }
 
     /**
-     * @return pauseStatus
+     * @return regionCode
      */
-    public Integer getPauseStatus() {
-        return this.pauseStatus;
+    public String getRegionCode() {
+        return this.regionCode;
     }
 
     /**
@@ -72,32 +77,41 @@ public class ModifyPauseProtectionStatusRequest extends Request {
     }
 
     /**
+     * @return regionType
+     */
+    public String getRegionType() {
+        return this.regionType;
+    }
+
+    /**
      * @return resourceManagerResourceGroupId
      */
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyPauseProtectionStatusRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeHybridCloudServerRegionsRequest, Builder> {
         private String instanceId; 
-        private Integer pauseStatus; 
+        private String regionCode; 
         private String regionId; 
+        private String regionType; 
         private String resourceManagerResourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyPauseProtectionStatusRequest request) {
+        private Builder(DescribeHybridCloudServerRegionsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.pauseStatus = request.pauseStatus;
+            this.regionCode = request.regionCode;
             this.regionId = request.regionId;
+            this.regionType = request.regionType;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
         } 
 
         /**
-         * The ID of the WAF instance.
+         * The ID of the Web Application Firewall (WAF) instance.
          * <p>
          * 
          * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
@@ -109,15 +123,14 @@ public class ModifyPauseProtectionStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to pause WAF protection.
+         * The code of the region.
          * <p>
          * 
-         * *   **0**: does not pause WAF protection. This is the default value.
-         * *   **1**: pauses WAF protection.
+         * >  This parameter is required if you set RegionType to region. The value is the code of the city.
          */
-        public Builder pauseStatus(Integer pauseStatus) {
-            this.putQueryParameter("PauseStatus", pauseStatus);
-            this.pauseStatus = pauseStatus;
+        public Builder regionCode(String regionCode) {
+            this.putQueryParameter("RegionCode", regionCode);
+            this.regionCode = regionCode;
             return this;
         }
 
@@ -125,12 +138,26 @@ public class ModifyPauseProtectionStatusRequest extends Request {
          * The region in which the WAF instance is deployed. Valid values:
          * <p>
          * 
-         * *   **cn-hangzhou**: the Chinese mainland.
+         * *   **cn-hangzhou**: Chinese mainland.
          * *   **ap-southeast-1**: outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The type of the region. Valid values:
+         * <p>
+         * 
+         * *   **operator**: the ISP.
+         * *   **continents**: the continent.
+         * *   **region**: the city.
+         */
+        public Builder regionType(String regionType) {
+            this.putQueryParameter("RegionType", regionType);
+            this.regionType = regionType;
             return this;
         }
 
@@ -144,8 +171,8 @@ public class ModifyPauseProtectionStatusRequest extends Request {
         }
 
         @Override
-        public ModifyPauseProtectionStatusRequest build() {
-            return new ModifyPauseProtectionStatusRequest(this);
+        public DescribeHybridCloudServerRegionsRequest build() {
+            return new DescribeHybridCloudServerRegionsRequest(this);
         } 
 
     } 

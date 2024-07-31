@@ -49,7 +49,11 @@ public class DescribePauseProtectionStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PauseStatus.
+         * Indicates whether WAF protection is paused.
+         * <p>
+         * 
+         * *   **0**: indicates that WAF protection is not paused. This is the default value.
+         * *   **1**: indicates that WAF protection is paused.
          */
         public Builder pauseStatus(Integer pauseStatus) {
             this.pauseStatus = pauseStatus;
@@ -57,7 +61,7 @@ public class DescribePauseProtectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

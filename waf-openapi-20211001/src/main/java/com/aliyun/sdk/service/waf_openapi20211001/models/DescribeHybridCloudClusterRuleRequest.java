@@ -6,20 +6,20 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyPauseProtectionStatusRequest} extends {@link RequestModel}
+ * {@link DescribeHybridCloudClusterRuleRequest} extends {@link RequestModel}
  *
- * <p>ModifyPauseProtectionStatusRequest</p>
+ * <p>DescribeHybridCloudClusterRuleRequest</p>
  */
-public class ModifyPauseProtectionStatusRequest extends Request {
+public class DescribeHybridCloudClusterRuleRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long clusterId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PauseStatus")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Integer pauseStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -29,19 +29,25 @@ public class ModifyPauseProtectionStatusRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private ModifyPauseProtectionStatusRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String ruleType;
+
+    private DescribeHybridCloudClusterRuleRequest(Builder builder) {
         super(builder);
+        this.clusterId = builder.clusterId;
         this.instanceId = builder.instanceId;
-        this.pauseStatus = builder.pauseStatus;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.ruleType = builder.ruleType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyPauseProtectionStatusRequest create() {
+    public static DescribeHybridCloudClusterRuleRequest create() {
         return builder().build();
     }
 
@@ -51,17 +57,17 @@ public class ModifyPauseProtectionStatusRequest extends Request {
     }
 
     /**
+     * @return clusterId
+     */
+    public Long getClusterId() {
+        return this.clusterId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
-    }
-
-    /**
-     * @return pauseStatus
-     */
-    public Integer getPauseStatus() {
-        return this.pauseStatus;
     }
 
     /**
@@ -78,23 +84,41 @@ public class ModifyPauseProtectionStatusRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyPauseProtectionStatusRequest, Builder> {
+    /**
+     * @return ruleType
+     */
+    public String getRuleType() {
+        return this.ruleType;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeHybridCloudClusterRuleRequest, Builder> {
+        private Long clusterId; 
         private String instanceId; 
-        private Integer pauseStatus; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
+        private String ruleType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyPauseProtectionStatusRequest request) {
+        private Builder(DescribeHybridCloudClusterRuleRequest request) {
             super(request);
+            this.clusterId = request.clusterId;
             this.instanceId = request.instanceId;
-            this.pauseStatus = request.pauseStatus;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
+            this.ruleType = request.ruleType;
         } 
+
+        /**
+         * The ID of the hybrid cloud cluster.
+         */
+        public Builder clusterId(Long clusterId) {
+            this.putQueryParameter("ClusterId", clusterId);
+            this.clusterId = clusterId;
+            return this;
+        }
 
         /**
          * The ID of the WAF instance.
@@ -109,23 +133,10 @@ public class ModifyPauseProtectionStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to pause WAF protection.
+         * The region in which the WAF instance is deployed. Valid value:
          * <p>
          * 
-         * *   **0**: does not pause WAF protection. This is the default value.
-         * *   **1**: pauses WAF protection.
-         */
-        public Builder pauseStatus(Integer pauseStatus) {
-            this.putQueryParameter("PauseStatus", pauseStatus);
-            this.pauseStatus = pauseStatus;
-            return this;
-        }
-
-        /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
-         * 
-         * *   **cn-hangzhou**: the Chinese mainland.
+         * *   **cn-hangzhou**: Chinese mainland.
          * *   **ap-southeast-1**: outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
@@ -143,9 +154,21 @@ public class ModifyPauseProtectionStatusRequest extends Request {
             return this;
         }
 
+        /**
+         * The type of the rule. Valid values:
+         * <p>
+         * 
+         * *   **pullin**: The traffic redirection rule of the hybrid cloud cluster.
+         */
+        public Builder ruleType(String ruleType) {
+            this.putQueryParameter("RuleType", ruleType);
+            this.ruleType = ruleType;
+            return this;
+        }
+
         @Override
-        public ModifyPauseProtectionStatusRequest build() {
-            return new ModifyPauseProtectionStatusRequest(this);
+        public DescribeHybridCloudClusterRuleRequest build() {
+            return new DescribeHybridCloudClusterRuleRequest(this);
         } 
 
     } 

@@ -6,42 +6,55 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyPauseProtectionStatusRequest} extends {@link RequestModel}
+ * {@link DeleteCloudResourceRequest} extends {@link RequestModel}
  *
- * <p>ModifyPauseProtectionStatusRequest</p>
+ * <p>DeleteCloudResourceRequest</p>
  */
-public class ModifyPauseProtectionStatusRequest extends Request {
+public class DeleteCloudResourceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PauseStatus")
+    @com.aliyun.core.annotation.NameInMap("Port")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Integer pauseStatus;
+    private Integer port;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String resourceInstanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private ModifyPauseProtectionStatusRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceProduct")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String resourceProduct;
+
+    private DeleteCloudResourceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.pauseStatus = builder.pauseStatus;
+        this.port = builder.port;
         this.regionId = builder.regionId;
+        this.resourceInstanceId = builder.resourceInstanceId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.resourceProduct = builder.resourceProduct;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyPauseProtectionStatusRequest create() {
+    public static DeleteCloudResourceRequest create() {
         return builder().build();
     }
 
@@ -58,10 +71,10 @@ public class ModifyPauseProtectionStatusRequest extends Request {
     }
 
     /**
-     * @return pauseStatus
+     * @return port
      */
-    public Integer getPauseStatus() {
-        return this.pauseStatus;
+    public Integer getPort() {
+        return this.port;
     }
 
     /**
@@ -72,35 +85,50 @@ public class ModifyPauseProtectionStatusRequest extends Request {
     }
 
     /**
+     * @return resourceInstanceId
+     */
+    public String getResourceInstanceId() {
+        return this.resourceInstanceId;
+    }
+
+    /**
      * @return resourceManagerResourceGroupId
      */
     public String getResourceManagerResourceGroupId() {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyPauseProtectionStatusRequest, Builder> {
+    /**
+     * @return resourceProduct
+     */
+    public String getResourceProduct() {
+        return this.resourceProduct;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteCloudResourceRequest, Builder> {
         private String instanceId; 
-        private Integer pauseStatus; 
+        private Integer port; 
         private String regionId; 
+        private String resourceInstanceId; 
         private String resourceManagerResourceGroupId; 
+        private String resourceProduct; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyPauseProtectionStatusRequest request) {
+        private Builder(DeleteCloudResourceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.pauseStatus = request.pauseStatus;
+            this.port = request.port;
             this.regionId = request.regionId;
+            this.resourceInstanceId = request.resourceInstanceId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
+            this.resourceProduct = request.resourceProduct;
         } 
 
         /**
-         * The ID of the WAF instance.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -109,24 +137,16 @@ public class ModifyPauseProtectionStatusRequest extends Request {
         }
 
         /**
-         * Specifies whether to pause WAF protection.
-         * <p>
-         * 
-         * *   **0**: does not pause WAF protection. This is the default value.
-         * *   **1**: pauses WAF protection.
+         * Port.
          */
-        public Builder pauseStatus(Integer pauseStatus) {
-            this.putQueryParameter("PauseStatus", pauseStatus);
-            this.pauseStatus = pauseStatus;
+        public Builder port(Integer port) {
+            this.putQueryParameter("Port", port);
+            this.port = port;
             return this;
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
-         * 
-         * *   **cn-hangzhou**: the Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -135,7 +155,16 @@ public class ModifyPauseProtectionStatusRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * ResourceInstanceId.
+         */
+        public Builder resourceInstanceId(String resourceInstanceId) {
+            this.putQueryParameter("ResourceInstanceId", resourceInstanceId);
+            this.resourceInstanceId = resourceInstanceId;
+            return this;
+        }
+
+        /**
+         * ResourceManagerResourceGroupId.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -143,9 +172,18 @@ public class ModifyPauseProtectionStatusRequest extends Request {
             return this;
         }
 
+        /**
+         * ResourceProduct.
+         */
+        public Builder resourceProduct(String resourceProduct) {
+            this.putQueryParameter("ResourceProduct", resourceProduct);
+            this.resourceProduct = resourceProduct;
+            return this;
+        }
+
         @Override
-        public ModifyPauseProtectionStatusRequest build() {
-            return new ModifyPauseProtectionStatusRequest(this);
+        public DeleteCloudResourceRequest build() {
+            return new DeleteCloudResourceRequest(this);
         } 
 
     } 
