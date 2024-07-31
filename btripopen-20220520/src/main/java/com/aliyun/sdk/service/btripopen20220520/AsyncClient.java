@@ -213,6 +213,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<HotelOrderDetailInfoResponse> hotelOrderDetailInfo(HotelOrderDetailInfoRequest request);
 
+    CompletableFuture<HotelOrderInfoQueryResponse> hotelOrderInfoQuery(HotelOrderInfoQueryRequest request);
+
     CompletableFuture<HotelOrderListQueryResponse> hotelOrderListQuery(HotelOrderListQueryRequest request);
 
     CompletableFuture<HotelOrderPayResponse> hotelOrderPay(HotelOrderPayRequest request);
@@ -228,6 +230,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HotelSearchResponse> hotelSearch(HotelSearchRequest request);
 
     CompletableFuture<HotelStaticInfoResponse> hotelStaticInfo(HotelStaticInfoRequest request);
+
+    CompletableFuture<HotelSuggestV2Response> hotelSuggestV2(HotelSuggestV2Request request);
 
     CompletableFuture<IeFlightBillSettlementQueryResponse> ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request);
 

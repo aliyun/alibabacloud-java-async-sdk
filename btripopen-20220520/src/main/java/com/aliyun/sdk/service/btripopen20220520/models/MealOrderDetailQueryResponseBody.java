@@ -202,6 +202,9 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("settle_time")
         private String settleTime;
 
+        @com.aliyun.core.annotation.NameInMap("third_part_apply_id")
+        private String thirdPartApplyId;
+
         @com.aliyun.core.annotation.NameInMap("user_alipay_id")
         private String userAlipayId;
 
@@ -226,6 +229,7 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
             this.refundAmount = builder.refundAmount;
             this.sceneName = builder.sceneName;
             this.settleTime = builder.settleTime;
+            this.thirdPartApplyId = builder.thirdPartApplyId;
             this.userAlipayId = builder.userAlipayId;
             this.userId = builder.userId;
         }
@@ -358,6 +362,13 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdPartApplyId
+         */
+        public String getThirdPartApplyId() {
+            return this.thirdPartApplyId;
+        }
+
+        /**
          * @return userAlipayId
          */
         public String getUserAlipayId() {
@@ -389,6 +400,7 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
             private Long refundAmount; 
             private String sceneName; 
             private String settleTime; 
+            private String thirdPartApplyId; 
             private String userAlipayId; 
             private String userId; 
 
@@ -525,6 +537,14 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
              */
             public Builder settleTime(String settleTime) {
                 this.settleTime = settleTime;
+                return this;
+            }
+
+            /**
+             * third_part_apply_id.
+             */
+            public Builder thirdPartApplyId(String thirdPartApplyId) {
+                this.thirdPartApplyId = thirdPartApplyId;
                 return this;
             }
 
