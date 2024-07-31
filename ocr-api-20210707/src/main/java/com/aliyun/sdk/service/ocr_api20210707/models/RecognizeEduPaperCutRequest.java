@@ -22,6 +22,10 @@ public class RecognizeEduPaperCutRequest extends Request {
     private String imageType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputOricoord")
+    private Boolean outputOricoord;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Subject")
     private String subject;
 
@@ -38,6 +42,7 @@ public class RecognizeEduPaperCutRequest extends Request {
         super(builder);
         this.cutType = builder.cutType;
         this.imageType = builder.imageType;
+        this.outputOricoord = builder.outputOricoord;
         this.subject = builder.subject;
         this.url = builder.url;
         this.body = builder.body;
@@ -71,6 +76,13 @@ public class RecognizeEduPaperCutRequest extends Request {
     }
 
     /**
+     * @return outputOricoord
+     */
+    public Boolean getOutputOricoord() {
+        return this.outputOricoord;
+    }
+
+    /**
      * @return subject
      */
     public String getSubject() {
@@ -94,6 +106,7 @@ public class RecognizeEduPaperCutRequest extends Request {
     public static final class Builder extends Request.Builder<RecognizeEduPaperCutRequest, Builder> {
         private String cutType; 
         private String imageType; 
+        private Boolean outputOricoord; 
         private String subject; 
         private String url; 
         private java.io.InputStream body; 
@@ -106,6 +119,7 @@ public class RecognizeEduPaperCutRequest extends Request {
             super(request);
             this.cutType = request.cutType;
             this.imageType = request.imageType;
+            this.outputOricoord = request.outputOricoord;
             this.subject = request.subject;
             this.url = request.url;
             this.body = request.body;
@@ -126,6 +140,15 @@ public class RecognizeEduPaperCutRequest extends Request {
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
             this.imageType = imageType;
+            return this;
+        }
+
+        /**
+         * OutputOricoord.
+         */
+        public Builder outputOricoord(Boolean outputOricoord) {
+            this.putQueryParameter("OutputOricoord", outputOricoord);
+            this.outputOricoord = outputOricoord;
             return this;
         }
 
