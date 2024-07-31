@@ -12,9 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class KnowledgeFileItem extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("drive_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String driveId;
 
     @com.aliyun.core.annotation.NameInMap("file_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileId;
 
     private KnowledgeFileItem(Builder builder) {

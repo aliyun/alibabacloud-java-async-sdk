@@ -30,7 +30,7 @@ public class PersonalRightsInfoResponse extends Response {
     private PersonalRightsInfoResponse otherRights;
 
     @com.aliyun.core.annotation.NameInMap("privileges")
-    private DataBoxPrivileges privileges;
+    private java.util.List < DataBoxPrivileges > privileges;
 
     @com.aliyun.core.annotation.NameInMap("spu_id")
     private String spuId;
@@ -105,7 +105,7 @@ public class PersonalRightsInfoResponse extends Response {
     /**
      * @return privileges
      */
-    public DataBoxPrivileges getPrivileges() {
+    public java.util.List < DataBoxPrivileges > getPrivileges() {
         return this.privileges;
     }
 
@@ -137,7 +137,7 @@ public class PersonalRightsInfoResponse extends Response {
 
         Builder otherRights(PersonalRightsInfoResponse otherRights);
 
-        Builder privileges(DataBoxPrivileges privileges);
+        Builder privileges(java.util.List < DataBoxPrivileges > privileges);
 
         Builder spuId(String spuId);
 
@@ -157,7 +157,7 @@ public class PersonalRightsInfoResponse extends Response {
         private Boolean isExpires; 
         private String name; 
         private PersonalRightsInfoResponse otherRights; 
-        private DataBoxPrivileges privileges; 
+        private java.util.List < DataBoxPrivileges > privileges; 
         private String spuId; 
         private String title; 
 
@@ -236,7 +236,7 @@ public class PersonalRightsInfoResponse extends Response {
          * privileges.
          */
         @Override
-        public Builder privileges(DataBoxPrivileges privileges) {
+        public Builder privileges(java.util.List < DataBoxPrivileges > privileges) {
             this.privileges = privileges;
             return this;
         }
