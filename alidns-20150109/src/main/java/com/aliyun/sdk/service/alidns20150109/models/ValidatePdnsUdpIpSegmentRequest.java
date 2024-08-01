@@ -16,12 +16,17 @@ public class ValidatePdnsUdpIpSegmentRequest extends Request {
     private String ip;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpToken")
+    private String ipToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private ValidatePdnsUdpIpSegmentRequest(Builder builder) {
         super(builder);
         this.ip = builder.ip;
+        this.ipToken = builder.ipToken;
         this.lang = builder.lang;
     }
 
@@ -46,6 +51,13 @@ public class ValidatePdnsUdpIpSegmentRequest extends Request {
     }
 
     /**
+     * @return ipToken
+     */
+    public String getIpToken() {
+        return this.ipToken;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -54,6 +66,7 @@ public class ValidatePdnsUdpIpSegmentRequest extends Request {
 
     public static final class Builder extends Request.Builder<ValidatePdnsUdpIpSegmentRequest, Builder> {
         private String ip; 
+        private String ipToken; 
         private String lang; 
 
         private Builder() {
@@ -63,6 +76,7 @@ public class ValidatePdnsUdpIpSegmentRequest extends Request {
         private Builder(ValidatePdnsUdpIpSegmentRequest request) {
             super(request);
             this.ip = request.ip;
+            this.ipToken = request.ipToken;
             this.lang = request.lang;
         } 
 
@@ -72,6 +86,15 @@ public class ValidatePdnsUdpIpSegmentRequest extends Request {
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
             this.ip = ip;
+            return this;
+        }
+
+        /**
+         * IpToken.
+         */
+        public Builder ipToken(String ipToken) {
+            this.putQueryParameter("IpToken", ipToken);
+            this.ipToken = ipToken;
             return this;
         }
 

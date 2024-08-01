@@ -16,6 +16,10 @@ public class CreatePdnsUdpIpSegmentRequest extends Request {
     private String ip;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpToken")
+    private String ipToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -26,6 +30,7 @@ public class CreatePdnsUdpIpSegmentRequest extends Request {
     private CreatePdnsUdpIpSegmentRequest(Builder builder) {
         super(builder);
         this.ip = builder.ip;
+        this.ipToken = builder.ipToken;
         this.lang = builder.lang;
         this.name = builder.name;
     }
@@ -51,6 +56,13 @@ public class CreatePdnsUdpIpSegmentRequest extends Request {
     }
 
     /**
+     * @return ipToken
+     */
+    public String getIpToken() {
+        return this.ipToken;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
@@ -66,6 +78,7 @@ public class CreatePdnsUdpIpSegmentRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreatePdnsUdpIpSegmentRequest, Builder> {
         private String ip; 
+        private String ipToken; 
         private String lang; 
         private String name; 
 
@@ -76,6 +89,7 @@ public class CreatePdnsUdpIpSegmentRequest extends Request {
         private Builder(CreatePdnsUdpIpSegmentRequest request) {
             super(request);
             this.ip = request.ip;
+            this.ipToken = request.ipToken;
             this.lang = request.lang;
             this.name = request.name;
         } 
@@ -86,6 +100,15 @@ public class CreatePdnsUdpIpSegmentRequest extends Request {
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
             this.ip = ip;
+            return this;
+        }
+
+        /**
+         * IpToken.
+         */
+        public Builder ipToken(String ipToken) {
+            this.putQueryParameter("IpToken", ipToken);
+            this.ipToken = ipToken;
             return this;
         }
 

@@ -69,7 +69,7 @@ public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the health check task.
+         * The ID of the health check configuration.
          */
         public Builder monitorConfigId(String monitorConfigId) {
             this.monitorConfigId = monitorConfigId;

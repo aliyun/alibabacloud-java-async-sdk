@@ -299,7 +299,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
          * The extended information. The required parameters vary based on the value of ProtocolType.
          * <p>
          * 
-         * *   When ProtocolType is set to HTTP or HTTPS:
+         * *   HTTP or HTTPS
          * 
          *     *   port: the port that you want to check
          * 
@@ -307,7 +307,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
          * 
          *     *   path: the URL path
          * 
-         *     *   code: the return code. The health check result is deemed abnormal if the returned value is greater than the specified value.
+         *     *   code: the response code. The health check result is deemed abnormal if the returned value is greater than the specified value. Values: 400, 500.
          * 
          *     *   failureRate: the failure rate
          * 
@@ -321,7 +321,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
          *         *   IPV4
          *         *   IPV6
          * 
-         * *   When ProtocolType is set to PING:
+         * *   PING
          * 
          *     *   failureRate: the failure rate
          * 
@@ -334,7 +334,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
          *         *   IPV4
          *         *   IPV6
          * 
-         * *   When ProtocolType is set to TCP:
+         * *   TCP
          * 
          *     *   port: the port that you want to check
          * 
@@ -507,7 +507,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
              * The information about the source region of the address. The value of this parameter is a JSON string. Valid values:
              * <p>
              * 
-             * *   LineCode: the line code of the source region for the address
+             * *   lineCode: the line code of the source region for the address
              * 
              * *   lineCodeRectifyType: the rectification type of the line code. Default value: AUTO. Valid values:
              * 
@@ -521,7 +521,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The weight of the address pool.
+             * The weight of the address.
              */
             public Builder lbaWeight(Integer lbaWeight) {
                 this.lbaWeight = lbaWeight;
@@ -542,7 +542,7 @@ public class AddDnsGtmAddressPoolRequest extends Request {
             }
 
             /**
-             * The remarks.
+             * The description of the address pool.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
