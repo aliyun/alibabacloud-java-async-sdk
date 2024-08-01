@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMessageResponseBody</p>
  */
 public class QueryMessageResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorDescription")
+    @com.aliyun.core.annotation.NameInMap("ErrorDescription")
     private String errorDescription;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MessageId")
+    @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
 
-    @NameInMap("NumberDetail")
+    @com.aliyun.core.annotation.NameInMap("NumberDetail")
     private NumberDetail numberDetail;
 
-    @NameInMap("ReceiveDate")
+    @com.aliyun.core.annotation.NameInMap("ReceiveDate")
     private String receiveDate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResponseCode")
+    @com.aliyun.core.annotation.NameInMap("ResponseCode")
     private String responseCode;
 
-    @NameInMap("ResponseDescription")
+    @com.aliyun.core.annotation.NameInMap("ResponseDescription")
     private String responseDescription;
 
-    @NameInMap("SendDate")
+    @com.aliyun.core.annotation.NameInMap("SendDate")
     private String sendDate;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("To")
+    @com.aliyun.core.annotation.NameInMap("To")
     private String to;
 
     private QueryMessageResponseBody(Builder builder) {
@@ -277,13 +276,13 @@ public class QueryMessageResponseBody extends TeaModel {
     } 
 
     public static class NumberDetail extends TeaModel {
-        @NameInMap("Carrier")
+        @com.aliyun.core.annotation.NameInMap("Carrier")
         private String carrier;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private NumberDetail(Builder builder) {

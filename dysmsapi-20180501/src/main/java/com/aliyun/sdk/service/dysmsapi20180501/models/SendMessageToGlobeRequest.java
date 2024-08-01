@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendMessageToGlobeRequest</p>
  */
 public class SendMessageToGlobeRequest extends Request {
-    @Query
-    @NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
-    @Query
-    @NameInMap("From")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
-    @Query
-    @NameInMap("Message")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Message")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String message;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("To")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("To")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String to;
 
-    @Query
-    @NameInMap("ValidityPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidityPeriod")
     private Long validityPeriod;
 
     private SendMessageToGlobeRequest(Builder builder) {
@@ -126,7 +125,7 @@ public class SendMessageToGlobeRequest extends Request {
         } 
 
         /**
-         * ChannelId.
+         * The ID of the channel.
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);

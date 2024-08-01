@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SmsConversionRequest</p>
  */
 public class SmsConversionRequest extends Request {
-    @Query
-    @NameInMap("ConversionTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConversionTime")
     private Long conversionTime;
 
-    @Query
-    @NameInMap("Delivered")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Delivered")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean delivered;
 
-    @Query
-    @NameInMap("MessageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String messageId;
 
     private SmsConversionRequest(Builder builder) {

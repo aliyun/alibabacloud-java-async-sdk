@@ -110,10 +110,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Usage notes
-      * You cannot call the SendMessageToGlobe operation to send messages to the Chinese mainland.
-      * ### QPS limit
-      * You may call this operation up to 300 times per second. If the number of calls per second exceeds this limit, throttling will be triggered. This can potentially impact your business operations. Therefore, we recommend that you take note of this limit when making calls to this operation.
+      * ### [](#)Usage notes
+      * The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.
+      * ### [](#qps-)QPS limit
+      * You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override

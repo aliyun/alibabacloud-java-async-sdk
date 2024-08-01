@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendMessageWithTemplateResponseBody</p>
  */
 public class SendMessageWithTemplateResponseBody extends TeaModel {
-    @NameInMap("MessageId")
+    @com.aliyun.core.annotation.NameInMap("MessageId")
     private String messageId;
 
-    @NameInMap("NumberDetail")
+    @com.aliyun.core.annotation.NameInMap("NumberDetail")
     private NumberDetail numberDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResponseCode")
+    @com.aliyun.core.annotation.NameInMap("ResponseCode")
     private String responseCode;
 
-    @NameInMap("ResponseDescription")
+    @com.aliyun.core.annotation.NameInMap("ResponseDescription")
     private String responseDescription;
 
-    @NameInMap("Segments")
+    @com.aliyun.core.annotation.NameInMap("Segments")
     private String segments;
 
-    @NameInMap("To")
+    @com.aliyun.core.annotation.NameInMap("To")
     private String to;
 
     private SendMessageWithTemplateResponseBody(Builder builder) {
@@ -172,13 +171,13 @@ public class SendMessageWithTemplateResponseBody extends TeaModel {
     } 
 
     public static class NumberDetail extends TeaModel {
-        @NameInMap("Carrier")
+        @com.aliyun.core.annotation.NameInMap("Carrier")
         private String carrier;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private NumberDetail(Builder builder) {

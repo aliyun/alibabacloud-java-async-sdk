@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendMessageWithTemplateRequest</p>
  */
 public class SendMessageWithTemplateRequest extends Request {
-    @Query
-    @NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
     private String channelId;
 
-    @Query
-    @NameInMap("From")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("From")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String from;
 
-    @Query
-    @NameInMap("SmsUpExtendCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsUpExtendCode")
     private String smsUpExtendCode;
 
-    @Query
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateCode;
 
-    @Query
-    @NameInMap("TemplateParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateParam")
     private String templateParam;
 
-    @Query
-    @NameInMap("To")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("To")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String to;
 
-    @Query
-    @NameInMap("ValidityPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidityPeriod")
     private Long validityPeriod;
 
     private SendMessageWithTemplateRequest(Builder builder) {
@@ -141,7 +140,7 @@ public class SendMessageWithTemplateRequest extends Request {
         } 
 
         /**
-         * ChannelId.
+         * The ID of the channel.
          */
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
@@ -189,7 +188,7 @@ public class SendMessageWithTemplateRequest extends Request {
          * The mobile phone number to which the message is sent. You must add the country code to the beginning of the mobile phone number. Example: 861503871\*\*\*\*.
          * <p>
          * 
-         * For more information, see [Dialing codes](https://www.alibabacloud.com/help/zh/short-message-service/latest/dialing-codes).
+         * For more information, see [Dialing codes](https://www.alibabacloud.com/help/en/sms/product-overview/dialing-codes?spm=a2c63.p38356.0.0.367279cbwQFoeM).
          */
         public Builder to(String to) {
             this.putQueryParameter("To", to);

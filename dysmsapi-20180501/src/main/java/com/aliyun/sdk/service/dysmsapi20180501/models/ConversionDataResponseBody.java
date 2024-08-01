@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20180501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConversionDataResponseBody</p>
  */
 public class ConversionDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResponseCode")
+    @com.aliyun.core.annotation.NameInMap("ResponseCode")
     private String responseCode;
 
-    @NameInMap("ResponseDescription")
+    @com.aliyun.core.annotation.NameInMap("ResponseDescription")
     private String responseDescription;
 
     private ConversionDataResponseBody(Builder builder) {
