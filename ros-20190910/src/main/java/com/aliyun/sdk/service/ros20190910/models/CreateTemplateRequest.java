@@ -36,6 +36,10 @@ public class CreateTemplateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidationOptions")
+    private java.util.List < String > validationOptions;
+
     private CreateTemplateRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -44,6 +48,7 @@ public class CreateTemplateRequest extends Request {
         this.templateBody = builder.templateBody;
         this.templateName = builder.templateName;
         this.templateURL = builder.templateURL;
+        this.validationOptions = builder.validationOptions;
     }
 
     public static Builder builder() {
@@ -101,6 +106,13 @@ public class CreateTemplateRequest extends Request {
         return this.templateURL;
     }
 
+    /**
+     * @return validationOptions
+     */
+    public java.util.List < String > getValidationOptions() {
+        return this.validationOptions;
+    }
+
     public static final class Builder extends Request.Builder<CreateTemplateRequest, Builder> {
         private String description; 
         private String resourceGroupId; 
@@ -108,6 +120,7 @@ public class CreateTemplateRequest extends Request {
         private String templateBody; 
         private String templateName; 
         private String templateURL; 
+        private java.util.List < String > validationOptions; 
 
         private Builder() {
             super();
@@ -121,6 +134,7 @@ public class CreateTemplateRequest extends Request {
             this.templateBody = request.templateBody;
             this.templateName = request.templateName;
             this.templateURL = request.templateURL;
+            this.validationOptions = request.validationOptions;
         } 
 
         /**
@@ -181,6 +195,15 @@ public class CreateTemplateRequest extends Request {
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
             this.templateURL = templateURL;
+            return this;
+        }
+
+        /**
+         * ValidationOptions.
+         */
+        public Builder validationOptions(java.util.List < String > validationOptions) {
+            this.putQueryParameter("ValidationOptions", validationOptions);
+            this.validationOptions = validationOptions;
             return this;
         }
 

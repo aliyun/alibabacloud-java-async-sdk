@@ -15,6 +15,14 @@ public class UpdateTemplateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDraft")
+    private Boolean isDraft;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RotateStrategy")
+    private String rotateStrategy;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
@@ -32,13 +40,20 @@ public class UpdateTemplateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TemplateURL")
     private String templateURL;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidationOptions")
+    private java.util.List < String > validationOptions;
+
     private UpdateTemplateRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.isDraft = builder.isDraft;
+        this.rotateStrategy = builder.rotateStrategy;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateName = builder.templateName;
         this.templateURL = builder.templateURL;
+        this.validationOptions = builder.validationOptions;
     }
 
     public static Builder builder() {
@@ -59,6 +74,20 @@ public class UpdateTemplateRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return isDraft
+     */
+    public Boolean getIsDraft() {
+        return this.isDraft;
+    }
+
+    /**
+     * @return rotateStrategy
+     */
+    public String getRotateStrategy() {
+        return this.rotateStrategy;
     }
 
     /**
@@ -89,12 +118,22 @@ public class UpdateTemplateRequest extends Request {
         return this.templateURL;
     }
 
+    /**
+     * @return validationOptions
+     */
+    public java.util.List < String > getValidationOptions() {
+        return this.validationOptions;
+    }
+
     public static final class Builder extends Request.Builder<UpdateTemplateRequest, Builder> {
         private String description; 
+        private Boolean isDraft; 
+        private String rotateStrategy; 
         private String templateBody; 
         private String templateId; 
         private String templateName; 
         private String templateURL; 
+        private java.util.List < String > validationOptions; 
 
         private Builder() {
             super();
@@ -103,10 +142,13 @@ public class UpdateTemplateRequest extends Request {
         private Builder(UpdateTemplateRequest request) {
             super(request);
             this.description = request.description;
+            this.isDraft = request.isDraft;
+            this.rotateStrategy = request.rotateStrategy;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
             this.templateName = request.templateName;
             this.templateURL = request.templateURL;
+            this.validationOptions = request.validationOptions;
         } 
 
         /**
@@ -115,6 +157,24 @@ public class UpdateTemplateRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * IsDraft.
+         */
+        public Builder isDraft(Boolean isDraft) {
+            this.putQueryParameter("IsDraft", isDraft);
+            this.isDraft = isDraft;
+            return this;
+        }
+
+        /**
+         * RotateStrategy.
+         */
+        public Builder rotateStrategy(String rotateStrategy) {
+            this.putQueryParameter("RotateStrategy", rotateStrategy);
+            this.rotateStrategy = rotateStrategy;
             return this;
         }
 
@@ -159,6 +219,15 @@ public class UpdateTemplateRequest extends Request {
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
             this.templateURL = templateURL;
+            return this;
+        }
+
+        /**
+         * ValidationOptions.
+         */
+        public Builder validationOptions(java.util.List < String > validationOptions) {
+            this.putQueryParameter("ValidationOptions", validationOptions);
+            this.validationOptions = validationOptions;
             return this;
         }
 
