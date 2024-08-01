@@ -278,7 +278,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * The rule description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -294,7 +294,7 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the resources evaluated based on the rule. Multiple resource types are separated with commas (,).
+             * The type of the resource evaluated based on the rule. Separate multiple resource types with commas (,).
              */
             public Builder resourceTypesScope(String resourceTypesScope) {
                 this.resourceTypesScope = resourceTypesScope;
@@ -305,9 +305,9 @@ public class GetCompliancePackResponseBody extends TeaModel {
              * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
-             * *   1: high.
-             * *   2: medium.
-             * *   3: low.
+             * *   1: high
+             * *   2: medium
+             * *   3: low
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;

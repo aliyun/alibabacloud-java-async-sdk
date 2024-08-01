@@ -74,6 +74,9 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
+        @com.aliyun.core.annotation.NameInMap("CompliantSnapshot")
+        private Boolean compliantSnapshot;
+
         @com.aliyun.core.annotation.NameInMap("ConfigurationItemChangeNotification")
         private Boolean configurationItemChangeNotification;
 
@@ -115,6 +118,7 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
 
         private DeliveryChannels(Builder builder) {
             this.accountId = builder.accountId;
+            this.compliantSnapshot = builder.compliantSnapshot;
             this.configurationItemChangeNotification = builder.configurationItemChangeNotification;
             this.configurationSnapshot = builder.configurationSnapshot;
             this.deliveryChannelAssumeRoleArn = builder.deliveryChannelAssumeRoleArn;
@@ -143,6 +147,13 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
          */
         public Long getAccountId() {
             return this.accountId;
+        }
+
+        /**
+         * @return compliantSnapshot
+         */
+        public Boolean getCompliantSnapshot() {
+            return this.compliantSnapshot;
         }
 
         /**
@@ -238,6 +249,7 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long accountId; 
+            private Boolean compliantSnapshot; 
             private Boolean configurationItemChangeNotification; 
             private Boolean configurationSnapshot; 
             private String deliveryChannelAssumeRoleArn; 
@@ -257,6 +269,14 @@ public class ListConfigDeliveryChannelsResponseBody extends TeaModel {
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
+                return this;
+            }
+
+            /**
+             * CompliantSnapshot.
+             */
+            public Builder compliantSnapshot(Boolean compliantSnapshot) {
+                this.compliantSnapshot = compliantSnapshot;
                 return this;
             }
 

@@ -154,7 +154,11 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * ComplianceOption.
+         * Specifies whether to query the compliance results of the resource. Valid values:
+         * <p>
+         * 
+         * *   0 (default): does not query the compliance results of the resource.
+         * *   1: queries the compliance results of the resource.
          */
         public Builder complianceOption(Integer complianceOption) {
             this.putQueryParameter("ComplianceOption", complianceOption);
@@ -175,9 +179,7 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the resources in the account group belong.
-         * <p>
-         * > You can use either the `ResourceAccountId` or `ResourceOwnerId` parameter. We recommend that you use the ResourceAccountId parameter.
+         * The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);
@@ -189,7 +191,7 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
          * The resource ID.
          * <p>
          * 
-         * For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
+         * For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~411691~~).
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

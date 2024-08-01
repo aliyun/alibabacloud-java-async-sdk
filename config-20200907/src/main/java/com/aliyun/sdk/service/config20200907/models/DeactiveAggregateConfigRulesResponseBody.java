@@ -49,7 +49,7 @@ public class DeactiveAggregateConfigRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned result.
+         * The results of the operations that are performed to disable the specified rules.
          */
         public Builder operateRuleResult(OperateRuleResult operateRuleResult) {
             this.operateRuleResult = operateRuleResult;
@@ -129,7 +129,7 @@ public class DeactiveAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned.
+             * The error code.
              * <p>
              * 
              * *   If the rule is disabled, no error code is returned.
@@ -144,8 +144,8 @@ public class DeactiveAggregateConfigRulesResponseBody extends TeaModel {
              * Indicates whether the request was successful. Valid values:
              * <p>
              * 
-             * *   true: The request was successful.
-             * *   false: The request failed.
+             * *   true
+             * *   false
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -186,7 +186,7 @@ public class DeactiveAggregateConfigRulesResponseBody extends TeaModel {
             private java.util.List < OperateRuleItemList> operateRuleItemList; 
 
             /**
-             * The returned result.
+             * The operations that are performed to disable the rule.
              */
             public Builder operateRuleItemList(java.util.List < OperateRuleItemList> operateRuleItemList) {
                 this.operateRuleItemList = operateRuleItemList;

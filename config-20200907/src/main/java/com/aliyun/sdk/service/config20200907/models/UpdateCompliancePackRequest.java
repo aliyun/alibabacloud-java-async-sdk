@@ -313,9 +313,6 @@ public class UpdateCompliancePackRequest extends Request {
 
         /**
          * The description of the compliance package.
-         * <p>
-         * 
-         * For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](~~263332~~).
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -591,10 +588,10 @@ public class UpdateCompliancePackRequest extends Request {
             private Integer riskLevel; 
 
             /**
-             * The ID of the rule. If you configure this parameter, Cloud Config adds the rule of the specified ID to the compliance package.
+             * The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.
              * <p>
              * 
-             * You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
+             * You need to only configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. You can call the [ListConfigRules](~~169607~~) operation to obtain the rule ID.
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -602,7 +599,7 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * The name of the rule.
+             * The rule name.
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -610,7 +607,7 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * The details of the input parameters of the rule.
+             * The input parameters of the rule.
              */
             public Builder configRuleParameters(java.util.List < ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
@@ -618,7 +615,7 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * The description of the rule.
+             * The description of the event rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -626,10 +623,10 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * The ID of the managed rule. Cloud Config automatically create a managed rule of the specified ID and adds the rule to the compliance package.
+             * The identifier of the managed rule. Cloud Config automatically creates a rule based on the identifier of the managed rule and adds the rule to the current compliance package.
              * <p>
              * 
-             * You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter take precedence. For more information about how to obtain the ID of a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+             * You need to only configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the identifier of a managed rule, see [ListCompliancePackTemplates](~~261176~~).
              */
             public Builder managedRuleIdentifier(String managedRuleIdentifier) {
                 this.managedRuleIdentifier = managedRuleIdentifier;
@@ -637,12 +634,12 @@ public class UpdateCompliancePackRequest extends Request {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
+             * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
-             * *   1: high risk level
-             * *   2: medium risk level
-             * *   3: low risk level
+             * *   1: high
+             * *   2: medium
+             * *   3: low
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;

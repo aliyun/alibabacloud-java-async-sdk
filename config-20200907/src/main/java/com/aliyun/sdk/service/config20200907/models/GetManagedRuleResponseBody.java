@@ -97,7 +97,7 @@ public class GetManagedRuleResponseBody extends TeaModel {
             private java.util.List < String > complianceResourceTypes; 
 
             /**
-             * The type of resource to which the managed rule applies.
+             * The types of resources to which the managed rule applies.
              */
             public Builder complianceResourceTypes(java.util.List < String > complianceResourceTypes) {
                 this.complianceResourceTypes = complianceResourceTypes;
@@ -150,14 +150,14 @@ public class GetManagedRuleResponseBody extends TeaModel {
             private String messageType; 
 
             /**
-             * The interval at which the managed rule is triggered. Valid values:
+             * The interval at which the rule is triggered. Valid values: Valid values:
              * <p>
              * 
-             * *   One_Hour: 1 hour.
-             * *   Three_Hours: 3 hours.
-             * *   Six_Hours: 6 hours.
-             * *   Twelve_Hours: 12 hours
-             * *   TwentyFour_Hours: 24 hours
+             * *   One_Hour
+             * *   Three_Hours
+             * *   Six_Hours
+             * *   Twelve_Hours
+             * *   TwentyFour_Hours
              */
             public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
                 this.maximumExecutionFrequency = maximumExecutionFrequency;
@@ -165,11 +165,11 @@ public class GetManagedRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger type of the managed rule. Valid values:
+             * The trigger type of the rule. Valid values:
              * <p>
              * 
-             * *   ConfigurationItemChangeNotification: The managed rule is triggered by configuration changes.
-             * *   ScheduledNotification: The managed rule is periodically triggered.
+             * *   ConfigurationItemChangeNotification: The rule is triggered by configuration changes.
+             * *   ScheduledNotification: The rule is periodically triggered.
              */
             public Builder messageType(String messageType) {
                 this.messageType = messageType;
@@ -318,7 +318,7 @@ public class GetManagedRuleResponseBody extends TeaModel {
             private java.util.List < SourceDetails> sourceDetails; 
 
             /**
-             * The settings of the required input parameters for the managed rule.
+             * The details of the required input parameters for the managed rule.
              */
             public Builder compulsoryInputParameterDetails(java.util.Map < String, ? > compulsoryInputParameterDetails) {
                 this.compulsoryInputParameterDetails = compulsoryInputParameterDetails;
@@ -366,7 +366,7 @@ public class GetManagedRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The settings of the optional input parameters for the managed rule.
+             * The details of the optional input parameters for the managed rule.
              */
             public Builder optionalInputParameterDetails(java.util.Map < String, ? > optionalInputParameterDetails) {
                 this.optionalInputParameterDetails = optionalInputParameterDetails;
@@ -374,12 +374,12 @@ public class GetManagedRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the managed rule. Valid values:
+             * The risk level of the managed rule. Valid values:
              * <p>
              * 
-             * *   1: high risk level
-             * *   2: medium risk level
-             * *   3: low risk level
+             * *   1: high
+             * *   2: medium
+             * *   3: low
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;

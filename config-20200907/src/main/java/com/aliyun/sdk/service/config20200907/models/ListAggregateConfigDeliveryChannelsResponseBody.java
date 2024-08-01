@@ -77,6 +77,9 @@ public class ListAggregateConfigDeliveryChannelsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
+        @com.aliyun.core.annotation.NameInMap("CompliantSnapshot")
+        private Boolean compliantSnapshot;
+
         @com.aliyun.core.annotation.NameInMap("ConfigurationItemChangeNotification")
         private Boolean configurationItemChangeNotification;
 
@@ -119,6 +122,7 @@ public class ListAggregateConfigDeliveryChannelsResponseBody extends TeaModel {
         private DeliveryChannels(Builder builder) {
             this.accountId = builder.accountId;
             this.aggregatorId = builder.aggregatorId;
+            this.compliantSnapshot = builder.compliantSnapshot;
             this.configurationItemChangeNotification = builder.configurationItemChangeNotification;
             this.configurationSnapshot = builder.configurationSnapshot;
             this.deliveryChannelAssumeRoleArn = builder.deliveryChannelAssumeRoleArn;
@@ -154,6 +158,13 @@ public class ListAggregateConfigDeliveryChannelsResponseBody extends TeaModel {
          */
         public String getAggregatorId() {
             return this.aggregatorId;
+        }
+
+        /**
+         * @return compliantSnapshot
+         */
+        public Boolean getCompliantSnapshot() {
+            return this.compliantSnapshot;
         }
 
         /**
@@ -250,6 +261,7 @@ public class ListAggregateConfigDeliveryChannelsResponseBody extends TeaModel {
         public static final class Builder {
             private Long accountId; 
             private String aggregatorId; 
+            private Boolean compliantSnapshot; 
             private Boolean configurationItemChangeNotification; 
             private Boolean configurationSnapshot; 
             private String deliveryChannelAssumeRoleArn; 
@@ -277,6 +289,14 @@ public class ListAggregateConfigDeliveryChannelsResponseBody extends TeaModel {
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
+                return this;
+            }
+
+            /**
+             * CompliantSnapshot.
+             */
+            public Builder compliantSnapshot(Boolean compliantSnapshot) {
+                this.compliantSnapshot = compliantSnapshot;
                 return this;
             }
 

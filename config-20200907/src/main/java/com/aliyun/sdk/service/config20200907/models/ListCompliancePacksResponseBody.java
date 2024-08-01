@@ -189,7 +189,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package.
+             * The compliance package ID.
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -205,7 +205,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package template based on which the compliance package was created.
+             * The ID of the compliance package template.
              */
             public Builder compliancePackTemplateId(String compliancePackTemplateId) {
                 this.compliancePackTemplateId = compliancePackTemplateId;
@@ -229,12 +229,12 @@ public class ListCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:
+             * The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
              * <p>
              * 
-             * *   1: high risk level.
-             * *   2: medium risk level.
-             * *   3: low risk level.
+             * *   1: high
+             * *   2: medium
+             * *   3: low
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -245,7 +245,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
              * The status of the compliance package. Valid values:
              * <p>
              * 
-             * *   ACTIVE: The compliance package is active.
+             * *   ACTIVE: The compliance package is normal.
              * *   CREATING: The compliance package is being created.
              */
             public Builder status(String status) {
@@ -323,7 +323,7 @@ public class ListCompliancePacksResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The details of the compliance package.
+             * The compliance packages.
              */
             public Builder compliancePacks(java.util.List < CompliancePacks> compliancePacks) {
                 this.compliancePacks = compliancePacks;

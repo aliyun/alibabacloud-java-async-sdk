@@ -97,7 +97,11 @@ public class GetDiscoveredResourceRequest extends Request {
         } 
 
         /**
-         * ComplianceOption.
+         * Specifies whether to query the compliance results of the resource. Valid values:
+         * <p>
+         * 
+         * *   0 (default): does not query the compliance results of the resource.
+         * *   1: queries the compliance results of the resource.
          */
         public Builder complianceOption(Integer complianceOption) {
             this.putQueryParameter("ComplianceOption", complianceOption);
@@ -118,10 +122,10 @@ public class GetDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The resource IDs.
+         * The resource ID.
          * <p>
          * 
-         * For more information about how to query the ID of a resource, see [ListDiscoveredResources](~~411702~~).
+         * For more information about how to obtain the ID of a resource, see [ListDiscoveredResources](~~411702~~).
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -130,7 +134,7 @@ public class GetDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * The resource type.
+         * The type of the resource.
          * <p>
          * 
          * For more information about how to obtain the type of a resource, see [ListDiscoveredResources](~~411702~~).

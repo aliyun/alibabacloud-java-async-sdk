@@ -49,7 +49,7 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the resource.
+         * The details of the resource.
          */
         public Builder discoveredResourceDetail(DiscoveredResourceDetail discoveredResourceDetail) {
             this.discoveredResourceDetail = discoveredResourceDetail;
@@ -237,7 +237,7 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone where the resource resides.
+             * The ID of the zone in which the resource resides.
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -305,11 +305,11 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:
+             * The status of the resource. The value of this parameter varies based on the resource type and may be empty.
              * <p>
              * 
-             * *   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.
-             * *   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.
+             * *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an ECS instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
+             * *   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;

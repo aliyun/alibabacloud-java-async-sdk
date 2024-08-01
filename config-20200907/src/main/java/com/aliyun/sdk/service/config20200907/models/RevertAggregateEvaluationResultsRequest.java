@@ -188,10 +188,10 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
             private String resourceType; 
 
             /**
-             * The ID of the region where the resource resides.
+             * The ID of the region in which your resources reside.
              * <p>
              * 
-             * For more information about how to obtain the ID of a region, see [ListAggregateDiscoveredResources](~~265983~~).
+             * For more information about how to obtain the ID of the region in which your resources reside, see [ListAggregateDiscoveredResources](~~265983~~).
              */
             public Builder region(String region) {
                 this.region = region;
@@ -202,7 +202,7 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
              * The ID of the Alibaba Cloud account to which the resource belongs.
              * <p>
              * 
-             * > You must specify the ID of the current management account or a member account in the account group of the management account.
+             * >  You must specify the ID of the current management account or a member in the account group of the management account.
              */
             public Builder resourceAccountId(Long resourceAccountId) {
                 this.resourceAccountId = resourceAccountId;
@@ -213,7 +213,7 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
              * The resource ID.
              * <p>
              * 
-             * For more information about how to query the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
+             * For more information about how to obtain the ID of a resource, see [ListAggregateDiscoveredResources](~~265983~~).
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -221,7 +221,7 @@ public class RevertAggregateEvaluationResultsRequest extends Request {
             }
 
             /**
-             * The type of resource.
+             * The type of the resource.
              * <p>
              * 
              * For more information about how to obtain the type of a resource, see [ListAggregateDiscoveredResources](~~265983~~).

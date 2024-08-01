@@ -49,7 +49,7 @@ public class ActiveConfigRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The result information about the operation.
+         * The returned results.
          */
         public Builder operateRuleResult(OperateRuleResult operateRuleResult) {
             this.operateRuleResult = operateRuleResult;
@@ -129,7 +129,7 @@ public class ActiveConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the request failed.
+             * The error code.
              * <p>
              * 
              * *   If the rule is enabled, no error code is returned.
@@ -186,7 +186,7 @@ public class ActiveConfigRulesResponseBody extends TeaModel {
             private java.util.List < OperateRuleItemList> operateRuleItemList; 
 
             /**
-             * The result information about the operation.
+             * The returned results.
              */
             public Builder operateRuleItemList(java.util.List < OperateRuleItemList> operateRuleItemList) {
                 this.operateRuleItemList = operateRuleItemList;

@@ -49,7 +49,7 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The results of the operations to disable the specified rules.
+         * The results of the operations that are performed to disable the specified rules.
          */
         public Builder operateRuleResult(OperateRuleResult operateRuleResult) {
             this.operateRuleResult = operateRuleResult;
@@ -121,7 +121,7 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The ID of the rule.
+             * The rule ID.
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -133,10 +133,7 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
              * <p>
              * 
              * *   If the rule is disabled, no error code is returned.
-             * 
-             * <!---->
-             * 
-             * *   If the rule fails to be disabled, an error code is returned. For more information about error codes, visit the [API Error Center](https://error-center.alibabacloud.com/status/product/Config).
+             * *   If the rule fails to be disabled, an error code is returned. For more information about error codes, see [Error codes](https://error-center.alibabacloud.com/status/product/Config).
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -144,11 +141,11 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the operation is successful. Valid values:
+             * Indicates whether the request was successful. Valid values:
              * <p>
              * 
-             * *   true: The operation is successful.
-             * *   false: The operation fails.
+             * *   true
+             * *   false
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -189,7 +186,7 @@ public class DeactiveConfigRulesResponseBody extends TeaModel {
             private java.util.List < OperateRuleItemList> operateRuleItemList; 
 
             /**
-             * The result of the operation to disable the rule.
+             * The operations that are performed to disable the rule.
              */
             public Builder operateRuleItemList(java.util.List < OperateRuleItemList> operateRuleItemList) {
                 this.operateRuleItemList = operateRuleItemList;

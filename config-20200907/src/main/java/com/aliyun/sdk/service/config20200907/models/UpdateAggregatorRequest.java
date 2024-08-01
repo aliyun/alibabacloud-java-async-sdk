@@ -110,10 +110,10 @@ public class UpdateAggregatorRequest extends Request {
         } 
 
         /**
-         * The information about the member accounts in the account group.
+         * The members in the account group.
          * <p>
          * 
-         * >  When you modify the configurations of an account group, this parameter can be left empty. In this case, the member account list is not updated. If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
+         * >  When you modify the configurations of an account group, this parameter can be left empty. In this case, the member list is not updated. If you want to update the member list, you must configure both the `AccountId` and `AccountType` parameters.
          */
         public Builder aggregatorAccounts(java.util.List < AggregatorAccounts> aggregatorAccounts) {
             String aggregatorAccountsShrink = shrink(aggregatorAccounts, "AggregatorAccounts", "json");
@@ -225,12 +225,12 @@ public class UpdateAggregatorRequest extends Request {
             private String accountType; 
 
             /**
-             * The member account ID, which indicates the Alibaba Cloud account ID of the member account.
+             * The ID of the member.
              * <p>
              * 
-             * For more information about how to obtain the ID of a member account, see [ListAccounts](~~160016~~).
+             * For more information about how to obtain the ID of a member, see [ListAccounts](~~160016~~).
              * 
-             * >  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
+             * >  If you want to update the member list, you must configure both the `AccountId` and `AccountType` parameters.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -238,12 +238,12 @@ public class UpdateAggregatorRequest extends Request {
             }
 
             /**
-             * The member account name, which indicates the name of the Alibaba Cloud account that corresponds to the member account.
+             * The display name of the member.
              * <p>
              * 
-             * For more information about how to obtain the name of a member account, see [ListAccounts](~~160016~~).
+             * For more information about how to obtain the name of a member, see [ListAccounts](~~160016~~).
              * 
-             * >  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
+             * >  If you want to update the member list, you must configure both the `AccountId` and `AccountType` parameters.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -251,10 +251,10 @@ public class UpdateAggregatorRequest extends Request {
             }
 
             /**
-             * The affiliation of the member account. You can set this parameter to only ResourceDirectory.
+             * The resource directory to which the member belongs. Valid value: ResourceDirectory. ResourceDirectory indicates that the member belongs to a resource directory.
              * <p>
              * 
-             * >  If you want to update the member account list, you must set the `AccountId`, `AccountName` and `AccountType` parameters.
+             * >  If you want to update the member list, you must configure both the `AccountId` and `AccountType` parameters.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;

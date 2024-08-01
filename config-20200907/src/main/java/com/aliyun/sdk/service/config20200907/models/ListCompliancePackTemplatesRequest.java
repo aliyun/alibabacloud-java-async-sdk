@@ -97,9 +97,6 @@ public class ListCompliancePackTemplatesRequest extends Request {
 
         /**
          * The ID of the compliance package template.
-         * <p>
-         * 
-         * For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](~~261176~~).
          */
         public Builder compliancePackTemplateId(String compliancePackTemplateId) {
             this.putQueryParameter("CompliancePackTemplateId", compliancePackTemplateId);
@@ -132,7 +129,7 @@ public class ListCompliancePackTemplatesRequest extends Request {
         }
 
         /**
-         * The type of the resource evaluated by the rule.
+         * The types of the resources evaluated based on the rule. If you configure this parameter, only the rules that include the resource types in the compliance package template are returned.
          */
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);

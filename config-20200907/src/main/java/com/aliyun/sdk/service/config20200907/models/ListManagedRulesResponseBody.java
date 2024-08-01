@@ -97,7 +97,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
             private java.util.List < String > complianceResourceTypes; 
 
             /**
-             * The type of resource to which the managed rule applies.
+             * The types of resources to which the managed rule applies.
              */
             public Builder complianceResourceTypes(java.util.List < String > complianceResourceTypes) {
                 this.complianceResourceTypes = complianceResourceTypes;
@@ -278,7 +278,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Classification description of the managed rule.
+             * The classification description of the managed rule.
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
@@ -286,7 +286,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Supported remediation template id.
+             * The ID of the remediation template.
              */
             public Builder remediationTemplateIdentifier(String remediationTemplateIdentifier) {
                 this.remediationTemplateIdentifier = remediationTemplateIdentifier;
@@ -294,7 +294,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Supported remediation template name.
+             * The name of the remediation template.
              */
             public Builder remediationTemplateName(String remediationTemplateName) {
                 this.remediationTemplateName = remediationTemplateName;
@@ -302,12 +302,12 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that do not comply with the managed rule. Valid values:
+             * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
-             * *   1: high risk level
-             * *   2: medium risk level
-             * *   3: low risk level
+             * *   1: high
+             * *   2: medium
+             * *   3: low
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -323,12 +323,11 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether pre-check is supported. Value:
+             * Indicates whether precheck is supported. Valid values:
              * <p>
              * 
-             * - true: Supported
-             * 
-             * - false: not supported
+             * *   true
+             * *   false
              */
             public Builder supportPreviewManagedRule(Boolean supportPreviewManagedRule) {
                 this.supportPreviewManagedRule = supportPreviewManagedRule;
@@ -405,7 +404,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The name of the remediation template.
+             * The details of the managed rule.
              */
             public Builder managedRuleList(java.util.List < ManagedRuleList> managedRuleList) {
                 this.managedRuleList = managedRuleList;
@@ -413,7 +412,10 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. Minimum value: 1.
+             * The page number.
+             * <p>
+             * 
+             * Page start from page 1.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -429,7 +431,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of managed rules returned.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -49,7 +49,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the compliance package templates.
+         * The information about the compliance package templates returned.
          */
         public Builder compliancePackTemplatesResult(CompliancePackTemplatesResult compliancePackTemplatesResult) {
             this.compliancePackTemplatesResult = compliancePackTemplatesResult;
@@ -121,7 +121,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             private Boolean required; 
 
             /**
-             * The name of the input parameter.
+             * The name of the input parameter of the managed rule.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -129,7 +129,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the input parameter.
+             * The value of the input parameter of the managed rule.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -137,11 +137,11 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the input parameter is required. Valid values:
+             * Indicates whether the parameter is required in the managed rule. Valid values:
              * <p>
              * 
-             * *   true: The parameter is required.
-             * *   false: The input parameter is optional.
+             * *   true: required
+             * *   false: optional
              */
             public Builder required(Boolean required) {
                 this.required = required;
@@ -278,7 +278,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             private Integer riskLevel; 
 
             /**
-             * The input parameters of the managed rule.
+             * The input parameter of the managed rule.
              */
             public Builder configRuleParameters(java.util.List < ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
@@ -294,10 +294,10 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the regulation.
+             * The regulation ID.
              * <p>
              * 
-             * > This parameter is available only for regulation compliance packages.
+             * >  This parameter is available only for regulation compliance packages.
              */
             public Builder controlId(String controlId) {
                 this.controlId = controlId;
@@ -305,7 +305,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule was enabled together with the compliance package. Default value: false. The value true indicates that the rule was enabled together with the compliance package. Valid values:
+             * Indicates whether the rules are enabled together with the compliance package. Valid values:
              * <p>
              * 
              * *   true
@@ -317,7 +317,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the managed rule.
+             * The description of the rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -341,7 +341,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource evaluated based on the rule.
+             * The types of the resources evaluated based on the rule.
              */
             public Builder resourceTypesScope(String resourceTypesScope) {
                 this.resourceTypesScope = resourceTypesScope;
@@ -349,7 +349,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the managed rule. Valid values:
+             * The risk level of the managed rule. Valid values:
              * <p>
              * 
              * *   1: high
@@ -483,7 +483,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about managed rules in the compliance package.
+             * The default rules in the compliance package.
              */
             public Builder configRules(java.util.List < ConfigRules> configRules) {
                 this.configRules = configRules;
@@ -515,7 +515,7 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:
+             * The risk level of the managed rule in the compliance package. Valid values:
              * <p>
              * 
              * *   1: high

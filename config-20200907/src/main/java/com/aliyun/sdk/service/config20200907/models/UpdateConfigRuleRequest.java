@@ -396,10 +396,10 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
+         * The IDs of the resources excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
          * <p>
          * 
-         * >  This parameter applies only to managed rules.
+         * >  This parameter applies only to a managed rule.
          */
         public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
             this.putBodyParameter("ExcludeResourceIdsScope", excludeResourceIdsScope);
@@ -445,10 +445,10 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).
+         * The IDs of the regions to which the rule applies. Separate multiple region IDs with commas (,).
          * <p>
          * 
-         * >  This parameter applies only to managed rules.
+         * >  This parameter applies only to a managed rule.
          */
         public Builder regionIdsScope(String regionIdsScope) {
             this.putBodyParameter("RegionIdsScope", regionIdsScope);
@@ -457,10 +457,10 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).
+         * The IDs of the resource groups to which the rule applies. Separate multiple resource group IDs with commas (,).
          * <p>
          * 
-         * >  This parameter applies only to managed rules.
+         * >  This parameter applies only to a managed rule.
          */
         public Builder resourceGroupIdsScope(String resourceGroupIdsScope) {
             this.putBodyParameter("ResourceGroupIdsScope", resourceGroupIdsScope);
@@ -502,11 +502,11 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * The logical relationship among the tag keys if you specify multiple tag keys by using the `TagKeyScope` parameter. For example, if the `TagKeyScope` parameter is set to `ECS,OSS` and the TagKeyLogicScope parameter is set to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:
+         * The logical relationship among the tag keys if you specify multiple tag keys for the `TagKeyScope` parameter. For example, if you set the `TagKeyScope` parameter to `ECS,OSS` and the TagKeyLogicScope parameter to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:
          * <p>
          * 
-         * *   AND: logical AND
-         * *   OR: logical OR
+         * *   AND
+         * *   OR
          */
         public Builder tagKeyLogicScope(String tagKeyLogicScope) {
             this.putBodyParameter("TagKeyLogicScope", tagKeyLogicScope);
@@ -518,7 +518,7 @@ public class UpdateConfigRuleRequest extends Request {
          * The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
          * <p>
          * 
-         * >  This parameter applies only to managed rules. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
+         * >  This parameter applies only to a managed rule. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
          */
         public Builder tagKeyScope(String tagKeyScope) {
             this.putBodyParameter("TagKeyScope", tagKeyScope);
@@ -527,10 +527,10 @@ public class UpdateConfigRuleRequest extends Request {
         }
 
         /**
-         * The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
+         * The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.
          * <p>
          * 
-         * >  This parameter applies only to managed rules. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
+         * >  This parameter applies only to a managed rule. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
          */
         public Builder tagValueScope(String tagValueScope) {
             this.putBodyParameter("TagValueScope", tagValueScope);

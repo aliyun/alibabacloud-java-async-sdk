@@ -73,8 +73,8 @@ public class GetResourceComplianceByConfigRuleRequest extends Request {
          * 
          * *   COMPLIANT: The resource is evaluated as compliant.
          * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-         * *   NOT_APPLICABLE: The rule does not apply to the resource.
-         * *   INSUFFICIENT_DATA: No resource data is available.
+         * *   NOT_APPLICABLE: The rule does not apply to the resources.
+         * *   INSUFFICIENT_DATA: No data is available.
          */
         public Builder complianceType(String complianceType) {
             this.putQueryParameter("ComplianceType", complianceType);

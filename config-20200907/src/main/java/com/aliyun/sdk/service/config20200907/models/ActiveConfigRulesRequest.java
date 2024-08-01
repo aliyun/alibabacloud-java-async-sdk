@@ -54,7 +54,7 @@ public class ActiveConfigRulesRequest extends Request {
         } 
 
         /**
-         * The rule IDs. Separate multiple rule IDs with commas (,). You can specify a maximum of 20 rule IDs at a time.
+         * The rule ID. Separate multiple rule IDs with commas (,).
          */
         public Builder configRuleIds(String configRuleIds) {
             this.putQueryParameter("ConfigRuleIds", configRuleIds);

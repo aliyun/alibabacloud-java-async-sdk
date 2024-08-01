@@ -112,10 +112,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
              * The compliance evaluation result. Valid values:
              * <p>
              * 
-             * *   COMPLIANT: The resource is evaluated as compliant.
-             * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-             * *   NOT_APPLICABLE: The rule does not apply to the resource.
-             * *   INSUFFICIENT_DATA: No resource data is available.
+             * *   COMPLIANT: The resources are evaluated as compliant.
+             * *   NON_COMPLIANT: The resources are evaluated as non-compliant.
+             * *   NOT_APPLICABLE: The rule does not apply to the resources.
+             * *   INSUFFICIENT_DATA: No data is available.
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -123,7 +123,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of evaluated resources.
+             * The number of evaluation resources that correspond to the summary result of the rule compliance evaluation.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -236,7 +236,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             private String creatorType; 
 
             /**
-             * The ID of the account group.
+             * The account group ID.
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -252,7 +252,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package.
+             * The compliance package ID.
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -268,7 +268,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management account that was used to create the rule.
+             * The ID of the management account that created the rule.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -276,7 +276,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the management account that was used to create the rule.
+             * The name of the management account that create the rule.
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -284,7 +284,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the creator of the rule. Valid value: AGGREGATOR, which indicates an account group.
+             * The type of the creator of the rule. The value is fixed to AGGREGATOR, which indicates an account group.
              */
             public Builder creatorType(String creatorType) {
                 this.creatorType = creatorType;
@@ -542,7 +542,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ID of the management account to which the rule belongs.
+             * The ID of the management account to which the rules belong.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -550,7 +550,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.
+             * The type of the remediation template. Only OOS is returned, which indicates CloudOps Orchestration Service.
              */
             public Builder automationType(String automationType) {
                 this.automationType = automationType;
@@ -582,7 +582,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name.
+             * The name of the rule.
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -593,7 +593,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
              * The status of the rule. Valid values:
              * <p>
              * 
-             * *   ACTIVE: The rule is enabled.
+             * *   ACTIVE: The rule is being used to monitor resource configurations.
              * *   DELETING: The rule is being deleted.
              * *   EVALUATING: The rule is triggered and is being used to monitor resource configurations.
              * *   INACTIVE: The rule is disabled.
@@ -628,7 +628,7 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
+             * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
              * *   1: high
@@ -641,11 +641,11 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * The identifier of the rule.
              * <p>
              * 
              * *   If the rule is a managed rule, the value of this parameter is the name of the managed rule.
-             * *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.
+             * *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of a function.
              */
             public Builder sourceIdentifier(String sourceIdentifier) {
                 this.sourceIdentifier = sourceIdentifier;
@@ -656,8 +656,8 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
              * The type of the rule. Valid values:
              * <p>
              * 
-             * *   CUSTOM_FC: custom rule
-             * *   ALIYUN: managed rule
+             * *   CUSTOM_FC: a custom rule.
+             * *   ALIYUN: a managed rule.
              */
             public Builder sourceOwner(String sourceOwner) {
                 this.sourceOwner = sourceOwner;

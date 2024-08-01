@@ -57,7 +57,7 @@ public class GetManagedRuleRequest extends Request {
          * The identifier of the managed rule.
          * <p>
          * 
-         * You can call the [ListManagedRules](~~421144~~) operation to obtain the managed rule identifier.
+         * For more information about how to obtain the identifier of a managed rule, see [ListManagedRules](~~421144~~).
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);

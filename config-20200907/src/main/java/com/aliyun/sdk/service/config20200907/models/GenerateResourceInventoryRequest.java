@@ -90,7 +90,11 @@ public class GenerateResourceInventoryRequest extends Request {
         }
 
         /**
-         * ResourceDeleted.
+         * Indicates whether the resource is deleted. Valid values:
+         * <p>
+         * 
+         * *   1 (default): The resource is retained.
+         * *   0: The resource is deleted.
          */
         public Builder resourceDeleted(Integer resourceDeleted) {
             this.putQueryParameter("ResourceDeleted", resourceDeleted);

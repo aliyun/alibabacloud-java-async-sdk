@@ -125,7 +125,9 @@ public class StartAggregateConfigRuleEvaluationRequest extends Request {
          * The rule ID.
          * <p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+         * For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+         * 
+         * >  You must configure either the `CompliancePackId` or `ConfigRuleId` parameter.
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -134,11 +136,11 @@ public class StartAggregateConfigRuleEvaluationRequest extends Request {
         }
 
         /**
-         * Specifies whether to re-evaluate the ignored incompliant resource. Valid values:
+         * Specifies whether to re-evaluate the ignored non-compliant resource. Valid values:
          * <p>
          * 
-         * *   true: The ignored incompliant resource based on the rule are re-evaluated.
-         * *   false: The ignored incompliant resource based on the rule are not re-evaluated.
+         * *   true: re-evaluates the ignored non-compliant resource based on the rule.
+         * *   false (default): does not re-evaluate the ignored non-compliant resource based on the rule.
          */
         public Builder revertEvaluation(Boolean revertEvaluation) {
             this.putQueryParameter("RevertEvaluation", revertEvaluation);

@@ -111,7 +111,7 @@ public class ListManagedRulesRequest extends Request {
         } 
 
         /**
-         * The keyword that you want to use to filter managed rules.
+         * The keyword of the managed rule.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -123,7 +123,7 @@ public class ListManagedRulesRequest extends Request {
          * The page number.
          * <p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * Page start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -153,12 +153,12 @@ public class ListManagedRulesRequest extends Request {
         }
 
         /**
-         * The risk level that you want to use to filter managed rules. Valid values:
+         * The risk level of the managed rule. Valid values:
          * <p>
          * 
-         * *   1: high risk level
-         * *   2: medium risk level
-         * *   3: low risk level
+         * *   1: high
+         * *   2: medium
+         * *   3: low
          */
         public Builder riskLevel(Integer riskLevel) {
             this.putQueryParameter("RiskLevel", riskLevel);

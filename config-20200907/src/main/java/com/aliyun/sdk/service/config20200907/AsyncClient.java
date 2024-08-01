@@ -20,11 +20,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+      * ### [](#)Prerequisites
+      * The rule is in the `INACTIVE` state.
+      * ### [](#)Description
       * This topic provides an example on how to enable the `cr-5772ba41209e007b****` rule in the `ca-a4e5626622af0079****` account group.
       *
      */
     CompletableFuture<ActiveAggregateConfigRulesResponse> activeAggregateConfigRules(ActiveAggregateConfigRulesRequest request);
 
+    /**
+      * ### [](#)Prerequisites
+      * The rule is in the `INACTIVE` state.
+      *
+     */
     CompletableFuture<ActiveConfigRulesResponse> activeConfigRules(ActiveConfigRulesRequest request);
 
     /**
@@ -52,8 +60,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAggregateAdvancedSearchFileResponse> createAggregateAdvancedSearchFile(CreateAggregateAdvancedSearchFileRequest request);
 
     /**
-      * You can use your management account to create up to five compliance packages for each account group.
-      * This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck for the `ca-f632626622af0079****` account group. The compliance package contains the `eip-bandwidth-limit` managed rule.
+      * This topic provides an example on how to create a compliance package for the account group `ca-f632626622af0079****` by using the compliance package template `ClassifiedProtectionPreCheck`.
       *
      */
     CompletableFuture<CreateAggregateCompliancePackResponse> createAggregateCompliancePack(CreateAggregateCompliancePackRequest request);
@@ -125,13 +132,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRemediationResponse> createRemediation(CreateRemediationRequest request);
 
     /**
+      * ### [](#)Prerequisites
+      * The status of the rule is `ACTIVE`.
+      * ### [](#)Description
       * This topic provides an example on how to disable the `cr-5772ba41209e007b****` rule in the `ca-04b3fd170e340007****` account group.
       *
      */
     CompletableFuture<DeactiveAggregateConfigRulesResponse> deactiveAggregateConfigRules(DeactiveAggregateConfigRulesRequest request);
 
     /**
-      * In this example, the `cr-19a56457e0d90058****` rule is used.
+      * ### [](#)Prerequisites
+      * The status of the rule is `ACTIVE`.
+      * ### [](#)Description
+      * This topic provides an example on how to disable the `cr-19a56457e0d90058****` rule.
       *
      */
     CompletableFuture<DeactiveConfigRulesResponse> deactiveConfigRules(DeactiveConfigRulesRequest request);
@@ -149,9 +162,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAggregateConfigDeliveryChannelResponse> deleteAggregateConfigDeliveryChannel(DeleteAggregateConfigDeliveryChannelRequest request);
 
     /**
-      * ### Background information
-      * You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.
-      * ### Usage notes
       * This topic provides an example on how to delete the `cr-4e3d626622af0080****` rule from the `ca-a4e5626622af0079****` account group.
       *
      */
@@ -164,6 +174,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAggregateRemediationsResponse> deleteAggregateRemediations(DeleteAggregateRemediationsRequest request);
 
     /**
+      * ### [](#)Background information
+      * After you delete an account group, the following changes occur to Cloud Config:
+      * *   The rules and compliance packages of the account group are deleted and cannot be recovered.
+      * *   All compliance results generated in the account group are automatically deleted and cannot be recovered.
+      * *   Service-linked roles for Cloud Config of member accounts in the account group are retained.
+      * *   If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.
+      * ### [](#)Description
       * This topic provides an example on how to delete the account group whose ID is `ca-9190626622af00a9****`.
       *
      */
@@ -317,7 +334,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetAggregateConfigRulesReportResponse> getAggregateConfigRulesReport(GetAggregateConfigRulesReportRequest request);
 
     /**
-      * This topic provides an example on how to query the `new-bucket` resource in the `ca-5885626622af0008****` account group.
+      * This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance `i-bp12g4xbl4i0brkn****` that resides in the China (Hangzhou) region in the account group `ca-5885626622af0008****`.
       *
      */
     CompletableFuture<GetAggregateDiscoveredResourceResponse> getAggregateDiscoveredResource(GetAggregateDiscoveredResourceRequest request);
@@ -430,7 +447,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetConfigurationRecorderResponse> getConfigurationRecorder(GetConfigurationRecorderRequest request);
 
     /**
-      * The sample request in this topic shows you how to query the details of the `new-bucket` resource.
+      * This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance `i-bp12g4xbl4i0brkn****` that resides in the China (Hangzhou) region.
       *
      */
     CompletableFuture<GetDiscoveredResourceResponse> getDiscoveredResource(GetDiscoveredResourceRequest request);
@@ -450,7 +467,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetIntegratedServiceStatusResponse> getIntegratedServiceStatus(GetIntegratedServiceStatusRequest request);
 
     /**
-      * In this topic, the `cdn-domain-https-enabled` managed rule is used as an example.
+      * This topic provides an example on how to query the details of the managed rule `cdn-domain-https-enabled`.
       *
      */
     CompletableFuture<GetManagedRuleResponse> getManagedRule(GetManagedRuleRequest request);
@@ -632,11 +649,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListIntegratedServiceResponse> listIntegratedService(ListIntegratedServiceRequest request);
 
     /**
-      * This topic describes how to query the managed rules of Alibaba Cloud CDN by using the `CDN` keyword. The returned result shows that only one managed rule exists. You can view the rule details in the result.
+      * ### [](#)Background information
+      * For more information about how to define, execute, and integrate an evaluation rule, see [Definition and execution of evaluation rules](~~470802~~).
+      * ### [](#)Usage notes
+      * This topic provides an example on how to query all managed rules whose keyword is `CDN`. The response shows that 21 managed rules exist.
       *
      */
     CompletableFuture<ListManagedRulesResponse> listManagedRules(ListManagedRulesRequest request);
 
+    /**
+      * For more information about how to define, execute, and integrate an evaluation rule, see [Definition and execution of evaluation rules](~~470802~~).
+      * After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.
+      *
+     */
     CompletableFuture<ListPreManagedRulesResponse> listPreManagedRules(ListPreManagedRulesRequest request);
 
     /**
@@ -687,22 +712,26 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
+    /**
+      * For more information about the definition, use scenarios, and execution of custom function rules, see [Definition and execution of custom function rules](~~127405~~).
+      *
+     */
     CompletableFuture<PutEvaluationsResponse> putEvaluations(PutEvaluationsRequest request);
 
     /**
-      * ### Prerequisites
-      * One or more non-compliant resources that are evaluated based on a rule are ignored.
-      * ### Usage notes
-      * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051***` rule in the `120886317861****` member account of the `ca-5b6c626622af008f****` account group. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.
+      * ### [](#)Prerequisites
+      * One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see [IgnoreAggregateEvaluationResults](~~607054~~).
+      * ### [](#)Description
+      * This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule of the `120886317861****` member in the `ca-5b6c626622af008f****` group account. The ID of the region in which the resource resides is `cn-beijing`, the type of the resource is `ACS::SLB::LoadBalancer`, and the ID of the resource is `lb-hp3a3b4ztyfm2plgm****`.
       *
      */
     CompletableFuture<RevertAggregateEvaluationResultsResponse> revertAggregateEvaluationResults(RevertAggregateEvaluationResultsRequest request);
 
     /**
-      * ### Prerequisites
-      * One or more non-compliant resources that are evaluated by a rule are ignored.
-      * ### Usage notes
-      * The sample request in this topic shows you how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is `cn-beijing`, and the type of the resource is `ACS::SLB::LoadBalancer`.``
+      * ### [](#)Prerequisites
+      * One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see [IgnoreEvaluationResults](~~606990~~).
+      * ### [](#)Description
+      * This topic provides an example on how to re-evaluate the `lb-hp3a3b4ztyfm2plgm****` non-compliant resource that is evaluated by the `cr-7e72626622af0051****` rule. The ID of the region in which the resource resides is`cn-beijing`, the type of the resource is `ACS::SLB::LoadBalancer`, and the ID of the resource is `lb-hp3a3b4ztyfm2plgm****`.
       *
      */
     CompletableFuture<RevertEvaluationResultsResponse> revertEvaluationResults(RevertEvaluationResultsRequest request);
@@ -738,6 +767,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<StartRemediationResponse> startRemediation(StartRemediationRequest request);
 
+    /**
+      * >  After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.
+      *
+     */
     CompletableFuture<StopConfigurationRecorderResponse> stopConfigurationRecorder(StopConfigurationRecorderRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
@@ -745,7 +778,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
-      * This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-fdc8626622af00f9****` compliance package in the `ca-f632626622af0079****` account group.
+      * This topic provides an example on how to change the value of the `eip-bandwidth-limit` parameter in the rule template of the compliance package `cp-fdc8626622af00f9****` in the account group `ca-f632626622af0079****` to `20`.
       *
      */
     CompletableFuture<UpdateAggregateCompliancePackResponse> updateAggregateCompliancePack(UpdateAggregateCompliancePackRequest request);
@@ -757,7 +790,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAggregateConfigDeliveryChannelResponse> updateAggregateConfigDeliveryChannel(UpdateAggregateConfigDeliveryChannelRequest request);
 
     /**
-      * The sample request in this topic shows you how to change the risk level specified for the `cr-4e3d626622af0080****` managed rule to `3`, which indicates low risk level, in the `ca-a4e5626622af0079****` account group.
+      * This topic provides an example on how to change the risk level of the rule `cr-4e3d626622af0080****` in an account group `ca-a4e5626622af0079****` to `3`, which indicates low risk level.
       *
      */
     CompletableFuture<UpdateAggregateConfigRuleResponse> updateAggregateConfigRule(UpdateAggregateConfigRuleRequest request);
@@ -769,13 +802,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAggregateRemediationResponse> updateAggregateRemediation(UpdateAggregateRemediationRequest request);
 
     /**
-      * The sample request in this topic shows you how to add a member account to the account group whose ID is `ca-dacf86d8314e00eb****`. The member account ID is `173808452267****` and the member account name is `Tony`. The member account belongs to `ResourceDirectory`.
+      * This topic provides an example on how to add a member to the account group `ca-dacf86d8314e00eb****`. The member ID is `173808452267****`, the member name is `Tony`, and the member belongs to the resource directory `ResourceDirectory`.
       *
      */
     CompletableFuture<UpdateAggregatorResponse> updateAggregator(UpdateAggregatorRequest request);
 
     /**
-      * This topic provides an example on how to change the value of a parameter for a managed rule whose ID is `eip-bandwidth-limit` to `20`. The managed rule is included in the `cp-a8a8626622af0082****` compliance package.
+      * This topic provides an example on how to change the value of the `eip-bandwidth-limit` parameter of a rule in the compliance package `cp-a8a8626622af0082****` to `20`.
       *
      */
     CompletableFuture<UpdateCompliancePackResponse> updateCompliancePack(UpdateCompliancePackRequest request);
@@ -787,7 +820,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateConfigDeliveryChannelResponse> updateConfigDeliveryChannel(UpdateConfigDeliveryChannelRequest request);
 
     /**
-      * This topic provides an example on how to change the risk level of a managed rule whose ID is `cr-a260626622af0005****` to `3` (low risk level).
+      * This topic provides an example on how to change the risk level of the rule `cr-a260626622af0005****` to `3`, which indicates low risk level.
       *
      */
     CompletableFuture<UpdateConfigRuleResponse> updateConfigRule(UpdateConfigRuleRequest request);

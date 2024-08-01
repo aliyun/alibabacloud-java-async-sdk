@@ -329,7 +329,7 @@ public class UpdateAggregateCompliancePackRequest extends Request {
          * The rules in the compliance package.
          * <p>
          * 
-         * If you leave this parameter empty, the rules in the compliance package remain unchanged. If you configure this parameter, Cloud Config replaces the existing rules in the compliance package with the specified rules.
+         * If you leave this parameter empty, the rules in the compliance package remain unchanged. If you set this parameter, Cloud Config replaces the existing rules in the compliance package with the specified rules.
          */
         public Builder configRules(java.util.List < ConfigRules> configRules) {
             String configRulesShrink = shrink(configRules, "ConfigRules", "json");
@@ -340,9 +340,6 @@ public class UpdateAggregateCompliancePackRequest extends Request {
 
         /**
          * The description of the compliance package.
-         * <p>
-         * 
-         * For more information about how to obtain the description of a compliance package, see [ListCompliancePacks](~~262059~~).
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -517,7 +514,7 @@ public class UpdateAggregateCompliancePackRequest extends Request {
              * The value of the input parameter.
              * <p>
              * 
-             * You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+             * You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -618,10 +615,10 @@ public class UpdateAggregateCompliancePackRequest extends Request {
             private Integer riskLevel; 
 
             /**
-             * The ID of the rule. If you configure this parameter, Cloud Config adds the rule of the specified ID to the compliance package.
+             * The rule ID. If you configure this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.
              * <p>
              * 
-             * You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+             * You need to only configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -629,7 +626,7 @@ public class UpdateAggregateCompliancePackRequest extends Request {
             }
 
             /**
-             * The name of the rule.
+             * The rule name.
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -637,7 +634,7 @@ public class UpdateAggregateCompliancePackRequest extends Request {
             }
 
             /**
-             * The input parameter settings of the rule.
+             * The input parameters of the rule.
              */
             public Builder configRuleParameters(java.util.List < ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
@@ -653,10 +650,10 @@ public class UpdateAggregateCompliancePackRequest extends Request {
             }
 
             /**
-             * The ID of the managed rule. Cloud Config automatically creates a managed rule based on the specified ID and adds the rule to the compliance package.
+             * The identifier of the managed rule. Cloud Config automatically creates a rule based on the identifier of the managed rule and adds the rule to the current compliance package.
              * <p>
              * 
-             * You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+             * You need to only configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the identifier of the managed rule.
              */
             public Builder managedRuleIdentifier(String managedRuleIdentifier) {
                 this.managedRuleIdentifier = managedRuleIdentifier;
@@ -664,12 +661,12 @@ public class UpdateAggregateCompliancePackRequest extends Request {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
+             * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
-             * *   1: high risk level
-             * *   2: medium risk level
-             * *   3: low risk level
+             * *   1: high
+             * *   2: medium
+             * *   3: low
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;

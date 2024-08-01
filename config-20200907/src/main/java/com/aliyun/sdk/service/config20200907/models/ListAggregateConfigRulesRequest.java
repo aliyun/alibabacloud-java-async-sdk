@@ -183,10 +183,10 @@ public class ListAggregateConfigRulesRequest extends Request {
          * The compliance evaluation result. Valid values:
          * <p>
          * 
-         * *   COMPLIANT: The resource is evaluated as compliant.
-         * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-         * *   NOT_APPLICABLE: The rule does not apply to the resource.
-         * *   INSUFFICIENT_DATA: No resource data is available.
+         * *   COMPLIANT: The resources are evaluated as compliant.
+         * *   NON_COMPLIANT: The resources are evaluated as non-compliant.
+         * *   NOT_APPLICABLE: The rule does not apply to the resources.
+         * *   INSUFFICIENT_DATA: No data is available.
          */
         public Builder complianceType(String complianceType) {
             this.putQueryParameter("ComplianceType", complianceType);
@@ -207,9 +207,9 @@ public class ListAggregateConfigRulesRequest extends Request {
          * The status of the rule. Valid values:
          * <p>
          * 
-         * *   ACTIVE: The rule is enabled.
+         * *   ACTIVE: The rule is being used to monitor resource configurations.
          * *   DELETING: The rule is being deleted.
-         * *   EVALUATING: The rule is being used to evaluate resource configurations.
+         * *   EVALUATING: The rule is triggered and is being used to monitor resource configurations.
          * *   INACTIVE: The rule is disabled.
          */
         public Builder configRuleState(String configRuleState) {
@@ -219,7 +219,7 @@ public class ListAggregateConfigRulesRequest extends Request {
         }
 
         /**
-         * The keyword that you want to use to query the rules.
+         * The keyword that is used for queries.
          * <p>
          * 
          * You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.
@@ -234,7 +234,7 @@ public class ListAggregateConfigRulesRequest extends Request {
          * The page number.
          * <p>
          * 
-         * Pages start from page 1. Default value: 1.
+         * Pages start from page 1. Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -246,7 +246,7 @@ public class ListAggregateConfigRulesRequest extends Request {
          * The number of entries per page.
          * <p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * Valid values: 1 to 100. Minimum value: 1. Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

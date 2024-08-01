@@ -21,6 +21,10 @@ public class CreateAggregateConfigDeliveryChannelRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompliantSnapshot")
+    private Boolean compliantSnapshot;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConfigurationItemChangeNotification")
     private Boolean configurationItemChangeNotification;
 
@@ -66,6 +70,7 @@ public class CreateAggregateConfigDeliveryChannelRequest extends Request {
         super(builder);
         this.aggregatorId = builder.aggregatorId;
         this.clientToken = builder.clientToken;
+        this.compliantSnapshot = builder.compliantSnapshot;
         this.configurationItemChangeNotification = builder.configurationItemChangeNotification;
         this.configurationSnapshot = builder.configurationSnapshot;
         this.deliveryChannelCondition = builder.deliveryChannelCondition;
@@ -103,6 +108,13 @@ public class CreateAggregateConfigDeliveryChannelRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return compliantSnapshot
+     */
+    public Boolean getCompliantSnapshot() {
+        return this.compliantSnapshot;
     }
 
     /**
@@ -178,6 +190,7 @@ public class CreateAggregateConfigDeliveryChannelRequest extends Request {
     public static final class Builder extends Request.Builder<CreateAggregateConfigDeliveryChannelRequest, Builder> {
         private String aggregatorId; 
         private String clientToken; 
+        private Boolean compliantSnapshot; 
         private Boolean configurationItemChangeNotification; 
         private Boolean configurationSnapshot; 
         private String deliveryChannelCondition; 
@@ -197,6 +210,7 @@ public class CreateAggregateConfigDeliveryChannelRequest extends Request {
             super(request);
             this.aggregatorId = request.aggregatorId;
             this.clientToken = request.clientToken;
+            this.compliantSnapshot = request.compliantSnapshot;
             this.configurationItemChangeNotification = request.configurationItemChangeNotification;
             this.configurationSnapshot = request.configurationSnapshot;
             this.deliveryChannelCondition = request.deliveryChannelCondition;
@@ -230,6 +244,15 @@ public class CreateAggregateConfigDeliveryChannelRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * CompliantSnapshot.
+         */
+        public Builder compliantSnapshot(Boolean compliantSnapshot) {
+            this.putQueryParameter("CompliantSnapshot", compliantSnapshot);
+            this.compliantSnapshot = compliantSnapshot;
             return this;
         }
 

@@ -54,10 +54,12 @@ public class GetIntegratedServiceStatusRequest extends Request {
         } 
 
         /**
-         * The product code of the cloud product. Valid values:
+         * The identity of the cloud service that is integrated with Cloud Config. Valid values:
          * <p>
          * 
-         * cadt: Cloud Architecture Design Tool
+         * *   eventbridge: EventBridge
+         * *   cms: CloudMonitor
+         * *   bpstudio: Cloud Architect Design Tools
          */
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);

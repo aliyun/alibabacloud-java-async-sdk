@@ -81,12 +81,12 @@ public class StartConfigRuleEvaluationRequest extends Request {
         } 
 
         /**
-         * The ID of the compliance package.
+         * The compliance package ID.
          * <p>
          * 
          * For more information about how to obtain the ID of a compliance package, see [ListCompliancePacks](~~606968~~).
          * 
-         * >  You must set either the CompliancePackId or ConfigRuleId parameter.
+         * >  You must configure either the `CompliancePackId` or `ConfigRuleId` parameter.
          */
         public Builder compliancePackId(String compliancePackId) {
             this.putQueryParameter("CompliancePackId", compliancePackId);
@@ -98,7 +98,9 @@ public class StartConfigRuleEvaluationRequest extends Request {
          * The rule ID.
          * <p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListConfigRules](~~609222~~).
+         * You can call the [ListConfigRules](~~609222~~) operation to obtain the rule ID.
+         * 
+         * >  You must configure either the `CompliancePackId` or `ConfigRuleId` parameter.
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -107,11 +109,11 @@ public class StartConfigRuleEvaluationRequest extends Request {
         }
 
         /**
-         * Specifies whether to re-evaluate ignored non-compliant resources. Valid values:
+         * Specifies whether to re-evaluate the ignored non-compliant resource. Valid values:
          * <p>
          * 
-         * *   true: re-evaluates ignored non-compliant resources based on the rule.
-         * *   false: continues to ignore non-compliant resources.
+         * *   true: re-evaluates the ignored non-compliant resource based on the rule.
+         * *   false (default): does not re-evaluate the ignored non-compliant resource based on the rule.
          */
         public Builder revertEvaluation(Boolean revertEvaluation) {
             this.putQueryParameter("RevertEvaluation", revertEvaluation);

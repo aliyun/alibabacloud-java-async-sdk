@@ -137,7 +137,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the input parameters are required. Valid values:
+             * Indicates whether the input parameter was required. Valid values:
              * <p>
              * 
              * *   true
@@ -262,7 +262,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name.
+             * The name of the rule.
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -270,7 +270,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The input parameters of the rule.
+             * The details of the input parameter of the rule.
              */
             public Builder configRuleParameters(java.util.List < ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
@@ -286,7 +286,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the managed rule.
+             * The ID of the rule template.
              */
             public Builder managedRuleIdentifier(String managedRuleIdentifier) {
                 this.managedRuleIdentifier = managedRuleIdentifier;
@@ -294,7 +294,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The types of the resources evaluated based on the rule. Multiple resource types are separated with commas (,).
+             * The type of the resource evaluated based on the rule. Multiple resource types are separated with commas (,).
              */
             public Builder resourceTypesScope(String resourceTypesScope) {
                 this.resourceTypesScope = resourceTypesScope;
@@ -305,9 +305,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
              * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
-             * *   1: high.
-             * *   2: medium.
-             * *   3: low.
+             * *   1: high
+             * *   2: medium
+             * *   3: low
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;

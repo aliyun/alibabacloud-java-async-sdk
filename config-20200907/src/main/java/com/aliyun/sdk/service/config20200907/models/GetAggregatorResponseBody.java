@@ -133,7 +133,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             private String recorderStatus; 
 
             /**
-             * The ID of the member account.
+             * The ID of the member.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -141,7 +141,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the member account.
+             * The display name of the member.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -149,7 +149,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the member account. Only ResourceDirectory is returned, which indicates that the account is a resource directory account.
+             * The resource directory to which the member belongs. Valid value: ResourceDirectory. ResourceDirectory indicates that the member belongs to a resource directory.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -157,7 +157,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the configuration recorder for the member account. Valid values:
+             * The status of the configuration recorder for the member. Valid values:
              * <p>
              * 
              * *   REGISTRABLE: The configuration recorder is not registered.
@@ -320,7 +320,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             }
 
             /**
-             * The number of member accounts in the account group.
+             * The number of members in the account group.
              */
             public Builder aggregatorAccountCount(Long aggregatorAccountCount) {
                 this.aggregatorAccountCount = aggregatorAccountCount;
@@ -328,7 +328,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the member accounts in the account group.
+             * The information about the members in the account group.
              */
             public Builder aggregatorAccounts(java.util.List < AggregatorAccounts> aggregatorAccounts) {
                 this.aggregatorAccounts = aggregatorAccounts;
@@ -337,6 +337,9 @@ public class GetAggregatorResponseBody extends TeaModel {
 
             /**
              * The timestamp generated when the account group was created.
+             * <p>
+             * 
+             * Unit: milliseconds.
              */
             public Builder aggregatorCreateTimestamp(String aggregatorCreateTimestamp) {
                 this.aggregatorCreateTimestamp = aggregatorCreateTimestamp;

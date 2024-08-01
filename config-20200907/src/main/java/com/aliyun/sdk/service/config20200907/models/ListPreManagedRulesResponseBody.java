@@ -209,7 +209,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * The required input parameters of the evaluation rule.
+             * The details of the required input parameters of the rule.
              */
             public Builder compulsoryInputParameterDetails(java.util.Map < String, ? > compulsoryInputParameterDetails) {
                 this.compulsoryInputParameterDetails = compulsoryInputParameterDetails;
@@ -217,7 +217,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the evaluation rule.
+             * The name of the rule.
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -225,7 +225,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the evaluation rule.
+             * The description of the rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -233,7 +233,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the topic that describes how the managed rule remediates the incompliant configurations.
+             * The URL of the topic that describes how the evaluation rule remediates the incompliant configurations.
              */
             public Builder helpUrls(String helpUrls) {
                 this.helpUrls = helpUrls;
@@ -241,7 +241,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the evaluation rule.
+             * The identifier of the rule.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -249,7 +249,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the optional input parameters of the evaluation rule.
+             * The details of the optional input parameters of the rule.
              */
             public Builder optionalInputParameterDetails(java.util.Map < String, ? > optionalInputParameterDetails) {
                 this.optionalInputParameterDetails = optionalInputParameterDetails;
@@ -257,7 +257,7 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * The type of resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

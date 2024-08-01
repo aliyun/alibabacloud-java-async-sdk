@@ -49,7 +49,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the compliance packages.
+         * The compliance packages returned.
          */
         public Builder compliancePacksResult(CompliancePacksResult compliancePacksResult) {
             this.compliancePacksResult = compliancePacksResult;
@@ -201,7 +201,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account group.
+             * The account group ID.
              */
             public Builder aggregatorId(String aggregatorId) {
                 this.aggregatorId = aggregatorId;
@@ -209,7 +209,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the compliance package.
+             * The compliance package ID.
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -249,12 +249,12 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:
+             * The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
              * <p>
              * 
-             * *   1: high risk level.
-             * *   2: medium risk level.
-             * *   3: low risk level.
+             * *   1: high
+             * *   2: medium
+             * *   3: low
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -265,7 +265,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
              * The status of the compliance package. Valid values:
              * <p>
              * 
-             * *   ACTIVE: The compliance package is available for use.
+             * *   ACTIVE: The compliance package is normal.
              * *   CREATING: The compliance package is being created.
              */
             public Builder status(String status) {
@@ -343,7 +343,7 @@ public class ListAggregateCompliancePacksResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The details of the compliance package.
+             * The compliance packages.
              */
             public Builder compliancePacks(java.util.List < CompliancePacks> compliancePacks) {
                 this.compliancePacks = compliancePacks;

@@ -148,9 +148,9 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
              * The identifier of the cloud service. Valid values:
              * <p>
              * 
-             * *   eventbridge: event bus
+             * *   eventbridge: EventBridge
              * *   cms: CloudMonitor
-             * *   bpstudio: Cloud Architect Design Tools (CADT)
+             * *   bpstudio: Cloud Architect Design Tools
              */
             public Builder serviceCode(String serviceCode) {
                 this.serviceCode = serviceCode;
@@ -169,8 +169,8 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
              * The integration status of the cloud service. Valid values:
              * <p>
              * 
-             * *   1: The cloud service is integrated.
-             * *   0: The cloud service is not integrated.
+             * *   true
+             * *   false
              */
             public Builder status(Boolean status) {
                 this.status = status;
