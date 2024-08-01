@@ -121,6 +121,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ExternalUserDeleteResponse> externalUserDelete(ExternalUserDeleteRequest request);
 
+    CompletableFuture<ExternalUserQueryResponse> externalUserQuery(ExternalUserQueryRequest request);
+
     CompletableFuture<ExternalUserUpdateResponse> externalUserUpdate(ExternalUserUpdateRequest request);
 
     CompletableFuture<FlightBillSettlementQueryResponse> flightBillSettlementQuery(FlightBillSettlementQueryRequest request);

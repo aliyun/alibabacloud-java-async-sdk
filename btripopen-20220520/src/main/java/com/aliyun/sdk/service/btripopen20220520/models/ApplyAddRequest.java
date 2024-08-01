@@ -1483,6 +1483,9 @@ public class ApplyAddRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("cost_center_id")
         private Long costCenterId;
 
+        @com.aliyun.core.annotation.NameInMap("external_user_id")
+        private String externalUserId;
+
         @com.aliyun.core.annotation.NameInMap("invoice_id")
         private Long invoiceId;
 
@@ -1516,6 +1519,7 @@ public class ApplyAddRequest extends Request {
         private ExternalTravelerList(Builder builder) {
             this.attribute = builder.attribute;
             this.costCenterId = builder.costCenterId;
+            this.externalUserId = builder.externalUserId;
             this.invoiceId = builder.invoiceId;
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
@@ -1548,6 +1552,13 @@ public class ApplyAddRequest extends Request {
          */
         public Long getCostCenterId() {
             return this.costCenterId;
+        }
+
+        /**
+         * @return externalUserId
+         */
+        public String getExternalUserId() {
+            return this.externalUserId;
         }
 
         /**
@@ -1623,6 +1634,7 @@ public class ApplyAddRequest extends Request {
         public static final class Builder {
             private String attribute; 
             private Long costCenterId; 
+            private String externalUserId; 
             private Long invoiceId; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
@@ -1647,6 +1659,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder costCenterId(Long costCenterId) {
                 this.costCenterId = costCenterId;
+                return this;
+            }
+
+            /**
+             * external_user_id.
+             */
+            public Builder externalUserId(String externalUserId) {
+                this.externalUserId = externalUserId;
                 return this;
             }
 

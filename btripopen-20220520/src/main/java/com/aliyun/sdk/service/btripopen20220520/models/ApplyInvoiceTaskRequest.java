@@ -185,6 +185,9 @@ public class ApplyInvoiceTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("vehicle_invoice_fee")
         private String vehicleInvoiceFee;
 
+        @com.aliyun.core.annotation.NameInMap("vehicle_normal_invoice_fee")
+        private String vehicleNormalInvoiceFee;
+
         private InvoiceTaskList(Builder builder) {
             this.contact = builder.contact;
             this.email = builder.email;
@@ -208,6 +211,7 @@ public class ApplyInvoiceTaskRequest extends Request {
             this.trainAccelerationPackageInvoiceFee = builder.trainAccelerationPackageInvoiceFee;
             this.trainInvoiceFee = builder.trainInvoiceFee;
             this.vehicleInvoiceFee = builder.vehicleInvoiceFee;
+            this.vehicleNormalInvoiceFee = builder.vehicleNormalInvoiceFee;
         }
 
         public static Builder builder() {
@@ -372,6 +376,13 @@ public class ApplyInvoiceTaskRequest extends Request {
             return this.vehicleInvoiceFee;
         }
 
+        /**
+         * @return vehicleNormalInvoiceFee
+         */
+        public String getVehicleNormalInvoiceFee() {
+            return this.vehicleNormalInvoiceFee;
+        }
+
         public static final class Builder {
             private String contact; 
             private String email; 
@@ -395,6 +406,7 @@ public class ApplyInvoiceTaskRequest extends Request {
             private String trainAccelerationPackageInvoiceFee; 
             private String trainInvoiceFee; 
             private String vehicleInvoiceFee; 
+            private String vehicleNormalInvoiceFee; 
 
             /**
              * contact.
@@ -569,6 +581,14 @@ public class ApplyInvoiceTaskRequest extends Request {
              */
             public Builder vehicleInvoiceFee(String vehicleInvoiceFee) {
                 this.vehicleInvoiceFee = vehicleInvoiceFee;
+                return this;
+            }
+
+            /**
+             * vehicle_normal_invoice_fee.
+             */
+            public Builder vehicleNormalInvoiceFee(String vehicleNormalInvoiceFee) {
+                this.vehicleNormalInvoiceFee = vehicleNormalInvoiceFee;
                 return this;
             }
 

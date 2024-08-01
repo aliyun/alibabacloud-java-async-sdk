@@ -382,6 +382,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("depart_id")
         private String departId;
 
+        @com.aliyun.core.annotation.NameInMap("external_user_id")
+        private String externalUserId;
+
         @com.aliyun.core.annotation.NameInMap("invoice_name")
         private String invoiceName;
 
@@ -404,6 +407,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.attribute = builder.attribute;
             this.costCenterName = builder.costCenterName;
             this.departId = builder.departId;
+            this.externalUserId = builder.externalUserId;
             this.invoiceName = builder.invoiceName;
             this.paymentDepartmentName = builder.paymentDepartmentName;
             this.projectCode = builder.projectCode;
@@ -439,6 +443,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
          */
         public String getDepartId() {
             return this.departId;
+        }
+
+        /**
+         * @return externalUserId
+         */
+        public String getExternalUserId() {
+            return this.externalUserId;
         }
 
         /**
@@ -487,6 +498,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private String attribute; 
             private String costCenterName; 
             private String departId; 
+            private String externalUserId; 
             private String invoiceName; 
             private String paymentDepartmentName; 
             private String projectCode; 
@@ -515,6 +527,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
              */
             public Builder departId(String departId) {
                 this.departId = departId;
+                return this;
+            }
+
+            /**
+             * external_user_id.
+             */
+            public Builder externalUserId(String externalUserId) {
+                this.externalUserId = externalUserId;
                 return this;
             }
 

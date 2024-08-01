@@ -550,6 +550,9 @@ public class ApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("economy_discount")
         private Integer economyDiscount;
 
+        @com.aliyun.core.annotation.NameInMap("external_user_id")
+        private String externalUserId;
+
         @com.aliyun.core.annotation.NameInMap("first_discount")
         private Integer firstDiscount;
 
@@ -619,6 +622,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             this.costCenterName = builder.costCenterName;
             this.departId = builder.departId;
             this.economyDiscount = builder.economyDiscount;
+            this.externalUserId = builder.externalUserId;
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
             this.flightIntlRuleCode = builder.flightIntlRuleCode;
@@ -683,6 +687,13 @@ public class ApplyQueryResponseBody extends TeaModel {
          */
         public Integer getEconomyDiscount() {
             return this.economyDiscount;
+        }
+
+        /**
+         * @return externalUserId
+         */
+        public String getExternalUserId() {
+            return this.externalUserId;
         }
 
         /**
@@ -838,6 +849,7 @@ public class ApplyQueryResponseBody extends TeaModel {
             private String costCenterName; 
             private String departId; 
             private Integer economyDiscount; 
+            private String externalUserId; 
             private Integer firstDiscount; 
             private String flightCabins; 
             private Long flightIntlRuleCode; 
@@ -897,6 +909,14 @@ public class ApplyQueryResponseBody extends TeaModel {
              */
             public Builder economyDiscount(Integer economyDiscount) {
                 this.economyDiscount = economyDiscount;
+                return this;
+            }
+
+            /**
+             * external_user_id.
+             */
+            public Builder externalUserId(String externalUserId) {
+                this.externalUserId = externalUserId;
                 return this;
             }
 
