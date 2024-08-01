@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckRecoveryConditionRequest</p>
  */
 public class CheckRecoveryConditionRequest extends Request {
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("DatabaseNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatabaseNames")
     private String databaseNames;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestRegion")
+    private String destRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
-    @Query
-    @NameInMap("SourceDBInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreType")
+    private String restoreType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDBInstance")
     private String sourceDBInstance;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcRegion")
+    private String srcRegion;
 
     private CheckRecoveryConditionRequest(Builder builder) {
         super(builder);
         this.backupId = builder.backupId;
         this.databaseNames = builder.databaseNames;
+        this.destRegion = builder.destRegion;
+        this.instanceType = builder.instanceType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
+        this.restoreType = builder.restoreType;
         this.sourceDBInstance = builder.sourceDBInstance;
+        this.srcRegion = builder.srcRegion;
     }
 
     public static Builder builder() {
@@ -86,6 +105,20 @@ public class CheckRecoveryConditionRequest extends Request {
      */
     public String getDatabaseNames() {
         return this.databaseNames;
+    }
+
+    /**
+     * @return destRegion
+     */
+    public String getDestRegion() {
+        return this.destRegion;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     /**
@@ -131,22 +164,40 @@ public class CheckRecoveryConditionRequest extends Request {
     }
 
     /**
+     * @return restoreType
+     */
+    public String getRestoreType() {
+        return this.restoreType;
+    }
+
+    /**
      * @return sourceDBInstance
      */
     public String getSourceDBInstance() {
         return this.sourceDBInstance;
     }
 
+    /**
+     * @return srcRegion
+     */
+    public String getSrcRegion() {
+        return this.srcRegion;
+    }
+
     public static final class Builder extends Request.Builder<CheckRecoveryConditionRequest, Builder> {
         private String backupId; 
         private String databaseNames; 
+        private String destRegion; 
+        private String instanceType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restoreTime; 
+        private String restoreType; 
         private String sourceDBInstance; 
+        private String srcRegion; 
 
         private Builder() {
             super();
@@ -156,13 +207,17 @@ public class CheckRecoveryConditionRequest extends Request {
             super(request);
             this.backupId = request.backupId;
             this.databaseNames = request.databaseNames;
+            this.destRegion = request.destRegion;
+            this.instanceType = request.instanceType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreTime = request.restoreTime;
+            this.restoreType = request.restoreType;
             this.sourceDBInstance = request.sourceDBInstance;
+            this.srcRegion = request.srcRegion;
         } 
 
         /**
@@ -188,6 +243,34 @@ public class CheckRecoveryConditionRequest extends Request {
         public Builder databaseNames(String databaseNames) {
             this.putQueryParameter("DatabaseNames", databaseNames);
             this.databaseNames = databaseNames;
+            return this;
+        }
+
+        /**
+         * The region of the backup set used for the cross-region backup and restoration.
+         * <p>
+         * 
+         * >  This parameter is required when you set the RestoreType parameter to 3.
+         */
+        public Builder destRegion(String destRegion) {
+            this.putQueryParameter("DestRegion", destRegion);
+            this.destRegion = destRegion;
+            return this;
+        }
+
+        /**
+         * The instance architecture. Valid values:
+         * <p>
+         * 
+         * *   replicate
+         * *   sharding
+         * 
+         * > * This parameter is required when you set the RestoreType parameter to 2.
+         * > * This parameter is required when you set the RestoreType parameter to 3.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
@@ -250,11 +333,39 @@ public class CheckRecoveryConditionRequest extends Request {
         }
 
         /**
+         * The restoration type.
+         * <p>
+         * 
+         * > * 0: The data of the source instance is restored to a new instance in the same region.
+         * > * 1: The data of the source instance is restored to an earlier point in time.
+         * > * 2: The data of a deleted instance is restored to a new instance from the backup set.
+         * > * 3: The data of a deleted instance is restored to a new instance in another region from the backup set.
+         */
+        public Builder restoreType(String restoreType) {
+            this.putQueryParameter("RestoreType", restoreType);
+            this.restoreType = restoreType;
+            return this;
+        }
+
+        /**
          * The ID of the source instance.
          */
         public Builder sourceDBInstance(String sourceDBInstance) {
             this.putQueryParameter("SourceDBInstance", sourceDBInstance);
             this.sourceDBInstance = sourceDBInstance;
+            return this;
+        }
+
+        /**
+         * The region where the source instance resides.
+         * <p>
+         * 
+         * > * This parameter is required when you set the RestoreType parameter to 2.
+         * > * This parameter is required when you set the RestoreType parameter to 3.
+         */
+        public Builder srcRegion(String srcRegion) {
+            this.putQueryParameter("SrcRegion", srcRegion);
+            this.srcRegion = srcRegion;
             return this;
         }
 

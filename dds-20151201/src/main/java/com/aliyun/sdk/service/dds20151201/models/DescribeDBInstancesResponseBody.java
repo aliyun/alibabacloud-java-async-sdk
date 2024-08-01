@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstancesResponseBody</p>
  */
 public class DescribeDBInstancesResponseBody extends TeaModel {
-    @NameInMap("DBInstances")
+    @com.aliyun.core.annotation.NameInMap("DBInstances")
     private DBInstances DBInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDBInstancesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the instances.
+         * The details of the instance.
          */
         public Builder DBInstances(DBInstances DBInstances) {
             this.DBInstances = DBInstances;
@@ -132,13 +131,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     } 
 
     public static class MongosAttribute extends TeaModel {
-        @NameInMap("NodeClass")
+        @com.aliyun.core.annotation.NameInMap("NodeClass")
         private String nodeClass;
 
-        @NameInMap("NodeDescription")
+        @com.aliyun.core.annotation.NameInMap("NodeDescription")
         private String nodeDescription;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
         private MongosAttribute(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     }
     public static class MongosList extends TeaModel {
-        @NameInMap("MongosAttribute")
+        @com.aliyun.core.annotation.NameInMap("MongosAttribute")
         private java.util.List < MongosAttribute> mongosAttribute;
 
         private MongosList(Builder builder) {
@@ -254,19 +253,19 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     }
     public static class ShardAttribute extends TeaModel {
-        @NameInMap("NodeClass")
+        @com.aliyun.core.annotation.NameInMap("NodeClass")
         private String nodeClass;
 
-        @NameInMap("NodeDescription")
+        @com.aliyun.core.annotation.NameInMap("NodeDescription")
         private String nodeDescription;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeStorage")
+        @com.aliyun.core.annotation.NameInMap("NodeStorage")
         private Integer nodeStorage;
 
-        @NameInMap("ReadonlyReplicas")
+        @com.aliyun.core.annotation.NameInMap("ReadonlyReplicas")
         private Integer readonlyReplicas;
 
         private ShardAttribute(Builder builder) {
@@ -375,7 +374,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     }
     public static class ShardList extends TeaModel {
-        @NameInMap("ShardAttribute")
+        @com.aliyun.core.annotation.NameInMap("ShardAttribute")
         private java.util.List < ShardAttribute> shardAttribute;
 
         private ShardList(Builder builder) {
@@ -416,10 +415,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -477,7 +476,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -518,91 +517,98 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     }
     public static class DBInstance extends TeaModel {
-        @NameInMap("CapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("BackupRetentionPolicy")
+        private Integer backupRetentionPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private String capacityUnit;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DBInstanceClass")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
         private String DBInstanceClass;
 
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private String DBInstanceStatus;
 
-        @NameInMap("DBInstanceStorage")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
         private Integer DBInstanceStorage;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("DestroyTime")
+        @com.aliyun.core.annotation.NameInMap("DestroyTime")
         private String destroyTime;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("HiddenZoneId")
+        @com.aliyun.core.annotation.NameInMap("HiddenZoneId")
         private String hiddenZoneId;
 
-        @NameInMap("KindCode")
+        @com.aliyun.core.annotation.NameInMap("KindCode")
         private String kindCode;
 
-        @NameInMap("LastDowngradeTime")
+        @com.aliyun.core.annotation.NameInMap("LastDowngradeTime")
         private String lastDowngradeTime;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("MongosList")
+        @com.aliyun.core.annotation.NameInMap("MongosList")
         private MongosList mongosList;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReplicationFactor")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
+        private String releaseTime;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicationFactor")
         private String replicationFactor;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecondaryZoneId")
+        @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
         private String secondaryZoneId;
 
-        @NameInMap("ShardList")
+        @com.aliyun.core.annotation.NameInMap("ShardList")
         private ShardList shardList;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VpcAuthMode")
+        @com.aliyun.core.annotation.NameInMap("VpcAuthMode")
         private String vpcAuthMode;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBInstance(Builder builder) {
+            this.backupRetentionPolicy = builder.backupRetentionPolicy;
             this.capacityUnit = builder.capacityUnit;
             this.chargeType = builder.chargeType;
             this.creationTime = builder.creationTime;
@@ -623,6 +629,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.mongosList = builder.mongosList;
             this.networkType = builder.networkType;
             this.regionId = builder.regionId;
+            this.releaseTime = builder.releaseTime;
             this.replicationFactor = builder.replicationFactor;
             this.resourceGroupId = builder.resourceGroupId;
             this.secondaryZoneId = builder.secondaryZoneId;
@@ -639,6 +646,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         public static DBInstance create() {
             return builder().build();
+        }
+
+        /**
+         * @return backupRetentionPolicy
+         */
+        public Integer getBackupRetentionPolicy() {
+            return this.backupRetentionPolicy;
         }
 
         /**
@@ -782,6 +796,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return releaseTime
+         */
+        public String getReleaseTime() {
+            return this.releaseTime;
+        }
+
+        /**
          * @return replicationFactor
          */
         public String getReplicationFactor() {
@@ -838,6 +859,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer backupRetentionPolicy; 
             private String capacityUnit; 
             private String chargeType; 
             private String creationTime; 
@@ -858,6 +880,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private MongosList mongosList; 
             private String networkType; 
             private String regionId; 
+            private String releaseTime; 
             private String replicationFactor; 
             private String resourceGroupId; 
             private String secondaryZoneId; 
@@ -868,10 +891,23 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The read and write throughput consumed by the instance.
+             * The backup retention policy configured for the instance. Valid values:
              * <p>
              * 
-             * >  This parameter is returned when the instance is a serverless instance.
+             * *   **0**: All backup sets of the instance are immediately deleted when the instance is released.
+             * *   **1**: A backup set of the instance is automatically backed up and retained for a long period of time when the instance is released.
+             * *   **2**: All backup sets of the instance are automatically backed up and retained for a long period of time when the instance is released.
+             */
+            public Builder backupRetentionPolicy(Integer backupRetentionPolicy) {
+                this.backupRetentionPolicy = backupRetentionPolicy;
+                return this;
+            }
+
+            /**
+             * The I/O throughput consumed by the instance.
+             * <p>
+             * 
+             * >  This parameter is required only when the instance is a serverless instance.
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -882,8 +918,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The billing method of the instance. Valid values:
              * <p>
              * 
-             * *   **PrePaid**: subscription.
-             * *   **PostPaid**: pay-as-you-go.
+             * *   **PrePaid**: subscription
+             * *   **PostPaid:** pay-as-you-go
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -915,7 +951,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -939,11 +975,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The architecture of the instance. Valid values:
+             * The architecture of the instance.
              * <p>
              * 
-             * *   **sharding**: sharded cluster instance.
-             * *   **replicate**: replica set or standalone instance.
+             * *   **sharding**: sharded cluster instance
+             * *   **replicate**: replica set or standalone instance
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -951,11 +987,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance data was destroyed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the instance data is destroyed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * > *   Subscription instances are released 15 days after expiration. After the instances are released, the data of the instances is deleted and cannot be restored.
-             * > *   Pay-as-you-go instances are locked after the payments have been overdue for longer than 24 hours. The instances are released after the payments have been overdue for longer than 15 days. The data of released instances is deleted and cannot be restored.
+             * > *   For a subscription instance, the computing resources of the instance are released on the 16th day after expiration, and the data of the instance is retained for seven days. The data is deleted on the 23th day after expiration and cannot be restored.
+             * > *   For a pay-as-you-go instance, the computing resources of the instance are released on the 16th day after the payment becomes overdue, and the data of the instance is retained for seven days. The data is deleted on the 23th day after the payment becomes overdue and cannot be restored.
              */
             public Builder destroyTime(String destroyTime) {
                 this.destroyTime = destroyTime;
@@ -963,7 +999,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance.
+             * The engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -971,9 +1007,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance.
+             * The database engine version of the instance. Valid values:
              * <p>
              * 
+             * *   **7.0**
+             * *   **6.0**
              * *   **5.0**
              * *   **4.4**
              * *   **4.2**
@@ -994,29 +1032,29 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secondary zone 2 of the instance. Valid values:
+             * The secondary zone 2 of the instance in the multi-zone deployment. Valid values:
              * <p>
              * 
-             * *   **cn-hangzhou-g**: Hangzhou Zone G.
-             * *   **cn-hangzhou-h**: Hangzhou Zone H.
-             * *   **cn-hangzhou-i**: Hangzhou Zone I.
-             * *   **cn-hongkong-b**: Hong Kong Zone B.
-             * *   **cn-hongkong-c**: Hong Kong Zone C.
-             * *   **cn-hongkong-d**: Hong Kong Zone D.
-             * *   **cn-wulanchabu-a**: Ulanqab Zone A.
-             * *   **cn-wulanchabu-b**: Ulanqab Zone B.
-             * *   **cn-wulanchabu-c**: Ulanqab Zone C.
-             * *   **ap-southeast-1a**: Singapore Zone A.
-             * *   **ap-southeast-1b**: Singapore Zone B.
-             * *   **ap-southeast-1c**: Singapore Zone C.
-             * *   **ap-southeast-5a**: Jakarta Zone A.
-             * *   **ap-southeast-5b**: Jakarta Zone B.
-             * *   **ap-southeast-5c**: Jakarta Zone C.
-             * *   **eu-central-1a**: Frankfurt Zone A.
-             * *   **eu-central-1b**: Frankfurt Zone B.
-             * *   **eu-central-1c**: Frankfurt Zone C.
+             * *   **cn-hangzhou-g**: Hangzhou Zone G
+             * *   **cn-hangzhou-h**: Hangzhou Zone H
+             * *   **cn-hangzhou-i**: Hangzhou Zone I
+             * *   **cn-hongkong-b**: Hong Kong Zone B
+             * *   **cn-hongkong-c**: Hong Kong Zone C
+             * *   **cn-hongkong-d**: Hong Kong Zone D
+             * *   **cn-wulanchabu-a**: Ulanqab Zone A
+             * *   **cn-wulanchabu-b**: Ulanqab Zone B
+             * *   **cn-wulanchabu-c**: Ulanqab Zone C
+             * *   **ap-southeast-1a**: Singapore Zone A
+             * *   **ap-southeast-1b**: Singapore Zone B
+             * *   **ap-southeast-1c**: Singapore Zone C
+             * *   **ap-southeast-5a**: Jakarta Zone A
+             * *   **ap-southeast-5b**: Jakarta Zone B
+             * *   **ap-southeast-5c**: Jakarta Zone C
+             * *   **eu-central-1a**: Frankfurt Zone A
+             * *   **eu-central-1b**: Frankfurt Zone B
+             * *   **eu-central-1c**: Frankfurt Zone C
              * 
-             * > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+             * > *   This parameter is returned only when the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses the multi-zone deployment.
              * > *   This parameter is returned only if you use the China site (aliyun.com).
              */
             public Builder hiddenZoneId(String hiddenZoneId) {
@@ -1028,10 +1066,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The kind code of the instance. Valid values:
              * <p>
              * 
-             * *   **0**: physical machine.
-             * *   **1**: Elastic Compute Service (ECS) instance.
-             * *   **2**: Docker cluster.
-             * *   **18**: Kubernetes cluster.
+             * *   **0**: physical machine
+             * *   **1**: Elastic Compute Service (ECS) instance
+             * *   **2**: Docker cluster
+             * *   **18**: Kubernetes cluster
              */
             public Builder kindCode(String kindCode) {
                 this.kindCode = kindCode;
@@ -1050,10 +1088,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The lock status of the instance. Valid values:
              * <p>
              * 
-             * *   **Unlock**: The instance is not locked.
+             * *   **Unlock**: The cluster is unlocked.
              * *   **ManualLock**: The instance is manually locked.
              * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-             * *   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.
+             * *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
              * *   **LockByDiskQuota**: The instance is automatically locked after the storage space is exhausted.
              * *   **Released**: The instance is released. After an instance is released, the instance cannot be unlocked. You can only restore the backup data of the instance to a new instance. This process requires a long period of time.
              */
@@ -1077,8 +1115,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **Classic**: classic network.
-             * *   **VPC**: VPC.
+             * *   **Classic**: classic network
+             * *   **VPC**: VPC
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1090,6 +1128,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The time when the instance was released.
+             */
+            public Builder releaseTime(String releaseTime) {
+                this.releaseTime = releaseTime;
                 return this;
             }
 
@@ -1113,29 +1159,29 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secondary zone 1 of the instance. Valid values:
+             * The secondary zone 1 of the instance in the multi-zone deployment. Valid values:
              * <p>
              * 
-             * *   **cn-hangzhou-g**: Hangzhou Zone G.
-             * *   **cn-hangzhou-h**: Hangzhou Zone H.
-             * *   **cn-hangzhou-i**: Hangzhou Zone I.
-             * *   **cn-hongkong-b**: Hong Kong Zone B.
-             * *   **cn-hongkong-c**: Hong Kong Zone C.
-             * *   **cn-hongkong-d**: Hong Kong Zone D.
-             * *   **cn-wulanchabu-a**: Ulanqab Zone A.
-             * *   **cn-wulanchabu-b**: Ulanqab Zone B.
-             * *   **cn-wulanchabu-c**: Ulanqab Zone C.
-             * *   **ap-southeast-1a**: Singapore Zone A.
-             * *   **ap-southeast-1b**: Singapore Zone B.
-             * *   **ap-southeast-1c**: Singapore Zone C.
-             * *   **ap-southeast-5a**: Jakarta Zone A.
-             * *   **ap-southeast-5b**: Jakarta Zone B.
-             * *   **ap-southeast-5c**: Jakarta Zone C.
-             * *   **eu-central-1a**: Frankfurt Zone A.
-             * *   **eu-central-1b**: Frankfurt Zone B.
-             * *   **eu-central-1c**: Frankfurt Zone C.
+             * *   **cn-hangzhou-g**: Hangzhou Zone G
+             * *   **cn-hangzhou-h**: Hangzhou Zone H
+             * *   **cn-hangzhou-i**: Hangzhou Zone I
+             * *   **cn-hongkong-b**: Hong Kong Zone B
+             * *   **cn-hongkong-c**: Hong Kong Zone C
+             * *   **cn-hongkong-d**: Hong Kong Zone D
+             * *   **cn-wulanchabu-a**: Ulanqab Zone A
+             * *   **cn-wulanchabu-b**: Ulanqab Zone B
+             * *   **cn-wulanchabu-c**: Ulanqab Zone C
+             * *   **ap-southeast-1a**: Singapore Zone A
+             * *   **ap-southeast-1b**: Singapore Zone B
+             * *   **ap-southeast-1c**: Singapore Zone C
+             * *   **ap-southeast-5a**: Jakarta Zone A
+             * *   **ap-southeast-5b**: Jakarta Zone B
+             * *   **ap-southeast-5c**: Jakarta Zone C
+             * *   **eu-central-1a**: Frankfurt Zone A
+             * *   **eu-central-1b**: Frankfurt Zone B
+             * *   **eu-central-1c**: Frankfurt Zone C
              * 
-             * > *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
+             * > *   This parameter is returned only when the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses the multi-zone deployment.
              * > *   This parameter is returned only if you use the China site (aliyun.com).
              */
             public Builder secondaryZoneId(String secondaryZoneId) {
@@ -1158,8 +1204,8 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The storage type of the instance. Valid values:
              * <p>
              * 
-             * *   **cloud_essd**: enhanced SSD (ESSD).
-             * *   **local_ssd**: local SSD.
+             * *   **cloud_essd**: Enterprise SSD (ESSD)
+             * *   **local_ssd**: local SSD
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -1167,7 +1213,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the resource tags.
+             * The details of the tag.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1175,11 +1221,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether password-free access within a virtual private cloud (VPC) is enabled. Valid values:
+             * Indicates whether password-free access over virtual private cloud (VPC) is enabled. Valid values:
              * <p>
              * 
-             * *   **Open**
-             * *   **Close**
+             * *   **Open**: Password-free access over VPC is enabled.
+             * *   **Close**: Password-free access over VPC is disabled.
              */
             public Builder vpcAuthMode(String vpcAuthMode) {
                 this.vpcAuthMode = vpcAuthMode;
@@ -1187,7 +1233,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the instance resides.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1202,7 +1248,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     }
     public static class DBInstances extends TeaModel {
-        @NameInMap("DBInstance")
+        @com.aliyun.core.annotation.NameInMap("DBInstance")
         private java.util.List < DBInstance> DBInstance;
 
         private DBInstances(Builder builder) {

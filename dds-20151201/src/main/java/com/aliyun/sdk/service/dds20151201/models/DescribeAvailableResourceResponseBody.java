@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableResourceResponseBody</p>
  */
 public class DescribeAvailableResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportedDBTypes")
+    @com.aliyun.core.annotation.NameInMap("SupportedDBTypes")
     private SupportedDBTypes supportedDBTypes;
 
     private DescribeAvailableResourceResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     } 
 
     public static class DBInstanceStorageRange extends TeaModel {
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private Integer max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private Integer min;
 
-        @NameInMap("Step")
+        @com.aliyun.core.annotation.NameInMap("Step")
         private Integer step;
 
         private DBInstanceStorageRange(Builder builder) {
@@ -153,13 +152,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class AvailableResource extends TeaModel {
-        @NameInMap("DBInstanceStorageRange")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorageRange")
         private DBInstanceStorageRange DBInstanceStorageRange;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("InstanceClassRemark")
+        @com.aliyun.core.annotation.NameInMap("InstanceClassRemark")
         private String instanceClassRemark;
 
         private AvailableResource(Builder builder) {
@@ -234,7 +233,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class AvailableResources extends TeaModel {
-        @NameInMap("AvailableResource")
+        @com.aliyun.core.annotation.NameInMap("AvailableResource")
         private java.util.List < AvailableResource> availableResource;
 
         private AvailableResources(Builder builder) {
@@ -275,13 +274,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportedNodeType extends TeaModel {
-        @NameInMap("AvailableResources")
+        @com.aliyun.core.annotation.NameInMap("AvailableResources")
         private AvailableResources availableResources;
 
-        @NameInMap("NetworkTypes")
+        @com.aliyun.core.annotation.NameInMap("NetworkTypes")
         private String networkTypes;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
         private SupportedNodeType(Builder builder) {
@@ -356,7 +355,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportedNodeTypes extends TeaModel {
-        @NameInMap("SupportedNodeType")
+        @com.aliyun.core.annotation.NameInMap("SupportedNodeType")
         private java.util.List < SupportedNodeType> supportedNodeType;
 
         private SupportedNodeTypes(Builder builder) {
@@ -397,10 +396,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportedEngine extends TeaModel {
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("SupportedNodeTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportedNodeTypes")
         private SupportedNodeTypes supportedNodeTypes;
 
         private SupportedEngine(Builder builder) {
@@ -458,7 +457,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportedEngines extends TeaModel {
-        @NameInMap("SupportedEngine")
+        @com.aliyun.core.annotation.NameInMap("SupportedEngine")
         private java.util.List < SupportedEngine> supportedEngine;
 
         private SupportedEngines(Builder builder) {
@@ -499,10 +498,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportedEngineVersion extends TeaModel {
-        @NameInMap("SupportedEngines")
+        @com.aliyun.core.annotation.NameInMap("SupportedEngines")
         private SupportedEngines supportedEngines;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private SupportedEngineVersion(Builder builder) {
@@ -560,7 +559,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportedEngineVersions extends TeaModel {
-        @NameInMap("SupportedEngineVersion")
+        @com.aliyun.core.annotation.NameInMap("SupportedEngineVersion")
         private java.util.List < SupportedEngineVersion> supportedEngineVersion;
 
         private SupportedEngineVersions(Builder builder) {
@@ -601,13 +600,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class AvailableZone extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SupportedEngineVersions")
+        @com.aliyun.core.annotation.NameInMap("SupportedEngineVersions")
         private SupportedEngineVersions supportedEngineVersions;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private AvailableZone(Builder builder) {
@@ -682,7 +681,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class AvailableZones extends TeaModel {
-        @NameInMap("AvailableZone")
+        @com.aliyun.core.annotation.NameInMap("AvailableZone")
         private java.util.List < AvailableZone> availableZone;
 
         private AvailableZones(Builder builder) {
@@ -723,10 +722,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportedDBType extends TeaModel {
-        @NameInMap("AvailableZones")
+        @com.aliyun.core.annotation.NameInMap("AvailableZones")
         private AvailableZones availableZones;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
         private SupportedDBType(Builder builder) {
@@ -788,7 +787,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportedDBTypes extends TeaModel {
-        @NameInMap("SupportedDBType")
+        @com.aliyun.core.annotation.NameInMap("SupportedDBType")
         private java.util.List < SupportedDBType> supportedDBType;
 
         private SupportedDBTypes(Builder builder) {

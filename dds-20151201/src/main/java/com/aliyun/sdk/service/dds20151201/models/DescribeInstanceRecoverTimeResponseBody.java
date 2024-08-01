@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceRecoverTimeResponseBody</p>
  */
 public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RestoreRanges")
+    @com.aliyun.core.annotation.NameInMap("RestoreRanges")
     private java.util.List < RestoreRanges> restoreRanges;
 
     private DescribeInstanceRecoverTimeResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
         private java.util.List < RestoreRanges> restoreRanges; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RestoreRanges.
+         * The time ranges to which data can be restored. The time ranges include those used for point-in-time data restoration.
          */
         public Builder restoreRanges(java.util.List < RestoreRanges> restoreRanges) {
             this.restoreRanges = restoreRanges;
@@ -72,13 +71,13 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
     } 
 
     public static class RestoreRanges extends TeaModel {
-        @NameInMap("RestoreBeginTime")
+        @com.aliyun.core.annotation.NameInMap("RestoreBeginTime")
         private String restoreBeginTime;
 
-        @NameInMap("RestoreEndTime")
+        @com.aliyun.core.annotation.NameInMap("RestoreEndTime")
         private String restoreEndTime;
 
-        @NameInMap("RestoreType")
+        @com.aliyun.core.annotation.NameInMap("RestoreType")
         private String restoreType;
 
         private RestoreRanges(Builder builder) {
@@ -122,7 +121,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
             private String restoreType; 
 
             /**
-             * RestoreBeginTime.
+             * The beginning of the time range to which data can be restored.
              */
             public Builder restoreBeginTime(String restoreBeginTime) {
                 this.restoreBeginTime = restoreBeginTime;
@@ -130,7 +129,7 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreEndTime.
+             * The end of the time range to which data can be restored.
              */
             public Builder restoreEndTime(String restoreEndTime) {
                 this.restoreEndTime = restoreEndTime;
@@ -138,7 +137,10 @@ public class DescribeInstanceRecoverTimeResponseBody extends TeaModel {
             }
 
             /**
-             * RestoreType.
+             * The method used to restore data. Valid value:
+             * <p>
+             * 
+             * *   PointInTime (default): Data is restored to a point in time.
              */
             public Builder restoreType(String restoreType) {
                 this.restoreType = restoreType;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeActiveOperationTaskCountResponseBody</p>
  */
 public class DescribeActiveOperationTaskCountResponseBody extends TeaModel {
-    @NameInMap("NeedPop")
+    @com.aliyun.core.annotation.NameInMap("NeedPop")
     private Integer needPop;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskCount")
+    @com.aliyun.core.annotation.NameInMap("TaskCount")
     private Integer taskCount;
 
     private DescribeActiveOperationTaskCountResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceSSLResponseBody</p>
  */
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
-    @NameInMap("CertCommonName")
+    @com.aliyun.core.annotation.NameInMap("CertCommonName")
     private String certCommonName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SSLExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("SSLExpiredTime")
     private String SSLExpiredTime;
 
-    @NameInMap("SSLStatus")
+    @com.aliyun.core.annotation.NameInMap("SSLStatus")
     private String SSLStatus;
 
     private DescribeDBInstanceSSLResponseBody(Builder builder) {

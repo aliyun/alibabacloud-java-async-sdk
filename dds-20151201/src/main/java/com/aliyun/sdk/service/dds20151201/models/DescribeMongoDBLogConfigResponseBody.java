@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMongoDBLogConfigResponseBody</p>
  */
 public class DescribeMongoDBLogConfigResponseBody extends TeaModel {
-    @NameInMap("EnableAudit")
+    @com.aliyun.core.annotation.NameInMap("EnableAudit")
     private Boolean enableAudit;
 
-    @NameInMap("IsEtlMetaExist")
+    @com.aliyun.core.annotation.NameInMap("IsEtlMetaExist")
     private Integer isEtlMetaExist;
 
-    @NameInMap("IsUserProjectLogstoreExist")
+    @com.aliyun.core.annotation.NameInMap("IsUserProjectLogstoreExist")
     private Integer isUserProjectLogstoreExist;
 
-    @NameInMap("PreserveStorageForStandard")
+    @com.aliyun.core.annotation.NameInMap("PreserveStorageForStandard")
     private Long preserveStorageForStandard;
 
-    @NameInMap("PreserveStorageForTrail")
+    @com.aliyun.core.annotation.NameInMap("PreserveStorageForTrail")
     private Long preserveStorageForTrail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @NameInMap("TtlForStandard")
+    @com.aliyun.core.annotation.NameInMap("TtlForStandard")
     private Long ttlForStandard;
 
-    @NameInMap("TtlForTrail")
+    @com.aliyun.core.annotation.NameInMap("TtlForTrail")
     private Long ttlForTrail;
 
-    @NameInMap("UsedStorageForStandard")
+    @com.aliyun.core.annotation.NameInMap("UsedStorageForStandard")
     private Long usedStorageForStandard;
 
-    @NameInMap("UsedStorageForTrail")
+    @com.aliyun.core.annotation.NameInMap("UsedStorageForTrail")
     private Long usedStorageForTrail;
 
-    @NameInMap("UserProjectName")
+    @com.aliyun.core.annotation.NameInMap("UserProjectName")
     private String userProjectName;
 
     private DescribeMongoDBLogConfigResponseBody(Builder builder) {

@@ -1,21 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RestoreDBInstanceResponseBody} extends {@link TeaModel}
+ * {@link RestartNodeResponseBody} extends {@link TeaModel}
  *
- * <p>RestoreDBInstanceResponseBody</p>
+ * <p>RestartNodeResponseBody</p>
  */
-public class RestoreDBInstanceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+public class RestartNodeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private RestoreDBInstanceResponseBody(Builder builder) {
+    private RestartNodeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +22,7 @@ public class RestoreDBInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RestoreDBInstanceResponseBody create() {
+    public static RestartNodeResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +37,15 @@ public class RestoreDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RestoreDBInstanceResponseBody build() {
-            return new RestoreDBInstanceResponseBody(this);
+        public RestartNodeResponseBody build() {
+            return new RestartNodeResponseBody(this);
         } 
 
     } 

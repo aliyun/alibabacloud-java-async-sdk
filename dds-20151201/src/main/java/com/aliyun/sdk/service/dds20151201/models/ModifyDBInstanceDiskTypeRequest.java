@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceDiskTypeRequest</p>
  */
 public class ModifyDBInstanceDiskTypeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @Query
-    @NameInMap("BusinessInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessInfo")
     private String businessInfo;
 
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("DbInstanceStorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbInstanceStorageType")
     private String dbInstanceStorageType;
 
-    @Query
-    @NameInMap("ExtraParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraParam")
     private String extraParam;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("ProvisionedIops")
-    @Validation(maximum = 50000)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
+    @com.aliyun.core.annotation.Validation(maximum = 50000)
     private Long provisionedIops;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ModifyDBInstanceDiskTypeRequest(Builder builder) {
@@ -205,7 +204,13 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
+         * *   **false**: disables automatic payment. You must perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner, click **Expenses** and select **User Center** from the drop-down list. The User Center page appears. In the left-side navigation pane, choose **Order Management** > Renew. On the Renewal tab, find the bill that you want to pay and then click Renew in the Actions column.
+         * 
+         * Default value: **true**.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -214,7 +219,13 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * Default value: **false**.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -223,7 +234,7 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * The business information. This is an additional parameter.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -232,7 +243,7 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -241,7 +252,7 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -250,7 +261,13 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * DbInstanceStorageType.
+         * The new disk type. Valid values:
+         * <p>
+         * 
+         * *   **cloud_auto**: ESSD AutoPL disk
+         * *   **cloud_essd1**: PL1 ESSD
+         * *   **cloud_essd2**: PL2 ESSD
+         * *   **cloud_essd3**: PL3 ESSD
          */
         public Builder dbInstanceStorageType(String dbInstanceStorageType) {
             this.putQueryParameter("DbInstanceStorageType", dbInstanceStorageType);
@@ -259,7 +276,7 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * ExtraParam.
+         * An additional parameter.
          */
         public Builder extraParam(String extraParam) {
             this.putQueryParameter("ExtraParam", extraParam);
@@ -268,7 +285,13 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of configuration changes. Valid values:
+         * <p>
+         * 
+         * *   **UPGRADE**
+         * *   **DOWNGRADE**
+         * 
+         * >  This parameter is valid only when the billing method of the instance is subscription.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -277,7 +300,7 @@ public class ModifyDBInstanceDiskTypeRequest extends Request {
         }
 
         /**
-         * ProvisionedIops.
+         * The provisioned IOPS. Valid values: 0 to 50000.
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);

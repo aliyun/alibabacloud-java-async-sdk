@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,60 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstancePerformanceRequest</p>
  */
 public class DescribeDBInstancePerformanceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    private String interval;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReplicaSetRole")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicaSetRole")
     private String replicaSetRole;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RoleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleId")
     private String roleId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeDBInstancePerformanceRequest(Builder builder) {
@@ -69,6 +72,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         this.regionId = builder.regionId;
         this.DBInstanceId = builder.DBInstanceId;
         this.endTime = builder.endTime;
+        this.interval = builder.interval;
         this.key = builder.key;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
@@ -112,6 +116,13 @@ public class DescribeDBInstancePerformanceRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return interval
+     */
+    public String getInterval() {
+        return this.interval;
     }
 
     /**
@@ -181,6 +192,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         private String regionId; 
         private String DBInstanceId; 
         private String endTime; 
+        private String interval; 
         private String key; 
         private String nodeId; 
         private String ownerAccount; 
@@ -200,6 +212,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
             this.regionId = request.regionId;
             this.DBInstanceId = request.DBInstanceId;
             this.endTime = request.endTime;
+            this.interval = request.interval;
             this.key = request.key;
             this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
@@ -242,7 +255,16 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The performance metric. For more information about valid values, see [Performance metrics](~~64048~~).
+         * The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400.
+         */
+        public Builder interval(String interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
+            return this;
+        }
+
+        /**
+         * The performance metric. For more information about valid values, see [Monitoring items and metrics](~~216973~~).
          * <p>
          * 
          * >  If you need to specify multiple metrics, separate the metrics with commas (,).
@@ -284,17 +306,14 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * The role of the node in a standalone or replica set instance. Valid values:
+         * The role of the node in the standalone or replica set instance. Valid values:
          * <p>
          * 
          * *   **Primary**
          * *   **Secondary**
          * 
-         * > 
-         * 
-         * *   This parameter is valid only when you set the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.
-         * 
-         * *   If you set the **DBInstanceId** parameter to the ID of a standalone instance, the value of this parameter can only be **Primary**.
+         * >  *  This parameter is valid only when you specify the **DBInstanceId** parameter to the ID of a standalone instance or a replica set instance.
+         * > *  This parameter can be set only to **Primary** when you specify the **DBInstanceId** parameter to the ID of a standalone instance.
          */
         public Builder replicaSetRole(String replicaSetRole) {
             this.putQueryParameter("ReplicaSetRole", replicaSetRole);

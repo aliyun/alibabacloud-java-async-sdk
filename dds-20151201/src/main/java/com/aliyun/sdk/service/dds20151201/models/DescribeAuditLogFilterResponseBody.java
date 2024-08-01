@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAuditLogFilterResponseBody</p>
  */
 public class DescribeAuditLogFilterResponseBody extends TeaModel {
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RoleType")
+    @com.aliyun.core.annotation.NameInMap("RoleType")
     private String roleType;
 
     private DescribeAuditLogFilterResponseBody(Builder builder) {

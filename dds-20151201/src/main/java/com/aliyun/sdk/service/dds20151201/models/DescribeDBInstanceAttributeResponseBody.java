@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceAttributeResponseBody</p>
  */
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
-    @NameInMap("DBInstances")
+    @com.aliyun.core.annotation.NameInMap("DBInstances")
     private DBInstances DBInstances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceAttributeResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the instance.
+         * The information of the instance.
          */
         public Builder DBInstances(DBInstances DBInstances) {
             this.DBInstances = DBInstances;
@@ -72,31 +71,31 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     } 
 
     public static class ConfigserverAttribute extends TeaModel {
-        @NameInMap("ConnectString")
+        @com.aliyun.core.annotation.NameInMap("ConnectString")
         private String connectString;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
-        @NameInMap("NodeClass")
+        @com.aliyun.core.annotation.NameInMap("NodeClass")
         private String nodeClass;
 
-        @NameInMap("NodeDescription")
+        @com.aliyun.core.annotation.NameInMap("NodeDescription")
         private String nodeDescription;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeStorage")
+        @com.aliyun.core.annotation.NameInMap("NodeStorage")
         private Integer nodeStorage;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ConfigserverAttribute(Builder builder) {
@@ -242,7 +241,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the Configserver node.
+             * The storage capacity of the Configserver node. Unit: GB.
              */
             public Builder nodeStorage(Integer nodeStorage) {
                 this.nodeStorage = nodeStorage;
@@ -273,7 +272,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class ConfigserverList extends TeaModel {
-        @NameInMap("ConfigserverAttribute")
+        @com.aliyun.core.annotation.NameInMap("ConfigserverAttribute")
         private java.util.List < ConfigserverAttribute> configserverAttribute;
 
         private ConfigserverList(Builder builder) {
@@ -314,37 +313,37 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class MongosAttribute extends TeaModel {
-        @NameInMap("ConnectSting")
+        @com.aliyun.core.annotation.NameInMap("ConnectSting")
         private String connectSting;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
-        @NameInMap("NodeClass")
+        @com.aliyun.core.annotation.NameInMap("NodeClass")
         private String nodeClass;
 
-        @NameInMap("NodeDescription")
+        @com.aliyun.core.annotation.NameInMap("NodeDescription")
         private String nodeDescription;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcCloudInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcCloudInstanceId")
         private String vpcCloudInstanceId;
 
         private MongosAttribute(Builder builder) {
@@ -527,7 +526,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The VPC ID of the instance.
              * <p>
              * 
-             * > This parameter is returned if the network type of the instance is VPC.
+             * >  This parameter is returned if the network type of the instance is VPC.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -538,7 +537,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The vSwitch ID of the instance.
              * <p>
              * 
-             * > This parameter is returned if the network type of the instance is VPC.
+             * >  This parameter is returned if the network type of the instance is VPC.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -561,7 +560,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class MongosList extends TeaModel {
-        @NameInMap("MongosAttribute")
+        @com.aliyun.core.annotation.NameInMap("MongosAttribute")
         private java.util.List < MongosAttribute> mongosAttribute;
 
         private MongosList(Builder builder) {
@@ -602,25 +601,25 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class ReplicaSet extends TeaModel {
-        @NameInMap("ConnectionDomain")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDomain")
         private String connectionDomain;
 
-        @NameInMap("ConnectionPort")
+        @com.aliyun.core.annotation.NameInMap("ConnectionPort")
         private String connectionPort;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("ReplicaSetRole")
+        @com.aliyun.core.annotation.NameInMap("ReplicaSetRole")
         private String replicaSetRole;
 
-        @NameInMap("VPCCloudInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VPCCloudInstanceId")
         private String VPCCloudInstanceId;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private ReplicaSet(Builder builder) {
@@ -719,8 +718,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **Classic**: classic network.
-             * *   **VPC**: VPC.
+             * *   **Classic**: classic network
+             * *   **VPC**: VPC
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -743,7 +742,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The instance ID.
              * <p>
              * 
-             * > This parameter is returned if the network type of the instance is VPC.
+             * >  This parameter is returned if the network type of the instance is VPC.
              */
             public Builder VPCCloudInstanceId(String VPCCloudInstanceId) {
                 this.VPCCloudInstanceId = VPCCloudInstanceId;
@@ -754,7 +753,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The VPC ID of the instance.
              * <p>
              * 
-             * > This parameter is returned if the network type of the instance is VPC.
+             * >  This parameter is returned if the network type of the instance is VPC.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -765,7 +764,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The vSwitch ID of the instance.
              * <p>
              * 
-             * > This parameter is returned if the network type of the instance is Virtual Private Cloud (VPC).
+             * >  This parameter is returned if the network type of the instance is virtual private cloud (VPC).
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -780,7 +779,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class ReplicaSets extends TeaModel {
-        @NameInMap("ReplicaSet")
+        @com.aliyun.core.annotation.NameInMap("ReplicaSet")
         private java.util.List < ReplicaSet> replicaSet;
 
         private ReplicaSets(Builder builder) {
@@ -821,37 +820,37 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class ShardAttribute extends TeaModel {
-        @NameInMap("ConnectString")
+        @com.aliyun.core.annotation.NameInMap("ConnectString")
         private String connectString;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MaxDiskMbps")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskMbps")
         private String maxDiskMbps;
 
-        @NameInMap("MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
-        @NameInMap("NodeClass")
+        @com.aliyun.core.annotation.NameInMap("NodeClass")
         private String nodeClass;
 
-        @NameInMap("NodeDescription")
+        @com.aliyun.core.annotation.NameInMap("NodeDescription")
         private String nodeDescription;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeStorage")
+        @com.aliyun.core.annotation.NameInMap("NodeStorage")
         private Integer nodeStorage;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ReadonlyReplicas")
+        @com.aliyun.core.annotation.NameInMap("ReadonlyReplicas")
         private Integer readonlyReplicas;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ShardAttribute(Builder builder) {
@@ -1023,7 +1022,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the shard node.
+             * The storage capacity of the shard node. Unit: GB.
              */
             public Builder nodeStorage(Integer nodeStorage) {
                 this.nodeStorage = nodeStorage;
@@ -1062,7 +1061,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class ShardList extends TeaModel {
-        @NameInMap("ShardAttribute")
+        @com.aliyun.core.annotation.NameInMap("ShardAttribute")
         private java.util.List < ShardAttribute> shardAttribute;
 
         private ShardList(Builder builder) {
@@ -1103,10 +1102,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -1141,7 +1140,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key of the instance.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1149,7 +1148,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the instance.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1164,7 +1163,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -1205,160 +1204,160 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class DBInstance extends TeaModel {
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("CapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private String capacityUnit;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ConfigserverList")
+        @com.aliyun.core.annotation.NameInMap("ConfigserverList")
         private ConfigserverList configserverList;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("CurrentKernelVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentKernelVersion")
         private String currentKernelVersion;
 
-        @NameInMap("DBInstanceClass")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
         private String DBInstanceClass;
 
-        @NameInMap("DBInstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
         private String DBInstanceDescription;
 
-        @NameInMap("DBInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
-        @NameInMap("DBInstanceOrderStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceOrderStatus")
         private String DBInstanceOrderStatus;
 
-        @NameInMap("DBInstanceReleaseProtection")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceReleaseProtection")
         private Boolean DBInstanceReleaseProtection;
 
-        @NameInMap("DBInstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStatus")
         private String DBInstanceStatus;
 
-        @NameInMap("DBInstanceStorage")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
         private Integer DBInstanceStorage;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("DestroyTime")
+        @com.aliyun.core.annotation.NameInMap("DestroyTime")
         private String destroyTime;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
-        @NameInMap("EncryptionKey")
+        @com.aliyun.core.annotation.NameInMap("EncryptionKey")
         private String encryptionKey;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("HiddenZoneId")
+        @com.aliyun.core.annotation.NameInMap("HiddenZoneId")
         private String hiddenZoneId;
 
-        @NameInMap("KindCode")
+        @com.aliyun.core.annotation.NameInMap("KindCode")
         private String kindCode;
 
-        @NameInMap("LastDowngradeTime")
+        @com.aliyun.core.annotation.NameInMap("LastDowngradeTime")
         private String lastDowngradeTime;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
-        @NameInMap("MaxConnections")
+        @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
-        @NameInMap("MaxIOPS")
+        @com.aliyun.core.annotation.NameInMap("MaxIOPS")
         private Integer maxIOPS;
 
-        @NameInMap("MaxMBPS")
+        @com.aliyun.core.annotation.NameInMap("MaxMBPS")
         private Integer maxMBPS;
 
-        @NameInMap("MongosList")
+        @com.aliyun.core.annotation.NameInMap("MongosList")
         private MongosList mongosList;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
-        @NameInMap("ReadonlyReplicas")
+        @com.aliyun.core.annotation.NameInMap("ReadonlyReplicas")
         private String readonlyReplicas;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReplacateId")
+        @com.aliyun.core.annotation.NameInMap("ReplacateId")
         private String replacateId;
 
-        @NameInMap("ReplicaSetName")
+        @com.aliyun.core.annotation.NameInMap("ReplicaSetName")
         private String replicaSetName;
 
-        @NameInMap("ReplicaSets")
+        @com.aliyun.core.annotation.NameInMap("ReplicaSets")
         private ReplicaSets replicaSets;
 
-        @NameInMap("ReplicationFactor")
+        @com.aliyun.core.annotation.NameInMap("ReplicationFactor")
         private String replicationFactor;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecondaryZoneId")
+        @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
         private String secondaryZoneId;
 
-        @NameInMap("ShardList")
+        @com.aliyun.core.annotation.NameInMap("ShardList")
         private ShardList shardList;
 
-        @NameInMap("StorageEngine")
+        @com.aliyun.core.annotation.NameInMap("StorageEngine")
         private String storageEngine;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("SyncPercent")
+        @com.aliyun.core.annotation.NameInMap("SyncPercent")
         private String syncPercent;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("UseClusterBackup")
+        @com.aliyun.core.annotation.NameInMap("UseClusterBackup")
         private Boolean useClusterBackup;
 
-        @NameInMap("VPCCloudInstanceIds")
+        @com.aliyun.core.annotation.NameInMap("VPCCloudInstanceIds")
         private String VPCCloudInstanceIds;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcAuthMode")
+        @com.aliyun.core.annotation.NameInMap("VpcAuthMode")
         private String vpcAuthMode;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBInstance(Builder builder) {
@@ -1843,7 +1842,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * 是否已开启突发
+             * Indicates whether performance burst is enabled for the ESSD AutoPL disk.
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1862,8 +1861,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The billing method of the instance. Valid values:
              * <p>
              * 
-             * *   **PrePaid**: subscription.
-             * *   **PostPaid**: pay-as-you-go.
+             * *   **PrePaid**: subscription
+             * *   **PostPaid**: pay-as-you-go
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1871,10 +1870,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the Configserver nodes.
+             * The information of the Configserver nodes.
              * <p>
              * 
-             * > This parameter is returned if the instance is a sharded cluster instance.
+             * >  This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder configserverList(ConfigserverList configserverList) {
                 this.configserverList = configserverList;
@@ -1898,7 +1897,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * The instance type of the instance.
              */
             public Builder DBInstanceClass(String DBInstanceClass) {
                 this.DBInstanceClass = DBInstanceClass;
@@ -1927,9 +1926,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **all_completed**: All orders are being produced or complete.
              * *   **order_unpaid**: The instance has unpaid orders.
-             * *   **order_wait_for_produce**: Order are being delivered for production.
+             * *   **order_wait_for_produce**: Orders are being delivered for production.
              * 
-             * > The order production process includes the following steps: place an order, pay for an order, deliver an order for production, produce an order, and complete an order.
+             * >  The order production process includes the following steps: place an order, pay for an order, deliver an order for production, produce an order, and complete the production.
              * 
              * *   If an order is in the **order_wait_for_produce** state for a long time, an error occurs when the order is being delivered for production. The system will automatically retry.
              * *   The instance status changes only when the order is in the producing and complete state, such as changing configurations and running.
@@ -1943,8 +1942,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * Indicates whether release protection is enabled for the instance. Valid values:
              * <p>
              * 
-             * *   **true**: Release protection is enabled.
-             * *   **false** Release protection is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder DBInstanceReleaseProtection(Boolean DBInstanceReleaseProtection) {
                 this.DBInstanceReleaseProtection = DBInstanceReleaseProtection;
@@ -1971,8 +1970,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The architecture of the instance. Valid values:
              * <p>
              * 
-             * *   **replicate**: replica set instance.
-             * *   **sharding**: sharded cluster instance.
+             * *   **replicate**: replica set instance
+             * *   **sharding**: sharded cluster instance
              */
             public Builder DBInstanceType(String DBInstanceType) {
                 this.DBInstanceType = DBInstanceType;
@@ -1988,7 +1987,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启云盘加密
+             * Indicates whether disk encryption is enabled.
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -1996,7 +1995,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 云盘加密对应的kms-key
+             * The Key Management Service (KMS) key used for disk encryption.
              */
             public Builder encryptionKey(String encryptionKey) {
                 this.encryptionKey = encryptionKey;
@@ -2012,7 +2011,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance. Valid values:
+             * The database engine version of the instance.
              * <p>
              * 
              * *   **6.0**
@@ -2030,7 +2029,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The time when the subscription instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * > This parameter is returned if the instance is a subscription instance.
+             * >  This parameter is returned if the instance is a subscription instance.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -2044,9 +2043,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **cn-hangzhou-g**: Hangzhou Zone G
              * *   **cn-hangzhou-h**: Hangzhou Zone H
              * *   **cn-hangzhou-i**: Hangzhou Zone I
-             * *   **cn-hongkong-b**: Hong Kong Zone B
-             * *   **cn-hongkong-c**: Hong Kong Zone C
-             * *   **cn-hongkong-d**: Hong Kong Zone D
+             * *   **cn-hongkong-b**: Hongkong Zone B
+             * *   **cn-hongkong-c**: Hongkong Zone C
+             * *   **cn-hongkong-d**: Hongkong Zone D
              * *   **cn-wulanchabu-a**: Ulanqab Zone A
              * *   **cn-wulanchabu-b**: Ulanqab Zone B
              * *   **cn-wulanchabu-c**: Ulanqab Zone C
@@ -2064,7 +2063,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
              * 
-             * *   This parameter is returned only if you use the Chine site (aliyun.com).
+             * *   This parameter is returned only if you use the China site (aliyun.com).
              */
             public Builder hiddenZoneId(String hiddenZoneId) {
                 this.hiddenZoneId = hiddenZoneId;
@@ -2075,10 +2074,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The kind code of the instance. Valid values:
              * <p>
              * 
-             * *   **0**: physical machine.
-             * *   **1**: Elastic Compute Service (ECS) instance.
-             * *   **2**: Docker cluster.
-             * *   **18**: Kubernetes cluster.
+             * *   **0**: physical machine
+             * *   **1**: Elastic Compute Service (ECS) instance
+             * *   **2**: Docker cluster
+             * *   **18**: Kubernetes cluster
              */
             public Builder kindCode(String kindCode) {
                 this.kindCode = kindCode;
@@ -2100,8 +2099,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **Unlock**: The instance is not locked.
              * *   **ManualLock**: The instance is manually locked.
              * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
-             * *   **LockByRestoration**: The instance is automatically locked before it is rolled back.
-             * *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage capacity.
+             * *   **LockByRestoration**: The instance is automatically locked before the instance is rolled back.
+             * *   **LockByDiskQuota**: The instance is automatically locked after the storage space is exhausted.
              * *   **Released**: The instance is released.
              */
             public Builder lockMode(String lockMode) {
@@ -2150,10 +2149,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the mongos nodes.
+             * The information of the mongos nodes.
              * <p>
              * 
-             * > This parameter is returned if the instance is a sharded cluster instance.
+             * >  This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder mongosList(MongosList mongosList) {
                 this.mongosList = mongosList;
@@ -2164,8 +2163,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **Classic**
-             * *   **VPC**
+             * *   **Classic**: classic network
+             * *   **VPC**: VPC
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -2179,7 +2178,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **mongodb**
              * *   **dynamodb**
              * 
-             * > This parameter is returned if the instance is a sharded cluster instance.
+             * >  This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
@@ -2187,7 +2186,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 预配置性能
+             * The provisioned performance of the ESSD AutoPL disk.
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -2211,10 +2210,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The logical ID of the replica instance.
+             * The logical ID of the replica set instance.
              * <p>
              * 
-             * > ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica instances.
+             * >  ApsaraDB for MongoDB does not support new instances of this type. This parameter applies only to previous-version replica set instances.
              */
             public Builder replacateId(String replacateId) {
                 this.replacateId = replacateId;
@@ -2225,7 +2224,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The name of the replica set instance.
              * <p>
              * 
-             * > This parameter is returned if the instance is a replica set instance.
+             * >  This parameter is returned if the instance is a replica set instance.
              */
             public Builder replicaSetName(String replicaSetName) {
                 this.replicaSetName = replicaSetName;
@@ -2233,10 +2232,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the replica set instance.
+             * The information of the replica set instance.
              * <p>
              * 
-             * > This parameter is returned if the instance is a replica set instance.
+             * >  This parameter is returned if the instance is a replica set instance.
              */
             public Builder replicaSets(ReplicaSets replicaSets) {
                 this.replicaSets = replicaSets;
@@ -2247,7 +2246,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The number of nodes in the instance.
              * <p>
              * 
-             * > This parameter is returned if the instance is a replica set instance.
+             * >  This parameter is returned if the instance is a replica set instance.
              */
             public Builder replicationFactor(String replicationFactor) {
                 this.replicationFactor = replicationFactor;
@@ -2255,10 +2254,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The ID of the resource group to which the instance belongs.
              * <p>
              * 
-             * > This parameter is returned only if you use the China site (aliyun.com).
+             * >  This parameter is returned only if you use the China site (aliyun.com).
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -2272,9 +2271,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * *   **cn-hangzhou-g**: Hangzhou Zone G
              * *   **cn-hangzhou-h**: Hangzhou Zone H
              * *   **cn-hangzhou-i**: Hangzhou Zone I
-             * *   **cn-hongkong-b**: Hong Kong Zone B
-             * *   **cn-hongkong-c**: Hong Kong Zone C
-             * *   **cn-hongkong-d**: Hong Kong Zone D
+             * *   **cn-hongkong-b**: Hongkong Zone B
+             * *   **cn-hongkong-c**: Hongkong Zone C
+             * *   **cn-hongkong-d**: Hongkong Zone D
              * *   **cn-wulanchabu-a**: Ulanqab Zone A
              * *   **cn-wulanchabu-b**: Ulanqab Zone B
              * *   **cn-wulanchabu-c**: Ulanqab Zone C
@@ -2292,7 +2291,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   This parameter is returned if the instance is a replica set or sharded cluster instance that runs MongoDB 4.4 or 5.0 and uses multi-zone deployment.
              * 
-             * *   This parameter is returned only if you use the Chine site (aliyun.com).
+             * *   This parameter is returned only if you use the China site (aliyun.com).
              */
             public Builder secondaryZoneId(String secondaryZoneId) {
                 this.secondaryZoneId = secondaryZoneId;
@@ -2300,10 +2299,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the shard nodes.
+             * The information of the shard nodes.
              * <p>
              * 
-             * > This parameter is returned if the instance is a sharded cluster instance.
+             * >  This parameter is returned if the instance is a sharded cluster instance.
              */
             public Builder shardList(ShardList shardList) {
                 this.shardList = shardList;
@@ -2322,7 +2321,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The storage type of the instance. Valid values:
              * <p>
              * 
-             * **cloud_essd1**: PL1 ESSD. **cloud_essd2**: PL2. ESSD. **cloud_essd3**: PL3 ESSD. **local_ssd**: local SSD.
+             * **cloud_essd1**: ESSD PL1 **cloud_essd2**: ESSD PL2 **cloud_essd3**: ESSD PL3 **local_ssd**: local SSD **cloud_essd_dbfs_s**: DBFS disk
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -2330,7 +2329,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 数据同步进度百分比。当实例处在变配中时，需要进行数据同步等操作，可以通过该字段判断同步进度。
+             * The progress of data synchronization in percentage. When you are changing the configurations of the instance, you must synchronize the data of the instance. You can obtain the data synchronization progress based on the value returned for this parameter.
              */
             public Builder syncPercent(String syncPercent) {
                 this.syncPercent = syncPercent;
@@ -2346,11 +2345,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 是否使用集群备份模式。取值说明：
+             * Indicates whether the cluster backup mode is enabled. Valid values:
              * <p>
              * 
-             * - **true**：启用集群备份模式。
-             * - **false**未启用集群备份模式。
+             * *   **true**: The cluster backup mode is enabled.
+             * *   **false**: The cluster backup mode is disabled.
              */
             public Builder useClusterBackup(Boolean useClusterBackup) {
                 this.useClusterBackup = useClusterBackup;
@@ -2361,7 +2360,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The instance ID.
              * <p>
              * 
-             * > This parameter is returned if the network type of the instance is VPC.
+             * >  This parameter is returned if the network type of the instance is VPC.
              */
             public Builder VPCCloudInstanceIds(String VPCCloudInstanceIds) {
                 this.VPCCloudInstanceIds = VPCCloudInstanceIds;
@@ -2372,7 +2371,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The VPC ID of the instance.
              * <p>
              * 
-             * > This parameter is returned if the network type of the instance is VPC.
+             * >  This parameter is returned if the network type of the instance is VPC.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -2383,7 +2382,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The vSwitch ID of the instance.
              * <p>
              * 
-             * > This parameter is returned if the network type of the instance is VPC.
+             * >  This parameter is returned if the network type of the instance is VPC.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2391,12 +2390,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether password-free access over VPC is enabled. Valid values:
+             * Indicates whether password-free access within the VPC is enabled. Valid values:
              * <p>
              * 
-             * *   **Open**: Password-free access over VPC is enabled.
-             * *   **Close**: Password-free access over VPC is disabled, and you must use a password for access.
-             * *   **NotSupport**: Password-free access over VPC is not supported.
+             * *   **Open**: Password-free access within the VPC is enabled.
+             * *   **Close**: Password-free access within the VPC is disabled, and you must use a password for access.
+             * *   **NotSupport**: Password-free access within the VPC is not supported.
              */
             public Builder vpcAuthMode(String vpcAuthMode) {
                 this.vpcAuthMode = vpcAuthMode;
@@ -2404,7 +2403,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * The ID of the zone in which the instance resides.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -2419,7 +2418,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class DBInstances extends TeaModel {
-        @NameInMap("DBInstance")
+        @com.aliyun.core.annotation.NameInMap("DBInstance")
         private java.util.List < DBInstance> DBInstance;
 
         private DBInstances(Builder builder) {

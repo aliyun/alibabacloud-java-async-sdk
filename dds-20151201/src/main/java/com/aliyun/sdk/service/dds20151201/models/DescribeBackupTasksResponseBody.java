@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupTasksResponseBody</p>
  */
 public class DescribeBackupTasksResponseBody extends TeaModel {
-    @NameInMap("BackupJobs")
+    @com.aliyun.core.annotation.NameInMap("BackupJobs")
     private java.util.List < BackupJobs> backupJobs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupTasksResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackupJobs.
+         * The details of the backup task.
          */
         public Builder backupJobs(java.util.List < BackupJobs> backupJobs) {
             this.backupJobs = backupJobs;
@@ -58,7 +57,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     } 
 
     public static class BackupJobs extends TeaModel {
-        @NameInMap("BackupSetStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupSetStatus")
         private String backupSetStatus;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupjobId")
+        @com.aliyun.core.annotation.NameInMap("BackupjobId")
         private String backupjobId;
 
-        @NameInMap("JobMode")
+        @com.aliyun.core.annotation.NameInMap("JobMode")
         private String jobMode;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
         private BackupJobs(Builder builder) {
@@ -146,7 +145,13 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String progress; 
 
             /**
-             * BackupSetStatus.
+             * The backup task status. Valid values:
+             * <p>
+             * 
+             * *   **Scheduled**: The backup task is in planning. Regular backup tasks that have not started are also in this state.
+             * *   **Checking**: The instance is being checked before the backup.
+             * *   **Backuping**: The backup task is in progress.
+             * *   **Finished**: The backup task is completed.
              */
             public Builder backupSetStatus(String backupSetStatus) {
                 this.backupSetStatus = backupSetStatus;
@@ -154,7 +159,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * The start time of the backup task.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -162,7 +167,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * BackupjobId.
+             * The ID of the backup task.
              */
             public Builder backupjobId(String backupjobId) {
                 this.backupjobId = backupjobId;
@@ -170,7 +175,11 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * JobMode.
+             * The backup mode. Valid values:
+             * <p>
+             * 
+             * *   **Automated**: automatic backup
+             * *   **Manual**: manual backup
              */
             public Builder jobMode(String jobMode) {
                 this.jobMode = jobMode;
@@ -178,7 +187,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the backup task. Unit: %. The progress is returned only for running backup tasks.
              */
             public Builder progress(String progress) {
                 this.progress = progress;

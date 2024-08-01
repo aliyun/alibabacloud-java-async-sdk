@@ -1,63 +1,67 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RestoreDBInstanceRequest} extends {@link RequestModel}
+ * {@link RestartNodeRequest} extends {@link RequestModel}
  *
- * <p>RestoreDBInstanceRequest</p>
+ * <p>RestartNodeRequest</p>
  */
-public class RestoreDBInstanceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+public class RestartNodeRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BackupId")
-    @Validation(required = true)
-    private Integer backupId;
-
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    private String nodeId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private RestoreDBInstanceRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String roleId;
+
+    private RestartNodeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.backupId = builder.backupId;
         this.DBInstanceId = builder.DBInstanceId;
+        this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.roleId = builder.roleId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static RestoreDBInstanceRequest create() {
+    public static RestartNodeRequest create() {
         return builder().build();
     }
 
@@ -74,17 +78,17 @@ public class RestoreDBInstanceRequest extends Request {
     }
 
     /**
-     * @return backupId
-     */
-    public Integer getBackupId() {
-        return this.backupId;
-    }
-
-    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return nodeId
+     */
+    public String getNodeId() {
+        return this.nodeId;
     }
 
     /**
@@ -115,28 +119,37 @@ public class RestoreDBInstanceRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<RestoreDBInstanceRequest, Builder> {
+    /**
+     * @return roleId
+     */
+    public String getRoleId() {
+        return this.roleId;
+    }
+
+    public static final class Builder extends Request.Builder<RestartNodeRequest, Builder> {
         private String regionId; 
-        private Integer backupId; 
         private String DBInstanceId; 
+        private String nodeId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String roleId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RestoreDBInstanceRequest request) {
+        private Builder(RestartNodeRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.backupId = request.backupId;
             this.DBInstanceId = request.DBInstanceId;
+            this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.roleId = request.roleId;
         } 
 
         /**
@@ -149,23 +162,20 @@ public class RestoreDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the backup set.
-         * <p>
-         * 
-         * > You can call the [DescribeBackups](~~62172~~) operation to query the backup set ID.
-         */
-        public Builder backupId(Integer backupId) {
-            this.putQueryParameter("BackupId", backupId);
-            this.backupId = backupId;
-            return this;
-        }
-
-        /**
-         * The instance ID.
+         * DBInstanceId.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * NodeId.
+         */
+        public Builder nodeId(String nodeId) {
+            this.putQueryParameter("NodeId", nodeId);
+            this.nodeId = nodeId;
             return this;
         }
 
@@ -205,9 +215,18 @@ public class RestoreDBInstanceRequest extends Request {
             return this;
         }
 
+        /**
+         * RoleId.
+         */
+        public Builder roleId(String roleId) {
+            this.putQueryParameter("RoleId", roleId);
+            this.roleId = roleId;
+            return this;
+        }
+
         @Override
-        public RestoreDBInstanceRequest build() {
-            return new RestoreDBInstanceRequest(this);
+        public RestartNodeRequest build() {
+            return new RestartNodeRequest(this);
         } 
 
     } 

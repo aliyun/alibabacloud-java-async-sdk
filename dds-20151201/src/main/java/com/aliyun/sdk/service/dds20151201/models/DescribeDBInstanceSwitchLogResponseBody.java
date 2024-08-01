@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceSwitchLogResponseBody</p>
  */
 public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("LogItems")
+    @com.aliyun.core.annotation.NameInMap("LogItems")
     private java.util.List < LogItems> logItems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDBInstanceSwitchLogResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class DescribeDBInstanceSwitchLogResponseBody extends TeaModel {
     } 
 
     public static class LogItems extends TeaModel {
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("SwitchCode")
+        @com.aliyun.core.annotation.NameInMap("SwitchCode")
         private String switchCode;
 
-        @NameInMap("SwitchStatus")
+        @com.aliyun.core.annotation.NameInMap("SwitchStatus")
         private String switchStatus;
 
-        @NameInMap("SwitchTime")
+        @com.aliyun.core.annotation.NameInMap("SwitchTime")
         private String switchTime;
 
         private LogItems(Builder builder) {

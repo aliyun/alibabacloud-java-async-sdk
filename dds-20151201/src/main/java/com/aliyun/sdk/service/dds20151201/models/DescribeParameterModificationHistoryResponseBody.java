@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParameterModificationHistoryResponseBody</p>
  */
 public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
-    @NameInMap("HistoricalParameters")
+    @com.aliyun.core.annotation.NameInMap("HistoricalParameters")
     private HistoricalParameters historicalParameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParameterModificationHistoryResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
     } 
 
     public static class HistoricalParameter extends TeaModel {
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("NewParameterValue")
+        @com.aliyun.core.annotation.NameInMap("NewParameterValue")
         private String newParameterValue;
 
-        @NameInMap("OldParameterValue")
+        @com.aliyun.core.annotation.NameInMap("OldParameterValue")
         private String oldParameterValue;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
         private HistoricalParameter(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeParameterModificationHistoryResponseBody extends TeaModel {
 
     }
     public static class HistoricalParameters extends TeaModel {
-        @NameInMap("HistoricalParameter")
+        @com.aliyun.core.annotation.NameInMap("HistoricalParameter")
         private java.util.List < HistoricalParameter> historicalParameter;
 
         private HistoricalParameters(Builder builder) {

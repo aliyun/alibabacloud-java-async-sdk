@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRoleZoneInfoResponseBody</p>
  */
 public class DescribeRoleZoneInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ZoneInfos")
+    @com.aliyun.core.annotation.NameInMap("ZoneInfos")
     private ZoneInfos zoneInfos;
 
     private DescribeRoleZoneInfoResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
     } 
 
     public static class ZoneInfo extends TeaModel {
-        @NameInMap("InsName")
+        @com.aliyun.core.annotation.NameInMap("InsName")
         private String insName;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ZoneInfo(Builder builder) {
@@ -206,7 +205,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
 
     }
     public static class ZoneInfos extends TeaModel {
-        @NameInMap("ZoneInfo")
+        @com.aliyun.core.annotation.NameInMap("ZoneInfo")
         private java.util.List < ZoneInfo> zoneInfo;
 
         private ZoneInfos(Builder builder) {

@@ -44,7 +44,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-chengdu", "mongodb.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-hongkong", "mongodb.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "mongodb.ap-northeast-1.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "mongodb.aliyuncs.com"),
+            new TeaPair("ap-southeast-1", "mongodb.ap-southeast-1.aliyuncs.com"),
             new TeaPair("ap-southeast-2", "mongodb.ap-southeast-2.aliyuncs.com"),
             new TeaPair("ap-southeast-3", "mongodb.ap-southeast-3.aliyuncs.com"),
             new TeaPair("ap-southeast-5", "mongodb.ap-southeast-5.aliyuncs.com"),
@@ -170,7 +170,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Database accounts can be created only for shards in sharded cluster instances that use cloud disks.
+      * *   You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
+      * *   The account is granted read-only permissions.
       *
      */
     @Override
@@ -1385,6 +1386,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can modify the connection strings and ports of the following instances:
+      * *   You can modify the connection strings of instances that use local or cloud disks.
+      * *   You can only modify the ports of instances that use cloud disks.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request) {
         try {
@@ -1865,20 +1872,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * This operation is applicable to replica set instances, but cannot be performed on standalone instances and sharded cluster instances. You can use the following methods to clone an instance: [Create an instance from a backup point](~~55013~~) to clone a standalone instance. Call the [CreateShardingDBInstance](~~61884~~) operation to clone a sharded cluster instance.
-      * > This operation overwrites the data of the current instance, and the data cannot be recovered. Proceed with caution.
-      *
-     */
     @Override
-    public CompletableFuture<RestoreDBInstanceResponse> restoreDBInstance(RestoreDBInstanceRequest request) {
+    public CompletableFuture<RestartNodeResponse> restartNode(RestartNodeRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestoreDBInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestoreDBInstanceResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RestartNode").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RestartNodeResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<RestoreDBInstanceResponse> future = new CompletableFuture<>();
+            CompletableFuture<RestartNodeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

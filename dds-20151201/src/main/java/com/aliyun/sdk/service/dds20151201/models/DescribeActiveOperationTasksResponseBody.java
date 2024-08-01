@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeActiveOperationTasksResponseBody</p>
  */
 public class DescribeActiveOperationTasksResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeActiveOperationTasksResponseBody(Builder builder) {
@@ -132,82 +131,82 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AllowCancel")
+        @com.aliyun.core.annotation.NameInMap("AllowCancel")
         private String allowCancel;
 
-        @NameInMap("AllowChange")
+        @com.aliyun.core.annotation.NameInMap("AllowChange")
         private String allowChange;
 
-        @NameInMap("ChangeLevel")
+        @com.aliyun.core.annotation.NameInMap("ChangeLevel")
         private String changeLevel;
 
-        @NameInMap("ChangeLevelEn")
+        @com.aliyun.core.annotation.NameInMap("ChangeLevelEn")
         private String changeLevelEn;
 
-        @NameInMap("ChangeLevelZh")
+        @com.aliyun.core.annotation.NameInMap("ChangeLevelZh")
         private String changeLevelZh;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CurrentAVZ")
+        @com.aliyun.core.annotation.NameInMap("CurrentAVZ")
         private String currentAVZ;
 
-        @NameInMap("DbType")
+        @com.aliyun.core.annotation.NameInMap("DbType")
         private String dbType;
 
-        @NameInMap("DbVersion")
+        @com.aliyun.core.annotation.NameInMap("DbVersion")
         private String dbVersion;
 
-        @NameInMap("Deadline")
+        @com.aliyun.core.annotation.NameInMap("Deadline")
         private String deadline;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("ImpactEn")
+        @com.aliyun.core.annotation.NameInMap("ImpactEn")
         private String impactEn;
 
-        @NameInMap("ImpactZh")
+        @com.aliyun.core.annotation.NameInMap("ImpactZh")
         private String impactZh;
 
-        @NameInMap("InsComment")
+        @com.aliyun.core.annotation.NameInMap("InsComment")
         private String insComment;
 
-        @NameInMap("InsName")
+        @com.aliyun.core.annotation.NameInMap("InsName")
         private String insName;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("PrepareInterval")
+        @com.aliyun.core.annotation.NameInMap("PrepareInterval")
         private String prepareInterval;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResultInfo")
+        @com.aliyun.core.annotation.NameInMap("ResultInfo")
         private String resultInfo;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubInsNames")
+        @com.aliyun.core.annotation.NameInMap("SubInsNames")
         private java.util.List < String > subInsNames;
 
-        @NameInMap("SwitchTime")
+        @com.aliyun.core.annotation.NameInMap("SwitchTime")
         private String switchTime;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeEn")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeEn")
         private String taskTypeEn;
 
-        @NameInMap("TaskTypeZh")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeZh")
         private String taskTypeZh;
 
         private Items(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstancePerformanceResponseBody</p>
  */
 public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PerformanceKeys")
+    @com.aliyun.core.annotation.NameInMap("PerformanceKeys")
     private PerformanceKeys performanceKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDBInstancePerformanceResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     } 
 
     public static class PerformanceValue extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PerformanceValue(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     }
     public static class PerformanceValues extends TeaModel {
-        @NameInMap("PerformanceValue")
+        @com.aliyun.core.annotation.NameInMap("PerformanceValue")
         private java.util.List < PerformanceValue> performanceValue;
 
         private PerformanceValues(Builder builder) {
@@ -214,16 +213,16 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     }
     public static class PerformanceKey extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("PerformanceValues")
+        @com.aliyun.core.annotation.NameInMap("PerformanceValues")
         private PerformanceValues performanceValues;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("ValueFormat")
+        @com.aliyun.core.annotation.NameInMap("ValueFormat")
         private String valueFormat;
 
         private PerformanceKey(Builder builder) {
@@ -318,7 +317,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
 
     }
     public static class PerformanceKeys extends TeaModel {
-        @NameInMap("PerformanceKey")
+        @com.aliyun.core.annotation.NameInMap("PerformanceKey")
         private java.util.List < PerformanceKey> performanceKey;
 
         private PerformanceKeys(Builder builder) {

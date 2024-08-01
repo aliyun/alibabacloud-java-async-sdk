@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupStorageResponseBody</p>
  */
 public class DescribeBackupStorageResponseBody extends TeaModel {
-    @NameInMap("FreeSize")
+    @com.aliyun.core.annotation.NameInMap("FreeSize")
     private Long freeSize;
 
-    @NameInMap("FullStorageSize")
+    @com.aliyun.core.annotation.NameInMap("FullStorageSize")
     private Long fullStorageSize;
 
-    @NameInMap("LogStorageSize")
+    @com.aliyun.core.annotation.NameInMap("LogStorageSize")
     private Long logStorageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupStorageResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FreeSize.
+         * The free quota for the storage capacity used for backup. Unit: bytes.
          */
         public Builder freeSize(Long freeSize) {
             this.freeSize = freeSize;
@@ -82,7 +81,10 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
         }
 
         /**
-         * FullStorageSize.
+         * The storage capacity used for the full backup. Unit: bytes.
+         * <p>
+         * 
+         * >  Instances that use cloud disks support snapshot backup. The size of the storage used for the current full backup is the size of the snapshot chain.
          */
         public Builder fullStorageSize(Long fullStorageSize) {
             this.fullStorageSize = fullStorageSize;
@@ -90,7 +92,7 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
         }
 
         /**
-         * LogStorageSize.
+         * The storage capacity used for the log backup. Unit: bytes.
          */
         public Builder logStorageSize(Long logStorageSize) {
             this.logStorageSize = logStorageSize;
@@ -98,7 +100,7 @@ public class DescribeBackupStorageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

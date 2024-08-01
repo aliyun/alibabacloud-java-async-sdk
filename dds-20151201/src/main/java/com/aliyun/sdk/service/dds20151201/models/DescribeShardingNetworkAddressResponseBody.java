@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeShardingNetworkAddressResponseBody</p>
  */
 public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
-    @NameInMap("CompatibleConnections")
+    @com.aliyun.core.annotation.NameInMap("CompatibleConnections")
     private CompatibleConnections compatibleConnections;
 
-    @NameInMap("NetworkAddresses")
+    @com.aliyun.core.annotation.NameInMap("NetworkAddresses")
     private NetworkAddresses networkAddresses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeShardingNetworkAddressResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
     } 
 
     public static class CompatibleConnection extends TeaModel {
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetworkAddress")
+        @com.aliyun.core.annotation.NameInMap("NetworkAddress")
         private String networkAddress;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private CompatibleConnection(Builder builder) {
@@ -264,7 +263,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
     }
     public static class CompatibleConnections extends TeaModel {
-        @NameInMap("CompatibleConnection")
+        @com.aliyun.core.annotation.NameInMap("CompatibleConnection")
         private java.util.List < CompatibleConnection> compatibleConnection;
 
         private CompatibleConnections(Builder builder) {
@@ -305,34 +304,34 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
     }
     public static class NetworkAddress extends TeaModel {
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("IPAddress")
+        @com.aliyun.core.annotation.NameInMap("IPAddress")
         private String IPAddress;
 
-        @NameInMap("NetworkAddress")
+        @com.aliyun.core.annotation.NameInMap("NetworkAddress")
         private String networkAddress;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeType")
+        @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VswitchId")
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
         private String vswitchId;
 
         private NetworkAddress(Builder builder) {
@@ -546,7 +545,7 @@ public class DescribeShardingNetworkAddressResponseBody extends TeaModel {
 
     }
     public static class NetworkAddresses extends TeaModel {
-        @NameInMap("NetworkAddress")
+        @com.aliyun.core.annotation.NameInMap("NetworkAddress")
         private java.util.List < NetworkAddress> networkAddress;
 
         private NetworkAddresses(Builder builder) {

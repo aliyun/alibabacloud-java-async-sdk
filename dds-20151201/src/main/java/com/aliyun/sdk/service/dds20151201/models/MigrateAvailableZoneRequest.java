@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MigrateAvailableZoneRequest</p>
  */
 public class MigrateAvailableZoneRequest extends Request {
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HiddenZoneId")
+    private String hiddenZoneId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Vswitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
+    private String secondaryZoneId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vswitch")
     private String vswitch;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private MigrateAvailableZoneRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.effectiveTime = builder.effectiveTime;
+        this.hiddenZoneId = builder.hiddenZoneId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.secondaryZoneId = builder.secondaryZoneId;
         this.vswitch = builder.vswitch;
         this.zoneId = builder.zoneId;
     }
@@ -86,6 +95,13 @@ public class MigrateAvailableZoneRequest extends Request {
     }
 
     /**
+     * @return hiddenZoneId
+     */
+    public String getHiddenZoneId() {
+        return this.hiddenZoneId;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -114,6 +130,13 @@ public class MigrateAvailableZoneRequest extends Request {
     }
 
     /**
+     * @return secondaryZoneId
+     */
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
+    }
+
+    /**
      * @return vswitch
      */
     public String getVswitch() {
@@ -130,10 +153,12 @@ public class MigrateAvailableZoneRequest extends Request {
     public static final class Builder extends Request.Builder<MigrateAvailableZoneRequest, Builder> {
         private String DBInstanceId; 
         private String effectiveTime; 
+        private String hiddenZoneId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String secondaryZoneId; 
         private String vswitch; 
         private String zoneId; 
 
@@ -145,10 +170,12 @@ public class MigrateAvailableZoneRequest extends Request {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
             this.effectiveTime = request.effectiveTime;
+            this.hiddenZoneId = request.hiddenZoneId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.secondaryZoneId = request.secondaryZoneId;
             this.vswitch = request.vswitch;
             this.zoneId = request.zoneId;
         } 
@@ -177,6 +204,15 @@ public class MigrateAvailableZoneRequest extends Request {
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
             this.effectiveTime = effectiveTime;
+            return this;
+        }
+
+        /**
+         * HiddenZoneId.
+         */
+        public Builder hiddenZoneId(String hiddenZoneId) {
+            this.putQueryParameter("HiddenZoneId", hiddenZoneId);
+            this.hiddenZoneId = hiddenZoneId;
             return this;
         }
 
@@ -213,6 +249,15 @@ public class MigrateAvailableZoneRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SecondaryZoneId.
+         */
+        public Builder secondaryZoneId(String secondaryZoneId) {
+            this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
+            this.secondaryZoneId = secondaryZoneId;
             return this;
         }
 

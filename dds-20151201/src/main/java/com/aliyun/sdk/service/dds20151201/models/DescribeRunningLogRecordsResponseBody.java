@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRunningLogRecordsResponseBody</p>
  */
 public class DescribeRunningLogRecordsResponseBody extends TeaModel {
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Integer totalRecordCount;
 
     private DescribeRunningLogRecordsResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
     } 
 
     public static class LogRecords extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("ConnInfo")
+        @com.aliyun.core.annotation.NameInMap("ConnInfo")
         private String connInfo;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
         private LogRecords(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeRunningLogRecordsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("LogRecords")
+        @com.aliyun.core.annotation.NameInMap("LogRecords")
         private java.util.List < LogRecords> logRecords;
 
         private Items(Builder builder) {

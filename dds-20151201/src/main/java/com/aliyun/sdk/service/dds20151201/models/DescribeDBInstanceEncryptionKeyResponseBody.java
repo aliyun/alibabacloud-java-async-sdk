@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceEncryptionKeyResponseBody</p>
  */
 public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @NameInMap("DeleteDate")
+    @com.aliyun.core.annotation.NameInMap("DeleteDate")
     private String deleteDate;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @NameInMap("EncryptionKeyStatus")
+    @com.aliyun.core.annotation.NameInMap("EncryptionKeyStatus")
     private String encryptionKeyStatus;
 
-    @NameInMap("KeyUsage")
+    @com.aliyun.core.annotation.NameInMap("KeyUsage")
     private String keyUsage;
 
-    @NameInMap("MaterialExpireTime")
+    @com.aliyun.core.annotation.NameInMap("MaterialExpireTime")
     private String materialExpireTime;
 
-    @NameInMap("Origin")
+    @com.aliyun.core.annotation.NameInMap("Origin")
     private String origin;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceEncryptionKeyResponseBody(Builder builder) {

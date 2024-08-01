@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGlobalSecurityIPGroupRelationResponseBody</p>
  */
 public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel {
-    @NameInMap("DBClusterId")
+    @com.aliyun.core.annotation.NameInMap("DBClusterId")
     private String DBClusterId;
 
-    @NameInMap("GlobalSecurityIPGroupRel")
+    @com.aliyun.core.annotation.NameInMap("GlobalSecurityIPGroupRel")
     private java.util.List < GlobalSecurityIPGroupRel> globalSecurityIPGroupRel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGlobalSecurityIPGroupRelationResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeGlobalSecurityIPGroupRelationResponseBody extends TeaModel 
     } 
 
     public static class GlobalSecurityIPGroupRel extends TeaModel {
-        @NameInMap("GIpList")
+        @com.aliyun.core.annotation.NameInMap("GIpList")
         private String gIpList;
 
-        @NameInMap("GlobalIgName")
+        @com.aliyun.core.annotation.NameInMap("GlobalIgName")
         private String globalIgName;
 
-        @NameInMap("GlobalSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("GlobalSecurityGroupId")
         private String globalSecurityGroupId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private GlobalSecurityIPGroupRel(Builder builder) {

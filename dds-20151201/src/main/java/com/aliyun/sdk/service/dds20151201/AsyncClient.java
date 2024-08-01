@@ -42,7 +42,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckRecoveryConditionResponse> checkRecoveryCondition(CheckRecoveryConditionRequest request);
 
     /**
-      * Database accounts can be created only for shards in sharded cluster instances that use cloud disks.
+      * *   You can create an account for shard nodes only in an ApsaraDB for MongoDB sharded cluster instance that uses cloud disks.
+      * *   The account is granted read-only permissions.
       *
      */
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
@@ -405,6 +406,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request);
 
+    /**
+      * You can modify the connection strings and ports of the following instances:
+      * *   You can modify the connection strings of instances that use local or cloud disks.
+      * *   You can only modify the ports of instances that use cloud disks.
+      *
+     */
     CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request);
 
     CompletableFuture<ModifyDBInstanceDescriptionResponse> modifyDBInstanceDescription(ModifyDBInstanceDescriptionRequest request);
@@ -561,12 +568,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<RestartDBInstanceResponse> restartDBInstance(RestartDBInstanceRequest request);
 
-    /**
-      * This operation is applicable to replica set instances, but cannot be performed on standalone instances and sharded cluster instances. You can use the following methods to clone an instance: [Create an instance from a backup point](~~55013~~) to clone a standalone instance. Call the [CreateShardingDBInstance](~~61884~~) operation to clone a sharded cluster instance.
-      * > This operation overwrites the data of the current instance, and the data cannot be recovered. Proceed with caution.
-      *
-     */
-    CompletableFuture<RestoreDBInstanceResponse> restoreDBInstance(RestoreDBInstanceRequest request);
+    CompletableFuture<RestartNodeResponse> restartNode(RestartNodeRequest request);
 
     /**
       * The instance must be running when you call this operation.

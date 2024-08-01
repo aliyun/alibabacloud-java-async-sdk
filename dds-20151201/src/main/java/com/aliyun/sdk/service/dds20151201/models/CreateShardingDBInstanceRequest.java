@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,156 +11,174 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateShardingDBInstanceRequest</p>
  */
 public class CreateShardingDBInstanceRequest extends Request {
-    @Query
-    @NameInMap("AccountPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountPassword")
     private String accountPassword;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    private String backupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ConfigServer")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigServer")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ConfigServer> configServer;
 
-    @Query
-    @NameInMap("DBInstanceDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceDescription")
     private String DBInstanceDescription;
 
-    @Query
-    @NameInMap("Encrypted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestRegion")
+    private String destRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encrypted")
     private Boolean encrypted;
 
-    @Query
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("GlobalSecurityGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GlobalSecurityGroupIds")
     private String globalSecurityGroupIds;
 
-    @Query
-    @NameInMap("HiddenZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HiddenZoneId")
     private String hiddenZoneId;
 
-    @Query
-    @NameInMap("Mongos")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mongos")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Mongos> mongos;
 
-    @Query
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @Query
-    @NameInMap("ProvisionedIops")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
     private Long provisionedIops;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReplicaSet")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicaSet")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ReplicaSet> replicaSet;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestoreTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTime")
     private String restoreTime;
 
-    @Query
-    @NameInMap("SecondaryZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreType")
+    private String restoreType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecondaryZoneId")
     private String secondaryZoneId;
 
-    @Query
-    @NameInMap("SecurityIPList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPList")
     private String securityIPList;
 
-    @Query
-    @NameInMap("SrcDBInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcDBInstanceId")
     private String srcDBInstanceId;
 
-    @Query
-    @NameInMap("StorageEngine")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcRegion")
+    private String srcRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageEngine")
     private String storageEngine;
 
-    @Query
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateShardingDBInstanceRequest(Builder builder) {
         super(builder);
         this.accountPassword = builder.accountPassword;
         this.autoRenew = builder.autoRenew;
+        this.backupId = builder.backupId;
         this.chargeType = builder.chargeType;
         this.clientToken = builder.clientToken;
         this.configServer = builder.configServer;
         this.DBInstanceDescription = builder.DBInstanceDescription;
+        this.destRegion = builder.destRegion;
         this.encrypted = builder.encrypted;
         this.encryptionKey = builder.encryptionKey;
         this.engine = builder.engine;
@@ -181,9 +198,11 @@ public class CreateShardingDBInstanceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
+        this.restoreType = builder.restoreType;
         this.secondaryZoneId = builder.secondaryZoneId;
         this.securityIPList = builder.securityIPList;
         this.srcDBInstanceId = builder.srcDBInstanceId;
+        this.srcRegion = builder.srcRegion;
         this.storageEngine = builder.storageEngine;
         this.storageType = builder.storageType;
         this.tag = builder.tag;
@@ -220,6 +239,13 @@ public class CreateShardingDBInstanceRequest extends Request {
     }
 
     /**
+     * @return backupId
+     */
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    /**
      * @return chargeType
      */
     public String getChargeType() {
@@ -245,6 +271,13 @@ public class CreateShardingDBInstanceRequest extends Request {
      */
     public String getDBInstanceDescription() {
         return this.DBInstanceDescription;
+    }
+
+    /**
+     * @return destRegion
+     */
+    public String getDestRegion() {
+        return this.destRegion;
     }
 
     /**
@@ -381,6 +414,13 @@ public class CreateShardingDBInstanceRequest extends Request {
     }
 
     /**
+     * @return restoreType
+     */
+    public String getRestoreType() {
+        return this.restoreType;
+    }
+
+    /**
      * @return secondaryZoneId
      */
     public String getSecondaryZoneId() {
@@ -399,6 +439,13 @@ public class CreateShardingDBInstanceRequest extends Request {
      */
     public String getSrcDBInstanceId() {
         return this.srcDBInstanceId;
+    }
+
+    /**
+     * @return srcRegion
+     */
+    public String getSrcRegion() {
+        return this.srcRegion;
     }
 
     /**
@@ -446,10 +493,12 @@ public class CreateShardingDBInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateShardingDBInstanceRequest, Builder> {
         private String accountPassword; 
         private String autoRenew; 
+        private String backupId; 
         private String chargeType; 
         private String clientToken; 
         private java.util.List < ConfigServer> configServer; 
         private String DBInstanceDescription; 
+        private String destRegion; 
         private Boolean encrypted; 
         private String encryptionKey; 
         private String engine; 
@@ -469,9 +518,11 @@ public class CreateShardingDBInstanceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restoreTime; 
+        private String restoreType; 
         private String secondaryZoneId; 
         private String securityIPList; 
         private String srcDBInstanceId; 
+        private String srcRegion; 
         private String storageEngine; 
         private String storageType; 
         private java.util.List < Tag> tag; 
@@ -487,10 +538,12 @@ public class CreateShardingDBInstanceRequest extends Request {
             super(request);
             this.accountPassword = request.accountPassword;
             this.autoRenew = request.autoRenew;
+            this.backupId = request.backupId;
             this.chargeType = request.chargeType;
             this.clientToken = request.clientToken;
             this.configServer = request.configServer;
             this.DBInstanceDescription = request.DBInstanceDescription;
+            this.destRegion = request.destRegion;
             this.encrypted = request.encrypted;
             this.encryptionKey = request.encryptionKey;
             this.engine = request.engine;
@@ -510,9 +563,11 @@ public class CreateShardingDBInstanceRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreTime = request.restoreTime;
+            this.restoreType = request.restoreType;
             this.secondaryZoneId = request.secondaryZoneId;
             this.securityIPList = request.securityIPList;
             this.srcDBInstanceId = request.srcDBInstanceId;
+            this.srcRegion = request.srcRegion;
             this.storageEngine = request.storageEngine;
             this.storageType = request.storageType;
             this.tag = request.tag;
@@ -547,6 +602,15 @@ public class CreateShardingDBInstanceRequest extends Request {
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
             this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
+         * BackupId.
+         */
+        public Builder backupId(String backupId) {
+            this.putQueryParameter("BackupId", backupId);
+            this.backupId = backupId;
             return this;
         }
 
@@ -594,6 +658,15 @@ public class CreateShardingDBInstanceRequest extends Request {
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
             this.DBInstanceDescription = DBInstanceDescription;
+            return this;
+        }
+
+        /**
+         * DestRegion.
+         */
+        public Builder destRegion(String destRegion) {
+            this.putQueryParameter("DestRegion", destRegion);
+            this.destRegion = destRegion;
             return this;
         }
 
@@ -816,6 +889,15 @@ public class CreateShardingDBInstanceRequest extends Request {
         }
 
         /**
+         * RestoreType.
+         */
+        public Builder restoreType(String restoreType) {
+            this.putQueryParameter("RestoreType", restoreType);
+            this.restoreType = restoreType;
+            return this;
+        }
+
+        /**
          * The ID of secondary zone 1 for multi-zone deployment. Valid values:
          * <p>
          * 
@@ -874,6 +956,15 @@ public class CreateShardingDBInstanceRequest extends Request {
         public Builder srcDBInstanceId(String srcDBInstanceId) {
             this.putQueryParameter("SrcDBInstanceId", srcDBInstanceId);
             this.srcDBInstanceId = srcDBInstanceId;
+            return this;
+        }
+
+        /**
+         * SrcRegion.
+         */
+        public Builder srcRegion(String srcRegion) {
+            this.putQueryParameter("SrcRegion", srcRegion);
+            this.srcRegion = srcRegion;
             return this;
         }
 
@@ -952,12 +1043,12 @@ public class CreateShardingDBInstanceRequest extends Request {
     } 
 
     public static class ConfigServer extends TeaModel {
-        @NameInMap("Class")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Class")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String _class;
 
-        @NameInMap("Storage")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Storage")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer storage;
 
         private ConfigServer(Builder builder) {
@@ -1022,8 +1113,8 @@ public class CreateShardingDBInstanceRequest extends Request {
 
     }
     public static class Mongos extends TeaModel {
-        @NameInMap("Class")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Class")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String _class;
 
         private Mongos(Builder builder) {
@@ -1068,16 +1159,16 @@ public class CreateShardingDBInstanceRequest extends Request {
 
     }
     public static class ReplicaSet extends TeaModel {
-        @NameInMap("Class")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Class")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String _class;
 
-        @NameInMap("ReadonlyReplicas")
-        @Validation(maximum = 5)
+        @com.aliyun.core.annotation.NameInMap("ReadonlyReplicas")
+        @com.aliyun.core.annotation.Validation(maximum = 5)
         private Integer readonlyReplicas;
 
-        @NameInMap("Storage")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Storage")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer storage;
 
         private ReplicaSet(Builder builder) {
@@ -1165,10 +1256,10 @@ public class CreateShardingDBInstanceRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

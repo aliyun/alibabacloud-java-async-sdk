@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupsRequest</p>
  */
 public class DescribeBackupsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BackupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
     private String backupId;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestRegion")
+    private String destRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcRegion")
+    private String srcRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeBackupsRequest(Builder builder) {
@@ -66,6 +73,7 @@ public class DescribeBackupsRequest extends Request {
         this.regionId = builder.regionId;
         this.backupId = builder.backupId;
         this.DBInstanceId = builder.DBInstanceId;
+        this.destRegion = builder.destRegion;
         this.endTime = builder.endTime;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
@@ -74,6 +82,7 @@ public class DescribeBackupsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.srcRegion = builder.srcRegion;
         this.startTime = builder.startTime;
     }
 
@@ -109,6 +118,13 @@ public class DescribeBackupsRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return destRegion
+     */
+    public String getDestRegion() {
+        return this.destRegion;
     }
 
     /**
@@ -168,6 +184,13 @@ public class DescribeBackupsRequest extends Request {
     }
 
     /**
+     * @return srcRegion
+     */
+    public String getSrcRegion() {
+        return this.srcRegion;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -178,6 +201,7 @@ public class DescribeBackupsRequest extends Request {
         private String regionId; 
         private String backupId; 
         private String DBInstanceId; 
+        private String destRegion; 
         private String endTime; 
         private String nodeId; 
         private String ownerAccount; 
@@ -186,6 +210,7 @@ public class DescribeBackupsRequest extends Request {
         private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String srcRegion; 
         private String startTime; 
 
         private Builder() {
@@ -197,6 +222,7 @@ public class DescribeBackupsRequest extends Request {
             this.regionId = request.regionId;
             this.backupId = request.backupId;
             this.DBInstanceId = request.DBInstanceId;
+            this.destRegion = request.destRegion;
             this.endTime = request.endTime;
             this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
@@ -205,6 +231,7 @@ public class DescribeBackupsRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.srcRegion = request.srcRegion;
             this.startTime = request.startTime;
         } 
 
@@ -238,6 +265,15 @@ public class DescribeBackupsRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DestRegion.
+         */
+        public Builder destRegion(String destRegion) {
+            this.putQueryParameter("DestRegion", destRegion);
+            this.destRegion = destRegion;
             return this;
         }
 
@@ -318,6 +354,15 @@ public class DescribeBackupsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SrcRegion.
+         */
+        public Builder srcRegion(String srcRegion) {
+            this.putQueryParameter("SrcRegion", srcRegion);
+            this.srcRegion = srcRegion;
             return this;
         }
 

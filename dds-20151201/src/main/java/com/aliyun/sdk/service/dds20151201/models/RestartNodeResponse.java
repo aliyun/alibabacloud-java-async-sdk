@@ -1,34 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RestoreDBInstanceResponse} extends {@link TeaModel}
+ * {@link RestartNodeResponse} extends {@link TeaModel}
  *
- * <p>RestoreDBInstanceResponse</p>
+ * <p>RestartNodeResponse</p>
  */
-public class RestoreDBInstanceResponse extends Response {
-    @NameInMap("headers")
+public class RestartNodeResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    private RestoreDBInstanceResponseBody body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private RestartNodeResponseBody body;
 
-    private RestoreDBInstanceResponse(BuilderImpl builder) {
+    private RestartNodeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RestoreDBInstanceResponse create() {
+    public static RestartNodeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +53,35 @@ public class RestoreDBInstanceResponse extends Response {
     /**
      * @return body
      */
-    public RestoreDBInstanceResponseBody getBody() {
+    public RestartNodeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RestoreDBInstanceResponse, Builder> {
+    public interface Builder extends Response.Builder<RestartNodeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RestoreDBInstanceResponseBody body);
+        Builder body(RestartNodeResponseBody body);
 
         @Override
-        RestoreDBInstanceResponse build();
+        RestartNodeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RestoreDBInstanceResponse, Builder>
+            extends Response.BuilderImpl<RestartNodeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private RestoreDBInstanceResponseBody body; 
+        private RestartNodeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RestoreDBInstanceResponse response) {
+        private BuilderImpl(RestartNodeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +110,14 @@ public class RestoreDBInstanceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RestoreDBInstanceResponseBody body) {
+        public Builder body(RestartNodeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RestoreDBInstanceResponse build() {
-            return new RestoreDBInstanceResponse(this);
+        public RestartNodeResponse build() {
+            return new RestartNodeResponse(this);
         } 
 
     } 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeReplicaSetRoleResponseBody</p>
  */
 public class DescribeReplicaSetRoleResponseBody extends TeaModel {
-    @NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     private String DBInstanceId;
 
-    @NameInMap("ReplicaSets")
+    @com.aliyun.core.annotation.NameInMap("ReplicaSets")
     private ReplicaSets replicaSets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeReplicaSetRoleResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
     } 
 
     public static class ReplicaSet extends TeaModel {
-        @NameInMap("ConnectionDomain")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDomain")
         private String connectionDomain;
 
-        @NameInMap("ConnectionPort")
+        @com.aliyun.core.annotation.NameInMap("ConnectionPort")
         private String connectionPort;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("ReplicaSetRole")
+        @com.aliyun.core.annotation.NameInMap("ReplicaSetRole")
         private String replicaSetRole;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
         private ReplicaSet(Builder builder) {
@@ -242,7 +241,7 @@ public class DescribeReplicaSetRoleResponseBody extends TeaModel {
 
     }
     public static class ReplicaSets extends TeaModel {
-        @NameInMap("ReplicaSet")
+        @com.aliyun.core.annotation.NameInMap("ReplicaSet")
         private java.util.List < ReplicaSet> replicaSet;
 
         private ReplicaSets(Builder builder) {

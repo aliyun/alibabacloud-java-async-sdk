@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterBackupsResponseBody</p>
  */
 public class DescribeClusterBackupsResponseBody extends TeaModel {
-    @NameInMap("ClusterBackups")
+    @com.aliyun.core.annotation.NameInMap("ClusterBackups")
     private java.util.List < ClusterBackups> clusterBackups;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClusterBackupsResponseBody(Builder builder) {
@@ -131,35 +130,139 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
     } 
 
+    public static class ExtraInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
+        private String instanceClass;
+
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        private String nodeId;
+
+        @com.aliyun.core.annotation.NameInMap("NodeType")
+        private String nodeType;
+
+        @com.aliyun.core.annotation.NameInMap("StorageSize")
+        private String storageSize;
+
+        private ExtraInfo(Builder builder) {
+            this.instanceClass = builder.instanceClass;
+            this.nodeId = builder.nodeId;
+            this.nodeType = builder.nodeType;
+            this.storageSize = builder.storageSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtraInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceClass
+         */
+        public String getInstanceClass() {
+            return this.instanceClass;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        /**
+         * @return nodeType
+         */
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
+        /**
+         * @return storageSize
+         */
+        public String getStorageSize() {
+            return this.storageSize;
+        }
+
+        public static final class Builder {
+            private String instanceClass; 
+            private String nodeId; 
+            private String nodeType; 
+            private String storageSize; 
+
+            /**
+             * The instance type of the node.
+             */
+            public Builder instanceClass(String instanceClass) {
+                this.instanceClass = instanceClass;
+                return this;
+            }
+
+            /**
+             * The node ID.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * The node type.
+             */
+            public Builder nodeType(String nodeType) {
+                this.nodeType = nodeType;
+                return this;
+            }
+
+            /**
+             * The storage capacity of the node. Unit: MB.
+             */
+            public Builder storageSize(String storageSize) {
+                this.storageSize = storageSize;
+                return this;
+            }
+
+            public ExtraInfo build() {
+                return new ExtraInfo(this);
+            } 
+
+        } 
+
+    }
     public static class Backups extends TeaModel {
-        @NameInMap("BackupDownloadURL")
+        @com.aliyun.core.annotation.NameInMap("BackupDownloadURL")
         private String backupDownloadURL;
 
-        @NameInMap("BackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
-        @NameInMap("BackupId")
+        @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
-        @NameInMap("BackupIntranetDownloadURL")
+        @com.aliyun.core.annotation.NameInMap("BackupIntranetDownloadURL")
         private String backupIntranetDownloadURL;
 
-        @NameInMap("BackupName")
+        @com.aliyun.core.annotation.NameInMap("BackupName")
         private String backupName;
 
-        @NameInMap("BackupSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSize")
         private String backupSize;
 
-        @NameInMap("BackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("BackupStartTime")
         private String backupStartTime;
 
-        @NameInMap("BackupStatus")
+        @com.aliyun.core.annotation.NameInMap("BackupStatus")
         private String backupStatus;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+        private ExtraInfo extraInfo;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("IsAvail")
+        @com.aliyun.core.annotation.NameInMap("IsAvail")
         private String isAvail;
 
         private Backups(Builder builder) {
@@ -171,6 +274,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             this.backupSize = builder.backupSize;
             this.backupStartTime = builder.backupStartTime;
             this.backupStatus = builder.backupStatus;
+            this.extraInfo = builder.extraInfo;
             this.instanceName = builder.instanceName;
             this.isAvail = builder.isAvail;
         }
@@ -240,6 +344,13 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return extraInfo
+         */
+        public ExtraInfo getExtraInfo() {
+            return this.extraInfo;
+        }
+
+        /**
          * @return instanceName
          */
         public String getInstanceName() {
@@ -262,6 +373,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             private String backupSize; 
             private String backupStartTime; 
             private String backupStatus; 
+            private ExtraInfo extraInfo; 
             private String instanceName; 
             private String isAvail; 
 
@@ -274,7 +386,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The end time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -314,7 +426,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the backup time range. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The start time of the backup. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -334,7 +446,15 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the shard.
+             * The information of the node associated with the backup.
+             */
+            public Builder extraInfo(ExtraInfo extraInfo) {
+                this.extraInfo = extraInfo;
+                return this;
+            }
+
+            /**
+             * The shard name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -360,11 +480,11 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         } 
 
     }
-    public static class ExtraInfo extends TeaModel {
-        @NameInMap("RegistryFromHistory")
+    public static class ClusterBackupsExtraInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("RegistryFromHistory")
         private String registryFromHistory;
 
-        private ExtraInfo(Builder builder) {
+        private ClusterBackupsExtraInfo(Builder builder) {
             this.registryFromHistory = builder.registryFromHistory;
         }
 
@@ -372,7 +492,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static ExtraInfo create() {
+        public static ClusterBackupsExtraInfo create() {
             return builder().build();
         }
 
@@ -387,52 +507,56 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             private String registryFromHistory; 
 
             /**
-             * Indicates whether the cluster backups are from the historical backup sets. If the value of this parameter is **1**, the cluster backups are migrated from the historical backup sets.
+             * Indicates whether the cluster backups are migrated from the historical backup sets. If the value of this parameter is **1**, the cluster backups are migrated from the historical backup sets.
              */
             public Builder registryFromHistory(String registryFromHistory) {
                 this.registryFromHistory = registryFromHistory;
                 return this;
             }
 
-            public ExtraInfo build() {
-                return new ExtraInfo(this);
+            public ClusterBackupsExtraInfo build() {
+                return new ClusterBackupsExtraInfo(this);
             } 
 
         } 
 
     }
     public static class ClusterBackups extends TeaModel {
-        @NameInMap("Backups")
+        @com.aliyun.core.annotation.NameInMap("AttachLogStatus")
+        private String attachLogStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Backups")
         private java.util.List < Backups> backups;
 
-        @NameInMap("ClusterBackupEndTime")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupEndTime")
         private String clusterBackupEndTime;
 
-        @NameInMap("ClusterBackupId")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupId")
         private String clusterBackupId;
 
-        @NameInMap("ClusterBackupMode")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupMode")
         private String clusterBackupMode;
 
-        @NameInMap("ClusterBackupSize")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupSize")
         private String clusterBackupSize;
 
-        @NameInMap("ClusterBackupStartTime")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupStartTime")
         private String clusterBackupStartTime;
 
-        @NameInMap("ClusterBackupStatus")
+        @com.aliyun.core.annotation.NameInMap("ClusterBackupStatus")
         private String clusterBackupStatus;
 
-        @NameInMap("ExtraInfo")
-        private ExtraInfo extraInfo;
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+        private ClusterBackupsExtraInfo extraInfo;
 
-        @NameInMap("IsAvail")
+        @com.aliyun.core.annotation.NameInMap("IsAvail")
         private Integer isAvail;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
         private ClusterBackups(Builder builder) {
+            this.attachLogStatus = builder.attachLogStatus;
             this.backups = builder.backups;
             this.clusterBackupEndTime = builder.clusterBackupEndTime;
             this.clusterBackupId = builder.clusterBackupId;
@@ -451,6 +575,13 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
         public static ClusterBackups create() {
             return builder().build();
+        }
+
+        /**
+         * @return attachLogStatus
+         */
+        public String getAttachLogStatus() {
+            return this.attachLogStatus;
         }
 
         /**
@@ -505,7 +636,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         /**
          * @return extraInfo
          */
-        public ExtraInfo getExtraInfo() {
+        public ClusterBackupsExtraInfo getExtraInfo() {
             return this.extraInfo;
         }
 
@@ -524,6 +655,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String attachLogStatus; 
             private java.util.List < Backups> backups; 
             private String clusterBackupEndTime; 
             private String clusterBackupId; 
@@ -531,9 +663,26 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             private String clusterBackupSize; 
             private String clusterBackupStartTime; 
             private String clusterBackupStatus; 
-            private ExtraInfo extraInfo; 
+            private ClusterBackupsExtraInfo extraInfo; 
             private Integer isAvail; 
             private String progress; 
+
+            /**
+             * The backup status. Valid values:
+             * <p>
+             * 
+             * *   **init**: The backup is being initialized.
+             * *   **No_Need**: Log backup is not performed.
+             * *   **Running**: Log backup is being performed.
+             * *   **Ready**: Log backup is complete.
+             * *   **Failed**: Log backup failed.
+             * 
+             * >  If the **ClusterBackupStatus** parameter is set to OK, full backup is successful. If you want to perform point-in-time-restoration on an instance for which log backup is enabled or to implement consistency restoration, make sure that log backup is complete.
+             */
+            public Builder attachLogStatus(String attachLogStatus) {
+                this.attachLogStatus = attachLogStatus;
+                return this;
+            }
 
             /**
              * The collection of the backup sets of each child node in a cluster backup set.
@@ -552,7 +701,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster backup set.
+             * The backup set ID.
              */
             public Builder clusterBackupId(String clusterBackupId) {
                 this.clusterBackupId = clusterBackupId;
@@ -592,9 +741,9 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information in JSON format.
+             * The additional information in the JSON format.
              */
-            public Builder extraInfo(ExtraInfo extraInfo) {
+            public Builder extraInfo(ClusterBackupsExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
                 return this;
             }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyActiveOperationTasksResponseBody</p>
  */
 public class ModifyActiveOperationTasksResponseBody extends TeaModel {
-    @NameInMap("Ids")
+    @com.aliyun.core.annotation.NameInMap("Ids")
     private String ids;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyActiveOperationTasksResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Ids.
+         * The IDs of the O\&M tasks. Multiple task IDs are separated by commas (,).
          */
         public Builder ids(String ids) {
             this.ids = ids;
@@ -58,7 +57,7 @@ public class ModifyActiveOperationTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

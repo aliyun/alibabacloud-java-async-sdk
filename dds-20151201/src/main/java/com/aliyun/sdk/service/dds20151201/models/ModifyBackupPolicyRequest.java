@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,125 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyBackupPolicyRequest</p>
  */
 public class ModifyBackupPolicyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BackupInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupInterval")
     private String backupInterval;
 
-    @Query
-    @NameInMap("BackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
     private Long backupRetentionPeriod;
 
-    @Query
-    @NameInMap("DBInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPolicyOnClusterDeletion")
+    private Integer backupRetentionPolicyOnClusterDeletion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossBackupPeriod")
+    private String crossBackupPeriod;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossBackupType")
+    private String crossBackupType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossLogRetentionType")
+    private String crossLogRetentionType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossLogRetentionValue")
+    private Integer crossLogRetentionValue;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRetentionType")
+    private String crossRetentionType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRetentionValue")
+    private Integer crossRetentionValue;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
-    @Query
-    @NameInMap("EnableBackupLog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestRegion")
+    private String destRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableBackupLog")
     private Long enableBackupLog;
 
-    @Query
-    @NameInMap("HighFrequencyBackupRetention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCrossLogBackup")
+    private Integer enableCrossLogBackup;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HighFrequencyBackupRetention")
     private Long highFrequencyBackupRetention;
 
-    @Query
-    @NameInMap("LogBackupRetentionPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogBackupRetentionPeriod")
     private Long logBackupRetentionPeriod;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PreferredBackupPeriod")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupPeriod")
     private String preferredBackupPeriod;
 
-    @Query
-    @NameInMap("PreferredBackupTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreferredBackupTime")
     private String preferredBackupTime;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SnapshotBackupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotBackupType")
     private String snapshotBackupType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcRegion")
+    private String srcRegion;
 
     private ModifyBackupPolicyRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.backupInterval = builder.backupInterval;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
+        this.backupRetentionPolicyOnClusterDeletion = builder.backupRetentionPolicyOnClusterDeletion;
+        this.crossBackupPeriod = builder.crossBackupPeriod;
+        this.crossBackupType = builder.crossBackupType;
+        this.crossLogRetentionType = builder.crossLogRetentionType;
+        this.crossLogRetentionValue = builder.crossLogRetentionValue;
+        this.crossRetentionType = builder.crossRetentionType;
+        this.crossRetentionValue = builder.crossRetentionValue;
         this.DBInstanceId = builder.DBInstanceId;
+        this.destRegion = builder.destRegion;
         this.enableBackupLog = builder.enableBackupLog;
+        this.enableCrossLogBackup = builder.enableCrossLogBackup;
         this.highFrequencyBackupRetention = builder.highFrequencyBackupRetention;
+        this.instanceType = builder.instanceType;
         this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -87,6 +138,7 @@ public class ModifyBackupPolicyRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.snapshotBackupType = builder.snapshotBackupType;
+        this.srcRegion = builder.srcRegion;
     }
 
     public static Builder builder() {
@@ -124,10 +176,66 @@ public class ModifyBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return backupRetentionPolicyOnClusterDeletion
+     */
+    public Integer getBackupRetentionPolicyOnClusterDeletion() {
+        return this.backupRetentionPolicyOnClusterDeletion;
+    }
+
+    /**
+     * @return crossBackupPeriod
+     */
+    public String getCrossBackupPeriod() {
+        return this.crossBackupPeriod;
+    }
+
+    /**
+     * @return crossBackupType
+     */
+    public String getCrossBackupType() {
+        return this.crossBackupType;
+    }
+
+    /**
+     * @return crossLogRetentionType
+     */
+    public String getCrossLogRetentionType() {
+        return this.crossLogRetentionType;
+    }
+
+    /**
+     * @return crossLogRetentionValue
+     */
+    public Integer getCrossLogRetentionValue() {
+        return this.crossLogRetentionValue;
+    }
+
+    /**
+     * @return crossRetentionType
+     */
+    public String getCrossRetentionType() {
+        return this.crossRetentionType;
+    }
+
+    /**
+     * @return crossRetentionValue
+     */
+    public Integer getCrossRetentionValue() {
+        return this.crossRetentionValue;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return destRegion
+     */
+    public String getDestRegion() {
+        return this.destRegion;
     }
 
     /**
@@ -138,10 +246,24 @@ public class ModifyBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return enableCrossLogBackup
+     */
+    public Integer getEnableCrossLogBackup() {
+        return this.enableCrossLogBackup;
+    }
+
+    /**
      * @return highFrequencyBackupRetention
      */
     public Long getHighFrequencyBackupRetention() {
         return this.highFrequencyBackupRetention;
+    }
+
+    /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     /**
@@ -200,13 +322,30 @@ public class ModifyBackupPolicyRequest extends Request {
         return this.snapshotBackupType;
     }
 
+    /**
+     * @return srcRegion
+     */
+    public String getSrcRegion() {
+        return this.srcRegion;
+    }
+
     public static final class Builder extends Request.Builder<ModifyBackupPolicyRequest, Builder> {
         private String regionId; 
         private String backupInterval; 
         private Long backupRetentionPeriod; 
+        private Integer backupRetentionPolicyOnClusterDeletion; 
+        private String crossBackupPeriod; 
+        private String crossBackupType; 
+        private String crossLogRetentionType; 
+        private Integer crossLogRetentionValue; 
+        private String crossRetentionType; 
+        private Integer crossRetentionValue; 
         private String DBInstanceId; 
+        private String destRegion; 
         private Long enableBackupLog; 
+        private Integer enableCrossLogBackup; 
         private Long highFrequencyBackupRetention; 
+        private String instanceType; 
         private Long logBackupRetentionPeriod; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -215,6 +354,7 @@ public class ModifyBackupPolicyRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String snapshotBackupType; 
+        private String srcRegion; 
 
         private Builder() {
             super();
@@ -225,9 +365,19 @@ public class ModifyBackupPolicyRequest extends Request {
             this.regionId = request.regionId;
             this.backupInterval = request.backupInterval;
             this.backupRetentionPeriod = request.backupRetentionPeriod;
+            this.backupRetentionPolicyOnClusterDeletion = request.backupRetentionPolicyOnClusterDeletion;
+            this.crossBackupPeriod = request.crossBackupPeriod;
+            this.crossBackupType = request.crossBackupType;
+            this.crossLogRetentionType = request.crossLogRetentionType;
+            this.crossLogRetentionValue = request.crossLogRetentionValue;
+            this.crossRetentionType = request.crossRetentionType;
+            this.crossRetentionValue = request.crossRetentionValue;
             this.DBInstanceId = request.DBInstanceId;
+            this.destRegion = request.destRegion;
             this.enableBackupLog = request.enableBackupLog;
+            this.enableCrossLogBackup = request.enableCrossLogBackup;
             this.highFrequencyBackupRetention = request.highFrequencyBackupRetention;
+            this.instanceType = request.instanceType;
             this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -236,6 +386,7 @@ public class ModifyBackupPolicyRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.snapshotBackupType = request.snapshotBackupType;
+            this.srcRegion = request.srcRegion;
         } 
 
         /**
@@ -248,22 +399,24 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The frequency at which high-frequency backups are created. Valid values:
+         * The frequency at which high-frequency backup is created. Valid values:
          * <p>
          * 
-         * *   **-1**: disables high-frequency backup.
-         * *   **15**: every 15 minutes.
-         * *   **30**: every 30 minutes.
-         * *   **60**: every hour.
-         * *   **120**: every 2 hours.
-         * *   **180**: every 3 hours.
-         * *   **240**: every 4 hours.
-         * *   **360**: every 6 hours.
-         * *   **480**: every 8 hours.
-         * *   **720**: every 12 hours.
+         * *   **-1**: High-frequency backup is disabled.
+         * *   **30**: High-frequency backups are generated every 30 minutes.
+         * *   **60**: High-frequency backups are generated every 1 hour.
+         * *   **120**: High-frequency backups are generated every 2 hours.
+         * *   **180**: High-frequency backups are generated every 3 hours.
+         * *   **240**: High-frequency backups are generated every 4 hours.
+         * *   **360**: High-frequency backups are generated every 6 hours.
+         * *   **480**: High-frequency backups are generated every 8 hours.
+         * *   **720**: High-frequency backups are generated every 12 hours.
          * 
-         * > * If **SnapshotBackupType** is set to **Standard**, this parameter is set to **-1** and cannot be changed.
-         * > * High-frequency backup takes effect only when **SnapshotBackupType** is set to **Flash** and the value of this parameter is greater than 0.
+         * > 
+         * 
+         * *   If the **SnapshotBackupType** parameter is set to **Standard**, this parameter is set to -1 and cannot be changed.
+         * 
+         * *   High-frequency backup takes effect only when the **SnapshotBackupType** parameter is set to **Flash** and the value of this parameter is greater than 0.
          */
         public Builder backupInterval(String backupInterval) {
             this.putQueryParameter("BackupInterval", backupInterval);
@@ -275,8 +428,11 @@ public class ModifyBackupPolicyRequest extends Request {
          * The retention period of full backups.
          * <p>
          * 
-         * > * If your instance is created before September 10, 2021, backups are retained for seven days by default.
-         * > * If your instance is created after September 10, 2021, backups are retained for 30 days by default.
+         * > 
+         * 
+         * *   If your instance is created before September 10, 2021, backups are retained for seven days by default.
+         * 
+         * *   If your instance is created after September 10, 2021, backups are retained for 30 days by default.
          */
         public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -285,7 +441,70 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * BackupRetentionPolicyOnClusterDeletion.
+         */
+        public Builder backupRetentionPolicyOnClusterDeletion(Integer backupRetentionPolicyOnClusterDeletion) {
+            this.putQueryParameter("BackupRetentionPolicyOnClusterDeletion", backupRetentionPolicyOnClusterDeletion);
+            this.backupRetentionPolicyOnClusterDeletion = backupRetentionPolicyOnClusterDeletion;
+            return this;
+        }
+
+        /**
+         * CrossBackupPeriod.
+         */
+        public Builder crossBackupPeriod(String crossBackupPeriod) {
+            this.putQueryParameter("CrossBackupPeriod", crossBackupPeriod);
+            this.crossBackupPeriod = crossBackupPeriod;
+            return this;
+        }
+
+        /**
+         * CrossBackupType.
+         */
+        public Builder crossBackupType(String crossBackupType) {
+            this.putQueryParameter("CrossBackupType", crossBackupType);
+            this.crossBackupType = crossBackupType;
+            return this;
+        }
+
+        /**
+         * CrossLogRetentionType.
+         */
+        public Builder crossLogRetentionType(String crossLogRetentionType) {
+            this.putQueryParameter("CrossLogRetentionType", crossLogRetentionType);
+            this.crossLogRetentionType = crossLogRetentionType;
+            return this;
+        }
+
+        /**
+         * CrossLogRetentionValue.
+         */
+        public Builder crossLogRetentionValue(Integer crossLogRetentionValue) {
+            this.putQueryParameter("CrossLogRetentionValue", crossLogRetentionValue);
+            this.crossLogRetentionValue = crossLogRetentionValue;
+            return this;
+        }
+
+        /**
+         * CrossRetentionType.
+         */
+        public Builder crossRetentionType(String crossRetentionType) {
+            this.putQueryParameter("CrossRetentionType", crossRetentionType);
+            this.crossRetentionType = crossRetentionType;
+            return this;
+        }
+
+        /**
+         * CrossRetentionValue.
+         */
+        public Builder crossRetentionValue(Integer crossRetentionValue) {
+            this.putQueryParameter("CrossRetentionValue", crossRetentionValue);
+            this.crossRetentionValue = crossRetentionValue;
+            return this;
+        }
+
+        /**
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -294,11 +513,20 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable log backup. Default value: 0. Valid values:
+         * DestRegion.
+         */
+        public Builder destRegion(String destRegion) {
+            this.putQueryParameter("DestRegion", destRegion);
+            this.destRegion = destRegion;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable the log backup feature. Valid values:
          * <p>
          * 
-         * *   **0**: disables log backup.
-         * *   **1**: enables log backup.
+         * *   **0** (default): The log backup feature is disabled.
+         * *   **1**: The log backup feature is enabled.
          */
         public Builder enableBackupLog(Long enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -307,11 +535,29 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * HighFrequencyBackupRetention.
+         * EnableCrossLogBackup.
+         */
+        public Builder enableCrossLogBackup(Integer enableCrossLogBackup) {
+            this.putQueryParameter("EnableCrossLogBackup", enableCrossLogBackup);
+            this.enableCrossLogBackup = enableCrossLogBackup;
+            return this;
+        }
+
+        /**
+         * The number of days for which high-frequency backups are retained. Before you use this parameter, make sure that you specify the BackupInterval parameter. By default, high-frequency backups are retained for one day.
          */
         public Builder highFrequencyBackupRetention(Long highFrequencyBackupRetention) {
             this.putQueryParameter("HighFrequencyBackupRetention", highFrequencyBackupRetention);
             this.highFrequencyBackupRetention = highFrequencyBackupRetention;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
@@ -346,7 +592,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The day of a week on which to back up data. Valid values:
+         * The day of a week when the system regularly backs up data. Valid values:
          * <p>
          * 
          * *   **Monday**
@@ -366,7 +612,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The time range to back up data. Specify the time in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.
+         * The start time of the backup. Specify the time in the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.
          * <p>
          * 
          * >  The time range is 1 hour.
@@ -396,15 +642,24 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The snapshot backup type. Default value: Standard. Valid values:
+         * The snapshot backup type. Valid values:
          * <p>
          * 
          * *   **Flash**: single-digit second backup
-         * *   **Standard**: standard backup
+         * *   **Standard** (default): standard backup
          */
         public Builder snapshotBackupType(String snapshotBackupType) {
             this.putQueryParameter("SnapshotBackupType", snapshotBackupType);
             this.snapshotBackupType = snapshotBackupType;
+            return this;
+        }
+
+        /**
+         * SrcRegion.
+         */
+        public Builder srcRegion(String srcRegion) {
+            this.putQueryParameter("SrcRegion", srcRegion);
+            this.srcRegion = srcRegion;
             return this;
         }
 

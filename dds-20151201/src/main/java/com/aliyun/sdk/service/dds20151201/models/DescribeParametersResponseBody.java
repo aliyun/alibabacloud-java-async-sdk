@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParametersResponseBody</p>
  */
 public class DescribeParametersResponseBody extends TeaModel {
-    @NameInMap("ConfigParameters")
+    @com.aliyun.core.annotation.NameInMap("ConfigParameters")
     private ConfigParameters configParameters;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningParameters")
+    @com.aliyun.core.annotation.NameInMap("RunningParameters")
     private RunningParameters runningParameters;
 
     private DescribeParametersResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeParametersResponseBody extends TeaModel {
     } 
 
     public static class Parameter extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private Boolean forceRestart;
 
-        @NameInMap("ModifiableStatus")
+        @com.aliyun.core.annotation.NameInMap("ModifiableStatus")
         private Boolean modifiableStatus;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private Parameter(Builder builder) {
@@ -281,7 +280,7 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class ConfigParameters extends TeaModel {
-        @NameInMap("Parameter")
+        @com.aliyun.core.annotation.NameInMap("Parameter")
         private java.util.List < Parameter> parameter;
 
         private ConfigParameters(Builder builder) {
@@ -322,25 +321,25 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class RunningParametersParameter extends TeaModel {
-        @NameInMap("CharacterType")
+        @com.aliyun.core.annotation.NameInMap("CharacterType")
         private String characterType;
 
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("ForceRestart")
+        @com.aliyun.core.annotation.NameInMap("ForceRestart")
         private String forceRestart;
 
-        @NameInMap("ModifiableStatus")
+        @com.aliyun.core.annotation.NameInMap("ModifiableStatus")
         private String modifiableStatus;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private RunningParametersParameter(Builder builder) {
@@ -496,7 +495,7 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class RunningParameters extends TeaModel {
-        @NameInMap("Parameter")
+        @com.aliyun.core.annotation.NameInMap("Parameter")
         private java.util.List < RunningParametersParameter> parameter;
 
         private RunningParameters(Builder builder) {

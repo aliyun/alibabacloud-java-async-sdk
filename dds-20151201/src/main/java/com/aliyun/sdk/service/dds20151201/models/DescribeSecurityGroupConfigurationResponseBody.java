@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dds20151201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupConfigurationResponseBody</p>
  */
 public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSecurityGroupConfigurationResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
     } 
 
     public static class RdsEcsSecurityGroupRel extends TeaModel {
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
         private RdsEcsSecurityGroupRel(Builder builder) {
@@ -157,7 +156,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("RdsEcsSecurityGroupRel")
+        @com.aliyun.core.annotation.NameInMap("RdsEcsSecurityGroupRel")
         private java.util.List < RdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;
 
         private Items(Builder builder) {
