@@ -121,6 +121,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribePlayListResponse> describePlayList(DescribePlayListRequest request);
 
+    CompletableFuture<DescribeRtcRobotInstanceResponse> describeRtcRobotInstance(DescribeRtcRobotInstanceRequest request);
+
     CompletableFuture<DetectAudioForCustomizedVoiceJobResponse> detectAudioForCustomizedVoiceJob(DetectAudioForCustomizedVoiceJobRequest request);
 
     CompletableFuture<DropSearchIndexResponse> dropSearchIndex(DropSearchIndexRequest request);
@@ -235,6 +237,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDynamicImageJobsResponse> listDynamicImageJobs(ListDynamicImageJobsRequest request);
 
+    CompletableFuture<ListEditingProjectsResponse> listEditingProjects(ListEditingProjectsRequest request);
+
     CompletableFuture<ListLiveRecordFilesResponse> listLiveRecordFiles(ListLiveRecordFilesRequest request);
 
     CompletableFuture<ListLiveRecordJobsResponse> listLiveRecordJobs(ListLiveRecordJobsRequest request);
@@ -333,7 +337,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetEventCallbackResponse> setEventCallback(SetEventCallbackRequest request);
 
+    CompletableFuture<StartRtcRobotInstanceResponse> startRtcRobotInstance(StartRtcRobotInstanceRequest request);
+
     CompletableFuture<StartWorkflowResponse> startWorkflow(StartWorkflowRequest request);
+
+    CompletableFuture<StopRtcRobotInstanceResponse> stopRtcRobotInstance(StopRtcRobotInstanceRequest request);
 
     CompletableFuture<SubmitASRJobResponse> submitASRJob(SubmitASRJobRequest request);
 
@@ -412,6 +420,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMediaToSearchLibResponse> updateMediaToSearchLib(UpdateMediaToSearchLibRequest request);
 
     CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
+
+    CompletableFuture<UpdateRtcRobotInstanceResponse> updateRtcRobotInstance(UpdateRtcRobotInstanceRequest request);
 
     CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);
 
