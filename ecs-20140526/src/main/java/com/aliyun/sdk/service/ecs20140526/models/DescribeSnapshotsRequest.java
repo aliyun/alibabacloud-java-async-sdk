@@ -636,13 +636,13 @@ public class DescribeSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of the source disk. Valid values:
+         * The source disk type of the snapshot. Valid values:
          * <p>
          * 
-         * *   system: system disk
-         * *   data: data disk
+         * *   system: system disk.
+         * *   data: data disk.
          * 
-         * >  The value of this parameter is not case-sensitive.
+         * >  The value of this parameter is case-insensitive.
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);

@@ -41,6 +41,10 @@ public class InvokeCommandRequest extends Request {
     private java.util.List < String > instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Launcher")
+    private String launcher;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -110,6 +114,7 @@ public class InvokeCommandRequest extends Request {
         this.containerName = builder.containerName;
         this.frequency = builder.frequency;
         this.instanceId = builder.instanceId;
+        this.launcher = builder.launcher;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.parameters = builder.parameters;
@@ -187,6 +192,13 @@ public class InvokeCommandRequest extends Request {
      */
     public java.util.List < String > getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return launcher
+     */
+    public String getLauncher() {
+        return this.launcher;
     }
 
     /**
@@ -302,6 +314,7 @@ public class InvokeCommandRequest extends Request {
         private String containerName; 
         private String frequency; 
         private java.util.List < String > instanceId; 
+        private String launcher; 
         private String ownerAccount; 
         private Long ownerId; 
         private java.util.Map < String, ? > parameters; 
@@ -331,6 +344,7 @@ public class InvokeCommandRequest extends Request {
             this.containerName = request.containerName;
             this.frequency = request.frequency;
             this.instanceId = request.instanceId;
+            this.launcher = request.launcher;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.parameters = request.parameters;
@@ -467,6 +481,15 @@ public class InvokeCommandRequest extends Request {
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Launcher.
+         */
+        public Builder launcher(String launcher) {
+            this.putQueryParameter("Launcher", launcher);
+            this.launcher = launcher;
             return this;
         }
 

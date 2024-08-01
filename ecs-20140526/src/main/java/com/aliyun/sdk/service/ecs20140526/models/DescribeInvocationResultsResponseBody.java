@@ -209,6 +209,9 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InvokeRecordStatus")
         private String invokeRecordStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Launcher")
+        private String launcher;
+
         @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
@@ -243,6 +246,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             this.invocationStatus = builder.invocationStatus;
             this.invokeId = builder.invokeId;
             this.invokeRecordStatus = builder.invokeRecordStatus;
+            this.launcher = builder.launcher;
             this.output = builder.output;
             this.repeats = builder.repeats;
             this.startTime = builder.startTime;
@@ -345,6 +349,13 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return launcher
+         */
+        public String getLauncher() {
+            return this.launcher;
+        }
+
+        /**
          * @return output
          */
         public String getOutput() {
@@ -406,6 +417,7 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private String invocationStatus; 
             private String invokeId; 
             private String invokeRecordStatus; 
+            private String launcher; 
             private String output; 
             private Integer repeats; 
             private String startTime; 
@@ -610,6 +622,14 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
              */
             public Builder invokeRecordStatus(String invokeRecordStatus) {
                 this.invokeRecordStatus = invokeRecordStatus;
+                return this;
+            }
+
+            /**
+             * Launcher.
+             */
+            public Builder launcher(String launcher) {
+                this.launcher = launcher;
                 return this;
             }
 

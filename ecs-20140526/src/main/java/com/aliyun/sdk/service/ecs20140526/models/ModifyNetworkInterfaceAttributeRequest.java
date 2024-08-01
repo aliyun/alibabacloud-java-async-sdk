@@ -288,7 +288,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable for public use.
+         * This parameter is not publicly available.
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
             this.putQueryParameter("ConnectionTrackingConfiguration", connectionTrackingConfiguration);
@@ -322,7 +322,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * This parameter is unavailable for public use.
+         * This parameter is not publicly available.
          */
         public Builder enhancedNetwork(EnhancedNetwork enhancedNetwork) {
             this.putQueryParameter("EnhancedNetwork", enhancedNetwork);
@@ -435,10 +435,10 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * The IDs of the security groups to which to add the secondary ENI. The secondary ENI is added to the specified security groups and are removed from its original security groups.
+         * The IDs of the security groups to which to add the secondary ENI. The secondary ENI is added to the specified security groups and removed from the original security groups.
          * <p>
          * 
-         * *   The valid value range of N varies based on the number of security groups to which an ENI can be added. For more information, see [Limits](~~25412#SecurityGroupQuota~~).
+         * *   The valid values of N vary based on the maximum number of security groups to which an ENI can be added. For more information, see the [Security group limits](~~25412#SecurityGroupQuota~~) section of the "Limits and quotas" topic.
          * *   The new security groups take effect after a short delay.
          */
         public Builder securityGroupId(java.util.List < String > securityGroupId) {
@@ -520,7 +520,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             private Integer udpTimeout; 
 
             /**
-             * This parameter is unavailable for public use.
+             * This parameter is not publicly available.
              */
             public Builder tcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
                 this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
@@ -528,7 +528,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * This parameter is not publicly available.
              */
             public Builder tcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
                 this.tcpEstablishedTimeout = tcpEstablishedTimeout;
@@ -536,7 +536,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * This parameter is not publicly available.
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;
@@ -577,7 +577,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             private Boolean enableSriov; 
 
             /**
-             * This parameter is unavailable for public use.
+             * This parameter is not publicly available.
              */
             public Builder enableSriov(Boolean enableSriov) {
                 this.enableSriov = enableSriov;

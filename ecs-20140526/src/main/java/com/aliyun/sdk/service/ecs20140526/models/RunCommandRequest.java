@@ -57,6 +57,10 @@ public class RunCommandRequest extends Request {
     private Boolean keepCommand;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Launcher")
+    private String launcher;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -143,6 +147,7 @@ public class RunCommandRequest extends Request {
         this.frequency = builder.frequency;
         this.instanceId = builder.instanceId;
         this.keepCommand = builder.keepCommand;
+        this.launcher = builder.launcher;
         this.name = builder.name;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -251,6 +256,13 @@ public class RunCommandRequest extends Request {
      */
     public Boolean getKeepCommand() {
         return this.keepCommand;
+    }
+
+    /**
+     * @return launcher
+     */
+    public String getLauncher() {
+        return this.launcher;
     }
 
     /**
@@ -391,6 +403,7 @@ public class RunCommandRequest extends Request {
         private String frequency; 
         private java.util.List < String > instanceId; 
         private Boolean keepCommand; 
+        private String launcher; 
         private String name; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -427,6 +440,7 @@ public class RunCommandRequest extends Request {
             this.frequency = request.frequency;
             this.instanceId = request.instanceId;
             this.keepCommand = request.keepCommand;
+            this.launcher = request.launcher;
             this.name = request.name;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -642,6 +656,15 @@ public class RunCommandRequest extends Request {
         public Builder keepCommand(Boolean keepCommand) {
             this.putQueryParameter("KeepCommand", keepCommand);
             this.keepCommand = keepCommand;
+            return this;
+        }
+
+        /**
+         * Launcher.
+         */
+        public Builder launcher(String launcher) {
+            this.putQueryParameter("Launcher", launcher);
+            this.launcher = launcher;
             return this;
         }
 

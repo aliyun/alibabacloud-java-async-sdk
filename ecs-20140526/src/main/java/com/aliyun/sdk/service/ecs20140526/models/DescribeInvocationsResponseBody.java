@@ -743,6 +743,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InvokeStatus")
         private String invokeStatus;
 
+        @com.aliyun.core.annotation.NameInMap("Launcher")
+        private String launcher;
+
         @com.aliyun.core.annotation.NameInMap("Parameters")
         private String parameters;
 
@@ -781,6 +784,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             this.invokeId = builder.invokeId;
             this.invokeInstances = builder.invokeInstances;
             this.invokeStatus = builder.invokeStatus;
+            this.launcher = builder.launcher;
             this.parameters = builder.parameters;
             this.repeatMode = builder.repeatMode;
             this.tags = builder.tags;
@@ -891,6 +895,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return launcher
+         */
+        public String getLauncher() {
+            return this.launcher;
+        }
+
+        /**
          * @return parameters
          */
         public String getParameters() {
@@ -960,6 +971,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String invokeId; 
             private InvokeInstances invokeInstances; 
             private String invokeStatus; 
+            private String launcher; 
             private String parameters; 
             private String repeatMode; 
             private Tags tags; 
@@ -1108,6 +1120,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              */
             public Builder invokeStatus(String invokeStatus) {
                 this.invokeStatus = invokeStatus;
+                return this;
+            }
+
+            /**
+             * Launcher.
+             */
+            public Builder launcher(String launcher) {
+                this.launcher = launcher;
                 return this;
             }
 

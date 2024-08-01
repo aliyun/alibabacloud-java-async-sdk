@@ -218,7 +218,7 @@ public class CreateDedicatedHostClusterRequest extends Request {
         }
 
         /**
-         * The name of the dedicated host cluster. The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter. The name cannot contain `http://` or `https://`.
+         * The name of the dedicated host cluster. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          * <p>
          * 
          * This parameter is left empty by default.
@@ -245,7 +245,7 @@ public class CreateDedicatedHostClusterRequest extends Request {
          * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
          * <p>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
          * *   false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          * 
          * Default value: false.
@@ -382,7 +382,7 @@ public class CreateDedicatedHostClusterRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.
+             * The value of tag N to add to the dedicated host cluster. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 64 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

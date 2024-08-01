@@ -522,7 +522,7 @@ public class ModifySecurityGroupRuleRequest extends Request {
          * The priority of the security group rule. Valid values: 1 to 100.
          * <p>
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);

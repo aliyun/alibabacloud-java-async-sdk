@@ -437,7 +437,7 @@ public class AuthorizeSecurityGroupRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+         * This parameter is deprecated. Use `Permissions.N.Ipv6DestCidrIp` to specify the destination IPv6 CIDR block.
          */
         public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
             this.putQueryParameter("Ipv6DestCidrIp", ipv6DestCidrIp);

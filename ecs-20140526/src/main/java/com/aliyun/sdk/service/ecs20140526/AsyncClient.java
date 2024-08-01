@@ -770,6 +770,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteHpcClusterResponse> deleteHpcCluster(DeleteHpcClusterRequest request);
 
+    /**
+      * For information about scenarios in which you cannot delete a custom image and the considerations related to custom image deletion, see [Delete a custom image](~~25466~~).
+      *
+     */
     CompletableFuture<DeleteImageResponse> deleteImage(DeleteImageRequest request);
 
     /**
@@ -1936,11 +1940,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<JoinSecurityGroupResponse> joinSecurityGroup(JoinSecurityGroupRequest request);
 
     /**
-      * > This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add an instance to or remove an instance from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add an ENI to or remove an ENI from a security group.
-      * When you call this operation, take note of the following items:
-      * *   Before you remove an instance from a security group, the instance must be in the **Stopped** or **Running** state.
-      * *   An instance must belong to at least one security group. Therefore, if the instance that you want to remove belongs to only one security group, the LeaveSecurityGroup operation fails.
-      * *   You cannot remove an instance and an ENI from a security group at the same time. This indicates that you cannot configure both `InstanceId` and `NetworkInterfaceId` in a request.
+      * ## [](#)Usage notes
+      * > 
+      * *   To improve user experience, Alibaba Cloud modified the verification rules for the LeaveSecurityGroup operation on July 8, 2024. When you remove an ECS instance or ENI that does not belong to a security group from the security group, the "InvalidSecurityGroupAssociation.NotFound" error code is returned instead of a success response. Update the LeaveSecurityGroup operation to use the new verification rules with the new error code based on your business requirements.
+      * *   This operation is not recommended. We recommend that you call the [ModifyInstanceAttribute](~~25503~~) operation to add an ECS instance to or remove an ECS instance from a security group, and call the [ModifyNetworkInterfaceAttribute](~~58513~~) operation to add an ENI to or remove an ENI from a security group.
+      * Take note of the following items:
+      * *   Before you remove an instance from a security group, the instance must be in the **Stopped** (Stopped) or **Running** (Running) state.
+      * *   An instance must belong to at least one security group. Therefore, if the instance to be removed belongs to only one security group, the LeaveSecurityGroup request fails.
+      * *   You cannot remove an instance and an ENI from a security group at the same time. This indicates that you cannot specify `InstanceId` and `NetworkInterfaceId` in one request.
       *
      */
     CompletableFuture<LeaveSecurityGroupResponse> leaveSecurityGroup(LeaveSecurityGroupRequest request);
@@ -2051,7 +2058,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * # [](#)Usage notes
-      * After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can go to the [Orders page](https://usercenter2-intl.aliyun.com/order/list) in the Expenses and Costs console and pay for the order.
+      * After you change the billing method, the payment (if any) is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the **Expenses and Costs console**, go to the [Orders page](https://usercenter2-intl.aliyun.com/order/list), and pay for the order.
       * Take note of the following items:
       * *   Only pay-as-you-go disks can be attached to pay-as-you-go instances, and the billing methods of the disks cannot be changed.
       * *   The instance cannot be in the Stopped state due to expiration.

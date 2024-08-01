@@ -139,7 +139,7 @@ public class ModifyReservedInstancesRequest extends Request {
         } 
 
         /**
-         * The configurations of reserved instance N.
+         * The configurations of reserved instances.
          */
         public Builder configuration(java.util.List < Configuration> configuration) {
             this.putQueryParameter("Configuration", configuration);
@@ -175,7 +175,7 @@ public class ModifyReservedInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of reserved instances. Valid values of N: 1 to 20.
+         * The ID of reserved instance N. Valid values of N: 1 to 20.
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
@@ -283,7 +283,7 @@ public class ModifyReservedInstancesRequest extends Request {
             private String zoneId; 
 
             /**
-             * The ID of the request.
+             * The number of pay-as-you-go instances of the same instance type that reserved instance N can match. The value of this parameter must be greater than or equal to 1. Valid values of N: 1 to 100.
              */
             public Builder instanceAmount(Integer instanceAmount) {
                 this.instanceAmount = instanceAmount;
@@ -291,10 +291,40 @@ public class ModifyReservedInstancesRequest extends Request {
             }
 
             /**
-             * The number of pay-as-you-go instances of the same instance type that the reserved instance can match. The value of this parameter must be greater than or equal to 1. Valid values of N: 1 to 100.
+             * The instance type that reserved instance N can match. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * >  The applicable instance types are continuously updated. For more information, see the "Attributes" section in [Overview of reserved instances](~~100370~~).
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * The name of reserved instance N. Valid values of N: 1 to 100.
+             * <p>
+             * 
+             * The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
+             */
+            public Builder reservedInstanceName(String reservedInstanceName) {
+                this.reservedInstanceName = reservedInstanceName;
+                return this;
+            }
+
+            /**
+             * The scope of reserved instance N. Valid values:
+             * <p>
+             * 
+             * *   Region: regional
+             * *   Zone: zonal
+             * 
+             * Valid values of N: 1 to 100.
+             * 
+             * Default value: Region.
+             */
+            public Builder scope(String scope) {
+                this.scope = scope;
                 return this;
             }
 
@@ -305,33 +335,6 @@ public class ModifyReservedInstancesRequest extends Request {
              * This parameter is required when `Scope` is set to `Zone`.
              * 
              * You can call the [DescribeZones](~~25609~~) operation to query the most recent zone list.
-             */
-            public Builder reservedInstanceName(String reservedInstanceName) {
-                this.reservedInstanceName = reservedInstanceName;
-                return this;
-            }
-
-            /**
-             * The instance type that reserved instance N can match. Valid values of N: 1 to 100.
-             * <p>
-             * 
-             * > The supported instance types are regularly updated. For more information, see the "Attributes" section of [Overview](~~100370~~).
-             */
-            public Builder scope(String scope) {
-                this.scope = scope;
-                return this;
-            }
-
-            /**
-             * The scope of reserved instance N. Valid values:
-             * <p>
-             * 
-             * *   Region
-             * *   Zone
-             * 
-             * Valid values of N: 1 to 100.
-             * 
-             * Default value: Region.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

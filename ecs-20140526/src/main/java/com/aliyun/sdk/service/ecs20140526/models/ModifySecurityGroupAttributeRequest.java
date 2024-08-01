@@ -197,7 +197,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * RAM用户的虚拟账号ID。
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -215,7 +215,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * 资源主账号的账号名称。
+         * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
             this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
@@ -224,7 +224,7 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * 资源主账号的ID，亦即UID。
+         * ResourceOwnerId.
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
@@ -242,10 +242,10 @@ public class ModifySecurityGroupAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The new name of the security group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          * <p>
          * 
-         * By default, this parameter is left empty.
+         * This parameter is empty by default.
          */
         public Builder securityGroupName(String securityGroupName) {
             this.putQueryParameter("SecurityGroupName", securityGroupName);

@@ -57,7 +57,7 @@ public class ModifyReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the reserved instance.
+         * The IDs of the reserved instances.
          */
         public Builder reservedInstanceIdSets(ReservedInstanceIdSets reservedInstanceIdSets) {
             this.reservedInstanceIdSets = reservedInstanceIdSets;

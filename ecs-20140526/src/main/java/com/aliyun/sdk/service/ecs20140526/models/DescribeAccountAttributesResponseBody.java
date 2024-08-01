@@ -49,7 +49,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about account privileges specified by AccountAttributeItem in the specified region.
+         * Details about account privileges in the specified region.
          */
         public Builder accountAttributeItems(AccountAttributeItems accountAttributeItems) {
             this.accountAttributeItems = accountAttributeItems;
@@ -225,22 +225,22 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
              * *   max-spot-instance-vcpu-count
              * *   used-postpaid-instance-vcpu-count
              * *   used-spot-instance-vcpu-count
-             * *   max-postpaid-yundisk-capacity(This value is deprecated)
-             * *   used-postpaid-yundisk-capacity(This value is deprecated)
+             * *   max-postpaid-yundisk-capacity (the value is deprecated)
+             * *   used-postpaid-yundisk-capacity (the value is deprecated)
              * *   max-dedicated-hosts
              * *   max-axt-command-count
              * *   max-axt-invocation-daily
              * *   max-cloud-assistant-activation-count
              * 
-             * When the AttributeName parameter is set to supported-postpay-instance-types, an instance type is returned. For more information, see [Instance families](~~25378~~).
+             * When AttributeName is set to supported-postpay-instance-types, instance types are returned. For more information, see [Overview of instance families](~~25378~~).
              * 
-             * When the AttributeName parameter is set to real-name-authentications, one of the following values is returned:
+             * When AttributeName is set to real-name-authentications, one of the following values is returned:
              * 
              * *   yes
              * *   none
              * *   unnecessary
              * 
-             * When the AttributeName parameter is set to instance-network-type, one of the following values is returned:
+             * When AttributeName is set to instance-network-type, one of the following values is returned:
              * 
              * *   vpc
              * *   classic
@@ -348,21 +348,21 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
              * The type of the resource quota in the specified region. Valid values:
              * <p>
              * 
-             * *   instance-network-type: available network types
-             * *   max-security-groups: the maximum number of security groups
-             * *   max-elastic-network-interfaces: the maximum number of ENIs
-             * *   max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances
-             * *   max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances
-             * *   used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances
-             * *   used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances
-             * *   max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks(This value is deprecated)
-             * *   used-postpaid-yundisk-capacity: the capacity of pay-as-you-go disks that have been created(This value is deprecated)
-             * *   max-dedicated-hosts: the maximum number of dedicated hosts
-             * *   supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances
-             * *   max-axt-command-count: the maximum number of Cloud Assistant commands
-             * *   max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day
-             * *   real-name-authentication: whether the account has passed the real-name verification
-             * *   max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances
+             * *   instance-network-type: the available network types.
+             * *   max-security-groups: the maximum number of security groups.
+             * *   max-elastic-network-interfaces: the maximum number of ENIs.
+             * *   max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.
+             * *   max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances.
+             * *   used-postpaid-instance-vcpu-count: the number of vCPUs that were allocated to pay-as-you-go instances.
+             * *   used-spot-instance-vcpu-count: the number of vCPUs that were allocated to preemptible instances.
+             * *   max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)
+             * *   used-postpaid-yundisk-capacity: the capacity of pay-as-you-go data disks that were created. (The value is deprecated.)
+             * *   max-dedicated-hosts: the maximum number of dedicated hosts.
+             * *   supported-postpaid-instance-types: the instance types of pay-as-you-go I/O optimized instances.
+             * *   max-axt-command-count: the maximum number of Cloud Assistant commands.
+             * *   max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day.
+             * *   real-name-authentication: whether the account completed the real-name verification.
+             * *   max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances.
              */
             public Builder attributeName(String attributeName) {
                 this.attributeName = attributeName;
@@ -370,7 +370,7 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The specific values of resource quotas.
+             * The values of resource quotas.
              */
             public Builder attributeValues(AttributeValues attributeValues) {
                 this.attributeValues = attributeValues;
