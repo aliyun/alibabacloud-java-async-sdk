@@ -24,6 +24,10 @@ public class CreateInstanceRequest extends Request {
     private java.util.List < CloudDisks> cloudDisks;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CredentialConfig")
+    private CredentialConfig credentialConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Datasets")
     private java.util.List < Datasets> datasets;
 
@@ -92,6 +96,7 @@ public class CreateInstanceRequest extends Request {
         this.accessibility = builder.accessibility;
         this.affinity = builder.affinity;
         this.cloudDisks = builder.cloudDisks;
+        this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
         this.driver = builder.driver;
         this.ecsSpec = builder.ecsSpec;
@@ -142,6 +147,13 @@ public class CreateInstanceRequest extends Request {
      */
     public java.util.List < CloudDisks> getCloudDisks() {
         return this.cloudDisks;
+    }
+
+    /**
+     * @return credentialConfig
+     */
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     /**
@@ -260,6 +272,7 @@ public class CreateInstanceRequest extends Request {
         private String accessibility; 
         private Affinity affinity; 
         private java.util.List < CloudDisks> cloudDisks; 
+        private CredentialConfig credentialConfig; 
         private java.util.List < Datasets> datasets; 
         private String driver; 
         private String ecsSpec; 
@@ -286,6 +299,7 @@ public class CreateInstanceRequest extends Request {
             this.accessibility = request.accessibility;
             this.affinity = request.affinity;
             this.cloudDisks = request.cloudDisks;
+            this.credentialConfig = request.credentialConfig;
             this.datasets = request.datasets;
             this.driver = request.driver;
             this.ecsSpec = request.ecsSpec;
@@ -328,6 +342,15 @@ public class CreateInstanceRequest extends Request {
         public Builder cloudDisks(java.util.List < CloudDisks> cloudDisks) {
             this.putBodyParameter("CloudDisks", cloudDisks);
             this.cloudDisks = cloudDisks;
+            return this;
+        }
+
+        /**
+         * CredentialConfig.
+         */
+        public Builder credentialConfig(CredentialConfig credentialConfig) {
+            this.putBodyParameter("CredentialConfig", credentialConfig);
+            this.credentialConfig = credentialConfig;
             return this;
         }
 

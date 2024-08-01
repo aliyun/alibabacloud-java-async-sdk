@@ -29,8 +29,16 @@ public class UpdateInstanceRequest extends Request {
     private java.util.List < CloudDisks> cloudDisks;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CredentialConfig")
+    private CredentialConfig credentialConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Datasets")
     private java.util.List < Datasets> datasets;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisassociateCredential")
+    private Boolean disassociateCredential;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisassociateDatasets")
@@ -98,7 +106,9 @@ public class UpdateInstanceRequest extends Request {
         this.accessibility = builder.accessibility;
         this.affinity = builder.affinity;
         this.cloudDisks = builder.cloudDisks;
+        this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
+        this.disassociateCredential = builder.disassociateCredential;
         this.disassociateDatasets = builder.disassociateDatasets;
         this.disassociateDriver = builder.disassociateDriver;
         this.disassociateForwardInfos = builder.disassociateForwardInfos;
@@ -158,10 +168,24 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return credentialConfig
+     */
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
+    }
+
+    /**
      * @return datasets
      */
     public java.util.List < Datasets> getDatasets() {
         return this.datasets;
+    }
+
+    /**
+     * @return disassociateCredential
+     */
+    public Boolean getDisassociateCredential() {
+        return this.disassociateCredential;
     }
 
     /**
@@ -274,7 +298,9 @@ public class UpdateInstanceRequest extends Request {
         private String accessibility; 
         private Affinity affinity; 
         private java.util.List < CloudDisks> cloudDisks; 
+        private CredentialConfig credentialConfig; 
         private java.util.List < Datasets> datasets; 
+        private Boolean disassociateCredential; 
         private Boolean disassociateDatasets; 
         private Boolean disassociateDriver; 
         private Boolean disassociateForwardInfos; 
@@ -301,7 +327,9 @@ public class UpdateInstanceRequest extends Request {
             this.accessibility = request.accessibility;
             this.affinity = request.affinity;
             this.cloudDisks = request.cloudDisks;
+            this.credentialConfig = request.credentialConfig;
             this.datasets = request.datasets;
+            this.disassociateCredential = request.disassociateCredential;
             this.disassociateDatasets = request.disassociateDatasets;
             this.disassociateDriver = request.disassociateDriver;
             this.disassociateForwardInfos = request.disassociateForwardInfos;
@@ -356,11 +384,29 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * CredentialConfig.
+         */
+        public Builder credentialConfig(CredentialConfig credentialConfig) {
+            this.putBodyParameter("CredentialConfig", credentialConfig);
+            this.credentialConfig = credentialConfig;
+            return this;
+        }
+
+        /**
          * Datasets.
          */
         public Builder datasets(java.util.List < Datasets> datasets) {
             this.putBodyParameter("Datasets", datasets);
             this.datasets = datasets;
+            return this;
+        }
+
+        /**
+         * DisassociateCredential.
+         */
+        public Builder disassociateCredential(Boolean disassociateCredential) {
+            this.putBodyParameter("DisassociateCredential", disassociateCredential);
+            this.disassociateCredential = disassociateCredential;
             return this;
         }
 
