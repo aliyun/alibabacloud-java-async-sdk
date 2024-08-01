@@ -19,6 +19,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddCustomLineResponse> addCustomLine(AddCustomLineRequest request);
+
     CompletableFuture<AddResolverEndpointResponse> addResolverEndpoint(AddResolverEndpointRequest request);
 
     CompletableFuture<AddResolverRuleResponse> addResolverRule(AddResolverRuleRequest request);
@@ -33,7 +35,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BindZoneVpcResponse> bindZoneVpc(BindZoneVpcRequest request);
 
+    CompletableFuture<ChangeZoneDnsGroupResponse> changeZoneDnsGroup(ChangeZoneDnsGroupRequest request);
+
     CompletableFuture<CheckZoneNameResponse> checkZoneName(CheckZoneNameRequest request);
+
+    CompletableFuture<DeleteCustomLineResponse> deleteCustomLine(DeleteCustomLineRequest request);
 
     CompletableFuture<DeleteResolverEndpointResponse> deleteResolverEndpoint(DeleteResolverEndpointRequest request);
 
@@ -46,6 +52,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteZoneRecordResponse> deleteZoneRecord(DeleteZoneRecordRequest request);
 
     CompletableFuture<DescribeChangeLogsResponse> describeChangeLogs(DescribeChangeLogsRequest request);
+
+    CompletableFuture<DescribeCustomLineInfoResponse> describeCustomLineInfo(DescribeCustomLineInfoRequest request);
+
+    CompletableFuture<DescribeCustomLinesResponse> describeCustomLines(DescribeCustomLinesRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
@@ -71,6 +81,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeZoneInfoResponse> describeZoneInfo(DescribeZoneInfoRequest request);
 
+    CompletableFuture<DescribeZoneRecordResponse> describeZoneRecord(DescribeZoneRecordRequest request);
+
     CompletableFuture<DescribeZoneRecordsResponse> describeZoneRecords(DescribeZoneRecordsRequest request);
 
     /**
@@ -85,6 +97,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request);
 
+    CompletableFuture<SearchCustomLinesResponse> searchCustomLines(SearchCustomLinesRequest request);
+
     CompletableFuture<SetProxyPatternResponse> setProxyPattern(SetProxyPatternRequest request);
 
     CompletableFuture<SetZoneRecordStatusResponse> setZoneRecordStatus(SetZoneRecordStatusRequest request);
@@ -92,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
+    CompletableFuture<UpdateCustomLineResponse> updateCustomLine(UpdateCustomLineRequest request);
 
     CompletableFuture<UpdateRecordRemarkResponse> updateRecordRemark(UpdateRecordRemarkRequest request);
 
