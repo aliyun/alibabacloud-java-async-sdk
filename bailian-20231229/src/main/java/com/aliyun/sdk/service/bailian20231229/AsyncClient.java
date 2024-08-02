@@ -49,6 +49,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListChunksResponse> listChunks(ListChunksRequest request);
 
+    CompletableFuture<ListFileResponse> listFile(ListFileRequest request);
+
     CompletableFuture<ListIndexDocumentsResponse> listIndexDocuments(ListIndexDocumentsRequest request);
 
     CompletableFuture<ListIndicesResponse> listIndices(ListIndicesRequest request);
