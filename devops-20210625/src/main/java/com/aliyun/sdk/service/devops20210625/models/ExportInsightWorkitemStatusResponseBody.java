@@ -171,6 +171,9 @@ public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("projectId")
         private String projectId;
 
+        @com.aliyun.core.annotation.NameInMap("serialNumber")
+        private Integer serialNumber;
+
         @com.aliyun.core.annotation.NameInMap("source")
         private String source;
 
@@ -231,6 +234,7 @@ public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
             this.priority = builder.priority;
             this.productId = builder.productId;
             this.projectId = builder.projectId;
+            this.serialNumber = builder.serialNumber;
             this.source = builder.source;
             this.sprintId = builder.sprintId;
             this.stage = builder.stage;
@@ -395,6 +399,13 @@ public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return serialNumber
+         */
+        public Integer getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -506,6 +517,7 @@ public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
             private Integer priority; 
             private String productId; 
             private String projectId; 
+            private Integer serialNumber; 
             private String source; 
             private String sprintId; 
             private Integer stage; 
@@ -677,6 +689,14 @@ public class ExportInsightWorkitemStatusResponseBody extends TeaModel {
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
+                return this;
+            }
+
+            /**
+             * serialNumber.
+             */
+            public Builder serialNumber(Integer serialNumber) {
+                this.serialNumber = serialNumber;
                 return this;
             }
 

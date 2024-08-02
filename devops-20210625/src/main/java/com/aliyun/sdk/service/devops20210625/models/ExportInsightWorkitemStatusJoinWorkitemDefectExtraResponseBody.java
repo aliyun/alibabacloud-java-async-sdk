@@ -189,6 +189,9 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
         @com.aliyun.core.annotation.NameInMap("reopenNum")
         private Integer reopenNum;
 
+        @com.aliyun.core.annotation.NameInMap("serialNumber")
+        private Integer serialNumber;
+
         @com.aliyun.core.annotation.NameInMap("seriousLevel")
         private Integer seriousLevel;
 
@@ -264,6 +267,7 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
             this.productId = builder.productId;
             this.projectId = builder.projectId;
             this.reopenNum = builder.reopenNum;
+            this.serialNumber = builder.serialNumber;
             this.seriousLevel = builder.seriousLevel;
             this.solution = builder.solution;
             this.source = builder.source;
@@ -473,6 +477,13 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
         }
 
         /**
+         * @return serialNumber
+         */
+        public Integer getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        /**
          * @return seriousLevel
          */
         public Integer getSeriousLevel() {
@@ -611,6 +622,7 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
             private String productId; 
             private String projectId; 
             private Integer reopenNum; 
+            private Integer serialNumber; 
             private Integer seriousLevel; 
             private String solution; 
             private String source; 
@@ -833,6 +845,14 @@ public class ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponseBody exte
              */
             public Builder reopenNum(Integer reopenNum) {
                 this.reopenNum = reopenNum;
+                return this;
+            }
+
+            /**
+             * serialNumber.
+             */
+            public Builder serialNumber(Integer serialNumber) {
+                this.serialNumber = serialNumber;
                 return this;
             }
 
