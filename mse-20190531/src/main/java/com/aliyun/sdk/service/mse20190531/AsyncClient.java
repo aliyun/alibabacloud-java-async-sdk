@@ -221,12 +221,19 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<FetchLosslessRuleListResponse> fetchLosslessRuleList(FetchLosslessRuleListRequest request);
 
+    CompletableFuture<GatewayBlackWhiteListResponse> gatewayBlackWhiteList(GatewayBlackWhiteListRequest request);
+
     CompletableFuture<GetAppMessageQueueRouteResponse> getAppMessageQueueRoute(GetAppMessageQueueRouteRequest request);
 
     CompletableFuture<GetApplicationInstanceListResponse> getApplicationInstanceList(GetApplicationInstanceListRequest request);
 
     CompletableFuture<GetApplicationListResponse> getApplicationList(GetApplicationListRequest request);
 
+    /**
+      * @deprecated
+      *
+     * @tags gateway
+     */
     CompletableFuture<GetBlackWhiteListResponse> getBlackWhiteList(GetBlackWhiteListRequest request);
 
     CompletableFuture<GetEngineNamepaceResponse> getEngineNamepace(GetEngineNamepaceRequest request);

@@ -16,8 +16,12 @@ public class CloneNacosConfigRequest extends Request {
     private String acceptLanguage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataIds")
+    private String dataIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ids")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @Deprecated
     private String ids;
 
     @com.aliyun.core.annotation.Query
@@ -41,6 +45,7 @@ public class CloneNacosConfigRequest extends Request {
     private CloneNacosConfigRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.dataIds = builder.dataIds;
         this.ids = builder.ids;
         this.instanceId = builder.instanceId;
         this.originNamespaceId = builder.originNamespaceId;
@@ -66,6 +71,13 @@ public class CloneNacosConfigRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return dataIds
+     */
+    public String getDataIds() {
+        return this.dataIds;
     }
 
     /**
@@ -105,6 +117,7 @@ public class CloneNacosConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<CloneNacosConfigRequest, Builder> {
         private String acceptLanguage; 
+        private String dataIds; 
         private String ids; 
         private String instanceId; 
         private String originNamespaceId; 
@@ -118,6 +131,7 @@ public class CloneNacosConfigRequest extends Request {
         private Builder(CloneNacosConfigRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.dataIds = request.dataIds;
             this.ids = request.ids;
             this.instanceId = request.instanceId;
             this.originNamespaceId = request.originNamespaceId;
@@ -135,6 +149,15 @@ public class CloneNacosConfigRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * DataIds.
+         */
+        public Builder dataIds(String dataIds) {
+            this.putQueryParameter("DataIds", dataIds);
+            this.dataIds = dataIds;
             return this;
         }
 
