@@ -17,6 +17,9 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    private String orderId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -26,6 +29,7 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
     private UpgradePrePayOrderResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -53,6 +57,13 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -69,6 +80,7 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
     public static final class Builder {
         private Integer code; 
         private String message; 
+        private String orderId; 
         private String requestId; 
         private Boolean success; 
 
@@ -85,6 +97,14 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
 
