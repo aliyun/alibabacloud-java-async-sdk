@@ -12,11 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListRegionsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizSource")
+    private String bizSource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
     private ListRegionsRequest(Builder builder) {
         super(builder);
+        this.bizSource = builder.bizSource;
         this.productType = builder.productType;
     }
 
@@ -34,6 +39,13 @@ public class ListRegionsRequest extends Request {
     }
 
     /**
+     * @return bizSource
+     */
+    public String getBizSource() {
+        return this.bizSource;
+    }
+
+    /**
      * @return productType
      */
     public String getProductType() {
@@ -41,6 +53,7 @@ public class ListRegionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListRegionsRequest, Builder> {
+        private String bizSource; 
         private String productType; 
 
         private Builder() {
@@ -49,8 +62,18 @@ public class ListRegionsRequest extends Request {
 
         private Builder(ListRegionsRequest request) {
             super(request);
+            this.bizSource = request.bizSource;
             this.productType = request.productType;
         } 
+
+        /**
+         * BizSource.
+         */
+        public Builder bizSource(String bizSource) {
+            this.putQueryParameter("BizSource", bizSource);
+            this.bizSource = bizSource;
+            return this;
+        }
 
         /**
          * ProductType.
