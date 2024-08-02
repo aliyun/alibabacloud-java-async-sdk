@@ -129,11 +129,11 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -1621,7 +1621,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The business time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.
+             * The business time of the task flow. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder businessTime(String businessTime) {
                 this.businessTime = businessTime;
@@ -1629,7 +1629,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to query the task flow ID.
+             * The task flow ID. You can call the [ListTaskFlow](~~424565~~) or [ListLhTaskFlowAndScenario](~~426672~~) operation to obtain the value of this parameter.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -1637,7 +1637,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the task flow. The time is in the yyyy-MM-DD HH:mm:ss format.
+             * The time when the task flow ended. The time is displayed in the yyyy-MM-DD HH:mm:ss format.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1669,7 +1669,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of the running task flow.
+             * The ID of the instance in the task flow that is executed.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1677,7 +1677,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The running scenario of the last task flow.
+             * The context of the previous execution of the task flow.
              */
             public Builder lastRunningContext(String lastRunningContext) {
                 this.lastRunningContext = lastRunningContext;
@@ -1685,7 +1685,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The running details of the task.
+             * The context of the current execution of the task flow.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -1696,12 +1696,12 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
              * The status of the task. Valid values:
              * <p>
              * 
-             * *   **0**: waiting for execution.
-             * *   **1**: running.
-             * *   **2**: suspended.
-             * *   **3**: failed.
-             * *   **4**: successful.
-             * *   **5**: complete.
+             * *   **0**: The task is waiting for execution.
+             * *   **1**: The task is in progress.
+             * *   **2**: The task is suspended.
+             * *   **3**: The task failed.
+             * *   **4**: The task is successful.
+             * *   **5**: The task is complete.
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -2004,7 +2004,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             private String tableWhere; 
 
             /**
-             * The name of the table.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -2012,7 +2012,7 @@ public class GetDataArchiveOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The filter conditions.
+             * The filter condition.
              */
             public Builder tableWhere(String tableWhere) {
                 this.tableWhere = tableWhere;

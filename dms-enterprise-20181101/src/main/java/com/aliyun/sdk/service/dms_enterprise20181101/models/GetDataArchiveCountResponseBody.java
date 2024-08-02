@@ -157,7 +157,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The number of failed archiving tickets.
+             * The number of tickets that data archiving failed.
              */
             public Builder failCount(Long failCount) {
                 this.failCount = failCount;
@@ -165,7 +165,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of in-progress archiving tickets.
+             * The number of tickets that data archiving is in progress.
              */
             public Builder processingCount(Long processingCount) {
                 this.processingCount = processingCount;
@@ -173,7 +173,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of successful archiving tickets.
+             * The number of tickets that data archiving is successful.
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -181,7 +181,7 @@ public class GetDataArchiveCountResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of archiving tickets.
+             * The total number of data archiving tickets.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

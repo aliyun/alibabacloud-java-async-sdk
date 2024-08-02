@@ -251,7 +251,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             private String tableWhere; 
 
             /**
-             * The name of the table.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -259,7 +259,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The filter condition specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name <=\"${variable name}\". The variable name in the filter condition must be the same as the Name value of Variables.
+             * The filter condition that is specified by the WHERE clause of the archiving configuration. If a time variable is used in the filter condition, the filter condition is specified in the following format: field name <=\"${variable name}\". The variable name in the filter condition must be the same as the time variable name that is specified in the Variables parameter.
              */
             public Builder tableWhere(String tableWhere) {
                 this.tableWhere = tableWhere;
@@ -512,13 +512,13 @@ public class CreateDataArchiveOrderRequest extends Request {
             private java.util.List < Variables> variables; 
 
             /**
-             * The type of the destination database for archiving data. Valid values:
+             * The archiving destination to which you want to archive data. Valid values:
              * <p>
              * 
-             * >  If you set ArchiveMethod to a value other than inner_oss, you must connect the destination database for archiving data to Data Management (DMS) before you create the data archiving ticket. After the database is connected to DMS, the database is displayed in the Instances Connected section of the DMS console.
+             * >  If you set ArchiveMethod to a value other than inner_oss, you must register the corresponding destination database with Data Management (DMS) before you create the data archiving ticket. After the database is registered with DMS, the database is displayed in the Instances Connected section of the DMS console.
              * 
-             * *   **inner_oss**: dedicated storage space, which is a built-in space.
-             * *   **oss_userself**: Object Storage Service (OSS) bucket of the user.
+             * *   **inner_oss**: dedicated storage, which is a built-in Object Storage Service (OSS) bucket.
+             * *   **oss_userself**: OSS bucket of the user.
              * *   **mysql**: ApsaraDB RDS for MySQL instance.
              * *   **polardb**: PolarDB for MySQL cluster.
              * *   **adb_mysql**: AnalyticDB for MySQL V3.0 cluster.
@@ -530,7 +530,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * A crontab expression that specifies the scheduling cycle to run the task. For more information, see the [Crontab expressions](~~206581~~) section of the "Create shadow tables for synchronization" topic. This parameter is required if RunMethod is set to schedule.
+             * A crontab expression that specifies the scheduling cycle of the data archiving task. For more information, see the [Crontab expressions](~~206581~~) section of the "Create shadow tables for synchronization" topic. You must specify this parameter if you set RunMethod to schedule.
              */
             public Builder cronStr(String cronStr) {
                 this.cronStr = cronStr;
@@ -538,7 +538,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * DatabaseId.
+             * The database ID. If the database is a self-managed database or a third-party cloud database, you can call the [GetDatabase](~~465856~~) operation to query the database ID. If the database is an Alibaba Cloud database, ignore this parameter.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -587,7 +587,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The name of the source instance.
+             * The name of the source instance. If the database instance is a self-managed database or a third-party cloud database, you can call the [GetInstance](~~465826~~) operation to query the instance ID.
              */
             public Builder sourceInstanceName(String sourceInstanceName) {
                 this.sourceInstanceName = sourceInstanceName;
