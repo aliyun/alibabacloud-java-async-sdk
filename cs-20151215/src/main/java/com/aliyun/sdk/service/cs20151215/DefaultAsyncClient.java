@@ -2028,7 +2028,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<UpdateContactGroupForAlertResponse> updateContactGroupForAlert(UpdateContactGroupForAlertRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateContactGroupForAlert").setMethod(HttpMethod.POST).setPathRegex("/alert/{ClusterId}/alert_rule/contact_groups").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateContactGroupForAlert").setMethod(HttpMethod.POST).setPathRegex("/alert/{ClusterId}/alert_rule/contact_groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateContactGroupForAlertResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

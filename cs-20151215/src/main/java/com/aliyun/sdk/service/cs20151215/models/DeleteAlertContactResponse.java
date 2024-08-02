@@ -18,7 +18,7 @@ public class DeleteAlertContactResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteAlertContactResponseBody body;
+    private java.util.List < DeleteAlertContactResponseBody> body;
 
     private DeleteAlertContactResponse(BuilderImpl builder) {
         super(builder);
@@ -53,7 +53,7 @@ public class DeleteAlertContactResponse extends Response {
     /**
      * @return body
      */
-    public DeleteAlertContactResponseBody getBody() {
+    public java.util.List < DeleteAlertContactResponseBody> getBody() {
         return this.body;
     }
 
@@ -63,7 +63,7 @@ public class DeleteAlertContactResponse extends Response {
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteAlertContactResponseBody body);
+        Builder body(java.util.List < DeleteAlertContactResponseBody> body);
 
         @Override
         DeleteAlertContactResponse build();
@@ -75,7 +75,7 @@ public class DeleteAlertContactResponse extends Response {
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteAlertContactResponseBody body; 
+        private java.util.List < DeleteAlertContactResponseBody> body; 
 
         private BuilderImpl() {
             super();
@@ -110,7 +110,7 @@ public class DeleteAlertContactResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteAlertContactResponseBody body) {
+        public Builder body(java.util.List < DeleteAlertContactResponseBody> body) {
             this.body = body;
             return this;
         }
@@ -122,7 +122,7 @@ public class DeleteAlertContactResponse extends Response {
 
     } 
 
-    public static class BodyBody extends TeaModel {
+    public static class DeleteAlertContactResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private Boolean status;
 
@@ -132,7 +132,7 @@ public class DeleteAlertContactResponse extends Response {
         @com.aliyun.core.annotation.NameInMap("contact_id")
         private String contactId;
 
-        private BodyBody(Builder builder) {
+        private DeleteAlertContactResponseBody(Builder builder) {
             this.status = builder.status;
             this.msg = builder.msg;
             this.contactId = builder.contactId;
@@ -142,7 +142,7 @@ public class DeleteAlertContactResponse extends Response {
             return new Builder();
         }
 
-        public static BodyBody create() {
+        public static DeleteAlertContactResponseBody create() {
             return builder().build();
         }
 
@@ -193,47 +193,6 @@ public class DeleteAlertContactResponse extends Response {
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
-                return this;
-            }
-
-            public BodyBody build() {
-                return new BodyBody(this);
-            } 
-
-        } 
-
-    }
-    public static class DeleteAlertContactResponseBody extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("body")
-        private java.util.List < BodyBody> body;
-
-        private DeleteAlertContactResponseBody(Builder builder) {
-            this.body = builder.body;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static DeleteAlertContactResponseBody create() {
-            return builder().build();
-        }
-
-        /**
-         * @return body
-         */
-        public java.util.List < BodyBody> getBody() {
-            return this.body;
-        }
-
-        public static final class Builder {
-            private java.util.List < BodyBody> body; 
-
-            /**
-             * body.
-             */
-            public Builder body(java.util.List < BodyBody> body) {
-                this.body = body;
                 return this;
             }
 

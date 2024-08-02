@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteAlertContactRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("contact_ids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > contactIds;
 
     private DeleteAlertContactRequest(Builder builder) {
