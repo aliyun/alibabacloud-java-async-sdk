@@ -17,7 +17,6 @@ public class UpdatePublicNetworkStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Cidr")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String cidr;
 
     @com.aliyun.core.annotation.Query
