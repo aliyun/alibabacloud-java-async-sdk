@@ -11,11 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDocumentsResponseBody</p>
  */
 public class ListDocumentsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Count")
+    private Integer count;
+
     @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -24,8 +30,10 @@ public class ListDocumentsResponseBody extends TeaModel {
     private String status;
 
     private ListDocumentsResponseBody(Builder builder) {
+        this.count = builder.count;
         this.items = builder.items;
         this.message = builder.message;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.status = builder.status;
     }
@@ -36,6 +44,13 @@ public class ListDocumentsResponseBody extends TeaModel {
 
     public static ListDocumentsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return count
+     */
+    public Integer getCount() {
+        return this.count;
     }
 
     /**
@@ -53,6 +68,13 @@ public class ListDocumentsResponseBody extends TeaModel {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -67,13 +89,23 @@ public class ListDocumentsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer count; 
         private Items items; 
         private String message; 
+        private String nextToken; 
         private String requestId; 
         private String status; 
 
         /**
-         * Items.
+         * The total number of entries returned.
+         */
+        public Builder count(Integer count) {
+            this.count = count;
+            return this;
+        }
+
+        /**
+         * The queried documents.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -85,6 +117,14 @@ public class ListDocumentsResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 

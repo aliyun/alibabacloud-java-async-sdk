@@ -316,8 +316,8 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
              * The status of the asynchronous request. Valid values:
              * <p>
              * 
-             * *   **RUNNING**
-             * *   **BLOCK**
+             * *   **running**
+             * *   **block**
              */
             public Builder state(String state) {
                 this.state = state;

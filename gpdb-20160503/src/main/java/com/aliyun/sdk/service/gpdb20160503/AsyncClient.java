@@ -100,6 +100,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateSampleDataResponse> createSampleData(CreateSampleDataRequest request);
 
+    CompletableFuture<CreateSecretResponse> createSecret(CreateSecretRequest request);
+
     CompletableFuture<CreateServiceLinkedRoleResponse> createServiceLinkedRole(CreateServiceLinkedRoleRequest request);
 
     CompletableFuture<CreateStreamingDataServiceResponse> createStreamingDataService(CreateStreamingDataServiceRequest request);
@@ -146,6 +148,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteJDBCDataSourceResponse> deleteJDBCDataSource(DeleteJDBCDataSourceRequest request);
 
     CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
+
+    CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
 
     CompletableFuture<DeleteStreamingDataServiceResponse> deleteStreamingDataService(DeleteStreamingDataServiceRequest request);
 
@@ -439,6 +443,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSupportFeaturesResponse> describeSupportFeatures(DescribeSupportFeaturesRequest request);
 
+    CompletableFuture<DescribeTableResponse> describeTable(DescribeTableRequest request);
+
     CompletableFuture<DescribeTagsResponse> describeTags(DescribeTagsRequest request);
 
     CompletableFuture<DescribeUserEncryptionKeyListResponse> describeUserEncryptionKeyList(DescribeUserEncryptionKeyListRequest request);
@@ -486,6 +492,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<EnableDBResourceGroupResponse> enableDBResourceGroup(EnableDBResourceGroupRequest request);
 
+    CompletableFuture<ExecuteStatementResponse> executeStatement(ExecuteStatementRequest request);
+
+    CompletableFuture<GetSecretValueResponse> getSecretValue(GetSecretValueRequest request);
+
     /**
       * This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.
       * >  Suggestions:
@@ -509,6 +519,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListCollectionsResponse> listCollections(ListCollectionsRequest request);
 
+    CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
+
     CompletableFuture<ListDocumentCollectionsResponse> listDocumentCollections(ListDocumentCollectionsRequest request);
 
     CompletableFuture<ListDocumentsResponse> listDocuments(ListDocumentsRequest request);
@@ -521,11 +533,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListNamespacesResponse> listNamespaces(ListNamespacesRequest request);
 
+    CompletableFuture<ListSchemasResponse> listSchemas(ListSchemasRequest request);
+
+    CompletableFuture<ListSecretsResponse> listSecrets(ListSecretsRequest request);
+
     CompletableFuture<ListStreamingDataServicesResponse> listStreamingDataServices(ListStreamingDataServicesRequest request);
 
     CompletableFuture<ListStreamingDataSourcesResponse> listStreamingDataSources(ListStreamingDataSourcesRequest request);
 
     CompletableFuture<ListStreamingJobsResponse> listStreamingJobs(ListStreamingJobsRequest request);
+
+    CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 

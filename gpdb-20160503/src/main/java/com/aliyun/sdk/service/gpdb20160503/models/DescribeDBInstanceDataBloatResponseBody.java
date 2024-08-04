@@ -73,7 +73,7 @@ public class DescribeDBInstanceDataBloatResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of data bloat.
+         * The queried data bloat.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;

@@ -13,7 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteNamespaceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -40,6 +39,10 @@ public class DeleteNamespaceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private DeleteNamespaceRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
@@ -48,6 +51,7 @@ public class DeleteNamespaceRequest extends Request {
         this.namespace = builder.namespace;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -105,6 +109,13 @@ public class DeleteNamespaceRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteNamespaceRequest, Builder> {
         private String DBInstanceId; 
         private String managerAccount; 
@@ -112,6 +123,7 @@ public class DeleteNamespaceRequest extends Request {
         private String namespace; 
         private Long ownerId; 
         private String regionId; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -125,6 +137,7 @@ public class DeleteNamespaceRequest extends Request {
             this.namespace = request.namespace;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -187,6 +200,15 @@ public class DeleteNamespaceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

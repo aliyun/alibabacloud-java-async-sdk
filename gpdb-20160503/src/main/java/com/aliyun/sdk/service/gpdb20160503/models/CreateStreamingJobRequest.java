@@ -350,7 +350,7 @@ public class CreateStreamingJobRequest extends Request {
         } 
 
         /**
-         * Account.
+         * The name of the database account.
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -359,7 +359,13 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * Consistency.
+         * The delivery guarantee setting.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ATLEAST
+         * *   EXACTLY
          */
         public Builder consistency(String consistency) {
             this.putQueryParameter("Consistency", consistency);
@@ -368,7 +374,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -377,7 +383,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * The data source ID.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -386,7 +392,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * DestColumns.
+         * The destination fields.
          */
         public Builder destColumns(java.util.List < String > destColumns) {
             String destColumnsShrink = shrink(destColumns, "DestColumns", "json");
@@ -396,7 +402,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * DestDatabase.
+         * The name of the destination database.
          */
         public Builder destDatabase(String destDatabase) {
             this.putQueryParameter("DestDatabase", destDatabase);
@@ -414,7 +420,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * DestTable.
+         * The name of the destination table.
          */
         public Builder destTable(String destTable) {
             this.putQueryParameter("DestTable", destTable);
@@ -423,7 +429,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * ErrorLimitCount.
+         * The number of allowed error rows. Write failures occur when Kafka data does not match the destination table in AnalyticDB for PostgreSQL. If the specified value is exceeded, the job fails.
          */
         public Builder errorLimitCount(Long errorLimitCount) {
             this.putQueryParameter("ErrorLimitCount", errorLimitCount);
@@ -450,7 +456,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * JobConfig.
+         * The YAML configuration file of the job. This parameter must be specified when Mode is set to professional.
          */
         public Builder jobConfig(String jobConfig) {
             this.putQueryParameter("JobConfig", jobConfig);
@@ -459,7 +465,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * JobDescription.
+         * The description of the job.
          */
         public Builder jobDescription(String jobDescription) {
             this.putQueryParameter("JobDescription", jobDescription);
@@ -468,7 +474,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * JobName.
+         * The name of the job.
          */
         public Builder jobName(String jobName) {
             this.putQueryParameter("JobName", jobName);
@@ -477,7 +483,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * MatchColumns.
+         * The update condition columns that are used to join the source data and the destination table. Typically, the columns are all the primary key columns of the destination table. If the values of all columns specified by this parameter in different rows are the same, the rows are considered duplicates.
          */
         public Builder matchColumns(java.util.List < String > matchColumns) {
             String matchColumnsShrink = shrink(matchColumns, "MatchColumns", "json");
@@ -487,7 +493,11 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The configuration mode. Valid values:
+         * <p>
+         * 
+         * 1.  basic: In basic mode, you must configure the configuration parameters.
+         * 2.  professional: In professional mode, you can submit a YAML configuration file.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -496,7 +506,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the database account.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -514,7 +524,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * SrcColumns.
+         * The source fields.
          */
         public Builder srcColumns(java.util.List < String > srcColumns) {
             String srcColumnsShrink = shrink(srcColumns, "SrcColumns", "json");
@@ -524,7 +534,13 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * TryRun.
+         * Specifies whether to test the real-time job. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder tryRun(Boolean tryRun) {
             this.putQueryParameter("TryRun", tryRun);
@@ -533,7 +549,7 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * UpdateColumns.
+         * The columns to be updated if a row of data meets the update condition. Typically, the columns are all non-primary key columns of the destination table. When the columns specified by the MatchColumns parameter are used as conditions to join the source data and the destination table, data in columns of the UpdateColumns type is updated if data is matched.
          */
         public Builder updateColumns(java.util.List < String > updateColumns) {
             String updateColumnsShrink = shrink(updateColumns, "UpdateColumns", "json");
@@ -543,7 +559,14 @@ public class CreateStreamingJobRequest extends Request {
         }
 
         /**
-         * WriteMode.
+         * The write mode.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   insert
+         * *   update
+         * *   merge
          */
         public Builder writeMode(String writeMode) {
             this.putQueryParameter("WriteMode", writeMode);

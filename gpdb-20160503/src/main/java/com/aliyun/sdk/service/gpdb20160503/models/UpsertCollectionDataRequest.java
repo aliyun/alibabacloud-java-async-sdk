@@ -18,7 +18,6 @@ public class UpsertCollectionDataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -43,6 +42,10 @@ public class UpsertCollectionDataRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Rows")
     private java.util.List < Rows> rows;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private UpsertCollectionDataRequest(Builder builder) {
         super(builder);
         this.collection = builder.collection;
@@ -52,6 +55,7 @@ public class UpsertCollectionDataRequest extends Request {
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.rows = builder.rows;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -116,6 +120,13 @@ public class UpsertCollectionDataRequest extends Request {
         return this.rows;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<UpsertCollectionDataRequest, Builder> {
         private String collection; 
         private String DBInstanceId; 
@@ -124,6 +135,7 @@ public class UpsertCollectionDataRequest extends Request {
         private Long ownerId; 
         private String regionId; 
         private java.util.List < Rows> rows; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -138,6 +150,7 @@ public class UpsertCollectionDataRequest extends Request {
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.rows = request.rows;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -207,6 +220,15 @@ public class UpsertCollectionDataRequest extends Request {
             String rowsShrink = shrink(rows, "Rows", "json");
             this.putBodyParameter("Rows", rowsShrink);
             this.rows = rows;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

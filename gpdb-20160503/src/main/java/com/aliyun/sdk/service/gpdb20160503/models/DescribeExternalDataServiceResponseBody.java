@@ -145,7 +145,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceDescription.
+         * The description of the service.
          */
         public Builder serviceDescription(String serviceDescription) {
             this.serviceDescription = serviceDescription;
@@ -161,7 +161,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -169,7 +169,7 @@ public class DescribeExternalDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceSpec.
+         * The specifications of the service. Unit: compute units (CUs).
          */
         public Builder serviceSpec(String serviceSpec) {
             this.serviceSpec = serviceSpec;

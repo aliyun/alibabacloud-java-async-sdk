@@ -49,7 +49,7 @@ public class CreateStreamingJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(Integer jobId) {
             this.jobId = jobId;
@@ -57,7 +57,7 @@ public class CreateStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

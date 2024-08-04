@@ -1,3 +1,6 @@
+2024-08-04 Version: 1.0.23
+- Generated java-async 2016-05-03 for gpdb.
+
 2024-07-03 Version: 1.0.22
 - Generated java-async 2016-05-03 for gpdb.
 

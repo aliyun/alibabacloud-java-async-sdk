@@ -26,7 +26,6 @@ public class DeleteCollectionDataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -47,6 +46,10 @@ public class DeleteCollectionDataRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private DeleteCollectionDataRequest(Builder builder) {
         super(builder);
         this.collection = builder.collection;
@@ -57,6 +60,7 @@ public class DeleteCollectionDataRequest extends Request {
         this.namespacePassword = builder.namespacePassword;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -128,6 +132,13 @@ public class DeleteCollectionDataRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteCollectionDataRequest, Builder> {
         private String collection; 
         private String collectionData; 
@@ -137,6 +148,7 @@ public class DeleteCollectionDataRequest extends Request {
         private String namespacePassword; 
         private Long ownerId; 
         private String regionId; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -152,6 +164,7 @@ public class DeleteCollectionDataRequest extends Request {
             this.namespacePassword = request.namespacePassword;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -229,6 +242,15 @@ public class DeleteCollectionDataRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

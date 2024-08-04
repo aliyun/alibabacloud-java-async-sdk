@@ -83,7 +83,7 @@ public class DescribeExternalDataServiceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +92,10 @@ public class DescribeExternalDataServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

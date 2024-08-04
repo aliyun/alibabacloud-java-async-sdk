@@ -209,14 +209,14 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. The end time must be later than the start time.
          * <p>
          * 
          * > 
          * 
          * *   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
          * 
-         * *   If you do not specify this parameter, the plan does not end.
+         * *   If you do not specify this parameter, the plan stops until the plan is deleted.
          */
         public Builder planEndDate(String planEndDate) {
             this.putQueryParameter("PlanEndDate", planEndDate);
@@ -247,14 +247,14 @@ public class CreateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The start time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * The start time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          * <p>
          * 
          * > 
          * 
          * *   This parameter must be specified only when **PlanScheduleType** is set to **Regular**.
          * 
-         * *   If you do not specify this parameter, the plan is executed immediately.
+         * *   If you do not specify this parameter, the current time is used.
          */
         public Builder planStartDate(String planStartDate) {
             this.putQueryParameter("PlanStartDate", planStartDate);
@@ -270,11 +270,8 @@ public class CreateDBInstancePlanRequest extends Request {
          * *   **Resize**: changes the number of compute nodes.
          * *   **ModifySpec**: changes compute node specifications.
          * 
-         * > 
-         * 
-         * *   You can specify the value to Resize only for instances in Serverless mode.
-         * 
-         * *   You can specify the value to ModifySpec only for instances in elastic storage mode.
+         * > - You can specify the value to ModifySpec only for instances in elastic storage mode.
+         * >- You can specify the value to ModifySpec only for instances in elastic storage mode.
          */
         public Builder planType(String planType) {
             this.putQueryParameter("PlanType", planType);

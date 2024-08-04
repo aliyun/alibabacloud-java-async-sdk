@@ -22,7 +22,6 @@ public class QueryCollectionDataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -84,6 +83,10 @@ public class QueryCollectionDataRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Vector")
     private java.util.List < Double > vector;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private QueryCollectionDataRequest(Builder builder) {
         super(builder);
         this.collection = builder.collection;
@@ -103,6 +106,7 @@ public class QueryCollectionDataRequest extends Request {
         this.regionId = builder.regionId;
         this.topK = builder.topK;
         this.vector = builder.vector;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -237,6 +241,13 @@ public class QueryCollectionDataRequest extends Request {
         return this.vector;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<QueryCollectionDataRequest, Builder> {
         private String collection; 
         private String content; 
@@ -255,6 +266,7 @@ public class QueryCollectionDataRequest extends Request {
         private String regionId; 
         private Long topK; 
         private java.util.List < Double > vector; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -279,6 +291,7 @@ public class QueryCollectionDataRequest extends Request {
             this.regionId = request.regionId;
             this.topK = request.topK;
             this.vector = request.vector;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -498,6 +511,15 @@ public class QueryCollectionDataRequest extends Request {
             String vectorShrink = shrink(vector, "Vector", "json");
             this.putQueryParameter("Vector", vectorShrink);
             this.vector = vector;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

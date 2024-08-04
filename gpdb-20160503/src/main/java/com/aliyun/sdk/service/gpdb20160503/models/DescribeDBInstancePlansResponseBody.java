@@ -120,7 +120,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * The queried plans.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -311,7 +311,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             private String planType; 
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -335,10 +335,14 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+             * The end time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * >  This parameter is returned only for periodically executed plans.
+             * > 
+             * 
+             * *   This parameter is returned only for the plans that are periodically executed.
+             * 
+             * *   If you did not specify the end time when you created the plan, this parameter is not returned.
              */
             public Builder planEndDate(String planEndDate) {
                 this.planEndDate = planEndDate;
@@ -346,7 +350,7 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the plan.
+             * The plan ID.
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -374,10 +378,14 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+             * The start time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * >  This parameter is returned only for periodically executed plans.
+             * > 
+             * 
+             * *   This parameter is returned only for the plans that are periodically executed.
+             * 
+             * *   If you did not specify the start time when you created the plan, the current time is returned.
              */
             public Builder planStartDate(String planStartDate) {
                 this.planStartDate = planStartDate;
@@ -385,13 +393,13 @@ public class DescribeDBInstancePlansResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the plan. Valid values:
+             * The status of the plan. Valid values:
              * <p>
              * 
-             * *   **active**: The plan is running.
-             * *   **cancel**: The plan is canceled.
-             * *   **deleted**: The plan is deleted.
-             * *   **finished**: The plan execution is complete.
+             * *   **active**
+             * *   **cancel**
+             * *   **deleted**
+             * *   **finished**
              */
             public Builder planStatus(String planStatus) {
                 this.planStatus = planStatus;

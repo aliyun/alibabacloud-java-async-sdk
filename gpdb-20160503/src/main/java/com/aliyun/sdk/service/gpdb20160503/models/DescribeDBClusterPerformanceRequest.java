@@ -206,7 +206,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * ResourceGroupName.
+         * The name of the resource group.
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);

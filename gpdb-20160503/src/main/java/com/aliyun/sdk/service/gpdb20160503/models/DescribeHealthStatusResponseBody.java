@@ -402,10 +402,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The metric value of instance storage usage.
-             * <p>
-             * 
-             * Unit: %.
+             * The total amount of cold data storage. Unit: GB.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -446,10 +443,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The metric value of instance storage usage.
-             * <p>
-             * 
-             * Unit: %.
+             * The total amount of hot data storage. Unit: GB.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -490,10 +484,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The metric value of instance storage usage.
-             * <p>
-             * 
-             * Unit: %.
+             * The total amount of data storage of the instance. Unit: GB.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -1295,7 +1286,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_instance_cold_data_gb.
+             * The total amount of cold data storage.
              */
             public Builder adbpgInstanceColdDataGb(AdbpgInstanceColdDataGb adbpgInstanceColdDataGb) {
                 this.adbpgInstanceColdDataGb = adbpgInstanceColdDataGb;
@@ -1303,7 +1294,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_instance_hot_data_gb.
+             * The total amount of hot data storage.
              */
             public Builder adbpgInstanceHotDataGb(AdbpgInstanceHotDataGb adbpgInstanceHotDataGb) {
                 this.adbpgInstanceHotDataGb = adbpgInstanceHotDataGb;
@@ -1311,7 +1302,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_instance_total_data_gb.
+             * The total amount of data storage of the instance.
              */
             public Builder adbpgInstanceTotalDataGb(AdbpgInstanceTotalDataGb adbpgInstanceTotalDataGb) {
                 this.adbpgInstanceTotalDataGb = adbpgInstanceTotalDataGb;

@@ -18,7 +18,6 @@ public class CreateCollectionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -78,6 +77,10 @@ public class CreateCollectionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private CreateCollectionRequest(Builder builder) {
         super(builder);
         this.collection = builder.collection;
@@ -95,6 +98,7 @@ public class CreateCollectionRequest extends Request {
         this.parser = builder.parser;
         this.pqEnable = builder.pqEnable;
         this.regionId = builder.regionId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -215,6 +219,13 @@ public class CreateCollectionRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<CreateCollectionRequest, Builder> {
         private String collection; 
         private String DBInstanceId; 
@@ -231,6 +242,7 @@ public class CreateCollectionRequest extends Request {
         private String parser; 
         private Integer pqEnable; 
         private String regionId; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -253,6 +265,7 @@ public class CreateCollectionRequest extends Request {
             this.parser = request.parser;
             this.pqEnable = request.pqEnable;
             this.regionId = request.regionId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -355,7 +368,16 @@ public class CreateCollectionRequest extends Request {
          * The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.
          * <p>
          * 
-         * ><warning>Reserved fields such as id, vector, to_tsvector, and source cannot be used.></warning>
+         * > 
+         * 
+         * *   For information about the supported data types, see [Data types](https://help.aliyun.com/zh/analyticdb-for-postgresql/developer-reference/data-types-1/?spm=a2c4g.11186623.0.0.43e567a1C35QRD).
+         * 
+         * *   The money data type is not supported.
+         * 
+         * **
+         * 
+         * **Warning**
+         * Reserved fields such as id, vector, to_tsvector, and source cannot be used.
          */
         public Builder metadata(String metadata) {
             this.putQueryParameter("Metadata", metadata);
@@ -421,6 +443,15 @@ public class CreateCollectionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

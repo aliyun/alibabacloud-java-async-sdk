@@ -18,7 +18,6 @@ public class UpdateCollectionDataMetadataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -52,6 +51,10 @@ public class UpdateCollectionDataMetadataRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    private String workspaceId;
+
     private UpdateCollectionDataMetadataRequest(Builder builder) {
         super(builder);
         this.collection = builder.collection;
@@ -63,6 +66,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         this.namespacePassword = builder.namespacePassword;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
@@ -141,6 +145,13 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
     public static final class Builder extends Request.Builder<UpdateCollectionDataMetadataRequest, Builder> {
         private String collection; 
         private String DBInstanceId; 
@@ -151,6 +162,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         private String namespacePassword; 
         private Long ownerId; 
         private String regionId; 
+        private String workspaceId; 
 
         private Builder() {
             super();
@@ -167,6 +179,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
             this.namespacePassword = request.namespacePassword;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
@@ -255,6 +268,15 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 

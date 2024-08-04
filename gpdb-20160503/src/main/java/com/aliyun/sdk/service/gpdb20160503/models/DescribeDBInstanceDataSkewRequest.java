@@ -103,14 +103,14 @@ public class DescribeDBInstanceDataSkewRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
-         * *   **20**
+         * *   **30**
          * *   **50**
          * *   **100**
          * 
-         * Default value: **20**.
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

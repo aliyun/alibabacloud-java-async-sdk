@@ -22,6 +22,10 @@ public class ListDocumentsRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
@@ -29,6 +33,10 @@ public class ListDocumentsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NamespacePassword")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespacePassword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -43,8 +51,10 @@ public class ListDocumentsRequest extends Request {
         super(builder);
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
+        this.maxResults = builder.maxResults;
         this.namespace = builder.namespace;
         this.namespacePassword = builder.namespacePassword;
+        this.nextToken = builder.nextToken;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
     }
@@ -77,6 +87,13 @@ public class ListDocumentsRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
      * @return namespace
      */
     public String getNamespace() {
@@ -88,6 +105,13 @@ public class ListDocumentsRequest extends Request {
      */
     public String getNamespacePassword() {
         return this.namespacePassword;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -107,8 +131,10 @@ public class ListDocumentsRequest extends Request {
     public static final class Builder extends Request.Builder<ListDocumentsRequest, Builder> {
         private String collection; 
         private String DBInstanceId; 
+        private Integer maxResults; 
         private String namespace; 
         private String namespacePassword; 
+        private String nextToken; 
         private Long ownerId; 
         private String regionId; 
 
@@ -120,8 +146,10 @@ public class ListDocumentsRequest extends Request {
             super(request);
             this.collection = request.collection;
             this.DBInstanceId = request.DBInstanceId;
+            this.maxResults = request.maxResults;
             this.namespace = request.namespace;
             this.namespacePassword = request.namespacePassword;
+            this.nextToken = request.nextToken;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
         } 
@@ -148,6 +176,15 @@ public class ListDocumentsRequest extends Request {
         }
 
         /**
+         * The maximum number of entries per page. Valid values: 1 to 100.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
          * The name of the namespace. Default value: public.
          * <p>
          * 
@@ -168,6 +205,15 @@ public class ListDocumentsRequest extends Request {
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
             this.namespacePassword = namespacePassword;
+            return this;
+        }
+
+        /**
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

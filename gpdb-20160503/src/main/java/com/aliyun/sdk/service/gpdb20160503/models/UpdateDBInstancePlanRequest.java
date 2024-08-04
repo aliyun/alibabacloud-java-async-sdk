@@ -192,10 +192,14 @@ public class UpdateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
+         * The end time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC. The end time must be later than the start time.
          * <p>
          * 
-         * >  This parameter is required only for **periodically executed** plans.
+         * > 
+         * 
+         * *   This parameter must be specified only for **periodically executed** plans.
+         * 
+         * *   If you do not specify this parameter, the plan stops until the plan is deleted.
          */
         public Builder planEndDate(String planEndDate) {
             this.putQueryParameter("PlanEndDate", planEndDate);
@@ -225,10 +229,14 @@ public class UpdateDBInstancePlanRequest extends Request {
         }
 
         /**
-         * The start time of the plan. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+         * The start time of the plan. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          * <p>
          * 
-         * >  This parameter is required only for **periodically executed** plans.
+         * > 
+         * 
+         * *   This parameter must be specified only for **periodically executed** plans.
+         * 
+         * *   If you do not specify this parameter, the current time is used.
          */
         public Builder planStartDate(String planStartDate) {
             this.putQueryParameter("PlanStartDate", planStartDate);
