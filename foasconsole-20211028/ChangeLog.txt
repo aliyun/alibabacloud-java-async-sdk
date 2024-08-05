@@ -1,3 +1,6 @@
+2024-08-05 Version: 1.0.4
+- Generated java-async 2021-10-28 for foasconsole.
+
 2024-07-31 Version: 1.0.3
 - Generated java-async 2021-10-28 for foasconsole.
 

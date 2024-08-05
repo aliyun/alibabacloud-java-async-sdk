@@ -171,6 +171,12 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
     } 
 
     public static class Regions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
+        @com.aliyun.core.annotation.NameInMap("Extra")
+        private String extra;
+
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
@@ -178,6 +184,8 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         private String regionName;
 
         private Regions(Builder builder) {
+            this.description = builder.description;
+            this.extra = builder.extra;
             this.region = builder.region;
             this.regionName = builder.regionName;
         }
@@ -188,6 +196,20 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
 
         public static Regions create() {
             return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return extra
+         */
+        public String getExtra() {
+            return this.extra;
         }
 
         /**
@@ -205,8 +227,26 @@ public class DescribeSupportedRegionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String description; 
+            private String extra; 
             private String region; 
             private String regionName; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Extra.
+             */
+            public Builder extra(String extra) {
+                this.extra = extra;
+                return this;
+            }
 
             /**
              * Region.
