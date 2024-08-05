@@ -190,6 +190,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterType")
         private String clusterType;
 
+        @com.aliyun.core.annotation.NameInMap("DbInstanceStatus")
+        private String dbInstanceStatus;
+
+        @com.aliyun.core.annotation.NameInMap("EnableAuthToken")
+        private String enableAuthToken;
+
         @com.aliyun.core.annotation.NameInMap("GrafanaInstanceId")
         private String grafanaInstanceId;
 
@@ -201,6 +207,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PaymentType")
         private String paymentType;
+
+        @com.aliyun.core.annotation.NameInMap("Product")
+        private String product;
 
         @com.aliyun.core.annotation.NameInMap("PushGatewayInterUrl")
         private String pushGatewayInterUrl;
@@ -238,6 +247,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubClustersJson")
         private String subClustersJson;
 
+        @com.aliyun.core.annotation.NameInMap("SurpportAuthTypes")
+        private java.util.List < String > surpportAuthTypes;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
@@ -257,10 +269,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
             this.clusterType = builder.clusterType;
+            this.dbInstanceStatus = builder.dbInstanceStatus;
+            this.enableAuthToken = builder.enableAuthToken;
             this.grafanaInstanceId = builder.grafanaInstanceId;
             this.httpApiInterUrl = builder.httpApiInterUrl;
             this.httpApiIntraUrl = builder.httpApiIntraUrl;
             this.paymentType = builder.paymentType;
+            this.product = builder.product;
             this.pushGatewayInterUrl = builder.pushGatewayInterUrl;
             this.pushGatewayIntraUrl = builder.pushGatewayIntraUrl;
             this.regionId = builder.regionId;
@@ -273,6 +288,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.securityGroupId = builder.securityGroupId;
             this.storageDuration = builder.storageDuration;
             this.subClustersJson = builder.subClustersJson;
+            this.surpportAuthTypes = builder.surpportAuthTypes;
             this.tags = builder.tags;
             this.userId = builder.userId;
             this.vSwitchId = builder.vSwitchId;
@@ -330,6 +346,20 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return dbInstanceStatus
+         */
+        public String getDbInstanceStatus() {
+            return this.dbInstanceStatus;
+        }
+
+        /**
+         * @return enableAuthToken
+         */
+        public String getEnableAuthToken() {
+            return this.enableAuthToken;
+        }
+
+        /**
          * @return grafanaInstanceId
          */
         public String getGrafanaInstanceId() {
@@ -355,6 +385,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         public String getPaymentType() {
             return this.paymentType;
+        }
+
+        /**
+         * @return product
+         */
+        public String getProduct() {
+            return this.product;
         }
 
         /**
@@ -442,6 +479,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return surpportAuthTypes
+         */
+        public java.util.List < String > getSurpportAuthTypes() {
+            return this.surpportAuthTypes;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List < Tags> getTags() {
@@ -476,10 +520,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String clusterId; 
             private String clusterName; 
             private String clusterType; 
+            private String dbInstanceStatus; 
+            private String enableAuthToken; 
             private String grafanaInstanceId; 
             private String httpApiInterUrl; 
             private String httpApiIntraUrl; 
             private String paymentType; 
+            private String product; 
             private String pushGatewayInterUrl; 
             private String pushGatewayIntraUrl; 
             private String regionId; 
@@ -492,6 +539,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String securityGroupId; 
             private Integer storageDuration; 
             private String subClustersJson; 
+            private java.util.List < String > surpportAuthTypes; 
             private java.util.List < Tags> tags; 
             private String userId; 
             private String vSwitchId; 
@@ -552,6 +600,22 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * DbInstanceStatus.
+             */
+            public Builder dbInstanceStatus(String dbInstanceStatus) {
+                this.dbInstanceStatus = dbInstanceStatus;
+                return this;
+            }
+
+            /**
+             * EnableAuthToken.
+             */
+            public Builder enableAuthToken(String enableAuthToken) {
+                this.enableAuthToken = enableAuthToken;
+                return this;
+            }
+
+            /**
              * The ID of the Grafana workspace.
              */
             public Builder grafanaInstanceId(String grafanaInstanceId) {
@@ -584,6 +648,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
+                return this;
+            }
+
+            /**
+             * Product.
+             */
+            public Builder product(String product) {
+                this.product = product;
                 return this;
             }
 
@@ -680,6 +752,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder subClustersJson(String subClustersJson) {
                 this.subClustersJson = subClustersJson;
+                return this;
+            }
+
+            /**
+             * SurpportAuthTypes.
+             */
+            public Builder surpportAuthTypes(java.util.List < String > surpportAuthTypes) {
+                this.surpportAuthTypes = surpportAuthTypes;
                 return this;
             }
 

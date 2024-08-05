@@ -24,11 +24,16 @@ public class GetRumUploadFilesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VersionId")
+    private String versionId;
+
     private GetRumUploadFilesRequest(Builder builder) {
         super(builder);
         this.appType = builder.appType;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
+        this.versionId = builder.versionId;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class GetRumUploadFilesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return versionId
+     */
+    public String getVersionId() {
+        return this.versionId;
+    }
+
     public static final class Builder extends Request.Builder<GetRumUploadFilesRequest, Builder> {
         private String appType; 
         private String pid; 
         private String regionId; 
+        private String versionId; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class GetRumUploadFilesRequest extends Request {
             this.appType = request.appType;
             this.pid = request.pid;
             this.regionId = request.regionId;
+            this.versionId = request.versionId;
         } 
 
         /**
@@ -105,6 +119,15 @@ public class GetRumUploadFilesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The version ID. When this field is not provided, the default response includes all versions.
+         */
+        public Builder versionId(String versionId) {
+            this.putQueryParameter("VersionId", versionId);
+            this.versionId = versionId;
             return this;
         }
 

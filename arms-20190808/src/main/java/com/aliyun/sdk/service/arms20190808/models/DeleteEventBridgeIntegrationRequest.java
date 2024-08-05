@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteEventBridgeIntegrationRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
     private DeleteEventBridgeIntegrationRequest(Builder builder) {

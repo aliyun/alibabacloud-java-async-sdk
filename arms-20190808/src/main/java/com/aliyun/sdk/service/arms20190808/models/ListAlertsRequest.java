@@ -28,6 +28,10 @@ public class ListAlertsRequest extends Request {
     private String integrationType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Owner")
+    private String owner;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Page")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long page;
@@ -67,6 +71,7 @@ public class ListAlertsRequest extends Request {
         this.dispatchRuleId = builder.dispatchRuleId;
         this.endTime = builder.endTime;
         this.integrationType = builder.integrationType;
+        this.owner = builder.owner;
         this.page = builder.page;
         this.regionId = builder.regionId;
         this.severity = builder.severity;
@@ -116,6 +121,13 @@ public class ListAlertsRequest extends Request {
      */
     public String getIntegrationType() {
         return this.integrationType;
+    }
+
+    /**
+     * @return owner
+     */
+    public String getOwner() {
+        return this.owner;
     }
 
     /**
@@ -179,6 +191,7 @@ public class ListAlertsRequest extends Request {
         private Long dispatchRuleId; 
         private String endTime; 
         private String integrationType; 
+        private String owner; 
         private Long page; 
         private String regionId; 
         private String severity; 
@@ -198,6 +211,7 @@ public class ListAlertsRequest extends Request {
             this.dispatchRuleId = request.dispatchRuleId;
             this.endTime = request.endTime;
             this.integrationType = request.integrationType;
+            this.owner = request.owner;
             this.page = request.page;
             this.regionId = request.regionId;
             this.severity = request.severity;
@@ -262,6 +276,15 @@ public class ListAlertsRequest extends Request {
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);
             this.integrationType = integrationType;
+            return this;
+        }
+
+        /**
+         * Owner.
+         */
+        public Builder owner(String owner) {
+            this.putQueryParameter("Owner", owner);
+            this.owner = owner;
             return this;
         }
 

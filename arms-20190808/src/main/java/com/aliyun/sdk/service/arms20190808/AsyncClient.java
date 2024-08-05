@@ -37,8 +37,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddPrometheusIntegrationResponse> addPrometheusIntegration(AddPrometheusIntegrationRequest request);
 
-    CompletableFuture<AddPrometheusRemoteWriteResponse> addPrometheusRemoteWrite(AddPrometheusRemoteWriteRequest request);
-
     CompletableFuture<AddRecordingRuleResponse> addRecordingRule(AddRecordingRuleRequest request);
 
     CompletableFuture<AddTagToFlinkClusterResponse> addTagToFlinkCluster(AddTagToFlinkClusterRequest request);
@@ -211,8 +209,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeletePrometheusMonitoringResponse> deletePrometheusMonitoring(DeletePrometheusMonitoringRequest request);
 
-    CompletableFuture<DeletePrometheusRemoteWriteResponse> deletePrometheusRemoteWrite(DeletePrometheusRemoteWriteRequest request);
-
     CompletableFuture<DeleteRetcodeAppResponse> deleteRetcodeApp(DeleteRetcodeAppRequest request);
 
     CompletableFuture<DeleteRumAppResponse> deleteRumApp(DeleteRumAppRequest request);
@@ -301,6 +297,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetIntegrationStateResponse> getIntegrationState(GetIntegrationStateRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetManagedPrometheusStatusResponse> getManagedPrometheusStatus(GetManagedPrometheusStatusRequest request);
 
     CompletableFuture<GetMultipleTraceResponse> getMultipleTrace(GetMultipleTraceRequest request);
@@ -320,8 +320,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPrometheusIntegrationResponse> getPrometheusIntegration(GetPrometheusIntegrationRequest request);
 
     CompletableFuture<GetPrometheusMonitoringResponse> getPrometheusMonitoring(GetPrometheusMonitoringRequest request);
-
-    CompletableFuture<GetPrometheusRemoteWriteResponse> getPrometheusRemoteWrite(GetPrometheusRemoteWriteRequest request);
 
     CompletableFuture<GetRecordingRuleResponse> getRecordingRule(GetRecordingRuleRequest request);
 
@@ -400,6 +398,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallEnvironmentFeatureResponse> installEnvironmentFeature(InstallEnvironmentFeatureRequest request);
 
     /**
+      * @deprecated
       * You can call this operation only if the following conditions are met: The resources that you want to monitor are ASK clusters or ECS clusters. No Prometheus agents are installed in the ASK or ECS clusters. Take note that Prometheus agents can be installed only on the cloud service side, not in user clusters.
       *
      */
@@ -472,8 +471,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPrometheusIntegrationResponse> listPrometheusIntegration(ListPrometheusIntegrationRequest request);
 
     CompletableFuture<ListPrometheusMonitoringResponse> listPrometheusMonitoring(ListPrometheusMonitoringRequest request);
-
-    CompletableFuture<ListPrometheusRemoteWritesResponse> listPrometheusRemoteWrites(ListPrometheusRemoteWritesRequest request);
 
     /**
       * ****
@@ -598,6 +595,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
+      * @deprecated
       * Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
       *
      */
@@ -650,8 +648,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePrometheusMonitoringResponse> updatePrometheusMonitoring(UpdatePrometheusMonitoringRequest request);
 
     CompletableFuture<UpdatePrometheusMonitoringStatusResponse> updatePrometheusMonitoringStatus(UpdatePrometheusMonitoringStatusRequest request);
-
-    CompletableFuture<UpdatePrometheusRemoteWriteResponse> updatePrometheusRemoteWrite(UpdatePrometheusRemoteWriteRequest request);
 
     /**
       * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.

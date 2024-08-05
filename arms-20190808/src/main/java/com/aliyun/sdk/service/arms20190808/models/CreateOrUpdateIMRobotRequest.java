@@ -51,6 +51,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateOrUpdateIMRobotRequest(Builder builder) {

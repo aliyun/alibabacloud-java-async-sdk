@@ -28,6 +28,10 @@ public class ListEnvironmentsRequest extends Request {
     private String feePackage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterRegionIds")
+    private String filterRegionIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -45,6 +49,7 @@ public class ListEnvironmentsRequest extends Request {
         this.bindResourceId = builder.bindResourceId;
         this.environmentType = builder.environmentType;
         this.feePackage = builder.feePackage;
+        this.filterRegionIds = builder.filterRegionIds;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
@@ -92,6 +97,13 @@ public class ListEnvironmentsRequest extends Request {
     }
 
     /**
+     * @return filterRegionIds
+     */
+    public String getFilterRegionIds() {
+        return this.filterRegionIds;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -117,6 +129,7 @@ public class ListEnvironmentsRequest extends Request {
         private String bindResourceId; 
         private String environmentType; 
         private String feePackage; 
+        private String filterRegionIds; 
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List < Tag> tag; 
@@ -131,6 +144,7 @@ public class ListEnvironmentsRequest extends Request {
             this.bindResourceId = request.bindResourceId;
             this.environmentType = request.environmentType;
             this.feePackage = request.feePackage;
+            this.filterRegionIds = request.filterRegionIds;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
@@ -217,6 +231,15 @@ public class ListEnvironmentsRequest extends Request {
         public Builder feePackage(String feePackage) {
             this.putQueryParameter("FeePackage", feePackage);
             this.feePackage = feePackage;
+            return this;
+        }
+
+        /**
+         * FilterRegionIds.
+         */
+        public Builder filterRegionIds(String filterRegionIds) {
+            this.putQueryParameter("FilterRegionIds", filterRegionIds);
+            this.filterRegionIds = filterRegionIds;
             return this;
         }
 

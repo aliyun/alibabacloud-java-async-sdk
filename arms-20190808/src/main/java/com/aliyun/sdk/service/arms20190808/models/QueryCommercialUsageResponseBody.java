@@ -12,10 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryCommercialUsageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
-    private String code;
+    private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
+
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -29,6 +32,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
     private QueryCommercialUsageResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
+        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -45,7 +49,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public String getCode() {
+    public Integer getCode() {
         return this.code;
     }
 
@@ -54,6 +58,13 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
      */
     public Data getData() {
         return this.data;
+    }
+
+    /**
+     * @return httpStatusCode
+     */
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     /**
@@ -78,8 +89,9 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
+        private Integer code; 
         private Data data; 
+        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -87,7 +99,7 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         /**
          * The response status. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.
          */
-        public Builder code(String code) {
+        public Builder code(Integer code) {
             this.code = code;
             return this;
         }
@@ -97,6 +109,14 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
          */
         public Builder data(Data data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * HttpStatusCode.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
