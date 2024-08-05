@@ -15,6 +15,10 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TrafficControlTaskId")
     private String trafficControlTaskId;
 
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Environment")
     private String environment;
@@ -34,6 +38,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
     private UpdateTrafficControlTaskTrafficRequest(Builder builder) {
         super(builder);
         this.trafficControlTaskId = builder.trafficControlTaskId;
+        this.regionId = builder.regionId;
         this.environment = builder.environment;
         this.instanceId = builder.instanceId;
         this.traffics = builder.traffics;
@@ -58,6 +63,13 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
      */
     public String getTrafficControlTaskId() {
         return this.trafficControlTaskId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,6 +102,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateTrafficControlTaskTrafficRequest, Builder> {
         private String trafficControlTaskId; 
+        private String regionId; 
         private String environment; 
         private String instanceId; 
         private java.util.List < Traffics> traffics; 
@@ -102,6 +115,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
         private Builder(UpdateTrafficControlTaskTrafficRequest request) {
             super(request);
             this.trafficControlTaskId = request.trafficControlTaskId;
+            this.regionId = request.regionId;
             this.environment = request.environment;
             this.instanceId = request.instanceId;
             this.traffics = request.traffics;
@@ -114,6 +128,15 @@ public class UpdateTrafficControlTaskTrafficRequest extends Request {
         public Builder trafficControlTaskId(String trafficControlTaskId) {
             this.putPathParameter("TrafficControlTaskId", trafficControlTaskId);
             this.trafficControlTaskId = trafficControlTaskId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

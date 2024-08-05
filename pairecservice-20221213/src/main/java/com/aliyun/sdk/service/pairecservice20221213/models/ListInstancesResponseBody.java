@@ -414,6 +414,47 @@ public class ListInstancesResponseBody extends TeaModel {
         } 
 
     }
+    public static class OperatingTool extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsEnable")
+        private Boolean isEnable;
+
+        private OperatingTool(Builder builder) {
+            this.isEnable = builder.isEnable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OperatingTool create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isEnable
+         */
+        public Boolean getIsEnable() {
+            return this.isEnable;
+        }
+
+        public static final class Builder {
+            private Boolean isEnable; 
+
+            /**
+             * IsEnable.
+             */
+            public Builder isEnable(Boolean isEnable) {
+                this.isEnable = isEnable;
+                return this;
+            }
+
+            public OperatingTool build() {
+                return new OperatingTool(this);
+            } 
+
+        } 
+
+    }
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
@@ -436,6 +477,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("OperatingTool")
+        private OperatingTool operatingTool;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -453,6 +497,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtModifiedTime = builder.gmtModifiedTime;
             this.instanceId = builder.instanceId;
+            this.operatingTool = builder.operatingTool;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.type = builder.type;
@@ -516,6 +561,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return operatingTool
+         */
+        public OperatingTool getOperatingTool() {
+            return this.operatingTool;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -544,6 +596,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
             private String instanceId; 
+            private OperatingTool operatingTool; 
             private String regionId; 
             private String status; 
             private String type; 
@@ -601,6 +654,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * OperatingTool.
+             */
+            public Builder operatingTool(OperatingTool operatingTool) {
+                this.operatingTool = operatingTool;
                 return this;
             }
 
