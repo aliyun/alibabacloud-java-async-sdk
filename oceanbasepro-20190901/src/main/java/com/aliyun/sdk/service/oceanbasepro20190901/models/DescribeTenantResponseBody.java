@@ -1886,7 +1886,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         private String instanceType;
 
         @com.aliyun.core.annotation.NameInMap("LowerCaseTableNames")
-        private byte[] lowerCaseTableNames;
+        private Integer lowerCaseTableNames;
 
         @com.aliyun.core.annotation.NameInMap("MasterIntranetAddressZone")
         private String masterIntranetAddressZone;
@@ -2111,7 +2111,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         /**
          * @return lowerCaseTableNames
          */
-        public byte[] getLowerCaseTableNames() {
+        public Integer getLowerCaseTableNames() {
             return this.lowerCaseTableNames;
         }
 
@@ -2259,7 +2259,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Boolean enableReadOnlyReplica; 
             private Boolean enableReadWriteSplit; 
             private String instanceType; 
-            private byte[] lowerCaseTableNames; 
+            private Integer lowerCaseTableNames; 
             private String masterIntranetAddressZone; 
             private Long maxParallelQueryDegree; 
             private String payType; 
@@ -2475,7 +2475,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             /**
              * LowerCaseTableNames.
              */
-            public Builder lowerCaseTableNames(byte[] lowerCaseTableNames) {
+            public Builder lowerCaseTableNames(Integer lowerCaseTableNames) {
                 this.lowerCaseTableNames = lowerCaseTableNames;
                 return this;
             }
