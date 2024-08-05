@@ -405,6 +405,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("CustomAccessPoint")
+        private String customAccessPoint;
+
         @com.aliyun.core.annotation.NameInMap("CustomSecurityGroupId")
         private String customSecurityGroupId;
 
@@ -536,6 +539,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.cidrBlock = builder.cidrBlock;
             this.cloudBoxOfficeSite = builder.cloudBoxOfficeSite;
             this.creationTime = builder.creationTime;
+            this.customAccessPoint = builder.customAccessPoint;
             this.customSecurityGroupId = builder.customSecurityGroupId;
             this.desktopAccessType = builder.desktopAccessType;
             this.desktopCount = builder.desktopCount;
@@ -654,6 +658,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return customAccessPoint
+         */
+        public String getCustomAccessPoint() {
+            return this.customAccessPoint;
         }
 
         /**
@@ -947,6 +958,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String cidrBlock; 
             private Boolean cloudBoxOfficeSite; 
             private String creationTime; 
+            private String customAccessPoint; 
             private String customSecurityGroupId; 
             private String desktopAccessType; 
             private Long desktopCount; 
@@ -1073,6 +1085,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * CustomAccessPoint.
+             */
+            public Builder customAccessPoint(String customAccessPoint) {
+                this.customAccessPoint = customAccessPoint;
                 return this;
             }
 

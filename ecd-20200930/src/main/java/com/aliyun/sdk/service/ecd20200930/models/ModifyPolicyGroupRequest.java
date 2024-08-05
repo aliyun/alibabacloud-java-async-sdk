@@ -249,6 +249,10 @@ public class ModifyPolicyGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("WatermarkType")
     private String watermarkType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WyAssistant")
+    private String wyAssistant;
+
     private ModifyPolicyGroupRequest(Builder builder) {
         super(builder);
         this.adminAccess = builder.adminAccess;
@@ -310,6 +314,7 @@ public class ModifyPolicyGroupRequest extends Request {
         this.watermarkTransparency = builder.watermarkTransparency;
         this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
         this.watermarkType = builder.watermarkType;
+        this.wyAssistant = builder.wyAssistant;
     }
 
     public static Builder builder() {
@@ -738,6 +743,13 @@ public class ModifyPolicyGroupRequest extends Request {
         return this.watermarkType;
     }
 
+    /**
+     * @return wyAssistant
+     */
+    public String getWyAssistant() {
+        return this.wyAssistant;
+    }
+
     public static final class Builder extends Request.Builder<ModifyPolicyGroupRequest, Builder> {
         private String adminAccess; 
         private String appContentProtection; 
@@ -798,6 +810,7 @@ public class ModifyPolicyGroupRequest extends Request {
         private String watermarkTransparency; 
         private Integer watermarkTransparencyValue; 
         private String watermarkType; 
+        private String wyAssistant; 
 
         private Builder() {
             super();
@@ -864,6 +877,7 @@ public class ModifyPolicyGroupRequest extends Request {
             this.watermarkTransparency = request.watermarkTransparency;
             this.watermarkTransparencyValue = request.watermarkTransparencyValue;
             this.watermarkType = request.watermarkType;
+            this.wyAssistant = request.wyAssistant;
         } 
 
         /**
@@ -1525,6 +1539,15 @@ public class ModifyPolicyGroupRequest extends Request {
         public Builder watermarkType(String watermarkType) {
             this.putQueryParameter("WatermarkType", watermarkType);
             this.watermarkType = watermarkType;
+            return this;
+        }
+
+        /**
+         * WyAssistant.
+         */
+        public Builder wyAssistant(String wyAssistant) {
+            this.putQueryParameter("WyAssistant", wyAssistant);
+            this.wyAssistant = wyAssistant;
             return this;
         }
 

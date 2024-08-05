@@ -1216,6 +1216,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WatermarkType")
         private String watermarkType;
 
+        @com.aliyun.core.annotation.NameInMap("WyAssistant")
+        private String wyAssistant;
+
         private DescribePolicyGroups(Builder builder) {
             this.adminAccess = builder.adminAccess;
             this.appContentProtection = builder.appContentProtection;
@@ -1301,6 +1304,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.watermarkTransparency = builder.watermarkTransparency;
             this.watermarkTransparencyValue = builder.watermarkTransparencyValue;
             this.watermarkType = builder.watermarkType;
+            this.wyAssistant = builder.wyAssistant;
         }
 
         public static Builder builder() {
@@ -1899,6 +1903,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.watermarkType;
         }
 
+        /**
+         * @return wyAssistant
+         */
+        public String getWyAssistant() {
+            return this.wyAssistant;
+        }
+
         public static final class Builder {
             private String adminAccess; 
             private String appContentProtection; 
@@ -1984,6 +1995,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String watermarkTransparency; 
             private Integer watermarkTransparencyValue; 
             private String watermarkType; 
+            private String wyAssistant; 
 
             /**
              * Indicates whether users have the administrator permissions after they connect to cloud desktops.
@@ -2821,6 +2833,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder watermarkType(String watermarkType) {
                 this.watermarkType = watermarkType;
+                return this;
+            }
+
+            /**
+             * WyAssistant.
+             */
+            public Builder wyAssistant(String wyAssistant) {
+                this.wyAssistant = wyAssistant;
                 return this;
             }
 
