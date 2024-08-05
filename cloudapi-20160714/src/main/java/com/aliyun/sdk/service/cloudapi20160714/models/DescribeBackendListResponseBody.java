@@ -169,7 +169,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The name of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +177,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -338,7 +338,7 @@ public class DescribeBackendListResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The list of tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

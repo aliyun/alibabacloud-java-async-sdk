@@ -239,7 +239,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             private String updateStatus; 
 
             /**
-             * ApiId.
+             * The API ID.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -247,7 +247,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * The API name.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -255,7 +255,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The API description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -263,7 +263,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The cause of the failure if the API fails to be imported.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -271,7 +271,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The API group ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -279,7 +279,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The HTTP request HTTP method of the API.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -287,7 +287,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The request path of the API.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -295,7 +295,14 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateStatus.
+             * The execution status of the subtask. Valid values:
+             * <p>
+             * 
+             * *   RUNNING
+             * *   WAIT
+             * *   OVER
+             * *   FAIL
+             * *   CANCEL
              */
             public Builder updateStatus(String updateStatus) {
                 this.updateStatus = updateStatus;
@@ -425,7 +432,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             private String updateStatus; 
 
             /**
-             * ErrorMessage.
+             * The cause of the failure if the model fails to be imported.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -433,7 +440,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The API group ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -441,7 +448,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModelId.
+             * The ID of the imported model.
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;
@@ -449,7 +456,7 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModelName.
+             * The model name.
              */
             public Builder modelName(String modelName) {
                 this.modelName = modelName;
@@ -457,7 +464,14 @@ public class DescribeImportOASTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateStatus.
+             * The execution status of the subtask. Valid values:
+             * <p>
+             * 
+             * *   RUNNING
+             * *   WAIT
+             * *   OVER
+             * *   FAIL
+             * *   CANCEL
              */
             public Builder updateStatus(String updateStatus) {
                 this.updateStatus = updateStatus;

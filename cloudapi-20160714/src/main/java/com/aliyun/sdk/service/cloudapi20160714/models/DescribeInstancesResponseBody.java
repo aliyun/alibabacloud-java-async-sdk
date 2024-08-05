@@ -85,7 +85,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * The information about the instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -93,7 +93,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +101,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +109,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -169,7 +169,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * LocalName.
+             * The variable name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -177,7 +177,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The variable value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -295,7 +295,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * vSwitch的网段。
+             * The CIDR block of the vSwitch.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -303,7 +303,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 安全组的ID，同一个安全组内的服务可以互相访问。
+             * The security group ID. Services in the same security group can access each other.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -311,7 +311,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 虚拟交换机ID
+             * The vSwitch ID.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -319,7 +319,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区ID
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -462,7 +462,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The variable value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1048,7 +1048,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String zoneLocalName; 
 
             /**
-             * AclId.
+             * The ACL ID.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -1056,7 +1056,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AclName.
+             * The name of the access control list (ACL).
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -1064,7 +1064,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AclStatus.
+             * Indicates whether the ACL is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -1072,7 +1076,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AclType.
+             * The ACL type. Valid values:
+             * <p>
+             * 
+             * *   black: blacklist
+             * *   white: whitelist
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
@@ -1080,7 +1088,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClassicEgressAddress.
+             * The egress IP address.
              */
             public Builder classicEgressAddress(String classicEgressAddress) {
                 this.classicEgressAddress = classicEgressAddress;
@@ -1088,7 +1096,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectCidrBlocks.
+             * The internal CIDR block of the user\"s VPC that can be accessed if the instance is a VPC integration instance.
              */
             public Builder connectCidrBlocks(String connectCidrBlocks) {
                 this.connectCidrBlocks = connectCidrBlocks;
@@ -1096,7 +1104,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VPC融合类型专享实例联通的用户VPC ID
+             * The ID of the user\"s VPC if the instance is a VPC integration instance.
              */
             public Builder connectVpcId(String connectVpcId) {
                 this.connectVpcId = connectVpcId;
@@ -1104,7 +1112,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the instance was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -1112,10 +1120,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 专享实例类型
+             * The type of the dedicated instance. Valid values:
              * <p>
-             * - vpc_connect：VPC融合类型专享实例
-             * - normal：传统类型专享实例
+             * 
+             * *   vpc_connect: VPC integration instance
+             * *   normal: conventional dedicated instance
              */
             public Builder dedicatedInstanceType(String dedicatedInstanceType) {
                 this.dedicatedInstanceType = dedicatedInstanceType;
@@ -1123,7 +1132,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EgressIpv6Enable.
+             * Indicates whether outbound IPv6 traffic is supported.
              */
             public Builder egressIpv6Enable(Boolean egressIpv6Enable) {
                 this.egressIpv6Enable = egressIpv6Enable;
@@ -1131,7 +1140,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The time when the instance expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -1139,7 +1148,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPolicies.
+             * The HTTPS security policy.
              */
             public Builder httpsPolicies(String httpsPolicies) {
                 this.httpsPolicies = httpsPolicies;
@@ -1147,7 +1156,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclId.
+             * The ID of the IPv6 ACL.
              */
             public Builder IPV6AclId(String IPV6AclId) {
                 this.IPV6AclId = IPV6AclId;
@@ -1155,7 +1164,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclName.
+             * The name of the IPv6 ACL.
              */
             public Builder IPV6AclName(String IPV6AclName) {
                 this.IPV6AclName = IPV6AclName;
@@ -1163,7 +1172,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclStatus.
+             * Indicates whether the IPv6 ACL is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder IPV6AclStatus(String IPV6AclStatus) {
                 this.IPV6AclStatus = IPV6AclStatus;
@@ -1171,7 +1184,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclType.
+             * The type of the IPv6 ACL. Valid values:
+             * <p>
+             * 
+             * *   black: blacklist
+             * *   white: whitelist
              */
             public Builder IPV6AclType(String IPV6AclType) {
                 this.IPV6AclType = IPV6AclType;
@@ -1179,7 +1196,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   PrePaid: subscription
+             * *   PayAsYouGo: pay-as-you-go
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1187,10 +1208,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 专享实例所在网段
+             * The CIDR block of the dedicated instance.
              * <p>
-             * - 172.16.0.0/12
-             * - 192.168.0.0/16
+             * 
+             * *   172.16.0.0/12
+             * *   192.168.0.0/16
              */
             public Builder instanceCidrBlock(String instanceCidrBlock) {
                 this.instanceCidrBlock = instanceCidrBlock;
@@ -1198,7 +1220,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClusterId.
+             * The ID of the cluster to which the dedicated instance cluster belongs.
              */
             public Builder instanceClusterId(String instanceClusterId) {
                 this.instanceClusterId = instanceClusterId;
@@ -1206,7 +1228,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1214,7 +1236,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1222,7 +1244,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceRpsLimit.
+             * The requests per second (RPS) limit on the instance.
              */
             public Builder instanceRpsLimit(Integer instanceRpsLimit) {
                 this.instanceRpsLimit = instanceRpsLimit;
@@ -1230,7 +1252,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * The instance specification.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -1238,7 +1260,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpecAttributes.
+             * The instance specification details.
              */
             public Builder instanceSpecAttributes(InstanceSpecAttributes instanceSpecAttributes) {
                 this.instanceSpecAttributes = instanceSpecAttributes;
@@ -1246,7 +1268,11 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type. Valid values:
+             * <p>
+             * 
+             * *   VPC_SHARED: shared instance (VPC)
+             * *   VPC_DEDICATED: dedicated instance (VPC)
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1254,7 +1280,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetEgressAddress.
+             * The outbound public IP address.
              */
             public Builder internetEgressAddress(String internetEgressAddress) {
                 this.internetEgressAddress = internetEgressAddress;
@@ -1262,7 +1288,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetSegments.
+             * The internal CIDR block that is allowed to access the API Gateway instance.
              */
             public Builder intranetSegments(String intranetSegments) {
                 this.intranetSegments = intranetSegments;
@@ -1270,7 +1296,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainEndTime.
+             * The end time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC.
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -1278,7 +1304,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainStartTime.
+             * The start time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC.
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -1286,7 +1312,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VPC融合类型专享实例连通的用户VPC内的网络信息
+             * The network information of the user\"s VPC if the instance is a VPC integration instance.
              */
             public Builder networkInterfaceAttributes(NetworkInterfaceAttributes networkInterfaceAttributes) {
                 this.networkInterfaceAttributes = networkInterfaceAttributes;
@@ -1302,7 +1328,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1310,7 +1336,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The instance status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1318,7 +1344,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportIpv6.
+             * Indicates whether IPv6 traffic is supported.
              */
             public Builder supportIpv6(Boolean supportIpv6) {
                 this.supportIpv6 = supportIpv6;
@@ -1334,7 +1360,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserVpcId.
+             * The user VPC ID.
              */
             public Builder userVpcId(String userVpcId) {
                 this.userVpcId = userVpcId;
@@ -1342,7 +1368,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserVswitchId.
+             * The user vSwitch ID.
              */
             public Builder userVswitchId(String userVswitchId) {
                 this.userVswitchId = userVswitchId;
@@ -1350,7 +1376,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcEgressAddress.
+             * The VPC egress CIDR block.
              */
             public Builder vpcEgressAddress(String vpcEgressAddress) {
                 this.vpcEgressAddress = vpcEgressAddress;
@@ -1358,7 +1384,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcIntranetEnable.
+             * Indicates whether VPC access is enabled.
              */
             public Builder vpcIntranetEnable(Boolean vpcIntranetEnable) {
                 this.vpcIntranetEnable = vpcIntranetEnable;
@@ -1366,7 +1392,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcOwnerId.
+             * The ID of the account to which the VPC-based instance belongs.
              */
             public Builder vpcOwnerId(Long vpcOwnerId) {
                 this.vpcOwnerId = vpcOwnerId;
@@ -1374,7 +1400,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcSlbIntranetEnable.
+             * Indicates whether virtual private cloud (VPC) Server Load Balancer (SLB) is enabled.
              */
             public Builder vpcSlbIntranetEnable(Boolean vpcSlbIntranetEnable) {
                 this.vpcSlbIntranetEnable = vpcSlbIntranetEnable;
@@ -1382,7 +1408,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区ID
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1390,7 +1416,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneLocalName.
+             * The zone.
              */
             public Builder zoneLocalName(String zoneLocalName) {
                 this.zoneLocalName = zoneLocalName;

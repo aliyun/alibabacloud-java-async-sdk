@@ -6,19 +6,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateBackendResponseBody} extends {@link TeaModel}
+ * {@link ExportOASResponseBody} extends {@link TeaModel}
  *
- * <p>CreateBackendResponseBody</p>
+ * <p>ExportOASResponseBody</p>
  */
-public class CreateBackendResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("BackendId")
-    private String backendId;
+public class ExportOASResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private String data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateBackendResponseBody(Builder builder) {
-        this.backendId = builder.backendId;
+    private ExportOASResponseBody(Builder builder) {
+        this.data = builder.data;
         this.requestId = builder.requestId;
     }
 
@@ -26,15 +26,15 @@ public class CreateBackendResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateBackendResponseBody create() {
+    public static ExportOASResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return backendId
+     * @return data
      */
-    public String getBackendId() {
-        return this.backendId;
+    public String getData() {
+        return this.data;
     }
 
     /**
@@ -45,27 +45,27 @@ public class CreateBackendResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String backendId; 
+        private String data; 
         private String requestId; 
 
         /**
-         * The ID of the backend service.
+         * Data.
          */
-        public Builder backendId(String backendId) {
-            this.backendId = backendId;
+        public Builder data(String data) {
+            this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateBackendResponseBody build() {
-            return new CreateBackendResponseBody(this);
+        public ExportOASResponseBody build() {
+            return new ExportOASResponseBody(this);
         } 
 
     } 

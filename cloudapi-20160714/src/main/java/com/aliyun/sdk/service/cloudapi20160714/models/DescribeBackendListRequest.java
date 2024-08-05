@@ -168,7 +168,7 @@ public class DescribeBackendListRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of the tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -222,7 +222,7 @@ public class DescribeBackendListRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -230,7 +230,7 @@ public class DescribeBackendListRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

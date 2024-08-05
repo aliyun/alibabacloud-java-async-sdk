@@ -109,7 +109,7 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * EnableTagAuthorization.
+         * Specifies whether tag authorization is enabled.
          */
         public Builder enableTagAuthorization(Boolean enableTagAuthorization) {
             this.putQueryParameter("EnableTagAuthorization", enableTagAuthorization);
@@ -118,7 +118,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID. If you do not specify this parameter, all instances are returned.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -127,7 +127,12 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Language.
+         * The language in which you want the description of the system policy to be returned. Valid values:
+         * <p>
+         * 
+         * *   en: English
+         * *   zh: Chinese
+         * *   ja: Japanese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -145,7 +150,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag that is bound to the instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -199,7 +204,7 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -207,7 +212,7 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

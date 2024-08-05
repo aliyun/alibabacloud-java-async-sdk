@@ -139,7 +139,7 @@ public class CreateBackendRequest extends Request {
         } 
 
         /**
-         * BackendName.
+         * The name of the backend service.
          */
         public Builder backendName(String backendName) {
             this.putQueryParameter("BackendName", backendName);
@@ -148,7 +148,7 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * BackendType.
+         * The type of the backend service.
          */
         public Builder backendType(String backendType) {
             this.putQueryParameter("BackendType", backendType);
@@ -157,7 +157,7 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * CreateEventBridgeServiceLinkedRole.
+         * Specifies to create a EventBridge service-linked role.
          */
         public Builder createEventBridgeServiceLinkedRole(Boolean createEventBridgeServiceLinkedRole) {
             this.putQueryParameter("CreateEventBridgeServiceLinkedRole", createEventBridgeServiceLinkedRole);
@@ -166,7 +166,7 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * CreateSlr.
+         * Specifies to create a service-linked role.
          */
         public Builder createSlr(Boolean createSlr) {
             this.putQueryParameter("CreateSlr", createSlr);
@@ -175,7 +175,7 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -193,7 +193,7 @@ public class CreateBackendRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag of objects that match the rule. You can specify multiple tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -247,7 +247,7 @@ public class CreateBackendRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,7 +255,7 @@ public class CreateBackendRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -623,6 +623,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EnableInstanceAccessControlResponse> enableInstanceAccessControl(EnableInstanceAccessControlRequest request);
 
+    CompletableFuture<ExportOASResponse> exportOAS(ExportOASRequest request);
+
     CompletableFuture<ImportOASResponse> importOAS(ImportOASRequest request);
 
     /**
