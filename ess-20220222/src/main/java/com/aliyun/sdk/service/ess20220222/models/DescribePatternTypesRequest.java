@@ -507,7 +507,13 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * CpuArchitectures.
+         * The CPU architectures of the instance types. Valid values:
+         * <p>
+         * 
+         * >  You can specify 1 to 2 CPU architectures.
+         * 
+         * *   x86
+         * *   Arm
          */
         public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
             this.putQueryParameter("CpuArchitectures", cpuArchitectures);
@@ -525,7 +531,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * GpuSpecs.
+         * The GPU models.
          */
         public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
             this.putQueryParameter("GpuSpecs", gpuSpecs);
@@ -534,7 +540,25 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * InstanceCategories.
+         * The categories of the instance types. Valid values:
+         * <p>
+         * 
+         * *   General-purpose
+         * *   Compute-optimized
+         * *   Memory-optimized
+         * *   Big data
+         * *   Local SSDs
+         * *   High Clock Speed
+         * *   Enhanced
+         * *   Shared
+         * *   Compute-optimized with GPU
+         * *   Visual Compute-optimized
+         * *   Heterogeneous Service
+         * *   Compute-optimized with FPGA
+         * *   Compute-optimized with NPU
+         * *   ECS Bare Metal
+         * *   Super Computing Cluster
+         * *   High Performance Compute
          */
         public Builder instanceCategories(java.util.List < String > instanceCategories) {
             this.putQueryParameter("InstanceCategories", instanceCategories);
@@ -557,7 +581,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * InstanceTypeFamilies.
+         * The instance families that you want to query. You can query 1 to 10 instance families in each call.
          */
         public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
             this.putQueryParameter("InstanceTypeFamilies", instanceTypeFamilies);
@@ -575,7 +599,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MaximumCpuCoreCount.
+         * The maximum number of vCPUs per instance type.
          */
         public Builder maximumCpuCoreCount(Integer maximumCpuCoreCount) {
             this.putQueryParameter("MaximumCpuCoreCount", maximumCpuCoreCount);
@@ -584,7 +608,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MaximumGpuAmount.
+         * The maximum number of GPUs per instance. The value must be a positive integer.
          */
         public Builder maximumGpuAmount(Integer maximumGpuAmount) {
             this.putQueryParameter("MaximumGpuAmount", maximumGpuAmount);
@@ -593,7 +617,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MaximumMemorySize.
+         * The maximum memory size per instance. Unit: GiB.
          */
         public Builder maximumMemorySize(Float maximumMemorySize) {
             this.putQueryParameter("MaximumMemorySize", maximumMemorySize);
@@ -620,7 +644,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MinimumBaselineCredit.
+         * The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
          */
         public Builder minimumBaselineCredit(Integer minimumBaselineCredit) {
             this.putQueryParameter("MinimumBaselineCredit", minimumBaselineCredit);
@@ -629,7 +653,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MinimumCpuCoreCount.
+         * The minimum number of vCPUs per instance type.
          */
         public Builder minimumCpuCoreCount(Integer minimumCpuCoreCount) {
             this.putQueryParameter("MinimumCpuCoreCount", minimumCpuCoreCount);
@@ -638,7 +662,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MinimumEniIpv6AddressQuantity.
+         * The minimum number of IPv6 addresses per ENI.
          */
         public Builder minimumEniIpv6AddressQuantity(Integer minimumEniIpv6AddressQuantity) {
             this.putQueryParameter("MinimumEniIpv6AddressQuantity", minimumEniIpv6AddressQuantity);
@@ -647,7 +671,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MinimumEniPrivateIpAddressQuantity.
+         * The minimum number of IPv4 addresses per ENI.
          */
         public Builder minimumEniPrivateIpAddressQuantity(Integer minimumEniPrivateIpAddressQuantity) {
             this.putQueryParameter("MinimumEniPrivateIpAddressQuantity", minimumEniPrivateIpAddressQuantity);
@@ -656,7 +680,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MinimumEniQuantity.
+         * The minimum number of elastic network interfaces (ENIs) per instance.
          */
         public Builder minimumEniQuantity(Integer minimumEniQuantity) {
             this.putQueryParameter("MinimumEniQuantity", minimumEniQuantity);
@@ -665,7 +689,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MinimumGpuAmount.
+         * The minimum number of GPUs per instance. The value must be a positive integer.
          */
         public Builder minimumGpuAmount(Integer minimumGpuAmount) {
             this.putQueryParameter("MinimumGpuAmount", minimumGpuAmount);
@@ -674,7 +698,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MinimumInitialCredit.
+         * The initial vCPU credits per t5 or t6 burstable instance.
          */
         public Builder minimumInitialCredit(Integer minimumInitialCredit) {
             this.putQueryParameter("MinimumInitialCredit", minimumInitialCredit);
@@ -683,7 +707,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * MinimumMemorySize.
+         * The minimum memory size per instance. Unit: GiB.
          */
         public Builder minimumMemorySize(Float minimumMemorySize) {
             this.putQueryParameter("MinimumMemorySize", minimumMemorySize);
@@ -692,7 +716,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * PhysicalProcessorModels.
+         * The processor models of the instance types. You can specify 1 to 10 processor models.
          */
         public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
             this.putQueryParameter("PhysicalProcessorModels", physicalProcessorModels);
@@ -726,7 +750,7 @@ public class DescribePatternTypesRequest extends Request {
         }
 
         /**
-         * The vSwitch IDs.
+         * The IDs of the vSwitches.
          */
         public Builder vSwitchId(java.util.List < String > vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

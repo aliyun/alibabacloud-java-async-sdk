@@ -1054,7 +1054,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Details of the intelligent configuration settings that determine the range of instance types that meet the specified criteria.
+         * The information about the intelligent configuration settings, which determine the available instance types.
          */
         public Builder instancePatternInfos(java.util.List < InstancePatternInfos> instancePatternInfos) {
             this.putQueryParameter("InstancePatternInfos", instancePatternInfos);
@@ -2608,14 +2608,14 @@ public class CreateScalingConfigurationRequest extends Request {
             private java.util.List < String > physicalProcessorModels; 
 
             /**
-             * The architectures of the instance types. Valid values:
+             * The architecture types of the instance types. Valid values:
              * <p>
              * 
-             * *   X86: x86 architecture.
-             * *   Heterogeneous: heterogeneous architecture, such as GPUs and FPGAs.
-             * *   BareMetal: ECS Bare Metal Instance architecture.
-             * *   Arm: ARM architecture.
-             * *   SuperComputeCluster: Super Computing Cluster architecture.
+             * *   X86: x86
+             * *   Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated
+             * *   BareMetal: ECS Bare Metal Instance
+             * *   Arm: Arm
+             * *   SuperComputeCluster: Super Computing Cluster
              * 
              * By default, all values are included.
              */
@@ -2632,7 +2632,7 @@ public class CreateScalingConfigurationRequest extends Request {
              * *   Include: includes burstable instance types.
              * *   Required: includes only burstable instance types.
              * 
-             * Default value: Include
+             * Default value: Include.
              */
             public Builder burstablePerformance(String burstablePerformance) {
                 this.burstablePerformance = burstablePerformance;
@@ -2640,14 +2640,14 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The number of vCPUs that you want to allocate to an instance type in intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria. For more information, see the "[Instance families](~~25378~~)" topic.
+             * The number of vCPUs per instance type in intelligent configuration mode. You can use this parameter to filter the available instance types that meet the specified criteria. For more information, see [Overview of instance families](~~25378~~).
              * <p>
              * 
-             * Take note of the following items when you specify Cores:
+             * Before you specify this parameter, take note of the following items:
              * 
-             * *   InstancePatternInfos is available only for scaling groups that reside in VPCs.
-             * *   If you specify InstancePatternInfos, you must specify Cores and Memory.
-             * *   If you specify an instance type by using InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type that is specified by InstanceType or InstanceTypes for scale-outs. If the specified instance type does not have sufficient inventory, Auto Scaling creates instances by using the lowest-priced instance type that is specified by InstancePatternInfos.
+             * *   InstancePatternInfos is applicable only to the scaling groups that reside in virtual private clouds (VPCs).
+             * *   If you specify InstancePatternInfos, you must also specify InstancePatternInfos.Cores and InstancePatternInfos.Memory.
+             * *   If you specify InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type specified by InstanceType or InstanceTypes to create instances during scale-out events. If the specified instance type does not have sufficient inventory, Auto Scaling uses the lowest-priced instance type specified by InstancePatternInfos to create instances during scale-out events.
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -2663,7 +2663,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The instance types that you want to exclude. You can use wildcard characters, such as asterisks (\*), to exclude an instance type or an instance family. Examples:
+             * The instance types that you want to exclude. You can use wildcard characters, such as an asterisk (\*), to exclude an instance type or an instance family. Examples:
              * <p>
              * 
              * *   ecs.c6.large: excludes the ecs.c6.large instance type.
@@ -2691,12 +2691,12 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The level of the instance type, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if you set `CostOptimization` to true. Valid values:
+             * The level of the instance family. You can specify this parameter to specify the available instance types. This parameter takes effect only if you set `CostOptimization` to true. Valid values:
              * <p>
              * 
-             * *   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see the "[Shared instance families](~~108489~~)" topic.
-             * *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see the "[Instance families](~~25378~~)" topic.
-             * *   CreditEntryLevel: credit entry level. This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the "[Overview](~~59977~~)" topic of burstable instances.
+             * *   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
+             * *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Overview of instance families](~~25378~~).
+             * *   CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](~~59977~~).
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
                 this.instanceFamilyLevel = instanceFamilyLevel;
@@ -2712,10 +2712,10 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The maximum hourly price of a pay-as-you-go or preemptible instance in intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria.
+             * The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to filter the available instance types.
              * <p>
              * 
-             * > If you set SpotStrategy to SpotWithPriceLimit, you must specify MaxPrice. In other cases, MaxPrice is optional.
+             * >  If you set SpotStrategy to SpotWithPriceLimit, you must specify this parameter. In other cases, this parameter is optional.
              */
             public Builder maxPrice(Float maxPrice) {
                 this.maxPrice = maxPrice;
@@ -2747,7 +2747,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The memory size that you want to allocate to an instance type in intelligent configuration mode. Unit: GiB. This parameter is used to filter the available instance types that meet the specified criteria.
+             * The memory size per instance type in intelligent configuration mode. Unit: GiB. You can specify this parameter to filter the available instance types.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;

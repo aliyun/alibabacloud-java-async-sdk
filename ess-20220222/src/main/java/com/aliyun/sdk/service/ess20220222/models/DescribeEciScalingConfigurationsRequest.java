@@ -250,10 +250,10 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The IDs of the scaling configurations that you want to query.
+         * The IDs of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration IDs.
          * <p>
          * 
-         * The IDs of active and inactive scaling configurations are displayed in the query results. You can differentiate between active and inactive scaling configurations based on the value of the `LifecycleState` parameter.
+         * The IDs of active and inactive scaling configurations are displayed in the query results. You can distinguish between active and inactive scaling configurations based on the value of `LifecycleState`.
          */
         public Builder scalingConfigurationIds(java.util.List < String > scalingConfigurationIds) {
             this.putQueryParameter("ScalingConfigurationIds", scalingConfigurationIds);
@@ -262,7 +262,7 @@ public class DescribeEciScalingConfigurationsRequest extends Request {
         }
 
         /**
-         * The names of the scaling configurations that you want to query.
+         * The names of the scaling configurations that you want to query. You can specify 1 to 10 scaling configuration names.
          * <p>
          * 
          * The names of inactive scaling configurations are not displayed in the query results, and no error is reported.

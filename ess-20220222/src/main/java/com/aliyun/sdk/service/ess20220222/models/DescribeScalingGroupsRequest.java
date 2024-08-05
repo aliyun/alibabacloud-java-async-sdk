@@ -223,7 +223,11 @@ public class DescribeScalingGroupsRequest extends Request {
         } 
 
         /**
-         * GroupType.
+         * The type of instances that are managed by the scaling group. Valid values:
+         * <p>
+         * 
+         * *   ECS: ECS instances
+         * *   ECI: elastic container instances
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);

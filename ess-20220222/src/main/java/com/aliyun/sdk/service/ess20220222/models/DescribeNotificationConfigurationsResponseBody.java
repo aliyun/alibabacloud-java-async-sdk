@@ -80,10 +80,14 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScalingGroupId")
         private String scalingGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
+        private String timeZone;
+
         private NotificationConfigurationModels(Builder builder) {
             this.notificationArn = builder.notificationArn;
             this.notificationTypes = builder.notificationTypes;
             this.scalingGroupId = builder.scalingGroupId;
+            this.timeZone = builder.timeZone;
         }
 
         public static Builder builder() {
@@ -115,10 +119,18 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             return this.scalingGroupId;
         }
 
+        /**
+         * @return timeZone
+         */
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
         public static final class Builder {
             private String notificationArn; 
             private java.util.List < String > notificationTypes; 
             private String scalingGroupId; 
+            private String timeZone; 
 
             /**
              * The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:
@@ -153,6 +165,14 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
+                return this;
+            }
+
+            /**
+             * TimeZone.
+             */
+            public Builder timeZone(String timeZone) {
+                this.timeZone = timeZone;
                 return this;
             }
 

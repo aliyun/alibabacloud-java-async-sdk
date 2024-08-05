@@ -2356,7 +2356,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the intelligent configuration settings, which determines the available instance types.
+             * The intelligent configuration settings, which determine the available instance types.
              */
             public Builder instancePatternInfos(java.util.List < InstancePatternInfos> instancePatternInfos) {
                 this.instancePatternInfos = instancePatternInfos;

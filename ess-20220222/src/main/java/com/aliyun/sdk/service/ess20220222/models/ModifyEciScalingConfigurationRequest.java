@@ -1234,7 +1234,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Information about the volumes.
+         * The volumes.
          */
         public Builder volumes(java.util.List < Volumes> volumes) {
             this.putQueryParameter("Volumes", volumes);
@@ -4649,7 +4649,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String path; 
 
             /**
-             * The content of the configuration file, which can be up to 32 KB in size.
+             * The content of the configuration file (32 KB).
              */
             public Builder content(String content) {
                 this.content = content;
@@ -4657,7 +4657,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The permissions on ConfigFileVolume.
+             * The permissions on the ConfigFile volume.
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
@@ -4847,7 +4847,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The paths to the configuration files.
+             * The paths to configuration files.
              */
             public Builder configFileVolumeConfigFileToPath(java.util.List < ConfigFileVolumeConfigFileToPath> configFileVolumeConfigFileToPath) {
                 this.configFileVolumeConfigFileToPath = configFileVolumeConfigFileToPath;
@@ -4855,7 +4855,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The default permissions on ConfigFileVolume.
+             * The default permissions on the ConfigFile volume.
              */
             public Builder configFileVolumeDefaultMode(Integer configFileVolumeDefaultMode) {
                 this.configFileVolumeDefaultMode = configFileVolumeDefaultMode;
@@ -4863,7 +4863,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the volume.
+             * The volume name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4871,7 +4871,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The type of HostPathVolume. Examples: File, Directory, and Socket.
+             * The type of the Host directory. Examples: File, Directory, and Socket.
              */
             public Builder type(String type) {
                 this.type = type;

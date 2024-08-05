@@ -38,6 +38,10 @@ public class CreateNotificationConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeZone")
+    private String timeZone;
+
     private CreateNotificationConfigurationRequest(Builder builder) {
         super(builder);
         this.notificationArn = builder.notificationArn;
@@ -46,6 +50,7 @@ public class CreateNotificationConfigurationRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.scalingGroupId = builder.scalingGroupId;
+        this.timeZone = builder.timeZone;
     }
 
     public static Builder builder() {
@@ -103,6 +108,13 @@ public class CreateNotificationConfigurationRequest extends Request {
         return this.scalingGroupId;
     }
 
+    /**
+     * @return timeZone
+     */
+    public String getTimeZone() {
+        return this.timeZone;
+    }
+
     public static final class Builder extends Request.Builder<CreateNotificationConfigurationRequest, Builder> {
         private String notificationArn; 
         private java.util.List < String > notificationTypes; 
@@ -110,6 +122,7 @@ public class CreateNotificationConfigurationRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private String scalingGroupId; 
+        private String timeZone; 
 
         private Builder() {
             super();
@@ -123,6 +136,7 @@ public class CreateNotificationConfigurationRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.scalingGroupId = request.scalingGroupId;
+            this.timeZone = request.timeZone;
         } 
 
         /**
@@ -191,6 +205,15 @@ public class CreateNotificationConfigurationRequest extends Request {
         public Builder scalingGroupId(String scalingGroupId) {
             this.putQueryParameter("ScalingGroupId", scalingGroupId);
             this.scalingGroupId = scalingGroupId;
+            return this;
+        }
+
+        /**
+         * TimeZone.
+         */
+        public Builder timeZone(String timeZone) {
+            this.putQueryParameter("TimeZone", timeZone);
+            this.timeZone = timeZone;
             return this;
         }
 

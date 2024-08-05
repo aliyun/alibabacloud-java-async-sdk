@@ -782,7 +782,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The containers in the elastic container instance.
+         * The containers per elastic container instance.
          */
         public Builder containers(java.util.List < Containers> containers) {
             this.putQueryParameter("Containers", containers);
@@ -991,7 +991,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Information about the image repository.
+         * The image repositories.
          */
         public Builder imageRegistryCredentials(java.util.List < ImageRegistryCredentials> imageRegistryCredentials) {
             this.putQueryParameter("ImageRegistryCredentials", imageRegistryCredentials);
@@ -1195,12 +1195,12 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The bidding policy for the elastic container instance. Valid values:
+         * The instance bidding policy. Valid values:
          * <p>
          * 
-         * *   NoSpot: The instance is a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.
+         * *   NoSpot: The instances are created as pay-as-you-go instances.
+         * *   SpotWithPriceLimit: The instances are preemptible instances for which you can specify the maximum hourly price.
+         * *   SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.
          * 
          * Default value: NoSpot.
          */
@@ -2225,7 +2225,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the environment variable. The name can be 1 to 128 characters in length and can contain underscores (\_) and digits. The name cannot start with a digit. Specify the value in the \[0-9a-zA-Z] format.
+             * The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (\_), and digits. The name cannot start with a digit. Specify the value in the \[0-9a-zA-Z] format.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2387,7 +2387,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String subPath; 
 
             /**
-             * The directory to which the container mounts the volume.
+             * The directory in which the container mounts the volume.
              * <p>
              * 
              * >  Data under this directory is overwritten by data on the volume. Specify this parameter with caution.
@@ -2398,12 +2398,12 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:
              * <p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are performed on the volume or the subdirectories of the volume.
-             * *   HostToContainer: The volume mount receives all subsequent mounts that are performed on the volume or the subdirectories of the volume.
-             * *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
+             * *   None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the volume.
+             * *   HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the volume.
+             * *   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the volume. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.
              * 
              * Default value: None.
              */
@@ -2435,7 +2435,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The subdirectory of the volume.
+             * The volume subdirectory.
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -2883,7 +2883,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The commands that you can run in the container when you use the CLI to perform liveness probes.
+             * The commands that you want to run by using the CLI for liveness probing within the container.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -2891,7 +2891,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The number of vCPUs that you want to allocate to the container.
+             * The number of vCPUs per container.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -2907,7 +2907,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The number of GPUs that you want to allocate to the container.
+             * The number of GPUs per container.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -2915,7 +2915,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The image of the container.
+             * The container image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -2936,7 +2936,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePostStartHandlerExecs.
+             * The commands that you want to run by using the CLI to configure the postStart callback function within the container.
              */
             public Builder lifecyclePostStartHandlerExecs(java.util.List < String > lifecyclePostStartHandlerExecs) {
                 this.lifecyclePostStartHandlerExecs = lifecyclePostStartHandlerExecs;
@@ -2944,7 +2944,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePostStartHandlerHttpGetHost.
+             * The IP address of the host to which you want to send HTTP GET requests to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
                 this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
@@ -2952,7 +2952,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePostStartHandlerHttpGetPath.
+             * The path to which you want to send HTTP GET requests to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
                 this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
@@ -2960,7 +2960,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePostStartHandlerHttpGetPort.
+             * The port over which you want to send HTTP GET requests to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
                 this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
@@ -2968,7 +2968,11 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePostStartHandlerHttpGetScheme.
+             * The protocol type of HTTP GET requests that you want to send to configure the postStart callback function. Valid values:
+             * <p>
+             * 
+             * *   HTTP
+             * *   HTTPS
              */
             public Builder lifecyclePostStartHandlerHttpGetScheme(String lifecyclePostStartHandlerHttpGetScheme) {
                 this.lifecyclePostStartHandlerHttpGetScheme = lifecyclePostStartHandlerHttpGetScheme;
@@ -2976,7 +2980,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePostStartHandlerTcpSocketHost.
+             * The IP address of the host detected by the TCP sockets that you want to use to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
                 this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
@@ -2984,7 +2988,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePostStartHandlerTcpSocketPort.
+             * The port detected by the TCP sockets that you want to use to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
                 this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
@@ -2992,7 +2996,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePreStopHandlerExecs.
+             * The commands that you want to run by using the CLI to configure the preStop callback function within the container.
              */
             public Builder lifecyclePreStopHandlerExecs(java.util.List < String > lifecyclePreStopHandlerExecs) {
                 this.lifecyclePreStopHandlerExecs = lifecyclePreStopHandlerExecs;
@@ -3000,7 +3004,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePreStopHandlerHttpGetHost.
+             * The IP address of the host to which you want to send HTTP GET requests to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
                 this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
@@ -3008,7 +3012,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePreStopHandlerHttpGetPath.
+             * The path to which you want to send HTTP GET requests to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
                 this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
@@ -3016,7 +3020,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePreStopHandlerHttpGetPort.
+             * The port over which you want to send HTTP GET requests to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
                 this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
@@ -3024,7 +3028,11 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePreStopHandlerHttpGetScheme.
+             * The protocol type of the HTTP GET requests that you want to send to configure the preStop callback function. Valid values:
+             * <p>
+             * 
+             * *   HTTP
+             * *   HTTPS
              */
             public Builder lifecyclePreStopHandlerHttpGetScheme(String lifecyclePreStopHandlerHttpGetScheme) {
                 this.lifecyclePreStopHandlerHttpGetScheme = lifecyclePreStopHandlerHttpGetScheme;
@@ -3032,7 +3040,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePreStopHandlerTcpSocketHost.
+             * The IP address of the host detected by the TCP sockets that you want to use to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
                 this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
@@ -3040,7 +3048,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * LifecyclePreStopHandlerTcpSocketPort.
+             * The port detected by the TCP sockets that you want to use to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
                 this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
@@ -3048,7 +3056,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The memory size that you want to allocate to the container. Unit: GiB.
+             * The memory size per container. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -3072,7 +3080,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read.
+             * Specifies whether the container allocates buffer resources to standard input streams during its active runtime. If you do not specify this parameter, an end-of-file (EOF) error occurs when standard input streams in the container are read.
              * <p>
              * 
              * Default value: false.
@@ -3083,10 +3091,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether to remain standard input streams connected during multiple sessions if StdinOnce is set to true.
+             * Specifies whether standard input streams remain connected during multiple sessions when StdinOnce is set to true.
              * <p>
              * 
-             * If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is restarted.
+             * If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain disconnected until the container is restarted.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -3094,7 +3102,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable interaction. Valid values:
+             * Specifies whether to enable the Interaction feature. Valid values:
              * <p>
              * 
              * *   true
@@ -3305,7 +3313,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             private String userName; 
 
             /**
-             * The password that is used to access the image repository.
+             * The password of the image repository.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -3321,7 +3329,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The username that is used to access the image repository.
+             * The username of the image repository.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
