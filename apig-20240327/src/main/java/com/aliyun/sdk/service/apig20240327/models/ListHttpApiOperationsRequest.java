@@ -21,6 +21,10 @@ public class ListHttpApiOperationsRequest extends Request {
     private String method;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nameLike")
     private String nameLike;
 
@@ -40,6 +44,7 @@ public class ListHttpApiOperationsRequest extends Request {
         super(builder);
         this.httpApiId = builder.httpApiId;
         this.method = builder.method;
+        this.name = builder.name;
         this.nameLike = builder.nameLike;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -74,6 +79,13 @@ public class ListHttpApiOperationsRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return nameLike
      */
     public String getNameLike() {
@@ -104,6 +116,7 @@ public class ListHttpApiOperationsRequest extends Request {
     public static final class Builder extends Request.Builder<ListHttpApiOperationsRequest, Builder> {
         private String httpApiId; 
         private String method; 
+        private String name; 
         private String nameLike; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -117,6 +130,7 @@ public class ListHttpApiOperationsRequest extends Request {
             super(request);
             this.httpApiId = request.httpApiId;
             this.method = request.method;
+            this.name = request.name;
             this.nameLike = request.nameLike;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -138,6 +152,15 @@ public class ListHttpApiOperationsRequest extends Request {
         public Builder method(String method) {
             this.putQueryParameter("method", method);
             this.method = method;
+            return this;
+        }
+
+        /**
+         * name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("name", name);
+            this.name = name;
             return this;
         }
 

@@ -16,6 +16,10 @@ public class ListHttpApisRequest extends Request {
     private String keyword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -30,6 +34,7 @@ public class ListHttpApisRequest extends Request {
     private ListHttpApisRequest(Builder builder) {
         super(builder);
         this.keyword = builder.keyword;
+        this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.publishedOnly = builder.publishedOnly;
@@ -56,6 +61,13 @@ public class ListHttpApisRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -78,6 +90,7 @@ public class ListHttpApisRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListHttpApisRequest, Builder> {
         private String keyword; 
+        private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Boolean publishedOnly; 
@@ -89,6 +102,7 @@ public class ListHttpApisRequest extends Request {
         private Builder(ListHttpApisRequest request) {
             super(request);
             this.keyword = request.keyword;
+            this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.publishedOnly = request.publishedOnly;
@@ -100,6 +114,15 @@ public class ListHttpApisRequest extends Request {
         public Builder keyword(String keyword) {
             this.putQueryParameter("keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("name", name);
+            this.name = name;
             return this;
         }
 
