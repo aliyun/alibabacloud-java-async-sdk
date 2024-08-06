@@ -11,10 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetClusterAuditProjectResponseBody</p>
  */
 public class GetClusterAuditProjectResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("audit_enabled")
+    private Boolean auditEnabled;
+
     @com.aliyun.core.annotation.NameInMap("sls_project_name")
     private String slsProjectName;
 
     private GetClusterAuditProjectResponseBody(Builder builder) {
+        this.auditEnabled = builder.auditEnabled;
         this.slsProjectName = builder.slsProjectName;
     }
 
@@ -27,6 +31,13 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
     }
 
     /**
+     * @return auditEnabled
+     */
+    public Boolean getAuditEnabled() {
+        return this.auditEnabled;
+    }
+
+    /**
      * @return slsProjectName
      */
     public String getSlsProjectName() {
@@ -34,7 +45,16 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Boolean auditEnabled; 
         private String slsProjectName; 
+
+        /**
+         * audit_enabled.
+         */
+        public Builder auditEnabled(Boolean auditEnabled) {
+            this.auditEnabled = auditEnabled;
+            return this;
+        }
 
         /**
          * sls_project_name.
