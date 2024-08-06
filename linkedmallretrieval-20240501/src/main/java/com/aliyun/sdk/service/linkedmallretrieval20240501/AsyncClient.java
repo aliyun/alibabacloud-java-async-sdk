@@ -23,4 +23,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     ResponseIterable<AISearchResponseBody> aISearchWithResponseIterable(AISearchRequest request);
 
+    CompletableFuture<AISearchV2Response> aISearchV2(AISearchV2Request request);
+
+    ResponseIterable<AISearchV2ResponseBody> aISearchV2WithResponseIterable(AISearchV2Request request);
+
 }
