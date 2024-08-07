@@ -157,6 +157,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCaseFileUploadUrlResponse> getCaseFileUploadUrl(GetCaseFileUploadUrlRequest request);
 
+    CompletableFuture<GetChatMediaUrlResponse> getChatMediaUrl(GetChatMediaUrlRequest request);
+
     CompletableFuture<GetContactFlowResponse> getContactFlow(GetContactFlowRequest request);
 
     CompletableFuture<GetConversationDetailResponse> getConversationDetail(GetConversationDetailRequest request);
