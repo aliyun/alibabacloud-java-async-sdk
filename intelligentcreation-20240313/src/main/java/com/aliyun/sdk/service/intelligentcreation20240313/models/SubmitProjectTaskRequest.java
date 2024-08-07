@@ -23,11 +23,16 @@ public class SubmitProjectTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("subtitleTag")
     private Integer subtitleTag;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("transparentBackground")
+    private Integer transparentBackground;
+
     private SubmitProjectTaskRequest(Builder builder) {
         super(builder);
         this.frames = builder.frames;
         this.scaleType = builder.scaleType;
         this.subtitleTag = builder.subtitleTag;
+        this.transparentBackground = builder.transparentBackground;
     }
 
     public static Builder builder() {
@@ -64,10 +69,18 @@ public class SubmitProjectTaskRequest extends Request {
         return this.subtitleTag;
     }
 
+    /**
+     * @return transparentBackground
+     */
+    public Integer getTransparentBackground() {
+        return this.transparentBackground;
+    }
+
     public static final class Builder extends Request.Builder<SubmitProjectTaskRequest, Builder> {
         private java.util.List < Frames> frames; 
         private String scaleType; 
         private Integer subtitleTag; 
+        private Integer transparentBackground; 
 
         private Builder() {
             super();
@@ -78,6 +91,7 @@ public class SubmitProjectTaskRequest extends Request {
             this.frames = request.frames;
             this.scaleType = request.scaleType;
             this.subtitleTag = request.subtitleTag;
+            this.transparentBackground = request.transparentBackground;
         } 
 
         /**
@@ -104,6 +118,15 @@ public class SubmitProjectTaskRequest extends Request {
         public Builder subtitleTag(Integer subtitleTag) {
             this.putBodyParameter("subtitleTag", subtitleTag);
             this.subtitleTag = subtitleTag;
+            return this;
+        }
+
+        /**
+         * transparentBackground.
+         */
+        public Builder transparentBackground(Integer transparentBackground) {
+            this.putBodyParameter("transparentBackground", transparentBackground);
+            this.transparentBackground = transparentBackground;
             return this;
         }
 

@@ -20,6 +20,10 @@ public class ListTextsRequest extends Request {
     private String industry;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("keyword")
+    private String keyword;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -43,6 +47,7 @@ public class ListTextsRequest extends Request {
         super(builder);
         this.generationSource = builder.generationSource;
         this.industry = builder.industry;
+        this.keyword = builder.keyword;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.publishStatus = builder.publishStatus;
@@ -75,6 +80,13 @@ public class ListTextsRequest extends Request {
      */
     public String getIndustry() {
         return this.industry;
+    }
+
+    /**
+     * @return keyword
+     */
+    public String getKeyword() {
+        return this.keyword;
     }
 
     /**
@@ -115,6 +127,7 @@ public class ListTextsRequest extends Request {
     public static final class Builder extends Request.Builder<ListTextsRequest, Builder> {
         private String generationSource; 
         private String industry; 
+        private String keyword; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String publishStatus; 
@@ -129,6 +142,7 @@ public class ListTextsRequest extends Request {
             super(request);
             this.generationSource = request.generationSource;
             this.industry = request.industry;
+            this.keyword = request.keyword;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.publishStatus = request.publishStatus;
@@ -151,6 +165,15 @@ public class ListTextsRequest extends Request {
         public Builder industry(String industry) {
             this.putQueryParameter("industry", industry);
             this.industry = industry;
+            return this;
+        }
+
+        /**
+         * keyword.
+         */
+        public Builder keyword(String keyword) {
+            this.putQueryParameter("keyword", keyword);
+            this.keyword = keyword;
             return this;
         }
 
