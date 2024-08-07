@@ -100,7 +100,7 @@ public class BatchStopApplicationsRequest extends Request {
         }
 
         /**
-         * Version.
+         * The application version.
          */
         public Builder version(String version) {
             this.putQueryParameter("Version", version);

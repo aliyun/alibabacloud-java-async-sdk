@@ -112,10 +112,10 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
          * The HTTP status code. Valid values:
          * <p>
          * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -123,7 +123,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the image of an application.
+         * The information about the image of the application.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -131,11 +131,11 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The error code. Valid values:
          * <p>
          * 
-         * *   The **ErrorCode** parameter is not returned when the request succeeds.
-         * *   The **ErrorCode** parameter is returned when the request fails. For more information, see **Error codes** in this topic.
+         * *   If the call is successful, the **ErrorCode** parameter is not returned.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the **Error codes** section in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,11 +143,11 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The returned message. Valid values:
          * <p>
          * 
-         * *   **success** is returned when the request succeeds.
-         * *   An error code is returned when the request fails.
+         * *   success: If the call is successful, **success** is returned.
+         * *   An error code: If the call fails, an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -155,7 +155,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +163,11 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the image information was obtained. Valid values:
+         * Indicates whether the information about the image was obtained. Valid values:
          * <p>
          * 
-         * *   **true**: indicates that the information was obtained.
-         * *   **false**: indicates that the information could not be obtained.
+         * *   **true**: The information was obtained.
+         * *   **false**: The information failed to be obtained.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +175,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It is used to query the details of a request.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -315,7 +315,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -331,7 +331,7 @@ public class DescribeApplicationImageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the namespace to which the repository belongs.
+             * The name of the namespace to which the image repository belongs.
              */
             public Builder repoNamespace(String repoNamespace) {
                 this.repoNamespace = repoNamespace;

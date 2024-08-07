@@ -109,11 +109,13 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the specified applications are stopped. Valid values:
+         * The HTTP status code. Take note of the following rules:
          * <p>
          * 
-         * *   **true**
-         * *   **false**
+         * - **2xx**: The call was successful.
+         * - **3xx**: The call was redirected.
+         * - **4xx**: The call failed.
+         * - **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,13 +131,11 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
+         * The error code returned if the request failed. Take note of the following rules:
          * <p>
          * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * - The ErrorCode parameter is not returned if the request succeeds.
+         * - If the call fails, the ErrorCode parameter is returned. For more information, see the "Error codes" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -163,7 +163,11 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the application is created. Valid values
+         * <p>
+         * 
+         * - **true**
+         * - **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

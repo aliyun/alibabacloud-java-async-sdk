@@ -123,7 +123,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the application.
+         * The information about the application.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -409,7 +409,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Boolean readOnly; 
 
             /**
-             * The name of the bucket.
+             * The name of the OSS bucket.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -417,7 +417,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The directory or object that you created in the OSS bucket. If the specified object or directory is invalid, an exception occurs.
+             * The directory or object in OSS. If the specified directory or object does not exist, an error is returned.
              */
             public Builder bucketPath(String bucketPath) {
                 this.bucketPath = bucketPath;
@@ -425,7 +425,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The directory of your container in SAE. The parameter value that you specified overwrites the original value. If the specified directory does not exist, SAE automatically creates the directory.
+             * The path of the container in SAE. The parameter value that you specified overwrites the original value. If the specified path does not exist, SAE automatically creates the path.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -433,11 +433,11 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the application can use the container directory to read data from or write data to resources in the directory of the OSS bucket. Valid values:
+             * Indicates whether the application can use the container path to read data from or write data to resources in the directory of the OSS bucket. Valid values:
              * <p>
              * 
-             * *   **true**: The application has read-only permissions.
-             * *   **false**: The application has read and write permissions.
+             * *   **true**: The application has the read-only permissions.
+             * *   **false**: The application has the read and write permissions.
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -1359,7 +1359,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AppSource.
+             * The SAE application type.
              */
             public Builder appSource(String appSource) {
                 this.appSource = appSource;

@@ -21,12 +21,20 @@ public class BindSlbRequest extends Request {
     private String internet;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetSlbChargeType")
+    private String internetSlbChargeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetSlbId")
     private String internetSlbId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Intranet")
     private String intranet;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntranetSlbChargeType")
+    private String intranetSlbChargeType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IntranetSlbId")
@@ -36,8 +44,10 @@ public class BindSlbRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.internet = builder.internet;
+        this.internetSlbChargeType = builder.internetSlbChargeType;
         this.internetSlbId = builder.internetSlbId;
         this.intranet = builder.intranet;
+        this.intranetSlbChargeType = builder.intranetSlbChargeType;
         this.intranetSlbId = builder.intranetSlbId;
     }
 
@@ -69,6 +79,13 @@ public class BindSlbRequest extends Request {
     }
 
     /**
+     * @return internetSlbChargeType
+     */
+    public String getInternetSlbChargeType() {
+        return this.internetSlbChargeType;
+    }
+
+    /**
      * @return internetSlbId
      */
     public String getInternetSlbId() {
@@ -83,6 +100,13 @@ public class BindSlbRequest extends Request {
     }
 
     /**
+     * @return intranetSlbChargeType
+     */
+    public String getIntranetSlbChargeType() {
+        return this.intranetSlbChargeType;
+    }
+
+    /**
      * @return intranetSlbId
      */
     public String getIntranetSlbId() {
@@ -92,8 +116,10 @@ public class BindSlbRequest extends Request {
     public static final class Builder extends Request.Builder<BindSlbRequest, Builder> {
         private String appId; 
         private String internet; 
+        private String internetSlbChargeType; 
         private String internetSlbId; 
         private String intranet; 
+        private String intranetSlbChargeType; 
         private String intranetSlbId; 
 
         private Builder() {
@@ -104,8 +130,10 @@ public class BindSlbRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.internet = request.internet;
+            this.internetSlbChargeType = request.internetSlbChargeType;
             this.internetSlbId = request.internetSlbId;
             this.intranet = request.intranet;
+            this.intranetSlbChargeType = request.intranetSlbChargeType;
             this.intranetSlbId = request.intranetSlbId;
         } 
 
@@ -128,6 +156,15 @@ public class BindSlbRequest extends Request {
         }
 
         /**
+         * InternetSlbChargeType.
+         */
+        public Builder internetSlbChargeType(String internetSlbChargeType) {
+            this.putQueryParameter("InternetSlbChargeType", internetSlbChargeType);
+            this.internetSlbChargeType = internetSlbChargeType;
+            return this;
+        }
+
+        /**
          * lb-bp1tg0k6d9nqaw7l1\*\*\*\*
          */
         public Builder internetSlbId(String internetSlbId) {
@@ -142,6 +179,15 @@ public class BindSlbRequest extends Request {
         public Builder intranet(String intranet) {
             this.putQueryParameter("Intranet", intranet);
             this.intranet = intranet;
+            return this;
+        }
+
+        /**
+         * IntranetSlbChargeType.
+         */
+        public Builder intranetSlbChargeType(String intranetSlbChargeType) {
+            this.putQueryParameter("IntranetSlbChargeType", intranetSlbChargeType);
+            this.intranetSlbChargeType = intranetSlbChargeType;
             return this;
         }
 

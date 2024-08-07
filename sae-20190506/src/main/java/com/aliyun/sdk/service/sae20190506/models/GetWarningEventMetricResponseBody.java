@@ -119,7 +119,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -207,7 +207,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             private Long warningCount; 
 
             /**
-             * The ID of the application.
+             * The application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -215,7 +215,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * The application name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +223,7 @@ public class GetWarningEventMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * The namespace ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

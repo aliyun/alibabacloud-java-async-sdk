@@ -119,7 +119,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The returned message.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder nameSpaceShortId(String nameSpaceShortId) {
             this.putQueryParameter("NameSpaceShortId", nameSpaceShortId);
@@ -128,7 +128,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * The message returned for the operation.
          */
         public Builder namespaceDescription(String namespaceDescription) {
             this.putQueryParameter("NamespaceDescription", namespaceDescription);
@@ -137,13 +137,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The HTTP status code. Valid values:
-         * <p>
-         * 
-         * *   **2xx**: indicates that the request was successful.
-         * *   **3xx**: indicates that the request was redirected.
-         * *   **4xx**: indicates that the request was invalid.
-         * *   **5xx**: indicates that a server error occurred.
+         * The data returned.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -152,7 +146,7 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * cn-beijing:test
+         * The ID of the request.
          */
         public Builder namespaceName(String namespaceName) {
             this.putQueryParameter("NamespaceName", namespaceName);

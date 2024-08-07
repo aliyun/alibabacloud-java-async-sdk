@@ -149,7 +149,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The queried applications.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -651,7 +651,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * appName
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -659,7 +659,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -880,7 +880,11 @@ public class ListApplicationsResponseBody extends TeaModel {
             private java.util.List < ApplicationsTags> tags; 
 
             /**
-             * demo-app
+             * Indicates whether the application is being deleted. Valid values:
+             * <p>
+             * 
+             * *   **true**: The application is being deleted.
+             * *   **false**: The application is not being deleted.
              */
             public Builder appDeletingStatus(Boolean appDeletingStatus) {
                 this.appDeletingStatus = appDeletingStatus;
@@ -888,7 +892,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * \[{"key":"key","value":"value"}]
+             * The description of the application.
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -896,7 +900,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of applications.
+             * The application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -904,7 +908,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -928,7 +932,16 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:
+             * <p>
+             * 
+             * *   **500**
+             * *   **1000**
+             * *   **2000**
+             * *   **4000**
+             * *   **8000**
+             * *   **16000**
+             * *   **32000**
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -936,7 +949,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of applications.
+             * The number of application instances.
              */
             public Builder instances(Integer instances) {
                 this.instances = instances;
@@ -944,7 +957,19 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Mem.
+             * The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:
+             * <p>
+             * 
+             * *   This parameter is set to **1024** if the Cpu parameter is set to 500 or 1000.
+             * *   This parameter is set to **2048** if the Cpu parameter is set to 500, 1000, or 2000.
+             * *   This parameter is set to **4096** if the Cpu parameter is set to 1000, 2000, or 4000.
+             * *   This parameter is set to **8192** if the Cpu parameter is set to 2000, 4000, or 8000.
+             * *   This parameter is set to **12288** if the Cpu parameter is set to 12000.
+             * *   This parameter is set to **16384** if the Cpu parameter is set to 4000, 8000, or 16000.
+             * *   This parameter is set to **24576** if the Cpu parameter is set to 12000.
+             * *   This parameter is set to **32768** if the Cpu parameter is set to 16000.
+             * *   This parameter is set to **65536** if the Cpu parameter is set to 8000, 16000, or 32000.
+             * *   This parameter is set to **131072** if the Cpu parameter is set to 32000.
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -968,7 +993,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * demo-app
+             * The namespace ID.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -984,7 +1009,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running instances.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -992,7 +1017,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The number of running instances.
              */
             public Builder runningInstances(Integer runningInstances) {
                 this.runningInstances = runningInstances;
@@ -1000,7 +1025,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * cn-beijing:demo
+             * The tags of the application.
              */
             public Builder tags(java.util.List < ApplicationsTags> tags) {
                 this.tags = tags;
@@ -1077,7 +1102,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The description of the application.
+             * The applications.
              */
             public Builder applications(java.util.List < Applications> applications) {
                 this.applications = applications;

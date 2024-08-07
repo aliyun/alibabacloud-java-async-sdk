@@ -54,7 +54,7 @@ public class DescribeGreyTagRouteRequest extends Request {
         } 
 
         /**
-         * 1
+         * The ID of the canary release rule.
          */
         public Builder greyTagRouteId(Long greyTagRouteId) {
             this.putQueryParameter("GreyTagRouteId", greyTagRouteId);

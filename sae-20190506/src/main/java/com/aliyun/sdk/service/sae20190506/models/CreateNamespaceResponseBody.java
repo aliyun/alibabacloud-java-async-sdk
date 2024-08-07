@@ -109,7 +109,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * bucketPath
          */
         public Builder code(String code) {
             this.code = code;
@@ -125,7 +125,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * http://sae_pop_pre/#vpc
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -133,7 +133,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * name
+         * The ID of the namespace.
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +141,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the namespace.
+         * The description of the custom namespace.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +149,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the namespace.
+         * mountDir
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -157,7 +157,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. It can be used to query the details of a request.
+         * The name of the namespace.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -265,7 +265,11 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * desc
+             * Indicates whether the namespace was created. Valid values:
+             * <p>
+             * 
+             * *   **true**: The instance was created.
+             * *   **false**: The call failed to be created.
              */
             public Builder nameSpaceShortId(String nameSpaceShortId) {
                 this.nameSpaceShortId = nameSpaceShortId;
@@ -273,7 +277,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the namespace.
+             * The short ID of the namespace.
              */
             public Builder namespaceDescription(String namespaceDescription) {
                 this.namespaceDescription = namespaceDescription;
@@ -281,7 +285,11 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The error code returned. Take note of the following rules:
+             * <p>
+             * 
+             * *   The **ErrorCode** parameter is not returned if the request succeeds.
+             * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -289,7 +297,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * cn-beijing:test
+             * Null
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -297,7 +305,13 @@ public class CreateNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * name
+             * The HTTP status code. Valid values:
+             * <p>
+             * 
+             * *   **2xx**: The call was successful.
+             * *   **3xx**: The call was redirected.
+             * *   **4xx**: The call failed.
+             * *   **5xx**: A server error occurred.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -123,7 +123,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The list of namespaces.
+         * The namespaces.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -131,11 +131,11 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error code. Valid values:
+         * The error code. Valid values:
          * <p>
          * 
          * *   If the call is successful, the **ErrorCode** parameter is not returned.
-         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the **Error codes** section in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +143,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information. Valid values:
+         * The returned message. Valid values:
          * <p>
          * 
          * *   success: If the call is successful, **success** is returned.
@@ -155,7 +155,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -163,11 +163,11 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the namespaces were obtained. Valid values:
+         * Indicates whether the list of namespaces was queried. Valid values:
          * <p>
          * 
-         * *   **true**: The namespaces were obtained.
-         * *   **false**: The namespaces failed to be obtained.
+         * *   **true**: The list was queried.
+         * *   **false**: The list failed to be queried.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -363,7 +363,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether hybrid cloud namespaces are excluded. Valid values:
+             * Indicates whether hybrid cloud namespaces are excluded. Valid values:
              * <p>
              * 
              * *   **true**: Hybrid cloud namespaces are excluded.
@@ -375,7 +375,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
             }
 
             /**
-             * NameSpaceShortId.
+             * The short ID of the namespace.
              */
             public Builder nameSpaceShortId(String nameSpaceShortId) {
                 this.nameSpaceShortId = nameSpaceShortId;

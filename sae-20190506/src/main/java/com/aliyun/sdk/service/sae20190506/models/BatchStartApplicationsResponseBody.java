@@ -109,7 +109,13 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. Take note of the following rules:
+         * <p>
+         * 
+         * - **2xx**: The call was successful.
+         * - **3xx**: The call was redirected.
+         * - **4xx**: The call failed.
+         * - **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,11 +135,11 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the specified applications are successfully started. Valid values:
+         * The error code returned if the request failed. Take note of the following rules:
          * <p>
          * 
-         * *   **true**
-         * *   **false**
+         * - The ErrorCode parameter is not returned if the request succeeds.
+         * - If the call fails, the ErrorCode parameter is returned. For more information, see the "Error codes" section of this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -157,7 +163,11 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the application deployment is successful. Take note of the following rules:
+         * <p>
+         * 
+         * - **true**
+         * - **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

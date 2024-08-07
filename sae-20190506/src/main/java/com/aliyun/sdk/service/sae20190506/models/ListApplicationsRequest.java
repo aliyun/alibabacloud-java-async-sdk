@@ -194,7 +194,12 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * AppSource.
+         * The SAE application type. Valid values:
+         * <p>
+         * 
+         * - **micro_service**
+         * - **web**
+         * - **job**
          */
         public Builder appSource(String appSource) {
             this.putQueryParameter("AppSource", appSource);

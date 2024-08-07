@@ -112,10 +112,10 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
          * The HTTP status code. Valid values:
          * <p>
          * 
-         * - **2xx**: The call was successful.
-         * - **3xx**: The call was redirected.
-         * - **4xx**: The call failed.
-         * - **5xx**: A server error occurred.
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -131,11 +131,11 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error code. Valid values:
+         * The error code. Valid values:
          * <p>
          * 
-         * - If the call is successful, the **ErrorCode** parameter is not returned.
-         * - If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+         * *   If the call is successful, the **ErrorCode** parameter is not returned.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the **Error codes** section in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +143,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +151,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,8 +162,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
          * Indicates whether the information of the change order was queried. Valid values:
          * <p>
          * 
-         * - **true**: The information was queried.
-         * - **false**: The information failed to be queried.
+         * *   **true**: The information was queried.
+         * *   **false**: The information failed to be queried.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -283,7 +283,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * cond.
+             * Valid value: ==.
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -291,7 +291,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * expr.
+             * This parameter is not returned for applications that are associated with ALB instances.
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -299,7 +299,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * This parameter is not returned for applications that are associated with Application Load Balancer (ALB) instances.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -307,7 +307,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -315,7 +315,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * operator.
+             * The operator. Valid value: **rawvalue**. This value indicates direct comparison.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -323,7 +323,12 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the comparison. Valid values:
+             * <p>
+             * 
+             * *   **sourceIp**: SourceIp
+             * *   **cookie**: cookie
+             * *   **header**: header
              */
             public Builder type(String type) {
                 this.type = type;
@@ -331,7 +336,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * The value of the parameter. This value is compared with the value that is obtained based on the type and name parameters.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -408,7 +413,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             private String serviceId; 
 
             /**
-             * condition.
+             * The condition mode of the canary release rule. Valid value: AND. This value indicates that that all conditions must be met.
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -416,7 +421,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * ingressId.
+             * The ID of the gateway routing rule.
              */
             public Builder ingressId(String ingressId) {
                 this.ingressId = ingressId;
@@ -432,7 +437,7 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
             }
 
             /**
-             * serviceId.
+             * The service ID.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -556,12 +561,12 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
              * The expression that is used to obtain the value of the parameter. Valid values:
              * <p>
              * 
-             * - **Empty**: obtains the value of the parameter.
-             * - **.name**: obtains the name property of the parameter. This expression works the same way as args0.getName().
-             * - **.isEnabled()**: obtains the enabled property of the parameter. This expression works the same way as args0.isEnabled().
-             * - **[0]**: indicates that the value of the parameter is an array and obtains the first value of the array. This expression works the same way as args0[0]. This expression does not start with a period (.).
-             * - **.get(0)**: indicates that the value of the parameter is a list and obtains the first value of the list. This expression works the same way as args0.get(0).
-             * - **.get("key")**: indicates that the value of the parameter is a map and obtains the value of the key in the map. This expression works the same way as args0.get("key").
+             * *   **Empty**: obtains the value of the parameter.
+             * *   **.name**: obtains the name property of the parameter. This expression works the same way as args0.getName().
+             * *   **.isEnabled()**: obtains the enabled property of the parameter. This expression works the same way as args0.isEnabled().
+             * *   **\[0]**: indicates that the value of the parameter is an array and obtains the first value of the array. This expression works the same way as args0\[0]. This expression does not start with a period (.).
+             * *   **.get(0)**: indicates that the value of the parameter is a list and obtains the first value of the list. This expression works the same way as args0.get(0).
+             * *   **.get("key")**: indicates that the value of the parameter is a map and obtains the value of the key in the map. This expression works the same way as args0.get("key").
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -588,10 +593,10 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
              * The operator. Valid values:
              * <p>
              * 
-             * - **rawvalue**: direct comparison.
-             * - **list**: whitelist.
-             * - **mod**: mods 100.
-             * - **deterministic_proportional_steaming_division**: percentage.
+             * *   **rawvalue**: direct comparison.
+             * *   **list**: whitelist.
+             * *   **mod**: mods 100.
+             * *   **deterministic_proportional_steaming_division**: percentage.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -711,8 +716,8 @@ public class DescribeGreyTagRouteResponseBody extends TeaModel {
              * The relationship between the conditions in the canary release rule. Valid values:
              * <p>
              * 
-             * - **AND**: The conditions are in the logical AND relation. All conditions must be met at the same time.
-             * - **OR**: The conditions are in the logical OR relation. At least one of the conditions must be met.
+             * *   **AND**: The conditions are in the logical AND relation. All conditions must be met at the same time.
+             * *   **OR**: The conditions are in the logical OR relation. At least one of the conditions must be met.
              */
             public Builder condition(String condition) {
                 this.condition = condition;

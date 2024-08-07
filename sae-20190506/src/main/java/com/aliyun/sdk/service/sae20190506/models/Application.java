@@ -14,9 +14,6 @@ public class Application extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("applicationID")
-    private String applicationID;
-
     @com.aliyun.core.annotation.NameInMap("applicationId")
     private String applicationId;
 
@@ -52,6 +49,9 @@ public class Application extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("customHealthCheckConfig")
     private CustomHealthCheckConfig customHealthCheckConfig;
+
+    @com.aliyun.core.annotation.NameInMap("customHostAlias")
+    private CustomHostAlias customHostAlias;
 
     @com.aliyun.core.annotation.NameInMap("customRuntimeConfig")
     private CustomRuntimeConfig customRuntimeConfig;
@@ -169,7 +169,6 @@ public class Application extends TeaModel {
 
     private Application(Builder builder) {
         this.requestId = builder.requestId;
-        this.applicationID = builder.applicationID;
         this.applicationId = builder.applicationId;
         this.applicationName = builder.applicationName;
         this.args = builder.args;
@@ -182,6 +181,7 @@ public class Application extends TeaModel {
         this.customDNS = builder.customDNS;
         this.customDomainName = builder.customDomainName;
         this.customHealthCheckConfig = builder.customHealthCheckConfig;
+        this.customHostAlias = builder.customHostAlias;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
         this.diskSize = builder.diskSize;
@@ -235,13 +235,6 @@ public class Application extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return applicationID
-     */
-    public String getApplicationID() {
-        return this.applicationID;
     }
 
     /**
@@ -326,6 +319,13 @@ public class Application extends TeaModel {
      */
     public CustomHealthCheckConfig getCustomHealthCheckConfig() {
         return this.customHealthCheckConfig;
+    }
+
+    /**
+     * @return customHostAlias
+     */
+    public CustomHostAlias getCustomHostAlias() {
+        return this.customHostAlias;
     }
 
     /**
@@ -596,7 +596,6 @@ public class Application extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private String applicationID; 
         private String applicationId; 
         private String applicationName; 
         private String args; 
@@ -609,6 +608,7 @@ public class Application extends TeaModel {
         private CustomDNS customDNS; 
         private String customDomainName; 
         private CustomHealthCheckConfig customHealthCheckConfig; 
+        private CustomHostAlias customHostAlias; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
         private Integer diskSize; 
@@ -653,14 +653,6 @@ public class Application extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * applicationID.
-         */
-        public Builder applicationID(String applicationID) {
-            this.applicationID = applicationID;
             return this;
         }
 
@@ -757,6 +749,14 @@ public class Application extends TeaModel {
          */
         public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
             this.customHealthCheckConfig = customHealthCheckConfig;
+            return this;
+        }
+
+        /**
+         * customHostAlias.
+         */
+        public Builder customHostAlias(CustomHostAlias customHostAlias) {
+            this.customHostAlias = customHostAlias;
             return this;
         }
 

@@ -36,6 +36,9 @@ public class CreateApplicationInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("customHealthCheckConfig")
     private CustomHealthCheckConfig customHealthCheckConfig;
 
+    @com.aliyun.core.annotation.NameInMap("customHostAlias")
+    private CustomHostAlias customHostAlias;
+
     @com.aliyun.core.annotation.NameInMap("customRuntimeConfig")
     private CustomRuntimeConfig customRuntimeConfig;
 
@@ -137,6 +140,7 @@ public class CreateApplicationInput extends TeaModel {
         this.cpu = builder.cpu;
         this.customDNS = builder.customDNS;
         this.customHealthCheckConfig = builder.customHealthCheckConfig;
+        this.customHostAlias = builder.customHostAlias;
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
         this.diskSize = builder.diskSize;
@@ -230,6 +234,13 @@ public class CreateApplicationInput extends TeaModel {
      */
     public CustomHealthCheckConfig getCustomHealthCheckConfig() {
         return this.customHealthCheckConfig;
+    }
+
+    /**
+     * @return customHostAlias
+     */
+    public CustomHostAlias getCustomHostAlias() {
+        return this.customHostAlias;
     }
 
     /**
@@ -444,6 +455,7 @@ public class CreateApplicationInput extends TeaModel {
         private Float cpu; 
         private CustomDNS customDNS; 
         private CustomHealthCheckConfig customHealthCheckConfig; 
+        private CustomHostAlias customHostAlias; 
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
         private Integer diskSize; 
@@ -535,6 +547,14 @@ public class CreateApplicationInput extends TeaModel {
          */
         public Builder customHealthCheckConfig(CustomHealthCheckConfig customHealthCheckConfig) {
             this.customHealthCheckConfig = customHealthCheckConfig;
+            return this;
+        }
+
+        /**
+         * customHostAlias.
+         */
+        public Builder customHostAlias(CustomHostAlias customHostAlias) {
+            this.customHostAlias = customHostAlias;
             return this;
         }
 

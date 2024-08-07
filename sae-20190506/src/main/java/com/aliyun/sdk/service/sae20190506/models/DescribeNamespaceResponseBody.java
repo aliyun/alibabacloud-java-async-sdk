@@ -123,7 +123,7 @@ public class DescribeNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the namespace.
+         * The information about the namespace.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -275,11 +275,11 @@ public class DescribeNamespaceResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * Indicates whether the SAE built-in registry is enabled. 
+             * Indicates whether the SAE built-in registry is enabled. Valid values:
              * <p>
-             * Valid values:
-             * * true
-             * * false
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder enableMicroRegistration(Boolean enableMicroRegistration) {
                 this.enableMicroRegistration = enableMicroRegistration;

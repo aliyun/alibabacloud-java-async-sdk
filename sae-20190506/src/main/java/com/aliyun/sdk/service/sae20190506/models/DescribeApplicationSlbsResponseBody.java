@@ -593,6 +593,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
+        @com.aliyun.core.annotation.NameInMap("InternetSlbChargeType")
+        private String internetSlbChargeType;
+
         @com.aliyun.core.annotation.NameInMap("InternetSlbExpired")
         private Boolean internetSlbExpired;
 
@@ -605,6 +608,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
+        @com.aliyun.core.annotation.NameInMap("IntranetSlbChargeType")
+        private String intranetSlbChargeType;
+
         @com.aliyun.core.annotation.NameInMap("IntranetSlbExpired")
         private Boolean intranetSlbExpired;
 
@@ -614,10 +620,12 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.internet = builder.internet;
             this.internetIp = builder.internetIp;
+            this.internetSlbChargeType = builder.internetSlbChargeType;
             this.internetSlbExpired = builder.internetSlbExpired;
             this.internetSlbId = builder.internetSlbId;
             this.intranet = builder.intranet;
             this.intranetIp = builder.intranetIp;
+            this.intranetSlbChargeType = builder.intranetSlbChargeType;
             this.intranetSlbExpired = builder.intranetSlbExpired;
             this.intranetSlbId = builder.intranetSlbId;
         }
@@ -642,6 +650,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
          */
         public String getInternetIp() {
             return this.internetIp;
+        }
+
+        /**
+         * @return internetSlbChargeType
+         */
+        public String getInternetSlbChargeType() {
+            return this.internetSlbChargeType;
         }
 
         /**
@@ -673,6 +688,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
+         * @return intranetSlbChargeType
+         */
+        public String getIntranetSlbChargeType() {
+            return this.intranetSlbChargeType;
+        }
+
+        /**
          * @return intranetSlbExpired
          */
         public Boolean getIntranetSlbExpired() {
@@ -689,10 +711,12 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < Internet> internet; 
             private String internetIp; 
+            private String internetSlbChargeType; 
             private Boolean internetSlbExpired; 
             private String internetSlbId; 
             private java.util.List < Intranet> intranet; 
             private String intranetIp; 
+            private String intranetSlbChargeType; 
             private Boolean intranetSlbExpired; 
             private String intranetSlbId; 
 
@@ -709,6 +733,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * InternetSlbChargeType.
+             */
+            public Builder internetSlbChargeType(String internetSlbChargeType) {
+                this.internetSlbChargeType = internetSlbChargeType;
                 return this;
             }
 
@@ -745,6 +777,14 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
+                return this;
+            }
+
+            /**
+             * IntranetSlbChargeType.
+             */
+            public Builder intranetSlbChargeType(String intranetSlbChargeType) {
+                this.intranetSlbChargeType = intranetSlbChargeType;
                 return this;
             }
 

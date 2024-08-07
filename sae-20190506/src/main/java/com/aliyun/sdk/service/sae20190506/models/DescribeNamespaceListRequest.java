@@ -67,7 +67,11 @@ public class DescribeNamespaceListRequest extends Request {
         } 
 
         /**
-         * true
+         * Specifies whether to return custom namespaces. Valid values:
+         * <p>
+         * 
+         * *   **true**: The system returns custom namespaces.
+         * *   **false**: The system does not return custom namespaces.
          */
         public Builder containCustom(Boolean containCustom) {
             this.putQueryParameter("ContainCustom", containCustom);
@@ -76,7 +80,11 @@ public class DescribeNamespaceListRequest extends Request {
         }
 
         /**
-         * true
+         * Specifies whether to exclude hybrid cloud namespaces from the result. Valid values:
+         * <p>
+         * 
+         * - **true**: The system excludes hybrid cloud namespaces from the result.
+         * - **false**: The system does not exclude hybrid cloud namespaces from the result.
          */
         public Builder hybridCloudExclude(Boolean hybridCloudExclude) {
             this.putQueryParameter("HybridCloudExclude", hybridCloudExclude);
