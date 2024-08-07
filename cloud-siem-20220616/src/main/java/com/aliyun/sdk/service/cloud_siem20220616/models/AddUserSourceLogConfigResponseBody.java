@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddUserSourceLogConfigResponseBody</p>
  */
 public class AddUserSourceLogConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddUserSourceLogConfigResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DiplayLine")
+        @com.aliyun.core.annotation.NameInMap("DiplayLine")
         private String diplayLine;
 
-        @NameInMap("Displayed")
+        @com.aliyun.core.annotation.NameInMap("Displayed")
         private Boolean displayed;
 
-        @NameInMap("Imported")
+        @com.aliyun.core.annotation.NameInMap("Imported")
         private Boolean imported;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private Long mainUserId;
 
-        @NameInMap("SourceLogCode")
+        @com.aliyun.core.annotation.NameInMap("SourceLogCode")
         private String sourceLogCode;
 
-        @NameInMap("SourceProdCode")
+        @com.aliyun.core.annotation.NameInMap("SourceProdCode")
         private String sourceProdCode;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
-        @NameInMap("SubUserName")
+        @com.aliyun.core.annotation.NameInMap("SubUserName")
         private String subUserName;
 
         private Data(Builder builder) {

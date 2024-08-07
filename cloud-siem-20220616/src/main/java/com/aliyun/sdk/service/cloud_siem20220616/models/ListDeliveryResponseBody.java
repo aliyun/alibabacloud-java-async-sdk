@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDeliveryResponseBody</p>
  */
 public class ListDeliveryResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDeliveryResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListDeliveryResponseBody extends TeaModel {
     } 
 
     public static class ExtraParameters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ExtraParameters(Builder builder) {
@@ -133,28 +132,28 @@ public class ListDeliveryResponseBody extends TeaModel {
 
     }
     public static class LogList extends TeaModel {
-        @NameInMap("CanOperateOrNot")
+        @com.aliyun.core.annotation.NameInMap("CanOperateOrNot")
         private Boolean canOperateOrNot;
 
-        @NameInMap("ExtraParameters")
+        @com.aliyun.core.annotation.NameInMap("ExtraParameters")
         private java.util.List < ExtraParameters> extraParameters;
 
-        @NameInMap("LogCode")
+        @com.aliyun.core.annotation.NameInMap("LogCode")
         private String logCode;
 
-        @NameInMap("LogName")
+        @com.aliyun.core.annotation.NameInMap("LogName")
         private String logName;
 
-        @NameInMap("LogNameEn")
+        @com.aliyun.core.annotation.NameInMap("LogNameEn")
         private String logNameEn;
 
-        @NameInMap("LogNameKey")
+        @com.aliyun.core.annotation.NameInMap("LogNameKey")
         private String logNameKey;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private LogList(Builder builder) {
@@ -322,16 +321,16 @@ public class ListDeliveryResponseBody extends TeaModel {
 
     }
     public static class ProductList extends TeaModel {
-        @NameInMap("LogList")
+        @com.aliyun.core.annotation.NameInMap("LogList")
         private java.util.List < LogList> logList;
 
-        @NameInMap("LogMap")
+        @com.aliyun.core.annotation.NameInMap("LogMap")
         private java.util.Map < String, java.util.List<DataProductListLogMapValue>> logMap;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
         private ProductList(Builder builder) {
@@ -448,22 +447,22 @@ public class ListDeliveryResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DashboardUrl")
+        @com.aliyun.core.annotation.NameInMap("DashboardUrl")
         private String dashboardUrl;
 
-        @NameInMap("DisplaySwitchOrNot")
+        @com.aliyun.core.annotation.NameInMap("DisplaySwitchOrNot")
         private Boolean displaySwitchOrNot;
 
-        @NameInMap("LogStoreName")
+        @com.aliyun.core.annotation.NameInMap("LogStoreName")
         private String logStoreName;
 
-        @NameInMap("ProductList")
+        @com.aliyun.core.annotation.NameInMap("ProductList")
         private java.util.List < ProductList> productList;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("SearchUrl")
+        @com.aliyun.core.annotation.NameInMap("SearchUrl")
         private String searchUrl;
 
         private Data(Builder builder) {

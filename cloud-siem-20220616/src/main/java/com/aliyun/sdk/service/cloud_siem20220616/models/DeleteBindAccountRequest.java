@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteBindAccountRequest</p>
  */
 public class DeleteBindAccountRequest extends Request {
-    @Body
-    @NameInMap("AccessId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessId;
 
-    @Body
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Body
-    @NameInMap("BindId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BindId")
     private Long bindId;
 
-    @Body
-    @NameInMap("CloudCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cloudCode;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
 
     private DeleteBindAccountRequest(Builder builder) {
         super(builder);
@@ -42,6 +49,8 @@ public class DeleteBindAccountRequest extends Request {
         this.bindId = builder.bindId;
         this.cloudCode = builder.cloudCode;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
     }
 
     public static Builder builder() {
@@ -92,12 +101,28 @@ public class DeleteBindAccountRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
     public static final class Builder extends Request.Builder<DeleteBindAccountRequest, Builder> {
         private String accessId; 
         private String accountId; 
         private Long bindId; 
         private String cloudCode; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
 
         private Builder() {
             super();
@@ -110,6 +135,8 @@ public class DeleteBindAccountRequest extends Request {
             this.bindId = request.bindId;
             this.cloudCode = request.cloudCode;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
         } 
 
         /**
@@ -163,6 +190,24 @@ public class DeleteBindAccountRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

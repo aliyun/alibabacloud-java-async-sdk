@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddDataSourceLogRequest</p>
  */
 public class AddDataSourceLogRequest extends Request {
-    @Body
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Body
-    @NameInMap("CloudCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cloudCode;
 
-    @Body
-    @NameInMap("DataSourceInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceInstanceId;
 
-    @Body
-    @NameInMap("DataSourceInstanceLogs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceInstanceLogs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceInstanceLogs;
 
-    @Body
-    @NameInMap("LogCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogCode")
     private String logCode;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private AddDataSourceLogRequest(Builder builder) {

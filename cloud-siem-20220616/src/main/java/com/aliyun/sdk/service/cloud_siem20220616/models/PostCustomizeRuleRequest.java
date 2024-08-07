@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,88 +11,88 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PostCustomizeRuleRequest</p>
  */
 public class PostCustomizeRuleRequest extends Request {
-    @Body
-    @NameInMap("AlertType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertType")
     private String alertType;
 
-    @Body
-    @NameInMap("AlertTypeMds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertTypeMds")
     private String alertTypeMds;
 
-    @Body
-    @NameInMap("AttCk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AttCk")
     private String attCk;
 
-    @Body
-    @NameInMap("EventTransferExt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventTransferExt")
     private String eventTransferExt;
 
-    @Body
-    @NameInMap("EventTransferSwitch")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventTransferSwitch")
     private Integer eventTransferSwitch;
 
-    @Body
-    @NameInMap("EventTransferType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EventTransferType")
     private String eventTransferType;
 
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Body
-    @NameInMap("LogSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogSource")
     private String logSource;
 
-    @Body
-    @NameInMap("LogSourceMds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogSourceMds")
     private String logSourceMds;
 
-    @Body
-    @NameInMap("LogType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogType")
     private String logType;
 
-    @Body
-    @NameInMap("LogTypeMds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogTypeMds")
     private String logTypeMds;
 
-    @Body
-    @NameInMap("QueryCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueryCycle")
     private String queryCycle;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RoleFor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    @Body
-    @NameInMap("RoleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
     private Integer roleType;
 
-    @Body
-    @NameInMap("RuleCondition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleCondition")
     private String ruleCondition;
 
-    @Body
-    @NameInMap("RuleDesc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleDesc")
     private String ruleDesc;
 
-    @Body
-    @NameInMap("RuleGroup")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleGroup")
     private String ruleGroup;
 
-    @Body
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Body
-    @NameInMap("RuleThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RuleThreshold")
     private String ruleThreshold;
 
-    @Body
-    @NameInMap("ThreatLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThreatLevel")
     private String threatLevel;
 
     private PostCustomizeRuleRequest(Builder builder) {
@@ -352,7 +351,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * AttCk.
+         * att&ck.
          */
         public Builder attCk(String attCk) {
             this.putBodyParameter("AttCk", attCk);
@@ -464,7 +463,7 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * The ID of the account that you switch from the management account.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -473,7 +472,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

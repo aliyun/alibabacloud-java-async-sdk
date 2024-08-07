@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAllProdsResponseBody</p>
  */
 public class ListAllProdsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAllProdsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class ListAllProdsResponseBody extends TeaModel {
     } 
 
     public static class ProdList extends TeaModel {
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("ImportedLogCount")
+        @com.aliyun.core.annotation.NameInMap("ImportedLogCount")
         private Integer importedLogCount;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ProdCode")
+        @com.aliyun.core.annotation.NameInMap("ProdCode")
         private String prodCode;
 
-        @NameInMap("TotalLogCount")
+        @com.aliyun.core.annotation.NameInMap("TotalLogCount")
         private Integer totalLogCount;
 
         private ProdList(Builder builder) {
@@ -149,9 +148,9 @@ public class ListAllProdsResponseBody extends TeaModel {
              * The code of the cloud service provider. Valid values:
              * <p>
              * 
-             * *   qcloud: Tencent Cloud
-             * *   aliyun: Alibaba Cloud
-             * *   hcloud: Huawei Cloud
+             * *   qcloud: Tencent Cloud.
+             * *   aliyun: Alibaba Cloud.
+             * *   hcloud: Huawei Cloud.
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -198,16 +197,16 @@ public class ListAllProdsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ProdList")
+        @com.aliyun.core.annotation.NameInMap("ProdList")
         private java.util.List < ProdList> prodList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

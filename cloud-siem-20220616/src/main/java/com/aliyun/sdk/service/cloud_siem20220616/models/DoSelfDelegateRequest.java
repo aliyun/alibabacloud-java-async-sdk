@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DoSelfDelegateRequest</p>
  */
 public class DoSelfDelegateRequest extends Request {
-    @Body
-    @NameInMap("AliUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AliUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long aliUid;
 
-    @Body
-    @NameInMap("DelegateOrNot")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DelegateOrNot")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer delegateOrNot;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DoSelfDelegateRequest(Builder builder) {

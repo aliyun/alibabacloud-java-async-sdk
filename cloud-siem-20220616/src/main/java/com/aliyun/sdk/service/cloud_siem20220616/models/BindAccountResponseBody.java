@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindAccountResponseBody</p>
  */
 public class BindAccountResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BindAccountResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class BindAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -72,7 +71,7 @@ public class BindAccountResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private Data(Builder builder) {
@@ -98,7 +97,7 @@ public class BindAccountResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The number of the cloud accounts that are added to the threat analysis feature. The value 1 indicates that the account is added, and a value less than or equal to 0 indicates that the account failed to be added.
+             * The number of the cloud accounts that are added to the threat analysis feature.
              */
             public Builder count(Integer count) {
                 this.count = count;

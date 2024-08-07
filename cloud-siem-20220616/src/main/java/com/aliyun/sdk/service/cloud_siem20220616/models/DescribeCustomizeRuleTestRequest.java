@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomizeRuleTestRequest</p>
  */
 public class DescribeCustomizeRuleTestRequest extends Request {
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RoleFor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    @Body
-    @NameInMap("RoleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
     private Integer roleType;
 
     private DescribeCustomizeRuleTestRequest(Builder builder) {
@@ -118,7 +117,7 @@ public class DescribeCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * The ID of the account that you switch from the management account.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -127,7 +126,10 @@ public class DescribeCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

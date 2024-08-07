@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertsCountResponseBody</p>
  */
 public class DescribeAlertsCountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAlertsCountResponseBody(Builder builder) {
@@ -136,19 +135,19 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("All")
+        @com.aliyun.core.annotation.NameInMap("All")
         private Long all;
 
-        @NameInMap("High")
+        @com.aliyun.core.annotation.NameInMap("High")
         private Long high;
 
-        @NameInMap("Low")
+        @com.aliyun.core.annotation.NameInMap("Low")
         private Long low;
 
-        @NameInMap("Medium")
+        @com.aliyun.core.annotation.NameInMap("Medium")
         private Long medium;
 
-        @NameInMap("ProductNum")
+        @com.aliyun.core.annotation.NameInMap("ProductNum")
         private Integer productNum;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBindAccountResponseBody</p>
  */
 public class ListBindAccountResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListBindAccountResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListBindAccountResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccessId")
+        @com.aliyun.core.annotation.NameInMap("AccessId")
         private String accessId;
 
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("BindId")
+        @com.aliyun.core.annotation.NameInMap("BindId")
         private Long bindId;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("CreateUser")
+        @com.aliyun.core.annotation.NameInMap("CreateUser")
         private String createUser;
 
-        @NameInMap("DataSourceCount")
+        @com.aliyun.core.annotation.NameInMap("DataSourceCount")
         private Long dataSourceCount;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
         private Data(Builder builder) {

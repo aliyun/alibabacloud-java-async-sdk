@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudSiemEventDetailResponseBody</p>
  */
 public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCloudSiemEventDetailResponseBody(Builder builder) {
@@ -136,58 +135,58 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AlertNum")
+        @com.aliyun.core.annotation.NameInMap("AlertNum")
         private Integer alertNum;
 
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private Long aliuid;
 
-        @NameInMap("AssetNum")
+        @com.aliyun.core.annotation.NameInMap("AssetNum")
         private Integer assetNum;
 
-        @NameInMap("AttCkLabels")
+        @com.aliyun.core.annotation.NameInMap("AttCkLabels")
         private java.util.List < String > attCkLabels;
 
-        @NameInMap("DataSources")
+        @com.aliyun.core.annotation.NameInMap("DataSources")
         private java.util.List < String > dataSources;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DescriptionEn")
+        @com.aliyun.core.annotation.NameInMap("DescriptionEn")
         private String descriptionEn;
 
-        @NameInMap("ExtContent")
+        @com.aliyun.core.annotation.NameInMap("ExtContent")
         private String extContent;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("IncidentName")
+        @com.aliyun.core.annotation.NameInMap("IncidentName")
         private String incidentName;
 
-        @NameInMap("IncidentNameEn")
+        @com.aliyun.core.annotation.NameInMap("IncidentNameEn")
         private String incidentNameEn;
 
-        @NameInMap("IncidentUuid")
+        @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
-        @NameInMap("ReferAccount")
+        @com.aliyun.core.annotation.NameInMap("ReferAccount")
         private String referAccount;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
-        @NameInMap("ThreatScore")
+        @com.aliyun.core.annotation.NameInMap("ThreatScore")
         private Float threatScore;
 
         private Data(Builder builder) {
@@ -470,7 +469,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ReferAccount.
+             * Users associated with the event.
              */
             public Builder referAccount(String referAccount) {
                 this.referAccount = referAccount;

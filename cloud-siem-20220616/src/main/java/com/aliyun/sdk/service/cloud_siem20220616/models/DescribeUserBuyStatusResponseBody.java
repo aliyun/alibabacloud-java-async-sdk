@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserBuyStatusResponseBody</p>
  */
 public class DescribeUserBuyStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserBuyStatusResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CanBuy")
+        @com.aliyun.core.annotation.NameInMap("CanBuy")
         private Boolean canBuy;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Integer capacity;
 
-        @NameInMap("DurationDays")
+        @com.aliyun.core.annotation.NameInMap("DurationDays")
         private Long durationDays;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private Long mainUserId;
 
-        @NameInMap("MainUserName")
+        @com.aliyun.core.annotation.NameInMap("MainUserName")
         private String mainUserName;
 
-        @NameInMap("MasterUserId")
+        @com.aliyun.core.annotation.NameInMap("MasterUserId")
         private Long masterUserId;
 
-        @NameInMap("MasterUserName")
+        @com.aliyun.core.annotation.NameInMap("MasterUserName")
         private String masterUserName;
 
-        @NameInMap("RdOrder")
+        @com.aliyun.core.annotation.NameInMap("RdOrder")
         private Integer rdOrder;
 
-        @NameInMap("SasInstanceId")
+        @com.aliyun.core.annotation.NameInMap("SasInstanceId")
         private String sasInstanceId;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
-        @NameInMap("SubUserName")
+        @com.aliyun.core.annotation.NameInMap("SubUserName")
         private String subUserName;
 
         private Data(Builder builder) {

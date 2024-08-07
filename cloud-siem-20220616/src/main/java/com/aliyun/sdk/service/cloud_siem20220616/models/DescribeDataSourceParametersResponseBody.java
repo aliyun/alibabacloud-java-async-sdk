@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataSourceParametersResponseBody</p>
  */
 public class DescribeDataSourceParametersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDataSourceParametersResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
     } 
 
     public static class ParamValue extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParamValue(Builder builder) {
@@ -133,46 +132,46 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CanEditted")
+        @com.aliyun.core.annotation.NameInMap("CanEditted")
         private Integer canEditted;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("DataSourceType")
+        @com.aliyun.core.annotation.NameInMap("DataSourceType")
         private String dataSourceType;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("FormatCheck")
+        @com.aliyun.core.annotation.NameInMap("FormatCheck")
         private String formatCheck;
 
-        @NameInMap("Hit")
+        @com.aliyun.core.annotation.NameInMap("Hit")
         private String hit;
 
-        @NameInMap("ParaCode")
+        @com.aliyun.core.annotation.NameInMap("ParaCode")
         private String paraCode;
 
-        @NameInMap("ParaLevel")
+        @com.aliyun.core.annotation.NameInMap("ParaLevel")
         private Integer paraLevel;
 
-        @NameInMap("ParaName")
+        @com.aliyun.core.annotation.NameInMap("ParaName")
         private String paraName;
 
-        @NameInMap("ParaType")
+        @com.aliyun.core.annotation.NameInMap("ParaType")
         private String paraType;
 
-        @NameInMap("ParamValue")
+        @com.aliyun.core.annotation.NameInMap("ParamValue")
         private java.util.List < ParamValue> paramValue;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Integer required;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Data(Builder builder) {

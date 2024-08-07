@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertsWithEventRequest</p>
  */
 public class DescribeAlertsWithEventRequest extends Request {
-    @Body
-    @NameInMap("AlertTitle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlertTitle")
     private String alertTitle;
 
-    @Body
-    @NameInMap("CurrentPage")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer currentPage;
 
-    @Body
-    @NameInMap("IncidentUuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncidentUuid")
     private String incidentUuid;
 
-    @Body
-    @NameInMap("IsDefend")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsDefend")
     private String isDefend;
 
-    @Body
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Level")
     private java.util.List < String > level;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RoleFor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    @Body
-    @NameInMap("RoleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
     private Integer roleType;
 
-    @Body
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @Body
-    @NameInMap("SubUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubUserId")
     private Long subUserId;
 
     private DescribeAlertsWithEventRequest(Builder builder) {
@@ -272,7 +271,7 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * The ID of the member in the resource directory.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -281,7 +280,11 @@ public class DescribeAlertsWithEventRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The type of the view.
+         * <p>
+         * 
+         * *   0: view of the current Alibaba Cloud account.
+         * *   1: view of all accounts for the enterprise.
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

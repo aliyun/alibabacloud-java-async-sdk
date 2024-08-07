@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertSourceWithEventRequest</p>
  */
 public class DescribeAlertSourceWithEventRequest extends Request {
-    @Body
-    @NameInMap("IncidentUuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncidentUuid")
     private String incidentUuid;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RoleFor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    @Body
-    @NameInMap("RoleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
     private Integer roleType;
 
     private DescribeAlertSourceWithEventRequest(Builder builder) {
@@ -105,10 +104,10 @@ public class DescribeAlertSourceWithEventRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the region where your assets reside. Valid values:
          * <p>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   Valid values: Your assets reside in regions in China.
          * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
@@ -118,7 +117,7 @@ public class DescribeAlertSourceWithEventRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * The ID of the account that you switch from the management account.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -127,7 +126,10 @@ public class DescribeAlertSourceWithEventRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

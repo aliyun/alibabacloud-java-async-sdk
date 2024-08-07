@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHistogramsRequest</p>
  */
 public class GetHistogramsRequest extends Request {
-    @Body
-    @NameInMap("From")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("From")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer from;
 
-    @Body
-    @NameInMap("Query")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("To")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("To")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer to;
 
     private GetHistogramsRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAutomateResponseConfigsResponseBody</p>
  */
 public class ListAutomateResponseConfigsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAutomateResponseConfigsResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -217,40 +216,40 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
 
     }
     public static class ResponseData extends TeaModel {
-        @NameInMap("ActionConfig")
+        @com.aliyun.core.annotation.NameInMap("ActionConfig")
         private String actionConfig;
 
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;
 
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private Long aliuid;
 
-        @NameInMap("AutoResponseType")
+        @com.aliyun.core.annotation.NameInMap("AutoResponseType")
         private String autoResponseType;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private Integer dataType;
 
-        @NameInMap("ExecutionCondition")
+        @com.aliyun.core.annotation.NameInMap("ExecutionCondition")
         private String executionCondition;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
         private ResponseData(Builder builder) {
@@ -375,7 +374,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             private Long subUserId; 
 
             /**
-             * The configuration of the action that is performed after the rule is hit. The value is in JSON format.
+             * The configuration of the action that is performed after the automated response rule is hit. The value is in the JSON format.
              */
             public Builder actionConfig(String actionConfig) {
                 this.actionConfig = actionConfig;
@@ -386,9 +385,9 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
              * The type of the handling action. Multiple types are separated by commas (,). Valid values:
              * <p>
              * 
-             * *   doPlaybook: runs a playbook.
-             * *   changeEventStatus: changes the status of an event.
-             * *   changeThreatLevel: changes the risk level of an event.
+             * *   **doPlaybook**: runs the playbook.
+             * *   **changeEventStatus**: changes the event status.
+             * *   **changeThreatLevel**: changes the risk level of the event.
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -407,8 +406,8 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
              * The type of the automated response rule. Valid values:
              * <p>
              * 
-             * *   event
-             * *   alert
+             * *   **event**
+             * *   **alert**
              */
             public Builder autoResponseType(String autoResponseType) {
                 this.autoResponseType = autoResponseType;
@@ -416,7 +415,11 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * The type of the view. Valid values:
+             * <p>
+             * 
+             * 0: the current Alibaba Cloud account
+             * 1: the global account
              */
             public Builder dataType(Integer dataType) {
                 this.dataType = dataType;
@@ -424,7 +427,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger condition of the rule. The value is in the JSON format.
+             * The trigger condition of the automated response rule. The value is in the JSON format.
              */
             public Builder executionCondition(String executionCondition) {
                 this.executionCondition = executionCondition;
@@ -467,8 +470,8 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
              * The status of the rule. Valid values:
              * <p>
              * 
-             * *   0: disabled
-             * *   100: enabled
+             * *   **0**: disabled.
+             * *   **100**: enabled.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -491,10 +494,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
-        @NameInMap("ResponseData")
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
         private java.util.List < ResponseData> responseData;
 
         private Data(Builder builder) {

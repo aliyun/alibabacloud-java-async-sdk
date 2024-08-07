@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchJobSubmitResponseBody</p>
  */
 public class BatchJobSubmitResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchJobSubmitResponseBody(Builder builder) {
@@ -156,22 +155,22 @@ public class BatchJobSubmitResponseBody extends TeaModel {
     } 
 
     public static class LogList extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("LogCode")
+        @com.aliyun.core.annotation.NameInMap("LogCode")
         private String logCode;
 
-        @NameInMap("LogStoreNamePattern")
+        @com.aliyun.core.annotation.NameInMap("LogStoreNamePattern")
         private String logStoreNamePattern;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProjectNamePattern")
+        @com.aliyun.core.annotation.NameInMap("ProjectNamePattern")
         private String projectNamePattern;
 
-        @NameInMap("RegionCode")
+        @com.aliyun.core.annotation.NameInMap("RegionCode")
         private String regionCode;
 
         private LogList(Builder builder) {
@@ -297,10 +296,10 @@ public class BatchJobSubmitResponseBody extends TeaModel {
 
     }
     public static class ProductList extends TeaModel {
-        @NameInMap("LogList")
+        @com.aliyun.core.annotation.NameInMap("LogList")
         private java.util.List < LogList> logList;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
         private ProductList(Builder builder) {
@@ -358,10 +357,10 @@ public class BatchJobSubmitResponseBody extends TeaModel {
 
     }
     public static class ConfigList extends TeaModel {
-        @NameInMap("ProductList")
+        @com.aliyun.core.annotation.NameInMap("ProductList")
         private java.util.List < ProductList> productList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private ConfigList(Builder builder) {
@@ -419,16 +418,16 @@ public class BatchJobSubmitResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("ConfigList")
+        @com.aliyun.core.annotation.NameInMap("ConfigList")
         private java.util.List < ConfigList> configList;
 
-        @NameInMap("SubmitId")
+        @com.aliyun.core.annotation.NameInMap("SubmitId")
         private String submitId;
 
-        @NameInMap("TaskCount")
+        @com.aliyun.core.annotation.NameInMap("TaskCount")
         private Integer taskCount;
 
         private Data(Builder builder) {

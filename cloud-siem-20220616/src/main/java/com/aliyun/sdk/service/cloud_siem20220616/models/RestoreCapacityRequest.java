@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RestoreCapacityRequest</p>
  */
 public class RestoreCapacityRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RoleFor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    @Body
-    @NameInMap("RoleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
     private Integer roleType;
 
     private RestoreCapacityRequest(Builder builder) {
@@ -82,11 +81,11 @@ public class RestoreCapacityRequest extends Request {
         } 
 
         /**
-         * The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:
+         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
          * <p>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in the Chinese mainland or in the China (Hong Kong) region.
-         * *   ap-southeast-1: Your assets reside in regions outside the Chinese mainland, excluding the China (Hong Kong) region.
+         * *   cn-hangzhou: Your assets reside in regions in China.
+         * *   ap-southeast-1: Your assets reside in regions outside China.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -95,7 +94,7 @@ public class RestoreCapacityRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * The ID of the account that you switch from the management account.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -104,7 +103,10 @@ public class RestoreCapacityRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

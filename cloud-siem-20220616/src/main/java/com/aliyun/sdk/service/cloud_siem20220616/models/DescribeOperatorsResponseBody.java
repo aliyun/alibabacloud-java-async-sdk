@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOperatorsResponseBody</p>
  */
 public class DescribeOperatorsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeOperatorsResponseBody(Builder builder) {
@@ -136,25 +135,25 @@ public class DescribeOperatorsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("OperatorDescCn")
+        @com.aliyun.core.annotation.NameInMap("OperatorDescCn")
         private String operatorDescCn;
 
-        @NameInMap("OperatorDescEn")
+        @com.aliyun.core.annotation.NameInMap("OperatorDescEn")
         private String operatorDescEn;
 
-        @NameInMap("OperatorName")
+        @com.aliyun.core.annotation.NameInMap("OperatorName")
         private String operatorName;
 
-        @NameInMap("SupportDataType")
+        @com.aliyun.core.annotation.NameInMap("SupportDataType")
         private String supportDataType;
 
-        @NameInMap("SupportTag")
+        @com.aliyun.core.annotation.NameInMap("SupportTag")
         private java.util.List < String > supportTag;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListImportedLogsByProdResponseBody</p>
  */
 public class ListImportedLogsByProdResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListImportedLogsByProdResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AutoImported")
+        @com.aliyun.core.annotation.NameInMap("AutoImported")
         private Integer autoImported;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("Imported")
+        @com.aliyun.core.annotation.NameInMap("Imported")
         private Integer imported;
 
-        @NameInMap("ImportedUserCount")
+        @com.aliyun.core.annotation.NameInMap("ImportedUserCount")
         private Integer importedUserCount;
 
-        @NameInMap("LogCode")
+        @com.aliyun.core.annotation.NameInMap("LogCode")
         private String logCode;
 
-        @NameInMap("LogMdsCode")
+        @com.aliyun.core.annotation.NameInMap("LogMdsCode")
         private String logMdsCode;
 
-        @NameInMap("LogType")
+        @com.aliyun.core.annotation.NameInMap("LogType")
         private Integer logType;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ProdCode")
+        @com.aliyun.core.annotation.NameInMap("ProdCode")
         private String prodCode;
 
-        @NameInMap("TotalUserCount")
+        @com.aliyun.core.annotation.NameInMap("TotalUserCount")
         private Integer totalUserCount;
 
-        @NameInMap("UnImportedUserCount")
+        @com.aliyun.core.annotation.NameInMap("UnImportedUserCount")
         private Integer unImportedUserCount;
 
         private Data(Builder builder) {
@@ -221,8 +220,8 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
              * Indicates whether the log is automatically added to the threat analysis feature within newly added accounts. Valid values:
              * <p>
              * 
-             * *   1: yes
-             * *   0: no
+             * *   1: yes.
+             * *   0: no.
              */
             public Builder autoImported(Integer autoImported) {
                 this.autoImported = autoImported;
@@ -233,9 +232,9 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
              * The code of the cloud service provider. Valid values:
              * <p>
              * 
-             * *   qcloud: Tencent Cloud
-             * *   aliyun: Alibaba Cloud
-             * *   hcloud: Huawei Cloud
+             * *   qcloud: Tencent Cloud.
+             * *   aliyun: Alibaba Cloud.
+             * *   hcloud: Huawei Cloud.
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -246,8 +245,8 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
              * Indicates whether the log is added to the threat analysis feature. Valid values:
              * <p>
              * 
-             * *   1: yes
-             * *   0: no
+             * *   1: yes.
+             * *   0: no.
              */
             public Builder imported(Integer imported) {
                 this.imported = imported;
@@ -263,7 +262,7 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The log code.
+             * The code of the log.
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -271,7 +270,7 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The display log code.
+             * The display code of the log.
              */
             public Builder logMdsCode(String logMdsCode) {
                 this.logMdsCode = logMdsCode;
@@ -279,7 +278,11 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * LogType.
+             * The type of log. Valid values:
+             * <p>
+             *  - 1: the log produced by other product
+             *  - 2: the predefined log
+             *  - 3: the custom log
              */
             public Builder logType(Integer logType) {
                 this.logType = logType;

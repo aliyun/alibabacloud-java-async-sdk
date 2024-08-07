@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectLogStoresResponseBody</p>
  */
 public class ListProjectLogStoresResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListProjectLogStoresResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("EndPoint")
+        @com.aliyun.core.annotation.NameInMap("EndPoint")
         private String endPoint;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private Long mainUserId;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
-        @NameInMap("SubUserName")
+        @com.aliyun.core.annotation.NameInMap("SubUserName")
         private String subUserName;
 
         private Data(Builder builder) {

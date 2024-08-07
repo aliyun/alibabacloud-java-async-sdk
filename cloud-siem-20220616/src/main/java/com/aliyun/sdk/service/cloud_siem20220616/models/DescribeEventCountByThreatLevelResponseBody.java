@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventCountByThreatLevelResponseBody</p>
  */
 public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeEventCountByThreatLevelResponseBody(Builder builder) {
@@ -136,19 +135,19 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("EventNum")
+        @com.aliyun.core.annotation.NameInMap("EventNum")
         private Long eventNum;
 
-        @NameInMap("HighLevelEventNum")
+        @com.aliyun.core.annotation.NameInMap("HighLevelEventNum")
         private Long highLevelEventNum;
 
-        @NameInMap("LowLevelEventNum")
+        @com.aliyun.core.annotation.NameInMap("LowLevelEventNum")
         private Long lowLevelEventNum;
 
-        @NameInMap("MediumLevelEventNum")
+        @com.aliyun.core.annotation.NameInMap("MediumLevelEventNum")
         private Long mediumLevelEventNum;
 
-        @NameInMap("UndealEventNum")
+        @com.aliyun.core.annotation.NameInMap("UndealEventNum")
         private Long undealEventNum;
 
         private Data(Builder builder) {

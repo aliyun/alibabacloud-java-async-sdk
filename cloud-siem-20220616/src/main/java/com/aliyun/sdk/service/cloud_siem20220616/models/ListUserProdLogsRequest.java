@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserProdLogsRequest</p>
  */
 public class ListUserProdLogsRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RoleFor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    @Body
-    @NameInMap("RoleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
     private Integer roleType;
 
-    @Body
-    @NameInMap("SourceLogCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceLogCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceLogCode;
 
-    @Body
-    @NameInMap("SourceProdCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceProdCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceProdCode;
 
     private ListUserProdLogsRequest(Builder builder) {
@@ -125,7 +124,7 @@ public class ListUserProdLogsRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * 管理员切换成其他成员视角的用户ID。
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -134,7 +133,11 @@ public class ListUserProdLogsRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * 视图类型。
+         * <p>
+         * 
+         * - 0：当前阿里云账号视图。
+         * - 1：企业下所有账号的视图。
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

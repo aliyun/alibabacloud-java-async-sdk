@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectLogStoresRequest</p>
  */
 public class ListProjectLogStoresRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SourceLogCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceLogCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceLogCode;
 
-    @Body
-    @NameInMap("SourceProdCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceProdCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceProdCode;
 
-    @Body
-    @NameInMap("SubUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long subUserId;
 
     private ListProjectLogStoresRequest(Builder builder) {

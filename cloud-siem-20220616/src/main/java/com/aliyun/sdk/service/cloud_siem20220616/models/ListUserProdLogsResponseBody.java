@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserProdLogsResponseBody</p>
  */
 public class ListUserProdLogsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUserProdLogsResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class ListUserProdLogsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DisplayLine")
+        @com.aliyun.core.annotation.NameInMap("DisplayLine")
         private String displayLine;
 
-        @NameInMap("Displayed")
+        @com.aliyun.core.annotation.NameInMap("Displayed")
         private Boolean displayed;
 
-        @NameInMap("Imported")
+        @com.aliyun.core.annotation.NameInMap("Imported")
         private Boolean imported;
 
-        @NameInMap("IsDeleted")
+        @com.aliyun.core.annotation.NameInMap("IsDeleted")
         private Integer isDeleted;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private Long mainUserId;
 
-        @NameInMap("SourceLogCode")
+        @com.aliyun.core.annotation.NameInMap("SourceLogCode")
         private String sourceLogCode;
 
-        @NameInMap("SourceLogInfo")
+        @com.aliyun.core.annotation.NameInMap("SourceLogInfo")
         private String sourceLogInfo;
 
-        @NameInMap("SourceProdCode")
+        @com.aliyun.core.annotation.NameInMap("SourceProdCode")
         private String sourceProdCode;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
-        @NameInMap("SubUserName")
+        @com.aliyun.core.annotation.NameInMap("SubUserName")
         private String subUserName;
 
         private Data(Builder builder) {

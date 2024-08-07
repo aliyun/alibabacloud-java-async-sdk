@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWhiteRuleListResponseBody</p>
  */
 public class DescribeWhiteRuleListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeWhiteRuleListResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -217,19 +216,19 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class Left extends TeaModel {
-        @NameInMap("IsVar")
+        @com.aliyun.core.annotation.NameInMap("IsVar")
         private Boolean isVar;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("ModifierParam")
+        @com.aliyun.core.annotation.NameInMap("ModifierParam")
         private java.util.Map < String, ? > modifierParam;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Left(Builder builder) {
@@ -294,8 +293,8 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
              * Indicates whether the left operand is a variable. Valid values:
              * <p>
              * 
-             * *   true: variable
-             * *   false: constant
+             * *   true: variable.
+             * *   false: constant.
              */
             public Builder isVar(Boolean isVar) {
                 this.isVar = isVar;
@@ -303,7 +302,7 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks on the left operand.
+             * The remarks on the right operand.
              */
             public Builder modifier(String modifier) {
                 this.modifier = modifier;
@@ -346,19 +345,19 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class Right extends TeaModel {
-        @NameInMap("IsVar")
+        @com.aliyun.core.annotation.NameInMap("IsVar")
         private Boolean isVar;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("ModifierParam")
+        @com.aliyun.core.annotation.NameInMap("ModifierParam")
         private java.util.Map < String, ? > modifierParam;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Right(Builder builder) {
@@ -423,8 +422,8 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
              * Indicates whether the right operand is a constant or a runtime variable that is obtained from the runtime context. Valid values:
              * <p>
              * 
-             * *   true: runtime variable
-             * *   false: constant
+             * *   true: runtime variable.
+             * *   false: constant.
              */
             public Builder isVar(Boolean isVar) {
                 this.isVar = isVar;
@@ -471,19 +470,19 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class Conditions extends TeaModel {
-        @NameInMap("IsNot")
+        @com.aliyun.core.annotation.NameInMap("IsNot")
         private Boolean isNot;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Integer itemId;
 
-        @NameInMap("Left")
+        @com.aliyun.core.annotation.NameInMap("Left")
         private Left left;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Right")
+        @com.aliyun.core.annotation.NameInMap("Right")
         private Right right;
 
         private Conditions(Builder builder) {
@@ -576,12 +575,12 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
              * The logical operator of the rule condition. Valid values:
              * <p>
              * 
-             * *   `=`: equals to
-             * *   `<>`: does not equal to
-             * *   `in`: contains
-             * *   `not in`: does not contain
-             * *   `REGEXP`: matches a regular expression
-             * *   `NOT REGEXP`: does not match a regular expression
+             * *   `=`: equals to.
+             * *   `<>`: does not equal to.
+             * *   `in`: contains.
+             * *   `not in`: does not contain.
+             * *   `REGEXP`: matches a regular expression.
+             * *   `NOT REGEXP`: does not match a regular expression.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -604,10 +603,10 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class Expression extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("Logic")
+        @com.aliyun.core.annotation.NameInMap("Logic")
         private String logic;
 
         private Expression(Builder builder) {
@@ -665,43 +664,43 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class ResponseData extends TeaModel {
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("AlertNameId")
+        @com.aliyun.core.annotation.NameInMap("AlertNameId")
         private String alertNameId;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("AlertTypeId")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeId")
         private String alertTypeId;
 
-        @NameInMap("AlertUuid")
+        @com.aliyun.core.annotation.NameInMap("AlertUuid")
         private String alertUuid;
 
-        @NameInMap("Aliuid")
+        @com.aliyun.core.annotation.NameInMap("Aliuid")
         private Long aliuid;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private Expression expression;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IncidentUuid")
+        @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubAliuid")
+        @com.aliyun.core.annotation.NameInMap("SubAliuid")
         private Long subAliuid;
 
         private ResponseData(Builder builder) {
@@ -926,8 +925,8 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
              * The status of the whitelist rule. Valid values:
              * <p>
              * 
-             * *   1: enabled
-             * *   0: disabled
+             * *   1: enabled.
+             * *   0: disabled.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -950,10 +949,10 @@ public class DescribeWhiteRuleListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
-        @NameInMap("ResponseData")
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
         private java.util.List < ResponseData> responseData;
 
         private Data(Builder builder) {

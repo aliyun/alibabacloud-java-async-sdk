@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,72 +11,72 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDisposeStrategyRequest</p>
  */
 public class ListDisposeStrategyRequest extends Request {
-    @Body
-    @NameInMap("CurrentPage")
-    @Validation(required = true, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer currentPage;
 
-    @Body
-    @NameInMap("EffectiveStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EffectiveStatus")
     private Integer effectiveStatus;
 
-    @Body
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Body
-    @NameInMap("EntityIdentity")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityIdentity")
     private String entityIdentity;
 
-    @Body
-    @NameInMap("EntityType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityType")
     private String entityType;
 
-    @Body
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Body
-    @NameInMap("OrderField")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderField")
     private String orderField;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("PlaybookName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookName")
     private String playbookName;
 
-    @Body
-    @NameInMap("PlaybookTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookTypes")
     private String playbookTypes;
 
-    @Body
-    @NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
     private String playbookUuid;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("RoleFor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
-    @Body
-    @NameInMap("RoleType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
     private Integer roleType;
 
-    @Body
-    @NameInMap("SophonTaskId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SophonTaskId")
     private String sophonTaskId;
 
-    @Body
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private ListDisposeStrategyRequest(Builder builder) {
@@ -405,7 +404,7 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * RoleFor.
+         * The ID of the account that you switch from the management account.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -414,7 +413,10 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The type of the view. Valid values:
+         * <p>
+         * - 0: the current Alibaba Cloud account
+         * - 1: the global account
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

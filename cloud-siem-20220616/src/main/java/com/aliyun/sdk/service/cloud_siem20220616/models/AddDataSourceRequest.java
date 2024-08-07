@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddDataSourceRequest</p>
  */
 public class AddDataSourceRequest extends Request {
-    @Body
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Body
-    @NameInMap("CloudCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cloudCode;
 
-    @Body
-    @NameInMap("DataSourceInstanceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceInstanceName")
     private String dataSourceInstanceName;
 
-    @Body
-    @NameInMap("DataSourceInstanceParams")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceInstanceParams")
     private String dataSourceInstanceParams;
 
-    @Body
-    @NameInMap("DataSourceInstanceRemark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceInstanceRemark")
     private String dataSourceInstanceRemark;
 
-    @Body
-    @NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private AddDataSourceRequest(Builder builder) {

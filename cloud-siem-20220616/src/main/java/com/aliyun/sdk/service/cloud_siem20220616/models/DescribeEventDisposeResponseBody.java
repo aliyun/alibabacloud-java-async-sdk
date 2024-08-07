@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventDisposeResponseBody</p>
  */
 public class DescribeEventDisposeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeEventDisposeResponseBody(Builder builder) {
@@ -136,28 +135,28 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
     } 
 
     public static class ReceiverInfo extends TeaModel {
-        @NameInMap("Channel")
+        @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IncidentUuid")
+        @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
-        @NameInMap("MessageTitle")
+        @com.aliyun.core.annotation.NameInMap("MessageTitle")
         private String messageTitle;
 
-        @NameInMap("Receiver")
+        @com.aliyun.core.annotation.NameInMap("Receiver")
         private String receiver;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private ReceiverInfo(Builder builder) {
@@ -325,16 +324,16 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EventDispose")
+        @com.aliyun.core.annotation.NameInMap("EventDispose")
         private java.util.List < ? > eventDispose;
 
-        @NameInMap("ReceiverInfo")
+        @com.aliyun.core.annotation.NameInMap("ReceiverInfo")
         private ReceiverInfo receiverInfo;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Data(Builder builder) {

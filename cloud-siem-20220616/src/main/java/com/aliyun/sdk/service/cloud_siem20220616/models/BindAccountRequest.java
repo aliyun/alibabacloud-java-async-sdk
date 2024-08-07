@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindAccountRequest</p>
  */
 public class BindAccountRequest extends Request {
-    @Body
-    @NameInMap("AccessId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccessId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessId;
 
-    @Body
-    @NameInMap("AccountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
-    @Body
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Body
-    @NameInMap("CloudCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cloudCode;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleFor")
+    private Long roleFor;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleType")
+    private Integer roleType;
 
     private BindAccountRequest(Builder builder) {
         super(builder);
@@ -43,6 +50,8 @@ public class BindAccountRequest extends Request {
         this.accountName = builder.accountName;
         this.cloudCode = builder.cloudCode;
         this.regionId = builder.regionId;
+        this.roleFor = builder.roleFor;
+        this.roleType = builder.roleType;
     }
 
     public static Builder builder() {
@@ -93,12 +102,28 @@ public class BindAccountRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return roleFor
+     */
+    public Long getRoleFor() {
+        return this.roleFor;
+    }
+
+    /**
+     * @return roleType
+     */
+    public Integer getRoleType() {
+        return this.roleType;
+    }
+
     public static final class Builder extends Request.Builder<BindAccountRequest, Builder> {
         private String accessId; 
         private String accountId; 
         private String accountName; 
         private String cloudCode; 
         private String regionId; 
+        private Long roleFor; 
+        private Integer roleType; 
 
         private Builder() {
             super();
@@ -111,6 +136,8 @@ public class BindAccountRequest extends Request {
             this.accountName = request.accountName;
             this.cloudCode = request.cloudCode;
             this.regionId = request.regionId;
+            this.roleFor = request.roleFor;
+            this.roleType = request.roleType;
         } 
 
         /**
@@ -141,13 +168,12 @@ public class BindAccountRequest extends Request {
         }
 
         /**
-         * The code of the cloud service provider.
+         * The code of the cloud service provider. Valid values:
          * <p>
          * 
-         * Valid values:
-         * 
-         * *   qcloud
-         * *   hcloud
+         * *   aliyun: Alibaba Cloud
+         * *   hcloud: Huawei Cloud
+         * *   qcloud: Tencent Cloud
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -165,6 +191,24 @@ public class BindAccountRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RoleFor.
+         */
+        public Builder roleFor(Long roleFor) {
+            this.putBodyParameter("RoleFor", roleFor);
+            this.roleFor = roleFor;
+            return this;
+        }
+
+        /**
+         * RoleType.
+         */
+        public Builder roleType(Integer roleType) {
+            this.putBodyParameter("RoleType", roleType);
+            this.roleType = roleType;
             return this;
         }
 

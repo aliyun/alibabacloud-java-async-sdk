@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAttackTimeLineResponseBody</p>
  */
 public class DescribeAttackTimeLineResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAttackTimeLineResponseBody(Builder builder) {
@@ -136,64 +135,64 @@ public class DescribeAttackTimeLineResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AlertLevel")
+        @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private String alertLevel;
 
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("AlertNameCode")
+        @com.aliyun.core.annotation.NameInMap("AlertNameCode")
         private String alertNameCode;
 
-        @NameInMap("AlertNameEn")
+        @com.aliyun.core.annotation.NameInMap("AlertNameEn")
         private String alertNameEn;
 
-        @NameInMap("AlertSrcProd")
+        @com.aliyun.core.annotation.NameInMap("AlertSrcProd")
         private String alertSrcProd;
 
-        @NameInMap("AlertSrcProdModule")
+        @com.aliyun.core.annotation.NameInMap("AlertSrcProdModule")
         private String alertSrcProdModule;
 
-        @NameInMap("AlertTime")
+        @com.aliyun.core.annotation.NameInMap("AlertTime")
         private Long alertTime;
 
-        @NameInMap("AlertTitle")
+        @com.aliyun.core.annotation.NameInMap("AlertTitle")
         private String alertTitle;
 
-        @NameInMap("AlertTitleEn")
+        @com.aliyun.core.annotation.NameInMap("AlertTitleEn")
         private String alertTitleEn;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("AlertTypeCode")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeCode")
         private String alertTypeCode;
 
-        @NameInMap("AlertTypeEn")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeEn")
         private String alertTypeEn;
 
-        @NameInMap("AlertUuid")
+        @com.aliyun.core.annotation.NameInMap("AlertUuid")
         private String alertUuid;
 
-        @NameInMap("AssetId")
+        @com.aliyun.core.annotation.NameInMap("AssetId")
         private String assetId;
 
-        @NameInMap("AssetList")
+        @com.aliyun.core.annotation.NameInMap("AssetList")
         private String assetList;
 
-        @NameInMap("AssetName")
+        @com.aliyun.core.annotation.NameInMap("AssetName")
         private String assetName;
 
-        @NameInMap("AttCk")
+        @com.aliyun.core.annotation.NameInMap("AttCk")
         private String attCk;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("IncidentUuid")
+        @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
-        @NameInMap("LogTime")
+        @com.aliyun.core.annotation.NameInMap("LogTime")
         private String logTime;
 
         private Data(Builder builder) {

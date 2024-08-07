@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeJobStatusResponseBody</p>
  */
 public class DescribeJobStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeJobStatusResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * The HTTP status code. If the request is successful, 200 is returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +105,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +113,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The error code. If the request is successful, the parameter is empty. If the request fails, an error code is returned.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -122,7 +121,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The error message. If the request is successful, the parameter is empty. If the request fails, the reason for the failure is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,8 +140,8 @@ public class DescribeJobStatusResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -156,22 +155,22 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     } 
 
     public static class LogList extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("LogCode")
+        @com.aliyun.core.annotation.NameInMap("LogCode")
         private String logCode;
 
-        @NameInMap("LogStoreNamePattern")
+        @com.aliyun.core.annotation.NameInMap("LogStoreNamePattern")
         private String logStoreNamePattern;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProjectNamePattern")
+        @com.aliyun.core.annotation.NameInMap("ProjectNamePattern")
         private String projectNamePattern;
 
-        @NameInMap("RegionCode")
+        @com.aliyun.core.annotation.NameInMap("RegionCode")
         private String regionCode;
 
         private LogList(Builder builder) {
@@ -242,7 +241,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             private String regionCode; 
 
             /**
-             * The error code.
+             * The reason for the failure.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -250,7 +249,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The log code.
+             * The code of the logs.
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -258,7 +257,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The pattern of SLS logstore name.
+             * The pattern for the name of the Simple Log Service Logstore from which logs are collected.
              */
             public Builder logStoreNamePattern(String logStoreNamePattern) {
                 this.logStoreNamePattern = logStoreNamePattern;
@@ -266,7 +265,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The code of product.
+             * The code of the service.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -274,7 +273,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The pattern of SLS project name.
+             * The pattern for the name of the Simple Log Service project from which logs are collected.
              */
             public Builder projectNamePattern(String projectNamePattern) {
                 this.projectNamePattern = projectNamePattern;
@@ -282,7 +281,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * The ID of the region.
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;
@@ -297,10 +296,10 @@ public class DescribeJobStatusResponseBody extends TeaModel {
 
     }
     public static class ProductList extends TeaModel {
-        @NameInMap("LogList")
+        @com.aliyun.core.annotation.NameInMap("LogList")
         private java.util.List < LogList> logList;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
         private ProductList(Builder builder) {
@@ -335,7 +334,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             private String productCode; 
 
             /**
-             * The list of log.
+             * The list of logs that fail to be collected.
              */
             public Builder logList(java.util.List < LogList> logList) {
                 this.logList = logList;
@@ -343,7 +342,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The code of product.
+             * The code of the service.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -358,10 +357,10 @@ public class DescribeJobStatusResponseBody extends TeaModel {
 
     }
     public static class ErrTaskList extends TeaModel {
-        @NameInMap("ProductList")
+        @com.aliyun.core.annotation.NameInMap("ProductList")
         private java.util.List < ProductList> productList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private ErrTaskList(Builder builder) {
@@ -396,7 +395,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * The list of product.
+             * The list of services in failed tasks.
              */
             public Builder productList(java.util.List < ProductList> productList) {
                 this.productList = productList;
@@ -404,7 +403,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The account id of aliyun.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -419,25 +418,25 @@ public class DescribeJobStatusResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("ErrTaskList")
+        @com.aliyun.core.annotation.NameInMap("ErrTaskList")
         private java.util.List < ErrTaskList> errTaskList;
 
-        @NameInMap("FailedCount")
+        @com.aliyun.core.annotation.NameInMap("FailedCount")
         private Integer failedCount;
 
-        @NameInMap("FinishCount")
+        @com.aliyun.core.annotation.NameInMap("FinishCount")
         private Integer finishCount;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("TaskCount")
+        @com.aliyun.core.annotation.NameInMap("TaskCount")
         private Integer taskCount;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
         private Data(Builder builder) {
@@ -525,7 +524,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The list of failed task.
+             * The list of failed tasks. The value contains the Alibaba Cloud account and service code of each failed task.
              */
             public Builder errTaskList(java.util.List < ErrTaskList> errTaskList) {
                 this.errTaskList = errTaskList;
@@ -533,7 +532,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of failed tasks.
+             * The total number of tasks that fail.
              */
             public Builder failedCount(Integer failedCount) {
                 this.failedCount = failedCount;
@@ -541,7 +540,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of scan tasks that are complete.
+             * The total number of tasks that are complete.
              */
             public Builder finishCount(Integer finishCount) {
                 this.finishCount = finishCount;
@@ -549,7 +548,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * The ID of the resource directory folder.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -557,7 +556,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of existing tasks that are created to add logs within the data source.
+             * The total number of collection tasks that are created.
              */
             public Builder taskCount(Integer taskCount) {
                 this.taskCount = taskCount;
@@ -565,7 +564,26 @@ public class DescribeJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of submitted task.
+             * The status of the submitted task.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   submit
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   finish
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

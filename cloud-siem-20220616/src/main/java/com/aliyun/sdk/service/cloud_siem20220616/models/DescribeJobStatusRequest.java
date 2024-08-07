@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeJobStatusRequest</p>
  */
 public class DescribeJobStatusRequest extends Request {
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SubmitId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubmitId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String submitId;
 
     private DescribeJobStatusRequest(Builder builder) {
@@ -69,11 +68,7 @@ public class DescribeJobStatusRequest extends Request {
         } 
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
-         * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * The region where the service resides. Default value: cn-shanghai.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -82,7 +77,7 @@ public class DescribeJobStatusRequest extends Request {
         }
 
         /**
-         * The id of collection task.
+         * The ID of the collection task. The ID is the value of the submitId parameter in the response of the [BatchJobSubmit](https://next.api.aliyun.com/api/cloud-siem/2022-06-16/BatchSubmitJob?lang=JAVA\&useCommon=true) operation.
          */
         public Builder submitId(String submitId) {
             this.putBodyParameter("SubmitId", submitId);

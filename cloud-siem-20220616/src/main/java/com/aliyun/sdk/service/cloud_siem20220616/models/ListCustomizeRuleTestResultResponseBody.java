@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCustomizeRuleTestResultResponseBody</p>
  */
 public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListCustomizeRuleTestResultResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -217,49 +216,49 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
 
     }
     public static class ResponseData extends TeaModel {
-        @NameInMap("AlertDesc")
+        @com.aliyun.core.annotation.NameInMap("AlertDesc")
         private String alertDesc;
 
-        @NameInMap("AlertDetail")
+        @com.aliyun.core.annotation.NameInMap("AlertDetail")
         private String alertDetail;
 
-        @NameInMap("AlertSrcProd")
+        @com.aliyun.core.annotation.NameInMap("AlertSrcProd")
         private String alertSrcProd;
 
-        @NameInMap("AlertSrcProdModule")
+        @com.aliyun.core.annotation.NameInMap("AlertSrcProdModule")
         private String alertSrcProdModule;
 
-        @NameInMap("AttCk")
+        @com.aliyun.core.annotation.NameInMap("AttCk")
         private String attCk;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("LogSource")
+        @com.aliyun.core.annotation.NameInMap("LogSource")
         private String logSource;
 
-        @NameInMap("LogTime")
+        @com.aliyun.core.annotation.NameInMap("LogTime")
         private String logTime;
 
-        @NameInMap("LogType")
+        @com.aliyun.core.annotation.NameInMap("LogType")
         private String logType;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private String mainUserId;
 
-        @NameInMap("OnlineStatus")
+        @com.aliyun.core.annotation.NameInMap("OnlineStatus")
         private String onlineStatus;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private String subUserId;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private ResponseData(Builder builder) {
@@ -547,10 +546,10 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
-        @NameInMap("ResponseData")
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
         private java.util.List < ResponseData> responseData;
 
         private Data(Builder builder) {

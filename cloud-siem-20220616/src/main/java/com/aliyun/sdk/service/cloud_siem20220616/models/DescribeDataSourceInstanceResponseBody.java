@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataSourceInstanceResponseBody</p>
  */
 public class DescribeDataSourceInstanceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDataSourceInstanceResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
     } 
 
     public static class DataSourceInstanceParams extends TeaModel {
-        @NameInMap("ParaCode")
+        @com.aliyun.core.annotation.NameInMap("ParaCode")
         private String paraCode;
 
-        @NameInMap("ParaValue")
+        @com.aliyun.core.annotation.NameInMap("ParaValue")
         private String paraValue;
 
         private DataSourceInstanceParams(Builder builder) {
@@ -133,16 +132,16 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("DataSourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceId")
         private String dataSourceInstanceId;
 
-        @NameInMap("DataSourceInstanceParams")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceParams")
         private java.util.List < DataSourceInstanceParams> dataSourceInstanceParams;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLogsResponseBody</p>
  */
 public class GetLogsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetLogsResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class GetLogsResponseBody extends TeaModel {
     } 
 
     public static class PageInfo extends TeaModel {
-        @NameInMap("CurrentPage")
+        @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private PageInfo(Builder builder) {
@@ -217,22 +216,22 @@ public class GetLogsResponseBody extends TeaModel {
 
     }
     public static class ResponseData extends TeaModel {
-        @NameInMap("CompleteOrNot")
+        @com.aliyun.core.annotation.NameInMap("CompleteOrNot")
         private Boolean completeOrNot;
 
-        @NameInMap("Cost")
+        @com.aliyun.core.annotation.NameInMap("Cost")
         private Long cost;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("HasSql")
+        @com.aliyun.core.annotation.NameInMap("HasSql")
         private Boolean hasSql;
 
-        @NameInMap("Keys")
+        @com.aliyun.core.annotation.NameInMap("Keys")
         private java.util.List < String > keys;
 
-        @NameInMap("Lines")
+        @com.aliyun.core.annotation.NameInMap("Lines")
         private java.util.List < ? > lines;
 
         private ResponseData(Builder builder) {
@@ -366,10 +365,10 @@ public class GetLogsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageInfo")
+        @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
-        @NameInMap("ResponseData")
+        @com.aliyun.core.annotation.NameInMap("ResponseData")
         private ResponseData responseData;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourceLogsResponseBody</p>
  */
 public class ListDataSourceLogsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDataSourceLogsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
     } 
 
     public static class LogParams extends TeaModel {
-        @NameInMap("ParaCode")
+        @com.aliyun.core.annotation.NameInMap("ParaCode")
         private String paraCode;
 
-        @NameInMap("ParaValue")
+        @com.aliyun.core.annotation.NameInMap("ParaValue")
         private String paraValue;
 
         private LogParams(Builder builder) {
@@ -133,19 +132,19 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
 
     }
     public static class DataSourceInstanceLogs extends TeaModel {
-        @NameInMap("LogCode")
+        @com.aliyun.core.annotation.NameInMap("LogCode")
         private String logCode;
 
-        @NameInMap("LogInstanceId")
+        @com.aliyun.core.annotation.NameInMap("LogInstanceId")
         private String logInstanceId;
 
-        @NameInMap("LogMdsCode")
+        @com.aliyun.core.annotation.NameInMap("LogMdsCode")
         private String logMdsCode;
 
-        @NameInMap("LogParams")
+        @com.aliyun.core.annotation.NameInMap("LogParams")
         private java.util.List < LogParams> logParams;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private Integer taskStatus;
 
         private DataSourceInstanceLogs(Builder builder) {
@@ -258,25 +257,25 @@ public class ListDataSourceLogsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("CloudCode")
+        @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
 
-        @NameInMap("DataSourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceId")
         private String dataSourceInstanceId;
 
-        @NameInMap("DataSourceInstanceLogs")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceLogs")
         private java.util.List < DataSourceInstanceLogs> dataSourceInstanceLogs;
 
-        @NameInMap("DataSourceInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceName")
         private String dataSourceInstanceName;
 
-        @NameInMap("DataSourceInstanceRemark")
+        @com.aliyun.core.annotation.NameInMap("DataSourceInstanceRemark")
         private String dataSourceInstanceRemark;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
         private Data(Builder builder) {

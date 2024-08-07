@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertSceneResponseBody</p>
  */
 public class DescribeAlertSceneResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAlertSceneResponseBody(Builder builder) {
@@ -136,16 +135,16 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
     } 
 
     public static class Targets extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private Targets(Builder builder) {
@@ -237,25 +236,25 @@ public class DescribeAlertSceneResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AlertName")
+        @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
 
-        @NameInMap("AlertNameId")
+        @com.aliyun.core.annotation.NameInMap("AlertNameId")
         private String alertNameId;
 
-        @NameInMap("AlertTile")
+        @com.aliyun.core.annotation.NameInMap("AlertTile")
         private String alertTile;
 
-        @NameInMap("AlertTileId")
+        @com.aliyun.core.annotation.NameInMap("AlertTileId")
         private String alertTileId;
 
-        @NameInMap("AlertType")
+        @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
 
-        @NameInMap("AlertTypeId")
+        @com.aliyun.core.annotation.NameInMap("AlertTypeId")
         private String alertTypeId;
 
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private java.util.List < Targets> targets;
 
         private Data(Builder builder) {

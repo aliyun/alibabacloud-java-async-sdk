@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRdUsersResponseBody</p>
  */
 public class ListRdUsersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRdUsersResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class ListRdUsersResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DelegatedOrNot")
+        @com.aliyun.core.annotation.NameInMap("DelegatedOrNot")
         private Boolean delegatedOrNot;
 
-        @NameInMap("Joined")
+        @com.aliyun.core.annotation.NameInMap("Joined")
         private Boolean joined;
 
-        @NameInMap("JoinedTime")
+        @com.aliyun.core.annotation.NameInMap("JoinedTime")
         private String joinedTime;
 
-        @NameInMap("MainUserId")
+        @com.aliyun.core.annotation.NameInMap("MainUserId")
         private Long mainUserId;
 
-        @NameInMap("SubUserId")
+        @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
-        @NameInMap("SubUserName")
+        @com.aliyun.core.annotation.NameInMap("SubUserName")
         private String subUserName;
 
         private Data(Builder builder) {

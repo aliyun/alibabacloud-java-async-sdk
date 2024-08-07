@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogStoreResponseBody</p>
  */
 public class DescribeLogStoreResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLogStoreResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeLogStoreResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AppendMeta")
+        @com.aliyun.core.annotation.NameInMap("AppendMeta")
         private Boolean appendMeta;
 
-        @NameInMap("AutoSplit")
+        @com.aliyun.core.annotation.NameInMap("AutoSplit")
         private Boolean autoSplit;
 
-        @NameInMap("EnableTracking")
+        @com.aliyun.core.annotation.NameInMap("EnableTracking")
         private Boolean enableTracking;
 
-        @NameInMap("LogStoreName")
+        @com.aliyun.core.annotation.NameInMap("LogStoreName")
         private String logStoreName;
 
-        @NameInMap("MaxSplitShard")
+        @com.aliyun.core.annotation.NameInMap("MaxSplitShard")
         private Integer maxSplitShard;
 
-        @NameInMap("ShardCount")
+        @com.aliyun.core.annotation.NameInMap("ShardCount")
         private Integer shardCount;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
         private Data(Builder builder) {
