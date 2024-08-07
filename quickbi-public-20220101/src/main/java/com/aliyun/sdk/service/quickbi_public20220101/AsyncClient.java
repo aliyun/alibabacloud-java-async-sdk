@@ -137,15 +137,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyApiDatasourceParametersResponse> modifyApiDatasourceParameters(ModifyApiDatasourceParametersRequest request);
 
+    CompletableFuture<ModifyCopilotEmbedConfigResponse> modifyCopilotEmbedConfig(ModifyCopilotEmbedConfigRequest request);
+
     CompletableFuture<QueryApprovalInfoResponse> queryApprovalInfo(QueryApprovalInfoRequest request);
 
     CompletableFuture<QueryAuditLogResponse> queryAuditLog(QueryAuditLogRequest request);
 
     CompletableFuture<QueryComponentPerformanceResponse> queryComponentPerformance(QueryComponentPerformanceRequest request);
 
+    CompletableFuture<QueryCopilotEmbedConfigResponse> queryCopilotEmbedConfig(QueryCopilotEmbedConfigRequest request);
+
     CompletableFuture<QueryCubeOptimizationResponse> queryCubeOptimization(QueryCubeOptimizationRequest request);
 
     CompletableFuture<QueryCubePerformanceResponse> queryCubePerformance(QueryCubePerformanceRequest request);
+
+    CompletableFuture<QueryDataResponse> queryData(QueryDataRequest request);
+
+    CompletableFuture<QueryDataRangeResponse> queryDataRange(QueryDataRangeRequest request);
 
     /**
       * f4cc43bc3***
