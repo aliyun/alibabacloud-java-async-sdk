@@ -21,6 +21,7 @@ public class GenerateUserAccessTokenRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String email;
 
     @com.aliyun.core.annotation.Query
@@ -34,14 +35,17 @@ public class GenerateUserAccessTokenRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ForeignId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String foreignId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Nick")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String nick;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Telephone")
+    @com.aliyun.core.annotation.Validation(maxLength = 30)
     private String telephone;
 
     private GenerateUserAccessTokenRequest(Builder builder) {
