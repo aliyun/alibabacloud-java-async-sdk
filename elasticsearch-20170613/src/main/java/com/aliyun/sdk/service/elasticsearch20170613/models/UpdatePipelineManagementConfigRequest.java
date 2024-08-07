@@ -21,6 +21,10 @@ public class UpdatePipelineManagementConfigRequest extends Request {
     private java.util.List < String > endpoints;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("esInstanceId")
+    private String esInstanceId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
@@ -44,6 +48,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.endpoints = builder.endpoints;
+        this.esInstanceId = builder.esInstanceId;
         this.password = builder.password;
         this.pipelineIds = builder.pipelineIds;
         this.pipelineManagementType = builder.pipelineManagementType;
@@ -76,6 +81,13 @@ public class UpdatePipelineManagementConfigRequest extends Request {
      */
     public java.util.List < String > getEndpoints() {
         return this.endpoints;
+    }
+
+    /**
+     * @return esInstanceId
+     */
+    public String getEsInstanceId() {
+        return this.esInstanceId;
     }
 
     /**
@@ -116,6 +128,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
     public static final class Builder extends Request.Builder<UpdatePipelineManagementConfigRequest, Builder> {
         private String instanceId; 
         private java.util.List < String > endpoints; 
+        private String esInstanceId; 
         private String password; 
         private java.util.List < String > pipelineIds; 
         private String pipelineManagementType; 
@@ -130,6 +143,7 @@ public class UpdatePipelineManagementConfigRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.endpoints = request.endpoints;
+            this.esInstanceId = request.esInstanceId;
             this.password = request.password;
             this.pipelineIds = request.pipelineIds;
             this.pipelineManagementType = request.pipelineManagementType;
@@ -152,6 +166,15 @@ public class UpdatePipelineManagementConfigRequest extends Request {
         public Builder endpoints(java.util.List < String > endpoints) {
             this.putBodyParameter("endpoints", endpoints);
             this.endpoints = endpoints;
+            return this;
+        }
+
+        /**
+         * esInstanceId.
+         */
+        public Builder esInstanceId(String esInstanceId) {
+            this.putBodyParameter("esInstanceId", esInstanceId);
+            this.esInstanceId = esInstanceId;
             return this;
         }
 

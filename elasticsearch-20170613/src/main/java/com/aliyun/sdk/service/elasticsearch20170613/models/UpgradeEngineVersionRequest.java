@@ -17,6 +17,10 @@ public class UpgradeEngineVersionRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("plugins")
+    private java.util.List < Plugins> plugins;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
@@ -35,6 +39,7 @@ public class UpgradeEngineVersionRequest extends Request {
     private UpgradeEngineVersionRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.plugins = builder.plugins;
         this.type = builder.type;
         this.version = builder.version;
         this.clientToken = builder.clientToken;
@@ -59,6 +64,13 @@ public class UpgradeEngineVersionRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return plugins
+     */
+    public java.util.List < Plugins> getPlugins() {
+        return this.plugins;
     }
 
     /**
@@ -91,6 +103,7 @@ public class UpgradeEngineVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpgradeEngineVersionRequest, Builder> {
         private String instanceId; 
+        private java.util.List < Plugins> plugins; 
         private String type; 
         private String version; 
         private String clientToken; 
@@ -103,6 +116,7 @@ public class UpgradeEngineVersionRequest extends Request {
         private Builder(UpgradeEngineVersionRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.plugins = request.plugins;
             this.type = request.type;
             this.version = request.version;
             this.clientToken = request.clientToken;
@@ -115,6 +129,15 @@ public class UpgradeEngineVersionRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * plugins.
+         */
+        public Builder plugins(java.util.List < Plugins> plugins) {
+            this.putBodyParameter("plugins", plugins);
+            this.plugins = plugins;
             return this;
         }
 
@@ -167,4 +190,85 @@ public class UpgradeEngineVersionRequest extends Request {
 
     } 
 
+    public static class Plugins extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("fileVersion")
+        private String fileVersion;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("version")
+        private String version;
+
+        private Plugins(Builder builder) {
+            this.fileVersion = builder.fileVersion;
+            this.name = builder.name;
+            this.version = builder.version;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Plugins create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fileVersion
+         */
+        public String getFileVersion() {
+            return this.fileVersion;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        public static final class Builder {
+            private String fileVersion; 
+            private String name; 
+            private String version; 
+
+            /**
+             * fileVersion.
+             */
+            public Builder fileVersion(String fileVersion) {
+                this.fileVersion = fileVersion;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * version.
+             */
+            public Builder version(String version) {
+                this.version = version;
+                return this;
+            }
+
+            public Plugins build() {
+                return new Plugins(this);
+            } 
+
+        } 
+
+    }
 }
