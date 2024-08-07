@@ -38,8 +38,23 @@ public class AckConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
+    @com.aliyun.core.annotation.NameInMap("NodeAffinity")
+    private String nodeAffinity;
+
     @com.aliyun.core.annotation.NameInMap("NodeSelectors")
     private java.util.List < Tag > nodeSelectors;
+
+    @com.aliyun.core.annotation.NameInMap("PodAffinity")
+    private String podAffinity;
+
+    @com.aliyun.core.annotation.NameInMap("PodAntiAffinity")
+    private String podAntiAffinity;
+
+    @com.aliyun.core.annotation.NameInMap("PreStartCommand")
+    private java.util.List < String > preStartCommand;
+
+    @com.aliyun.core.annotation.NameInMap("Pvcs")
+    private java.util.List < Pvcs> pvcs;
 
     @com.aliyun.core.annotation.NameInMap("RequestCpu")
     private Float requestCpu;
@@ -49,6 +64,12 @@ public class AckConfig extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Tolerations")
     private java.util.List < Toleration > tolerations;
+
+    @com.aliyun.core.annotation.NameInMap("VolumeMounts")
+    private java.util.List < VolumeMounts> volumeMounts;
+
+    @com.aliyun.core.annotation.NameInMap("Volumes")
+    private java.util.List < Volumes> volumes;
 
     private AckConfig(Builder builder) {
         this.ackInstanceId = builder.ackInstanceId;
@@ -60,10 +81,17 @@ public class AckConfig extends TeaModel {
         this.limitMemory = builder.limitMemory;
         this.mountHostCgroup = builder.mountHostCgroup;
         this.namespace = builder.namespace;
+        this.nodeAffinity = builder.nodeAffinity;
         this.nodeSelectors = builder.nodeSelectors;
+        this.podAffinity = builder.podAffinity;
+        this.podAntiAffinity = builder.podAntiAffinity;
+        this.preStartCommand = builder.preStartCommand;
+        this.pvcs = builder.pvcs;
         this.requestCpu = builder.requestCpu;
         this.requestMemory = builder.requestMemory;
         this.tolerations = builder.tolerations;
+        this.volumeMounts = builder.volumeMounts;
+        this.volumes = builder.volumes;
     }
 
     public static Builder builder() {
@@ -138,10 +166,45 @@ public class AckConfig extends TeaModel {
     }
 
     /**
+     * @return nodeAffinity
+     */
+    public String getNodeAffinity() {
+        return this.nodeAffinity;
+    }
+
+    /**
      * @return nodeSelectors
      */
     public java.util.List < Tag > getNodeSelectors() {
         return this.nodeSelectors;
+    }
+
+    /**
+     * @return podAffinity
+     */
+    public String getPodAffinity() {
+        return this.podAffinity;
+    }
+
+    /**
+     * @return podAntiAffinity
+     */
+    public String getPodAntiAffinity() {
+        return this.podAntiAffinity;
+    }
+
+    /**
+     * @return preStartCommand
+     */
+    public java.util.List < String > getPreStartCommand() {
+        return this.preStartCommand;
+    }
+
+    /**
+     * @return pvcs
+     */
+    public java.util.List < Pvcs> getPvcs() {
+        return this.pvcs;
     }
 
     /**
@@ -165,6 +228,20 @@ public class AckConfig extends TeaModel {
         return this.tolerations;
     }
 
+    /**
+     * @return volumeMounts
+     */
+    public java.util.List < VolumeMounts> getVolumeMounts() {
+        return this.volumeMounts;
+    }
+
+    /**
+     * @return volumes
+     */
+    public java.util.List < Volumes> getVolumes() {
+        return this.volumes;
+    }
+
     public static final class Builder {
         private String ackInstanceId; 
         private java.util.List < Tag > customAnnotations; 
@@ -175,10 +252,17 @@ public class AckConfig extends TeaModel {
         private Float limitMemory; 
         private Boolean mountHostCgroup; 
         private String namespace; 
+        private String nodeAffinity; 
         private java.util.List < Tag > nodeSelectors; 
+        private String podAffinity; 
+        private String podAntiAffinity; 
+        private java.util.List < String > preStartCommand; 
+        private java.util.List < Pvcs> pvcs; 
         private Float requestCpu; 
         private Float requestMemory; 
         private java.util.List < Toleration > tolerations; 
+        private java.util.List < VolumeMounts> volumeMounts; 
+        private java.util.List < Volumes> volumes; 
 
         /**
          * ack集群id
@@ -253,10 +337,50 @@ public class AckConfig extends TeaModel {
         }
 
         /**
+         * NodeAffinity.
+         */
+        public Builder nodeAffinity(String nodeAffinity) {
+            this.nodeAffinity = nodeAffinity;
+            return this;
+        }
+
+        /**
          * ack的节点标签限制
          */
         public Builder nodeSelectors(java.util.List < Tag > nodeSelectors) {
             this.nodeSelectors = nodeSelectors;
+            return this;
+        }
+
+        /**
+         * PodAffinity.
+         */
+        public Builder podAffinity(String podAffinity) {
+            this.podAffinity = podAffinity;
+            return this;
+        }
+
+        /**
+         * PodAntiAffinity.
+         */
+        public Builder podAntiAffinity(String podAntiAffinity) {
+            this.podAntiAffinity = podAntiAffinity;
+            return this;
+        }
+
+        /**
+         * PreStartCommand.
+         */
+        public Builder preStartCommand(java.util.List < String > preStartCommand) {
+            this.preStartCommand = preStartCommand;
+            return this;
+        }
+
+        /**
+         * Pvcs.
+         */
+        public Builder pvcs(java.util.List < Pvcs> pvcs) {
+            this.pvcs = pvcs;
             return this;
         }
 
@@ -284,10 +408,269 @@ public class AckConfig extends TeaModel {
             return this;
         }
 
+        /**
+         * VolumeMounts.
+         */
+        public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
+            this.volumeMounts = volumeMounts;
+            return this;
+        }
+
+        /**
+         * Volumes.
+         */
+        public Builder volumes(java.util.List < Volumes> volumes) {
+            this.volumes = volumes;
+            return this;
+        }
+
         public AckConfig build() {
             return new AckConfig(this);
         } 
 
     } 
 
+    public static class Pvcs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
+        private Long dataDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("DataDiskStorageClass")
+        private String dataDiskStorageClass;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        private Pvcs(Builder builder) {
+            this.dataDiskSize = builder.dataDiskSize;
+            this.dataDiskStorageClass = builder.dataDiskStorageClass;
+            this.name = builder.name;
+            this.path = builder.path;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Pvcs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataDiskSize
+         */
+        public Long getDataDiskSize() {
+            return this.dataDiskSize;
+        }
+
+        /**
+         * @return dataDiskStorageClass
+         */
+        public String getDataDiskStorageClass() {
+            return this.dataDiskStorageClass;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        public static final class Builder {
+            private Long dataDiskSize; 
+            private String dataDiskStorageClass; 
+            private String name; 
+            private String path; 
+
+            /**
+             * DataDiskSize.
+             */
+            public Builder dataDiskSize(Long dataDiskSize) {
+                this.dataDiskSize = dataDiskSize;
+                return this;
+            }
+
+            /**
+             * DataDiskStorageClass.
+             */
+            public Builder dataDiskStorageClass(String dataDiskStorageClass) {
+                this.dataDiskStorageClass = dataDiskStorageClass;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            public Pvcs build() {
+                return new Pvcs(this);
+            } 
+
+        } 
+
+    }
+    public static class VolumeMounts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        private VolumeMounts(Builder builder) {
+            this.name = builder.name;
+            this.path = builder.path;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VolumeMounts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String path; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            public VolumeMounts build() {
+                return new VolumeMounts(this);
+            } 
+
+        } 
+
+    }
+    public static class Volumes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private Volumes(Builder builder) {
+            this.name = builder.name;
+            this.path = builder.path;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Volumes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String path; 
+            private String type; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Volumes build() {
+                return new Volumes(this);
+            } 
+
+        } 
+
+    }
 }

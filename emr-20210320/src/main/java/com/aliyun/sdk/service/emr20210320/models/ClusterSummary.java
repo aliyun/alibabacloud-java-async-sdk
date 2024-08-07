@@ -26,6 +26,9 @@ public class ClusterSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
     @com.aliyun.core.annotation.NameInMap("EmrDefaultRole")
     private String emrDefaultRole;
 
@@ -59,6 +62,7 @@ public class ClusterSummary extends TeaModel {
         this.clusterState = builder.clusterState;
         this.clusterType = builder.clusterType;
         this.createTime = builder.createTime;
+        this.description = builder.description;
         this.emrDefaultRole = builder.emrDefaultRole;
         this.endTime = builder.endTime;
         this.expireTime = builder.expireTime;
@@ -111,6 +115,13 @@ public class ClusterSummary extends TeaModel {
      */
     public Long getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
     }
 
     /**
@@ -182,6 +193,7 @@ public class ClusterSummary extends TeaModel {
         private String clusterState; 
         private String clusterType; 
         private Long createTime; 
+        private String description; 
         private String emrDefaultRole; 
         private Long endTime; 
         private Long expireTime; 
@@ -243,6 +255,14 @@ public class ClusterSummary extends TeaModel {
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.description = description;
             return this;
         }
 

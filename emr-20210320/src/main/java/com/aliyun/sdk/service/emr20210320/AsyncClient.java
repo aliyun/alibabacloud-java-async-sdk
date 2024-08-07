@@ -253,8 +253,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListDoctorReportsResponse> listDoctorReports(ListDoctorReportsRequest request);
 
-    CompletableFuture<ListInspectionHistoryResponse> listInspectionHistory(ListInspectionHistoryRequest request);
-
     CompletableFuture<ListInstanceTypesResponse> listInstanceTypes(ListInstanceTypesRequest request);
 
     CompletableFuture<ListNodeGroupsResponse> listNodeGroups(ListNodeGroupsRequest request);
@@ -266,12 +264,6 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ListReleaseVersionsResponse> listReleaseVersions(ListReleaseVersionsRequest request);
-
-    /**
-      * 查询资源巡检项。
-      *
-     */
-    CompletableFuture<ListResourceHealthInspectionsResponse> listResourceHealthInspections(ListResourceHealthInspectionsRequest request);
 
     CompletableFuture<ListScriptsResponse> listScripts(ListScriptsRequest request);
 

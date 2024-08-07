@@ -905,20 +905,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<ListInspectionHistoryResponse> listInspectionHistory(ListInspectionHistoryRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListInspectionHistory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListInspectionHistoryResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListInspectionHistoryResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<ListInstanceTypesResponse> listInstanceTypes(ListInstanceTypesRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -973,24 +959,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListReleaseVersionsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-      * 查询资源巡检项。
-      *
-     */
-    @Override
-    public CompletableFuture<ListResourceHealthInspectionsResponse> listResourceHealthInspections(ListResourceHealthInspectionsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListResourceHealthInspections").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListResourceHealthInspectionsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListResourceHealthInspectionsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

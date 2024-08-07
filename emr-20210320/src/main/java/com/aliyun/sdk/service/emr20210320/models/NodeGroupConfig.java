@@ -14,6 +14,9 @@ public class NodeGroupConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AdditionalSecurityGroupIds")
     private java.util.List < String > additionalSecurityGroupIds;
 
+    @com.aliyun.core.annotation.NameInMap("AutoScalingPolicy")
+    private AutoScalingPolicy autoScalingPolicy;
+
     @com.aliyun.core.annotation.NameInMap("ComponentTags")
     private java.util.List < String > componentTags;
 
@@ -71,6 +74,7 @@ public class NodeGroupConfig extends TeaModel {
 
     private NodeGroupConfig(Builder builder) {
         this.additionalSecurityGroupIds = builder.additionalSecurityGroupIds;
+        this.autoScalingPolicy = builder.autoScalingPolicy;
         this.componentTags = builder.componentTags;
         this.costOptimizedConfig = builder.costOptimizedConfig;
         this.dataDisks = builder.dataDisks;
@@ -104,6 +108,13 @@ public class NodeGroupConfig extends TeaModel {
      */
     public java.util.List < String > getAdditionalSecurityGroupIds() {
         return this.additionalSecurityGroupIds;
+    }
+
+    /**
+     * @return autoScalingPolicy
+     */
+    public AutoScalingPolicy getAutoScalingPolicy() {
+        return this.autoScalingPolicy;
     }
 
     /**
@@ -234,6 +245,7 @@ public class NodeGroupConfig extends TeaModel {
 
     public static final class Builder {
         private java.util.List < String > additionalSecurityGroupIds; 
+        private AutoScalingPolicy autoScalingPolicy; 
         private java.util.List < String > componentTags; 
         private CostOptimizedConfig costOptimizedConfig; 
         private java.util.List < DataDisk > dataDisks; 
@@ -258,6 +270,14 @@ public class NodeGroupConfig extends TeaModel {
          */
         public Builder additionalSecurityGroupIds(java.util.List < String > additionalSecurityGroupIds) {
             this.additionalSecurityGroupIds = additionalSecurityGroupIds;
+            return this;
+        }
+
+        /**
+         * AutoScalingPolicy.
+         */
+        public Builder autoScalingPolicy(AutoScalingPolicy autoScalingPolicy) {
+            this.autoScalingPolicy = autoScalingPolicy;
             return this;
         }
 

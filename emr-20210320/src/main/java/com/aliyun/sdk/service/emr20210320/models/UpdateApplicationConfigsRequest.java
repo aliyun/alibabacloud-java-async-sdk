@@ -264,7 +264,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         }
 
         /**
-         * Specifies whether to refresh the configurations.
+         * Specifies whether to refresh the configurations. Default value: True.
          */
         public Builder refreshConfig(Boolean refreshConfig) {
             this.putQueryParameter("RefreshConfig", refreshConfig);

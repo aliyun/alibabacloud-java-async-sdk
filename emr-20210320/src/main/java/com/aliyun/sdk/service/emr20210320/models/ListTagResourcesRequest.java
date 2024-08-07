@@ -135,7 +135,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Marks the current position to start reading. If this field is empty, the data is read from the beginning.
+         * The pagination token that is used in the request to retrieve a new page of results. If NextToken is empty, the query starts from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

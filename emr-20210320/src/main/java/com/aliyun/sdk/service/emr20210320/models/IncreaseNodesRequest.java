@@ -183,7 +183,7 @@ public class IncreaseNodesRequest extends Request {
         } 
 
         /**
-         * The configurations of the applications. Valid values of N: 1 to 1000.
+         * The application configurations. You can specify a maximum of 1,000 items.
          */
         public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
             this.putQueryParameter("ApplicationConfigs", applicationConfigs);
@@ -207,7 +207,11 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal for nodes. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default value)
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);

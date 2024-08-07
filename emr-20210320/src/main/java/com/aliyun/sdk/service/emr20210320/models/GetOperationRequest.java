@@ -93,7 +93,7 @@ public class GetOperationRequest extends Request {
         }
 
         /**
-         * The ID of the operation.
+         * The operation ID. For more information, see [CreateCluster](~~454393~~) [IncreaseNodes](~~454397~~)
          */
         public Builder operationId(String operationId) {
             this.putQueryParameter("OperationId", operationId);
