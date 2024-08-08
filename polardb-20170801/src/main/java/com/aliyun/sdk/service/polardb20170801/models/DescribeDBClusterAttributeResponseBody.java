@@ -864,7 +864,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the nodes.
+         * The information about the nodes.
          */
         public Builder DBNodes(java.util.List < DBNodes> DBNodes) {
             this.DBNodes = DBNodes;

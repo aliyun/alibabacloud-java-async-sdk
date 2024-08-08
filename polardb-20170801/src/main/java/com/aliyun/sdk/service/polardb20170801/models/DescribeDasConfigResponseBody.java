@@ -69,7 +69,7 @@ public class DescribeDasConfigResponseBody extends TeaModel {
         }
 
         /**
-         * StorageAutoScale.
+         * Indicates whether the automatic storage expansion feature is enabled for the standard cluster.
          */
         public Builder storageAutoScale(String storageAutoScale) {
             this.storageAutoScale = storageAutoScale;
@@ -77,7 +77,10 @@ public class DescribeDasConfigResponseBody extends TeaModel {
         }
 
         /**
-         * StorageUpperBound.
+         * The maximum storage capacity of the standard cluster that is scaled up. Unit: GB.
+         * <p>
+         * 
+         * >  This parameter is returned when the StorageAutoScale parameter is set to Enable.
          */
         public Builder storageUpperBound(Long storageUpperBound) {
             this.storageUpperBound = storageUpperBound;

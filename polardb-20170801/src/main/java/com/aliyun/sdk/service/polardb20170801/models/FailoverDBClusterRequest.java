@@ -44,6 +44,10 @@ public class FailoverDBClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TargetDBNodeId")
     private String targetDBNodeId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetZoneType")
+    private String targetZoneType;
+
     private FailoverDBClusterRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -54,6 +58,7 @@ public class FailoverDBClusterRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.rollBackForDisaster = builder.rollBackForDisaster;
         this.targetDBNodeId = builder.targetDBNodeId;
+        this.targetZoneType = builder.targetZoneType;
     }
 
     public static Builder builder() {
@@ -125,6 +130,13 @@ public class FailoverDBClusterRequest extends Request {
         return this.targetDBNodeId;
     }
 
+    /**
+     * @return targetZoneType
+     */
+    public String getTargetZoneType() {
+        return this.targetZoneType;
+    }
+
     public static final class Builder extends Request.Builder<FailoverDBClusterRequest, Builder> {
         private String clientToken; 
         private String DBClusterId; 
@@ -134,6 +146,7 @@ public class FailoverDBClusterRequest extends Request {
         private Long resourceOwnerId; 
         private Boolean rollBackForDisaster; 
         private String targetDBNodeId; 
+        private String targetZoneType; 
 
         private Builder() {
             super();
@@ -149,6 +162,7 @@ public class FailoverDBClusterRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.rollBackForDisaster = request.rollBackForDisaster;
             this.targetDBNodeId = request.targetDBNodeId;
+            this.targetZoneType = request.targetZoneType;
         } 
 
         /**
@@ -228,6 +242,15 @@ public class FailoverDBClusterRequest extends Request {
         public Builder targetDBNodeId(String targetDBNodeId) {
             this.putQueryParameter("TargetDBNodeId", targetDBNodeId);
             this.targetDBNodeId = targetDBNodeId;
+            return this;
+        }
+
+        /**
+         * TargetZoneType.
+         */
+        public Builder targetZoneType(String targetZoneType) {
+            this.putQueryParameter("TargetZoneType", targetZoneType);
+            this.targetZoneType = targetZoneType;
             return this;
         }
 
