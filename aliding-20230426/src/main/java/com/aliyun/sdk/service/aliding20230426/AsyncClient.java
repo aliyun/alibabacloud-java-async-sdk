@@ -57,6 +57,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CommentListReportResponse> commentListReport(CommentListReportRequest request);
 
+    CompletableFuture<CommitFileResponse> commitFile(CommitFileRequest request);
+
     CompletableFuture<CreateDeliveryPlanResponse> createDeliveryPlan(CreateDeliveryPlanRequest request);
 
     CompletableFuture<CreateDingtalkPersonalTodoTaskResponse> createDingtalkPersonalTodoTask(CreateDingtalkPersonalTodoTaskRequest request);
@@ -155,6 +157,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFileDownloadInfoResponse> getFileDownloadInfo(GetFileDownloadInfoRequest request);
 
+    CompletableFuture<GetFileUploadInfoResponse> getFileUploadInfo(GetFileUploadInfoRequest request);
+
     CompletableFuture<GetFormComponentDefinitionListResponse> getFormComponentDefinitionList(GetFormComponentDefinitionListRequest request);
 
     CompletableFuture<GetFormDataByIDResponse> getFormDataByID(GetFormDataByIDRequest request);
@@ -178,6 +182,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMeetingRoomsScheduleResponse> getMeetingRoomsSchedule(GetMeetingRoomsScheduleRequest request);
 
     CompletableFuture<GetMineWorkspaceResponse> getMineWorkspace(GetMineWorkspaceRequest request);
+
+    CompletableFuture<GetMultipartFileUploadInfosResponse> getMultipartFileUploadInfos(GetMultipartFileUploadInfosRequest request);
 
     CompletableFuture<GetNewestInnerGroupsResponse> getNewestInnerGroups(GetNewestInnerGroupsRequest request);
 
@@ -205,6 +211,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRunningTasksResponse> getRunningTasks(GetRunningTasksRequest request);
 
+    CompletableFuture<GetScheduleResponse> getSchedule(GetScheduleRequest request);
+
     CompletableFuture<GetSheetResponse> getSheet(GetSheetRequest request);
 
     CompletableFuture<GetSpaceDirectoriesResponse> getSpaceDirectories(GetSpaceDirectoriesRequest request);
@@ -224,6 +232,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkspacesResponse> getWorkspaces(GetWorkspacesRequest request);
 
     CompletableFuture<GrantHonorResponse> grantHonor(GrantHonorRequest request);
+
+    CompletableFuture<InitMultipartFileUploadResponse> initMultipartFileUpload(InitMultipartFileUploadRequest request);
 
     CompletableFuture<InsertColumnsBeforeResponse> insertColumnsBefore(InsertColumnsBeforeRequest request);
 

@@ -6,46 +6,45 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetDocContentTakIdRequest} extends {@link RequestModel}
+ * {@link GetMultipartFileUploadInfosRequest} extends {@link RequestModel}
  *
- * <p>GetDocContentTakIdRequest</p>
+ * <p>GetMultipartFileUploadInfosRequest</p>
  */
-public class GetDocContentTakIdRequest extends Request {
+public class GetMultipartFileUploadInfosRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("DentryUuid")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String dentryUuid;
+    @com.aliyun.core.annotation.NameInMap("Option")
+    private Option option;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("GenerateCp")
-    private Boolean generateCp;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("TargetFormat")
-    private String targetFormat;
+    @com.aliyun.core.annotation.NameInMap("PartNumbers")
+    private java.util.List < Integer > partNumbers;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    private GetDocContentTakIdRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UploadKey")
+    private String uploadKey;
+
+    private GetMultipartFileUploadInfosRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.dentryUuid = builder.dentryUuid;
-        this.generateCp = builder.generateCp;
-        this.targetFormat = builder.targetFormat;
+        this.option = builder.option;
+        this.partNumbers = builder.partNumbers;
         this.tenantContext = builder.tenantContext;
+        this.uploadKey = builder.uploadKey;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetDocContentTakIdRequest create() {
+    public static GetMultipartFileUploadInfosRequest create() {
         return builder().build();
     }
 
@@ -62,24 +61,17 @@ public class GetDocContentTakIdRequest extends Request {
     }
 
     /**
-     * @return dentryUuid
+     * @return option
      */
-    public String getDentryUuid() {
-        return this.dentryUuid;
+    public Option getOption() {
+        return this.option;
     }
 
     /**
-     * @return generateCp
+     * @return partNumbers
      */
-    public Boolean getGenerateCp() {
-        return this.generateCp;
-    }
-
-    /**
-     * @return targetFormat
-     */
-    public String getTargetFormat() {
-        return this.targetFormat;
+    public java.util.List < Integer > getPartNumbers() {
+        return this.partNumbers;
     }
 
     /**
@@ -89,24 +81,31 @@ public class GetDocContentTakIdRequest extends Request {
         return this.tenantContext;
     }
 
-    public static final class Builder extends Request.Builder<GetDocContentTakIdRequest, Builder> {
+    /**
+     * @return uploadKey
+     */
+    public String getUploadKey() {
+        return this.uploadKey;
+    }
+
+    public static final class Builder extends Request.Builder<GetMultipartFileUploadInfosRequest, Builder> {
         private AccountContext accountContext; 
-        private String dentryUuid; 
-        private Boolean generateCp; 
-        private String targetFormat; 
+        private Option option; 
+        private java.util.List < Integer > partNumbers; 
         private TenantContext tenantContext; 
+        private String uploadKey; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDocContentTakIdRequest request) {
+        private Builder(GetMultipartFileUploadInfosRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.dentryUuid = request.dentryUuid;
-            this.generateCp = request.generateCp;
-            this.targetFormat = request.targetFormat;
+            this.option = request.option;
+            this.partNumbers = request.partNumbers;
             this.tenantContext = request.tenantContext;
+            this.uploadKey = request.uploadKey;
         } 
 
         /**
@@ -120,29 +119,22 @@ public class GetDocContentTakIdRequest extends Request {
         }
 
         /**
-         * DentryUuid.
+         * Option.
          */
-        public Builder dentryUuid(String dentryUuid) {
-            this.putBodyParameter("DentryUuid", dentryUuid);
-            this.dentryUuid = dentryUuid;
+        public Builder option(Option option) {
+            String optionShrink = shrink(option, "Option", "json");
+            this.putBodyParameter("Option", optionShrink);
+            this.option = option;
             return this;
         }
 
         /**
-         * GenerateCp.
+         * PartNumbers.
          */
-        public Builder generateCp(Boolean generateCp) {
-            this.putBodyParameter("GenerateCp", generateCp);
-            this.generateCp = generateCp;
-            return this;
-        }
-
-        /**
-         * TargetFormat.
-         */
-        public Builder targetFormat(String targetFormat) {
-            this.putBodyParameter("TargetFormat", targetFormat);
-            this.targetFormat = targetFormat;
+        public Builder partNumbers(java.util.List < Integer > partNumbers) {
+            String partNumbersShrink = shrink(partNumbers, "PartNumbers", "json");
+            this.putBodyParameter("PartNumbers", partNumbersShrink);
+            this.partNumbers = partNumbers;
             return this;
         }
 
@@ -156,9 +148,18 @@ public class GetDocContentTakIdRequest extends Request {
             return this;
         }
 
+        /**
+         * UploadKey.
+         */
+        public Builder uploadKey(String uploadKey) {
+            this.putBodyParameter("UploadKey", uploadKey);
+            this.uploadKey = uploadKey;
+            return this;
+        }
+
         @Override
-        public GetDocContentTakIdRequest build() {
-            return new GetDocContentTakIdRequest(this);
+        public GetMultipartFileUploadInfosRequest build() {
+            return new GetMultipartFileUploadInfosRequest(this);
         } 
 
     } 
@@ -200,6 +201,47 @@ public class GetDocContentTakIdRequest extends Request {
 
             public AccountContext build() {
                 return new AccountContext(this);
+            } 
+
+        } 
+
+    }
+    public static class Option extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PreferIntranet")
+        private Boolean preferIntranet;
+
+        private Option(Builder builder) {
+            this.preferIntranet = builder.preferIntranet;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Option create() {
+            return builder().build();
+        }
+
+        /**
+         * @return preferIntranet
+         */
+        public Boolean getPreferIntranet() {
+            return this.preferIntranet;
+        }
+
+        public static final class Builder {
+            private Boolean preferIntranet; 
+
+            /**
+             * PreferIntranet.
+             */
+            public Builder preferIntranet(Boolean preferIntranet) {
+                this.preferIntranet = preferIntranet;
+                return this;
+            }
+
+            public Option build() {
+                return new Option(this);
             } 
 
         } 

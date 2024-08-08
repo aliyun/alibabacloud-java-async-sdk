@@ -6,46 +6,45 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetDocContentTakIdRequest} extends {@link RequestModel}
+ * {@link GetScheduleRequest} extends {@link RequestModel}
  *
- * <p>GetDocContentTakIdRequest</p>
+ * <p>GetScheduleRequest</p>
  */
-public class GetDocContentTakIdRequest extends Request {
+public class GetScheduleRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("DentryUuid")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String dentryUuid;
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("GenerateCp")
-    private Boolean generateCp;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("TargetFormat")
-    private String targetFormat;
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantContext")
     private TenantContext tenantContext;
 
-    private GetDocContentTakIdRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserIds")
+    private java.util.List < String > userIds;
+
+    private GetScheduleRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.dentryUuid = builder.dentryUuid;
-        this.generateCp = builder.generateCp;
-        this.targetFormat = builder.targetFormat;
+        this.endTime = builder.endTime;
+        this.startTime = builder.startTime;
         this.tenantContext = builder.tenantContext;
+        this.userIds = builder.userIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetDocContentTakIdRequest create() {
+    public static GetScheduleRequest create() {
         return builder().build();
     }
 
@@ -62,24 +61,17 @@ public class GetDocContentTakIdRequest extends Request {
     }
 
     /**
-     * @return dentryUuid
+     * @return endTime
      */
-    public String getDentryUuid() {
-        return this.dentryUuid;
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
-     * @return generateCp
+     * @return startTime
      */
-    public Boolean getGenerateCp() {
-        return this.generateCp;
-    }
-
-    /**
-     * @return targetFormat
-     */
-    public String getTargetFormat() {
-        return this.targetFormat;
+    public String getStartTime() {
+        return this.startTime;
     }
 
     /**
@@ -89,24 +81,31 @@ public class GetDocContentTakIdRequest extends Request {
         return this.tenantContext;
     }
 
-    public static final class Builder extends Request.Builder<GetDocContentTakIdRequest, Builder> {
+    /**
+     * @return userIds
+     */
+    public java.util.List < String > getUserIds() {
+        return this.userIds;
+    }
+
+    public static final class Builder extends Request.Builder<GetScheduleRequest, Builder> {
         private AccountContext accountContext; 
-        private String dentryUuid; 
-        private Boolean generateCp; 
-        private String targetFormat; 
+        private String endTime; 
+        private String startTime; 
         private TenantContext tenantContext; 
+        private java.util.List < String > userIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetDocContentTakIdRequest request) {
+        private Builder(GetScheduleRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.dentryUuid = request.dentryUuid;
-            this.generateCp = request.generateCp;
-            this.targetFormat = request.targetFormat;
+            this.endTime = request.endTime;
+            this.startTime = request.startTime;
             this.tenantContext = request.tenantContext;
+            this.userIds = request.userIds;
         } 
 
         /**
@@ -120,29 +119,20 @@ public class GetDocContentTakIdRequest extends Request {
         }
 
         /**
-         * DentryUuid.
+         * EndTime.
          */
-        public Builder dentryUuid(String dentryUuid) {
-            this.putBodyParameter("DentryUuid", dentryUuid);
-            this.dentryUuid = dentryUuid;
+        public Builder endTime(String endTime) {
+            this.putBodyParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
         /**
-         * GenerateCp.
+         * StartTime.
          */
-        public Builder generateCp(Boolean generateCp) {
-            this.putBodyParameter("GenerateCp", generateCp);
-            this.generateCp = generateCp;
-            return this;
-        }
-
-        /**
-         * TargetFormat.
-         */
-        public Builder targetFormat(String targetFormat) {
-            this.putBodyParameter("TargetFormat", targetFormat);
-            this.targetFormat = targetFormat;
+        public Builder startTime(String startTime) {
+            this.putBodyParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 
@@ -156,9 +146,19 @@ public class GetDocContentTakIdRequest extends Request {
             return this;
         }
 
+        /**
+         * UserIds.
+         */
+        public Builder userIds(java.util.List < String > userIds) {
+            String userIdsShrink = shrink(userIds, "UserIds", "json");
+            this.putBodyParameter("UserIds", userIdsShrink);
+            this.userIds = userIds;
+            return this;
+        }
+
         @Override
-        public GetDocContentTakIdRequest build() {
-            return new GetDocContentTakIdRequest(this);
+        public GetScheduleRequest build() {
+            return new GetScheduleRequest(this);
         } 
 
     } 

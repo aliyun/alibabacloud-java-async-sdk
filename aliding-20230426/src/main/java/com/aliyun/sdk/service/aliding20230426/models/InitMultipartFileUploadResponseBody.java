@@ -6,16 +6,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InviteUsersResponseBody} extends {@link TeaModel}
+ * {@link InitMultipartFileUploadResponseBody} extends {@link TeaModel}
  *
- * <p>InviteUsersResponseBody</p>
+ * <p>InitMultipartFileUploadResponseBody</p>
  */
-public class InviteUsersResponseBody extends TeaModel {
+public class InitMultipartFileUploadResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("success")
-    private Boolean success;
+    @com.aliyun.core.annotation.NameInMap("storageDriver")
+    private String storageDriver;
+
+    @com.aliyun.core.annotation.NameInMap("uploadKey")
+    private String uploadKey;
 
     @com.aliyun.core.annotation.NameInMap("vendorRequestId")
     private String vendorRequestId;
@@ -23,9 +26,10 @@ public class InviteUsersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("vendorType")
     private String vendorType;
 
-    private InviteUsersResponseBody(Builder builder) {
+    private InitMultipartFileUploadResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.success = builder.success;
+        this.storageDriver = builder.storageDriver;
+        this.uploadKey = builder.uploadKey;
         this.vendorRequestId = builder.vendorRequestId;
         this.vendorType = builder.vendorType;
     }
@@ -34,7 +38,7 @@ public class InviteUsersResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static InviteUsersResponseBody create() {
+    public static InitMultipartFileUploadResponseBody create() {
         return builder().build();
     }
 
@@ -46,10 +50,17 @@ public class InviteUsersResponseBody extends TeaModel {
     }
 
     /**
-     * @return success
+     * @return storageDriver
      */
-    public Boolean getSuccess() {
-        return this.success;
+    public String getStorageDriver() {
+        return this.storageDriver;
+    }
+
+    /**
+     * @return uploadKey
+     */
+    public String getUploadKey() {
+        return this.uploadKey;
     }
 
     /**
@@ -68,12 +79,13 @@ public class InviteUsersResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private Boolean success; 
+        private String storageDriver; 
+        private String uploadKey; 
         private String vendorRequestId; 
         private String vendorType; 
 
         /**
-         * requestId
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,10 +93,18 @@ public class InviteUsersResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * storageDriver.
          */
-        public Builder success(Boolean success) {
-            this.success = success;
+        public Builder storageDriver(String storageDriver) {
+            this.storageDriver = storageDriver;
+            return this;
+        }
+
+        /**
+         * uploadKey.
+         */
+        public Builder uploadKey(String uploadKey) {
+            this.uploadKey = uploadKey;
             return this;
         }
 
@@ -104,8 +124,8 @@ public class InviteUsersResponseBody extends TeaModel {
             return this;
         }
 
-        public InviteUsersResponseBody build() {
-            return new InviteUsersResponseBody(this);
+        public InitMultipartFileUploadResponseBody build() {
+            return new InitMultipartFileUploadResponseBody(this);
         } 
 
     } 

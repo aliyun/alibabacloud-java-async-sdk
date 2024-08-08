@@ -311,15 +311,23 @@ public class InviteUsersRequest extends Request {
 
     }
     public static class PhoneInviteeList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InviteClient")
+        private Boolean inviteClient;
+
         @com.aliyun.core.annotation.NameInMap("Nick")
         private String nick;
 
         @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
+        @com.aliyun.core.annotation.NameInMap("StatusCode")
+        private String statusCode;
+
         private PhoneInviteeList(Builder builder) {
+            this.inviteClient = builder.inviteClient;
             this.nick = builder.nick;
             this.phoneNumber = builder.phoneNumber;
+            this.statusCode = builder.statusCode;
         }
 
         public static Builder builder() {
@@ -328,6 +336,13 @@ public class InviteUsersRequest extends Request {
 
         public static PhoneInviteeList create() {
             return builder().build();
+        }
+
+        /**
+         * @return inviteClient
+         */
+        public Boolean getInviteClient() {
+            return this.inviteClient;
         }
 
         /**
@@ -344,9 +359,26 @@ public class InviteUsersRequest extends Request {
             return this.phoneNumber;
         }
 
+        /**
+         * @return statusCode
+         */
+        public String getStatusCode() {
+            return this.statusCode;
+        }
+
         public static final class Builder {
+            private Boolean inviteClient; 
             private String nick; 
             private String phoneNumber; 
+            private String statusCode; 
+
+            /**
+             * InviteClient.
+             */
+            public Builder inviteClient(Boolean inviteClient) {
+                this.inviteClient = inviteClient;
+                return this;
+            }
 
             /**
              * Nick.
@@ -361,6 +393,14 @@ public class InviteUsersRequest extends Request {
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
+                return this;
+            }
+
+            /**
+             * StatusCode.
+             */
+            public Builder statusCode(String statusCode) {
+                this.statusCode = statusCode;
                 return this;
             }
 
