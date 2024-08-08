@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHpoExperimentResponseBody</p>
  */
 public class CreateHpoExperimentResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, String > detail;
 
-    @NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
     private String experimentId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateHpoExperimentResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class CreateHpoExperimentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class CreateHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * Detailed information of the failure.
          */
         public Builder detail(java.util.Map < String, String > detail) {
             this.detail = detail;
@@ -102,7 +101,7 @@ public class CreateHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * ExperimentId.
+         * Id of the request
          */
         public Builder experimentId(String experimentId) {
             this.experimentId = experimentId;
@@ -110,7 +109,7 @@ public class CreateHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +117,7 @@ public class CreateHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

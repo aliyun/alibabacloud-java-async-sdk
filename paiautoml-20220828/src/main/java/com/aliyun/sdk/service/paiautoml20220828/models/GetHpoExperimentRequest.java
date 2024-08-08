@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHpoExperimentRequest</p>
  */
 public class GetHpoExperimentRequest extends Request {
-    @Path
-    @NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
     private String experimentId;
 
     private GetHpoExperimentRequest(Builder builder) {
@@ -54,7 +53,7 @@ public class GetHpoExperimentRequest extends Request {
         } 
 
         /**
-         * ExperimentId.
+         * A short description of struct
          */
         public Builder experimentId(String experimentId) {
             this.putPathParameter("ExperimentId", experimentId);

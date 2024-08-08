@@ -6,36 +6,37 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateHpoExperimentRequest} extends {@link RequestModel}
+ * {@link CreateAutofeExperimentRequest} extends {@link RequestModel}
  *
- * <p>CreateHpoExperimentRequest</p>
+ * <p>CreateAutofeExperimentRequest</p>
  */
-public class CreateHpoExperimentRequest extends Request {
+public class CreateAutofeExperimentRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutofeExperimentConfiguration")
+    private AutofeExperimentConfiguration autofeExperimentConfiguration;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("HpoExperimentConfiguration")
-    private HpoExperimentConfig hpoExperimentConfiguration;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    private CreateHpoExperimentRequest(Builder builder) {
+    private CreateAutofeExperimentRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
+        this.autofeExperimentConfiguration = builder.autofeExperimentConfiguration;
         this.description = builder.description;
-        this.hpoExperimentConfiguration = builder.hpoExperimentConfiguration;
         this.name = builder.name;
         this.workspaceId = builder.workspaceId;
     }
@@ -44,7 +45,7 @@ public class CreateHpoExperimentRequest extends Request {
         return new Builder();
     }
 
-    public static CreateHpoExperimentRequest create() {
+    public static CreateAutofeExperimentRequest create() {
         return builder().build();
     }
 
@@ -61,17 +62,17 @@ public class CreateHpoExperimentRequest extends Request {
     }
 
     /**
+     * @return autofeExperimentConfiguration
+     */
+    public AutofeExperimentConfiguration getAutofeExperimentConfiguration() {
+        return this.autofeExperimentConfiguration;
+    }
+
+    /**
      * @return description
      */
     public String getDescription() {
         return this.description;
-    }
-
-    /**
-     * @return hpoExperimentConfiguration
-     */
-    public HpoExperimentConfig getHpoExperimentConfiguration() {
-        return this.hpoExperimentConfiguration;
     }
 
     /**
@@ -88,10 +89,10 @@ public class CreateHpoExperimentRequest extends Request {
         return this.workspaceId;
     }
 
-    public static final class Builder extends Request.Builder<CreateHpoExperimentRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateAutofeExperimentRequest, Builder> {
         private String accessibility; 
+        private AutofeExperimentConfiguration autofeExperimentConfiguration; 
         private String description; 
-        private HpoExperimentConfig hpoExperimentConfiguration; 
         private String name; 
         private String workspaceId; 
 
@@ -99,17 +100,17 @@ public class CreateHpoExperimentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateHpoExperimentRequest request) {
+        private Builder(CreateAutofeExperimentRequest request) {
             super(request);
             this.accessibility = request.accessibility;
+            this.autofeExperimentConfiguration = request.autofeExperimentConfiguration;
             this.description = request.description;
-            this.hpoExperimentConfiguration = request.hpoExperimentConfiguration;
             this.name = request.name;
             this.workspaceId = request.workspaceId;
         } 
 
         /**
-         * Experiment accesibility, public or private.
+         * Accessibility.
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -118,7 +119,16 @@ public class CreateHpoExperimentRequest extends Request {
         }
 
         /**
-         * Experiment description.
+         * AutofeExperimentConfiguration.
+         */
+        public Builder autofeExperimentConfiguration(AutofeExperimentConfiguration autofeExperimentConfiguration) {
+            this.putBodyParameter("AutofeExperimentConfiguration", autofeExperimentConfiguration);
+            this.autofeExperimentConfiguration = autofeExperimentConfiguration;
+            return this;
+        }
+
+        /**
+         * Description.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -127,16 +137,7 @@ public class CreateHpoExperimentRequest extends Request {
         }
 
         /**
-         * The config object of the expriment.
-         */
-        public Builder hpoExperimentConfiguration(HpoExperimentConfig hpoExperimentConfiguration) {
-            this.putBodyParameter("HpoExperimentConfiguration", hpoExperimentConfiguration);
-            this.hpoExperimentConfiguration = hpoExperimentConfiguration;
-            return this;
-        }
-
-        /**
-         * Experiment Name
+         * Name.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -145,7 +146,7 @@ public class CreateHpoExperimentRequest extends Request {
         }
 
         /**
-         * AI Workspace ID
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -154,8 +155,8 @@ public class CreateHpoExperimentRequest extends Request {
         }
 
         @Override
-        public CreateHpoExperimentRequest build() {
-            return new CreateHpoExperimentRequest(this);
+        public CreateAutofeExperimentRequest build() {
+            return new CreateAutofeExperimentRequest(this);
         } 
 
     } 

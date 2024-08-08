@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHpoTrialCommandsResponseBody</p>
  */
 public class ListHpoTrialCommandsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Commands")
+    @com.aliyun.core.annotation.NameInMap("Commands")
     private java.util.List < Commands> commands;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, String > detail;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListHpoTrialCommandsResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListHpoTrialCommandsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class ListHpoTrialCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * Commands.
+         * The list of commands.
          */
         public Builder commands(java.util.List < Commands> commands) {
             this.commands = commands;
@@ -102,7 +101,7 @@ public class ListHpoTrialCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * Extra error information.
          */
         public Builder detail(java.util.Map < String, String > detail) {
             this.detail = detail;
@@ -110,7 +109,7 @@ public class ListHpoTrialCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +117,7 @@ public class ListHpoTrialCommandsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,13 +131,13 @@ public class ListHpoTrialCommandsResponseBody extends TeaModel {
     } 
 
     public static class Commands extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
         private Commands(Builder builder) {
@@ -182,7 +181,7 @@ public class ListHpoTrialCommandsResponseBody extends TeaModel {
             private String output; 
 
             /**
-             * Command.
+             * The command that you want to run.
              */
             public Builder command(String command) {
                 this.command = command;
@@ -190,7 +189,7 @@ public class ListHpoTrialCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The id of the command.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -198,7 +197,7 @@ public class ListHpoTrialCommandsResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * The output of the above command
              */
             public Builder output(String output) {
                 this.output = output;

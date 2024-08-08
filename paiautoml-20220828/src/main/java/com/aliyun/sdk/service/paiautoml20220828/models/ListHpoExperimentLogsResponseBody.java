@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHpoExperimentLogsResponseBody</p>
  */
 public class ListHpoExperimentLogsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, ? > detail;
 
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private java.util.List < String > logs;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListHpoExperimentLogsResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class ListHpoExperimentLogsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * Error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +105,7 @@ public class ListHpoExperimentLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * Extra error message.
          */
         public Builder detail(java.util.Map < String, ? > detail) {
             this.detail = detail;
@@ -114,7 +113,7 @@ public class ListHpoExperimentLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Logs.
+         * The log.
          */
         public Builder logs(java.util.List < String > logs) {
             this.logs = logs;
@@ -122,7 +121,7 @@ public class ListHpoExperimentLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +129,7 @@ public class ListHpoExperimentLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +137,7 @@ public class ListHpoExperimentLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

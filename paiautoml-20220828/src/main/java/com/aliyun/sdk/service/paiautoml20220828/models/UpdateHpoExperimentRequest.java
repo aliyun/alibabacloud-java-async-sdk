@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateHpoExperimentRequest</p>
  */
 public class UpdateHpoExperimentRequest extends Request {
-    @Path
-    @NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
     private String experimentId;
 
-    @Body
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("HpoExperimentConfiguration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HpoExperimentConfiguration")
     private HpoExperimentConfig hpoExperimentConfiguration;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private UpdateHpoExperimentRequest(Builder builder) {
@@ -124,7 +123,7 @@ public class UpdateHpoExperimentRequest extends Request {
         } 
 
         /**
-         * ExperimentId.
+         * Experiment ID.
          */
         public Builder experimentId(String experimentId) {
             this.putPathParameter("ExperimentId", experimentId);
@@ -133,7 +132,7 @@ public class UpdateHpoExperimentRequest extends Request {
         }
 
         /**
-         * Accessibility.
+         * Experiment accessibility, private or public.
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -142,7 +141,7 @@ public class UpdateHpoExperimentRequest extends Request {
         }
 
         /**
-         * Description.
+         * Experiment description.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -151,7 +150,7 @@ public class UpdateHpoExperimentRequest extends Request {
         }
 
         /**
-         * HpoExperimentConfiguration.
+         * Experiment configuration.
          */
         public Builder hpoExperimentConfiguration(HpoExperimentConfig hpoExperimentConfiguration) {
             this.putBodyParameter("HpoExperimentConfiguration", hpoExperimentConfiguration);
@@ -160,7 +159,7 @@ public class UpdateHpoExperimentRequest extends Request {
         }
 
         /**
-         * Name.
+         * Experiment name.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -169,7 +168,7 @@ public class UpdateHpoExperimentRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * Expeirment\"s AI workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);

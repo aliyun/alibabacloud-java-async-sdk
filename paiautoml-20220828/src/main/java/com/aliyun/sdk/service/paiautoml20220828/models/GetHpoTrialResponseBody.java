@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHpoTrialResponseBody</p>
  */
 public class GetHpoTrialResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, String > detail;
 
-    @NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
     private String experimentId;
 
-    @NameInMap("FinalMetric")
+    @com.aliyun.core.annotation.NameInMap("FinalMetric")
     private String finalMetric;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("Hyperparam")
+    @com.aliyun.core.annotation.NameInMap("Hyperparam")
     private String hyperparam;
 
-    @NameInMap("JobMeta")
+    @com.aliyun.core.annotation.NameInMap("JobMeta")
     private String jobMeta;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Metric")
+    @com.aliyun.core.annotation.NameInMap("Metric")
     private String metric;
 
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private String model;
 
-    @NameInMap("ParameterId")
+    @com.aliyun.core.annotation.NameInMap("ParameterId")
     private Integer parameterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TrialId")
+    @com.aliyun.core.annotation.NameInMap("TrialId")
     private String trialId;
 
-    @NameInMap("UserComment")
+    @com.aliyun.core.annotation.NameInMap("UserComment")
     private String userComment;
 
-    @NameInMap("UserScore")
+    @com.aliyun.core.annotation.NameInMap("UserScore")
     private Integer userScore;
 
     private GetHpoTrialResponseBody(Builder builder) {
@@ -242,7 +241,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         private Integer userScore; 
 
         /**
-         * Code.
+         * Error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -250,7 +249,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * Extra error information.
          */
         public Builder detail(java.util.Map < String, String > detail) {
             this.detail = detail;
@@ -258,7 +257,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * ExperimentId.
+         * Experiment ID.
          */
         public Builder experimentId(String experimentId) {
             this.experimentId = experimentId;
@@ -266,7 +265,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * FinalMetric.
+         * Final metric of the trial.
          */
         public Builder finalMetric(String finalMetric) {
             this.finalMetric = finalMetric;
@@ -274,7 +273,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * Trial create time.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -282,7 +281,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * Trial last update time.
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -290,7 +289,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * Hyperparam.
+         * Hyperparameters used to run the trial.
          */
         public Builder hyperparam(String hyperparam) {
             this.hyperparam = hyperparam;
@@ -298,7 +297,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * JobMeta.
+         * trial meta infomation.
          */
         public Builder jobMeta(String jobMeta) {
             this.jobMeta = jobMeta;
@@ -306,7 +305,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -314,7 +313,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * Metric.
+         * metric details uploaded during running.
          */
         public Builder metric(String metric) {
             this.metric = metric;
@@ -322,7 +321,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * MetricName.
+         * Name of the metric.
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -330,7 +329,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * Model.
+         * Trial output model.
          */
         public Builder model(String model) {
             this.model = model;
@@ -338,7 +337,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * ParameterId.
+         * Parameter id, start from 0.
          */
         public Builder parameterId(Integer parameterId) {
             this.parameterId = parameterId;
@@ -346,7 +345,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -354,7 +353,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Trial status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -362,7 +361,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * TrialId.
+         * Trail ID.
          */
         public Builder trialId(String trialId) {
             this.trialId = trialId;
@@ -370,7 +369,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * UserComment.
+         * User added comments.
          */
         public Builder userComment(String userComment) {
             this.userComment = userComment;
@@ -378,7 +377,7 @@ public class GetHpoTrialResponseBody extends TeaModel {
         }
 
         /**
-         * UserScore.
+         * User updated score.
          */
         public Builder userScore(Integer userScore) {
             this.userScore = userScore;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StopHpoExperimentRequest</p>
  */
 public class StopHpoExperimentRequest extends Request {
-    @Path
-    @NameInMap("ExperimentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String experimentId;
 
     private StopHpoExperimentRequest(Builder builder) {
@@ -55,7 +54,7 @@ public class StopHpoExperimentRequest extends Request {
         } 
 
         /**
-         * ExperimentId.
+         * 需要被停止的实验的id。
          */
         public Builder experimentId(String experimentId) {
             this.putPathParameter("ExperimentId", experimentId);

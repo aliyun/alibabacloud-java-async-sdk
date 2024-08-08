@@ -6,19 +6,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListHpoTrialLogsResponseBody} extends {@link TeaModel}
+ * {@link CreateAutofeExperimentResponseBody} extends {@link TeaModel}
  *
- * <p>ListHpoTrialLogsResponseBody</p>
+ * <p>CreateAutofeExperimentResponseBody</p>
  */
-public class ListHpoTrialLogsResponseBody extends TeaModel {
+public class CreateAutofeExperimentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, ? > detail;
 
-    @com.aliyun.core.annotation.NameInMap("Logs")
-    private java.util.List < String > logs;
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
+    private String experimentId;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -26,23 +26,19 @@ public class ListHpoTrialLogsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("TotalCount")
-    private Integer totalCount;
-
-    private ListHpoTrialLogsResponseBody(Builder builder) {
+    private CreateAutofeExperimentResponseBody(Builder builder) {
         this.code = builder.code;
         this.detail = builder.detail;
-        this.logs = builder.logs;
+        this.experimentId = builder.experimentId;
         this.message = builder.message;
         this.requestId = builder.requestId;
-        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListHpoTrialLogsResponseBody create() {
+    public static CreateAutofeExperimentResponseBody create() {
         return builder().build();
     }
 
@@ -61,10 +57,10 @@ public class ListHpoTrialLogsResponseBody extends TeaModel {
     }
 
     /**
-     * @return logs
+     * @return experimentId
      */
-    public java.util.List < String > getLogs() {
-        return this.logs;
+    public String getExperimentId() {
+        return this.experimentId;
     }
 
     /**
@@ -81,23 +77,15 @@ public class ListHpoTrialLogsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return totalCount
-     */
-    public Integer getTotalCount() {
-        return this.totalCount;
-    }
-
     public static final class Builder {
         private String code; 
         private java.util.Map < String, ? > detail; 
-        private java.util.List < String > logs; 
+        private String experimentId; 
         private String message; 
         private String requestId; 
-        private Integer totalCount; 
 
         /**
-         * Error code.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +93,7 @@ public class ListHpoTrialLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Extra error information.
+         * Detail.
          */
         public Builder detail(java.util.Map < String, ? > detail) {
             this.detail = detail;
@@ -113,15 +101,15 @@ public class ListHpoTrialLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The log.
+         * ExperimentId.
          */
-        public Builder logs(java.util.List < String > logs) {
-            this.logs = logs;
+        public Builder experimentId(String experimentId) {
+            this.experimentId = experimentId;
             return this;
         }
 
         /**
-         * Error message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,23 +117,15 @@ public class ListHpoTrialLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * The total number of entries returned.
-         */
-        public Builder totalCount(Integer totalCount) {
-            this.totalCount = totalCount;
-            return this;
-        }
-
-        public ListHpoTrialLogsResponseBody build() {
-            return new ListHpoTrialLogsResponseBody(this);
+        public CreateAutofeExperimentResponseBody build() {
+            return new CreateAutofeExperimentResponseBody(this);
         } 
 
     } 

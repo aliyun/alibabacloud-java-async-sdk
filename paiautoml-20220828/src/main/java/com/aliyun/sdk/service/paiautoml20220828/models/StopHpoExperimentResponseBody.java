@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StopHpoExperimentResponseBody</p>
  */
 public class StopHpoExperimentResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, String > detail;
 
-    @NameInMap("ExpId")
+    @com.aliyun.core.annotation.NameInMap("ExpId")
     private String expId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
 
     private StopHpoExperimentResponseBody(Builder builder) {
         this.code = builder.code;
@@ -33,6 +35,7 @@ public class StopHpoExperimentResponseBody extends TeaModel {
         this.expId = builder.expId;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -78,15 +81,23 @@ public class StopHpoExperimentResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder {
         private String code; 
         private java.util.Map < String, String > detail; 
         private String expId; 
         private String message; 
         private String requestId; 
+        private String status; 
 
         /**
-         * Code.
+         * Response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +105,7 @@ public class StopHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * Extra error information.
          */
         public Builder detail(java.util.Map < String, String > detail) {
             this.detail = detail;
@@ -102,7 +113,7 @@ public class StopHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * ExpId.
+         * Experiment ID
          */
         public Builder expId(String expId) {
             this.expId = expId;
@@ -110,7 +121,7 @@ public class StopHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,10 +129,18 @@ public class StopHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
             return this;
         }
 

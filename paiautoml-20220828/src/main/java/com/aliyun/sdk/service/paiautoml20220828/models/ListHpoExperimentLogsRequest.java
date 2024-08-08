@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHpoExperimentLogsRequest</p>
  */
 public class ListHpoExperimentLogsRequest extends Request {
-    @Path
-    @NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
     private String experimentId;
 
-    @Query
-    @NameInMap("LogName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogName")
     private String logName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListHpoExperimentLogsRequest(Builder builder) {
@@ -96,7 +95,7 @@ public class ListHpoExperimentLogsRequest extends Request {
         } 
 
         /**
-         * ExperimentId.
+         * Experiment ID.
          */
         public Builder experimentId(String experimentId) {
             this.putPathParameter("ExperimentId", experimentId);
@@ -105,7 +104,7 @@ public class ListHpoExperimentLogsRequest extends Request {
         }
 
         /**
-         * LogName.
+         * Log name to be listed.
          */
         public Builder logName(String logName) {
             this.putQueryParameter("LogName", logName);
@@ -114,7 +113,7 @@ public class ListHpoExperimentLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +122,7 @@ public class ListHpoExperimentLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

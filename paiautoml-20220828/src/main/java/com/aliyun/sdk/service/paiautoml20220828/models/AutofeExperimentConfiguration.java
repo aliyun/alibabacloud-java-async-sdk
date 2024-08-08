@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AutofeExperimentConfiguration</p>
  */
 public class AutofeExperimentConfiguration extends TeaModel {
-    @NameInMap("odps_config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("odps_config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private OdpsConfig odpsConfig;
 
-    @NameInMap("oss_config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("oss_config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private OssConfig ossConfig;
 
-    @NameInMap("yml_config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("yml_config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private YmlConfig ymlConfig;
 
     private AutofeExperimentConfiguration(Builder builder) {
@@ -95,25 +94,25 @@ public class AutofeExperimentConfiguration extends TeaModel {
     } 
 
     public static class OdpsConfig extends TeaModel {
-        @NameInMap("odps_access_id")
+        @com.aliyun.core.annotation.NameInMap("odps_access_id")
         private String odpsAccessId;
 
-        @NameInMap("odps_access_key")
+        @com.aliyun.core.annotation.NameInMap("odps_access_key")
         private String odpsAccessKey;
 
-        @NameInMap("odps_endpoint")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("odps_endpoint")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String odpsEndpoint;
 
-        @NameInMap("odps_project_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("odps_project_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String odpsProjectName;
 
-        @NameInMap("odps_region_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("odps_region_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String odpsRegionId;
 
-        @NameInMap("odps_role_arn")
+        @com.aliyun.core.annotation.NameInMap("odps_role_arn")
         private String odpsRoleArn;
 
         private OdpsConfig(Builder builder) {
@@ -239,21 +238,21 @@ public class AutofeExperimentConfiguration extends TeaModel {
 
     }
     public static class OssConfig extends TeaModel {
-        @NameInMap("oss_access_id")
+        @com.aliyun.core.annotation.NameInMap("oss_access_id")
         private String ossAccessId;
 
-        @NameInMap("oss_access_key")
+        @com.aliyun.core.annotation.NameInMap("oss_access_key")
         private String ossAccessKey;
 
-        @NameInMap("oss_bucket")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("oss_bucket")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ossBucket;
 
-        @NameInMap("oss_endpoint")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("oss_endpoint")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ossEndpoint;
 
-        @NameInMap("oss_role_arn")
+        @com.aliyun.core.annotation.NameInMap("oss_role_arn")
         private String ossRoleArn;
 
         private OssConfig(Builder builder) {
@@ -362,77 +361,77 @@ public class AutofeExperimentConfiguration extends TeaModel {
 
     }
     public static class YmlConfig extends TeaModel {
-        @NameInMap("action")
+        @com.aliyun.core.annotation.NameInMap("action")
         private String action;
 
-        @NameInMap("aggregate_only")
+        @com.aliyun.core.annotation.NameInMap("aggregate_only")
         private String aggregateOnly;
 
-        @NameInMap("analyze_exp_id")
+        @com.aliyun.core.annotation.NameInMap("analyze_exp_id")
         private String analyzeExpId;
 
-        @NameInMap("cpu")
+        @com.aliyun.core.annotation.NameInMap("cpu")
         private String cpu;
 
-        @NameInMap("data_partition")
+        @com.aliyun.core.annotation.NameInMap("data_partition")
         private String dataPartition;
 
-        @NameInMap("data_source")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("data_source")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dataSource;
 
-        @NameInMap("data_type")
+        @com.aliyun.core.annotation.NameInMap("data_type")
         private String dataType;
 
-        @NameInMap("debug_mode")
+        @com.aliyun.core.annotation.NameInMap("debug_mode")
         private String debugMode;
 
-        @NameInMap("exclude_columns")
+        @com.aliyun.core.annotation.NameInMap("exclude_columns")
         private String excludeColumns;
 
-        @NameInMap("feature_selection")
+        @com.aliyun.core.annotation.NameInMap("feature_selection")
         private String featureSelection;
 
-        @NameInMap("filter_thresh")
+        @com.aliyun.core.annotation.NameInMap("filter_thresh")
         private String filterThresh;
 
-        @NameInMap("iv_thresh")
+        @com.aliyun.core.annotation.NameInMap("iv_thresh")
         private String ivThresh;
 
-        @NameInMap("label")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("label")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String label;
 
-        @NameInMap("memory")
+        @com.aliyun.core.annotation.NameInMap("memory")
         private String memory;
 
-        @NameInMap("output_config_oss_dir")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("output_config_oss_dir")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String outputConfigOssDir;
 
-        @NameInMap("pipeline_exp_id")
+        @com.aliyun.core.annotation.NameInMap("pipeline_exp_id")
         private String pipelineExpId;
 
-        @NameInMap("reuse_results")
+        @com.aliyun.core.annotation.NameInMap("reuse_results")
         private String reuseResults;
 
-        @NameInMap("sample_ratio")
+        @com.aliyun.core.annotation.NameInMap("sample_ratio")
         private String sampleRatio;
 
-        @NameInMap("sample_size")
+        @com.aliyun.core.annotation.NameInMap("sample_size")
         private String sampleSize;
 
-        @NameInMap("selection_exp_id")
+        @com.aliyun.core.annotation.NameInMap("selection_exp_id")
         private String selectionExpId;
 
-        @NameInMap("skip_select")
+        @com.aliyun.core.annotation.NameInMap("skip_select")
         private String skipSelect;
 
-        @NameInMap("workers")
+        @com.aliyun.core.annotation.NameInMap("workers")
         private String workers;
 
-        @NameInMap("workspace_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("workspace_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String workspaceName;
 
         private YmlConfig(Builder builder) {

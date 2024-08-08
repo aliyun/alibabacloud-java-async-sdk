@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StopHpoExperimentResponse} extends {@link TeaModel}
+ * {@link CreateAutofeExperimentResponse} extends {@link TeaModel}
  *
- * <p>StopHpoExperimentResponse</p>
+ * <p>CreateAutofeExperimentResponse</p>
  */
-public class StopHpoExperimentResponse extends Response {
+public class CreateAutofeExperimentResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class StopHpoExperimentResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private StopHpoExperimentResponseBody body;
+    private CreateAutofeExperimentResponseBody body;
 
-    private StopHpoExperimentResponse(BuilderImpl builder) {
+    private CreateAutofeExperimentResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static StopHpoExperimentResponse create() {
+    public static CreateAutofeExperimentResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class StopHpoExperimentResponse extends Response {
     /**
      * @return body
      */
-    public StopHpoExperimentResponseBody getBody() {
+    public CreateAutofeExperimentResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<StopHpoExperimentResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateAutofeExperimentResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(StopHpoExperimentResponseBody body);
+        Builder body(CreateAutofeExperimentResponseBody body);
 
         @Override
-        StopHpoExperimentResponse build();
+        CreateAutofeExperimentResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<StopHpoExperimentResponse, Builder>
+            extends Response.BuilderImpl<CreateAutofeExperimentResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private StopHpoExperimentResponseBody body; 
+        private CreateAutofeExperimentResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(StopHpoExperimentResponse response) {
+        private BuilderImpl(CreateAutofeExperimentResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class StopHpoExperimentResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(StopHpoExperimentResponseBody body) {
+        public Builder body(CreateAutofeExperimentResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public StopHpoExperimentResponse build() {
-            return new StopHpoExperimentResponse(this);
+        public CreateAutofeExperimentResponse build() {
+            return new CreateAutofeExperimentResponse(this);
         } 
 
     } 

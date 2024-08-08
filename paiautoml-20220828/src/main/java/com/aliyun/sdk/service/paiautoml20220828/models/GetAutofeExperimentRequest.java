@@ -6,32 +6,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListHpoTrialLogNamesRequest} extends {@link RequestModel}
+ * {@link GetAutofeExperimentRequest} extends {@link RequestModel}
  *
- * <p>ListHpoTrialLogNamesRequest</p>
+ * <p>GetAutofeExperimentRequest</p>
  */
-public class ListHpoTrialLogNamesRequest extends Request {
+public class GetAutofeExperimentRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("ExperimentId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String experimentId;
 
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("TrialId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String trialId;
-
-    private ListHpoTrialLogNamesRequest(Builder builder) {
+    private GetAutofeExperimentRequest(Builder builder) {
         super(builder);
         this.experimentId = builder.experimentId;
-        this.trialId = builder.trialId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListHpoTrialLogNamesRequest create() {
+    public static GetAutofeExperimentRequest create() {
         return builder().build();
     }
 
@@ -47,29 +41,20 @@ public class ListHpoTrialLogNamesRequest extends Request {
         return this.experimentId;
     }
 
-    /**
-     * @return trialId
-     */
-    public String getTrialId() {
-        return this.trialId;
-    }
-
-    public static final class Builder extends Request.Builder<ListHpoTrialLogNamesRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetAutofeExperimentRequest, Builder> {
         private String experimentId; 
-        private String trialId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListHpoTrialLogNamesRequest request) {
+        private Builder(GetAutofeExperimentRequest request) {
             super(request);
             this.experimentId = request.experimentId;
-            this.trialId = request.trialId;
         } 
 
         /**
-         * Experiment ID.
+         * ExperimentId.
          */
         public Builder experimentId(String experimentId) {
             this.putPathParameter("ExperimentId", experimentId);
@@ -77,18 +62,9 @@ public class ListHpoTrialLogNamesRequest extends Request {
             return this;
         }
 
-        /**
-         * Trial id
-         */
-        public Builder trialId(String trialId) {
-            this.putPathParameter("TrialId", trialId);
-            this.trialId = trialId;
-            return this;
-        }
-
         @Override
-        public ListHpoTrialLogNamesRequest build() {
-            return new ListHpoTrialLogNamesRequest(this);
+        public GetAutofeExperimentRequest build() {
+            return new GetAutofeExperimentRequest(this);
         } 
 
     } 

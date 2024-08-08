@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHpoTrialsRequest</p>
  */
 public class ListHpoTrialsRequest extends Request {
-    @Path
-    @NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
     private String experimentId;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
     private ListHpoTrialsRequest(Builder builder) {
@@ -110,7 +109,7 @@ public class ListHpoTrialsRequest extends Request {
         } 
 
         /**
-         * ExperimentId.
+         * Experiment ID.
          */
         public Builder experimentId(String experimentId) {
             this.putPathParameter("ExperimentId", experimentId);
@@ -119,7 +118,7 @@ public class ListHpoTrialsRequest extends Request {
         }
 
         /**
-         * Order.
+         * The trial results order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -128,7 +127,7 @@ public class ListHpoTrialsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,7 +136,7 @@ public class ListHpoTrialsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -146,7 +145,7 @@ public class ListHpoTrialsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * The results to be sorted by which column.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,67 +11,67 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHpoExperimentResponseBody</p>
  */
 public class GetHpoExperimentResponseBody extends TeaModel {
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ConfigIni")
+    @com.aliyun.core.annotation.NameInMap("ConfigIni")
     private String configIni;
 
-    @NameInMap("ConfigYml")
+    @com.aliyun.core.annotation.NameInMap("ConfigYml")
     private String configYml;
 
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @NameInMap("Deleted")
+    @com.aliyun.core.annotation.NameInMap("Deleted")
     private Boolean deleted;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, ? > detail;
 
-    @NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
     private String experimentId;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("HpoExperimentConfiguration")
+    @com.aliyun.core.annotation.NameInMap("HpoExperimentConfiguration")
     private java.util.Map < String, ? > hpoExperimentConfiguration;
 
-    @NameInMap("JobType")
+    @com.aliyun.core.annotation.NameInMap("JobType")
     private String jobType;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SearchSpace")
+    @com.aliyun.core.annotation.NameInMap("SearchSpace")
     private String searchSpace;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TrialCount")
+    @com.aliyun.core.annotation.NameInMap("TrialCount")
     private Integer trialCount;
 
-    @NameInMap("TrialStatus")
+    @com.aliyun.core.annotation.NameInMap("TrialStatus")
     private java.util.Map < String, String > trialStatus;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private GetHpoExperimentResponseBody(Builder builder) {
@@ -278,7 +277,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         private String workspaceId; 
 
         /**
-         * Accessibility.
+         * Accessibility of expriment, public or private.
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -286,7 +285,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * Error when the API call is not success.
          */
         public Builder code(String code) {
             this.code = code;
@@ -294,7 +293,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigIni.
+         * Experiment run environment configurations.
          */
         public Builder configIni(String configIni) {
             this.configIni = configIni;
@@ -302,7 +301,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * ConfigYml.
+         * HPO search config yaml.
          */
         public Builder configYml(String configYml) {
             this.configYml = configYml;
@@ -310,7 +309,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Creator.
+         * The one who created the experiment.
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -318,7 +317,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Deleted.
+         * If the Experiment if deleted.
          */
         public Builder deleted(Boolean deleted) {
             this.deleted = deleted;
@@ -326,7 +325,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * Description of the experiment.
          */
         public Builder description(String description) {
             this.description = description;
@@ -334,7 +333,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * Extra error message info.
          */
         public Builder detail(java.util.Map < String, ? > detail) {
             this.detail = detail;
@@ -342,7 +341,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * ExperimentId.
+         * Experiment ID.
          */
         public Builder experimentId(String experimentId) {
             this.experimentId = experimentId;
@@ -350,7 +349,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * Experiment create time.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -358,7 +357,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * Experiment last update time.
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -366,7 +365,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * HpoExperimentConfiguration.
+         * Experiment configuration in json format.
          */
         public Builder hpoExperimentConfiguration(java.util.Map < String, ? > hpoExperimentConfiguration) {
             this.hpoExperimentConfiguration = hpoExperimentConfiguration;
@@ -374,7 +373,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * JobType.
+         * Experiment  Job type.
          */
         public Builder jobType(String jobType) {
             this.jobType = jobType;
@@ -382,7 +381,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -390,7 +389,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * Experiment name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -398,7 +397,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -406,7 +405,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * SearchSpace.
+         * HPO hyperparameter search space.
          */
         public Builder searchSpace(String searchSpace) {
             this.searchSpace = searchSpace;
@@ -414,7 +413,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Experiment status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -422,7 +421,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * TrialCount.
+         * Trials amount run till now.
          */
         public Builder trialCount(Integer trialCount) {
             this.trialCount = trialCount;
@@ -430,7 +429,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * TrialStatus.
+         * Status if a trial
          */
         public Builder trialStatus(java.util.Map < String, String > trialStatus) {
             this.trialStatus = trialStatus;
@@ -438,7 +437,7 @@ public class GetHpoExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * AI Workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;

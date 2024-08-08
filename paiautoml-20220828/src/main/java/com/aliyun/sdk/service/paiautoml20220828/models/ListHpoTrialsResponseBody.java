@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHpoTrialsResponseBody</p>
  */
 public class ListHpoTrialsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, String > detail;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("Trials")
+    @com.aliyun.core.annotation.NameInMap("Trials")
     private java.util.List < Trials> trials;
 
     private ListHpoTrialsResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class ListHpoTrialsResponseBody extends TeaModel {
         private java.util.List < Trials> trials; 
 
         /**
-         * Code.
+         * Error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +105,7 @@ public class ListHpoTrialsResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * Extra error information.
          */
         public Builder detail(java.util.Map < String, String > detail) {
             this.detail = detail;
@@ -114,7 +113,7 @@ public class ListHpoTrialsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +121,7 @@ public class ListHpoTrialsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +129,7 @@ public class ListHpoTrialsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries qualified.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +137,7 @@ public class ListHpoTrialsResponseBody extends TeaModel {
         }
 
         /**
-         * Trials.
+         * Trial array.
          */
         public Builder trials(java.util.List < Trials> trials) {
             this.trials = trials;
@@ -152,46 +151,46 @@ public class ListHpoTrialsResponseBody extends TeaModel {
     } 
 
     public static class Trials extends TeaModel {
-        @NameInMap("ExperimentId")
+        @com.aliyun.core.annotation.NameInMap("ExperimentId")
         private String experimentId;
 
-        @NameInMap("FinalMetric")
+        @com.aliyun.core.annotation.NameInMap("FinalMetric")
         private String finalMetric;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("Hyperparam")
+        @com.aliyun.core.annotation.NameInMap("Hyperparam")
         private String hyperparam;
 
-        @NameInMap("JobMeta")
+        @com.aliyun.core.annotation.NameInMap("JobMeta")
         private String jobMeta;
 
-        @NameInMap("Metric")
+        @com.aliyun.core.annotation.NameInMap("Metric")
         private String metric;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Model")
+        @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
 
-        @NameInMap("ParameterId")
+        @com.aliyun.core.annotation.NameInMap("ParameterId")
         private Integer parameterId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TrialId")
+        @com.aliyun.core.annotation.NameInMap("TrialId")
         private String trialId;
 
-        @NameInMap("UserComment")
+        @com.aliyun.core.annotation.NameInMap("UserComment")
         private String userComment;
 
-        @NameInMap("UserScore")
+        @com.aliyun.core.annotation.NameInMap("UserScore")
         private Integer userScore;
 
         private Trials(Builder builder) {

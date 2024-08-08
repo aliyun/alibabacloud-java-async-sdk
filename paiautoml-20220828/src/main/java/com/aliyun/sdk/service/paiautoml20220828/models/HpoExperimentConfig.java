@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HpoExperimentConfig</p>
  */
 public class HpoExperimentConfig extends TeaModel {
-    @NameInMap("dlc_config")
+    @com.aliyun.core.annotation.NameInMap("dlc_config")
     private DlcConfig dlcConfig;
 
-    @NameInMap("k8s_config")
+    @com.aliyun.core.annotation.NameInMap("k8s_config")
     private K8sConfig k8sConfig;
 
-    @NameInMap("metric_config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("metric_config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private MetricConfig metricConfig;
 
-    @NameInMap("monitor_config")
+    @com.aliyun.core.annotation.NameInMap("monitor_config")
     private MonitorConfig monitorConfig;
 
-    @NameInMap("odps_config")
+    @com.aliyun.core.annotation.NameInMap("odps_config")
     private OdpsConfig odpsConfig;
 
-    @NameInMap("oss_config")
+    @com.aliyun.core.annotation.NameInMap("oss_config")
     private OssConfig ossConfig;
 
-    @NameInMap("output_config")
+    @com.aliyun.core.annotation.NameInMap("output_config")
     private OutputConfig outputConfig;
 
-    @NameInMap("paiflow_config")
+    @com.aliyun.core.annotation.NameInMap("paiflow_config")
     private PaiflowConfig paiflowConfig;
 
-    @NameInMap("params_config")
+    @com.aliyun.core.annotation.NameInMap("params_config")
     private ParamsConfig paramsConfig;
 
-    @NameInMap("platform_config")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("platform_config")
+    @com.aliyun.core.annotation.Validation(required = true)
     private PlatformConfig platformConfig;
 
-    @NameInMap("schedule_config")
+    @com.aliyun.core.annotation.NameInMap("schedule_config")
     private ScheduleConfig scheduleConfig;
 
-    @NameInMap("search_space")
+    @com.aliyun.core.annotation.NameInMap("search_space")
     private java.util.Map < String, ? > searchSpace;
 
-    @NameInMap("ts_config")
+    @com.aliyun.core.annotation.NameInMap("ts_config")
     private TsConfig tsConfig;
 
-    @NameInMap("yml_config")
+    @com.aliyun.core.annotation.NameInMap("yml_config")
     private YmlConfig ymlConfig;
 
     private HpoExperimentConfig(Builder builder) {
@@ -314,19 +313,19 @@ public class HpoExperimentConfig extends TeaModel {
     } 
 
     public static class DlcConfig extends TeaModel {
-        @NameInMap("access_id")
+        @com.aliyun.core.annotation.NameInMap("access_id")
         private String accessId;
 
-        @NameInMap("access_key")
+        @com.aliyun.core.annotation.NameInMap("access_key")
         private String accessKey;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("protocol")
+        @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
-        @NameInMap("region")
+        @com.aliyun.core.annotation.NameInMap("region")
         private String region;
 
         private DlcConfig(Builder builder) {
@@ -435,16 +434,16 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class K8sConfig extends TeaModel {
-        @NameInMap("nni_container_cpu_limit")
+        @com.aliyun.core.annotation.NameInMap("nni_container_cpu_limit")
         private String nniContainerCpuLimit;
 
-        @NameInMap("nni_container_memory_limit")
+        @com.aliyun.core.annotation.NameInMap("nni_container_memory_limit")
         private String nniContainerMemoryLimit;
 
-        @NameInMap("nni_container_requested_cpu")
+        @com.aliyun.core.annotation.NameInMap("nni_container_requested_cpu")
         private String nniContainerRequestedCpu;
 
-        @NameInMap("nni_container_requested_memory")
+        @com.aliyun.core.annotation.NameInMap("nni_container_requested_memory")
         private String nniContainerRequestedMemory;
 
         private K8sConfig(Builder builder) {
@@ -536,23 +535,23 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class MetricConfig extends TeaModel {
-        @NameInMap("final_mode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("final_mode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String finalMode;
 
-        @NameInMap("metric_dict")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("metric_dict")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.Map < String, ? > metricDict;
 
-        @NameInMap("metric_source")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("metric_source")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > metricSource;
 
-        @NameInMap("metric_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("metric_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricType;
 
-        @NameInMap("source_list_final_mode")
+        @com.aliyun.core.annotation.NameInMap("source_list_final_mode")
         private String sourceListFinalMode;
 
         private MetricConfig(Builder builder) {
@@ -661,19 +660,19 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class MonitorConfig extends TeaModel {
-        @NameInMap("at_mobiles")
+        @com.aliyun.core.annotation.NameInMap("at_mobiles")
         private String atMobiles;
 
-        @NameInMap("at_user_ids")
+        @com.aliyun.core.annotation.NameInMap("at_user_ids")
         private String atUserIds;
 
-        @NameInMap("is_at_all")
+        @com.aliyun.core.annotation.NameInMap("is_at_all")
         private String isAtAll;
 
-        @NameInMap("keyword")
+        @com.aliyun.core.annotation.NameInMap("keyword")
         private String keyword;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private MonitorConfig(Builder builder) {
@@ -782,25 +781,25 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class OdpsConfig extends TeaModel {
-        @NameInMap("access_id")
+        @com.aliyun.core.annotation.NameInMap("access_id")
         private String accessId;
 
-        @NameInMap("access_key")
+        @com.aliyun.core.annotation.NameInMap("access_key")
         private String accessKey;
 
-        @NameInMap("end_point")
+        @com.aliyun.core.annotation.NameInMap("end_point")
         private String endPoint;
 
-        @NameInMap("log_view_host")
+        @com.aliyun.core.annotation.NameInMap("log_view_host")
         private String logViewHost;
 
-        @NameInMap("project_name")
+        @com.aliyun.core.annotation.NameInMap("project_name")
         private String projectName;
 
-        @NameInMap("region")
+        @com.aliyun.core.annotation.NameInMap("region")
         private String region;
 
-        @NameInMap("role_arn")
+        @com.aliyun.core.annotation.NameInMap("role_arn")
         private String roleArn;
 
         private OdpsConfig(Builder builder) {
@@ -943,16 +942,16 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class OssConfig extends TeaModel {
-        @NameInMap("accessKeyID")
+        @com.aliyun.core.annotation.NameInMap("accessKeyID")
         private String accessKeyID;
 
-        @NameInMap("accessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("accessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("role_arn")
+        @com.aliyun.core.annotation.NameInMap("role_arn")
         private String roleArn;
 
         private OssConfig(Builder builder) {
@@ -1044,10 +1043,10 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class OutputConfig extends TeaModel {
-        @NameInMap("model_path")
+        @com.aliyun.core.annotation.NameInMap("model_path")
         private String modelPath;
 
-        @NameInMap("summary_path")
+        @com.aliyun.core.annotation.NameInMap("summary_path")
         private String summaryPath;
 
         private OutputConfig(Builder builder) {
@@ -1105,16 +1104,16 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class PaiflowConfig extends TeaModel {
-        @NameInMap("access_key_id")
+        @com.aliyun.core.annotation.NameInMap("access_key_id")
         private String accessKeyId;
 
-        @NameInMap("access_key_secret")
+        @com.aliyun.core.annotation.NameInMap("access_key_secret")
         private String accessKeySecret;
 
-        @NameInMap("region_id")
+        @com.aliyun.core.annotation.NameInMap("region_id")
         private String regionId;
 
-        @NameInMap("workspace_id")
+        @com.aliyun.core.annotation.NameInMap("workspace_id")
         private String workspaceId;
 
         private PaiflowConfig(Builder builder) {
@@ -1206,7 +1205,7 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class ParamsConfig extends TeaModel {
-        @NameInMap("params_src_dst_filepath")
+        @com.aliyun.core.annotation.NameInMap("params_src_dst_filepath")
         private java.util.List < String > paramsSrcDstFilepath;
 
         private ParamsConfig(Builder builder) {
@@ -1247,15 +1246,15 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class PlatformConfig extends TeaModel {
-        @NameInMap("cmd")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("cmd")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > cmd;
 
-        @NameInMap("name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("resume")
+        @com.aliyun.core.annotation.NameInMap("resume")
         private String resume;
 
         private PlatformConfig(Builder builder) {
@@ -1330,13 +1329,13 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("day")
+        @com.aliyun.core.annotation.NameInMap("day")
         private String day;
 
-        @NameInMap("end_time")
+        @com.aliyun.core.annotation.NameInMap("end_time")
         private String endTime;
 
-        @NameInMap("start_time")
+        @com.aliyun.core.annotation.NameInMap("start_time")
         private String startTime;
 
         private ScheduleConfig(Builder builder) {
@@ -1411,16 +1410,16 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class TsConfig extends TeaModel {
-        @NameInMap("access_key_id")
+        @com.aliyun.core.annotation.NameInMap("access_key_id")
         private String accessKeyId;
 
-        @NameInMap("access_key_secret")
+        @com.aliyun.core.annotation.NameInMap("access_key_secret")
         private String accessKeySecret;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("region_id")
+        @com.aliyun.core.annotation.NameInMap("region_id")
         private String regionId;
 
         private TsConfig(Builder builder) {
@@ -1512,19 +1511,19 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class ClassArgs extends TeaModel {
-        @NameInMap("earlystop")
+        @com.aliyun.core.annotation.NameInMap("earlystop")
         private Boolean earlystop;
 
-        @NameInMap("moving_avg")
+        @com.aliyun.core.annotation.NameInMap("moving_avg")
         private String movingAvg;
 
-        @NameInMap("optimize_mode")
+        @com.aliyun.core.annotation.NameInMap("optimize_mode")
         private String optimizeMode;
 
-        @NameInMap("proportion")
+        @com.aliyun.core.annotation.NameInMap("proportion")
         private Float proportion;
 
-        @NameInMap("start_step")
+        @com.aliyun.core.annotation.NameInMap("start_step")
         private Integer startStep;
 
         private ClassArgs(Builder builder) {
@@ -1633,10 +1632,10 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class Assessor extends TeaModel {
-        @NameInMap("class_args")
+        @com.aliyun.core.annotation.NameInMap("class_args")
         private ClassArgs classArgs;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Assessor(Builder builder) {
@@ -1694,10 +1693,10 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class Tuner extends TeaModel {
-        @NameInMap("class_args")
+        @com.aliyun.core.annotation.NameInMap("class_args")
         private java.util.Map < String, ? > classArgs;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Tuner(Builder builder) {
@@ -1755,25 +1754,25 @@ public class HpoExperimentConfig extends TeaModel {
 
     }
     public static class YmlConfig extends TeaModel {
-        @NameInMap("assessor")
+        @com.aliyun.core.annotation.NameInMap("assessor")
         private Assessor assessor;
 
-        @NameInMap("debug")
+        @com.aliyun.core.annotation.NameInMap("debug")
         private Boolean debug;
 
-        @NameInMap("experiment_name")
+        @com.aliyun.core.annotation.NameInMap("experiment_name")
         private String experimentName;
 
-        @NameInMap("log_level")
+        @com.aliyun.core.annotation.NameInMap("log_level")
         private String logLevel;
 
-        @NameInMap("max_trial_number")
+        @com.aliyun.core.annotation.NameInMap("max_trial_number")
         private Integer maxTrialNumber;
 
-        @NameInMap("trial_concurrency")
+        @com.aliyun.core.annotation.NameInMap("trial_concurrency")
         private Integer trialConcurrency;
 
-        @NameInMap("tuner")
+        @com.aliyun.core.annotation.NameInMap("tuner")
         private Tuner tuner;
 
         private YmlConfig(Builder builder) {

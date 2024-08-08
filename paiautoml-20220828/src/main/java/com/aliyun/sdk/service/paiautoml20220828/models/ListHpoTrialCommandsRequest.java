@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHpoTrialCommandsRequest</p>
  */
 public class ListHpoTrialCommandsRequest extends Request {
-    @Path
-    @NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
     private String experimentId;
 
-    @Path
-    @NameInMap("TrialId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TrialId")
     private String trialId;
 
     private ListHpoTrialCommandsRequest(Builder builder) {
@@ -68,7 +67,7 @@ public class ListHpoTrialCommandsRequest extends Request {
         } 
 
         /**
-         * ExperimentId.
+         * Experiment ID.
          */
         public Builder experimentId(String experimentId) {
             this.putPathParameter("ExperimentId", experimentId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHpoExperimentsRequest</p>
  */
 public class ListHpoExperimentsRequest extends Request {
-    @Query
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Query
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @Query
-    @NameInMap("IncludeConfigData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeConfigData")
     private String includeConfigData;
 
-    @Query
-    @NameInMap("MaxCreateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxCreateTime")
     private String maxCreateTime;
 
-    @Query
-    @NameInMap("MinCreateTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinCreateTime")
     private String minCreateTime;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListHpoExperimentsRequest(Builder builder) {
@@ -208,7 +207,7 @@ public class ListHpoExperimentsRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * The accessibility of the experiments to be listed.
          */
         public Builder accessibility(String accessibility) {
             this.putQueryParameter("Accessibility", accessibility);
@@ -217,7 +216,7 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * Creator.
+         * Who created the expriment.
          */
         public Builder creator(String creator) {
             this.putQueryParameter("Creator", creator);
@@ -226,7 +225,7 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * IncludeConfigData.
+         * Return experiment detailed configuration or not.
          */
         public Builder includeConfigData(String includeConfigData) {
             this.putQueryParameter("IncludeConfigData", includeConfigData);
@@ -235,7 +234,7 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * MaxCreateTime.
+         * The maximum create time of the experiment.
          */
         public Builder maxCreateTime(String maxCreateTime) {
             this.putQueryParameter("MaxCreateTime", maxCreateTime);
@@ -244,7 +243,7 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * MinCreateTime.
+         * The minimum create time of the experiment.
          */
         public Builder minCreateTime(String minCreateTime) {
             this.putQueryParameter("MinCreateTime", minCreateTime);
@@ -253,7 +252,7 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * Name.
+         * Experiment name filter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -262,7 +261,7 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * Order.
+         * ASC, DESC.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -271,7 +270,10 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -280,7 +282,7 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * Record number on each page
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -289,7 +291,7 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * SortBy.
+         * The returned experiments to be sorted by this column.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -298,7 +300,7 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * Status.
+         * Experiment status to be listed.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -307,7 +309,7 @@ public class ListHpoExperimentsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * The AI workspace ID the experiments belongs to.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

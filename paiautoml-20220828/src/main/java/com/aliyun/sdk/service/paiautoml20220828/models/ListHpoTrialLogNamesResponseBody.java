@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHpoTrialLogNamesResponseBody</p>
  */
 public class ListHpoTrialLogNamesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private java.util.Map < String, String > detail;
 
-    @NameInMap("LogNames")
+    @com.aliyun.core.annotation.NameInMap("LogNames")
     private java.util.List < String > logNames;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListHpoTrialLogNamesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListHpoTrialLogNamesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * Error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class ListHpoTrialLogNamesResponseBody extends TeaModel {
         }
 
         /**
-         * Detail.
+         * Extra error information.
          */
         public Builder detail(java.util.Map < String, String > detail) {
             this.detail = detail;
@@ -102,7 +101,7 @@ public class ListHpoTrialLogNamesResponseBody extends TeaModel {
         }
 
         /**
-         * LogNames.
+         * Existing log files.
          */
         public Builder logNames(java.util.List < String > logNames) {
             this.logNames = logNames;
@@ -110,7 +109,7 @@ public class ListHpoTrialLogNamesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +117,7 @@ public class ListHpoTrialLogNamesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paiautoml20220828.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHpoTrialLogsRequest</p>
  */
 public class ListHpoTrialLogsRequest extends Request {
-    @Path
-    @NameInMap("ExperimentId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ExperimentId")
     private String experimentId;
 
-    @Path
-    @NameInMap("TrialId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TrialId")
     private String trialId;
 
-    @Query
-    @NameInMap("LogName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogName")
     private String logName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListHpoTrialLogsRequest(Builder builder) {
@@ -110,7 +109,7 @@ public class ListHpoTrialLogsRequest extends Request {
         } 
 
         /**
-         * ExperimentId.
+         * Experiment ID
          */
         public Builder experimentId(String experimentId) {
             this.putPathParameter("ExperimentId", experimentId);
@@ -119,7 +118,7 @@ public class ListHpoTrialLogsRequest extends Request {
         }
 
         /**
-         * TrialId.
+         * Trial ID
          */
         public Builder trialId(String trialId) {
             this.putPathParameter("TrialId", trialId);
@@ -128,7 +127,7 @@ public class ListHpoTrialLogsRequest extends Request {
         }
 
         /**
-         * LogName.
+         * Log file name.
          */
         public Builder logName(String logName) {
             this.putQueryParameter("LogName", logName);
@@ -137,7 +136,7 @@ public class ListHpoTrialLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +145,7 @@ public class ListHpoTrialLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

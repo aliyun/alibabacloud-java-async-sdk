@@ -19,13 +19,21 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CreateAutofeExperimentResponse> createAutofeExperiment(CreateAutofeExperimentRequest request);
+
     CompletableFuture<CreateHpoExperimentResponse> createHpoExperiment(CreateHpoExperimentRequest request);
 
+    CompletableFuture<CreateServiceIdentityRoleResponse> createServiceIdentityRole(CreateServiceIdentityRoleRequest request);
+
     CompletableFuture<DeleteHpoExperimentResponse> deleteHpoExperiment(DeleteHpoExperimentRequest request);
+
+    CompletableFuture<GetAutofeExperimentResponse> getAutofeExperiment(GetAutofeExperimentRequest request);
 
     CompletableFuture<GetHpoExperimentResponse> getHpoExperiment(GetHpoExperimentRequest request);
 
     CompletableFuture<GetHpoTrialResponse> getHpoTrial(GetHpoTrialRequest request);
+
+    CompletableFuture<GetServiceIdentityRoleResponse> getServiceIdentityRole(GetServiceIdentityRoleRequest request);
 
     CompletableFuture<ListHpoExperimentLogsResponse> listHpoExperimentLogs(ListHpoExperimentLogsRequest request);
 
