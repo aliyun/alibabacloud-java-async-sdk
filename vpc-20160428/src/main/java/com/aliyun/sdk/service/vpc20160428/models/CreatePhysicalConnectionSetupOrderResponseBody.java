@@ -61,7 +61,7 @@ public class CreatePhysicalConnectionSetupOrderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the order.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -77,7 +77,7 @@ public class CreatePhysicalConnectionSetupOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

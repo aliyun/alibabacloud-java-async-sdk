@@ -205,11 +205,11 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
+         * Specifies whether to enable automatic payments. Valid values:
          * <p>
          * 
          * *   **false** (default): disables automatic payment.
-         * *   **true**: enables automatic payment.
+         * *   **true**
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -221,9 +221,9 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -267,7 +267,7 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The port type. Valid values:
+         * The port type of the Express Connect circuit. Valid values:
          * <p>
          * 
          * *   **100Base-T**: 100 Mbit/s copper Ethernet port
@@ -278,7 +278,7 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
          * *   **40GBase-LR**: 40,000 Mbit/s single-mode optical port
          * *   **100GBase-LR**: 100,000 Mbit/s single-mode optical port
          * 
-         * >  Whether 40GBase-LR and 100GBase-LR ports can be created is based on resource supplies. For more information, contact your business manager.
+         * >  Whether 40GBase-LR and 100GBase-LR ports can be created depends on resource supplies. For more information, contact your account manager.
          */
         public Builder portType(String portType) {
             this.putQueryParameter("PortType", portType);
@@ -287,7 +287,7 @@ public class CreatePhysicalConnectionSetupOrderRequest extends Request {
         }
 
         /**
-         * The ID of the redundant Express Connect circuit. The redundant Express Connect circuit must be in the **Allocated**, **Confirmed**, or **Enabled** state.
+         * The ID of the redundant physical connection. The redundant physical connection must be in the **Allocated**, **Confirmed**, or **Enabled** state.
          */
         public Builder redundantPhysicalConnectionId(String redundantPhysicalConnectionId) {
             this.putQueryParameter("RedundantPhysicalConnectionId", redundantPhysicalConnectionId);

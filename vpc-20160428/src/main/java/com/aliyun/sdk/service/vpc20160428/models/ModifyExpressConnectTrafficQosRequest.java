@@ -181,7 +181,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         } 
 
         /**
-         * AddInstanceList.
+         * The instances to be added. Ignore this parameter if no instances are to be added.
          */
         public Builder addInstanceList(java.util.List < AddInstanceList> addInstanceList) {
             this.putQueryParameter("AddInstanceList", addInstanceList);
@@ -190,7 +190,12 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -217,7 +222,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * QosDescription.
+         * The description of the QoS policy.
          */
         public Builder qosDescription(String qosDescription) {
             this.putQueryParameter("QosDescription", qosDescription);
@@ -226,7 +231,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * QosId.
+         * The ID of the QoS policy.
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -235,7 +240,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * QosName.
+         * The name of the QoS policy.
          */
         public Builder qosName(String qosName) {
             this.putQueryParameter("QosName", qosName);
@@ -244,7 +249,10 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the resource.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +261,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * RemoveInstanceList.
+         * The instances to be removed. Ignore this parameter if no instances are to be removed.
          */
         public Builder removeInstanceList(java.util.List < RemoveInstanceList> removeInstanceList) {
             this.putQueryParameter("RemoveInstanceList", removeInstanceList);
@@ -316,7 +324,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
             private String instanceType; 
 
             /**
-             * InstanceId.
+             * The ID of the instance to be associated.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -324,7 +332,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * The type of instance to be associated. Set the value to **PHYSICALCONNECTION**.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -377,7 +385,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
             private String instanceType; 
 
             /**
-             * InstanceId.
+             * The ID of the associated instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -385,7 +393,7 @@ public class ModifyExpressConnectTrafficQosRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * The type of the associated instance. Set the value to **PHYSICALCONNECTION**.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;

@@ -155,7 +155,10 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -182,7 +185,7 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * QosId.
+         * The ID of the QoS policy.
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -191,7 +194,7 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * QueueId.
+         * The ID of the QoS queue.
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);
@@ -200,7 +203,10 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the QoS policy.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +224,7 @@ public class DeleteExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the QoS rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

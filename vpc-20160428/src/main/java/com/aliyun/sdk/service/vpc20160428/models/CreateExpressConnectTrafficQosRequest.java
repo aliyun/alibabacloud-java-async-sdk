@@ -138,7 +138,12 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** in each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -165,7 +170,10 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * QosDescription.
+         * The description of the QoS policy.
+         * <p>
+         * 
+         * The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder qosDescription(String qosDescription) {
             this.putQueryParameter("QosDescription", qosDescription);
@@ -174,7 +182,10 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * QosName.
+         * The name of the QoS policy.
+         * <p>
+         * 
+         * The name must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder qosName(String qosName) {
             this.putQueryParameter("QosName", qosName);
@@ -183,7 +194,10 @@ public class CreateExpressConnectTrafficQosRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the QoS policy.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

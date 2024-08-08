@@ -49,7 +49,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FailoverTestJobModel.
+         * The failover test.
          */
         public Builder failoverTestJobModel(FailoverTestJobModel failoverTestJobModel) {
             this.failoverTestJobModel = failoverTestJobModel;
@@ -57,7 +57,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -205,7 +205,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             private String stopTime; 
 
             /**
-             * Description.
+             * The description of the failover test.
+             * <p>
+             * 
+             * The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -213,7 +216,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobDuration.
+             * The duration of the failover test. Unit: minutes. Valid values: **1 to 4320**.
              */
             public Builder jobDuration(String jobDuration) {
                 this.jobDuration = jobDuration;
@@ -221,7 +224,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the failover test.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -229,7 +232,11 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * Indicates whether the failover test is performed immediately. Valid values:
+             * <p>
+             * 
+             * *   **StartNow**
+             * *   **StartLater**
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -237,7 +244,10 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the failover test.
+             * <p>
+             * 
+             * The name must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -245,7 +255,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The IDs of failover test resources.
              */
             public Builder resourceId(java.util.List < String > resourceId) {
                 this.resourceId = resourceId;
@@ -253,7 +263,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of failover test resource. Only **PHYSICALCONNECTION** is returned.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -261,7 +271,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the failover test. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -269,7 +279,14 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the failover test. Valid values:
+             * <p>
+             * 
+             * *   **Init**
+             * *   **Starting**
+             * *   **Testing**
+             * *   **Stopping**
+             * *   **Stopped**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -277,7 +294,7 @@ public class DescribeFailoverTestJobResponseBody extends TeaModel {
             }
 
             /**
-             * StopTime.
+             * The end time of the failover test. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;

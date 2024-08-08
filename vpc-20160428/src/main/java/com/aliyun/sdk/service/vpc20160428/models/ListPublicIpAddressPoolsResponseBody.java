@@ -228,7 +228,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         private Integer usedIpNum;
 
         @com.aliyun.core.annotation.NameInMap("UserType")
-        private Boolean userType;
+        private String userType;
 
         @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List < String > zones;
@@ -385,7 +385,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         /**
          * @return userType
          */
-        public Boolean getUserType() {
+        public String getUserType() {
             return this.userType;
         }
 
@@ -414,7 +414,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
             private Integer totalIpNum; 
             private Integer usedIpNum; 
-            private Boolean userType; 
+            private String userType; 
             private java.util.List < String > zones; 
 
             /**
@@ -602,7 +602,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
              * *   **admin**: An administrator can delete, modify, and query IP address pools, and can assign elastic IP addresses (EIPs) to the pool.
              * *   **user**: A user can only assign EIPs to the IP address pool and query the IP address pool, but cannot modify or delete the IP address pool.
              */
-            public Builder userType(Boolean userType) {
+            public Builder userType(String userType) {
                 this.userType = userType;
                 return this;
             }

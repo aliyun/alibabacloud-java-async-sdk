@@ -844,6 +844,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteExpressConnectTrafficQosRuleResponse> deleteExpressConnectTrafficQosRule(DeleteExpressConnectTrafficQosRuleRequest request);
 
+    /**
+      * You can delete only failover tests that are in the **Pending** or **Complete** state.
+      *
+     */
     CompletableFuture<DeleteFailoverTestJobResponse> deleteFailoverTestJob(DeleteFailoverTestJobRequest request);
 
     /**
@@ -2091,6 +2095,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<SetHighDefinitionMonitorLogStatusResponse> setHighDefinitionMonitorLogStatus(SetHighDefinitionMonitorLogStatusRequest request);
 
+    /**
+      * You can perform only failover tests that are in the **Pending** state.
+      *
+     */
     CompletableFuture<StartFailoverTestJobResponse> startFailoverTestJob(StartFailoverTestJobRequest request);
 
     CompletableFuture<StopFailoverTestJobResponse> stopFailoverTestJob(StopFailoverTestJobRequest request);

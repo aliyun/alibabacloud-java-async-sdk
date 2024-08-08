@@ -49,7 +49,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         private java.util.List < RuleList> ruleList; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleList.
+         * The list of QoS rules.
          */
         public Builder ruleList(java.util.List < RuleList> ruleList) {
             this.ruleList = ruleList;
@@ -277,7 +277,10 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DstCidr.
+             * The destination IPv4 CIDR block that matches the QoS rule traffic.
+             * <p>
+             * 
+             * > When this parameter is unavailable, specify **SrcIPv6Cidr** or **DstIPv6Cidr**.
              */
             public Builder dstCidr(String dstCidr) {
                 this.dstCidr = dstCidr;
@@ -285,7 +288,10 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DstIPv6Cidr.
+             * The destination IPv6 CIDR block that matches the QoS rule traffic.
+             * <p>
+             * 
+             * > When this parameter is unavailable, specify **SrcCidr** or **DstCidr**.
              */
             public Builder dstIPv6Cidr(String dstIPv6Cidr) {
                 this.dstIPv6Cidr = dstIPv6Cidr;
@@ -293,7 +299,25 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DstPortRange.
+             * The range of destination ports that match the QoS rule traffic. Valid values: **0** to **65535**. If the traffic does not match, the value is -1. You can specify only one port. The start port number must be the same as the end port number. Different protocols correspond to different ports. Valid values:
+             * <p>
+             * 
+             * *   **ALL** (uneditable): -1/-1.
+             * *   **ICMP(IPv4)** (uneditable): -1/-1.
+             * *   **ICMPv6(IPv6)** (uneditable): -1/-1.
+             * *   **TCP** (editable): -1/-1.
+             * *   **UDP** (editable): -1/-1.
+             * *   **GRE** (uneditable): -1/-1.
+             * *   **SSH** (uneditable): 22/22.
+             * *   **Telnet** (uneditable): 23/23.
+             * *   **HTTP** (uneditable): 80/80.
+             * *   **HTTPS** (uneditable): 443/443.
+             * *   **MS SQL** (uneditable): 1443/1443.
+             * *   **Oracle** (uneditable): 1521/1521.
+             * *   **MySql** (uneditable): 3306/3306.
+             * *   **RDP** (uneditable): 3389/3389.
+             * *   **PostgreSQL** (uneditable): 5432/5432.
+             * *   **Redis** (uneditable): 6379/6379.
              */
             public Builder dstPortRange(String dstPortRange) {
                 this.dstPortRange = dstPortRange;
@@ -301,7 +325,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * MatchDscp.
+             * The DSCP value that matches the QoS rule traffic. Valid values: **0** to **63**. If no value is matched, the value is -1.
              */
             public Builder matchDscp(Integer matchDscp) {
                 this.matchDscp = matchDscp;
@@ -309,7 +333,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the QoS rule. Valid values: **1** to **9000**. A larger value indicates a higher priority. The priority of each QoS rule must be unique in the same QoS policy.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -317,7 +341,25 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol of the QoS rule. Valid values:
+             * <p>
+             * 
+             * *   **ALL**
+             * *   **ICMP(IPv4)**
+             * *   **ICMPv6(IPv6)**
+             * *   **TCP**
+             * *   **UDP**
+             * *   **GRE**
+             * *   **SSH**
+             * *   **Telnet**
+             * *   **HTTP**
+             * *   **HTTPS**
+             * *   **MS SQL**
+             * *   **Oracle**
+             * *   **MySql**
+             * *   **RDP**
+             * *   **PostgreSQL**
+             * *   **Redis**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -325,7 +367,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * QosId.
+             * The ID of the QoS policy.
              */
             public Builder qosId(String qosId) {
                 this.qosId = qosId;
@@ -333,7 +375,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * QueueId.
+             * The ID of the QoS queue.
              */
             public Builder queueId(String queueId) {
                 this.queueId = queueId;
@@ -341,7 +383,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RemarkingDscp.
+             * The new DSCP value. Valid values: **0** to **63**. If you do not change the value, set the value to -1.
              */
             public Builder remarkingDscp(Integer remarkingDscp) {
                 this.remarkingDscp = remarkingDscp;
@@ -349,7 +391,10 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDescription.
+             * The description of the QoS rule.
+             * <p>
+             * 
+             * The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
              */
             public Builder ruleDescription(String ruleDescription) {
                 this.ruleDescription = ruleDescription;
@@ -357,7 +402,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the QoS rule.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -365,7 +410,10 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the QoS rule.
+             * <p>
+             * 
+             * The name must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -373,7 +421,10 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SrcCidr.
+             * The source IPv4 CIDR block that matches the QoS rule traffic.
+             * <p>
+             * 
+             * > When this parameter is unavailable, specify **SrcIPv6Cidr** or **DstIPv6Cidr**.
              */
             public Builder srcCidr(String srcCidr) {
                 this.srcCidr = srcCidr;
@@ -381,7 +432,10 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIPv6Cidr.
+             * The source IPv6 CIDR block that matches the QoS rule traffic.
+             * <p>
+             * 
+             * > When this parameter is unavailable, specify **SrcCidr** or **DstCidr**.
              */
             public Builder srcIPv6Cidr(String srcIPv6Cidr) {
                 this.srcIPv6Cidr = srcIPv6Cidr;
@@ -389,7 +443,7 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * SrcPortRange.
+             * The range of source ports that match the QoS rule traffic. Valid values: **0** to **65535**. If the traffic does not match, the value is -1. You can specify only one port. The start port number must be the same as the end port number.
              */
             public Builder srcPortRange(String srcPortRange) {
                 this.srcPortRange = srcPortRange;
@@ -397,7 +451,12 @@ public class DescribeExpressConnectTrafficQosRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the QoS rule. Valid values:
+             * <p>
+             * 
+             * *   **Normal**
+             * *   **Configuring**
+             * *   **Deleting**
              */
             public Builder status(String status) {
                 this.status = status;

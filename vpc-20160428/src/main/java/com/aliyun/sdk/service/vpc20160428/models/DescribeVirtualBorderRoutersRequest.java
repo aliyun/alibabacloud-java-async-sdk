@@ -221,7 +221,7 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: **1 to 50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

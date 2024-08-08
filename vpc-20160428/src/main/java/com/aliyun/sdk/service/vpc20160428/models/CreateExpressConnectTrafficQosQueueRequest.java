@@ -182,7 +182,11 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
         } 
 
         /**
-         * BandwidthPercent.
+         * The percentage of bandwidth allocated to the QoS queue.
+         * <p>
+         * 
+         * *   If QueueType is set to **Medium**, this parameter is required. Valid values: 1 to 100.
+         * *   If QueueType is set to **Default**, a value of - is returned.
          */
         public Builder bandwidthPercent(String bandwidthPercent) {
             this.putQueryParameter("BandwidthPercent", bandwidthPercent);
@@ -191,7 +195,12 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -218,7 +227,7 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * QosId.
+         * The ID of the QoS policy.
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -227,7 +236,10 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * QueueDescription.
+         * The description of the QoS queue.
+         * <p>
+         * 
+         * It must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder queueDescription(String queueDescription) {
             this.putQueryParameter("QueueDescription", queueDescription);
@@ -236,7 +248,10 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * The name of the QoS queue.
+         * <p>
+         * 
+         * It must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
@@ -245,7 +260,14 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * QueueType.
+         * The priority of the QoS queue. Valid values:
+         * <p>
+         * 
+         * *   **High**
+         * *   **Medium**
+         * *   **Default**: default queue.
+         * 
+         * > You cannot create a QoS queue of the default priority.
          */
         public Builder queueType(String queueType) {
             this.putQueryParameter("QueueType", queueType);
@@ -254,7 +276,10 @@ public class CreateExpressConnectTrafficQosQueueRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the QoS policy.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

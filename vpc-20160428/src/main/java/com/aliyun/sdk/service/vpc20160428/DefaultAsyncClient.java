@@ -2185,6 +2185,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can delete only failover tests that are in the **Pending** or **Complete** state.
+      *
+     */
     @Override
     public CompletableFuture<DeleteFailoverTestJobResponse> deleteFailoverTestJob(DeleteFailoverTestJobRequest request) {
         try {
@@ -6384,6 +6388,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can perform only failover tests that are in the **Pending** state.
+      *
+     */
     @Override
     public CompletableFuture<StartFailoverTestJobResponse> startFailoverTestJob(StartFailoverTestJobRequest request) {
         try {

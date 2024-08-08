@@ -166,7 +166,12 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -193,7 +198,7 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * QosId.
+         * The ID of the QoS policy.
          */
         public Builder qosId(String qosId) {
             this.putQueryParameter("QosId", qosId);
@@ -202,7 +207,7 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * QueueId.
+         * The ID of the QoS queue.
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);
@@ -211,7 +216,10 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the QoS policy.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -229,7 +237,7 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * RuleIdList.
+         * The list of QoS rule IDs.
          */
         public Builder ruleIdList(java.util.List < String > ruleIdList) {
             this.putQueryParameter("RuleIdList", ruleIdList);
@@ -238,7 +246,7 @@ public class DescribeExpressConnectTrafficQosRuleRequest extends Request {
         }
 
         /**
-         * RuleNameList.
+         * The list of QoS rule names.
          */
         public Builder ruleNameList(java.util.List < String > ruleNameList) {
             this.putQueryParameter("RuleNameList", ruleNameList);

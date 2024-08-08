@@ -151,7 +151,12 @@ public class DescribeFailoverTestJobsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -160,7 +165,7 @@ public class DescribeFailoverTestJobsRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The filter information.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -169,7 +174,7 @@ public class DescribeFailoverTestJobsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -205,7 +210,10 @@ public class DescribeFailoverTestJobsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where you want to perform the failover test.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +276,17 @@ public class DescribeFailoverTestJobsRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Key.
+             * The filter key. Valid values:
+             * <p>
+             * 
+             * *   **JobId**
+             * *   **JobName**
+             * *   **JobStatus**
+             * *   **ResourceId**
+             * *   **ResourceName**
+             * *   **ResourceType**
+             * 
+             * > You can specify at most five different filter keys. If you specify ResourceId or ResourceName, you must also specify ResourceType. The logical operator among the filter keys is AND. Results that meet all specified filter keys are returned.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -276,7 +294,10 @@ public class DescribeFailoverTestJobsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the filter key.
+             * <p>
+             * 
+             * > You can specify at most five filter values for each filter key. The logical operator among filter values is OR. If a filter value is matched, the filter key is considered matched.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

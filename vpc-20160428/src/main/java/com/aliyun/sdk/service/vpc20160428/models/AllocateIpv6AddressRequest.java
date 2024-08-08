@@ -237,7 +237,11 @@ public class AllocateIpv6AddressRequest extends Request {
         } 
 
         /**
-         * AddressType.
+         * The type of the IPv6 address. Valid values:
+         * <p>
+         * 
+         * *   IPv6Address (default): an IPv6 address.
+         * *   IPv6Prefix: an IPv6 CIDR block.
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);

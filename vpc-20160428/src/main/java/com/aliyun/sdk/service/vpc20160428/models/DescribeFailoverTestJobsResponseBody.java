@@ -105,7 +105,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         }
 
         /**
-         * FailoverTestJobList.
+         * The list of failover tests.
          */
         public Builder failoverTestJobList(java.util.List < FailoverTestJobList> failoverTestJobList) {
             this.failoverTestJobList = failoverTestJobList;
@@ -113,7 +113,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: **1 to 100**. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -285,7 +285,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             private String stopTime; 
 
             /**
-             * Description.
+             * The description of the failover test.
+             * <p>
+             * 
+             * The description must be 0 to 256 characters in length and cannot start with \*\*http:// **or** https://\*\*.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -293,7 +296,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobDuration.
+             * The duration of the failover test. Unit: minutes. Valid values: **1 to 4320**.
              */
             public Builder jobDuration(String jobDuration) {
                 this.jobDuration = jobDuration;
@@ -301,7 +304,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the failover test.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -309,7 +312,11 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * Indicates whether the failover test is performed immediately. Valid values:
+             * <p>
+             * 
+             * *   **StartNow**
+             * *   **StartLater**
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -317,7 +324,10 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the failover test.
+             * <p>
+             * 
+             * The name must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -325,7 +335,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The IDs of the failover test resources.
              */
             public Builder resourceId(java.util.List < String > resourceId) {
                 this.resourceId = resourceId;
@@ -333,7 +343,7 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the failover test resource. Only **PHYSICALCONNECTION** is returned.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -349,7 +359,14 @@ public class DescribeFailoverTestJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the failover test. Valid values:
+             * <p>
+             * 
+             * *   **Init**
+             * *   **Starting**
+             * *   **Testing**
+             * *   **Stopping**
+             * *   **Stopped**
              */
             public Builder status(String status) {
                 this.status = status;
