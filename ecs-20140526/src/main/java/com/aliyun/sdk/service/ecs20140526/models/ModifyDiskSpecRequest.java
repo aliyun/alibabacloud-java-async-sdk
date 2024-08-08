@@ -292,12 +292,12 @@ public class ModifyDiskSpecRequest extends Request {
         }
 
         /**
-         * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
+         * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.
          * <p>
          * 
-         * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
+         * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
          * 
-         * >  This parameter is available only if the DiskCategory parameter is set to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
+         * >  This parameter is available only if you set DiskCategory to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);

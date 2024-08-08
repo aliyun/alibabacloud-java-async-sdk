@@ -238,6 +238,10 @@ public class RunInstancesRequest extends Request {
     private String periodUnit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateDnsNameOptions")
+    private PrivateDnsNameOptions privateDnsNameOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
@@ -382,6 +386,7 @@ public class RunInstancesRequest extends Request {
         this.passwordInherit = builder.passwordInherit;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.privateDnsNameOptions = builder.privateDnsNameOptions;
         this.privateIpAddress = builder.privateIpAddress;
         this.ramRoleName = builder.ramRoleName;
         this.regionId = builder.regionId;
@@ -811,6 +816,13 @@ public class RunInstancesRequest extends Request {
     }
 
     /**
+     * @return privateDnsNameOptions
+     */
+    public PrivateDnsNameOptions getPrivateDnsNameOptions() {
+        return this.privateDnsNameOptions;
+    }
+
+    /**
      * @return privateIpAddress
      */
     public String getPrivateIpAddress() {
@@ -1014,6 +1026,7 @@ public class RunInstancesRequest extends Request {
         private Boolean passwordInherit; 
         private Integer period; 
         private String periodUnit; 
+        private PrivateDnsNameOptions privateDnsNameOptions; 
         private String privateIpAddress; 
         private String ramRoleName; 
         private String regionId; 
@@ -1098,6 +1111,7 @@ public class RunInstancesRequest extends Request {
             this.passwordInherit = request.passwordInherit;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.privateDnsNameOptions = request.privateDnsNameOptions;
             this.privateIpAddress = request.privateIpAddress;
             this.ramRoleName = request.ramRoleName;
             this.regionId = request.regionId;
@@ -1833,6 +1847,15 @@ public class RunInstancesRequest extends Request {
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * PrivateDnsNameOptions.
+         */
+        public Builder privateDnsNameOptions(PrivateDnsNameOptions privateDnsNameOptions) {
+            this.putQueryParameter("PrivateDnsNameOptions", privateDnsNameOptions);
+            this.privateDnsNameOptions = privateDnsNameOptions;
             return this;
         }
 
@@ -3861,6 +3884,127 @@ public class RunInstancesRequest extends Request {
 
             public NetworkOptions build() {
                 return new NetworkOptions(this);
+            } 
+
+        } 
+
+    }
+    public static class PrivateDnsNameOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableInstanceIdDnsAAAARecord")
+        private Boolean enableInstanceIdDnsAAAARecord;
+
+        @com.aliyun.core.annotation.NameInMap("EnableInstanceIdDnsARecord")
+        private Boolean enableInstanceIdDnsARecord;
+
+        @com.aliyun.core.annotation.NameInMap("EnableIpDnsARecord")
+        private Boolean enableIpDnsARecord;
+
+        @com.aliyun.core.annotation.NameInMap("EnableIpDnsPtrRecord")
+        private Boolean enableIpDnsPtrRecord;
+
+        @com.aliyun.core.annotation.NameInMap("HostnameType")
+        private String hostnameType;
+
+        private PrivateDnsNameOptions(Builder builder) {
+            this.enableInstanceIdDnsAAAARecord = builder.enableInstanceIdDnsAAAARecord;
+            this.enableInstanceIdDnsARecord = builder.enableInstanceIdDnsARecord;
+            this.enableIpDnsARecord = builder.enableIpDnsARecord;
+            this.enableIpDnsPtrRecord = builder.enableIpDnsPtrRecord;
+            this.hostnameType = builder.hostnameType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateDnsNameOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableInstanceIdDnsAAAARecord
+         */
+        public Boolean getEnableInstanceIdDnsAAAARecord() {
+            return this.enableInstanceIdDnsAAAARecord;
+        }
+
+        /**
+         * @return enableInstanceIdDnsARecord
+         */
+        public Boolean getEnableInstanceIdDnsARecord() {
+            return this.enableInstanceIdDnsARecord;
+        }
+
+        /**
+         * @return enableIpDnsARecord
+         */
+        public Boolean getEnableIpDnsARecord() {
+            return this.enableIpDnsARecord;
+        }
+
+        /**
+         * @return enableIpDnsPtrRecord
+         */
+        public Boolean getEnableIpDnsPtrRecord() {
+            return this.enableIpDnsPtrRecord;
+        }
+
+        /**
+         * @return hostnameType
+         */
+        public String getHostnameType() {
+            return this.hostnameType;
+        }
+
+        public static final class Builder {
+            private Boolean enableInstanceIdDnsAAAARecord; 
+            private Boolean enableInstanceIdDnsARecord; 
+            private Boolean enableIpDnsARecord; 
+            private Boolean enableIpDnsPtrRecord; 
+            private String hostnameType; 
+
+            /**
+             * EnableInstanceIdDnsAAAARecord.
+             */
+            public Builder enableInstanceIdDnsAAAARecord(Boolean enableInstanceIdDnsAAAARecord) {
+                this.enableInstanceIdDnsAAAARecord = enableInstanceIdDnsAAAARecord;
+                return this;
+            }
+
+            /**
+             * EnableInstanceIdDnsARecord.
+             */
+            public Builder enableInstanceIdDnsARecord(Boolean enableInstanceIdDnsARecord) {
+                this.enableInstanceIdDnsARecord = enableInstanceIdDnsARecord;
+                return this;
+            }
+
+            /**
+             * EnableIpDnsARecord.
+             */
+            public Builder enableIpDnsARecord(Boolean enableIpDnsARecord) {
+                this.enableIpDnsARecord = enableIpDnsARecord;
+                return this;
+            }
+
+            /**
+             * EnableIpDnsPtrRecord.
+             */
+            public Builder enableIpDnsPtrRecord(Boolean enableIpDnsPtrRecord) {
+                this.enableIpDnsPtrRecord = enableIpDnsPtrRecord;
+                return this;
+            }
+
+            /**
+             * HostnameType.
+             */
+            public Builder hostnameType(String hostnameType) {
+                this.hostnameType = hostnameType;
+                return this;
+            }
+
+            public PrivateDnsNameOptions build() {
+                return new PrivateDnsNameOptions(this);
             } 
 
         } 

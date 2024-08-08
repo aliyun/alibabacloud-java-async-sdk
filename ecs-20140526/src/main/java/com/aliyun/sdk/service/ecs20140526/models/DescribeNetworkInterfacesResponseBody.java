@@ -639,12 +639,16 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Primary")
         private Boolean primary;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateDnsName")
+        private String privateDnsName;
+
         @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
         private PrivateIpSet(Builder builder) {
             this.associatedPublicIp = builder.associatedPublicIp;
             this.primary = builder.primary;
+            this.privateDnsName = builder.privateDnsName;
             this.privateIpAddress = builder.privateIpAddress;
         }
 
@@ -671,6 +675,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateDnsName
+         */
+        public String getPrivateDnsName() {
+            return this.privateDnsName;
+        }
+
+        /**
          * @return privateIpAddress
          */
         public String getPrivateIpAddress() {
@@ -680,6 +691,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public static final class Builder {
             private PrivateIpSetAssociatedPublicIp associatedPublicIp; 
             private Boolean primary; 
+            private String privateDnsName; 
             private String privateIpAddress; 
 
             /**
@@ -699,6 +711,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
+                return this;
+            }
+
+            /**
+             * PrivateDnsName.
+             */
+            public Builder privateDnsName(String privateDnsName) {
+                this.privateDnsName = privateDnsName;
                 return this;
             }
 

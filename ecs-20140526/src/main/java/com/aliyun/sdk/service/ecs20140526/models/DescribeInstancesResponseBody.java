@@ -1060,11 +1060,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Primary")
         private Boolean primary;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateDnsName")
+        private String privateDnsName;
+
         @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
         private PrivateIpSet(Builder builder) {
             this.primary = builder.primary;
+            this.privateDnsName = builder.privateDnsName;
             this.privateIpAddress = builder.privateIpAddress;
         }
 
@@ -1084,6 +1088,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateDnsName
+         */
+        public String getPrivateDnsName() {
+            return this.privateDnsName;
+        }
+
+        /**
          * @return privateIpAddress
          */
         public String getPrivateIpAddress() {
@@ -1092,6 +1103,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean primary; 
+            private String privateDnsName; 
             private String privateIpAddress; 
 
             /**
@@ -1103,6 +1115,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
+                return this;
+            }
+
+            /**
+             * PrivateDnsName.
+             */
+            public Builder privateDnsName(String privateDnsName) {
+                this.privateDnsName = privateDnsName;
                 return this;
             }
 
@@ -1499,6 +1519,127 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
             public OperationLocks build() {
                 return new OperationLocks(this);
+            } 
+
+        } 
+
+    }
+    public static class PrivateDnsNameOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableInstanceIdDnsAAAARecord")
+        private Boolean enableInstanceIdDnsAAAARecord;
+
+        @com.aliyun.core.annotation.NameInMap("EnableInstanceIdDnsARecord")
+        private Boolean enableInstanceIdDnsARecord;
+
+        @com.aliyun.core.annotation.NameInMap("EnableIpDnsARecord")
+        private Boolean enableIpDnsARecord;
+
+        @com.aliyun.core.annotation.NameInMap("EnableIpDnsPtrRecord")
+        private Boolean enableIpDnsPtrRecord;
+
+        @com.aliyun.core.annotation.NameInMap("HostnameType")
+        private String hostnameType;
+
+        private PrivateDnsNameOptions(Builder builder) {
+            this.enableInstanceIdDnsAAAARecord = builder.enableInstanceIdDnsAAAARecord;
+            this.enableInstanceIdDnsARecord = builder.enableInstanceIdDnsARecord;
+            this.enableIpDnsARecord = builder.enableIpDnsARecord;
+            this.enableIpDnsPtrRecord = builder.enableIpDnsPtrRecord;
+            this.hostnameType = builder.hostnameType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateDnsNameOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableInstanceIdDnsAAAARecord
+         */
+        public Boolean getEnableInstanceIdDnsAAAARecord() {
+            return this.enableInstanceIdDnsAAAARecord;
+        }
+
+        /**
+         * @return enableInstanceIdDnsARecord
+         */
+        public Boolean getEnableInstanceIdDnsARecord() {
+            return this.enableInstanceIdDnsARecord;
+        }
+
+        /**
+         * @return enableIpDnsARecord
+         */
+        public Boolean getEnableIpDnsARecord() {
+            return this.enableIpDnsARecord;
+        }
+
+        /**
+         * @return enableIpDnsPtrRecord
+         */
+        public Boolean getEnableIpDnsPtrRecord() {
+            return this.enableIpDnsPtrRecord;
+        }
+
+        /**
+         * @return hostnameType
+         */
+        public String getHostnameType() {
+            return this.hostnameType;
+        }
+
+        public static final class Builder {
+            private Boolean enableInstanceIdDnsAAAARecord; 
+            private Boolean enableInstanceIdDnsARecord; 
+            private Boolean enableIpDnsARecord; 
+            private Boolean enableIpDnsPtrRecord; 
+            private String hostnameType; 
+
+            /**
+             * EnableInstanceIdDnsAAAARecord.
+             */
+            public Builder enableInstanceIdDnsAAAARecord(Boolean enableInstanceIdDnsAAAARecord) {
+                this.enableInstanceIdDnsAAAARecord = enableInstanceIdDnsAAAARecord;
+                return this;
+            }
+
+            /**
+             * EnableInstanceIdDnsARecord.
+             */
+            public Builder enableInstanceIdDnsARecord(Boolean enableInstanceIdDnsARecord) {
+                this.enableInstanceIdDnsARecord = enableInstanceIdDnsARecord;
+                return this;
+            }
+
+            /**
+             * EnableIpDnsARecord.
+             */
+            public Builder enableIpDnsARecord(Boolean enableIpDnsARecord) {
+                this.enableIpDnsARecord = enableIpDnsARecord;
+                return this;
+            }
+
+            /**
+             * EnableIpDnsPtrRecord.
+             */
+            public Builder enableIpDnsPtrRecord(Boolean enableIpDnsPtrRecord) {
+                this.enableIpDnsPtrRecord = enableIpDnsPtrRecord;
+                return this;
+            }
+
+            /**
+             * HostnameType.
+             */
+            public Builder hostnameType(String hostnameType) {
+                this.hostnameType = hostnameType;
+                return this;
+            }
+
+            public PrivateDnsNameOptions build() {
+                return new PrivateDnsNameOptions(this);
             } 
 
         } 
@@ -2007,6 +2148,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OperationLocks")
         private OperationLocks operationLocks;
 
+        @com.aliyun.core.annotation.NameInMap("PrivateDnsNameOptions")
+        private PrivateDnsNameOptions privateDnsNameOptions;
+
         @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private PublicIpAddress publicIpAddress;
 
@@ -2110,6 +2254,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.OSNameEn = builder.OSNameEn;
             this.OSType = builder.OSType;
             this.operationLocks = builder.operationLocks;
+            this.privateDnsNameOptions = builder.privateDnsNameOptions;
             this.publicIpAddress = builder.publicIpAddress;
             this.rdmaIpAddress = builder.rdmaIpAddress;
             this.recyclable = builder.recyclable;
@@ -2455,6 +2600,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return privateDnsNameOptions
+         */
+        public PrivateDnsNameOptions getPrivateDnsNameOptions() {
+            return this.privateDnsNameOptions;
+        }
+
+        /**
          * @return publicIpAddress
          */
         public PublicIpAddress getPublicIpAddress() {
@@ -2633,6 +2785,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String OSNameEn; 
             private String OSType; 
             private OperationLocks operationLocks; 
+            private PrivateDnsNameOptions privateDnsNameOptions; 
             private PublicIpAddress publicIpAddress; 
             private RdmaIpAddress rdmaIpAddress; 
             private Boolean recyclable; 
@@ -3047,6 +3200,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder operationLocks(OperationLocks operationLocks) {
                 this.operationLocks = operationLocks;
+                return this;
+            }
+
+            /**
+             * PrivateDnsNameOptions.
+             */
+            public Builder privateDnsNameOptions(PrivateDnsNameOptions privateDnsNameOptions) {
+                this.privateDnsNameOptions = privateDnsNameOptions;
                 return this;
             }
 
