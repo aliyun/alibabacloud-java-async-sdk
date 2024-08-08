@@ -101,6 +101,9 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("OperationMetadata")
+        private String operationMetadata;
+
         @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
@@ -124,6 +127,7 @@ public class GetApplicationGroupResponseBody extends TeaModel {
             this.importTagKey = builder.importTagKey;
             this.importTagValue = builder.importTagValue;
             this.name = builder.name;
+            this.operationMetadata = builder.operationMetadata;
             this.progress = builder.progress;
             this.status = builder.status;
             this.statusReason = builder.statusReason;
@@ -209,6 +213,13 @@ public class GetApplicationGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return operationMetadata
+         */
+        public String getOperationMetadata() {
+            return this.operationMetadata;
+        }
+
+        /**
          * @return progress
          */
         public String getProgress() {
@@ -247,6 +258,7 @@ public class GetApplicationGroupResponseBody extends TeaModel {
             private String importTagKey; 
             private String importTagValue; 
             private String name; 
+            private String operationMetadata; 
             private String progress; 
             private String status; 
             private String statusReason; 
@@ -329,6 +341,14 @@ public class GetApplicationGroupResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * OperationMetadata.
+             */
+            public Builder operationMetadata(String operationMetadata) {
+                this.operationMetadata = operationMetadata;
                 return this;
             }
 

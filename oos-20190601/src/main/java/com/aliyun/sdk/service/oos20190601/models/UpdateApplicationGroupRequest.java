@@ -26,6 +26,14 @@ public class UpdateApplicationGroupRequest extends Request {
     private String newName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationName")
+    private String operationName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
+    private java.util.Map < String, ? > parameters;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -34,6 +42,8 @@ public class UpdateApplicationGroupRequest extends Request {
         this.applicationName = builder.applicationName;
         this.name = builder.name;
         this.newName = builder.newName;
+        this.operationName = builder.operationName;
+        this.parameters = builder.parameters;
         this.regionId = builder.regionId;
     }
 
@@ -72,6 +82,20 @@ public class UpdateApplicationGroupRequest extends Request {
     }
 
     /**
+     * @return operationName
+     */
+    public String getOperationName() {
+        return this.operationName;
+    }
+
+    /**
+     * @return parameters
+     */
+    public java.util.Map < String, ? > getParameters() {
+        return this.parameters;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -82,6 +106,8 @@ public class UpdateApplicationGroupRequest extends Request {
         private String applicationName; 
         private String name; 
         private String newName; 
+        private String operationName; 
+        private java.util.Map < String, ? > parameters; 
         private String regionId; 
 
         private Builder() {
@@ -93,6 +119,8 @@ public class UpdateApplicationGroupRequest extends Request {
             this.applicationName = request.applicationName;
             this.name = request.name;
             this.newName = request.newName;
+            this.operationName = request.operationName;
+            this.parameters = request.parameters;
             this.regionId = request.regionId;
         } 
 
@@ -120,6 +148,25 @@ public class UpdateApplicationGroupRequest extends Request {
         public Builder newName(String newName) {
             this.putQueryParameter("NewName", newName);
             this.newName = newName;
+            return this;
+        }
+
+        /**
+         * OperationName.
+         */
+        public Builder operationName(String operationName) {
+            this.putQueryParameter("OperationName", operationName);
+            this.operationName = operationName;
+            return this;
+        }
+
+        /**
+         * Parameters.
+         */
+        public Builder parameters(java.util.Map < String, ? > parameters) {
+            String parametersShrink = shrink(parameters, "Parameters", "json");
+            this.putQueryParameter("Parameters", parametersShrink);
+            this.parameters = parameters;
             return this;
         }
 
