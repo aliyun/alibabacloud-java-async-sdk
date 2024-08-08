@@ -17,9 +17,13 @@ public class UpdateTemplateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
+    @com.aliyun.core.annotation.NameInMap("TemplateVersion")
+    private String templateVersion;
+
     private UpdateTemplateResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.templateId = builder.templateId;
+        this.templateVersion = builder.templateVersion;
     }
 
     public static Builder builder() {
@@ -44,9 +48,17 @@ public class UpdateTemplateResponseBody extends TeaModel {
         return this.templateId;
     }
 
+    /**
+     * @return templateVersion
+     */
+    public String getTemplateVersion() {
+        return this.templateVersion;
+    }
+
     public static final class Builder {
         private String requestId; 
         private String templateId; 
+        private String templateVersion; 
 
         /**
          * The ID of the request.
@@ -61,6 +73,14 @@ public class UpdateTemplateResponseBody extends TeaModel {
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * TemplateVersion.
+         */
+        public Builder templateVersion(String templateVersion) {
+            this.templateVersion = templateVersion;
             return this;
         }
 
