@@ -6,19 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link Deployment} extends {@link TeaModel}
+ * {@link DeploymentDraft} extends {@link TeaModel}
  *
- * <p>Deployment</p>
+ * <p>DeploymentDraft</p>
  */
-public class Deployment extends TeaModel {
+public class DeploymentDraft extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("artifact")
     private Artifact artifact;
 
-    @com.aliyun.core.annotation.NameInMap("batchResourceSetting")
-    private BatchResourceSetting batchResourceSetting;
-
     @com.aliyun.core.annotation.NameInMap("createdAt")
-    private String createdAt;
+    private Long createdAt;
 
     @com.aliyun.core.annotation.NameInMap("creator")
     private String creator;
@@ -26,17 +23,8 @@ public class Deployment extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("creatorName")
     private String creatorName;
 
-    @com.aliyun.core.annotation.NameInMap("deploymentHasChanged")
-    private Boolean deploymentHasChanged;
-
-    @com.aliyun.core.annotation.NameInMap("deploymentId")
-    private String deploymentId;
-
-    @com.aliyun.core.annotation.NameInMap("deploymentTarget")
-    private BriefDeploymentTarget deploymentTarget;
-
-    @com.aliyun.core.annotation.NameInMap("description")
-    private String description;
+    @com.aliyun.core.annotation.NameInMap("deploymentDraftId")
+    private String deploymentDraftId;
 
     @com.aliyun.core.annotation.NameInMap("engineVersion")
     private String engineVersion;
@@ -44,23 +32,17 @@ public class Deployment extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("executionMode")
     private String executionMode;
 
-    @com.aliyun.core.annotation.NameInMap("flinkConf")
-    private java.util.Map < String, ? > flinkConf;
-
-    @com.aliyun.core.annotation.NameInMap("jobSummary")
-    private JobSummary jobSummary;
-
     @com.aliyun.core.annotation.NameInMap("labels")
     private java.util.Map < String, ? > labels;
 
     @com.aliyun.core.annotation.NameInMap("localVariables")
     private java.util.List < LocalVariable > localVariables;
 
-    @com.aliyun.core.annotation.NameInMap("logging")
-    private Logging logging;
+    @com.aliyun.core.annotation.NameInMap("lock")
+    private Lock lock;
 
     @com.aliyun.core.annotation.NameInMap("modifiedAt")
-    private String modifiedAt;
+    private Long modifiedAt;
 
     @com.aliyun.core.annotation.NameInMap("modifier")
     private String modifier;
@@ -74,39 +56,33 @@ public class Deployment extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
-    @com.aliyun.core.annotation.NameInMap("referencedDeploymentDraftId")
-    private String referencedDeploymentDraftId;
+    @com.aliyun.core.annotation.NameInMap("parentId")
+    private String parentId;
 
-    @com.aliyun.core.annotation.NameInMap("streamingResourceSetting")
-    private StreamingResourceSetting streamingResourceSetting;
+    @com.aliyun.core.annotation.NameInMap("referencedDeploymentId")
+    private String referencedDeploymentId;
 
     @com.aliyun.core.annotation.NameInMap("workspace")
     private String workspace;
 
-    private Deployment(Builder builder) {
+    private DeploymentDraft(Builder builder) {
         this.artifact = builder.artifact;
-        this.batchResourceSetting = builder.batchResourceSetting;
         this.createdAt = builder.createdAt;
         this.creator = builder.creator;
         this.creatorName = builder.creatorName;
-        this.deploymentHasChanged = builder.deploymentHasChanged;
-        this.deploymentId = builder.deploymentId;
-        this.deploymentTarget = builder.deploymentTarget;
-        this.description = builder.description;
+        this.deploymentDraftId = builder.deploymentDraftId;
         this.engineVersion = builder.engineVersion;
         this.executionMode = builder.executionMode;
-        this.flinkConf = builder.flinkConf;
-        this.jobSummary = builder.jobSummary;
         this.labels = builder.labels;
         this.localVariables = builder.localVariables;
-        this.logging = builder.logging;
+        this.lock = builder.lock;
         this.modifiedAt = builder.modifiedAt;
         this.modifier = builder.modifier;
         this.modifierName = builder.modifierName;
         this.name = builder.name;
         this.namespace = builder.namespace;
-        this.referencedDeploymentDraftId = builder.referencedDeploymentDraftId;
-        this.streamingResourceSetting = builder.streamingResourceSetting;
+        this.parentId = builder.parentId;
+        this.referencedDeploymentId = builder.referencedDeploymentId;
         this.workspace = builder.workspace;
     }
 
@@ -114,7 +90,7 @@ public class Deployment extends TeaModel {
         return new Builder();
     }
 
-    public static Deployment create() {
+    public static DeploymentDraft create() {
         return builder().build();
     }
 
@@ -126,16 +102,9 @@ public class Deployment extends TeaModel {
     }
 
     /**
-     * @return batchResourceSetting
-     */
-    public BatchResourceSetting getBatchResourceSetting() {
-        return this.batchResourceSetting;
-    }
-
-    /**
      * @return createdAt
      */
-    public String getCreatedAt() {
+    public Long getCreatedAt() {
         return this.createdAt;
     }
 
@@ -154,31 +123,10 @@ public class Deployment extends TeaModel {
     }
 
     /**
-     * @return deploymentHasChanged
+     * @return deploymentDraftId
      */
-    public Boolean getDeploymentHasChanged() {
-        return this.deploymentHasChanged;
-    }
-
-    /**
-     * @return deploymentId
-     */
-    public String getDeploymentId() {
-        return this.deploymentId;
-    }
-
-    /**
-     * @return deploymentTarget
-     */
-    public BriefDeploymentTarget getDeploymentTarget() {
-        return this.deploymentTarget;
-    }
-
-    /**
-     * @return description
-     */
-    public String getDescription() {
-        return this.description;
+    public String getDeploymentDraftId() {
+        return this.deploymentDraftId;
     }
 
     /**
@@ -196,20 +144,6 @@ public class Deployment extends TeaModel {
     }
 
     /**
-     * @return flinkConf
-     */
-    public java.util.Map < String, ? > getFlinkConf() {
-        return this.flinkConf;
-    }
-
-    /**
-     * @return jobSummary
-     */
-    public JobSummary getJobSummary() {
-        return this.jobSummary;
-    }
-
-    /**
      * @return labels
      */
     public java.util.Map < String, ? > getLabels() {
@@ -224,16 +158,16 @@ public class Deployment extends TeaModel {
     }
 
     /**
-     * @return logging
+     * @return lock
      */
-    public Logging getLogging() {
-        return this.logging;
+    public Lock getLock() {
+        return this.lock;
     }
 
     /**
      * @return modifiedAt
      */
-    public String getModifiedAt() {
+    public Long getModifiedAt() {
         return this.modifiedAt;
     }
 
@@ -266,17 +200,17 @@ public class Deployment extends TeaModel {
     }
 
     /**
-     * @return referencedDeploymentDraftId
+     * @return parentId
      */
-    public String getReferencedDeploymentDraftId() {
-        return this.referencedDeploymentDraftId;
+    public String getParentId() {
+        return this.parentId;
     }
 
     /**
-     * @return streamingResourceSetting
+     * @return referencedDeploymentId
      */
-    public StreamingResourceSetting getStreamingResourceSetting() {
-        return this.streamingResourceSetting;
+    public String getReferencedDeploymentId() {
+        return this.referencedDeploymentId;
     }
 
     /**
@@ -288,28 +222,22 @@ public class Deployment extends TeaModel {
 
     public static final class Builder {
         private Artifact artifact; 
-        private BatchResourceSetting batchResourceSetting; 
-        private String createdAt; 
+        private Long createdAt; 
         private String creator; 
         private String creatorName; 
-        private Boolean deploymentHasChanged; 
-        private String deploymentId; 
-        private BriefDeploymentTarget deploymentTarget; 
-        private String description; 
+        private String deploymentDraftId; 
         private String engineVersion; 
         private String executionMode; 
-        private java.util.Map < String, ? > flinkConf; 
-        private JobSummary jobSummary; 
         private java.util.Map < String, ? > labels; 
         private java.util.List < LocalVariable > localVariables; 
-        private Logging logging; 
-        private String modifiedAt; 
+        private Lock lock; 
+        private Long modifiedAt; 
         private String modifier; 
         private String modifierName; 
         private String name; 
         private String namespace; 
-        private String referencedDeploymentDraftId; 
-        private StreamingResourceSetting streamingResourceSetting; 
+        private String parentId; 
+        private String referencedDeploymentId; 
         private String workspace; 
 
         /**
@@ -321,17 +249,9 @@ public class Deployment extends TeaModel {
         }
 
         /**
-         * batchResourceSetting.
-         */
-        public Builder batchResourceSetting(BatchResourceSetting batchResourceSetting) {
-            this.batchResourceSetting = batchResourceSetting;
-            return this;
-        }
-
-        /**
          * createdAt.
          */
-        public Builder createdAt(String createdAt) {
+        public Builder createdAt(Long createdAt) {
             this.createdAt = createdAt;
             return this;
         }
@@ -353,34 +273,10 @@ public class Deployment extends TeaModel {
         }
 
         /**
-         * deploymentHasChanged.
+         * deploymentDraftId.
          */
-        public Builder deploymentHasChanged(Boolean deploymentHasChanged) {
-            this.deploymentHasChanged = deploymentHasChanged;
-            return this;
-        }
-
-        /**
-         * deploymentId.
-         */
-        public Builder deploymentId(String deploymentId) {
-            this.deploymentId = deploymentId;
-            return this;
-        }
-
-        /**
-         * deploymentTarget.
-         */
-        public Builder deploymentTarget(BriefDeploymentTarget deploymentTarget) {
-            this.deploymentTarget = deploymentTarget;
-            return this;
-        }
-
-        /**
-         * description.
-         */
-        public Builder description(String description) {
-            this.description = description;
+        public Builder deploymentDraftId(String deploymentDraftId) {
+            this.deploymentDraftId = deploymentDraftId;
             return this;
         }
 
@@ -401,22 +297,6 @@ public class Deployment extends TeaModel {
         }
 
         /**
-         * flinkConf.
-         */
-        public Builder flinkConf(java.util.Map < String, ? > flinkConf) {
-            this.flinkConf = flinkConf;
-            return this;
-        }
-
-        /**
-         * jobSummary.
-         */
-        public Builder jobSummary(JobSummary jobSummary) {
-            this.jobSummary = jobSummary;
-            return this;
-        }
-
-        /**
          * labels.
          */
         public Builder labels(java.util.Map < String, ? > labels) {
@@ -433,17 +313,17 @@ public class Deployment extends TeaModel {
         }
 
         /**
-         * logging.
+         * lock.
          */
-        public Builder logging(Logging logging) {
-            this.logging = logging;
+        public Builder lock(Lock lock) {
+            this.lock = lock;
             return this;
         }
 
         /**
          * modifiedAt.
          */
-        public Builder modifiedAt(String modifiedAt) {
+        public Builder modifiedAt(Long modifiedAt) {
             this.modifiedAt = modifiedAt;
             return this;
         }
@@ -481,18 +361,18 @@ public class Deployment extends TeaModel {
         }
 
         /**
-         * referencedDeploymentDraftId.
+         * parentId.
          */
-        public Builder referencedDeploymentDraftId(String referencedDeploymentDraftId) {
-            this.referencedDeploymentDraftId = referencedDeploymentDraftId;
+        public Builder parentId(String parentId) {
+            this.parentId = parentId;
             return this;
         }
 
         /**
-         * streamingResourceSetting.
+         * referencedDeploymentId.
          */
-        public Builder streamingResourceSetting(StreamingResourceSetting streamingResourceSetting) {
-            this.streamingResourceSetting = streamingResourceSetting;
+        public Builder referencedDeploymentId(String referencedDeploymentId) {
+            this.referencedDeploymentId = referencedDeploymentId;
             return this;
         }
 
@@ -504,8 +384,8 @@ public class Deployment extends TeaModel {
             return this;
         }
 
-        public Deployment build() {
-            return new Deployment(this);
+        public DeploymentDraft build() {
+            return new DeploymentDraft(this);
         } 
 
     } 
