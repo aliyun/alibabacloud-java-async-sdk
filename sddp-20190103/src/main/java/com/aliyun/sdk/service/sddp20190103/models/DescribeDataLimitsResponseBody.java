@@ -179,6 +179,9 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastFinishedTime")
         private Long lastFinishedTime;
 
+        @com.aliyun.core.annotation.NameInMap("LastStartTime")
+        private Long lastStartTime;
+
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
@@ -268,6 +271,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             this.instanceDescription = builder.instanceDescription;
             this.instanceId = builder.instanceId;
             this.lastFinishedTime = builder.lastFinishedTime;
+            this.lastStartTime = builder.lastStartTime;
             this.localName = builder.localName;
             this.logStoreDay = builder.logStoreDay;
             this.memberAccount = builder.memberAccount;
@@ -412,6 +416,13 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
          */
         public Long getLastFinishedTime() {
             return this.lastFinishedTime;
+        }
+
+        /**
+         * @return lastStartTime
+         */
+        public Long getLastStartTime() {
+            return this.lastStartTime;
         }
 
         /**
@@ -599,6 +610,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             private String instanceDescription; 
             private String instanceId; 
             private Long lastFinishedTime; 
+            private Long lastStartTime; 
             private String localName; 
             private Integer logStoreDay; 
             private Long memberAccount; 
@@ -780,6 +792,14 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
              */
             public Builder lastFinishedTime(Long lastFinishedTime) {
                 this.lastFinishedTime = lastFinishedTime;
+                return this;
+            }
+
+            /**
+             * LastStartTime.
+             */
+            public Builder lastStartTime(Long lastStartTime) {
+                this.lastStartTime = lastStartTime;
                 return this;
             }
 
