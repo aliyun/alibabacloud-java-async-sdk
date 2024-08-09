@@ -423,7 +423,7 @@ public class CreateDBResourceGroupRequest extends Request {
             }
 
             /**
-             * The name of the destination resource group.
+             * The name of the resource group to which you want to resubmit the query job.
              */
             public Builder targetGroupName(String targetGroupName) {
                 this.targetGroupName = targetGroupName;

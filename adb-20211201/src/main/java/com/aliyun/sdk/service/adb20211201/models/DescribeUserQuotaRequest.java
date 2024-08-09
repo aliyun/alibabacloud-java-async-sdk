@@ -77,7 +77,7 @@ public class DescribeUserQuotaRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * The region ID.
          * <p>
          * 
          * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.

@@ -229,7 +229,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -359,7 +359,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             private String schemaName; 
 
             /**
-             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -473,7 +473,7 @@ public class DescribeAllDataSourceResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+             * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;

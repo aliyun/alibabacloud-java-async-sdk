@@ -125,7 +125,10 @@ public class DescribePerformanceViewsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -152,7 +155,10 @@ public class DescribePerformanceViewsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

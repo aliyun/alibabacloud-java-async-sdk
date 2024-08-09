@@ -211,10 +211,10 @@ public class DescribeExcessivePrimaryKeysRequest extends Request {
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V5.0) cluster.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V5.0) clusters within a region.
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

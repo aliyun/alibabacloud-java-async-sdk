@@ -299,9 +299,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -739,6 +739,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      *
+     */
     @Override
     public CompletableFuture<DescribeClusterResourceDetailResponse> describeClusterResourceDetail(DescribeClusterResourceDetailRequest request) {
         try {
@@ -786,6 +790,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      *
+     */
     @Override
     public CompletableFuture<DescribeComputeResourceUsageResponse> describeComputeResourceUsage(DescribeComputeResourceUsageRequest request) {
         try {
@@ -819,7 +827,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
       *
      */
     @Override
@@ -837,7 +845,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
       *
      */
     @Override
@@ -927,9 +935,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
       *
      */
     @Override
@@ -965,9 +971,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
       *
      */
     @Override
@@ -1003,7 +1007,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see DescribeElasticPlanAttribute.
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
       *
      */
     @Override
@@ -1056,6 +1060,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      *
+     */
     @Override
     public CompletableFuture<DescribeElasticPlansResponse> describeElasticPlans(DescribeElasticPlansRequest request) {
         try {
@@ -1098,6 +1106,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeJobResourceUsageResponse> describeJobResourceUsage(DescribeJobResourceUsageRequest request) {
         try {
@@ -1307,9 +1319,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
       *
      */
     @Override
@@ -1400,9 +1410,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
       *
      */
     @Override
@@ -1517,9 +1525,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -1537,9 +1545,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -1557,9 +1565,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -1657,9 +1665,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -1677,9 +1685,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -1697,10 +1705,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~612467~~) operation.
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -1842,9 +1849,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -1882,9 +1889,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -1902,9 +1909,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -1976,7 +1983,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
       *
      */
     @Override
@@ -2107,7 +2114,8 @@ public final class DefaultAsyncClient implements AsyncClient {
       * *   When you scale a cluster, data in the cluster is migrated for redistribution. The amount of time that is required to migrate data is proportional to the data volume. During a scaling event, the services provided by the cluster are not interrupted. When you downgrade cluster specifications, data migration may require up to dozens of hours to complete. Proceed with caution especially if your cluster contains a large amount of data.
       * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
       * *   When the scaling process is about to end, transient connections may occur. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
-      * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition (V3.0) to Data Lakehouse Edition (V3.0), but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition. For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition to Data Lakehouse Edition, but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
+      * *   For information about the endpoints of the current service, see [Endpoints](~~612373~~).
       *
      */
     @Override
@@ -2211,9 +2219,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -2249,9 +2257,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     @Override
@@ -2367,7 +2375,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
       *
      */
     @Override

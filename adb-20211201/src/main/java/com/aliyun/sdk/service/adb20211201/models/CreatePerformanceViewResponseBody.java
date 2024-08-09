@@ -69,7 +69,11 @@ public class CreatePerformanceViewResponseBody extends TeaModel {
         }
 
         /**
-         * CreateStatus.
+         * The creation result. Valid values:
+         * <p>
+         * 
+         * *   **SUCCESS**
+         * *   **FAILED**
          */
         public Builder createStatus(String createStatus) {
             this.createStatus = createStatus;

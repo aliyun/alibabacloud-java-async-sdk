@@ -85,7 +85,7 @@ public class DescribeElasticPlansResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The scaling plans.
+         * The queried scaling plans.
          */
         public Builder elasticPlans(java.util.List < ElasticPlans> elasticPlans) {
             this.elasticPlans = elasticPlans;

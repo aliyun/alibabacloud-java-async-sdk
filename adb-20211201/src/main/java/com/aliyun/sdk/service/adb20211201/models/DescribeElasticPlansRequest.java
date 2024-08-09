@@ -143,7 +143,7 @@ public class DescribeElasticPlansRequest extends Request {
          * The cluster ID.
          * <p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -164,7 +164,7 @@ public class DescribeElasticPlansRequest extends Request {
         }
 
         /**
-         * Indicates whether the scaling plan was immediately enabled after the plan is created. Valid values:
+         * Specifies whether to query the scaling plans that are immediately enabled after the plans are created. Valid values:
          * <p>
          * 
          * *   true
@@ -211,8 +211,7 @@ public class DescribeElasticPlansRequest extends Request {
          * The type of the scaling plan. Valid values:
          * <p>
          * 
-         * *   EXECUTOR: interactive resource groups, which fall into the computing resource category.
-         * *   WORKER: EIUs.
+         * EXECUTOR: the interactive resource group type, which specifies the computing resource type. WORKER: the EIU type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

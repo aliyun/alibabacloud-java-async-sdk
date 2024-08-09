@@ -61,7 +61,10 @@ public class DeletePerformanceViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial.
+         * <p>
+         * 
+         * >  This parameter is returned only if Resource Access Management (RAM) permission verification failed.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;

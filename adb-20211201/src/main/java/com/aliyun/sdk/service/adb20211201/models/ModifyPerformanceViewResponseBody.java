@@ -61,7 +61,7 @@ public class ModifyPerformanceViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessDeniedDetail.
+         * The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -69,7 +69,11 @@ public class ModifyPerformanceViewResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyStatus.
+         * The modification result. Valid values:
+         * <p>
+         * 
+         * *   **SUCCESS**
+         * *   **FAILED**
          */
         public Builder modifyStatus(String modifyStatus) {
             this.modifyStatus = modifyStatus;
@@ -77,7 +81,7 @@ public class ModifyPerformanceViewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

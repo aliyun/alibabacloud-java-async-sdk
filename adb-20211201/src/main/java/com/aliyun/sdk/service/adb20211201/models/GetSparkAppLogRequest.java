@@ -123,10 +123,10 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * The cluster ID.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

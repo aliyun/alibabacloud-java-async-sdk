@@ -132,9 +132,6 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
 
         /**
          * The cluster ID.
-         * <p>
-         * 
-         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;

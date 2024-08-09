@@ -114,7 +114,7 @@ public class DescribePatternPerformanceRequest extends Request {
          * The cluster ID.
          * <p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region, including cluster IDs.
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -138,7 +138,7 @@ public class DescribePatternPerformanceRequest extends Request {
          * The SQL pattern ID.
          * <p>
          * 
-         * >  You can call the [DescribeSQLPatterns](~~321868~~) operation to query the information about all SQL patterns in an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster within a period of time, including SQL pattern IDs.
+         * >  You can call the [DescribeSQLPatterns](~~321868~~) operation to query the information about all SQL patterns in an AnalyticDB for MySQL cluster within a period of time, including SQL pattern IDs.
          */
         public Builder patternId(String patternId) {
             this.putQueryParameter("PatternId", patternId);

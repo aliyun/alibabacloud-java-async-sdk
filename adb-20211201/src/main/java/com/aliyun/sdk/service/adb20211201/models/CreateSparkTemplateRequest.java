@@ -129,7 +129,7 @@ public class CreateSparkTemplateRequest extends Request {
         }
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putBodyParameter("DBClusterId", DBClusterId);

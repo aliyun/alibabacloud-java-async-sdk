@@ -90,9 +90,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePerformanceViewResponse> createPerformanceView(CreatePerformanceViewRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<CreateSparkTemplateResponse> createSparkTemplate(CreateSparkTemplateRequest request);
@@ -242,6 +242,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeClusterNetInfoResponse> describeClusterNetInfo(DescribeClusterNetInfoRequest request);
 
+    /**
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      *
+     */
     CompletableFuture<DescribeClusterResourceDetailResponse> describeClusterResourceDetail(DescribeClusterResourceDetailRequest request);
 
     CompletableFuture<DescribeClusterResourceUsageResponse> describeClusterResourceUsage(DescribeClusterResourceUsageRequest request);
@@ -253,6 +257,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeColumnsResponse> describeColumns(DescribeColumnsRequest request);
 
+    /**
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      *
+     */
     CompletableFuture<DescribeComputeResourceUsageResponse> describeComputeResourceUsage(DescribeComputeResourceUsageRequest request);
 
     /**
@@ -262,13 +270,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBClusterAttributeResponse> describeDBClusterAttribute(DescribeDBClusterAttributeRequest request);
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
       *
      */
     CompletableFuture<DescribeDBClusterHealthStatusResponse> describeDBClusterHealthStatus(DescribeDBClusterHealthStatusRequest request);
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
       *
      */
     CompletableFuture<DescribeDBClusterPerformanceResponse> describeDBClusterPerformance(DescribeDBClusterPerformanceRequest request);
@@ -298,9 +306,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDBResourceGroupResponse> describeDBResourceGroup(DescribeDBResourceGroupRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
       *
      */
     CompletableFuture<DescribeDiagnosisDimensionsResponse> describeDiagnosisDimensions(DescribeDiagnosisDimensionsRequest request);
@@ -312,9 +318,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDiagnosisRecordsResponse> describeDiagnosisRecords(DescribeDiagnosisRecordsRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
       *
      */
     CompletableFuture<DescribeDiagnosisSQLInfoResponse> describeDiagnosisSQLInfo(DescribeDiagnosisSQLInfoRequest request);
@@ -326,7 +330,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDownloadRecordsResponse> describeDownloadRecords(DescribeDownloadRecordsRequest request);
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see DescribeElasticPlanAttribute.
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
       *
      */
     CompletableFuture<DescribeElasticPlanAttributeResponse> describeElasticPlanAttribute(DescribeElasticPlanAttributeRequest request);
@@ -343,12 +347,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeElasticPlanSpecificationsResponse> describeElasticPlanSpecifications(DescribeElasticPlanSpecificationsRequest request);
 
+    /**
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      *
+     */
     CompletableFuture<DescribeElasticPlansResponse> describeElasticPlans(DescribeElasticPlansRequest request);
 
     CompletableFuture<DescribeEnabledPrivilegesResponse> describeEnabledPrivileges(DescribeEnabledPrivilegesRequest request);
 
     CompletableFuture<DescribeExcessivePrimaryKeysResponse> describeExcessivePrimaryKeys(DescribeExcessivePrimaryKeysRequest request);
 
+    /**
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
+      *
+     */
     CompletableFuture<DescribeJobResourceUsageResponse> describeJobResourceUsage(DescribeJobResourceUsageRequest request);
 
     /**
@@ -414,9 +426,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeStorageResourceUsageResponse> describeStorageResourceUsage(DescribeStorageResourceUsageRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
       *
      */
     CompletableFuture<DescribeTableAccessCountResponse> describeTableAccessCount(DescribeTableAccessCountRequest request);
@@ -447,9 +457,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableElasticPlanResponse> disableElasticPlan(DisableElasticPlanRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
-      * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
-      * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
       *
      */
     CompletableFuture<DownloadDiagnosisRecordsResponse> downloadDiagnosisRecords(DownloadDiagnosisRecordsRequest request);
@@ -492,25 +500,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSparkAppInfoResponse> getSparkAppInfo(GetSparkAppInfoRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<GetSparkAppLogResponse> getSparkAppLog(GetSparkAppLogRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<GetSparkAppMetricsResponse> getSparkAppMetrics(GetSparkAppMetricsRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<GetSparkAppStateResponse> getSparkAppState(GetSparkAppStateRequest request);
@@ -548,26 +556,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSparkLogAnalyzeTaskResponse> getSparkLogAnalyzeTask(GetSparkLogAnalyzeTaskRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<GetSparkSQLEngineStateResponse> getSparkSQLEngineState(GetSparkSQLEngineStateRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<GetSparkTemplateFileContentResponse> getSparkTemplateFileContent(GetSparkTemplateFileContentRequest request);
 
     /**
-      * *   You can call this operation to query the directory structure but not application data in the directory. To query the directory structure that contains application data, call the [GetSparkTemplateFullTree](~~612467~~) operation.
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<GetSparkTemplateFolderTreeResponse> getSparkTemplateFolderTree(GetSparkTemplateFolderTreeRequest request);
@@ -613,9 +620,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetViewObjectsResponse> getViewObjects(GetViewObjectsRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<KillSparkAppResponse> killSparkApp(KillSparkAppRequest request);
@@ -629,17 +636,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<KillSparkLogAnalyzeTaskResponse> killSparkLogAnalyzeTask(KillSparkLogAnalyzeTaskRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<KillSparkSQLEngineResponse> killSparkSQLEngine(KillSparkSQLEngineRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<ListSparkAppAttemptsResponse> listSparkAppAttempts(ListSparkAppAttemptsRequest request);
@@ -663,7 +670,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSparkTemplateFileIdsResponse> listSparkTemplateFileIds(ListSparkTemplateFileIdsRequest request);
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
       *
      */
     CompletableFuture<LoadSampleDataSetResponse> loadSampleDataSet(LoadSampleDataSetRequest request);
@@ -710,7 +717,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   When you scale a cluster, data in the cluster is migrated for redistribution. The amount of time that is required to migrate data is proportional to the data volume. During a scaling event, the services provided by the cluster are not interrupted. When you downgrade cluster specifications, data migration may require up to dozens of hours to complete. Proceed with caution especially if your cluster contains a large amount of data.
       * *   If the cluster has a built-in dataset loaded, make sure that the cluster has reserved storage resources of at least 24 AnalyticDB compute units (ACUs). Otherwise, the built-in dataset cannot be used.
       * *   When the scaling process is about to end, transient connections may occur. We recommend that you scale your cluster during off-peak hours or make sure that your application is configured to automatically reconnect to your cluster.
-      * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition (V3.0) to Data Lakehouse Edition (V3.0), but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition. For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      * *   You can change an AnalyticDB for MySQL cluster from Data Warehouse Edition to Data Lakehouse Edition, but not the other way around. For more information, see Change a cluster from Data Warehouse Edition to Data Lakehouse Edition.
+      * *   For information about the endpoints of the current service, see [Endpoints](~~612373~~).
       *
      */
     CompletableFuture<ModifyDBClusterResponse> modifyDBCluster(ModifyDBClusterRequest request);
@@ -742,9 +750,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyPerformanceViewResponse> modifyPerformanceView(ModifyPerformanceViewRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<PreloadSparkAppMetricsResponse> preloadSparkAppMetrics(PreloadSparkAppMetricsRequest request);
@@ -756,9 +764,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReleaseClusterPublicConnectionResponse> releaseClusterPublicConnection(ReleaseClusterPublicConnectionRequest request);
 
     /**
-      * *   General endpoint: `adb.aliyuncs.com`.
       * *   Regional public endpoint: `adb.<region-id>.aliyuncs.com`. Example: `adb.cn-hangzhou.aliyuncs.com`.
       * *   Regional Virtual Private Cloud (VPC) endpoint: `adb-vpc.<region-id>.aliyuncs.com`. Example: `adb-vpc.cn-hangzhou.aliyuncs.com`.
+      * >  If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.
       *
      */
     CompletableFuture<RenameSparkTemplateFileResponse> renameSparkTemplateFile(RenameSparkTemplateFileRequest request);
@@ -802,7 +810,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitSparkLogAnalyzeTaskResponse> submitSparkLogAnalyzeTask(SubmitSparkLogAnalyzeTaskRequest request);
 
     /**
-      * For information about the endpoints of AnalyticDB for MySQL, see Endpoints.
+      * For information about the endpoints of AnalyticDB for MySQL, see [Endpoints](~~612373~~).
       *
      */
     CompletableFuture<UnbindAccountResponse> unbindAccount(UnbindAccountRequest request);

@@ -192,7 +192,10 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~612397~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -201,7 +204,11 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * FillOriginViewKeys.
+         * Specifies whether to populate the names of the metrics in the original monitoring view when you view the monitoring view. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder fillOriginViewKeys(Boolean fillOriginViewKeys) {
             this.putQueryParameter("FillOriginViewKeys", fillOriginViewKeys);
@@ -228,7 +235,10 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -255,7 +265,7 @@ public class CreatePerformanceViewRequest extends Request {
         }
 
         /**
-         * ViewDetail.
+         * The information about the monitoring view.
          */
         public Builder viewDetail(ViewDetail viewDetail) {
             String viewDetailShrink = shrink(viewDetail, "ViewDetail", "json");
@@ -319,7 +329,7 @@ public class CreatePerformanceViewRequest extends Request {
             private Boolean selected; 
 
             /**
-             * KeyName.
+             * The name of the metric.
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -327,7 +337,11 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * Selected.
+             * Specifies whether to select the metric. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;
@@ -380,7 +394,13 @@ public class CreatePerformanceViewRequest extends Request {
             private java.util.List < Keys> keys; 
 
             /**
-             * Category.
+             * The name of the metric category. Valid values:
+             * <p>
+             * 
+             * *   **Node**
+             * *   **DiskData**
+             * *   **WorkLoad**
+             * *   **ResourceGroup**
              */
             public Builder category(String category) {
                 this.category = category;
@@ -388,7 +408,7 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * Keys.
+             * The metrics.
              */
             public Builder keys(java.util.List < Keys> keys) {
                 this.keys = keys;
@@ -453,7 +473,7 @@ public class CreatePerformanceViewRequest extends Request {
             private Integer chartsPerLine; 
 
             /**
-             * Categories.
+             * The metric categories.
              */
             public Builder categories(java.util.List < Categories> categories) {
                 this.categories = categories;
@@ -461,7 +481,11 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * ChartLinked.
+             * Specifies whether to enable the filter interaction feature. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder chartLinked(Boolean chartLinked) {
                 this.chartLinked = chartLinked;
@@ -469,7 +493,7 @@ public class CreatePerformanceViewRequest extends Request {
             }
 
             /**
-             * ChartsPerLine.
+             * The number of charts to display in each row.
              */
             public Builder chartsPerLine(Integer chartsPerLine) {
                 this.chartsPerLine = chartsPerLine;
