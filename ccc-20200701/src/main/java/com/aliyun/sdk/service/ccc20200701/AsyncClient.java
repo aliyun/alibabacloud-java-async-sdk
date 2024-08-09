@@ -295,6 +295,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDocumentsResponse> listDocuments(ListDocumentsRequest request);
 
+    CompletableFuture<ListFlashSmsApplicationsResponse> listFlashSmsApplications(ListFlashSmsApplicationsRequest request);
+
+    CompletableFuture<ListFlashSmsTemplatesResponse> listFlashSmsTemplates(ListFlashSmsTemplatesRequest request);
+
     CompletableFuture<ListGroupChatMessagesResponse> listGroupChatMessages(ListGroupChatMessagesRequest request);
 
     CompletableFuture<ListHistoricalAgentReportResponse> listHistoricalAgentReport(ListHistoricalAgentReportRequest request);
