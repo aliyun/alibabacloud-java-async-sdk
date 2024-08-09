@@ -137,6 +137,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+        private String networkInterfaceId;
+
         @com.aliyun.core.annotation.NameInMap("SnatEntryId")
         private String snatEntryId;
 
@@ -161,6 +164,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private SnatTableEntry(Builder builder) {
             this.eipAffinity = builder.eipAffinity;
             this.natGatewayId = builder.natGatewayId;
+            this.networkInterfaceId = builder.networkInterfaceId;
             this.snatEntryId = builder.snatEntryId;
             this.snatEntryName = builder.snatEntryName;
             this.snatIp = builder.snatIp;
@@ -190,6 +194,13 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
          */
         public String getNatGatewayId() {
             return this.natGatewayId;
+        }
+
+        /**
+         * @return networkInterfaceId
+         */
+        public String getNetworkInterfaceId() {
+            return this.networkInterfaceId;
         }
 
         /**
@@ -244,6 +255,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         public static final class Builder {
             private String eipAffinity; 
             private String natGatewayId; 
+            private String networkInterfaceId; 
             private String snatEntryId; 
             private String snatEntryName; 
             private String snatIp; 
@@ -265,6 +277,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
              */
             public Builder natGatewayId(String natGatewayId) {
                 this.natGatewayId = natGatewayId;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceId.
+             */
+            public Builder networkInterfaceId(String networkInterfaceId) {
+                this.networkInterfaceId = networkInterfaceId;
                 return this;
             }
 

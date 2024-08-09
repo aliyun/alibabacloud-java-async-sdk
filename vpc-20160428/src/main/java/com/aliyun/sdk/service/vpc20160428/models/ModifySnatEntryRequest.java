@@ -20,6 +20,10 @@ public class ModifySnatEntryRequest extends Request {
     private Integer eipAffinity;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
+    private String networkInterfaceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -62,6 +66,7 @@ public class ModifySnatEntryRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.eipAffinity = builder.eipAffinity;
+        this.networkInterfaceId = builder.networkInterfaceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -98,6 +103,13 @@ public class ModifySnatEntryRequest extends Request {
      */
     public Integer getEipAffinity() {
         return this.eipAffinity;
+    }
+
+    /**
+     * @return networkInterfaceId
+     */
+    public String getNetworkInterfaceId() {
+        return this.networkInterfaceId;
     }
 
     /**
@@ -166,6 +178,7 @@ public class ModifySnatEntryRequest extends Request {
     public static final class Builder extends Request.Builder<ModifySnatEntryRequest, Builder> {
         private String clientToken; 
         private Integer eipAffinity; 
+        private String networkInterfaceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -184,6 +197,7 @@ public class ModifySnatEntryRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.eipAffinity = request.eipAffinity;
+            this.networkInterfaceId = request.networkInterfaceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -215,6 +229,15 @@ public class ModifySnatEntryRequest extends Request {
         public Builder eipAffinity(Integer eipAffinity) {
             this.putQueryParameter("EipAffinity", eipAffinity);
             this.eipAffinity = eipAffinity;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceId.
+         */
+        public Builder networkInterfaceId(String networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
             return this;
         }
 

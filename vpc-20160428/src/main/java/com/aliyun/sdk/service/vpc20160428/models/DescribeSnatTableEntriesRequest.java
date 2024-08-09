@@ -16,6 +16,10 @@ public class DescribeSnatTableEntriesRequest extends Request {
     private String natGatewayId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIds")
+    private java.util.List < String > networkInterfaceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -72,6 +76,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
     private DescribeSnatTableEntriesRequest(Builder builder) {
         super(builder);
         this.natGatewayId = builder.natGatewayId;
+        this.networkInterfaceIds = builder.networkInterfaceIds;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -105,6 +110,13 @@ public class DescribeSnatTableEntriesRequest extends Request {
      */
     public String getNatGatewayId() {
         return this.natGatewayId;
+    }
+
+    /**
+     * @return networkInterfaceIds
+     */
+    public java.util.List < String > getNetworkInterfaceIds() {
+        return this.networkInterfaceIds;
     }
 
     /**
@@ -200,6 +212,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeSnatTableEntriesRequest, Builder> {
         private String natGatewayId; 
+        private java.util.List < String > networkInterfaceIds; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -221,6 +234,7 @@ public class DescribeSnatTableEntriesRequest extends Request {
         private Builder(DescribeSnatTableEntriesRequest request) {
             super(request);
             this.natGatewayId = request.natGatewayId;
+            this.networkInterfaceIds = request.networkInterfaceIds;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -245,6 +259,15 @@ public class DescribeSnatTableEntriesRequest extends Request {
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
             this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceIds.
+         */
+        public Builder networkInterfaceIds(java.util.List < String > networkInterfaceIds) {
+            this.putQueryParameter("NetworkInterfaceIds", networkInterfaceIds);
+            this.networkInterfaceIds = networkInterfaceIds;
             return this;
         }
 
