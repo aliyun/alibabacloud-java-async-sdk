@@ -141,6 +141,10 @@ public class CreateDesktopGroupRequest extends Request {
     private Boolean profileFollowSwitch;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    private String promotionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RatioThreshold")
     private Float ratioThreshold;
 
@@ -209,6 +213,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
         this.profileFollowSwitch = builder.profileFollowSwitch;
+        this.promotionId = builder.promotionId;
         this.ratioThreshold = builder.ratioThreshold;
         this.regionId = builder.regionId;
         this.resetType = builder.resetType;
@@ -444,6 +449,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return promotionId
+     */
+    public String getPromotionId() {
+        return this.promotionId;
+    }
+
+    /**
      * @return ratioThreshold
      */
     public Float getRatioThreshold() {
@@ -537,6 +549,7 @@ public class CreateDesktopGroupRequest extends Request {
         private String periodUnit; 
         private String policyGroupId; 
         private Boolean profileFollowSwitch; 
+        private String promotionId; 
         private Float ratioThreshold; 
         private String regionId; 
         private Long resetType; 
@@ -583,6 +596,7 @@ public class CreateDesktopGroupRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
             this.profileFollowSwitch = request.profileFollowSwitch;
+            this.promotionId = request.promotionId;
             this.ratioThreshold = request.ratioThreshold;
             this.regionId = request.regionId;
             this.resetType = request.resetType;
@@ -896,6 +910,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder profileFollowSwitch(Boolean profileFollowSwitch) {
             this.putQueryParameter("ProfileFollowSwitch", profileFollowSwitch);
             this.profileFollowSwitch = profileFollowSwitch;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 
