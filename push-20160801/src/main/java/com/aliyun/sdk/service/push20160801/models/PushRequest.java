@@ -16,6 +16,20 @@ public class PushRequest extends Request {
     private String androidActivity;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidBadgeAddNum")
+    @com.aliyun.core.annotation.Validation(maximum = 99, minimum = 1)
+    private Integer androidBadgeAddNum;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidBadgeClass")
+    private String androidBadgeClass;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidBadgeSetNum")
+    @com.aliyun.core.annotation.Validation(maximum = 99, minimum = 1)
+    private Integer androidBadgeSetNum;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AndroidBigBody")
     private String androidBigBody;
 
@@ -379,6 +393,9 @@ public class PushRequest extends Request {
     private PushRequest(Builder builder) {
         super(builder);
         this.androidActivity = builder.androidActivity;
+        this.androidBadgeAddNum = builder.androidBadgeAddNum;
+        this.androidBadgeClass = builder.androidBadgeClass;
+        this.androidBadgeSetNum = builder.androidBadgeSetNum;
         this.androidBigBody = builder.androidBigBody;
         this.androidBigPictureUrl = builder.androidBigPictureUrl;
         this.androidBigTitle = builder.androidBigTitle;
@@ -486,6 +503,27 @@ public class PushRequest extends Request {
      */
     public String getAndroidActivity() {
         return this.androidActivity;
+    }
+
+    /**
+     * @return androidBadgeAddNum
+     */
+    public Integer getAndroidBadgeAddNum() {
+        return this.androidBadgeAddNum;
+    }
+
+    /**
+     * @return androidBadgeClass
+     */
+    public String getAndroidBadgeClass() {
+        return this.androidBadgeClass;
+    }
+
+    /**
+     * @return androidBadgeSetNum
+     */
+    public Integer getAndroidBadgeSetNum() {
+        return this.androidBadgeSetNum;
     }
 
     /**
@@ -1099,6 +1137,9 @@ public class PushRequest extends Request {
 
     public static final class Builder extends Request.Builder<PushRequest, Builder> {
         private String androidActivity; 
+        private Integer androidBadgeAddNum; 
+        private String androidBadgeClass; 
+        private Integer androidBadgeSetNum; 
         private String androidBigBody; 
         private String androidBigPictureUrl; 
         private String androidBigTitle; 
@@ -1194,6 +1235,9 @@ public class PushRequest extends Request {
         private Builder(PushRequest request) {
             super(request);
             this.androidActivity = request.androidActivity;
+            this.androidBadgeAddNum = request.androidBadgeAddNum;
+            this.androidBadgeClass = request.androidBadgeClass;
+            this.androidBadgeSetNum = request.androidBadgeSetNum;
             this.androidBigBody = request.androidBigBody;
             this.androidBigPictureUrl = request.androidBigPictureUrl;
             this.androidBigTitle = request.androidBigTitle;
@@ -1289,6 +1333,33 @@ public class PushRequest extends Request {
         public Builder androidActivity(String androidActivity) {
             this.putQueryParameter("AndroidActivity", androidActivity);
             this.androidActivity = androidActivity;
+            return this;
+        }
+
+        /**
+         * AndroidBadgeAddNum.
+         */
+        public Builder androidBadgeAddNum(Integer androidBadgeAddNum) {
+            this.putQueryParameter("AndroidBadgeAddNum", androidBadgeAddNum);
+            this.androidBadgeAddNum = androidBadgeAddNum;
+            return this;
+        }
+
+        /**
+         * AndroidBadgeClass.
+         */
+        public Builder androidBadgeClass(String androidBadgeClass) {
+            this.putQueryParameter("AndroidBadgeClass", androidBadgeClass);
+            this.androidBadgeClass = androidBadgeClass;
+            return this;
+        }
+
+        /**
+         * AndroidBadgeSetNum.
+         */
+        public Builder androidBadgeSetNum(Integer androidBadgeSetNum) {
+            this.putQueryParameter("AndroidBadgeSetNum", androidBadgeSetNum);
+            this.androidBadgeSetNum = androidBadgeSetNum;
             return this;
         }
 

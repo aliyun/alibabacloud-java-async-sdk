@@ -97,6 +97,15 @@ public class MassPushRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AndroidActivity")
         private String androidActivity;
 
+        @com.aliyun.core.annotation.NameInMap("AndroidBadgeAddNum")
+        private Integer androidBadgeAddNum;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidBadgeClass")
+        private String androidBadgeClass;
+
+        @com.aliyun.core.annotation.NameInMap("AndroidBadgeSetNum")
+        private Integer androidBadgeSetNum;
+
         @com.aliyun.core.annotation.NameInMap("AndroidBigBody")
         private String androidBigBody;
 
@@ -351,6 +360,9 @@ public class MassPushRequest extends Request {
 
         private PushTask(Builder builder) {
             this.androidActivity = builder.androidActivity;
+            this.androidBadgeAddNum = builder.androidBadgeAddNum;
+            this.androidBadgeClass = builder.androidBadgeClass;
+            this.androidBadgeSetNum = builder.androidBadgeSetNum;
             this.androidBigBody = builder.androidBigBody;
             this.androidBigPictureUrl = builder.androidBigPictureUrl;
             this.androidBigTitle = builder.androidBigTitle;
@@ -447,6 +459,27 @@ public class MassPushRequest extends Request {
          */
         public String getAndroidActivity() {
             return this.androidActivity;
+        }
+
+        /**
+         * @return androidBadgeAddNum
+         */
+        public Integer getAndroidBadgeAddNum() {
+            return this.androidBadgeAddNum;
+        }
+
+        /**
+         * @return androidBadgeClass
+         */
+        public String getAndroidBadgeClass() {
+            return this.androidBadgeClass;
+        }
+
+        /**
+         * @return androidBadgeSetNum
+         */
+        public Integer getAndroidBadgeSetNum() {
+            return this.androidBadgeSetNum;
         }
 
         /**
@@ -1018,6 +1051,9 @@ public class MassPushRequest extends Request {
 
         public static final class Builder {
             private String androidActivity; 
+            private Integer androidBadgeAddNum; 
+            private String androidBadgeClass; 
+            private Integer androidBadgeSetNum; 
             private String androidBigBody; 
             private String androidBigPictureUrl; 
             private String androidBigTitle; 
@@ -1105,6 +1141,30 @@ public class MassPushRequest extends Request {
              */
             public Builder androidActivity(String androidActivity) {
                 this.androidActivity = androidActivity;
+                return this;
+            }
+
+            /**
+             * AndroidBadgeAddNum.
+             */
+            public Builder androidBadgeAddNum(Integer androidBadgeAddNum) {
+                this.androidBadgeAddNum = androidBadgeAddNum;
+                return this;
+            }
+
+            /**
+             * AndroidBadgeClass.
+             */
+            public Builder androidBadgeClass(String androidBadgeClass) {
+                this.androidBadgeClass = androidBadgeClass;
+                return this;
+            }
+
+            /**
+             * AndroidBadgeSetNum.
+             */
+            public Builder androidBadgeSetNum(Integer androidBadgeSetNum) {
+                this.androidBadgeSetNum = androidBadgeSetNum;
                 return this;
             }
 
