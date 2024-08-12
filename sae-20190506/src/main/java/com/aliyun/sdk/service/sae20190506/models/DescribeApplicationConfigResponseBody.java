@@ -561,6 +561,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableGreyTagRoute")
         private Boolean enableGreyTagRoute;
 
+        @com.aliyun.core.annotation.NameInMap("EnableIdle")
+        private Boolean enableIdle;
+
         @com.aliyun.core.annotation.NameInMap("Envs")
         private String envs;
 
@@ -590,6 +593,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MicroRegistration")
         private String microRegistration;
+
+        @com.aliyun.core.annotation.NameInMap("MicroRegistrationConfig")
+        private String microRegistrationConfig;
 
         @com.aliyun.core.annotation.NameInMap("MinReadyInstanceRatio")
         private Integer minReadyInstanceRatio;
@@ -728,6 +734,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.edasContainerVersion = builder.edasContainerVersion;
             this.enableAhas = builder.enableAhas;
             this.enableGreyTagRoute = builder.enableGreyTagRoute;
+            this.enableIdle = builder.enableIdle;
             this.envs = builder.envs;
             this.imagePullSecrets = builder.imagePullSecrets;
             this.imageUrl = builder.imageUrl;
@@ -738,6 +745,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.liveness = builder.liveness;
             this.memory = builder.memory;
             this.microRegistration = builder.microRegistration;
+            this.microRegistrationConfig = builder.microRegistrationConfig;
             this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
             this.minReadyInstances = builder.minReadyInstances;
             this.mountDesc = builder.mountDesc;
@@ -901,6 +909,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableIdle
+         */
+        public Boolean getEnableIdle() {
+            return this.enableIdle;
+        }
+
+        /**
          * @return envs
          */
         public String getEnvs() {
@@ -968,6 +983,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getMicroRegistration() {
             return this.microRegistration;
+        }
+
+        /**
+         * @return microRegistrationConfig
+         */
+        public String getMicroRegistrationConfig() {
+            return this.microRegistrationConfig;
         }
 
         /**
@@ -1267,6 +1289,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String edasContainerVersion; 
             private String enableAhas; 
             private Boolean enableGreyTagRoute; 
+            private Boolean enableIdle; 
             private String envs; 
             private String imagePullSecrets; 
             private String imageUrl; 
@@ -1277,6 +1300,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String liveness; 
             private Integer memory; 
             private String microRegistration; 
+            private String microRegistrationConfig; 
             private Integer minReadyInstanceRatio; 
             private Integer minReadyInstances; 
             private java.util.List < MountDesc> mountDesc; 
@@ -1489,6 +1513,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             }
 
             /**
+             * EnableIdle.
+             */
+            public Builder enableIdle(Boolean enableIdle) {
+                this.enableIdle = enableIdle;
+                return this;
+            }
+
+            /**
              * The environment variables. Variable description:
              * <p>
              * 
@@ -1630,6 +1662,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder microRegistration(String microRegistration) {
                 this.microRegistration = microRegistration;
+                return this;
+            }
+
+            /**
+             * MicroRegistrationConfig.
+             */
+            public Builder microRegistrationConfig(String microRegistrationConfig) {
+                this.microRegistrationConfig = microRegistrationConfig;
                 return this;
             }
 
