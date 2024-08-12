@@ -36,6 +36,10 @@ public class ListListenersRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecSensorEnabled")
+    private String secSensorEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -47,6 +51,7 @@ public class ListListenersRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.secSensorEnabled = builder.secSensorEnabled;
         this.tag = builder.tag;
     }
 
@@ -106,6 +111,13 @@ public class ListListenersRequest extends Request {
     }
 
     /**
+     * @return secSensorEnabled
+     */
+    public String getSecSensorEnabled() {
+        return this.secSensorEnabled;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -119,6 +131,7 @@ public class ListListenersRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
+        private String secSensorEnabled; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -133,6 +146,7 @@ public class ListListenersRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.secSensorEnabled = request.secSensorEnabled;
             this.tag = request.tag;
         } 
 
@@ -194,6 +208,15 @@ public class ListListenersRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SecSensorEnabled.
+         */
+        public Builder secSensorEnabled(String secSensorEnabled) {
+            this.putQueryParameter("SecSensorEnabled", secSensorEnabled);
+            this.secSensorEnabled = secSensorEnabled;
             return this;
         }
 
