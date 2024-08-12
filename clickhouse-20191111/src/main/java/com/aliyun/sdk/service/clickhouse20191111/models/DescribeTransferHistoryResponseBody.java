@@ -71,8 +71,14 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
     } 
 
     public static class HistoryDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DisableWriteWindows")
+        private String disableWriteWindows;
+
         @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
+
+        @com.aliyun.core.annotation.NameInMap("SourceControlVersion")
+        private String sourceControlVersion;
 
         @com.aliyun.core.annotation.NameInMap("SourceDBCluster")
         private String sourceDBCluster;
@@ -80,13 +86,19 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TargetControlVersion")
+        private String targetControlVersion;
+
         @com.aliyun.core.annotation.NameInMap("TargetDBCluster")
         private String targetDBCluster;
 
         private HistoryDetail(Builder builder) {
+            this.disableWriteWindows = builder.disableWriteWindows;
             this.progress = builder.progress;
+            this.sourceControlVersion = builder.sourceControlVersion;
             this.sourceDBCluster = builder.sourceDBCluster;
             this.status = builder.status;
+            this.targetControlVersion = builder.targetControlVersion;
             this.targetDBCluster = builder.targetDBCluster;
         }
 
@@ -99,10 +111,24 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return disableWriteWindows
+         */
+        public String getDisableWriteWindows() {
+            return this.disableWriteWindows;
+        }
+
+        /**
          * @return progress
          */
         public String getProgress() {
             return this.progress;
+        }
+
+        /**
+         * @return sourceControlVersion
+         */
+        public String getSourceControlVersion() {
+            return this.sourceControlVersion;
         }
 
         /**
@@ -120,6 +146,13 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
 
         /**
+         * @return targetControlVersion
+         */
+        public String getTargetControlVersion() {
+            return this.targetControlVersion;
+        }
+
+        /**
          * @return targetDBCluster
          */
         public String getTargetDBCluster() {
@@ -127,16 +160,35 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String disableWriteWindows; 
             private String progress; 
+            private String sourceControlVersion; 
             private String sourceDBCluster; 
             private String status; 
+            private String targetControlVersion; 
             private String targetDBCluster; 
+
+            /**
+             * DisableWriteWindows.
+             */
+            public Builder disableWriteWindows(String disableWriteWindows) {
+                this.disableWriteWindows = disableWriteWindows;
+                return this;
+            }
 
             /**
              * The progress of the data migration.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
+                return this;
+            }
+
+            /**
+             * SourceControlVersion.
+             */
+            public Builder sourceControlVersion(String sourceControlVersion) {
+                this.sourceControlVersion = sourceControlVersion;
                 return this;
             }
 
@@ -157,6 +209,14 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TargetControlVersion.
+             */
+            public Builder targetControlVersion(String targetControlVersion) {
+                this.targetControlVersion = targetControlVersion;
                 return this;
             }
 

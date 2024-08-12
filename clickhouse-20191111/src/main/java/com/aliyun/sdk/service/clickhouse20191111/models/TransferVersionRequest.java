@@ -17,6 +17,10 @@ public class TransferVersionRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableWriteWindows")
+    private String disableWriteWindows;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -73,6 +77,7 @@ public class TransferVersionRequest extends Request {
     private TransferVersionRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.disableWriteWindows = builder.disableWriteWindows;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -105,6 +110,13 @@ public class TransferVersionRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return disableWriteWindows
+     */
+    public String getDisableWriteWindows() {
+        return this.disableWriteWindows;
     }
 
     /**
@@ -193,6 +205,7 @@ public class TransferVersionRequest extends Request {
 
     public static final class Builder extends Request.Builder<TransferVersionRequest, Builder> {
         private String DBClusterId; 
+        private String disableWriteWindows; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -213,6 +226,7 @@ public class TransferVersionRequest extends Request {
         private Builder(TransferVersionRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.disableWriteWindows = request.disableWriteWindows;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -233,6 +247,15 @@ public class TransferVersionRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * DisableWriteWindows.
+         */
+        public Builder disableWriteWindows(String disableWriteWindows) {
+            this.putQueryParameter("DisableWriteWindows", disableWriteWindows);
+            this.disableWriteWindows = disableWriteWindows;
             return this;
         }
 

@@ -347,6 +347,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBNodeStorage")
         private Long DBNodeStorage;
 
+        @com.aliyun.core.annotation.NameInMap("DbVersion")
+        private String dbVersion;
+
         @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
@@ -413,6 +416,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             this.DBNodeClass = builder.DBNodeClass;
             this.DBNodeCount = builder.DBNodeCount;
             this.DBNodeStorage = builder.DBNodeStorage;
+            this.dbVersion = builder.dbVersion;
             this.expireTime = builder.expireTime;
             this.extStorageSize = builder.extStorageSize;
             this.extStorageType = builder.extStorageType;
@@ -536,6 +540,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
          */
         public Long getDBNodeStorage() {
             return this.DBNodeStorage;
+        }
+
+        /**
+         * @return dbVersion
+         */
+        public String getDbVersion() {
+            return this.dbVersion;
         }
 
         /**
@@ -672,6 +683,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String DBNodeClass; 
             private Long DBNodeCount; 
             private Long DBNodeStorage; 
+            private String dbVersion; 
             private String expireTime; 
             private Integer extStorageSize; 
             private String extStorageType; 
@@ -835,6 +847,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder DBNodeStorage(Long DBNodeStorage) {
                 this.DBNodeStorage = DBNodeStorage;
+                return this;
+            }
+
+            /**
+             * DbVersion.
+             */
+            public Builder dbVersion(String dbVersion) {
+                this.dbVersion = dbVersion;
                 return this;
             }
 
