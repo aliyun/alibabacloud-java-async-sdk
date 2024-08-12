@@ -244,6 +244,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetGatewayAuthDetailResponse> getGatewayAuthDetail(GetGatewayAuthDetailRequest request);
 
+    CompletableFuture<GetGatewayConfigResponse> getGatewayConfig(GetGatewayConfigRequest request);
+
     CompletableFuture<GetGatewayDomainDetailResponse> getGatewayDomainDetail(GetGatewayDomainDetailRequest request);
 
     CompletableFuture<GetGatewayOptionResponse> getGatewayOption(GetGatewayOptionRequest request);
