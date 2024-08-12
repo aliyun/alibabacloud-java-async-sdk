@@ -809,6 +809,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
+        private String reasonCode;
+
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
@@ -823,6 +826,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.notBefore = builder.notBefore;
             this.reason = builder.reason;
+            this.reasonCode = builder.reasonCode;
             this.resourceType = builder.resourceType;
         }
 
@@ -905,6 +909,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return reasonCode
+         */
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -922,6 +933,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String instanceId; 
             private String notBefore; 
             private String reason; 
+            private String reasonCode; 
             private String resourceType; 
 
             /**
@@ -1001,6 +1013,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              */
             public Builder reason(String reason) {
                 this.reason = reason;
+                return this;
+            }
+
+            /**
+             * ReasonCode.
+             */
+            public Builder reasonCode(String reasonCode) {
+                this.reasonCode = reasonCode;
                 return this;
             }
 
