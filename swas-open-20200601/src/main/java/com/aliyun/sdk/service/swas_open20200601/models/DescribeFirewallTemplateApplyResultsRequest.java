@@ -20,10 +20,6 @@ public class DescribeFirewallTemplateApplyResultsRequest extends Request {
     private String firewallTemplateId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private String instanceId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -44,7 +40,6 @@ public class DescribeFirewallTemplateApplyResultsRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.firewallTemplateId = builder.firewallTemplateId;
-        this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -79,13 +74,6 @@ public class DescribeFirewallTemplateApplyResultsRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -116,7 +104,6 @@ public class DescribeFirewallTemplateApplyResultsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeFirewallTemplateApplyResultsRequest, Builder> {
         private String clientToken; 
         private String firewallTemplateId; 
-        private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
@@ -130,7 +117,6 @@ public class DescribeFirewallTemplateApplyResultsRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.firewallTemplateId = request.firewallTemplateId;
-            this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
@@ -152,15 +138,6 @@ public class DescribeFirewallTemplateApplyResultsRequest extends Request {
         public Builder firewallTemplateId(String firewallTemplateId) {
             this.putQueryParameter("FirewallTemplateId", firewallTemplateId);
             this.firewallTemplateId = firewallTemplateId;
-            return this;
-        }
-
-        /**
-         * The ID of the simple application server to which the template belongs.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
             return this;
         }
 

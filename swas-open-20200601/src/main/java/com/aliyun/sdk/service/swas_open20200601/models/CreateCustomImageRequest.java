@@ -39,8 +39,8 @@ public class CreateCustomImageRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResoureGroupId")
-    private String resoureGroupId;
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SystemSnapshotId")
@@ -58,7 +58,7 @@ public class CreateCustomImageRequest extends Request {
         this.imageName = builder.imageName;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
-        this.resoureGroupId = builder.resoureGroupId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.systemSnapshotId = builder.systemSnapshotId;
         this.tag = builder.tag;
     }
@@ -119,10 +119,10 @@ public class CreateCustomImageRequest extends Request {
     }
 
     /**
-     * @return resoureGroupId
+     * @return resourceGroupId
      */
-    public String getResoureGroupId() {
-        return this.resoureGroupId;
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -146,7 +146,7 @@ public class CreateCustomImageRequest extends Request {
         private String imageName; 
         private String instanceId; 
         private String regionId; 
-        private String resoureGroupId; 
+        private String resourceGroupId; 
         private String systemSnapshotId; 
         private java.util.List < Tag> tag; 
 
@@ -162,7 +162,7 @@ public class CreateCustomImageRequest extends Request {
             this.imageName = request.imageName;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
-            this.resoureGroupId = request.resoureGroupId;
+            this.resourceGroupId = request.resourceGroupId;
             this.systemSnapshotId = request.systemSnapshotId;
             this.tag = request.tag;
         } 
@@ -222,11 +222,11 @@ public class CreateCustomImageRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * ResourceGroupId.
          */
-        public Builder resoureGroupId(String resoureGroupId) {
-            this.putQueryParameter("ResoureGroupId", resoureGroupId);
-            this.resoureGroupId = resoureGroupId;
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -98,7 +98,7 @@ public class RemoveCustomImageShareAccountRequest extends Request {
         } 
 
         /**
-         * Account.
+         * The IDs of the Alibaba Cloud accounts with which you want to unshare the image.
          */
         public Builder account(java.util.List < Long > account) {
             this.putQueryParameter("Account", account);
@@ -107,7 +107,7 @@ public class RemoveCustomImageShareAccountRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -116,7 +116,7 @@ public class RemoveCustomImageShareAccountRequest extends Request {
         }
 
         /**
-         * ImageId.
+         * The ID of the shared custom image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -125,7 +125,7 @@ public class RemoveCustomImageShareAccountRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

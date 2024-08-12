@@ -21,10 +21,6 @@ public class DeleteFirewallTemplatesRequest extends Request {
     private java.util.List < String > firewallTemplateId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    private String instanceId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -33,7 +29,6 @@ public class DeleteFirewallTemplatesRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.firewallTemplateId = builder.firewallTemplateId;
-        this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
     }
 
@@ -65,13 +60,6 @@ public class DeleteFirewallTemplatesRequest extends Request {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -81,7 +69,6 @@ public class DeleteFirewallTemplatesRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteFirewallTemplatesRequest, Builder> {
         private String clientToken; 
         private java.util.List < String > firewallTemplateId; 
-        private String instanceId; 
         private String regionId; 
 
         private Builder() {
@@ -92,7 +79,6 @@ public class DeleteFirewallTemplatesRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.firewallTemplateId = request.firewallTemplateId;
-            this.instanceId = request.instanceId;
             this.regionId = request.regionId;
         } 
 
@@ -111,15 +97,6 @@ public class DeleteFirewallTemplatesRequest extends Request {
         public Builder firewallTemplateId(java.util.List < String > firewallTemplateId) {
             this.putQueryParameter("FirewallTemplateId", firewallTemplateId);
             this.firewallTemplateId = firewallTemplateId;
-            return this;
-        }
-
-        /**
-         * The ID of the simple application server to which the firewall templates belong.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
             return this;
         }
 
