@@ -15,6 +15,10 @@ public class InitFaceVerifyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppQualityCheck")
+    private String appQualityCheck;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AuthId")
     private String authId;
@@ -65,6 +69,7 @@ public class InitFaceVerifyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FaceContrastPicture")
+    @com.aliyun.core.annotation.Validation(maxLength = 1548576)
     private String faceContrastPicture;
 
     @com.aliyun.core.annotation.Query
@@ -158,6 +163,7 @@ public class InitFaceVerifyRequest extends Request {
     private InitFaceVerifyRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.appQualityCheck = builder.appQualityCheck;
         this.authId = builder.authId;
         this.birthday = builder.birthday;
         this.callbackToken = builder.callbackToken;
@@ -213,6 +219,13 @@ public class InitFaceVerifyRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return appQualityCheck
+     */
+    public String getAppQualityCheck() {
+        return this.appQualityCheck;
     }
 
     /**
@@ -462,6 +475,7 @@ public class InitFaceVerifyRequest extends Request {
 
     public static final class Builder extends Request.Builder<InitFaceVerifyRequest, Builder> {
         private String regionId; 
+        private String appQualityCheck; 
         private String authId; 
         private String birthday; 
         private String callbackToken; 
@@ -505,6 +519,7 @@ public class InitFaceVerifyRequest extends Request {
         private Builder(InitFaceVerifyRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.appQualityCheck = request.appQualityCheck;
             this.authId = request.authId;
             this.birthday = request.birthday;
             this.callbackToken = request.callbackToken;
@@ -548,6 +563,15 @@ public class InitFaceVerifyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AppQualityCheck.
+         */
+        public Builder appQualityCheck(String appQualityCheck) {
+            this.putQueryParameter("AppQualityCheck", appQualityCheck);
+            this.appQualityCheck = appQualityCheck;
             return this;
         }
 
