@@ -18,12 +18,10 @@ public class RecoveryFileRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupFileId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String backupFileId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupFilePath")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String backupFilePath;
 
     @com.aliyun.core.annotation.Query
