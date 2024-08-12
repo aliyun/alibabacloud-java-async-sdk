@@ -267,6 +267,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListCallDetailRecordsV2Response> listCallDetailRecordsV2(ListCallDetailRecordsV2Request request);
 
+    CompletableFuture<ListCallSummariesResponse> listCallSummaries(ListCallSummariesRequest request);
+
     CompletableFuture<ListCallTagsResponse> listCallTags(ListCallTagsRequest request);
 
     CompletableFuture<ListCampaignTrendingReportResponse> listCampaignTrendingReport(ListCampaignTrendingReportRequest request);
@@ -390,6 +392,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
 
     CompletableFuture<ListVoicemailsResponse> listVoicemails(ListVoicemailsRequest request);
+
+    CompletableFuture<ListWaitingChatsResponse> listWaitingChats(ListWaitingChatsRequest request);
 
     CompletableFuture<MakeCallResponse> makeCall(MakeCallRequest request);
 
