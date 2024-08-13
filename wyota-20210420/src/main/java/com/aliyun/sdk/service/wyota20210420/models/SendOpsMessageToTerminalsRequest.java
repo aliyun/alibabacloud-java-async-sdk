@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendOpsMessageToTerminalsRequest</p>
  */
 public class SendOpsMessageToTerminalsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Delay")
+    private Boolean delay;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
@@ -29,6 +33,7 @@ public class SendOpsMessageToTerminalsRequest extends Request {
 
     private SendOpsMessageToTerminalsRequest(Builder builder) {
         super(builder);
+        this.delay = builder.delay;
         this.msg = builder.msg;
         this.opsAction = builder.opsAction;
         this.uuids = builder.uuids;
@@ -46,6 +51,13 @@ public class SendOpsMessageToTerminalsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return delay
+     */
+    public Boolean getDelay() {
+        return this.delay;
     }
 
     /**
@@ -77,6 +89,7 @@ public class SendOpsMessageToTerminalsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SendOpsMessageToTerminalsRequest, Builder> {
+        private Boolean delay; 
         private String msg; 
         private String opsAction; 
         private java.util.List < String > uuids; 
@@ -88,11 +101,21 @@ public class SendOpsMessageToTerminalsRequest extends Request {
 
         private Builder(SendOpsMessageToTerminalsRequest request) {
             super(request);
+            this.delay = request.delay;
             this.msg = request.msg;
             this.opsAction = request.opsAction;
             this.uuids = request.uuids;
             this.waitForAck = request.waitForAck;
         } 
+
+        /**
+         * Delay.
+         */
+        public Builder delay(Boolean delay) {
+            this.putQueryParameter("Delay", delay);
+            this.delay = delay;
+            return this;
+        }
 
         /**
          * Msg.

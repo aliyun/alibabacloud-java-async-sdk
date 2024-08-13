@@ -24,16 +24,26 @@ public class ListTerminalsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SearchKeyword")
     private String searchKeyword;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SerialNumbers")
+    private java.util.List < String > serialNumbers;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TerminalGroupId")
     private String terminalGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuids")
+    private java.util.List < String > uuids;
 
     private ListTerminalsRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.searchKeyword = builder.searchKeyword;
+        this.serialNumbers = builder.serialNumbers;
         this.terminalGroupId = builder.terminalGroupId;
+        this.uuids = builder.uuids;
     }
 
     public static Builder builder() {
@@ -71,17 +81,33 @@ public class ListTerminalsRequest extends Request {
     }
 
     /**
+     * @return serialNumbers
+     */
+    public java.util.List < String > getSerialNumbers() {
+        return this.serialNumbers;
+    }
+
+    /**
      * @return terminalGroupId
      */
     public String getTerminalGroupId() {
         return this.terminalGroupId;
     }
 
+    /**
+     * @return uuids
+     */
+    public java.util.List < String > getUuids() {
+        return this.uuids;
+    }
+
     public static final class Builder extends Request.Builder<ListTerminalsRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
         private String searchKeyword; 
+        private java.util.List < String > serialNumbers; 
         private String terminalGroupId; 
+        private java.util.List < String > uuids; 
 
         private Builder() {
             super();
@@ -92,7 +118,9 @@ public class ListTerminalsRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.searchKeyword = request.searchKeyword;
+            this.serialNumbers = request.serialNumbers;
             this.terminalGroupId = request.terminalGroupId;
+            this.uuids = request.uuids;
         } 
 
         /**
@@ -123,11 +151,29 @@ public class ListTerminalsRequest extends Request {
         }
 
         /**
+         * SerialNumbers.
+         */
+        public Builder serialNumbers(java.util.List < String > serialNumbers) {
+            this.putQueryParameter("SerialNumbers", serialNumbers);
+            this.serialNumbers = serialNumbers;
+            return this;
+        }
+
+        /**
          * TerminalGroupId.
          */
         public Builder terminalGroupId(String terminalGroupId) {
             this.putBodyParameter("TerminalGroupId", terminalGroupId);
             this.terminalGroupId = terminalGroupId;
+            return this;
+        }
+
+        /**
+         * Uuids.
+         */
+        public Builder uuids(java.util.List < String > uuids) {
+            this.putQueryParameter("Uuids", uuids);
+            this.uuids = uuids;
             return this;
         }
 
