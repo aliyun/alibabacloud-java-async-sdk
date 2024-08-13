@@ -61,7 +61,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * AttachmentList.
+         * The records of attachments to the mitigation policy.
          */
         public Builder attachmentList(java.util.List < AttachmentList> attachmentList) {
             this.attachmentList = attachmentList;
@@ -69,7 +69,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of attachments to the mitigation policy.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -103,6 +103,9 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
+        @com.aliyun.core.annotation.NameInMap("PolicyRemark")
+        private String policyRemark;
+
         @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
@@ -120,6 +123,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             this.memberUid = builder.memberUid;
             this.policyId = builder.policyId;
             this.policyName = builder.policyName;
+            this.policyRemark = builder.policyRemark;
             this.policyType = builder.policyType;
             this.port = builder.port;
             this.protocol = builder.protocol;
@@ -163,6 +167,13 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
         }
 
         /**
+         * @return policyRemark
+         */
+        public String getPolicyRemark() {
+            return this.policyRemark;
+        }
+
+        /**
          * @return policyType
          */
         public String getPolicyType() {
@@ -195,13 +206,14 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             private String memberUid; 
             private String policyId; 
             private String policyName; 
+            private String policyRemark; 
             private String policyType; 
             private Integer port; 
             private String protocol; 
             private String region; 
 
             /**
-             * Ip.
+             * The IP address of the protected object.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -209,7 +221,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * MemberUid.
+             * The UID of the member to which the IP address of the protected object belongs.
              */
             public Builder memberUid(String memberUid) {
                 this.memberUid = memberUid;
@@ -217,7 +229,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * The ID of the policy.
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -225,7 +237,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the rule.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -233,7 +245,19 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * PolicyRemark.
+             */
+            public Builder policyRemark(String policyRemark) {
+                this.policyRemark = policyRemark;
+                return this;
+            }
+
+            /**
+             * The type of the policy. Valid values:
+             * <p>
+             * 
+             * *   **l3**: IP-specific mitigation policies.
+             * *   **l4**: port-specific mitigation policies.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -241,7 +265,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the protected object.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -249,7 +273,11 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The protocol type of the protected object. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -257,7 +285,7 @@ public class ListPolicyAttachmentResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region to which the IP address of the protected object belongs.
              */
             public Builder region(String region) {
                 this.region = region;

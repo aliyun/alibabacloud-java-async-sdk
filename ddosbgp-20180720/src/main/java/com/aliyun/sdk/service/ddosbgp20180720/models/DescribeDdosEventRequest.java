@@ -156,7 +156,7 @@ public class DescribeDdosEventRequest extends Request {
         } 
 
         /**
-         * The end time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.
+         * The end time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -186,7 +186,7 @@ public class DescribeDdosEventRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -195,7 +195,7 @@ public class DescribeDdosEventRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,7 +228,7 @@ public class DescribeDdosEventRequest extends Request {
         }
 
         /**
-         * The start time of the DDoS attack event to query. This value is a UNIX timestamp. Unit: seconds.
+         * The start time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

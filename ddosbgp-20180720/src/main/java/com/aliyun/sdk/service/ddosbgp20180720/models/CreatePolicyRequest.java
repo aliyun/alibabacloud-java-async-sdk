@@ -92,7 +92,7 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -101,7 +101,11 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the policy. Valid values:
+         * <p>
+         * 
+         * *   **l3**: IP-specific mitigation policies.
+         * *   **l4**: port-specific mitigation policies.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

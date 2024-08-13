@@ -93,7 +93,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -265,7 +265,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * The scheduling action. Set the value to **declare**, which indicates that the route is advertised.
+             * The scheduling action. The value is set to **declare**, which indicates that the route is advertised.
              */
             public Builder ruleAction(String ruleAction) {
                 this.ruleAction = ruleAction;
@@ -284,7 +284,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold of inbound packets. Unit: Kpps. Minimum value: **10**.
+             * The threshold of inbound packets. Unit: kilo packets per second (Kpps). Minimum value: **10**.
              */
             public Builder ruleConditionKpps(String ruleConditionKpps) {
                 this.ruleConditionKpps = ruleConditionKpps;
@@ -311,8 +311,8 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
              * Indicates whether the scheduling rule is enabled. Valid values:
              * <p>
              * 
-             * *   **on**: enabled
-             * *   **off**: disabled
+             * *   **on**: enabled.
+             * *   **off**: disabled.
              */
             public Builder ruleSwitch(String ruleSwitch) {
                 this.ruleSwitch = ruleSwitch;
@@ -325,7 +325,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
              * 
              * If the system detects that DDoS attacks stop, the system no longer reroutes traffic to the on-demand instance from the time you specified. We recommend that you set this parameter to a value that is defined as off-peak hours.
              * 
-             * >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
+             * >  This parameter takes effect only when the value of **RuleUndoMode** is **auto**.
              */
             public Builder ruleUndoBeginTime(String ruleUndoBeginTime) {
                 this.ruleUndoBeginTime = ruleUndoBeginTime;
@@ -344,8 +344,8 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
              * The stop method of the scheduling rule. Valid values:
              * <p>
              * 
-             * *   **auto**: The scheduling rule automatically stops.
-             * *   **manual**: The scheduling rule is manually stopped.
+             * *   **auto**
+             * *   **manual**
              */
             public Builder ruleUndoMode(String ruleUndoMode) {
                 this.ruleUndoMode = ruleUndoMode;
@@ -358,7 +358,7 @@ public class QuerySchedruleOnDemandResponseBody extends TeaModel {
              * 
              * For example, the value `GMT-08:00` indicates that the time zone is UTC+8.
              * 
-             * >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
+             * >  This parameter takes effect only when the value of **RuleUndoMode** is **auto**.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

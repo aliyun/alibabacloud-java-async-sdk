@@ -114,7 +114,9 @@ public class AddIpRequest extends Request {
          * 
          * *   **ip**: required. The IP address that you want to add. Data type: string.
          * 
-         *     > The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.
+         *     **
+         * 
+         *     **Note** The IP address must be the IP address of an asset that belongs to the current Alibaba Cloud account.
          */
         public Builder ipList(String ipList) {
             this.putQueryParameter("IpList", ipList);
@@ -126,7 +128,7 @@ public class AddIpRequest extends Request {
          * The region ID of the Anti-DDoS Origin Enterprise instance.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

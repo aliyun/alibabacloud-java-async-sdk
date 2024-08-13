@@ -49,7 +49,7 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the on-demand instance.
+         * The details of the anti-DDoS diversion instance.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -172,8 +172,8 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
              * The details of route advertisement for data centers outside the Chinese mainland. This parameter is a JSON string. The following fields are included in the value:
              * <p>
              * 
-             * *   **region**: The code of the data center outside the Chinese mainland. The value is of the STRING type. For more information, see **Codes of data centers outside the Chinese mainland**.
-             * *   **declared**: indicates whether the data center advertised the route. The value is of the STRING type. Valid values: **0** and **1**. The value of 0 indicates that the data center did not advertise the route. The value of 1 indicates that the data center advertised the route.
+             * *   **region**: The code of the data center outside the Chinese mainland. The value is of the string type. For more information, see **Codes of data centers outside the Chinese mainland**.
+             * *   **declared**: indicates whether the data center advertised the route. The value is of the string type. Valid values: **0** and **1**. The value of 0 indicates that the data center did not advertise the route. The value of 1 indicates that the data center advertised the route.
              */
             public Builder declared(String declared) {
                 this.declared = declared;
@@ -181,10 +181,10 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the on-demand instance.
+             * The description of the anti-DDoS diversion instance.
              * <p>
              * 
-             * >  The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.
+             * > This parameter is returned only when the information about multiple anti-DDoS diversion instances are returned. The value of this parameter is not returned because the information about only one anti-DDoS diversion instance is returned.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -192,10 +192,10 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the on-demand instance.
+             * The ID of the anti-DDoS diversion instance.
              * <p>
              * 
-             * >  The value of this parameter is returned only when the information about multiple on-demand instances is returned. The value of this parameter is not returned because the information about only one on-demand instance is returned.
+             * > This parameter is returned only when the information about multiple anti-DDoS diversion instances are returned. The value of this parameter is not returned because the information about only one anti-DDoS diversion instance is returned.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -203,7 +203,7 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The mode used to start the on-demand instance. Valid values:
+             * The mode that is used to enable traffic rerouting to the anti-DDoS diversion instance. Valid values:
              * <p>
              * 
              * *   **manual**: The instance is manually started.
@@ -215,7 +215,7 @@ public class DescribeOnDemandInstanceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The CIDR block of the on-demand instance.
+             * The CIDR block of the anti-DDoS diversion instance.
              */
             public Builder net(String net) {
                 this.net = net;

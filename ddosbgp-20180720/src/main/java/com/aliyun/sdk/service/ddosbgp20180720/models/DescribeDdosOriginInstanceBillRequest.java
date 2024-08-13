@@ -95,7 +95,7 @@ public class DescribeDdosOriginInstanceBillRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a timestamp. Unit: milliseconds. The time span between StartTime and EndTime cannot exceed 30 days.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -104,7 +104,11 @@ public class DescribeDdosOriginInstanceBillRequest extends Request {
         }
 
         /**
-         * IsShowList.
+         * Specifies whether to display the bill details. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder isShowList(Boolean isShowList) {
             this.putQueryParameter("IsShowList", isShowList);
@@ -113,7 +117,7 @@ public class DescribeDdosOriginInstanceBillRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a timestamp. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -122,7 +126,15 @@ public class DescribeDdosOriginInstanceBillRequest extends Request {
         }
 
         /**
-         * Type.
+         * The bill type. Valid values:
+         * <p>
+         * 
+         * *   **flow_cn**: the bill for the clean bandwidth of elastic IP addresses (EIPs) with Anti-DDoS (Enhanced) enabled in the Chinese mainland
+         * *   **flow_ov**: the bill for the clean bandwidth of EIPs with Anti-DDoS (Enhanced) enabled outside the Chinese mainland
+         * *   **standard_assets_flow_cn**: the bill for the clean bandwidth of regular Alibaba Cloud services in the Chinese mainland
+         * *   **standard_assets_flow_ov**: the bill for the clean bandwidth of regular Alibaba Cloud services outside the Chinese mainland
+         * *   **function**: the bill for the basic fee
+         * *   **ip_count**: the bill for protected IP addresses
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

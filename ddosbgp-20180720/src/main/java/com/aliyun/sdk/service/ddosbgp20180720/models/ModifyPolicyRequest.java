@@ -120,7 +120,31 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * ActionType.
+         * The type of the action. Valid values:
+         * <p>
+         * 
+         * *   **10**: modifies the name. If you specify this value, `Name` is required.
+         * *   **11**: modifies the blacklist validity period. If you specify this value, `BlackIpListExpireAt` is required. Only IP-specific mitigation policies support this value.
+         * *   **12**: changes the status of the feature of adding back-to-origin CIDR blocks of Anti-DDoS Proxy to the whitelist. If you specify this value, `WhitenGfbrNets` is required. Only IP-specific mitigation policies support this value.
+         * *   **13**: changes the status of the ICMP blocking feature. If you specify this value, `EnableDropIcmp` is required. Only IP-specific mitigation policies support this value.
+         * *   **20**: adds IP addresses to the blacklist or the whitelist. If you specify this value, you must specify at least one of `WhiteIpList` and `BlackIpList`. Only IP-specific mitigation policies support this value.
+         * *   **21**: removes IP addresses from the blacklist or the whitelist. If you specify this value, at least one of `WhiteIpList` and `BlackIpList` is required. Only IP-specific mitigation policies support this value.
+         * *   **22**: clears the whitelist. Only IP-specific mitigation policies support this value.
+         * *   **23**: clears the blacklist. Only IP-specific mitigation policies support this value.
+         * *   **30**: modifies the status and level of intelligent protection. If you specify this value, `EnableIntelligence` and `IntelligenceLevel` are required. Only IP-specific mitigation policies support this value.
+         * *   **31**: modifies the location blacklist settings. If you specify this value, one of `RegionBlockCountryList` and `RegionBlockProvinceList` is required. Only IP-specific mitigation policies support this value.
+         * *   **32**: modifies the settings for source rate limiting. If you specify this value, `SourceLimit` and `SourceBlockList` are required. Only IP-specific mitigation policies support this value.
+         * *   **33**: modifies the settings for reflection attack filtering. If you specify this value, `ReflectBlockUdpPortList` is required. Only IP-specific mitigation policies support this value.
+         * *   **40**: creates a port blocking rule. If you specify this value, `PortRuleList` is required. Only IP-specific mitigation policies support this value.
+         * *   **41**: modifies the port blocking rule. If you specify this value, `PortRuleList` is required. Only IP-specific mitigation policies support this value.
+         * *   **42**: deletes the port blocking rule. If you specify this value, `PortRuleList` is required. Only IP-specific mitigation policies support this value.
+         * *   **50**: creates a byte-match filter rule. If you specify this value, `FingerPrintRuleList` is required. Only IP-specific mitigation policies support this value.
+         * *   **51**: modifies the byte-match filter rule. If you specify this value, `FingerPrintRuleList` is required. Only IP-specific mitigation policies support this value.
+         * *   **52**: deletes the byte-match filter rule. If you specify this value, `FingerPrintRuleList` is required. Only IP-specific mitigation policies support this value.
+         * *   **60**: changes the status of the port-specific mitigation feature. If you specify this value, `EnableL4Defense` is required. Only port-specific mitigation policies support this value.
+         * *   **61**: creates a port-specific mitigation rule. If you specify this value, `L4RuleList` is required. Only port-specific mitigation policies support this value.
+         * *   **62**: modifies the port-specific mitigation rule. If you specify this value, `L4RuleList` is required. Only port-specific mitigation policies support this value.
+         * *   **63**: deletes the port-specific mitigation rule. If you specify this value, `L4RuleList` is required. Only port-specific mitigation policies support this value.
          */
         public Builder actionType(Integer actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -129,7 +153,7 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * Content.
+         * The content of the policy.
          */
         public Builder content(Content content) {
             String contentShrink = shrink(content, "Content", "json");
@@ -139,7 +163,7 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the policy.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -148,7 +172,7 @@ public class ModifyPolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -346,7 +370,7 @@ public class ModifyPolicyRequest extends Request {
             private Integer srcPortStart; 
 
             /**
-             * DstPortEnd.
+             * The end of the destination port range. Valid values: **0** to **65535**.
              */
             public Builder dstPortEnd(Integer dstPortEnd) {
                 this.dstPortEnd = dstPortEnd;
@@ -354,7 +378,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * DstPortStart.
+             * The start of the destination port range. Valid values: **0** to **65535**.
              */
             public Builder dstPortStart(Integer dstPortStart) {
                 this.dstPortStart = dstPortStart;
@@ -362,7 +386,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Id.
+             * The ID of the rule.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -370,7 +394,13 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * MatchAction.
+             * The action triggered if the rule is matched. Valid values:
+             * <p>
+             * 
+             * *   **accept**: allows the traffic that matches the conditions in the byte-match filter rule.
+             * *   **drop**: discards the traffic that matches the conditions in the byte-match filter rule.
+             * *   **ip_rate**: limits rates on the source IP address whose traffic matches the conditions in the byte-match filter rule. The rate limit is specified by **RateValue**.
+             * *   **session_rate**: limits the number of sessions from the source IP address whose traffic matches the conditions in the byte-match filter rule. The rate limit is specified by **RateValue**.
              */
             public Builder matchAction(String matchAction) {
                 this.matchAction = matchAction;
@@ -378,7 +408,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * MaxPktLen.
+             * The maximum packet length. Valid values: **1** to **1500**.
              */
             public Builder maxPktLen(Integer maxPktLen) {
                 this.maxPktLen = maxPktLen;
@@ -386,7 +416,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * MinPktLen.
+             * The minimum packet length. Valid values: **1** to **1500**.
              */
             public Builder minPktLen(Integer minPktLen) {
                 this.minPktLen = minPktLen;
@@ -394,7 +424,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Offset.
+             * The offset. Valid values: **0** to **1500**.
              */
             public Builder offset(Integer offset) {
                 this.offset = offset;
@@ -402,7 +432,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * PayloadBytes.
+             * The payload. The value is a hexadecimal string.
              */
             public Builder payloadBytes(String payloadBytes) {
                 this.payloadBytes = payloadBytes;
@@ -410,7 +440,11 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The type of the protocol. Valid value:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -418,7 +452,10 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * RateValue.
+             * The rate limit. Valid values: **1** to **100000**.
+             * <p>
+             * 
+             * >  This parameter is required when **MatchAction** is set to **ip_rate** or **session_rate**.
              */
             public Builder rateValue(Integer rateValue) {
                 this.rateValue = rateValue;
@@ -426,7 +463,10 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * SeqNo.
+             * The sequence number that indicates the order for the rule to take effect. The value is an integer.
+             * <p>
+             * 
+             * >  A smaller number indicates a higher priority.
              */
             public Builder seqNo(Integer seqNo) {
                 this.seqNo = seqNo;
@@ -434,7 +474,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * SrcPortEnd.
+             * The end of the source port range. Valid values: **0** to **65535**.
              */
             public Builder srcPortEnd(Integer srcPortEnd) {
                 this.srcPortEnd = srcPortEnd;
@@ -442,7 +482,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * SrcPortStart.
+             * The start of the source port range. Valid values: **0** to **65535**.
              */
             public Builder srcPortStart(Integer srcPortStart) {
                 this.srcPortStart = srcPortStart;
@@ -510,7 +550,10 @@ public class ModifyPolicyRequest extends Request {
             private Integer position; 
 
             /**
-             * Arg.
+             * The term that is used for matching.
+             * <p>
+             * 
+             * >  If Method is set to **char**, the value of this parameter must be ASCII strings. If Method is set to **hex**, the value of this parameter must be hexadecimal strings. Maximum length: 2,048.
              */
             public Builder arg(String arg) {
                 this.arg = arg;
@@ -518,7 +561,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Depth.
+             * The number of bytes from the start position for matching. Valid values: **1** to **2048**.
              */
             public Builder depth(Integer depth) {
                 this.depth = depth;
@@ -526,7 +569,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Position.
+             * The start position for matching. Valid values: **0** to **2047**.
              */
             public Builder position(Integer position) {
                 this.position = position;
@@ -646,7 +689,10 @@ public class ModifyPolicyRequest extends Request {
             private Integer priority; 
 
             /**
-             * Action.
+             * The action that is specified in the rule. Valid value:
+             * <p>
+             * 
+             * *   **2**: The traffic is discarded.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -654,7 +700,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * ConditionList.
+             * The match conditions.
              */
             public Builder conditionList(java.util.List < ConditionList> conditionList) {
                 this.conditionList = conditionList;
@@ -662,7 +708,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Limited.
+             * The minimum number of bytes in a session to trigger matching. Valid values: **0** to **2048**.
              */
             public Builder limited(Integer limited) {
                 this.limited = limited;
@@ -670,7 +716,11 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Match.
+             * The condition based on which an action is performed. Valid values:
+             * <p>
+             * 
+             * *   **0**: If the rule is matched, the action specified in the rule is performed.
+             * *   **1**: If the rule is not matched, the action specified in the rule is performed.
              */
             public Builder match(String match) {
                 this.match = match;
@@ -678,7 +728,11 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Method.
+             * The type of the rule. Valid values:
+             * <p>
+             * 
+             * *   **char**: string match.
+             * *   **hex**: hexadecimal string match.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -686,7 +740,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -694,7 +748,10 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Priority.
+             * The priority of the rule. Valid values: **1** to **100**.
+             * <p>
+             * 
+             * >  A smaller value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -826,7 +883,7 @@ public class ModifyPolicyRequest extends Request {
             private Integer srcPortStart; 
 
             /**
-             * DstPortEnd.
+             * The end of the destination port range. Valid values: **0** to **65535**.
              */
             public Builder dstPortEnd(Integer dstPortEnd) {
                 this.dstPortEnd = dstPortEnd;
@@ -834,7 +891,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * DstPortStart.
+             * The start of the destination port range. Valid values: **0** to **65535**.
              */
             public Builder dstPortStart(Integer dstPortStart) {
                 this.dstPortStart = dstPortStart;
@@ -842,7 +899,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Id.
+             * The ID of the rule.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -850,7 +907,10 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * MatchAction.
+             * The action triggered if the rule is matched. Valid value:
+             * <p>
+             * 
+             * *   **drop**: The traffic is discarded.
              */
             public Builder matchAction(String matchAction) {
                 this.matchAction = matchAction;
@@ -858,7 +918,11 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The type of the protocol. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -866,7 +930,10 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * SeqNo.
+             * The sequence number that indicates the order for the rule to take effect. The value is an integer.
+             * <p>
+             * 
+             * >  A smaller number indicates a higher priority.
              */
             public Builder seqNo(Integer seqNo) {
                 this.seqNo = seqNo;
@@ -874,7 +941,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * SrcPortEnd.
+             * The end of the source port range. Valid values: **0** to **65535**.
              */
             public Builder srcPortEnd(Integer srcPortEnd) {
                 this.srcPortEnd = srcPortEnd;
@@ -882,7 +949,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * SrcPortStart.
+             * The start of the source port range. Valid values: **0** to **65535**.
              */
             public Builder srcPortStart(Integer srcPortStart) {
                 this.srcPortStart = srcPortStart;
@@ -963,7 +1030,7 @@ public class ModifyPolicyRequest extends Request {
             private Integer type; 
 
             /**
-             * BlockExpireSeconds.
+             * The validity period of the blacklist to which the source IP address is added. Unit: seconds.
              */
             public Builder blockExpireSeconds(Integer blockExpireSeconds) {
                 this.blockExpireSeconds = blockExpireSeconds;
@@ -971,7 +1038,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * EverySeconds.
+             * The statistical period during which the system collects data on source IP addresses to determine whether to add the source IP addresses to the blacklist. Unit: seconds.
              */
             public Builder everySeconds(Integer everySeconds) {
                 this.everySeconds = everySeconds;
@@ -979,7 +1046,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * ExceedLimitTimes.
+             * The number of times that the source IP address exceeds a limit in a statistical period.
              */
             public Builder exceedLimitTimes(Integer exceedLimitTimes) {
                 this.exceedLimitTimes = exceedLimitTimes;
@@ -987,7 +1054,13 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of the source rate limit. Valid values:
+             * <p>
+             * 
+             * *   **3**: the PPS limit on source IP addresses.
+             * *   **4**: the bandwidth limit on source IP addresses.
+             * *   **5**: the PPS limit on source SYN packets.
+             * *   **6**: the bandwidth limit on source SYN packets.
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -1068,7 +1141,7 @@ public class ModifyPolicyRequest extends Request {
             private Integer synPps; 
 
             /**
-             * Bps.
+             * The bandwidth limit on source IP addresses. Unit: bytes per second.
              */
             public Builder bps(Integer bps) {
                 this.bps = bps;
@@ -1076,7 +1149,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * Pps.
+             * The packets per second (PPS) limit on source IP addresses.
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;
@@ -1084,7 +1157,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * SynBps.
+             * The bandwidth limit on source SYN packets. Unit: bytes per second.
              */
             public Builder synBps(Integer synBps) {
                 this.synBps = synBps;
@@ -1092,7 +1165,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * SynPps.
+             * The PPS limit on source SYN packets.
              */
             public Builder synPps(Integer synPps) {
                 this.synPps = synPps;
@@ -1313,7 +1386,7 @@ public class ModifyPolicyRequest extends Request {
             private Boolean whitenGfbrNets; 
 
             /**
-             * BlackIpList.
+             * The IP addresses in the blacklist.
              */
             public Builder blackIpList(java.util.List < String > blackIpList) {
                 this.blackIpList = blackIpList;
@@ -1321,7 +1394,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * BlackIpListExpireAt.
+             * The validity period of the IP address blacklist. The value is a UNIX timestamp.
              */
             public Builder blackIpListExpireAt(Long blackIpListExpireAt) {
                 this.blackIpListExpireAt = blackIpListExpireAt;
@@ -1329,7 +1402,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * EnableDropIcmp.
+             * Specifies whether to enable ICMP blocking.
              */
             public Builder enableDropIcmp(Boolean enableDropIcmp) {
                 this.enableDropIcmp = enableDropIcmp;
@@ -1337,7 +1410,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * EnableIntelligence.
+             * Specifies whether to enable intelligent protection.
              */
             public Builder enableIntelligence(Boolean enableIntelligence) {
                 this.enableIntelligence = enableIntelligence;
@@ -1345,7 +1418,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * EnableL4Defense.
+             * Specifies whether to enable port-specific mitigation.
              */
             public Builder enableL4Defense(Boolean enableL4Defense) {
                 this.enableL4Defense = enableL4Defense;
@@ -1353,7 +1426,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * FingerPrintRuleList.
+             * The byte-match filter rules.
              */
             public Builder fingerPrintRuleList(java.util.List < FingerPrintRuleList> fingerPrintRuleList) {
                 this.fingerPrintRuleList = fingerPrintRuleList;
@@ -1361,7 +1434,12 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * IntelligenceLevel.
+             * The level of intelligent protection. Valid values:
+             * <p>
+             * 
+             * *   **default**: normal.
+             * *   **hard**: strict.
+             * *   **weak**: loose.
              */
             public Builder intelligenceLevel(String intelligenceLevel) {
                 this.intelligenceLevel = intelligenceLevel;
@@ -1369,7 +1447,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * L4RuleList.
+             * The port-specific mitigation rules.
              */
             public Builder l4RuleList(java.util.List < L4RuleList> l4RuleList) {
                 this.l4RuleList = l4RuleList;
@@ -1377,7 +1455,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * PortRuleList.
+             * The port blocking rules.
              */
             public Builder portRuleList(java.util.List < PortRuleList> portRuleList) {
                 this.portRuleList = portRuleList;
@@ -1385,7 +1463,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * ReflectBlockUdpPortList.
+             * The ports whose traffic is filtered out by the filtering policies for UDP reflection attacks.
              */
             public Builder reflectBlockUdpPortList(java.util.List < Integer > reflectBlockUdpPortList) {
                 this.reflectBlockUdpPortList = reflectBlockUdpPortList;
@@ -1393,7 +1471,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * RegionBlockCountryList.
+             * The countries in the location blacklist.
              */
             public Builder regionBlockCountryList(java.util.List < Integer > regionBlockCountryList) {
                 this.regionBlockCountryList = regionBlockCountryList;
@@ -1401,7 +1479,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * RegionBlockProvinceList.
+             * The provinces in the location blacklist.
              */
             public Builder regionBlockProvinceList(java.util.List < Integer > regionBlockProvinceList) {
                 this.regionBlockProvinceList = regionBlockProvinceList;
@@ -1409,7 +1487,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * SourceBlockList.
+             * The source IP addresses that are added to the blacklist.
              */
             public Builder sourceBlockList(java.util.List < SourceBlockList> sourceBlockList) {
                 this.sourceBlockList = sourceBlockList;
@@ -1417,7 +1495,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * SourceLimit.
+             * The settings for source rate limiting.
              */
             public Builder sourceLimit(SourceLimit sourceLimit) {
                 this.sourceLimit = sourceLimit;
@@ -1425,7 +1503,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * WhiteIpList.
+             * The IP addresses in the whitelist.
              */
             public Builder whiteIpList(java.util.List < String > whiteIpList) {
                 this.whiteIpList = whiteIpList;
@@ -1433,7 +1511,7 @@ public class ModifyPolicyRequest extends Request {
             }
 
             /**
-             * WhitenGfbrNets.
+             * Specifies whether to add back-to-origin CIDR blocks of Anti-DDoS Proxy to the whitelist.
              */
             public Builder whitenGfbrNets(Boolean whitenGfbrNets) {
                 this.whitenGfbrNets = whitenGfbrNets;

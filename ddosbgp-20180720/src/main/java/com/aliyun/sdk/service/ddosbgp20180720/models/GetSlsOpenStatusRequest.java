@@ -79,7 +79,7 @@ public class GetSlsOpenStatusRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the Anti-DDoS Origin instance belongs to the default resource group.
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
          * <p>
          * 
          * For more information about resource groups, see [Create a resource group](~~94485~~).

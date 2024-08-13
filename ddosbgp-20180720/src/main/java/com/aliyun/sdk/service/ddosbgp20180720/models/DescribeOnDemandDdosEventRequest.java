@@ -156,7 +156,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         } 
 
         /**
-         * The timestamp that specifies the end of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.
+         * The end time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -165,7 +165,10 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The ID of the on-demand instance to query.
+         * The ID of the anti-DDoS diversion instance to query.
+         * <p>
+         * 
+         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all anti-DDoS diversion instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -174,7 +177,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The IP address of the protection target.
+         * The IP address of the anti-DDoS diversion instance to query.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -183,7 +186,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -192,7 +195,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. The maximum value is **50**. The default value is **10**.
+         * The number of entries per page. Maximum value: **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,7 +204,10 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the anti-DDoS diversion instance to query.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +216,10 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+         * <p>
+         * 
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -219,7 +228,7 @@ public class DescribeOnDemandDdosEventRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the beginning of the time range to query. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.
+         * The start time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

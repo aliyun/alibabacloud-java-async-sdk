@@ -112,10 +112,10 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the Anti-DDoS Origin instance resides.
+         * The ID of the region in which the instance resides.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * > You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.
+         * The ID of the resource group to which the instance belongs in Resource Management.
          * <p>
          * 
          * If you do not specify this parameter, the instance belongs to the default resource group.
@@ -136,7 +136,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The IDs of the instances to which you want to add tags. You can specify up to 51 IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -154,7 +154,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add. You can specify up to 21 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -211,7 +211,7 @@ public class TagResourcesRequest extends Request {
              * The key of the tag to add.
              * <p>
              * 
-             * >  If the specified key does not exist, a key is created.
+             * > If the specified key does not exist, a key is created.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -222,7 +222,7 @@ public class TagResourcesRequest extends Request {
              * The value of the tag to add.
              * <p>
              * 
-             * >  If the specified value does not exist, a value is created.
+             * > If the specified tag value does not exist, the tag value is created.
              */
             public Builder value(String value) {
                 this.value = value;

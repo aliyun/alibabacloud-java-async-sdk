@@ -109,12 +109,14 @@ public class DeleteIpRequest extends Request {
         }
 
         /**
-         * The list of IP addresses that you want to remove from the Anti-DDoS Origin Enterprise instance. This parameter is a string consisting of JSON arrays. Each element in a JSON array is a JSON struct that includes the following field:
+         * The list of IP addresses that you want to remove from the Anti-DDoS Origin Enterprise instance. This parameter is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that contains the following fields:
          * <p>
          * 
          * *   **ip**: required. The IP address that you want to remove. Data type: string.
          * 
-         *     > The IP addresses that you want to remove must be protected by the Anti-DDoS Origin Enterprise instance.
+         *     **
+         * 
+         *     **Note** The IP addresses that you want to remove must be protected by the Anti-DDoS Origin Enterprise instance.
          */
         public Builder ipList(String ipList) {
             this.putQueryParameter("IpList", ipList);
@@ -126,7 +128,7 @@ public class DeleteIpRequest extends Request {
          * The region ID of the Anti-DDoS Origin Enterprise instance.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

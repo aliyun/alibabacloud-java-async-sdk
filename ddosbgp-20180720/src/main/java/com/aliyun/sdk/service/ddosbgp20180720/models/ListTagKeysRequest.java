@@ -111,7 +111,7 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Pages start from page **1**. Default value: **1**.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -120,7 +120,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to **50**. Default value: **10**.
+         * The number of entries per page. Valid values: 1 to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -129,7 +129,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region that you want to query.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +138,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -147,7 +147,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid value: **INSTANCE**.
+         * The resource type. Set the value to **INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

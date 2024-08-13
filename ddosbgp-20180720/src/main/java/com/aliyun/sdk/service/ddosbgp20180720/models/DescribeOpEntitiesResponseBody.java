@@ -61,7 +61,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * The details of the operation log.
          */
         public Builder opEntities(java.util.List < OpEntities> opEntities) {
             this.opEntities = opEntities;
@@ -69,7 +69,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The end time. Operation logs that were generated before this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the log was generated. This value is a UNIX timestamp. Unit: milliseconds.
+         * The total number of operation logs.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -177,7 +177,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             private String opDesc; 
 
             /**
-             * Queries the operation logs of an Anti-DDoS Origin instance.
+             * The operation object, which is the ID of the instance.
              */
             public Builder entityObject(String entityObject) {
                 this.entityObject = entityObject;
@@ -185,10 +185,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * All Alibaba Cloud API operations must include common request parameters. For more information about common request parameters, see [Common parameters](~~118841~~).
-             * <p>
-             * 
-             * For more information about sample requests, see the **"Examples"** section of this topic.
+             * The type of the operation object. The value is fixed as **1**, which indicates Anti-DDoS Origin instances.
              */
             public Builder entityType(Integer entityType) {
                 this.entityType = entityType;
@@ -196,7 +193,7 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * WB01342967
+             * The time when the log was generated. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -204,7 +201,10 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * OpAccount.
+             * The ID of the Alibaba Cloud account that performs the operation.
+             * <p>
+             * 
+             * > If the value is **system**, the operation is performed by Anti-DDoS Origin.
              */
             public Builder opAccount(String opAccount) {
                 this.opAccount = opAccount;
@@ -212,7 +212,15 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeOpEntities
+             * The type of operation. Valid values:
+             * <p>
+             * 
+             * *   **3**: indicates an operation to add an IP address to the Anti-DDoS Origin instance for protection.
+             * *   **4**: indicates an operation to remove a protected IP address from the Anti-DDoS Origin instance.
+             * *   **5**: indicates an operation to downgrade the Anti-DDoS Origin instance.
+             * *   **6**: indicates an operation to deactivate blackhole filtering for an IP address.
+             * *   **7**: indicates an operation to reset the number of times that you can deactivate blackhole filtering.
+             * *   **8**: indicates an operation to enable burstable protection.
              */
             public Builder opAction(Integer opAction) {
                 this.opAction = opAction;
@@ -220,7 +228,35 @@ public class DescribeOpEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * OpDesc.
+             * The details of the operation. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
+             * <p>
+             * 
+             * *   **entity**: the operation object. Data type: object. The fields that are included in the value of the **entity** parameter vary based on the value of the **OpAction** parameter. Valid values:
+             * 
+             *     *   If the value of the **OpAction** parameter is **3**, the value of the **entity** parameter consists of the following field:
+             * 
+             *         *   **ips**: the public IP addresses that are protected by the Anti-DDoS Origin instance. Data type: array
+             * 
+             *     *   If the value of the **OpAction** parameter is **4**, the value of the **entity** parameter consists of the following field:
+             * 
+             *         *   **ips**: the public IP addresses that are no longer protected by the Anti-DDoS Origin instance. Data type: array.
+             * 
+             *     *   If the value of the **OpAction** parameter is **5**, the value of the **entity** parameter consists of the following fields:
+             * 
+             *         *   **baseBandwidth**: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.
+             *         *   **elasticBandwidth**: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.
+             *         *   **opSource**: the source of the operation. The value is fixed as **1**, indicating that the operation is performed by Anti-DDoS Origin. Data type: integer.
+             * 
+             *     *   If the value of the **OpAction** parameter is **6**, the value of the **entity** parameter consists of the following field:
+             * 
+             *         *   **ips**: the public IP addresses for which to deactivate blackhole filtering. Data type: array.
+             * 
+             *     *   If the value of the **OpAction** parameter is **7**, the **entity** parameter is not returned.
+             * 
+             *     *   If the value of the **OpAction** parameter is **8**, the value of the **entity** parameter consists of the following fields:
+             * 
+             *         *   **baseBandwidth**: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.
+             *         *   **elasticBandwidth**: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.
              */
             public Builder opDesc(String opDesc) {
                 this.opDesc = opDesc;

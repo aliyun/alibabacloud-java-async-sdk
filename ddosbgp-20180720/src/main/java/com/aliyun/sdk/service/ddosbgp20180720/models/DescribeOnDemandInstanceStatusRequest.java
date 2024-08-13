@@ -68,10 +68,10 @@ public class DescribeOnDemandInstanceStatusRequest extends Request {
         } 
 
         /**
-         * The IDs of on-demand instances.
+         * The IDs of the anti-DDoS diversion instances.
          * <p>
          * 
-         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.
+         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all anti-DDoS diversion instances.
          */
         public Builder instanceIdList(java.util.List < String > instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -80,10 +80,10 @@ public class DescribeOnDemandInstanceStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the on-demand instance.
+         * The region ID of the anti-DDoS diversion instance.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+         * > You can call the [DescribeRegions](~~118703~~) operation to query all regions that are supported by Anti-DDoS Origin.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

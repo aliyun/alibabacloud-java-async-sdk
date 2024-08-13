@@ -74,6 +74,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Only a delegated administrator account or the management account of a resource directory can be used to add members to the resource directory.
+      *
+     */
     @Override
     public CompletableFuture<AddRdMemberListResponse> addRdMemberList(AddRdMemberListRequest request) {
         try {
@@ -195,8 +199,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * You can call the DeleteBlackhole operation to deactivate blackhole filtering for a protected IP address.
       * Before you call this operation, you can call the [DescribePackIpList](~~118701~~) operation to query the protection status of the IP addresses that are protected by your Anti-DDoS Origin instance. For example, you can query whether blackhole filtering is triggered for an IP address.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * ### [](#qps-)Limits
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
@@ -231,6 +235,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You cannot delete a mitigation policy to which a protected object is added.
+      *
+     */
     @Override
     public CompletableFuture<DeletePolicyResponse> deletePolicy(DeletePolicyRequest request) {
         try {
@@ -245,6 +253,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Only a delegated administrator account or the management account of a resource directory can be used to delete members.
+      *
+     */
     @Override
     public CompletableFuture<DeleteRdMemberListResponse> deleteRdMemberList(DeleteRdMemberListRequest request) {
         try {
@@ -302,8 +314,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on a specific Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.  
-      * ## Limits
+      * You can call the DescribeDdosEvent operation to query the details about the DDoS attack events that occurred on an Anti-DDoS Origin instance by page. The details include the start time, end time, attacked IP address, and status of each event.
+      * ### [](#qps-)Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
@@ -389,7 +401,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  Anti-DDoS Origin API operations are available for only Anti-DDoS Origin Enterprise users.
+      * You can use this operation to query the details about the DDoS attack events that occurred on the IP address of an anti-DDoS diversion instance of Anti-DDoS Origin by page. The details include the start time, end time, volume of attack traffic, and status of each event.
+      * ### [](#qps-)Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
@@ -421,7 +435,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The start time. Operation logs that were generated after this time are queried.**** This value is a UNIX timestamp. Unit: milliseconds.
+      * You can call the DescribeOpEntities operation to query the operation logs of an instance by page.
+      * ### Limit
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
@@ -621,6 +637,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * You can call the ListTagResources operation to query the tags that are added to Anti-DDoS Origin instances at a time.
+      * ### [](#qps-)Limits
+      * You can call this API operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
@@ -651,6 +669,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Make sure that all request parameters are configured when you call this operation. If any parameter is left empty, the configuration is deleted.
+      *
+     */
     @Override
     public CompletableFuture<ModifyPolicyContentResponse> modifyPolicyContent(ModifyPolicyContentRequest request) {
         try {
@@ -666,8 +688,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
-      * ## Limits
+      * You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.
+      * ### [](#qps-)Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
@@ -728,9 +750,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the TagResources operation to add tags to Anti-DDoS Origin instances. 
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call the TagResources operation to add tags to instances.
+      * ### Limit
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override

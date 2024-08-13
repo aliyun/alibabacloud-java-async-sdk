@@ -49,7 +49,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id.
+         * The ID of the policy.
          */
         public Builder id(String id) {
             this.id = id;
@@ -57,7 +57,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

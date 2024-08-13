@@ -61,7 +61,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The details about the Anti-DDoS Origin instance.
+         * The details about the Anti-DDoS Origin instances.
          */
         public Builder instanceList(java.util.List < InstanceList> instanceList) {
             this.instanceList = instanceList;
@@ -302,7 +302,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AutoProtectCondition.
+             * The condition that triggers automatic association of the instance with an object.
              */
             public Builder autoProtectCondition(AutoProtectCondition autoProtectCondition) {
                 this.autoProtectCondition = autoProtectCondition;
@@ -313,8 +313,8 @@ public class DescribeInstanceListResponseBody extends TeaModel {
              * Indicates whether auto-renewal is enabled for the instance. Valid values:
              * <p>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * *   **true**
+             * *   **false**
              */
             public Builder autoRenewal(Boolean autoRenewal) {
                 this.autoRenewal = autoRenewal;
@@ -333,7 +333,11 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityType.
+             * The type of the instance.
+             * <p>
+             * 
+             * *   **ddos_ddosorigin_public_cn**: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the China site (aliyun.com)
+             * *   **ddos_ddosorigin_public_intl**: Anti-DDoS Origin 2.0 (Pay-as-you-go) on the International site (alibabacloud.com)
              */
             public Builder commodityType(String commodityType) {
                 this.commodityType = commodityType;
@@ -341,7 +345,13 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * CoverageType.
+             * The application scope of the instance.
+             * <p>
+             * 
+             * *   **1**: The instance supports public IP addresses in all regions.
+             * *   **2**: The instance supports public IP addresses in regions in the Chinese mainland.
+             * *   **3**: The instance supports public IP addresses in regions outside the Chinese mainland.
+             * *   **4**: The instance supports public IP addresses in a region in or outside the Chinese mainland.
              */
             public Builder coverageType(Integer coverageType) {
                 this.coverageType = coverageType;
@@ -349,7 +359,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expires. This value is a UNIX timestamp. Unit: milliseconds.
+             * The time when the instance expires. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -357,7 +367,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was purchased. This value is a UNIX timestamp. Unit: milliseconds.
+             * The time when the instance was purchased. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -388,8 +398,8 @@ public class DescribeInstanceListResponseBody extends TeaModel {
              * The protocol type of the IP address asset that is protected by the instance. Valid values:
              * <p>
              * 
-             * *   **Ipv4**: IPv4
-             * *   **Ipv6**: IPv6
+             * *   **Ipv4**
+             * *   **Ipv6**
              */
             public Builder ipType(String ipType) {
                 this.ipType = ipType;
@@ -397,7 +407,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud service that is associated with the Anti-DDoS Origin instance. By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.
+             * The type of the cloud service that is associated with the Anti-DDoS Origin instance By default, this parameter is not returned. If the Anti-DDoS Origin instance is created by using a different cloud service, the code of the cloud service is returned.
              * <p>
              * 
              * Valid values:
@@ -411,7 +421,7 @@ public class DescribeInstanceListResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the instance.
+             * The description of the instance.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

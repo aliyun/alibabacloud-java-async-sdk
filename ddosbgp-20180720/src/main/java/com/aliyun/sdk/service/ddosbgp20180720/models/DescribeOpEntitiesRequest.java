@@ -169,7 +169,7 @@ public class DescribeOpEntitiesRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeOpEntities**.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -178,7 +178,7 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The details of the operation log.
+         * The end time. Operation logs that were generated before this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -187,11 +187,23 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The ID of the instance to query.
+         * <p>
+         * 
+         * > You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The sorting method of operation logs. Set the value to **opdate**, which indicates sorting based on the operation time.
+         */
+        public Builder orderBy(String orderBy) {
+            this.putQueryParameter("OrderBy", orderBy);
+            this.orderBy = orderBy;
             return this;
         }
 
@@ -201,18 +213,8 @@ public class DescribeOpEntitiesRequest extends Request {
          * 
          * *   **ASC**: the ascending order.
          * *   **DESC**: the descending order.
-         */
-        public Builder orderBy(String orderBy) {
-            this.putQueryParameter("OrderBy", orderBy);
-            this.orderBy = orderBy;
-            return this;
-        }
-
-        /**
-         * The ID of the region where the Anti-DDoS Origin instance resides.
-         * <p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
+         * Default value: **DESC**.
          */
         public Builder orderDir(String orderDir) {
             this.putQueryParameter("OrderDir", orderDir);
@@ -221,7 +223,7 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The type of the operation object. The value is fixed as **1**, which indicates Anti-DDoS Origin instances.
+         * The number of entries per page. Maximum value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -230,10 +232,10 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account that performs the operation.
+         * The ID of the region where the instance resides.
          * <p>
          * 
-         * >  If the value is **system**, the operation is performed by Anti-DDoS Origin.
+         * > You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -242,35 +244,10 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The details about the operation. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
+         * The ID of the resource group to which the instance belongs in Resource Management.
          * <p>
          * 
-         * *   **entity**: the operation object. Data type: object. The fields that are included in the value of the **entity** parameter vary based on the value of the **OpAction** parameter. Take note of the following items:
-         * 
-         *     *   If the value of the **OpAction** parameter is **3**, the value of the **entity** parameter consists of the following field:
-         * 
-         *         *   **ips**: the public IP addresses that are protected by the Anti-DDoS Origin instance. Data type: array
-         * 
-         *     *   If the value of the **OpAction** parameter is **4**, the value of the **entity** parameter consists of the following field:
-         * 
-         *         *   **ips**: the public IP addresses that are no longer protected by the Anti-DDoS Origin instance. Data type: array.
-         * 
-         *     *   If the value of the **OpAction** parameter is **5**, the value of the **entity** parameter consists of the following fields:
-         * 
-         *         *   **baseBandwidth**: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.
-         *         *   **elasticBandwidth**: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.
-         *         *   **opSource**: the source of the operation. The value is fixed as **1**, indicating that the operation is performed by Anti-DDoS Origin. Data type: integer.
-         * 
-         *     *   If the value of the **OpAction** parameter is **6**, the value of the **entity** parameter consists of the following field:
-         * 
-         *         *   **ips**: the public IP addresses for which to deactivate blackhole filtering. Data type: array.
-         * 
-         *     *   If the value of the **OpAction** parameter is **7**, the **entity** parameter is not returned.
-         * 
-         *     *   If the value of the **OpAction** parameter is **8**, the value of the **entity** parameter consists of the following fields:
-         * 
-         *         *   **baseBandwidth**: the basic protection bandwidth. Unit: Gbit/s. Data type: integer.
-         *         *   **elasticBandwidth**: the burstable protection bandwidth. Unit: Gbit/s. Data type: integer.
+         * If you do not specify this parameter, the instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -279,7 +256,7 @@ public class DescribeOpEntitiesRequest extends Request {
         }
 
         /**
-         * The sorting method of operation logs. Set the value to **opdate**, which indicates sorting based on the operation time.
+         * The start time. Operation logs that were generated after this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

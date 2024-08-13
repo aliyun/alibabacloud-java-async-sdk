@@ -61,7 +61,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * The list of DDoS events and the details of each event.
+         * The details about the DDoS attack event.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -69,7 +69,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DDoS events.
+         * The total number of DDoS attack events that are returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -177,7 +177,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The timestamp that indicates the end time of the attack. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.
+             * The time when the DDoS attack stopped. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder endTime(Integer endTime) {
                 this.endTime = endTime;
@@ -185,7 +185,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the protection target that encounters the DDoS attack.
+             * The attacked IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -193,7 +193,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The throughput of the DDoS attack. Unit: Mbit/s.
+             * The attack traffic. Unit: Mbit/s.
              */
             public Builder mbps(Integer mbps) {
                 this.mbps = mbps;
@@ -209,7 +209,7 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that indicates the start time of the attack. Unit: seconds. The timestamp follows the UNIX time format. It is the number of seconds that have elapsed since 00:00:00 Thursday, 1 January 1970.
+             * The time when the DDoS attack started. This value is a UNIX timestamp. Unit: seconds.
              */
             public Builder startTime(Integer startTime) {
                 this.startTime = startTime;
@@ -217,13 +217,13 @@ public class DescribeOnDemandDdosEventResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. Valid values:
+             * The status of the DDoS attack event. Valid values:
              * <p>
              * 
-             * *   **hole_begin **: indicates that the event is in the blackhole state.
-             * *   **hole_end **: indicates that blackhole ends.
-             * *   **defense_begin **: indicates that the event is in the cleaning state.
-             * *   **defense_end **: indicates that cleaning ends.
+             * *   **hole_begin**: indicates that blackhole filtering is triggered.
+             * *   **hole_end**: indicates that tblackhole filtering is deactivated.
+             * *   **defense_begin**: indicates that traffic scrubbing is in progress.
+             * *   **defense_end**: indicates that traffic scrubbing is complete.
              */
             public Builder status(String status) {
                 this.status = status;

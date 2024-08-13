@@ -125,7 +125,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * The query token. Set the value to the **NextToken** value that is returned in the last call to the ListTagResources operation. Leave this parameter empty the first time you call this operation.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -158,10 +158,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of Anti-DDoS Origin Instances to query.
+         * The IDs of the Anti-DDoS Origin instances to query.
          * <p>
          * 
-         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
+         * >  The **ResourceId** parameter and the **key-value pair for the Tag parameter** cannot be left empty at the same time.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -170,7 +170,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource to query. Set the value to **INSTANCE**, which indicates instances.
+         * The type of the resource to query. Set the value to **INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -179,7 +179,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The tags to query.
+         * The key-value pair of the tag to query.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -236,7 +236,7 @@ public class ListTagResourcesRequest extends Request {
              * The key of the tag to query.
              * <p>
              * 
-             * >  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.
+             * >  The **ResourceId** parameter and the **key-value pair for the Tag parameter** cannot be left empty at the same time.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -247,7 +247,7 @@ public class ListTagResourcesRequest extends Request {
              * The value of the tag to query.
              * <p>
              * 
-             * >  The **ResourceIds.N** parameter and the key-value pair (Tag.N.Key and Tag.N.Value) cannot be left empty at the same time.
+             * >  The **ResourceId** parameter and the **key-value pair for the Tag parameter** cannot be left empty at the same time.
              */
             public Builder value(String value) {
                 this.value = value;

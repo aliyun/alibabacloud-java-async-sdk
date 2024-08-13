@@ -61,7 +61,7 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * MemberList.
+         * The list of the members.
          */
         public Builder memberList(java.util.List < MemberList> memberList) {
             this.memberList = memberList;
@@ -69,7 +69,7 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -141,7 +141,7 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -149,7 +149,7 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the member.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -157,7 +157,7 @@ public class DescribeRdMemberListResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * The Alibaba Cloud account ID of the member.
              */
             public Builder uid(String uid) {
                 this.uid = uid;

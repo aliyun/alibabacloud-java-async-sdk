@@ -28,6 +28,10 @@ public class ListPolicyRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    private String productType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -37,6 +41,7 @@ public class ListPolicyRequest extends Request {
         this.name = builder.name;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.productType = builder.productType;
         this.type = builder.type;
     }
 
@@ -82,6 +87,13 @@ public class ListPolicyRequest extends Request {
     }
 
     /**
+     * @return productType
+     */
+    public String getProductType() {
+        return this.productType;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -93,6 +105,7 @@ public class ListPolicyRequest extends Request {
         private String name; 
         private Long pageNo; 
         private Long pageSize; 
+        private String productType; 
         private String type; 
 
         private Builder() {
@@ -105,6 +118,7 @@ public class ListPolicyRequest extends Request {
             this.name = request.name;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.productType = request.productType;
             this.type = request.type;
         } 
 
@@ -118,7 +132,7 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the policy.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -127,7 +141,7 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number.
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -136,7 +150,7 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,7 +159,20 @@ public class ListPolicyRequest extends Request {
         }
 
         /**
-         * Type.
+         * ProductType.
+         */
+        public Builder productType(String productType) {
+            this.putQueryParameter("ProductType", productType);
+            this.productType = productType;
+            return this;
+        }
+
+        /**
+         * The type of the policy. Valid values:
+         * <p>
+         * 
+         * *   **l3**: IP-specific mitigation policies.
+         * *   **l4**: port-specific mitigation policies.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -92,7 +92,7 @@ public class AttachToPolicyRequest extends Request {
         }
 
         /**
-         * IpPortProtocolList.
+         * The protected objects.
          */
         public Builder ipPortProtocolList(java.util.List < IpPortProtocolList> ipPortProtocolList) {
             String ipPortProtocolListShrink = shrink(ipPortProtocolList, "IpPortProtocolList", "json");
@@ -102,7 +102,7 @@ public class AttachToPolicyRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * The policy ID.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -170,7 +170,7 @@ public class AttachToPolicyRequest extends Request {
             private String protocol; 
 
             /**
-             * Ip.
+             * The IP address of the protected object.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -178,7 +178,10 @@ public class AttachToPolicyRequest extends Request {
             }
 
             /**
-             * Port.
+             * The port number of the protected object.
+             * <p>
+             * 
+             * >  This parameter is available for only port-specific mitigation policies.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -186,7 +189,13 @@ public class AttachToPolicyRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol type of the protected object. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
+             * 
+             * >  This parameter is available for only port-specific mitigation policies.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

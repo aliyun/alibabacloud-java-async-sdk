@@ -132,7 +132,7 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * IpPortProtocolList.
+         * The protected objects.
          */
         public Builder ipPortProtocolList(java.util.List < IpPortProtocolList> ipPortProtocolList) {
             String ipPortProtocolListShrink = shrink(ipPortProtocolList, "IpPortProtocolList", "json");
@@ -142,7 +142,7 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number.
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -151,7 +151,7 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -160,7 +160,7 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * PolicyId.
+         * The ID of the policy.
          */
         public Builder policyId(String policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -169,7 +169,12 @@ public class ListPolicyAttachmentRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the policy. Valid values:
+         * <p>
+         * 
+         * *   **default**: the default mitigation policies.
+         * *   **l3**: IP-specific mitigation policies.
+         * *   **l4**: port-specific mitigation policies.
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -237,7 +242,7 @@ public class ListPolicyAttachmentRequest extends Request {
             private String protocol; 
 
             /**
-             * Ip.
+             * The IP address of the protected object.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -245,7 +250,7 @@ public class ListPolicyAttachmentRequest extends Request {
             }
 
             /**
-             * Port.
+             * The port number of the protected object.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -253,7 +258,11 @@ public class ListPolicyAttachmentRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol type of the protected object. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

@@ -92,7 +92,7 @@ public class DetachFromPolicyRequest extends Request {
         }
 
         /**
-         * IpPortProtocolList.
+         * The protected objects.
          */
         public Builder ipPortProtocolList(java.util.List < IpPortProtocolList> ipPortProtocolList) {
             String ipPortProtocolListShrink = shrink(ipPortProtocolList, "IpPortProtocolList", "json");
@@ -102,7 +102,12 @@ public class DetachFromPolicyRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the policy. Valid values:
+         * <p>
+         * 
+         * *   **default**: the default mitigation policies.
+         * *   **l3**: IP-specific mitigation policies.
+         * *   **l4**: port-specific mitigation policies.
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -170,7 +175,7 @@ public class DetachFromPolicyRequest extends Request {
             private String protocol; 
 
             /**
-             * Ip.
+             * The IP address of the protected object.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -178,7 +183,7 @@ public class DetachFromPolicyRequest extends Request {
             }
 
             /**
-             * Port.
+             * The port of the protected object.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -186,7 +191,11 @@ public class DetachFromPolicyRequest extends Request {
             }
 
             /**
-             * Protocol.
+             * The protocol type of the protected object. Valid values:
+             * <p>
+             * 
+             * *   **tcp**
+             * *   **udp**
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

@@ -61,7 +61,7 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,8 +132,8 @@ public class ListOpenedAccessLogInstancesResponseBody extends TeaModel {
              * Indicates whether log analysis was enabled for the Anti-DDoS Origin instance. Valid values:
              * <p>
              * 
-             * *   **true**: Log analysis was enabled.
-             * *   **false**: Log analysis was disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;

@@ -81,7 +81,7 @@ public class DescribeRdMemberListRequest extends Request {
         } 
 
         /**
-         * PageNo.
+         * The page number.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -90,7 +90,7 @@ public class DescribeRdMemberListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -99,7 +99,7 @@ public class DescribeRdMemberListRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryId.
+         * The ID of the resource directory.
          */
         public Builder resourceDirectoryId(String resourceDirectoryId) {
             this.putQueryParameter("ResourceDirectoryId", resourceDirectoryId);

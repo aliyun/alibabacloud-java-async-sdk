@@ -232,7 +232,7 @@ public class ConfigSchedruleOnDemandRequest extends Request {
          * The region ID of the on-demand instance.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -262,7 +262,7 @@ public class ConfigSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The threshold of inbound packets. Unit: Kpps. Minimum value: **10**.
+         * The threshold of inbound packets. Unit: kilo packets per second (Kpps). Minimum value: **10**.
          */
         public Builder ruleConditionKpps(String ruleConditionKpps) {
             this.putQueryParameter("RuleConditionKpps", ruleConditionKpps);
@@ -295,8 +295,8 @@ public class ConfigSchedruleOnDemandRequest extends Request {
          * Specifies whether the scheduling rule is enabled. Valid values:
          * <p>
          * 
-         * *   **on**: enabled
-         * *   **off**: disabled
+         * *   **on**
+         * *   **off**
          */
         public Builder ruleSwitch(String ruleSwitch) {
             this.putQueryParameter("RuleSwitch", ruleSwitch);
@@ -310,7 +310,7 @@ public class ConfigSchedruleOnDemandRequest extends Request {
          * 
          * If the system detects that DDoS attacks stop, the system no longer reroutes traffic to the on-demand instance from the time you specified. We recommend that you set this parameter to a value that is defined as off-peak hours.
          * 
-         * >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
+         * >  This parameter takes effect only when the value of **RuleUndoMode** is **auto**.
          */
         public Builder ruleUndoBeginTime(String ruleUndoBeginTime) {
             this.putQueryParameter("RuleUndoBeginTime", ruleUndoBeginTime);
@@ -331,8 +331,8 @@ public class ConfigSchedruleOnDemandRequest extends Request {
          * The stop method of the scheduling rule. Valid values:
          * <p>
          * 
-         * *   **auto**: The scheduling rule automatically stops.
-         * *   **manual**: The scheduling rule is manually stopped.
+         * *   **auto**
+         * *   **manual**
          */
         public Builder ruleUndoMode(String ruleUndoMode) {
             this.putQueryParameter("RuleUndoMode", ruleUndoMode);
@@ -346,7 +346,7 @@ public class ConfigSchedruleOnDemandRequest extends Request {
          * 
          * For example, the value `GMT-08:00` indicates that the time zone is UTC+8.
          * 
-         * >  This parameter takes effect only when the **RuleUndoMode** parameter is set to **auto**.
+         * >  This parameter takes effect only when the value of **RuleUndoMode** is **auto**.
          */
         public Builder timeZone(String timeZone) {
             this.putQueryParameter("TimeZone", timeZone);

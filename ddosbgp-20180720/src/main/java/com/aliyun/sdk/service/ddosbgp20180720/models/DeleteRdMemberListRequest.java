@@ -54,7 +54,7 @@ public class DeleteRdMemberListRequest extends Request {
         } 
 
         /**
-         * MemberList.
+         * The list of the members.
          */
         public Builder memberList(java.util.List < MemberList> memberList) {
             String memberListShrink = shrink(memberList, "MemberList", "json");
@@ -97,7 +97,7 @@ public class DeleteRdMemberListRequest extends Request {
             private String uid; 
 
             /**
-             * Uid.
+             * The Alibaba Cloud account ID of the member.
              */
             public Builder uid(String uid) {
                 this.uid = uid;

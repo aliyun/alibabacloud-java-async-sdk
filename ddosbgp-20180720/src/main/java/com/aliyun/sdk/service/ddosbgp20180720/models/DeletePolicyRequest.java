@@ -77,7 +77,7 @@ public class DeletePolicyRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the policy.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

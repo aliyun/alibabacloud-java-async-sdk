@@ -49,7 +49,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The specifications of the Anti-DDoS Origin Enterprise instance, including whether the unlimited protection feature is enabled, and the numbers of times that the unlimited protection feature can be enabled and has been enabled.
+         * The specifications of the Anti-DDoS Origin Enterprise instance, including whether best-effort protection is enabled, the number of available best-effort protection sessions, and the number of used best-effort protection sessions.
          */
         public Builder instanceSpecs(java.util.List < InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
@@ -181,7 +181,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer packBasicThre; 
 
             /**
-             * The bandwidth of the package configuration.
+             * The bandwidth. Unit: Gbit/s.
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -197,7 +197,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The burstable bandwidth of each protected IP address. Unit: Gbit/s.
+             * The burstable protection bandwidth of each protected IP address. Unit: Gbit/s.
              */
             public Builder ipAdvanceThre(Integer ipAdvanceThre) {
                 this.ipAdvanceThre = ipAdvanceThre;
@@ -205,7 +205,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The basic bandwidth of each protected IP address. Unit: Gbit/s.
+             * The basic protection bandwidth of each protected IP address. Unit: Gbit/s.
              */
             public Builder ipBasicThre(Integer ipBasicThre) {
                 this.ipBasicThre = ipBasicThre;
@@ -221,7 +221,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The normal clean bandwidth. Unit: Mbit/s.
+             * The clean bandwidth. Unit: Mbit/s.
              */
             public Builder normalBandwidth(Integer normalBandwidth) {
                 this.normalBandwidth = normalBandwidth;
@@ -362,7 +362,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer totalDefenseTimes; 
 
             /**
-             * The number of times that the unlimited protection feature can be enabled.
+             * The available best-effort protection sessions.
              */
             public Builder availableDefenseTimes(Integer availableDefenseTimes) {
                 this.availableDefenseTimes = availableDefenseTimes;
@@ -378,7 +378,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * DefenseTimesPercent.
+             * The percentage of the used best-effort protection sessions. Unit: %.
              */
             public Builder defenseTimesPercent(Integer defenseTimesPercent) {
                 this.defenseTimesPercent = defenseTimesPercent;
@@ -386,7 +386,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Anti-DDoS Origin Enterprise instance.
+             * The region ID of the Anti-DDoS Origin Enterprise instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -394,11 +394,11 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the unlimited protection feature is enabled. Valid values:
+             * Indicates whether best-effort protection is enabled. Valid values:
              * <p>
              * 
-             * *   **0**: The unlimited protection feature is disabled.
-             * *   **1**: The unlimited protection feature is enabled.
+             * *   **0**: Best-effort protection is disabled.
+             * *   **1**: Best-effort protection is enabled.
              */
             public Builder isFullDefenseMode(Integer isFullDefenseMode) {
                 this.isFullDefenseMode = isFullDefenseMode;
@@ -417,7 +417,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
              * The region ID of the Anti-DDoS Origin Enterprise instance.
              * <p>
              * 
-             * >  You can call the [DescribeRegions](~~118703~~) operation to query the name of the region.
+             * > You can call the [DescribeRegions](~~118703~~) operation to query the name of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -425,7 +425,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the unlimited protection feature can be enabled.
+             * The total best-effort protection sessions.
              */
             public Builder totalDefenseTimes(Integer totalDefenseTimes) {
                 this.totalDefenseTimes = totalDefenseTimes;

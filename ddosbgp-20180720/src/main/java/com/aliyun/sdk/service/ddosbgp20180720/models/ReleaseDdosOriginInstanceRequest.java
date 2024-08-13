@@ -54,7 +54,10 @@ public class ReleaseDdosOriginInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Anti-DDoS Origin instance that you want to release.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstanceList](~~118698~~) operation to query the IDs of all Anti-DDoS Origin instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

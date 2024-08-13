@@ -83,7 +83,7 @@ public class QuerySchedruleOnDemandRequest extends Request {
          * The region ID of the on-demand instance.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

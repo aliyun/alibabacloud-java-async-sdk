@@ -61,7 +61,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The query token that is returned in this call.
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -69,7 +69,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tags that are added to the Anti-DDoS Origin instance.
+         * The tags that are added to the Anti-DDoS Origin instance.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -161,7 +161,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. The value is fixed as **INSTANCE**, which indicates instances.
+             * The type of the resource. The value is set to **INSTANCE**.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

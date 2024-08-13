@@ -86,7 +86,7 @@ public class SetInstanceModeOnDemandRequest extends Request {
          * The IDs of on-demand instances.
          * <p>
          * 
-         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.
+         * > You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.
          */
         public Builder instanceIdList(java.util.List < String > instanceIdList) {
             this.putQueryParameter("InstanceIdList", instanceIdList);
@@ -95,7 +95,7 @@ public class SetInstanceModeOnDemandRequest extends Request {
         }
 
         /**
-         * The scheduling mode of the on-demand instance. Valid values:
+         * Specifies the scheduling mode for on-demand instances. Valid values:
          * <p>
          * 
          * *   **manual**: manual scheduling
@@ -111,7 +111,7 @@ public class SetInstanceModeOnDemandRequest extends Request {
          * The region ID of the on-demand instance.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+         * > You can call the [DescribeRegions](~~118703~~) operation to query all regions that are supported by Anti-DDoS Origin.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

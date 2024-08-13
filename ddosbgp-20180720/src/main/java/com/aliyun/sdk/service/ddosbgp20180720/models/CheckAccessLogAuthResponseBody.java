@@ -49,11 +49,11 @@ public class CheckAccessLogAuthResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether Anti-DDoS Origin was authorized to access Log Service. Valid values:
+         * Indicates whether Anti-DDoS Origin was authorized to access Simple Log Service. Valid values:
          * <p>
          * 
-         * *   **true**: Anti-DDoS Origin was authorized.
-         * *   **false**: Anti-DDoS Origin was not authorized.
+         * *   **true**
+         * *   **false**
          */
         public Builder accessLogAuth(Boolean accessLogAuth) {
             this.accessLogAuth = accessLogAuth;
@@ -61,7 +61,7 @@ public class CheckAccessLogAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

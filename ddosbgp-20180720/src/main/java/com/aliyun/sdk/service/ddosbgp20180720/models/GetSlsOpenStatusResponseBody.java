@@ -49,7 +49,7 @@ public class GetSlsOpenStatusResponseBody extends TeaModel {
         private Boolean slsOpenStatus; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +57,11 @@ public class GetSlsOpenStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether Log Service was activated. Valid values:
+         * Indicates whether Simple Log Service was activated. Valid values:
          * <p>
          * 
-         * *   **true**: Log Service was activated.
-         * *   **false**: Log Service was not activated.
+         * *   **true**
+         * *   **false**
          */
         public Builder slsOpenStatus(Boolean slsOpenStatus) {
             this.slsOpenStatus = slsOpenStatus;

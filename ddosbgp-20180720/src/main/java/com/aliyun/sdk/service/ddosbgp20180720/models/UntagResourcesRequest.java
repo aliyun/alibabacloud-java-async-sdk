@@ -126,7 +126,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the specified Anti-DDoS Origin Enterprise instances.
+         * Specifies whether to remove all tags from the instances. Default value: No.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -135,7 +135,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region where the Anti-DDoS Origin Enterprise instances reside.
+         * The ID of the region in which the instances reside.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +153,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The IDs of the instances. Valid values of N: 0 to 49. You can specify up to 50 instances at a time. Example: ResourceId.0, ResourceId.1, ... , ResourceId.49.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -162,7 +162,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the specified resource. Set the value to **INSTANCE**.
+         * The resource type. Set the value to **INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -171,7 +171,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The keys of the tag that you want to remove. Valid values of N: 0 to 19. You can specify up to 20 tag keys at a time. Example: Tag.0.Key, Tag.1.Key, ... , Tag.19.Key.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

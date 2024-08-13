@@ -69,7 +69,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class DescribeDdosEventResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of DDoS attack events.
+         * The total number of DDoS attack events that are returned.
          */
         public Builder total(Long total) {
             this.total = total;

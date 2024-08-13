@@ -276,7 +276,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * NsmExpireAt.
+             * The time when the near-origin traffic diversion feature was disabled.
              */
             public Builder nsmExpireAt(Long nsmExpireAt) {
                 this.nsmExpireAt = nsmExpireAt;
@@ -284,7 +284,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * NsmStartAt.
+             * The time when the near-origin traffic diversion feature was enabled.
              */
             public Builder nsmStartAt(Long nsmStartAt) {
                 this.nsmStartAt = nsmStartAt;
@@ -292,7 +292,11 @@ public class DescribePackIpListResponseBody extends TeaModel {
             }
 
             /**
-             * NsmStatus.
+             * The status of the near-origin traffic diversion feature. Valid values:
+             * <p>
+             * 
+             * *   **1**: The near-origin traffic diversion feature is enabled.
+             * *   **0**: The near-origin traffic diversion feature is disabled.
              */
             public Builder nsmStatus(Integer nsmStatus) {
                 this.nsmStatus = nsmStatus;
@@ -304,7 +308,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
              * <p>
              * 
              * *   **ECS**: an ECS instance.
-             * *   **SLB**: a CLB instance, originally called an SLB instance.
+             * *   **SLB**: a CLB (formerly SLB) instance.
              * *   **EIP**: an EIP. If the IP address belongs to an ALB instance, the value EIP is returned.
              * *   **WAF**: a WAF instance.
              */
@@ -339,7 +343,7 @@ public class DescribePackIpListResponseBody extends TeaModel {
              * The status of the IP address. Valid values:
              * <p>
              * 
-             * *   **normal**: The IP address is in the normal state, which indicates that the IP address is not under attack.
+             * *   **normal**: The IP address is not under attack.
              * *   **hole_begin**: Blackhole filtering is triggered for the IP address.
              */
             public Builder status(String status) {

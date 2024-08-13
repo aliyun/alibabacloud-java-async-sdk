@@ -83,10 +83,10 @@ public class DeleteSchedruleOnDemandRequest extends Request {
         } 
 
         /**
-         * The ID of the on-demand instance.
+         * The ID of the anti-DDoS diversion instance.
          * <p>
          * 
-         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all on-demand instances.
+         * >  You can call the [DescribeOnDemandInstance](~~152120~~) operation to query the IDs of all anti-DDoS diversion instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -95,10 +95,10 @@ public class DeleteSchedruleOnDemandRequest extends Request {
         }
 
         /**
-         * The region ID of the on-demand instance.
+         * The region ID of the anti-DDoS diversion instance.
          * <p>
          * 
-         * >  You can call the [DescribeRegions](~~118703~~) operation to query all regions supported by Anti-DDoS Origin.
+         * >  You can call the [DescribeRegions](~~118703~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
