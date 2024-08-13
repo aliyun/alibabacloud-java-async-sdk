@@ -22,6 +22,10 @@ public class AsymmetricVerifyRequest extends Request {
     private String digest;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String keyId;
@@ -40,6 +44,7 @@ public class AsymmetricVerifyRequest extends Request {
         super(builder);
         this.algorithm = builder.algorithm;
         this.digest = builder.digest;
+        this.dryRun = builder.dryRun;
         this.keyId = builder.keyId;
         this.keyVersionId = builder.keyVersionId;
         this.value = builder.value;
@@ -73,6 +78,13 @@ public class AsymmetricVerifyRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return keyId
      */
     public String getKeyId() {
@@ -96,6 +108,7 @@ public class AsymmetricVerifyRequest extends Request {
     public static final class Builder extends Request.Builder<AsymmetricVerifyRequest, Builder> {
         private String algorithm; 
         private String digest; 
+        private String dryRun; 
         private String keyId; 
         private String keyVersionId; 
         private String value; 
@@ -108,6 +121,7 @@ public class AsymmetricVerifyRequest extends Request {
             super(request);
             this.algorithm = request.algorithm;
             this.digest = request.digest;
+            this.dryRun = request.dryRun;
             this.keyId = request.keyId;
             this.keyVersionId = request.keyVersionId;
             this.value = request.value;
@@ -131,6 +145,15 @@ public class AsymmetricVerifyRequest extends Request {
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
             this.digest = digest;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

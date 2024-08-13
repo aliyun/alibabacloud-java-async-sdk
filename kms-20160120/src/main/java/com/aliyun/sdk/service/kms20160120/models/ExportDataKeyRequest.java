@@ -17,6 +17,10 @@ public class ExportDataKeyRequest extends Request {
     private String ciphertextBlob;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map < String, ? > encryptionContext;
 
@@ -38,6 +42,7 @@ public class ExportDataKeyRequest extends Request {
     private ExportDataKeyRequest(Builder builder) {
         super(builder);
         this.ciphertextBlob = builder.ciphertextBlob;
+        this.dryRun = builder.dryRun;
         this.encryptionContext = builder.encryptionContext;
         this.publicKeyBlob = builder.publicKeyBlob;
         this.wrappingAlgorithm = builder.wrappingAlgorithm;
@@ -62,6 +67,13 @@ public class ExportDataKeyRequest extends Request {
      */
     public String getCiphertextBlob() {
         return this.ciphertextBlob;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -94,6 +106,7 @@ public class ExportDataKeyRequest extends Request {
 
     public static final class Builder extends Request.Builder<ExportDataKeyRequest, Builder> {
         private String ciphertextBlob; 
+        private String dryRun; 
         private java.util.Map < String, ? > encryptionContext; 
         private String publicKeyBlob; 
         private String wrappingAlgorithm; 
@@ -106,6 +119,7 @@ public class ExportDataKeyRequest extends Request {
         private Builder(ExportDataKeyRequest request) {
             super(request);
             this.ciphertextBlob = request.ciphertextBlob;
+            this.dryRun = request.dryRun;
             this.encryptionContext = request.encryptionContext;
             this.publicKeyBlob = request.publicKeyBlob;
             this.wrappingAlgorithm = request.wrappingAlgorithm;
@@ -118,6 +132,15 @@ public class ExportDataKeyRequest extends Request {
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);
             this.ciphertextBlob = ciphertextBlob;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

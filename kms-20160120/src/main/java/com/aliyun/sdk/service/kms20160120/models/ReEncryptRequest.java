@@ -26,6 +26,10 @@ public class ReEncryptRequest extends Request {
     private String destinationKeyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceEncryptionAlgorithm")
     private String sourceEncryptionAlgorithm;
 
@@ -46,6 +50,7 @@ public class ReEncryptRequest extends Request {
         this.ciphertextBlob = builder.ciphertextBlob;
         this.destinationEncryptionContext = builder.destinationEncryptionContext;
         this.destinationKeyId = builder.destinationKeyId;
+        this.dryRun = builder.dryRun;
         this.sourceEncryptionAlgorithm = builder.sourceEncryptionAlgorithm;
         this.sourceEncryptionContext = builder.sourceEncryptionContext;
         this.sourceKeyId = builder.sourceKeyId;
@@ -87,6 +92,13 @@ public class ReEncryptRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return sourceEncryptionAlgorithm
      */
     public String getSourceEncryptionAlgorithm() {
@@ -118,6 +130,7 @@ public class ReEncryptRequest extends Request {
         private String ciphertextBlob; 
         private java.util.Map < String, ? > destinationEncryptionContext; 
         private String destinationKeyId; 
+        private String dryRun; 
         private String sourceEncryptionAlgorithm; 
         private java.util.Map < String, ? > sourceEncryptionContext; 
         private String sourceKeyId; 
@@ -132,6 +145,7 @@ public class ReEncryptRequest extends Request {
             this.ciphertextBlob = request.ciphertextBlob;
             this.destinationEncryptionContext = request.destinationEncryptionContext;
             this.destinationKeyId = request.destinationKeyId;
+            this.dryRun = request.dryRun;
             this.sourceEncryptionAlgorithm = request.sourceEncryptionAlgorithm;
             this.sourceEncryptionContext = request.sourceEncryptionContext;
             this.sourceKeyId = request.sourceKeyId;
@@ -169,6 +183,15 @@ public class ReEncryptRequest extends Request {
         public Builder destinationKeyId(String destinationKeyId) {
             this.putQueryParameter("DestinationKeyId", destinationKeyId);
             this.destinationKeyId = destinationKeyId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

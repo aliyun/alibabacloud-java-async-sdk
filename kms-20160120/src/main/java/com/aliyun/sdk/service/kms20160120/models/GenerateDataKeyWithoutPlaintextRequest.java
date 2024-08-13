@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateDataKeyWithoutPlaintextRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map < String, ? > encryptionContext;
 
@@ -31,6 +35,7 @@ public class GenerateDataKeyWithoutPlaintextRequest extends Request {
 
     private GenerateDataKeyWithoutPlaintextRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.encryptionContext = builder.encryptionContext;
         this.keyId = builder.keyId;
         this.keySpec = builder.keySpec;
@@ -48,6 +53,13 @@ public class GenerateDataKeyWithoutPlaintextRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -79,6 +91,7 @@ public class GenerateDataKeyWithoutPlaintextRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateDataKeyWithoutPlaintextRequest, Builder> {
+        private String dryRun; 
         private java.util.Map < String, ? > encryptionContext; 
         private String keyId; 
         private String keySpec; 
@@ -90,11 +103,21 @@ public class GenerateDataKeyWithoutPlaintextRequest extends Request {
 
         private Builder(GenerateDataKeyWithoutPlaintextRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.encryptionContext = request.encryptionContext;
             this.keyId = request.keyId;
             this.keySpec = request.keySpec;
             this.numberOfBytes = request.numberOfBytes;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see [EncryptionContext](~~42975~~).

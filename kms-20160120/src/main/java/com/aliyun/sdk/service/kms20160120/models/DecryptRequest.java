@@ -17,12 +17,17 @@ public class DecryptRequest extends Request {
     private String ciphertextBlob;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map < String, ? > encryptionContext;
 
     private DecryptRequest(Builder builder) {
         super(builder);
         this.ciphertextBlob = builder.ciphertextBlob;
+        this.dryRun = builder.dryRun;
         this.encryptionContext = builder.encryptionContext;
     }
 
@@ -47,6 +52,13 @@ public class DecryptRequest extends Request {
     }
 
     /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
      * @return encryptionContext
      */
     public java.util.Map < String, ? > getEncryptionContext() {
@@ -55,6 +67,7 @@ public class DecryptRequest extends Request {
 
     public static final class Builder extends Request.Builder<DecryptRequest, Builder> {
         private String ciphertextBlob; 
+        private String dryRun; 
         private java.util.Map < String, ? > encryptionContext; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class DecryptRequest extends Request {
         private Builder(DecryptRequest request) {
             super(request);
             this.ciphertextBlob = request.ciphertextBlob;
+            this.dryRun = request.dryRun;
             this.encryptionContext = request.encryptionContext;
         } 
 
@@ -80,6 +94,15 @@ public class DecryptRequest extends Request {
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);
             this.ciphertextBlob = ciphertextBlob;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

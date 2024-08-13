@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateAndExportDataKeyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private String dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptionContext")
     private java.util.Map < String, ? > encryptionContext;
 
@@ -46,6 +50,7 @@ public class GenerateAndExportDataKeyRequest extends Request {
 
     private GenerateAndExportDataKeyRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.encryptionContext = builder.encryptionContext;
         this.keyId = builder.keyId;
         this.keySpec = builder.keySpec;
@@ -66,6 +71,13 @@ public class GenerateAndExportDataKeyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public String getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -118,6 +130,7 @@ public class GenerateAndExportDataKeyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateAndExportDataKeyRequest, Builder> {
+        private String dryRun; 
         private java.util.Map < String, ? > encryptionContext; 
         private String keyId; 
         private String keySpec; 
@@ -132,6 +145,7 @@ public class GenerateAndExportDataKeyRequest extends Request {
 
         private Builder(GenerateAndExportDataKeyRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.encryptionContext = request.encryptionContext;
             this.keyId = request.keyId;
             this.keySpec = request.keySpec;
@@ -140,6 +154,15 @@ public class GenerateAndExportDataKeyRequest extends Request {
             this.wrappingAlgorithm = request.wrappingAlgorithm;
             this.wrappingKeySpec = request.wrappingKeySpec;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(String dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * A JSON string of key-value pairs. If you specify this parameter here, an equivalent value is required when you decrypt or re-encrypt the data key. For more information, see [EncryptionContext](~~42975~~).
