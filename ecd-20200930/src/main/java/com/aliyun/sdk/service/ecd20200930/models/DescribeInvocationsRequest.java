@@ -32,6 +32,10 @@ public class DescribeInvocationsRequest extends Request {
     private String endUserId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeInvokeDesktops")
+    private Boolean includeInvokeDesktops;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IncludeOutput")
     private Boolean includeOutput;
 
@@ -64,6 +68,7 @@ public class DescribeInvocationsRequest extends Request {
         this.desktopId = builder.desktopId;
         this.desktopIds = builder.desktopIds;
         this.endUserId = builder.endUserId;
+        this.includeInvokeDesktops = builder.includeInvokeDesktops;
         this.includeOutput = builder.includeOutput;
         this.invokeId = builder.invokeId;
         this.invokeStatus = builder.invokeStatus;
@@ -121,6 +126,13 @@ public class DescribeInvocationsRequest extends Request {
     }
 
     /**
+     * @return includeInvokeDesktops
+     */
+    public Boolean getIncludeInvokeDesktops() {
+        return this.includeInvokeDesktops;
+    }
+
+    /**
      * @return includeOutput
      */
     public Boolean getIncludeOutput() {
@@ -168,6 +180,7 @@ public class DescribeInvocationsRequest extends Request {
         private String desktopId; 
         private java.util.List < String > desktopIds; 
         private String endUserId; 
+        private Boolean includeInvokeDesktops; 
         private Boolean includeOutput; 
         private String invokeId; 
         private String invokeStatus; 
@@ -186,6 +199,7 @@ public class DescribeInvocationsRequest extends Request {
             this.desktopId = request.desktopId;
             this.desktopIds = request.desktopIds;
             this.endUserId = request.endUserId;
+            this.includeInvokeDesktops = request.includeInvokeDesktops;
             this.includeOutput = request.includeOutput;
             this.invokeId = request.invokeId;
             this.invokeStatus = request.invokeStatus;
@@ -246,6 +260,15 @@ public class DescribeInvocationsRequest extends Request {
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
             this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * IncludeInvokeDesktops.
+         */
+        public Builder includeInvokeDesktops(Boolean includeInvokeDesktops) {
+            this.putQueryParameter("IncludeInvokeDesktops", includeInvokeDesktops);
+            this.includeInvokeDesktops = includeInvokeDesktops;
             return this;
         }
 

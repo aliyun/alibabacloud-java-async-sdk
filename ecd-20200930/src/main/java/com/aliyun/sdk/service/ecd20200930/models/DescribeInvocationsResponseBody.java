@@ -443,6 +443,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
+        @com.aliyun.core.annotation.NameInMap("InvokeDesktopCount")
+        private Integer invokeDesktopCount;
+
+        @com.aliyun.core.annotation.NameInMap("InvokeDesktopSucceedCount")
+        private Integer invokeDesktopSucceedCount;
+
         @com.aliyun.core.annotation.NameInMap("InvokeDesktops")
         private java.util.List < InvokeDesktops> invokeDesktops;
 
@@ -455,6 +461,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.endUserId = builder.endUserId;
             this.invocationStatus = builder.invocationStatus;
+            this.invokeDesktopCount = builder.invokeDesktopCount;
+            this.invokeDesktopSucceedCount = builder.invokeDesktopSucceedCount;
             this.invokeDesktops = builder.invokeDesktops;
             this.invokeId = builder.invokeId;
         }
@@ -503,6 +511,20 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return invokeDesktopCount
+         */
+        public Integer getInvokeDesktopCount() {
+            return this.invokeDesktopCount;
+        }
+
+        /**
+         * @return invokeDesktopSucceedCount
+         */
+        public Integer getInvokeDesktopSucceedCount() {
+            return this.invokeDesktopSucceedCount;
+        }
+
+        /**
          * @return invokeDesktops
          */
         public java.util.List < InvokeDesktops> getInvokeDesktops() {
@@ -522,6 +544,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String creationTime; 
             private String endUserId; 
             private String invocationStatus; 
+            private Integer invokeDesktopCount; 
+            private Integer invokeDesktopSucceedCount; 
             private java.util.List < InvokeDesktops> invokeDesktops; 
             private String invokeId; 
 
@@ -586,6 +610,22 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
+                return this;
+            }
+
+            /**
+             * InvokeDesktopCount.
+             */
+            public Builder invokeDesktopCount(Integer invokeDesktopCount) {
+                this.invokeDesktopCount = invokeDesktopCount;
+                return this;
+            }
+
+            /**
+             * InvokeDesktopSucceedCount.
+             */
+            public Builder invokeDesktopSucceedCount(Integer invokeDesktopSucceedCount) {
+                this.invokeDesktopSucceedCount = invokeDesktopSucceedCount;
                 return this;
             }
 
