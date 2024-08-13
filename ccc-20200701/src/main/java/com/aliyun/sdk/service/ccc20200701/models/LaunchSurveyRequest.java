@@ -13,7 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class LaunchSurveyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContactFlowId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String contactFlowId;
 
     @com.aliyun.core.annotation.Query
