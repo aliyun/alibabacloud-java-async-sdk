@@ -85,7 +85,7 @@ public class ListCsrResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * CsrList.
+         * The CSRs.
          */
         public Builder csrList(java.util.List < CsrList> csrList) {
             this.csrList = csrList;
@@ -93,7 +93,7 @@ public class ListCsrResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -101,7 +101,7 @@ public class ListCsrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListCsrResponseBody extends TeaModel {
         }
 
         /**
-         * ShowSize.
+         * The number of entries per page. Default value: 50.
          */
         public Builder showSize(Long showSize) {
             this.showSize = showSize;
@@ -117,7 +117,7 @@ public class ListCsrResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -301,7 +301,7 @@ public class ListCsrResponseBody extends TeaModel {
             private String sans; 
 
             /**
-             * Algorithm.
+             * The algorithm. Valid values: RSA, SM2, and ECC.
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -309,7 +309,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * CommonName.
+             * The primary domain name, which is a common name.
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -317,7 +317,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * CorpName.
+             * The name of the company.
              */
             public Builder corpName(String corpName) {
                 this.corpName = corpName;
@@ -325,7 +325,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * CountryCode.
+             * The code of the country or region in which the organization is located. For example, you can use CN to indicate China and use US to indicate the United States. The default value is the code of the country or region in which the organization is located. The organization is associated with the intermediate CA certificate from which the certificate is issued. For more information about country codes, see the "Country codes" section of the [Manage company profiles](~~198289~~) topic.
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
@@ -333,7 +333,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * CSR ID。
+             * The ID of the CSR.
              */
             public Builder csrId(Long csrId) {
                 this.csrId = csrId;
@@ -341,7 +341,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * Department.
+             * The department that uses the certificate.
              */
             public Builder department(String department) {
                 this.department = department;
@@ -349,7 +349,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * HasPrivateKey.
+             * Indicates whether the certificate contains a private key.
              */
             public Builder hasPrivateKey(Boolean hasPrivateKey) {
                 this.hasPrivateKey = hasPrivateKey;
@@ -357,7 +357,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * KeySha2.
+             * The public key that is calculated by using the SHA256 algorithm.
              */
             public Builder keySha2(String keySha2) {
                 this.keySha2 = keySha2;
@@ -365,7 +365,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * KeySize.
+             * The key length that is used by the algorithm. The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits. The key length for ECC and SM2 algorithms can be 256 bits.
              */
             public Builder keySize(Integer keySize) {
                 this.keySize = keySize;
@@ -373,7 +373,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * Locality.
+             * The city where the company is located.
              */
             public Builder locality(String locality) {
                 this.locality = locality;
@@ -381,7 +381,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the CSR.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -389,7 +389,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * Province.
+             * The province or location.
              */
             public Builder province(String province) {
                 this.province = province;
@@ -397,7 +397,7 @@ public class ListCsrResponseBody extends TeaModel {
             }
 
             /**
-             * Sans.
+             * The secondary domain names. Separate multiple domain names with commas (,).
              */
             public Builder sans(String sans) {
                 this.sans = sans;

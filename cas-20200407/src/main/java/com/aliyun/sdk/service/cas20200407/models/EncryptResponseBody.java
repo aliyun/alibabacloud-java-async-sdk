@@ -61,7 +61,7 @@ public class EncryptResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertIdentifier.
+         * The unique identifier of the certificate.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -69,7 +69,7 @@ public class EncryptResponseBody extends TeaModel {
         }
 
         /**
-         * CiphertextBlob.
+         * The data after encryption. The value is encoded in Base64.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
@@ -77,7 +77,7 @@ public class EncryptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

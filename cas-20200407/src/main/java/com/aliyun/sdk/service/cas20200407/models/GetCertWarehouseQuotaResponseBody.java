@@ -61,7 +61,7 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         private Long useCount; 
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +69,7 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * TotalQuota.
+         * The total quota for certificate repositories, including the free quota and purchased quota.
          */
         public Builder totalQuota(Long totalQuota) {
             this.totalQuota = totalQuota;
@@ -77,7 +77,7 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * UseCount.
+         * The used quota.
          */
         public Builder useCount(Long useCount) {
             this.useCount = useCount;

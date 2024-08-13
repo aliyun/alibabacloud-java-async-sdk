@@ -131,7 +131,7 @@ public class CreateCertificateRequestRequest extends Request {
          * The domain name that you want to bind to the certificate. You can specify only one domain name.
          * <p>
          * 
-         * > The domain name must match the certificate specifications that you specify for the **ProductCode** parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as `*.aliyundoc.com` for this parameter.
+         * >  The domain name must match the certificate specifications that you specify for the **ProductCode** parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as `*.aliyundoc.com` for this parameter.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -140,7 +140,7 @@ public class CreateCertificateRequestRequest extends Request {
         }
 
         /**
-         * The email address of the applicant.
+         * The contact email address of the applicant.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -161,8 +161,8 @@ public class CreateCertificateRequestRequest extends Request {
          * The specifications of the certificate. Valid values:
          * <p>
          * 
-         * *   **digicert-free-1-free**: DigiCert single-domain DV certificate in 3 months free trial. This is the default value.
-         * *   **symantec-free-1-free**: DigiCert single-domain DV certificate in 1 year free trial.
+         * *   **digicert-free-1-free** (default): DigiCert single-domain DV certificate, which is free and valid for 3 months.
+         * *   **symantec-free-1-free**: DigiCert single-domain DV certificate, which is free and valid for 1 year. This value is available only on the China site (aliyun.com).
          * *   **symantec-dv-1-starter**: DigiCert wildcard DV certificate.
          * *   **geotrust-dv-1-starter**: GeoTrust single-domain DV certificate.
          * *   **geotrust-dv-w-starter**: GeoTrust wildcard DV certificate.
@@ -185,7 +185,7 @@ public class CreateCertificateRequestRequest extends Request {
         }
 
         /**
-         * The verification method of the domain name ownership. Valid values:
+         * The method to verify the ownership of a domain name. Valid values:
          * <p>
          * 
          * *   **DNS**: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.

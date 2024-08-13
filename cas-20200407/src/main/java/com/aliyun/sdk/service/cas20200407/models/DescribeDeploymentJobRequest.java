@@ -54,7 +54,7 @@ public class DescribeDeploymentJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * The ID of the deployment job. The **ID** of the job is returned after you call the [CreateDeploymentJob](~~2712234~~) operation. You can also call the [ListDeploymentJob](~~2712223~~) operation to obtain the ID.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);

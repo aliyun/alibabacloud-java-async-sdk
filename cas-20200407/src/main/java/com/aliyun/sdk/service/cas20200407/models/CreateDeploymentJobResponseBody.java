@@ -49,7 +49,7 @@ public class CreateDeploymentJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * The ID of the deployment task.
          */
         public Builder jobId(Long jobId) {
             this.jobId = jobId;
@@ -57,7 +57,7 @@ public class CreateDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -49,7 +49,7 @@ public class UploadCsrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CSR ID。
+         * The ID of the CSR.
          */
         public Builder csrId(Long csrId) {
             this.csrId = csrId;
@@ -57,7 +57,7 @@ public class UploadCsrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

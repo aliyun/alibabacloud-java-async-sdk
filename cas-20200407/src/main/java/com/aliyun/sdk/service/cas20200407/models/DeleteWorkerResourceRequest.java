@@ -69,7 +69,7 @@ public class DeleteWorkerResourceRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * The ID of the deployment task.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -78,7 +78,7 @@ public class DeleteWorkerResourceRequest extends Request {
         }
 
         /**
-         * WorkerId.
+         * The ID of the worker for the deployment task.
          */
         public Builder workerId(Long workerId) {
             this.putQueryParameter("WorkerId", workerId);

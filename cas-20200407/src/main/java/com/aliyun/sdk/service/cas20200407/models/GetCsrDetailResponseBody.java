@@ -49,7 +49,7 @@ public class GetCsrDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Csr.
+         * The content of the CSR.
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -57,7 +57,7 @@ public class GetCsrDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

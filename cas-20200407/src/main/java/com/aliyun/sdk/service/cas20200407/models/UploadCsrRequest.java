@@ -82,7 +82,7 @@ public class UploadCsrRequest extends Request {
         } 
 
         /**
-         * Csr.
+         * The content of the CSR.
          */
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
@@ -91,7 +91,7 @@ public class UploadCsrRequest extends Request {
         }
 
         /**
-         * Key.
+         * The private key content of the certificate in the PEM format.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -100,7 +100,7 @@ public class UploadCsrRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the CSR.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

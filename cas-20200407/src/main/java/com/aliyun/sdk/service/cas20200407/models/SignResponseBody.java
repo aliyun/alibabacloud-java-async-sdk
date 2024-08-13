@@ -49,7 +49,7 @@ public class SignResponseBody extends TeaModel {
         private String signature; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class SignResponseBody extends TeaModel {
         }
 
         /**
-         * Signature.
+         * The signature.
          */
         public Builder signature(String signature) {
             this.signature = signature;

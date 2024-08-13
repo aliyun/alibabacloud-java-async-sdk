@@ -98,11 +98,7 @@ public class MoveResourceGroupRequest extends Request {
         } 
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
-         * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * The region of the organization to which the owner of the certificate belongs. Valid values: ap-southeast-1 and cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -120,7 +116,7 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource ID.
+         * The ID of the resource.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -129,7 +125,14 @@ public class MoveResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource.
+         * The type of the resource.\
+         * <p>
+         * Default value: **instance**
+         * 
+         * Valid values:
+         * 
+         * *   instance: certificate order
+         * *   Certificate: certificate
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

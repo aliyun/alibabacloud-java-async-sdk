@@ -53,7 +53,10 @@ public class DescribeCloudResourceStatusRequest extends Request {
         } 
 
         /**
-         * SecretId.
+         * The AccessKey secret used to access cloud resources.
+         * <p>
+         * 
+         * >  You can call the [ListCloudAccess](~~2712219~~) operation to obtain the ID.
          */
         public Builder secretId(String secretId) {
             this.putQueryParameter("SecretId", secretId);

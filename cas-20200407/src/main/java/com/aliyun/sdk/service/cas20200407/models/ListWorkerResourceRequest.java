@@ -110,7 +110,7 @@ public class ListWorkerResourceRequest extends Request {
         } 
 
         /**
-         * CloudProduct.
+         * The cloud service in the deployment task.
          */
         public Builder cloudProduct(String cloudProduct) {
             this.putQueryParameter("CloudProduct", cloudProduct);
@@ -119,7 +119,7 @@ public class ListWorkerResourceRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -128,7 +128,7 @@ public class ListWorkerResourceRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the deployment task. You can call the [CreateDeploymentJob](~~2712234~~) operation to obtain the ID of a deployment task from the **ID** parameter. You can also call the [ListDeploymentJob](~~2712223~~) operation to obtain the ID of a deployment task.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -137,7 +137,7 @@ public class ListWorkerResourceRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * The number of entries per page. Default value: 50.
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -146,7 +146,20 @@ public class ListWorkerResourceRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the worker task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   rollback
+         * *   rollback_error
+         * *   success
+         * *   rollback_success
+         * *   pending
+         * *   scheduling
+         * *   processing
+         * *   error
+         * *   editing
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

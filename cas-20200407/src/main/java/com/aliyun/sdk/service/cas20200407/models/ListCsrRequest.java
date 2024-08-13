@@ -95,7 +95,7 @@ public class ListCsrRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * The algorithm. Valid values: RSA, ECC, and SM2.
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -104,7 +104,7 @@ public class ListCsrRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -113,7 +113,7 @@ public class ListCsrRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * The keyword.
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -122,7 +122,7 @@ public class ListCsrRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * The number of entries per page. Default value: 50.
          */
         public Builder showSize(Long showSize) {
             this.putQueryParameter("ShowSize", showSize);

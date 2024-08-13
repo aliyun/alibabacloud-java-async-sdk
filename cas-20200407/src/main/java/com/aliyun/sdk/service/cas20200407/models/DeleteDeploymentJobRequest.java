@@ -54,7 +54,7 @@ public class DeleteDeploymentJobRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * The ID of the deployment task.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);

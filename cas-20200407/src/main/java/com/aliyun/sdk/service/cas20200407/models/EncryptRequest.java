@@ -98,7 +98,12 @@ public class EncryptRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * The encryption algorithm. Valid values:
+         * <p>
+         * 
+         * *   **RSAES_OAEP_SHA\_1**
+         * *   **RSAES_OAEP_SHA\_256**
+         * *   **SM2PKE**
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -107,7 +112,11 @@ public class EncryptRequest extends Request {
         }
 
         /**
-         * CertIdentifier.
+         * The unique identifier of the certificate. You can call the [ListCert](~~455806~~) operation to obtain the identifier.
+         * <p>
+         * 
+         * *   If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.
+         * *   If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -116,7 +125,11 @@ public class EncryptRequest extends Request {
         }
 
         /**
-         * MessageType.
+         * The value type of the Message parameter. Valid values:
+         * <p>
+         * 
+         * *   RAW: The value of the Plaintext parameter is directly encrypted. This is the default value.
+         * *   Base64: The value of the Plaintext parameter is Base64-encoded data. The data is decoded and then encrypted.
          */
         public Builder messageType(String messageType) {
             this.putQueryParameter("MessageType", messageType);
@@ -125,7 +138,12 @@ public class EncryptRequest extends Request {
         }
 
         /**
-         * Plaintext.
+         * The data that you want to encrypt. The value of this parameter can be raw data or Base64-encoded data. For more information, see the description of the MessageType parameter. For example, if the hexadecimal data that you want to encrypt is `[0x31, 0x32, 0x33, 0x34]`, the Base64-encoded data is MTIzNA==. The size of data that can be encrypted varies based on the encryption algorithm that you use. The following list describes the relationship between the encryption algorithms and data sizes:
+         * <p>
+         * 
+         * *   **RSAES_OAEP_SHA\_1**: 214 bytes
+         * *   **RSAES_OAEP_SHA\_256**: 190 bytes
+         * *   **SM2PKE**: 6,047 bytes
          */
         public Builder plaintext(String plaintext) {
             this.putQueryParameter("Plaintext", plaintext);

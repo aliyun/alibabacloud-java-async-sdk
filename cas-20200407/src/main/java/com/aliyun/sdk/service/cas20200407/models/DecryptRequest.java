@@ -98,7 +98,12 @@ public class DecryptRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * The encryption algorithm. Valid values:
+         * <p>
+         * 
+         * *   **RSAES_OAEP_SHA\_1**
+         * *   **RSAES_OAEP_SHA\_256**
+         * *   **SM2PKE**
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -107,7 +112,11 @@ public class DecryptRequest extends Request {
         }
 
         /**
-         * CertIdentifier.
+         * The unique identifier of the certificate. You can call the [ListCert](~~455806~~) operation to query the identifier.
+         * <p>
+         * 
+         * *   If the certificate is an SSL certificate, the value of this parameter must be in the {Certificate ID}-cn-hangzhou format.
+         * *   If the certificate is a private certificate, the value of this parameter must be the value of the Identifier field for the private certificate.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -116,7 +125,7 @@ public class DecryptRequest extends Request {
         }
 
         /**
-         * CiphertextBlob.
+         * The data that you want to decrypt. The value is encoded in Base64.
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);
@@ -125,7 +134,11 @@ public class DecryptRequest extends Request {
         }
 
         /**
-         * MessageType.
+         * The value type of the Message parameter. Valid values:
+         * <p>
+         * 
+         * *   RAW: The returned result is raw data encoded in UTF-8.
+         * *   Base64: The returned result is Base64-encoded data. This is the default value.
          */
         public Builder messageType(String messageType) {
             this.putQueryParameter("MessageType", messageType);

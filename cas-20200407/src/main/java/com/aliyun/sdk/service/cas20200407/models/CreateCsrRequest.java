@@ -185,7 +185,7 @@ public class CreateCsrRequest extends Request {
         } 
 
         /**
-         * Algorithm.
+         * The algorithm. Valid values: RSA, SM2, and ECC. For more information about algorithms, see [Select an SSL certificate](~~197871~~).
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -194,7 +194,7 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * CommonName.
+         * The primary domain name, which is a common name.
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -203,7 +203,7 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * CorpName.
+         * The name of the company.
          */
         public Builder corpName(String corpName) {
             this.putQueryParameter("CorpName", corpName);
@@ -212,7 +212,7 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * CountryCode.
+         * The code of the country or region in which the organization is located. For example, you can use CN to indicate China and use US to indicate the United States.
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -221,7 +221,7 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * Department.
+         * The department that uses the certificate.
          */
         public Builder department(String department) {
             this.putQueryParameter("Department", department);
@@ -230,7 +230,11 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * KeySize.
+         * The key length that is used by the algorithm.
+         * <p>
+         * 
+         * *   The key length for RSA algorithms can be 2,048, 3,072, and 4,096 bits.
+         * *   The key length for ECC and SM2 algorithms can be 256 bits.
          */
         public Builder keySize(Integer keySize) {
             this.putQueryParameter("KeySize", keySize);
@@ -239,7 +243,7 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * Locality.
+         * The city where the company is located.
          */
         public Builder locality(String locality) {
             this.putQueryParameter("Locality", locality);
@@ -248,7 +252,7 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the CSR. The name can be up to 50 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -257,7 +261,7 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * Province.
+         * The province or location where the company is located.
          */
         public Builder province(String province) {
             this.putQueryParameter("Province", province);
@@ -266,7 +270,7 @@ public class CreateCsrRequest extends Request {
         }
 
         /**
-         * Sans.
+         * The secondary domain names. Separate multiple domain names with commas (,). You can use the CSR to apply for a certificate for both the primary and secondary domain names.
          */
         public Builder sans(String sans) {
             this.putQueryParameter("Sans", sans);

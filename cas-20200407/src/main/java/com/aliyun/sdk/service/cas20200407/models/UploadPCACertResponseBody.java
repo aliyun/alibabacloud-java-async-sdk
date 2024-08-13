@@ -49,7 +49,7 @@ public class UploadPCACertResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Identifier.
+         * The unique identifier of the certificate.
          */
         public Builder identifier(String identifier) {
             this.identifier = identifier;

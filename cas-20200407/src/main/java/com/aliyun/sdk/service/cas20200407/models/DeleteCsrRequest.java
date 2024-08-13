@@ -54,7 +54,7 @@ public class DeleteCsrRequest extends Request {
         } 
 
         /**
-         * CSR ID。
+         * The ID of the CSR.
          */
         public Builder csrId(Long csrId) {
             this.putQueryParameter("CsrId", csrId);

@@ -54,7 +54,7 @@ public class ListDeploymentJobCertRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * The ID of the deployment task. You can call the [CreateDeploymentJob](~~2712234~~) operation to obtain the ID of a deployment task from the **JobId** parameter. You can also call the [ListDeploymentJob](~~2712223~~) operation to obtain the ID of a deployment task.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);

@@ -128,7 +128,7 @@ public class CreateDeploymentJobRequest extends Request {
         } 
 
         /**
-         * CertIds.
+         * The certificate IDs.
          */
         public Builder certIds(String certIds) {
             this.putQueryParameter("CertIds", certIds);
@@ -137,7 +137,7 @@ public class CreateDeploymentJobRequest extends Request {
         }
 
         /**
-         * ContactIds.
+         * The contact IDs.
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -146,7 +146,13 @@ public class CreateDeploymentJobRequest extends Request {
         }
 
         /**
-         * JobType.
+         * The type of the task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   cloud
+         * *   user
          */
         public Builder jobType(String jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -155,7 +161,7 @@ public class CreateDeploymentJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the deployment task.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -164,7 +170,7 @@ public class CreateDeploymentJobRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * The resource IDs.
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -173,7 +179,7 @@ public class CreateDeploymentJobRequest extends Request {
         }
 
         /**
-         * ScheduleTime.
+         * The time when the task was scheduled.
          */
         public Builder scheduleTime(Long scheduleTime) {
             this.putQueryParameter("ScheduleTime", scheduleTime);

@@ -54,7 +54,7 @@ public class GetCsrDetailRequest extends Request {
         } 
 
         /**
-         * CSR ID。
+         * The ID of the CSR.
          */
         public Builder csrId(Long csrId) {
             this.putQueryParameter("CsrId", csrId);

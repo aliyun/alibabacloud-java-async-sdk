@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCloudResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertIds")
+    private java.util.List < Long > certIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CloudName")
     private String cloudName;
 
@@ -37,6 +41,7 @@ public class ListCloudResourcesRequest extends Request {
 
     private ListCloudResourcesRequest(Builder builder) {
         super(builder);
+        this.certIds = builder.certIds;
         this.cloudName = builder.cloudName;
         this.cloudProduct = builder.cloudProduct;
         this.currentPage = builder.currentPage;
@@ -56,6 +61,13 @@ public class ListCloudResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return certIds
+     */
+    public java.util.List < Long > getCertIds() {
+        return this.certIds;
     }
 
     /**
@@ -101,6 +113,7 @@ public class ListCloudResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCloudResourcesRequest, Builder> {
+        private java.util.List < Long > certIds; 
         private String cloudName; 
         private String cloudProduct; 
         private Integer currentPage; 
@@ -114,6 +127,7 @@ public class ListCloudResourcesRequest extends Request {
 
         private Builder(ListCloudResourcesRequest request) {
             super(request);
+            this.certIds = request.certIds;
             this.cloudName = request.cloudName;
             this.cloudProduct = request.cloudProduct;
             this.currentPage = request.currentPage;
@@ -123,7 +137,23 @@ public class ListCloudResourcesRequest extends Request {
         } 
 
         /**
-         * CloudName.
+         * CertIds.
+         */
+        public Builder certIds(java.util.List < Long > certIds) {
+            String certIdsShrink = shrink(certIds, "CertIds", "json");
+            this.putQueryParameter("CertIds", certIdsShrink);
+            this.certIds = certIds;
+            return this;
+        }
+
+        /**
+         * The cloud service provider.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Tencent: Tencent Cloud
+         * *   aliyun: Alibaba Cloud
          */
         public Builder cloudName(String cloudName) {
             this.putQueryParameter("CloudName", cloudName);
@@ -132,7 +162,7 @@ public class ListCloudResourcesRequest extends Request {
         }
 
         /**
-         * CloudProduct.
+         * The cloud service. Only Content Delivery Network (CDN) is supported for Tencent Cloud.
          */
         public Builder cloudProduct(String cloudProduct) {
             this.putQueryParameter("CloudProduct", cloudProduct);
@@ -141,7 +171,7 @@ public class ListCloudResourcesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -150,7 +180,7 @@ public class ListCloudResourcesRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The domain name bound to the cloud resource.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -159,7 +189,7 @@ public class ListCloudResourcesRequest extends Request {
         }
 
         /**
-         * SecretId.
+         * The AccessKey ID used to access cloud resources.
          */
         public Builder secretId(String secretId) {
             this.putQueryParameter("SecretId", secretId);
@@ -168,7 +198,7 @@ public class ListCloudResourcesRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * The number of revoked certificates per page. Default value: **20**.
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

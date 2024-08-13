@@ -84,7 +84,7 @@ public class UpdateWorkerResourceStatusRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * The ID of the deployment task. You can call the [CreateDeploymentJob](~~2712234~~) operation to obtain the ID of a deployment task from the **JobId** parameter. You can also call the [ListDeploymentJob](~~2712223~~) operation to obtain the ID of a deployment task.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -93,7 +93,12 @@ public class UpdateWorkerResourceStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The desired status.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   rollback
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -102,7 +107,7 @@ public class UpdateWorkerResourceStatusRequest extends Request {
         }
 
         /**
-         * WorkerId.
+         * The ID of the worker task. You can call the [ListWorkerResource](~~2712224~~) operation to obtain the ID of a worker task.
          */
         public Builder workerId(Long workerId) {
             this.putQueryParameter("WorkerId", workerId);

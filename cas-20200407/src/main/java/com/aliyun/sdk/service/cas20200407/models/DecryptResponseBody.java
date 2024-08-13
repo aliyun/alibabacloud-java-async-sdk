@@ -61,7 +61,7 @@ public class DecryptResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertIdentifier.
+         * The unique identifier of the certificate.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -69,7 +69,7 @@ public class DecryptResponseBody extends TeaModel {
         }
 
         /**
-         * Plaintext.
+         * The data after decryption.
          */
         public Builder plaintext(String plaintext) {
             this.plaintext = plaintext;
@@ -77,7 +77,7 @@ public class DecryptResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

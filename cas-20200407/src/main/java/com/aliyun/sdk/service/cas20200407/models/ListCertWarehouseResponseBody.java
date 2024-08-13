@@ -85,7 +85,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * CertWarehouseList.
+         * The certificate application repositories.
          */
         public Builder certWarehouseList(java.util.List < CertWarehouseList> certWarehouseList) {
             this.certWarehouseList = certWarehouseList;
@@ -93,7 +93,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number of the returned page. Default value: 1.
          */
         public Builder currentPage(Long currentPage) {
             this.currentPage = currentPage;
@@ -101,7 +101,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * ShowSize.
+         * The number of entries returned per page. Default value: 50.
          */
         public Builder showSize(Long showSize) {
             this.showSize = showSize;
@@ -117,7 +117,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -241,7 +241,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             private Long whId; 
 
             /**
-             * EndTime.
+             * The timestamp when the certificate application repository expires. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -249,7 +249,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID of the certificate application repository.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -257,7 +257,11 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * IsExpired.
+             * Indicates whether the certificate application repository has expired. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isExpired(Boolean isExpired) {
                 this.isExpired = isExpired;
@@ -265,7 +269,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the certificate application repository.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -273,7 +277,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * PcaInstanceId.
+             * The instance ID of the private CA.
              */
             public Builder pcaInstanceId(String pcaInstanceId) {
                 this.pcaInstanceId = pcaInstanceId;
@@ -281,7 +285,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * The queries per second (QPS).
              */
             public Builder qps(Long qps) {
                 this.qps = qps;
@@ -289,7 +293,14 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the certificate application repository. Valid values:
+             * <p>
+             * 
+             * *   **ssl**: certificate application repository of SSL certificates
+             * *   **uploadPCA**: certificate application repository of uploaded private certificates
+             * *   **free**: certificate application repository of free certificates, available only on the China site (aliyun.com)
+             * *   **aliyunPCA**: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)
+             * *   **disable**: disabled certificate application repository
              */
             public Builder type(String type) {
                 this.type = type;
@@ -297,7 +308,7 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             }
 
             /**
-             * WhId.
+             * The ID of the certificate application repository.
              */
             public Builder whId(Long whId) {
                 this.whId = whId;

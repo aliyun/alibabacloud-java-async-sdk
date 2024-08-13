@@ -137,11 +137,11 @@ public class ListCertRequest extends Request {
         } 
 
         /**
-         * The type of the certificate.
+         * 证书的类型 。取值：
          * <p>
          * 
-         * *   **CA**: the CA certificate.
-         * *   **CERT**: a issued certificate.
+         * - **CA**：表示CA证书。
+         * - **CERT**：表示签发的证书。
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -159,7 +159,7 @@ public class ListCertRequest extends Request {
         }
 
         /**
-         * The keyword that is used for queries. The value can be a name, domain name, or subject alternative name (SAN) attribute. Fuzzy match is supported.
+         * The keyword for the query. You can enter a name, domain name, or Subject Alternative Name (SAN) extension. Fuzzy match is supported.
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);

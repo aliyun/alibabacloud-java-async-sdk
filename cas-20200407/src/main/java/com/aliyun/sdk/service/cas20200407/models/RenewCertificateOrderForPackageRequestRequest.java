@@ -75,7 +75,7 @@ public class RenewCertificateOrderForPackageRequestRequest extends Request {
          * 
          * A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.
          * 
-         * > The **CN** field in the CSR file specifies the domain name that is bound to the certificate.
+         * >  The **CN** field in the CSR file specifies the domain name that is bound to the certificate.
          */
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
@@ -87,7 +87,7 @@ public class RenewCertificateOrderForPackageRequestRequest extends Request {
          * The ID of the certificate application order that you want to renew.
          * <p>
          * 
-         * > After you call the [CreateCertificateForPackageRequest](~~455296~~), [CreateCertificateRequest](~~455292~~), or [CreateCertificateWithCsrRequest](~~455801~~) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter.
+         * >  After you call the [CreateCertificateForPackageRequest](~~455296~~), [CreateCertificateRequest](~~455292~~), or [CreateCertificateWithCsrRequest](~~455801~~) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter. You can also call the [ListUserCertificateOrder](~~455804~~) operation to obtain the order ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

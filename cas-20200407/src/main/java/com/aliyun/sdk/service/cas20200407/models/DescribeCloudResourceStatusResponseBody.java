@@ -49,7 +49,7 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +121,7 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * CloudName.
+             * The cloud service provider.
              */
             public Builder cloudName(String cloudName) {
                 this.cloudName = cloudName;
@@ -129,7 +129,7 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CloudProduct.
+             * The cloud service.
              */
             public Builder cloudProduct(String cloudProduct) {
                 this.cloudProduct = cloudProduct;
@@ -137,7 +137,7 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of cloud resources on which certificates are deployed.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

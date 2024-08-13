@@ -61,7 +61,7 @@ public class CreateCsrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Csr.
+         * The content of the CSR.
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -69,7 +69,7 @@ public class CreateCsrResponseBody extends TeaModel {
         }
 
         /**
-         * CSR ID。
+         * The unique identifier of the CSR. You can use this value to obtain the content of the CSR. For more information about the operation that you can call to obtain the content of a CSR, see [GetCsrDetail](~~2709720~~).
          */
         public Builder csrId(Long csrId) {
             this.csrId = csrId;
@@ -77,7 +77,7 @@ public class CreateCsrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

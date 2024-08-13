@@ -69,7 +69,7 @@ public class UpdateDeploymentJobStatusRequest extends Request {
         } 
 
         /**
-         * JobId.
+         * The ID of the deployment task.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -78,7 +78,14 @@ public class UpdateDeploymentJobStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The desired status.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   pending
+         * *   scheduling
+         * *   editing
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

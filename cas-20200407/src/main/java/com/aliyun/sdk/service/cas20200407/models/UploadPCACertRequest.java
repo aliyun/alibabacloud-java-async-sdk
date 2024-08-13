@@ -127,10 +127,10 @@ public class UploadPCACertRequest extends Request {
         }
 
         /**
-         * {
+         * The ID of the repository.
          * <p>
-         *     "RequestId": "15C66C7B-671A-4297-9187-2C4477247A74"
-         * }
+         * 
+         * >  You can call the [ListCertWarehouse](~~455805~~) operation to query the ID.
          */
         public Builder warehouseId(Long warehouseId) {
             this.putQueryParameter("WarehouseId", warehouseId);

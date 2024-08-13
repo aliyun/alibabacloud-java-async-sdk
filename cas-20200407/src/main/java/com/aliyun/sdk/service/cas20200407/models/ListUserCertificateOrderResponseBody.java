@@ -85,7 +85,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of the information about the certificates and orders.
+         * The certificates and orders.
          */
         public Builder certificateOrderList(java.util.List < CertificateOrderList> certificateOrderList) {
             this.certificateOrderList = certificateOrderList;
@@ -622,8 +622,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
              * 
              * *   **DV**: domain validated (DV) certificate
              * *   **EV**: extended validation (EV) certificate
-             * *   **OV**: organization validated (OV) certificate
-             * *   **FREE**: free certificate
+             * *   **OV**: organization validated (OV) certificate **FREE**: free certificate, available only on the China site (aliyun.com)
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -758,7 +757,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate authority (CA) order. This parameter is returned only if OrderType is set to CPACK or BUY.
+             * The ID of the third-party certificate authority (CA) order. This parameter is returned only if OrderType is set to CPACK or BUY.
              */
             public Builder partnerOrderId(String partnerOrderId) {
                 this.partnerOrderId = partnerOrderId;
@@ -782,7 +781,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the province or autonomous region in which the organization is located. This parameter is returned only if OrderType is set to CERT or UPLOAD.
+             * The province or autonomous region in which the organization is located. This parameter is returned only if OrderType is set to CERT or UPLOAD.
              */
             public Builder province(String province) {
                 this.province = province;
@@ -830,7 +829,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the order. This parameter is returned only if OrderType is set to CPACK or BUY.
+             * The type of the order. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:
              * <p>
              * 
              * *   **cpack**: virtual resource order
@@ -850,7 +849,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The certificate status of the order. This parameter is returned only if OrderType is set to CPACK or BUY.
+             * The certificate status of the order. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:
              * <p>
              * 
              * *   **PAYED**: pending application
@@ -868,7 +867,7 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * The hosting status of the certificate. This parameter is returned only if OrderType is set to CPACK or BUY.
+             * The hosting status of the certificate. This parameter is returned only if OrderType is set to CPACK or BUY. Valid values:
              * <p>
              * 
              * *   **unTrustee**: not hosted

@@ -85,7 +85,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * CurrentPage.
+         * The page number. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,7 +93,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned for the request.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * ShowSize.
+         * The number of deployment tasks per page. Default value: **50**.
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -117,7 +117,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of deployment tasks returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -337,7 +337,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * CertDomain.
+             * The domain names bound to the certificate of the deployment task.
              */
             public Builder certDomain(String certDomain) {
                 this.certDomain = certDomain;
@@ -345,7 +345,12 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * CertType.
+             * The type of the certificate. Valid values:
+             * <p>
+             * 
+             * *   **upload**: uploaded certificate
+             * *   **buy**: purchased certificate
+             * *   **free**: free certificate, available only on the China site (aliyun.com)
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -353,7 +358,11 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * Del.
+             * Indicates whether the deployment task is deleted. Valid values:
+             * <p>
+             * 
+             * *   **0**: not deleted
+             * *   **1**: deleted
              */
             public Builder del(Integer del) {
                 this.del = del;
@@ -361,7 +370,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the deployment task.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -369,7 +378,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the deployment task was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -377,7 +386,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the deployment task was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -385,7 +394,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the deployment task. You can use the ID to query the details and status of the deployment task.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -393,7 +402,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID of the deployment task.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -401,7 +410,11 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * JobType.
+             * The type of the deployment task.
+             * <p>
+             * 
+             * *   **cloud**: multi-cloud deployment task.
+             * *   **user**: cloud service deployment task. This type of task does not support ECS instances.
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -409,7 +422,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the deployment task.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -417,7 +430,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * The cloud service included in the resources of the deployment task.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -425,7 +438,11 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * Rollback.
+             * Indicates whether the rollback worker is included. For example, if a cloud service involved in a deployment task has been rolled back, **1** is returned. Valid values:
+             * <p>
+             * 
+             * *   **0**: The rollback worker is not included.
+             * *   **1**: The rollback worker is included.
              */
             public Builder rollback(Integer rollback) {
                 this.rollback = rollback;
@@ -433,7 +450,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleTime.
+             * The time when the deployment task was scheduled.
              */
             public Builder scheduleTime(String scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -441,7 +458,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the deployment task.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -449,7 +466,15 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the deployment task. Valid values:
+             * <p>
+             * 
+             * *   **pending**
+             * *   **editing**
+             * *   **scheduling**
+             * *   **processing**
+             * *   **error**
+             * *   **success**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -457,7 +482,7 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

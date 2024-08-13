@@ -47,6 +47,9 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
     @com.aliyun.core.annotation.NameInMap("Issuer")
     private String issuer;
 
@@ -74,6 +77,12 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Sans")
     private String sans;
 
+    @com.aliyun.core.annotation.NameInMap("SerialNo")
+    private String serialNo;
+
+    @com.aliyun.core.annotation.NameInMap("Sha2")
+    private String sha2;
+
     @com.aliyun.core.annotation.NameInMap("SignCert")
     private String signCert;
 
@@ -96,6 +105,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         this.expired = builder.expired;
         this.fingerprint = builder.fingerprint;
         this.id = builder.id;
+        this.instanceId = builder.instanceId;
         this.issuer = builder.issuer;
         this.key = builder.key;
         this.name = builder.name;
@@ -105,6 +115,8 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.sans = builder.sans;
+        this.serialNo = builder.serialNo;
+        this.sha2 = builder.sha2;
         this.signCert = builder.signCert;
         this.signPrivateKey = builder.signPrivateKey;
         this.startDate = builder.startDate;
@@ -203,6 +215,13 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return issuer
      */
     public String getIssuer() {
@@ -266,6 +285,20 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return serialNo
+     */
+    public String getSerialNo() {
+        return this.serialNo;
+    }
+
+    /**
+     * @return sha2
+     */
+    public String getSha2() {
+        return this.sha2;
+    }
+
+    /**
      * @return signCert
      */
     public String getSignCert() {
@@ -299,6 +332,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         private Boolean expired; 
         private String fingerprint; 
         private Long id; 
+        private String instanceId; 
         private String issuer; 
         private String key; 
         private String name; 
@@ -308,6 +342,8 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private String sans; 
+        private String serialNo; 
+        private String sha2; 
         private String signCert; 
         private String signPrivateKey; 
         private String startDate; 
@@ -333,7 +369,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the certificate.
+         * The content of the certificate if the certificate does not use an SM algorithm. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
          */
         public Builder cert(String cert) {
             this.cert = cert;
@@ -349,7 +385,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The parent domain name that is bound to the certificate.
+         * The primary domain name that is bound to the certificate.
          */
         public Builder common(String common) {
             this.common = common;
@@ -365,7 +401,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the encryption certificate in PEM format.
+         * The content of the encryption certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
          */
         public Builder encryptCert(String encryptCert) {
             this.encryptCert = encryptCert;
@@ -373,7 +409,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The private key of the encryption certificate in the PEM format.
+         * The private key of the encryption certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
          */
         public Builder encryptPrivateKey(String encryptPrivateKey) {
             this.encryptPrivateKey = encryptPrivateKey;
@@ -417,6 +453,14 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
+         * The instance ID.
+         */
+        public Builder instanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
          * The certificate authority (CA) that issued the certificate.
          */
         public Builder issuer(String issuer) {
@@ -425,7 +469,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The private key.
+         * The private key of the certificate if the certificate does not use an SM algorithm. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
          */
         public Builder key(String key) {
             this.key = key;
@@ -441,7 +485,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the certificate application order.
+         * The order ID.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -473,7 +517,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the certificate belongs.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -489,7 +533,23 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the signing certificate in the PEM format.
+         * The certificate serial No.
+         */
+        public Builder serialNo(String serialNo) {
+            this.serialNo = serialNo;
+            return this;
+        }
+
+        /**
+         * The certificate sha2 value.
+         */
+        public Builder sha2(String sha2) {
+            this.sha2 = sha2;
+            return this;
+        }
+
+        /**
+         * The content of the signing certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
          */
         public Builder signCert(String signCert) {
             this.signCert = signCert;
@@ -497,7 +557,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The private key of the signing certificate in the PEM format.
+         * The private key of the signing certificate if the certificate uses an SM algorithm and is encoded in the PEM format. If certFilter is set to false, this parameter is returned. Otherwise, this parameter is not returned.
          */
         public Builder signPrivateKey(String signPrivateKey) {
             this.signPrivateKey = signPrivateKey;

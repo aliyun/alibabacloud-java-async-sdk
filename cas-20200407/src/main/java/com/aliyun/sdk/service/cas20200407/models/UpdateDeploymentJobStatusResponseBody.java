@@ -49,7 +49,7 @@ public class UpdateDeploymentJobStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Object data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class UpdateDeploymentJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

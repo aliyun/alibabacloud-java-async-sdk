@@ -81,7 +81,7 @@ public class ListContactRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -90,7 +90,7 @@ public class ListContactRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword used in the query. For example, you can specify a keyword in names, email addresses, and mobile phone numbers.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -99,7 +99,7 @@ public class ListContactRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * The number of contacts per page.
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

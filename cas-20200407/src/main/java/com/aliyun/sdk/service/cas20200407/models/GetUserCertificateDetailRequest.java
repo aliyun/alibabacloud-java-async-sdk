@@ -68,7 +68,7 @@ public class GetUserCertificateDetailRequest extends Request {
         } 
 
         /**
-         * If true, the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, SignPrivateKey will return null, default is false.
+         * Specifies whether to filter return results. Valid values: true and false. Default value: false. **true** specifies that the Cert, Key, EncryptCert, EncryptPrivateKey, SignCert, and SignPrivateKey parameters are not returned. **false** specifies that the parameters are returned.
          */
         public Builder certFilter(Boolean certFilter) {
             this.putQueryParameter("CertFilter", certFilter);
@@ -78,6 +78,9 @@ public class GetUserCertificateDetailRequest extends Request {
 
         /**
          * The ID of the certificate.
+         * <p>
+         * 
+         * >  You can call the [ListUserCertificateOrder](~~455804~~) operation to query the ID.
          */
         public Builder certId(Long certId) {
             this.putQueryParameter("CertId", certId);

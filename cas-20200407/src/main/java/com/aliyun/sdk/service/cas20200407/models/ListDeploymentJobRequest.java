@@ -95,7 +95,7 @@ public class ListDeploymentJobRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -104,7 +104,13 @@ public class ListDeploymentJobRequest extends Request {
         }
 
         /**
-         * JobType.
+         * The type of the deployment task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   cloud: multi-cloud deployment task.
+         * *   user: cloud service deployment task. This type of task does not support Elastic Compute Service (ECS) instances.
          */
         public Builder jobType(String jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -113,7 +119,7 @@ public class ListDeploymentJobRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * The number of certificates per page. Default value: **50**.
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -122,7 +128,17 @@ public class ListDeploymentJobRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the deployment task.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   success
+         * *   pending
+         * *   scheduling
+         * *   processing
+         * *   error
+         * *   editing
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

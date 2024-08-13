@@ -124,7 +124,7 @@ public class UpdateDeploymentJobRequest extends Request {
         } 
 
         /**
-         * CertIds.
+         * The ID of the certificate. Separate multiple certificate IDs with commas (,). You can call the [ListUserCertificateOrder](~~455804~~) operation to obtain the ID of a certificate from the **CertificateId** parameter.
          */
         public Builder certIds(String certIds) {
             this.putQueryParameter("CertIds", certIds);
@@ -133,7 +133,7 @@ public class UpdateDeploymentJobRequest extends Request {
         }
 
         /**
-         * ContactIds.
+         * The ID of the contact. Separate multiple contact IDs with commas (,). You can call the [ListContact](~~2712221~~) operation to obtain the ID of a contact from the **ContactId** parameter.
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -142,7 +142,7 @@ public class UpdateDeploymentJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the deployment task. You can call the [CreateDeploymentJob](~~2712234~~) operation to obtain the ID of a deployment task from the JobId parameter. You can also call the [ListDeploymentJob](~~2712223~~) operation to obtain the ID of a deployment task.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -151,7 +151,7 @@ public class UpdateDeploymentJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the deployment task.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -160,7 +160,7 @@ public class UpdateDeploymentJobRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * The ID of the cloud resource. Separate multiple resource IDs with commas (,). You can call the [ListCloudResources](~~2712230~~) operation to obtain the ID of a cloud resource from the **Id** parameter.
          */
         public Builder resourceIds(String resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -169,7 +169,7 @@ public class UpdateDeploymentJobRequest extends Request {
         }
 
         /**
-         * ScheduleTime.
+         * The time when the task starts. The value is a UNIX timestamp. If you do not specify this parameter, the system immediately starts the task after it is created.
          */
         public Builder scheduleTime(Long scheduleTime) {
             this.putQueryParameter("ScheduleTime", scheduleTime);

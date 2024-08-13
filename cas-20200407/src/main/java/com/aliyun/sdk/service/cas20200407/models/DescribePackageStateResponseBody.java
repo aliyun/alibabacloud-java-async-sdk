@@ -93,11 +93,11 @@ public class DescribePackageStateResponseBody extends TeaModel {
         }
 
         /**
-         * The specifications of the certificate. Valid values:
+         * The specifications of the certificate resource plan. Valid values:
          * <p>
          * 
-         * *   **symantec-free-1-free**: DigiCert single-domain DV certificate in 3 months free trial.
-         * *   **symantec-free-1-free**: DigiCert single-domain DV certificate in 1 year free trial.
+         * *   **digicert-free-1-free**: DigiCert single-domain DV certificate in a three-month free trial, available only on the China site (aliyun.com).
+         * *   **symantec-free-1-free**: DigiCert single-domain DV certificate in a one-year free trial, available only on the China site (aliyun.com).
          * *   **symantec-dv-1-starter**: DigiCert wildcard DV certificate.
          * *   **symantec-ov-1-personal**: DigiCert single-domain OV certificate.
          * *   **symantec-ov-w-personal**: DigiCert wildcard OV certificate.
@@ -109,8 +109,8 @@ public class DescribePackageStateResponseBody extends TeaModel {
          * *   **globalsign-dv-w-advanced**: GlobalSign wildcard DV certificate.
          * *   **globalsign-ov-1-personal**: GlobalSign single-domain OV certificate.
          * *   **globalsign-ov-w-advanced**: GlobalSign wildcard OV certificate.
-         * *   **cfca-ov-1-personal**: CFCA single-domain OV certificate.
-         * *   **cfca-ev-w-advanced**: CFCA wildcard OV certificate.
+         * *   **cfca-ov-1-personal**: CFCA single-domain OV certificate, available only on the China site (aliyun.com).
+         * *   **cfca-ev-w-advanced**: CFCA wildcard OV certificate, available only on the China site (aliyun.com).
          */
         public Builder productCode(String productCode) {
             this.productCode = productCode;
@@ -137,7 +137,7 @@ public class DescribePackageStateResponseBody extends TeaModel {
          * The number of certificate applications that you submitted for certificates of the specified specifications.
          * <p>
          * 
-         * > A successful call of the [CreateCertificateForPackageRequest](~~455296~~), [CreateCertificateRequest](~~455292~~), or [CreateCertificateWithCsrRequest](~~455801~~) operation is counted as one a certificate application, regardless of whether the certificate is issued.
+         * > : A successful call of the [CreateCertificateForPackageRequest](~~204087~~), [CreateCertificateRequest](~~164105~~), or [CreateCertificateWithCsrRequest](~~178732~~) operation is counted as one a certificate application, regardless of whether the certificate is issued.
          */
         public Builder usedCount(Long usedCount) {
             this.usedCount = usedCount;

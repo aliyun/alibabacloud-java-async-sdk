@@ -52,7 +52,7 @@ public class CreateCertificateRequestResponseBody extends TeaModel {
          * The ID of the certificate application order.
          * <p>
          * 
-         * > You can use the ID to query the status of the certificate application. For more information, see [DescribeCertificateState](~~455800~~).
+         * >  You can use the ID to query the status of the certificate application. For more information, see [DescribeCertificateState](~~164111~~).
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

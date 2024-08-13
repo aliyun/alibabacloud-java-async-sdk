@@ -109,7 +109,7 @@ public class ListCertWarehouseRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: 1.
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,7 +118,7 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID of the certificate application repository.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -127,7 +127,7 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the certificate application repository. Fuzzy match is supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -136,7 +136,7 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * The number of entries to return on each page. Default value: 50.
          */
         public Builder showSize(Long showSize) {
             this.putQueryParameter("ShowSize", showSize);
@@ -145,7 +145,14 @@ public class ListCertWarehouseRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the certificate application repository. Valid values:
+         * <p>
+         * 
+         * *   **ssl**: certificate application repository of SSL certificates
+         * *   **uploadPCA**: certificate application repository of uploaded private certificates
+         * *   **free**: certificate application repository of free certificates, available only on the China site (aliyun.com)
+         * *   **aliyunPCA**: certificate application repository of private certificates purchased from Alibaba Cloud Private Certificate Authority (PCA), available only on the China site (aliyun.com)
+         * *   **disable**: disabled certificate application repository
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

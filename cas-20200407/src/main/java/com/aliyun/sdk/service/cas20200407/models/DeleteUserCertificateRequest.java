@@ -55,6 +55,9 @@ public class DeleteUserCertificateRequest extends Request {
 
         /**
          * The ID of the certificate.
+         * <p>
+         * 
+         * >  You can call the [ListUserCertificateOrder](~~455804~~) operation to obtain the ID.
          */
         public Builder certId(Long certId) {
             this.putQueryParameter("CertId", certId);

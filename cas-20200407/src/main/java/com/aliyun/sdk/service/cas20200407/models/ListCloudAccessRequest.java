@@ -95,7 +95,7 @@ public class ListCloudAccessRequest extends Request {
         } 
 
         /**
-         * CloudName.
+         * The cloud service provider.
          */
         public Builder cloudName(String cloudName) {
             this.putQueryParameter("CloudName", cloudName);
@@ -104,7 +104,7 @@ public class ListCloudAccessRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -113,7 +113,7 @@ public class ListCloudAccessRequest extends Request {
         }
 
         /**
-         * SecretId.
+         * The AccessKey secret used to access the cloud service.
          */
         public Builder secretId(String secretId) {
             this.putQueryParameter("SecretId", secretId);
@@ -122,7 +122,7 @@ public class ListCloudAccessRequest extends Request {
         }
 
         /**
-         * ShowSize.
+         * The number of certificates per page. Default value: **20**.
          */
         public Builder showSize(Integer showSize) {
             this.putQueryParameter("ShowSize", showSize);

@@ -85,7 +85,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CloudAccessList.
+         * The list of the AccessKey pairs.
          */
         public Builder cloudAccessList(java.util.List < CloudAccessList> cloudAccessList) {
             this.cloudAccessList = cloudAccessList;
@@ -93,7 +93,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Default value: 1.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -101,7 +101,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
         }
 
         /**
-         * ShowSize.
+         * The number of revoked certificates per page. Default value: **20**.
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -117,7 +117,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -193,7 +193,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
             private String serviceStatus; 
 
             /**
-             * AccessId.
+             * The AccessKey ID used to access the cloud service.
              */
             public Builder accessId(Long accessId) {
                 this.accessId = accessId;
@@ -201,7 +201,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
             }
 
             /**
-             * CloudName.
+             * The cloud service provider.
              */
             public Builder cloudName(String cloudName) {
                 this.cloudName = cloudName;
@@ -209,7 +209,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
             }
 
             /**
-             * SecretId.
+             * The AccessKey secret used to access the cloud service.
              */
             public Builder secretId(String secretId) {
                 this.secretId = secretId;
@@ -217,7 +217,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceStatus.
+             * The status of the service.
              */
             public Builder serviceStatus(String serviceStatus) {
                 this.serviceStatus = serviceStatus;

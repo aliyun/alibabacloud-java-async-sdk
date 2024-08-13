@@ -97,7 +97,7 @@ public class ListContactResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * ContactList.
+         * The contacts.
          */
         public Builder contactList(java.util.List < ContactList> contactList) {
             this.contactList = contactList;
@@ -105,7 +105,7 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -113,7 +113,7 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * Keyword.
+         * The keyword used in the fuzzy search.
          */
         public Builder keyword(String keyword) {
             this.keyword = keyword;
@@ -121,7 +121,7 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * ShowSize.
+         * The number of certificates per page. Default value: **20**.
          */
         public Builder showSize(Integer showSize) {
             this.showSize = showSize;
@@ -137,7 +137,7 @@ public class ListContactResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -249,7 +249,7 @@ public class ListContactResponseBody extends TeaModel {
             private String webhooks; 
 
             /**
-             * ContactId.
+             * The ID of the contact.
              */
             public Builder contactId(Long contactId) {
                 this.contactId = contactId;
@@ -257,7 +257,7 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the contact.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -265,7 +265,7 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * EmailStatus.
+             * Indicates whether the email address passed the verification.
              */
             public Builder emailStatus(Integer emailStatus) {
                 this.emailStatus = emailStatus;
@@ -273,7 +273,7 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * Mobile.
+             * The phone number.
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;
@@ -281,7 +281,7 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * MobileStatus.
+             * Indicates whether the phone number was verified.
              */
             public Builder mobileStatus(Integer mobileStatus) {
                 this.mobileStatus = mobileStatus;
@@ -289,7 +289,7 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the contact.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -297,7 +297,7 @@ public class ListContactResponseBody extends TeaModel {
             }
 
             /**
-             * Webhooks.
+             * The webhook URL of the chatbot.
              */
             public Builder webhooks(String webhooks) {
                 this.webhooks = webhooks;

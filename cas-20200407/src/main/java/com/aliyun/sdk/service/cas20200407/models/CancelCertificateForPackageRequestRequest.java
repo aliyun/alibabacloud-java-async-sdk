@@ -54,7 +54,10 @@ public class CancelCertificateForPackageRequestRequest extends Request {
         } 
 
         /**
-         * OrderId.
+         * The order ID.
+         * <p>
+         * 
+         * >  You can call the [ListUserCertificateOrder](~~455804~~) operation to obtain the ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

@@ -54,7 +54,7 @@ public class RevokeWHClientCertificateRequest extends Request {
         } 
 
         /**
-         * Identifier.
+         * The unique identifier of the client certificate or server certificate that you want to revoke.
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);

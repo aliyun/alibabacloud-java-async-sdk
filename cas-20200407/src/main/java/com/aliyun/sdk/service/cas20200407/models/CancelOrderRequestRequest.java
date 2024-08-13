@@ -54,10 +54,10 @@ public class CancelOrderRequestRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate application order that you want to cancel.
+         * The order ID.
          * <p>
          * 
-         * >  After you call the [CreateCertificateForPackageRequest](~~CreateCertificateForPackageRequest~~), [CreateCertificateRequest](~~CreateCertificateRequest~~), or [CreateCertificateWithCsrRequest](~~CreateCertificateWithCsrRequest~~) operation to submit a certificate application, you can obtain the ID of the certificate application order from the **OrderId** response parameter.
+         * >  You can call the [ListUserCertificateOrder](~~455804~~) operation to obtain the ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);

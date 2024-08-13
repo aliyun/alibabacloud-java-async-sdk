@@ -49,7 +49,7 @@ public class VerifyResponseBody extends TeaModel {
         private Boolean signatureValid; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,11 @@ public class VerifyResponseBody extends TeaModel {
         }
 
         /**
-         * SignatureValid.
+         * Indicates whether the signature is valid. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder signatureValid(Boolean signatureValid) {
             this.signatureValid = signatureValid;
