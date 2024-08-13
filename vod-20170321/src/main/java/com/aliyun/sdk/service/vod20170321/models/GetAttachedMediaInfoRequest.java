@@ -82,18 +82,22 @@ public class GetAttachedMediaInfoRequest extends Request {
         } 
 
         /**
-         * The validity period of the URL of the auxiliary media asset. Unit: seconds.
+         * The validity period of the URL. Unit: seconds.
          * <p>
-         * > *   If the OutputType parameter is set to **cdn**:
-         * >     *   The URL of the auxiliary media asset has a validity period only if URL signing is enabled. Otherwise, the URL of the auxiliary media asset is permanently valid.
-         * >     *   Minimum value: **1**.
-         * >     *   Maximum value: unlimited.
-         * >     *   Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.
-         * > *   If the OutputType parameter is set to **oss**:
-         * >     *   The URL of the auxiliary media asset has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the URL of the auxiliary media asset is permanently valid.
-         * >     *   Minimum value: **1**.
-         * >     *   Maximum value: **2592000** (30 days). The maximum value is limited to reduce security risks of the origin.
-         * >     *   Default value: If you do not set this parameter, the default value is **3600**.
+         * 
+         * *   If you set the OutputType parameter to **cdn**:
+         * 
+         *     *   The URL of the auxiliary media asset has a validity period only if URL signing is enabled. Otherwise, the URL of the auxiliary media asset is permanently valid.
+         *     *   Minimum value: **1**.
+         *     *   Maximum value: unlimited.
+         *     *   Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.
+         * 
+         * *   If you set the OutputType parameter to **oss**:
+         * 
+         *     *   The URL of the auxiliary media asset has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the URL of the auxiliary media asset is permanently valid.
+         *     *   Minimum value: **1**.
+         *     *   The maximum value for a media asset stored in the VOD bucket is **2592000** (30 days) and the maximum value for a media asset stored in an OSS bucket is **129600** (36 hours). The maximum value is limited to reduce security risks of the origin.
+         *     *   Default value: If you do not set this parameter, the default value **3600** is used.
          */
         public Builder authTimeout(Long authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -102,7 +106,11 @@ public class GetAttachedMediaInfoRequest extends Request {
         }
 
         /**
-         * The ID of the auxiliary media asset. Separate multiple IDs with commas (,). A maximum of 20 IDs can be specified.
+         * The ID of the auxiliary media asset.
+         * <p>
+         * 
+         * *   Separate multiple IDs with commas (,). You can specify up to 20 IDs.
+         * *   You can obtain the ID from the response to the [CreateUploadAttachedMedia](~~CreateUploadAttachedMedia~~) operation that you call to obtain the upload URL and credential.
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);
@@ -111,10 +119,11 @@ public class GetAttachedMediaInfoRequest extends Request {
         }
 
         /**
-         * The type of the URL of the auxiliary media asset. Valid values:
+         * The type of the media asset URL. Valid values:
          * <p>
-         * *   **oss**: OSS URL
-         * *   **cdn** (default): Content Delivery Network (CDN) URL
+         * 
+         * *   **oss**
+         * *   **cdn** (default)
          */
         public Builder outputType(String outputType) {
             this.putQueryParameter("OutputType", outputType);

@@ -203,17 +203,11 @@ public class SubmitAIImageAuditJobRequest extends Request {
         }
 
         /**
-         * The ID of the review template.
+         * The ID of the AI template. You can use one of the following methods to obtain the ID:
          * <p>
          * 
-         * If you want to use an AI template, you can call the following operations:
-         * 
-         * *   [ListAITemplate](~~102936~~)
-         * *   [AddAITemplate](~~102930~~)
-         * *   [GetAITemplate](~~102933~~)
-         * *   [SetDefaultAITemplate](~~102937~~)
-         * 
-         * If you do not specify this parameter, the ID of the default AI template for automated review is used.
+         * *   Obtain the value of TemplateId from the response to the [AddAITemplate](~~102930~~) operation that you call to create an AI template.
+         * *   Obtain the value of TemplateId from the response to the [ListAITemplate](~~102936~~) operation that you call to create an AI template.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

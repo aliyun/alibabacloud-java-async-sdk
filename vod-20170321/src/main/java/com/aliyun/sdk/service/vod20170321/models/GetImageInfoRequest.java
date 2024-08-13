@@ -82,19 +82,22 @@ public class GetImageInfoRequest extends Request {
         } 
 
         /**
-         * The validity period of the image URL. Unit: seconds.
+         * The time when the image URL expires. Unit: seconds.
          * <p>
          * 
-         * > *   If the OutputType parameter is set to **cdn**:
-         * >     *   The image URL has a validity period only if URL signing is enabled. Otherwise, the image URL is permanently valid.
-         * >     *   Minimum value: **1**.
-         * >     *   Maximum value: unlimited.
-         * >     *   Default value: If you do not set this parameter, the default validity period that is specified in URL signing is used.
-         * > *   If the OutputType parameter is set to **oss**:
-         * >     *   The image URL has a validity period only if the permissions on the Object Storage Service (OSS) bucket are private. Otherwise, the image URL is permanently valid.
-         * >     *   Minimum value: **1**.
-         * >     *   Maximum value: **2592000** (30 days). The maximum value is limited to reduce security risks of the origin.
-         * >     *   Default value: If you do not set this parameter, the default value is **3600**.
+         * *   If you set OutputType to cdn:
+         * 
+         *     *   This parameter takes effect only if URL authentication is enabled. Otherwise, the image URL does not expire.
+         *     *   Minimum value: 1.
+         *     *   Maximum value: unlimited.
+         *     *   Default value: If you leave this parameter empty, the default validity period that is specified in URL signing is used.
+         * 
+         * *   If you set OutputType to oss:
+         * 
+         *     *   This parameter takes effect only when the ACL of the Object Storage Service (OSS) bucket is private. Otherwise, the image URL does not expire.
+         *     *   Minimum value: 1.
+         *     *   If you store the image in the VOD bucket, the maximum value of this parameter is **2592000** (30 days). If you store the image in an OSS bucket, the maximum value of this parameter is **129600** (36 hours). The maximum value is limited to reduce security risks of the origin.
+         *     *   Default value: 3600.
          */
         public Builder authTimeout(Long authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -103,7 +106,12 @@ public class GetImageInfoRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * The ID of the image. You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com/). In the left-side navigation pane, choose Media Files > Image. On the Image page, view the image ID.
+         * *   Obtain the image ID from the response to the [CreateUploadImage](~~CreateUploadImage~~) operation that you call to obtain the upload URL and credential.
+         * *   Obtain the image ID from the response to the [SearchMedia](~~SearchMedia~~) operation that you call to query the image.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -112,11 +120,11 @@ public class GetImageInfoRequest extends Request {
         }
 
         /**
-         * The type of the image URL. Valid values:
+         * The type of the output image URL. Valid values:
          * <p>
          * 
-         * *   **oss**: OSS URL
-         * *   **cdn** (default): Content Delivery Network (CDN) URL
+         * *   oss: OSS URL
+         * *   cdn: CDN URL
          */
         public Builder outputType(String outputType) {
             this.putQueryParameter("OutputType", outputType);

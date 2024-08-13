@@ -302,7 +302,7 @@ public class CreateUploadImageRequest extends Request {
          * <p>
          * 
          * > *   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
-         * >*   If you want to enable the upload acceleration feature, [submit a request on Yida](https://yida.alibaba-inc.com/o/ticketapply). For more information, see [Overview](~~55396~~).
+         * > *   If you want to enable the upload acceleration feature, submit a ticket. For more information, see [Overview](~~55396~~). For more information about how to submit a ticket, see [Contact us](~~464625~~).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

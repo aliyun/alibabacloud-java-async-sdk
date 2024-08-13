@@ -120,7 +120,7 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * The domain name for CDN.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -129,14 +129,11 @@ public class DeleteVodSpecificConfigRequest extends Request {
         }
 
         /**
-         * The environment of configuration. 
+         * The environment from which the domain name configurations are deleted. Valid values:
          * <p>
          * 
-         * Value:
-         * 
-         * online: production environment
-         * 
-         * gray: simulation environment
+         * *   online: production environment
+         * *   gray: simulation environment
          */
         public Builder env(String env) {
             this.putQueryParameter("Env", env);

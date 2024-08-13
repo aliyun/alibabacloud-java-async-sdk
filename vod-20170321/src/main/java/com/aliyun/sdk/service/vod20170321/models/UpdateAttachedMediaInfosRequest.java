@@ -54,7 +54,11 @@ public class UpdateAttachedMediaInfosRequest extends Request {
         } 
 
         /**
-         * The new information about auxiliary media assets. You can modify the information about up to 20 auxiliary media assets at a time. For more information, see the **UpdateContent** section of this topic.
+         * The new information about the one or more images. You can modify the information about up to 20 auxiliary media assets at a time. For more information, see the **UpdateContent** section of this topic.
+         * <p>
+         * 
+         * > *   You cannot specify emojis for `Title`, `Description`, or `Tags`.
+         * > *   The specific parameter of a video is updated only when a new value is passed in the parameter.
          */
         public Builder updateContent(String updateContent) {
             this.putQueryParameter("UpdateContent", updateContent);

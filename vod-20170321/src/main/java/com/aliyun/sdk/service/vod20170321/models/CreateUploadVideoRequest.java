@@ -218,12 +218,12 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * The category ID of the media file. You can use one of the following methods to obtain the category ID:
+         * The ID of the category. You can use one of the following methods to obtain the ID:
          * <p>
          * 
          * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories** to view the category ID of the media file.
-         * *   Obtain the value of CateId from the response to the [AddCategory](~~56401~~) operation.
-         * *   Obtain the value of CateId from the response to the [GetCategories](~~56406~~) operation.
+         * *   Obtain the value of CateId from the response to the [AddCategory](~~AddCategory~~) operation.
+         * *   Obtain the value of CateId from the response to the [GetCategories](~~GetCategories~~) operation.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -254,7 +254,7 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * The name of the audio or video file.
+         * The name of the source file.
          * <p>
          * 
          * *   The name must contain a file name extension, which is not case-sensitive.
@@ -276,10 +276,10 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * The storage address. To obtain the storage address, log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**.
+         * The storage address. Perform the following operations to obtain the storage address: Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, view the storage address.
          * <p>
          * 
-         * > If you specify a storage address, media files are uploaded to the specified address.
+         * >  If you leave this parameter empty, audio and video files are uploaded to the default storage address. If you specify a storage address, audio and video files are uploaded to the specified address.
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);
@@ -303,14 +303,17 @@ public class CreateUploadVideoRequest extends Request {
         }
 
         /**
-         * The ID of the transcoding template group. You can use one of the following methods to obtain the ID of the transcoding template group:
+         * The ID of the transcoding template group. You can use one of the following methods to obtain the ID:
          * <p>
          * 
-         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Processing** > **Transcoding Template Groups** to view the ID of the transcoding template group.
-         * *   Obtain the value of TranscodeTemplateGroupId in the response to the [AddTranscodeTemplateGroup](~~102665~~) operation.
-         * *   Obtain the value of TranscodeTemplateGroupId in the response to the [ListTranscodeTemplateGroup](~~102669~~) operation.
+         * *   Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose Configuration Management > Media Processing > Transcoding Template Groups. On the Transcoding Template Groups page, you can view the ID of the transcoding template group.[](https://vod.console.aliyun.com)************
+         * *   Obtain the value of the TranscodeTemplateGroupId parameter from the response to the [AddTranscodeTemplateGroup](~~102665~~) operation that you called to create a transcoding template group.
+         * *   Obtain the value of the TranscodeTemplateGroupId parameter from the response to the [ListTranscodeTemplateGroup](~~102669~~) operation that you called to query transcoding template groups.
          * 
-         * > If you leave this parameter empty, the default transcoding template group is used. If you specify this parameter, the specified transcoding template group is used for transcoding.
+         * > *   If you specify both WorkflowId and TemplateGroupId, the value of the WorkflowId parameter takes effect.
+         * > *   If this parameter is not specified, transcoding is performed based on the default transcoding template group. If the transcoding template group ID is specified, transcoding is performed based on the specified template group.
+         * > *   If the **No Transcoding** template group is used, only the [FileUploadComplete](~~55630~~) event notification is returned after a video is uploaded. The [StreamTranscodeComplete](~~55636~~) event notification is not returned.
+         * > *   If you use the **No Transcoding** template group to upload videos, only videos in the format of MP4, FLV, MP3, M3U8, or WebM can be played. Videos in other formats can only be stored in ApsaraVideo VOD. You can view the file name extension to obtain the video format. If you want to use ApsaraVideo Player, make sure that the version of the player is V3.1.0 or later.
          */
         public Builder templateGroupId(String templateGroupId) {
             this.putQueryParameter("TemplateGroupId", templateGroupId);

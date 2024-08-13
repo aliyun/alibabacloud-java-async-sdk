@@ -944,6 +944,9 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputType")
         private String outputType;
 
+        @com.aliyun.core.annotation.NameInMap("PreprocessStatus")
+        private String preprocessStatus;
+
         @com.aliyun.core.annotation.NameInMap("RestoreExpiration")
         private String restoreExpiration;
 
@@ -978,6 +981,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             this.fps = builder.fps;
             this.height = builder.height;
             this.outputType = builder.outputType;
+            this.preprocessStatus = builder.preprocessStatus;
             this.restoreExpiration = builder.restoreExpiration;
             this.restoreStatus = builder.restoreStatus;
             this.size = builder.size;
@@ -1060,6 +1064,13 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return preprocessStatus
+         */
+        public String getPreprocessStatus() {
+            return this.preprocessStatus;
+        }
+
+        /**
          * @return restoreExpiration
          */
         public String getRestoreExpiration() {
@@ -1125,6 +1136,7 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
             private String fps; 
             private Long height; 
             private String outputType; 
+            private String preprocessStatus; 
             private String restoreExpiration; 
             private String restoreStatus; 
             private Long size; 
@@ -1209,6 +1221,14 @@ public class GetMezzanineInfoResponseBody extends TeaModel {
              */
             public Builder outputType(String outputType) {
                 this.outputType = outputType;
+                return this;
+            }
+
+            /**
+             * PreprocessStatus.
+             */
+            public Builder preprocessStatus(String preprocessStatus) {
+                this.preprocessStatus = preprocessStatus;
                 return this;
             }
 

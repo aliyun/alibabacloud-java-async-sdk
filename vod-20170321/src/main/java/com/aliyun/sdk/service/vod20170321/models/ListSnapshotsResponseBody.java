@@ -49,7 +49,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The snapshot data of the media.
+         * The information about the snapshot.
          */
         public Builder mediaSnapshot(MediaSnapshot mediaSnapshot) {
             this.mediaSnapshot = mediaSnapshot;
@@ -263,7 +263,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The rule for generating snapshot URLs.
+             * The rule used to generate snapshot URLs.
              */
             public Builder regular(String regular) {
                 this.regular = regular;
@@ -271,7 +271,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot data.
+             * The details of the snapshot.
              */
             public Builder snapshots(Snapshots snapshots) {
                 this.snapshots = snapshots;

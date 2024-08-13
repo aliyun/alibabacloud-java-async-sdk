@@ -165,7 +165,7 @@ public class GetImageInfosResponseBody extends TeaModel {
             private Integer width; 
 
             /**
-             * The size of the image file. Unit: bytes.
+             * The size of the file to be uploaded. Unit: bytes.
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -189,7 +189,7 @@ public class GetImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the source file.
+             * The URL of the source file.
              */
             public Builder originalFileName(String originalFileName) {
                 this.originalFileName = originalFileName;
@@ -390,7 +390,7 @@ public class GetImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the category to which the image belongs.
+             * The ID of the category.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -422,7 +422,7 @@ public class GetImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image file.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -433,11 +433,8 @@ public class GetImageInfosResponseBody extends TeaModel {
              * The type of the image. Valid values:
              * <p>
              * 
-             * *   **CoverSnapshot**: thumbnail snapshot
-             * *   **NormalSnapshot**: normal snapshot
-             * *   **SpriteSnapshot**: sprite snapshot
-             * *   **SpriteOriginSnapshot**: sprite source snapshot
-             * *   **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate the types with commas (,).
+             * *   **default**: regular images
+             * *   **cover**: video thumbnail
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -474,7 +471,7 @@ public class GetImageInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the image. Separate multiple tags with commas (,).
+             * The tags of the image. Multiple tags are separated by commas (,).
              */
             public Builder tags(String tags) {
                 this.tags = tags;

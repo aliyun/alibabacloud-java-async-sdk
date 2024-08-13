@@ -110,12 +110,12 @@ public class ListSnapshotsRequest extends Request {
         } 
 
         /**
-         * The validity period of the snapshot URL. Unit: seconds. Default value: **3600**. Minimum value: **3600**.
+         * The validity period of the snapshot URL. Default value: **3600**. Minimum value: **3600**. Unit: seconds.
          * <p>
          * 
-         * *   This parameter only takes effect when [URL authentication](~~57007~~) is enabled.
-         * *   If the specified validity period is less than **3600** seconds, the default value is **3600**.
-         * *   If an Object Storage Service (OSS) URL is returned, the maximum validity period is limited to **2592000** seconds (30 days) to reduce security risks of the origin.
+         * *   This parameter takes effect only when you enable URL signing. For more information, see [Configure URL signing](~~57007~~).
+         * *   If you specify a value smaller than **3,600 seconds**, **3600** is used by default.
+         * *   If the snapshot URL is an Object Storage Service (OSS) URL, the maximum value for this parameter is **2592000** (30 days). This reduces risks on the origin.
          */
         public Builder authTimeout(String authTimeout) {
             this.putQueryParameter("AuthTimeout", authTimeout);
@@ -124,7 +124,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of the page to turn. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -133,7 +133,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**. Maximum value: **100**.
+         * The number of entries per page. Default value: **20**. Maximum value: **100**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -142,11 +142,11 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The type of snapshots that are returned. Valid values:
+         * The type of snapshots to return. Valid values:
          * <p>
          * 
          * *   **CoverSnapshot**: thumbnail snapshot
-         * *   **NormalSnapshot**: normal snapshot
+         * *   **NormalSnapshot**: regular snapshot
          * *   **SpriteSnapshot**: sprite snapshot
          * *   **SpriteOriginSnapshot**: sprite source snapshot
          * *   **WebVttSnapshot**: WebVTT snapshot
@@ -158,7 +158,12 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * The ID of the video. You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video** to view the video ID.
+         * *   Obtain the video ID from the response to the [CreateUploadVideo](~~CreateUploadVideo~~) operation that you call to obtain the upload URL and credential.
+         * *   Obtain the video ID from the response to the [SearchMedia](~~SearchMedia~~) operation that you call to query videos.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

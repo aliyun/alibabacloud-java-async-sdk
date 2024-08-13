@@ -49,7 +49,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The job information.
+         * The information about the job.
          */
         public Builder preprocessJobs(PreprocessJobs preprocessJobs) {
             this.preprocessJobs = preprocessJobs;

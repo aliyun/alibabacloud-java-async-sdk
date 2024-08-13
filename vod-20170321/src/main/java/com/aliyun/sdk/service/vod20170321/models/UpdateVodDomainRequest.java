@@ -110,7 +110,7 @@ public class UpdateVodDomainRequest extends Request {
         } 
 
         /**
-         * The accelerated domain name.
+         * DomainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -137,7 +137,7 @@ public class UpdateVodDomainRequest extends Request {
         }
 
         /**
-         * The information about the addresses of origin servers.
+         * Sources.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -146,7 +146,7 @@ public class UpdateVodDomainRequest extends Request {
         }
 
         /**
-         * The top-level domain.
+         * TopLevelDomain.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

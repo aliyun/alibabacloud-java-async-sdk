@@ -49,7 +49,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MaterialList.
+         * The materials.
          */
         public Builder materialList(java.util.List < MaterialList> materialList) {
             this.materialList = materialList;
@@ -57,7 +57,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -289,7 +289,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * CateId.
+             * The ID of the category.
              */
             public Builder cateId(Integer cateId) {
                 this.cateId = cateId;
@@ -297,7 +297,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * CateName.
+             * The category name of the material.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -305,7 +305,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * CoverURL.
+             * The thumbnail URL.
              */
             public Builder coverURL(String coverURL) {
                 this.coverURL = coverURL;
@@ -313,7 +313,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the material was created. The time follows the ISO 8601 standard in the *YYYY-MM-DD**Thh:mm:ss* format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -321,7 +321,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerId.
+             * The user ID.
              */
             public Builder customerId(Long customerId) {
                 this.customerId = customerId;
@@ -329,7 +329,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the material.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -337,7 +337,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the material. Unit: seconds. The value is accurate to four decimal places.
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -345,7 +345,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * MaterialId.
+             * The ID of the material.
              */
             public Builder materialId(String materialId) {
                 this.materialId = materialId;
@@ -353,7 +353,12 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * MaterialType.
+             * The type of the material. Valid values:
+             * <p>
+             * 
+             * *   **video**
+             * *   **audio**
+             * *   **image**
              */
             public Builder materialType(String materialType) {
                 this.materialType = materialType;
@@ -361,7 +366,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the material was last updated. The time follows the ISO 8601 standard in the *YYYY-MM-DD**Thh:mm:ss* format. The time is displayed in UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -369,7 +374,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the material.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -377,7 +382,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Snapshots.
+             * The URLs of snapshots.
              */
             public Builder snapshots(java.util.List < String > snapshots) {
                 this.snapshots = snapshots;
@@ -385,7 +390,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * SpriteConfig.
+             * The configuration of the sprite snapshot.
              */
             public Builder spriteConfig(String spriteConfig) {
                 this.spriteConfig = spriteConfig;
@@ -393,7 +398,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Sprites.
+             * The URLs of sprite snapshots.
              */
             public Builder sprites(java.util.List < String > sprites) {
                 this.sprites = sprites;
@@ -401,7 +406,12 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the material. Valid values:
+             * <p>
+             * 
+             * *   **Normal**
+             * *   **Uploading**
+             * *   **UploadFail**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -409,7 +419,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag of the material. Multiple tags are separated by commas (,).
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -417,7 +427,7 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the material.
              */
             public Builder title(String title) {
                 this.title = title;

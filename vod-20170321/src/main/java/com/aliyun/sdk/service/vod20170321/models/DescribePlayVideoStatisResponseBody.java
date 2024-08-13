@@ -157,7 +157,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             private String vv; 
 
             /**
-             * The date. The date is displayed in the *yyyy-MM-dd* format.
+             * The date. The time follows the ISO 8601 standard in the *YYYY-MM-DD*T*hh:mm:ss* format. The time is displayed in UTC.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -165,7 +165,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
             }
 
             /**
-             * The playback duration. Unit: millisecond.
+             * The total playback duration. Unit: milliseconds.
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;

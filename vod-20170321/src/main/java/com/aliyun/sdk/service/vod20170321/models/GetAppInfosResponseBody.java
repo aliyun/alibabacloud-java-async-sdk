@@ -126,6 +126,9 @@ public class GetAppInfosResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -138,6 +141,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.modificationTime = builder.modificationTime;
+            this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.type = builder.type;
         }
@@ -186,6 +190,13 @@ public class GetAppInfosResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -205,6 +216,7 @@ public class GetAppInfosResponseBody extends TeaModel {
             private String creationTime; 
             private String description; 
             private String modificationTime; 
+            private String resourceGroupId; 
             private String status; 
             private String type; 
 
@@ -245,6 +257,14 @@ public class GetAppInfosResponseBody extends TeaModel {
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

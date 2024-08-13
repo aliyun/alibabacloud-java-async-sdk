@@ -173,7 +173,7 @@ public class AddEditingProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the online editing project was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the online editing project was last modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -192,10 +192,10 @@ public class AddEditingProjectResponseBody extends TeaModel {
              * The status of the online editing project. Valid values:
              * <p>
              * 
-             * - **Normal**: indicates that the online editing project is in draft.
-             * - **Producing**: indicates that the video is being produced.
-             * - **Produced**: indicates that the video was produced.
-             * - **ProduceFailed**: indicates that the video failed to be produced.
+             * *   **Normal**: the online editing project is in draft.
+             * *   **Producing**: the video is being produced.
+             * *   **Produced**: the video is produced.
+             * *   **ProduceFailed**: the video failed to be produced.
              */
             public Builder status(String status) {
                 this.status = status;

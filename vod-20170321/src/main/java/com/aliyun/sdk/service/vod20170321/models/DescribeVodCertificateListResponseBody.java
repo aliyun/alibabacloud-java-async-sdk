@@ -49,7 +49,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the returned certificates.
+         * The information about each certificate.
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -71,8 +71,14 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
     } 
 
     public static class Cert extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
+        private String algorithm;
+
         @com.aliyun.core.annotation.NameInMap("CertId")
         private Long certId;
+
+        @com.aliyun.core.annotation.NameInMap("CertIdentifier")
+        private String certIdentifier;
 
         @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
@@ -80,8 +86,20 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Common")
         private String common;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
+        @com.aliyun.core.annotation.NameInMap("DomainMatchCert")
+        private Boolean domainMatchCert;
+
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private Long endTime;
+
         @com.aliyun.core.annotation.NameInMap("Fingerprint")
         private String fingerprint;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
 
         @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
@@ -89,13 +107,23 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
+        @com.aliyun.core.annotation.NameInMap("SignAlgorithm")
+        private String signAlgorithm;
+
         private Cert(Builder builder) {
+            this.algorithm = builder.algorithm;
             this.certId = builder.certId;
+            this.certIdentifier = builder.certIdentifier;
             this.certName = builder.certName;
             this.common = builder.common;
+            this.createTime = builder.createTime;
+            this.domainMatchCert = builder.domainMatchCert;
+            this.endTime = builder.endTime;
             this.fingerprint = builder.fingerprint;
+            this.instanceId = builder.instanceId;
             this.issuer = builder.issuer;
             this.lastTime = builder.lastTime;
+            this.signAlgorithm = builder.signAlgorithm;
         }
 
         public static Builder builder() {
@@ -107,10 +135,24 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         }
 
         /**
+         * @return algorithm
+         */
+        public String getAlgorithm() {
+            return this.algorithm;
+        }
+
+        /**
          * @return certId
          */
         public Long getCertId() {
             return this.certId;
+        }
+
+        /**
+         * @return certIdentifier
+         */
+        public String getCertIdentifier() {
+            return this.certIdentifier;
         }
 
         /**
@@ -128,10 +170,38 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return domainMatchCert
+         */
+        public Boolean getDomainMatchCert() {
+            return this.domainMatchCert;
+        }
+
+        /**
+         * @return endTime
+         */
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        /**
          * @return fingerprint
          */
         public String getFingerprint() {
             return this.fingerprint;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
@@ -148,19 +218,49 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             return this.lastTime;
         }
 
+        /**
+         * @return signAlgorithm
+         */
+        public String getSignAlgorithm() {
+            return this.signAlgorithm;
+        }
+
         public static final class Builder {
+            private String algorithm; 
             private Long certId; 
+            private String certIdentifier; 
             private String certName; 
             private String common; 
+            private Long createTime; 
+            private Boolean domainMatchCert; 
+            private Long endTime; 
             private String fingerprint; 
+            private String instanceId; 
             private String issuer; 
             private Long lastTime; 
+            private String signAlgorithm; 
+
+            /**
+             * Algorithm.
+             */
+            public Builder algorithm(String algorithm) {
+                this.algorithm = algorithm;
+                return this;
+            }
 
             /**
              * The ID of the certificate.
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
+                return this;
+            }
+
+            /**
+             * CertIdentifier.
+             */
+            public Builder certIdentifier(String certIdentifier) {
+                this.certIdentifier = certIdentifier;
                 return this;
             }
 
@@ -181,10 +281,42 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
+             * CreateTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DomainMatchCert.
+             */
+            public Builder domainMatchCert(Boolean domainMatchCert) {
+                this.domainMatchCert = domainMatchCert;
+                return this;
+            }
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
              * The fingerprint of the certificate.
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
@@ -201,6 +333,14 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
+                return this;
+            }
+
+            /**
+             * SignAlgorithm.
+             */
+            public Builder signAlgorithm(String signAlgorithm) {
+                this.signAlgorithm = signAlgorithm;
                 return this;
             }
 
@@ -291,7 +431,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The details of each certificate.
+             * The list of certificates.
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;
@@ -299,7 +439,7 @@ public class DescribeVodCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of certificates.
+             * The number of certificates that are returned.
              */
             public Builder count(Integer count) {
                 this.count = count;

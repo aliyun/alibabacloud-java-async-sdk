@@ -97,7 +97,7 @@ public class DescribePlayTopVideosRequest extends Request {
         } 
 
         /**
-         * The time to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The time to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder bizDate(String bizDate) {
             this.putQueryParameter("BizDate", bizDate);
@@ -115,7 +115,7 @@ public class DescribePlayTopVideosRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -124,7 +124,7 @@ public class DescribePlayTopVideosRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **100**. Maximum value: **1000**.
+         * The number of entries to return on each page. The default value is **100**. The maximum value is **1000**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

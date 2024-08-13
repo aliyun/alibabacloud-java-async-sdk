@@ -85,7 +85,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         private Long totalNum; 
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNo(Long pageNo) {
             this.pageNo = pageNo;
@@ -93,7 +93,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -205,7 +205,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
             private String videoId; 
 
             /**
-             * The playback duration. Unit: milliseconds.
+             * The total playback duration. Unit: milliseconds.
              */
             public Builder playDuration(String playDuration) {
                 this.playDuration = playDuration;

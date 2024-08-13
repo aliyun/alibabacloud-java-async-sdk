@@ -99,6 +99,9 @@ public class DescribePlayVideoStatisRequest extends Request {
 
         /**
          * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time. The interval between the start time and the end time cannot exceed 180 days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -125,7 +128,12 @@ public class DescribePlayVideoStatisRequest extends Request {
         }
 
         /**
-         * The video ID.
+         * The ID of the video. You can specify only one ID. You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the page that appears, view the video ID.
+         * *   Obtain the video ID from the response to the [CreateUploadVideo](~~CreateUploadVideo~~) operation that you call to obtain the upload URL and credential.
+         * *   Obtain the video ID from the response to the [SearchMedia](~~SearchMedia~~) operation that you call to query the audio or video file.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

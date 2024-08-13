@@ -69,7 +69,7 @@ public class SubmitPreprocessJobsRequest extends Request {
         } 
 
         /**
-         * The preprocessing type. Set the value to **LivePreprocess**, which indicates that the video is preprocessed in the production studio.
+         * The preprocessing type. Set the value to **LivePreprocess**. LivePreprocess specifies that the video is preprocessed in the production studio.
          */
         public Builder preprocessType(String preprocessType) {
             this.putQueryParameter("PreprocessType", preprocessType);
@@ -78,7 +78,12 @@ public class SubmitPreprocessJobsRequest extends Request {
         }
 
         /**
-         * The ID of the video.
+         * The ID of the video. You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   After you upload a video in the ApsaraVideo VOD console, you can log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com) and choose **Media Files** > **Audio/Video** to view the ID of the video.
+         * *   Obtain the VideoId from the response to the [CreateUploadVideo](~~55407~~) operation that you call to upload videos.
+         * *   Obtain the VideoId from the response to the [SearchMedia](~~86044~~) operation that you call to query videos.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

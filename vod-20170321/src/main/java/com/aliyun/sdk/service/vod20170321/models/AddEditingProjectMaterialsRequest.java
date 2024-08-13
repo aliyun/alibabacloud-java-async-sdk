@@ -140,7 +140,10 @@ public class AddEditingProjectMaterialsRequest extends Request {
         } 
 
         /**
-         * MaterialIds.
+         * The ID of the material. Separate multiple material IDs with commas (,). You can specify up to 10 IDs.
+         * <p>
+         * 
+         * >  If you specify multiple materials, make sure that the materials are of the same type as specified in MaterialType.
          */
         public Builder materialIds(String materialIds) {
             this.putQueryParameter("MaterialIds", materialIds);
@@ -149,7 +152,12 @@ public class AddEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * MaterialType.
+         * The type of the material. Valid values:
+         * <p>
+         * 
+         * *   **video**
+         * *   **audio**
+         * *   **image**
          */
         public Builder materialType(String materialType) {
             this.putQueryParameter("MaterialType", materialType);
@@ -176,7 +184,7 @@ public class AddEditingProjectMaterialsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the online editing project.
          */
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);

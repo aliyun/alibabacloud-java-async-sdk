@@ -347,7 +347,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
             private Vv vv; 
 
             /**
-             * The date. The date is displayed in the *yyyy-MM-dd* format.
+             * The date. The date is displayed in the yyyy-MM-dd format.
              */
             public Builder date(String date) {
                 this.date = date;

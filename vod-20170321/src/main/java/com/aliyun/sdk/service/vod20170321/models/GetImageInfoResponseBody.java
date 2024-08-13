@@ -145,7 +145,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             private Integer width; 
 
             /**
-             * The size of the file. Unit: byte.
+             * The size of the image. Unit: bytes.
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -153,7 +153,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS URL of the image.
+             * The OSS URL of the image file.
              */
             public Builder fileURL(String fileURL) {
                 this.fileURL = fileURL;
@@ -161,7 +161,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The height of the image. Unit: pixel.
+             * The height of the image. Unit: pixels.
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -169,7 +169,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the uploaded file.
+             * The URL of the source file.
              */
             public Builder originalFileName(String originalFileName) {
                 this.originalFileName = originalFileName;
@@ -177,7 +177,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the image. Unit: pixel.
+             * The width of the image. Unit: pixels.
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -386,7 +386,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the image file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the image was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -413,11 +413,11 @@ public class GetImageInfoResponseBody extends TeaModel {
              * The type of the image. Valid values:
              * <p>
              * 
-             * - **CoverSnapshot**: thumbnail snapshot.
-             * - **NormalSnapshot**: normal snapshot.
-             * - **SpriteSnapshot**: sprite snapshot.
-             * - **SpriteOriginSnapshot**: sprite source snapshot.
-             * - **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate them with commas (,).
+             * *   **CoverSnapshot**: thumbnail snapshot.
+             * *   **NormalSnapshot**: normal snapshot.
+             * *   **SpriteSnapshot**: sprite snapshot.
+             * *   **SpriteOriginSnapshot**: sprite source snapshot.
+             * *   **All**: images of all the preceding types. Multiple types other than All can return for this parameter. Multiple types are separated by commas (,).
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -425,7 +425,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the image mezzanine file.
+             * The source information about the image.
              */
             public Builder mezzanine(Mezzanine mezzanine) {
                 this.mezzanine = mezzanine;
@@ -436,9 +436,9 @@ public class GetImageInfoResponseBody extends TeaModel {
              * The status of the image. Valid values:
              * <p>
              * 
-             * - **Uploading**: The image is being uploaded. This is the initial status.
-             * - **Normal**: The image is uploaded.
-             * - **UploadFail**: The image fails to be uploaded.
+             * *   **Uploading**: The image is being uploaded. This is the initial status.
+             * *   **Normal**: The image is uploaded.
+             * *   **UploadFail**: The image fails to be uploaded.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -446,7 +446,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The OSS bucket where the image is stored.
+             * The bucket in which the image is stored.
              */
             public Builder storageLocation(String storageLocation) {
                 this.storageLocation = storageLocation;
@@ -454,7 +454,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the image. Multiple tags are separated by commas (,).
+             * The tags of the image. Multiple tags are separated by commas (,).
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -470,7 +470,7 @@ public class GetImageInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image. If a CDN domain name is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
+             * The image URL. If a domain name for CDN is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
              */
             public Builder URL(String URL) {
                 this.URL = URL;

@@ -97,7 +97,10 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         private String uploadAuth; 
 
         /**
-         * The OSS URL of the file. The URL does not contain the information used for URL signing. You can set the FileUrl parameter to this URL when you call the [AddWatermark](~~98617~~) operation.
+         * The URL of the auxiliary media asset file. The URL is an Object Storage Service (OSS) URL and does not contain the information used for URL signing.
+         * <p>
+         * 
+         * You can use specify this value for the `FileUrl` parameter when you call the [AddWatermark](~~AddWatermark~~) operation to create a watermark template.
          */
         public Builder fileURL(String fileURL) {
             this.fileURL = fileURL;
@@ -113,10 +116,12 @@ public class CreateUploadAttachedMediaResponseBody extends TeaModel {
         }
 
         /**
-         * The URL of the auxiliary media asset. If a domain name for Alibaba Cloud CDN (CDN) is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
+         * The URL of the auxiliary media asset.
          * <p>
          * 
-         * >  If you enable the URL signing feature of ApsaraVideo VOD, you may be unable to access the returned URL of the auxiliary media asset by using a browser and the HTTP status code 403 may be returned. You can disable the [URL signing](~~86090~~) feature or [generate an authentication signature](~~57007~~).
+         * If a domain name for Alibaba Cloud CDN is specified, a CDN URL is returned. Otherwise, an OSS URL is returned.
+         * 
+         * >  If you enable the URL signing feature of ApsaraVideo VOD, you may be unable to access the returned URL of the auxiliary media asset by using a browser and the HTTP status code 403 may be returned. To resolve this issue, you can disable the [URL signing](~~86090~~) feature or [generate a signed URL](~~57007~~).
          */
         public Builder mediaURL(String mediaURL) {
             this.mediaURL = mediaURL;

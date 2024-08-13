@@ -122,6 +122,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   For more information about the online editing feature, see [Overview](~~95482~~).
+      *
+     */
     @Override
     public CompletableFuture<AddEditingProjectResponse> addEditingProject(AddEditingProjectRequest request) {
         try {
@@ -331,6 +335,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * *   You can cancel only URL-based upload jobs in the **Pending** state. You can query the status of a URL-based upload job by calling the [GetURLUploadInfos](~~106830~~) operation.
       * *   You cannot cancel an upload job that already starts.
+      * *   You must specify either JobIds or UploadUrls. If you specify both parameters, only JobIds takes effect.
       *
      */
     @Override
@@ -382,10 +387,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see [Billing of media asset storage](~~188308#section_e97\\_xrp_mzz~~). If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see [Billing of acceleration traffic](~~188310#section_sta_zm2\\_tsv~~).**
-      * *   You must obtain a URL and a credential before you upload an image to ApsaraVideo VOD. ApsaraVideo VOD provides multiple upload methods. You can upload auxiliary media assets by using SDKs for upload from servers, SDKs for upload from clients, URLs of auxiliary media assets, Object Storage Service (OSS) API, or OSS SDKs. Each upload method has different requirements for obtaining upload URLs and credentials. For more information, see the "Usage notes" section of the [Upload URLs and credentials](~~55397~~) topic.
-      * *   If the upload credential expires, you can call this operation to obtain a new upload URL and credential. The default validity period of an upload credential is 3,000 seconds.
+      * *   **Make sure that you understand the billing method and prices of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see [Billing of media asset storage](~~188308#section_e97\\_xrp_mzz~~). If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see [Billing of acceleration traffic](~~188310#section_sta_zm2\\_tsv~~).**
+      * *   You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see [Upload media files by calling API operations](~~476208~~).
+      * *   If the upload credential expires after 3,000 seconds, you can call the CreateUploadAttachedMedia operation again to obtain a new upload URL and a new upload credential.
       * *   You can configure a callback to receive an [AttachedMediaUploadComplete](~~103250~~) event notification to determine whether the upload is successful.
+      * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see [Upload URLs and credentials](~~55397~~).
       *
      */
     @Override
@@ -428,9 +434,9 @@ public final class DefaultAsyncClient implements AsyncClient {
       * *   **Make sure that you understand the billing method and prices of ApsaraVideo VOD before you call this operation. You are charged storage fees after you upload media files to ApsaraVideo VOD. For more information, see [Billing of media asset storage](~~188308#section_e97\\_xrp_mzz~~). If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see [Billing of acceleration traffic](~~188310#section_sta_zm2\\_tsv~~).**
       * *   You can call this operation to obtain upload URLs and credentials for video and audio files. For more information, see [Upload URLs and credentials](~~55397~~).
       * *   You can call this operation only to obtain the upload URLs and credentials for media files and create media assets in ApsaraVideo VOD. You cannot call this operation to upload media files. For more information about how to upload media files by calling API operations, see [Upload media files by calling API operations](~~476208~~).
-      * *   If the upload credential expires, call the [RefreshUploadVideo](~~55408~~) operation to obtain a new upload credential. The default validity period of an upload credential is 3,000 seconds.
-      * *   You can configure a callback to receive an [event notification](~~55396~~) when an audio or video file is uploaded. Alternatively, after you upload an audio or video file, you can call the [GetMezzanineInfo](~~59624~~) operation to determine whether the upload is successful based on the value of the Status response parameter.
-      * *   The VideoId parameter that is returned after you call this operation can be used for media processing or lifecycle management of media assets.
+      * *   If the upload credential expires, call the [RefreshUploadVideo](~~RefreshUploadVideo~~) operation to obtain a new upload credential. The default validity period of an upload credential is 3,000 seconds.
+      * *   You can configure a callback to receive an event notification when an audio or video file is uploaded. Alternatively, after you upload an audio or video file, you can call the [GetMezzanineInfo](~~59624~~) operation to determine whether the upload is successful. For more information, see [Overview](~~55396~~).
+      * *   The value of the VideoId parameter that is returned after you call this operation can be used for media processing or the lifecycle management of media assets.
       * *   You must obtain a URL and a credential before you upload a media file to ApsaraVideo VOD. ApsaraVideo VOD supports multiple upload methods. Each method has different requirements on upload URLs and credentials. For more information, see [Upload URLs and credentials](~~55397~~).
       *
      */
@@ -519,7 +525,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation physically deletes auxiliary media assets. You cannot recover the auxiliary media assets that you deleted. Exercise caution when you call this operation.
+      * *   **This operation physically deletes auxiliary media assets. You cannot recover the auxiliary media assets that you deleted. Exercise caution when you call this operation.**
       * *   You can delete a maximum of 20 auxiliary media assets in one request.
       *
      */
@@ -575,9 +581,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to delete multiple online editing projects at a time.
-      * ### QPS limits
-      * You can call this operation up to 20 times per second per account. Requests that exceed this limit are dropped and you may experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VOD](~~342790~~).
+      * *   You can call this operation to delete multiple online editing projects at a time.
       *
      */
     @Override
@@ -609,10 +613,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   After you call this operation to delete an image, the source file is permanently deleted and cannot be recovered. If some images are cached on Alibaba Cloud CDN points of presence (POPs), the image URLs do not immediately become invalid.
+      * *   **After you call this operation to delete an image, the source file is permanently deleted and cannot be recovered. Exercise caution when you call this operation.**
+      * *   If some images are cached on Alibaba Cloud CDN points of presence (POPs), the image URLs do not immediately become invalid.
       * *   You can call this operation to delete uploaded images and video snapshots.
-      * ### QPS limits
-      * You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VOD](~~342790~~).
       *
      */
     @Override
@@ -759,9 +762,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > *   This operation is available only in the **China (Shanghai)** region.
-      * > *   After the configurations of a domain name for CDN are deleted, the domain name becomes unavailable. We recommend that you restore the A record at your DNS service provider before you delete the configurations of the domain name for CDN.
-      * > *   After you call this operation to delete the configurations of a domain name for CDN, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the [BatchStopVodDomain](~~120208~~) operation.
+      * > 
+      * *   This operation is available only in the **China (Shanghai)** region.
+      * *   After the configurations of a domain name for CDN are deleted, the domain name becomes unavailable. We recommend that you restore the A record at your DNS service provider before you delete the configurations of the domain name for CDN.
+      * *   After you call this operation to remove a domain name for CDN from ApsaraVideo VOD, all records that are related to the domain name are deleted. If you only want to disable a domain name for CDN, call the [BatchStopVodDomain](~~120208~~) operation.
       *
      */
     @Override
@@ -812,11 +816,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > *   This operation is available only in the **China (Shanghai)** region.
-      * > *   You can query playback statistics on top 1,000 videos at most on a specified day. By default, top videos are sorted in descending order based on video views.
-      * > *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
-      * > *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
-      * > *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
+      * *   This operation is available only in the **China (Shanghai)** region.
+      * *   You can query playback statistics on top 1,000 videos at most on a specified day. By default, top videos are sorted in descending order based on video views.
+      * *   You can call this operation to query only playback statistics collected on videos that are played by using ApsaraVideo Player SDKs.
+      * *   Playback statistics for the previous day are generated at 09:00 on the current day, in UTC+8.
+      * *   You can query data that is generated since January 1, 2018. The maximum time range to query is 180 days.
       *
      */
     @Override
@@ -916,7 +920,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is available only in the **China (Shanghai)** region.
+      * >  This operation is available only in the **China (Shanghai)** region.
       *
      */
     @Override
@@ -1059,10 +1063,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * *   This operation is available only in the **China (Shanghai)** region.
       * *   For more information about the log format and latency, see [Download logs](~~86099~~).
-      * *   If you specify neither StartTime nor EndTime, the log data in the previous 24 hours is queried.
-      * *   You can specify both StartTime and EndTime to query the log data that is generated in the specified time range.
-      * ### [](#qps)QPS limits
-      * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations](~~342790~~).
+      * *   If you specify neither the StartTime parameter nor the EndTime parameter, the log data in the last 24 hours is queried.
+      * *   You can specify both the StartTime and EndTime parameters to query the log data that is generated in the specified time range.
       *
      */
     @Override
@@ -1418,7 +1420,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   This operation is available only in the **China (Shanghai)** region.
-      * *   Playback data in ApsaraVideo Player SDK is collected based on media IDs.
+      * *   Only playback data in ApsaraVideo Player SDK is collected.
+      * *   You can query only data within the last 30 days.
       * *   Before you call this operation, make sure that the following requirements are met:
       *     *   ApsaraVideo Player SDK for Android or iOS
       *         *   ApsaraVideo Player SDK for Android or iOS V5.4.9.2 or later is used.
@@ -1486,8 +1489,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > *   This operation is available only in the **China (Shanghai)** region.
-      * >*   If you do not specify the TaskId or ObjectPath parameter, the data in the last three days is returned on the first page. By default, one page displays a maximum of 20 entries. You can specify the TaskId and ObjectPath parameters at the same time.
+      * *   This operation is available only in the **China (Shanghai)** region.
+      * *   If you do not specify the TaskId or ObjectPath parameter, the data in the last three days is returned on the first page. By default, one page displays a maximum of 20 entries. You can specify the TaskId and ObjectPath parameters at the same time.
       *
      */
     @Override
@@ -1599,6 +1602,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   This operation is available only in the **China (Shanghai)** region.
+      *
+     */
     @Override
     public CompletableFuture<DescribeVodVerifyContentResponse> describeVodVerifyContent(DescribeVodVerifyContentRequest request) {
         try {
@@ -1758,6 +1765,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can query information about up to 20 auxiliary media assets in a request.
+      *
+     */
     @Override
     public CompletableFuture<GetAttachedMediaInfoResponse> getAttachedMediaInfo(GetAttachedMediaInfoRequest request) {
         try {
@@ -1886,9 +1897,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query the basic information about multiple images at a time, such as the image title, type, creation time, tags, and URL.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on an API operation in ApsaraVideo Live](~~342790~~).
+      * *   You can call the [CreateUploadImage](~~CreateUploadImage~~) operation to upload images to ApsaraVideo VOD and call this operation to query the basic information about multiple images at a time.
+      * *   To query information about video snapshots, call the [ListSnapshots](~~ListSnapshots~~) operation.
+      * *   You can specify up to 20 image IDs in one call.
       *
      */
     @Override
@@ -1938,8 +1949,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * - By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.
-      * - ApsaraVideo VOD stores the snapshots in the automated review results free of charge for two weeks. After this period, the snapshots are automatically deleted.
+      * *   By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.
+      * *   ApsaraVideo VOD stores the snapshots in the automated review results free of charge for two weeks. After this period, the snapshots are automatically deleted.
+      * *   This operation is available only in the Singapore region.
       *
      */
     @Override
@@ -1956,6 +1968,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  By default, only details of snapshots that violate content regulations and potentially violate content regulations are returned.
+      * This operation is available only in the Singapore region.
+      *
+     */
     @Override
     public CompletableFuture<GetMediaAuditResultTimelineResponse> getMediaAuditResultTimeline(GetMediaAuditResultTimelineRequest request) {
         try {
@@ -2408,7 +2425,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * If multiple snapshots of a video exist, the data of the latest snapshot is returned.
+      * If multiple snapshots exist for a video, you can call this operation to query information about the latest snapshot.
       *
      */
     @Override
@@ -2525,14 +2542,21 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   **Make sure that you understand the billing methods and price of ApsaraVideo VOD before you call this operation. You are charged for using the online editing feature. For more information, see [Billing](~~188310#section-pyv-b8h-bo7~~).**
+      * *   **Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged for using the online editing feature. For more information, see [Billing](~~188310#section-pyv-b8h-bo7~~).**
       * *   This operation returns only the submission result of a video production task. When the submission result is returned, video production may still be in progress. After a video production task is submitted, the task is queued in the background for asynchronous processing.
-      * *   The source files that are used in the timeline of an online editing project can be materials directly uploaded to the online project or selected from the media asset library.
+      * *   The source files that are used in the timeline of an online editing project can be materials directly uploaded to the online project or selected from the media asset library. Only media assets that are in the Normal state can be used in the project.
       * *   Videos are produced based on ProjectId and Timeline. The following content describes the parameter configurations:
       *     *   You must specify ProjectId or Timeline. If you leave both parameters empty, the video cannot be produced.
       *     *   If you specify Timeline and leave ProjectId empty, the system automatically creates an online editing project based on Timeline and adds the materials specified in the Timeline to the project to produce videos.
       *     *   If you specify ProjectId and leave Timeline empty, the system automatically uses the latest timeline information of the project to produce videos.
       *     *   If you specify both ProjectId and Timeline, the system automatically uses the timeline information that you specified to produce videos and updates the project timeline and materials. You can also specify other parameters to update the corresponding information about the online editing project.
+      * *   You can create up to 100 video tracks, 100 image tracks, and 100 subtitle tracks in a project.
+      * *   The total size of material files cannot exceed 1 TB.
+      * *   The buckets in which the materials reside and where the exported videos are stored must be in the same region as the region where ApsaraVideo VOD is activated.
+      * *   The exported videos must meet the following requirements:
+      *     *   The width and height of the video image cannot be less than 128 pixels.
+      *     *   The width and height of the video image cannot exceed 4,096 pixels.
+      *     *   The width cannot exceed 2,160 pixels.
       * *   After a video is produced, the video is automatically uploaded to ApsaraVideo VOD. Then, the **ProduceMediaComplete** and **FileUploadComplete** event notifications are sent to you. After the produced video is transcoded, the **StreamTranscodeComplete** and **TranscodeComplete** event notifications are sent to you.
       * *   You can add special effects to the video. For more information, see [Special effects](~~69082~~).
       *
@@ -2552,11 +2576,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * - ApsaraVideo VOD allows you to refresh and prefetch resources. The refresh feature forces the point of presence (POP) to clear cached resources and retrieve the latest resources from origin servers. The prefetch feature allows the POP to retrieve frequently accessed resources from origin servers during off-peak hours. This increases the cache hit ratio.
-      * - You can call this operation to submit refresh or prefetch tasks based on the media ID. You can also specify the format and resolution of the media streams to refresh or prefetch based on your business requirements.
-      * - You can submit a maximum of 20 refresh or prefetch tasks at a time.
-      * ### QPS limits
-      * You can call this operation up to 50 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limits on API operations in ApsaraVideo VoD](~~342790~~).
+      * *   ApsaraVideo VOD allows you to purge and prefetch resources. The purge feature forces the point of presence (POP) to clear cached resources and retrieve the latest resources from origin servers. The prefetch feature allows the POP to retrieve frequently accessed resources from origin servers during off-peak hours. This increases the cache hit ratio.
+      * *   You can call this operation to submit purge or prefetch tasks based on the media ID. You can also specify the format and resolution of the media streams to purge or prefetch based on your business requirements.
+      * *   You can submit a maximum of 20 purge or prefetch tasks at a time.
       *
      */
     @Override
@@ -2862,8 +2884,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * *   **Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged for using the smart tagging and video fingerprinting features. For more information, see [Billing of video AI](~~188310#section-g7l-s3o-9ng~~).**
       * *   Regions that support the video fingerprinting feature: **China (Beijing)**, **China (Shanghai)**, and **Singapore**. Regions that support the smart tagging feature: **China (Beijing)** and **China (Shanghai)**.
-      * *   You need to enable the video fingerprinting feature or the smart tagging feature before you can call this operation to submit jobs. For more information, see [Video AI](~~101148~~).
-      * *   If this is the first time you use the video fingerprinting feature, you must [submit a ticket](https://yida.alibaba-inc.com/o/ticketapply) to apply for using the media fingerprint library for free. Otherwise, the video fingerprinting feature will be affected.
+      * *   You need to enable the video fingerprinting feature or the smart tagging feature before you can call this operation to submit jobs. For more information, see [Overview](~~101148~~).
+      * *   If this is the first time you use the video fingerprinting feature, you must submit a ticket to apply for using the media fingerprint library for free. Otherwise, the video fingerprinting feature will be affected. For more information about how to submit a ticket, see [Contact us](~~464625~~).
       * *   After you submit an AI job, ApsaraVideo VOD asynchronously processes the job. The operation may return a response before the job is complete. You can configure the [Event Notification](~~55627~~) feature and set the callback event to **AI Processing Completed**. After you receive the event notification, you can query the execution result of the AI job.
       *
      */
@@ -2964,8 +2986,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   During video preprocessing, videos are transcoded to meet the playback requirements of the production studio. Therefore, you are **charged** for video preprocessing. You can submit a ticket for information about the **production studio** service.
-      *  *   You can obtain the preprocessing result in the [TranscodeComplete](~~55638~~) event notification. If the value of the **Preprocess** parameter is true in the event notification, the video is preprocessed.
+      * *   During video preprocessing, videos are transcoded to meet the playback requirements of the production studio. Therefore, **you are charged for video preprocessing**. For more information about billing, see [Billing of production studios](~~64531~~).
+      * *   You can obtain the preprocessing result in the [TranscodeComplete](~~55638~~) event notification. If **Preprocess=true** is returned in the event notification, the video is transcoded.
       *
      */
     @Override
@@ -3083,7 +3105,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The specific parameter of an auxiliary media asset is updated only when a new value is passed in the parameter.
+      * You can modify the information about up to 20 auxiliary media assets at a time.
       *
      */
     @Override
@@ -3132,6 +3154,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can call this operation to modify information such as the title, tags, description, and category about images based on image IDs. You must pass in the parameters that you want to modify. Otherwise, parameter configurations are not overwritten.
+      * *   You can modify the information about up to 20 images at a time.
+      *
+     */
     @Override
     public CompletableFuture<UpdateImageInfosResponse> updateImageInfos(UpdateImageInfosRequest request) {
         try {
@@ -3222,7 +3249,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is available only in the **China (Shanghai)** region.
+      * UpdateVodDomain
       *
      */
     @Override

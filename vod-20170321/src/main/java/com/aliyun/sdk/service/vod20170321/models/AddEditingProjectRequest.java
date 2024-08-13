@@ -166,7 +166,7 @@ public class AddEditingProjectRequest extends Request {
         } 
 
         /**
-         * The thumbnail URL of the online editing project. If you do not specify this parameter and the video track in the timeline has mezzanine files, the thumbnail of the first mezzanine file in the timeline is used.
+         * The thumbnail URL of the online editing project. If you leave this parameter empty and materials exist on the video track in the timeline, the thumbnail of the first material is used by default.
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -184,7 +184,7 @@ public class AddEditingProjectRequest extends Request {
         }
 
         /**
-         * The region where you want to create the online editing project.
+         * The region in which ApsaraVideo VOD is activated.
          */
         public Builder division(String division) {
             this.putQueryParameter("Division", division);
@@ -229,10 +229,10 @@ public class AddEditingProjectRequest extends Request {
         }
 
         /**
-         * The timeline of the online editing project, in JSON format. For more information about the structure, see [Timeline](~~52839~~).
+         * The timeline of the online editing project in JSON format. For more information about the structure, see [Timeline](~~52839~~).
          * <p>
          * 
-         * If you do not specify this parameter, an empty timeline is created and the duration of the online editing project is zero.
+         * If you leave this parameter empty, an empty timeline is created and the duration of the online editing project is zero.
          */
         public Builder timeline(String timeline) {
             this.putQueryParameter("Timeline", timeline);

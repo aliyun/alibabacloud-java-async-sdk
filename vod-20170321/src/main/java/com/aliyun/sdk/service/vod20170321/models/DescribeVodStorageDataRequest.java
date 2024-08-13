@@ -190,7 +190,7 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple bucket names with commas (,).
+         * The name of the Object Storage Service (OSS) bucket. If you leave this parameter empty, data of all buckets is returned. Separate multiple transcoding specifications with commas (,).
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);
@@ -199,7 +199,7 @@ public class DescribeVodStorageDataRequest extends Request {
         }
 
         /**
-         * The storage type. Set the value to **OSS**.
+         * The storage class. Set the value to **OSS**.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

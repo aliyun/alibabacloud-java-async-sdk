@@ -114,7 +114,7 @@ public class SubmitAIMediaAuditJobRequest extends Request {
          * <p>
          * 
          * *   Other configuration items of the review job. Only the ResourceType field is supported. This field is used to specify the type of media files. You can adjust review standards and rules based on the type of media files.
-         * *   If you want to modify the review standard and rules based on ResourceType, [submit a request on Yida](https://yida.alibaba-inc.com/o/ticketapply) to reach technical support.
+         * *   If you want to modify the review standard and rules based on ResourceType, submit a ticket. For more information, see [Contact us](~~464625~~).
          * *   The value of ResourceType can contain only letters, digits, and underscores (\_).
          */
         public Builder mediaAuditConfiguration(String mediaAuditConfiguration) {
@@ -145,8 +145,8 @@ public class SubmitAIMediaAuditJobRequest extends Request {
          * The ID of the AI template. You can use one of the following methods to obtain the ID of the AI template:
          * <p>
          * 
-         * *   Obtain the ID of the AI template from the response to the [AddAITemplate](~~102930~~) operation. The value of TemplateId is the ID of the AI template.
-         * *   Obtain the ID of the AI template from the response to the [ListAITemplate](~~102936~~) operation. The value of TemplateId is the ID of the AI template.
+         * *   Obtain the value of TemplateId from the response to the [AddAITemplate](~~102930~~) operation that you call to create an AI template.
+         * *   Obtain the value of TemplateId from the response to the [ListAITemplate](~~102936~~) operation that you call to create an AI template.
          * 
          * >  If you do not specify an ID, the ID of the default AI template is used.
          */

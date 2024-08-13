@@ -271,11 +271,11 @@ public class RefreshMediaPlayUrlsRequest extends Request {
         }
 
         /**
-         * The custom configurations such as callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see [Request parameter](~~86952~~).
+         * The custom configurations such as callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section in the [Request parameter](~~86952~~) topic.
          * <p>
-         * > 
-         * - The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
-         * - You must submit a ticket to enable the upload acceleration feature. For more information, see [Overview](~~55396~~).
+         * 
+         * >*   The callback configurations take effect only after you specify the HTTP callback URL and select specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+         * >*   To enable the upload acceleration feature, submit a ticket. For more information, see [Overview](~~55396~~). For more information about how to submit a ticket, see [Contact us](~~464625~~).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

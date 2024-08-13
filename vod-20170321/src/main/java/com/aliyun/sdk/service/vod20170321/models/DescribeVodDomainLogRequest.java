@@ -125,7 +125,7 @@ public class DescribeVodDomainLogRequest extends Request {
         } 
 
         /**
-         * The domain name.
+         * The domain name for CDN.
          * <p>
          * 
          * >  You can specify only one domain name in each query.

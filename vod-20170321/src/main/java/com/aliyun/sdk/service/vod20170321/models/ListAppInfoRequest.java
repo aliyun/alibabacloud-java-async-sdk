@@ -20,6 +20,10 @@ public class ListAppInfoRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -27,6 +31,7 @@ public class ListAppInfoRequest extends Request {
         super(builder);
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
+        this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
     }
 
@@ -58,6 +63,13 @@ public class ListAppInfoRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -67,6 +79,7 @@ public class ListAppInfoRequest extends Request {
     public static final class Builder extends Request.Builder<ListAppInfoRequest, Builder> {
         private Integer pageNo; 
         private Integer pageSize; 
+        private String resourceGroupId; 
         private String status; 
 
         private Builder() {
@@ -77,6 +90,7 @@ public class ListAppInfoRequest extends Request {
             super(request);
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
             this.status = request.status;
         } 
 
@@ -95,6 +109,15 @@ public class ListAppInfoRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

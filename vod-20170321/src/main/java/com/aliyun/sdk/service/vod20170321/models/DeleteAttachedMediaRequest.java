@@ -54,11 +54,11 @@ public class DeleteAttachedMediaRequest extends Request {
         } 
 
         /**
-         * The ID of the auxiliary media asset that you want to delete. You can obtain the ID of the auxiliary media asset from the MediaId parameter in the response to the [CreateUploadAttachedMedia](~~98467~~) operation.
+         * The ID of the auxiliary media asset that you want to delete.
          * <p>
          * 
-         * *   Separate multiple IDs with commas (,).
-         * *   You can specify a maximum of 20 IDs.
+         * *   Separate multiple IDs with commas (,). You can specify up to 20 IDs.
+         * *   You can obtain the ID from the response to the [CreateUploadAttachedMedia](~~CreateUploadAttachedMedia~~) operation that you call to obtain the upload URL and credential.
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

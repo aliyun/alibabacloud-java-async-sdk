@@ -101,6 +101,8 @@ public class SetAuditSecurityIpRequest extends Request {
          * *   **Append** (default): adds the IP addresses to the original whitelist.
          * *   **Cover**: overwrites the original whitelist.
          * *   **Delete**: removes the IP addresses from the original whitelist.
+         * 
+         * >  If the value that you specify is invalid, the default value is used.
          */
         public Builder operateMode(String operateMode) {
             this.putQueryParameter("OperateMode", operateMode);

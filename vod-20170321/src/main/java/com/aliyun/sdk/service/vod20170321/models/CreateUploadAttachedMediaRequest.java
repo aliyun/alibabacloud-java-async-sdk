@@ -194,7 +194,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         } 
 
         /**
-         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+         * The ID of the application. Default value: **app-1000000**. If you have activated the multi-application service, specify the ID of the application to add the watermark template in the specified application. For more information, see [Overview](~~113600~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -203,7 +203,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The type of the media asset. Valid values:
+         * The type of the auxiliary media asset. Valid values:
          * <p>
          * 
          * *   **watermark**
@@ -217,12 +217,12 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The one or more category IDs of the auxiliary media asset. Separate multiple category IDs with commas (,). A maximum of five category IDs can be specified. You can use one of the following methods to obtain the category ID:
+         * The ID of the category. Separate multiple IDs with commas (,). You can specify up to five IDs. You can use one of the following methods to obtain the ID:
          * <p>
          * 
-         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories**. On the Categories page, you can view the category ID.
-         * *   View the value of the CateId parameter returned by the [AddCategory](~~56401~~) operation that you called to create a category.
-         * *   View the value of the CateId parameter returned by the [GetCategories](~~56406~~) operation that you called to query a category.
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Categories** to view the category ID of the media file.
+         * *   Obtain the category ID from the response to the [AddCategory](~~AddCategory~~) operation that you call to create a category.
+         * *   Obtain the category ID from the response to the [GetCategories](~~GetCategories~~) operation that you call to query categories.
          */
         public Builder cateIds(String cateIds) {
             this.putQueryParameter("CateIds", cateIds);
@@ -244,7 +244,10 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The name of the source file.
+         * The source file URL of the auxiliary media asset.
+         * <p>
+         * 
+         * >  The file name extension is optional. If the file name extension that you specified for this parameter is different from the value of MediaExt, the value of MediaExt takes effect.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -262,7 +265,7 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The file name extension. Valid values:
+         * The file name extension of the auxiliary media asset.
          * <p>
          * 
          * *   Valid values for watermarks: **png, gif, apng, and mov**
@@ -276,12 +279,12 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The storage location. You can use one of the following methods to obtain the storage location:
+         * The storage address. Perform the following operations to obtain the storage address:
          * <p>
          * 
-         * Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, you can view the storage location.
+         * Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. On the Storage page, view the storage address.
          * 
-         * >  If this parameter is set to a specific value, the auxiliary media asset is uploaded to the specified storage location.
+         * >  If you leave this parameter empty, the auxiliary media asset is uploaded to the default storage address. If you specify this parameter, the auxiliary media asset is uploaded to the specified storage address.
          */
         public Builder storageLocation(String storageLocation) {
             this.putQueryParameter("StorageLocation", storageLocation);
@@ -305,11 +308,11 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The title of the media asset. Take note of the following items:
+         * The title of the auxiliary media asset. The following rules apply:
          * <p>
          * 
-         * *   The title can be up to 128 bytes in length.
-         * *   The value must be encoded in UTF-8.
+         * *   The title cannot exceed 128 bytes.
+         * *   The title must be encoded in UTF-8.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);
@@ -318,11 +321,11 @@ public class CreateUploadAttachedMediaRequest extends Request {
         }
 
         /**
-         * The custom configurations, including callback configurations and upload acceleration configurations. The value is a JSON string. For more information, see the "UserData: specifies the custom configurations for media upload" section of the [Request parameters](~~86952~~) topic.
+         * The custom configurations. For example, you can specify callback configurations and upload acceleration configurations. The value must be a JSON string. For more information, see [Request parameters](~~86952#section-6fg-qll-v3w~~).
          * <p>
          * 
-         * > *   The callback configurations take effect only after you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. For more information about how to configure an HTTP callback in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
-         * >*   To use the upload acceleration feature, submit a [ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex) to enable this feature. For more information, see [Overview](~~55396~~).
+         * > *   The callback configurations take effect only after you specify the HTTP callback URL and select the specific callback events in the ApsaraVideo VOD console. For more information about how to configure HTTP callback settings in the ApsaraVideo VOD console, see [Configure callback settings](~~86071~~).
+         * > *   If you want to enable the upload acceleration feature, submit a ticket. For more information, see [Overview](~~55396~~). For more information about how to submit a ticket, see [Contact us](~~464625~~).
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

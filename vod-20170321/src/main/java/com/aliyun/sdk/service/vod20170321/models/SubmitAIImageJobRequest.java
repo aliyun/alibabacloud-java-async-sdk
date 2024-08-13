@@ -156,7 +156,7 @@ public class SubmitAIImageJobRequest extends Request {
          * The ID of the pipeline that is used for the AI processing job.
          * <p>
          * 
-         * >  This parameter is optional if you have specified a default pipeline ID. If you need to submit image AI processing jobs in a batch to a specific pipeline, [submit a ticket](https://yida.alibaba-inc.com/o/ticketapply) to contact Alibaba Cloud technical support.
+         * >  This parameter is optional if you specify a default pipeline ID. If you want to use a separate pipeline to submit multiple AI processing jobs., submit a ticket or contact Alibaba Cloud after-sales engineers. For more information about how to submit a ticket, see [Contact us](~~464625~~).
          */
         public Builder AIPipelineId(String AIPipelineId) {
             this.putQueryParameter("AIPipelineId", AIPipelineId);

@@ -243,7 +243,11 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * The playback time. You can specify this parameter to query all playback data generated only on the specified date. You can query data only by day. Specify the value in the yyyyMMdd format.
+         * The playback time. Specify the value in the yyyyMMdd format.
+         * <p>
+         * 
+         * > *   You can query data only by day.
+         * > *   You can query only data within the last 30 days.
          */
         public Builder playDate(String playDate) {
             this.putQueryParameter("PlayDate", playDate);
@@ -262,7 +266,7 @@ public class DescribeVodMediaPlayDataRequest extends Request {
          * *   **ap-southeast-1**: Singapore
          * *   **ap-southeast-5**: Indonesia (Jakarta)
          * *   **eu-central-1**: Germany (Frankfurt)
-         * *   **ap-south-1**: India (Mumbai)
+         * *   **ap-south-1**: India (Mumbai) (disabled)
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

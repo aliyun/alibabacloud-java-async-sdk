@@ -124,14 +124,14 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * The ID of the image file. You can specify multiple image IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the image ID:
+         * The ID of the image. You can specify up to 20 image IDs and separate them with commas (,). You can use one of the following methods to obtain the image ID:
          * <p>
          * 
-         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Image** to view the image ID. This method is applicable to images that are uploaded by using the ApsaraVideo VOD console.
-         * *   Obtain the value of the ImageId parameter from the response to the [CreateUploadImage](~~55619~~) operation.
-         * *   Obtain the value of the ImageId parameter from the response to the [SearchMedia](~~86044~~) operation after you upload images.
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Image** to view the image ID.
+         * *   Obtain the image ID from the response to the [CreateUploadImage](~~CreateUploadImage~~) operation that you call to obtain the upload credential and URL.
+         * *   Obtain the image ID from the response to the [SearchMedia](~~SearchMedia~~) operation that you call to query images.
          * 
-         * > This parameter is required only if you set **DeleteImageType** to **ImageId**.
+         * >  This parameter takes effect and is required only if you set **DeleteImageType** to **ImageId**.
          */
         public Builder imageIds(String imageIds) {
             this.putQueryParameter("ImageIds", imageIds);
@@ -140,14 +140,16 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * The type of images that you want to delete. The images are associated with the video. This parameter is required only if you set **DeleteImageType** to **VideoId**. Valid values:
+         * The type of images that you want to delete. The images are associated with the video. Valid values:
          * <p>
          * 
          * *   **CoverSnapshot**: thumbnail snapshot.
-         * *   **NormalSnapshot**: normal snapshot.
+         * *   **NormalSnapshot**: regular snapshot.
          * *   **SpriteSnapshot**: sprite snapshot.
          * *   **SpriteOriginSnapshot**: sprite source snapshot.
-         * *   **All**: images of all the preceding types. If this parameter is not set to All, you can specify multiple types and separate the types with commas (,).
+         * *   **All**: images of all the preceding types. You can specify multiple types other than `All` for this parameter. Separate multiple types with commas (,).
+         * 
+         * >  This parameter takes effect and is required only if you set **DeleteImageType** to **VideoId**.
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);
@@ -156,10 +158,10 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * The URL of the image. You can obtain the value of ImageURL from the response to the [CreateUploadImage](~~55619~~) operation. You can specify multiple URLs. Separate multiple URLs with commas (,).
+         * The URL of the image. You can obtain the value of `ImageURL` from the response to the [CreateUploadImage](~~CreateUploadImage~~) operation. You can specify up to 20 URLs and separate them with commas (,).
          * <p>
          * 
-         * > This parameter is required only if you set **DeleteImageType** to **ImageURL**.
+         * >  This parameter takes effect and is required only if you set **DeleteImageType** to **ImageURL**.
          */
         public Builder imageURLs(String imageURLs) {
             this.putQueryParameter("ImageURLs", imageURLs);
@@ -168,14 +170,14 @@ public class DeleteImageRequest extends Request {
         }
 
         /**
-         * The ID of the video file. You can use one of the following methods to obtain the video ID:
+         * The ID of the video. You can specify only one ID. You can use one of the following methods to obtain the ID:
          * <p>
          * 
-         * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the media file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
-         * *   Obtain the value of the VideoId parameter from the response to the [CreateUploadVideo](~~55407~~) operation.
-         * *   Obtain the value of the VideoId parameter from the response to the [SearchMedia](~~86044~~) operation after you upload media files.
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, view the ID of the media file.
+         * *   Obtain the video ID from the response to the [CreateUploadVideo](~~CreateUploadVideo~~) operation that you call to obtain the upload credential and URL.
+         * *   Obtain the video ID from the response to the [SearchMedia](~~SearchMedia~~) operation that you call to query videos.
          * 
-         * > This parameter is required only if you set **DeleteImageType** to **VideoId**.
+         * >  This parameter takes effect and is required only if you set **DeleteImageType** to **VideoId**.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

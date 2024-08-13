@@ -20,10 +20,15 @@ public class CreateAppInfoRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private CreateAppInfoRequest(Builder builder) {
         super(builder);
         this.appName = builder.appName;
         this.description = builder.description;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class CreateAppInfoRequest extends Request {
         return this.description;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<CreateAppInfoRequest, Builder> {
         private String appName; 
         private String description; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class CreateAppInfoRequest extends Request {
             super(request);
             this.appName = request.appName;
             this.description = request.description;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -90,6 +104,15 @@ public class CreateAppInfoRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

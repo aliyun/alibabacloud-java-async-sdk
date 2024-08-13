@@ -229,11 +229,20 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The category of the ad review result. Valid values:
+             * The category of the review result. Valid values:
              * <p>
              * 
-             * *   **normal**: normal content
-             * *   **ad**: ad or text violation
+             * *   **normal**: normal content.
+             * *   **ad**: other ads.
+             * *   **politics**: political content in text.
+             * *   **porn**: pornographic content in text.
+             * *   **abuse**: verbal abuse in text.
+             * *   **terrorism**: terrorist content in text.
+             * *   **contraband**: prohibited content in text.
+             * *   **spam**: spam content in text.
+             * *   **npx**: illegal ad
+             * *   **qrcode**: QR code.
+             * *   **programCode**: mini program code.
              */
             public Builder adLabel(String adLabel) {
                 this.adLabel = adLabel;
@@ -241,7 +250,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.
+             * The score of the video snapshot in the ad review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
              */
             public Builder adScore(String adScore) {
                 this.adScore = adScore;
@@ -249,11 +258,14 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the undesirable scene review result. Valid values:
+             * The category of the review result. Valid values:
              * <p>
              * 
-             * *   **normal**: The video does not contain undesirable scenes.
-             * *   **live**: The video contains undesirable scenes.
+             * *   **normal**: normal content.
+             * *   **meaningless**: meaningless content, such as a black or white screen.
+             * *   **PIP**: picture-in-picture.
+             * *   **smoking**: smoking.
+             * *   **drivelive**: live broadcasting in a running vehicle.
              */
             public Builder liveLabel(String liveLabel) {
                 this.liveLabel = liveLabel;
@@ -261,7 +273,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.
+             * The score of the video snapshot in the undesirable content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
              */
             public Builder liveScore(String liveScore) {
                 this.liveScore = liveScore;
@@ -269,11 +281,12 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the logo review result. Valid values:
+             * The category of the review result. Valid values:
              * <p>
              * 
-             * *   **normal**
-             * *   **tlogo**
+             * *   **normal**: normal content.
+             * *   **TV**: controlled TV station logo.
+             * *   **trademark**: trademark.
              */
             public Builder logoLabel(String logoLabel) {
                 this.logoLabel = logoLabel;
@@ -281,7 +294,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.
+             * The score of the video snapshot in the logo review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
              */
             public Builder logoScore(String logoScore) {
                 this.logoScore = logoScore;
@@ -289,7 +302,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the pornographic content review result. Valid values:
+             * The category of the review result. Valid values:
              * <p>
              * 
              * *   **normal**
@@ -302,7 +315,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.
+             * The score of the video snapshot in the pornographic content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
              */
             public Builder pornScore(String pornScore) {
                 this.pornScore = pornScore;
@@ -310,16 +323,23 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The category of the terrorist content review result.
+             * The category of the review result. Valid values:
              * <p>
              * 
-             * *   **normal**: normal
-             * *   **terrorism**: terrorist content
-             * *   **outfit**: special costume
-             * *   **logo**: special logo
-             * *   **weapon**: weapon
-             * *   **politics**: politically sensitive content
-             * *   **others**: other terrorist content and politically sensitive content
+             * *   **normal**
+             * *   **bloody**
+             * *   **explosion**
+             * *   **outfit**
+             * *   **logo**
+             * *   **weapon**
+             * *   **politics**
+             * *   **violence**
+             * *   **crowd**
+             * *   **parade**
+             * *   **carcrash**
+             * *   **flag**
+             * *   **location**
+             * *   **others**
              */
             public Builder terrorismLabel(String terrorismLabel) {
                 this.terrorismLabel = terrorismLabel;
@@ -327,7 +347,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The score of the review result category. It is representative of the confidence. Valid values: `[0.00-100.00].` The value is rounded down to 10 decimal places.
+             * The score of the video snapshot in the terrorist content review result. Valid values: `[0,100]`. The value is rounded down to 10 decimal places. The score is representative of the confidence.
              */
             public Builder terrorismScore(String terrorismScore) {
                 this.terrorismScore = terrorismScore;
@@ -335,7 +355,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The position in the video. Unit: milliseconds.
+             * The timestamp of the snapshot in the video. Unit: milliseconds.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -343,7 +363,7 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the image.
+             * The URL of the video snapshot.
              */
             public Builder url(String url) {
                 this.url = url;
