@@ -17,6 +17,12 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
+    @com.aliyun.core.annotation.NameInMap("Marker")
+    private String marker;
+
+    @com.aliyun.core.annotation.NameInMap("NextMarker")
+    private String nextMarker;
+
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
@@ -26,12 +32,18 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
+    @com.aliyun.core.annotation.NameInMap("Truncated")
+    private Boolean truncated;
+
     private DescribeOssObjectsResponseBody(Builder builder) {
         this.currentPage = builder.currentPage;
         this.items = builder.items;
+        this.marker = builder.marker;
+        this.nextMarker = builder.nextMarker;
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
+        this.truncated = builder.truncated;
     }
 
     public static Builder builder() {
@@ -57,6 +69,20 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     }
 
     /**
+     * @return marker
+     */
+    public String getMarker() {
+        return this.marker;
+    }
+
+    /**
+     * @return nextMarker
+     */
+    public String getNextMarker() {
+        return this.nextMarker;
+    }
+
+    /**
      * @return pageSize
      */
     public Integer getPageSize() {
@@ -77,12 +103,22 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    /**
+     * @return truncated
+     */
+    public Boolean getTruncated() {
+        return this.truncated;
+    }
+
     public static final class Builder {
         private Integer currentPage; 
         private java.util.List < Items> items; 
+        private String marker; 
+        private String nextMarker; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+        private Boolean truncated; 
 
         /**
          * The page number of the returned page.
@@ -97,6 +133,22 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
+            return this;
+        }
+
+        /**
+         * Marker.
+         */
+        public Builder marker(String marker) {
+            this.marker = marker;
+            return this;
+        }
+
+        /**
+         * NextMarker.
+         */
+        public Builder nextMarker(String nextMarker) {
+            this.nextMarker = nextMarker;
             return this;
         }
 
@@ -121,6 +173,14 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
+            return this;
+        }
+
+        /**
+         * Truncated.
+         */
+        public Builder truncated(Boolean truncated) {
+            this.truncated = truncated;
             return this;
         }
 

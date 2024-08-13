@@ -36,6 +36,10 @@ public class DescribeOssObjectsRequest extends Request {
     private Long lastScanTimeStart;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Marker")
+    private Long marker;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -67,6 +71,7 @@ public class DescribeOssObjectsRequest extends Request {
         this.lang = builder.lang;
         this.lastScanTimeEnd = builder.lastScanTimeEnd;
         this.lastScanTimeStart = builder.lastScanTimeStart;
+        this.marker = builder.marker;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
         this.riskLevelId = builder.riskLevelId;
@@ -131,6 +136,13 @@ public class DescribeOssObjectsRequest extends Request {
     }
 
     /**
+     * @return marker
+     */
+    public Long getMarker() {
+        return this.marker;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -179,6 +191,7 @@ public class DescribeOssObjectsRequest extends Request {
         private String lang; 
         private Long lastScanTimeEnd; 
         private Long lastScanTimeStart; 
+        private Long marker; 
         private String name; 
         private Integer pageSize; 
         private Integer riskLevelId; 
@@ -198,6 +211,7 @@ public class DescribeOssObjectsRequest extends Request {
             this.lang = request.lang;
             this.lastScanTimeEnd = request.lastScanTimeEnd;
             this.lastScanTimeStart = request.lastScanTimeStart;
+            this.marker = request.marker;
             this.name = request.name;
             this.pageSize = request.pageSize;
             this.riskLevelId = request.riskLevelId;
@@ -264,6 +278,15 @@ public class DescribeOssObjectsRequest extends Request {
         public Builder lastScanTimeStart(Long lastScanTimeStart) {
             this.putQueryParameter("LastScanTimeStart", lastScanTimeStart);
             this.lastScanTimeStart = lastScanTimeStart;
+            return this;
+        }
+
+        /**
+         * Marker.
+         */
+        public Builder marker(Long marker) {
+            this.putQueryParameter("Marker", marker);
+            this.marker = marker;
             return this;
         }
 
