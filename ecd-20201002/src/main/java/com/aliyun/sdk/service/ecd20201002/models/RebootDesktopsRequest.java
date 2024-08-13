@@ -263,7 +263,7 @@ public class RebootDesktopsRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the client.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

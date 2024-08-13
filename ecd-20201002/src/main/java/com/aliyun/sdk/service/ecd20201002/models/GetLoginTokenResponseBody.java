@@ -293,10 +293,10 @@ public class GetLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * The next stage that is expected to enter. For example, if the administrator enables MFA authentication in the EDS console, `MFAVerify` is returned after the username and password pass the authentication (after you set CurrentStage to `ADPassword` stage). This indicates that the MFA authentication is required.
+         * The next stage that is expected to enter. For example, an administrator enables MFA in the EDS console. When an end user enters the password, that is, the end user completes the `ADPassword` stage, this parameter returns `MFAVerify`. This indicates that MFA is required.
          * <p>
          * 
-         * > For more information about each authentication stage, see the parameter description of the request parameter `CurrentStage`.
+         * >  For more information about the authentication stages, see the `CurrentStage` parameter.
          */
         public Builder nextStage(String nextStage) {
             this.nextStage = nextStage;
@@ -304,7 +304,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * PasswordStrategy.
+         * > This is a parameter only for internal use.
          */
         public Builder passwordStrategy(PasswordStrategy passwordStrategy) {
             this.passwordStrategy = passwordStrategy;
@@ -339,7 +339,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * > This is a parameter only for internal use.
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -355,7 +355,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RiskVerifyInfo.
+         * Risk identification information regarding the signin process.
          */
         public Builder riskVerifyInfo(RiskVerifyInfo riskVerifyInfo) {
             this.riskVerifyInfo = riskVerifyInfo;
@@ -445,7 +445,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
             private String tenantPasswordLength; 
 
             /**
-             * TenantAlternativeChars.
+             * > This is a parameter only for internal use.
              */
             public Builder tenantAlternativeChars(java.util.List < String > tenantAlternativeChars) {
                 this.tenantAlternativeChars = tenantAlternativeChars;
@@ -453,7 +453,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
             }
 
             /**
-             * TenantPasswordLength.
+             * > This is a parameter only for internal use.
              */
             public Builder tenantPasswordLength(String tenantPasswordLength) {
                 this.tenantPasswordLength = tenantPasswordLength;
@@ -530,11 +530,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
             private String phone; 
 
             /**
-             * The email address of the user. The system returns the email address in the return value of the LoginToken parameter after the user logs on to the client.
-             * <p>
-             * 
-             * *   For a convenience user, the return value is the email address specified when the administrator creates the convenience user.
-             * *   For an AD user, the return value is in the following format: `Username@Name of the AD domain`.
+             * The email used for authentication.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -542,7 +538,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
             }
 
             /**
-             * LastLockDuration.
+             * The duration of the lock.
              */
             public Builder lastLockDuration(Long lastLockDuration) {
                 this.lastLockDuration = lastLockDuration;
@@ -550,7 +546,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Locked.
+             * Whether the account is locked or not.
              */
             public Builder locked(String locked) {
                 this.locked = locked;
@@ -558,7 +554,7 @@ public class GetLoginTokenResponseBody extends TeaModel {
             }
 
             /**
-             * Enter the mobile number of the convenience user. For an AD user, null is returned.
+             * The mobile number used for authentication.
              */
             public Builder phone(String phone) {
                 this.phone = phone;

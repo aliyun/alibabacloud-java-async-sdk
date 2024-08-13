@@ -790,6 +790,9 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("RegionLocation")
+        private String regionLocation;
+
         @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
@@ -837,6 +840,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             this.protocolType = builder.protocolType;
             this.realDesktopId = builder.realDesktopId;
             this.regionId = builder.regionId;
+            this.regionLocation = builder.regionLocation;
             this.sessionType = builder.sessionType;
             this.sessions = builder.sessions;
             this.supportHibernation = builder.supportHibernation;
@@ -1090,6 +1094,13 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionLocation
+         */
+        public String getRegionLocation() {
+            return this.regionLocation;
+        }
+
+        /**
          * @return sessionType
          */
         public String getSessionType() {
@@ -1152,6 +1163,7 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
             private String protocolType; 
             private String realDesktopId; 
             private String regionId; 
+            private String regionLocation; 
             private String sessionType; 
             private java.util.List < Sessions> sessions; 
             private Boolean supportHibernation; 
@@ -1426,6 +1438,14 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * RegionLocation.
+             */
+            public Builder regionLocation(String regionLocation) {
+                this.regionLocation = regionLocation;
                 return this;
             }
 
