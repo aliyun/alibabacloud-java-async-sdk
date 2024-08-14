@@ -167,6 +167,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableSpot")
         private String enableSpot;
 
+        @com.aliyun.core.annotation.NameInMap("Engine")
+        private String engine;
+
+        @com.aliyun.core.annotation.NameInMap("EngineParams")
+        private java.util.Map < String, ? > engineParams;
+
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
@@ -181,6 +187,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MaxComputeResource")
         private String maxComputeResource;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String message;
 
         @com.aliyun.core.annotation.NameInMap("MinClusterCount")
         private Integer minClusterCount;
@@ -206,11 +216,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.elasticMinComputeResource = builder.elasticMinComputeResource;
             this.enableSpot = builder.enableSpot;
+            this.engine = builder.engine;
+            this.engineParams = builder.engineParams;
             this.groupName = builder.groupName;
             this.groupType = builder.groupType;
             this.groupUsers = builder.groupUsers;
             this.maxClusterCount = builder.maxClusterCount;
             this.maxComputeResource = builder.maxComputeResource;
+            this.message = builder.message;
             this.minClusterCount = builder.minClusterCount;
             this.minComputeResource = builder.minComputeResource;
             this.rules = builder.rules;
@@ -263,6 +276,20 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return engine
+         */
+        public String getEngine() {
+            return this.engine;
+        }
+
+        /**
+         * @return engineParams
+         */
+        public java.util.Map < String, ? > getEngineParams() {
+            return this.engineParams;
+        }
+
+        /**
          * @return groupName
          */
         public String getGroupName() {
@@ -295,6 +322,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
          */
         public String getMaxComputeResource() {
             return this.maxComputeResource;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
         }
 
         /**
@@ -345,11 +379,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             private String createTime; 
             private String elasticMinComputeResource; 
             private String enableSpot; 
+            private String engine; 
+            private java.util.Map < String, ? > engineParams; 
             private String groupName; 
             private String groupType; 
             private String groupUsers; 
             private Integer maxClusterCount; 
             private String maxComputeResource; 
+            private String message; 
             private Integer minClusterCount; 
             private String minComputeResource; 
             private java.util.List < Rules> rules; 
@@ -404,6 +441,22 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
+             * Engine.
+             */
+            public Builder engine(String engine) {
+                this.engine = engine;
+                return this;
+            }
+
+            /**
+             * EngineParams.
+             */
+            public Builder engineParams(java.util.Map < String, ? > engineParams) {
+                this.engineParams = engineParams;
+                return this;
+            }
+
+            /**
              * The name of the resource group.
              */
             public Builder groupName(String groupName) {
@@ -446,6 +499,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
              */
             public Builder maxComputeResource(String maxComputeResource) {
                 this.maxComputeResource = maxComputeResource;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
                 return this;
             }
 

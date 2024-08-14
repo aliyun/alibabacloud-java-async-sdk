@@ -29,6 +29,14 @@ public class CreateDBResourceGroupRequest extends Request {
     private Boolean enableSpot;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineParams")
+    private java.util.Map < String, ? > engineParams;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
@@ -68,6 +76,8 @@ public class CreateDBResourceGroupRequest extends Request {
         this.clusterSizeResource = builder.clusterSizeResource;
         this.DBClusterId = builder.DBClusterId;
         this.enableSpot = builder.enableSpot;
+        this.engine = builder.engine;
+        this.engineParams = builder.engineParams;
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
         this.maxClusterCount = builder.maxClusterCount;
@@ -117,6 +127,20 @@ public class CreateDBResourceGroupRequest extends Request {
      */
     public Boolean getEnableSpot() {
         return this.enableSpot;
+    }
+
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
+     * @return engineParams
+     */
+    public java.util.Map < String, ? > getEngineParams() {
+        return this.engineParams;
     }
 
     /**
@@ -180,6 +204,8 @@ public class CreateDBResourceGroupRequest extends Request {
         private String clusterSizeResource; 
         private String DBClusterId; 
         private Boolean enableSpot; 
+        private String engine; 
+        private java.util.Map < String, ? > engineParams; 
         private String groupName; 
         private String groupType; 
         private Integer maxClusterCount; 
@@ -199,6 +225,8 @@ public class CreateDBResourceGroupRequest extends Request {
             this.clusterSizeResource = request.clusterSizeResource;
             this.DBClusterId = request.DBClusterId;
             this.enableSpot = request.enableSpot;
+            this.engine = request.engine;
+            this.engineParams = request.engineParams;
             this.groupName = request.groupName;
             this.groupType = request.groupType;
             this.maxClusterCount = request.maxClusterCount;
@@ -246,6 +274,25 @@ public class CreateDBResourceGroupRequest extends Request {
         public Builder enableSpot(Boolean enableSpot) {
             this.putQueryParameter("EnableSpot", enableSpot);
             this.enableSpot = enableSpot;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
+            return this;
+        }
+
+        /**
+         * EngineParams.
+         */
+        public Builder engineParams(java.util.Map < String, ? > engineParams) {
+            String engineParamsShrink = shrink(engineParams, "EngineParams", "json");
+            this.putQueryParameter("EngineParams", engineParamsShrink);
+            this.engineParams = engineParams;
             return this;
         }
 

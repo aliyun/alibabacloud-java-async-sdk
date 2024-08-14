@@ -29,6 +29,10 @@ public class ModifyDBResourceGroupRequest extends Request {
     private Boolean enableSpot;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineParams")
+    private java.util.Map < String, ? > engineParams;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
@@ -68,6 +72,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         this.clusterSizeResource = builder.clusterSizeResource;
         this.DBClusterId = builder.DBClusterId;
         this.enableSpot = builder.enableSpot;
+        this.engineParams = builder.engineParams;
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
         this.maxClusterCount = builder.maxClusterCount;
@@ -117,6 +122,13 @@ public class ModifyDBResourceGroupRequest extends Request {
      */
     public Boolean getEnableSpot() {
         return this.enableSpot;
+    }
+
+    /**
+     * @return engineParams
+     */
+    public java.util.Map < String, ? > getEngineParams() {
+        return this.engineParams;
     }
 
     /**
@@ -180,6 +192,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         private String clusterSizeResource; 
         private String DBClusterId; 
         private Boolean enableSpot; 
+        private java.util.Map < String, ? > engineParams; 
         private String groupName; 
         private String groupType; 
         private Integer maxClusterCount; 
@@ -199,6 +212,7 @@ public class ModifyDBResourceGroupRequest extends Request {
             this.clusterSizeResource = request.clusterSizeResource;
             this.DBClusterId = request.DBClusterId;
             this.enableSpot = request.enableSpot;
+            this.engineParams = request.engineParams;
             this.groupName = request.groupName;
             this.groupType = request.groupType;
             this.maxClusterCount = request.maxClusterCount;
@@ -246,6 +260,16 @@ public class ModifyDBResourceGroupRequest extends Request {
         public Builder enableSpot(Boolean enableSpot) {
             this.putQueryParameter("EnableSpot", enableSpot);
             this.enableSpot = enableSpot;
+            return this;
+        }
+
+        /**
+         * EngineParams.
+         */
+        public Builder engineParams(java.util.Map < String, ? > engineParams) {
+            String engineParamsShrink = shrink(engineParams, "EngineParams", "json");
+            this.putQueryParameter("EngineParams", engineParamsShrink);
+            this.engineParams = engineParams;
             return this;
         }
 
