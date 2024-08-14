@@ -24,6 +24,14 @@ public class ListInstancesRequest extends Request {
     private String createUserId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuType")
+    private String gpuType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    private String imageName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -34,6 +42,38 @@ public class ListInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.Map < String, ? > labels;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxCpu")
+    private String maxCpu;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxGpu")
+    private String maxGpu;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxGpuMemory")
+    private String maxGpuMemory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxMemory")
+    private String maxMemory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinCpu")
+    private String minCpu;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinGpu")
+    private String minGpu;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinGpuMemory")
+    private String minGpuMemory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinMemory")
+    private String minMemory;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Order")
@@ -72,9 +112,19 @@ public class ListInstancesRequest extends Request {
         this.acceleratorType = builder.acceleratorType;
         this.accessibility = builder.accessibility;
         this.createUserId = builder.createUserId;
+        this.gpuType = builder.gpuType;
+        this.imageName = builder.imageName;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.labels = builder.labels;
+        this.maxCpu = builder.maxCpu;
+        this.maxGpu = builder.maxGpu;
+        this.maxGpuMemory = builder.maxGpuMemory;
+        this.maxMemory = builder.maxMemory;
+        this.minCpu = builder.minCpu;
+        this.minGpu = builder.minGpu;
+        this.minGpuMemory = builder.minGpuMemory;
+        this.minMemory = builder.minMemory;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -120,6 +170,20 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return gpuType
+     */
+    public String getGpuType() {
+        return this.gpuType;
+    }
+
+    /**
+     * @return imageName
+     */
+    public String getImageName() {
+        return this.imageName;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -138,6 +202,62 @@ public class ListInstancesRequest extends Request {
      */
     public java.util.Map < String, ? > getLabels() {
         return this.labels;
+    }
+
+    /**
+     * @return maxCpu
+     */
+    public String getMaxCpu() {
+        return this.maxCpu;
+    }
+
+    /**
+     * @return maxGpu
+     */
+    public String getMaxGpu() {
+        return this.maxGpu;
+    }
+
+    /**
+     * @return maxGpuMemory
+     */
+    public String getMaxGpuMemory() {
+        return this.maxGpuMemory;
+    }
+
+    /**
+     * @return maxMemory
+     */
+    public String getMaxMemory() {
+        return this.maxMemory;
+    }
+
+    /**
+     * @return minCpu
+     */
+    public String getMinCpu() {
+        return this.minCpu;
+    }
+
+    /**
+     * @return minGpu
+     */
+    public String getMinGpu() {
+        return this.minGpu;
+    }
+
+    /**
+     * @return minGpuMemory
+     */
+    public String getMinGpuMemory() {
+        return this.minGpuMemory;
+    }
+
+    /**
+     * @return minMemory
+     */
+    public String getMinMemory() {
+        return this.minMemory;
     }
 
     /**
@@ -200,9 +320,19 @@ public class ListInstancesRequest extends Request {
         private String acceleratorType; 
         private String accessibility; 
         private String createUserId; 
+        private String gpuType; 
+        private String imageName; 
         private String instanceId; 
         private String instanceName; 
         private java.util.Map < String, ? > labels; 
+        private String maxCpu; 
+        private String maxGpu; 
+        private String maxGpuMemory; 
+        private String maxMemory; 
+        private String minCpu; 
+        private String minGpu; 
+        private String minGpuMemory; 
+        private String minMemory; 
         private String order; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -221,9 +351,19 @@ public class ListInstancesRequest extends Request {
             this.acceleratorType = request.acceleratorType;
             this.accessibility = request.accessibility;
             this.createUserId = request.createUserId;
+            this.gpuType = request.gpuType;
+            this.imageName = request.imageName;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.labels = request.labels;
+            this.maxCpu = request.maxCpu;
+            this.maxGpu = request.maxGpu;
+            this.maxGpuMemory = request.maxGpuMemory;
+            this.maxMemory = request.maxMemory;
+            this.minCpu = request.minCpu;
+            this.minGpu = request.minGpu;
+            this.minGpuMemory = request.minGpuMemory;
+            this.minMemory = request.minMemory;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -262,6 +402,24 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
+         * GpuType.
+         */
+        public Builder gpuType(String gpuType) {
+            this.putQueryParameter("GpuType", gpuType);
+            this.gpuType = gpuType;
+            return this;
+        }
+
+        /**
+         * ImageName.
+         */
+        public Builder imageName(String imageName) {
+            this.putQueryParameter("ImageName", imageName);
+            this.imageName = imageName;
+            return this;
+        }
+
+        /**
          * InstanceId.
          */
         public Builder instanceId(String instanceId) {
@@ -286,6 +444,78 @@ public class ListInstancesRequest extends Request {
             String labelsShrink = shrink(labels, "Labels", "json");
             this.putQueryParameter("Labels", labelsShrink);
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * MaxCpu.
+         */
+        public Builder maxCpu(String maxCpu) {
+            this.putQueryParameter("MaxCpu", maxCpu);
+            this.maxCpu = maxCpu;
+            return this;
+        }
+
+        /**
+         * MaxGpu.
+         */
+        public Builder maxGpu(String maxGpu) {
+            this.putQueryParameter("MaxGpu", maxGpu);
+            this.maxGpu = maxGpu;
+            return this;
+        }
+
+        /**
+         * MaxGpuMemory.
+         */
+        public Builder maxGpuMemory(String maxGpuMemory) {
+            this.putQueryParameter("MaxGpuMemory", maxGpuMemory);
+            this.maxGpuMemory = maxGpuMemory;
+            return this;
+        }
+
+        /**
+         * MaxMemory.
+         */
+        public Builder maxMemory(String maxMemory) {
+            this.putQueryParameter("MaxMemory", maxMemory);
+            this.maxMemory = maxMemory;
+            return this;
+        }
+
+        /**
+         * MinCpu.
+         */
+        public Builder minCpu(String minCpu) {
+            this.putQueryParameter("MinCpu", minCpu);
+            this.minCpu = minCpu;
+            return this;
+        }
+
+        /**
+         * MinGpu.
+         */
+        public Builder minGpu(String minGpu) {
+            this.putQueryParameter("MinGpu", minGpu);
+            this.minGpu = minGpu;
+            return this;
+        }
+
+        /**
+         * MinGpuMemory.
+         */
+        public Builder minGpuMemory(String minGpuMemory) {
+            this.putQueryParameter("MinGpuMemory", minGpuMemory);
+            this.minGpuMemory = minGpuMemory;
+            return this;
+        }
+
+        /**
+         * MinMemory.
+         */
+        public Builder minMemory(String minMemory) {
+            this.putQueryParameter("MinMemory", minMemory);
+            this.minMemory = minMemory;
             return this;
         }
 
