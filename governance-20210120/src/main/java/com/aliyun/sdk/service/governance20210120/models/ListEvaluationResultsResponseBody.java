@@ -90,6 +90,67 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
     } 
 
+    public static class ErrorInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        private ErrorInfo(Builder builder) {
+            this.code = builder.code;
+            this.message = builder.message;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ErrorInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String message; 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Message.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            public ErrorInfo build() {
+                return new ErrorInfo(this);
+            } 
+
+        } 
+
+    }
     public static class ResourcesSummary extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NonCompliant")
         private Integer nonCompliant;
@@ -132,6 +193,9 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
     }
     public static class MetricResults extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
+        private ErrorInfo errorInfo;
+
         @com.aliyun.core.annotation.NameInMap("EvaluationTime")
         private String evaluationTime;
 
@@ -151,6 +215,7 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         private String status;
 
         private MetricResults(Builder builder) {
+            this.errorInfo = builder.errorInfo;
             this.evaluationTime = builder.evaluationTime;
             this.id = builder.id;
             this.resourcesSummary = builder.resourcesSummary;
@@ -165,6 +230,13 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
 
         public static MetricResults create() {
             return builder().build();
+        }
+
+        /**
+         * @return errorInfo
+         */
+        public ErrorInfo getErrorInfo() {
+            return this.errorInfo;
         }
 
         /**
@@ -210,12 +282,21 @@ public class ListEvaluationResultsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ErrorInfo errorInfo; 
             private String evaluationTime; 
             private String id; 
             private ResourcesSummary resourcesSummary; 
             private Double result; 
             private String risk; 
             private String status; 
+
+            /**
+             * ErrorInfo.
+             */
+            public Builder errorInfo(ErrorInfo errorInfo) {
+                this.errorInfo = errorInfo;
+                return this;
+            }
 
             /**
              * EvaluationTime.
