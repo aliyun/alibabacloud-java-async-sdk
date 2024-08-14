@@ -40,6 +40,10 @@ public class ListMediaProducingJobsRequest extends Request {
     private String nextToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    private String projectId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -60,6 +64,7 @@ public class ListMediaProducingJobsRequest extends Request {
         this.masterJobId = builder.masterJobId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.projectId = builder.projectId;
         this.sortBy = builder.sortBy;
         this.startTime = builder.startTime;
         this.status = builder.status;
@@ -128,6 +133,13 @@ public class ListMediaProducingJobsRequest extends Request {
     }
 
     /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -156,6 +168,7 @@ public class ListMediaProducingJobsRequest extends Request {
         private String masterJobId; 
         private Integer maxResults; 
         private String nextToken; 
+        private String projectId; 
         private String sortBy; 
         private String startTime; 
         private String status; 
@@ -173,6 +186,7 @@ public class ListMediaProducingJobsRequest extends Request {
             this.masterJobId = request.masterJobId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
+            this.projectId = request.projectId;
             this.sortBy = request.sortBy;
             this.startTime = request.startTime;
             this.status = request.status;
@@ -238,6 +252,15 @@ public class ListMediaProducingJobsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(String projectId) {
+            this.putQueryParameter("ProjectId", projectId);
+            this.projectId = projectId;
             return this;
         }
 
