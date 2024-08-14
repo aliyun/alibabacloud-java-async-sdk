@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJobExecutorsResponseBody</p>
  */
 public class ListJobExecutorsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ExecutorStatus")
+    private ExecutorStatus executorStatus;
+
     @com.aliyun.core.annotation.NameInMap("Executors")
     private java.util.List < Executors> executors;
 
@@ -33,6 +36,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     private String totalCount;
 
     private ListJobExecutorsResponseBody(Builder builder) {
+        this.executorStatus = builder.executorStatus;
         this.executors = builder.executors;
         this.jobId = builder.jobId;
         this.pageNumber = builder.pageNumber;
@@ -48,6 +52,13 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
     public static ListJobExecutorsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return executorStatus
+     */
+    public ExecutorStatus getExecutorStatus() {
+        return this.executorStatus;
     }
 
     /**
@@ -100,6 +111,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private ExecutorStatus executorStatus; 
         private java.util.List < Executors> executors; 
         private String jobId; 
         private String pageNumber; 
@@ -107,6 +119,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         private String requestId; 
         private String taskName; 
         private String totalCount; 
+
+        /**
+         * ExecutorStatus.
+         */
+        public Builder executorStatus(ExecutorStatus executorStatus) {
+            this.executorStatus = executorStatus;
+            return this;
+        }
 
         /**
          * Executors.
@@ -170,6 +190,167 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
     } 
 
+    public static class ExecutorStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Deleted")
+        private Integer deleted;
+
+        @com.aliyun.core.annotation.NameInMap("Exception")
+        private Integer exception;
+
+        @com.aliyun.core.annotation.NameInMap("Failed")
+        private Integer failed;
+
+        @com.aliyun.core.annotation.NameInMap("Initing")
+        private Integer initing;
+
+        @com.aliyun.core.annotation.NameInMap("Pending")
+        private Integer pending;
+
+        @com.aliyun.core.annotation.NameInMap("Running")
+        private Integer running;
+
+        @com.aliyun.core.annotation.NameInMap("Succeeded")
+        private Integer succeeded;
+
+        private ExecutorStatus(Builder builder) {
+            this.deleted = builder.deleted;
+            this.exception = builder.exception;
+            this.failed = builder.failed;
+            this.initing = builder.initing;
+            this.pending = builder.pending;
+            this.running = builder.running;
+            this.succeeded = builder.succeeded;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExecutorStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deleted
+         */
+        public Integer getDeleted() {
+            return this.deleted;
+        }
+
+        /**
+         * @return exception
+         */
+        public Integer getException() {
+            return this.exception;
+        }
+
+        /**
+         * @return failed
+         */
+        public Integer getFailed() {
+            return this.failed;
+        }
+
+        /**
+         * @return initing
+         */
+        public Integer getIniting() {
+            return this.initing;
+        }
+
+        /**
+         * @return pending
+         */
+        public Integer getPending() {
+            return this.pending;
+        }
+
+        /**
+         * @return running
+         */
+        public Integer getRunning() {
+            return this.running;
+        }
+
+        /**
+         * @return succeeded
+         */
+        public Integer getSucceeded() {
+            return this.succeeded;
+        }
+
+        public static final class Builder {
+            private Integer deleted; 
+            private Integer exception; 
+            private Integer failed; 
+            private Integer initing; 
+            private Integer pending; 
+            private Integer running; 
+            private Integer succeeded; 
+
+            /**
+             * Deleted.
+             */
+            public Builder deleted(Integer deleted) {
+                this.deleted = deleted;
+                return this;
+            }
+
+            /**
+             * Exception.
+             */
+            public Builder exception(Integer exception) {
+                this.exception = exception;
+                return this;
+            }
+
+            /**
+             * Failed.
+             */
+            public Builder failed(Integer failed) {
+                this.failed = failed;
+                return this;
+            }
+
+            /**
+             * Initing.
+             */
+            public Builder initing(Integer initing) {
+                this.initing = initing;
+                return this;
+            }
+
+            /**
+             * Pending.
+             */
+            public Builder pending(Integer pending) {
+                this.pending = pending;
+                return this;
+            }
+
+            /**
+             * Running.
+             */
+            public Builder running(Integer running) {
+                this.running = running;
+                return this;
+            }
+
+            /**
+             * Succeeded.
+             */
+            public Builder succeeded(Integer succeeded) {
+                this.succeeded = succeeded;
+                return this;
+            }
+
+            public ExecutorStatus build() {
+                return new ExecutorStatus(this);
+            } 
+
+        } 
+
+    }
     public static class Executors extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArrayIndex")
         private Integer arrayIndex;
@@ -179,6 +360,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("ExecutorId")
+        private String executorId;
 
         @com.aliyun.core.annotation.NameInMap("HostName")
         private java.util.List < String > hostName;
@@ -196,6 +380,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             this.arrayIndex = builder.arrayIndex;
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
+            this.executorId = builder.executorId;
             this.hostName = builder.hostName;
             this.ipAddress = builder.ipAddress;
             this.status = builder.status;
@@ -232,6 +417,13 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return executorId
+         */
+        public String getExecutorId() {
+            return this.executorId;
+        }
+
+        /**
          * @return hostName
          */
         public java.util.List < String > getHostName() {
@@ -263,6 +455,7 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             private Integer arrayIndex; 
             private String createTime; 
             private String endTime; 
+            private String executorId; 
             private java.util.List < String > hostName; 
             private java.util.List < String > ipAddress; 
             private String status; 
@@ -289,6 +482,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * ExecutorId.
+             */
+            public Builder executorId(String executorId) {
+                this.executorId = executorId;
                 return this;
             }
 
