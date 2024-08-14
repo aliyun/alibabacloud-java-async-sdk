@@ -30,6 +30,10 @@ public class UpgradeClusterRequest extends Request {
     private String nextVersion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rolling_policy")
+    private RollingPolicy rollingPolicy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("version")
     @Deprecated
     private String version;
@@ -40,6 +44,7 @@ public class UpgradeClusterRequest extends Request {
         this.componentName = builder.componentName;
         this.masterOnly = builder.masterOnly;
         this.nextVersion = builder.nextVersion;
+        this.rollingPolicy = builder.rollingPolicy;
         this.version = builder.version;
     }
 
@@ -85,6 +90,13 @@ public class UpgradeClusterRequest extends Request {
     }
 
     /**
+     * @return rollingPolicy
+     */
+    public RollingPolicy getRollingPolicy() {
+        return this.rollingPolicy;
+    }
+
+    /**
      * @return version
      */
     public String getVersion() {
@@ -96,6 +108,7 @@ public class UpgradeClusterRequest extends Request {
         private String componentName; 
         private Boolean masterOnly; 
         private String nextVersion; 
+        private RollingPolicy rollingPolicy; 
         private String version; 
 
         private Builder() {
@@ -108,6 +121,7 @@ public class UpgradeClusterRequest extends Request {
             this.componentName = request.componentName;
             this.masterOnly = request.masterOnly;
             this.nextVersion = request.nextVersion;
+            this.rollingPolicy = request.rollingPolicy;
             this.version = request.version;
         } 
 
@@ -152,6 +166,15 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
+         * rolling_policy.
+         */
+        public Builder rollingPolicy(RollingPolicy rollingPolicy) {
+            this.putBodyParameter("rolling_policy", rollingPolicy);
+            this.rollingPolicy = rollingPolicy;
+            return this;
+        }
+
+        /**
          * This parameter is discontinued. Specify the Kubernetes version by using the next_version parameter.
          */
         public Builder version(String version) {
@@ -167,4 +190,45 @@ public class UpgradeClusterRequest extends Request {
 
     } 
 
+    public static class RollingPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("max_parallelism")
+        private Integer maxParallelism;
+
+        private RollingPolicy(Builder builder) {
+            this.maxParallelism = builder.maxParallelism;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RollingPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxParallelism
+         */
+        public Integer getMaxParallelism() {
+            return this.maxParallelism;
+        }
+
+        public static final class Builder {
+            private Integer maxParallelism; 
+
+            /**
+             * max_parallelism.
+             */
+            public Builder maxParallelism(Integer maxParallelism) {
+                this.maxParallelism = maxParallelism;
+                return this;
+            }
+
+            public RollingPolicy build() {
+                return new RollingPolicy(this);
+            } 
+
+        } 
+
+    }
 }
