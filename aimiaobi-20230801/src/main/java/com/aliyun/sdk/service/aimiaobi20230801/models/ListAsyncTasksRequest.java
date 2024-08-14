@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAsyncTasksRequest</p>
  */
 public class ListAsyncTasksRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -58,6 +62,7 @@ public class ListAsyncTasksRequest extends Request {
 
     private ListAsyncTasksRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.createTimeEnd = builder.createTimeEnd;
         this.createTimeStart = builder.createTimeStart;
@@ -82,6 +87,13 @@ public class ListAsyncTasksRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -162,6 +174,7 @@ public class ListAsyncTasksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAsyncTasksRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String createTimeEnd; 
         private String createTimeStart; 
@@ -180,6 +193,7 @@ public class ListAsyncTasksRequest extends Request {
 
         private Builder(ListAsyncTasksRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.createTimeEnd = request.createTimeEnd;
             this.createTimeStart = request.createTimeStart;
@@ -192,6 +206,15 @@ public class ListAsyncTasksRequest extends Request {
             this.taskType = request.taskType;
             this.taskTypeList = request.taskTypeList;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

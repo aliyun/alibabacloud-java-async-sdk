@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateUploadConfigRequest</p>
  */
 public class GenerateUploadConfigRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -27,6 +31,7 @@ public class GenerateUploadConfigRequest extends Request {
 
     private GenerateUploadConfigRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.fileName = builder.fileName;
         this.parentDir = builder.parentDir;
@@ -43,6 +48,13 @@ public class GenerateUploadConfigRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -67,6 +79,7 @@ public class GenerateUploadConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateUploadConfigRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String fileName; 
         private String parentDir; 
@@ -77,10 +90,20 @@ public class GenerateUploadConfigRequest extends Request {
 
         private Builder(GenerateUploadConfigRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.fileName = request.fileName;
             this.parentDir = request.parentDir;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGeneratedContentRequest</p>
  */
 public class CreateGeneratedContentRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -53,6 +57,7 @@ public class CreateGeneratedContentRequest extends Request {
 
     private CreateGeneratedContentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.content = builder.content;
         this.contentDomain = builder.contentDomain;
@@ -75,6 +80,13 @@ public class CreateGeneratedContentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -141,6 +153,7 @@ public class CreateGeneratedContentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateGeneratedContentRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String content; 
         private String contentDomain; 
@@ -157,6 +170,7 @@ public class CreateGeneratedContentRequest extends Request {
 
         private Builder(CreateGeneratedContentRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.content = request.content;
             this.contentDomain = request.contentDomain;
@@ -167,6 +181,15 @@ public class CreateGeneratedContentRequest extends Request {
             this.title = request.title;
             this.uuid = request.uuid;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

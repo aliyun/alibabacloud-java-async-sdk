@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVersionsRequest</p>
  */
 public class ListVersionsRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -18,6 +22,7 @@ public class ListVersionsRequest extends Request {
 
     private ListVersionsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
     }
 
@@ -35,6 +40,13 @@ public class ListVersionsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return agentKey
      */
     public String getAgentKey() {
@@ -42,6 +54,7 @@ public class ListVersionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListVersionsRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
 
         private Builder() {
@@ -50,8 +63,18 @@ public class ListVersionsRequest extends Request {
 
         private Builder(ListVersionsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

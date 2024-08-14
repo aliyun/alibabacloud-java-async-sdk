@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsertInterveneRuleRequest</p>
  */
 public class InsertInterveneRuleRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -22,6 +26,7 @@ public class InsertInterveneRuleRequest extends Request {
 
     private InsertInterveneRuleRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.interveneRuleConfig = builder.interveneRuleConfig;
     }
@@ -40,6 +45,13 @@ public class InsertInterveneRuleRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return agentKey
      */
     public String getAgentKey() {
@@ -54,6 +66,7 @@ public class InsertInterveneRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InsertInterveneRuleRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private InterveneRuleConfig interveneRuleConfig; 
 
@@ -63,9 +76,19 @@ public class InsertInterveneRuleRequest extends Request {
 
         private Builder(InsertInterveneRuleRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.interveneRuleConfig = request.interveneRuleConfig;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

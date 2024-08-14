@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHotNewsWithTypeRequest</p>
  */
 public class ListHotNewsWithTypeRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -34,6 +38,7 @@ public class ListHotNewsWithTypeRequest extends Request {
 
     private ListHotNewsWithTypeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.current = builder.current;
         this.newsType = builder.newsType;
@@ -52,6 +57,13 @@ public class ListHotNewsWithTypeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -90,6 +102,7 @@ public class ListHotNewsWithTypeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListHotNewsWithTypeRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private Integer current; 
         private String newsType; 
@@ -102,12 +115,22 @@ public class ListHotNewsWithTypeRequest extends Request {
 
         private Builder(ListHotNewsWithTypeRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.current = request.current;
             this.newsType = request.newsType;
             this.newsTypes = request.newsTypes;
             this.size = request.size;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

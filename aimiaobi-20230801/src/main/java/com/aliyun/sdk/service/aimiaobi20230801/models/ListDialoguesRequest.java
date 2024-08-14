@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDialoguesRequest</p>
  */
 public class ListDialoguesRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -43,6 +47,7 @@ public class ListDialoguesRequest extends Request {
 
     private ListDialoguesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.current = builder.current;
         this.dialogueType = builder.dialogueType;
@@ -63,6 +68,13 @@ public class ListDialoguesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -115,6 +127,7 @@ public class ListDialoguesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDialoguesRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private Integer current; 
         private Integer dialogueType; 
@@ -129,6 +142,7 @@ public class ListDialoguesRequest extends Request {
 
         private Builder(ListDialoguesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.current = request.current;
             this.dialogueType = request.dialogueType;
@@ -137,6 +151,15 @@ public class ListDialoguesRequest extends Request {
             this.startTime = request.startTime;
             this.taskId = request.taskId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

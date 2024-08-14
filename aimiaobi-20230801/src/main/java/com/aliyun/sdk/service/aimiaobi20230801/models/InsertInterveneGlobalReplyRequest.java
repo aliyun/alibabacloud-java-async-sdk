@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InsertInterveneGlobalReplyRequest</p>
  */
 public class InsertInterveneGlobalReplyRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -22,6 +26,7 @@ public class InsertInterveneGlobalReplyRequest extends Request {
 
     private InsertInterveneGlobalReplyRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.replyMessagList = builder.replyMessagList;
     }
@@ -40,6 +45,13 @@ public class InsertInterveneGlobalReplyRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return agentKey
      */
     public String getAgentKey() {
@@ -54,6 +66,7 @@ public class InsertInterveneGlobalReplyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<InsertInterveneGlobalReplyRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private java.util.List < ReplyMessagList> replyMessagList; 
 
@@ -63,9 +76,19 @@ public class InsertInterveneGlobalReplyRequest extends Request {
 
         private Builder(InsertInterveneGlobalReplyRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.replyMessagList = request.replyMessagList;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

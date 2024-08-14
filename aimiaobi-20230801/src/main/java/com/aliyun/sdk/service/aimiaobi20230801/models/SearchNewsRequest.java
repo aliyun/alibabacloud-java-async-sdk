@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchNewsRequest</p>
  */
 public class SearchNewsRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -42,6 +46,7 @@ public class SearchNewsRequest extends Request {
 
     private SearchNewsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.filterNotNull = builder.filterNotNull;
         this.includeContent = builder.includeContent;
@@ -62,6 +67,13 @@ public class SearchNewsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -114,6 +126,7 @@ public class SearchNewsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SearchNewsRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private Boolean filterNotNull; 
         private Boolean includeContent; 
@@ -128,6 +141,7 @@ public class SearchNewsRequest extends Request {
 
         private Builder(SearchNewsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.filterNotNull = request.filterNotNull;
             this.includeContent = request.includeContent;
@@ -136,6 +150,15 @@ public class SearchNewsRequest extends Request {
             this.query = request.query;
             this.searchSources = request.searchSources;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

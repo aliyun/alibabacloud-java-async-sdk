@@ -16,6 +16,10 @@ public class ListBuildConfigsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String agentKey;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
@@ -23,6 +27,7 @@ public class ListBuildConfigsRequest extends Request {
     private ListBuildConfigsRequest(Builder builder) {
         super(builder);
         this.agentKey = builder.agentKey;
+        this.regionId = builder.regionId;
         this.type = builder.type;
     }
 
@@ -47,6 +52,13 @@ public class ListBuildConfigsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -55,6 +67,7 @@ public class ListBuildConfigsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListBuildConfigsRequest, Builder> {
         private String agentKey; 
+        private String regionId; 
         private String type; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class ListBuildConfigsRequest extends Request {
         private Builder(ListBuildConfigsRequest request) {
             super(request);
             this.agentKey = request.agentKey;
+            this.regionId = request.regionId;
             this.type = request.type;
         } 
 
@@ -73,6 +87,15 @@ public class ListBuildConfigsRequest extends Request {
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
             this.agentKey = agentKey;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

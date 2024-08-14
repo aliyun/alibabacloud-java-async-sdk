@@ -21,10 +21,15 @@ public class DeleteGeneratedContentRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     private DeleteGeneratedContentRequest(Builder builder) {
         super(builder);
         this.agentKey = builder.agentKey;
         this.id = builder.id;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -54,9 +59,17 @@ public class DeleteGeneratedContentRequest extends Request {
         return this.id;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteGeneratedContentRequest, Builder> {
         private String agentKey; 
         private Long id; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -66,6 +79,7 @@ public class DeleteGeneratedContentRequest extends Request {
             super(request);
             this.agentKey = request.agentKey;
             this.id = request.id;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -83,6 +97,15 @@ public class DeleteGeneratedContentRequest extends Request {
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
             this.id = id;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

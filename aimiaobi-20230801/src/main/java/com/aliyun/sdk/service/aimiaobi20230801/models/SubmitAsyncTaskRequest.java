@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitAsyncTaskRequest</p>
  */
 public class SubmitAsyncTaskRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -35,6 +39,7 @@ public class SubmitAsyncTaskRequest extends Request {
 
     private SubmitAsyncTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.taskCode = builder.taskCode;
         this.taskExecuteTime = builder.taskExecuteTime;
@@ -53,6 +58,13 @@ public class SubmitAsyncTaskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -91,6 +103,7 @@ public class SubmitAsyncTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SubmitAsyncTaskRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String taskCode; 
         private String taskExecuteTime; 
@@ -103,12 +116,22 @@ public class SubmitAsyncTaskRequest extends Request {
 
         private Builder(SubmitAsyncTaskRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.taskCode = request.taskCode;
             this.taskExecuteTime = request.taskExecuteTime;
             this.taskName = request.taskName;
             this.taskParam = request.taskParam;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

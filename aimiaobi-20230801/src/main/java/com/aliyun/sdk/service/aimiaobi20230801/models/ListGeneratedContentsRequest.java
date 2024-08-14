@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGeneratedContentsRequest</p>
  */
 public class ListGeneratedContentsRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -29,6 +33,10 @@ public class ListGeneratedContentsRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Query")
+    private String query;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Size")
     private Integer size;
 
@@ -37,17 +45,24 @@ public class ListGeneratedContentsRequest extends Request {
     private String startTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private ListGeneratedContentsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.contentDomain = builder.contentDomain;
         this.current = builder.current;
         this.endTime = builder.endTime;
+        this.query = builder.query;
         this.size = builder.size;
         this.startTime = builder.startTime;
+        this.taskId = builder.taskId;
         this.title = builder.title;
     }
 
@@ -62,6 +77,13 @@ public class ListGeneratedContentsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -93,6 +115,13 @@ public class ListGeneratedContentsRequest extends Request {
     }
 
     /**
+     * @return query
+     */
+    public String getQuery() {
+        return this.query;
+    }
+
+    /**
      * @return size
      */
     public Integer getSize() {
@@ -107,6 +136,13 @@ public class ListGeneratedContentsRequest extends Request {
     }
 
     /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -114,12 +150,15 @@ public class ListGeneratedContentsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListGeneratedContentsRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String contentDomain; 
         private Integer current; 
         private String endTime; 
+        private String query; 
         private Integer size; 
         private String startTime; 
+        private String taskId; 
         private String title; 
 
         private Builder() {
@@ -128,14 +167,26 @@ public class ListGeneratedContentsRequest extends Request {
 
         private Builder(ListGeneratedContentsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.contentDomain = request.contentDomain;
             this.current = request.current;
             this.endTime = request.endTime;
+            this.query = request.query;
             this.size = request.size;
             this.startTime = request.startTime;
+            this.taskId = request.taskId;
             this.title = request.title;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.
@@ -174,6 +225,15 @@ public class ListGeneratedContentsRequest extends Request {
         }
 
         /**
+         * Query.
+         */
+        public Builder query(String query) {
+            this.putBodyParameter("Query", query);
+            this.query = query;
+            return this;
+        }
+
+        /**
          * Size.
          */
         public Builder size(Integer size) {
@@ -188,6 +248,15 @@ public class ListGeneratedContentsRequest extends Request {
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.putBodyParameter("TaskId", taskId);
+            this.taskId = taskId;
             return this;
         }
 

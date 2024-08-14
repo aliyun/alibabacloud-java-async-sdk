@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveMaterialDocumentRequest</p>
  */
 public class SaveMaterialDocumentRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -71,6 +75,7 @@ public class SaveMaterialDocumentRequest extends Request {
 
     private SaveMaterialDocumentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.author = builder.author;
         this.bothSavePrivateAndShare = builder.bothSavePrivateAndShare;
@@ -98,6 +103,13 @@ public class SaveMaterialDocumentRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -199,6 +211,7 @@ public class SaveMaterialDocumentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SaveMaterialDocumentRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String author; 
         private Boolean bothSavePrivateAndShare; 
@@ -220,6 +233,7 @@ public class SaveMaterialDocumentRequest extends Request {
 
         private Builder(SaveMaterialDocumentRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.author = request.author;
             this.bothSavePrivateAndShare = request.bothSavePrivateAndShare;
@@ -235,6 +249,15 @@ public class SaveMaterialDocumentRequest extends Request {
             this.title = request.title;
             this.url = request.url;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

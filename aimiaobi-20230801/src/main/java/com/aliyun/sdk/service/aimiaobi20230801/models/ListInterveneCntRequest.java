@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInterveneCntRequest</p>
  */
 public class ListInterveneCntRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -26,6 +30,7 @@ public class ListInterveneCntRequest extends Request {
 
     private ListInterveneCntRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
@@ -42,6 +47,13 @@ public class ListInterveneCntRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -66,6 +78,7 @@ public class ListInterveneCntRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInterveneCntRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private Integer pageIndex; 
         private Integer pageSize; 
@@ -76,10 +89,20 @@ public class ListInterveneCntRequest extends Request {
 
         private Builder(ListInterveneCntRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExportGeneratedContentRequest</p>
  */
 public class ExportGeneratedContentRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -23,6 +27,7 @@ public class ExportGeneratedContentRequest extends Request {
 
     private ExportGeneratedContentRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.id = builder.id;
     }
@@ -41,6 +46,13 @@ public class ExportGeneratedContentRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return agentKey
      */
     public String getAgentKey() {
@@ -55,6 +67,7 @@ public class ExportGeneratedContentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ExportGeneratedContentRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private Long id; 
 
@@ -64,9 +77,19 @@ public class ExportGeneratedContentRequest extends Request {
 
         private Builder(ExportGeneratedContentRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.id = request.id;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.

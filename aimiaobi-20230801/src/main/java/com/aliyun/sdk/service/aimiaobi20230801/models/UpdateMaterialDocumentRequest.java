@@ -46,6 +46,10 @@ public class UpdateMaterialDocumentRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PubTime")
     private String pubTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ShareAttr")
     private Integer shareAttr;
@@ -80,6 +84,7 @@ public class UpdateMaterialDocumentRequest extends Request {
         this.htmlContent = builder.htmlContent;
         this.id = builder.id;
         this.pubTime = builder.pubTime;
+        this.regionId = builder.regionId;
         this.shareAttr = builder.shareAttr;
         this.srcFrom = builder.srcFrom;
         this.summary = builder.summary;
@@ -158,6 +163,13 @@ public class UpdateMaterialDocumentRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return shareAttr
      */
     public Integer getShareAttr() {
@@ -208,6 +220,7 @@ public class UpdateMaterialDocumentRequest extends Request {
         private String htmlContent; 
         private Long id; 
         private String pubTime; 
+        private String regionId; 
         private Integer shareAttr; 
         private String srcFrom; 
         private String summary; 
@@ -229,6 +242,7 @@ public class UpdateMaterialDocumentRequest extends Request {
             this.htmlContent = request.htmlContent;
             this.id = request.id;
             this.pubTime = request.pubTime;
+            this.regionId = request.regionId;
             this.shareAttr = request.shareAttr;
             this.srcFrom = request.srcFrom;
             this.summary = request.summary;
@@ -307,6 +321,15 @@ public class UpdateMaterialDocumentRequest extends Request {
         public Builder pubTime(String pubTime) {
             this.putBodyParameter("PubTime", pubTime);
             this.pubTime = pubTime;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

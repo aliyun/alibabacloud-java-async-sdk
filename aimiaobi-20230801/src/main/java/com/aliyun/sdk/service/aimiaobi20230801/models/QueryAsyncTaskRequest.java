@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryAsyncTaskRequest</p>
  */
 public class QueryAsyncTaskRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AgentKey")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -22,6 +26,7 @@ public class QueryAsyncTaskRequest extends Request {
 
     private QueryAsyncTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.agentKey = builder.agentKey;
         this.taskId = builder.taskId;
     }
@@ -40,6 +45,13 @@ public class QueryAsyncTaskRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return agentKey
      */
     public String getAgentKey() {
@@ -54,6 +66,7 @@ public class QueryAsyncTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryAsyncTaskRequest, Builder> {
+        private String regionId; 
         private String agentKey; 
         private String taskId; 
 
@@ -63,9 +76,19 @@ public class QueryAsyncTaskRequest extends Request {
 
         private Builder(QueryAsyncTaskRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.agentKey = request.agentKey;
             this.taskId = request.taskId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AgentKey.
