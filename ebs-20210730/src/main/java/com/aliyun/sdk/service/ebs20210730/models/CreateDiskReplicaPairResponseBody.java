@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDiskReplicaPairResponseBody</p>
  */
 public class CreateDiskReplicaPairResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("ReplicaPairId")
+    @com.aliyun.core.annotation.NameInMap("ReplicaPairId")
     private String replicaPairId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDiskReplicaPairResponseBody(Builder builder) {

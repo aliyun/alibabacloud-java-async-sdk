@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiskReplicaPairsResponseBody</p>
  */
 public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("ReplicaPairs")
+    @com.aliyun.core.annotation.NameInMap("ReplicaPairs")
     private java.util.List < ReplicaPairs> replicaPairs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDiskReplicaPairsResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -213,82 +212,82 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
 
     }
     public static class ReplicaPairs extends TeaModel {
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Long bandwidth;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationDiskId")
+        @com.aliyun.core.annotation.NameInMap("DestinationDiskId")
         private String destinationDiskId;
 
-        @NameInMap("DestinationRegion")
+        @com.aliyun.core.annotation.NameInMap("DestinationRegion")
         private String destinationRegion;
 
-        @NameInMap("DestinationZoneId")
+        @com.aliyun.core.annotation.NameInMap("DestinationZoneId")
         private String destinationZoneId;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private Long expiredTime;
 
-        @NameInMap("LastRecoverPoint")
+        @com.aliyun.core.annotation.NameInMap("LastRecoverPoint")
         private Long lastRecoverPoint;
 
-        @NameInMap("PairName")
+        @com.aliyun.core.annotation.NameInMap("PairName")
         private String pairName;
 
-        @NameInMap("PrimaryRegion")
+        @com.aliyun.core.annotation.NameInMap("PrimaryRegion")
         private String primaryRegion;
 
-        @NameInMap("PrimaryZone")
+        @com.aliyun.core.annotation.NameInMap("PrimaryZone")
         private String primaryZone;
 
-        @NameInMap("RPO")
+        @com.aliyun.core.annotation.NameInMap("RPO")
         private Long RPO;
 
-        @NameInMap("ReplicaGroupId")
+        @com.aliyun.core.annotation.NameInMap("ReplicaGroupId")
         private String replicaGroupId;
 
-        @NameInMap("ReplicaGroupName")
+        @com.aliyun.core.annotation.NameInMap("ReplicaGroupName")
         private String replicaGroupName;
 
-        @NameInMap("ReplicaPairId")
+        @com.aliyun.core.annotation.NameInMap("ReplicaPairId")
         private String replicaPairId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Site")
+        @com.aliyun.core.annotation.NameInMap("Site")
         private String site;
 
-        @NameInMap("SourceDiskId")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskId")
         private String sourceDiskId;
 
-        @NameInMap("SourceRegion")
+        @com.aliyun.core.annotation.NameInMap("SourceRegion")
         private String sourceRegion;
 
-        @NameInMap("SourceZoneId")
+        @com.aliyun.core.annotation.NameInMap("SourceZoneId")
         private String sourceZoneId;
 
-        @NameInMap("StandbyRegion")
+        @com.aliyun.core.annotation.NameInMap("StandbyRegion")
         private String standbyRegion;
 
-        @NameInMap("StandbyZone")
+        @com.aliyun.core.annotation.NameInMap("StandbyZone")
         private String standbyZone;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private ReplicaPairs(Builder builder) {

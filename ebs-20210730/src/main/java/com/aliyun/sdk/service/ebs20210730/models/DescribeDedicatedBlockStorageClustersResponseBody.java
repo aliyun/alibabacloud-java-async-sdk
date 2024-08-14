@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedBlockStorageClustersResponseBody</p>
  */
 public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel {
-    @NameInMap("DedicatedBlockStorageClusters")
+    @com.aliyun.core.annotation.NameInMap("DedicatedBlockStorageClusters")
     private java.util.List < DedicatedBlockStorageClusters> dedicatedBlockStorageClusters;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDedicatedBlockStorageClustersResponseBody(Builder builder) {
@@ -152,40 +151,40 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
     } 
 
     public static class DedicatedBlockStorageClusterCapacity extends TeaModel {
-        @NameInMap("AvailableCapacity")
+        @com.aliyun.core.annotation.NameInMap("AvailableCapacity")
         private Long availableCapacity;
 
-        @NameInMap("AvailableDeviceCapacity")
+        @com.aliyun.core.annotation.NameInMap("AvailableDeviceCapacity")
         private Long availableDeviceCapacity;
 
-        @NameInMap("AvailableSpaceCapacity")
+        @com.aliyun.core.annotation.NameInMap("AvailableSpaceCapacity")
         private Double availableSpaceCapacity;
 
-        @NameInMap("ClusterAvailableCapacity")
+        @com.aliyun.core.annotation.NameInMap("ClusterAvailableCapacity")
         private Long clusterAvailableCapacity;
 
-        @NameInMap("ClusterDeliveryCapacity")
+        @com.aliyun.core.annotation.NameInMap("ClusterDeliveryCapacity")
         private Long clusterDeliveryCapacity;
 
-        @NameInMap("DeliveryCapacity")
+        @com.aliyun.core.annotation.NameInMap("DeliveryCapacity")
         private Long deliveryCapacity;
 
-        @NameInMap("TotalCapacity")
+        @com.aliyun.core.annotation.NameInMap("TotalCapacity")
         private Long totalCapacity;
 
-        @NameInMap("TotalDeviceCapacity")
+        @com.aliyun.core.annotation.NameInMap("TotalDeviceCapacity")
         private Long totalDeviceCapacity;
 
-        @NameInMap("TotalSpaceCapacity")
+        @com.aliyun.core.annotation.NameInMap("TotalSpaceCapacity")
         private Long totalSpaceCapacity;
 
-        @NameInMap("UsedCapacity")
+        @com.aliyun.core.annotation.NameInMap("UsedCapacity")
         private Long usedCapacity;
 
-        @NameInMap("UsedDeviceCapacity")
+        @com.aliyun.core.annotation.NameInMap("UsedDeviceCapacity")
         private Long usedDeviceCapacity;
 
-        @NameInMap("UsedSpaceCapacity")
+        @com.aliyun.core.annotation.NameInMap("UsedSpaceCapacity")
         private Double usedSpaceCapacity;
 
         private DedicatedBlockStorageClusterCapacity(Builder builder) {
@@ -413,10 +412,10 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -474,61 +473,61 @@ public class DescribeDedicatedBlockStorageClustersResponseBody extends TeaModel 
 
     }
     public static class DedicatedBlockStorageClusters extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DedicatedBlockStorageClusterCapacity")
+        @com.aliyun.core.annotation.NameInMap("DedicatedBlockStorageClusterCapacity")
         private DedicatedBlockStorageClusterCapacity dedicatedBlockStorageClusterCapacity;
 
-        @NameInMap("DedicatedBlockStorageClusterId")
+        @com.aliyun.core.annotation.NameInMap("DedicatedBlockStorageClusterId")
         private String dedicatedBlockStorageClusterId;
 
-        @NameInMap("DedicatedBlockStorageClusterName")
+        @com.aliyun.core.annotation.NameInMap("DedicatedBlockStorageClusterName")
         private String dedicatedBlockStorageClusterName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnableThinProvision")
+        @com.aliyun.core.annotation.NameInMap("EnableThinProvision")
         private Boolean enableThinProvision;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SizeOverSoldRatio")
+        @com.aliyun.core.annotation.NameInMap("SizeOverSoldRatio")
         private Double sizeOverSoldRatio;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageDomain")
+        @com.aliyun.core.annotation.NameInMap("StorageDomain")
         private String storageDomain;
 
-        @NameInMap("SupportedCategory")
+        @com.aliyun.core.annotation.NameInMap("SupportedCategory")
         private String supportedCategory;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DedicatedBlockStorageClusters(Builder builder) {

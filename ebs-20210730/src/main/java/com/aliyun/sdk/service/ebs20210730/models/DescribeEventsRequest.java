@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventsRequest</p>
  */
 public class DescribeEventsRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("EventName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventName")
     private String eventName;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeEventsRequest(Builder builder) {
@@ -168,7 +167,7 @@ public class DescribeEventsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -177,7 +176,21 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * EventName.
+         * The name of the event. Valid values:
+         * <p>
+         * 
+         * *   NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.
+         * *   BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.
+         * *   CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.
+         * *   DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.
+         * *   DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.
+         * *   DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.
+         * *   InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.
+         * *   InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.
+         * *   DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.
+         * *   DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.
+         * *   DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.
+         * *   DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -186,7 +199,12 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries per page. If you specify MaxResults, `MaxResults` and `NextToken` are used for a paged query.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
+         * 
+         * Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -195,7 +213,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -204,7 +222,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID . You can call the [DescribeRegions](~~354276~~) operation to query the most recent list of regions supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,7 +231,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource ID.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -222,7 +240,12 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of resource. Valid values:
+         * <p>
+         * 
+         * *   disk.
+         * 
+         * Default value: disk.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -231,7 +254,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -240,7 +263,15 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of event. Valid values:
+         * <p>
+         * 
+         * - WillExecute
+         * - Executing
+         * - Executed
+         * - Ignore
+         * - Expired
+         * - Deleted
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDisksResponseBody</p>
  */
 public class DescribeDisksResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDisksResponseBody(Builder builder) {
@@ -152,7 +151,7 @@ public class DescribeDisksResponseBody extends TeaModel {
     } 
 
     public static class Ecs extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private Ecs(Builder builder) {
@@ -193,10 +192,10 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     }
     public static class Pod extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("PodId")
+        @com.aliyun.core.annotation.NameInMap("PodId")
         private String podId;
 
         private Pod(Builder builder) {
@@ -254,13 +253,13 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     }
     public static class AccessAuthorization extends TeaModel {
-        @NameInMap("AccessToken")
+        @com.aliyun.core.annotation.NameInMap("AccessToken")
         private String accessToken;
 
-        @NameInMap("Ecs")
+        @com.aliyun.core.annotation.NameInMap("Ecs")
         private Ecs ecs;
 
-        @NameInMap("Pod")
+        @com.aliyun.core.annotation.NameInMap("Pod")
         private Pod pod;
 
         private AccessAuthorization(Builder builder) {
@@ -335,13 +334,13 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     }
     public static class Attachments extends TeaModel {
-        @NameInMap("AttachedTime")
+        @com.aliyun.core.annotation.NameInMap("AttachedTime")
         private String attachedTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private Integer namespaceId;
 
         private Attachments(Builder builder) {
@@ -416,10 +415,10 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -477,82 +476,82 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AccessAuthorization")
+        @com.aliyun.core.annotation.NameInMap("AccessAuthorization")
         private java.util.List < AccessAuthorization> accessAuthorization;
 
-        @NameInMap("AttachedTime")
+        @com.aliyun.core.annotation.NameInMap("AttachedTime")
         private String attachedTime;
 
-        @NameInMap("Attachments")
+        @com.aliyun.core.annotation.NameInMap("Attachments")
         private java.util.List < Attachments> attachments;
 
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DetachedTime")
+        @com.aliyun.core.annotation.NameInMap("DetachedTime")
         private String detachedTime;
 
-        @NameInMap("DeviceNguid")
+        @com.aliyun.core.annotation.NameInMap("DeviceNguid")
         private String deviceNguid;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
-        @NameInMap("Iops")
+        @com.aliyun.core.annotation.NameInMap("Iops")
         private Long iops;
 
-        @NameInMap("IopsRead")
+        @com.aliyun.core.annotation.NameInMap("IopsRead")
         private Long iopsRead;
 
-        @NameInMap("IopsWrite")
+        @com.aliyun.core.annotation.NameInMap("IopsWrite")
         private Long iopsWrite;
 
-        @NameInMap("KmsKeyId")
+        @com.aliyun.core.annotation.NameInMap("KmsKeyId")
         private String kmsKeyId;
 
-        @NameInMap("ModifyAt")
+        @com.aliyun.core.annotation.NameInMap("ModifyAt")
         private String modifyAt;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Throughput")
+        @com.aliyun.core.annotation.NameInMap("Throughput")
         private Long throughput;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Data(Builder builder) {

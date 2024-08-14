@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricDataResponseBody</p>
  */
 public class DescribeMetricDataResponseBody extends TeaModel {
-    @NameInMap("DataList")
+    @com.aliyun.core.annotation.NameInMap("DataList")
     private java.util.List < DataList> dataList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeMetricDataResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeMetricDataResponseBody extends TeaModel {
     } 
 
     public static class DataList extends TeaModel {
-        @NameInMap("Datapoints")
+        @com.aliyun.core.annotation.NameInMap("Datapoints")
         private Object datapoints;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private Object labels;
 
         private DataList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDedicatedBlockStorageClusterInventoryDataResponseBody</p>
  */
 public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("DbscId")
+    @com.aliyun.core.annotation.NameInMap("DbscId")
     private String dbscId;
 
-    @NameInMap("DbscName")
+    @com.aliyun.core.annotation.NameInMap("DbscName")
     private String dbscName;
 
-    @NameInMap("DiskCategory")
+    @com.aliyun.core.annotation.NameInMap("DiskCategory")
     private String diskCategory;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private QueryDedicatedBlockStorageClusterInventoryDataResponseBody(Builder builder) {
@@ -155,10 +154,10 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
     } 
 
     public static class MonitorItems extends TeaModel {
-        @NameInMap("AvailableSize")
+        @com.aliyun.core.annotation.NameInMap("AvailableSize")
         private Long availableSize;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private MonitorItems(Builder builder) {
@@ -216,13 +215,13 @@ public class QueryDedicatedBlockStorageClusterInventoryDataResponseBody extends 
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("MonitorItems")
+        @com.aliyun.core.annotation.NameInMap("MonitorItems")
         private MonitorItems monitorItems;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnterpriseSnapshotPolicyResponseBody</p>
  */
 public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private java.util.List < Policies> policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeEnterpriseSnapshotPolicyResponseBody(Builder builder) {
@@ -122,7 +121,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The returned enterprise-level snapshot policies.
+         * The returned snapshot policies.
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -152,10 +151,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
     } 
 
     public static class Regions extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RetainDays")
+        @com.aliyun.core.annotation.NameInMap("RetainDays")
         private Integer retainDays;
 
         private Regions(Builder builder) {
@@ -213,10 +212,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     }
     public static class CrossRegionCopyInfo extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Regions")
+        @com.aliyun.core.annotation.NameInMap("Regions")
         private java.util.List < Regions> regions;
 
         private CrossRegionCopyInfo(Builder builder) {
@@ -274,13 +273,13 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     }
     public static class RetainRule extends TeaModel {
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
 
-        @NameInMap("TimeInterval")
+        @com.aliyun.core.annotation.NameInMap("TimeInterval")
         private Integer timeInterval;
 
-        @NameInMap("TimeUnit")
+        @com.aliyun.core.annotation.NameInMap("TimeUnit")
         private String timeUnit;
 
         private RetainRule(Builder builder) {
@@ -355,7 +354,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     }
     public static class Schedule extends TeaModel {
-        @NameInMap("CronExpression")
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
         private Schedule(Builder builder) {
@@ -396,13 +395,13 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("SpecialPeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("SpecialPeriodUnit")
         private String specialPeriodUnit;
 
-        @NameInMap("TimeInterval")
+        @com.aliyun.core.annotation.NameInMap("TimeInterval")
         private Integer timeInterval;
 
-        @NameInMap("TimeUnit")
+        @com.aliyun.core.annotation.NameInMap("TimeUnit")
         private String timeUnit;
 
         private Rules(Builder builder) {
@@ -477,10 +476,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     }
     public static class SpecialRetainRules extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
         private SpecialRetainRules(Builder builder) {
@@ -538,7 +537,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     }
     public static class StorageRule extends TeaModel {
-        @NameInMap("EnableImmediateAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableImmediateAccess")
         private Boolean enableImmediateAccess;
 
         private StorageRule(Builder builder) {
@@ -579,10 +578,10 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -640,52 +639,52 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
 
     }
     public static class Policies extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CrossRegionCopyInfo")
+        @com.aliyun.core.annotation.NameInMap("CrossRegionCopyInfo")
         private CrossRegionCopyInfo crossRegionCopyInfo;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("DiskIds")
+        @com.aliyun.core.annotation.NameInMap("DiskIds")
         private java.util.List < String > diskIds;
 
-        @NameInMap("ManagedForEcs")
+        @com.aliyun.core.annotation.NameInMap("ManagedForEcs")
         private Boolean managedForEcs;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RetainRule")
+        @com.aliyun.core.annotation.NameInMap("RetainRule")
         private RetainRule retainRule;
 
-        @NameInMap("Schedule")
+        @com.aliyun.core.annotation.NameInMap("Schedule")
         private Schedule schedule;
 
-        @NameInMap("SpecialRetainRules")
+        @com.aliyun.core.annotation.NameInMap("SpecialRetainRules")
         private SpecialRetainRules specialRetainRules;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StorageRule")
+        @com.aliyun.core.annotation.NameInMap("StorageRule")
         private StorageRule storageRule;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TargetCount")
+        @com.aliyun.core.annotation.NameInMap("TargetCount")
         private Integer targetCount;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private Policies(Builder builder) {
@@ -870,7 +869,7 @@ public class DescribeEnterpriseSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The list of disks.
+             * The disks that are associated with the snapshot policy.
              */
             public Builder diskIds(java.util.List < String > diskIds) {
                 this.diskIds = diskIds;

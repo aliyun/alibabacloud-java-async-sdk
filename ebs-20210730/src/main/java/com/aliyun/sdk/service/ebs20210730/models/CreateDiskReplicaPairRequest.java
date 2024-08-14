@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDiskReplicaPairRequest</p>
  */
 public class CreateDiskReplicaPairRequest extends Request {
-    @Query
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Long bandwidth;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DestinationDiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationDiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationDiskId;
 
-    @Query
-    @NameInMap("DestinationRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationRegionId;
 
-    @Query
-    @NameInMap("DestinationZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationZoneId;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskId;
 
-    @Query
-    @NameInMap("PairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PairName")
     private String pairName;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Long period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("RPO")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RPO")
     private Long RPO;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SourceZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceZoneId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private CreateDiskReplicaPairRequest(Builder builder) {
@@ -447,10 +446,10 @@ public class CreateDiskReplicaPairRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiskEventsResponseBody</p>
  */
 public class DescribeDiskEventsResponseBody extends TeaModel {
-    @NameInMap("DiskEvents")
+    @com.aliyun.core.annotation.NameInMap("DiskEvents")
     private java.util.List < DiskEvents> diskEvents;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDiskEventsResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class DescribeDiskEventsResponseBody extends TeaModel {
     } 
 
     public static class DiskEvents extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("RecommendAction")
+        @com.aliyun.core.annotation.NameInMap("RecommendAction")
         private String recommendAction;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DiskEvents(Builder builder) {

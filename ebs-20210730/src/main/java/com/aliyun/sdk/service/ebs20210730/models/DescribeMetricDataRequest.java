@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricDataRequest</p>
  */
 public class DescribeMetricDataRequest extends Request {
-    @Query
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private String dimensions;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeMetricDataRequest(Builder builder) {
@@ -143,7 +142,19 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * The name of the metric.
+         * The name of the metric. Valid values:
+         * <p>
+         * 
+         * *   disk_bps_percent
+         * *   disk_iops_percent
+         * *   disk_read_block_size
+         * *   disk_read_bps
+         * *   disk_read_iops
+         * *   disk_read_latency
+         * *   disk_write_block_size
+         * *   disk_write_bps
+         * *   disk_write_iops
+         * *   disk_write_latency
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);

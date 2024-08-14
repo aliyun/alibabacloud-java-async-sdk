@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEnterpriseSnapshotPolicyRequest</p>
  */
 public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CrossRegionCopyInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRegionCopyInfo")
     private CrossRegionCopyInfo crossRegionCopyInfo;
 
-    @Query
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RetainRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetainRule")
     private RetainRule retainRule;
 
-    @Query
-    @NameInMap("Schedule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Schedule")
     private Schedule schedule;
 
-    @Query
-    @NameInMap("SpecialRetainRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecialRetainRules")
     private SpecialRetainRules specialRetainRules;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @Query
-    @NameInMap("StorageRule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageRule")
     private StorageRule storageRule;
 
     private UpdateEnterpriseSnapshotPolicyRequest(Builder builder) {
@@ -311,10 +310,10 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
     } 
 
     public static class Regions extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RetainDays")
+        @com.aliyun.core.annotation.NameInMap("RetainDays")
         private Integer retainDays;
 
         private Regions(Builder builder) {
@@ -372,10 +371,10 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
 
     }
     public static class CrossRegionCopyInfo extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Regions")
+        @com.aliyun.core.annotation.NameInMap("Regions")
         private java.util.List < Regions> regions;
 
         private CrossRegionCopyInfo(Builder builder) {
@@ -438,13 +437,13 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
 
     }
     public static class RetainRule extends TeaModel {
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private Integer number;
 
-        @NameInMap("TimeInterval")
+        @com.aliyun.core.annotation.NameInMap("TimeInterval")
         private Integer timeInterval;
 
-        @NameInMap("TimeUnit")
+        @com.aliyun.core.annotation.NameInMap("TimeUnit")
         private String timeUnit;
 
         private RetainRule(Builder builder) {
@@ -523,8 +522,8 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
 
     }
     public static class Schedule extends TeaModel {
-        @NameInMap("CronExpression")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String cronExpression;
 
         private Schedule(Builder builder) {
@@ -568,13 +567,13 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("SpecialPeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("SpecialPeriodUnit")
         private String specialPeriodUnit;
 
-        @NameInMap("TimeInterval")
+        @com.aliyun.core.annotation.NameInMap("TimeInterval")
         private Integer timeInterval;
 
-        @NameInMap("TimeUnit")
+        @com.aliyun.core.annotation.NameInMap("TimeUnit")
         private String timeUnit;
 
         private Rules(Builder builder) {
@@ -658,10 +657,10 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
 
     }
     public static class SpecialRetainRules extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
         private SpecialRetainRules(Builder builder) {
@@ -723,7 +722,7 @@ public class UpdateEnterpriseSnapshotPolicyRequest extends Request {
 
     }
     public static class StorageRule extends TeaModel {
-        @NameInMap("EnableImmediateAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableImmediateAccess")
         private Boolean enableImmediateAccess;
 
         private StorageRule(Builder builder) {

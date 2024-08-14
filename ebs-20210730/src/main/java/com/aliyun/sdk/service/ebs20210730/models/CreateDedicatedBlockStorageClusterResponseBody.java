@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDedicatedBlockStorageClusterResponseBody</p>
  */
 public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
-    @NameInMap("DbscId")
+    @com.aliyun.core.annotation.NameInMap("DbscId")
     private String dbscId;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateDedicatedBlockStorageClusterResponseBody(Builder builder) {
@@ -70,7 +69,7 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +77,7 @@ public class CreateDedicatedBlockStorageClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

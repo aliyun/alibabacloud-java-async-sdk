@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiskMonitorDataListResponseBody</p>
  */
 public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private java.util.List < MonitorData> monitorData;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDiskMonitorDataListResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class DescribeDiskMonitorDataListResponseBody extends TeaModel {
     } 
 
     public static class MonitorData extends TeaModel {
-        @NameInMap("BurstIOCount")
+        @com.aliyun.core.annotation.NameInMap("BurstIOCount")
         private Long burstIOCount;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
         private MonitorData(Builder builder) {

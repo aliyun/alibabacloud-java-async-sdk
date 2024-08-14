@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiskReplicaPairsRequest</p>
  */
 public class DescribeDiskReplicaPairsRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PairIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PairIds")
     private String pairIds;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReplicaGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReplicaGroupId")
     private String replicaGroupId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Site")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Site")
     private String site;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeDiskReplicaPairsRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
+        this.name = builder.name;
         this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -85,6 +89,13 @@ public class DescribeDiskReplicaPairsRequest extends Request {
      */
     public Long getMaxResults() {
         return this.maxResults;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -152,6 +163,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDiskReplicaPairsRequest, Builder> {
         private Long maxResults; 
+        private String name; 
         private String nextToken; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -169,6 +181,7 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         private Builder(DescribeDiskReplicaPairsRequest request) {
             super(request);
             this.maxResults = request.maxResults;
+            this.name = request.name;
             this.nextToken = request.nextToken;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -191,6 +204,15 @@ public class DescribeDiskReplicaPairsRequest extends Request {
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 
@@ -297,10 +319,10 @@ public class DescribeDiskReplicaPairsRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

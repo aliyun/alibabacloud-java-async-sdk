@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePairDrillsResponseBody</p>
  */
 public class DescribePairDrillsResponseBody extends TeaModel {
-    @NameInMap("Drills")
+    @com.aliyun.core.annotation.NameInMap("Drills")
     private java.util.List < Drills> drills;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribePairDrillsResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class DescribePairDrillsResponseBody extends TeaModel {
     } 
 
     public static class Drills extends TeaModel {
-        @NameInMap("DrillDiskId")
+        @com.aliyun.core.annotation.NameInMap("DrillDiskId")
         private String drillDiskId;
 
-        @NameInMap("DrillDiskStatus")
+        @com.aliyun.core.annotation.NameInMap("DrillDiskStatus")
         private String drillDiskStatus;
 
-        @NameInMap("DrillId")
+        @com.aliyun.core.annotation.NameInMap("DrillId")
         private String drillId;
 
-        @NameInMap("RecoverPoint")
+        @com.aliyun.core.annotation.NameInMap("RecoverPoint")
         private Long recoverPoint;
 
-        @NameInMap("StartAt")
+        @com.aliyun.core.annotation.NameInMap("StartAt")
         private Long startAt;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
         private Drills(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDedicatedBlockStorageClusterDisksResponseBody</p>
  */
 public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaModel {
-    @NameInMap("Disks")
+    @com.aliyun.core.annotation.NameInMap("Disks")
     private Disks disks;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDedicatedBlockStorageClusterDisksResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -153,106 +152,106 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
 
     }
     public static class Disk extends TeaModel {
-        @NameInMap("AttachedTime")
+        @com.aliyun.core.annotation.NameInMap("AttachedTime")
         private String attachedTime;
 
-        @NameInMap("BdfId")
+        @com.aliyun.core.annotation.NameInMap("BdfId")
         private String bdfId;
 
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DeleteAutoSnapshot")
+        @com.aliyun.core.annotation.NameInMap("DeleteAutoSnapshot")
         private Boolean deleteAutoSnapshot;
 
-        @NameInMap("DeleteWithInstance")
+        @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
         private Boolean deleteWithInstance;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DetachedTime")
+        @com.aliyun.core.annotation.NameInMap("DetachedTime")
         private String detachedTime;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("DiskChargeType")
+        @com.aliyun.core.annotation.NameInMap("DiskChargeType")
         private String diskChargeType;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("EnableAutoSnapshot")
+        @com.aliyun.core.annotation.NameInMap("EnableAutoSnapshot")
         private Boolean enableAutoSnapshot;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
-        @NameInMap("IOPS")
+        @com.aliyun.core.annotation.NameInMap("IOPS")
         private Long IOPS;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
-        @NameInMap("MountInstanceNum")
+        @com.aliyun.core.annotation.NameInMap("MountInstanceNum")
         private Integer mountInstanceNum;
 
-        @NameInMap("MultiAttach")
+        @com.aliyun.core.annotation.NameInMap("MultiAttach")
         private String multiAttach;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("Portable")
+        @com.aliyun.core.annotation.NameInMap("Portable")
         private Boolean portable;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Long provisionedIops;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SourceSnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SourceSnapshotId")
         private String sourceSnapshotId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageClusterId")
+        @com.aliyun.core.annotation.NameInMap("StorageClusterId")
         private String storageClusterId;
 
-        @NameInMap("StorageSetId")
+        @com.aliyun.core.annotation.NameInMap("StorageSetId")
         private String storageSetId;
 
-        @NameInMap("StorageSetPartitionNumber")
+        @com.aliyun.core.annotation.NameInMap("StorageSetPartitionNumber")
         private Integer storageSetPartitionNumber;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Throughput")
+        @com.aliyun.core.annotation.NameInMap("Throughput")
         private Long throughput;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Disk(Builder builder) {
@@ -901,7 +900,7 @@ public class DescribeDedicatedBlockStorageClusterDisksResponseBody extends TeaMo
 
     }
     public static class Disks extends TeaModel {
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private java.util.List < Disk> disk;
 
         private Disks(Builder builder) {

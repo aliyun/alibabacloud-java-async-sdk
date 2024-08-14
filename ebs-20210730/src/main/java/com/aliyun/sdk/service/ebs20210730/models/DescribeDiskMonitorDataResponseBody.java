@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDiskMonitorDataResponseBody</p>
  */
 public class DescribeDiskMonitorDataResponseBody extends TeaModel {
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private java.util.List < MonitorData> monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDiskMonitorDataResponseBody(Builder builder) {
@@ -92,43 +91,43 @@ public class DescribeDiskMonitorDataResponseBody extends TeaModel {
     } 
 
     public static class MonitorData extends TeaModel {
-        @NameInMap("BPSPercent")
+        @com.aliyun.core.annotation.NameInMap("BPSPercent")
         private Long BPSPercent;
 
-        @NameInMap("BurstIOCount")
+        @com.aliyun.core.annotation.NameInMap("BurstIOCount")
         private Long burstIOCount;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("IOPSPercent")
+        @com.aliyun.core.annotation.NameInMap("IOPSPercent")
         private Long IOPSPercent;
 
-        @NameInMap("ReadBPS")
+        @com.aliyun.core.annotation.NameInMap("ReadBPS")
         private Long readBPS;
 
-        @NameInMap("ReadBlockSize")
+        @com.aliyun.core.annotation.NameInMap("ReadBlockSize")
         private Long readBlockSize;
 
-        @NameInMap("ReadIOPS")
+        @com.aliyun.core.annotation.NameInMap("ReadIOPS")
         private Long readIOPS;
 
-        @NameInMap("ReadLatency")
+        @com.aliyun.core.annotation.NameInMap("ReadLatency")
         private Long readLatency;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("WriteBPS")
+        @com.aliyun.core.annotation.NameInMap("WriteBPS")
         private Long writeBPS;
 
-        @NameInMap("WriteBlockSize")
+        @com.aliyun.core.annotation.NameInMap("WriteBlockSize")
         private Long writeBlockSize;
 
-        @NameInMap("WriteIOPS")
+        @com.aliyun.core.annotation.NameInMap("WriteIOPS")
         private Long writeIOPS;
 
-        @NameInMap("WriteLatency")
+        @com.aliyun.core.annotation.NameInMap("WriteLatency")
         private Long writeLatency;
 
         private MonitorData(Builder builder) {

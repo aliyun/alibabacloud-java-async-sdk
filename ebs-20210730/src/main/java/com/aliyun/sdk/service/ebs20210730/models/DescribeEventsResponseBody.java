@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventsResponseBody</p>
  */
 public class DescribeEventsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceEvents")
+    @com.aliyun.core.annotation.NameInMap("ResourceEvents")
     private java.util.List < ResourceEvents> resourceEvents;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEventsResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +89,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceEvents.
+         * The events.
          */
         public Builder resourceEvents(java.util.List < ResourceEvents> resourceEvents) {
             this.resourceEvents = resourceEvents;
@@ -98,7 +97,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -112,37 +111,37 @@ public class DescribeEventsResponseBody extends TeaModel {
     } 
 
     public static class ResourceEvents extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EventLevel")
+        @com.aliyun.core.annotation.NameInMap("EventLevel")
         private String eventLevel;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("RecommendAction")
+        @com.aliyun.core.annotation.NameInMap("RecommendAction")
         private String recommendAction;
 
-        @NameInMap("RecommendParams")
+        @com.aliyun.core.annotation.NameInMap("RecommendParams")
         private String recommendParams;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ResourceEvents(Builder builder) {
@@ -258,7 +257,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Description.
+             * The description of the event.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,7 +265,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The end time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -274,7 +273,12 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventLevel.
+             * The level of the event. Valid values:
+             * <p>
+             * 
+             * 1.  INFO
+             * 2.  WARN
+             * 3.  CRITICAL
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -282,7 +286,21 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventName.
+             * The name of the event. Valid values:
+             * <p>
+             * 
+             * *   NoSnapshot: indicates the event that is triggered because no snapshot is created for a disk to protect data on the disk.
+             * *   BurstIOTriggered: indicates the event that is triggered when a burst I/O operation is performed on a disk.
+             * *   CostOptimizationNeeded: indicates the event that is triggered when cost optimization is required.
+             * *   DiskSpecNotMatchedWithInstance: indicates the event that is triggered because the specifications of a disk do not match the instance to which the disk is attached.
+             * *   DiskIONo4kAligned: indicates the event that is triggered because the physical and logical sectors involved in a read or write operation are not 4K aligned.
+             * *   DiskIOHang: indicates the event that is triggered when an I/O hang occurs on a disk.
+             * *   InstanceIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on an instance reaches the upper limit.
+             * *   InstanceBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on an instance reaches the upper limit.
+             * *   DiskIOPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the associated instance.
+             * *   DiskBPSExceedInstanceMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the associated instance.
+             * *   DiskIOPSExceedDiskMaxLimit: indicates the event that is triggered when the number of IOPS on a disk reaches the upper limit for the disk.
+             * *   DiskBPSExceedDiskMaxLimit: indicates the event that is triggered when the number of BPS on a disk reaches the upper limit for the disk.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -290,7 +308,12 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * The type of the event. Valid values:
+             * <p>
+             * 
+             * 1.  Notification
+             * 2.  SystemException
+             * 3.  Alert
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -298,7 +321,14 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RecommendAction.
+             * The recommended action after the event occurred. Valid values:
+             * <p>
+             * 
+             * *   ModifyDiskSpec
+             * *   CreateSnapshot
+             * *   ResizeDisk
+             * *   AdjustProvision
+             * *   ModifyInstanceSpec
              */
             public Builder recommendAction(String recommendAction) {
                 this.recommendAction = recommendAction;
@@ -306,7 +336,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * RecommendParams.
+             * The codes of the parameters for the recommended action after the event occurred.
              */
             public Builder recommendParams(String recommendParams) {
                 this.recommendParams = recommendParams;
@@ -314,7 +344,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -322,7 +352,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -330,7 +360,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the event, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -338,7 +368,15 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the event. Valid values:
+             * <p>
+             * 
+             * 1.  WillExecute
+             * 2.  Executing
+             * 3.  Executed
+             * 4.  Ignore
+             * 5.  Expired
+             * 6.  Deleted
              */
             public Builder status(String status) {
                 this.status = status;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ebs20210730.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLensMonitorDisksResponseBody</p>
  */
 public class DescribeLensMonitorDisksResponseBody extends TeaModel {
-    @NameInMap("DiskInfos")
+    @com.aliyun.core.annotation.NameInMap("DiskInfos")
     private java.util.List < DiskInfos> diskInfos;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeLensMonitorDisksResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -173,49 +172,49 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
 
     }
     public static class DiskInfos extends TeaModel {
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Integer bps;
 
-        @NameInMap("BurstingEnabled")
+        @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
-        @NameInMap("DiskCategory")
+        @com.aliyun.core.annotation.NameInMap("DiskCategory")
         private String diskCategory;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("DiskStatus")
+        @com.aliyun.core.annotation.NameInMap("DiskStatus")
         private String diskStatus;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("Iops")
+        @com.aliyun.core.annotation.NameInMap("Iops")
         private Integer iops;
 
-        @NameInMap("LensTags")
+        @com.aliyun.core.annotation.NameInMap("LensTags")
         private java.util.List < String > lensTags;
 
-        @NameInMap("PerformanceLevel")
+        @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
-        @NameInMap("ProvisionedIops")
+        @com.aliyun.core.annotation.NameInMap("ProvisionedIops")
         private Integer provisionedIops;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DiskInfos(Builder builder) {
@@ -451,7 +450,7 @@ public class DescribeLensMonitorDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Lens tags of the disk.
+             * Event tags of the disk.
              */
             public Builder lensTags(java.util.List < String > lensTags) {
                 this.lensTags = lensTags;
