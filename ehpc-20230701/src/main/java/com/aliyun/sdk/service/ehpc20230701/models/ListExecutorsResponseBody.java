@@ -146,6 +146,9 @@ public class ListExecutorsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HostName")
         private java.util.List < String > hostName;
 
+        @com.aliyun.core.annotation.NameInMap("Image")
+        private String image;
+
         @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
 
@@ -170,6 +173,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.executorId = builder.executorId;
             this.hostName = builder.hostName;
+            this.image = builder.image;
             this.ipAddress = builder.ipAddress;
             this.jobId = builder.jobId;
             this.jobName = builder.jobName;
@@ -222,6 +226,13 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
 
         /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
+        }
+
+        /**
          * @return ipAddress
          */
         public java.util.List < String > getIpAddress() {
@@ -269,6 +280,7 @@ public class ListExecutorsResponseBody extends TeaModel {
             private String endTime; 
             private String executorId; 
             private java.util.List < String > hostName; 
+            private String image; 
             private java.util.List < String > ipAddress; 
             private String jobId; 
             private String jobName; 
@@ -313,6 +325,14 @@ public class ListExecutorsResponseBody extends TeaModel {
              */
             public Builder hostName(java.util.List < String > hostName) {
                 this.hostName = hostName;
+                return this;
+            }
+
+            /**
+             * Image.
+             */
+            public Builder image(String image) {
+                this.image = image;
                 return this;
             }
 
