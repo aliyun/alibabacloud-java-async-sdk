@@ -98,7 +98,7 @@ public class UpdateTableThemeRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +107,7 @@ public class UpdateTableThemeRequest extends Request {
         }
 
         /**
-         * The name of the table folder.
+         * The name of the theme.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -116,7 +116,7 @@ public class UpdateTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * The workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -125,7 +125,7 @@ public class UpdateTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the table folder.
+         * The ID of the theme.
          */
         public Builder themeId(Long themeId) {
             this.putQueryParameter("ThemeId", themeId);

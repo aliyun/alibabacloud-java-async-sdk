@@ -91,7 +91,7 @@ public class SetEntityTagsRequest extends Request {
         }
 
         /**
-         * QualifiedName.
+         * The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);
@@ -100,7 +100,7 @@ public class SetEntityTagsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < UserEntityTag > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

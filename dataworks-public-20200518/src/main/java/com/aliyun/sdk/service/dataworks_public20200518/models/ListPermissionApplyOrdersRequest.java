@@ -219,7 +219,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The end time. You can query all permission request orders that have been submitted before the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders that are submitted before the current time are queried.
+         * The end of the time range to query. You can query all the permissions request orders that have been submitted before the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders that are submitted before the current time are queried.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -228,7 +228,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in MaxCompute compute engine instances.
+         * The type of the compute engine with which the permission request order is associated. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.
          */
         public Builder engineType(String engineType) {
             this.putQueryParameter("EngineType", engineType);
@@ -240,10 +240,19 @@ public class ListPermissionApplyOrdersRequest extends Request {
          * The status of the permission request order. Valid values:
          * <p>
          * 
-         * *   1: pending approval
+         * *   1: to be processed
          * *   2: approved and authorized
          * *   3: approved but authorization failed
          * *   4: rejected
+         * 
+         * Valid values:
+         * 
+         * *   0
+         * *   1
+         * *   2
+         * *   3
+         * *   4
+         * *   5
          */
         public Builder flowStatus(Integer flowStatus) {
             this.putQueryParameter("FlowStatus", flowStatus);
@@ -252,7 +261,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute project to which the permission request order belongs. If you do not specify the parameter, the permission request orders of all MaxCompute projects are returned.
+         * The name of the MaxCompute project with which the permission request order is associated. If you do not specify the parameter, the permission request orders of all MaxCompute projects are returned.
          */
         public Builder maxComputeProjectName(String maxComputeProjectName) {
             this.putQueryParameter("MaxComputeProjectName", maxComputeProjectName);
@@ -270,7 +279,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -279,7 +288,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -301,7 +310,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The start time. You can query all permission request orders that have been submitted after the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders are queried.
+         * The beginning of the time range to query. You can query all the permissions request orders that have been submitted after the time. The parameter value is a UNIX timestamp. If you do not specify the parameter, all permission request orders are queried.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -319,7 +328,7 @@ public class ListPermissionApplyOrdersRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace to which the permission request order belongs. If you do not specify the parameter, the permission request orders of all workspaces are returned. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
+         * The ID of the DataWorks workspace that is associated with the permission request order. If you do not specify the parameter, the permission request orders of all workspaces are returned. You can go to the Workspace page in the DataWorks console to obtain the workspace ID.
          */
         public Builder workspaceId(Integer workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

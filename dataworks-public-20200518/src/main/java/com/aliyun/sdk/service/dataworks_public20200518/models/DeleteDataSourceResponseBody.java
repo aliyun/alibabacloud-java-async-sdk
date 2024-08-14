@@ -73,7 +73,7 @@ public class DeleteDataSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the data source was removed.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -81,7 +81,7 @@ public class DeleteDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +89,7 @@ public class DeleteDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class DeleteDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

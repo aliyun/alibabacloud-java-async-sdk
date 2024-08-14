@@ -122,7 +122,7 @@ public class GetMetaCategoryRequest extends Request {
         }
 
         /**
-         * The ID of the category tree.
+         * The category tree ID.
          */
         public Builder parentCategoryId(Long parentCategoryId) {
             this.putQueryParameter("ParentCategoryId", parentCategoryId);

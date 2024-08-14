@@ -92,7 +92,7 @@ public class OfflineNodeRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to obtain the ID.
+         * The node ID. You can call the [ListNodes](~~173979~~) operation to obtain the node ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -101,7 +101,7 @@ public class OfflineNodeRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * The DataWorks workspace ID. You can call the [ListProjects](~~178393~~) operation to obtain the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

@@ -115,7 +115,7 @@ public class DeleteQualityFollowerRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -124,7 +124,7 @@ public class DeleteQualityFollowerRequest extends Request {
         }
 
         /**
-         * The name of the compute engine or data source for which the partition filter expression is configured. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Monitoring Rules page of Data Quality to obtain the name.
+         * The name of the compute engine or data source for which the partition filter expression is configured. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the rule configuration page of Data Quality page to obtain the name.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

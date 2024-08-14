@@ -105,7 +105,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +225,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The date on which the business was performed. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
+             * The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -322,7 +322,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The date on which the business was performed. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
+             * The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -887,7 +887,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The date on which the business was performed. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
+             * The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
              */
             public Builder bizDate(Long bizDate) {
                 this.bizDate = bizDate;
@@ -895,14 +895,11 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the monitoring rule. The type of a monitoring rule indicates the importance of the rule. Valid values:
+             * The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:
              * <p>
              * 
              * *   1: indicates that the monitoring rule is a strong rule.
-             * 
-             * *   0: indicates that the monitoring rule is a weak rule.
-             * 
-             *     You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.
+             * *   0: indicates that the monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
              */
             public Builder blockType(Integer blockType) {
                 this.blockType = blockType;
@@ -926,7 +923,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the checker.
+             * The checker ID.
              */
             public Builder checkerId(Integer checkerId) {
                 this.checkerId = checkerId;
@@ -958,7 +955,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.
+             * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
              */
             public Builder criticalThreshold(Float criticalThreshold) {
                 this.criticalThreshold = criticalThreshold;
@@ -966,7 +963,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scheduling cycle. In most cases, the value of this parameter is YMD. This value indicates year, month, and day.
+             * The scheduling frequency. In most cases, the value of this parameter is YMD. This value indicates year, month, and day.
              */
             public Builder dateType(String dateType) {
                 this.dateType = dateType;
@@ -977,8 +974,8 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
              * Indicates whether the monitoring is discrete monitoring. Valid values:
              * <p>
              * 
-             * *   true: indicates that the monitoring is discrete monitoring.
-             * *   false: indicates that the monitoring is not discrete monitoring.
+             * *   true
+             * *   false
              */
             public Builder discreteCheck(Boolean discreteCheck) {
                 this.discreteCheck = discreteCheck;
@@ -1010,7 +1007,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder externalId(String externalId) {
                 this.externalId = externalId;
@@ -1029,8 +1026,8 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
              * Indicates whether the monitoring is performed based on a fixed value. Valid values:
              * <p>
              * 
-             * *   true: indicates that the monitoring is performed based on a fixed value.
-             * *   false: indicates that the monitoring is performed based on a non-fixed value.
+             * *   true
+             * *   false
              */
             public Builder fixedCheck(Boolean fixedCheck) {
                 this.fixedCheck = fixedCheck;
@@ -1038,7 +1035,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary key.
+             * The primary key ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1049,8 +1046,8 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
              * Indicates whether the monitoring result is the same as the predicted result. Valid values:
              * <p>
              * 
-             * *   true: indicates that the monitoring result is the same as the predicted result.
-             * *   false: indicates that the monitoring result is different from the predicted result.
+             * *   true
+             * *   false
              */
             public Builder isPrediction(Boolean isPrediction) {
                 this.isPrediction = isPrediction;
@@ -1058,7 +1055,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The lower limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specified.
+             * The lower limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.
              */
             public Builder lowerValue(Float lowerValue) {
                 this.lowerValue = lowerValue;
@@ -1074,7 +1071,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The method used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
+             * The method used to collect sample data, such as such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
              */
             public Builder methodName(String methodName) {
                 this.methodName = methodName;
@@ -1090,7 +1087,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Open.
+             * Indicates whether the monitoring rule is enabled.
              */
             public Builder open(Boolean open) {
                 this.open = open;
@@ -1098,7 +1095,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compute engine instance or data source for which data quality is monitored.
+             * The name of the compute engine or data source for which data quality is monitored.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -1106,7 +1103,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The field of the rule attribute. This field is the column name of the data source table that is monitored.
+             * The field whose data quality is checked based on the monitoring rule. This field is a column in the data source table that is monitored.
              */
             public Builder property(String property) {
                 this.property = property;
@@ -1146,7 +1143,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The sample values.
+             * The current sample values.
              */
             public Builder sampleValue(java.util.List < SampleValue> sampleValue) {
                 this.sampleValue = sampleValue;
@@ -1162,7 +1159,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the monitoring task.
+             * The monitoring task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1202,7 +1199,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specified.
+             * The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.
              */
             public Builder upperValue(Float upperValue) {
                 this.upperValue = upperValue;
@@ -1210,7 +1207,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.
+             * The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.
              */
             public Builder warningThreshold(Float warningThreshold) {
                 this.warningThreshold = warningThreshold;
@@ -1218,7 +1215,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The filter condition of the monitoring rule.
+             * The filter condition of the monitoring task.
              */
             public Builder whereCondition(String whereCondition) {
                 this.whereCondition = whereCondition;
@@ -1295,7 +1292,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1303,7 +1300,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The number of entries per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1311,7 +1308,7 @@ public class ListQualityResultsByRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring results returned.
+             * The returned monitoring results.
              */
             public Builder ruleChecks(java.util.List < RuleChecks> ruleChecks) {
                 this.ruleChecks = ruleChecks;

@@ -49,7 +49,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The page number of the returned page. Minimum value: 1. Maximum value: 100. Default value: 1.
+         * The pagination data.
          */
         public Builder paging(Paging paging) {
             this.paging = paging;
@@ -57,7 +57,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
         }
 
         /**
-         * The pagination data.
+         * The request ID. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +133,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             private String shiftPersonUID; 
 
             /**
-             * The time when the on-duty engineer ends the shift.
+             * The time when the on-duty engineer starts the shift.
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -141,7 +141,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the on-duty engineer ends the shift.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -149,7 +149,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the on-duty engineer starts the shift.
+             * The name of the on-duty engineer.
              */
             public Builder shiftPersonName(String shiftPersonName) {
                 this.shiftPersonName = shiftPersonName;
@@ -157,7 +157,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the on-duty engineer.
+             * The UID of the on-duty engineer.
              */
             public Builder shiftPersonUID(String shiftPersonUID) {
                 this.shiftPersonUID = shiftPersonUID;
@@ -234,7 +234,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The page number. Valid values: 1 to 100. Default value: 1.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -242,7 +242,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The number of entries per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -250,7 +250,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the on-duty engineer.
+             * A list of on-duty engineers in a shift schedule.
              */
             public Builder shiftPersons(java.util.List < ShiftPersons> shiftPersons) {
                 this.shiftPersons = shiftPersons;
@@ -258,7 +258,7 @@ public class ListShiftPersonnelsResponseBody extends TeaModel {
             }
 
             /**
-             * The on-duty engineers in the shift schedule.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -49,7 +49,7 @@ public class CreateDIJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DIJobId.
+         * The synchronization task ID.
          */
         public Builder DIJobId(Long DIJobId) {
             this.DIJobId = DIJobId;
@@ -57,7 +57,7 @@ public class CreateDIJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID. You can use the request ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

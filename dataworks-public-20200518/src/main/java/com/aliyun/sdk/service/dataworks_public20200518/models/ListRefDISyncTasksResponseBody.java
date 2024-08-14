@@ -61,7 +61,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data returned for the query.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +69,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,8 +80,8 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -169,12 +169,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The destination data source of the sync node.
-             * <p>
-             * 
-             * If the sync node has multiple destination data sources, the return value is a JSON array, such as \\"odps_writer\\", \\"mysql\\".
-             * 
-             * If the RefType parameter is set to to, the sync nodes that use the specified data source as the destination data source are returned. In this case, the value of this parameter indicates the specified data source.
+             * The destination of the synchronization task. If the synchronization task has multiple destinations, the return value is a JSON array, such as \\"odps_writer\\", \\"mysql\\". If the RefType parameter is set to to, the synchronization tasks that use the specified data source as the destination are returned. In this case, the value of this parameter indicates the specified data source.
              */
             public Builder diDestinationDatasource(String diDestinationDatasource) {
                 this.diDestinationDatasource = diDestinationDatasource;
@@ -182,12 +177,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The source data source of the sync node.
-             * <p>
-             * 
-             * If the sync node has multiple source data sources, the return value is a JSON array, such as \\"odps_writer\\", \\"mysql\\".
-             * 
-             * If the RefType parameter is set to from, the sync nodes that use the specified data source as the source data source are returned. In this case, the value of this parameter indicates the specified data source.
+             * The source of the synchronization task. If the synchronization task has multiple sources, the return value is a JSON array, such as \\"odps_writer\\", \\"mysql\\". If the RefType parameter is set to from, the synchronization tasks that use the specified data source as the source are returned. In this case, the value of this parameter indicates the specified data source.
              */
             public Builder diSourceDatasource(String diSourceDatasource) {
                 this.diSourceDatasource = diSourceDatasource;
@@ -195,7 +185,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sync node.
+             * The ID of the synchronization task.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -203,7 +193,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the sync node.
+             * The name of the synchronization task.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -211,11 +201,11 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the sync node. Valid values:
+             * The type of the synchronization task. Valid values:
              * <p>
              * 
-             * *   DI_OFFLINE: batch sync node
-             * *   DI_REALTIME: real-time sync node
+             * *   DI_OFFLINE: batch synchronization task
+             * *   DI_REALTIME: real-time synchronization task
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -256,10 +246,7 @@ public class ListRefDISyncTasksResponseBody extends TeaModel {
             private java.util.List < DISyncTasks> DISyncTasks; 
 
             /**
-             * The details of the sync nodes.
-             * <p>
-             * 
-             * A data source is usually associated with multiple sync nodes. Therefore, the value of this parameter is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sync node.
+             * The details of the synchronization tasks. In most cases, a data source is used by multiple synchronization tasks. Therefore, the value of this parameter is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a synchronization task.
              */
             public Builder DISyncTasks(java.util.List < DISyncTasks> DISyncTasks) {
                 this.DISyncTasks = DISyncTasks;

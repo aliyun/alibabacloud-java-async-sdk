@@ -12,7 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QuerySensNodeInfoRequest extends Request {
     @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("regionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Body
@@ -153,16 +153,16 @@ public class QuerySensNodeInfoRequest extends Request {
         } 
 
         /**
-         * regionId.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
-            this.putHostParameter("regionId", regionId);
+            this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
 
         /**
-         * NodeId.
+         * The ID of the data category. You can call the [QuerySensClassification](~~2746850~~) operation or log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Data Security Guard page to obtain the ID.
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -171,7 +171,7 @@ public class QuerySensNodeInfoRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. Pages start from page 1.
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -180,7 +180,7 @@ public class QuerySensNodeInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 10 to 1000. The recommended number of entries per page ranges from 10 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -189,7 +189,7 @@ public class QuerySensNodeInfoRequest extends Request {
         }
 
         /**
-         * SensitiveName.
+         * The name of the sensitive field. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Data Security Guard page to obtain the name.
          */
         public Builder sensitiveName(String sensitiveName) {
             this.putBodyParameter("SensitiveName", sensitiveName);
@@ -198,7 +198,7 @@ public class QuerySensNodeInfoRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the data category and data sensitivity level template. You can call the [QueryDefaultTemplate](~~2743948~~) operation to obtain the template ID.
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -207,7 +207,7 @@ public class QuerySensNodeInfoRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -216,7 +216,11 @@ public class QuerySensNodeInfoRequest extends Request {
         }
 
         /**
-         * status.
+         * The status of the sensitive field. Valid values:
+         * <p>
+         * 
+         * *   0: draft
+         * *   1: published
          */
         public Builder status(Integer status) {
             this.putBodyParameter("status", status);

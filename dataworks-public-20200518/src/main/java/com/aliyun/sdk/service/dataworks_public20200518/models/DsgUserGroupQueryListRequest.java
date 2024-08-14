@@ -134,7 +134,7 @@ public class DsgUserGroupQueryListRequest extends Request {
         }
 
         /**
-         * Name.
+         * The keyword of the user group name. A fuzzy match is performed based on the keyword to search for the user group.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -143,7 +143,7 @@ public class DsgUserGroupQueryListRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The owner of the user group.
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -152,7 +152,7 @@ public class DsgUserGroupQueryListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,7 +161,7 @@ public class DsgUserGroupQueryListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,7 +170,7 @@ public class DsgUserGroupQueryListRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the compute engine. If you want to query the information about a MaxCompute user group, you need to configure this parameter.
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

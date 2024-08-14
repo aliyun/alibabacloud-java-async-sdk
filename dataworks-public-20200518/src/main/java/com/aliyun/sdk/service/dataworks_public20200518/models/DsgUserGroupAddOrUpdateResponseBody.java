@@ -97,7 +97,11 @@ public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The operation result. Valid values:
+         * <p>
+         * 
+         * *   true: The operation is successful.
+         * *   false: The operation fails.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -105,7 +109,7 @@ public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,7 @@ public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +125,7 @@ public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +133,7 @@ public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,11 @@ public class DsgUserGroupAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

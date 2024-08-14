@@ -97,7 +97,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The name of the node.
+         * The nodes in the baseline.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The nodes in the baseline.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The request ID. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account used by the node owner.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -213,7 +213,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * NodeId.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -221,7 +221,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace to which the node belongs.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -229,7 +229,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -237,7 +237,7 @@ public class ListNodesByBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the node belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

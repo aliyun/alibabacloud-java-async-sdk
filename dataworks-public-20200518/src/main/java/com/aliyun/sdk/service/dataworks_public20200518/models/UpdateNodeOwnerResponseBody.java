@@ -49,7 +49,7 @@ public class UpdateNodeOwnerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request. You can use the ID to obtain logs and troubleshoot issues.
+         * The request ID. You can use the request ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,11 +57,11 @@ public class UpdateNodeOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: indicates that the request is successful.
-         * *   false: indicates that the request fails.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

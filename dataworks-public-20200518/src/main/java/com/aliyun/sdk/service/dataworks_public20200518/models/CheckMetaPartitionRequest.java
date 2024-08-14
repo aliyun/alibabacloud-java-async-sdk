@@ -147,7 +147,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * The name of the table.
+         * This parameter is deprecated.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -156,7 +156,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * Indicates whether the partition exists.
+         * The type of the data source. Set the value to odps.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -165,7 +165,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * The name of the metadatabase.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -174,7 +174,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * The name of the partition in the MaxCompute metatable.
          */
         public Builder partition(String partition) {
             this.putQueryParameter("Partition", partition);
@@ -183,7 +183,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * The ID of the E-MapReduce (EMR) cluster.
+         * The GUID of the MaxCompute metatable.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -192,7 +192,7 @@ public class CheckMetaPartitionRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The name of the metatable.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

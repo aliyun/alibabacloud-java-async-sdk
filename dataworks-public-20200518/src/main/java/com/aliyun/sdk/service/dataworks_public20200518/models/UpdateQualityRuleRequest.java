@@ -386,11 +386,8 @@ public class UpdateQualityRuleRequest extends Request {
          * The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:
          * <p>
          * 
-         * *   1: indicates that the monitoring rule is a strong rule.
-         * 
-         * *   0: indicates that the monitoring rule is a weak rule.
-         * 
-         *     You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and a critical alert is triggered, nodes are blocked.
+         * *   1: The monitoring rule is a strong rule.
+         * *   0: The monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
          */
         public Builder blockType(Integer blockType) {
             this.putBodyParameter("BlockType", blockType);
@@ -399,7 +396,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the checker. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the checker.
+         * The checker ID. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the checker.
          */
         public Builder checker(Integer checker) {
             this.putBodyParameter("Checker", checker);
@@ -417,7 +414,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.
+         * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
          */
         public Builder criticalThreshold(String criticalThreshold) {
             this.putBodyParameter("CriticalThreshold", criticalThreshold);
@@ -426,7 +423,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the partition filter expression. You can call the [GetQualityEntity](~~173995~~) operation to obtain the ID of the partition filter expression.
+         * The ID of the partition filter expression. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the partition filter expression.
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -435,7 +432,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The expected value of the monitoring result.
+         * The expected value of the monitoring rule.
          */
         public Builder expectValue(String expectValue) {
             this.putBodyParameter("ExpectValue", expectValue);
@@ -444,7 +441,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the monitoring rule. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring rule.
+         * The monitoring rule ID. You can call the [ListQualityRules](~~173995~~) operation to query the ID of the monitoring rule.
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -462,7 +459,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the monitoring rule in the production environment.
+         * Specifies whether to enable the monitoring rule in the production environment. Valid values:
          * <p>
          * 
          * *   true: The monitoring rule is triggered when the associated auto triggered node that generates the output data starts to run.
@@ -487,8 +484,8 @@ public class UpdateQualityRuleRequest extends Request {
          * Specifies whether the threshold is a dynamic threshold. Valid values:
          * <p>
          * 
-         * *   0: indicates that the threshold is not a dynamic threshold.
-         * *   2: indicates that the threshold is a dynamic threshold.
+         * *   0: The threshold is not a dynamic threshold.
+         * *   2: The threshold is a dynamic threshold.
          */
         public Builder predictType(Integer predictType) {
             this.putBodyParameter("PredictType", predictType);
@@ -497,7 +494,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -506,7 +503,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the name.
+         * The name of the compute engine or data source. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the name of the compute engine or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -515,7 +512,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the field to be monitored.
+         * The name of the field.
          */
         public Builder property(String property) {
             this.putBodyParameter("Property", property);
@@ -556,7 +553,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * TaskSetting.
+         * The variable settings inserted before the custom rule. Format: x=a,y=b.
          */
         public Builder taskSetting(String taskSetting) {
             this.putBodyParameter("TaskSetting", taskSetting);
@@ -565,7 +562,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the monitoring template. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring template that is used to create the monitoring rule.
+         * The ID of the monitoring template. You can call the [ListQualityRules](~~173995~~) operation to obtain the ID of the monitoring template.
          */
         public Builder templateId(Integer templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -588,7 +585,7 @@ public class UpdateQualityRuleRequest extends Request {
         }
 
         /**
-         * The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.
+         * The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.
          */
         public Builder warningThreshold(String warningThreshold) {
             this.putBodyParameter("WarningThreshold", warningThreshold);

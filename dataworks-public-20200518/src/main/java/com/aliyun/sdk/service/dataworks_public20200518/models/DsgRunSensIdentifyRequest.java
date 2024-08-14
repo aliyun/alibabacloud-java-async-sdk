@@ -91,7 +91,7 @@ public class DsgRunSensIdentifyRequest extends Request {
         }
 
         /**
-         * EsMetaParams.
+         * The parameters that you need to configure to scan specified metadata.
          */
         public Builder esMetaParams(java.util.List < EsMetaParams> esMetaParams) {
             String esMetaParamsShrink = shrink(esMetaParams, "EsMetaParams", "json");
@@ -101,7 +101,7 @@ public class DsgRunSensIdentifyRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -227,7 +227,7 @@ public class DsgRunSensIdentifyRequest extends Request {
             private String user; 
 
             /**
-             * ClusterId.
+             * The cluster ID. You can obtain the ID based on the data source you use.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -235,7 +235,12 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * DbType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   ODPS.ODPS
+             * *   EMR
+             * *   HOLO.POSTGRES
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -243,7 +248,7 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * The instance ID. You can obtain the ID based on the data source you use.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -251,7 +256,7 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * ProjectName.
+             * The name of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the name.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -259,7 +264,7 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * SchemaName.
+             * The name of the schema.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -267,7 +272,7 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -275,7 +280,7 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * TableNameList.
+             * The names of the tables.
              */
             public Builder tableNameList(java.util.List < String > tableNameList) {
                 this.tableNameList = tableNameList;
@@ -283,7 +288,7 @@ public class DsgRunSensIdentifyRequest extends Request {
             }
 
             /**
-             * User.
+             * The username of the operator. We recommend that you enter the username of your Alibaba Cloud account.
              */
             public Builder user(String user) {
                 this.user = user;

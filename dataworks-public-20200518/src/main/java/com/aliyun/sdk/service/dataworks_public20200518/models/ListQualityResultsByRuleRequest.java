@@ -178,7 +178,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -187,7 +187,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -196,7 +196,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -205,7 +205,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source for which data quality is monitored.
+         * The name of the compute engine or data source for which data quality is monitored.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -214,7 +214,7 @@ public class ListQualityResultsByRuleRequest extends Request {
         }
 
         /**
-         * The ID of the monitoring rule. You can use the ID and information such as a partition filter expression to perform a joint query.
+         * The monitoring rule ID. You can use the ID and information such as a partition filter expression to perform a joint query.
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

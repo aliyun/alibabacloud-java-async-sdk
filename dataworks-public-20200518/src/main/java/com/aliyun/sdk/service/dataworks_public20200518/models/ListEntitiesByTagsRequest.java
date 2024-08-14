@@ -121,7 +121,7 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * The type of the entity.
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -130,7 +130,7 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -139,7 +139,7 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. Valid values: 1 to 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +148,7 @@ public class ListEntitiesByTagsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < UserEntityTag > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

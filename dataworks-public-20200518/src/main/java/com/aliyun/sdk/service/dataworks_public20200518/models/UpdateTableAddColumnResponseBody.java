@@ -49,7 +49,7 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
         private TaskInfo taskInfo; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,10 +57,8 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the request task.
+         * The information about the request task. After a request task is submitted, it is divided into multiple subtasks that are run in sequence. After the current subtask is complete, the next subtask starts to run. After all subtasks are complete, the request task is complete. If a request task is aborted due to one of the following issues, address the issue based on the error code and initiate the request task again:
          * <p>
-         * 
-         * After a request task is submitted, it is divided into multiple subtasks that are run in sequence. After the current subtask is complete, the next subtask starts to run. After all subtasks are complete, the request task is complete. If a request task is aborted due to one of the following issues, address the issue based on the error code and initiate the request task again:
          * 
          * *   The request task fails to be submitted.
          * *   After the request task is submitted, a subtask fails to run.
@@ -139,10 +137,10 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * Details about the status of the current subtask. Valid values:
+             * The details about the status of the current subtask.
              * <p>
              * 
-             * *   If the current subtask succeeds, success is returned.
+             * *   If the current subtask is successful, success is returned.
              * *   If the current subtask fails, the error details are displayed.
              */
             public Builder content(String content) {
@@ -151,7 +149,7 @@ public class UpdateTableAddColumnResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete. You can call the [GetDDLJobStatus](~~185659~~) operation to query the status of the subtask based on the subtask ID.
+             * The ID of the subtask that you want to run. If this parameter is left empty, all subtasks are complete.
              */
             public Builder nextTaskId(String nextTaskId) {
                 this.nextTaskId = nextTaskId;

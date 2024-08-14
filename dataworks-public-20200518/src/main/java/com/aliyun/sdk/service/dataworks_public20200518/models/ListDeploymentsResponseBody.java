@@ -49,7 +49,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The return results.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +181,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The time when the deployment task was created.
+             * The time when the deployment package was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -189,7 +189,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the user who created the deployment tasks.
+             * The ID of the Alibaba Cloud account used by the user who created the deployment package.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -197,7 +197,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned when the deployment task failed.
+             * The error message returned when the deployment package failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -205,7 +205,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the deployment task was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The time when the deployment package was run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder executeTime(Long executeTime) {
                 this.executeTime = executeTime;
@@ -213,7 +213,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the user who ran the deployment tasks.
+             * The ID of the Alibaba Cloud account used by the user who ran the deployment package.
              */
             public Builder executor(String executor) {
                 this.executor = executor;
@@ -221,7 +221,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the deployment task. You can call the [GetDeployment](~~173950~~) operation to query the details of the deployment task based on the ID.
+             * The deployment package ID. You can call the [GetDeployment](~~173950~~) operation to obtain the ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -229,7 +229,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the deployment task.
+             * The name of the deployment package.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -237,13 +237,13 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the deployment tasks. Valid values:
+             * The status of the deployment package. Valid values:
              * <p>
              * 
-             * *   0: The deployment tasks are ready.
-             * *   1: The deployment tasks are successful.
-             * *   2: The deployment tasks fail.
-             * *   6: The deployment tasks are rejected.
+             * *   0: The deployment package is ready.
+             * *   1: The deployment package is deployed.
+             * *   2: The deployment package fails to be deployed.
+             * *   6: The deployment package is rejected.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -320,7 +320,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The information about the deployment tasks.
+             * The deployment packages.
              */
             public Builder deployments(java.util.List < Deployments> deployments) {
                 this.deployments = deployments;
@@ -328,7 +328,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -336,7 +336,7 @@ public class ListDeploymentsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The number of entries per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;

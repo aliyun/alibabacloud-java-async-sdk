@@ -161,24 +161,11 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
-         * <p>
-         * 
-         * *   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.
-         * *   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.
+         * The type of the change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.
          */
         public Builder changeType(String changeType) {
             this.putBodyParameter("ChangeType", changeType);
             this.changeType = changeType;
-            return this;
-        }
-
-        /**
-         * The error message returned.
-         */
-        public Builder endDate(String endDate) {
-            this.putBodyParameter("EndDate", endDate);
-            this.endDate = endDate;
             return this;
         }
 
@@ -189,6 +176,15 @@ public class GetMetaTableChangeLogRequest extends Request {
          * *   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.
          * *   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.
          */
+        public Builder endDate(String endDate) {
+            this.putBodyParameter("EndDate", endDate);
+            this.endDate = endDate;
+            return this;
+        }
+
+        /**
+         * The entity on which the change is made. Valid values: TABLE and PARTITION.
+         */
         public Builder objectType(String objectType) {
             this.putBodyParameter("ObjectType", objectType);
             this.objectType = objectType;
@@ -196,10 +192,7 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.projectName.tableName. You can call the [GetMetaDBTableList](~~173916~~) operation to query the GUID of the table.
-         * <p>
-         * 
-         * >  To query the change logs of a MaxCompute table, you must call the [GetMetaTableChangeLog](~~173925~~) operation.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -208,7 +201,7 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The type of the change. Valid values: CREATE_TABLE, ALTER_TABLE, DROP_TABLE, ADD_PARTITION, and DROP_PARTITION.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -217,7 +210,11 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
+         * <p>
+         * 
+         * *   By default, the system uses the current time as the value of this parameter if the time that you specify is invalid.
+         * *   If both the values of the StartDate and EndDate parameters are invalid, the system automatically queries the change logs that are generated within the last 30 days.
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);
@@ -226,7 +223,10 @@ public class GetMetaTableChangeLogRequest extends Request {
         }
 
         /**
-         * The entity on which the change is made. Valid values: TABLE and PARTITION.
+         * The GUID of the table. Specify the GUID in the odps.projectName.tableName format. You can call the [GetMetaDBTableList](~~2780086~~) operation to query the GUID.
+         * <p>
+         * 
+         * > To query the change logs of a MaxCompute table, you must call the [GetMetaTableChangeLog](~~2780094~~) operation.
          */
         public Builder tableGuid(String tableGuid) {
             this.putBodyParameter("TableGuid", tableGuid);

@@ -136,7 +136,7 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The name of the data source.
          */
         public Builder datasourceName(String datasourceName) {
             this.putQueryParameter("DatasourceName", datasourceName);
@@ -145,11 +145,11 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * The environment in which the data source resides. Valid values:
          * <p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * *   0: development environment
+         * *   1: production environment
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -158,7 +158,7 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,11 +167,7 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The environment to which the data source belongs. Valid values:
-         * <p>
-         * 
-         * *   0: development environment
-         * *   1: production environment
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -180,7 +176,7 @@ public class GetDataSourceMetaRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

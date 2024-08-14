@@ -49,7 +49,7 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
         private StatusCount statusCount; 
 
         /**
-         * The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +201,7 @@ public class GetInstanceStatusStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances.
+             * The total number of instances returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

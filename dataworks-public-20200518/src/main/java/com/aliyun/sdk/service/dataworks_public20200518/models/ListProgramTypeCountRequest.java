@@ -83,7 +83,7 @@ public class ListProgramTypeCountRequest extends Request {
         } 
 
         /**
-         * The unique identifier of the zone.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +92,7 @@ public class ListProgramTypeCountRequest extends Request {
         }
 
         /**
-         * The environment of the workspace, including projects in PROD and DEV.
+         * The environment of the workspace. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -101,7 +101,7 @@ public class ListProgramTypeCountRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * The workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

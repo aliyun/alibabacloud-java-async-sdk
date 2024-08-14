@@ -49,7 +49,7 @@ public class ListFileTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the node types.
+         * The information about node types.
          */
         public Builder nodeTypeInfoList(NodeTypeInfoList nodeTypeInfoList) {
             this.nodeTypeInfoList = nodeTypeInfoList;
@@ -57,7 +57,7 @@ public class ListFileTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,12 +109,7 @@ public class ListFileTypeResponseBody extends TeaModel {
             private String nodeTypeName; 
 
             /**
-             * The code of the node type.
-             * <p>
-             * 
-             * The codes and names of node types have the following mappings:
-             * 
-             * 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
+             * The code of the node type. The codes and names of node types have the following mappings: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
              */
             public Builder nodeType(Integer nodeType) {
                 this.nodeType = nodeType;
@@ -122,12 +117,7 @@ public class ListFileTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the node type.
-             * <p>
-             * 
-             * The codes and names of node types have the following mappings:
-             * 
-             * 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
+             * The name of the node type. The codes and names of node types have the following mappings: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
              */
             public Builder nodeTypeName(String nodeTypeName) {
                 this.nodeTypeName = nodeTypeName;
@@ -204,7 +194,7 @@ public class ListFileTypeResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The information of the node type.
+             * The information about the node type.
              */
             public Builder nodeTypeInfo(java.util.List < NodeTypeInfo> nodeTypeInfo) {
                 this.nodeTypeInfo = nodeTypeInfo;
@@ -212,7 +202,7 @@ public class ListFileTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -220,7 +210,7 @@ public class ListFileTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

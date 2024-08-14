@@ -77,7 +77,7 @@ public class DeleteMetaCollectionRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * The unique identifier of the collection.
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);

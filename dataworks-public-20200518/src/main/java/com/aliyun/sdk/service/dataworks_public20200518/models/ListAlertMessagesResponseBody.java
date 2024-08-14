@@ -105,7 +105,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -225,7 +225,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -233,7 +233,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -257,7 +257,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the node. The value CHECKING_CONDITION indicates that branch conditions are being checked for the node. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is successfully run.
+             * The status of the instance. Valid values: NOT_RUN, WAIT_TIME, WAIT_RESOURCE, RUNNING, CHECKING, CHECKING_CONDITION, FAILURE, and SUCCESS. The value NOT_RUN indicates that the instance is not run. The value WAIT_TIME indicates that the instance is waiting to be run. The value WAIT_RESOURCE indicates that the instance is waiting for resources. The value RUNNING indicates that the instance is running. The value CHECKING indicates that data quality is being checked for the node for which the instance is generated. The value CHECKING_CONDITION indicates that branch conditions are being checked for the node for which the instance is generated. The value FAILURE indicates that the instance fails to run. The value SUCCESS indicates that the instance is successfully run.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -334,7 +334,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -350,7 +350,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the owner of the node.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -471,7 +471,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the baseline.
+             * The baseline ID.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -503,7 +503,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: 1 to 24. The ID of a day-level cycle is 1.
+             * The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: \[1,24]. The ID of a day-level cycle is 1.
              */
             public Builder inGroupId(Integer inGroupId) {
                 this.inGroupId = inGroupId;
@@ -519,7 +519,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the baseline. Valid values: ERROR, SAFE, DANGROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGROUS indicates that nodes are still running after the alert duration ends but the committed time does not arrive. The value OVER indicates that nodes are still running after the committed time.
+             * The status of the baseline. Valid values: ERROR, SAFE, DANGEROUS, and OVER. The value ERROR indicates that no nodes are associated with the baseline, or all nodes associated with the baseline are suspended. The value SAFE indicates that nodes are run before the alert duration begins. The value DANGEROUS indicates that nodes are still running after the alert duration ends but the committed completion time does not arrive. The value OVER indicates that nodes are still running after the committed completion time.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -636,7 +636,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the event.
+             * The event ID.
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -845,7 +845,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             private java.util.List < Topics> topics; 
 
             /**
-             * The ID of the alert.
+             * The alert ID.
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -861,7 +861,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The notification method. Valid values: MAIL, SMS, and PHONE. The value MAIL indicates that the notification is sent by email. The value SMS indicates that the notification is sent by text message. The value PHONE indicates that the notification is sent by phone call. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.
+             * The notification method. Valid values: MAIL, SMS, and PHONE. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.
              */
             public Builder alertMethod(String alertMethod) {
                 this.alertMethod = alertMethod;
@@ -1030,7 +1030,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1038,7 +1038,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The number of entries per page.
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -1046,7 +1046,7 @@ public class ListAlertMessagesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned alerts.
+             * The total number of alerts returned.
              */
             public Builder totalCount(String totalCount) {
                 this.totalCount = totalCount;

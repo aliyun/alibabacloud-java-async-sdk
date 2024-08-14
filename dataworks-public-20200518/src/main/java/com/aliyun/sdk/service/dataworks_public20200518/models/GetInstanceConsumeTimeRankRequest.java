@@ -92,7 +92,7 @@ public class GetInstanceConsumeTimeRankRequest extends Request {
         }
 
         /**
-         * Bizdate.
+         * The data timestamp, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
          */
         public Builder bizdate(String bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -101,7 +101,7 @@ public class GetInstanceConsumeTimeRankRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

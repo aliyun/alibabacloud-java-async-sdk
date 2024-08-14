@@ -97,7 +97,7 @@ public class GetBaselineResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -189,7 +189,7 @@ public class GetBaselineResponseBody extends TeaModel {
             private String webUrl; 
 
             /**
-             * AtAll.
+             * Indicates whether all members were reminded by using the at sign (@).
              */
             public Builder atAll(Boolean atAll) {
                 this.atAll = atAll;
@@ -197,7 +197,7 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * WebUrl.
+             * The webhook URL of the DingTalk chatbot.
              */
             public Builder webUrl(String webUrl) {
                 this.webUrl = webUrl;
@@ -370,7 +370,7 @@ public class GetBaselineResponseBody extends TeaModel {
             private java.util.List < String > webhooks; 
 
             /**
-             * AlertInterval.
+             * The interval at which an event alert notification is sent. Unit: seconds.
              */
             public Builder alertInterval(Integer alertInterval) {
                 this.alertInterval = alertInterval;
@@ -378,7 +378,7 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertMaximum.
+             * The maximum number of times an event alert notification is sent.
              */
             public Builder alertMaximum(Integer alertMaximum) {
                 this.alertMaximum = alertMaximum;
@@ -386,7 +386,7 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertMethods.
+             * The alert notification methods.
              */
             public Builder alertMethods(java.util.List < String > alertMethods) {
                 this.alertMethods = alertMethods;
@@ -394,7 +394,12 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertRecipient.
+             * The details of the alert recipient.
+             * <p>
+             * 
+             * *   If the value of AlertRecipientType is OWNER, this parameter is left empty.
+             * *   If the value of AlertRecipientType is SHIFT_SCHEDULE, the value of this parameter is the ID of a shift schedule.
+             * *   If the value of AlertRecipientType is OTHER, the value of this parameter is the UIDs of specified personnel. Multiple UIDs are separated by commas (,).
              */
             public Builder alertRecipient(String alertRecipient) {
                 this.alertRecipient = alertRecipient;
@@ -402,7 +407,12 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertRecipientType.
+             * The type of the alert recipient. Valid values:
+             * <p>
+             * 
+             * *   OWNER: indicates the node owner.
+             * *   OTHER: indicates specified personnel.
+             * *   SHIFT_SCHEDULE: indicates personnel in a shift schedule.
              */
             public Builder alertRecipientType(String alertRecipientType) {
                 this.alertRecipientType = alertRecipientType;
@@ -410,7 +420,11 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * The type of the alert. Valid values:
+             * <p>
+             * 
+             * *   BASELINE: indicates a baseline alert.
+             * *   TOPIC: indicates an event alert.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -418,7 +432,11 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineAlertEnabled.
+             * Indicates whether the baseline alerting feature is enabled. The feature is specific to baselines. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder baselineAlertEnabled(Boolean baselineAlertEnabled) {
                 this.baselineAlertEnabled = baselineAlertEnabled;
@@ -426,7 +444,7 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * DingRobots.
+             * The DingTalk chatbots.
              */
             public Builder dingRobots(java.util.List < DingRobots> dingRobots) {
                 this.dingRobots = dingRobots;
@@ -434,7 +452,7 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * SilenceEndTime.
+             * The end of the time range for silence. The time is in the HH:mm:ss format.
              */
             public Builder silenceEndTime(String silenceEndTime) {
                 this.silenceEndTime = silenceEndTime;
@@ -442,7 +460,7 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * SilenceStartTime.
+             * The beginning of the time range for silence. The time is in the HH:mm:ss format.
              */
             public Builder silenceStartTime(String silenceStartTime) {
                 this.silenceStartTime = silenceStartTime;
@@ -450,7 +468,7 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * TopicTypes.
+             * The types of event alerts, which are event-specific configurations.
              */
             public Builder topicTypes(java.util.List < String > topicTypes) {
                 this.topicTypes = topicTypes;
@@ -458,7 +476,7 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * Webhooks.
+             * The webhook URLs.
              */
             public Builder webhooks(java.util.List < String > webhooks) {
                 this.webhooks = webhooks;
@@ -511,7 +529,7 @@ public class GetBaselineResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * Cycle.
+             * The cycle that corresponds to the committed completion time. For a day-level baseline, the value of this parameter is 1. For an hour-level baseline, the value of this parameter cannot exceed 24.
              */
             public Builder cycle(Integer cycle) {
                 this.cycle = cycle;
@@ -519,7 +537,7 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The committed completion time in the hh:mm format. Valid values of hh: \[0,47]. Valid values of mm: \[0,59].
              */
             public Builder time(String time) {
                 this.time = time;
@@ -708,7 +726,7 @@ public class GetBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * AlertSettings.
+             * The alert settings.
              */
             public Builder alertSettings(java.util.List < AlertSettings> alertSettings) {
                 this.alertSettings = alertSettings;

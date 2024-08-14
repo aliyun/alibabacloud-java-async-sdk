@@ -142,7 +142,7 @@ public class ListRefDISyncTasksRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the DataWorks workspace resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -160,7 +160,7 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number. Valid values: 1 to 100.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -169,7 +169,7 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -178,7 +178,7 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -187,11 +187,11 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The condition used to filter sync nodes. Valid values:
+         * The condition used to filter synchronization tasks. Valid values:
          * <p>
          * 
-         * *   from: queries the sync nodes that use the data source as the source data source.
-         * *   to: queries the sync nodes that use the data source as the destination data source.
+         * *   from: queries the synchronization tasks that use the data source as the source.
+         * *   to: queries the synchronization tasks that use the data source as the destination.
          */
         public Builder refType(String refType) {
             this.putQueryParameter("RefType", refType);
@@ -200,13 +200,13 @@ public class ListRefDISyncTasksRequest extends Request {
         }
 
         /**
-         * The type of the sync node that you want to query. Valid values:
+         * The type of the synchronization task that you want to query. Valid values:
          * <p>
          * 
-         * *   DI_OFFLINE: batch sync node
-         * *   DI_REALTIME: real-time sync node
+         * *   DI_OFFLINE: batch synchronization task
+         * *   DI_REALTIME: real-time synchronization task
          * 
-         * You can specify only one type. The sync solution type is not supported.
+         * You can call the ListRefDISyncTasks operation to query only one type of the task.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

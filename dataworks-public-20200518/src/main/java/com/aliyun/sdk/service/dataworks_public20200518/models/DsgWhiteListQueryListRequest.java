@@ -121,7 +121,7 @@ public class DsgWhiteListQueryListRequest extends Request {
         }
 
         /**
-         * DataType.
+         * The keyword of the sensitive field type.
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -130,7 +130,7 @@ public class DsgWhiteListQueryListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,7 +139,7 @@ public class DsgWhiteListQueryListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +148,7 @@ public class DsgWhiteListQueryListRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * The ID of the level-2 data masking scenario. You can call the [DsgSceneQuerySceneListByName](~~2786322~~) operation to query the list of IDs.
          */
         public Builder sceneId(Long sceneId) {
             this.putQueryParameter("SceneId", sceneId);

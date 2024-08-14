@@ -49,10 +49,7 @@ public class ListProjectIdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IDs of the DataWorks workspaces.
-         * <p>
-         * 
-         * The IDs of the workspaces on which the specific Alibaba Cloud account has permissions were returned. In this example, a single workspace ID is used.
+         * The IDs of the DataWorks workspaces. The IDs of the workspaces on which the desired Alibaba Cloud account has permissions were returned.
          */
         public Builder projectIds(java.util.List < Long > projectIds) {
             this.projectIds = projectIds;
@@ -60,7 +57,7 @@ public class ListProjectIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can troubleshoot errors based on the ID.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

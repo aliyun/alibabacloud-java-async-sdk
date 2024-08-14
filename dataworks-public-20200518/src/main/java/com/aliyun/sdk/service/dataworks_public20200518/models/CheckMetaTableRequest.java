@@ -132,7 +132,7 @@ public class CheckMetaTableRequest extends Request {
         }
 
         /**
-         * The name of the EMR table.
+         * The E-MapReduce (EMR) cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -141,7 +141,7 @@ public class CheckMetaTableRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The type of the data source. Valid values: odps and emr.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -150,7 +150,7 @@ public class CheckMetaTableRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * The name of the metadatabase of the EMR cluster.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -159,7 +159,7 @@ public class CheckMetaTableRequest extends Request {
         }
 
         /**
-         * The name of the EMR database.
+         * The GUID of the metatable.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -168,7 +168,7 @@ public class CheckMetaTableRequest extends Request {
         }
 
         /**
-         * Indicates whether the table exists.
+         * The name of the EMR metatable.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

@@ -77,7 +77,12 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaRequest extends Request {
         }
 
         /**
-         * EngineName.
+         * The type of the compute engine. Valid values:
+         * <p>
+         * 
+         * *   ODPS.ODPS
+         * *   EMR
+         * *   HOLO.POSTGRES
          */
         public Builder engineName(String engineName) {
             this.putQueryParameter("EngineName", engineName);

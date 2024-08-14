@@ -239,7 +239,7 @@ public class CreateUdfFileRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -302,7 +302,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+         * The type of the function. Valid values: MATH, AGGREGATE, STRING, DATE, ANALYTIC, and OTHER. This parameter corresponds to the Function Type parameter in the Register Function section of the configuration tab of the function on the DataStudio page.
          */
         public Builder functionType(String functionType) {
             this.putBodyParameter("FunctionType", functionType);
@@ -311,7 +311,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * The description of the input parameters of the function. This parameter corresponds to the Parameter Description parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+         * The description of the input parameters of the function. This parameter corresponds to the Parameter Description parameter in the Register Function section of the configuration tab of the function on the DataStudio page.
          */
         public Builder parameterDescription(String parameterDescription) {
             this.putBodyParameter("ParameterDescription", parameterDescription);
@@ -350,7 +350,7 @@ public class CreateUdfFileRequest extends Request {
         }
 
         /**
-         * The description of the return value of the function. This parameter corresponds to the Return Value parameter in the Register Function section of the configuration tab of the function in the DataWorks console.
+         * The description of the return value of the function. This parameter corresponds to the Return Value parameter in the Register Function section of the configuration tab of the function on the DataStudio page.
          */
         public Builder returnValue(String returnValue) {
             this.putBodyParameter("ReturnValue", returnValue);

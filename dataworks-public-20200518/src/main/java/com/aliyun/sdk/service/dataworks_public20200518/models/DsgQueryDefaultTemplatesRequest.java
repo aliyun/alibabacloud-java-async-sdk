@@ -77,7 +77,7 @@ public class DsgQueryDefaultTemplatesRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * The ID of the level-2 data masking scenario. You can call the [DsgSceneQuerySceneListByName](~~2786322~~) operation to query the list of IDs.
          */
         public Builder sceneId(Integer sceneId) {
             this.putQueryParameter("SceneId", sceneId);

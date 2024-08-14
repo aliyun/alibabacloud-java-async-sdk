@@ -146,7 +146,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The name of the metadatabase.
+         * The GUID of the MaxCompute project. Specify the GUID in the `odps.{projectName}` format. You must configure this parameter only if you set the DataSourceType parameter to odps.
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -155,7 +155,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * The E-MapReduce (EMR) cluster ID. You must configure this parameter only if you set the DataSourceType parameter to emr.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -164,7 +164,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The business data.
+         * The type of the data source. Valid values: odps and emr.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -173,7 +173,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The name of the metadatabase.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -182,7 +182,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the `odps.{projectName}` format. This parameter must be configured if you set the DataSourceType parameter to odps.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -191,7 +191,7 @@ public class GetMetaDBTableListRequest extends Request {
         }
 
         /**
-         * The ID of the E-MapReduce (EMR) cluster. This parameter must be configured if you set the DataSourceType parameter to emr.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

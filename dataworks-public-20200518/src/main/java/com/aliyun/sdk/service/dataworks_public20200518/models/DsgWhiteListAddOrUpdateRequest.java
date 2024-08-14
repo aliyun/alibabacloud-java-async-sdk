@@ -77,7 +77,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
         }
 
         /**
-         * WhiteLists.
+         * A collection of whitelists.
          */
         public Builder whiteLists(java.util.List < WhiteLists> whiteLists) {
             String whiteListsShrink = shrink(whiteLists, "WhiteLists", "json");
@@ -171,7 +171,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             private java.util.List < Integer > userGroupIds; 
 
             /**
-             * EndTime.
+             * The end of the time range to query. If you enter null, the whitelist is valid permanently.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -179,7 +179,11 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             }
 
             /**
-             * Id.
+             * The ID of the data masking whitelist.
+             * <p>
+             * 
+             * *   If you do not configure this parameter, the current operation is to add a data masking whitelist.
+             * *   If you configure this parameter, the current operation is to modify a data masking whitelist. You can call the [DsgWhiteListQueryList](~~2786508~~) operation to query the whitelist ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -187,7 +191,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             }
 
             /**
-             * RuleId.
+             * The ID of the data masking rule. You can call the [DsgDesensPlanQueryList](~~2786578~~) operation to query the ID of the data masking rule.
              */
             public Builder ruleId(Integer ruleId) {
                 this.ruleId = ruleId;
@@ -195,7 +199,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range to query.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -203,7 +207,7 @@ public class DsgWhiteListAddOrUpdateRequest extends Request {
             }
 
             /**
-             * UserGroupIds.
+             * A collection of user group IDs.
              */
             public Builder userGroupIds(java.util.List < Integer > userGroupIds) {
                 this.userGroupIds = userGroupIds;

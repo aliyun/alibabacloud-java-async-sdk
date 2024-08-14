@@ -97,7 +97,7 @@ public class ListNodeIOResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The node information.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class ListNodeIOResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +201,7 @@ public class ListNodeIOResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * Data.
+             * The name of the ancestor or descendant node.
              */
             public Builder data(String data) {
                 this.data = data;
@@ -209,7 +209,7 @@ public class ListNodeIOResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -217,7 +217,7 @@ public class ListNodeIOResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the input or output table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

@@ -97,7 +97,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The total number of entries returned.
+         * The data structure of the check results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page. Default value: 10. Maximum value: 100.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure of the monitoring results returned.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +225,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The sample values.
+             * The data timestamp. In most cases, if the monitored business entity is offline data, the value is one day before the monitoring is performed.
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -233,7 +233,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring result.
+             * The values of the sample field that are grouped by using the GROUP BY clause. For example, the values of the Gender field are grouped by using the GROUP BY clause. In this case, the values of the DiscreteProperty parameter are Male, Female, and null.
              */
             public Builder discreteProperty(String discreteProperty) {
                 this.discreteProperty = discreteProperty;
@@ -241,7 +241,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the sample field that are grouped by using the GROUP BY clause. For example, the values of the Gender field are grouped by using the GROUP BY clause. In this case, the values of DiscreteProperty are Male, Female, and null.
+             * The check result.
              */
             public Builder singleCheckResult(Integer singleCheckResult) {
                 this.singleCheckResult = singleCheckResult;
@@ -249,7 +249,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
+             * The threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -257,7 +257,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold.
+             * The check value.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -322,7 +322,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * The sample values.
+             * The data timestamp. In most cases, if the monitored business entity is offline data, the value is one day before the monitoring is performed.
              */
             public Builder bizDate(String bizDate) {
                 this.bizDate = bizDate;
@@ -330,7 +330,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring result.
+             * The values of the sample field that are grouped by using the GROUP BY clause. For example, the values of the Gender field are grouped by using the GROUP BY clause. In this case, the values of the DiscreteProperty parameter are Male, Female, and null.
              */
             public Builder discreteProperty(String discreteProperty) {
                 this.discreteProperty = discreteProperty;
@@ -338,7 +338,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold.
+             * The current sample value.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -859,7 +859,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             private String whereCondition; 
 
             /**
-             * The trend of the monitoring result.
+             * The monitored partition in the data source table.
              */
             public Builder actualExpression(String actualExpression) {
                 this.actualExpression = actualExpression;
@@ -867,11 +867,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the monitoring result is the same as the predicted result. Valid values:
-             * <p>
-             * 
-             * *   true: indicates that the monitoring result is the same as the predicted result.
-             * *   false: indicates that the monitoring result is different from the predicted result.
+             * The time when the monitoring started.
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -879,7 +875,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The partition filter expression.
+             * The data timestamp. In most cases, if the monitored business entity is offline data, the value is one day before the monitoring is performed.
              */
             public Builder bizDate(Long bizDate) {
                 this.bizDate = bizDate;
@@ -887,7 +883,11 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table that is monitored.
+             * The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:
+             * <p>
+             * 
+             * *   1: the monitoring rule is a strong rule.
+             * *   0: the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
              */
             public Builder blockType(Integer blockType) {
                 this.blockType = blockType;
@@ -895,186 +895,15 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring type. Valid values:
+             * The check result. The value of this parameter is the same as the value of the CheckResultStatus parameter. Valid values:
              * <p>
              * 
-             * *   1: VOLATILITY_CHECK
-             * *   2: FIXEDVALUE_CHECK
+             * *   0: indicates that the data source table is normal.
+             * *   1: indicates that a warning alert is reported.
+             * *   2: indicates that a critical alert is reported.
              */
             public Builder checkResult(Integer checkResult) {
                 this.checkResult = checkResult;
-                return this;
-            }
-
-            /**
-             * The ID of the monitoring rule.
-             */
-            public Builder checkResultStatus(Integer checkResultStatus) {
-                this.checkResultStatus = checkResultStatus;
-                return this;
-            }
-
-            /**
-             * The method used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
-             */
-            public Builder checkerId(Integer checkerId) {
-                this.checkerId = checkerId;
-                return this;
-            }
-
-            /**
-             * The comparison operator.
-             */
-            public Builder checkerName(String checkerName) {
-                this.checkerName = checkerName;
-                return this;
-            }
-
-            /**
-             * The type of the scheduling cycle. In most cases, the value of this parameter is YMD. This value indicates year, month, and day.
-             */
-            public Builder checkerType(Integer checkerType) {
-                this.checkerType = checkerType;
-                return this;
-            }
-
-            /**
-             * The name of the checker.
-             */
-            public Builder comment(String comment) {
-                this.comment = comment;
-                return this;
-            }
-
-            /**
-             * The ID of the checker.
-             */
-            public Builder criticalThreshold(Float criticalThreshold) {
-                this.criticalThreshold = criticalThreshold;
-                return this;
-            }
-
-            /**
-             * The name of the monitoring rule.
-             */
-            public Builder dateType(String dateType) {
-                this.dateType = dateType;
-                return this;
-            }
-
-            /**
-             * The lower limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specified.
-             */
-            public Builder discreteCheck(Boolean discreteCheck) {
-                this.discreteCheck = discreteCheck;
-                return this;
-            }
-
-            /**
-             * The ID of the partition filter expression.
-             */
-            public Builder endTime(Long endTime) {
-                this.endTime = endTime;
-                return this;
-            }
-
-            /**
-             * The ID of the monitoring template.
-             */
-            public Builder entityId(Long entityId) {
-                this.entityId = entityId;
-                return this;
-            }
-
-            /**
-             * The ID of the primary key.
-             */
-            public Builder expectValue(Float expectValue) {
-                this.expectValue = expectValue;
-                return this;
-            }
-
-            /**
-             * The type of the scheduling system. Only CWF scheduling systems are supported.
-             */
-            public Builder externalId(String externalId) {
-                this.externalId = externalId;
-                return this;
-            }
-
-            /**
-             * The string of the monitoring result.
-             */
-            public Builder externalType(String externalType) {
-                this.externalType = externalType;
-                return this;
-            }
-
-            /**
-             * The partition in the monitored data source table.
-             */
-            public Builder fixedCheck(Boolean fixedCheck) {
-                this.fixedCheck = fixedCheck;
-                return this;
-            }
-
-            /**
-             * The check value.
-             */
-            public Builder id(Long id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * Indicates whether the monitoring is discrete monitoring. Valid values:
-             * <p>
-             * 
-             * *   true: indicates that the monitoring is discrete monitoring.
-             * *   false: indicates that the monitoring is not discrete monitoring.
-             */
-            public Builder isPrediction(Boolean isPrediction) {
-                this.isPrediction = isPrediction;
-                return this;
-            }
-
-            /**
-             * The expected value.
-             */
-            public Builder lowerValue(Float lowerValue) {
-                this.lowerValue = lowerValue;
-                return this;
-            }
-
-            /**
-             * The time when the monitoring started.
-             */
-            public Builder matchExpression(String matchExpression) {
-                this.matchExpression = matchExpression;
-                return this;
-            }
-
-            /**
-             * The filter condition of the monitoring rule.
-             */
-            public Builder methodName(String methodName) {
-                this.methodName = methodName;
-                return this;
-            }
-
-            /**
-             * The ID of the node.
-             */
-            public Builder op(String op) {
-                this.op = op;
-                return this;
-            }
-
-            /**
-             * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.
-             */
-            public Builder projectName(String projectName) {
-                this.projectName = projectName;
                 return this;
             }
 
@@ -1086,13 +915,198 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
              * *   1: indicates that a warning alert is reported.
              * *   2: indicates that a critical alert is reported.
              */
+            public Builder checkResultStatus(Integer checkResultStatus) {
+                this.checkResultStatus = checkResultStatus;
+                return this;
+            }
+
+            /**
+             * The checker ID.
+             */
+            public Builder checkerId(Integer checkerId) {
+                this.checkerId = checkerId;
+                return this;
+            }
+
+            /**
+             * The name of the checker.
+             */
+            public Builder checkerName(String checkerName) {
+                this.checkerName = checkerName;
+                return this;
+            }
+
+            /**
+             * The check type. Valid values:
+             * <p>
+             * 
+             * *   0: indicates that the monitoring is performed based on a fixed value.
+             * *   1: indicates that the monitoring is performed based on a non-fixed value.
+             * *   2: indicates that the monitoring is performed based on a dynamic threshold.
+             */
+            public Builder checkerType(Integer checkerType) {
+                this.checkerType = checkerType;
+                return this;
+            }
+
+            /**
+             * The description of the monitoring rule.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
+
+            /**
+             * The threshold for a critical alert. The threshold indicates the deviation of the check result from the expected value. You can specify a value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
+             */
+            public Builder criticalThreshold(Float criticalThreshold) {
+                this.criticalThreshold = criticalThreshold;
+                return this;
+            }
+
+            /**
+             * The scheduling frequency. In most cases, the value of this parameter is YMD. This value indicates year, month, and day.
+             */
+            public Builder dateType(String dateType) {
+                this.dateType = dateType;
+                return this;
+            }
+
+            /**
+             * Indicates whether the monitoring is discrete monitoring. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             */
+            public Builder discreteCheck(Boolean discreteCheck) {
+                this.discreteCheck = discreteCheck;
+                return this;
+            }
+
+            /**
+             * The deadline for querying the check result.
+             */
+            public Builder endTime(Long endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * The ID of the partition filter expression.
+             */
+            public Builder entityId(Long entityId) {
+                this.entityId = entityId;
+                return this;
+            }
+
+            /**
+             * The expected value.
+             */
+            public Builder expectValue(Float expectValue) {
+                this.expectValue = expectValue;
+                return this;
+            }
+
+            /**
+             * The node ID.
+             */
+            public Builder externalId(String externalId) {
+                this.externalId = externalId;
+                return this;
+            }
+
+            /**
+             * The type of the scheduling system. Only CWF scheduling systems are supported.
+             */
+            public Builder externalType(String externalType) {
+                this.externalType = externalType;
+                return this;
+            }
+
+            /**
+             * Indicates whether the monitoring is performed based on a fixed value. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             */
+            public Builder fixedCheck(Boolean fixedCheck) {
+                this.fixedCheck = fixedCheck;
+                return this;
+            }
+
+            /**
+             * The primary key ID.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Indicates whether the check result is the same as the predicted result. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             */
+            public Builder isPrediction(Boolean isPrediction) {
+                this.isPrediction = isPrediction;
+                return this;
+            }
+
+            /**
+             * The lower limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.
+             */
+            public Builder lowerValue(Float lowerValue) {
+                this.lowerValue = lowerValue;
+                return this;
+            }
+
+            /**
+             * The partition filter expression.
+             */
+            public Builder matchExpression(String matchExpression) {
+                this.matchExpression = matchExpression;
+                return this;
+            }
+
+            /**
+             * The method used to collect sample data, such as such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
+             */
+            public Builder methodName(String methodName) {
+                this.methodName = methodName;
+                return this;
+            }
+
+            /**
+             * The comparison operator.
+             */
+            public Builder op(String op) {
+                this.op = op;
+                return this;
+            }
+
+            /**
+             * The name of the compute engine or data source for which data quality is monitored.
+             */
+            public Builder projectName(String projectName) {
+                this.projectName = projectName;
+                return this;
+            }
+
+            /**
+             * The field whose data quality is checked based on the monitoring rule. This field is a column in the data source table that is monitored.
+             */
             public Builder property(String property) {
                 this.property = property;
                 return this;
             }
 
             /**
-             * The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
+             * The historical sample values.
              */
             public Builder referenceValue(java.util.List < ReferenceValue> referenceValue) {
                 this.referenceValue = referenceValue;
@@ -1100,7 +1114,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compute engine instance or data source for which data quality is monitored.
+             * The string of the check result.
              */
             public Builder resultString(String resultString) {
                 this.resultString = resultString;
@@ -1108,7 +1122,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specified.
+             * The ID of the monitoring rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -1116,7 +1130,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the monitoring ended.
+             * The name of the monitoring rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -1132,7 +1146,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the monitoring template.
+             * The name of the table that is monitored.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1140,7 +1154,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the sample field that are grouped by using the GROUP BY clause. For example, the values of the Gender field are grouped by using the GROUP BY clause. In this case, the values of DiscreteProperty are Male, Female, and null.
+             * The monitoring task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1148,7 +1162,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The historical sample values.
+             * The ID of the monitoring template.
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -1156,11 +1170,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the monitoring is performed based on a fixed value. Valid values:
-             * <p>
-             * 
-             * *   true: indicates that the monitoring is performed based on a fixed value.
-             * *   false: indicates that the monitoring is performed based on a non-fixed value.
+             * The name of the monitoring template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1168,7 +1178,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp. If the monitored business entity is offline data, the value is usually one day before the monitoring is performed.
+             * The time that was taken to run the monitoring task. Unit: seconds.
              */
             public Builder timeCost(String timeCost) {
                 this.timeCost = timeCost;
@@ -1176,12 +1186,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The monitoring result. The value of this parameter is the same as the value of the CheckResultStatus parameter. Valid values:
-             * <p>
-             * 
-             * *   0: indicates that the data source table is normal.
-             * *   1: indicates that a warning alert is reported.
-             * *   2: indicates that a critical alert is reported.
+             * The trend of the check result.
              */
             public Builder trend(String trend) {
                 this.trend = trend;
@@ -1189,7 +1194,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The time that was taken to run the monitoring task. Unit: seconds.
+             * The upper limit of the predicted result. The value of this parameter is automatically generated based on the threshold that you specify.
              */
             public Builder upperValue(Float upperValue) {
                 this.upperValue = upperValue;
@@ -1197,7 +1202,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the monitoring rule.
+             * The threshold for a warning alert. The threshold indicates the deviation of the check result from the expected value. You can customize this threshold based on your business requirements.
              */
             public Builder warningThreshold(Float warningThreshold) {
                 this.warningThreshold = warningThreshold;
@@ -1205,7 +1210,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the monitoring task.
+             * The filter condition of the monitoring rule.
              */
             public Builder whereCondition(String whereCondition) {
                 this.whereCondition = whereCondition;
@@ -1282,7 +1287,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The monitoring results returned.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1290,14 +1295,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the monitoring rule. The type of a monitoring rule indicates the importance of the rule. Valid values:
-             * <p>
-             * 
-             * *   1: indicates that the monitoring rule is a strong rule.
-             * 
-             * *   0: indicates that the monitoring rule is a weak rule.
-             * 
-             *     You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and a critical alert is triggered, nodes are blocked.
+             * The number of entries per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1305,7 +1303,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The field of the rule attribute. This field is the column name of the data source table that is monitored.
+             * The returned check results.
              */
             public Builder ruleChecks(java.util.List < RuleChecks> ruleChecks) {
                 this.ruleChecks = ruleChecks;
@@ -1313,7 +1311,7 @@ public class ListQualityResultsByEntityResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

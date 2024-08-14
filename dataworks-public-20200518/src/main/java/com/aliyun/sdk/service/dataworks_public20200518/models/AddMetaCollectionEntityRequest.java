@@ -116,10 +116,7 @@ public class AddMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The unique identifier of the entity.
-         * <p>
-         * 
-         * Example: maxcompute-table.projectA.tableA.
+         * The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
          */
         public Builder entityQualifiedName(String entityQualifiedName) {
             this.putQueryParameter("EntityQualifiedName", entityQualifiedName);
@@ -128,7 +125,7 @@ public class AddMetaCollectionEntityRequest extends Request {
         }
 
         /**
-         * The remarks on the entity. Example: latest product table.
+         * The remarks of the entity. Example: latest product table.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

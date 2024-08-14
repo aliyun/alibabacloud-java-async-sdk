@@ -126,7 +126,7 @@ public class UpdateTableLevelRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -144,7 +144,7 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The ID of the table level to be updated. You can call the ListTableLevel operation to obtain the ID.
+         * The ID of the table level. You can call the ListTableLevel operation to query the ID.
          */
         public Builder levelId(Long levelId) {
             this.putQueryParameter("LevelId", levelId);
@@ -153,7 +153,7 @@ public class UpdateTableLevelRequest extends Request {
         }
 
         /**
-         * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
+         * The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);

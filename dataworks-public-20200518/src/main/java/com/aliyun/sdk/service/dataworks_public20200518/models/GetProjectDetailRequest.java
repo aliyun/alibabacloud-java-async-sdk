@@ -77,7 +77,7 @@ public class GetProjectDetailRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

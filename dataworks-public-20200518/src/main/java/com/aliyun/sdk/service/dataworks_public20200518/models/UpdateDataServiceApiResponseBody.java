@@ -97,7 +97,7 @@ public class UpdateDataServiceApiResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the information about the API is updated.
+         * Indicates whether the information about the API was updated.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -129,7 +129,7 @@ public class UpdateDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

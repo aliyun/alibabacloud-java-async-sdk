@@ -97,7 +97,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class GetAlertMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -225,7 +229,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -233,7 +237,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -241,7 +245,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -249,7 +253,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the node belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -257,7 +261,17 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * *   NOT_RUN
+             * *   WAIT_TIME
+             * *   WAIT_RESOURCE
+             * *   RUNNING
+             * *   CHECKING
+             * *   CHECKING_CONDITION
+             * *   FAILURE
+             * *   SUCCESS
              */
             public Builder status(String status) {
                 this.status = status;
@@ -334,7 +348,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * NodeId.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -342,7 +356,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -350,7 +364,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -358,7 +372,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the node belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -471,7 +485,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * BaselineId.
+             * The baseline ID.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -479,7 +493,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineName.
+             * The name of the baseline.
              */
             public Builder baselineName(String baselineName) {
                 this.baselineName = baselineName;
@@ -487,7 +501,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * BaselineOwner.
+             * The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).
              */
             public Builder baselineOwner(String baselineOwner) {
                 this.baselineOwner = baselineOwner;
@@ -495,7 +509,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Bizdate.
+             * The data timestamp of the baseline instance.
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -503,7 +517,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * InGroupId.
+             * The ID of the cycle of the baseline instance. Valid values of the ID of an hour-level cycle: \[1,24]. The ID of a day-level cycle is 1.
              */
             public Builder inGroupId(Integer inGroupId) {
                 this.inGroupId = inGroupId;
@@ -511,7 +525,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the baseline belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -519,7 +533,13 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the baseline. Valid values:
+             * <p>
+             * 
+             * *   ERROR
+             * *   SAFE
+             * *   DANGEROUS
+             * *   OVER
              */
             public Builder status(String status) {
                 this.status = status;
@@ -620,7 +640,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             private String topicStatus; 
 
             /**
-             * InstanceId.
+             * The ID of the instance that triggered the event.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -628,7 +648,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node that triggered the event.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -636,7 +656,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * TopicId.
+             * The event ID.
              */
             public Builder topicId(Long topicId) {
                 this.topicId = topicId;
@@ -644,7 +664,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * TopicName.
+             * The name of the event.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;
@@ -652,7 +672,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * TopicOwner.
+             * The ID of the Alibaba Cloud account used by the event owner.
              */
             public Builder topicOwner(String topicOwner) {
                 this.topicOwner = topicOwner;
@@ -660,7 +680,13 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * TopicStatus.
+             * The status of the event. Valid values:
+             * <p>
+             * 
+             * *   IGNORE
+             * *   NEW
+             * *   FIXING
+             * *   RECOVER
              */
             public Builder topicStatus(String topicStatus) {
                 this.topicStatus = topicStatus;
@@ -845,7 +871,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             private java.util.List < Topics> topics; 
 
             /**
-             * AlertId.
+             * The alert ID.
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -853,7 +879,13 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * AlertMessageStatus.
+             * The sending status of the notification. Valid values:
+             * <p>
+             * 
+             * *   READY_TO_SEND: The notification is waiting to be sent.
+             * *   SEND_FAIL: The notification fails to be sent.
+             * *   SEND_SUCCESS: The notification is sent.
+             * *   SEND_OVERLIMIT: The number of notifications that are sent exceeds the upper limit.
              */
             public Builder alertMessageStatus(String alertMessageStatus) {
                 this.alertMessageStatus = alertMessageStatus;
@@ -861,7 +893,12 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * AlertMethod.
+             * The notification method. Valid values:
+             * <p>
+             * 
+             * *   MAIL.
+             * *   SMS.
+             * *   PHONE. Only DataWorks Professional Edition and more advanced editions support the PHONE notification method.
              */
             public Builder alertMethod(String alertMethod) {
                 this.alertMethod = alertMethod;
@@ -869,7 +906,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTime.
+             * The time when the alert was reported.
              */
             public Builder alertTime(Long alertTime) {
                 this.alertTime = alertTime;
@@ -877,7 +914,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * AlertUser.
+             * The ID of the Alibaba Cloud account used by the alert recipient.
              */
             public Builder alertUser(String alertUser) {
                 this.alertUser = alertUser;
@@ -885,7 +922,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The content of the alert.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -893,7 +930,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Instances.
+             * The instances that triggered the custom alert rule. This parameter is returned if the value of the Source parameter is REMIND_ALERT. This parameter is left empty if the value of the Source parameter is not REMIND_ALERT.
              */
             public Builder instances(java.util.List < Instances> instances) {
                 this.instances = instances;
@@ -901,7 +938,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Nodes.
+             * The nodes returned for different alert sources. The nodes that form a loop are returned if the value of the Source parameter is NODE_CYCLE_ALERT. The nodes that are isolated are returned if the value of the Source parameter is NODE_LONELY_ALERT.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;
@@ -909,7 +946,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * RemindId.
+             * The ID of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.
              */
             public Builder remindId(Long remindId) {
                 this.remindId = remindId;
@@ -917,7 +954,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * RemindName.
+             * The name of the custom alert rule that was triggered. This parameter is returned if the value of the Source parameter is REMIND_ALERT.
              */
             public Builder remindName(String remindName) {
                 this.remindName = remindName;
@@ -925,7 +962,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * SlaAlert.
+             * The basic information about the baseline instance that triggered an alert. This parameter is returned if the value of the Source parameter is SLA_ALERT. This parameter is left empty if the value of the Source parameter is not SLA_ALERT.
              */
             public Builder slaAlert(SlaAlert slaAlert) {
                 this.slaAlert = slaAlert;
@@ -933,7 +970,14 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The type of the alert. Valid values:
+             * <p>
+             * 
+             * *   REMIND_ALERT: The alert is a custom alert.
+             * *   TOPIC_ALERT: The alert is an event alert.
+             * *   SLA_ALERT: The alert is a baseline alert.
+             * *   NODE_CYCLE_ALERT: The alert is reported for a node dependency loop.
+             * *   NODE_LONELY_ALERT: The alert is reported for isolated nodes.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -941,7 +985,7 @@ public class GetAlertMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Topics.
+             * The events that triggered alerts. This parameter is returned if the value of the Source parameter is TOPIC_ALERT. This parameter is left empty if the value of the Source parameter is not TOPIC_ALERT.
              */
             public Builder topics(java.util.List < Topics> topics) {
                 this.topics = topics;

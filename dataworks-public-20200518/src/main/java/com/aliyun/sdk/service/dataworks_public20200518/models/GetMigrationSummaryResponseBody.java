@@ -61,7 +61,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the migration task.
+         * The details of the migration task.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,11 +69,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request is successful.
-         * *   false: The request fails. You can locate the error based on the request ID.
+         * The request ID. You can use the request ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +77,11 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the migration task.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +217,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the user who manages the migration task.
+             * The ID of the user who created the task.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -225,7 +225,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadUrl.
+             * The URL that is used to download the package of the export task. You can use the URL to download the package of the export task.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -233,7 +233,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration task was modified.
+             * The time when the task was created.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -241,7 +241,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who creates the migration task.
+             * The time when the task was modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -249,7 +249,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the migration task.
+             * The task ID.
              */
             public Builder migrationId(Long migrationId) {
                 this.migrationId = migrationId;
@@ -257,7 +257,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the migration task was created.
+             * The task name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -265,19 +265,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the migration task. Valid values:
-             * <p>
-             * 
-             * *   INIT: The migration task is initiating.
-             * *   EDITING: The migration task is being edited.
-             * *   IMPORTING: The migration task is importing data objects.
-             * *   IMPORT_ERROR: The migration task fails to import data objects.
-             * *   IMPORT_SUCCESS: Data objects are imported.
-             * *   EXPORTING: The migration task is exporting data objects.
-             * *   EXPORT_ERROR: The migration task fails to export data objects.
-             * *   EXPORT_SUCCESS: The migration task successfully exports data objects.
-             * *   REVOKED: The migration task is canceled.
-             * *   PARTIAL_SUCCESS: The migration task successfully imports or exports only some data objects.
+             * The ID of the user who managed the task.
              */
             public Builder opUser(String opUser) {
                 this.opUser = opUser;
@@ -285,7 +273,7 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the package of the export task.
+             * The ID of the DataWorks workspace to which the migration task belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -293,7 +281,19 @@ public class GetMigrationSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DataWorks workspace.
+             * The status of the migration task. Valid values:
+             * <p>
+             * 
+             * *   INIT
+             * *   EDITING
+             * *   IMPORTING
+             * *   IMPORT_ERROR
+             * *   IMPORT_SUCCESS
+             * *   EXPORTING
+             * *   EXPORT_ERROR
+             * *   EXPORT_SUCCESS
+             * *   REVOKED
+             * *   PARTIAL_SUCCESS
              */
             public Builder status(String status) {
                 this.status = status;

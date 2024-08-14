@@ -97,11 +97,11 @@ public class MountDirectoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * The number of directories that are added. Valid values:
          * <p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * *   0: No directories are added. The left-side navigation pane may contain the specified directory.
+         * *   1: One directory is added.
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -109,7 +109,7 @@ public class MountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code. The value 200 indicates that the task is successful.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -117,7 +117,7 @@ public class MountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -125,7 +125,7 @@ public class MountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -133,7 +133,7 @@ public class MountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned. The value 200 indicates that the add task is successful.
+         * The request ID. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +141,11 @@ public class MountDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -113,7 +113,7 @@ public class TestNetworkConnectionRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the data source resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -131,7 +131,7 @@ public class TestNetworkConnectionRequest extends Request {
         }
 
         /**
-         * The environment to which the data source belongs. Valid values:
+         * The environment in which the data source resides. Valid values:
          * <p>
          * 
          * *   0: development environment
@@ -144,7 +144,7 @@ public class TestNetworkConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
+         * The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

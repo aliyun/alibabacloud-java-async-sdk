@@ -61,7 +61,7 @@ public class CreateExportMigrationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the export task.
+         * The export task ID.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -69,7 +69,7 @@ public class CreateExportMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot errors.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,11 +77,11 @@ public class CreateExportMigrationResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call succeeded.
-         * *   false: The call failed. You can locate errors based on the request ID.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

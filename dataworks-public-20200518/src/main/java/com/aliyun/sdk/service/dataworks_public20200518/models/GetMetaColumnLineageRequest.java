@@ -198,7 +198,7 @@ public class GetMetaColumnLineageRequest extends Request {
         }
 
         /**
-         * The GUID of the field.
+         * The unique identifier of the field.
          */
         public Builder columnGuid(String columnGuid) {
             this.putQueryParameter("ColumnGuid", columnGuid);

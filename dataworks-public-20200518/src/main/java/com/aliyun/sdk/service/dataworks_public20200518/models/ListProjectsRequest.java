@@ -120,7 +120,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The page number. Valid values: 1 to 100.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -129,7 +129,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +138,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The tag key.
+         * The resource group ID.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -147,7 +147,7 @@ public class ListProjectsRequest extends Request {
         }
 
         /**
-         * The tag value.
+         * The tags to add to the workspace.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -202,7 +202,7 @@ public class ListProjectsRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the request.
+             * The key of tag N to add to the workspace.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +210,7 @@ public class ListProjectsRequest extends Request {
             }
 
             /**
-             * The results that are returned.
+             * The value of tag N to add to the workspace.
              */
             public Builder value(String value) {
                 this.value = value;

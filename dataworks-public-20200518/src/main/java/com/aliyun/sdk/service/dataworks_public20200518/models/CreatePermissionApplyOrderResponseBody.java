@@ -49,7 +49,7 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request order. If you request permissions on multiple objects but each object has a different request approver, one request order is generated for each object and is sent to the related approver. In this case, an array is returned.
+         * The request order ID.
          */
         public Builder flowId(java.util.List < String > flowId) {
             this.flowId = flowId;
@@ -57,7 +57,7 @@ public class CreatePermissionApplyOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

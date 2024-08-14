@@ -151,7 +151,13 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * Valid values: 0 (corrected when SQl is completed) and 1 (corrected when task is completed).
+         * This parameter is deprecated.
+         * <p>
+         * 
+         * The value 0 indicates that the partition filter expression is at the SQL level, and the system checks data quality after each SQL statement is executed.
+         * 
+         * *
+         * *
          */
         public Builder entityLevel(Integer entityLevel) {
             this.putBodyParameter("EntityLevel", entityLevel);
@@ -160,7 +166,18 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * The engine or data source type.
+         * The type of the compute engine or data source.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   odps
+         * *   emr
+         * *   hadoop
+         * *   cdh
+         * *   analyticdb_for_mysql
+         * *   hybriddb_for_postgresql
+         * *   holodb
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -169,7 +186,7 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * The partition expression.
+         * The partition filter expression.
          */
         public Builder matchExpression(String matchExpression) {
             this.putBodyParameter("MatchExpression", matchExpression);
@@ -178,7 +195,7 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID. You can log on to the DataWorks console to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -187,7 +204,7 @@ public class CreateQualityEntityRequest extends Request {
         }
 
         /**
-         * The name of the maxcompute project or data source.
+         * The name of the compute engine or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

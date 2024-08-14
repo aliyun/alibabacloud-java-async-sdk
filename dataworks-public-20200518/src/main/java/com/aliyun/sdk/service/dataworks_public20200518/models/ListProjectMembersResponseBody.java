@@ -49,7 +49,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The results that are returned.
+         * The returned results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -133,10 +133,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String projectRoleType; 
 
             /**
-             * The code of the role.
-             * <p>
-             * 
-             * DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
+             * The code of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
              */
             public Builder projectRoleCode(String projectRoleCode) {
                 this.projectRoleCode = projectRoleCode;
@@ -152,10 +149,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the role.
-             * <p>
-             * 
-             * DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
+             * The name of the role. DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
              */
             public Builder projectRoleName(String projectRoleName) {
                 this.projectRoleName = projectRoleName;
@@ -403,7 +397,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page. Valid values: 1 to 100. Default value: 10.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -411,7 +405,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The information of members in the DataWorks workspace.
+             * The information about members in the DataWorks workspace.
              */
             public Builder projectMemberList(java.util.List < ProjectMemberList> projectMemberList) {
                 this.projectMemberList = projectMemberList;

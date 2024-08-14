@@ -49,7 +49,7 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceCounts.
+         * The quantity trend of instances.
          */
         public Builder instanceCounts(java.util.List < InstanceCounts> instanceCounts) {
             this.instanceCounts = instanceCounts;
@@ -57,7 +57,7 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
             private Long date; 
 
             /**
-             * Count.
+             * The number of instances.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -117,7 +117,7 @@ public class GetInstanceCountTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Date.
+             * The data timestamp.
              */
             public Builder date(Long date) {
                 this.date = date;

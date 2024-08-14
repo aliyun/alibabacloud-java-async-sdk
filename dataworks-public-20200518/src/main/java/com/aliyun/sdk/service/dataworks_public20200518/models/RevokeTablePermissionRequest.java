@@ -141,7 +141,7 @@ public class RevokeTablePermissionRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the MaxCompute project that contains the table resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -150,10 +150,7 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * The permissions that you want to revoke. Separate multiple permissions with commas (,).
-         * <p>
-         * 
-         * You can revoke only the SELECT, DESCRIBE, and DOWNLOAD permissions on MaxCompute tables.
+         * The permissions that you want to revoke. Separate multiple permissions with commas (,). You can revoke only the SELECT, DESCRIBE, and DOWNLOAD permissions on MaxCompute tables.
          */
         public Builder actions(String actions) {
             this.putQueryParameter("Actions", actions);
@@ -162,7 +159,7 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute project to which the table belongs. You can log on to the DataWorks console and go to the Workspace Management page to obtain the MaxCompute project name.
+         * The name of the MaxCompute project to which the table belongs. You can log on to the DataWorks console and go to the SettingCenter page to obtain the name of the MaxCompute project that you associate with the workspace.
          */
         public Builder maxComputeProjectName(String maxComputeProjectName) {
             this.putQueryParameter("MaxComputeProjectName", maxComputeProjectName);
@@ -171,10 +168,7 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account from which you want to revoke permissions. You can log on to the DataWorks console and go to the Security Settings page to obtain the ID.
-         * <p>
-         * 
-         * You must specify either this parameter or RevokeUserName. If you specify both this parameter and RevokeUserName, the value of this parameter prevails.
+         * The ID of the Alibaba Cloud account from which you want to revoke permissions. You can log on to the DataWorks console and go to the Security Settings page to obtain the ID. You must specify either this parameter or the RevokeUserName parameter. If you specify both this parameter and the RevokeUserName parameter and the parameter values are different, the value of this parameter prevails.
          */
         public Builder revokeUserId(String revokeUserId) {
             this.putQueryParameter("RevokeUserId", revokeUserId);
@@ -186,10 +180,10 @@ public class RevokeTablePermissionRequest extends Request {
          * The Alibaba Cloud account from which you want to revoke permissions. Specify this parameter in the format that is the same as the format of the account used to access the MaxCompute project.
          * <p>
          * 
-         * *   If you want to revoke permissions from an Alibaba Cloud account, specify this parameter in the ALIYUN$+Alibaba Cloud account format.
-         * *   If you want to revoke permissions from a Resource Access Management (RAM) user, specify this parameter in the RAM$+RAM user format.
+         * *   If the account is an Alibaba Cloud account, the value is in the ALIYUN$+Account name format.
+         * *   If the account is a RAM user, the value is in the RAM$+Account name format.
          * 
-         * You must specify either this parameter or RevokeUserId. If you specify both this parameter and RevokeUserId, the value of RevokeUserId prevails.
+         * You must specify either this parameter or the RevokeUserId parameter. If you specify both this parameter and the RevokeUserId parameter and the parameter values are different, the value of the RevokeUserId parameter prevails.
          */
         public Builder revokeUserName(String revokeUserName) {
             this.putQueryParameter("RevokeUserName", revokeUserName);
@@ -198,7 +192,7 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute table. You can call the [SearchMetaTables](~~173919~~) operation to query the table name.
+         * The name of the MaxCompute table. You can call the [SearchMetaTables](~~173919~~) operation to query the name of the MaxCompute table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -207,7 +201,7 @@ public class RevokeTablePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace with which the MaxCompute project is associated. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
+         * The ID of the DataWorks workspace with which the MaxCompute project is associated. You can log on to the DataWorks console and go to the Workspace page to obtain the ID.
          */
         public Builder workspaceId(Long workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

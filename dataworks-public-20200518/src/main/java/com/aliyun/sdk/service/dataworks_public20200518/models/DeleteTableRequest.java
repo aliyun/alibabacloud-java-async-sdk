@@ -144,7 +144,16 @@ public class DeleteTableRequest extends Request {
         }
 
         /**
-         * The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
+         * The type of the compute engine or data source. Valid values:
+         * <p>
+         * 
+         * *   cdh
+         * *   analyticdb_for_mysql
+         * *   odps
+         * *   emr
+         * *   hadoop
+         * *   holodb
+         * *   hybriddb_for_postgresql
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);

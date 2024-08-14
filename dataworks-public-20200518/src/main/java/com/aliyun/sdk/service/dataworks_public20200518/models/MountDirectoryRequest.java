@@ -104,7 +104,7 @@ public class MountDirectoryRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The ID of the directory that you want to add to the left-side navigation pane of DataAnalysis. This parameter is used together with the TargetType parameter. For example, if you set the TargetType parameter to META_ALBUM, you must set the TargetId parameter to the ID of the related data album. You can call the [ListMetaCollections](~~469938~~) operation to obtain the ID of the data album. The ID is indicated by the QualifiedName parameter.
          */
         public Builder targetId(String targetId) {
             this.putBodyParameter("TargetId", targetId);
@@ -113,11 +113,7 @@ public class MountDirectoryRequest extends Request {
         }
 
         /**
-         * The number of directories that are added. Valid values:
-         * <p>
-         * 
-         * *   0: No directories are added. The left-side navigation pane may contain the specified directory.
-         * *   1: One directory is added.
+         * The type of the directory that you want to add to the left-side navigation pane of DataAnalysis. Example: META_ALBUM, which indicates the data album.
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("TargetType", targetType);
@@ -126,7 +122,11 @@ public class MountDirectoryRequest extends Request {
         }
 
         /**
-         * TargetUserId.
+         * The ID of the user in the tenant.
+         * <p>
+         * 
+         * *   If you do not configure TargetUserId, the specified directory belongs to you.
+         * *   If you configure TargetUserId, the specified directory belongs to the user specified by using TargetUserId.
          */
         public Builder targetUserId(String targetUserId) {
             this.putBodyParameter("TargetUserId", targetUserId);

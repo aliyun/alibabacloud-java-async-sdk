@@ -49,7 +49,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DIJobPaging.
+         * The pagination information.
          */
         public Builder DIJobPaging(DIJobPaging DIJobPaging) {
             this.DIJobPaging = DIJobPaging;
@@ -57,7 +57,7 @@ public class ListDIJobsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +169,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             private String sourceDataSourceType; 
 
             /**
-             * DIJobId.
+             * The task ID.
              */
             public Builder DIJobId(Long DIJobId) {
                 this.DIJobId = DIJobId;
@@ -177,7 +177,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationDataSourceType.
+             * The type of the destination. The value Hologres is returned.
              */
             public Builder destinationDataSourceType(String destinationDataSourceType) {
                 this.destinationDataSourceType = destinationDataSourceType;
@@ -185,7 +185,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * The task name.
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -193,7 +193,15 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * JobStatus.
+             * The task status. Valid values:
+             * <p>
+             * 
+             * *   Finished
+             * *   Initialized
+             * *   Stopped
+             * *   Failed
+             * *   Running
+             * *   Stopping
              */
             public Builder jobStatus(String jobStatus) {
                 this.jobStatus = jobStatus;
@@ -201,7 +209,12 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationType.
+             * The synchronization type. Valid values:
+             * <p>
+             * 
+             * *   FullAndRealtimeIncremental: one-time full synchronization and real-time incremental synchronization
+             * *   RealtimeIncremental: real-time incremental synchronization
+             * *   Full: one-time full synchronization
              */
             public Builder migrationType(String migrationType) {
                 this.migrationType = migrationType;
@@ -209,7 +222,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The workspace ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -217,7 +230,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceDataSourceType.
+             * The type of the source. The value MySQL is returned.
              */
             public Builder sourceDataSourceType(String sourceDataSourceType) {
                 this.sourceDataSourceType = sourceDataSourceType;
@@ -294,7 +307,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * DIJobs.
+             * The list of tasks.
              */
             public Builder DIJobs(java.util.List < DIJobs> DIJobs) {
                 this.DIJobs = DIJobs;
@@ -302,7 +315,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -310,7 +323,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -318,7 +331,7 @@ public class ListDIJobsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

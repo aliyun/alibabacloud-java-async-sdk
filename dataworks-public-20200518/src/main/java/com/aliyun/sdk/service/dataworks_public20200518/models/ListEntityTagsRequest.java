@@ -77,7 +77,7 @@ public class ListEntityTagsRequest extends Request {
         }
 
         /**
-         * QualifiedName.
+         * The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);

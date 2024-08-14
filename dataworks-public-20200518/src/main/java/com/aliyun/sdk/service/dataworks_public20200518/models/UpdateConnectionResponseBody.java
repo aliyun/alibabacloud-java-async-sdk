@@ -73,7 +73,7 @@ public class UpdateConnectionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the update is successful.
+         * Indicates whether the data source is updated.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class UpdateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class UpdateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request has failed.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

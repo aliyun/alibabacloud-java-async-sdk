@@ -107,7 +107,7 @@ public class ListInstanceAmountRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * The beginning of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
          */
         public Builder beginDate(String beginDate) {
             this.putBodyParameter("BeginDate", beginDate);
@@ -116,7 +116,7 @@ public class ListInstanceAmountRequest extends Request {
         }
 
         /**
-         * The end of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * The end of the time range to query, accurate to the day. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -125,7 +125,7 @@ public class ListInstanceAmountRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the ID.
+         * The DataWorks workspace ID. You can log on to the DataWorks console and go to the Work space page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

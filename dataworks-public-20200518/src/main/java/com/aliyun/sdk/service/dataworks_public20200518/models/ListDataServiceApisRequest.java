@@ -162,7 +162,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The keyword in API names. The keyword is used to search for the APIs whose names contain the keyword.
          */
         public Builder apiNameKeyword(String apiNameKeyword) {
             this.putBodyParameter("ApiNameKeyword", apiNameKeyword);
@@ -171,7 +171,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * The keyword in the name of the API. The keyword can be used to search for the API whose name contains the keyword.
+         * The keyword in API paths. The keyword is used to search for the APIs whose paths contain the keyword.
          */
         public Builder apiPathKeyword(String apiPathKeyword) {
             this.putBodyParameter("ApiPathKeyword", apiPathKeyword);
@@ -180,7 +180,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * The keyword in the path of the API. The keyword can be used to search for the API whose path contains the keyword.
+         * The ID of the Alibaba Cloud account used by the creator of the APIs. The ID is used to search for the APIs created by the creator.
          */
         public Builder creatorId(String creatorId) {
             this.putBodyParameter("CreatorId", creatorId);
@@ -189,7 +189,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ListDataServiceApis**.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -198,7 +198,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -207,7 +207,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. A maximum of 100 entries can be returned on each page.
+         * The workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -216,7 +216,7 @@ public class ListDataServiceApisRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

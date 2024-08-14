@@ -134,11 +134,10 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * The lineage type. Valid values:
+         * The lineage type. Valid values:\
          * <p>
-         * 
-         * *   up: ancestor lineage
-         * *   down: descendant lineage
+         * up: ancestor lineage\
+         * down: descendant lineage
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -165,7 +164,7 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

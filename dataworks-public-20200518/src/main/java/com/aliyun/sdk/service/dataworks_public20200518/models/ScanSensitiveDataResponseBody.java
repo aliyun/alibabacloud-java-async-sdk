@@ -49,7 +49,7 @@ public class ScanSensitiveDataResponseBody extends TeaModel {
         private java.util.Map < String, ? > sensitives; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,13 +57,11 @@ public class ScanSensitiveDataResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the check.
+         * The check result. sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:
          * <p>
          * 
-         * sensDatas indicates the rules that are used to check the sensitive data. sensDatas includes the following parameters:
-         * 
-         * *   hitCount: the number of times that the sensitive data hits the rule
-         * *   ruleName: the name of the rule
+         * *   hitCount: the number of times that the sensitive data hits the rule.
+         * *   ruleName: the name of the rule.
          */
         public Builder sensitives(java.util.Map < String, ? > sensitives) {
             this.sensitives = sensitives;

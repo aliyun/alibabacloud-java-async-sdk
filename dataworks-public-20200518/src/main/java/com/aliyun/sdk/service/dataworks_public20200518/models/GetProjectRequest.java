@@ -90,7 +90,7 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * The ID of the DataWorks workspace. You can call the [ListProjects](~~2780068~~) operation to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -99,7 +99,7 @@ public class GetProjectRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The name of the DataWorks workspace. You can call the [ListProjects](~~2780068~~) operation to query the name.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putQueryParameter("ProjectIdentifier", projectIdentifier);

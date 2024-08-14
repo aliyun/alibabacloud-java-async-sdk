@@ -61,11 +61,7 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the synchronization node in Data Integration is deleted. Valid values:
-         * <p>
-         * 
-         * *   success: The synchronization node in Data Integration is deleted.
-         * *   fail: The synchronization node in Data Integration failed to be deleted. You can troubleshoot the issue based on the failure reason.
+         * The deletion result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -73,7 +69,7 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned after you called the DeleteDISyncTask operation.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +77,11 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -133,7 +133,7 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * The reason why the synchronization task fails to be deleted. If the synchronization task is deleted, the value null is returned for this parameter.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -141,10 +141,11 @@ public class DeleteDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the synchronization node in Data Integration failed to be deleted.
+             * Indicates whether the synchronization task is deleted. Valid values:
              * <p>
              * 
-             * If the synchronization node in Data Integration is deleted, the value null is returned.
+             * *   success: The synchronization task is deleted.
+             * *   fail: The synchronization task fails to be deleted. You can troubleshoot the issue based on the failure reason.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -97,7 +97,7 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The execution result of adding or modifying a data masking rule.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class DsgDesensPlanAddOrUpdateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values: true false
          */
         public Builder success(Boolean success) {
             this.success = success;

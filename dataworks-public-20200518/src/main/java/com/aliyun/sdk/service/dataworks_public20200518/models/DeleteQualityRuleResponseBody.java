@@ -97,7 +97,7 @@ public class DeleteQualityRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the deletion was successful.
+         * Indicates whether the monitoring rule was deleted.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class DeleteQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -129,7 +129,7 @@ public class DeleteQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class DeleteQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

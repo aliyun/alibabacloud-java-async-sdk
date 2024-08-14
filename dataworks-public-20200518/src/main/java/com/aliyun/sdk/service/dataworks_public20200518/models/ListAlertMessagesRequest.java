@@ -195,11 +195,8 @@ public class ListAlertMessagesRequest extends Request {
          * The notification method. Valid values:
          * <p>
          * 
-         * *   MAIL: email
-         * 
-         * *   SMS: text message
-         * 
-         *     Alert notifications can be sent by text message only in the Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.
+         * *   MAIL
+         * *   SMS Alert notifications can be sent by text message only in the Singapore, Malaysia (Kuala Lumpur), and Germany (Frankfurt) regions.
          * 
          * You can specify multiple notification methods. Separate them with commas (,).
          */
@@ -228,10 +225,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The ID of the baseline. This parameter takes effect if the AlertRuleTypes parameter is set to GLOBAL.
-         * <p>
-         * 
-         * You can configure either this parameter or RemindId.
+         * The baseline ID. This parameter takes effect if the AlertRuleTypes parameter is set to GLOBAL. You can configure either this parameter or the RemindId parameter.
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -240,7 +234,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
          */
         public Builder beginTime(String beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -249,7 +243,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Specify the time in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd\"T\"HH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -258,7 +252,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: 1 to 30. Default value: 1.
+         * The page number. Default value: 1. Minimum value: 1. Maximum value: 30.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -267,7 +261,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -276,10 +270,7 @@ public class ListAlertMessagesRequest extends Request {
         }
 
         /**
-         * The ID of the custom alert rule. This parameter takes effect if the AlertRuleTypes parameter is set to USER_DEFINE.
-         * <p>
-         * 
-         * You can configure either this parameter or BaselineId.
+         * The custom alert rule ID. This parameter takes effect if the AlertRuleTypes parameter is set to USER_DEFINE. You can configure either this parameter or the BaselineId parameter.
          */
         public Builder remindId(Long remindId) {
             this.putBodyParameter("RemindId", remindId);

@@ -97,7 +97,11 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error message.
+         * Indicates whether the partition in the MaxCompute metatable exists. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -105,7 +109,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +125,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +133,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,7 @@ public class CheckMetaPartitionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

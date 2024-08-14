@@ -350,7 +350,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The strength of the monitoring rule. Valid values: 0 and 1. 0 indicates that the monitoring rule is a weak rule. 1 indicates that the monitoring rule is a strong rule.
+         * The strength type of the monitoring rule. Valid values: 0 and 1. The value 0 indicates that the monitoring rule is a weak rule. The value 1 indicates that the monitoring rule is a strong rule.
          */
         public Builder blockType(Integer blockType) {
             this.putBodyParameter("BlockType", blockType);
@@ -359,7 +359,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the checker.
+         * The checker ID.
          */
         public Builder checker(Integer checker) {
             this.putBodyParameter("Checker", checker);
@@ -377,7 +377,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.
+         * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is triggered, nodes are blocked.
          */
         public Builder criticalThreshold(String criticalThreshold) {
             this.putBodyParameter("CriticalThreshold", criticalThreshold);
@@ -395,7 +395,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The expected value of the monitoring result.
+         * The expected value.
          */
         public Builder expectValue(String expectValue) {
             this.putBodyParameter("ExpectValue", expectValue);
@@ -413,7 +413,10 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The comparison operator of the monitoring rule.
+         * The comparison operator, such as >, >=, =, ≠, <, or <=.
+         * <p>
+         * 
+         * > If you set the Checker parameter to 9, you must configure the Operator parameter.
          */
         public Builder operator(String operator) {
             this.putBodyParameter("Operator", operator);
@@ -422,7 +425,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether the monitoring rule is a dynamic threshold rule. Valid values: 0 and 2. 0 indicates that the monitoring rule is not a dynamic threshold rule. 2 indicates that the monitoring rule is a dynamic threshold rule.
+         * Specifies whether the monitoring rule is a dynamic threshold rule. Valid values: 0 and 2. The value 0 indicates that the monitoring rule is not a dynamic threshold rule. The value 2 indicates that the monitoring rule is a dynamic threshold rule.
          */
         public Builder predictType(Integer predictType) {
             this.putBodyParameter("PredictType", predictType);
@@ -431,7 +434,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -440,7 +443,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source.
+         * The name of the compute engine or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -476,7 +479,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The type of the monitoring rule. Valid values: 0, 1, and 2. 0 indicates that the monitoring rule is created by the system. 1 indicates that the monitoring rule is created by a user. 2 indicates that the monitoring rule is a workspace-level rule.
+         * The type of the monitoring rule. Valid values: 0, 1, and 2. The value 0 indicates that the monitoring rule is created by the system. The value 1 indicates that the monitoring rule is created by a user. The value 2 indicates that the monitoring rule is a workspace-level rule.
          */
         public Builder ruleType(Integer ruleType) {
             this.putBodyParameter("RuleType", ruleType);
@@ -485,7 +488,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * TaskSetting.
+         * The variable settings inserted before the custom rule. Format: x=a,y=b.
          */
         public Builder taskSetting(String taskSetting) {
             this.putBodyParameter("TaskSetting", taskSetting);
@@ -494,7 +497,7 @@ public class CreateQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the template that is used to create the monitoring rule.
+         * The template ID.
          */
         public Builder templateId(Integer templateId) {
             this.putBodyParameter("TemplateId", templateId);

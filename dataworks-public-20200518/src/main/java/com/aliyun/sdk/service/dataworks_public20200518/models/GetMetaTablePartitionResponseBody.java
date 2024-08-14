@@ -97,7 +97,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data returned.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,7 +129,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -377,7 +377,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the metatable.
+             * The unique identifier of the metatable.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -462,7 +462,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -470,7 +470,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The number of entries per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

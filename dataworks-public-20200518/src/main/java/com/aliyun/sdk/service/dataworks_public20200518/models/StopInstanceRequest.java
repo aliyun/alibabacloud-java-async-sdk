@@ -92,7 +92,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [ListInstances](~~173982~~) operation to query the ID.
+         * The instance ID. You can call the [ListInstances](~~173982~~) operation to obtain the ID.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

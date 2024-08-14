@@ -92,7 +92,7 @@ public class GetIDEEventDetailRequest extends Request {
         }
 
         /**
-         * The ID of the message. You can obtain the ID from the received message when the extension point event is triggered.
+         * The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.
          */
         public Builder messageId(String messageId) {
             this.putBodyParameter("MessageId", messageId);
@@ -101,7 +101,7 @@ public class GetIDEEventDetailRequest extends Request {
         }
 
         /**
-         * The ID of the workspace. You can obtain the ID from the message.
+         * The DataWorks workspace ID. You can obtain the ID from the message.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

@@ -49,7 +49,7 @@ public class CallbackExtensionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,12 @@ public class CallbackExtensionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * true
+         * 
+         * false
          */
         public Builder success(String success) {
             this.success = success;

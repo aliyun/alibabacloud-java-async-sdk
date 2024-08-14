@@ -105,7 +105,7 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * DIJobId.
+         * The ID of the task with which the alert rules are associated.
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);
@@ -114,7 +114,7 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -123,7 +123,7 @@ public class ListDIAlarmRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);

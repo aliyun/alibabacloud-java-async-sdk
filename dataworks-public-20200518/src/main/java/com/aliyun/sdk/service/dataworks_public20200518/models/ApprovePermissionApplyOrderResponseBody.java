@@ -49,7 +49,7 @@ public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates that the approval is successful.
+         * Indicates whether the permission request order is processed.
          */
         public Builder approveSuccess(Boolean approveSuccess) {
             this.approveSuccess = approveSuccess;
@@ -57,7 +57,7 @@ public class ApprovePermissionApplyOrderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -105,7 +105,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +177,7 @@ public class CreateMetaCategoryResponseBody extends TeaModel {
             private Long categoryId; 
 
             /**
-             * The ID of the category.
+             * The category ID.
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;

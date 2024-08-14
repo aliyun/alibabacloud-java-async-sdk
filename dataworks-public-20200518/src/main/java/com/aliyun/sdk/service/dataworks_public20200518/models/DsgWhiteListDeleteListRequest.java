@@ -77,7 +77,7 @@ public class DsgWhiteListDeleteListRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The IDs of the whitelists.
          */
         public Builder ids(java.util.List < Integer > ids) {
             String idsShrink = shrink(ids, "Ids", "json");

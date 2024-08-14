@@ -125,7 +125,7 @@ public class GetDataServiceFolderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID. This parameter is deprecated. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

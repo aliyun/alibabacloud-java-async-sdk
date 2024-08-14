@@ -105,7 +105,7 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * DIJobId.
+         * The task ID.
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);
@@ -114,7 +114,7 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * ForceToRerun.
+         * Specifies whether to forcefully rerun all synchronization steps. If you do not configure this parameter, the system does not forcefully rerun the task.
          */
         public Builder forceToRerun(Boolean forceToRerun) {
             this.putBodyParameter("ForceToRerun", forceToRerun);
@@ -123,7 +123,7 @@ public class StartDIJobRequest extends Request {
         }
 
         /**
-         * RealtimeStartSettings.
+         * The settings for the start.
          */
         public Builder realtimeStartSettings(RealtimeStartSettings realtimeStartSettings) {
             String realtimeStartSettingsShrink = shrink(realtimeStartSettings, "RealtimeStartSettings", "json");
@@ -178,7 +178,7 @@ public class StartDIJobRequest extends Request {
             private Long upperLimit; 
 
             /**
-             * Interval.
+             * The failover interval. Unit: minutes.
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -186,7 +186,7 @@ public class StartDIJobRequest extends Request {
             }
 
             /**
-             * UpperLimit.
+             * The maximum number of failovers.
              */
             public Builder upperLimit(Long upperLimit) {
                 this.upperLimit = upperLimit;
@@ -239,7 +239,7 @@ public class StartDIJobRequest extends Request {
             private Long startTime; 
 
             /**
-             * FailoverSettings.
+             * The failover settings.
              */
             public Builder failoverSettings(FailoverSettings failoverSettings) {
                 this.failoverSettings = failoverSettings;
@@ -247,7 +247,7 @@ public class StartDIJobRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * The timestamp of the start offset. Unit: seconds. If you do not configure this parameter, the offset is not reset by default.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

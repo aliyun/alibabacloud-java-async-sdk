@@ -49,7 +49,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceConsumeTimeRank.
+         * The ranking record of the running durations of instances.
          */
         public Builder instanceConsumeTimeRank(InstanceConsumeTimeRank instanceConsumeTimeRank) {
             this.instanceConsumeTimeRank = instanceConsumeTimeRank;
@@ -57,7 +57,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +169,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             private Integer prgType; 
 
             /**
-             * Bizdate.
+             * The data timestamp of the instance.
              */
             public Builder bizdate(Long bizdate) {
                 this.bizdate = bizdate;
@@ -177,7 +177,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * Consumed.
+             * The running duration of the instance. Unit: seconds.
              */
             public Builder consumed(Long consumed) {
                 this.consumed = consumed;
@@ -185,7 +185,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -193,7 +193,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -201,7 +201,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -209,7 +209,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -217,7 +217,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * PrgType.
+             * The type of the node.
              */
             public Builder prgType(Integer prgType) {
                 this.prgType = prgType;
@@ -270,7 +270,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * ConsumeTimeRank.
+             * The ranking data of the running durations of instances.
              */
             public Builder consumeTimeRank(java.util.List < ConsumeTimeRank> consumeTimeRank) {
                 this.consumeTimeRank = consumeTimeRank;
@@ -278,7 +278,7 @@ public class GetInstanceConsumeTimeRankResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The timestamp when the ranking was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

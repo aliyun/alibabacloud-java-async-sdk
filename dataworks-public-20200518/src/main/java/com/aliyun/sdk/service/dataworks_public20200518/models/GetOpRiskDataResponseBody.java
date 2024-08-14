@@ -49,7 +49,7 @@ public class GetOpRiskDataResponseBody extends TeaModel {
         private String riskData; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,10 +57,8 @@ public class GetOpRiskDataResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the risky sensitive data returned. The information includes totalCount and opRiskDatas.
+         * The information about the high-risk sensitive data. The information includes totalCount and opRiskDatas. opRiskDatas includes the following parameters:
          * <p>
-         * 
-         * opRiskDatas includes the following parameters:
          * 
          * *   sensType: the type of the sensitive data
          * *   sensLevel: the sensitivity level of the sensitive data

@@ -49,7 +49,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceStatusTrend.
+         * The trend of statistics on the instance status in different time periods.
          */
         public Builder instanceStatusTrend(InstanceStatusTrend instanceStatusTrend) {
             this.instanceStatusTrend = instanceStatusTrend;
@@ -57,7 +57,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * Count.
+             * The number of instances.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -117,7 +117,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoint.
+             * The point in time. Valid values: 00:00 to 23:00.
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -170,7 +170,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * Count.
+             * The number of instances.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -178,7 +178,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoint.
+             * The point in time. Valid values: 00:00 to 23:00.
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -231,7 +231,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private String timePoint; 
 
             /**
-             * Count.
+             * The number of instances.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -239,7 +239,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TimePoint.
+             * The point in time. Valid values: 00:00 to 23:00.
              */
             public Builder timePoint(String timePoint) {
                 this.timePoint = timePoint;
@@ -304,7 +304,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             private java.util.List < YesterdayTrend> yesterdayTrend; 
 
             /**
-             * AvgTrend.
+             * The average trend.
              */
             public Builder avgTrend(java.util.List < AvgTrend> avgTrend) {
                 this.avgTrend = avgTrend;
@@ -312,7 +312,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * TodayTrend.
+             * The trend on the current day.
              */
             public Builder todayTrend(java.util.List < TodayTrend> todayTrend) {
                 this.todayTrend = todayTrend;
@@ -320,7 +320,7 @@ public class GetSuccessInstanceTrendResponseBody extends TeaModel {
             }
 
             /**
-             * YesterdayTrend.
+             * The trend on the previous day.
              */
             public Builder yesterdayTrend(java.util.List < YesterdayTrend> yesterdayTrend) {
                 this.yesterdayTrend = yesterdayTrend;

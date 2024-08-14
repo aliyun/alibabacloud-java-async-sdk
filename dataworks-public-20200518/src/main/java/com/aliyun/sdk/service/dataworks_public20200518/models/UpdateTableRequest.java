@@ -347,13 +347,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * Specifies whether the table exists. Valid values:
-         * <p>
-         * 
-         * *   true: The table exists.
-         * *   false: The table does not exist.
-         * 
-         * This parameter is deprecated. Do not use this parameter.
+         * The unique identifier of the MaxCompute project. Specify the GUID in the odps.{projectName} format.
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -362,7 +356,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The ID of the logical level.
+         * The ID of the associated category.
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -371,7 +365,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * Columns.
+         * The list of fields.
          */
         public Builder columns(java.util.List < Columns> columns) {
             this.putBodyParameter("Columns", columns);
@@ -380,7 +374,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.
+         * The comment.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -389,10 +383,13 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * Specifies whether the table that you want to update is a partitioned table. Valid values: 0 and 1. The value 0 indicates that the table is not a partitioned table. The value 1 indicates that the table is a partitioned table. This parameter is deprecated. Do not use this parameter.
+         * Specifies whether the table exists. Valid values:
          * <p>
          * 
-         * The Column.N.isPartitionCol parameter is used instead of the HasPart parameter to specify whether the MaxCompute table is a partitioned table. If the Column.N.isPartitionCol parameter is set to 1, the MaxCompute table is a partitioned table.
+         * *   true: The table exists.
+         * *   false: The table does not exist.
+         * 
+         * This parameter is deprecated. Do not use this parameter.
          */
         public Builder createIfNotExists(Boolean createIfNotExists) {
             this.putQueryParameter("CreateIfNotExists", createIfNotExists);
@@ -401,7 +398,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
+         * The endpoint of MaxCompute. If you do not specify this parameter, the endpoint of the MaxCompute project is used.
          */
         public Builder endpoint(String endpoint) {
             this.putBodyParameter("Endpoint", endpoint);
@@ -410,7 +407,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The globally unique identifier (GUID) of the MaxCompute project. Specify the GUID in the odps.{projectName} format.
+         * The environment of the DataWorks workspace. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
          */
         public Builder envType(Integer envType) {
             this.putBodyParameter("EnvType", envType);
@@ -419,7 +416,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The storage location of the external table. This parameter is deprecated. Do not use this parameter.
+         * The type of the external table. Valid values: 0, 1, 2, and 3. The value 0 indicates that the external table is an OSS external table. The value 1 indicates that the external table is a Tablestore external table. The value 2 indicates that the external table is a volume external table. The value 3 indicates that the external table is a MySQL external table. This parameter is deprecated. Do not use this parameter.
          */
         public Builder externalTableType(String externalTableType) {
             this.putQueryParameter("ExternalTableType", externalTableType);
@@ -428,7 +425,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The comment.
+         * Specifies whether the table that you want to update is a partitioned table. Valid values: 0 and 1. The value 0 indicates that the table is not a partitioned table. The value 1 indicates that the table is a partitioned table. This parameter is deprecated. Do not use this parameter. The Column.N.isPartitionCol parameter is used instead of the HasPart parameter to specify whether the MaxCompute table is a partitioned table. If the Column.N.isPartitionCol parameter is set to 1, the MaxCompute table is a partitioned table.
          */
         public Builder hasPart(Integer hasPart) {
             this.putQueryParameter("HasPart", hasPart);
@@ -437,7 +434,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.
+         * Specifies whether the table is a view. Valid values: 0 and 1. The value 0 indicates that the table is not a view. The value 1 indicates that the table is a view. This parameter is deprecated. Do not use this parameter.
          */
         public Builder isView(Integer isView) {
             this.putQueryParameter("IsView", isView);
@@ -446,7 +443,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The ID of the associated category.
+         * The lifecycle of the table. Unit: days. If this parameter is left empty, the table is permanently stored.
          */
         public Builder lifeCycle(Integer lifeCycle) {
             this.putQueryParameter("LifeCycle", lifeCycle);
@@ -455,7 +452,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the DataWorks console to obtain the ID of the DataWorks workspace.
+         * The storage location of the external table. This parameter is deprecated. Do not use this parameter.
          */
         public Builder location(String location) {
             this.putQueryParameter("Location", location);
@@ -464,7 +461,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The ID of the physical level.
+         * The ID of the logical level.
          */
         public Builder logicalLevelId(Long logicalLevelId) {
             this.putQueryParameter("LogicalLevelId", logicalLevelId);
@@ -482,7 +479,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The type of the external table. Valid values: 0, 1, 2, and 3. The value 0 indicates that the external table is an OSS external table. The value 1 indicates that the external table is a Tablestore external table. The value 2 indicates that the external table is a volume external table. The value 3 indicates that the external table is a MySQL external table. This parameter is deprecated. Do not use this parameter.
+         * The ID of the physical layer.
          */
         public Builder physicsLevelId(Long physicsLevelId) {
             this.putQueryParameter("PhysicsLevelId", physicsLevelId);
@@ -491,7 +488,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The name of the MaxCompute table.
+         * The DataWorks workspace ID. You can log on to the DataWorks console to obtain the ID of the DataWorks workspace.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -500,7 +497,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The display name of the field.
+         * The schema information of the table. You need to enter the schema information of the table if you enable the table schema in MaxCompute.
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -509,7 +506,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The endpoint of MaxCompute. If this parameter is left empty, the endpoint of the MaxCompute project is used.
+         * The name of the MaxCompute table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -518,7 +515,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * Themes.
+         * The list of fields.
          */
         public Builder themes(java.util.List < Themes> themes) {
             this.putBodyParameter("Themes", themes);
@@ -527,7 +524,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * The lifecycle of the table. Unit: days. If this parameter is left empty, the table is permanently stored.
+         * The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.
          */
         public Builder visibility(Integer visibility) {
             this.putQueryParameter("Visibility", visibility);
@@ -643,7 +640,7 @@ public class UpdateTableRequest extends Request {
             private Integer seqNumber; 
 
             /**
-             * The comment of the field.
+             * The name of the field.
              */
             public Builder columnName(String columnName) {
                 this.columnName = columnName;
@@ -651,7 +648,7 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The name of the field.
+             * The display name of the field.
              */
             public Builder columnNameCn(String columnNameCn) {
                 this.columnNameCn = columnNameCn;
@@ -659,7 +656,7 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The sequence number of the field. If the field is a partition field, this parameter is not supported.
+             * The type of the field. For more information, see MaxCompute field types.
              */
             public Builder columnType(String columnType) {
                 this.columnType = columnType;
@@ -667,7 +664,7 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The type of the field. For more information, see MaxCompute field types.
+             * The comment of the field.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -675,7 +672,7 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The ID of the associated topic.
+             * Specifies whether the field is a partition field. Valid values: 0 and 1. The value 0 indicates that the field is not a partition field. The value 1 indicates that the field is a partition field.
              */
             public Builder isPartitionCol(Boolean isPartitionCol) {
                 this.isPartitionCol = isPartitionCol;
@@ -683,7 +680,7 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * Specifies whether the field is a partition field. Valid values: 0 and 1. The value 0 indicates that the field is not a partition field. The value 1 indicates that the field is a partition field.
+             * The length of the field.
              */
             public Builder length(Integer length) {
                 this.length = length;
@@ -691,7 +688,7 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The length of the field.
+             * The sequence number of the field. If the field is a partition field, this parameter is not supported.
              */
             public Builder seqNumber(Integer seqNumber) {
                 this.seqNumber = seqNumber;
@@ -745,7 +742,7 @@ public class UpdateTableRequest extends Request {
             private Integer themeLevel; 
 
             /**
-             * The level that corresponds to the topic ID.
+             * The ID of the associated topic.
              */
             public Builder themeId(Long themeId) {
                 this.themeId = themeId;
@@ -753,7 +750,7 @@ public class UpdateTableRequest extends Request {
             }
 
             /**
-             * The ID of the request.
+             * The level that corresponds to the topic ID.
              */
             public Builder themeLevel(Integer themeLevel) {
                 this.themeLevel = themeLevel;

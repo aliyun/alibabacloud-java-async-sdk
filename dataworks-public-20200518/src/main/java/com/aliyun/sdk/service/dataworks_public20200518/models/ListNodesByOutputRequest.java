@@ -83,7 +83,7 @@ public class ListNodesByOutputRequest extends Request {
         } 
 
         /**
-         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +92,7 @@ public class ListNodesByOutputRequest extends Request {
         }
 
         /**
-         * The output name of the node. You can specify multiple output names. In this case, separate them with commas (,).
+         * The output name of the node. You can specify multiple output names. Separate them with commas (,).
          */
         public Builder outputs(String outputs) {
             this.putBodyParameter("Outputs", outputs);
@@ -101,7 +101,7 @@ public class ListNodesByOutputRequest extends Request {
         }
 
         /**
-         * The environment type. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
+         * The environment of Operation Center. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

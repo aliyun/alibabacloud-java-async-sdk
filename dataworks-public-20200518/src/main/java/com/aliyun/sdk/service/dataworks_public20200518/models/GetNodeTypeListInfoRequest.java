@@ -148,7 +148,7 @@ public class GetNodeTypeListInfoRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The name of the node type. You can log on to the DataWorks console, go to the DataStudio page, and then view the name of a specific node type on the left side of the page. You can view the English or Chinese name of a specific node type, but the language specified to present the name must be the same as the language specified by the Locale parameter. Fuzzy match is supported. If this parameter is not configured, the names of all node types are returned.
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -157,7 +157,7 @@ public class GetNodeTypeListInfoRequest extends Request {
         }
 
         /**
-         * Locale.
+         * The language that you use for the query. Valid values: zh-CN and en-US.
          */
         public Builder locale(String locale) {
             this.putBodyParameter("Locale", locale);
@@ -166,7 +166,7 @@ public class GetNodeTypeListInfoRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -175,7 +175,7 @@ public class GetNodeTypeListInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -184,7 +184,7 @@ public class GetNodeTypeListInfoRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID. You can click the Workspace Manage icon in the upper-right corner of the DataStudio page to go to the Workspace page and query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -193,7 +193,7 @@ public class GetNodeTypeListInfoRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The unique identifier of the DataWorks workspace. You can view the identifier in the upper part of the DataStudio page. You can also select another identifier to switch to another workspace. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

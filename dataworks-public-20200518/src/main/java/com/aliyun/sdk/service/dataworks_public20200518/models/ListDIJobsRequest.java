@@ -147,7 +147,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * DestinationDataSourceType.
+         * The destination type. If you do not configure this parameter, no limits are imposed on the tasks.
          */
         public Builder destinationDataSourceType(String destinationDataSourceType) {
             this.putBodyParameter("DestinationDataSourceType", destinationDataSourceType);
@@ -156,7 +156,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * JobName.
+         * The name of the task. Fuzzy match is supported. If you do not configure this parameter, no limits are imposed on the tasks.
          */
         public Builder jobName(String jobName) {
             this.putBodyParameter("JobName", jobName);
@@ -165,7 +165,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -174,7 +174,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -183,7 +183,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -192,7 +192,7 @@ public class ListDIJobsRequest extends Request {
         }
 
         /**
-         * SourceDataSourceType.
+         * The source type. If you do not configure this parameter, no limits are imposed on the tasks.
          */
         public Builder sourceDataSourceType(String sourceDataSourceType) {
             this.putBodyParameter("SourceDataSourceType", sourceDataSourceType);

@@ -97,7 +97,7 @@ public class AddMetaCollectionEntityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class AddMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class AddMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class AddMetaCollectionEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * The request ID. You can use the request ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -144,9 +144,7 @@ public class AddMetaCollectionEntityResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * true: The request was successful.
-         * 
-         * false: The request failed.
+         * true false
          */
         public Builder success(Boolean success) {
             this.success = success;

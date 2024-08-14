@@ -77,7 +77,7 @@ public class DeleteConnectionRequest extends Request {
         }
 
         /**
-         * ConnectionId.
+         * The data source ID. You can call the [ListConnection](~~173911~~) operation to query the ID.
          */
         public Builder connectionId(Long connectionId) {
             this.putQueryParameter("ConnectionId", connectionId);

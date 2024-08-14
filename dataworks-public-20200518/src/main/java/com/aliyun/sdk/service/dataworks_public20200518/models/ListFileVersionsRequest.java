@@ -125,7 +125,7 @@ public class ListFileVersionsRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -143,7 +143,7 @@ public class ListFileVersionsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -152,7 +152,7 @@ public class ListFileVersionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value:10. Maximum value: 100.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);

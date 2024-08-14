@@ -98,7 +98,7 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         } 
 
         /**
-         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint that is used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,11 +107,20 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The approval action. Valid values:
+         * The action for the permission request order. Valid values:
          * <p>
          * 
-         * *   1: Approve the permission request order.
-         * *   2: Reject the permission request order.
+         * *   1: approve
+         * *   2: reject
+         * 
+         * <!---->
+         * 
+         * *   0
+         * *   1
+         * *   2\.
+         * *   3\.
+         * *   4
+         * *   5
          */
         public Builder approveAction(Integer approveAction) {
             this.putQueryParameter("ApproveAction", approveAction);
@@ -120,7 +129,7 @@ public class ApprovePermissionApplyOrderRequest extends Request {
         }
 
         /**
-         * The comment on the approval.
+         * The comment on the order.
          */
         public Builder approveComment(String approveComment) {
             this.putQueryParameter("ApproveComment", approveComment);

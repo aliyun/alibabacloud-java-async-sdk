@@ -116,7 +116,7 @@ public class GetDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -125,7 +125,7 @@ public class GetDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID. This parameter is deprecated.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

@@ -49,7 +49,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceErrorRank.
+         * The ranking data of nodes on which errors occurred.
          */
         public Builder instanceErrorRank(InstanceErrorRank instanceErrorRank) {
             this.instanceErrorRank = instanceErrorRank;
@@ -57,7 +57,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +157,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * Count.
+             * The number of errors that occurred on the node.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -165,7 +165,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -173,7 +173,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -181,7 +181,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -189,7 +189,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * PrgType.
+             * The type of the node.
              */
             public Builder prgType(Integer prgType) {
                 this.prgType = prgType;
@@ -197,7 +197,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The DataWorks workspace ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -250,7 +250,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * ErrorRank.
+             * The ranking data of nodes on which errors occurred within the last month.
              */
             public Builder errorRank(java.util.List < ErrorRank> errorRank) {
                 this.errorRank = errorRank;
@@ -258,7 +258,7 @@ public class GetInstanceErrorRankResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The timestamp at which the rankings were updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

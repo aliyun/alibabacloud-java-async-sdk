@@ -97,7 +97,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The object returned.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,8 +140,8 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +201,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * The token that is used for the next query.
+             * A pagination token. It can be used in the next request to retrieve a new page of results.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

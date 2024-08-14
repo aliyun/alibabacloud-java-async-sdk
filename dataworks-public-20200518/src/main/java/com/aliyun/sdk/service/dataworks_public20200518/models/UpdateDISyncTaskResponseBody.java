@@ -61,7 +61,7 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information that indicates whether the sync node was updated.
+         * The information that indicates whether the data synchronization task is updated.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +69,7 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,8 +80,8 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -133,7 +133,7 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the sync node failed to be updated. If the sync node was updated, this parameter is left empty.
+             * The error message returned if the data synchronization task fails to be updated. If the data synchronization task is successfully updated, the value null is returned for this parameter.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -141,11 +141,11 @@ public class UpdateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the sync node was updated. Valid values:
+             * The update status of the data synchronization task. Valid values:
              * <p>
              * 
-             * *   success: The sync node was updated.
-             * *   fail: The sync node failed to be updated.
+             * *   success
+             * *   fail
              */
             public Builder status(String status) {
                 this.status = status;

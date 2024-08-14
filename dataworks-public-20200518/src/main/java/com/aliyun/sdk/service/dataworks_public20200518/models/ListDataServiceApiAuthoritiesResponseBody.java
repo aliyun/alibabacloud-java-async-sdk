@@ -105,7 +105,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -221,7 +221,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the user who granted other users the access permissions on the API.
+             * The ID of the Alibaba Cloud account used by the API owner.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -398,7 +398,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The ID of the API.
+             * The API ID.
              */
             public Builder apiId(Long apiId) {
                 this.apiId = apiId;
@@ -454,7 +454,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the group.
+             * The group ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -462,7 +462,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the API was last updated.
+             * The time when the API was last modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -470,7 +470,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The workspace ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -478,7 +478,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * The tenant ID.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -555,7 +555,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The APIs on which other users are granted the access permissions and the authorization records.
+             * The APIs on which other users are granted the access permissions.
              */
             public Builder apiAuthorizationList(java.util.List < ApiAuthorizationList> apiAuthorizationList) {
                 this.apiAuthorizationList = apiAuthorizationList;
@@ -563,7 +563,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
+             * The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -571,7 +571,7 @@ public class ListDataServiceApiAuthoritiesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The number of entries per page. Valid values: 1 to 100. Default value: 10.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

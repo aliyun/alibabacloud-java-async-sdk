@@ -61,7 +61,7 @@ public class ImportDataSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the import operation.
+         * The information about the imported data sources.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +69,7 @@ public class ImportDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,8 +80,8 @@ public class ImportDataSourcesResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -144,8 +144,8 @@ public class ImportDataSourcesResponseBody extends TeaModel {
              * Indicates whether the data sources were imported. Valid values:
              * <p>
              * 
-             * *   true: All the data sources were imported.
-             * *   false: Some of the data sources failed to be imported. You can troubleshoot issues based on the Message parameter.
+             * *   true: All data sources were imported.
+             * *   false: Specific data sources failed to be imported. You can troubleshoot issues based on the Message parameter.
              */
             public Builder status(Boolean status) {
                 this.status = status;

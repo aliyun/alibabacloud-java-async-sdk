@@ -131,7 +131,7 @@ public class RunTriggerNodeRequest extends Request {
         }
 
         /**
-         * The data timestamp of the manually triggered node instance.
+         * The data timestamp of the instance that is generated for the manually triggered node.
          */
         public Builder bizDate(Long bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -140,7 +140,7 @@ public class RunTriggerNodeRequest extends Request {
         }
 
         /**
-         * The scheduled time to run the manually triggered node. Set the value to a 13-digit timestamp in milliseconds.
+         * The scheduling time to run the manually triggered node. Set the value to a 13-digit timestamp in milliseconds.
          */
         public Builder cycleTime(Long cycleTime) {
             this.putBodyParameter("CycleTime", cycleTime);

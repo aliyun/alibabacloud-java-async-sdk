@@ -105,7 +105,7 @@ public class UpdateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * The comment of the collection. The comment must be 1 to 64 characters in length.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -114,10 +114,7 @@ public class UpdateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The comment of the collection.
-         * <p>
-         * 
-         * The comment must be 1 to 64 characters in length.
+         * The name of the collection.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -126,7 +123,7 @@ public class UpdateMetaCollectionRequest extends Request {
         }
 
         /**
-         * The name of the collection.
+         * The unique identifier of the collection.
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);

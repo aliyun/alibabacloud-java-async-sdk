@@ -164,7 +164,7 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The ID of the node group to which the inner nodes belong.
+         * The name of the node to which the inner nodes belong.
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -173,7 +173,7 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * The ID of the node group to which the inner nodes belong.
          */
         public Builder outerNodeId(Long outerNodeId) {
             this.putBodyParameter("OuterNodeId", outerNodeId);
@@ -182,7 +182,7 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The page number. Valid values: 1 to 100.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -191,7 +191,7 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -200,7 +200,10 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Minimum value: 1. Maximum value: 100.
+         * The type of the node to which the inner nodes belong.
+         * <p>
+         * 
+         * Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 97 (PAI), 98 (node group), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1002 (PAI inner node), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), 1106 (for-each), and 1221 (PyODPS 3). You can call the ListNodes operation to query the type of the node.
          */
         public Builder programType(String programType) {
             this.putBodyParameter("ProgramType", programType);
@@ -209,7 +212,7 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The name of the node to which the inner nodes belong.
+         * The environment in which the node is run. Valid values: DEV and PROD. Default value: PROD.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -218,7 +221,7 @@ public class ListInnerNodesRequest extends Request {
         }
 
         /**
-         * The environment in which the node is run. Valid values: DEV and PROD. Default value: PROD.
+         * The workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

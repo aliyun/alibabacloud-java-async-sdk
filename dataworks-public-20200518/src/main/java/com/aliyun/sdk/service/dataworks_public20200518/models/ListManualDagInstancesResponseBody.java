@@ -57,7 +57,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to search for logs and troubleshoot issues based on the logs.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -289,7 +289,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The time when the node started to run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The time when the instance started to run.
              */
             public Builder beginRunningTime(Long beginRunningTime) {
                 this.beginRunningTime = beginRunningTime;
@@ -297,7 +297,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node started to wait for resources. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The time when the instance started to wait for resources.
              */
             public Builder beginWaitResTime(Long beginWaitResTime) {
                 this.beginWaitResTime = beginWaitResTime;
@@ -305,7 +305,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node started to wait to be scheduled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The time when the instance started to wait to be scheduled.
              */
             public Builder beginWaitTimeTime(Long beginWaitTimeTime) {
                 this.beginWaitTimeTime = beginWaitTimeTime;
@@ -313,7 +313,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The data timestamp of the instance. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. In most cases, the value indicates one day before the time when the node was run.
+             * The data timestamp of the instance. In most cases, the value is one day before the time when the instance was run.
              */
             public Builder bizDate(Long bizDate) {
                 this.bizDate = bizDate;
@@ -321,7 +321,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The time when the instance was generated.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -329,7 +329,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account used to run the instance. For example, if an account named Test was used to run the instance to backfill data, the value of this parameter is Test.
+             * The name of the account that is used to run the instance. For example, if you use an account named Test to run the instance, the value of this parameter is Test.
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -337,7 +337,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node was scheduled to run. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The time when the instance was scheduled to run.
              */
             public Builder cycTime(Long cycTime) {
                 this.cycTime = cycTime;
@@ -345,7 +345,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DAG for the manually triggered workflow.
+             * The ID of the DAG for the instance in the manually triggered workflow.
              */
             public Builder dagId(Long dagId) {
                 this.dagId = dagId;
@@ -353,7 +353,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the manually triggered workflow.
+             * The type of the manually triggered workflow.
              */
             public Builder dagType(String dagType) {
                 this.dagType = dagType;
@@ -361,7 +361,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node stopped running. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The time when the instance finished running.
              */
             public Builder finishTime(Long finishTime) {
                 this.finishTime = finishTime;
@@ -369,7 +369,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance in the manually triggered workflow.
+             * The instance ID.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -377,7 +377,7 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the node was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The time when the instance was last modified.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -409,17 +409,17 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the node. Valid values:
+             * The status of the instance. Valid values:
              * <p>
              * 
-             * *   NOT_RUN: The node is not run.
-             * *   WAIT_TIME: The node is waiting for its scheduled time to arrive.
-             * *   WAIT_RESOURCE: The node is waiting for resources.
-             * *   RUNNING: The node is running.
-             * *   CHECKING: Data quality is being checked for the node.
-             * *   CHECKING_CONDITION: Branch conditions are being checked for the node.
-             * *   FAILURE: The node fails to run.
-             * *   SUCCESS: The node is run as expected.
+             * *   NOT_RUN: The instance is not run.
+             * *   WAIT_TIME: The instance is waiting for its scheduling time to arrive.
+             * *   WAIT_RESOURCE: The instance is waiting for resources.
+             * *   RUNNING: The instance is running.
+             * *   CHECKING: Data quality is being checked for the instance.
+             * *   CHECKING_CONDITION: Branch conditions are being checked for the instance.
+             * *   FAILURE: The instance fails to be run.
+             * *   SUCCESS: The instance is successfully run.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -430,14 +430,14 @@ public class ListManualDagInstancesResponseBody extends TeaModel {
              * The scheduling type of the node. Valid values:
              * <p>
              * 
-             * *   NORMAL(0): The node is an auto triggered node. It is run on a regular basis.
-             * *   MANUAL(1): The node is a manually triggered node. It is not run on a regular basis.
-             * *   PAUSE(2): The node is a frozen node. The scheduling system still runs the node on a regular basis but sets it to Failed when the scheduling system starts to run the node.
-             * *   SKIP(3): The node is a dry-run node. The scheduling system still runs the node on a regular basis but sets it to Succeeded when the scheduling system starts to run the node.
-             * *   SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the node to Succeeded when the scheduling system starts to run the node.
-             * *   SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for its scheduled time. The scheduling system still runs the node on a regular basis but sets it to Succeeded when the scheduling system starts to run the node.
+             * *   NORMAL(0): The node is an auto triggered node. The scheduling system regularly runs the node.
+             * *   MANUAL(1): The node is a manually triggered node. The scheduling system does not regularly run the node.
+             * *   PAUSE(2): The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.
+             * *   SKIP(3): The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.
+             * *   SKIP_UNCHOOSE(4): The node is an unselected node in a temporary workflow. This type of node exists only in temporary workflows. The scheduling system sets the status of the node to successful when the scheduling system starts to run the node.
+             * *   SKIP_CYCLE(5): The node is a node that is scheduled by week or month and is waiting for the scheduling time to arrive. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.
              * *   CONDITION_UNCHOOSE(6): The node is not selected by its ancestor branch node and is run as a dry-run node.
-             * *   REALTIME_DEPRECATED(7): The node has instances generated in real time but deprecated. The scheduling system directly sets the node to Succeeded.
+             * *   REALTIME_DEPRECATED(7): The node has instances that are generated in real time but deprecated. The scheduling system sets the status of the node to successful.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

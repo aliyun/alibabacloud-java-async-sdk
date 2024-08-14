@@ -77,7 +77,7 @@ public class GetNodeOnBaselineRequest extends Request {
         }
 
         /**
-         * BaselineId.
+         * The baseline ID.
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);

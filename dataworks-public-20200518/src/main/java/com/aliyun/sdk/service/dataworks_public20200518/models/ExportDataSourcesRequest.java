@@ -154,7 +154,7 @@ public class ExportDataSourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the data sources reside. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -163,7 +163,7 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The data source type. Valid values:
+         * The type of the data source. Valid values:
          * <p>
          * 
          * *   odps
@@ -187,7 +187,7 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The environment to which the data sources belong. Valid values:
+         * The environment in which the data source resides. Valid values:
          * <p>
          * 
          * *   0: development environment
@@ -200,10 +200,7 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The keyword contained in the names of the data sources to be exported.
-         * <p>
-         * 
-         * You can specify only one keyword. For example, if you set this parameter to test, all the data sources whose names contain test in the specified workspace are exported.
+         * The keyword contained in the names of the data sources that you want to export. You can specify only one keyword. For example, if you set this parameter to test, you can call the ExportDataSources operation to export all data sources whose names contain test in the workspace.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -212,7 +209,7 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value of this parameter must be a positive integer greater than or equal to 1.
+         * The page number. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -221,7 +218,7 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -239,10 +236,10 @@ public class ExportDataSourcesRequest extends Request {
         }
 
         /**
-         * The data source subtype. This parameter takes effect only if the DataSourceType parameter is set to rds.
+         * The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.
          * <p>
          * 
-         * If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.
+         * If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);

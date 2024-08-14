@@ -97,7 +97,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The map returned. The key in the map indicates an output name, and the value in the map indicates the information about the node that generates the output.
          */
         public Builder data(java.util.Map < String, ? > data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class SearchNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

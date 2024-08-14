@@ -568,8 +568,8 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
              * Indicates whether the metatable is a partitioned table. Valid values:
              * <p>
              * 
-             * *   true: The metatable is a partitioned table.
-             * *   false: The metatable is a non-partitioned table.
+             * *   true
+             * *   false
              */
             public Builder isPartitionTable(Boolean isPartitionTable) {
                 this.isPartitionTable = isPartitionTable;
@@ -580,8 +580,8 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
              * Indicates whether the metatable is a view. Valid values:
              * <p>
              * 
-             * *   true: The metatable is a view.
-             * *   false: The metatable is not a view.
+             * *   true
+             * *   false
              */
             public Builder isView(Boolean isView) {
                 this.isView = isView;
@@ -683,7 +683,7 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The schema information of the metatable. This parameter is returned only if you enable the table schema in MaxCompute.
+             * The schema information of the metatable. This parameter is returned if the three-layer model of MaxCompute is enabled.
              */
             public Builder schema(String schema) {
                 this.schema = schema;

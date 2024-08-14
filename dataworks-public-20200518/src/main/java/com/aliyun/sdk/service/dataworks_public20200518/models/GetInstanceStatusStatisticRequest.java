@@ -165,6 +165,14 @@ public class GetInstanceStatusStatisticRequest extends Request {
          * *   SMOKE_TEST: DAG for a smoke testing workflow
          * *   SUPPLY_DATA: DAG for a data backfill instance
          * *   BUSINESS_PROCESS_DAG: DAG for a one-time workflow
+         * 
+         * <!---->
+         * 
+         * *   DAILY
+         * *   MANUAL
+         * *   SMOKE_TEST
+         * *   SUPPLY_DATA
+         * *   BUSINESS_PROCESS_DAG
          */
         public Builder dagType(String dagType) {
             this.putBodyParameter("DagType", dagType);
@@ -173,7 +181,7 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
+         * The runtime environment. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -182,7 +190,7 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.
+         * The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -191,7 +199,14 @@ public class GetInstanceStatusStatisticRequest extends Request {
         }
 
         /**
-         * SchedulerPeriod.
+         * The scheduling cycle. Valid values:
+         * <p>
+         * 
+         * *   MINUTE
+         * *   HOUR
+         * *   DAY
+         * *   WEEK
+         * *   MONTH
          */
         public Builder schedulerPeriod(String schedulerPeriod) {
             this.putBodyParameter("SchedulerPeriod", schedulerPeriod);

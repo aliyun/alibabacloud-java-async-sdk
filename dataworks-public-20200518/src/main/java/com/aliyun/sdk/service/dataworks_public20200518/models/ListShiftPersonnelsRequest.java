@@ -135,7 +135,7 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.
+         * The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.
          */
         public Builder beginTime(Long beginTime) {
             this.putBodyParameter("BeginTime", beginTime);
@@ -144,7 +144,7 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The time when the on-duty engineer ends a shift. Set the value to a UNIX timestamp.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -153,7 +153,7 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The time when the on-duty engineer starts a shift. Set the value to a UNIX timestamp.
+         * The ID of the Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.
          */
         public Builder shiftPersonUID(String shiftPersonUID) {
             this.putBodyParameter("ShiftPersonUID", shiftPersonUID);
@@ -162,7 +162,7 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The type of on-duty engineers that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.
+         * The unique identifier of the shift schedule.
          */
         public Builder shiftScheduleIdentifier(String shiftScheduleIdentifier) {
             this.putBodyParameter("ShiftScheduleIdentifier", shiftScheduleIdentifier);
@@ -171,7 +171,7 @@ public class ListShiftPersonnelsRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to obtain the ID.
+         * The type of the on-duty engineer that you want to query. Valid values: ALL, PRIMARY, BACKUP, and DESIGNATED_USER.
          */
         public Builder userType(String userType) {
             this.putBodyParameter("UserType", userType);

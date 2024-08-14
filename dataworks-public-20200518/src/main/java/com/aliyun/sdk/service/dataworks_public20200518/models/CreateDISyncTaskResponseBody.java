@@ -69,7 +69,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to locate logs and troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -149,7 +149,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the "Invalid path: Business Flow/xxxx/Data Integration" format is returned.
+             * The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the "Invalid path: Workflow/xxxx/Data Integration" format is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -159,8 +159,9 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             /**
              * The creation status of the data synchronization task. Valid values:
              * <p>
-             * - success 
-             * - fail
+             * 
+             * *   success
+             * *   fail
              */
             public Builder status(String status) {
                 this.status = status;

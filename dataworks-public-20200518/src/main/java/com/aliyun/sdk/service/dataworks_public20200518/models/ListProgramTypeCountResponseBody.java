@@ -49,7 +49,7 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The type and number of nodes.
+         * The list of node types and quantity.
          */
         public Builder programTypeAndCounts(java.util.List < ProgramTypeAndCounts> programTypeAndCounts) {
             this.programTypeAndCounts = programTypeAndCounts;
@@ -57,7 +57,7 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate logs and troubleshoot problems.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListProgramTypeCountResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * The node type.
              */
             public Builder programType(String programType) {
                 this.programType = programType;

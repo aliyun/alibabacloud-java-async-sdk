@@ -49,7 +49,7 @@ public class CreateDataServiceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the business process.
+         * The business process ID.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -57,7 +57,7 @@ public class CreateDataServiceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

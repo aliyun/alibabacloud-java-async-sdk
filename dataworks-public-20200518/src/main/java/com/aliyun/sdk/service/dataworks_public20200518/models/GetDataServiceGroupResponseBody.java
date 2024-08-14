@@ -57,7 +57,7 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -225,7 +225,7 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the business process.
+             * The business process ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -249,7 +249,7 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The workspace ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -257,7 +257,7 @@ public class GetDataServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * The tenant ID.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;

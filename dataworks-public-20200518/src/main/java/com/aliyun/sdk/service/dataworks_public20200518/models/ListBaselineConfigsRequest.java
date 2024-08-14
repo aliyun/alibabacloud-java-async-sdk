@@ -177,7 +177,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The type of the baseline. Valid values: DAILY and HOURLY. A value of DAILY indicates that the baseline is a day-level baseline. A value of HOURLY indicates that the baseline is an hour-level baseline. Separate multiple baseline types with commas (,).
+         * The type of the baseline. Valid values: DAILY and HOURLY. Separate multiple baseline types with commas (,).
          */
         public Builder baselineTypes(String baselineTypes) {
             this.putBodyParameter("BaselineTypes", baselineTypes);
@@ -195,7 +195,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: 1 to 30. Default value: 1.
+         * The page number. Valid values: 1 to 30. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -204,7 +204,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -213,7 +213,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The priority of the baseline. Valid values: 1, 3, 5, 7, and 8. Separate multiple priorities with commas (,).
+         * The priority of the baseline. Valid values: {1,3,5,7,8}. Separate multiple priorities with commas (,).
          */
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
@@ -222,7 +222,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the workspace. You can call the ListProjects operation to query the ID.
+         * The workspace ID. You can call the ListProjects operation to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -231,7 +231,7 @@ public class ListBaselineConfigsRequest extends Request {
         }
 
         /**
-         * The keyword in the baseline name used to search for the baseline.
+         * The keyword in the baseline name, which is used to search for the baseline.
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);

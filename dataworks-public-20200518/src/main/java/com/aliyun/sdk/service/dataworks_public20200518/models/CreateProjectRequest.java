@@ -191,7 +191,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.
+         * The client token that is used to ensure the idempotence of the request. This parameter can be left empty.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,12 +200,11 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * Specifies whether to disable the Development role. Valid values:
+         * Specifies whether to disable the Develop role. Valid values:
          * <p>
          * 
-         * *   false: enables the Development role.
-         * *   true: disables the Development role.
-         * *   Default value: false.
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder disableDevelopment(Boolean disableDevelopment) {
             this.putQueryParameter("DisableDevelopment", disableDevelopment);
@@ -214,12 +213,11 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * Specifies whether query result download from DataStudio is allowed. Valid values:
+         * Specifies whether to allow you to download the query result from DataStudio. Valid values:
          * <p>
          * 
-         * *   1: allowed
-         * *   0: not allowed
-         * *   Default value: 1.
+         * *   **1** (default): allows you to download the query result from DataStudio.
+         * *   **0**: does not allow you to download the query result from DataStudio.
          */
         public Builder isAllowDownload(Integer isAllowDownload) {
             this.putQueryParameter("IsAllowDownload", isAllowDownload);
@@ -237,7 +235,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The name of the workspace. The name can contain letters, digits, and underscores (\_) and must start with a letter or digit.
+         * The name of the workspace. The name can contain only letters, digits, and underscores (\_) and must start with a letter or digit.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putQueryParameter("ProjectIdentifier", projectIdentifier);
@@ -246,12 +244,13 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The mode of the workspace. For more information about the differences between the modes of workspaces, see [Differences between workspaces in basic mode and workspaces in standard mode](~~85772~~). Valid values:
+         * The mode of the workspace. For more information about the differences between the modes of workspaces, see [Differences between workspaces in basic mode and workspaces in standard mode](~~85772~~).
          * <p>
          * 
-         * *   2: basic mode
-         * *   3: standard mode
-         * *   Default value: 2.
+         * Valid values:
+         * 
+         * *   **2** (default): basic mode
+         * *   **3**: standard mode
          */
         public Builder projectMode(Integer projectMode) {
             this.putQueryParameter("ProjectMode", projectMode);
@@ -278,7 +277,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The tags added to the workspace.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

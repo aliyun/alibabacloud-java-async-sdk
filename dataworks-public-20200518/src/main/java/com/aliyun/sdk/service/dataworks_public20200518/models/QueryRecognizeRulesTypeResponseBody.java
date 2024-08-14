@@ -97,7 +97,7 @@ public class QueryRecognizeRulesTypeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The returned data about the built-in sensitive data identification rule that is used to configure a sensitive field. The data is in the JSON format.
          */
         public Builder data(Object data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class QueryRecognizeRulesTypeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class QueryRecognizeRulesTypeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class QueryRecognizeRulesTypeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class QueryRecognizeRulesTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class QueryRecognizeRulesTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

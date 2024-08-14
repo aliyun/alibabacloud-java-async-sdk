@@ -25,6 +25,10 @@ public class DeleteLineageRelationRequest extends Request {
     private String relationshipGuid;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationshipType")
+    private String relationshipType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcEntityQualifiedName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String srcEntityQualifiedName;
@@ -34,6 +38,7 @@ public class DeleteLineageRelationRequest extends Request {
         this.regionId = builder.regionId;
         this.destEntityQualifiedName = builder.destEntityQualifiedName;
         this.relationshipGuid = builder.relationshipGuid;
+        this.relationshipType = builder.relationshipType;
         this.srcEntityQualifiedName = builder.srcEntityQualifiedName;
     }
 
@@ -72,6 +77,13 @@ public class DeleteLineageRelationRequest extends Request {
     }
 
     /**
+     * @return relationshipType
+     */
+    public String getRelationshipType() {
+        return this.relationshipType;
+    }
+
+    /**
      * @return srcEntityQualifiedName
      */
     public String getSrcEntityQualifiedName() {
@@ -82,6 +94,7 @@ public class DeleteLineageRelationRequest extends Request {
         private String regionId; 
         private String destEntityQualifiedName; 
         private String relationshipGuid; 
+        private String relationshipType; 
         private String srcEntityQualifiedName; 
 
         private Builder() {
@@ -93,6 +106,7 @@ public class DeleteLineageRelationRequest extends Request {
             this.regionId = request.regionId;
             this.destEntityQualifiedName = request.destEntityQualifiedName;
             this.relationshipGuid = request.relationshipGuid;
+            this.relationshipType = request.relationshipType;
             this.srcEntityQualifiedName = request.srcEntityQualifiedName;
         } 
 
@@ -106,7 +120,7 @@ public class DeleteLineageRelationRequest extends Request {
         }
 
         /**
-         * DestEntityQualifiedName.
+         * The unique identifier of the destination entity.
          */
         public Builder destEntityQualifiedName(String destEntityQualifiedName) {
             this.putQueryParameter("DestEntityQualifiedName", destEntityQualifiedName);
@@ -115,7 +129,7 @@ public class DeleteLineageRelationRequest extends Request {
         }
 
         /**
-         * RelationshipGuid.
+         * The unique identifier of the lineage.
          */
         public Builder relationshipGuid(String relationshipGuid) {
             this.putQueryParameter("RelationshipGuid", relationshipGuid);
@@ -124,7 +138,16 @@ public class DeleteLineageRelationRequest extends Request {
         }
 
         /**
-         * SrcEntityQualifiedName.
+         * RelationshipType.
+         */
+        public Builder relationshipType(String relationshipType) {
+            this.putQueryParameter("RelationshipType", relationshipType);
+            this.relationshipType = relationshipType;
+            return this;
+        }
+
+        /**
+         * The unique identifier of the source entity.
          */
         public Builder srcEntityQualifiedName(String srcEntityQualifiedName) {
             this.putQueryParameter("SrcEntityQualifiedName", srcEntityQualifiedName);

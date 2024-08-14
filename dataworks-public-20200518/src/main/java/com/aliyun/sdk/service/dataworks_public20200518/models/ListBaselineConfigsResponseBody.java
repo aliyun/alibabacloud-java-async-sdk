@@ -97,7 +97,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The return results of the request.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the request. You can troubleshoot issues based on the ID.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -333,7 +333,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             private Boolean useFlag; 
 
             /**
-             * The ID of the baseline.
+             * The baseline ID.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -349,7 +349,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the baseline. Valid values: DAILY and HOURLY. A value of DAILY indicates that the baseline is a day-level baseline. A value of HOURLY indicates that the baseline is an hour-level baseline.
+             * The type of the baseline. Valid values: DAILY and HOURLY.
              */
             public Builder baselineType(String baselineType) {
                 this.baselineType = baselineType;
@@ -357,7 +357,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The hour in the alert time of the day-level baseline. Valid values: 0 to 47.
+             * The hour in the alerting time of the day-level baseline. Valid values: \[0, 47].
              */
             public Builder expHour(Integer expHour) {
                 this.expHour = expHour;
@@ -365,7 +365,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The minute in the alert time of the day-level baseline. Valid values: 0 to 59.
+             * The minute in the alerting time of the day-level baseline. Valid values: \[0, 59].
              */
             public Builder expMinu(Integer expMinu) {
                 this.expMinu = expMinu;
@@ -373,7 +373,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert time of the hour-level baseline. This parameter is presented as key-value pairs in the JSON format. The key indicates the ID of the cycle, and the value is presented in the hh:mm format. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.
+             * The alerting time of the hour-level baseline. This parameter is presented as key-value pairs in the JSON format. The key indicates the ID of the cycle, and the value is presented in the hh:mm format. Valid values of hh: \[0,47]. Valid values of mm: \[0,59].
              */
             public Builder hourExpDetail(String hourExpDetail) {
                 this.hourExpDetail = hourExpDetail;
@@ -381,7 +381,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The committed time of the hour-level baseline. This parameter is presented as key-value pairs in the JSON format. The key indicates the ID of the cycle, and the value is presented in the hh:mm format. Valid values of hh: 0 to 47. Valid values of mm: 0 to 59.
+             * The committed completion time of the hour-level baseline. This parameter is presented as key-value pairs in the JSON format. The key indicates the ID of the cycle, and the value is presented in the hh:mm format. Valid values of hh: \[0,47]. Valid values of mm: \[0,59].
              */
             public Builder hourSlaDetail(String hourSlaDetail) {
                 this.hourSlaDetail = hourSlaDetail;
@@ -397,7 +397,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs are separated by commas (,).
+             * The ID of the Alibaba Cloud account used by the baseline owner. Multiple IDs can be specified. The IDs are separated by commas (,).
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -405,7 +405,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the baseline. Valid values: 1, 3, 5, 7, and 8.
+             * The priority of the baseline. Valid values: {1,3,5,7,8}.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -421,7 +421,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The hour in the committed time of the day-level baseline. Valid values: 0 to 47.
+             * The hour in the committed completion time of the day-level baseline. Valid values: \[0, 47].
              */
             public Builder slaHour(Integer slaHour) {
                 this.slaHour = slaHour;
@@ -429,7 +429,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The minute in the alert time of the day-level baseline. Valid values: 0 to 59.
+             * The minute in the alerting time of the day-level baseline. Valid values: \[0, 59].
              */
             public Builder slaMinu(Integer slaMinu) {
                 this.slaMinu = slaMinu;
@@ -522,7 +522,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -530,7 +530,7 @@ public class ListBaselineConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

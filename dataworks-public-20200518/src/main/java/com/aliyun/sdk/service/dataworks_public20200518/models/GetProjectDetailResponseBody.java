@@ -73,7 +73,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information about the workspace.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,7 +81,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +89,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -149,7 +149,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -157,7 +157,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -474,7 +474,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             private Boolean useProxyOdpsAccount; 
 
             /**
-             * DefaultDiResourceGroupIdentifier.
+             * The identifier of the shared resource group for Data Integration on which nodes are run.
              */
             public Builder defaultDiResourceGroupIdentifier(String defaultDiResourceGroupIdentifier) {
                 this.defaultDiResourceGroupIdentifier = defaultDiResourceGroupIdentifier;
@@ -482,7 +482,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DevelopmentType.
+             * The development type of the workspace. The value is fixed to 4.
              */
             public Builder developmentType(Integer developmentType) {
                 this.developmentType = developmentType;
@@ -490,7 +490,11 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DisableDevelopment.
+             * Indicates whether the Develop role is disabled. Valid values:
+             * <p>
+             * 
+             * *   **false** (default)
+             * *   **true**
              */
             public Builder disableDevelopment(Boolean disableDevelopment) {
                 this.disableDevelopment = disableDevelopment;
@@ -498,7 +502,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EnvTypes.
+             * The environments of workspaces in different modes. Workspaces in basic mode provide only the production environment. Workspaces in standard mode provide both the development environment and the production environment.
              */
             public Builder envTypes(java.util.List < String > envTypes) {
                 this.envTypes = envTypes;
@@ -506,7 +510,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the workspace was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -514,7 +518,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the workspace was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -522,7 +526,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsAllowDownload.
+             * Indicates whether the download operation is allowed.
              */
             public Builder isAllowDownload(Integer isAllowDownload) {
                 this.isAllowDownload = isAllowDownload;
@@ -530,7 +534,11 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the workspace is a default workspace. Valid values:
+             * <p>
+             * 
+             * *   1: The workspace is a default workspace.
+             * *   0: The workspace is not a default workspace.
              */
             public Builder isDefault(Integer isDefault) {
                 this.isDefault = isDefault;
@@ -538,7 +546,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectDescription.
+             * The description of the workspace.
              */
             public Builder projectDescription(String projectDescription) {
                 this.projectDescription = projectDescription;
@@ -546,7 +554,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The workspace ID.
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -554,7 +562,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectIdentifier.
+             * The unique identifier of the workspace.
              */
             public Builder projectIdentifier(String projectIdentifier) {
                 this.projectIdentifier = projectIdentifier;
@@ -562,7 +570,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectMode.
+             * The mode of the workspace. The value 2 indicates that the workspace is in basic mode. The value 3 indicates that the workspace is in standard mode.
              */
             public Builder projectMode(Integer projectMode) {
                 this.projectMode = projectMode;
@@ -570,7 +578,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * The display name of the workspace.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -578,7 +586,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectOwnerBaseId.
+             * The ID of the Alibaba Cloud account used by the workspace owner.
              */
             public Builder projectOwnerBaseId(String projectOwnerBaseId) {
                 this.projectOwnerBaseId = projectOwnerBaseId;
@@ -586,7 +594,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectedMode.
+             * Indicates whether the workspace protection feature is enabled.
              */
             public Builder protectedMode(Integer protectedMode) {
                 this.protectedMode = protectedMode;
@@ -594,7 +602,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResidentArea.
+             * The type of the workspace. Valid values: private and swap.
              */
             public Builder residentArea(String residentArea) {
                 this.residentArea = residentArea;
@@ -602,7 +610,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceManagerResourceGroupId.
+             * The resource group ID.
              */
             public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
                 this.resourceManagerResourceGroupId = resourceManagerResourceGroupId;
@@ -610,7 +618,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerMaxRetryTimes.
+             * The default maximum number of automatic reruns that are allowed after an error occurs.
              */
             public Builder schedulerMaxRetryTimes(Integer schedulerMaxRetryTimes) {
                 this.schedulerMaxRetryTimes = schedulerMaxRetryTimes;
@@ -618,7 +626,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SchedulerRetryInterval.
+             * The interval between automatic reruns after an error occurs.
              */
             public Builder schedulerRetryInterval(Integer schedulerRetryInterval) {
                 this.schedulerRetryInterval = schedulerRetryInterval;
@@ -626,7 +634,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the workspace.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -634,7 +642,11 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TablePrivacyMode.
+             * Indicates whether the MaxCompute tables in the workspace are visible to the users within a tenant. Valid values:
+             * <p>
+             * 
+             * *   0: The MaxCompute tables in the workspace are not visible to the users within a tenant.
+             * *   1: The MaxCompute tables in the workspace are visible to the users within a tenant.
              */
             public Builder tablePrivacyMode(Integer tablePrivacyMode) {
                 this.tablePrivacyMode = tablePrivacyMode;
@@ -642,7 +654,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag information.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -650,7 +662,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The tenant ID.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -658,7 +670,7 @@ public class GetProjectDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UseProxyOdpsAccount.
+             * Indicates whether a proxy account is used to access the MaxCompute compute engine.
              */
             public Builder useProxyOdpsAccount(Boolean useProxyOdpsAccount) {
                 this.useProxyOdpsAccount = useProxyOdpsAccount;

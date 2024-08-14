@@ -125,7 +125,7 @@ public class SetDataSourceShareRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the data source resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -134,7 +134,7 @@ public class SetDataSourceShareRequest extends Request {
         }
 
         /**
-         * The name of the data source to be shared.
+         * The name of the data source that you want to share.
          */
         public Builder datasourceName(String datasourceName) {
             this.putQueryParameter("DatasourceName", datasourceName);
@@ -143,7 +143,7 @@ public class SetDataSourceShareRequest extends Request {
         }
 
         /**
-         * The environment to which the data source belongs. Valid values:
+         * The environment in which the data source is used. Valid values:
          * <p>
          * 
          * *   0: development environment
@@ -156,7 +156,7 @@ public class SetDataSourceShareRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to query the ID of the workspace.
+         * The ID of the DataWorks workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -165,14 +165,12 @@ public class SetDataSourceShareRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace to which the data source is to be shared. If you set this parameter, all members of the specified DataWorks workspace can view and use the data source. The value must be a JSON array. Example: {"projectId":1000,"permission":"WRITE","sharedName":"PX_DATAHUB1.shared_name"}.
+         * The DataWorks workspace to which you want to share the data source. If you configure this parameter, all members of the specified DataWorks workspace can view and use the data source. The value of this parameter is a JSON array. Example: \[{"projectId":1000,"permission":"WRITE","sharedName":"PX_DATAHUB1.shared_name"}], Parameter description:
          * <p>
          * 
-         * Field description:
-         * 
-         * *   projectId: the ID of the DataWorks workspace to which the data source is to be shared.
+         * *   projectId: the ID of the DataWorks workspace to which you want to share the data source.
          * *   permission: the mode in which the data source is shared. Valid values: READ and WRITE. The value READ indicates that all members of the specified workspace can read data from the data source, but cannot modify the data. The value WRITE indicates that all members of the specified workspace can modify the data in the data source.
-         * *   sharedName: the name of the data source to be shared.
+         * *   sharedName: the name of the data source that you want to share.
          */
         public Builder projectPermissions(String projectPermissions) {
             this.putQueryParameter("ProjectPermissions", projectPermissions);
@@ -181,15 +179,13 @@ public class SetDataSourceShareRequest extends Request {
         }
 
         /**
-         * The user to whom the data source is to be shared. If you set this parameter, the specified user can view or use the data source. The value must be a JSON array. Example: {"projectId":10000,"users":\[{"userId":"276184575345452131","permission":"WRITE"},"sharedName":"PX_DATAHUB1.shared_name"}].
+         * The user to whom you want to share the data source. If you configure this parameter, the specified user can view or use the data source. The value of this parameter is a JSON array. Example: \[{"projectId":10000,"users":\[{"userId":"276184575345452131","permission":"WRITE"}],"sharedName":"PX_DATAHUB1.shared_name"}], Parameter description:
          * <p>
          * 
-         * Field description:
-         * 
-         * *   projectId: the ID of the DataWorks workspace. If you set the UserPermissions parameter, the specified user can view or use the data source only in this specified DataWorks workspace.
-         * *   userId: the ID of the user to whom the data source is to be shared.
+         * *   projectId: the ID of the DataWorks workspace. If you configure the UserPermissions parameter, the specified user can view or use the data source only in the specified DataWorks workspace.
+         * *   userId: the ID of the user to whom you want to share the data source.
          * *   permission: the mode in which the data source is shared. Valid values: READ and WRITE. The value READ indicates that the specified user can read data from the data source, but cannot modify the data. The value WRITE indicates that the specified user can modify the data in the data source.
-         * *   sharedName: the name of the data source to be shared.
+         * *   sharedName: the name of the data source that you want to share.
          * 
          * If the ProjectPermissions and UserPermissions parameters are both left empty, the specified data source is not shared to any DataWorks workspace or user. If neither of the parameters is left empty, both parameters take effect.
          */

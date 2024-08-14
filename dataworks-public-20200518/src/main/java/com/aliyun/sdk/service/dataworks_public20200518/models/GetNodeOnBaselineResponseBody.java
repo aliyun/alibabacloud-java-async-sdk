@@ -97,7 +97,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Data.
+         * The list of nodes.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -213,7 +213,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * NodeId.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -221,7 +221,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -229,7 +229,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -237,7 +237,7 @@ public class GetNodeOnBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace to which the node belongs.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

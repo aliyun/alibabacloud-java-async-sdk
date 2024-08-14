@@ -57,7 +57,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +149,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task
+             * The status of the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -157,7 +157,7 @@ public class GetDDLJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

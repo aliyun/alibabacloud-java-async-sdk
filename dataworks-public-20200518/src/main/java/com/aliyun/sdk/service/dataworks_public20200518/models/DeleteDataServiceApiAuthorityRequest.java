@@ -122,7 +122,7 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the API.
+         * The API ID.
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -140,7 +140,7 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -149,7 +149,7 @@ public class DeleteDataServiceApiAuthorityRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID. This parameter is deprecated.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

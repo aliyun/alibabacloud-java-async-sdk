@@ -322,7 +322,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The Alibaba Cloud account that is used to create a sensitive data identification rule. Enter the username of the Alibaba Cloud account.
          */
         public Builder accountName(String accountName) {
             this.putBodyParameter("AccountName", accountName);
@@ -331,7 +331,11 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * ColExclude.
+         * Excludes fields. The system does not identify fields that are assigned with values.
+         * <p>
+         * 
+         * *   The value must be in the ${Project name}.${Table name}.${Field name} or ${Project name}.${Schema name}.${Table name}.${Field name} format.
+         * *   *Wildcards are supported. For example, the asterisk (\*) in default.table.column1\* can be used to match any content following default.table.column1, such as default.table.column10.
          */
         public Builder colExclude(String colExclude) {
             this.putBodyParameter("ColExclude", colExclude);
@@ -340,7 +344,11 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * ColScan.
+         * Scans fields. The system identifies only fields that are assigned with values.
+         * <p>
+         * 
+         * *   The value must be in the ${Project name}.${Table name}.${Field name} or ${Project name}.${Schema name}.${Table name}.${Field name} format.
+         * *   *Wildcards are supported. For example, the asterisk (\*) in default.table.column1\* can be used to match any content following default.table.column1, such as default.table.column10.
          */
         public Builder colScan(String colScan) {
             this.putBodyParameter("ColScan", colScan);
@@ -349,7 +357,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * CommentScan.
+         * Scans content. The value is the text of each field comment in your data asset. Fuzzy match is supported.
          */
         public Builder commentScan(String commentScan) {
             this.putBodyParameter("CommentScan", commentScan);
@@ -358,7 +366,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * ContentScan.
+         * Identifies content. You can call the [QuerySensNodeInfo](~~2747189~~) operation to query the value of the current parameter for a built-in sensitive field.
          */
         public Builder contentScan(String contentScan) {
             this.putBodyParameter("ContentScan", contentScan);
@@ -367,7 +375,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * HitThreshold.
+         * The hit ratio threshold. If more than 60%, which is a sample hit ratio threshold, of all sample data records hit the Name Entity Recognition (NER) model, the sensitive field is hit. The value can be an integer from 0 to 100.
          */
         public Builder hitThreshold(Integer hitThreshold) {
             this.putBodyParameter("HitThreshold", hitThreshold);
@@ -376,7 +384,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * Level.
+         * The sensitivity level of the sensitive field. You can select one from all sensitivity levels that are defined in a template as the sensitivity level of the sensitive field, such as level 1 to level 10.
          */
         public Builder level(String level) {
             this.putBodyParameter("Level", level);
@@ -385,7 +393,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * LevelName.
+         * The name of the sensitivity level. You can call the [QueryDefaultTemplate](~~2743948~~) operation to obtain the name of the sensitivity level in the related template.
          */
         public Builder levelName(String levelName) {
             this.putBodyParameter("LevelName", levelName);
@@ -394,7 +402,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the data category. You can call the [QuerySensClassification](~~2746850~~) operation to query the ID of all data categories. Then, you can select a data category to create a sensitive field. Enter the ID of the selected data category.
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -403,7 +411,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * NodeParent.
+         * The information about the parent data category of the current data category. You can call the [QuerySensClassification](~~2746850~~) operation to obtain the ID of a data category.
          */
         public Builder nodeParent(String nodeParent) {
             this.putBodyParameter("NodeParent", nodeParent);
@@ -412,7 +420,11 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * The type of the arithmetic operation. Valid values:
+         * <p>
+         * 
+         * *   0: OR
+         * *   1: AND
          */
         public Builder operationType(Integer operationType) {
             this.putBodyParameter("OperationType", operationType);
@@ -421,7 +433,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * RecognizeRules.
+         * The content of the sensitive data identification rule. You can call the [QuerySensNodeInfo](~~2747189~~) operation to query the value of the current parameter for a built-in sensitive field.
          */
         public Builder recognizeRules(String recognizeRules) {
             this.putBodyParameter("RecognizeRules", recognizeRules);
@@ -430,7 +442,13 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * RecognizeRulesType.
+         * The type of the sensitive data identification rule. Valid values:
+         * <p>
+         * 
+         * *   1: regular expression
+         * *   2: built-in rule
+         * *   3: sample library
+         * *   4: self-generated data identification model
          */
         public Builder recognizeRulesType(String recognizeRulesType) {
             this.putBodyParameter("RecognizeRulesType", recognizeRulesType);
@@ -439,7 +457,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * SensitiveDescription.
+         * The description of the sensitive field. Enter a string that is less than 128 characters in length.
          */
         public Builder sensitiveDescription(String sensitiveDescription) {
             this.putBodyParameter("SensitiveDescription", sensitiveDescription);
@@ -448,7 +466,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * SensitiveName.
+         * The name of the custom sensitive field. Enter a string that is less than 128 characters in length.
          */
         public Builder sensitiveName(String sensitiveName) {
             this.putBodyParameter("SensitiveName", sensitiveName);
@@ -457,7 +475,11 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the sensitive field. Valid values:
+         * <p>
+         * 
+         * *   0: draft
+         * *   1: effective
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -466,7 +488,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The template ID. You can call the [QueryDefaultTemplate](~~2743948~~) operation to obtain the template ID.
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -475,7 +497,7 @@ public class AddRecognizeRuleRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

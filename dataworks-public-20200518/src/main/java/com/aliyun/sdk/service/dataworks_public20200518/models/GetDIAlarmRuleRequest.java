@@ -77,7 +77,7 @@ public class GetDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * DIAlarmRuleId.
+         * The alert rule ID.
          */
         public Builder DIAlarmRuleId(Long DIAlarmRuleId) {
             this.putBodyParameter("DIAlarmRuleId", DIAlarmRuleId);

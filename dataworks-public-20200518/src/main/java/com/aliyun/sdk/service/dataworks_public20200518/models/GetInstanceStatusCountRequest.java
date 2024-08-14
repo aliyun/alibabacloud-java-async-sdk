@@ -98,7 +98,7 @@ public class GetInstanceStatusCountRequest extends Request {
         } 
 
         /**
-         * The unique identifier of the zone.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +107,7 @@ public class GetInstanceStatusCountRequest extends Request {
         }
 
         /**
-         * The business date of the instance.
+         * The data timestamp of instances.
          */
         public Builder bizDate(String bizDate) {
             this.putBodyParameter("BizDate", bizDate);
@@ -116,7 +116,7 @@ public class GetInstanceStatusCountRequest extends Request {
         }
 
         /**
-         * The running environment in PROD and DEV modes.
+         * The runtime environment. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -125,7 +125,7 @@ public class GetInstanceStatusCountRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * The workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

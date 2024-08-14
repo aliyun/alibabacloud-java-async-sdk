@@ -24,7 +24,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddMetaCollectionEntityResponse> addMetaCollectionEntity(AddMetaCollectionEntityRequest request);
 
     /**
-      * The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to query the ID.
+      * For information about how to add an account to a DataWorks workspace as a member, see [Manage members and roles](~~136941~~).
       *
      */
     CompletableFuture<AddProjectMemberToRoleResponse> addProjectMemberToRole(AddProjectMemberToRoleRequest request);
@@ -55,6 +55,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateConnectionResponse> createConnection(CreateConnectionRequest request);
 
+    /**
+      * You can configure alert rules only for tasks that can be used for real-time data synchronization.
+      *
+     */
     CompletableFuture<CreateDIAlarmRuleResponse> createDIAlarmRule(CreateDIAlarmRuleRequest request);
 
     CompletableFuture<CreateDIJobResponse> createDIJob(CreateDIJobRequest request);
@@ -98,8 +102,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMetaCategoryResponse> createMetaCategory(CreateMetaCategoryRequest request);
 
     /**
-      * A category must belong to a data album.
-      * You can create a category in a data album only after you create the data album. You can set the value of the parentQualifiedName parameter to the unique identifier of the data album to create the category.
+      * Collections are classified into various types. The names of collections of the same type must be different.
       *
      */
     CompletableFuture<CreateMetaCollectionResponse> createMetaCollection(CreateMetaCollectionRequest request);
@@ -138,10 +141,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteConnectionResponse> deleteConnection(DeleteConnectionRequest request);
 
+    /**
+      * You can configure alert rules only for tasks whose MigrationType is set to RealtimeIncremental.
+      *
+     */
     CompletableFuture<DeleteDIAlarmRuleResponse> deleteDIAlarmRule(DeleteDIAlarmRuleRequest request);
 
     CompletableFuture<DeleteDIJobResponse> deleteDIJob(DeleteDIJobRequest request);
 
+    /**
+      * If you want to delete a batch synchronization task, call the DeleteFile operation. For more information, see [Delete a synchronization task](~~321443~~).
+      *
+     */
     CompletableFuture<DeleteDISyncTaskResponse> deleteDISyncTask(DeleteDISyncTaskRequest request);
 
     CompletableFuture<DeleteDataServiceApiResponse> deleteDataServiceApi(DeleteDataServiceApiRequest request);
@@ -156,6 +167,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteFromMetaCategoryResponse> deleteFromMetaCategory(DeleteFromMetaCategoryRequest request);
 
+    /**
+      * This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.
+      *
+     */
     CompletableFuture<DeleteLineageRelationResponse> deleteLineageRelation(DeleteLineageRelationRequest request);
 
     CompletableFuture<DeleteMetaCategoryResponse> deleteMetaCategory(DeleteMetaCategoryRequest request);
@@ -169,7 +184,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteQualityEntityResponse> deleteQualityEntity(DeleteQualityEntityRequest request);
 
     /**
-      * In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transformation, load (ETL). Thereby, Data Quality automatically blocks the nodes that involve dirty data to stop dirty data from spreading downstream. This prevents nodes from producing unexpected dirty data that affects normal use and business decisions. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule described by the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors in a timely manner. For more information, see [Configure monitoring rules for MaxCompute](~~73690~~).
+      * In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transform, and load (ETL). This way, you can prevent tasks from producing unexpected dirty data that affects the smooth running of tasks and business decision-making. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule that is created based on the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors at the earliest opportunity. For more information, see [Configure monitoring rules](~~73690~~).
       *
      */
     CompletableFuture<DeleteQualityFollowerResponse> deleteQualityFollower(DeleteQualityFollowerRequest request);
@@ -206,6 +221,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DsgQueryDefaultTemplatesResponse> dsgQueryDefaultTemplates(DsgQueryDefaultTemplatesRequest request);
 
+    /**
+      * The query capability of the API operation is similar to the query feature in Data Security Guard in the DataWorks console. The API operation can be used to query the identification results of sensitive data of a tenant based on the association with the tenant ID.
+      * *   You can search for a specific identification result based on filter conditions such as data source type and workspace.
+      * *   You can sort the identification results of sensitive data of a tenant based on the values of a field in ascending or descending order.
+      * *   This operation supports paged query.
+      *
+     */
     CompletableFuture<DsgQuerySensResultResponse> dsgQuerySensResult(DsgQuerySensResultRequest request);
 
     CompletableFuture<DsgRunSensIdentifyResponse> dsgRunSensIdentify(DsgRunSensIdentifyRequest request);
@@ -241,13 +263,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportDataSourcesResponse> exportDataSources(ExportDataSourcesRequest request);
 
     /**
-      * The operation that you want to perform.
+      * DataWorks allows you to use the [CreateDISyncTask](~~278725~~) operation to directly create a batch synchronization task in Data Integration. To create a real-time synchronization task or another type of synchronization task, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can use the parameters as request parameters of [CreateDISyncTask](~~278725~~) and call the [CreateDISyncTask](~~278725~~) operation to create a real-time synchronization task or another type of synchronization task. DataWorks allows you to create real-time synchronization tasks and other types of synchronization tasks in Data Integration only in asynchronous mode.
       *
      */
     CompletableFuture<GenerateDISyncTaskConfigForCreatingResponse> generateDISyncTaskConfigForCreating(GenerateDISyncTaskConfigForCreatingRequest request);
 
     /**
-      * The operation that you want to perform.
+      * DataWorks allows you to use only the [UpdateDISyncTask](~~289109~~) operation to update a batch synchronization task in Data Integration. To update a real-time synchronization task, you must first call the GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the UpdateDISyncTask operation and use the parameters as request parameters to update a real-time synchronization task in Data Integration. DataWorks allows you to create or update real-time synchronization tasks in Data Integration only in asynchronous mode.
       *
      */
     CompletableFuture<GenerateDISyncTaskConfigForUpdatingResponse> generateDISyncTaskConfigForUpdating(GenerateDISyncTaskConfigForUpdatingRequest request);
@@ -266,6 +288,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDDLJobStatusResponse> getDDLJobStatus(GetDDLJobStatusRequest request);
 
+    /**
+      * You can configure alert rules only for tasks that can be used for real-time data synchronization.
+      *
+     */
     CompletableFuture<GetDIAlarmRuleResponse> getDIAlarmRule(GetDIAlarmRuleRequest request);
 
     CompletableFuture<GetDIJobResponse> getDIJob(GetDIJobRequest request);
@@ -276,15 +302,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * Supported DAG types:
-      * *   MANUAL: the DAG for a manually triggered workflow.
-      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
-      * *   SUPPLY_DATA: the DAG for a data backfill instance.
-      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
+      * *   MANUAL: DAG for a manually triggered workflow
+      * *   SMOKE_TEST: DAG for a smoke testing workflow
+      * *   SUPPLY_DATA: DAG for a data backfill instance
+      * *   BUSINESS_PROCESS_DAG: DAG for a one-time workflow
       * Supported DAG states:
-      * *   CREATED: The DAG is created.
-      * *   RUNNING: The DAG is running.
-      * *   FAILURE: The DAG fails to run.
-      * *   SUCCESS: The DAG successfully runs.
+      * *   CREATED
+      * *   RUNNING
+      * *   FAILURE
+      * *   SUCCESS
       *
      */
     CompletableFuture<GetDagResponse> getDag(GetDagRequest request);
@@ -374,6 +400,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetMetaTableBasicInfoResponse> getMetaTableBasicInfo(GetMetaTableBasicInfoRequest request);
 
+    /**
+      * > This operation will be replaced soon. We recommend that you do not call this operation.
+      *
+     */
     CompletableFuture<GetMetaTableChangeLogResponse> getMetaTableChangeLog(GetMetaTableChangeLogRequest request);
 
     CompletableFuture<GetMetaTableColumnResponse> getMetaTableColumn(GetMetaTableColumnRequest request);
@@ -389,7 +419,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMetaTableOutputResponse> getMetaTableOutput(GetMetaTableOutputRequest request);
 
     /**
-      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine. If you query partitions of a metatable in an EMR compute engine, only DataLake clusters that use Data Lake Formation (DLF) to manage metadata and Hadoop clusters whose cluster version is earlier than 3.41.0 or 5.7.0 are supported.
       *
      */
     CompletableFuture<GetMetaTablePartitionResponse> getMetaTablePartition(GetMetaTablePartitionRequest request);
@@ -468,9 +498,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTopicInfluenceResponse> getTopicInfluence(GetTopicInfluenceRequest request);
 
     /**
-      * You can import self-managed data sources or data sources that are exported from other Dataworks workspaces to a specified DataWorks workspace.
-      * *   To import a self-managed data source to DataWorks, the data source type must be supported by DataWorks. For more information about the types of data sources supported by DataWorks, see [Supported data stores](~~181656~~).
-      * *   For more information about how to export data sources from DataWorks workspaces to on-premises devices, see [ExportDataSources](~~279570~~).
+      * You can import self-managed data sources or data sources that are exported from other DataWorks workspaces to a specific DataWorks workspace.
+      * *   To import a self-managed data source to a DataWorks workspace, the data source type must be supported by DataWorks. For more information about the types of data sources supported by DataWorks, see [Supported data stores](~~181656~~).
+      * *   For more information about how to export data sources from DataWorks workspaces to your on-premises machine, see [ExportDataSources](~~279570~~).
       *
      */
     CompletableFuture<ImportDataSourcesResponse> importDataSources(ImportDataSourcesRequest request);
@@ -487,24 +517,45 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListCalcEnginesResponse> listCalcEngines(ListCalcEnginesRequest request);
 
+    CompletableFuture<ListClusterConfigsResponse> listClusterConfigs(ListClusterConfigsRequest request);
+
+    CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
+
     /**
       * @deprecated
       *
      */
     CompletableFuture<ListConnectionsResponse> listConnections(ListConnectionsRequest request);
 
+    /**
+      * You can configure alert rules only for tasks that can be used for real-time data synchronization.
+      *
+     */
     CompletableFuture<ListDIAlarmRulesResponse> listDIAlarmRules(ListDIAlarmRulesRequest request);
 
+    /**
+      * You can call this operation to obtain only the basic information about the tasks. If you want to obtain the details of a task, call the GetDIJob operation.
+      *
+     */
     CompletableFuture<ListDIJobsResponse> listDIJobs(ListDIJobsRequest request);
 
     /**
-      * DataWorks allows you to set the default global configuration for only the processing rules of DDL messages in sync solutions. After you configure the **processing rules of DDL messages** in sync solutions, the configuration is set as the default global configuration and applies to all real-time sync nodes. You can also modify the **processing rules of DDL messages** based on your business requirements. For more information, see [Sync solutions](~~199008~~).
+      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization tasks in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
       *
      */
     CompletableFuture<ListDIProjectConfigResponse> listDIProjectConfig(ListDIProjectConfigRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **ListDags**.
+      * Supported DAG types:
+      * *   MANUAL: DAG for a manually triggered workflow
+      * *   SMOKE_TEST: DAG for a smoke testing workflow
+      * *   SUPPLY_DATA: DAG for a data backfill instance
+      * *   BUSINESS_PROCESS_DAG: DAG for a one-time workflow
+      * Supported DAG states:
+      * *   CREATED: The DAG is created.
+      * *   RUNNING: The DAG is running.
+      * *   FAILURE: The DAG fails to run.
+      * *   SUCCESS: The DAG is successfully run.
       *
      */
     CompletableFuture<ListDagsResponse> listDags(ListDagsRequest request);
@@ -529,6 +580,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDeploymentsResponse> listDeployments(ListDeploymentsRequest request);
 
+    /**
+      * For information about codes of extension point events, see [Development references: Extension point event codes](~~463357~~).
+      *
+     */
     CompletableFuture<ListEnabledExtensionsForProjectResponse> listEnabledExtensionsForProject(ListEnabledExtensionsForProjectRequest request);
 
     CompletableFuture<ListEntitiesByTagsResponse> listEntitiesByTags(ListEntitiesByTagsRequest request);
@@ -556,6 +611,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListLineageResponse> listLineage(ListLineageRequest request);
 
     CompletableFuture<ListManualDagInstancesResponse> listManualDagInstances(ListManualDagInstancesRequest request);
+
+    CompletableFuture<ListMeasureDataResponse> listMeasureData(ListMeasureDataRequest request);
 
     CompletableFuture<ListMetaCollectionEntitiesResponse> listMetaCollectionEntities(ListMetaCollectionEntitiesRequest request);
 
@@ -592,7 +649,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListProgramTypeCountResponse> listProgramTypeCount(ListProgramTypeCountRequest request);
 
     /**
-      * For example, an Alibaba Cloud account can assume the developer, O&M engineer, or workspace administrator role in a workspace. For more information, see [Manage members and roles](~~136941~~).
+      * An Alibaba Cloud account can assume a role such as the developer, O\\&M engineer, or workspace administrator role in a workspace. For more information, see [Manage members and roles](~~136941~~).
       *
      */
     CompletableFuture<ListProjectIdsResponse> listProjectIds(ListProjectIdsRequest request);
@@ -643,13 +700,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishDataServiceApiResponse> publishDataServiceApi(PublishDataServiceApiRequest request);
 
     /**
-      * The operation that you want to perform.
+      * DataWorks allows you to call only the [CreateDISyncTask](~~278725~~) operation to create a batch synchronization task or the [UpdateDISyncTask](~~289109~~) operation to update a batch synchronization task in Data Integration. To create or update a real-time synchronization task, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) or [GenerateDISyncTaskConfigForUpdating](~~383464~~) operation to obtain the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask or UpdateDISyncTask operation and use the parameters as request parameters to create or update a real-time synchronization task. DataWorks allows you to create or update real-time synchronization tasks in Data Integration only in asynchronous mode.
       *
      */
     CompletableFuture<QueryDISyncTaskConfigProcessResultResponse> queryDISyncTaskConfigProcessResult(QueryDISyncTaskConfigProcessResultRequest request);
 
     CompletableFuture<QueryDefaultTemplateResponse> queryDefaultTemplate(QueryDefaultTemplateRequest request);
 
+    /**
+      * *   Each time you call this API operation, you must use FML statements to query information about objects that are created in Data Modeling.
+      * *   The information about the objects can be queried by page, except for data layers, business processes, and data domains. You can add an offset to the end of an FML statement. The num LIMIT num statement specifies the offset when the information about the objects is queried, and the number of pages to return each time. The offset value must be a multiple of the number of pages.
+      * *   A maximum of 1,000 entries can be returned each time you call this API operation.
+      *
+     */
     CompletableFuture<QueryPublicModelEngineResponse> queryPublicModelEngine(QueryPublicModelEngineRequest request);
 
     CompletableFuture<QueryRecognizeDataByRuleTypeResponse> queryRecognizeDataByRuleType(QueryRecognizeDataByRuleTypeRequest request);
@@ -664,6 +727,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QuerySensNodeInfoResponse> querySensNodeInfo(QuerySensNodeInfoRequest request);
 
+    /**
+      * This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.
+      *
+     */
     CompletableFuture<RegisterLineageRelationResponse> registerLineageRelation(RegisterLineageRelationRequest request);
 
     CompletableFuture<RemoveEntityTagsResponse> removeEntityTags(RemoveEntityTagsRequest request);
@@ -695,7 +762,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ScanSensitiveDataResponse> scanSensitiveData(ScanSensitiveDataRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **SearchMetaTables**.
+      * You can call this operation to query only metatables in a MaxCompute or E-MapReduce (EMR) compute engine.
       *
      */
     CompletableFuture<SearchMetaTablesResponse> searchMetaTables(SearchMetaTablesRequest request);
@@ -750,18 +817,24 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateBusinessResponse> updateBusiness(UpdateBusinessRequest request);
 
+    CompletableFuture<UpdateClusterConfigsResponse> updateClusterConfigs(UpdateClusterConfigsRequest request);
+
     /**
       * @deprecated
       *
      */
     CompletableFuture<UpdateConnectionResponse> updateConnection(UpdateConnectionRequest request);
 
+    /**
+      * You can configure alert rules only for tasks that can be used for real-time data synchronization. You must update all fields in the alert rule.
+      *
+     */
     CompletableFuture<UpdateDIAlarmRuleResponse> updateDIAlarmRule(UpdateDIAlarmRuleRequest request);
 
     CompletableFuture<UpdateDIJobResponse> updateDIJob(UpdateDIJobRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **UpdateDIProjectConfig**.
+      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization tasks in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
       *
      */
     CompletableFuture<UpdateDIProjectConfigResponse> updateDIProjectConfig(UpdateDIProjectConfigRequest request);
@@ -785,7 +858,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMetaCategoryResponse> updateMetaCategory(UpdateMetaCategoryRequest request);
 
     /**
-      * You must configure at least one of the Name and Comment parameters when you update a collection.
+      * Only the name and comment of a collection can be updated.
       *
      */
     CompletableFuture<UpdateMetaCollectionResponse> updateMetaCollection(UpdateMetaCollectionRequest request);

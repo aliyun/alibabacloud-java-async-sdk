@@ -83,7 +83,7 @@ public class ImportDataSourcesRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the DataWorks workspace resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +92,7 @@ public class ImportDataSourcesRequest extends Request {
         }
 
         /**
-         * The configurations of the data sources to be imported. The Name, DataSourceType, SubType, Description, Content, and EnvType fields are required. For more information about the fields, see [CreateDataSource](~~211429~~).
+         * The configurations of the data sources that you want to import. The Name, DataSourceType, SubType, Description, Content, and EnvType parameters are required. For more information about the parameters, see [CreateDataSource](~~211429~~).
          */
         public Builder dataSources(String dataSources) {
             this.putQueryParameter("DataSources", dataSources);
@@ -101,7 +101,7 @@ public class ImportDataSourcesRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

@@ -97,7 +97,7 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,12 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The result of the operation. Valid values:
+         * <p>
+         * 
+         * true: successful
+         * 
+         * false: failed
          */
         public Builder status(Boolean status) {
             this.status = status;
@@ -137,7 +142,12 @@ public class DeleteLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * true
+         * 
+         * false
          */
         public Builder success(Boolean success) {
             this.success = success;

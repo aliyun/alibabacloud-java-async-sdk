@@ -150,7 +150,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * DIAlarmRuleId.
+         * The alert rule ID.
          */
         public Builder DIAlarmRuleId(Long DIAlarmRuleId) {
             this.putBodyParameter("DIAlarmRuleId", DIAlarmRuleId);
@@ -159,7 +159,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the alert rule.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -168,7 +168,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * Specifies whether to enable the alert rule. By default, the alert rule is disabled.
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("Enabled", enabled);
@@ -177,7 +177,12 @@ public class UpdateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * The metric type in the alert rule. Valid values:
+         * <p>
+         * 
+         * *   Heartbeat
+         * *   FailoverCount
+         * *   Delay
          */
         public Builder metricType(String metricType) {
             this.putBodyParameter("MetricType", metricType);
@@ -186,7 +191,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * NotificationSettings.
+         * The alert notification settings.
          */
         public Builder notificationSettings(NotificationSettings notificationSettings) {
             String notificationSettingsShrink = shrink(notificationSettings, "NotificationSettings", "json");
@@ -196,7 +201,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
         }
 
         /**
-         * TriggerConditions.
+         * The conditions that can trigger the alert rule.
          */
         public Builder triggerConditions(java.util.List < TriggerConditions> triggerConditions) {
             String triggerConditionsShrink = shrink(triggerConditions, "TriggerConditions", "json");
@@ -251,7 +256,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
             private String severity; 
 
             /**
-             * Channels.
+             * The alert notification methods.
              */
             public Builder channels(java.util.List < String > channels) {
                 this.channels = channels;
@@ -259,7 +264,11 @@ public class UpdateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * Severity.
+             * The severity level. Valid values:
+             * <p>
+             * 
+             * *   Warning
+             * *   Critical
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -312,7 +321,11 @@ public class UpdateDIAlarmRuleRequest extends Request {
             private java.util.List < String > receiverValues; 
 
             /**
-             * ReceiverType.
+             * The recipient type.
+             * <p>
+             * 
+             * *   If the alert notification method is Mail, Phone, or Sms, the recipient type is Alibaba Cloud account ID.
+             * *   If the alert notification method is Ding, the recipient type is DingTalk chatbot token.
              */
             public Builder receiverType(String receiverType) {
                 this.receiverType = receiverType;
@@ -320,7 +333,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * ReceiverValues.
+             * The recipients.
              */
             public Builder receiverValues(java.util.List < String > receiverValues) {
                 this.receiverValues = receiverValues;
@@ -387,7 +400,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
             private java.util.List < NotificationReceivers> notificationReceivers; 
 
             /**
-             * InhibitionInterval.
+             * The duration of the alert suppression interval. Default value: 5. Unit: minutes.
              */
             public Builder inhibitionInterval(Integer inhibitionInterval) {
                 this.inhibitionInterval = inhibitionInterval;
@@ -395,7 +408,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * NotificationChannels.
+             * The alert notification methods.
              */
             public Builder notificationChannels(java.util.List < NotificationChannels> notificationChannels) {
                 this.notificationChannels = notificationChannels;
@@ -403,7 +416,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * NotificationReceivers.
+             * The alert notification recipients.
              */
             public Builder notificationReceivers(java.util.List < NotificationReceivers> notificationReceivers) {
                 this.notificationReceivers = notificationReceivers;
@@ -468,7 +481,7 @@ public class UpdateDIAlarmRuleRequest extends Request {
             private Long threshold; 
 
             /**
-             * Duration.
+             * The time interval for alert calculation. Unit: minutes.
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -476,7 +489,11 @@ public class UpdateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * Severity.
+             * The severity level. Valid values:
+             * <p>
+             * 
+             * *   Warning
+             * *   Critical
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -484,7 +501,12 @@ public class UpdateDIAlarmRuleRequest extends Request {
             }
 
             /**
-             * Threshold.
+             * The alert threshold.
+             * <p>
+             * 
+             * *   If the alert rule is for task status, you do not need to specify a threshold.
+             * *   If the alert rule is for failovers, specify the number of failovers.
+             * *   If the alert rule is for latency, specify the latency duration, in seconds.
              */
             public Builder threshold(Long threshold) {
                 this.threshold = threshold;

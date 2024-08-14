@@ -120,7 +120,7 @@ public class ListShiftSchedulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to view the ID.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -129,7 +129,7 @@ public class ListShiftSchedulesRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * The page number. Minimum value:1. Maximum value: 100. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -138,7 +138,7 @@ public class ListShiftSchedulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Minimum value:1. Maximum value: 100. Default value: 1.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -147,7 +147,7 @@ public class ListShiftSchedulesRequest extends Request {
         }
 
         /**
-         * The ID of your Alibaba Cloud account. You can log on to the DataWorks console and move the pointer over the profile picture in the upper-right corner to obtain the ID.
+         * The keyword used to perform a fuzzy search on shift schedules.
          */
         public Builder shiftScheduleName(String shiftScheduleName) {
             this.putBodyParameter("ShiftScheduleName", shiftScheduleName);

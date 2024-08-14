@@ -49,7 +49,7 @@ public class RevokeTablePermissionResponseBody extends TeaModel {
         private Boolean revokeSuccess; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class RevokeTablePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the permissions on the table are revoked.
+         * Indicates whether the permissions are revoked.
          */
         public Builder revokeSuccess(Boolean revokeSuccess) {
             this.revokeSuccess = revokeSuccess;

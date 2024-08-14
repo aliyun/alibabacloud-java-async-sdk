@@ -91,7 +91,7 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * DIJobId.
+         * The ID of the synchronization task.
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);
@@ -100,7 +100,7 @@ public class GetDIJobRequest extends Request {
         }
 
         /**
-         * WithDetails.
+         * Specifies whether to return detailed configuration information, including TransformationRules, TableMappings, and JobSettings. Valid values: true and false. Default value: true.
          */
         public Builder withDetails(Boolean withDetails) {
             this.putBodyParameter("WithDetails", withDetails);

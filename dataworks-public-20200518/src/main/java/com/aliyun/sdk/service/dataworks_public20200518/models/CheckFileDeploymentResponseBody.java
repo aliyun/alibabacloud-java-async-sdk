@@ -37,7 +37,7 @@ public class CheckFileDeploymentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The request ID. You can use the ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

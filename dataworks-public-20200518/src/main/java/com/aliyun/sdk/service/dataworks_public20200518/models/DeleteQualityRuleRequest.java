@@ -97,7 +97,7 @@ public class DeleteQualityRuleRequest extends Request {
         } 
 
         /**
-         * The ID of the region where your project resides.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -106,7 +106,7 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -115,7 +115,7 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the database engine or data source.
+         * The name of the compute engine or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -124,7 +124,7 @@ public class DeleteQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * The monitoring rule ID.
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

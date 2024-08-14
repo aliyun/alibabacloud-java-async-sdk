@@ -182,7 +182,16 @@ public class DeleteQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The environment in which the compute engine instance runs. Valid values: DEV and PRD. The value DEV indicates the development environment, and the value PRD indicates the production environment.
+         * The type of the compute engine or data source. Valid values:
+         * <p>
+         * 
+         * *   cdh
+         * *   analyticdb_for_mysql
+         * *   odps
+         * *   emr
+         * *   hadoop
+         * *   holodb
+         * *   hybriddb_for_postgresql
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);

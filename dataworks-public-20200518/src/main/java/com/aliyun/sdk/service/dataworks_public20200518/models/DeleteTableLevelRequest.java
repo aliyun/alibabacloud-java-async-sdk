@@ -83,7 +83,7 @@ public class DeleteTableLevelRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +92,7 @@ public class DeleteTableLevelRequest extends Request {
         }
 
         /**
-         * The ID of the table level to be deleted. You can call the ListTableLevel operation to obtain the ID.
+         * The ID of the table level that you want to delete. You can call the ListTableLevel operation to query the ID.
          */
         public Builder levelId(Long levelId) {
             this.putQueryParameter("LevelId", levelId);
@@ -101,7 +101,7 @@ public class DeleteTableLevelRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

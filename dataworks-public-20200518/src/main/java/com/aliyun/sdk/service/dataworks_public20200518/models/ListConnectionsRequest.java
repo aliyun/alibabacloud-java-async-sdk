@@ -175,7 +175,22 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * ConnectionType.
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   odps
+         * *   mysql
+         * *   rds
+         * *   oss
+         * *   sqlserver
+         * *   polardb
+         * *   oracle
+         * *   mongodb
+         * *   emr
+         * *   postgresql
+         * *   analyticdb_for_mysql
+         * *   hybriddb_for_postgresql
+         * *   holo
          */
         public Builder connectionType(String connectionType) {
             this.putQueryParameter("ConnectionType", connectionType);
@@ -184,7 +199,7 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * The environment in which the data source is used. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -193,7 +208,7 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the data source that you want to query.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -202,7 +217,7 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -211,7 +226,7 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -220,7 +235,7 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace to which the data source belongs. You can call the [ListProjects](~~178393~~) operation to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -229,7 +244,11 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the data source. Valid values:
+         * <p>
+         * 
+         * *   ENABLED
+         * *   DISABLED
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -238,7 +257,11 @@ public class ListConnectionsRequest extends Request {
         }
 
         /**
-         * SubType.
+         * The subtype of the data source. This parameter is used in scenarios where a type includes subtypes. The following type and subtypes are supported:
+         * <p>
+         * 
+         * *   Type: `rds`
+         * *   Subtypes: `mysql`, `sqlserver`, and `postgresql`
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);

@@ -175,7 +175,7 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The name of the metatable.
+         * The ID of the E-MapReduce (EMR) cluster. Configure this parameter only if you want to query the lineage of an EMR table.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -184,7 +184,7 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The error message.
+         * The type of the data source. Valid values: odps and emr.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -193,7 +193,7 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * The name of the database.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -202,7 +202,7 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * Specifies the ancestor or descendant lineage that you want to query for a field. Valid values: up and down. The value up indicates the ancestor lineage. The value down indicates the descendant lineage.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -211,7 +211,7 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The ID of the E-MapReduce (EMR) cluster. Set this parameter only when you query data in an EMR compute engine instance.
+         * The logic of paging. Configure this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the previous request.
          */
         public Builder nextPrimaryKey(String nextPrimaryKey) {
             this.putQueryParameter("NextPrimaryKey", nextPrimaryKey);
@@ -220,7 +220,7 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The name of the metadatabase.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -229,7 +229,7 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The logic of paging. Set this parameter based on the value of the response parameter NextPrimaryKey when the value of the response parameter HasNext is true in the last query.
+         * The unique identifier of the table.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -238,7 +238,7 @@ public class GetMetaTableLineageRequest extends Request {
         }
 
         /**
-         * The HTTP status code.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

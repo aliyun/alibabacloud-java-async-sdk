@@ -77,7 +77,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
         }
 
         /**
-         * DesensRules.
+         * A collection of data masking rules that you want to add or modify.
          */
         public Builder desensRules(java.util.List < DesensRules> desensRules) {
             String desensRulesShrink = shrink(desensRules, "DesensRules", "json");
@@ -133,7 +133,16 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             private java.util.Map < String, ? > extParam; 
 
             /**
-             * DesensPlanType.
+             * The masking method configured in the data masking rule. Valid values:
+             * <p>
+             * 
+             * *   hash
+             * *   mapping
+             * *   mask
+             * *   charreplacement
+             * *   intervalselect
+             * *   decimalpoint
+             * *   emptydesens
              */
             public Builder desensPlanType(String desensPlanType) {
                 this.desensPlanType = desensPlanType;
@@ -141,7 +150,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             }
 
             /**
-             * ExtParam.
+             * The parameters for the data masking rule.
              */
             public Builder extParam(java.util.Map < String, ? > extParam) {
                 this.extParam = extParam;
@@ -271,7 +280,11 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             private Integer status; 
 
             /**
-             * CheckWatermark.
+             * Specifies whether to add a watermark. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder checkWatermark(Boolean checkWatermark) {
                 this.checkWatermark = checkWatermark;
@@ -279,7 +292,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             }
 
             /**
-             * DataType.
+             * The sensitive field type.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -287,7 +300,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             }
 
             /**
-             * DesensPlan.
+             * The data masking rule.
              */
             public Builder desensPlan(DesensPlan desensPlan) {
                 this.desensPlan = desensPlan;
@@ -295,7 +308,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             }
 
             /**
-             * Id.
+             * The ID of the data masking rule. You can call the [DsgDesensPlanQueryList](~~2786578~~) operation to query the ID of the data masking rule.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -303,7 +316,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             }
 
             /**
-             * Owner.
+             * The owner of the data masking rule.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -311,7 +324,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             }
 
             /**
-             * RuleName.
+             * The name of the data masking rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -319,7 +332,7 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             }
 
             /**
-             * SceneIds.
+             * The level-2 data masking scenario.
              */
             public Builder sceneIds(java.util.List < Integer > sceneIds) {
                 this.sceneIds = sceneIds;
@@ -327,7 +340,11 @@ public class DsgDesensPlanAddOrUpdateRequest extends Request {
             }
 
             /**
-             * Status.
+             * The status of the data masking rule. Valid values:
+             * <p>
+             * 
+             * *   0: expired
+             * *   1: effective
              */
             public Builder status(Integer status) {
                 this.status = status;

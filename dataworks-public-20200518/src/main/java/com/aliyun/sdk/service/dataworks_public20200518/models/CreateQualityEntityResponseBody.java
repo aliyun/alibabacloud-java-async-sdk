@@ -97,7 +97,7 @@ public class CreateQualityEntityResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the partition expression.
+         * The partition filter expression ID.
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class CreateQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class CreateQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP request error codes.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class CreateQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class CreateQualityEntityResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

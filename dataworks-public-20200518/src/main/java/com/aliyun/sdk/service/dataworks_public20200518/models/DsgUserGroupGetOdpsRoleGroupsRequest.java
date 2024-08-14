@@ -77,7 +77,7 @@ public class DsgUserGroupGetOdpsRoleGroupsRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the MaxCompute project. You can call the [DsgPlatformQueryProjectsAndSchemaFromMeta](~~2786303~~) operation to query a list of MaxCompute projects.
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

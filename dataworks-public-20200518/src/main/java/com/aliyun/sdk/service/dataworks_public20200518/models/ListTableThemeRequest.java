@@ -122,7 +122,7 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -131,7 +131,7 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value:10. Maximum value: 100.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -140,7 +140,7 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the parent table folder.
+         * The ID of the parent table theme.
          */
         public Builder parentId(Long parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -149,7 +149,7 @@ public class ListTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

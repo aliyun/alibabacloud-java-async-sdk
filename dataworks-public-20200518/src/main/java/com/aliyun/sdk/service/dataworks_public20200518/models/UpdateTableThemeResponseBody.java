@@ -97,7 +97,7 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         private Boolean updateResult; 
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,11 +129,11 @@ public class UpdateTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -144,8 +144,8 @@ public class UpdateTableThemeResponseBody extends TeaModel {
          * Indicates whether the update result is returned. Valid values:
          * <p>
          * 
-         * *   true: The update result is returned.
-         * *   false: The update result is not returned.
+         * *   true
+         * *   false
          */
         public Builder updateResult(Boolean updateResult) {
             this.updateResult = updateResult;

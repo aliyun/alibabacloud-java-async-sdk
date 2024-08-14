@@ -97,7 +97,7 @@ public class GetMetaCollectionDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The collection.
+         * The information about the collection.
          */
         public Builder collection(Collection collection) {
             this.collection = collection;
@@ -105,7 +105,7 @@ public class GetMetaCollectionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class GetMetaCollectionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class GetMetaCollectionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class GetMetaCollectionDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,9 +140,9 @@ public class GetMetaCollectionDetailResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * true: The request was successful.
+         * true
          * 
-         * false: The request failed.
+         * false
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -129,7 +129,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot errors.
+         * The request ID. You can troubleshoot errors based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +137,11 @@ public class ListQualityRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -485,10 +485,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
              * <p>
              * 
              * *   1: The monitoring rule is a strong rule.
-             * 
-             * *   0: The monitoring rule is a weak rule.
-             * 
-             *     You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.
+             * *   0: The monitoring rule is a weak rule. You can specify the strength of a monitoring rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
              */
             public Builder blockType(Integer blockType) {
                 this.blockType = blockType;
@@ -496,7 +493,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the checker.
+             * The checker ID.
              */
             public Builder checkerId(Integer checkerId) {
                 this.checkerId = checkerId;
@@ -504,7 +501,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the monitoring rule.
+             * The description of the system defense rule.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -512,7 +509,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and a critical alert is reported, nodes are blocked.
+             * The threshold for a critical alert. The threshold indicates the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
              */
             public Builder criticalThreshold(String criticalThreshold) {
                 this.criticalThreshold = criticalThreshold;
@@ -560,7 +557,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the monitoring rule.
+             * The monitoring rule ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -576,7 +573,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sampling method of the monitoring rule.
+             * The ID of the task that is associated with the partition filter expression.
              */
             public Builder methodId(Integer methodId) {
                 this.methodId = methodId;
@@ -584,7 +581,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
+             * The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
              */
             public Builder methodName(String methodName) {
                 this.methodName = methodName;
@@ -592,7 +589,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to configure the monitoring rule.
+             * The name of the Alibaba Cloud account that is used to configure the monitoring rule.
              */
             public Builder onDuty(String onDuty) {
                 this.onDuty = onDuty;
@@ -608,7 +605,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the compute engine instance or data source.
+             * The name of the compute engine or data source.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -616,7 +613,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the monitored field.
+             * The name of the field.
              */
             public Builder property(String property) {
                 this.property = property;
@@ -632,7 +629,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node that is associated with the partition filter expression.
+             * The ID of the task that is associated with the partition filter expression.
              */
             public Builder ruleCheckerRelationId(Long ruleCheckerRelationId) {
                 this.ruleCheckerRelationId = ruleCheckerRelationId;
@@ -685,7 +682,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The trend of the monitoring results.
+             * The trend of the monitoring result.
              */
             public Builder trend(String trend) {
                 this.trend = trend;
@@ -693,7 +690,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.
+             * The threshold for a warning alert. The threshold specifies the deviation of the monitoring result from the expected value. You can specify a custom value for the threshold based on your business requirements.
              */
             public Builder warningThreshold(String warningThreshold) {
                 this.warningThreshold = warningThreshold;
@@ -770,7 +767,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -778,7 +775,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The number of entries per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -786,7 +783,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the monitoring rules.
+             * The details of the monitoring rule.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -794,7 +791,7 @@ public class ListQualityRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

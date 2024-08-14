@@ -97,7 +97,7 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
         private Boolean success; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -189,7 +193,7 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
             private String project; 
 
             /**
-             * ClusterId.
+             * The ID of the EMR cluster. This parameter is generated only when the request parameter EngineName is set to EMR.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -197,7 +201,7 @@ public class DsgPlatformQueryProjectsAndSchemaFromMetaResponseBody extends TeaMo
             }
 
             /**
-             * Project.
+             * The name of the compute engine.
              */
             public Builder project(String project) {
                 this.project = project;

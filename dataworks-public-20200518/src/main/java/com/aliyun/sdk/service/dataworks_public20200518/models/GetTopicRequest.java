@@ -77,7 +77,7 @@ public class GetTopicRequest extends Request {
         }
 
         /**
-         * The ID of the request. You can troubleshoot issues based on the ID.
+         * The event ID. You can call the [ListTopics](~~173973~~) operation to query the ID.
          */
         public Builder topicId(Long topicId) {
             this.putBodyParameter("TopicId", topicId);

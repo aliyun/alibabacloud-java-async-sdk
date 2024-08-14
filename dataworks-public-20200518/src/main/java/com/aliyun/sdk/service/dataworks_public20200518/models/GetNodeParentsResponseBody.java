@@ -97,7 +97,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information of the ancestor nodes.
+         * The information about the ancestor nodes.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -297,7 +297,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
             private String stepType; 
 
             /**
-             * The ID of the baseline.
+             * The baseline ID.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -305,7 +305,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The cron expression. Cron expressions are used to run auto triggered nodes.
+             * The CRON expression. CRON expressions are used to run auto triggered nodes.
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -313,7 +313,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -337,7 +337,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the node. Valid values: 1 to 8. A large value indicates a high priority.
+             * The priority. Valid values: 1 to 8. A large value indicates a high priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -364,8 +364,8 @@ public class GetNodeParentsResponseBody extends TeaModel {
              * Indicates whether the node can be rerun if the node fails to run. Valid values:
              * <p>
              * 
-             * *   true: indicates that the node can be rerun.
-             * *   false: indicates that the node cannot be rerun.
+             * *   true
+             * *   false
              */
             public Builder repeatability(Boolean repeatability) {
                 this.repeatability = repeatability;
@@ -376,10 +376,10 @@ public class GetNodeParentsResponseBody extends TeaModel {
              * The scheduling type of the node. Valid values:
              * <p>
              * 
-             * *   NORMAL: indicates that the node is an auto triggered node.
-             * *   MANUAL: indicates that the node is a manually triggered node.
-             * *   PAUSE: indicates that the node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.
-             * *   SKIP: indicates that the node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
+             * *   NORMAL: The node is an auto triggered node.
+             * *   MANUAL: The node is a manually triggered node. Manually triggered nodes cannot be automatically triggered.
+             * *   PAUSE: The node is a paused node. Paused nodes are started as scheduled but the system sets the status of the nodes to failed when it starts to run them.
+             * *   SKIP: The node is a dry-run node. Dry-run nodes are started as scheduled but the system sets the status of the nodes to successful when it starts to run them.
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -428,7 +428,7 @@ public class GetNodeParentsResponseBody extends TeaModel {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * The ancestor nodes returned.
+             * The ancestor nodes.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;

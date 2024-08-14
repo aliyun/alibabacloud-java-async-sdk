@@ -49,7 +49,7 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
         private java.util.List < java.util.Map<String, ?>> returnValue; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class QueryPublicModelEngineResponseBody extends TeaModel {
         }
 
         /**
-         * ReturnValue.
+         * The returned information about objects.
          */
         public Builder returnValue(java.util.List < java.util.Map<String, ?>> returnValue) {
             this.returnValue = returnValue;

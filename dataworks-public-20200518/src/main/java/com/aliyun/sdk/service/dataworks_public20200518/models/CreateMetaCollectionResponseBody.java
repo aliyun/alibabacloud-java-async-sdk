@@ -97,7 +97,7 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error message returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,11 +121,7 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * The unique identifier of the collection.
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;
@@ -133,7 +129,7 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The unique identifier of the collection.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +137,11 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;

@@ -85,7 +85,7 @@ public class SubmitDataServiceApiResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * Indicates whether the API was submitted.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -93,7 +93,7 @@ public class SubmitDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -101,7 +101,7 @@ public class SubmitDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -109,7 +109,7 @@ public class SubmitDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class SubmitDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

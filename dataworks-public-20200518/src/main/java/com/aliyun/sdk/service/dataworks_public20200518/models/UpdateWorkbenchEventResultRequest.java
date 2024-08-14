@@ -121,7 +121,7 @@ public class UpdateWorkbenchEventResultRequest extends Request {
         }
 
         /**
-         * The check status of the extension point event. Valid values: OK and Fail. A value of OK indicates that the event passes the check. A value of FAIL indicates that the event fails to pass the check.
+         * The check result of the extension point event. Valid values: OK and Fail.
          */
         public Builder checkResult(String checkResult) {
             this.putQueryParameter("CheckResult", checkResult);

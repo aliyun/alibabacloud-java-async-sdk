@@ -76,7 +76,7 @@ public class DsgSceneQuerySceneListByNameRequest extends Request {
         }
 
         /**
-         * SceneName.
+         * The name of the data masking scenario. A fuzzy match is performed in the platform based on a keyword to search for the data masking scenario.
          */
         public Builder sceneName(String sceneName) {
             this.putQueryParameter("SceneName", sceneName);

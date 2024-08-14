@@ -97,7 +97,7 @@ public class SetSuccessInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error message.
+         * Indicates whether result details are returned.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class SetSuccessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class SetSuccessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class SetSuccessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether result details are returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class SetSuccessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class SetSuccessInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

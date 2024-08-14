@@ -101,7 +101,7 @@ public class UpdateMetaTableIntroWikiRequest extends Request {
         }
 
         /**
-         * The GUID of the metatable. Specify the GUID in the format of odps.{projectName}.{tableName}.
+         * The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

@@ -172,7 +172,7 @@ public class CreateDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID. This parameter is deprecated.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

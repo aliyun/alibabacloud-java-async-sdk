@@ -92,7 +92,7 @@ public class RemoveEntityTagsRequest extends Request {
         }
 
         /**
-         * QualifiedName.
+         * The unique identifier of the entity. Example: maxcompute-table.projectA.tableA.
          */
         public Builder qualifiedName(String qualifiedName) {
             this.putQueryParameter("QualifiedName", qualifiedName);
@@ -101,7 +101,7 @@ public class RemoveEntityTagsRequest extends Request {
         }
 
         /**
-         * TagKeys.
+         * The tag keys.
          */
         public Builder tagKeys(java.util.List < String > tagKeys) {
             String tagKeysShrink = shrink(tagKeys, "TagKeys", "json");

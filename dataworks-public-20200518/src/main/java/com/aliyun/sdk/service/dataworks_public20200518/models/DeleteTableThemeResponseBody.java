@@ -97,7 +97,7 @@ public class DeleteTableThemeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the table folder is deleted.
+         * Indicates whether the theme was deleted.
          */
         public Builder deleteResult(Boolean deleteResult) {
             this.deleteResult = deleteResult;
@@ -105,7 +105,7 @@ public class DeleteTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class DeleteTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class DeleteTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class DeleteTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,11 +137,11 @@ public class DeleteTableThemeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

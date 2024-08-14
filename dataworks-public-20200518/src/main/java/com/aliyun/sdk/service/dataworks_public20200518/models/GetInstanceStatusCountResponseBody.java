@@ -49,7 +49,7 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
         private StatusCount statusCount; 
 
         /**
-         * The request ID, which is used to locate the logs and troubleshoot problems.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
         }
 
         /**
-         * The status statistics of the instance.
+         * The statistics of instances.
          */
         public Builder statusCount(StatusCount statusCount) {
             this.statusCount = statusCount;
@@ -169,7 +169,7 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
             private Integer waitTimeCount; 
 
             /**
-             * The number of failed instances.
+             * The number of instances that failed.
              */
             public Builder failureCount(Integer failureCount) {
                 this.failureCount = failureCount;
@@ -177,7 +177,7 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are not running.
+             * The number of instances that are not run.
              */
             public Builder notRunCount(Integer notRunCount) {
                 this.notRunCount = notRunCount;
@@ -185,7 +185,7 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of running instances.
+             * The number of instances that are running.
              */
             public Builder runningCount(Integer runningCount) {
                 this.runningCount = runningCount;
@@ -193,7 +193,7 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of successful instances.
+             * The number of instances that are successfully run.
              */
             public Builder successCount(Integer successCount) {
                 this.successCount = successCount;
@@ -201,7 +201,7 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances.
+             * The total number of instances returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
@@ -209,7 +209,7 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances waiting for resources.
+             * The number of instances that are waiting for resources.
              */
             public Builder waitResCount(Integer waitResCount) {
                 this.waitResCount = waitResCount;
@@ -217,7 +217,7 @@ public class GetInstanceStatusCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances to be run that meet the conditions.
+             * The number of instances that are waiting for their scheduling time to arrive.
              */
             public Builder waitTimeCount(Integer waitTimeCount) {
                 this.waitTimeCount = waitTimeCount;

@@ -83,7 +83,7 @@ public class DeleteTableThemeRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -101,7 +101,7 @@ public class DeleteTableThemeRequest extends Request {
         }
 
         /**
-         * The ID of the table folder.
+         * The ID of the theme.
          */
         public Builder themeId(Long themeId) {
             this.putQueryParameter("ThemeId", themeId);

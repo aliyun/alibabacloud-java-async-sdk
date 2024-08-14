@@ -165,7 +165,22 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * The type of the connection string.
+         * The type of the connection string. Valid values:
+         * <p>
+         * 
+         * *   odps
+         * *   mysql
+         * *   rds
+         * *   oss
+         * *   sqlserver
+         * *   polardb
+         * *   oracle
+         * *   mongodb
+         * *   emr
+         * *   postgresql
+         * *   analyticdb_for_mysql
+         * *   hybriddb_for_postgresql
+         * *   holo
          */
         public Builder connectionType(String connectionType) {
             this.putQueryParameter("ConnectionType", connectionType);
@@ -174,7 +189,187 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * Details of the data source.
+         * The details of the data source. Examples of details of some common data sources:
+         * <p>
+         * 
+         * *   odps
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "accessId": "xssssss",
+         *       "accessKey": "xsaxsaxsa",
+         *       "authType": 2,
+         *       "endpoint": "http://service.odps.aliyun.com/api",
+         *       "project": "xsaxsax",
+         *       "tag": "public"
+         *     }
+         * 
+         * *   mysql
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "database": "xsaxsa",
+         *       "instanceName": "rm-xsaxsa",
+         *       "password": "xsaxsa",
+         *       "rdsOwnerId": "xasxsa",
+         *       "regionId": "cn-shanghai",
+         *       "tag": "rds",
+         *       "username": "xsaxsa"
+         *     }
+         * 
+         * *   rds
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "configType": 1,
+         *       "tag": "rds",
+         *       "database": "xsaxsa",
+         *       "username": "xsaxsa",
+         *       "password": "xssaxsa$32050",
+         *       "instanceName": "rm-xsaxs",
+         *       "rdsOwnerId": "11111111"
+         *     }
+         * 
+         * *   oss
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "accessId": "sssssxx",
+         *       "accessKey": "xsaxaxsaxs",
+         *       "bucket": "xsa-xs-xs",
+         *       "endpoint": "http://oss-cn-shanghai.aliyuncs.com",
+         *       "tag": "public"
+         *     }
+         * 
+         * *   sqlserver
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "jdbcUrl": "jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cn:123;DatabaseName=xsxs-xsxs",
+         *       "password": "sdasda$fs",
+         *       "tag": "public",
+         *       "username": "sxaxacdacdd"
+         *     }
+         * 
+         * *   polardb
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "clusterId": "pc-sdadsadsa",
+         *       "database": "dsadsadsa",
+         *       "ownerId": "121212122",
+         *       "password": "sdasdafssa",
+         *       "region": "cn-shanghai",
+         *       "tag": "polardb",
+         *       "username": "asdadsads"
+         *     }
+         * 
+         * *   oracle
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "jdbcUrl": "jdbc:oracle:saaa:@xxxxx:1521:PROD",
+         *       "password": "sxasaxsa",
+         *       "tag": "public",
+         *       "username": "sasfadfa"
+         *     }
+         * 
+         * *   mongodb
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "address": "[\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\"]",
+         *       "database": "admin",
+         *       "password": "sadsda@",
+         *       "tag": "public",
+         *       "username": "dsadsadas"
+         *     }
+         * 
+         * *   emr
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "accessId": "xsaxsa",
+         *       "emrClusterId": "C-dsads",
+         *       "emrResourceQueueName": "default",
+         *       "emrEndpoint": "emr.aliyuncs.com",
+         *       "accessKey": "dsadsad",
+         *       "emrUserId": "224833315798889783",
+         *       "name": "sasdsadsa",
+         *       "emrAccessMode": "simple",
+         *       "region": "cn-shanghai",
+         *       "authType": "2",
+         *       "emrProjectId": "FP-sdadsad"
+         *     }
+         * 
+         * *   postgresql
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "jdbcUrl": "jdbc:postgresql://xxxx:1921/ssss",
+         *       "password": "sdadsads",
+         *       "tag": "public",
+         *       "username": "sdsasda"
+         *     }
+         * 
+         * *   analyticdb_for_mysql
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "instanceId": "am-sadsada",
+         *       "database": "xsxsx",
+         *       "username": "xsxsa",
+         *       "password": "asdadsa",
+         *       "connectionString": "am-xssxsxs.ads.aliyuncs.com:3306"
+         *     }
+         * 
+         * *   hybriddb_for_postgresql
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "connectionString": "gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com",
+         *       "database": "xsaxsaxas",
+         *       "password": "xsaxsaxsa@11",
+         *       "instanceId": "gp-xsaxsaxsa",
+         *       "port": "541132",
+         *       "ownerId": "xsaxsaxsas",
+         *       "username": "sadsad"
+         *     }
+         * 
+         * *   holo
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "accessId": "xsaxsaxs",
+         *       "accessKey": "xsaxsaxsa",
+         *       "database": "xsaxsaxsa",
+         *       "instanceId": "xsaxa",
+         *       "tag": "aliyun"
+         *     }
+         * 
+         * *   kafka
+         * 
+         * <!---->
+         * 
+         *     {
+         *       "instanceId": "xsax-cn-xsaxsa",
+         *       "regionId": "cn-shanghai",
+         *       "tag": "aliyun",
+         *       "ownerId": "1212121212112"
+         *     }
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -192,7 +387,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * Environment of the data source.
+         * The environment in which the data source is used. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
          */
         public Builder envType(Integer envType) {
             this.putQueryParameter("EnvType", envType);
@@ -210,7 +405,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to be associated with the data source.
+         * The ID of the workspace with which the data source is associated. You can call the [ListProjects](~~178393~~) operation to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -219,7 +414,11 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * The sub-type of a connection string.
+         * The subtype of the connection string. This parameter is used for scenarios where a type includes subtypes. The following type and subtypes are supported:
+         * <p>
+         * 
+         * *   Type: `rds`
+         * *   Subtypes: `mysql`, `sqlserver`, and `postgresql`.
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);

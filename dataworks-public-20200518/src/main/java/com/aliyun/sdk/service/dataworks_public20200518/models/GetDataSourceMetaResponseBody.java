@@ -61,11 +61,7 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the metadata of the data source was retrieved. Valid values:
-         * <p>
-         * 
-         * *   success: The metadata of the data source was retrieved.
-         * *   fail: The metadata of the data source failed to be retrieved. You can troubleshoot issues based on the Message parameter.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -73,7 +69,7 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the query operation.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +77,11 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
         }
 
         /**
-         * The unique ID of the request. You can query logs and troubleshoot issues based on the unique ID.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -145,6 +145,14 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
             private String status; 
 
             /**
+             * The reason why the metadata of the data source fails to be obtained. If the metadata of the data source is obtained, no value is returned for this parameter.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
              * The returned metadata of the data source. The returned metadata is in the JSON format.
              * <p>
              * 
@@ -154,17 +162,9 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
              * 
              * *   dbName: the name of the database in which the data source resides.
              * *   schema: the schema of the database.
-             * *   enable: indicates whether the database is available. A value of true indicates that the database is available. A value of false indicates that the database is unavailable.
+             * *   enable: indicates whether the database is available. The valid values are true and false. The value true indicates that the database is available. The value false indicates that the database is unavailable.
              * *   tableName: the name of the table in the database.
              * *   tableInfos: the information about the table in the database.
-             */
-            public Builder message(String message) {
-                this.message = message;
-                return this;
-            }
-
-            /**
-             * Meta.
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -172,7 +172,11 @@ public class GetDataSourceMetaResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the metadata of the data source failed to be retrieved. If the metadata of the data source was retrieved, this parameter is left empty.
+             * Indicates whether the metadata of the data source is obtained. Valid values:
+             * <p>
+             * 
+             * *   success: The metadata of the data source is obtained.
+             * *   fail: The metadata of the data source failed to be obtained. You can troubleshoot issues based on the Message parameter.
              */
             public Builder status(String status) {
                 this.status = status;

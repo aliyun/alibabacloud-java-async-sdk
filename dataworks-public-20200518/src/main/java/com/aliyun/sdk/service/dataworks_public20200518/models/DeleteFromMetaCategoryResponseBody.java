@@ -97,7 +97,7 @@ public class DeleteFromMetaCategoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the metatable was removed from the specified category.
+         * Indicates whether the table was removed from the specified category.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -129,7 +129,7 @@ public class DeleteFromMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

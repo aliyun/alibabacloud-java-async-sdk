@@ -73,7 +73,7 @@ public class CreateConnectionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the data source.
+         * The data source ID.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class CreateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class CreateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. A value of true indicates that the request is successful. A value of false indicates that the request has failed.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

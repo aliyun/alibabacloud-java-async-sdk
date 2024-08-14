@@ -61,7 +61,7 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         private java.util.List < ? > extParamTemplate; 
 
         /**
-         * Name.
+         * The name of the data masking method.
          */
         public Builder name(String name) {
             this.name = name;
@@ -69,7 +69,11 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         }
 
         /**
-         * SupportWaterMark.
+         * Indicates whether a watermark is added. Valid values:
+         * <p>
+         * 
+         * *   true: allow
+         * *   false: disallow
          */
         public Builder supportWaterMark(Boolean supportWaterMark) {
             this.supportWaterMark = supportWaterMark;
@@ -77,7 +81,7 @@ public class DataDesensPlanTemplateValue extends TeaModel {
         }
 
         /**
-         * ExtParamTemplate.
+         * The data masking parameters and their descriptions.
          */
         public Builder extParamTemplate(java.util.List < ? > extParamTemplate) {
             this.extParamTemplate = extParamTemplate;

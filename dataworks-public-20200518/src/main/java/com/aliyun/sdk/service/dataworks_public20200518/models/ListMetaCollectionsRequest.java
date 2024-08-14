@@ -198,9 +198,9 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * - **ALBUM**: data album
+         * - ALBUM: data album 
          * <p>
-         * - **ALBUM_CATEGORY**: category in a data album
+         * - ALBUM_CATEGORY: category in a data album
          */
         public Builder collectionType(String collectionType) {
             this.putQueryParameter("CollectionType", collectionType);
@@ -236,7 +236,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The paging information. This parameter specifies the start point of the query.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -254,7 +254,7 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

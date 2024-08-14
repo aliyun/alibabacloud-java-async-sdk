@@ -97,7 +97,7 @@ public class CreateRemindResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The ID of the custom alert rule.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class CreateRemindResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class CreateRemindResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class CreateRemindResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class CreateRemindResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class CreateRemindResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -97,7 +97,7 @@ public class RunSmokeTestResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the workflow.
+         * The workflow ID.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class RunSmokeTestResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class RunSmokeTestResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class RunSmokeTestResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class RunSmokeTestResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * The request ID. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class RunSmokeTestResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -107,7 +107,7 @@ public class ListNodeIORequest extends Request {
         }
 
         /**
-         * IoType.
+         * Specifies whether to query the information about ancestor or descendant nodes of the current node. Valid values: input and output.
          */
         public Builder ioType(String ioType) {
             this.putBodyParameter("IoType", ioType);
@@ -116,7 +116,7 @@ public class ListNodeIORequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The node ID. You can call the [ListNodes](~~173979~~) operation to query the ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -125,7 +125,7 @@ public class ListNodeIORequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The runtime environment. Valid values: DEV and PROD.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

@@ -129,7 +129,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -245,7 +245,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the application.
+             * The application ID.
              */
             public Builder applicationId(Long applicationId) {
                 this.applicationId = applicationId;
@@ -277,7 +277,7 @@ public class GetDataServiceApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The workspace ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;

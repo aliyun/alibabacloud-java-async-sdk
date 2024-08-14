@@ -49,7 +49,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ranking of nodes on which errors occur.
+         * The ranking data of nodes on which errors occurred.
          */
         public Builder instanceErrorRank(InstanceErrorRank instanceErrorRank) {
             this.instanceErrorRank = instanceErrorRank;
@@ -57,7 +57,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +157,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The number of errors that occur on the node.
+             * The number of errors that occurred on the node.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -165,7 +165,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -181,7 +181,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The user identifier (UID) of the Alibaba Cloud account used by the owner of the node.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -189,12 +189,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * 6 (Shell node), 10 (ODPS SQL node), 11 (ODPS MR node), 23 (Data Integration node), 24 (ODPS Script node), 99 (zero load node), 221 (PyODPS 2 node), 225 (ODPS Spark node), 227 (EMR Hive node), 228 (EMR Spark node), 229 (EMR Spark SQL node), 230 (EMR MR node), 239 (OSS object inspection node), 257 (EMR Shell node), 258 (EMR Spark Shell node), 259 (EMR Presto node), 260 (EMR Impala node), 900 (real-time data synchronization node), 1089 (cross-tenant collaboration node), 1091 (Hologres development node), 1093 (Hologres SQL node), 1100 (assignment node), and 1221 (PyODPS 3 node).
+             * The type of the node. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
              */
             public Builder programType(Integer programType) {
                 this.programType = programType;
@@ -202,7 +197,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the DataWorks workspace.
+             * The DataWorks workspace ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -255,7 +250,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The ranking of nodes on which errors occur within the last month.
+             * The ranking data of nodes on which errors occurred within the last month.
              */
             public Builder errorRank(java.util.List < ErrorRank> errorRank) {
                 this.errorRank = errorRank;
@@ -263,7 +258,7 @@ public class TopTenErrorTimesInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the ranking was updated.
+             * The timestamp at which the rankings were updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

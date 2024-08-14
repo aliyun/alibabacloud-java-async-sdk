@@ -97,7 +97,7 @@ public class UpdateTableLevelResponseBody extends TeaModel {
         private Boolean updateResult; 
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class UpdateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class UpdateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class UpdateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class UpdateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +137,7 @@ public class UpdateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the update result is returned.
+         * Indicates whether the table level is updated.
          */
         public Builder updateResult(Boolean updateResult) {
             this.updateResult = updateResult;

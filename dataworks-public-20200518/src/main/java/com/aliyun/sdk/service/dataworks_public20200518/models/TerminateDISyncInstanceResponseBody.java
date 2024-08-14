@@ -61,11 +61,7 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the real-time synchronization node is terminated. Valid values:
-         * <p>
-         * 
-         * *   success
-         * *   fail
+         * The returned results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -73,7 +69,7 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the operation.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +77,11 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can query logs and troubleshoot issues based on the ID.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -133,7 +133,7 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * The reason why the real-time synchronization task fails to be terminated. If the real-time synchronization task is undeployed, the value of this parameter is null.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -141,7 +141,11 @@ public class TerminateDISyncInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the real-time synchronization node fails to be terminated. If the real-time synchronization node is terminated, this parameter is left empty.
+             * Indicates whether the real-time synchronization task is undeployed. Valid values:
+             * <p>
+             * 
+             * *   success
+             * *   fail
              */
             public Builder status(String status) {
                 this.status = status;

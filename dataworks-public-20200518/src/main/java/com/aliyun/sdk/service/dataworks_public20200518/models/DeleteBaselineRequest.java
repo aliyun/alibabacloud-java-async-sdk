@@ -92,7 +92,7 @@ public class DeleteBaselineRequest extends Request {
         }
 
         /**
-         * BaselineId.
+         * The baseline ID. You can call the [ListBaselines](~~2261507~~) operation to query the ID.
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -101,7 +101,7 @@ public class DeleteBaselineRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The ID of the workspace to which the baseline belongs. You can call the ListBaselines operation to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

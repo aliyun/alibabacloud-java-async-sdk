@@ -97,7 +97,7 @@ public class CreateTableLevelResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request is successful.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class CreateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class CreateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class CreateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * LevelId.
+         * The table level ID.
          */
         public Builder levelId(Long levelId) {
             this.levelId = levelId;
@@ -129,7 +129,7 @@ public class CreateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * 1AAE721C-F9EC-5923-BAFC-99802C4E0F21
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class CreateTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the table level.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

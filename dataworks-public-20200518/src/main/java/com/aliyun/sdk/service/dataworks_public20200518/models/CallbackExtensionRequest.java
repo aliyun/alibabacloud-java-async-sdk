@@ -121,7 +121,7 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * CheckMessage.
+         * The check message of the extension point event. If CheckResult is set to FAIL, you must provide the failure cause.
          */
         public Builder checkMessage(String checkMessage) {
             this.putBodyParameter("CheckMessage", checkMessage);
@@ -130,7 +130,12 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * CheckResult.
+         * The check status of the extension point event. Valid values:
+         * <p>
+         * 
+         * *   OK: The event passes the check.
+         * *   FAIL: The event fails to pass the check. You must check and handle the reported error at the earliest opportunity to ensure that your program is run as expected.
+         * *   WARN: The event passes the check, but an alert is reported.
          */
         public Builder checkResult(String checkResult) {
             this.putBodyParameter("CheckResult", checkResult);
@@ -139,7 +144,7 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * ExtensionCode.
+         * The unique code of the extension.
          */
         public Builder extensionCode(String extensionCode) {
             this.putBodyParameter("ExtensionCode", extensionCode);
@@ -148,7 +153,7 @@ public class CallbackExtensionRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.
          */
         public Builder messageId(String messageId) {
             this.putBodyParameter("MessageId", messageId);

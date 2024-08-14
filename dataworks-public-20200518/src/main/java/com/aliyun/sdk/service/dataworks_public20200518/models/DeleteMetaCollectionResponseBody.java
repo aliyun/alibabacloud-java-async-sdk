@@ -97,12 +97,7 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * true: The request was successful.
-         * 
-         * false: The request failed.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -110,7 +105,7 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -118,10 +113,18 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * The request ID.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -133,21 +136,18 @@ public class DeleteMetaCollectionResponseBody extends TeaModel {
          * 
          * false: failed
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned.
-         */
         public Builder status(Boolean status) {
             this.status = status;
             return this;
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * true
+         * 
+         * false
          */
         public Builder success(Boolean success) {
             this.success = success;

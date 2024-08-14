@@ -57,7 +57,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,10 +109,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             private String objectName; 
 
             /**
-             * The permission that you wanted to request. If you wanted to request multiple permissions at the same time, separate them with commas (,).
-             * <p>
-             * 
-             * You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.
+             * Actions.
              */
             public Builder actions(java.util.List < String > actions) {
                 this.actions = actions;
@@ -181,7 +178,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the DataWorks workspace that was associated with the MaxCompute project in which you requested permissions on a table.
+             * The name of the DataWorks workspace that is associated with the MaxCompute project in which you requested permissions on a table.
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -351,7 +348,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             private Integer flowStatus; 
 
             /**
-             * The unique ID of the Alibaba Cloud account that was used to submit the permission request order.
+             * The ID of the Alibaba Cloud account that was used to submit the permission request order.
              */
             public Builder applyBaseId(String applyBaseId) {
                 this.applyBaseId = applyBaseId;
@@ -386,7 +383,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
              * The status of the permission request order. Valid values:
              * <p>
              * 
-             * *   1: pending approval
+             * *   1: to be processed
              * *   2: approved and authorized
              * *   3: approved but authorization failed
              * *   4: rejected
@@ -474,7 +471,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the returned page.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -482,7 +479,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -490,7 +487,7 @@ public class ListPermissionApplyOrdersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of permission request orders returned.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

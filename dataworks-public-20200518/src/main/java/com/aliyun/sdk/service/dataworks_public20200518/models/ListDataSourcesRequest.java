@@ -175,58 +175,6 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * The status of the data source. Valid values:
-         * <p>
-         * 
-         * *   ENABLED: The data source is accessible.
-         * *   DISABLED: The data source is inaccessible.
-         */
-        public Builder dataSourceType(String dataSourceType) {
-            this.putQueryParameter("DataSourceType", dataSourceType);
-            this.dataSourceType = dataSourceType;
-            return this;
-        }
-
-        /**
-         * The number of the page to return. The value of this parameter must be an integer greater than or equal to 1.
-         */
-        public Builder envType(Integer envType) {
-            this.putQueryParameter("EnvType", envType);
-            this.envType = envType;
-            return this;
-        }
-
-        /**
-         * The subtype of the data source. This parameter takes effect only if the DataSourceType parameter is set to rds.
-         * <p>
-         * 
-         * If the DataSourceType parameter is set to rds, this parameter can be set to mysql, sqlserver, or postgresql.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The HTTP status code returned.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
          * The type of the data source. Valid values:
          * <p>
          * 
@@ -244,6 +192,51 @@ public class ListDataSourcesRequest extends Request {
          * *   hybriddb_for_postgresql
          * *   holo
          */
+        public Builder dataSourceType(String dataSourceType) {
+            this.putQueryParameter("DataSourceType", dataSourceType);
+            this.dataSourceType = dataSourceType;
+            return this;
+        }
+
+        /**
+         * The environment in which the data source is used. Valid values: 0 and 1. The value 0 indicates development environment. The value 1 indicates production environment.
+         */
+        public Builder envType(Integer envType) {
+            this.putQueryParameter("EnvType", envType);
+            this.envType = envType;
+            return this;
+        }
+
+        /**
+         * The name of the data source that you want to query.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * The page number. Pages start from page 1.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries per page. Default value: 10. Maximum value: 100.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The ID of the DataWorks workspace to which the data sources belong. You can call the [ListProjects](~~2780068~~) operation to query the ID.
+         */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
@@ -251,7 +244,11 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The status of the data source. Valid values:
+         * <p>
+         * 
+         * *   ENABLED
+         * *   DISABLED
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -260,7 +257,10 @@ public class ListDataSourcesRequest extends Request {
         }
 
         /**
-         * The environment in which the data source is used. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
+         * The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.
+         * <p>
+         * 
+         * If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.
          */
         public Builder subType(String subType) {
             this.putQueryParameter("SubType", subType);

@@ -118,7 +118,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The compute engine instance ID. Specify the ID in the `Engine type.Engine name` format.
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -127,7 +127,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The business data returned.
+         * The E-MapReduce (EMR) cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -136,7 +136,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The comment.
+         * The type of the data source. Valid values: odps and emr.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -145,7 +145,7 @@ public class GetMetaDBInfoRequest extends Request {
         }
 
         /**
-         * The type of the metadatabase. Only hive is supported.
+         * The name of the metadatabase of the EMR cluster.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);

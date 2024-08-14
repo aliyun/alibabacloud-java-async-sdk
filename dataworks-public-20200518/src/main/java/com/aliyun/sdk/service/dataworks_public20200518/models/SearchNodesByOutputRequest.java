@@ -92,7 +92,7 @@ public class SearchNodesByOutputRequest extends Request {
         }
 
         /**
-         * Outputs.
+         * The output names of the node. If you specify multiple output names, separate them with commas (,).
          */
         public Builder outputs(String outputs) {
             this.putBodyParameter("Outputs", outputs);
@@ -101,7 +101,7 @@ public class SearchNodesByOutputRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of Operation Center. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

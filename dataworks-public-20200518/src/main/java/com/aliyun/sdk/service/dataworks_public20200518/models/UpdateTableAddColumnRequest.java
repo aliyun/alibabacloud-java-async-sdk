@@ -92,7 +92,7 @@ public class UpdateTableAddColumnRequest extends Request {
         }
 
         /**
-         * Column.
+         * The list of fields.
          */
         public Builder column(java.util.List < Column> column) {
             this.putBodyParameter("Column", column);

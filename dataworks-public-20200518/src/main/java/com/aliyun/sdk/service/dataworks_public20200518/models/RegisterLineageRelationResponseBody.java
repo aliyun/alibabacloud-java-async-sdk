@@ -97,7 +97,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * LineageRelation.
+         * The lineage.
          */
         public Builder lineageRelation(LineageRelation lineageRelation) {
             this.lineageRelation = lineageRelation;
@@ -129,7 +129,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +205,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
             private String srcEntityQualifiedName; 
 
             /**
-             * DestEntityQualifiedName.
+             * The unique identifier of the destination entity.
              */
             public Builder destEntityQualifiedName(String destEntityQualifiedName) {
                 this.destEntityQualifiedName = destEntityQualifiedName;
@@ -209,7 +213,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
             }
 
             /**
-             * RelationshipGuid.
+             * The ID of the lineage between entities.
              */
             public Builder relationshipGuid(String relationshipGuid) {
                 this.relationshipGuid = relationshipGuid;
@@ -217,7 +221,7 @@ public class RegisterLineageRelationResponseBody extends TeaModel {
             }
 
             /**
-             * SrcEntityQualifiedName.
+             * The unique identifier of the source entity.
              */
             public Builder srcEntityQualifiedName(String srcEntityQualifiedName) {
                 this.srcEntityQualifiedName = srcEntityQualifiedName;

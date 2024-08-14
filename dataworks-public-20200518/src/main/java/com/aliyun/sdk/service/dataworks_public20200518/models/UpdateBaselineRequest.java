@@ -246,7 +246,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * AlertEnabled.
+         * Specifies whether to enable the alerting feature. Valid values: true and false.
          */
         public Builder alertEnabled(Boolean alertEnabled) {
             this.putBodyParameter("AlertEnabled", alertEnabled);
@@ -255,7 +255,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * AlertMarginThreshold.
+         * The alert margin threshold of the baseline. Unit: minutes.
          */
         public Builder alertMarginThreshold(Integer alertMarginThreshold) {
             this.putBodyParameter("AlertMarginThreshold", alertMarginThreshold);
@@ -264,7 +264,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * AlertSettings.
+         * The alert settings of the baseline.
          */
         public Builder alertSettings(java.util.List < AlertSettings> alertSettings) {
             String alertSettingsShrink = shrink(alertSettings, "AlertSettings", "json");
@@ -274,7 +274,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * BaselineId.
+         * The baseline ID. You can call the [ListBaselines](~~2261507~~) operation to query the ID.
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -283,7 +283,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * BaselineName.
+         * The name of the baseline.
          */
         public Builder baselineName(String baselineName) {
             this.putBodyParameter("BaselineName", baselineName);
@@ -292,7 +292,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * BaselineType.
+         * The type of the baseline. Valid values: DAILY and HOURLY.
          */
         public Builder baselineType(String baselineType) {
             this.putBodyParameter("BaselineType", baselineType);
@@ -301,7 +301,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * Enabled.
+         * Specifies whether to enable the baseline. Valid values: true and false.
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("Enabled", enabled);
@@ -310,7 +310,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * The ancestor nodes of nodes in the baseline. Separate the ancestor nodes with commas (,). If a large number of ancestor nodes exist, we recommend that you create a zero load node and configure the zero load node as the descendant node of nodes in the baseline to facilitate node management.
          */
         public Builder nodeIds(String nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);
@@ -319,7 +319,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * OvertimeSettings.
+         * The settings of the committed completion time of the baseline.
          */
         public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
             String overtimeSettingsShrink = shrink(overtimeSettings, "OvertimeSettings", "json");
@@ -329,7 +329,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The ID of the Alibaba Cloud account used by the baseline owner.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -338,7 +338,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the baseline. Valid values: {1,3,5,7,8}.
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -347,7 +347,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The workspace ID. You can call the [ListBaselines](~~2261507~~) operation to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -356,7 +356,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * RemoveNodeIds.
+         * The ID of the node that you want to disassociate from the baseline. You can specify multiple node IDs. Separate multiple node IDs with commas (,).
          */
         public Builder removeNodeIds(String removeNodeIds) {
             this.putBodyParameter("RemoveNodeIds", removeNodeIds);
@@ -410,7 +410,7 @@ public class UpdateBaselineRequest extends Request {
             private String webUrl; 
 
             /**
-             * AtAll.
+             * Specifies whether to remind all members by using the at sign (@). Valid values: true and false.
              */
             public Builder atAll(Boolean atAll) {
                 this.atAll = atAll;
@@ -418,7 +418,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * WebUrl.
+             * The webhook URL of the DingTalk chatbot.
              */
             public Builder webUrl(String webUrl) {
                 this.webUrl = webUrl;
@@ -593,7 +593,7 @@ public class UpdateBaselineRequest extends Request {
             private java.util.List < String > webhooks; 
 
             /**
-             * AlertInterval.
+             * The interval at which an event alert notification is sent. Unit: seconds. Minimum value: 900.
              */
             public Builder alertInterval(Integer alertInterval) {
                 this.alertInterval = alertInterval;
@@ -601,7 +601,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * AlertMaximum.
+             * The maximum number of times an event alert notification is sent. Maximum value: 24.
              */
             public Builder alertMaximum(Integer alertMaximum) {
                 this.alertMaximum = alertMaximum;
@@ -609,7 +609,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * AlertMethods.
+             * The alert notification methods. Valid values: MAIL, SMS, PHONE, DINGROBOTS, and Webhooks. The value MAIL indicates that alert notifications are sent by email. The value SMS indicates that alert notifications are sent by text message. The value PHONE indicates that alert notifications are sent by phone call. You can use this notification method only in DataWorks Professional Edition or a more advanced edition. The value DINGROBOTS indicates that alert notifications are sent by using a DingTalk chatbot. You can use this notification method only if the RobotUrls parameter is configured. The value Webhooks indicates that alert notifications are sent by WeCom or Lark. You can use this notification method only if the Webhooks parameter is configured.
              */
             public Builder alertMethods(java.util.List < String > alertMethods) {
                 this.alertMethods = alertMethods;
@@ -617,7 +617,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * AlertRecipient.
+             * The details of the alert recipient. If you set AlertRecipientType to OWNER, leave this parameter empty. If you set AlertRecipientType to SHIFT_SCHEDULE, set this parameter to the name of the shift schedule. If you set AlertRecipientType to OTHER, set this parameter to the employee IDs of specified personnel.
              */
             public Builder alertRecipient(String alertRecipient) {
                 this.alertRecipient = alertRecipient;
@@ -625,7 +625,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * AlertRecipientType.
+             * The type of the alert recipient. Valid values: OWNER, OTHER, and SHIFT_SCHEDULE. The value OWNER indicates the node owner. The value OTHER indicates specified personnel. The value SHIFT_SCHEDULE indicates personnel in a shift schedule.
              */
             public Builder alertRecipientType(String alertRecipientType) {
                 this.alertRecipientType = alertRecipientType;
@@ -633,7 +633,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * AlertType.
+             * The type of the alert. Valid values: BASELINE and TOPIC. The value BASELINE indicates a baseline alert. The value TOPIC indicates an event alert.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -641,7 +641,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * BaselineAlertEnabled.
+             * Specifies whether to enable the baseline alerting feature. This feature is specific to baselines. Valid values: true and false.
              */
             public Builder baselineAlertEnabled(Boolean baselineAlertEnabled) {
                 this.baselineAlertEnabled = baselineAlertEnabled;
@@ -649,7 +649,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * DingRobots.
+             * The DingTalk chatbots.
              */
             public Builder dingRobots(java.util.List < DingRobots> dingRobots) {
                 this.dingRobots = dingRobots;
@@ -657,7 +657,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * SilenceEndTime.
+             * The end time of silence.
              */
             public Builder silenceEndTime(String silenceEndTime) {
                 this.silenceEndTime = silenceEndTime;
@@ -665,7 +665,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * SilenceStartTime.
+             * The start time of silence.
              */
             public Builder silenceStartTime(String silenceStartTime) {
                 this.silenceStartTime = silenceStartTime;
@@ -673,7 +673,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * TopicTypes.
+             * The types of event alerts, which are event-specific configurations.
              */
             public Builder topicTypes(java.util.List < String > topicTypes) {
                 this.topicTypes = topicTypes;
@@ -681,7 +681,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * Webhooks.
+             * The webhook URLs.
              */
             public Builder webhooks(java.util.List < String > webhooks) {
                 this.webhooks = webhooks;
@@ -734,7 +734,7 @@ public class UpdateBaselineRequest extends Request {
             private String time; 
 
             /**
-             * Cycle.
+             * The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that does not exceed 24.
              */
             public Builder cycle(Integer cycle) {
                 this.cycle = cycle;
@@ -742,7 +742,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * Time.
+             * The committed completion time in the hh:mm format. Valid values of hh: \[0,47]. Valid values of mm: \[0,59].
              */
             public Builder time(String time) {
                 this.time = time;

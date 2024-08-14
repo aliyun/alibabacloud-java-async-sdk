@@ -105,7 +105,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -209,7 +209,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -217,7 +217,7 @@ public class ListNodeInputOrOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the associated table.
+             * This parameter does not take effect. You cannot obtain the parameter settings.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

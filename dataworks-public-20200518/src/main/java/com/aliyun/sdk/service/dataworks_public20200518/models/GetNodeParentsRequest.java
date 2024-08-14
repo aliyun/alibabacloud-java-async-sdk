@@ -92,7 +92,7 @@ public class GetNodeParentsRequest extends Request {
         }
 
         /**
-         * The ID of the node. You can go to the Operation Center page in the DataWorks console to view the node ID.
+         * The node ID. You can go to the Operation Center page in the DataWorks console to query the node ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -101,7 +101,7 @@ public class GetNodeParentsRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
+         * The environment type of Operation Center. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

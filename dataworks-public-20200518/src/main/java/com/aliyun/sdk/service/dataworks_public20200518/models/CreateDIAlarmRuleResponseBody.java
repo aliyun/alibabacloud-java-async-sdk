@@ -49,7 +49,7 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DIAlarmRuleId.
+         * The alert rule ID.
          */
         public Builder DIAlarmRuleId(Long DIAlarmRuleId) {
             this.DIAlarmRuleId = DIAlarmRuleId;
@@ -57,7 +57,7 @@ public class CreateDIAlarmRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

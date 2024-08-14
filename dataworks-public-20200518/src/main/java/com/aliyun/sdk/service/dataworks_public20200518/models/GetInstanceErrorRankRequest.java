@@ -77,7 +77,7 @@ public class GetInstanceErrorRankRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

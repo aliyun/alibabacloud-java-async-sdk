@@ -106,10 +106,7 @@ public class ListDIProjectConfigRequest extends Request {
         }
 
         /**
-         * The type of the destination data source of the sync solution. This parameter cannot be left empty.
-         * <p>
-         * 
-         * Valid values: analyticdb_for_mysql, odps, elasticsearch, holo, mysql, and polardb. You can call the ListDIProjectConfig operation to query the supported types of destination data sources.
+         * The type of the destinations of the synchronization solutions. This parameter cannot be left empty. Valid values: analyticdb_for_mysql, odps, elasticsearch, holo, mysql, and polardb.
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -118,7 +115,7 @@ public class ListDIProjectConfigRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
+         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -127,12 +124,7 @@ public class ListDIProjectConfigRequest extends Request {
         }
 
         /**
-         * The type of the source data source of the sync solution.
-         * <p>
-         * 
-         * Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql. You can call the ListDIProjectConfig operation to query the supported types of source data sources.
-         * 
-         * If you do not set this parameter, DataWorks applies the default global configuration to all the source data sources of the preceding types.
+         * The type of the sources of the synchronization solutions. Valid values: oracle, mysql, polardb, datahub, drds, and analyticdb_for_mysql. If you do not configure this parameter, DataWorks applies the default global configuration to all sources.
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);

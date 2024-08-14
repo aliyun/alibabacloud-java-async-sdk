@@ -61,9 +61,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * *   If the TaskType parameter is set to DI_REALTIME, the Status parameter indicates the status of the real-time synchronization node. Valid values: PAUSE, NORUN, RUN, KILLING, and WAIT.
-         * <p>
-         * *   If the TaskType parameter is set to DI_SOLITION, the Status parameter indicates the status of the data synchronization solution. Valid values: success and fail.
+         * The status of the real-time synchronization task or data synchronization solution.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -71,7 +69,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the real-time synchronization node or data synchronization solution.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -79,7 +77,11 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -155,7 +157,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             private String stepName; 
 
             /**
-             * Info.
+             * The information of the data synchronization solution.
              */
             public Builder info(String info) {
                 this.info = info;
@@ -163,7 +165,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the step in the data synchronization solution.
+             * The status of the step in the data synchronization solution.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -171,7 +173,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the step in the data synchronization solution.
+             * The ID of the step in the data synchronization solution.
              */
             public Builder stepId(Long stepId) {
                 this.stepId = stepId;
@@ -179,7 +181,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the data synchronization solution.
+             * The name of the step in the data synchronization solution.
              */
             public Builder stepName(String stepName) {
                 this.stepName = stepName;
@@ -256,7 +258,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             private java.util.List < StepDetail> stepDetail; 
 
             /**
-             * The step details of the synchronization solution.
+             * The creator of the data synchronization solution.
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -264,7 +266,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the data synchronization solution.
+             * The ID of the data synchronization solution.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -272,7 +274,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data synchronization solution.
+             * The status of the data synchronization solution.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -280,7 +282,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the step in the data synchronization solution.
+             * The step details of the data synchronization solution.
              */
             public Builder stepDetail(java.util.List < StepDetail> stepDetail) {
                 this.stepDetail = stepDetail;
@@ -357,9 +359,7 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * *   If the TaskType parameter is set to DI_REALTIME, the Name parameter indicates the name of the real-time synchronization node.
-             * <p>
-             * *   If the TaskType parameter is set to DI_SOLITION, the value null is returned.
+             * The cause of the failure to obtain the status of the real-time synchronization task or data synchronization solution. If the status of the real-time synchronization task or data synchronization solution is obtained, the value null is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -367,9 +367,9 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * *   If the TaskType parameter is set to DI_REALTIME, the value null is returned.
+             * *   If the TaskType parameter is set to DI_REALTIME, the Name parameter indicates the name of the real-time synchronization task.
              * <p>
-             * *   If the TaskType parameter is set to DI_SOLITION, the SolutionInfo parameter indicates the details of the data synchronization solution.
+             * *   If the TaskType parameter is set to DI_SOLUTION, the value null is returned.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -377,7 +377,9 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data synchronization solution.
+             * *   If the TaskType parameter is set to DI_REALTIME, the value null is returned.
+             * <p>
+             * *   If the TaskType parameter is set to DI_SOLUTION, the SolutionInfo parameter indicates the details of the data synchronization solution.
              */
             public Builder solutionInfo(SolutionInfo solutionInfo) {
                 this.solutionInfo = solutionInfo;
@@ -385,7 +387,9 @@ public class GetDISyncInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the failure to obtain the status of the real-time synchronization node or data synchronization solution. If the status of the real-time synchronization node or data synchronization solution is obtained, the value null is returned.
+             * *   If the TaskType parameter is set to DI_REALTIME, the Status parameter indicates the status of the real-time synchronization task. Valid values: PAUSE, NORUN, RUN, KILLING, and WAIT.
+             * <p>
+             * *   If the TaskType parameter is set to DI_SOLUTION, the Status parameter indicates the status of the data synchronization solution. Valid values: success and fail.
              */
             public Builder status(String status) {
                 this.status = status;

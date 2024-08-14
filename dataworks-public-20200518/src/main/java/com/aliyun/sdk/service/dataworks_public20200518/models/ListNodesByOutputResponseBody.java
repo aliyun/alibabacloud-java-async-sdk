@@ -105,7 +105,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can use the ID to locate logs and troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -393,7 +393,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             private String schedulerType; 
 
             /**
-             * The ID of the baseline.
+             * The baseline ID.
              */
             public Builder baselineId(Long baselineId) {
                 this.baselineId = baselineId;
@@ -409,7 +409,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The cron expression.
+             * The CRON expression.
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
@@ -433,7 +433,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node is associated with Data Quality. Valid values: 0 and 1. The value 0 indicates that node is associated with Data Quality, and the value 1 indicates that the node is not associated with Data Quality.
+             * Indicates whether the node is associated with a monitoring rule in Data Quality. Valid values: 0 and 1. The value 0 indicates that the node is associated with a monitoring rule in Data Quality. The value 1 indicates that the node is not associated with a monitoring rule in Data Quality.
              */
             public Builder dqcType(Integer dqcType) {
                 this.dqcType = dqcType;
@@ -441,12 +441,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
+             * The node type. Valid values:
              * <p>
              * 
-             * Valid values:
-             * 
-             * 6 (Shell node), 10 (ODPS SQL node), 11 (ODPS MR node), 23 (Data Integration node), 24 (ODPS Script node), 99 (zero-load node), 221 (PyODPS 2 node), 225 (ODPS Spark node), 227 (EMR Hive node), 228 (EMR Spark node), 229 (EMR Spark SQL node), 230 (EMR MR node), 239 (OSS object inspection node), 257 (EMR Shell node), 258 (EMR Spark Shell node), 259 (EMR Presto node), 260 (EMR Impala node), 900 (real-time synchronization node), 1089 (cross-tenant collaboration node), 1091 (Hologres development node), 1093 (Hologres SQL node), 1100 (assignment node), and 1221 (PyODPS 3 node).
+             * 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -454,7 +452,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -470,7 +468,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node owner.
+             * The owner ID.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -478,7 +476,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The values of the scheduling parameters configured for the node.
+             * The scheduling parameters of the node.
              */
             public Builder paramValues(String paramValues) {
                 this.paramValues = paramValues;
@@ -486,7 +484,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the node. Valid values: 1, 3, 5, 7, and 8. A large value indicates a high priority. Default value: 1.
+             * The priority of the node. Valid values: 1, 3, 5, 7, and 8. A greater value indicates a higher priority. Default value: 1.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -494,7 +492,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. This parameter is deprecated. For more information about node types, see the valid values of FileType.
+             * The node type. This parameter is deprecated. For more information about node types, see valid values of the FileType parameter.
              */
             public Builder programType(String programType) {
                 this.programType = programType;
@@ -502,7 +500,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The workspace ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -510,7 +508,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated workflow.
+             * The ID of the workflow to which the node belongs.
              */
             public Builder relatedFlowId(Long relatedFlowId) {
                 this.relatedFlowId = relatedFlowId;
@@ -545,10 +543,10 @@ public class ListNodesByOutputResponseBody extends TeaModel {
              * The scheduling type of the node. Valid values:
              * <p>
              * 
-             * *   NORAMAL: The node is an auto triggered node. The node is scheduled on a regular basis.
-             * *   MANUAL: The node is a manually triggered node. The node is not scheduled on a regular basis.
-             * *   PAUSE: The node is a frozen node. The system schedules the node on a regular basis but sets it to FAILURE when the system starts to schedule it.
-             * *   SKIP: The node is a dry-run node. The system schedules the node on a regular basis but sets it to SUCCESS when the system starts to schedule it.
+             * *   NORMAL: The node is an auto triggered node. The scheduling system regularly runs the node.
+             * *   MANUAL: The node is a manually triggered node. The scheduling system does not regularly run the node.
+             * *   PAUSE: The node is a frozen node. The scheduling system regularly runs the node but sets the status of the node to failed when the scheduling system starts to run the node.
+             * *   SKIP: The node is a dry-run node. The scheduling system regularly runs the node but sets the status of the node to successful when the scheduling system starts to run the node.
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
@@ -601,7 +599,7 @@ public class ListNodesByOutputResponseBody extends TeaModel {
             private String output; 
 
             /**
-             * The information of the nodes returned.
+             * The information about the nodes returned.
              */
             public Builder nodeList(java.util.List < NodeList> nodeList) {
                 this.nodeList = nodeList;

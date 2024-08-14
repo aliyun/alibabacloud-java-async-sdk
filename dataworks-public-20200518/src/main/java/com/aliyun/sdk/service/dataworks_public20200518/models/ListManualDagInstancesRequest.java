@@ -116,7 +116,7 @@ public class ListManualDagInstancesRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. A value of PROD indicates the production environment. A value of DEV indicates the development environment.
+         * The environment of Operation Center. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -125,7 +125,7 @@ public class ListManualDagInstancesRequest extends Request {
         }
 
         /**
-         * The name of the workspace to which the manually triggered workflow belongs. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to view the name.
+         * The name of the workspace to which the manually triggered workflow belongs. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the name.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

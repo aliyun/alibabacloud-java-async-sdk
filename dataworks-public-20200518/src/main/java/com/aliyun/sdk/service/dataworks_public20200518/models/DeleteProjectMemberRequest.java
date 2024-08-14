@@ -92,7 +92,7 @@ public class DeleteProjectMemberRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -101,7 +101,7 @@ public class DeleteProjectMemberRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The user ID.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

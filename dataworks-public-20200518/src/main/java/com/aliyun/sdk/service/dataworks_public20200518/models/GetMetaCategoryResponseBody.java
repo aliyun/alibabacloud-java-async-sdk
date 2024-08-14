@@ -97,7 +97,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned result.
+         * The business data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -273,7 +273,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             private Long parentCategoryId; 
 
             /**
-             * The ID of the category.
+             * The category ID.
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -329,7 +329,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the category owner.
+             * The category owner ID.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -337,7 +337,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category.
+             * The parent category ID.
              */
             public Builder parentCategoryId(Long parentCategoryId) {
                 this.parentCategoryId = parentCategoryId;
@@ -422,7 +422,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -430,7 +430,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The number of entries per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -438,7 +438,7 @@ public class GetMetaCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of categories.
+             * The total number of categories returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

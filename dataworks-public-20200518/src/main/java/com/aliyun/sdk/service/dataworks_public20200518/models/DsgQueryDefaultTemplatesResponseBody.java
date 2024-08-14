@@ -97,7 +97,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -189,7 +193,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
             private java.util.Map < String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate; 
 
             /**
-             * DataType.
+             * The sensitive field type.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -197,7 +201,7 @@ public class DsgQueryDefaultTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DesensPlanTemplate.
+             * The supported data masking methods and parameter descriptions.
              */
             public Builder desensPlanTemplate(java.util.Map < String, java.util.List<DataDesensPlanTemplateValue>> desensPlanTemplate) {
                 this.desensPlanTemplate = desensPlanTemplate;

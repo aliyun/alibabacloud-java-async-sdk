@@ -61,7 +61,7 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
         private TaskList taskList; 
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,8 +72,8 @@ public class TestNetworkConnectionResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

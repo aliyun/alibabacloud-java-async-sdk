@@ -163,7 +163,7 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The paging information. This parameter specifies the start point of the query.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -172,7 +172,7 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

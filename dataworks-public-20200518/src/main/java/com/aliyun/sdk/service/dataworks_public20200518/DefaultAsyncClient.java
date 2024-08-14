@@ -93,7 +93,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the DataWorks workspace. You can call the [ListProjects](~~178393~~) operation to query the ID.
+      * For information about how to add an account to a DataWorks workspace as a member, see [Manage members and roles](~~136941~~).
       *
      */
     @Override
@@ -268,6 +268,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can configure alert rules only for tasks that can be used for real-time data synchronization.
+      *
+     */
     @Override
     public CompletableFuture<CreateDIAlarmRuleResponse> createDIAlarmRule(CreateDIAlarmRuleRequest request) {
         try {
@@ -491,8 +495,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A category must belong to a data album.
-      * You can create a category in a data album only after you create the data album. You can set the value of the parentQualifiedName parameter to the unique identifier of the data album to create the category.
+      * Collections are classified into various types. The names of collections of the same type must be different.
       *
      */
     @Override
@@ -723,6 +726,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can configure alert rules only for tasks whose MigrationType is set to RealtimeIncremental.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDIAlarmRuleResponse> deleteDIAlarmRule(DeleteDIAlarmRuleRequest request) {
         try {
@@ -751,6 +758,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you want to delete a batch synchronization task, call the DeleteFile operation. For more information, see [Delete a synchronization task](~~321443~~).
+      *
+     */
     @Override
     public CompletableFuture<DeleteDISyncTaskResponse> deleteDISyncTask(DeleteDISyncTaskRequest request) {
         try {
@@ -849,6 +860,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.
+      *
+     */
     @Override
     public CompletableFuture<DeleteLineageRelationResponse> deleteLineageRelation(DeleteLineageRelationRequest request) {
         try {
@@ -934,7 +949,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transformation, load (ETL). Thereby, Data Quality automatically blocks the nodes that involve dirty data to stop dirty data from spreading downstream. This prevents nodes from producing unexpected dirty data that affects normal use and business decisions. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule described by the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors in a timely manner. For more information, see [Configure monitoring rules for MaxCompute](~~73690~~).
+      * In Data Quality, you must configure monitoring rules based on a partition filter expression. Data Quality uses these rules to detect changes in source data and dirty data generated during the process of extract, transform, and load (ETL). This way, you can prevent tasks from producing unexpected dirty data that affects the smooth running of tasks and business decision-making. You can go to the Manage Subscriptions page to add subscribers for a partition filter expression. When the monitoring rule that is created based on the partition filter expression is triggered, the subscribers can receive notifications and troubleshoot errors at the earliest opportunity. For more information, see [Configure monitoring rules](~~73690~~).
       *
      */
     @Override
@@ -1175,6 +1190,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The query capability of the API operation is similar to the query feature in Data Security Guard in the DataWorks console. The API operation can be used to query the identification results of sensitive data of a tenant based on the association with the tenant ID.
+      * *   You can search for a specific identification result based on filter conditions such as data source type and workspace.
+      * *   You can sort the identification results of sensitive data of a tenant based on the values of a field in ascending or descending order.
+      * *   This operation supports paged query.
+      *
+     */
     @Override
     public CompletableFuture<DsgQuerySensResultResponse> dsgQuerySensResult(DsgQuerySensResultRequest request) {
         try {
@@ -1414,7 +1436,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform.
+      * DataWorks allows you to use the [CreateDISyncTask](~~278725~~) operation to directly create a batch synchronization task in Data Integration. To create a real-time synchronization task or another type of synchronization task, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can use the parameters as request parameters of [CreateDISyncTask](~~278725~~) and call the [CreateDISyncTask](~~278725~~) operation to create a real-time synchronization task or another type of synchronization task. DataWorks allows you to create real-time synchronization tasks and other types of synchronization tasks in Data Integration only in asynchronous mode.
       *
      */
     @Override
@@ -1432,7 +1454,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform.
+      * DataWorks allows you to use only the [UpdateDISyncTask](~~289109~~) operation to update a batch synchronization task in Data Integration. To update a real-time synchronization task, you must first call the GenerateDISyncTaskConfigForUpdating operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the UpdateDISyncTask operation and use the parameters as request parameters to update a real-time synchronization task in Data Integration. DataWorks allows you to create or update real-time synchronization tasks in Data Integration only in asynchronous mode.
       *
      */
     @Override
@@ -1547,6 +1569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can configure alert rules only for tasks that can be used for real-time data synchronization.
+      *
+     */
     @Override
     public CompletableFuture<GetDIAlarmRuleResponse> getDIAlarmRule(GetDIAlarmRuleRequest request) {
         try {
@@ -1605,15 +1631,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * Supported DAG types:
-      * *   MANUAL: the DAG for a manually triggered workflow.
-      * *   SMOKE_TEST: the DAG for a smoke testing workflow.
-      * *   SUPPLY_DATA: the DAG for a data backfill instance.
-      * *   BUSINESS_PROCESS_DAG: the DAG for a one-time workflow.
+      * *   MANUAL: DAG for a manually triggered workflow
+      * *   SMOKE_TEST: DAG for a smoke testing workflow
+      * *   SUPPLY_DATA: DAG for a data backfill instance
+      * *   BUSINESS_PROCESS_DAG: DAG for a one-time workflow
       * Supported DAG states:
-      * *   CREATED: The DAG is created.
-      * *   RUNNING: The DAG is running.
-      * *   FAILURE: The DAG fails to run.
-      * *   SUCCESS: The DAG successfully runs.
+      * *   CREATED
+      * *   RUNNING
+      * *   FAILURE
+      * *   SUCCESS
       *
      */
     @Override
@@ -2051,6 +2077,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > This operation will be replaced soon. We recommend that you do not call this operation.
+      *
+     */
     @Override
     public CompletableFuture<GetMetaTableChangeLogResponse> getMetaTableChangeLog(GetMetaTableChangeLogRequest request) {
         try {
@@ -2150,7 +2180,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
+      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine. If you query partitions of a metatable in an EMR compute engine, only DataLake clusters that use Data Lake Formation (DLF) to manage metadata and Hadoop clusters whose cluster version is earlier than 3.41.0 or 5.7.0 are supported.
       *
      */
     @Override
@@ -2529,9 +2559,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can import self-managed data sources or data sources that are exported from other Dataworks workspaces to a specified DataWorks workspace.
-      * *   To import a self-managed data source to DataWorks, the data source type must be supported by DataWorks. For more information about the types of data sources supported by DataWorks, see [Supported data stores](~~181656~~).
-      * *   For more information about how to export data sources from DataWorks workspaces to on-premises devices, see [ExportDataSources](~~279570~~).
+      * You can import self-managed data sources or data sources that are exported from other DataWorks workspaces to a specific DataWorks workspace.
+      * *   To import a self-managed data source to a DataWorks workspace, the data source type must be supported by DataWorks. For more information about the types of data sources supported by DataWorks, see [Supported data stores](~~181656~~).
+      * *   For more information about how to export data sources from DataWorks workspaces to your on-premises machine, see [ExportDataSources](~~279570~~).
       *
      */
     @Override
@@ -2632,6 +2662,34 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<ListClusterConfigsResponse> listClusterConfigs(ListClusterConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListClusterConfigs").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListClusterConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListClusterConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListClusters").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListClustersResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListClustersResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * @deprecated
       *
@@ -2650,6 +2708,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can configure alert rules only for tasks that can be used for real-time data synchronization.
+      *
+     */
     @Override
     public CompletableFuture<ListDIAlarmRulesResponse> listDIAlarmRules(ListDIAlarmRulesRequest request) {
         try {
@@ -2664,6 +2726,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to obtain only the basic information about the tasks. If you want to obtain the details of a task, call the GetDIJob operation.
+      *
+     */
     @Override
     public CompletableFuture<ListDIJobsResponse> listDIJobs(ListDIJobsRequest request) {
         try {
@@ -2679,7 +2745,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * DataWorks allows you to set the default global configuration for only the processing rules of DDL messages in sync solutions. After you configure the **processing rules of DDL messages** in sync solutions, the configuration is set as the default global configuration and applies to all real-time sync nodes. You can also modify the **processing rules of DDL messages** based on your business requirements. For more information, see [Sync solutions](~~199008~~).
+      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization tasks in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
       *
      */
     @Override
@@ -2697,7 +2763,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **ListDags**.
+      * Supported DAG types:
+      * *   MANUAL: DAG for a manually triggered workflow
+      * *   SMOKE_TEST: DAG for a smoke testing workflow
+      * *   SUPPLY_DATA: DAG for a data backfill instance
+      * *   BUSINESS_PROCESS_DAG: DAG for a one-time workflow
+      * Supported DAG states:
+      * *   CREATED: The DAG is created.
+      * *   RUNNING: The DAG is running.
+      * *   FAILURE: The DAG fails to run.
+      * *   SUCCESS: The DAG is successfully run.
       *
      */
     @Override
@@ -2854,6 +2929,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For information about codes of extension point events, see [Development references: Extension point event codes](~~463357~~).
+      *
+     */
     @Override
     public CompletableFuture<ListEnabledExtensionsForProjectResponse> listEnabledExtensionsForProject(ListEnabledExtensionsForProjectRequest request) {
         try {
@@ -3051,6 +3130,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ListMeasureDataResponse> listMeasureData(ListMeasureDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListMeasureData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMeasureDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMeasureDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<ListMetaCollectionEntitiesResponse> listMetaCollectionEntities(ListMetaCollectionEntitiesRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -3217,7 +3310,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For example, an Alibaba Cloud account can assume the developer, O&M engineer, or workspace administrator role in a workspace. For more information, see [Manage members and roles](~~136941~~).
+      * An Alibaba Cloud account can assume a role such as the developer, O\\&M engineer, or workspace administrator role in a workspace. For more information, see [Manage members and roles](~~136941~~).
       *
      */
     @Override
@@ -3496,7 +3589,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform.
+      * DataWorks allows you to call only the [CreateDISyncTask](~~278725~~) operation to create a batch synchronization task or the [UpdateDISyncTask](~~289109~~) operation to update a batch synchronization task in Data Integration. To create or update a real-time synchronization task, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) or [GenerateDISyncTaskConfigForUpdating](~~383464~~) operation to obtain the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask or UpdateDISyncTask operation and use the parameters as request parameters to create or update a real-time synchronization task. DataWorks allows you to create or update real-time synchronization tasks in Data Integration only in asynchronous mode.
       *
      */
     @Override
@@ -3527,6 +3620,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Each time you call this API operation, you must use FML statements to query information about objects that are created in Data Modeling.
+      * *   The information about the objects can be queried by page, except for data layers, business processes, and data domains. You can add an offset to the end of an FML statement. The num LIMIT num statement specifies the offset when the information about the objects is queried, and the number of pages to return each time. The offset value must be a multiple of the number of pages.
+      * *   A maximum of 1,000 entries can be returned each time you call this API operation.
+      *
+     */
     @Override
     public CompletableFuture<QueryPublicModelEngineResponse> queryPublicModelEngine(QueryPublicModelEngineRequest request) {
         try {
@@ -3625,6 +3724,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is in the trial phase. Users who need to call this operation can apply for it. The users can call this operation after the administrator adds the users to the trial list.
+      *
+     */
     @Override
     public CompletableFuture<RegisterLineageRelationResponse> registerLineageRelation(RegisterLineageRelationRequest request) {
         try {
@@ -3812,7 +3915,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **SearchMetaTables**.
+      * You can call this operation to query only metatables in a MaxCompute or E-MapReduce (EMR) compute engine.
       *
      */
     @Override
@@ -4131,6 +4234,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<UpdateClusterConfigsResponse> updateClusterConfigs(UpdateClusterConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateClusterConfigs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateClusterConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateClusterConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * @deprecated
       *
@@ -4149,6 +4266,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can configure alert rules only for tasks that can be used for real-time data synchronization. You must update all fields in the alert rule.
+      *
+     */
     @Override
     public CompletableFuture<UpdateDIAlarmRuleResponse> updateDIAlarmRule(UpdateDIAlarmRuleRequest request) {
         try {
@@ -4178,7 +4299,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **UpdateDIProjectConfig**.
+      * DataWorks allows you to specify a default global configuration only for the processing rules of DDL messages in synchronization solutions. After you configure the **processing rules of DDL messages** in synchronization solutions, the configuration is used as the default global configuration and applies to all real-time synchronization tasks in the solutions. You can modify the **processing rules of DDL messages** based on your business requirements. For more information about how to configure a synchronization solution, see [Synchronization solutions](~~199008~~).
       *
      */
     @Override
@@ -4298,7 +4419,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You must configure at least one of the Name and Comment parameters when you update a collection.
+      * Only the name and comment of a collection can be updated.
       *
      */
     @Override

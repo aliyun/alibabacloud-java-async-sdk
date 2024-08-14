@@ -96,7 +96,7 @@ public class GetDeploymentRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which DataWorks is activated.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

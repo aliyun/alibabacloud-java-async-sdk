@@ -97,7 +97,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * PageData.
+         * The pagination information.
          */
         public Builder pageData(PageData pageData) {
             this.pageData = pageData;
@@ -129,7 +129,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -273,7 +277,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             private java.util.List < String > userGroups; 
 
             /**
-             * EndTime.
+             * The expiration time of the data masking whitelist cannot be earlier than the time when the data masking whitelist takes effect. Unit: days.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -281,7 +285,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the whitelist was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -289,7 +293,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the whitelist was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -297,7 +301,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the data masking whitelist.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -305,7 +309,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the data masking rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -313,7 +317,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * The ID of the level-2 data masking scenario.
              */
             public Builder sceneId(Long sceneId) {
                 this.sceneId = sceneId;
@@ -321,7 +325,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the data masking whitelist takes effect cannot be earlier than the current time. Unit: days.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -329,7 +333,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The sensitive field type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -337,7 +341,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroups.
+             * A collection of user group names.
              */
             public Builder userGroups(java.util.List < String > userGroups) {
                 this.userGroups = userGroups;
@@ -414,7 +418,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Data.
+             * A collection of whitelists.
              */
             public Builder data(java.util.List < Data> data) {
                 this.data = data;
@@ -422,7 +426,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -430,7 +434,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -438,7 +442,7 @@ public class DsgWhiteListQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of data masking whitelists.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

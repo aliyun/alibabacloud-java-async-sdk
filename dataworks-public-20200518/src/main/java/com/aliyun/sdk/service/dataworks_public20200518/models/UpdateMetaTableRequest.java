@@ -255,7 +255,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The ID of the new owner. If this parameter is not specified, the owner ID is not updated.
+         * The new owner ID. If you leave this parameter empty, the owner ID is not updated.
          */
         public Builder newOwnerId(String newOwnerId) {
             this.putQueryParameter("NewOwnerId", newOwnerId);
@@ -264,7 +264,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -273,7 +273,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The names of labels that you want to delete. Separate the labels with commas (,).
+         * The names of labels that you want to remove. Separate the labels with commas (,).
          */
         public Builder removedLabels(String removedLabels) {
             this.putBodyParameter("RemovedLabels", removedLabels);
@@ -282,7 +282,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The schema information of the table. You need to configure this parameter if you enable the table schema in MaxCompute.
+         * The schema information about the table. You must configure this parameter if you enable the three-layer model of MaxCompute.
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);
@@ -291,7 +291,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.
+         * The GUID of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -309,7 +309,7 @@ public class UpdateMetaTableRequest extends Request {
         }
 
         /**
-         * The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all workspace members. The value 1 indicates that the table is visible to all workspace members. The value 2 indicates that the table is visible to workspace members.
+         * The scope in which the table is visible. Valid values: 0, 1, and 2. The value 0 indicates that the table is invisible to all members. The value 1 indicates that the table is visible to all members. The value 2 indicates that the table is visible to workspace members.
          */
         public Builder visibility(Integer visibility) {
             this.putQueryParameter("Visibility", visibility);

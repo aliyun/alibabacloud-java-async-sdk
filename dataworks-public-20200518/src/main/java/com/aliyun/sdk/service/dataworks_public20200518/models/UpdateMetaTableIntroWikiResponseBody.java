@@ -49,7 +49,7 @@ public class UpdateMetaTableIntroWikiResponseBody extends TeaModel {
         private Boolean updateResult; 
 
         /**
-         * The ID of the request.
+         * The request ID. You can troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class UpdateMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * The updated instructions.
+         * Indicates whether the instructions on how to use the table are updated.
          */
         public Builder updateResult(Boolean updateResult) {
             this.updateResult = updateResult;

@@ -77,7 +77,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
         }
 
         /**
-         * scenes.
+         * The information about the level-2 data masking scenario.
          */
         public Builder scenes(java.util.List < Scenes> scenes) {
             String scenesShrink = shrink(scenes, "scenes", "json");
@@ -144,7 +144,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             private String projectName; 
 
             /**
-             * clusterId.
+             * If the data masking scenario takes effect for an E-MapReduce (EMR) compute engine, enter the ID of an EMR cluster. This parameter is required only when you use an EMR compute engine.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -152,7 +152,12 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             }
 
             /**
-             * dbType.
+             * The type of the compute engine for which the data masking scenario takes effect. Valid values:
+             * <p>
+             * 
+             * *   ODPS: ODPS.ODPS
+             * *   HOLO: HOLO.POSTGRES
+             * *   EMR: EMR
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -160,7 +165,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             }
 
             /**
-             * projectName.
+             * The name of the compute engine instance for which the data masking scenario takes effect.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -263,7 +268,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             private java.util.List < Long > userGroupIds; 
 
             /**
-             * desc.
+             * The description.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -271,7 +276,11 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             }
 
             /**
-             * id.
+             * The ID of the level-2 data masking scenario.
+             * <p>
+             * 
+             * *   If you do not configure this parameter, the current operation is to add a level-2 data masking scenario.
+             * *   If you configure this parameter, the current operation is to modify a level-2 data masking scenario. You can call the [DsgSceneQuerySceneListByName](~~2786322~~) operation to query the ID of the level-2 data masking scenario.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -279,7 +288,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             }
 
             /**
-             * projects.
+             * The information about the compute engine for which the data masking scenario takes effect.
              */
             public Builder projects(java.util.List < Projects> projects) {
                 this.projects = projects;
@@ -287,7 +296,13 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             }
 
             /**
-             * sceneCode.
+             * The code of the level-1 data masking scenario to which the level-2 data masking scenario belongs. Valid values:
+             * <p>
+             * 
+             * *   dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map
+             * *   maxcompute_desense_code: data masking at the MaxCompute compute engine layer
+             * *   maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)
+             * *   dataworks_analysis_desense_code: masking of displayed data in DataAnalysis
              */
             public Builder sceneCode(String sceneCode) {
                 this.sceneCode = sceneCode;
@@ -295,7 +310,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             }
 
             /**
-             * sceneName.
+             * The name of the level-2 data masking scenario.
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -303,7 +318,7 @@ public class DsgSceneAddOrUpdateSceneRequest extends Request {
             }
 
             /**
-             * userGroupIds.
+             * The information about the user group for which the data masking scenario takes effect.
              */
             public Builder userGroupIds(java.util.List < Long > userGroupIds) {
                 this.userGroupIds = userGroupIds;

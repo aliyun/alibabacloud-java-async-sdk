@@ -129,7 +129,7 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can locate logs and troubleshoot issues based on the ID.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -140,8 +140,9 @@ public class ListLineageResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false
+         * true
+         * 
+         * false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +218,10 @@ public class ListLineageResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Channel.
+             * The data channel. Valid values:
+             * <p>
+             * 
+             *     FIRST_PARTY: DataWorks platformTHIRD_PARTY: user registration
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -225,7 +229,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Datasource.
+             * The name of the data source.
              */
             public Builder datasource(String datasource) {
                 this.datasource = datasource;
@@ -233,7 +237,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Guid.
+             * The unique relationship ID.
              */
             public Builder guid(String guid) {
                 this.guid = guid;
@@ -241,7 +245,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The task type, which is used to describe the relationship between entities, such as SQL-based calculation, mapping based on report fields, or API operation definition.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -306,7 +310,7 @@ public class ListLineageResponseBody extends TeaModel {
             private java.util.List < RelationList> relationList; 
 
             /**
-             * CreateTimestamp.
+             * The time when the lineage was generated.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -314,7 +318,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The array of the entity structure.
+             * The information about the entity.
              */
             public Builder entity(Entity entity) {
                 this.entity = entity;
@@ -322,7 +326,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * RelationList.
+             * The array of the relationship structure.
              */
             public Builder relationList(java.util.List < RelationList> relationList) {
                 this.relationList = relationList;
@@ -383,7 +387,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The pagination token that is used in the next request to retrieve a new page of results.
+             * A pagination token. It can be used in the next request to retrieve a new page of results.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

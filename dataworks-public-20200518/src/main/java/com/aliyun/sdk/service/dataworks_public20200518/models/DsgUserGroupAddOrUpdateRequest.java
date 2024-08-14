@@ -77,7 +77,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
         }
 
         /**
-         * UserGroups.
+         * The information about the user group.
          */
         public Builder userGroups(java.util.List < UserGroups> userGroups) {
             String userGroupsShrink = shrink(userGroups, "UserGroups", "json");
@@ -184,7 +184,11 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             private Integer userGroupType; 
 
             /**
-             * Accounts.
+             * The users in the group.
+             * <p>
+             * 
+             * *   If a user group is created by using an Alibaba Cloud account and a RAM role, you can call the [DsgUserGroupQueryUserList](~~2786445~~) operation to query the users in the group.
+             * *   If a user group is created by using a MaxCompute role, you can call the [DsgUserGroupQueryUserList](~~2785695~~) operation to query the users in the group.
              */
             public Builder accounts(java.util.List < String > accounts) {
                 this.accounts = accounts;
@@ -192,7 +196,11 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             }
 
             /**
-             * Id.
+             * The user group ID.
+             * <p>
+             * 
+             * *   If you do not configure this parameter, the current operation is to add a user group.
+             * *   If you configure this parameter, the current operation is to modify a user group. You can call the [DsgUserGroupQueryList](~~2786441~~) operation to query the user group ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -200,7 +208,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the user group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -208,7 +216,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             }
 
             /**
-             * Owner.
+             * The owner of the user group.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -216,7 +224,7 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             }
 
             /**
-             * ProjectName.
+             * The name of the MaxCompute project. You must configure this parameter when you create a MaxCompute user group.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -224,7 +232,12 @@ public class DsgUserGroupAddOrUpdateRequest extends Request {
             }
 
             /**
-             * UserGroupType.
+             * The type of the user group. Valid values:
+             * <p>
+             * 
+             * *   1: Alibaba Cloud account
+             * *   2: RAM role
+             * *   3: MaxCompute role
              */
             public Builder userGroupType(Integer userGroupType) {
                 this.userGroupType = userGroupType;

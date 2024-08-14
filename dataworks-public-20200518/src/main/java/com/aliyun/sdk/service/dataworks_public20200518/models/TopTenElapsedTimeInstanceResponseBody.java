@@ -57,7 +57,7 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can troubleshoot errors based on the ID.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +177,7 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The running duration of the instance. Unit: seconds.
+             * The run time length of the instance. Unit: seconds.
              */
             public Builder consumed(Long consumed) {
                 this.consumed = consumed;
@@ -185,7 +185,7 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -193,7 +193,7 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -209,7 +209,7 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the owner of the node.
+             * The ID of the Alibaba Cloud account used by the node owner.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -217,12 +217,7 @@ public class TopTenElapsedTimeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
+             * The type of the node. Valid values: 6 (Shell), 10 (ODPS SQL), 11 (ODPS MR), 23 (Data Integration), 24 (ODPS Script), 99 (zero load), 221 (PyODPS 2), 225 (ODPS Spark), 227 (EMR Hive), 228 (EMR Spark), 229 (EMR Spark SQL), 230 (EMR MR), 239 (OSS object inspection), 257 (EMR Shell), 258 (EMR Spark Shell), 259 (EMR Presto), 260 (EMR Impala), 900 (real-time synchronization), 1089 (cross-tenant collaboration), 1091 (Hologres development), 1093 (Hologres SQL), 1100 (assignment), and 1221 (PyODPS 3)
              */
             public Builder programType(Integer programType) {
                 this.programType = programType;

@@ -69,7 +69,7 @@ public class SetDataSourceShareResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -80,8 +80,8 @@ public class SetDataSourceShareResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -133,7 +133,7 @@ public class SetDataSourceShareResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The reason why the data source failed to be shared. If the data source was shared, this parameter is left empty.
+             * The reason why the data source failed to be shared. If the data source is successfully shared, the value of this parameter is an empty string.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -144,8 +144,8 @@ public class SetDataSourceShareResponseBody extends TeaModel {
              * Indicates whether the data source was shared. Valid values:
              * <p>
              * 
-             * *   success: The data source was shared.
-             * *   fail: The data source failed to be shared. You can troubleshoot issues based on the Message parameter.
+             * *   success.
+             * *   fail. You can view the value of the Message parameter to identify the cause of the failure.
              */
             public Builder status(String status) {
                 this.status = status;

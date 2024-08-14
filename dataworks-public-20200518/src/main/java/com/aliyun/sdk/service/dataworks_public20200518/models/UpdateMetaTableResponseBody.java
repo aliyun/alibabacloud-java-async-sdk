@@ -49,7 +49,7 @@ public class UpdateMetaTableResponseBody extends TeaModel {
         private Boolean updateResult; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class UpdateMetaTableResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the metadata information about the table is updated.
+         * Indicates whether the metadata information about the table was updated.
          */
         public Builder updateResult(Boolean updateResult) {
             this.updateResult = updateResult;

@@ -107,11 +107,7 @@ public class TerminateDISyncInstanceRequest extends Request {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request is successful.
-         * *   false: The request fails.
+         * The ID of the real-time synchronization task.
          */
         public Builder fileId(Long fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -120,7 +116,10 @@ public class TerminateDISyncInstanceRequest extends Request {
         }
 
         /**
-         * The type of the node. A value of DI_REALTIME indicates that the node is a real-time synchronization node.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
+         * <p>
+         * 
+         * You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -129,7 +128,7 @@ public class TerminateDISyncInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the real-time synchronization node.
+         * The value DI_REALTIME indicates that the task is a real-time synchronization task.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

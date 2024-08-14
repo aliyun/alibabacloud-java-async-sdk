@@ -92,7 +92,7 @@ public class DsgStopSensIdentifyRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the sensitive data identification task. You can call the [DsgRunSensIdentify](~~2744039~~) operation to obtain the task ID.
          */
         public Builder jobId(Long jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -101,7 +101,7 @@ public class DsgStopSensIdentifyRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

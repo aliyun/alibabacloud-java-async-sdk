@@ -97,7 +97,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The business data returned.
+         * The business data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -261,7 +261,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user who created the metatable.
+             * The name of the user who creates the metatable.
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -269,7 +269,7 @@ public class GetMetaTableIntroWikiResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was modified.
+             * The time when the metatable was last modified.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;

@@ -73,7 +73,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information about the export operation.
+         * The information about the exported data sources.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -93,7 +93,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -104,8 +104,8 @@ public class ExportDataSourcesResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -349,7 +349,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * The ID of the compute engine to which the data source is bound.
+             * The ID of the compute engine that is added as the data source.
              */
             public Builder bindingCalcEngineId(Integer bindingCalcEngineId) {
                 this.bindingCalcEngineId = bindingCalcEngineId;
@@ -400,7 +400,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the compute engine to which the data source is bound is the default compute engine. Valid values:
+             * Indicates whether the compute engine that is added as the data source is the default compute engine. Valid values:
              * <p>
              * 
              * *   true: The compute engine is the default compute engine.
@@ -420,7 +420,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The environment to which the data source belongs. Valid values:
+             * The environment in which the data source resides. Valid values:
              * <p>
              * 
              * *   0: development environment
@@ -448,7 +448,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data source.
+             * The data source ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -512,7 +512,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The subtype of the data source. This parameter is returned only if the value of the DataSourceType parameter is rds.
+             * The subtype of the data source. This parameter takes effect only when the DataSourceType parameter is set to rds.
              * <p>
              * 
              * If the value of the DataSourceType parameter is rds, the value of this parameter can be mysql, sqlserver, or postgresql.
@@ -600,10 +600,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The details of the exported data sources.
-             * <p>
-             * 
-             * The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.
+             * The details of the exported data sources. The value is an array. The following parameters are the elements in the array. The sample values of these parameters show the details of a sample data source.
              */
             public Builder dataSources(java.util.List < DataSources> dataSources) {
                 this.dataSources = dataSources;
@@ -611,7 +608,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. The value of this parameter is a positive integer greater than or equal to 1.
+             * The page number. Pages start from page 1.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -619,7 +616,7 @@ public class ExportDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned on each page.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

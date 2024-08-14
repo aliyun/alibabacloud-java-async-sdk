@@ -107,7 +107,7 @@ public class GetManualDagInstancesRequest extends Request {
         }
 
         /**
-         * DagId.
+         * The ID of the directed acyclic graph (DAG) for the manually triggered workflow. You can call the [CreateManualDag](~~189728~~) operation to query the ID.
          */
         public Builder dagId(String dagId) {
             this.putBodyParameter("DagId", dagId);
@@ -116,7 +116,7 @@ public class GetManualDagInstancesRequest extends Request {
         }
 
         /**
-         * ProjectEnv.
+         * The environment of Operation Center. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);
@@ -125,7 +125,7 @@ public class GetManualDagInstancesRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The name of the workspace to which the manually triggered workflow belongs. You can log on to the DataWorks console and go to the Workspace Settings panel to query the name.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

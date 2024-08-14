@@ -49,7 +49,7 @@ public class OfflineNodeResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Indicates whether the request is successful.
+         * The request ID. You can use the request ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class OfflineNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;

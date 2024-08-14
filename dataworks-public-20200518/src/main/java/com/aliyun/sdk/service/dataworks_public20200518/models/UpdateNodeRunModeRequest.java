@@ -98,7 +98,7 @@ public class UpdateNodeRunModeRequest extends Request {
         } 
 
         /**
-         * The region ID. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +107,7 @@ public class UpdateNodeRunModeRequest extends Request {
         }
 
         /**
-         * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID.
+         * The node ID. You can call the [ListNodes](~~173979~~) operation to query the node ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -116,7 +116,11 @@ public class UpdateNodeRunModeRequest extends Request {
         }
 
         /**
-         * The environment where the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment. The value PROD indicates the production environment.
+         * The environment in which the node runs. Valid values: DEV and PROD. The value DEV indicates the development environment, and the value PROD indicates the production environment.
+         * <p>
+         * 
+         * *   PROD
+         * *   DEV
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

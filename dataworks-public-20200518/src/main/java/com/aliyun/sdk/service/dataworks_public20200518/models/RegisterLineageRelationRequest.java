@@ -77,7 +77,7 @@ public class RegisterLineageRelationRequest extends Request {
         }
 
         /**
-         * LineageRelationRegisterVO.
+         * The structure whose lineage you want to register to DataWorks.
          */
         public Builder lineageRelationRegisterVO(LineageRelationRegisterVO lineageRelationRegisterVO) {
             String lineageRelationRegisterVOShrink = shrink(lineageRelationRegisterVO, "LineageRelationRegisterVO", "json");

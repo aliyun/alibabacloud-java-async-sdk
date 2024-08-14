@@ -97,7 +97,11 @@ public class DsgUserGroupDeleteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The operation result. Valid values:
+         * <p>
+         * 
+         * *   true: The user group is deleted.
+         * *   false: The user group fails to be deleted.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -105,7 +109,7 @@ public class DsgUserGroupDeleteResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +117,7 @@ public class DsgUserGroupDeleteResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +125,7 @@ public class DsgUserGroupDeleteResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +133,7 @@ public class DsgUserGroupDeleteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +141,11 @@ public class DsgUserGroupDeleteResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

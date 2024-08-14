@@ -92,7 +92,12 @@ public class GetDagRequest extends Request {
         }
 
         /**
-         * The ID of the DAG. You can set this parameter to the value of the DagId parameter returned by the CreateDagComplement, CreateTest, or CreateManualDag operation.
+         * The ID of the DAG. You can use one of the following method to obtain the ID:
+         * <p>
+         * 
+         * *   Call the [RunCycleDagNodes](~~2780209~~) operation and obtain the value of the **Data** response parameter.
+         * *   Call the [RunSmokeTest](~~2780210~~) operation and obtain the value of the **Data** response parameter.
+         * *   Call the [RunManualDagNodes](~~2780218~~) operation and obtain the value of the **DagId** response parameter.
          */
         public Builder dagId(Long dagId) {
             this.putBodyParameter("DagId", dagId);
@@ -101,7 +106,7 @@ public class GetDagRequest extends Request {
         }
 
         /**
-         * The environment type. Valid values: PROD and DEV. The value PROD indicates the production environment. The value DEV indicates the development environment.
+         * The environment of the workspace. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

@@ -143,7 +143,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +152,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,7 +161,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -170,7 +170,7 @@ public class ListDataServiceAuthorizedApisRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID. This parameter is deprecated.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

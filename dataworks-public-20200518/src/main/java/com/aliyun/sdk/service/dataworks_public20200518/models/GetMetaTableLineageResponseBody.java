@@ -97,7 +97,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the next page has more query results.
+         * The business data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The paging information.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
         }
 
         /**
-         * The business data.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -213,7 +213,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * CreateTimestamp.
+             * The time when the table was created.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -221,7 +221,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The name of the database.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -229,7 +229,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * The unique identifier of the table.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -237,7 +237,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the metatable was created.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -302,7 +302,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             private String nextPrimaryKey; 
 
             /**
-             * The GUID of the metatable.
+             * The information about the table.
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -310,7 +310,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metatable.
+             * Indicates whether the next page exists.
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -318,7 +318,7 @@ public class GetMetaTableLineageResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the metatable.
+             * The logic of paging. If the value true is returned for the HasNext parameter and a value is returned for the NextPrimaryKey parameter in the response of the previous request, you must use the value of the NextPrimaryKey parameter for the next request.
              */
             public Builder nextPrimaryKey(String nextPrimaryKey) {
                 this.nextPrimaryKey = nextPrimaryKey;

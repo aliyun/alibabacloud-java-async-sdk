@@ -92,7 +92,7 @@ public class QueryPublicModelEngineRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the ID.
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -101,7 +101,7 @@ public class QueryPublicModelEngineRequest extends Request {
         }
 
         /**
-         * Text.
+         * The FML statement that is used to query information about objects that are created in Data Modeling. For more information, see [Use FML statements to configure and manage data tables](~~298128~~). Only SHOW statements are supported.
          */
         public Builder text(String text) {
             this.putBodyParameter("Text", text);

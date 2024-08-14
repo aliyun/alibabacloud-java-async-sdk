@@ -57,7 +57,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +189,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the folder.
+             * The folder ID.
              */
             public Builder folderId(Long folderId) {
                 this.folderId = folderId;
@@ -229,7 +229,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The workspace ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -237,7 +237,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * The tenant ID.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -322,7 +322,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
+             * The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -330,7 +330,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The number of entries per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -338,7 +338,7 @@ public class ListDataServiceFoldersResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of returned entries.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

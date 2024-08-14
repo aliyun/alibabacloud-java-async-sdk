@@ -120,7 +120,7 @@ public class ListTableLevelRequest extends Request {
         }
 
         /**
-         * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
+         * The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
@@ -129,7 +129,7 @@ public class ListTableLevelRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * The page number. Default value: 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -138,7 +138,7 @@ public class ListTableLevelRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +147,7 @@ public class ListTableLevelRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the DataWorks console to obtain the ID.
+         * The ID of the DataWorks workspace. You can log on to the DataWorks console to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

@@ -92,7 +92,7 @@ public class QueryRecognizeRuleDetailRequest extends Request {
         }
 
         /**
-         * SensitiveName.
+         * The name of the sensitive field. To obtain the name of the sensitive field, call the [QuerySensNodeInfo](~~2747189~~) operation or log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Data Category and Sensitivity Level page.
          */
         public Builder sensitiveName(String sensitiveName) {
             this.putBodyParameter("SensitiveName", sensitiveName);
@@ -101,7 +101,7 @@ public class QueryRecognizeRuleDetailRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

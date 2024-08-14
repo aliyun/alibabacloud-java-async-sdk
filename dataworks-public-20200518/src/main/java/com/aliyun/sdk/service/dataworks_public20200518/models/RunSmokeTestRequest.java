@@ -154,7 +154,7 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * The ID of the node. You can call the [ListNodes](~~173979~~) operation to query the ID.
+         * The node ID. You can call the [ListNodes](~~173979~~) operation to query the ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -172,10 +172,7 @@ public class RunSmokeTestRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
-         * <p>
-         * 
-         * A workspace in basic mode does not have a development environment. For more information, see [Basic mode and standard mode](~~85772~~).
+         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment. A workspace in basic mode does not have a development environment. For more information, see [Differences between workspaces in basic mode and workspaces in standard mode](~~85772~~).
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

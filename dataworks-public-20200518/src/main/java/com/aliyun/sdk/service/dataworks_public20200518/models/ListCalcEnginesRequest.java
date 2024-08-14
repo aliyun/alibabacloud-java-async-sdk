@@ -148,7 +148,18 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The type of the compute engine instance. Valid values: `ODPS`, `EMR`, `BLINK`, `HOLO`, `MaxGraph`, `HYBRIDDB_FOR_POSTGRESQL`, `ADB_MYSQL`, and `HADOOP_CDH`. The values are not case-sensitive.
+         * The type of the compute engine. The value of this parameter is not case-sensitive. Valid values:
+         * <p>
+         * 
+         * *   **ODPS**
+         * *   **EMR**
+         * *   **BLINK**
+         * *   **HOLO**
+         * *   **MaxGraph**
+         * *   **HYBRIDDB_FOR_POSTGRESQL**
+         * *   **ADB_MYSQL**
+         * *   **HADOOP_CDH**
+         * *   **CLICKHOUSE**
          */
         public Builder calcEngineType(String calcEngineType) {
             this.putQueryParameter("CalcEngineType", calcEngineType);
@@ -157,7 +168,11 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The environment in which the compute engine instance runs. Valid values: DEV and PRD. The value DEV indicates the development environment, and the value PRD indicates the production environment.
+         * The environment in which the compute engine is used. Valid values:
+         * <p>
+         * 
+         * *   **DEV**
+         * *   **PRD**
          */
         public Builder envType(String envType) {
             this.putQueryParameter("EnvType", envType);
@@ -166,7 +181,7 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance that you want to query. Only exact match is supported.
+         * The name of the compute engine, which must be exactly matched.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -175,7 +190,7 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -184,7 +199,7 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 100. Maximum value: 100.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -193,7 +208,7 @@ public class ListCalcEnginesRequest extends Request {
         }
 
         /**
-         * The DataWorks workspace with which the compute engine instances are associated.
+         * The ID of the DataWorks workspace with which the compute engine is associated.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

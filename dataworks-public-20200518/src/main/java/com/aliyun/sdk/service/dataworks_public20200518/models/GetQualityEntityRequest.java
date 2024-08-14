@@ -136,7 +136,16 @@ public class GetQualityEntityRequest extends Request {
         }
 
         /**
-         * The type of the compute engine instance or data source.
+         * The type of the compute engine or data source. Valid values:
+         * <p>
+         * 
+         * *   cdh
+         * *   analyticdb_for_mysql
+         * *   odps
+         * *   emr
+         * *   hadoop
+         * *   holodb
+         * *   hybriddb_for_postgresql
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);

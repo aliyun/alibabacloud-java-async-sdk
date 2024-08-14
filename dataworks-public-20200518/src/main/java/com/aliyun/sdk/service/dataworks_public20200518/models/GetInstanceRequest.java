@@ -92,7 +92,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [ListInstances](~~173982~~) operation to query the ID.
+         * The instance ID. You can call the [ListInstances](~~173982~~) operation to query the ID.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -101,7 +101,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
-         * The environment of the workspace. Valid values: PROD and DEV. The value PROD indicates the production environment, and the value DEV indicates the development environment.
+         * The environment of the workspace. Valid values: PROD and DEV.
          */
         public Builder projectEnv(String projectEnv) {
             this.putBodyParameter("ProjectEnv", projectEnv);

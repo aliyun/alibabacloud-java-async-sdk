@@ -77,7 +77,7 @@ public class DeleteDIJobRequest extends Request {
         }
 
         /**
-         * DIJobId.
+         * The task ID.
          */
         public Builder DIJobId(Long DIJobId) {
             this.putBodyParameter("DIJobId", DIJobId);

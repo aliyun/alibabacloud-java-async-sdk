@@ -92,7 +92,7 @@ public class QuerySensLevelRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template defined by Data Security Guard. You can call the [QueryDefaultTemplate](~~2743948~~) operation to obtain the template ID.
          */
         public Builder templateId(String templateId) {
             this.putBodyParameter("TemplateId", templateId);
@@ -101,7 +101,7 @@ public class QuerySensLevelRequest extends Request {
         }
 
         /**
-         * tenantId.
+         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("tenantId", tenantId);

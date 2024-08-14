@@ -145,7 +145,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -154,7 +154,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 20.
+         * The number of entries per page. Default value: 10. Maximum value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -163,7 +163,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -172,7 +172,7 @@ public class ListQualityRulesRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source. You can obtain the name from data source configurations.
+         * The name of the compute engine or data source. You can obtain the name from data source configurations.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

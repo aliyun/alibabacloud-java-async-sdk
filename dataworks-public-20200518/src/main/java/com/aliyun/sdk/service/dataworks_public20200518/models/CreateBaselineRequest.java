@@ -180,7 +180,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * AlertMarginThreshold.
+         * The alert margin threshold of the baseline. Unit: minutes.
          */
         public Builder alertMarginThreshold(Integer alertMarginThreshold) {
             this.putBodyParameter("AlertMarginThreshold", alertMarginThreshold);
@@ -189,7 +189,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * BaselineName.
+         * The name of the baseline.
          */
         public Builder baselineName(String baselineName) {
             this.putBodyParameter("BaselineName", baselineName);
@@ -198,7 +198,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * BaselineType.
+         * The type of the baseline. Valid values: DAILY and HOURLY.
          */
         public Builder baselineType(String baselineType) {
             this.putBodyParameter("BaselineType", baselineType);
@@ -207,7 +207,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * NodeIds.
+         * The ancestor nodes of nodes in the baseline.
          */
         public Builder nodeIds(String nodeIds) {
             this.putBodyParameter("NodeIds", nodeIds);
@@ -216,7 +216,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * OvertimeSettings.
+         * The settings of the committed completion time of the baseline.
          */
         public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
             this.putBodyParameter("OvertimeSettings", overtimeSettings);
@@ -225,7 +225,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The ID of the Alibaba Cloud account used by the baseline owner.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -234,7 +234,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the baseline. Valid values: {1,3,5,7,8}.
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -243,7 +243,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -297,7 +297,7 @@ public class CreateBaselineRequest extends Request {
             private String time; 
 
             /**
-             * Cycle.
+             * The cycle that corresponds to the committed completion time. For a day-level baseline, set this parameter to 1. For an hour-level baseline, set this parameter to a value that is no more than 24.
              */
             public Builder cycle(Integer cycle) {
                 this.cycle = cycle;
@@ -305,7 +305,7 @@ public class CreateBaselineRequest extends Request {
             }
 
             /**
-             * Time.
+             * The committed completion time in the hh:mm format. Valid values of hh: \[0,47]. Valid values of mm: \[0,59].
              */
             public Builder time(String time) {
                 this.time = time;

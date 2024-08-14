@@ -97,7 +97,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The information of the monitoring rule.
+         * The information about the monitoring rule.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -208,6 +208,9 @@ public class GetQualityRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuleType")
         private Integer ruleType;
 
+        @com.aliyun.core.annotation.NameInMap("TaskSetting")
+        private String taskSetting;
+
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Integer templateId;
 
@@ -243,6 +246,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             this.property = builder.property;
             this.ruleName = builder.ruleName;
             this.ruleType = builder.ruleType;
+            this.taskSetting = builder.taskSetting;
             this.templateId = builder.templateId;
             this.templateName = builder.templateName;
             this.trend = builder.trend;
@@ -392,6 +396,13 @@ public class GetQualityRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return taskSetting
+         */
+        public String getTaskSetting() {
+            return this.taskSetting;
+        }
+
+        /**
          * @return templateId
          */
         public Integer getTemplateId() {
@@ -446,6 +457,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             private String property; 
             private String ruleName; 
             private Integer ruleType; 
+            private String taskSetting; 
             private Integer templateId; 
             private String templateName; 
             private String trend; 
@@ -456,11 +468,8 @@ public class GetQualityRuleResponseBody extends TeaModel {
              * The strength of the monitoring rule. The strength of a monitoring rule indicates the importance of the rule. Valid values:
              * <p>
              * 
-             * *   1: indicates that the monitoring rule is a strong rule.
-             * 
-             * *   0: indicates that the monitoring rule is a weak rule.
-             * 
-             *     You can specify whether a monitoring rule is a strong rule based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.
+             * *   1: the monitoring rule is a strong rule.
+             * *   0: the monitoring rule is a weak rule. You can specify whether a monitoring rule is a strong rule based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
              */
             public Builder blockType(Integer blockType) {
                 this.blockType = blockType;
@@ -468,7 +477,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the checker. The value of this parameter corresponds to the ID at the frontend and is converted from the ID of the primary key.
+             * The checker ID. The value of this parameter corresponds to the ID at the frontend and is converted from the ID of the primary key.
              */
             public Builder checker(Integer checker) {
                 this.checker = checker;
@@ -492,7 +501,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for an error alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements. If a strong rule is used and an error alert is triggered, nodes are blocked.
+             * The threshold for a critical alert. The threshold indicates the deviation of the check result from the expected value. You can specify a value for the threshold based on your business requirements. If a monitoring rule is a strong rule and the critical threshold is exceeded, a critical alert is reported and tasks that are associated with the rule are blocked from running.
              */
             public Builder criticalThreshold(String criticalThreshold) {
                 this.criticalThreshold = criticalThreshold;
@@ -524,7 +533,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the monitoring rule.
+             * The monitoring rule ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -532,7 +541,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the sampling method of the monitoring rule.
+             * The ID of the task that is associated with the partition filter expression.
              */
             public Builder methodId(Integer methodId) {
                 this.methodId = methodId;
@@ -540,7 +549,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
+             * The method that is used to collect sample data, such as avg, count, sum, min, max, count_distinct, user_defined, table_count, table_size, table_dt_load_count, table_dt_refuseload_count, null_value, null_value/table_count, (table_count-count_distinct)/table_count, or table_count-count_distinct.
              */
             public Builder methodName(String methodName) {
                 this.methodName = methodName;
@@ -564,7 +573,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * OpenSwitch.
+             * Indicates whether the monitoring rule is enabled.
              */
             public Builder openSwitch(Boolean openSwitch) {
                 this.openSwitch = openSwitch;
@@ -592,7 +601,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is monitored. This field is a column name in the data source table that is monitored.
+             * The field whose data quality is checked based on the monitoring rule. This field is a column in the data source table that is monitored.
              */
             public Builder property(String property) {
                 this.property = property;
@@ -616,6 +625,14 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
+             * TaskSetting.
+             */
+            public Builder taskSetting(String taskSetting) {
+                this.taskSetting = taskSetting;
+                return this;
+            }
+
+            /**
              * The ID of the monitoring template.
              */
             public Builder templateId(Integer templateId) {
@@ -632,7 +649,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The trend of the monitoring result.
+             * The trend of the check result.
              */
             public Builder trend(String trend) {
                 this.trend = trend;
@@ -640,7 +657,7 @@ public class GetQualityRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold for a warning alert. The threshold indicates the deviation of the monitoring result from the expected value. You can customize this threshold based on your business requirements.
+             * The threshold for a warning alert. The threshold indicates the deviation of the check result from the expected value. You can customize this threshold based on your business requirements.
              */
             public Builder warningThreshold(String warningThreshold) {
                 this.warningThreshold = warningThreshold;

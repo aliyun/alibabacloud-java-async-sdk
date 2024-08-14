@@ -149,7 +149,7 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The owner of the data masking rule.
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -158,7 +158,7 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +167,7 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +176,7 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The name of the sensitive field.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -185,7 +185,7 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * The ID of the level-2 data masking scenario. You can call the [DsgSceneQuerySceneListByName](~~2786322~~) operation to query the list of IDs.
          */
         public Builder sceneId(Integer sceneId) {
             this.putQueryParameter("SceneId", sceneId);
@@ -194,7 +194,11 @@ public class DsgDesensPlanQueryListRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the data masking rule. Valid values:
+         * <p>
+         * 
+         * *   0: expired
+         * *   1: effective
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

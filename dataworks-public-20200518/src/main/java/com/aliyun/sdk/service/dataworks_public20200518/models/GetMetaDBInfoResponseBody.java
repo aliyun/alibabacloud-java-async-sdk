@@ -49,7 +49,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The time when the compute engine instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+         * The basic metadata information.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
         }
 
         /**
-         * test table
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -277,7 +277,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The display name of the workspace.
+             * The compute engine instance ID. Specify the ID in the `Engine type.Engine name` format.
              */
             public Builder appGuid(String appGuid) {
                 this.appGuid = appGuid;
@@ -285,7 +285,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the compute engine instance was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * The EMR cluster ID.
              */
             public Builder clusterBizId(String clusterBizId) {
                 this.clusterBizId = clusterBizId;
@@ -293,7 +293,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace.
+             * The comment.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -301,7 +301,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the workspace owner.
+             * The time when the compute engine instance was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -309,7 +309,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * The endpoint of the service.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -317,7 +317,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EMR cluster. This parameter is returned only for an EMR compute engine instance.
+             * The type of the environment. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -325,7 +325,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The storage path of the metadatabase of the EMR cluster.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -333,7 +333,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the compute engine instance was modified.
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -341,7 +341,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the database.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -349,7 +349,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the service.
+             * The ID of the Alibaba Cloud account used by the workspace owner.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -357,7 +357,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Test items
+             * The name of the workspace owner.
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -365,7 +365,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account used by the workspace owner.
+             * The workspace ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -373,7 +373,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the environment. Valid values: 0 and 1. The value 0 indicates the development environment. The value 1 indicates the production environment.
+             * The name of the workspace.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -381,7 +381,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metadatabase.
+             * The display name of the workspace.
              */
             public Builder projectNameCn(String projectNameCn) {
                 this.projectNameCn = projectNameCn;
@@ -389,7 +389,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The tenant ID.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -397,7 +397,7 @@ public class GetMetaDBInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The type of the metadatabase.
              */
             public Builder type(String type) {
                 this.type = type;

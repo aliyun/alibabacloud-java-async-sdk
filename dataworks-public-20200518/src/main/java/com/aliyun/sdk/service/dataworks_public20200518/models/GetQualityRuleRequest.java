@@ -106,7 +106,7 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -115,7 +115,7 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source.
+         * The name of the compute engine or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -124,7 +124,7 @@ public class GetQualityRuleRequest extends Request {
         }
 
         /**
-         * The ID of the monitoring rule. You can call the [ListQualityRules](~~173995~~) operation to query the ID.
+         * The monitoring rule ID. You can call the [ListQualityRules](~~173995~~) operation to query the ID.
          */
         public Builder ruleId(Long ruleId) {
             this.putBodyParameter("RuleId", ruleId);

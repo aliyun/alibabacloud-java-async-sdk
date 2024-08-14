@@ -97,7 +97,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * PageData.
+         * The pagination information.
          */
         public Builder pageData(PageData pageData) {
             this.pageData = pageData;
@@ -129,7 +129,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -189,7 +193,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             private java.util.Map < String, ? > extParam; 
 
             /**
-             * DesensPlanType.
+             * The type of the data masking rule.
              */
             public Builder desensPlanType(String desensPlanType) {
                 this.desensPlanType = desensPlanType;
@@ -197,7 +201,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * ExtParam.
+             * The parameters for the data masking rule. For more information about the parameters, see the [DsgDesensPlanAddOrUpdate](~~2786295~~) API reference.
              */
             public Builder extParam(java.util.Map < String, ? > extParam) {
                 this.extParam = extParam;
@@ -394,7 +398,11 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * CheckWatermark.
+             * Indicates whether a watermark is added. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder checkWatermark(Boolean checkWatermark) {
                 this.checkWatermark = checkWatermark;
@@ -402,7 +410,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * The sensitive field type.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -410,7 +418,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * DesenMode.
+             * The type of the data masking method.
              */
             public Builder desenMode(String desenMode) {
                 this.desenMode = desenMode;
@@ -418,7 +426,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * DesensPlan.
+             * The details of the data masking rule.
              */
             public Builder desensPlan(DesensPlan desensPlan) {
                 this.desensPlan = desensPlan;
@@ -426,7 +434,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * DesensRule.
+             * The data masking rule.
              */
             public Builder desensRule(String desensRule) {
                 this.desensRule = desensRule;
@@ -434,7 +442,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * DesensWay.
+             * The data masking method.
              */
             public Builder desensWay(String desensWay) {
                 this.desensWay = desensWay;
@@ -442,7 +450,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the data masking rule was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -450,7 +458,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the data masking rule was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -458,7 +466,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the data masking rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -466,7 +474,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The owner of the data masking rule.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -474,7 +482,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the data masking rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -482,7 +490,15 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * SceneCode.
+             * The code of the level-1 data masking scenario to which the rule belongs. Valid values:
+             * <p>
+             * 
+             * *   dataworks_display_desense_code: masking of displayed data in DataStudio and Data Map
+             * *   maxcompute_desense_code: data masking at the MaxCompute compute engine layer
+             * *   maxcompute_new_desense_code: data masking at the MaxCompute compute engine layer (new)
+             * *   hologres_display_desense_code: data masking at the Hologres compute engine layer
+             * *   dataworks_data_integration_desense_code: static data masking in Data Integration
+             * *   dataworks_analysis_desense_code: masking of displayed data in DataAnalysis
              */
             public Builder sceneCode(String sceneCode) {
                 this.sceneCode = sceneCode;
@@ -490,7 +506,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * The name of the level-2 data masking scenario to which the data masking rule belongs.
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -498,7 +514,11 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the data masking rule. Valid values:
+             * <p>
+             * 
+             * *   0: expired
+             * *   1: effective
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -575,7 +595,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Data.
+             * The information about the data masking rule.
              */
             public Builder data(java.util.List < Data> data) {
                 this.data = data;
@@ -583,7 +603,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -591,7 +611,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -599,7 +619,7 @@ public class DsgDesensPlanQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The number of data masking rules.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

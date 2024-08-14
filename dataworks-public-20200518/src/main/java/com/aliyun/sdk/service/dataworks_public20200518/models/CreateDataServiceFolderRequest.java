@@ -173,7 +173,7 @@ public class CreateDataServiceFolderRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

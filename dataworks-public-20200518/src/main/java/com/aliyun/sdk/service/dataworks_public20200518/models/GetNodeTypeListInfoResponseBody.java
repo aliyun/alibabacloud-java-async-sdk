@@ -49,7 +49,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NodeTypeInfoList.
+         * The list of node types.
          */
         public Builder nodeTypeInfoList(NodeTypeInfoList nodeTypeInfoList) {
             this.nodeTypeInfoList = nodeTypeInfoList;
@@ -57,7 +57,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             private String nodeTypeName; 
 
             /**
-             * NodeType.
+             * The type of the node, which is specified by a number.
              */
             public Builder nodeType(Integer nodeType) {
                 this.nodeType = nodeType;
@@ -117,7 +117,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeTypeName.
+             * The name of the node type.
              */
             public Builder nodeTypeName(String nodeTypeName) {
                 this.nodeTypeName = nodeTypeName;
@@ -194,7 +194,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * NodeTypeInfo.
+             * The information about a node type.
              */
             public Builder nodeTypeInfo(java.util.List < NodeTypeInfo> nodeTypeInfo) {
                 this.nodeTypeInfo = nodeTypeInfo;
@@ -202,7 +202,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -210,7 +210,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -218,7 +218,7 @@ public class GetNodeTypeListInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

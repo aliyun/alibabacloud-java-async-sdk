@@ -77,7 +77,7 @@ public class GetAlertMessageRequest extends Request {
         }
 
         /**
-         * AlertId.
+         * The alert ID. You can all the [ListAlertMessages](~~173961~~) operation to obtain the alert ID.
          */
         public Builder alertId(String alertId) {
             this.putBodyParameter("AlertId", alertId);

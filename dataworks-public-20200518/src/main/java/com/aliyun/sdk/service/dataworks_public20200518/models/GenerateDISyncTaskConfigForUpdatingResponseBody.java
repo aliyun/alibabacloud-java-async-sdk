@@ -61,11 +61,7 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the ID of the asynchronous thread is generated. Valid values:
-         * <p>
-         * 
-         * *   success: indicates that the ID of the asynchronous thread is generated.
-         * *   fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.
+         * The information returned for the ID of the asynchronous thread.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -73,7 +69,7 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
         }
 
         /**
-         * The information returned for the ID of the asynchronous thread.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +77,11 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request. You can locate logs and troubleshoot issues based on the ID.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -145,7 +145,7 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * The reason why the ID of the asynchronous thread fails to be generated. If the ID is successfully generated, no value is returned for this parameter.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -153,7 +153,7 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the ID of the asynchronous thread fails to be generated. If the ID is successfully generated, the value null is returned.
+             * The ID of the asynchronous thread. You can call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to update a real-time synchronization task in Data Integration.
              */
             public Builder processId(Long processId) {
                 this.processId = processId;
@@ -161,7 +161,11 @@ public class GenerateDISyncTaskConfigForUpdatingResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asynchronous thread. You can call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. The parameters are used to update a real-time synchronization node or a synchronization solution in Data Integration.
+             * Indicates whether the ID of the asynchronous thread is generated. Valid values:
+             * <p>
+             * 
+             * *   success: indicates that the ID of the asynchronous thread is generated.
+             * *   fail: indicates that the ID of the asynchronous thread fails to be generated. You can view the reason for the failure and troubleshoot the issue based on the reason.
              */
             public Builder status(String status) {
                 this.status = status;

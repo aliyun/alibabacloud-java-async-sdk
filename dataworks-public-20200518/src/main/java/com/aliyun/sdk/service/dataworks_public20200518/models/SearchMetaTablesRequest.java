@@ -175,7 +175,7 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The type of the metatables. Valid values: 0 and 1. The value 0 indicates that tables are queried. The value 1 indicates that views are queried. If you do not configure this parameter, all types of metatables are queried.
+         * The GUID of the workspace where the metatables reside.
          */
         public Builder appGuid(String appGuid) {
             this.putQueryParameter("AppGuid", appGuid);
@@ -184,7 +184,10 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The schema information of the table. You need to configure this parameter if you enable the table schema in MaxCompute.
+         * The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
+         * <p>
+         * 
+         * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -193,7 +196,7 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned.
+         * The type of the data source. Valid values: odps and emr.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -202,7 +205,7 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps and emr.
+         * The type of the metatables. Valid values: 0 and 1. The value 0 indicates that tables are queried. The value 1 indicates that views are queried. If you do not configure this parameter, all types of metatables are queried.
          */
         public Builder entityType(Integer entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -211,10 +214,7 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
-         * <p>
-         * 
-         * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.
+         * The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, the value null is returned. By default, the system uses underscores (\_) to tokenize the names.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -223,7 +223,7 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The GUID of the workspace where the metatables reside.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -232,7 +232,7 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The keyword based on which metatables are queried. During the query, the system tokenizes the names of metatables and matches the names with the keyword. If no name is matched, an empty result is returned. By default, the system uses underscores (\_) to tokenize the names.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -241,7 +241,7 @@ public class SearchMetaTablesRequest extends Request {
         }
 
         /**
-         * The error message returned.
+         * The schema information of the table. You must configure this parameter if you enable the three-layer model of MaxCompute.
          */
         public Builder schema(String schema) {
             this.putQueryParameter("Schema", schema);

@@ -97,7 +97,7 @@ public class PublishDataServiceApiResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the API is published.
+         * Indicates whether the API was published.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -129,7 +129,7 @@ public class PublishDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class PublishDataServiceApiResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

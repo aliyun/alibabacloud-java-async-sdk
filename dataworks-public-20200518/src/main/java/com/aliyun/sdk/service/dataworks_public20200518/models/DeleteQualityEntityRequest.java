@@ -130,7 +130,17 @@ public class DeleteQualityEntityRequest extends Request {
         }
 
         /**
-         * The type of the compute engine instance or data source. Valid values: EMR, Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka and DataHub.
+         * The type of the compute engine or data source. The following types are supported: E-MapReduce (EMR), Hologres, AnalyticDB for PostgreSQL, CDH, MaxCompute, Kafka, and DataHub.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   odps
+         * *   emr
+         * *   hadoop
+         * *   cdh
+         * *   hybriddb_for_postgresql
+         * *   holodb
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -139,7 +149,7 @@ public class DeleteQualityEntityRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -148,7 +158,7 @@ public class DeleteQualityEntityRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source.
+         * The name of the compute engine or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

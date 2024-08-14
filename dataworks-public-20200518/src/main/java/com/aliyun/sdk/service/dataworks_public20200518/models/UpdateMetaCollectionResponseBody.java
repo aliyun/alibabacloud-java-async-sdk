@@ -97,11 +97,7 @@ public class UpdateMetaCollectionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   true: The request was successful.
-         * *   false: The request failed.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -109,7 +105,7 @@ public class UpdateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The returned message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -117,7 +113,7 @@ public class UpdateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -125,12 +121,7 @@ public class UpdateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The result of the operation. Valid values:
-         * <p>
-         * 
-         * true: succeeded
-         * 
-         * false: failed
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +129,7 @@ public class UpdateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The result of the operation. Valid values: true false
          */
         public Builder status(Boolean status) {
             this.status = status;
@@ -146,7 +137,11 @@ public class UpdateMetaCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

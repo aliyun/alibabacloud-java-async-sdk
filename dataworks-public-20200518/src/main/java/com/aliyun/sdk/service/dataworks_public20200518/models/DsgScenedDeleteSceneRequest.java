@@ -77,7 +77,7 @@ public class DsgScenedDeleteSceneRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The IDs of level-2 data masking scenarios.
          */
         public Builder ids(java.util.List < Integer > ids) {
             String idsShrink = shrink(ids, "Ids", "json");

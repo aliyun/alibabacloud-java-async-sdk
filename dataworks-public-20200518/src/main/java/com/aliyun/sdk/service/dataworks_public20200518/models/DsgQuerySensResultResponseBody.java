@@ -121,7 +121,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Object data) {
             this.data = data;
@@ -129,7 +129,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicErrorCode.
+         * The error code. The value is the same as that of ErrorCode.
          */
         public Builder dynamicErrorCode(String dynamicErrorCode) {
             this.dynamicErrorCode = dynamicErrorCode;
@@ -137,7 +137,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicErrorMessage.
+         * The error message. The value is the same as that of ErrorMessage.
          */
         public Builder dynamicErrorMessage(String dynamicErrorMessage) {
             this.dynamicErrorMessage = dynamicErrorMessage;
@@ -145,7 +145,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -153,7 +153,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -161,7 +161,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -169,7 +169,7 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +177,11 @@ public class DsgQuerySensResultResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

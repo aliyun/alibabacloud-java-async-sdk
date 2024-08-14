@@ -126,7 +126,7 @@ public class UpdateDISyncTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the DataWorks workspace resides. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -135,7 +135,7 @@ public class UpdateDISyncTaskRequest extends Request {
         }
 
         /**
-         * The ID of the sync node to be updated. You can call the [ListFiles](~~173942~~) operation to query the ID of the node.
+         * The ID of the data synchronization task. You can call the [ListFiles](~~173942~~) operation to query the ID.
          */
         public Builder fileId(Long fileId) {
             this.putQueryParameter("FileId", fileId);
@@ -144,10 +144,7 @@ public class UpdateDISyncTaskRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace Management page to obtain the workspace ID.
-         * <p>
-         * 
-         * You must set this parameter to specify the DataWorks workspace in which the node resides.
+         * The ID of the DataWorks workspace. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID. You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -156,7 +153,7 @@ public class UpdateDISyncTaskRequest extends Request {
         }
 
         /**
-         * The updated configuration of the sync node. This operation is equivalent to node update by using the code editor in the DataWorks console. For more information, see [Create a sync node by using the code editor](~~137717~~). You can call the UpdateDISyncTask operation to update only batch sync nodes. If you do not need to update the configuration of the sync node, leave this parameter empty.
+         * The updated configurations of the data synchronization task. Calling this API operation to update a data synchronization task is equivalent to updating a data synchronization task by using the code editor in the DataWorks console. For more information, see [Create a synchronization task by using the code editor](~~137717~~). You can call the UpdateDISyncTask operation to update only batch synchronization tasks. If you do not need to update the configurations of the data synchronization task, leave this parameter empty.
          */
         public Builder taskContent(String taskContent) {
             this.putQueryParameter("TaskContent", taskContent);
@@ -165,12 +162,10 @@ public class UpdateDISyncTaskRequest extends Request {
         }
 
         /**
-         * The setting that updates the resource group used by the node. The value must be in the JSON format.
+         * The setting based on which the resource group used by the data synchronization task is updated. You must configure this parameter in the JSON format.
          * <p>
          * 
-         * Only the ResourceGroup field is supported. This field specifies the identifier of the resource group for Data Integration that is used by the node. To query the identifier of the resource group, call the [ListResourceGroup](~~62055~~) operation.
-         * 
-         * If you do not need to update the resource group for the sync node, leave this parameter empty.
+         * Only the ResourceGroup field is supported. This field specifies the identifier of the resource group for Data Integration that is used by the data synchronization task. You can call the [ListResourceGroups](~~173913~~) operation to query the identifier of the resource group. If you do not need to update the resource group for the data synchronization task, leave this parameter empty.
          */
         public Builder taskParam(String taskParam) {
             this.putQueryParameter("TaskParam", taskParam);
@@ -179,10 +174,7 @@ public class UpdateDISyncTaskRequest extends Request {
         }
 
         /**
-         * The type of the sync node.
-         * <p>
-         * 
-         * You can call the UpdateDISyncTask operation to update only batch sync nodes. The value must be DI_OFFLINE.
+         * The type of the data synchronization task. Set the value to DI_OFFLINE. You can call the UpdateDISyncTask operation to update only batch synchronization tasks.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -135,7 +135,7 @@ public class GetOpRiskDataRequest extends Request {
         }
 
         /**
-         * The date on which the access records were queried. Specify the value in the yyyyMMdd format.
+         * The date on which access records were generated. Specify the value in the yyyyMMdd format.
          */
         public Builder date(String date) {
             this.putQueryParameter("Date", date);
@@ -144,20 +144,18 @@ public class GetOpRiskDataRequest extends Request {
         }
 
         /**
-         * The parameters that you can specify to query the access records. Valid values:
+         * The parameters that you can configure to query the access records. Valid values:
          * <p>
          * 
-         * *   dbType: the data type
-         * *   instanceName: the name of the instance
-         * *   databaseName: the name of the database
-         * *   projectName: the name of the workspace
-         * *   clusterName: the name of the cluster
+         * *   dbType
+         * *   instanceName
+         * *   databaseName
+         * *   projectName
+         * *   clusterName
          * 
-         * The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the ABC Hologres instance:
+         * The following example shows the parameters configured to query the access records of the sensitive data in the abc database of the Hologres instance ABC: \[ {"dbType":"hologres","instanceName":"ABC","databaseName":"abc"} ]
          * 
-         * {"dbType":"hologres","instanceName":"ABC","databaseName":"abc"}
-         * 
-         * You must specify the parameters based on the compute engine that you use in your business.
+         * You must configure the parameters based on the compute engine that you use in your business.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -166,7 +164,7 @@ public class GetOpRiskDataRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Minimum value: 1.
+         * The page number. Pages start from 1.
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -175,7 +173,7 @@ public class GetOpRiskDataRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 1000.
+         * The number of entries per page. Maximum value: 1000.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,11 +182,11 @@ public class GetOpRiskDataRequest extends Request {
         }
 
         /**
-         * The method that you use to identify risks.
+         * The method that you use to identify risks. Valid values:
          * <p>
          * 
          * *   You can manually identify risks.
-         * *   You can also use a risk rule to identify risks. You can go to the DataWorks console to obtain the name of the risk rule on the Custom Identification Rules page of Data Security Guard.
+         * *   You can also use a sensitive data identification rule to identify risks. You can log on to the DataWorks console and go to the Risk Identification Rules page in Data Security Guard to obtain the name of the rule.
          */
         public Builder riskType(String riskType) {
             this.putQueryParameter("RiskType", riskType);

@@ -97,7 +97,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned result.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +201,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             private Long projectId; 
 
             /**
-             * The ID of the application.
+             * The application ID.
              */
             public Builder applicationId(Long applicationId) {
                 this.applicationId = applicationId;
@@ -217,7 +217,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The workspace ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -302,7 +302,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page. The value of this parameter is the same as that of the PageNumber parameter in the request.
+             * The page number. The value of this parameter is the same as that of the PageNumber parameter in the request.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -310,7 +310,7 @@ public class ListDataServiceApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page. Default value: 10. Maximum value: 100.
+             * The number of entries per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

@@ -73,7 +73,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The query results for data sources that are returned on multiple pages.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,7 +81,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +89,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class ListConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -341,7 +341,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * BindingCalcEngineId.
+             * The ID of the compute engine with which the data source is associated.
              */
             public Builder bindingCalcEngineId(Integer bindingCalcEngineId) {
                 this.bindingCalcEngineId = bindingCalcEngineId;
@@ -349,7 +349,11 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectStatus.
+             * The status of the data source. Valid values:
+             * <p>
+             * 
+             * *   1: The data source is normal.
+             * *   2: The data source is disabled.
              */
             public Builder connectStatus(Integer connectStatus) {
                 this.connectStatus = connectStatus;
@@ -357,7 +361,22 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   odps
+             * *   mysql
+             * *   rds
+             * *   oss
+             * *   sqlserver
+             * *   polardb
+             * *   oracle
+             * *   mongodb
+             * *   emr
+             * *   postgresql
+             * *   analyticdb_for_mysql
+             * *   hybriddb_for_postgresql
+             * *   holo
              */
             public Builder connectionType(String connectionType) {
                 this.connectionType = connectionType;
@@ -365,7 +384,187 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The details of the data source. Examples of details of some common data sources:
+             * <p>
+             * 
+             * *   odps
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "accessId": "xssssss",
+             *       "accessKey": "xsaxsaxsa",
+             *       "authType": 2,
+             *       "endpoint": "http://service.odps.aliyun.com/api",
+             *       "project": "xsaxsax",
+             *       "tag": "public"
+             *     }
+             * 
+             * *   mysql
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "database": "xsaxsa",
+             *       "instanceName": "rm-xsaxsa",
+             *       "password": "xsaxsa",
+             *       "rdsOwnerId": "xasxsa",
+             *       "regionId": "cn-shanghai",
+             *       "tag": "rds",
+             *       "username": "xsaxsa"
+             *     }
+             * 
+             * *   rds
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "configType": 1,
+             *       "tag": "rds",
+             *       "database": "xsaxsa",
+             *       "username": "xsaxsa",
+             *       "password": "xssaxsa$32050",
+             *       "instanceName": "rm-xsaxs",
+             *       "rdsOwnerId": "11111111"
+             *     }
+             * 
+             * *   oss
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "accessId": "sssssxx",
+             *       "accessKey": "xsaxaxsaxs",
+             *       "bucket": "xsa-xs-xs",
+             *       "endpoint": "http://oss-cn-shanghai.aliyuncs.com",
+             *       "tag": "public"
+             *     }
+             * 
+             * *   sqlserver
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "jdbcUrl": "jdbc:sqlserver://xsaxsa-xsaxsa.database.xxx.cn:123;DatabaseName=xsxs-xsxs",
+             *       "password": "sdasda$fs",
+             *       "tag": "public",
+             *       "username": "sxaxacdacdd"
+             *     }
+             * 
+             * *   polardb
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "clusterId": "pc-sdadsadsa",
+             *       "database": "dsadsadsa",
+             *       "ownerId": "121212122",
+             *       "password": "sdasdafssa",
+             *       "region": "cn-shanghai",
+             *       "tag": "polardb",
+             *       "username": "asdadsads"
+             *     }
+             * 
+             * *   oracle
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "jdbcUrl": "jdbc:oracle:saaa:@xxxxx:1521:PROD",
+             *       "password": "sxasaxsa",
+             *       "tag": "public",
+             *       "username": "sasfadfa"
+             *     }
+             * 
+             * *   mongodb
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "address": "[\"xsaxxsa.mongodb.rds.aliyuncs.com:3717\"]",
+             *       "database": "admin",
+             *       "password": "sadsda@",
+             *       "tag": "public",
+             *       "username": "dsadsadas"
+             *     }
+             * 
+             * *   emr
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "accessId": "xsaxsa",
+             *       "emrClusterId": "C-dsads",
+             *       "emrResourceQueueName": "default",
+             *       "emrEndpoint": "emr.aliyuncs.com",
+             *       "accessKey": "dsadsad",
+             *       "emrUserId": "224833315798889783",
+             *       "name": "sasdsadsa",
+             *       "emrAccessMode": "simple",
+             *       "region": "cn-shanghai",
+             *       "authType": "2",
+             *       "emrProjectId": "FP-sdadsad"
+             *     }
+             * 
+             * *   postgresql
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "jdbcUrl": "jdbc:postgresql://xxxx:1921/ssss",
+             *       "password": "sdadsads",
+             *       "tag": "public",
+             *       "username": "sdsasda"
+             *     }
+             * 
+             * *   analyticdb_for_mysql
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "instanceId": "am-sadsada",
+             *       "database": "xsxsx",
+             *       "username": "xsxsa",
+             *       "password": "asdadsa",
+             *       "connectionString": "am-xssxsxs.ads.aliyuncs.com:3306"
+             *     }
+             * 
+             * *   hybriddb_for_postgresql
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "connectionString": "gp-xsaxsaxa-master.gpdbmaster.rds.aliyuncs.com",
+             *       "database": "xsaxsaxas",
+             *       "password": "xsaxsaxsa@11",
+             *       "instanceId": "gp-xsaxsaxsa",
+             *       "port": "541132",
+             *       "ownerId": "xsaxsaxsas",
+             *       "username": "sadsad"
+             *     }
+             * 
+             * *   holo
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "accessId": "xsaxsaxs",
+             *       "accessKey": "xsaxsaxsa",
+             *       "database": "xsaxsaxsa",
+             *       "instanceId": "xsaxa",
+             *       "tag": "aliyun"
+             *     }
+             * 
+             * *   kafka
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "instanceId": "xsax-cn-xsaxsa",
+             *       "regionId": "cn-shanghai",
+             *       "tag": "aliyun",
+             *       "ownerId": "1212121212112"
+             *     }
              */
             public Builder content(String content) {
                 this.content = content;
@@ -373,7 +572,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultEngine.
+             * Indicates whether the compute engine that is associated with the data source is the default compute engine used by data sources of the same type.
              */
             public Builder defaultEngine(Boolean defaultEngine) {
                 this.defaultEngine = defaultEngine;
@@ -381,7 +580,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the data source.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -389,7 +588,11 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The environment in which the data source is used. Valid values:
+             * <p>
+             * 
+             * *   0: development environment
+             * *   1: production environment
              */
             public Builder envType(Integer envType) {
                 this.envType = envType;
@@ -397,7 +600,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the data source was created. Example: Mar 17, 2021 4:09:32 PM.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -405,7 +608,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the data source was last modified. Example: Mar 17, 2021 4:09:32 PM.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -413,7 +616,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The data source ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -421,7 +624,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the data source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -429,7 +632,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The ID of the Alibaba Cloud account that is used to last modify the data source.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -437,7 +640,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The ID of the workspace with which the data source is associated.
              */
             public Builder projectId(Integer projectId) {
                 this.projectId = projectId;
@@ -445,7 +648,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Sequence.
+             * The field that is used to sort data sources. Data sources are sorted in descending order based on the value of this parameter.
              */
             public Builder sequence(Integer sequence) {
                 this.sequence = sequence;
@@ -453,7 +656,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Shared.
+             * Indicates whether the data source is a shared data source.
              */
             public Builder shared(Boolean shared) {
                 this.shared = shared;
@@ -461,7 +664,11 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the data source. Valid values:
+             * <p>
+             * 
+             * *   1: The data source is normal.
+             * *   2: The data source is disabled.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -469,7 +676,11 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * SubType.
+             * The subtype of the data source. This parameter is used in scenarios where a type includes subtypes. The following type and subtypes are supported:
+             * <p>
+             * 
+             * *   Type: `rds`
+             * *   Subtypes: `mysql`, `sqlserver`, and `postgresql`.
              */
             public Builder subType(String subType) {
                 this.subType = subType;
@@ -477,7 +688,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The tenant ID.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -554,7 +765,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Connections.
+             * The data sources.
              */
             public Builder connections(java.util.List < Connections> connections) {
                 this.connections = connections;
@@ -562,7 +773,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -570,7 +781,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -578,7 +789,7 @@ public class ListConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of data sources returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

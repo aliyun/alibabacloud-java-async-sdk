@@ -76,7 +76,7 @@ public class DsgUserGroupDeleteRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The information about the user group.
          */
         public Builder ids(java.util.List < Long > ids) {
             String idsShrink = shrink(ids, "Ids", "json");

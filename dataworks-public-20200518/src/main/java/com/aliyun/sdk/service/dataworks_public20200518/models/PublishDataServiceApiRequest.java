@@ -106,7 +106,7 @@ public class PublishDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the API. You can call the [ListDataServiceApis](~~174009~~) operation to obtain the ID.
+         * The API ID.
          */
         public Builder apiId(Long apiId) {
             this.putBodyParameter("ApiId", apiId);
@@ -115,7 +115,7 @@ public class PublishDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace Management page to obtain the workspace ID.
+         * The workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -124,7 +124,7 @@ public class PublishDataServiceApiRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The tenant ID. To obtain the tenant ID, perform the following steps: Log on to the [DataWorks console](https://workbench.data.aliyun.com/console). Find your workspace and go to the DataStudio page. On the DataStudio page, click the logon username in the upper-right corner and click User Info in the Menu section.
          */
         public Builder tenantId(Long tenantId) {
             this.putBodyParameter("TenantId", tenantId);

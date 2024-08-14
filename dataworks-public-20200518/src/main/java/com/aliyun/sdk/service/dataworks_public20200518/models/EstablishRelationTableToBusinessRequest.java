@@ -125,7 +125,7 @@ public class EstablishRelationTableToBusinessRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

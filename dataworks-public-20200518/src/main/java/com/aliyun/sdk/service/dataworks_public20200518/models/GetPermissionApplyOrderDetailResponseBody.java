@@ -49,7 +49,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the permission request order.
+         * The details of the permission request order.
          */
         public Builder applyOrderDetail(ApplyOrderDetail applyOrderDetail) {
             this.applyOrderDetail = applyOrderDetail;
@@ -57,7 +57,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private String baseId; 
 
             /**
-             * The unique ID of the Alibaba Cloud account that is used to approve the permission request order.
+             * The ID of the Alibaba Cloud account that is used to process the permission request order.
              */
             public Builder baseId(String baseId) {
                 this.baseId = baseId;
@@ -178,7 +178,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * The security level of the column on which you request permissions. Valid values: 0 to 9.
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -312,7 +312,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the object on which you request permissions.
+             * The details about the object on which you request permissions.
              */
             public Builder objectMetaList(java.util.List < ObjectMetaList> objectMetaList) {
                 this.objectMetaList = objectMetaList;
@@ -397,7 +397,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private ProjectMeta projectMeta; 
 
             /**
-             * The reason for your request. The administrator decides whether to approve the request based on the request reason.
+             * The reason of the permission request. The administrator processes the request based on the reason.
              */
             public Builder applyReason(String applyReason) {
                 this.applyReason = applyReason;
@@ -405,10 +405,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the permissions that you requested. The parameter value is a UNIX timestamp.
-             * <p>
-             * 
-             * If LabelSecurity is disabled in the MaxCompute project, or the security level of fields in the MaxCompute table on which you request permissions is 0 or is less than or equal to the security level of the Alibaba Cloud account for which you request permissions, you can request only permanent permissions.
+             * The expiration time of the permissions that you request. The value is a UNIX timestamp. If LabelSecurity is disabled for the MaxCompute project in which you want to request permissions on the fields of a table, or the security level of the fields is 0 or is lower than or equal to the security level of the Alibaba Cloud account for which you want to request permissions, you can request only permanent permissions.
              */
             public Builder deadline(Long deadline) {
                 this.deadline = deadline;
@@ -416,7 +413,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the permission request order. The parameter value is 1 and cannot be changed. 1 indicates that ACL-based authorization is requested.
+             * The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.
              */
             public Builder orderType(Integer orderType) {
                 this.orderType = orderType;
@@ -424,7 +421,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the project and workspace that are associated with the object on which you requested permissions.
+             * The information about the project and workspace that are associated with the object on which you request permissions.
              */
             public Builder projectMeta(ProjectMeta projectMeta) {
                 this.projectMeta = projectMeta;
@@ -501,7 +498,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private Integer granteeTypeSub; 
 
             /**
-             * The unique ID of the account that is used to request permissions.
+             * The ID of the account that is used to request permissions.
              */
             public Builder granteeId(String granteeId) {
                 this.granteeId = granteeId;
@@ -512,8 +509,8 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
              * The name of the account that is used to request permissions. The name is in the same format as that of the account used to access the MaxCompute project.
              * <p>
              * 
-             * *   An Alibaba Cloud account is in the format of ALIYUN$+Account name.
-             * *   A RAM user is in the format of RAM$+Account name.
+             * *   If the account is an Alibaba Cloud account, the value is in the ALIYUN$+Account name format.
+             * *   If the account is a RAM user, the value is in the RAM$+Account name format.
              */
             public Builder granteeName(String granteeName) {
                 this.granteeName = granteeName;
@@ -521,7 +518,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the subject that requests permissions. The parameter value is 1 and cannot be changed. It indicates user.
+             * The type of the subject that requests permissions. The value is fixed as 1, which indicates users.
              */
             public Builder granteeType(Integer granteeType) {
                 this.granteeType = granteeType;
@@ -647,7 +644,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             private java.util.List < GranteeObjectList> granteeObjectList; 
 
             /**
-             * The unique ID of the Alibaba Cloud account that is used to submit the permission request order.
+             * The ID of the Alibaba Cloud account that was used to submit the permission request order.
              */
             public Builder applyBaseId(String applyBaseId) {
                 this.applyBaseId = applyBaseId;
@@ -655,7 +652,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the permission request order was submitted. The parameter value is a UNIX timestamp.
+             * The time when the permission request order was submitted. The value is a UNIX timestamp.
              */
             public Builder applyTimestamp(Long applyTimestamp) {
                 this.applyTimestamp = applyTimestamp;
@@ -663,7 +660,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The list of Alibaba Cloud accounts that are used to approve the permission request order.
+             * The list of Alibaba Cloud accounts that are used to process the permission request order.
              */
             public Builder approveAccountList(java.util.List < ApproveAccountList> approveAccountList) {
                 this.approveAccountList = approveAccountList;
@@ -690,7 +687,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
              * The status of the permission request order. Valid values:
              * <p>
              * 
-             * *   1: pending approval
+             * *   1: to be processed
              * *   2: approved and authorized
              * *   3: approved but authorization failed
              * *   4: rejected
@@ -701,7 +698,7 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Information about the account that is used to request permissions.
+             * The information about the account that is used to request permissions.
              */
             public Builder granteeObjectList(java.util.List < GranteeObjectList> granteeObjectList) {
                 this.granteeObjectList = granteeObjectList;

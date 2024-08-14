@@ -149,7 +149,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned.
+         * The end date.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -158,7 +158,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The Globally Unique Identifier (GUID) of the MaxCompute metatable.
+         * The page number. Valid values: 1 to 30. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -167,7 +167,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The start date of the time range to query. The start date must be within the previous 30 days.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -176,7 +176,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The ID of the node.
+         * The start date.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -185,7 +185,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The end date of the time range to query. The end date must be within the previous 30 days.
+         * The GUID of the metatable.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -194,7 +194,7 @@ public class GetMetaTableOutputRequest extends Request {
         }
 
         /**
-         * The error message returned.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

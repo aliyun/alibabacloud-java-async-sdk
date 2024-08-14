@@ -182,7 +182,7 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The type of the compute engine instance or data source.
+         * The type of the compute engine or data source.
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -200,7 +200,7 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The ID of the node.
+         * The node ID. You can call the [ListNodes](~~173979~~) operation to query the ID.
          */
         public Builder nodeId(Long nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -209,7 +209,7 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -218,7 +218,7 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The name of the compute engine instance or data source.
+         * The name of the compute engine or data source.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -236,7 +236,7 @@ public class CreateQualityRelativeNodeRequest extends Request {
         }
 
         /**
-         * The ID of the workspace to which the node to be associated with the partition filter expression belongs.
+         * The ID of the workspace to which the node belongs.
          */
         public Builder targetNodeProjectId(Long targetNodeProjectId) {
             this.putBodyParameter("TargetNodeProjectId", targetNodeProjectId);

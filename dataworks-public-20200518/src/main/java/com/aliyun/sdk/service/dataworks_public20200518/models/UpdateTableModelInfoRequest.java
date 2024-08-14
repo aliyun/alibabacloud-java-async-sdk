@@ -128,7 +128,7 @@ public class UpdateTableModelInfoRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -146,7 +146,7 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The ID of the table level.
+         * The table level ID.
          */
         public Builder levelId(Long levelId) {
             this.putQueryParameter("LevelId", levelId);
@@ -155,7 +155,7 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
+         * The type of the table level. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.
          */
         public Builder levelType(Integer levelType) {
             this.putQueryParameter("LevelType", levelType);
@@ -173,7 +173,7 @@ public class UpdateTableModelInfoRequest extends Request {
         }
 
         /**
-         * The globally unique identifier (GUID) of the table. Specify the GUID in the format of odps.{projectName}.{tableName}.
+         * The GUID of the table. Specify the GUID in the odps.{projectName}.{tableName} format.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);

@@ -97,7 +97,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * PageData.
+         * The pagination information.
          */
         public Builder pageData(PageData pageData) {
             this.pageData = pageData;
@@ -129,7 +129,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -237,7 +241,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             private String owner; 
 
             /**
-             * Accounts.
+             * The usernames in the user group.
              */
             public Builder accounts(java.util.List < String > accounts) {
                 this.accounts = accounts;
@@ -245,7 +249,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the user group was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -253,7 +257,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the user group was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -261,7 +265,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The user group ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -269,7 +273,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the user group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -277,7 +281,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The owner of the user group.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -354,7 +358,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Data.
+             * The user groups.
              */
             public Builder data(java.util.List < Data> data) {
                 this.data = data;
@@ -362,7 +366,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -370,7 +374,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -378,7 +382,7 @@ public class DsgUserGroupQueryListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of user groups returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

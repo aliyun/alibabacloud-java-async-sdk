@@ -97,7 +97,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         private TableLevelInfo tableLevelInfo; 
 
         /**
-         * The error code returned.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -105,7 +105,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -113,7 +113,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class ListTableLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -233,7 +233,7 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the table level.
+             * The table level ID.
              */
             public Builder levelId(Long levelId) {
                 this.levelId = levelId;
@@ -241,7 +241,7 @@ public class ListTableLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the table level. Valid values: 1 and 2. A value of 1 indicates the logical level. A value of 2 indicates the physical level.
+             * The table level type. Valid values: 1 and 2. The value 1 indicates the logical level. The value 2 indicates the physical level.
              */
             public Builder levelType(Integer levelType) {
                 this.levelType = levelType;

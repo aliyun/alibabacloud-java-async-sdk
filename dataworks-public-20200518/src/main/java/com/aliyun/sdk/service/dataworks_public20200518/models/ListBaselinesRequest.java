@@ -177,7 +177,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * BaselineTypes.
+         * The type of the baseline. Valid values: DAILY and HOURLY. You can specify multiple types. Separate multiple types with commas (,).
          */
         public Builder baselineTypes(String baselineTypes) {
             this.putBodyParameter("BaselineTypes", baselineTypes);
@@ -186,7 +186,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the baseline. Valid values: true and false.
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("Enable", enable);
@@ -195,7 +195,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * Owner.
+         * The owner.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -204,7 +204,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1. Maximum value: 30.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -213,7 +213,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -222,7 +222,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the baseline. Valid values: {1,3,5,7,8}.
          */
         public Builder priority(String priority) {
             this.putBodyParameter("Priority", priority);
@@ -231,7 +231,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to query the ID.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -240,7 +240,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * SearchText.
+         * The keyword in the baseline name, which is used to search for the baseline.
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);
