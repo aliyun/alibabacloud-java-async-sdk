@@ -59,6 +59,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DetachClusterFromHubResponse> detachClusterFromHub(DetachClusterFromHubRequest request);
 
+    /**
+      * *   To call this API operation to grant permissions to a RAM user or RAM role on a specific cluster, you must use an Alibaba Cloud account, the account that is used to create the cluster, or a RAM user that has the cluster administrator permissions. A regular RAM user does not have the permissions to call this operation.
+      * *   Before you grant RBAC permissions to a RAM user or RAM role on a cluster, you must grant the operation permissions to the RAM user or RAM role on the specified cluster. For more information, see [Attach a system permission policy to a RAM user or RAM role](~~613486~~).
+      * For more information, see [Authorization overview](~~613468~~).
+      *
+     */
     CompletableFuture<GrantUserPermissionResponse> grantUserPermission(GrantUserPermissionRequest request);
 
     /**

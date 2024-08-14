@@ -323,7 +323,10 @@ public class CreateHubClusterRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag > tag) {
             String tagShrink = shrink(tag, "Tag", "json");

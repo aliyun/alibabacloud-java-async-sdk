@@ -129,7 +129,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether public endpoint is enabled for the API server. Valid values:
+             * Indicates whether the public endpoint is enabled for the API server. Valid values:
              * <p>
              * 
              * *   true
@@ -194,7 +194,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -202,7 +202,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -383,10 +383,10 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The specification of the cluster.
+             * The specifications of the cluster.
              * <p>
              * 
-             * *   Only ack.pro.small is returned.
+             * *   Only ack.pro.small may be returned.
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -410,7 +410,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The cluster name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -434,7 +434,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of Resource Group.
+             * The resource group ID.
              */
             public Builder resourceGroupID(String resourceGroupID) {
                 this.resourceGroupID = resourceGroupID;
@@ -442,13 +442,13 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values:
+             * The state of the cluster. Valid values:
              * <p>
              * 
              * *   initial: The cluster is being initialized.
              * *   failed: The cluster failed to be created.
              * *   running: The cluster is running
-             * *   inactive: The cluster is pending.
+             * *   inactive: The cluster is not activated.
              * *   deleting: The cluster is being deleted.
              * *   delete_failed: The cluster failed to be deleted.
              * *   deleted: The cluster is deleted.
@@ -459,7 +459,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -467,7 +467,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was last updated.
+             * The time when the cluster was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -475,7 +475,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The Kubernetes version of the cluster.
+             * The version of the cluster.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -552,7 +552,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The error message that is returned.
+             * The error message returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -568,7 +568,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster that the deletion condition indicates. Valid values:
+             * The state of the cluster that the deletion condition indicates. Valid values:
              * <p>
              * 
              * *   True: The cluster cannot be deleted.
@@ -1030,7 +1030,7 @@ public class DescribeHubClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the cluster.
+             * The endpoints of the cluster.
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;

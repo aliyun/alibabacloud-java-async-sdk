@@ -54,7 +54,7 @@ public class DescribeHubClusterLogsRequest extends Request {
         } 
 
         /**
-         * The ID of the master instance.
+         * The ID of the Fleet instance. You can call the [DescribeHubClusters](~~424404~~) operation to query the created Fleet instances.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

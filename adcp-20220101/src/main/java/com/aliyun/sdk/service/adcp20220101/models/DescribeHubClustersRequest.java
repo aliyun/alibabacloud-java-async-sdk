@@ -99,7 +99,7 @@ public class DescribeHubClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag > tag) {
             String tagShrink = shrink(tag, "Tag", "json");

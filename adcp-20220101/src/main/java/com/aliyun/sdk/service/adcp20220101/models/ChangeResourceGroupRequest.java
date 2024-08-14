@@ -83,7 +83,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * The ID of the new resource group.
+         * The ID of the new resource group. You can view the available resource groups in the Resource Management console.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -92,7 +92,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The resource ID. If ResourceType=cluster, the resource ID is ClusterId.
+         * The ID of the resource. The value of this parameter varies with the resource type. For example, if you set ResourceType to cluster, this parameter specifies a cluster ID.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -101,7 +101,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * The type of the resource. Only cluster are supported. Set the value to cluster.
+         * The resource type. Set the value to cluster.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -109,7 +109,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the associated cluster.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -117,7 +117,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the deployment.
+             * The status of the policy deployment.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -242,7 +242,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of policy instances that are deployed. If this parameter is empty, no policy instance is deployed.
+             * The number of policy instances that are deployed. If this parameter is left empty, no policy instance is deployed.
              */
             public Builder policyInstancesCount(Long policyInstancesCount) {
                 this.policyInstancesCount = policyInstancesCount;
@@ -250,7 +250,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * The policy name.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -319,7 +319,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level.
+             * The severity level of the policy.
              */
             public Builder severityType(String severityType) {
                 this.severityType = severityType;

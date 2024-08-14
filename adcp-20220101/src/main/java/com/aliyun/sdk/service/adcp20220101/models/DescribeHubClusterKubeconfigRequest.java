@@ -68,7 +68,7 @@ public class DescribeHubClusterKubeconfigRequest extends Request {
         } 
 
         /**
-         * The ID of the master instance.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
