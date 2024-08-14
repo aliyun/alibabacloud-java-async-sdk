@@ -19,6 +19,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CertNoThreeElementVerificationResponse> certNoThreeElementVerification(CertNoThreeElementVerificationRequest request);
+
     CompletableFuture<CertNoTwoElementVerificationResponse> certNoTwoElementVerification(CertNoTwoElementVerificationRequest request);
 
     /**
@@ -57,6 +59,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeEmptyNumberResponse> describeEmptyNumber(DescribeEmptyNumberRequest request);
+
+    CompletableFuture<DescribeMobileOperatorAttributeResponse> describeMobileOperatorAttribute(DescribeMobileOperatorAttributeRequest request);
 
     CompletableFuture<DescribePhoneNumberAnalysisResponse> describePhoneNumberAnalysis(DescribePhoneNumberAnalysisRequest request);
 

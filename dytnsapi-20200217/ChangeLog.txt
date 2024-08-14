@@ -1,3 +1,6 @@
+2024-08-14 Version: 1.0.7
+- Generated java-async 2020-02-17 for Dytnsapi.
+
 2024-07-08 Version: 1.0.6
 - Generated java-async 2020-02-17 for Dytnsapi.
 
