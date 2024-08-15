@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTargetAttachmentsForControlPolicyResponseBody</p>
  */
 public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TargetAttachments")
+    @com.aliyun.core.annotation.NameInMap("TargetAttachments")
     private TargetAttachments targetAttachments;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTargetAttachmentsForControlPolicyResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
     } 
 
     public static class TargetAttachment extends TeaModel {
-        @NameInMap("AttachDate")
+        @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private TargetAttachment(Builder builder) {
@@ -238,7 +237,7 @@ public class ListTargetAttachmentsForControlPolicyResponseBody extends TeaModel 
 
     }
     public static class TargetAttachments extends TeaModel {
-        @NameInMap("TargetAttachment")
+        @com.aliyun.core.annotation.NameInMap("TargetAttachment")
         private java.util.List < TargetAttachment> targetAttachment;
 
         private TargetAttachments(Builder builder) {

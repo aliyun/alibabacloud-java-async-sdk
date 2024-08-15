@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PrecheckForConsolidatedBillingAccountResponseBody</p>
  */
 public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel {
-    @NameInMap("Reasons")
+    @com.aliyun.core.annotation.NameInMap("Reasons")
     private java.util.List < Reasons> reasons;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private PrecheckForConsolidatedBillingAccountResponseBody(Builder builder) {
@@ -96,10 +95,10 @@ public class PrecheckForConsolidatedBillingAccountResponseBody extends TeaModel 
     } 
 
     public static class Reasons extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Reasons(Builder builder) {

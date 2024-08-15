@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMessageContactDeletionStatusResponseBody</p>
  */
 public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
-    @NameInMap("ContactDeletionStatus")
+    @com.aliyun.core.annotation.NameInMap("ContactDeletionStatus")
     private ContactDeletionStatus contactDeletionStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMessageContactDeletionStatusResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
     } 
 
     public static class FailReasonList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("MessageTypes")
+        @com.aliyun.core.annotation.NameInMap("MessageTypes")
         private java.util.List < String > messageTypes;
 
         private FailReasonList(Builder builder) {
@@ -133,13 +132,13 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
 
     }
     public static class ContactDeletionStatus extends TeaModel {
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("FailReasonList")
+        @com.aliyun.core.annotation.NameInMap("FailReasonList")
         private java.util.List < FailReasonList> failReasonList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ContactDeletionStatus(Builder builder) {

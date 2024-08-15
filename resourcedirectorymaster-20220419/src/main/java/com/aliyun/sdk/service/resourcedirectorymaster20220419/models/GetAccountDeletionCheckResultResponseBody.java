@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccountDeletionCheckResultResponseBody</p>
  */
 public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
-    @NameInMap("AccountDeletionCheckResultInfo")
+    @com.aliyun.core.annotation.NameInMap("AccountDeletionCheckResultInfo")
     private AccountDeletionCheckResultInfo accountDeletionCheckResultInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountDeletionCheckResultResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
     } 
 
     public static class AbandonableChecks extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckName")
+        @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private AbandonableChecks(Builder builder) {
@@ -153,13 +152,13 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
 
     }
     public static class NotAllowReason extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckName")
+        @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private NotAllowReason(Builder builder) {
@@ -234,16 +233,16 @@ public class GetAccountDeletionCheckResultResponseBody extends TeaModel {
 
     }
     public static class AccountDeletionCheckResultInfo extends TeaModel {
-        @NameInMap("AbandonableChecks")
+        @com.aliyun.core.annotation.NameInMap("AbandonableChecks")
         private java.util.List < AbandonableChecks> abandonableChecks;
 
-        @NameInMap("AllowDelete")
+        @com.aliyun.core.annotation.NameInMap("AllowDelete")
         private String allowDelete;
 
-        @NameInMap("NotAllowReason")
+        @com.aliyun.core.annotation.NameInMap("NotAllowReason")
         private java.util.List < NotAllowReason> notAllowReason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AccountDeletionCheckResultInfo(Builder builder) {

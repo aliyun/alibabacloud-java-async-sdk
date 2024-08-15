@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMessageContactResponseBody</p>
  */
 public class GetMessageContactResponseBody extends TeaModel {
-    @NameInMap("Contact")
+    @com.aliyun.core.annotation.NameInMap("Contact")
     private Contact contact;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMessageContactResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class GetMessageContactResponseBody extends TeaModel {
     } 
 
     public static class Contact extends TeaModel {
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("EmailAddress")
+        @com.aliyun.core.annotation.NameInMap("EmailAddress")
         private String emailAddress;
 
-        @NameInMap("Members")
+        @com.aliyun.core.annotation.NameInMap("Members")
         private java.util.List < String > members;
 
-        @NameInMap("MessageTypes")
+        @com.aliyun.core.annotation.NameInMap("MessageTypes")
         private java.util.List < String > messageTypes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Contact(Builder builder) {

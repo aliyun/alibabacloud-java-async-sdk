@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHandshakeResponseBody</p>
  */
 public class GetHandshakeResponseBody extends TeaModel {
-    @NameInMap("Handshake")
+    @com.aliyun.core.annotation.NameInMap("Handshake")
     private Handshake handshake;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetHandshakeResponseBody(Builder builder) {
@@ -72,43 +71,43 @@ public class GetHandshakeResponseBody extends TeaModel {
     } 
 
     public static class Handshake extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("HandshakeId")
+        @com.aliyun.core.annotation.NameInMap("HandshakeId")
         private String handshakeId;
 
-        @NameInMap("InvitedAccountRealName")
+        @com.aliyun.core.annotation.NameInMap("InvitedAccountRealName")
         private String invitedAccountRealName;
 
-        @NameInMap("MasterAccountId")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountId")
         private String masterAccountId;
 
-        @NameInMap("MasterAccountName")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountName")
         private String masterAccountName;
 
-        @NameInMap("MasterAccountRealName")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountRealName")
         private String masterAccountRealName;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Note")
+        @com.aliyun.core.annotation.NameInMap("Note")
         private String note;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TargetEntity")
+        @com.aliyun.core.annotation.NameInMap("TargetEntity")
         private String targetEntity;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private Handshake(Builder builder) {

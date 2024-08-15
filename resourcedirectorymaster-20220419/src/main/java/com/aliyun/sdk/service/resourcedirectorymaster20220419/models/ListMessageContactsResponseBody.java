@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMessageContactsResponseBody</p>
  */
 public class ListMessageContactsResponseBody extends TeaModel {
-    @NameInMap("Contacts")
+    @com.aliyun.core.annotation.NameInMap("Contacts")
     private java.util.List < Contacts> contacts;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListMessageContactsResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class ListMessageContactsResponseBody extends TeaModel {
     } 
 
     public static class Contacts extends TeaModel {
-        @NameInMap("AssociatedDate")
+        @com.aliyun.core.annotation.NameInMap("AssociatedDate")
         private String associatedDate;
 
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("EmailAddress")
+        @com.aliyun.core.annotation.NameInMap("EmailAddress")
         private String emailAddress;
 
-        @NameInMap("Members")
+        @com.aliyun.core.annotation.NameInMap("Members")
         private java.util.List < String > members;
 
-        @NameInMap("MessageTypes")
+        @com.aliyun.core.annotation.NameInMap("MessageTypes")
         private java.util.List < String > messageTypes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Contacts(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EnableResourceDirectoryRequest</p>
  */
 public class EnableResourceDirectoryRequest extends Request {
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EnableMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String enableMode;
 
-    @Query
-    @NameInMap("MAName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MAName")
     private String MAName;
 
-    @Query
-    @NameInMap("MASecureMobilePhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MASecureMobilePhone")
     private String MASecureMobilePhone;
 
-    @Query
-    @NameInMap("VerificationCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerificationCode")
     private String verificationCode;
 
     private EnableResourceDirectoryRequest(Builder builder) {

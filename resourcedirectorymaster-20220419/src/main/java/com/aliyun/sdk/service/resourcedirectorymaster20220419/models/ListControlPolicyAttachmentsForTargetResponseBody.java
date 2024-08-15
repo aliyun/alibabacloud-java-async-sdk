@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListControlPolicyAttachmentsForTargetResponseBody</p>
  */
 public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel {
-    @NameInMap("ControlPolicyAttachments")
+    @com.aliyun.core.annotation.NameInMap("ControlPolicyAttachments")
     private ControlPolicyAttachments controlPolicyAttachments;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListControlPolicyAttachmentsForTargetResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
     } 
 
     public static class ControlPolicyAttachment extends TeaModel {
-        @NameInMap("AttachDate")
+        @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EffectScope")
+        @com.aliyun.core.annotation.NameInMap("EffectScope")
         private String effectScope;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private String policyId;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private ControlPolicyAttachment(Builder builder) {
@@ -221,7 +220,7 @@ public class ListControlPolicyAttachmentsForTargetResponseBody extends TeaModel 
 
     }
     public static class ControlPolicyAttachments extends TeaModel {
-        @NameInMap("ControlPolicyAttachment")
+        @com.aliyun.core.annotation.NameInMap("ControlPolicyAttachment")
         private java.util.List < ControlPolicyAttachment> controlPolicyAttachment;
 
         private ControlPolicyAttachments(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EnableResourceDirectoryResponseBody</p>
  */
 public class EnableResourceDirectoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceDirectory")
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectory")
     private ResourceDirectory resourceDirectory;
 
     private EnableResourceDirectoryResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
     } 
 
     public static class ResourceDirectory extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("MasterAccountId")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountId")
         private String masterAccountId;
 
-        @NameInMap("MasterAccountName")
+        @com.aliyun.core.annotation.NameInMap("MasterAccountName")
         private String masterAccountName;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("RootFolderId")
+        @com.aliyun.core.annotation.NameInMap("RootFolderId")
         private String rootFolderId;
 
         private ResourceDirectory(Builder builder) {

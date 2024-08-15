@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DisassociateMembersResponseBody</p>
  */
 public class DisassociateMembersResponseBody extends TeaModel {
-    @NameInMap("Members")
+    @com.aliyun.core.annotation.NameInMap("Members")
     private java.util.List < Members> members;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DisassociateMembersResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DisassociateMembersResponseBody extends TeaModel {
     } 
 
     public static class Members extends TeaModel {
-        @NameInMap("ContactId")
+        @com.aliyun.core.annotation.NameInMap("ContactId")
         private String contactId;
 
-        @NameInMap("MemberId")
+        @com.aliyun.core.annotation.NameInMap("MemberId")
         private String memberId;
 
-        @NameInMap("ModifyDate")
+        @com.aliyun.core.annotation.NameInMap("ModifyDate")
         private String modifyDate;
 
         private Members(Builder builder) {

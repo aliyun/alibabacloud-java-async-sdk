@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDelegatedAdministratorsResponseBody</p>
  */
 public class ListDelegatedAdministratorsResponseBody extends TeaModel {
-    @NameInMap("Accounts")
+    @com.aliyun.core.annotation.NameInMap("Accounts")
     private Accounts accounts;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDelegatedAdministratorsResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
     } 
 
     public static class Account extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("DelegationEnabledTime")
+        @com.aliyun.core.annotation.NameInMap("DelegationEnabledTime")
         private String delegationEnabledTime;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("JoinMethod")
+        @com.aliyun.core.annotation.NameInMap("JoinMethod")
         private String joinMethod;
 
-        @NameInMap("ServicePrincipal")
+        @com.aliyun.core.annotation.NameInMap("ServicePrincipal")
         private String servicePrincipal;
 
         private Account(Builder builder) {
@@ -257,7 +256,7 @@ public class ListDelegatedAdministratorsResponseBody extends TeaModel {
 
     }
     public static class Accounts extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private java.util.List < Account> account;
 
         private Accounts(Builder builder) {

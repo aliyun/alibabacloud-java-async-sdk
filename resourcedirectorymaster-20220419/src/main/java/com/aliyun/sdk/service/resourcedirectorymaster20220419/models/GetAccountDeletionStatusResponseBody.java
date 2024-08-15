@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccountDeletionStatusResponseBody</p>
  */
 public class GetAccountDeletionStatusResponseBody extends TeaModel {
-    @NameInMap("RdAccountDeletionStatus")
+    @com.aliyun.core.annotation.NameInMap("RdAccountDeletionStatus")
     private RdAccountDeletionStatus rdAccountDeletionStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountDeletionStatusResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
     } 
 
     public static class FailReasonList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private FailReasonList(Builder builder) {
@@ -133,23 +132,23 @@ public class GetAccountDeletionStatusResponseBody extends TeaModel {
 
     }
     public static class RdAccountDeletionStatus extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeletionTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DeletionTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String deletionTime;
 
-        @NameInMap("DeletionType")
+        @com.aliyun.core.annotation.NameInMap("DeletionType")
         private String deletionType;
 
-        @NameInMap("FailReasonList")
+        @com.aliyun.core.annotation.NameInMap("FailReasonList")
         private java.util.List < FailReasonList> failReasonList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RdAccountDeletionStatus(Builder builder) {

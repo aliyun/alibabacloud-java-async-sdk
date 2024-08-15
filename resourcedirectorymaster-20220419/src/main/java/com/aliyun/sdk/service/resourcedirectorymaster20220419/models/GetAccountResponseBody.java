@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccountResponseBody</p>
  */
 public class GetAccountResponseBody extends TeaModel {
-    @NameInMap("Account")
+    @com.aliyun.core.annotation.NameInMap("Account")
     private Account account;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GetAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of the member.
+         * The information about the member.
          */
         public Builder account(Account account) {
             this.account = account;
@@ -72,10 +71,10 @@ public class GetAccountResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -110,7 +109,7 @@ public class GetAccountResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * A tag key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +117,7 @@ public class GetAccountResponseBody extends TeaModel {
             }
 
             /**
-             * A tag value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -133,49 +132,52 @@ public class GetAccountResponseBody extends TeaModel {
 
     }
     public static class Account extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("EmailStatus")
+        @com.aliyun.core.annotation.NameInMap("EmailStatus")
         private String emailStatus;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("IdentityInformation")
+        @com.aliyun.core.annotation.NameInMap("HasSecureMobilePhone")
+        private Boolean hasSecureMobilePhone;
+
+        @com.aliyun.core.annotation.NameInMap("IdentityInformation")
         private String identityInformation;
 
-        @NameInMap("JoinMethod")
+        @com.aliyun.core.annotation.NameInMap("JoinMethod")
         private String joinMethod;
 
-        @NameInMap("JoinTime")
+        @com.aliyun.core.annotation.NameInMap("JoinTime")
         private String joinTime;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("ResourceDirectoryPath")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryPath")
         private String resourceDirectoryPath;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Account(Builder builder) {
@@ -184,6 +186,7 @@ public class GetAccountResponseBody extends TeaModel {
             this.displayName = builder.displayName;
             this.emailStatus = builder.emailStatus;
             this.folderId = builder.folderId;
+            this.hasSecureMobilePhone = builder.hasSecureMobilePhone;
             this.identityInformation = builder.identityInformation;
             this.joinMethod = builder.joinMethod;
             this.joinTime = builder.joinTime;
@@ -237,6 +240,13 @@ public class GetAccountResponseBody extends TeaModel {
          */
         public String getFolderId() {
             return this.folderId;
+        }
+
+        /**
+         * @return hasSecureMobilePhone
+         */
+        public Boolean getHasSecureMobilePhone() {
+            return this.hasSecureMobilePhone;
         }
 
         /**
@@ -315,6 +325,7 @@ public class GetAccountResponseBody extends TeaModel {
             private String displayName; 
             private String emailStatus; 
             private String folderId; 
+            private Boolean hasSecureMobilePhone; 
             private String identityInformation; 
             private String joinMethod; 
             private String joinTime; 
@@ -369,6 +380,18 @@ public class GetAccountResponseBody extends TeaModel {
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
+                return this;
+            }
+
+            /**
+             * Indicates whether a mobile phone number is bound to the member for security purposes. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             */
+            public Builder hasSecureMobilePhone(Boolean hasSecureMobilePhone) {
+                this.hasSecureMobilePhone = hasSecureMobilePhone;
                 return this;
             }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDelegatedServicesForAccountResponseBody</p>
  */
 public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
-    @NameInMap("DelegatedServices")
+    @com.aliyun.core.annotation.NameInMap("DelegatedServices")
     private DelegatedServices delegatedServices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDelegatedServicesForAccountResponseBody(Builder builder) {
@@ -75,13 +74,13 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
     } 
 
     public static class DelegatedService extends TeaModel {
-        @NameInMap("DelegationEnabledTime")
+        @com.aliyun.core.annotation.NameInMap("DelegationEnabledTime")
         private String delegationEnabledTime;
 
-        @NameInMap("ServicePrincipal")
+        @com.aliyun.core.annotation.NameInMap("ServicePrincipal")
         private String servicePrincipal;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DelegatedService(Builder builder) {
@@ -160,7 +159,7 @@ public class ListDelegatedServicesForAccountResponseBody extends TeaModel {
 
     }
     public static class DelegatedServices extends TeaModel {
-        @NameInMap("DelegatedService")
+        @com.aliyun.core.annotation.NameInMap("DelegatedService")
         private java.util.List < DelegatedService> delegatedService;
 
         private DelegatedServices(Builder builder) {

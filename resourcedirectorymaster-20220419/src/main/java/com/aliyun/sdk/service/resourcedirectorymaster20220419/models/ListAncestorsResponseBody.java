@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAncestorsResponseBody</p>
  */
 public class ListAncestorsResponseBody extends TeaModel {
-    @NameInMap("Folders")
+    @com.aliyun.core.annotation.NameInMap("Folders")
     private Folders folders;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAncestorsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListAncestorsResponseBody extends TeaModel {
     } 
 
     public static class Folder extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("FolderName")
+        @com.aliyun.core.annotation.NameInMap("FolderName")
         private String folderName;
 
         private Folder(Builder builder) {
@@ -153,7 +152,7 @@ public class ListAncestorsResponseBody extends TeaModel {
 
     }
     public static class Folders extends TeaModel {
-        @NameInMap("Folder")
+        @com.aliyun.core.annotation.NameInMap("Folder")
         private java.util.List < Folder> folder;
 
         private Folders(Builder builder) {

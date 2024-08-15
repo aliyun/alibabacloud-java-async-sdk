@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAccountsResponseBody</p>
  */
 public class ListAccountsResponseBody extends TeaModel {
-    @NameInMap("Accounts")
+    @com.aliyun.core.annotation.NameInMap("Accounts")
     private Accounts accounts;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAccountsResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListAccountsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The members returned.
+         * The information about the members.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -132,10 +131,10 @@ public class ListAccountsResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -170,7 +169,7 @@ public class ListAccountsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +177,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -193,7 +192,7 @@ public class ListAccountsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -234,43 +233,43 @@ public class ListAccountsResponseBody extends TeaModel {
 
     }
     public static class Account extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("DeletionStatus")
+        @com.aliyun.core.annotation.NameInMap("DeletionStatus")
         private String deletionStatus;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
-        @NameInMap("JoinMethod")
+        @com.aliyun.core.annotation.NameInMap("JoinMethod")
         private String joinMethod;
 
-        @NameInMap("JoinTime")
+        @com.aliyun.core.annotation.NameInMap("JoinTime")
         private String joinTime;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("ResourceDirectoryId")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
         private String resourceDirectoryId;
 
-        @NameInMap("ResourceDirectoryPath")
+        @com.aliyun.core.annotation.NameInMap("ResourceDirectoryPath")
         private String resourceDirectoryPath;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Account(Builder builder) {
@@ -420,7 +419,15 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DeletionStatus.
+             * The deletion status of the member. Valid values:
+             * <p>
+             * 
+             * *   Checking: A deletion check is being performed for the member.
+             * *   Deleting: The member is being deleted.
+             * *   CheckFailed: The deletion check for the member fails.
+             * *   DeleteFailed: The member fails to be deleted.
+             * 
+             * >  If deletion is not performed for the member, the value of this parameter is empty.
              */
             public Builder deletionStatus(String deletionStatus) {
                 this.deletionStatus = deletionStatus;
@@ -480,7 +487,7 @@ public class ListAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the member in the resource directory.
+             * The RDPath of the member.
              */
             public Builder resourceDirectoryPath(String resourceDirectoryPath) {
                 this.resourceDirectoryPath = resourceDirectoryPath;
@@ -492,7 +499,7 @@ public class ListAccountsResponseBody extends TeaModel {
              * <p>
              * 
              * *   CreateSuccess: The member is created.
-             * *   PromoteVerifying: The upgrade of the member is being confirmed.
+             * *   PromoteVerifying: The upgrade of the member is under confirmation.
              * *   PromoteFailed: The upgrade of the member fails.
              * *   PromoteExpired: The upgrade of the member expires.
              * *   PromoteCancelled: The upgrade of the member is canceled.
@@ -532,7 +539,7 @@ public class ListAccountsResponseBody extends TeaModel {
 
     }
     public static class Accounts extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private java.util.List < Account> account;
 
         private Accounts(Builder builder) {

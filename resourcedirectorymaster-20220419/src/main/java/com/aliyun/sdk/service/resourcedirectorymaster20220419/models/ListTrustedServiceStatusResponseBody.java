@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.resourcedirectorymaster20220419.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTrustedServiceStatusResponseBody</p>
  */
 public class ListTrustedServiceStatusResponseBody extends TeaModel {
-    @NameInMap("EnabledServicePrincipals")
+    @com.aliyun.core.annotation.NameInMap("EnabledServicePrincipals")
     private EnabledServicePrincipals enabledServicePrincipals;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTrustedServiceStatusResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
     } 
 
     public static class EnabledServicePrincipal extends TeaModel {
-        @NameInMap("EnableTime")
+        @com.aliyun.core.annotation.NameInMap("EnableTime")
         private String enableTime;
 
-        @NameInMap("ServicePrincipal")
+        @com.aliyun.core.annotation.NameInMap("ServicePrincipal")
         private String servicePrincipal;
 
         private EnabledServicePrincipal(Builder builder) {
@@ -193,7 +192,7 @@ public class ListTrustedServiceStatusResponseBody extends TeaModel {
 
     }
     public static class EnabledServicePrincipals extends TeaModel {
-        @NameInMap("EnabledServicePrincipal")
+        @com.aliyun.core.annotation.NameInMap("EnabledServicePrincipal")
         private java.util.List < EnabledServicePrincipal> enabledServicePrincipal;
 
         private EnabledServicePrincipals(Builder builder) {
