@@ -274,7 +274,7 @@ public class CreateOrUpdateIMRobotRequest extends Request {
          * 
          * *   `dingding`: DingTalk chatbot
          * *   `wechat`: WeCom chatbot
-         * *   `feishu`: Lark chatbot.
+         * *   `feishu`: Lark chatbot
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

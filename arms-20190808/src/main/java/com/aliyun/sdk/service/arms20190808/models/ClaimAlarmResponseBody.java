@@ -121,7 +121,12 @@ public class ClaimAlarmResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * `true`
+         * 
+         * `false`
          */
         public Builder success(Boolean success) {
             this.success = success;

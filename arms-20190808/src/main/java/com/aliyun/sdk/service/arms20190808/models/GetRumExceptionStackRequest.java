@@ -169,7 +169,12 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * SourcemapType.
+         * The file type. Valid values:
+         * <p>
+         * 
+         * *   source-map: SourceMap files
+         * *   mapping: symbol table files for Android
+         * *   dsym: dSYM files for iOS
          */
         public Builder sourcemapType(String sourcemapType) {
             this.putQueryParameter("SourcemapType", sourcemapType);

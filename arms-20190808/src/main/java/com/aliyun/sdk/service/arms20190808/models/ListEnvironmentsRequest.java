@@ -235,7 +235,7 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * FilterRegionIds.
+         * The region IDs.
          */
         public Builder filterRegionIds(String filterRegionIds) {
             this.putQueryParameter("FilterRegionIds", filterRegionIds);

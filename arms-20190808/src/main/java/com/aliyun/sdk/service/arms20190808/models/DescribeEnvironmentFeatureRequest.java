@@ -97,7 +97,7 @@ public class DescribeEnvironmentFeatureRequest extends Request {
         } 
 
         /**
-         * AliyunLang.
+         * Language, en | zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -120,21 +120,9 @@ public class DescribeEnvironmentFeatureRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   app-agent-pilot
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         * *   metric-agent
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
+         * *   app-agent-pilot: App Pilot agent
+         * *   arms-cmonitor: ARMS CMonitor agent
+         * *   metric-agent: Prometheus agent
          */
         public Builder featureName(String featureName) {
             this.putQueryParameter("FeatureName", featureName);

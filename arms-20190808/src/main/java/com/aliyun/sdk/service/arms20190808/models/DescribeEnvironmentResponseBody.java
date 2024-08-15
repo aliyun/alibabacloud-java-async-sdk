@@ -766,7 +766,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID bound to the environment.
+             * The ID of the security group associated with the environment.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

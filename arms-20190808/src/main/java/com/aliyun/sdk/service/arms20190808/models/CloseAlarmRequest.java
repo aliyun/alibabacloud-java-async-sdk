@@ -97,7 +97,10 @@ public class CloseAlarmRequest extends Request {
         } 
 
         /**
-         * The alert ID.
+         * The ID of the alert.
+         * <p>
+         * 
+         * For more information about how to obtain the ID of an alert, see [ListAlertEvents](~~2612346~~).
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);
@@ -106,7 +109,7 @@ public class CloseAlarmRequest extends Request {
         }
 
         /**
-         * The ID of the handler.
+         * The ID of the alert handler.
          */
         public Builder handlerId(Long handlerId) {
             this.putQueryParameter("HandlerId", handlerId);
@@ -124,7 +127,7 @@ public class CloseAlarmRequest extends Request {
         }
 
         /**
-         * The solution to the alert.
+         * The alert solution.
          */
         public Builder solution(String solution) {
             this.putQueryParameter("Solution", solution);

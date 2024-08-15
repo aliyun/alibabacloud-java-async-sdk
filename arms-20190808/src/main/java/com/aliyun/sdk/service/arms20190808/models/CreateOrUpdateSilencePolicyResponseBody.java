@@ -201,6 +201,9 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
 
     }
     public static class SilencePolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EffectiveTimeType")
+        private String effectiveTimeType;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
@@ -213,11 +216,20 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
+        @com.aliyun.core.annotation.NameInMap("TimePeriod")
+        private String timePeriod;
+
+        @com.aliyun.core.annotation.NameInMap("TimeSlots")
+        private String timeSlots;
+
         private SilencePolicy(Builder builder) {
+            this.effectiveTimeType = builder.effectiveTimeType;
             this.id = builder.id;
             this.matchingRules = builder.matchingRules;
             this.name = builder.name;
             this.state = builder.state;
+            this.timePeriod = builder.timePeriod;
+            this.timeSlots = builder.timeSlots;
         }
 
         public static Builder builder() {
@@ -226,6 +238,13 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
 
         public static SilencePolicy create() {
             return builder().build();
+        }
+
+        /**
+         * @return effectiveTimeType
+         */
+        public String getEffectiveTimeType() {
+            return this.effectiveTimeType;
         }
 
         /**
@@ -256,11 +275,36 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             return this.state;
         }
 
+        /**
+         * @return timePeriod
+         */
+        public String getTimePeriod() {
+            return this.timePeriod;
+        }
+
+        /**
+         * @return timeSlots
+         */
+        public String getTimeSlots() {
+            return this.timeSlots;
+        }
+
         public static final class Builder {
+            private String effectiveTimeType; 
             private Long id; 
             private java.util.List < MatchingRules> matchingRules; 
             private String name; 
             private String state; 
+            private String timePeriod; 
+            private String timeSlots; 
+
+            /**
+             * EffectiveTimeType.
+             */
+            public Builder effectiveTimeType(String effectiveTimeType) {
+                this.effectiveTimeType = effectiveTimeType;
+                return this;
+            }
 
             /**
              * The ID of the silence policy.
@@ -291,6 +335,22 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * TimePeriod.
+             */
+            public Builder timePeriod(String timePeriod) {
+                this.timePeriod = timePeriod;
+                return this;
+            }
+
+            /**
+             * TimeSlots.
+             */
+            public Builder timeSlots(String timeSlots) {
+                this.timeSlots = timeSlots;
                 return this;
             }
 

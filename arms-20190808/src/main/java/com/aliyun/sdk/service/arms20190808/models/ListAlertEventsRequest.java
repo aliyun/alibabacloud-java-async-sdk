@@ -189,7 +189,7 @@ public class ListAlertEventsRequest extends Request {
         }
 
         /**
-         * Whether to display the associated notification policies.
+         * Specifies whether to show the associated notification policy.
          */
         public Builder showNotificationPolicies(Boolean showNotificationPolicies) {
             this.putQueryParameter("ShowNotificationPolicies", showNotificationPolicies);

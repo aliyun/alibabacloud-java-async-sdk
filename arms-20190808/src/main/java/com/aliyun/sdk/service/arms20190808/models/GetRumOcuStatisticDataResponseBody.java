@@ -73,7 +73,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +97,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -185,7 +185,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             private Integer total; 
 
             /**
-             * Complete.
+             * Indicates whether the next page exists.
              */
             public Builder complete(Boolean complete) {
                 this.complete = complete;
@@ -193,7 +193,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The queried data.
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;
@@ -201,7 +201,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -209,7 +209,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -217,7 +217,7 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Integer total) {
                 this.total = total;

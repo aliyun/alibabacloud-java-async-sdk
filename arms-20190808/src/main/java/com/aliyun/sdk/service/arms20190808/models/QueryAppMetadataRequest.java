@@ -99,7 +99,10 @@ public class QueryAppMetadataRequest extends Request {
         } 
 
         /**
-         * The list of metadata IDs. Separate multiple IDs with commas (,).
+         * The metadata IDs. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * You can obtain the exception ID on the **Exception Analysis** page of your application in the ARMS console.
          */
         public Builder metaIds(String metaIds) {
             this.putQueryParameter("MetaIds", metaIds);
@@ -108,7 +111,11 @@ public class QueryAppMetadataRequest extends Request {
         }
 
         /**
-         * The metadata type. Valid values: sql: obtains an SQL statement based on sqlId exception: obtains the exception stack based on exceptionId
+         * The metadata type. Valid values:
+         * <p>
+         * 
+         * *   sql: obtains an SQL statement based on sqlId.
+         * *   exception: obtains the exception stack based on exceptionId.
          */
         public Builder metaType(String metaType) {
             this.putQueryParameter("MetaType", metaType);
@@ -117,7 +124,7 @@ public class QueryAppMetadataRequest extends Request {
         }
 
         /**
-         * The process identifier (PID) of the application. For more information about how to obtain the PID, see "Obtain the PID of an application."
+         * The process identifier (PID) of the application. You can obtain the PID of an application by calling the **ListTraceApps** operation.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -126,7 +133,7 @@ public class QueryAppMetadataRequest extends Request {
         }
 
         /**
-         * The region ID. Default value: cn-hangzhou.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

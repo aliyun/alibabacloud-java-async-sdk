@@ -98,7 +98,10 @@ public class BlockAlarmNotificationRequest extends Request {
         } 
 
         /**
-         * AlarmId.
+         * The ID of the alert.
+         * <p>
+         * 
+         * For more information about how to obtain the ID of an alert, see [ListAlertEvents](~~2612346~~).
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);
@@ -107,7 +110,7 @@ public class BlockAlarmNotificationRequest extends Request {
         }
 
         /**
-         * HandlerId.
+         * The ID of the alert handler.
          */
         public Builder handlerId(Long handlerId) {
             this.putQueryParameter("HandlerId", handlerId);
@@ -125,7 +128,7 @@ public class BlockAlarmNotificationRequest extends Request {
         }
 
         /**
-         * Timeout.
+         * The number of seconds that elapse before alert notifications are blocked. Unit: seconds.
          */
         public Builder timeout(Long timeout) {
             this.putQueryParameter("Timeout", timeout);

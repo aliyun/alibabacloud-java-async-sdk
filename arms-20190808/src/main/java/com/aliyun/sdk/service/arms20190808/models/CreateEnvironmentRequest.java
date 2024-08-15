@@ -262,7 +262,7 @@ public class CreateEnvironmentRequest extends Request {
          * <p>
          * 
          * *   CS: Container Service for Kubernetes (ACK) or Distributed Cloud Container Platform for Kubernetes (ACK One)
-         * *   ECS: Elastic Compute Service (ECS)
+         * *   ECS: ECS
          * *   Cloud: cloud service
          */
         public Builder environmentSubType(String environmentSubType) {
@@ -275,8 +275,8 @@ public class CreateEnvironmentRequest extends Request {
          * The type of the environment. Valid values:
          * <p>
          * 
-         * *   CS: ACK
-         * *   ECS: ECS
+         * *   CS: Container Service
+         * *   ECS: Elastic Compute Service
          * *   Cloud: cloud service
          */
         public Builder environmentType(String environmentType) {
@@ -286,7 +286,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The payable resource plan. Valid values:
+         * The payable resource plan.
          * <p>
          * 
          * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
@@ -308,7 +308,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * Whether to initialize the environment.
+         * Specifies whether to initialize the environment.
          */
         public Builder initEnvironment(Boolean initEnvironment) {
             this.putQueryParameter("InitEnvironment", initEnvironment);

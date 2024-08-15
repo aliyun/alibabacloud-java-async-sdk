@@ -54,7 +54,10 @@ public class DeleteSilencePolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the silence policy.
+         * <p>
+         * 
+         * For more information about how to obtain the ID of a silence policy, see [ListSilencePolicies](~~2612383~~).
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

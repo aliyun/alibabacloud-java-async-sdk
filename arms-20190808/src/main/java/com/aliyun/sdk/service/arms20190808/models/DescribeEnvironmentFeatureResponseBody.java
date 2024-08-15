@@ -349,7 +349,15 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * The installation status of the agent.
+             * <p>
+             * 
+             * *   Installing: The agent is being installed.
+             * *   Success: The agent is installed.
+             * *   Failed: The agent failed to be installed.
+             * *   UnInstall: The agent is uninstalled or has not been installed.
+             * *   Uninstalling: The agent is being uninstalled.
+             * *   UnInstallFailed: The agent failed to be uninstalled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -430,7 +438,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The image of the container.
+             * The container image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -438,7 +446,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * The container name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -563,7 +571,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * BindResourceId.
+             * Binded resource ID.
              */
             public Builder bindResourceId(String bindResourceId) {
                 this.bindResourceId = bindResourceId;
@@ -579,7 +587,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * IPs for Pod.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -603,7 +611,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The security group ID.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -624,7 +632,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -677,7 +685,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private FeatureStatus featureStatus; 
 
             /**
-             * The installation information of the feature.
+             * The installation information about the feature.
              */
             public Builder feature(Feature feature) {
                 this.feature = feature;

@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DataBonreeSDKConfigModuleConfigValue} extends {@link TeaModel}
+ * {@link DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue} extends {@link TeaModel}
  *
- * <p>DataBonreeSDKConfigModuleConfigValue</p>
+ * <p>DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue</p>
  */
-public class DataBonreeSDKConfigModuleConfigValue extends TeaModel {
+public class DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("enable")
     private Boolean enable;
 
-    private DataBonreeSDKConfigModuleConfigValue(Builder builder) {
+    private DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue(Builder builder) {
         this.enable = builder.enable;
     }
 
@@ -22,7 +22,7 @@ public class DataBonreeSDKConfigModuleConfigValue extends TeaModel {
         return new Builder();
     }
 
-    public static DataBonreeSDKConfigModuleConfigValue create() {
+    public static DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue create() {
         return builder().build();
     }
 
@@ -44,8 +44,8 @@ public class DataBonreeSDKConfigModuleConfigValue extends TeaModel {
             return this;
         }
 
-        public DataBonreeSDKConfigModuleConfigValue build() {
-            return new DataBonreeSDKConfigModuleConfigValue(this);
+        public DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue build() {
+            return new DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue(this);
         } 
 
     } 

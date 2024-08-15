@@ -253,7 +253,7 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * Set the application service domain name, support creation, modification, and deletion of service domain name configuration.
+         * The service domain name of the application. You can create, modify, and delete service domain name configurations.
          */
         public Builder serviceDomainOperationJson(String serviceDomainOperationJson) {
             this.putQueryParameter("ServiceDomainOperationJson", serviceDomainOperationJson);

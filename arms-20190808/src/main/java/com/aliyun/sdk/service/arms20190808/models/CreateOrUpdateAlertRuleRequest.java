@@ -546,13 +546,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * *   APPLICATION_MONITORING_ALERT_RULE
+         * The type of the alert rule. Valid values:
          * <p>
-         * *   BROWSER_MONITORING_ALERT_RULE
-         * *   XTRACE_MONITORING_ALERT_RULE
-         * *   RUM_MONITORING_ALERT_RULE
-         * *   EBPF_MONITORING_ALERT_RULE
-         * *   PROMETHEUS_MONITORING_ALERT_RULE
+         * 
+         * *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
+         * *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
+         * *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus
+         * *   XTRACE_MONITORING_ALERT_RULE: alert rule for Managed Service for OpenTelemetry
+         * *   EBPF_MONITORING_ALERT_RULE: alert rule for Application Monitoring eBPF Edition
+         * *   RUM_MONITORING_ALERT_RULE: alert rule for Real User Monitoring
          */
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
@@ -583,7 +585,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * Application monitoring alarm rules - Alarm application automatically adds configuration. auto Add Match Type: Matching method: regular match (REGULAR)/regular non-match (NOT_REGULAR) auto Add Match Exp: regular expression
+         * The configurations that are automatically appended to monitor the application based on the specified alert rule. autoAddMatchType: the matching mode. Valid values: REGULAR and NOT_REGULAR. autoAddMatchExp: the regular expression
          */
         public Builder autoAddTargetConfig(String autoAddTargetConfig) {
             this.putBodyParameter("AutoAddTargetConfig", autoAddTargetConfig);
@@ -721,7 +723,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * Notification Mode. Normal mode or Simplified mode.
+         * The notification mode. You can specify the normal mode or simple mode.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   DIRECTED_MODE
+         * *   NORMAL_MODE
          */
         public Builder notifyMode(String notifyMode) {
             this.putBodyParameter("NotifyMode", notifyMode);

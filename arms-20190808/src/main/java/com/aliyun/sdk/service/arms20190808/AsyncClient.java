@@ -347,6 +347,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRumExceptionStackResponse> getRumExceptionStack(GetRumExceptionStackRequest request);
 
+    /**
+      * You can query the usage data for the current day at any time. You can query the usage data for the previous day only after 8:00 today.
+      *
+     */
     CompletableFuture<GetRumOcuStatisticDataResponse> getRumOcuStatisticData(GetRumOcuStatisticDataRequest request);
 
     /**

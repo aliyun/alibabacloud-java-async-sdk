@@ -242,6 +242,12 @@ public class QueryCommercialUsageRequest extends Request {
 
         /**
          * The time interval between data slices. Unit: seconds. Minimum value: 3600.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   3600: hours
+         * *   86400: days
          */
         public Builder intervalInSec(Integer intervalInSec) {
             this.putQueryParameter("IntervalInSec", intervalInSec);

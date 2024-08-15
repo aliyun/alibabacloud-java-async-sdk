@@ -221,7 +221,11 @@ public class ListSyntheticDetailRequest extends Request {
         } 
 
         /**
-         * AdvancedFilters.
+         * An array of filter conditions. This parameter is required.
+         * <p>
+         * 
+         * *   To query the list of synthetic test results, set this parameter in the following format: \[{"Key":"taskType","OpType":"in","Value":\[Task type]}].
+         * *   To query the result details of a synthetic monitoring task, set this parameter in the following format: \[{"Key":"dataId","OpType":"eq","Value":"dataId"}]. dataId is returned when you query the list of synthetic test results.
          */
         public Builder advancedFilters(java.util.List < AdvancedFilters> advancedFilters) {
             String advancedFiltersShrink = shrink(advancedFilters, "AdvancedFilters", "json");
@@ -240,7 +244,16 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * Detail.
+         * The type of the list that contains the results. This parameter is required. Valid values:
+         * <p>
+         * 
+         * *   ICMP_LIST
+         * *   TCP_LIST
+         * *   DNS_LIST
+         * *   HTTP_LIST
+         * *   WEBSITE_LIST
+         * *   DOWNLOAD_LIST
+         * *   ALL
          */
         public Builder detail(String detail) {
             this.putQueryParameter("Detail", detail);
@@ -268,7 +281,11 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * Filters.
+         * The filter condition. This parameter is required.
+         * <p>
+         * 
+         * *   To query the result of a synthetic monitoring task, set this parameter in the following format: {"taskId":"${taskId}"}.
+         * *   To query the result details of a synthetic monitoring task, set this parameter in the following format: {"taskId":"${taskId}","dataId":"${dataId}"}.
          */
         public Builder filters(java.util.Map < String, String > filters) {
             String filtersShrink = shrink(filters, "Filters", "json");
@@ -398,7 +415,11 @@ public class ListSyntheticDetailRequest extends Request {
             private Object value; 
 
             /**
-             * Key.
+             * The filter condition. The taskType and dataId fields are supported.
+             * <p>
+             * 
+             * *   To query the list of synthetic test results, set the key to taskType.
+             * *   To query the result details of a synthetic monitoring task, set the key to dataId.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -406,7 +427,7 @@ public class ListSyntheticDetailRequest extends Request {
             }
 
             /**
-             * OpType.
+             * The type of the filter condition. Valid values: eq and in. eq: equal to. in: include.
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -414,7 +435,7 @@ public class ListSyntheticDetailRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the filter condition. The type of the task. Valid values: 1: ICMP 2: TCP 3: DNS 4: HTTP 5: website speed measurement 6: file download
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -479,7 +500,11 @@ public class ListSyntheticDetailRequest extends Request {
             private Object value; 
 
             /**
-             * Key.
+             * The filter condition. The taskType and dataId fields are supported.
+             * <p>
+             * 
+             * *   To query the list of synthetic test results, set the key to taskType.
+             * *   To query the result details of a synthetic monitoring task, set the key to dataId.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -487,7 +512,7 @@ public class ListSyntheticDetailRequest extends Request {
             }
 
             /**
-             * OpType.
+             * The type of the filter condition. Valid values: eq and in. eq: equal to. in: include.
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -495,7 +520,7 @@ public class ListSyntheticDetailRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the filter condition. The type of the task. Valid values: 1: ICMP 2: TCP 3: DNS 4: HTTP 5: website speed measurement 6: file download
              */
             public Builder value(Object value) {
                 this.value = value;

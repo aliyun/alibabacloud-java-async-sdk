@@ -1913,6 +1913,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can query the usage data for the current day at any time. You can query the usage data for the previous day only after 8:00 today.
+      *
+     */
     @Override
     public CompletableFuture<GetRumOcuStatisticDataResponse> getRumOcuStatisticData(GetRumOcuStatisticDataRequest request) {
         try {

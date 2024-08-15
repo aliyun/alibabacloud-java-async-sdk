@@ -121,7 +121,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request failed.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,15 +154,92 @@ public class GetRumAppInfoResponseBody extends TeaModel {
 
     } 
 
-    public static class BonreeSDKConfig extends TeaModel {
+    public static class ModuleConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("defaultConfig")
+        private java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > defaultConfig;
+
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
+        @com.aliyun.core.annotation.NameInMap("versionConfigs")
+        private java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > versionConfigs;
+
+        private ModuleConfig(Builder builder) {
+            this.defaultConfig = builder.defaultConfig;
+            this.enable = builder.enable;
+            this.versionConfigs = builder.versionConfigs;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModuleConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return defaultConfig
+         */
+        public java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > getDefaultConfig() {
+            return this.defaultConfig;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return versionConfigs
+         */
+        public java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > getVersionConfigs() {
+            return this.versionConfigs;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > defaultConfig; 
+            private Boolean enable; 
+            private java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > versionConfigs; 
+
+            /**
+             * defaultConfig.
+             */
+            public Builder defaultConfig(java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > defaultConfig) {
+                this.defaultConfig = defaultConfig;
+                return this;
+            }
+
+            /**
+             * enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * versionConfigs.
+             */
+            public Builder versionConfigs(java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > versionConfigs) {
+                this.versionConfigs = versionConfigs;
+                return this;
+            }
+
+            public ModuleConfig build() {
+                return new ModuleConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class BonreeSDKConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("moduleConfig")
-        private java.util.Map < String, DataBonreeSDKConfigModuleConfigValue > moduleConfig;
+        private ModuleConfig moduleConfig;
 
         private BonreeSDKConfig(Builder builder) {
-            this.enable = builder.enable;
             this.moduleConfig = builder.moduleConfig;
         }
 
@@ -175,35 +252,19 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * @return enable
-         */
-        public Boolean getEnable() {
-            return this.enable;
-        }
-
-        /**
          * @return moduleConfig
          */
-        public java.util.Map < String, DataBonreeSDKConfigModuleConfigValue > getModuleConfig() {
+        public ModuleConfig getModuleConfig() {
             return this.moduleConfig;
         }
 
         public static final class Builder {
-            private Boolean enable; 
-            private java.util.Map < String, DataBonreeSDKConfigModuleConfigValue > moduleConfig; 
-
-            /**
-             * enable.
-             */
-            public Builder enable(Boolean enable) {
-                this.enable = enable;
-                return this;
-            }
+            private ModuleConfig moduleConfig; 
 
             /**
              * moduleConfig.
              */
-            public Builder moduleConfig(java.util.Map < String, DataBonreeSDKConfigModuleConfigValue > moduleConfig) {
+            public Builder moduleConfig(ModuleConfig moduleConfig) {
                 this.moduleConfig = moduleConfig;
                 return this;
             }
@@ -225,6 +286,9 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PropagatorTypes")
         private java.util.List < String > propagatorTypes;
 
+        @com.aliyun.core.annotation.NameInMap("SamplingRate")
+        private Integer samplingRate;
+
         @com.aliyun.core.annotation.NameInMap("Tracing")
         private Boolean tracing;
 
@@ -232,6 +296,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             this.description = builder.description;
             this.domain = builder.domain;
             this.propagatorTypes = builder.propagatorTypes;
+            this.samplingRate = builder.samplingRate;
             this.tracing = builder.tracing;
         }
 
@@ -265,6 +330,13 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return samplingRate
+         */
+        public Integer getSamplingRate() {
+            return this.samplingRate;
+        }
+
+        /**
          * @return tracing
          */
         public Boolean getTracing() {
@@ -275,10 +347,11 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private String description; 
             private String domain; 
             private java.util.List < String > propagatorTypes; 
+            private Integer samplingRate; 
             private Boolean tracing; 
 
             /**
-             * Describe.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -286,7 +359,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Domain name or IP.
+             * The domain name or IP address.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -294,7 +367,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Trace transparent transmission protocol list, must be transmitted when link tracking is enabled.
+             * The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.
              */
             public Builder propagatorTypes(java.util.List < String > propagatorTypes) {
                 this.propagatorTypes = propagatorTypes;
@@ -302,10 +375,19 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable link tracking (need to enable the observable link Open Telemetry version), value:
+             * SamplingRate.
+             */
+            public Builder samplingRate(Integer samplingRate) {
+                this.samplingRate = samplingRate;
+                return this;
+            }
+
+            /**
+             * Indicates whether the tracing analysis feature is enabled. To enable the tracing analysis feature, you must activate Managed Service for OpenTelemetry. Valid values:
              * <p>
-             * - `true`: Enable link tracking (after enabling, the relevant header will be inserted into the domain name request).
-             * - `false`: Do not enable link tracking.
+             * 
+             * *   `true`: enables the tracing analysis feature. If you enable the tracing analysis feature, related headers are inserted into requests for the domain name.
+             * *   `false`: disables the tracing analysis feature.
              */
             public Builder tracing(Boolean tracing) {
                 this.tracing = tracing;
@@ -747,7 +829,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Service domain name configuration list (currently only supports mobile applications).
+             * The list of service domain configurations. Only mobile applications are supported.
              */
             public Builder serviceDomainConfigs(java.util.List < ServiceDomainConfigs> serviceDomainConfigs) {
                 this.serviceDomainConfigs = serviceDomainConfigs;

@@ -247,8 +247,8 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubClustersJson")
         private String subClustersJson;
 
-        @com.aliyun.core.annotation.NameInMap("SurpportAuthTypes")
-        private java.util.List < String > surpportAuthTypes;
+        @com.aliyun.core.annotation.NameInMap("SupportAuthTypes")
+        private java.util.List < String > supportAuthTypes;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
@@ -288,7 +288,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.securityGroupId = builder.securityGroupId;
             this.storageDuration = builder.storageDuration;
             this.subClustersJson = builder.subClustersJson;
-            this.surpportAuthTypes = builder.surpportAuthTypes;
+            this.supportAuthTypes = builder.supportAuthTypes;
             this.tags = builder.tags;
             this.userId = builder.userId;
             this.vSwitchId = builder.vSwitchId;
@@ -479,10 +479,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * @return surpportAuthTypes
+         * @return supportAuthTypes
          */
-        public java.util.List < String > getSurpportAuthTypes() {
-            return this.surpportAuthTypes;
+        public java.util.List < String > getSupportAuthTypes() {
+            return this.supportAuthTypes;
         }
 
         /**
@@ -539,14 +539,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String securityGroupId; 
             private Integer storageDuration; 
             private String subClustersJson; 
-            private java.util.List < String > surpportAuthTypes; 
+            private java.util.List < String > supportAuthTypes; 
             private java.util.List < Tags> tags; 
             private String userId; 
             private String vSwitchId; 
             private String vpcId; 
 
             /**
-             * Permission type: read Write, read Only, http Read Only
+             * The permission type. Valid values: readWrite, readOnly, and httpReadOnly
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -600,7 +600,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceStatus.
+             * Backend data storage status.
              */
             public Builder dbInstanceStatus(String dbInstanceStatus) {
                 this.dbInstanceStatus = dbInstanceStatus;
@@ -608,7 +608,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAuthToken.
+             * Whether to enable access token authentication.
              */
             public Builder enableAuthToken(String enableAuthToken) {
                 this.enableAuthToken = enableAuthToken;
@@ -652,7 +652,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * The product to which the prometheus instance belongs.
+             * <p>
+             * - arms
+             * - cms
              */
             public Builder product(String product) {
                 this.product = product;
@@ -756,10 +759,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SurpportAuthTypes.
+             * SupportAuthTypes.
              */
-            public Builder surpportAuthTypes(java.util.List < String > surpportAuthTypes) {
-                this.surpportAuthTypes = surpportAuthTypes;
+            public Builder supportAuthTypes(java.util.List < String > supportAuthTypes) {
+                this.supportAuthTypes = supportAuthTypes;
                 return this;
             }
 

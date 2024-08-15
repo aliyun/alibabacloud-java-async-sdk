@@ -151,7 +151,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -160,7 +160,12 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The filter condition. Three types of filter conditions are provided:
+         * <p>
+         * 
+         * *   Application name: pid (Note that the application name is displayed, but the application ID is actually specified)
+         * *   Application type: siteType
+         * *   Data type: dataType
          */
         public Builder filter(java.util.List < Filter> filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -170,7 +175,14 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * Group.
+         * The grouping fields. Valid values:
+         * <p>
+         * 
+         * *   siteType: The total number of OCUs is grouped by application type.
+         * *   dataType: The total number of OCUs is grouped by data type.
+         * *   pid: The total number of OCUs is grouped by application ID.
+         * *   appName: The total number of OCUs is grouped by application name.
+         * *   startTime: The total number of OCUs is grouped by start time.
          */
         public Builder group(java.util.List < String > group) {
             String groupShrink = shrink(group, "Group", "json");
@@ -180,7 +192,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * Page.
+         * The page number.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -189,7 +201,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +210,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * The type of the query. To query non-time series data, set the value to INSTANT. To query time series data, set the value to TIME_SERIES.
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -207,7 +219,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +228,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -282,7 +294,12 @@ public class GetRumOcuStatisticDataRequest extends Request {
             private Object value; 
 
             /**
-             * Key.
+             * The key of the filter condition. Three types of filter conditions are provided:
+             * <p>
+             * 
+             * *   Application name: pid (Note that the application name is displayed, but the application ID is actually specified)
+             * *   Application type: siteType
+             * *   Data type: dataType
              */
             public Builder key(String key) {
                 this.key = key;
@@ -290,7 +307,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
             }
 
             /**
-             * OpType.
+             * The type of the operator. Valid value: in.
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -298,7 +315,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the filter condition. The value is a JSON array of strings.
              */
             public Builder value(Object value) {
                 this.value = value;

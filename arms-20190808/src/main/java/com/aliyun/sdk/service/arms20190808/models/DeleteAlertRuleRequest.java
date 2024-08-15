@@ -54,11 +54,10 @@ public class DeleteAlertRuleRequest extends Request {
         } 
 
         /**
-         * Indicates whether the alert rule was successfully deleted.
+         * The alert rule ID.
          * <p>
          * 
-         * *   `true`: The specified data is deleted.
-         * *   `false`: The specified data fails to be deleted.
+         * For more information about how to obtain the ID of an alert rule, see [GetAlertRules](~~2612348~~).
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);

@@ -98,7 +98,10 @@ public class ChangeAlarmSeverityRequest extends Request {
         } 
 
         /**
-         * AlarmId.
+         * The ID of the alert.
+         * <p>
+         * 
+         * For more information about how to obtain the ID of an alert, see [ListAlertEvents](~~2612346~~).
          */
         public Builder alarmId(Long alarmId) {
             this.putQueryParameter("AlarmId", alarmId);

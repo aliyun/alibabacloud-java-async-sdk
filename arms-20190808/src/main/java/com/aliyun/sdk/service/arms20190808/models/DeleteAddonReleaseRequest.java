@@ -111,7 +111,7 @@ public class DeleteAddonReleaseRequest extends Request {
         } 
 
         /**
-         * The name of the add-on.
+         * The name of the add-on. If you assign a value to AddonName, the ReleaseName parameter is ignored and all AddonReleases that belong to the same add-on are deleted.
          */
         public Builder addonName(String addonName) {
             this.putQueryParameter("AddonName", addonName);

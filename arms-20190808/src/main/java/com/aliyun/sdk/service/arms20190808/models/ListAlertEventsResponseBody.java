@@ -524,7 +524,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the notification policy.
+             * The associated notification policies.
              */
             public Builder notificationPolicies(java.util.List < NotificationPolicies> notificationPolicies) {
                 this.notificationPolicies = notificationPolicies;
@@ -576,7 +576,7 @@ public class ListAlertEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times the alert is triggered.
+             * The number of times the event is triggered.
              */
             public Builder triggerCount(Long triggerCount) {
                 this.triggerCount = triggerCount;

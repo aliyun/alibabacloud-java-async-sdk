@@ -217,7 +217,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             private String tracing; 
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -225,7 +225,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Domain name or IP.
+             * The domain name or IP address.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -233,7 +233,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Trace transparent transmission protocol list, which must be transmitted when link tracing is enabled.
+             * The trace propagation protocols. This parameter is required if the tracing analysis feature is enabled.
              */
             public Builder propagatorTypes(java.util.List < String > propagatorTypes) {
                 this.propagatorTypes = propagatorTypes;
@@ -241,10 +241,11 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable link tracking (need to enable the observable link Open Telemetry version), value:
+             * Indicates whether the tracing analysis feature is enabled. To enable the tracing analysis feature, you must activate Managed Service for OpenTelemetry. Valid values:
              * <p>
-             * - `true`: Enable link tracking (after enabling, the relevant header will be inserted into the domain name request).
-             * - `false`: Do not enable link tracking.
+             * 
+             * *   `true`: enables the tracing analysis feature. If you enable the tracing analysis feature, related headers are inserted into requests for the domain name.
+             * *   `false`: disables the tracing analysis feature.
              */
             public Builder tracing(String tracing) {
                 this.tracing = tracing;
@@ -626,7 +627,7 @@ public class GetRumAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Service domain name configuration list. Currently only supports mobile applications.
+             * The list of service domain configurations. Only mobile applications are supported.
              */
             public Builder serviceDomainConfigs(java.util.List < ServiceDomainConfigs> serviceDomainConfigs) {
                 this.serviceDomainConfigs = serviceDomainConfigs;

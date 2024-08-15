@@ -54,7 +54,10 @@ public class DeleteNotificationPolicyRequest extends Request {
         } 
 
         /**
-         * Deletes a notification policy based on its ID.
+         * The ID of the notification policy.
+         * <p>
+         * 
+         * For more information about how to obtain the ID of a notification policy, see [ListNotificationPolicies](~~2612375~~).
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
