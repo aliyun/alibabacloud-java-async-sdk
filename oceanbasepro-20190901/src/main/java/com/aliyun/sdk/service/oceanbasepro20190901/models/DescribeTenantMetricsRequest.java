@@ -46,10 +46,12 @@ public class DescribeTenantMetricsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantId")
     @Deprecated
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantIdList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantIdList;
 
     @com.aliyun.core.annotation.Body

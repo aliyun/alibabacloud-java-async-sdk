@@ -152,6 +152,9 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ObUserId")
         private Double obUserId;
 
+        @com.aliyun.core.annotation.NameInMap("ParamsValue")
+        private String paramsValue;
+
         @com.aliyun.core.annotation.NameInMap("PartitionCount")
         private Double partitionCount;
 
@@ -258,6 +261,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             this.obDbId = builder.obDbId;
             this.obServerId = builder.obServerId;
             this.obUserId = builder.obUserId;
+            this.paramsValue = builder.paramsValue;
             this.partitionCount = builder.partitionCount;
             this.planId = builder.planId;
             this.planType = builder.planType;
@@ -484,6 +488,13 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         }
 
         /**
+         * @return paramsValue
+         */
+        public String getParamsValue() {
+            return this.paramsValue;
+        }
+
+        /**
          * @return partitionCount
          */
         public Double getPartitionCount() {
@@ -693,6 +704,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             private Double obDbId; 
             private Double obServerId; 
             private Double obUserId; 
+            private String paramsValue; 
             private Double partitionCount; 
             private Double planId; 
             private String planType; 
@@ -933,6 +945,14 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              */
             public Builder obUserId(Double obUserId) {
                 this.obUserId = obUserId;
+                return this;
+            }
+
+            /**
+             * ParamsValue.
+             */
+            public Builder paramsValue(String paramsValue) {
+                this.paramsValue = paramsValue;
                 return this;
             }
 

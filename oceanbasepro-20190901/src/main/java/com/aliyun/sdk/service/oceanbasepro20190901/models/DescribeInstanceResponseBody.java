@@ -1825,6 +1825,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowCreateProxySqlFirewallRule")
+        private Boolean allowCreateProxySqlFirewallRule;
+
         @com.aliyun.core.annotation.NameInMap("AllowModifyInternetAddressConnectionLimit")
         private Boolean allowModifyInternetAddressConnectionLimit;
 
@@ -1964,6 +1967,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private java.util.List < String > zones;
 
         private Instance(Builder builder) {
+            this.allowCreateProxySqlFirewallRule = builder.allowCreateProxySqlFirewallRule;
             this.allowModifyInternetAddressConnectionLimit = builder.allowModifyInternetAddressConnectionLimit;
             this.autoRenewal = builder.autoRenewal;
             this.autoUpgradeObVersion = builder.autoUpgradeObVersion;
@@ -2018,6 +2022,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static Instance create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowCreateProxySqlFirewallRule
+         */
+        public Boolean getAllowCreateProxySqlFirewallRule() {
+            return this.allowCreateProxySqlFirewallRule;
         }
 
         /**
@@ -2343,6 +2354,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowCreateProxySqlFirewallRule; 
             private Boolean allowModifyInternetAddressConnectionLimit; 
             private Boolean autoRenewal; 
             private Boolean autoUpgradeObVersion; 
@@ -2389,6 +2401,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String unitSpec; 
             private String version; 
             private java.util.List < String > zones; 
+
+            /**
+             * AllowCreateProxySqlFirewallRule.
+             */
+            public Builder allowCreateProxySqlFirewallRule(Boolean allowCreateProxySqlFirewallRule) {
+                this.allowCreateProxySqlFirewallRule = allowCreateProxySqlFirewallRule;
+                return this;
+            }
 
             /**
              * AllowModifyInternetAddressConnectionLimit.

@@ -608,11 +608,17 @@ public class DescribeTenantResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntranetRpcPort")
         private Integer intranetRpcPort;
 
+        @com.aliyun.core.annotation.NameInMap("IntranetSqlPort")
+        private Integer intranetSqlPort;
+
         @com.aliyun.core.annotation.NameInMap("MaxConnectionLimit")
         private Long maxConnectionLimit;
 
         @com.aliyun.core.annotation.NameInMap("MaxConnectionNum")
         private Long maxConnectionNum;
+
+        @com.aliyun.core.annotation.NameInMap("OdpVersion")
+        private String odpVersion;
 
         @com.aliyun.core.annotation.NameInMap("ParallelQueryDegree")
         private Long parallelQueryDegree;
@@ -650,8 +656,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.intranetAddressStatus = builder.intranetAddressStatus;
             this.intranetPort = builder.intranetPort;
             this.intranetRpcPort = builder.intranetRpcPort;
+            this.intranetSqlPort = builder.intranetSqlPort;
             this.maxConnectionLimit = builder.maxConnectionLimit;
             this.maxConnectionNum = builder.maxConnectionNum;
+            this.odpVersion = builder.odpVersion;
             this.parallelQueryDegree = builder.parallelQueryDegree;
             this.proxyClusterId = builder.proxyClusterId;
             this.tenantEndpointId = builder.tenantEndpointId;
@@ -788,6 +796,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return intranetSqlPort
+         */
+        public Integer getIntranetSqlPort() {
+            return this.intranetSqlPort;
+        }
+
+        /**
          * @return maxConnectionLimit
          */
         public Long getMaxConnectionLimit() {
@@ -799,6 +814,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public Long getMaxConnectionNum() {
             return this.maxConnectionNum;
+        }
+
+        /**
+         * @return odpVersion
+         */
+        public String getOdpVersion() {
+            return this.odpVersion;
         }
 
         /**
@@ -861,8 +883,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String intranetAddressStatus; 
             private Integer intranetPort; 
             private Integer intranetRpcPort; 
+            private Integer intranetSqlPort; 
             private Long maxConnectionLimit; 
             private Long maxConnectionNum; 
+            private String odpVersion; 
             private Long parallelQueryDegree; 
             private String proxyClusterId; 
             private String tenantEndpointId; 
@@ -1011,6 +1035,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
+             * IntranetSqlPort.
+             */
+            public Builder intranetSqlPort(Integer intranetSqlPort) {
+                this.intranetSqlPort = intranetSqlPort;
+                return this;
+            }
+
+            /**
              * MaxConnectionLimit.
              */
             public Builder maxConnectionLimit(Long maxConnectionLimit) {
@@ -1023,6 +1055,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder maxConnectionNum(Long maxConnectionNum) {
                 this.maxConnectionNum = maxConnectionNum;
+                return this;
+            }
+
+            /**
+             * OdpVersion.
+             */
+            public Builder odpVersion(String odpVersion) {
+                this.odpVersion = odpVersion;
                 return this;
             }
 
@@ -1894,6 +1934,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxParallelQueryDegree")
         private Long maxParallelQueryDegree;
 
+        @com.aliyun.core.annotation.NameInMap("OdpVersion")
+        private String odpVersion;
+
         @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
@@ -1963,6 +2006,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.lowerCaseTableNames = builder.lowerCaseTableNames;
             this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
             this.maxParallelQueryDegree = builder.maxParallelQueryDegree;
+            this.odpVersion = builder.odpVersion;
             this.payType = builder.payType;
             this.primaryZone = builder.primaryZone;
             this.primaryZoneDeployType = builder.primaryZoneDeployType;
@@ -2130,6 +2174,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return odpVersion
+         */
+        public String getOdpVersion() {
+            return this.odpVersion;
+        }
+
+        /**
          * @return payType
          */
         public String getPayType() {
@@ -2262,6 +2313,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Integer lowerCaseTableNames; 
             private String masterIntranetAddressZone; 
             private Long maxParallelQueryDegree; 
+            private String odpVersion; 
             private String payType; 
             private String primaryZone; 
             private String primaryZoneDeployType; 
@@ -2499,6 +2551,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder maxParallelQueryDegree(Long maxParallelQueryDegree) {
                 this.maxParallelQueryDegree = maxParallelQueryDegree;
+                return this;
+            }
+
+            /**
+             * OdpVersion.
+             */
+            public Builder odpVersion(String odpVersion) {
+                this.odpVersion = odpVersion;
                 return this;
             }
 

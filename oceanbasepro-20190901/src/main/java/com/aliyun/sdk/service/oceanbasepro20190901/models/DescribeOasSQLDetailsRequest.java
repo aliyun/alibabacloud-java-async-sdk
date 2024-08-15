@@ -35,6 +35,10 @@ public class DescribeOasSQLDetailsRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParseTable")
+    private Boolean parseTable;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SqlId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sqlId;
@@ -56,6 +60,7 @@ public class DescribeOasSQLDetailsRequest extends Request {
         this.dynamicSql = builder.dynamicSql;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.parseTable = builder.parseTable;
         this.sqlId = builder.sqlId;
         this.startTime = builder.startTime;
         this.tenantId = builder.tenantId;
@@ -110,6 +115,13 @@ public class DescribeOasSQLDetailsRequest extends Request {
     }
 
     /**
+     * @return parseTable
+     */
+    public Boolean getParseTable() {
+        return this.parseTable;
+    }
+
+    /**
      * @return sqlId
      */
     public String getSqlId() {
@@ -136,6 +148,7 @@ public class DescribeOasSQLDetailsRequest extends Request {
         private Boolean dynamicSql; 
         private String endTime; 
         private String instanceId; 
+        private Boolean parseTable; 
         private String sqlId; 
         private String startTime; 
         private String tenantId; 
@@ -151,6 +164,7 @@ public class DescribeOasSQLDetailsRequest extends Request {
             this.dynamicSql = request.dynamicSql;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.parseTable = request.parseTable;
             this.sqlId = request.sqlId;
             this.startTime = request.startTime;
             this.tenantId = request.tenantId;
@@ -200,6 +214,15 @@ public class DescribeOasSQLDetailsRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ParseTable.
+         */
+        public Builder parseTable(Boolean parseTable) {
+            this.putBodyParameter("ParseTable", parseTable);
+            this.parseTable = parseTable;
             return this;
         }
 

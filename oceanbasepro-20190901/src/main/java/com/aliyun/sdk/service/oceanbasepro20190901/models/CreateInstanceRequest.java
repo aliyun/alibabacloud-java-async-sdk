@@ -51,7 +51,7 @@ public class CreateInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceName")
-    @com.aliyun.core.annotation.Validation(maxLength = 20)
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String instanceName;
 
     @com.aliyun.core.annotation.Body

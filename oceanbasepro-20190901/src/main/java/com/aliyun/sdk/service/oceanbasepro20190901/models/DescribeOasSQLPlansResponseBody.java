@@ -854,6 +854,12 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MergedVersion")
         private Long mergedVersion;
 
+        @com.aliyun.core.annotation.NameInMap("OutlineId")
+        private String outlineId;
+
+        @com.aliyun.core.annotation.NameInMap("OutlineStatus")
+        private String outlineStatus;
+
         @com.aliyun.core.annotation.NameInMap("PlanExplain")
         private PlanExplain planExplain;
 
@@ -872,6 +878,9 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuerySql")
         private String querySql;
 
+        @com.aliyun.core.annotation.NameInMap("TableScan")
+        private Boolean tableScan;
+
         private Data(Builder builder) {
             this.avgCpuTime = builder.avgCpuTime;
             this.bounded = builder.bounded;
@@ -880,12 +889,15 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             this.hitDiagnosis = builder.hitDiagnosis;
             this.hitPercentage = builder.hitPercentage;
             this.mergedVersion = builder.mergedVersion;
+            this.outlineId = builder.outlineId;
+            this.outlineStatus = builder.outlineStatus;
             this.planExplain = builder.planExplain;
             this.planHash = builder.planHash;
             this.planType = builder.planType;
             this.planUnionHash = builder.planUnionHash;
             this.plans = builder.plans;
             this.querySql = builder.querySql;
+            this.tableScan = builder.tableScan;
         }
 
         public static Builder builder() {
@@ -946,6 +958,20 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return outlineId
+         */
+        public String getOutlineId() {
+            return this.outlineId;
+        }
+
+        /**
+         * @return outlineStatus
+         */
+        public String getOutlineStatus() {
+            return this.outlineStatus;
+        }
+
+        /**
          * @return planExplain
          */
         public PlanExplain getPlanExplain() {
@@ -987,6 +1013,13 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             return this.querySql;
         }
 
+        /**
+         * @return tableScan
+         */
+        public Boolean getTableScan() {
+            return this.tableScan;
+        }
+
         public static final class Builder {
             private Double avgCpuTime; 
             private Boolean bounded; 
@@ -995,12 +1028,15 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             private Boolean hitDiagnosis; 
             private Double hitPercentage; 
             private Long mergedVersion; 
+            private String outlineId; 
+            private String outlineStatus; 
             private PlanExplain planExplain; 
             private String planHash; 
             private String planType; 
             private String planUnionHash; 
             private java.util.List < Plans> plans; 
             private String querySql; 
+            private Boolean tableScan; 
 
             /**
              * Average CPU time (in milliseconds) during the execution period.
@@ -1059,6 +1095,22 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             }
 
             /**
+             * Outline ID.
+             */
+            public Builder outlineId(String outlineId) {
+                this.outlineId = outlineId;
+                return this;
+            }
+
+            /**
+             * OutlineStatus.
+             */
+            public Builder outlineStatus(String outlineStatus) {
+                this.outlineStatus = outlineStatus;
+                return this;
+            }
+
+            /**
              * Execution plan.
              */
             public Builder planExplain(PlanExplain planExplain) {
@@ -1103,6 +1155,14 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
              */
             public Builder querySql(String querySql) {
                 this.querySql = querySql;
+                return this;
+            }
+
+            /**
+             * Whether a full table scan is performed.
+             */
+            public Builder tableScan(Boolean tableScan) {
+                this.tableScan = tableScan;
                 return this;
             }
 
