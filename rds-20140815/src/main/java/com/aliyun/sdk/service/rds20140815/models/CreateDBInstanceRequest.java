@@ -861,7 +861,12 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * AutoCreateProxy.
+         * 是否自动创建代理。取值范围：
+         * <p>
+         * 
+         * - **true**：开启自动创建，默认为通用代理。
+         * 
+         * - **false**：不开启自动创建。
          */
         public Builder autoCreateProxy(Boolean autoCreateProxy) {
             this.putQueryParameter("AutoCreateProxy", autoCreateProxy);
@@ -873,8 +878,8 @@ public class CreateDBInstanceRequest extends Request {
          * Specifies whether to enable the automatic payment feature. Valid values:
          * <p>
          * 
-         * *   **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
-         * *   **false**: does not automatically complete the payment. An unpaid order is generated.
+         * *   **true**: enables the feature. Make sure that your account balance is sufficient.
+         * *   **false**: disables the feature. An unpaid order is generated.
          * 
          * >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
          */
@@ -1746,7 +1751,7 @@ public class CreateDBInstanceRequest extends Request {
              * 
              * *   Serverless ApsaraDB RDS for MySQL instances: **0.5 to 32**.
              * *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.
-             * *   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 14**
+             * *   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 14**.
              * 
              * >  The value of this parameter must be less than or equal to the value of **MaxCapacity**.
              */

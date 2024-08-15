@@ -339,9 +339,6 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetaStatus")
         private String metaStatus;
 
-        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
-        private String resourceGroupId;
-
         @com.aliyun.core.annotation.NameInMap("StorageClass")
         private String storageClass;
 
@@ -371,7 +368,6 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.hostInstanceID = builder.hostInstanceID;
             this.isAvail = builder.isAvail;
             this.metaStatus = builder.metaStatus;
-            this.resourceGroupId = builder.resourceGroupId;
             this.storageClass = builder.storageClass;
             this.storeStatus = builder.storeStatus;
         }
@@ -539,13 +535,6 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
          * @return storageClass
          */
         public String getStorageClass() {
@@ -582,7 +571,6 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String hostInstanceID; 
             private Integer isAvail; 
             private String metaStatus; 
-            private String resourceGroupId; 
             private String storageClass; 
             private String storeStatus; 
 
@@ -808,14 +796,6 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder metaStatus(String metaStatus) {
                 this.metaStatus = metaStatus;
-                return this;
-            }
-
-            /**
-             * The resource group ID.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

@@ -550,7 +550,12 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         } 
 
         /**
-         * AutoCreateProxy.
+         * 是否自动创建代理。取值范围：
+         * <p>
+         * 
+         * - **true**：开启自动创建，默认为通用代理。
+         * 
+         * - **false**：不开启自动创建。
          */
         public Builder autoCreateProxy(Boolean autoCreateProxy) {
             this.putQueryParameter("AutoCreateProxy", autoCreateProxy);
@@ -565,7 +570,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
          * 1.  **true**: enables the feature. Make sure that your account balance is sufficient.
          * 2.  **false**: disables the feature. An unpaid order is generated.
          * 
-         * >  Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
+         * >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -703,10 +708,10 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
          * Specifies whether to enable the release protection feature for the read-only instance. Valid values:
          * <p>
          * 
-         * *   **true**: enables the feature.
-         * *   **false** (default): disables the feature.
+         * *   **true**
+         * *   **false** (default)
          * 
-         * >  You can enable the release protection feature for the read-only instance only when you set the **Billing Method** parameter to **Pay-As-You-Go**.
+         * >  You can enable the release protection feature for the read-only instance only when you set the **PayType** parameter to **Postpaid**.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);

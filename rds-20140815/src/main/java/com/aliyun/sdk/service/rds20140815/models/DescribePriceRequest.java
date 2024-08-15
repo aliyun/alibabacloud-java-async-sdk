@@ -366,15 +366,15 @@ public class DescribePriceRequest extends Request {
          * <p>
          * 
          * *   **bards**: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).
-         * *   **rds**: The instance is a subscription primary instance. This is the default value. This value is available at the China site (aliyun.com).
+         * *   **rds** (default): The instance is a subscription primary instance. This value is available on the China site (aliyun.com).
          * *   **rords**: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).
          * *   **rds_rordspre_public_cn**: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).
-         * *   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available at the International site (alibabacloud.com).
-         * *   **rds_intl**: The instance is a subscription primary instance. This value is available at the International site (alibabacloud.com).
-         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available at the International site (alibabacloud.com).
-         * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance. This value is available on the International site (alibabacloud.com).
+         * *   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available at the international site (alibabacloud.com).
+         * *   **rds_intl**: The instance is a subscription primary instance. This value is available at the international site (alibabacloud.com).
+         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available at the international site (alibabacloud.com).
+         * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance. This value is available on the international site (alibabacloud.com).
          * 
-         * > If you want to query the price of a read-only instance, you must specify this parameter.
+         * >  If you want to query the price of a read-only instance, you must specify this parameter.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);

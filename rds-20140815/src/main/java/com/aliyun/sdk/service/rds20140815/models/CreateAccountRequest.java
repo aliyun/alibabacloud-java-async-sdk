@@ -230,7 +230,7 @@ public class CreateAccountRequest extends Request {
          * The account type. Valid values:
          * <p>
          * 
-         * *   **Normal**: standard account (default).
+         * *   **Normal** (default): standard account.
          * *   **Super**: privileged account.
          * *   **Sysadmin**: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.
          * 

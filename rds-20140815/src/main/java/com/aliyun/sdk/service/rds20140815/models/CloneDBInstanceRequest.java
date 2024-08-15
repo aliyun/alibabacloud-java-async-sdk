@@ -36,6 +36,10 @@ public class CloneDBInstanceRequest extends Request {
     private String category;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
@@ -141,6 +145,7 @@ public class CloneDBInstanceRequest extends Request {
         this.bpeEnabled = builder.bpeEnabled;
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
+        this.clientToken = builder.clientToken;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceId = builder.DBInstanceId;
         this.DBInstanceStorage = builder.DBInstanceStorage;
@@ -220,6 +225,13 @@ public class CloneDBInstanceRequest extends Request {
      */
     public String getCategory() {
         return this.category;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -397,6 +409,7 @@ public class CloneDBInstanceRequest extends Request {
         private String bpeEnabled; 
         private Boolean burstingEnabled; 
         private String category; 
+        private String clientToken; 
         private String DBInstanceClass; 
         private String DBInstanceId; 
         private Integer DBInstanceStorage; 
@@ -434,6 +447,7 @@ public class CloneDBInstanceRequest extends Request {
             this.bpeEnabled = request.bpeEnabled;
             this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
+            this.clientToken = request.clientToken;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceId = request.DBInstanceId;
             this.DBInstanceStorage = request.DBInstanceStorage;
@@ -541,6 +555,15 @@ public class CloneDBInstanceRequest extends Request {
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
             this.category = category;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -665,7 +688,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * The unit that is used to calculate the billing cycle of the new instance. Valid values:
+         * The unit that is used to calculate the billing cycle of the new instance. This parameter takes effect only when you select the subscription billing method for the new instance. Valid values:
          * <p>
          * 
          * *   **Year**

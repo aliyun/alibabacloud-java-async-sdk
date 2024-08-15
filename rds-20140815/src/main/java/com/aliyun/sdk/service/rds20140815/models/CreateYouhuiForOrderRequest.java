@@ -36,7 +36,7 @@ public class CreateYouhuiForOrderRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
-    private String resourceOwnerId;
+    private Long resourceOwnerId;
 
     private CreateYouhuiForOrderRequest(Builder builder) {
         super(builder);
@@ -99,7 +99,7 @@ public class CreateYouhuiForOrderRequest extends Request {
     /**
      * @return resourceOwnerId
      */
-    public String getResourceOwnerId() {
+    public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 
@@ -109,7 +109,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         private Long promotionId; 
         private String regionId; 
         private String resourceOwnerAccount; 
-        private String resourceOwnerId; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -173,7 +173,7 @@ public class CreateYouhuiForOrderRequest extends Request {
         /**
          * ResourceOwnerId.
          */
-        public Builder resourceOwnerId(String resourceOwnerId) {
+        public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
             return this;

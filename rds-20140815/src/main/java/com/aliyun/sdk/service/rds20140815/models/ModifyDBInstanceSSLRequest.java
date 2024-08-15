@@ -336,7 +336,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * The type of the server certificate. This parameter is supported only when the instance runs PostgreSQL with cloud disks. If you set SSLEnabled to **1**, the default value of this parameter is **aliyun**. Valid values:
+         * The type of the server certificate. This parameter is supported only when the instance runs MySQL or PostgreSQL with cloud disks. If you set SSLEnabled to **1**, the default value of this parameter is **aliyun**. Valid values:
          * <p>
          * 
          * *   **aliyun**: a cloud certificate

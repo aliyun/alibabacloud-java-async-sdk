@@ -110,7 +110,7 @@ public class DescribeWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * The region ID.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

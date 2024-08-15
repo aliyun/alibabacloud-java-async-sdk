@@ -139,7 +139,7 @@ public class DescribeDBInstanceIpHostnameRequest extends Request {
         } 
 
         /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * The instance ID. You can call the [DescribeDBInstances](~~2628785~~) operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -166,7 +166,7 @@ public class DescribeDBInstanceIpHostnameRequest extends Request {
         }
 
         /**
-         * You can call the DescribeDBInstanceAttribute operation to query the region ID.
+         * The region ID. You can call the [DescribeDBInstanceAttribute](~~2628783~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

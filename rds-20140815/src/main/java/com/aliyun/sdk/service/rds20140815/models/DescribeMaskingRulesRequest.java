@@ -21,6 +21,10 @@ public class DescribeMaskingRulesRequest extends Request {
     private String ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -36,6 +40,7 @@ public class DescribeMaskingRulesRequest extends Request {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.ruleName = builder.ruleName;
@@ -69,6 +74,13 @@ public class DescribeMaskingRulesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -92,6 +104,7 @@ public class DescribeMaskingRulesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeMaskingRulesRequest, Builder> {
         private String DBInstanceName; 
         private String ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String ruleName; 
@@ -104,6 +117,7 @@ public class DescribeMaskingRulesRequest extends Request {
             super(request);
             this.DBInstanceName = request.DBInstanceName;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.ruleName = request.ruleName;
@@ -124,6 +138,15 @@ public class DescribeMaskingRulesRequest extends Request {
         public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

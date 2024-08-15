@@ -281,7 +281,7 @@ public class ModifyDBNodeRequest extends Request {
          * The information about the node.
          * <p>
          * 
-         * >  This parameter is supported for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
+         * >  This parameter is used for ApsaraDB RDS for MySQL instances that run RDS Cluster Edition.
          */
         public Builder DBNode(java.util.List < DBNode> DBNode) {
             String DBNodeShrink = shrink(DBNode, "DBNode", "json");
@@ -304,10 +304,11 @@ public class ModifyDBNodeRequest extends Request {
         }
 
         /**
-         * Effective time, value:
+         * The time when you want the change to take effect. Valid values:
          * <p>
-         * - Immediate (default value): takes effect immediately.
-         * - MaintainTime: Effective within the operational time period, please refer to ModifyDBInstanceMaintainTime.
+         * 
+         * *   **Immediate** (default): The change immediately takes effect.
+         * *   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -412,7 +413,7 @@ public class ModifyDBNodeRequest extends Request {
             private String nodeId; 
 
             /**
-             * The instance type of the node.
+             * The specification information about the node.
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;

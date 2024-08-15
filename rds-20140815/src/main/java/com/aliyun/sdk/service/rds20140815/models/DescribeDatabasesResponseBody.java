@@ -364,9 +364,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
-        private String resourceGroupId;
-
         @com.aliyun.core.annotation.NameInMap("RuntimeInfo")
         private RuntimeInfo runtimeInfo;
 
@@ -391,7 +388,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             this.engine = builder.engine;
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
-            this.resourceGroupId = builder.resourceGroupId;
             this.runtimeInfo = builder.runtimeInfo;
             this.tablespace = builder.tablespace;
             this.totalCount = builder.totalCount;
@@ -504,13 +500,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * @return resourceGroupId
-         */
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
-        }
-
-        /**
          * @return runtimeInfo
          */
         public RuntimeInfo getRuntimeInfo() {
@@ -546,7 +535,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String engine; 
             private Integer pageNumber; 
             private Integer pageSize; 
-            private String resourceGroupId; 
             private RuntimeInfo runtimeInfo; 
             private String tablespace; 
             private Integer totalCount; 
@@ -681,14 +669,6 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
-                return this;
-            }
-
-            /**
-             * The resource group ID.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
