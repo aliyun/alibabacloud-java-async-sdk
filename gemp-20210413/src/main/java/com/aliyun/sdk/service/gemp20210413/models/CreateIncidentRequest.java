@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIncidentRequest</p>
  */
 public class CreateIncidentRequest extends Request {
-    @Body
-    @NameInMap("assignUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("assignUserId")
     private Long assignUserId;
 
-    @Body
-    @NameInMap("channels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("channels")
     private java.util.List < String > channels;
 
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("effect")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("effect")
     private String effect;
 
-    @Body
-    @NameInMap("incidentDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentDescription")
     private String incidentDescription;
 
-    @Body
-    @NameInMap("incidentLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentLevel")
     private String incidentLevel;
 
-    @Body
-    @NameInMap("incidentTitle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentTitle")
     private String incidentTitle;
 
-    @Body
-    @NameInMap("relatedServiceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("relatedServiceId")
     private Long relatedServiceId;
 
-    @Body
-    @NameInMap("serviceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupId")
     private Long serviceGroupId;
 
     private CreateIncidentRequest(Builder builder) {

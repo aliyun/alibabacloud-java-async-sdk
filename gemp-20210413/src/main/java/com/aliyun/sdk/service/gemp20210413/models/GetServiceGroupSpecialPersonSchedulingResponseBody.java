@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceGroupSpecialPersonSchedulingResponseBody</p>
  */
 public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetServiceGroupSpecialPersonSchedulingResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("schedulingDate")
+        @com.aliyun.core.annotation.NameInMap("schedulingDate")
         private String schedulingDate;
 
-        @NameInMap("schedulingEndTime")
+        @com.aliyun.core.annotation.NameInMap("schedulingEndTime")
         private String schedulingEndTime;
 
-        @NameInMap("schedulingStartTime")
+        @com.aliyun.core.annotation.NameInMap("schedulingStartTime")
         private String schedulingStartTime;
 
-        @NameInMap("schedulingUserId")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserId")
         private Long schedulingUserId;
 
-        @NameInMap("serviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
-        @NameInMap("serviceGroupName")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupName")
         private String serviceGroupName;
 
         private Data(Builder builder) {

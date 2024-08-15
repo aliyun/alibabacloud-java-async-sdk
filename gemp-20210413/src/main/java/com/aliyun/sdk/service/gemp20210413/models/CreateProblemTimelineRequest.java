@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateProblemTimelineRequest</p>
  */
 public class CreateProblemTimelineRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("content")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
-    @Body
-    @NameInMap("keyNode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keyNode")
     private String keyNode;
 
-    @Body
-    @NameInMap("problemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long problemId;
 
-    @Body
-    @NameInMap("time")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("time")
     private String time;
 
     private CreateProblemTimelineRequest(Builder builder) {

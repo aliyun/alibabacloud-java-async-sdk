@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersRequest</p>
  */
 public class ListUsersRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @Body
-    @NameInMap("phone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("phone")
     private String phone;
 
-    @Body
-    @NameInMap("ramId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ramId")
     private String ramId;
 
-    @Body
-    @NameInMap("scene")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scene")
     private Long scene;
 
-    @Body
-    @NameInMap("synergyChannel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("synergyChannel")
     private String synergyChannel;
 
-    @Body
-    @NameInMap("username")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("username")
     private String username;
 
     private ListUsersRequest(Builder builder) {

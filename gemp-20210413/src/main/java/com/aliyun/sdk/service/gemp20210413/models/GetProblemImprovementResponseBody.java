@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProblemImprovementResponseBody</p>
  */
 public class GetProblemImprovementResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetProblemImprovementResponseBody(Builder builder) {
@@ -72,49 +71,49 @@ public class GetProblemImprovementResponseBody extends TeaModel {
     } 
 
     public static class MeasureList extends TeaModel {
-        @NameInMap("checkStandard")
+        @com.aliyun.core.annotation.NameInMap("checkStandard")
         private String checkStandard;
 
-        @NameInMap("checkUserId")
+        @com.aliyun.core.annotation.NameInMap("checkUserId")
         private Long checkUserId;
 
-        @NameInMap("checkUserIsValid")
+        @com.aliyun.core.annotation.NameInMap("checkUserIsValid")
         private Integer checkUserIsValid;
 
-        @NameInMap("checkUserName")
+        @com.aliyun.core.annotation.NameInMap("checkUserName")
         private String checkUserName;
 
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("directorId")
+        @com.aliyun.core.annotation.NameInMap("directorId")
         private Long directorId;
 
-        @NameInMap("directorIsValid")
+        @com.aliyun.core.annotation.NameInMap("directorIsValid")
         private Integer directorIsValid;
 
-        @NameInMap("directorName")
+        @com.aliyun.core.annotation.NameInMap("directorName")
         private String directorName;
 
-        @NameInMap("measureId")
+        @com.aliyun.core.annotation.NameInMap("measureId")
         private Long measureId;
 
-        @NameInMap("planFinishTime")
+        @com.aliyun.core.annotation.NameInMap("planFinishTime")
         private String planFinishTime;
 
-        @NameInMap("stalkerId")
+        @com.aliyun.core.annotation.NameInMap("stalkerId")
         private Long stalkerId;
 
-        @NameInMap("stalkerIsValid")
+        @com.aliyun.core.annotation.NameInMap("stalkerIsValid")
         private Integer stalkerIsValid;
 
-        @NameInMap("stalkerName")
+        @com.aliyun.core.annotation.NameInMap("stalkerName")
         private String stalkerName;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Long type;
 
         private MeasureList(Builder builder) {
@@ -393,73 +392,73 @@ public class GetProblemImprovementResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("customProblemReason")
+        @com.aliyun.core.annotation.NameInMap("customProblemReason")
         private String customProblemReason;
 
-        @NameInMap("discoverSource")
+        @com.aliyun.core.annotation.NameInMap("discoverSource")
         private String discoverSource;
 
-        @NameInMap("dutyDepartmentId")
+        @com.aliyun.core.annotation.NameInMap("dutyDepartmentId")
         private String dutyDepartmentId;
 
-        @NameInMap("dutyDepartmentName")
+        @com.aliyun.core.annotation.NameInMap("dutyDepartmentName")
         private String dutyDepartmentName;
 
-        @NameInMap("dutyUserId")
+        @com.aliyun.core.annotation.NameInMap("dutyUserId")
         private Long dutyUserId;
 
-        @NameInMap("dutyUserIsValid")
+        @com.aliyun.core.annotation.NameInMap("dutyUserIsValid")
         private Long dutyUserIsValid;
 
-        @NameInMap("dutyUserName")
+        @com.aliyun.core.annotation.NameInMap("dutyUserName")
         private String dutyUserName;
 
-        @NameInMap("dutyUserPhone")
+        @com.aliyun.core.annotation.NameInMap("dutyUserPhone")
         private String dutyUserPhone;
 
-        @NameInMap("injectionMode")
+        @com.aliyun.core.annotation.NameInMap("injectionMode")
         private String injectionMode;
 
-        @NameInMap("isManual")
+        @com.aliyun.core.annotation.NameInMap("isManual")
         private Boolean isManual;
 
-        @NameInMap("measureList")
+        @com.aliyun.core.annotation.NameInMap("measureList")
         private java.util.List < MeasureList> measureList;
 
-        @NameInMap("monitorSourceName")
+        @com.aliyun.core.annotation.NameInMap("monitorSourceName")
         private String monitorSourceName;
 
-        @NameInMap("problemId")
+        @com.aliyun.core.annotation.NameInMap("problemId")
         private String problemId;
 
-        @NameInMap("problemReason")
+        @com.aliyun.core.annotation.NameInMap("problemReason")
         private String problemReason;
 
-        @NameInMap("recentActivity")
+        @com.aliyun.core.annotation.NameInMap("recentActivity")
         private String recentActivity;
 
-        @NameInMap("recoveryMode")
+        @com.aliyun.core.annotation.NameInMap("recoveryMode")
         private String recoveryMode;
 
-        @NameInMap("relationChanges")
+        @com.aliyun.core.annotation.NameInMap("relationChanges")
         private String relationChanges;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("replayDutyUserId")
+        @com.aliyun.core.annotation.NameInMap("replayDutyUserId")
         private Long replayDutyUserId;
 
-        @NameInMap("replayDutyUserIsValid")
+        @com.aliyun.core.annotation.NameInMap("replayDutyUserIsValid")
         private Long replayDutyUserIsValid;
 
-        @NameInMap("replayDutyUserName")
+        @com.aliyun.core.annotation.NameInMap("replayDutyUserName")
         private String replayDutyUserName;
 
-        @NameInMap("replayDutyUserPhone")
+        @com.aliyun.core.annotation.NameInMap("replayDutyUserPhone")
         private String replayDutyUserPhone;
 
-        @NameInMap("userReport")
+        @com.aliyun.core.annotation.NameInMap("userReport")
         private Long userReport;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceGroupMonitorSourceTemplatesRequest</p>
  */
 public class ListServiceGroupMonitorSourceTemplatesRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @Body
-    @NameInMap("serviceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupId")
     private Long serviceGroupId;
 
     private ListServiceGroupMonitorSourceTemplatesRequest(Builder builder) {

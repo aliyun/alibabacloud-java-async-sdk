@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyRouteRuleResponseBody</p>
  */
 public class VerifyRouteRuleResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private VerifyRouteRuleResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
     } 
 
     public static class EscalationPlans extends TeaModel {
-        @NameInMap("escalationPlanId")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanId")
         private Long escalationPlanId;
 
-        @NameInMap("escalationPlanName")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanName")
         private String escalationPlanName;
 
         private EscalationPlans(Builder builder) {
@@ -133,10 +132,10 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
 
     }
     public static class NotifySubscriptionNames extends TeaModel {
-        @NameInMap("subscriptionId")
+        @com.aliyun.core.annotation.NameInMap("subscriptionId")
         private Long subscriptionId;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private NotifySubscriptionNames(Builder builder) {
@@ -194,22 +193,22 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("escalationPlans")
+        @com.aliyun.core.annotation.NameInMap("escalationPlans")
         private java.util.List < EscalationPlans> escalationPlans;
 
-        @NameInMap("isValidRule")
+        @com.aliyun.core.annotation.NameInMap("isValidRule")
         private Boolean isValidRule;
 
-        @NameInMap("monitorSourceIds")
+        @com.aliyun.core.annotation.NameInMap("monitorSourceIds")
         private java.util.List < Long > monitorSourceIds;
 
-        @NameInMap("notifySubscriptionNames")
+        @com.aliyun.core.annotation.NameInMap("notifySubscriptionNames")
         private java.util.List < NotifySubscriptionNames> notifySubscriptionNames;
 
-        @NameInMap("routeRuleFailReason")
+        @com.aliyun.core.annotation.NameInMap("routeRuleFailReason")
         private java.util.List < String > routeRuleFailReason;
 
-        @NameInMap("routeType")
+        @com.aliyun.core.annotation.NameInMap("routeType")
         private String routeType;
 
         private Data(Builder builder) {

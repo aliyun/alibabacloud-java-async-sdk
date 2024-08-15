@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSubscriptionRequest</p>
  */
 public class CreateSubscriptionRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
-    @Body
-    @NameInMap("expiredType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("expiredType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long expiredType;
 
-    @Body
-    @NameInMap("notifyObjectList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("notifyObjectList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < NotifyObjectList> notifyObjectList;
 
-    @Body
-    @NameInMap("notifyObjectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("notifyObjectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long notifyObjectType;
 
-    @Body
-    @NameInMap("notifyStrategyList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("notifyStrategyList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < NotifyStrategyList> notifyStrategyList;
 
-    @Body
-    @NameInMap("period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("period")
     private String period;
 
-    @Body
-    @NameInMap("scope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long scope;
 
-    @Body
-    @NameInMap("scopeObjectList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scopeObjectList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ScopeObjectList> scopeObjectList;
 
-    @Body
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
 
-    @Body
-    @NameInMap("subscriptionTitle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subscriptionTitle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionTitle;
 
     private CreateSubscriptionRequest(Builder builder) {
@@ -307,8 +306,8 @@ public class CreateSubscriptionRequest extends Request {
     } 
 
     public static class NotifyObjectList extends TeaModel {
-        @NameInMap("notifyObjectId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("notifyObjectId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long notifyObjectId;
 
         private NotifyObjectList(Builder builder) {
@@ -349,10 +348,10 @@ public class CreateSubscriptionRequest extends Request {
 
     }
     public static class PeriodChannel extends TeaModel {
-        @NameInMap("nonWorkday")
+        @com.aliyun.core.annotation.NameInMap("nonWorkday")
         private String nonWorkday;
 
-        @NameInMap("workday")
+        @com.aliyun.core.annotation.NameInMap("workday")
         private String workday;
 
         private PeriodChannel(Builder builder) {
@@ -410,16 +409,16 @@ public class CreateSubscriptionRequest extends Request {
 
     }
     public static class Conditions extends TeaModel {
-        @NameInMap("action")
+        @com.aliyun.core.annotation.NameInMap("action")
         private String action;
 
-        @NameInMap("effection")
+        @com.aliyun.core.annotation.NameInMap("effection")
         private String effection;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
-        @NameInMap("problemNotifyType")
+        @com.aliyun.core.annotation.NameInMap("problemNotifyType")
         private String problemNotifyType;
 
         private Conditions(Builder builder) {
@@ -511,7 +510,7 @@ public class CreateSubscriptionRequest extends Request {
 
     }
     public static class Strategies extends TeaModel {
-        @NameInMap("conditions")
+        @com.aliyun.core.annotation.NameInMap("conditions")
         private java.util.List < Conditions> conditions;
 
         private Strategies(Builder builder) {
@@ -552,19 +551,19 @@ public class CreateSubscriptionRequest extends Request {
 
     }
     public static class NotifyStrategyList extends TeaModel {
-        @NameInMap("channels")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("channels")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String channels;
 
-        @NameInMap("instanceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("instanceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long instanceType;
 
-        @NameInMap("periodChannel")
+        @com.aliyun.core.annotation.NameInMap("periodChannel")
         private PeriodChannel periodChannel;
 
-        @NameInMap("strategies")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("strategies")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < Strategies> strategies;
 
         private NotifyStrategyList(Builder builder) {
@@ -656,8 +655,8 @@ public class CreateSubscriptionRequest extends Request {
 
     }
     public static class ScopeObjectList extends TeaModel {
-        @NameInMap("scopeObjectId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("scopeObjectId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long scopeObjectId;
 
         private ScopeObjectList(Builder builder) {

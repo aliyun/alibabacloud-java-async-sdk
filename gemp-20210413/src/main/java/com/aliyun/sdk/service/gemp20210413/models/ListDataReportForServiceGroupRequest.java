@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataReportForServiceGroupRequest</p>
  */
 public class ListDataReportForServiceGroupRequest extends Request {
-    @Body
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
-    @Body
-    @NameInMap("serviceGroupName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupName")
     private String serviceGroupName;
 
-    @Body
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
 
     private ListDataReportForServiceGroupRequest(Builder builder) {

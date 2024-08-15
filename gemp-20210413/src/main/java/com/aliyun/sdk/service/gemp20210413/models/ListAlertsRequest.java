@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAlertsRequest</p>
  */
 public class ListAlertsRequest extends Request {
-    @Body
-    @NameInMap("alertLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("alertLevel")
     private String alertLevel;
 
-    @Body
-    @NameInMap("alertName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("alertName")
     private String alertName;
 
-    @Body
-    @NameInMap("alertSourceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("alertSourceName")
     private String alertSourceName;
 
-    @Body
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private String endTime;
 
-    @Body
-    @NameInMap("monitorSourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("monitorSourceId")
     private String monitorSourceId;
 
-    @Body
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @Body
-    @NameInMap("relatedServiceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("relatedServiceId")
     private Long relatedServiceId;
 
-    @Body
-    @NameInMap("ruleName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ruleName")
     private String ruleName;
 
-    @Body
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
 
     private ListAlertsRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTenantApplicationResponseBody</p>
  */
 public class GetTenantApplicationResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetTenantApplicationResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetTenantApplicationResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("bizId")
+        @com.aliyun.core.annotation.NameInMap("bizId")
         private String bizId;
 
-        @NameInMap("channel")
+        @com.aliyun.core.annotation.NameInMap("channel")
         private String channel;
 
-        @NameInMap("corporationId")
+        @com.aliyun.core.annotation.NameInMap("corporationId")
         private String corporationId;
 
-        @NameInMap("originalCorpId")
+        @com.aliyun.core.annotation.NameInMap("originalCorpId")
         private String originalCorpId;
 
-        @NameInMap("progress")
+        @com.aliyun.core.annotation.NameInMap("progress")
         private String progress;
 
         private Data(Builder builder) {

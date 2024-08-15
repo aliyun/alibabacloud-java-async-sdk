@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIncidentDetailEscalationPlansResponseBody</p>
  */
 public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListIncidentDetailEscalationPlansResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
     } 
 
     public static class NoticeObjectList extends TeaModel {
-        @NameInMap("noticeObjectId")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectId")
         private Long noticeObjectId;
 
-        @NameInMap("noticeObjectName")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectName")
         private String noticeObjectName;
 
-        @NameInMap("noticeObjectPhone")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectPhone")
         private String noticeObjectPhone;
 
-        @NameInMap("roleNameList")
+        @com.aliyun.core.annotation.NameInMap("roleNameList")
         private java.util.List < String > roleNameList;
 
         private NoticeObjectList(Builder builder) {
@@ -173,10 +172,10 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class ServiceGroupList extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private ServiceGroupList(Builder builder) {
@@ -234,25 +233,25 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class ConvergenceEscalationPlan extends TeaModel {
-        @NameInMap("escalationPlanType")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanType")
         private String escalationPlanType;
 
-        @NameInMap("noticeChannels")
+        @com.aliyun.core.annotation.NameInMap("noticeChannels")
         private java.util.List < String > noticeChannels;
 
-        @NameInMap("noticeObjectList")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectList")
         private java.util.List < NoticeObjectList> noticeObjectList;
 
-        @NameInMap("noticeTime")
+        @com.aliyun.core.annotation.NameInMap("noticeTime")
         private Long noticeTime;
 
-        @NameInMap("serviceGroupList")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupList")
         private java.util.List < ServiceGroupList> serviceGroupList;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private ConvergenceEscalationPlan(Builder builder) {
@@ -395,16 +394,16 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class NuAcknowledgeEscalationPlanNoticeObjectList extends TeaModel {
-        @NameInMap("noticeObjectId")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectId")
         private Long noticeObjectId;
 
-        @NameInMap("noticeObjectName")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectName")
         private String noticeObjectName;
 
-        @NameInMap("noticeObjectPhone")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectPhone")
         private String noticeObjectPhone;
 
-        @NameInMap("roleNameList")
+        @com.aliyun.core.annotation.NameInMap("roleNameList")
         private java.util.List < String > roleNameList;
 
         private NuAcknowledgeEscalationPlanNoticeObjectList(Builder builder) {
@@ -496,10 +495,10 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class NoticeRoleObjectList extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private NoticeRoleObjectList(Builder builder) {
@@ -557,10 +556,10 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class NuAcknowledgeEscalationPlanServiceGroupList extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private NuAcknowledgeEscalationPlanServiceGroupList(Builder builder) {
@@ -618,31 +617,31 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class NuAcknowledgeEscalationPlan extends TeaModel {
-        @NameInMap("escalationPlanType")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanType")
         private String escalationPlanType;
 
-        @NameInMap("noticeChannels")
+        @com.aliyun.core.annotation.NameInMap("noticeChannels")
         private java.util.List < String > noticeChannels;
 
-        @NameInMap("noticeObjectList")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectList")
         private java.util.List < NuAcknowledgeEscalationPlanNoticeObjectList> noticeObjectList;
 
-        @NameInMap("noticeRoleList")
+        @com.aliyun.core.annotation.NameInMap("noticeRoleList")
         private java.util.List < Long > noticeRoleList;
 
-        @NameInMap("noticeRoleObjectList")
+        @com.aliyun.core.annotation.NameInMap("noticeRoleObjectList")
         private java.util.List < NoticeRoleObjectList> noticeRoleObjectList;
 
-        @NameInMap("noticeTime")
+        @com.aliyun.core.annotation.NameInMap("noticeTime")
         private Long noticeTime;
 
-        @NameInMap("serviceGroupList")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupList")
         private java.util.List < NuAcknowledgeEscalationPlanServiceGroupList> serviceGroupList;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private NuAcknowledgeEscalationPlan(Builder builder) {
@@ -819,16 +818,16 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class UnFinishEscalationPlanNoticeObjectList extends TeaModel {
-        @NameInMap("noticeObjectId")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectId")
         private Long noticeObjectId;
 
-        @NameInMap("noticeObjectName")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectName")
         private String noticeObjectName;
 
-        @NameInMap("noticeObjectPhone")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectPhone")
         private String noticeObjectPhone;
 
-        @NameInMap("roleNameList")
+        @com.aliyun.core.annotation.NameInMap("roleNameList")
         private java.util.List < String > roleNameList;
 
         private UnFinishEscalationPlanNoticeObjectList(Builder builder) {
@@ -920,10 +919,10 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class UnFinishEscalationPlanNoticeRoleObjectList extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private UnFinishEscalationPlanNoticeRoleObjectList(Builder builder) {
@@ -981,10 +980,10 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class UnFinishEscalationPlanServiceGroupList extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private UnFinishEscalationPlanServiceGroupList(Builder builder) {
@@ -1042,31 +1041,31 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class UnFinishEscalationPlan extends TeaModel {
-        @NameInMap("escalationPlanType")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanType")
         private String escalationPlanType;
 
-        @NameInMap("noticeChannels")
+        @com.aliyun.core.annotation.NameInMap("noticeChannels")
         private java.util.List < String > noticeChannels;
 
-        @NameInMap("noticeObjectList")
+        @com.aliyun.core.annotation.NameInMap("noticeObjectList")
         private java.util.List < UnFinishEscalationPlanNoticeObjectList> noticeObjectList;
 
-        @NameInMap("noticeRoleList")
+        @com.aliyun.core.annotation.NameInMap("noticeRoleList")
         private java.util.List < Long > noticeRoleList;
 
-        @NameInMap("noticeRoleObjectList")
+        @com.aliyun.core.annotation.NameInMap("noticeRoleObjectList")
         private java.util.List < UnFinishEscalationPlanNoticeRoleObjectList> noticeRoleObjectList;
 
-        @NameInMap("noticeTime")
+        @com.aliyun.core.annotation.NameInMap("noticeTime")
         private Integer noticeTime;
 
-        @NameInMap("serviceGroupList")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupList")
         private java.util.List < UnFinishEscalationPlanServiceGroupList> serviceGroupList;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private UnFinishEscalationPlan(Builder builder) {
@@ -1243,19 +1242,19 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("convergenceEscalationPlan")
+        @com.aliyun.core.annotation.NameInMap("convergenceEscalationPlan")
         private java.util.List < ConvergenceEscalationPlan> convergenceEscalationPlan;
 
-        @NameInMap("escalationPlanId")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanId")
         private Long escalationPlanId;
 
-        @NameInMap("escalationPlanName")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanName")
         private String escalationPlanName;
 
-        @NameInMap("nuAcknowledgeEscalationPlan")
+        @com.aliyun.core.annotation.NameInMap("nuAcknowledgeEscalationPlan")
         private java.util.List < NuAcknowledgeEscalationPlan> nuAcknowledgeEscalationPlan;
 
-        @NameInMap("unFinishEscalationPlan")
+        @com.aliyun.core.annotation.NameInMap("unFinishEscalationPlan")
         private java.util.List < UnFinishEscalationPlan> unFinishEscalationPlan;
 
         private Data(Builder builder) {

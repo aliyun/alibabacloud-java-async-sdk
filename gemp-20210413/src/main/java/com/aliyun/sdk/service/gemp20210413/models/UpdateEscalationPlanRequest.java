@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEscalationPlanRequest</p>
  */
 public class UpdateEscalationPlanRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("escalationPlanDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("escalationPlanDescription")
     private String escalationPlanDescription;
 
-    @Body
-    @NameInMap("escalationPlanId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("escalationPlanId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long escalationPlanId;
 
-    @Body
-    @NameInMap("escalationPlanName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("escalationPlanName")
     private String escalationPlanName;
 
-    @Body
-    @NameInMap("escalationPlanRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("escalationPlanRules")
     private java.util.List < EscalationPlanRules> escalationPlanRules;
 
-    @Body
-    @NameInMap("escalationPlanScopeObjects")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("escalationPlanScopeObjects")
     private java.util.List < EscalationPlanScopeObjects> escalationPlanScopeObjects;
 
-    @Body
-    @NameInMap("isGlobal")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("isGlobal")
     private Boolean isGlobal;
 
     private UpdateEscalationPlanRequest(Builder builder) {
@@ -209,10 +208,10 @@ public class UpdateEscalationPlanRequest extends Request {
     } 
 
     public static class EscalationPlanConditions extends TeaModel {
-        @NameInMap("effection")
+        @com.aliyun.core.annotation.NameInMap("effection")
         private String effection;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
         private EscalationPlanConditions(Builder builder) {
@@ -270,25 +269,25 @@ public class UpdateEscalationPlanRequest extends Request {
 
     }
     public static class EscalationPlanStrategies extends TeaModel {
-        @NameInMap("enableWebhook")
+        @com.aliyun.core.annotation.NameInMap("enableWebhook")
         private Boolean enableWebhook;
 
-        @NameInMap("escalationPlanType")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanType")
         private String escalationPlanType;
 
-        @NameInMap("noticeChannels")
+        @com.aliyun.core.annotation.NameInMap("noticeChannels")
         private java.util.List < String > noticeChannels;
 
-        @NameInMap("noticeObjects")
+        @com.aliyun.core.annotation.NameInMap("noticeObjects")
         private java.util.List < Long > noticeObjects;
 
-        @NameInMap("noticeRoleList")
+        @com.aliyun.core.annotation.NameInMap("noticeRoleList")
         private java.util.List < Long > noticeRoleList;
 
-        @NameInMap("noticeTime")
+        @com.aliyun.core.annotation.NameInMap("noticeTime")
         private Long noticeTime;
 
-        @NameInMap("serviceGroupIds")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupIds")
         private java.util.List < Long > serviceGroupIds;
 
         private EscalationPlanStrategies(Builder builder) {
@@ -431,16 +430,16 @@ public class UpdateEscalationPlanRequest extends Request {
 
     }
     public static class EscalationPlanRules extends TeaModel {
-        @NameInMap("escalationPlanConditions")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanConditions")
         private java.util.List < EscalationPlanConditions> escalationPlanConditions;
 
-        @NameInMap("escalationPlanStrategies")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanStrategies")
         private java.util.List < EscalationPlanStrategies> escalationPlanStrategies;
 
-        @NameInMap("escalationPlanType")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanType")
         private String escalationPlanType;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
         private EscalationPlanRules(Builder builder) {
@@ -532,15 +531,15 @@ public class UpdateEscalationPlanRequest extends Request {
 
     }
     public static class EscalationPlanScopeObjects extends TeaModel {
-        @NameInMap("id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long id;
 
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private String scope;
 
-        @NameInMap("scopeObjectId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("scopeObjectId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long scopeObjectId;
 
         private EscalationPlanScopeObjects(Builder builder) {

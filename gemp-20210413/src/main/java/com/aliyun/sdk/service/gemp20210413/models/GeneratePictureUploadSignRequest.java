@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GeneratePictureUploadSignRequest</p>
  */
 public class GeneratePictureUploadSignRequest extends Request {
-    @Body
-    @NameInMap("files")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("files")
     private java.util.List < Files> files;
 
-    @Body
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private Long instanceId;
 
-    @Body
-    @NameInMap("instanceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceType")
     private String instanceType;
 
     private GeneratePictureUploadSignRequest(Builder builder) {
@@ -116,13 +115,13 @@ public class GeneratePictureUploadSignRequest extends Request {
     } 
 
     public static class Files extends TeaModel {
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileSize")
+        @com.aliyun.core.annotation.NameInMap("fileSize")
         private Long fileSize;
 
-        @NameInMap("fileType")
+        @com.aliyun.core.annotation.NameInMap("fileType")
         private String fileType;
 
         private Files(Builder builder) {

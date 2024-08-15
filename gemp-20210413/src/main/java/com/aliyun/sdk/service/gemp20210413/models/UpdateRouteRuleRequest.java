@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,97 +11,97 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRouteRuleRequest</p>
  */
 public class UpdateRouteRuleRequest extends Request {
-    @Body
-    @NameInMap("assignObjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("assignObjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long assignObjectId;
 
-    @Body
-    @NameInMap("assignObjectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("assignObjectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String assignObjectType;
 
-    @Body
-    @NameInMap("childRuleRelation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("childRuleRelation")
     private String childRuleRelation;
 
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("convergenceFields")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("convergenceFields")
     private java.util.List < String > convergenceFields;
 
-    @Body
-    @NameInMap("convergenceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("convergenceType")
     private Integer convergenceType;
 
-    @Body
-    @NameInMap("coverageProblemLevels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("coverageProblemLevels")
     private java.util.List < String > coverageProblemLevels;
 
-    @Body
-    @NameInMap("effection")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("effection")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String effection;
 
-    @Body
-    @NameInMap("incidentLevel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String incidentLevel;
 
-    @Body
-    @NameInMap("matchCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("matchCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long matchCount;
 
-    @Body
-    @NameInMap("notifyChannels")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("notifyChannels")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > notifyChannels;
 
-    @Body
-    @NameInMap("problemEffectionServices")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemEffectionServices")
     private java.util.List < Long > problemEffectionServices;
 
-    @Body
-    @NameInMap("problemLevelGroup")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemLevelGroup")
     private java.util.Map < String, ProblemLevelGroupValue > problemLevelGroup;
 
-    @Body
-    @NameInMap("relatedServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("relatedServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long relatedServiceId;
 
-    @Body
-    @NameInMap("routeChildRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("routeChildRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < RouteChildRules> routeChildRules;
 
-    @Body
-    @NameInMap("routeRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("routeRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long routeRuleId;
 
-    @Body
-    @NameInMap("routeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("routeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeType;
 
-    @Body
-    @NameInMap("ruleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ruleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @Body
-    @NameInMap("timeWindow")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timeWindow")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeWindow;
 
-    @Body
-    @NameInMap("timeWindowUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("timeWindowUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String timeWindowUnit;
 
     private UpdateRouteRuleRequest(Builder builder) {
@@ -520,16 +519,16 @@ public class UpdateRouteRuleRequest extends Request {
     } 
 
     public static class Conditions extends TeaModel {
-        @NameInMap("key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("operationSymbol")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("operationSymbol")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String operationSymbol;
 
-        @NameInMap("value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Conditions(Builder builder) {
@@ -604,26 +603,26 @@ public class UpdateRouteRuleRequest extends Request {
 
     }
     public static class RouteChildRules extends TeaModel {
-        @NameInMap("childConditionRelation")
+        @com.aliyun.core.annotation.NameInMap("childConditionRelation")
         private Long childConditionRelation;
 
-        @NameInMap("childRouteRuleId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("childRouteRuleId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long childRouteRuleId;
 
-        @NameInMap("conditions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("conditions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("isValidChildRule")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("isValidChildRule")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean isValidChildRule;
 
-        @NameInMap("monitorSourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("monitorSourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long monitorSourceId;
 
-        @NameInMap("problemLevel")
+        @com.aliyun.core.annotation.NameInMap("problemLevel")
         private String problemLevel;
 
         private RouteChildRules(Builder builder) {

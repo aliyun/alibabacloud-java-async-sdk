@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataReportForServiceGroupResponseBody</p>
  */
 public class ListDataReportForServiceGroupResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @NameInMap("pageSIze")
+    @com.aliyun.core.annotation.NameInMap("pageSIze")
     private Long pageSIze;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListDataReportForServiceGroupResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("escalationIncidentCount")
+        @com.aliyun.core.annotation.NameInMap("escalationIncidentCount")
         private Long escalationIncidentCount;
 
-        @NameInMap("finishIncidentCount")
+        @com.aliyun.core.annotation.NameInMap("finishIncidentCount")
         private Long finishIncidentCount;
 
-        @NameInMap("finishProportion")
+        @com.aliyun.core.annotation.NameInMap("finishProportion")
         private String finishProportion;
 
-        @NameInMap("incidentCount")
+        @com.aliyun.core.annotation.NameInMap("incidentCount")
         private Long incidentCount;
 
-        @NameInMap("meanTimeToAcknowledge")
+        @com.aliyun.core.annotation.NameInMap("meanTimeToAcknowledge")
         private Long meanTimeToAcknowledge;
 
-        @NameInMap("meanTimeToRepair")
+        @com.aliyun.core.annotation.NameInMap("meanTimeToRepair")
         private Long meanTimeToRepair;
 
-        @NameInMap("serviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
-        @NameInMap("serviceGroupName")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupName")
         private String serviceGroupName;
 
-        @NameInMap("unAcknowledgedEscalationIncidentCount")
+        @com.aliyun.core.annotation.NameInMap("unAcknowledgedEscalationIncidentCount")
         private Long unAcknowledgedEscalationIncidentCount;
 
-        @NameInMap("unFinishEscalationIncidentCount")
+        @com.aliyun.core.annotation.NameInMap("unFinishEscalationIncidentCount")
         private Long unFinishEscalationIncidentCount;
 
         private Data(Builder builder) {

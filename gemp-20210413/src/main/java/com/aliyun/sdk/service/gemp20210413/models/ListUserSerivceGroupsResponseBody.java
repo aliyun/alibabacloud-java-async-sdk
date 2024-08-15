@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserSerivceGroupsResponseBody</p>
  */
 public class ListUserSerivceGroupsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListUserSerivceGroupsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
     } 
 
     public static class ServiceGroups extends TeaModel {
-        @NameInMap("serviceGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupDescription")
         private String serviceGroupDescription;
 
-        @NameInMap("serviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
-        @NameInMap("serviceGroupName")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupName")
         private String serviceGroupName;
 
         private ServiceGroups(Builder builder) {
@@ -153,22 +152,22 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("phone")
+        @com.aliyun.core.annotation.NameInMap("phone")
         private String phone;
 
-        @NameInMap("ramId")
+        @com.aliyun.core.annotation.NameInMap("ramId")
         private Long ramId;
 
-        @NameInMap("serviceGroups")
+        @com.aliyun.core.annotation.NameInMap("serviceGroups")
         private java.util.List < ServiceGroups> serviceGroups;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRouteRulesByServiceResponseBody</p>
  */
 public class ListRouteRulesByServiceResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListRouteRulesByServiceResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class ListRouteRulesByServiceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Integer id;
 
-        @NameInMap("ruleName")
+        @com.aliyun.core.annotation.NameInMap("ruleName")
         private String ruleName;
 
         private Data(Builder builder) {

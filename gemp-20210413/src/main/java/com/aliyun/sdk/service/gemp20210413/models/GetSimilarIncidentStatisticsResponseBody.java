@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSimilarIncidentStatisticsResponseBody</p>
  */
 public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetSimilarIncidentStatisticsResponseBody(Builder builder) {
@@ -72,46 +71,46 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
     } 
 
     public static class SimilarIncidents extends TeaModel {
-        @NameInMap("assignUserId")
+        @com.aliyun.core.annotation.NameInMap("assignUserId")
         private Long assignUserId;
 
-        @NameInMap("assignUserName")
+        @com.aliyun.core.annotation.NameInMap("assignUserName")
         private String assignUserName;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("durationTime")
+        @com.aliyun.core.annotation.NameInMap("durationTime")
         private Long durationTime;
 
-        @NameInMap("finishReason")
+        @com.aliyun.core.annotation.NameInMap("finishReason")
         private Long finishReason;
 
-        @NameInMap("finishReasonDescription")
+        @com.aliyun.core.annotation.NameInMap("finishReasonDescription")
         private String finishReasonDescription;
 
-        @NameInMap("finishSolutionDescription")
+        @com.aliyun.core.annotation.NameInMap("finishSolutionDescription")
         private String finishSolutionDescription;
 
-        @NameInMap("incidentFinishSolution")
+        @com.aliyun.core.annotation.NameInMap("incidentFinishSolution")
         private Long incidentFinishSolution;
 
-        @NameInMap("incidentId")
+        @com.aliyun.core.annotation.NameInMap("incidentId")
         private Long incidentId;
 
-        @NameInMap("incidentNumber")
+        @com.aliyun.core.annotation.NameInMap("incidentNumber")
         private String incidentNumber;
 
-        @NameInMap("incidentTitle")
+        @com.aliyun.core.annotation.NameInMap("incidentTitle")
         private String incidentTitle;
 
-        @NameInMap("relatedRouteRuleId")
+        @com.aliyun.core.annotation.NameInMap("relatedRouteRuleId")
         private Long relatedRouteRuleId;
 
-        @NameInMap("relatedRouteRuleName")
+        @com.aliyun.core.annotation.NameInMap("relatedRouteRuleName")
         private String relatedRouteRuleName;
 
-        @NameInMap("similarScore")
+        @com.aliyun.core.annotation.NameInMap("similarScore")
         private String similarScore;
 
         private SimilarIncidents(Builder builder) {
@@ -373,22 +372,22 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
 
     }
     public static class DailySimilarIncidents extends TeaModel {
-        @NameInMap("commitment")
+        @com.aliyun.core.annotation.NameInMap("commitment")
         private Long commitment;
 
-        @NameInMap("date")
+        @com.aliyun.core.annotation.NameInMap("date")
         private String date;
 
-        @NameInMap("day")
+        @com.aliyun.core.annotation.NameInMap("day")
         private Long day;
 
-        @NameInMap("month")
+        @com.aliyun.core.annotation.NameInMap("month")
         private Long month;
 
-        @NameInMap("similarIncidents")
+        @com.aliyun.core.annotation.NameInMap("similarIncidents")
         private java.util.List < SimilarIncidents> similarIncidents;
 
-        @NameInMap("week")
+        @com.aliyun.core.annotation.NameInMap("week")
         private String week;
 
         private DailySimilarIncidents(Builder builder) {
@@ -514,46 +513,46 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
 
     }
     public static class TopFiveIncidents extends TeaModel {
-        @NameInMap("assignUserId")
+        @com.aliyun.core.annotation.NameInMap("assignUserId")
         private String assignUserId;
 
-        @NameInMap("assignUserName")
+        @com.aliyun.core.annotation.NameInMap("assignUserName")
         private String assignUserName;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("durationTime")
+        @com.aliyun.core.annotation.NameInMap("durationTime")
         private Long durationTime;
 
-        @NameInMap("finishReason")
+        @com.aliyun.core.annotation.NameInMap("finishReason")
         private Long finishReason;
 
-        @NameInMap("finishReasonDescription")
+        @com.aliyun.core.annotation.NameInMap("finishReasonDescription")
         private String finishReasonDescription;
 
-        @NameInMap("finishSolutionDescription")
+        @com.aliyun.core.annotation.NameInMap("finishSolutionDescription")
         private String finishSolutionDescription;
 
-        @NameInMap("incidentFinishSolution")
+        @com.aliyun.core.annotation.NameInMap("incidentFinishSolution")
         private Long incidentFinishSolution;
 
-        @NameInMap("incidentId")
+        @com.aliyun.core.annotation.NameInMap("incidentId")
         private Long incidentId;
 
-        @NameInMap("incidentNumber")
+        @com.aliyun.core.annotation.NameInMap("incidentNumber")
         private String incidentNumber;
 
-        @NameInMap("incidentTitle")
+        @com.aliyun.core.annotation.NameInMap("incidentTitle")
         private String incidentTitle;
 
-        @NameInMap("relatedRouteRuleId")
+        @com.aliyun.core.annotation.NameInMap("relatedRouteRuleId")
         private Long relatedRouteRuleId;
 
-        @NameInMap("relatedRouteRuleName")
+        @com.aliyun.core.annotation.NameInMap("relatedRouteRuleName")
         private String relatedRouteRuleName;
 
-        @NameInMap("similarScore")
+        @com.aliyun.core.annotation.NameInMap("similarScore")
         private String similarScore;
 
         private TopFiveIncidents(Builder builder) {
@@ -815,19 +814,19 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("countInSevenDays")
+        @com.aliyun.core.annotation.NameInMap("countInSevenDays")
         private Long countInSevenDays;
 
-        @NameInMap("countInSixMonths")
+        @com.aliyun.core.annotation.NameInMap("countInSixMonths")
         private Long countInSixMonths;
 
-        @NameInMap("dailySimilarIncidents")
+        @com.aliyun.core.annotation.NameInMap("dailySimilarIncidents")
         private java.util.List < DailySimilarIncidents> dailySimilarIncidents;
 
-        @NameInMap("requestId")
+        @com.aliyun.core.annotation.NameInMap("requestId")
         private String requestId;
 
-        @NameInMap("topFiveIncidents")
+        @com.aliyun.core.annotation.NameInMap("topFiveIncidents")
         private java.util.List < TopFiveIncidents> topFiveIncidents;
 
         private Data(Builder builder) {

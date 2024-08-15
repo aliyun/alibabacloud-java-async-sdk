@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceGroupsByUserIdResponseBody</p>
  */
 public class ListServiceGroupsByUserIdResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListServiceGroupsByUserIdResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListServiceGroupsByUserIdResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("isScheduled")
+        @com.aliyun.core.annotation.NameInMap("isScheduled")
         private Boolean isScheduled;
 
-        @NameInMap("serviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
-        @NameInMap("serviceGroupName")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupName")
         private String serviceGroupName;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProblemPreviewResponseBody</p>
  */
 public class GetProblemPreviewResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetProblemPreviewResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
     } 
 
     public static class Users extends TeaModel {
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Users(Builder builder) {
@@ -113,10 +112,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class Mail extends TeaModel {
-        @NameInMap("count")
+        @com.aliyun.core.annotation.NameInMap("count")
         private Long count;
 
-        @NameInMap("users")
+        @com.aliyun.core.annotation.NameInMap("users")
         private java.util.List < Users> users;
 
         private Mail(Builder builder) {
@@ -174,13 +173,13 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class CoordinationGroups extends TeaModel {
-        @NameInMap("serviceGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupDescription")
         private String serviceGroupDescription;
 
-        @NameInMap("serviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
-        @NameInMap("serviceGroupName")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupName")
         private String serviceGroupName;
 
         private CoordinationGroups(Builder builder) {
@@ -255,10 +254,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class EffectionServices extends TeaModel {
-        @NameInMap("serviceId")
+        @com.aliyun.core.annotation.NameInMap("serviceId")
         private Long serviceId;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
         private EffectionServices(Builder builder) {
@@ -316,58 +315,58 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class Problem extends TeaModel {
-        @NameInMap("coordinationGroups")
+        @com.aliyun.core.annotation.NameInMap("coordinationGroups")
         private java.util.List < CoordinationGroups> coordinationGroups;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("discoverTime")
+        @com.aliyun.core.annotation.NameInMap("discoverTime")
         private String discoverTime;
 
-        @NameInMap("effectionServices")
+        @com.aliyun.core.annotation.NameInMap("effectionServices")
         private java.util.List < EffectionServices> effectionServices;
 
-        @NameInMap("isManual")
+        @com.aliyun.core.annotation.NameInMap("isManual")
         private Boolean isManual;
 
-        @NameInMap("isUpgrade")
+        @com.aliyun.core.annotation.NameInMap("isUpgrade")
         private Boolean isUpgrade;
 
-        @NameInMap("mainHandlerId")
+        @com.aliyun.core.annotation.NameInMap("mainHandlerId")
         private String mainHandlerId;
 
-        @NameInMap("mainHandlerName")
+        @com.aliyun.core.annotation.NameInMap("mainHandlerName")
         private String mainHandlerName;
 
-        @NameInMap("preliminaryReason")
+        @com.aliyun.core.annotation.NameInMap("preliminaryReason")
         private String preliminaryReason;
 
-        @NameInMap("problemId")
+        @com.aliyun.core.annotation.NameInMap("problemId")
         private Long problemId;
 
-        @NameInMap("problemLevel")
+        @com.aliyun.core.annotation.NameInMap("problemLevel")
         private String problemLevel;
 
-        @NameInMap("problemName")
+        @com.aliyun.core.annotation.NameInMap("problemName")
         private String problemName;
 
-        @NameInMap("problemStatus")
+        @com.aliyun.core.annotation.NameInMap("problemStatus")
         private String problemStatus;
 
-        @NameInMap("progressSummary")
+        @com.aliyun.core.annotation.NameInMap("progressSummary")
         private String progressSummary;
 
-        @NameInMap("progressSummaryRichTextId")
+        @com.aliyun.core.annotation.NameInMap("progressSummaryRichTextId")
         private Long progressSummaryRichTextId;
 
-        @NameInMap("recoveryTime")
+        @com.aliyun.core.annotation.NameInMap("recoveryTime")
         private String recoveryTime;
 
-        @NameInMap("relatedServiceId")
+        @com.aliyun.core.annotation.NameInMap("relatedServiceId")
         private Long relatedServiceId;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
         private Problem(Builder builder) {
@@ -697,7 +696,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class SmsUsers extends TeaModel {
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private SmsUsers(Builder builder) {
@@ -738,10 +737,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class Sms extends TeaModel {
-        @NameInMap("count")
+        @com.aliyun.core.annotation.NameInMap("count")
         private Long count;
 
-        @NameInMap("users")
+        @com.aliyun.core.annotation.NameInMap("users")
         private java.util.List < SmsUsers> users;
 
         private Sms(Builder builder) {
@@ -799,7 +798,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class VoiceUsers extends TeaModel {
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private VoiceUsers(Builder builder) {
@@ -840,10 +839,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class Voice extends TeaModel {
-        @NameInMap("count")
+        @com.aliyun.core.annotation.NameInMap("count")
         private Long count;
 
-        @NameInMap("users")
+        @com.aliyun.core.annotation.NameInMap("users")
         private java.util.List < VoiceUsers> users;
 
         private Voice(Builder builder) {
@@ -901,7 +900,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class ServiceGroups extends TeaModel {
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
         private ServiceGroups(Builder builder) {
@@ -942,10 +941,10 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class Webhook extends TeaModel {
-        @NameInMap("count")
+        @com.aliyun.core.annotation.NameInMap("count")
         private Long count;
 
-        @NameInMap("serviceGroups")
+        @com.aliyun.core.annotation.NameInMap("serviceGroups")
         private java.util.List < ServiceGroups> serviceGroups;
 
         private Webhook(Builder builder) {
@@ -1003,31 +1002,31 @@ public class GetProblemPreviewResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("deAfterData")
+        @com.aliyun.core.annotation.NameInMap("deAfterData")
         private String deAfterData;
 
-        @NameInMap("deBeforeData")
+        @com.aliyun.core.annotation.NameInMap("deBeforeData")
         private String deBeforeData;
 
-        @NameInMap("mail")
+        @com.aliyun.core.annotation.NameInMap("mail")
         private Mail mail;
 
-        @NameInMap("problem")
+        @com.aliyun.core.annotation.NameInMap("problem")
         private Problem problem;
 
-        @NameInMap("sms")
+        @com.aliyun.core.annotation.NameInMap("sms")
         private Sms sms;
 
-        @NameInMap("upAfterData")
+        @com.aliyun.core.annotation.NameInMap("upAfterData")
         private String upAfterData;
 
-        @NameInMap("upBeforeData")
+        @com.aliyun.core.annotation.NameInMap("upBeforeData")
         private String upBeforeData;
 
-        @NameInMap("voice")
+        @com.aliyun.core.annotation.NameInMap("voice")
         private Voice voice;
 
-        @NameInMap("webhook")
+        @com.aliyun.core.annotation.NameInMap("webhook")
         private Webhook webhook;
 
         private Data(Builder builder) {

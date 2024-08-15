@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSubscriptionResponseBody</p>
  */
 public class GetSubscriptionResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetSubscriptionResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetSubscriptionResponseBody extends TeaModel {
     } 
 
     public static class NotifyObjectList extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("notifyObjectId")
+        @com.aliyun.core.annotation.NameInMap("notifyObjectId")
         private Long notifyObjectId;
 
-        @NameInMap("notifyObjectType")
+        @com.aliyun.core.annotation.NameInMap("notifyObjectType")
         private Long notifyObjectType;
 
         private NotifyObjectList(Builder builder) {
@@ -173,16 +172,16 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     }
     public static class Conditions extends TeaModel {
-        @NameInMap("action")
+        @com.aliyun.core.annotation.NameInMap("action")
         private String action;
 
-        @NameInMap("effection")
+        @com.aliyun.core.annotation.NameInMap("effection")
         private String effection;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
-        @NameInMap("problemNotifyType")
+        @com.aliyun.core.annotation.NameInMap("problemNotifyType")
         private String problemNotifyType;
 
         private Conditions(Builder builder) {
@@ -274,10 +273,10 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     }
     public static class PeriodChannel extends TeaModel {
-        @NameInMap("nonWorkday")
+        @com.aliyun.core.annotation.NameInMap("nonWorkday")
         private String nonWorkday;
 
-        @NameInMap("workday")
+        @com.aliyun.core.annotation.NameInMap("workday")
         private String workday;
 
         private PeriodChannel(Builder builder) {
@@ -335,16 +334,16 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     }
     public static class Strategies extends TeaModel {
-        @NameInMap("channels")
+        @com.aliyun.core.annotation.NameInMap("channels")
         private String channels;
 
-        @NameInMap("conditions")
+        @com.aliyun.core.annotation.NameInMap("conditions")
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("periodChannel")
+        @com.aliyun.core.annotation.NameInMap("periodChannel")
         private PeriodChannel periodChannel;
 
         private Strategies(Builder builder) {
@@ -436,10 +435,10 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     }
     public static class NotifyStrategyList extends TeaModel {
-        @NameInMap("instanceType")
+        @com.aliyun.core.annotation.NameInMap("instanceType")
         private Long instanceType;
 
-        @NameInMap("strategies")
+        @com.aliyun.core.annotation.NameInMap("strategies")
         private java.util.List < Strategies> strategies;
 
         private NotifyStrategyList(Builder builder) {
@@ -497,19 +496,19 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     }
     public static class ScopeObjectList extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("isValid")
+        @com.aliyun.core.annotation.NameInMap("isValid")
         private Long isValid;
 
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private String scope;
 
-        @NameInMap("scopeObject")
+        @com.aliyun.core.annotation.NameInMap("scopeObject")
         private String scopeObject;
 
-        @NameInMap("scopeObjectId")
+        @com.aliyun.core.annotation.NameInMap("scopeObjectId")
         private Long scopeObjectId;
 
         private ScopeObjectList(Builder builder) {
@@ -618,40 +617,40 @@ public class GetSubscriptionResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private String endTime;
 
-        @NameInMap("expiredType")
+        @com.aliyun.core.annotation.NameInMap("expiredType")
         private String expiredType;
 
-        @NameInMap("notifyObjectList")
+        @com.aliyun.core.annotation.NameInMap("notifyObjectList")
         private java.util.List < NotifyObjectList> notifyObjectList;
 
-        @NameInMap("notifyObjectType")
+        @com.aliyun.core.annotation.NameInMap("notifyObjectType")
         private String notifyObjectType;
 
-        @NameInMap("notifyStrategyList")
+        @com.aliyun.core.annotation.NameInMap("notifyStrategyList")
         private java.util.List < NotifyStrategyList> notifyStrategyList;
 
-        @NameInMap("period")
+        @com.aliyun.core.annotation.NameInMap("period")
         private String period;
 
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private String scope;
 
-        @NameInMap("scopeObjectList")
+        @com.aliyun.core.annotation.NameInMap("scopeObjectList")
         private java.util.List < ScopeObjectList> scopeObjectList;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("subscriptionId")
+        @com.aliyun.core.annotation.NameInMap("subscriptionId")
         private Long subscriptionId;
 
-        @NameInMap("subscriptionTitle")
+        @com.aliyun.core.annotation.NameInMap("subscriptionTitle")
         private String subscriptionTitle;
 
         private Data(Builder builder) {

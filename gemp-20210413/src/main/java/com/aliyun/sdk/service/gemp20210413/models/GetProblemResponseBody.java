@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProblemResponseBody</p>
  */
 public class GetProblemResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetProblemResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetProblemResponseBody extends TeaModel {
     } 
 
     public static class CancelProblemOperateLogs extends TeaModel {
-        @NameInMap("actionName")
+        @com.aliyun.core.annotation.NameInMap("actionName")
         private String actionName;
 
-        @NameInMap("actionTime")
+        @com.aliyun.core.annotation.NameInMap("actionTime")
         private String actionTime;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
         private CancelProblemOperateLogs(Builder builder) {
@@ -173,13 +172,13 @@ public class GetProblemResponseBody extends TeaModel {
 
     }
     public static class CoordinationGroups extends TeaModel {
-        @NameInMap("isValid")
+        @com.aliyun.core.annotation.NameInMap("isValid")
         private Long isValid;
 
-        @NameInMap("serviceGroupId")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
-        @NameInMap("serviceGroupName")
+        @com.aliyun.core.annotation.NameInMap("serviceGroupName")
         private String serviceGroupName;
 
         private CoordinationGroups(Builder builder) {
@@ -254,22 +253,22 @@ public class GetProblemResponseBody extends TeaModel {
 
     }
     public static class EffectionServices extends TeaModel {
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("effectionLevel")
+        @com.aliyun.core.annotation.NameInMap("effectionLevel")
         private Long effectionLevel;
 
-        @NameInMap("effectionServiceId")
+        @com.aliyun.core.annotation.NameInMap("effectionServiceId")
         private Long effectionServiceId;
 
-        @NameInMap("effectionStatus")
+        @com.aliyun.core.annotation.NameInMap("effectionStatus")
         private Integer effectionStatus;
 
-        @NameInMap("serviceDeleteType")
+        @com.aliyun.core.annotation.NameInMap("serviceDeleteType")
         private Integer serviceDeleteType;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
         private EffectionServices(Builder builder) {
@@ -395,19 +394,19 @@ public class GetProblemResponseBody extends TeaModel {
 
     }
     public static class HandingProblemOperateLogs extends TeaModel {
-        @NameInMap("actionName")
+        @com.aliyun.core.annotation.NameInMap("actionName")
         private String actionName;
 
-        @NameInMap("actionTime")
+        @com.aliyun.core.annotation.NameInMap("actionTime")
         private String actionTime;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
-        @NameInMap("userIsValid")
+        @com.aliyun.core.annotation.NameInMap("userIsValid")
         private Long userIsValid;
 
         private HandingProblemOperateLogs(Builder builder) {
@@ -516,19 +515,19 @@ public class GetProblemResponseBody extends TeaModel {
 
     }
     public static class ReplayProblemOperateLogs extends TeaModel {
-        @NameInMap("actionName")
+        @com.aliyun.core.annotation.NameInMap("actionName")
         private String actionName;
 
-        @NameInMap("actionTime")
+        @com.aliyun.core.annotation.NameInMap("actionTime")
         private String actionTime;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
-        @NameInMap("userIsValid")
+        @com.aliyun.core.annotation.NameInMap("userIsValid")
         private Long userIsValid;
 
         private ReplayProblemOperateLogs(Builder builder) {
@@ -637,19 +636,19 @@ public class GetProblemResponseBody extends TeaModel {
 
     }
     public static class ReplayingProblemOperateLogs extends TeaModel {
-        @NameInMap("actionName")
+        @com.aliyun.core.annotation.NameInMap("actionName")
         private String actionName;
 
-        @NameInMap("actionTime")
+        @com.aliyun.core.annotation.NameInMap("actionTime")
         private String actionTime;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
-        @NameInMap("userIsValid")
+        @com.aliyun.core.annotation.NameInMap("userIsValid")
         private Long userIsValid;
 
         private ReplayingProblemOperateLogs(Builder builder) {
@@ -758,19 +757,19 @@ public class GetProblemResponseBody extends TeaModel {
 
     }
     public static class RestoredProblemOperateLogs extends TeaModel {
-        @NameInMap("actionName")
+        @com.aliyun.core.annotation.NameInMap("actionName")
         private String actionName;
 
-        @NameInMap("actionTime")
+        @com.aliyun.core.annotation.NameInMap("actionTime")
         private String actionTime;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private Long userId;
 
-        @NameInMap("userIsValid")
+        @com.aliyun.core.annotation.NameInMap("userIsValid")
         private Long userIsValid;
 
         private RestoredProblemOperateLogs(Builder builder) {
@@ -879,7 +878,7 @@ public class GetProblemResponseBody extends TeaModel {
 
     }
     public static class Timelines extends TeaModel {
-        @NameInMap("keyNode")
+        @com.aliyun.core.annotation.NameInMap("keyNode")
         private String keyNode;
 
         private Timelines(Builder builder) {
@@ -920,104 +919,104 @@ public class GetProblemResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("cancelProblemOperateLogs")
+        @com.aliyun.core.annotation.NameInMap("cancelProblemOperateLogs")
         private java.util.List < CancelProblemOperateLogs> cancelProblemOperateLogs;
 
-        @NameInMap("cancelReason")
+        @com.aliyun.core.annotation.NameInMap("cancelReason")
         private Long cancelReason;
 
-        @NameInMap("cancelReasonDescription")
+        @com.aliyun.core.annotation.NameInMap("cancelReasonDescription")
         private String cancelReasonDescription;
 
-        @NameInMap("coordinationGroups")
+        @com.aliyun.core.annotation.NameInMap("coordinationGroups")
         private java.util.List < CoordinationGroups> coordinationGroups;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("discoverTime")
+        @com.aliyun.core.annotation.NameInMap("discoverTime")
         private String discoverTime;
 
-        @NameInMap("durationTime")
+        @com.aliyun.core.annotation.NameInMap("durationTime")
         private Long durationTime;
 
-        @NameInMap("effectionServices")
+        @com.aliyun.core.annotation.NameInMap("effectionServices")
         private java.util.List < EffectionServices> effectionServices;
 
-        @NameInMap("feedback")
+        @com.aliyun.core.annotation.NameInMap("feedback")
         private String feedback;
 
-        @NameInMap("handingProblemOperateLogs")
+        @com.aliyun.core.annotation.NameInMap("handingProblemOperateLogs")
         private java.util.List < HandingProblemOperateLogs> handingProblemOperateLogs;
 
-        @NameInMap("incidentId")
+        @com.aliyun.core.annotation.NameInMap("incidentId")
         private Long incidentId;
 
-        @NameInMap("incidentNumber")
+        @com.aliyun.core.annotation.NameInMap("incidentNumber")
         private String incidentNumber;
 
-        @NameInMap("isRuleTrigger")
+        @com.aliyun.core.annotation.NameInMap("isRuleTrigger")
         private Boolean isRuleTrigger;
 
-        @NameInMap("mainHandler")
+        @com.aliyun.core.annotation.NameInMap("mainHandler")
         private Long mainHandler;
 
-        @NameInMap("mainHandlerId")
+        @com.aliyun.core.annotation.NameInMap("mainHandlerId")
         private Long mainHandlerId;
 
-        @NameInMap("mainHandlerIsValid")
+        @com.aliyun.core.annotation.NameInMap("mainHandlerIsValid")
         private Long mainHandlerIsValid;
 
-        @NameInMap("mainHandlerPhone")
+        @com.aliyun.core.annotation.NameInMap("mainHandlerPhone")
         private String mainHandlerPhone;
 
-        @NameInMap("preliminaryReason")
+        @com.aliyun.core.annotation.NameInMap("preliminaryReason")
         private String preliminaryReason;
 
-        @NameInMap("problemId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("problemId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long problemId;
 
-        @NameInMap("problemLevel")
+        @com.aliyun.core.annotation.NameInMap("problemLevel")
         private Integer problemLevel;
 
-        @NameInMap("problemName")
+        @com.aliyun.core.annotation.NameInMap("problemName")
         private String problemName;
 
-        @NameInMap("problemNumber")
+        @com.aliyun.core.annotation.NameInMap("problemNumber")
         private String problemNumber;
 
-        @NameInMap("problemStatus")
+        @com.aliyun.core.annotation.NameInMap("problemStatus")
         private Integer problemStatus;
 
-        @NameInMap("progressSummary")
+        @com.aliyun.core.annotation.NameInMap("progressSummary")
         private String progressSummary;
 
-        @NameInMap("progressSummaryRichTextId")
+        @com.aliyun.core.annotation.NameInMap("progressSummaryRichTextId")
         private Long progressSummaryRichTextId;
 
-        @NameInMap("recoveryTime")
+        @com.aliyun.core.annotation.NameInMap("recoveryTime")
         private String recoveryTime;
 
-        @NameInMap("relatedServiceId")
+        @com.aliyun.core.annotation.NameInMap("relatedServiceId")
         private Long relatedServiceId;
 
-        @NameInMap("replayProblemOperateLogs")
+        @com.aliyun.core.annotation.NameInMap("replayProblemOperateLogs")
         private java.util.List < ReplayProblemOperateLogs> replayProblemOperateLogs;
 
-        @NameInMap("replayingProblemOperateLogs")
+        @com.aliyun.core.annotation.NameInMap("replayingProblemOperateLogs")
         private java.util.List < ReplayingProblemOperateLogs> replayingProblemOperateLogs;
 
-        @NameInMap("restoredProblemOperateLogs")
+        @com.aliyun.core.annotation.NameInMap("restoredProblemOperateLogs")
         private java.util.List < RestoredProblemOperateLogs> restoredProblemOperateLogs;
 
-        @NameInMap("serviceDeleteType")
+        @com.aliyun.core.annotation.NameInMap("serviceDeleteType")
         private Integer serviceDeleteType;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("timelines")
+        @com.aliyun.core.annotation.NameInMap("timelines")
         private java.util.List < Timelines> timelines;
 
         private Data(Builder builder) {

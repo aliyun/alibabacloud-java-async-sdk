@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveProblemServiceGroupRequest</p>
  */
 public class RemoveProblemServiceGroupRequest extends Request {
-    @Body
-    @NameInMap("problemId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemId")
     private Long problemId;
 
-    @Body
-    @NameInMap("serviceGroupIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupIds")
     private java.util.List < Long > serviceGroupIds;
 
     private RemoveProblemServiceGroupRequest(Builder builder) {

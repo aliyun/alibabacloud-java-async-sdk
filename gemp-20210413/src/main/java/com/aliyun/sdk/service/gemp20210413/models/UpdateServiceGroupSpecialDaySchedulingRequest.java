@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateServiceGroupSpecialDaySchedulingRequest</p>
  */
 public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("schedulingDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("schedulingDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String schedulingDate;
 
-    @Body
-    @NameInMap("schedulingSpecialDays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("schedulingSpecialDays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SchedulingSpecialDays> schedulingSpecialDays;
 
-    @Body
-    @NameInMap("serviceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long serviceGroupId;
 
     private UpdateServiceGroupSpecialDaySchedulingRequest(Builder builder) {
@@ -142,25 +141,25 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
     } 
 
     public static class SchedulingSpecialDays extends TeaModel {
-        @NameInMap("schedulingEndTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("schedulingEndTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String schedulingEndTime;
 
-        @NameInMap("schedulingObjectType")
+        @com.aliyun.core.annotation.NameInMap("schedulingObjectType")
         private String schedulingObjectType;
 
-        @NameInMap("schedulingOrder")
+        @com.aliyun.core.annotation.NameInMap("schedulingOrder")
         private Integer schedulingOrder;
 
-        @NameInMap("schedulingStartTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("schedulingStartTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String schedulingStartTime;
 
-        @NameInMap("schedulingUserId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("schedulingUserId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long schedulingUserId;
 
-        @NameInMap("schedulingUserIdList")
+        @com.aliyun.core.annotation.NameInMap("schedulingUserIdList")
         private java.util.List < Long > schedulingUserIdList;
 
         private SchedulingSpecialDays(Builder builder) {

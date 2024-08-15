@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FinishIncidentRequest</p>
  */
 public class FinishIncidentRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("incidentFinishReason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentFinishReason")
     private Integer incidentFinishReason;
 
-    @Body
-    @NameInMap("incidentFinishReasonDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentFinishReasonDescription")
     private String incidentFinishReasonDescription;
 
-    @Body
-    @NameInMap("incidentFinishSolution")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentFinishSolution")
     private Integer incidentFinishSolution;
 
-    @Body
-    @NameInMap("incidentFinishSolutionDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentFinishSolutionDescription")
     private String incidentFinishSolutionDescription;
 
-    @Body
-    @NameInMap("incidentIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("incidentIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > incidentIds;
 
     private FinishIncidentRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateProblemRequest</p>
  */
 public class UpdateProblemRequest extends Request {
-    @Body
-    @NameInMap("feedback")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("feedback")
     private String feedback;
 
-    @Body
-    @NameInMap("level")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("level")
     private String level;
 
-    @Body
-    @NameInMap("mainHandlerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mainHandlerId")
     private Long mainHandlerId;
 
-    @Body
-    @NameInMap("preliminaryReason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("preliminaryReason")
     private String preliminaryReason;
 
-    @Body
-    @NameInMap("problemId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemId")
     private Long problemId;
 
-    @Body
-    @NameInMap("problemName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemName")
     private String problemName;
 
-    @Body
-    @NameInMap("progressSummary")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("progressSummary")
     private String progressSummary;
 
-    @Body
-    @NameInMap("progressSummaryRichTextId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("progressSummaryRichTextId")
     private Long progressSummaryRichTextId;
 
-    @Body
-    @NameInMap("relatedServiceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("relatedServiceId")
     private Long relatedServiceId;
 
-    @Body
-    @NameInMap("serviceGroupIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupIds")
     private java.util.List < Long > serviceGroupIds;
 
     private UpdateProblemRequest(Builder builder) {

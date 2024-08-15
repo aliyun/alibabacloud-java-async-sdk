@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateIncidentResponseBody</p>
  */
 public class UpdateIncidentResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private UpdateIncidentResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class UpdateIncidentResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("incidentId")
+        @com.aliyun.core.annotation.NameInMap("incidentId")
         private Long incidentId;
 
         private Data(Builder builder) {

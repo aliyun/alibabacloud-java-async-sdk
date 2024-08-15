@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RecoverProblemRequest</p>
  */
 public class RecoverProblemRequest extends Request {
-    @Body
-    @NameInMap("problemId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemId")
     private Long problemId;
 
-    @Body
-    @NameInMap("problemNotifyType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("problemNotifyType")
     private String problemNotifyType;
 
-    @Body
-    @NameInMap("recoveryTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("recoveryTime")
     private String recoveryTime;
 
     private RecoverProblemRequest(Builder builder) {

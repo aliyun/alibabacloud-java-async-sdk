@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRouteRulesRequest</p>
  */
 public class ListRouteRulesRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("notFilterRouteRuleDeleted")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("notFilterRouteRuleDeleted")
     private Boolean notFilterRouteRuleDeleted;
 
-    @Body
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("routeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("routeType")
     private Long routeType;
 
-    @Body
-    @NameInMap("ruleName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ruleName")
     private byte[] ruleName;
 
-    @Body
-    @NameInMap("serviceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceName")
     private byte[] serviceName;
 
     private ListRouteRulesRequest(Builder builder) {

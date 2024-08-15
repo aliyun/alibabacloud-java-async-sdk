@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProblemEffectionServiceResponseBody</p>
  */
 public class GetProblemEffectionServiceResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetProblemEffectionServiceResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("effectionServiceId")
+        @com.aliyun.core.annotation.NameInMap("effectionServiceId")
         private Long effectionServiceId;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private Long level;
 
-        @NameInMap("picUrl")
+        @com.aliyun.core.annotation.NameInMap("picUrl")
         private java.util.List < String > picUrl;
 
-        @NameInMap("serviceId")
+        @com.aliyun.core.annotation.NameInMap("serviceId")
         private Long serviceId;
 
-        @NameInMap("serviceName")
+        @com.aliyun.core.annotation.NameInMap("serviceName")
         private String serviceName;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Long status;
 
         private Data(Builder builder) {

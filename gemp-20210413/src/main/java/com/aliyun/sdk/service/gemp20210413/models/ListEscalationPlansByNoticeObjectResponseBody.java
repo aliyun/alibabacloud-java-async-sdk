@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEscalationPlansByNoticeObjectResponseBody</p>
  */
 public class ListEscalationPlansByNoticeObjectResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListEscalationPlansByNoticeObjectResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListEscalationPlansByNoticeObjectResponseBody extends TeaModel {
     } 
 
     public static class EscalationPlanScopeObjects extends TeaModel {
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private String scope;
 
-        @NameInMap("scopeObjectDeletedType")
+        @com.aliyun.core.annotation.NameInMap("scopeObjectDeletedType")
         private Integer scopeObjectDeletedType;
 
-        @NameInMap("scopeObjectId")
+        @com.aliyun.core.annotation.NameInMap("scopeObjectId")
         private Long scopeObjectId;
 
-        @NameInMap("scopeObjectName")
+        @com.aliyun.core.annotation.NameInMap("scopeObjectName")
         private String scopeObjectName;
 
         private EscalationPlanScopeObjects(Builder builder) {
@@ -173,19 +172,19 @@ public class ListEscalationPlansByNoticeObjectResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("escalationPlanId")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanId")
         private Long escalationPlanId;
 
-        @NameInMap("escalationPlanName")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanName")
         private String escalationPlanName;
 
-        @NameInMap("escalationPlanScopeObjects")
+        @com.aliyun.core.annotation.NameInMap("escalationPlanScopeObjects")
         private java.util.List < EscalationPlanScopeObjects> escalationPlanScopeObjects;
 
-        @NameInMap("modifyTime")
+        @com.aliyun.core.annotation.NameInMap("modifyTime")
         private String modifyTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private Data(Builder builder) {

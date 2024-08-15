@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteServiceGroupUserRequest</p>
  */
 public class DeleteServiceGroupUserRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("newUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("newUserId")
     private Long newUserId;
 
-    @Body
-    @NameInMap("oldUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("oldUserId")
     private Long oldUserId;
 
-    @Body
-    @NameInMap("removeUser")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("removeUser")
     private Boolean removeUser;
 
-    @Body
-    @NameInMap("serviceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupId")
     private Long serviceGroupId;
 
     private DeleteServiceGroupUserRequest(Builder builder) {

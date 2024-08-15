@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.gemp20210413.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateServiceGroupRequest</p>
  */
 public class UpdateServiceGroupRequest extends Request {
-    @Body
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("enableWebhook")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableWebhook")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String enableWebhook;
 
-    @Body
-    @NameInMap("monitorSourceTemplates")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("monitorSourceTemplates")
     private java.util.List < MonitorSourceTemplates> monitorSourceTemplates;
 
-    @Body
-    @NameInMap("serviceGroupDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupDescription")
     private String serviceGroupDescription;
 
-    @Body
-    @NameInMap("serviceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long serviceGroupId;
 
-    @Body
-    @NameInMap("serviceGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceGroupName;
 
-    @Body
-    @NameInMap("userIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > userIds;
 
-    @Body
-    @NameInMap("webhookLink")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("webhookLink")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String webhookLink;
 
-    @Body
-    @NameInMap("webhookType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("webhookType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String webhookType;
 
     private UpdateServiceGroupRequest(Builder builder) {
@@ -260,16 +259,16 @@ public class UpdateServiceGroupRequest extends Request {
     } 
 
     public static class MonitorSourceTemplates extends TeaModel {
-        @NameInMap("monitorSourceId")
+        @com.aliyun.core.annotation.NameInMap("monitorSourceId")
         private Long monitorSourceId;
 
-        @NameInMap("monitorSourceName")
+        @com.aliyun.core.annotation.NameInMap("monitorSourceName")
         private String monitorSourceName;
 
-        @NameInMap("templateContent")
+        @com.aliyun.core.annotation.NameInMap("templateContent")
         private String templateContent;
 
-        @NameInMap("templateId")
+        @com.aliyun.core.annotation.NameInMap("templateId")
         private Long templateId;
 
         private MonitorSourceTemplates(Builder builder) {
