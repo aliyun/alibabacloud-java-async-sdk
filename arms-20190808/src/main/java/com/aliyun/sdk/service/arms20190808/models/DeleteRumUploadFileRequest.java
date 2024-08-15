@@ -12,11 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteRumUploadFileRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchItems")
+    private String batchItems;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Pid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
     @com.aliyun.core.annotation.Query
@@ -34,6 +39,7 @@ public class DeleteRumUploadFileRequest extends Request {
 
     private DeleteRumUploadFileRequest(Builder builder) {
         super(builder);
+        this.batchItems = builder.batchItems;
         this.fileName = builder.fileName;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
@@ -52,6 +58,13 @@ public class DeleteRumUploadFileRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return batchItems
+     */
+    public String getBatchItems() {
+        return this.batchItems;
     }
 
     /**
@@ -90,6 +103,7 @@ public class DeleteRumUploadFileRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteRumUploadFileRequest, Builder> {
+        private String batchItems; 
         private String fileName; 
         private String pid; 
         private String regionId; 
@@ -102,12 +116,22 @@ public class DeleteRumUploadFileRequest extends Request {
 
         private Builder(DeleteRumUploadFileRequest request) {
             super(request);
+            this.batchItems = request.batchItems;
             this.fileName = request.fileName;
             this.pid = request.pid;
             this.regionId = request.regionId;
             this.uuid = request.uuid;
             this.versionId = request.versionId;
         } 
+
+        /**
+         * BatchItems.
+         */
+        public Builder batchItems(String batchItems) {
+            this.putQueryParameter("BatchItems", batchItems);
+            this.batchItems = batchItems;
+            return this;
+        }
 
         /**
          * The file name, with the extension.
