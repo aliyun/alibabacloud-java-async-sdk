@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPropertyResponseBody</p>
  */
 public class ListPropertyResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Properties")
+    @com.aliyun.core.annotation.NameInMap("Properties")
     private java.util.List < Properties> properties;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPropertyResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class ListPropertyResponseBody extends TeaModel {
     } 
 
     public static class PropertyValues extends TeaModel {
-        @NameInMap("PropertyValue")
+        @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
 
-        @NameInMap("PropertyValueId")
+        @com.aliyun.core.annotation.NameInMap("PropertyValueId")
         private Long propertyValueId;
 
         private PropertyValues(Builder builder) {
@@ -153,13 +152,13 @@ public class ListPropertyResponseBody extends TeaModel {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("PropertyId")
+        @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
 
-        @NameInMap("PropertyKey")
+        @com.aliyun.core.annotation.NameInMap("PropertyKey")
         private String propertyKey;
 
-        @NameInMap("PropertyValues")
+        @com.aliyun.core.annotation.NameInMap("PropertyValues")
         private java.util.List < PropertyValues> propertyValues;
 
         private Properties(Builder builder) {

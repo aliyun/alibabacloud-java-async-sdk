@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUsersResponseBody</p>
  */
 public class DescribeUsersResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < Users> users;
 
     private DescribeUsersResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeUsersResponseBody extends TeaModel {
     } 
 
     public static class Groups extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private Groups(Builder builder) {
@@ -153,10 +152,10 @@ public class DescribeUsersResponseBody extends TeaModel {
 
     }
     public static class Orgs extends TeaModel {
-        @NameInMap("OrgId")
+        @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
 
-        @NameInMap("OrgName")
+        @com.aliyun.core.annotation.NameInMap("OrgName")
         private String orgName;
 
         private Orgs(Builder builder) {
@@ -214,52 +213,55 @@ public class DescribeUsersResponseBody extends TeaModel {
 
     }
     public static class Users extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Avatar")
+        @com.aliyun.core.annotation.NameInMap("Avatar")
         private String avatar;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("Groups")
+        @com.aliyun.core.annotation.NameInMap("Groups")
         private java.util.List < Groups> groups;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsTenantManager")
+        @com.aliyun.core.annotation.NameInMap("IsTenantManager")
         private Boolean isTenantManager;
 
-        @NameInMap("JobNumber")
+        @com.aliyun.core.annotation.NameInMap("JobNumber")
         private String jobNumber;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("OrgId")
+        @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
 
-        @NameInMap("Orgs")
+        @com.aliyun.core.annotation.NameInMap("Orgs")
         private java.util.List < Orgs> orgs;
 
-        @NameInMap("OwnerType")
+        @com.aliyun.core.annotation.NameInMap("OwnerType")
         private String ownerType;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("RealNickName")
+        private String realNickName;
+
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("WyId")
+        @com.aliyun.core.annotation.NameInMap("WyId")
         private String wyId;
 
         private Users(Builder builder) {
@@ -276,6 +278,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             this.orgs = builder.orgs;
             this.ownerType = builder.ownerType;
             this.phone = builder.phone;
+            this.realNickName = builder.realNickName;
             this.remark = builder.remark;
             this.status = builder.status;
             this.wyId = builder.wyId;
@@ -381,6 +384,13 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return realNickName
+         */
+        public String getRealNickName() {
+            return this.realNickName;
+        }
+
+        /**
          * @return remark
          */
         public String getRemark() {
@@ -415,6 +425,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             private java.util.List < Orgs> orgs; 
             private String ownerType; 
             private String phone; 
+            private String realNickName; 
             private String remark; 
             private Long status; 
             private String wyId; 
@@ -553,6 +564,14 @@ public class DescribeUsersResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * RealNickName.
+             */
+            public Builder realNickName(String realNickName) {
+                this.realNickName = realNickName;
                 return this;
             }
 

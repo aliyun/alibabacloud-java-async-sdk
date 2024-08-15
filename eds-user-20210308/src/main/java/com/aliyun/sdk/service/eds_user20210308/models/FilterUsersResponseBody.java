@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FilterUsersResponseBody</p>
  */
 public class FilterUsersResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < Users> users;
 
     private FilterUsersResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class FilterUsersResponseBody extends TeaModel {
     } 
 
     public static class ExternalInfo extends TeaModel {
-        @NameInMap("ExternalName")
+        @com.aliyun.core.annotation.NameInMap("ExternalName")
         private String externalName;
 
-        @NameInMap("JobNumber")
+        @com.aliyun.core.annotation.NameInMap("JobNumber")
         private String jobNumber;
 
         private ExternalInfo(Builder builder) {
@@ -153,10 +152,10 @@ public class FilterUsersResponseBody extends TeaModel {
 
     }
     public static class PropertyValues extends TeaModel {
-        @NameInMap("PropertyValue")
+        @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
 
-        @NameInMap("PropertyValueId")
+        @com.aliyun.core.annotation.NameInMap("PropertyValueId")
         private Long propertyValueId;
 
         private PropertyValues(Builder builder) {
@@ -214,22 +213,22 @@ public class FilterUsersResponseBody extends TeaModel {
 
     }
     public static class UserSetPropertiesModels extends TeaModel {
-        @NameInMap("PropertyId")
+        @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
 
-        @NameInMap("PropertyKey")
+        @com.aliyun.core.annotation.NameInMap("PropertyKey")
         private String propertyKey;
 
-        @NameInMap("PropertyType")
+        @com.aliyun.core.annotation.NameInMap("PropertyType")
         private Integer propertyType;
 
-        @NameInMap("PropertyValues")
+        @com.aliyun.core.annotation.NameInMap("PropertyValues")
         private java.util.List < PropertyValues> propertyValues;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private UserSetPropertiesModels(Builder builder) {
@@ -355,55 +354,55 @@ public class FilterUsersResponseBody extends TeaModel {
 
     }
     public static class Users extends TeaModel {
-        @NameInMap("AutoLockTime")
+        @com.aliyun.core.annotation.NameInMap("AutoLockTime")
         private String autoLockTime;
 
-        @NameInMap("DesktopCount")
+        @com.aliyun.core.annotation.NameInMap("DesktopCount")
         private Long desktopCount;
 
-        @NameInMap("DesktopGroupCount")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupCount")
         private Long desktopGroupCount;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EnableAdminAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
         private Boolean enableAdminAccess;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("ExternalInfo")
+        @com.aliyun.core.annotation.NameInMap("ExternalInfo")
         private ExternalInfo externalInfo;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsTenantManager")
+        @com.aliyun.core.annotation.NameInMap("IsTenantManager")
         private Boolean isTenantManager;
 
-        @NameInMap("OwnerType")
+        @com.aliyun.core.annotation.NameInMap("OwnerType")
         private String ownerType;
 
-        @NameInMap("PasswordExpireDays")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpireDays")
         private Integer passwordExpireDays;
 
-        @NameInMap("PasswordExpireRestDays")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpireRestDays")
         private Integer passwordExpireRestDays;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("RealNickName")
+        @com.aliyun.core.annotation.NameInMap("RealNickName")
         private String realNickName;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("UserSetPropertiesModels")
+        @com.aliyun.core.annotation.NameInMap("UserSetPropertiesModels")
         private java.util.List < UserSetPropertiesModels> userSetPropertiesModels;
 
         private Users(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOrgsResponseBody</p>
  */
 public class DescribeOrgsResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Orgs")
+    @com.aliyun.core.annotation.NameInMap("Orgs")
     private java.util.List < Orgs> orgs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOrgsResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeOrgsResponseBody extends TeaModel {
     } 
 
     public static class Orgs extends TeaModel {
-        @NameInMap("OrgId")
+        @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
 
-        @NameInMap("OrgName")
+        @com.aliyun.core.annotation.NameInMap("OrgName")
         private String orgName;
 
-        @NameInMap("ParentOrgId")
+        @com.aliyun.core.annotation.NameInMap("ParentOrgId")
         private String parentOrgId;
 
         private Orgs(Builder builder) {

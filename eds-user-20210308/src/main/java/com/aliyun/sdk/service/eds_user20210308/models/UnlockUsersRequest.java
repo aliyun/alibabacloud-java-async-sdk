@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnlockUsersRequest</p>
  */
 public class UnlockUsersRequest extends Request {
-    @Query
-    @NameInMap("AutoLockTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoLockTime")
     private String autoLockTime;
 
-    @Body
-    @NameInMap("Users")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Users")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > users;
 
     private UnlockUsersRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUsersResponseBody</p>
  */
 public class CreateUsersResponseBody extends TeaModel {
-    @NameInMap("CreateResult")
+    @com.aliyun.core.annotation.NameInMap("CreateResult")
     private CreateResult createResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateUsersResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class CreateUsersResponseBody extends TeaModel {
     } 
 
     public static class CreatedUsers extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("RealNickName")
+        @com.aliyun.core.annotation.NameInMap("RealNickName")
         private String realNickName;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private CreatedUsers(Builder builder) {
@@ -193,19 +192,19 @@ public class CreateUsersResponseBody extends TeaModel {
 
     }
     public static class FailedUsers extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
         private FailedUsers(Builder builder) {
@@ -314,10 +313,10 @@ public class CreateUsersResponseBody extends TeaModel {
 
     }
     public static class CreateResult extends TeaModel {
-        @NameInMap("CreatedUsers")
+        @com.aliyun.core.annotation.NameInMap("CreatedUsers")
         private java.util.List < CreatedUsers> createdUsers;
 
-        @NameInMap("FailedUsers")
+        @com.aliyun.core.annotation.NameInMap("FailedUsers")
         private java.util.List < FailedUsers> failedUsers;
 
         private CreateResult(Builder builder) {

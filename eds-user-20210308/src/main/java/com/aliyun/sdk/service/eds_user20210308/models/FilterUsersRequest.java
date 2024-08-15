@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FilterUsersRequest</p>
  */
 public class FilterUsersRequest extends Request {
-    @Query
-    @NameInMap("ExcludeEndUserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeEndUserIds")
     private java.util.List < String > excludeEndUserIds;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("IncludeDesktopCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeDesktopCount")
     private Boolean includeDesktopCount;
 
-    @Query
-    @NameInMap("IncludeDesktopGroupCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeDesktopGroupCount")
     private Boolean includeDesktopGroupCount;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 200, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrderParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderParam")
     private OrderParam orderParam;
 
-    @Query
-    @NameInMap("OrgId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrgId")
     private String orgId;
 
-    @Query
-    @NameInMap("OwnerType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerType")
     private String ownerType;
 
-    @Query
-    @NameInMap("PropertyFilterParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PropertyFilterParam")
     private java.util.List < PropertyFilterParam> propertyFilterParam;
 
-    @Query
-    @NameInMap("PropertyKeyValueFilterParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PropertyKeyValueFilterParam")
     private java.util.List < PropertyKeyValueFilterParam> propertyKeyValueFilterParam;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
 
     private FilterUsersRequest(Builder builder) {
         super(builder);
@@ -70,6 +73,7 @@ public class FilterUsersRequest extends Request {
         this.ownerType = builder.ownerType;
         this.propertyFilterParam = builder.propertyFilterParam;
         this.propertyKeyValueFilterParam = builder.propertyKeyValueFilterParam;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -162,6 +166,13 @@ public class FilterUsersRequest extends Request {
         return this.propertyKeyValueFilterParam;
     }
 
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<FilterUsersRequest, Builder> {
         private java.util.List < String > excludeEndUserIds; 
         private String filter; 
@@ -174,6 +185,7 @@ public class FilterUsersRequest extends Request {
         private String ownerType; 
         private java.util.List < PropertyFilterParam> propertyFilterParam; 
         private java.util.List < PropertyKeyValueFilterParam> propertyKeyValueFilterParam; 
+        private Integer status; 
 
         private Builder() {
             super();
@@ -192,6 +204,7 @@ public class FilterUsersRequest extends Request {
             this.ownerType = request.ownerType;
             this.propertyFilterParam = request.propertyFilterParam;
             this.propertyKeyValueFilterParam = request.propertyKeyValueFilterParam;
+            this.status = request.status;
         } 
 
         /**
@@ -332,6 +345,15 @@ public class FilterUsersRequest extends Request {
             return this;
         }
 
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
         @Override
         public FilterUsersRequest build() {
             return new FilterUsersRequest(this);
@@ -340,10 +362,10 @@ public class FilterUsersRequest extends Request {
     } 
 
     public static class OrderParam extends TeaModel {
-        @NameInMap("OrderField")
+        @com.aliyun.core.annotation.NameInMap("OrderField")
         private String orderField;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
         private OrderParam(Builder builder) {
@@ -427,10 +449,10 @@ public class FilterUsersRequest extends Request {
 
     }
     public static class PropertyFilterParam extends TeaModel {
-        @NameInMap("PropertyId")
+        @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
 
-        @NameInMap("PropertyValueIds")
+        @com.aliyun.core.annotation.NameInMap("PropertyValueIds")
         private String propertyValueIds;
 
         private PropertyFilterParam(Builder builder) {
@@ -488,10 +510,10 @@ public class FilterUsersRequest extends Request {
 
     }
     public static class PropertyKeyValueFilterParam extends TeaModel {
-        @NameInMap("PropertyKey")
+        @com.aliyun.core.annotation.NameInMap("PropertyKey")
         private String propertyKey;
 
-        @NameInMap("PropertyValues")
+        @com.aliyun.core.annotation.NameInMap("PropertyValues")
         private String propertyValues;
 
         private PropertyKeyValueFilterParam(Builder builder) {

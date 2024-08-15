@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePropertyResponseBody</p>
  */
 public class UpdatePropertyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UpdateResult")
+    @com.aliyun.core.annotation.NameInMap("UpdateResult")
     private UpdateResult updateResult;
 
     private UpdatePropertyResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class UpdatePropertyResponseBody extends TeaModel {
     } 
 
     public static class FailedPropertyValues extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("PropertyId")
+        @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
 
-        @NameInMap("PropertyValue")
+        @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
 
         private FailedPropertyValues(Builder builder) {
@@ -173,10 +172,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
 
     }
     public static class SavePropertyValues extends TeaModel {
-        @NameInMap("PropertyValue")
+        @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
 
-        @NameInMap("PropertyValueId")
+        @com.aliyun.core.annotation.NameInMap("PropertyValueId")
         private Long propertyValueId;
 
         private SavePropertyValues(Builder builder) {
@@ -234,10 +233,10 @@ public class UpdatePropertyResponseBody extends TeaModel {
 
     }
     public static class SavePropertyValueModel extends TeaModel {
-        @NameInMap("FailedPropertyValues")
+        @com.aliyun.core.annotation.NameInMap("FailedPropertyValues")
         private java.util.List < FailedPropertyValues> failedPropertyValues;
 
-        @NameInMap("SavePropertyValues")
+        @com.aliyun.core.annotation.NameInMap("SavePropertyValues")
         private java.util.List < SavePropertyValues> savePropertyValues;
 
         private SavePropertyValueModel(Builder builder) {
@@ -295,13 +294,13 @@ public class UpdatePropertyResponseBody extends TeaModel {
 
     }
     public static class UpdateResult extends TeaModel {
-        @NameInMap("PropertyId")
+        @com.aliyun.core.annotation.NameInMap("PropertyId")
         private Long propertyId;
 
-        @NameInMap("PropertyKey")
+        @com.aliyun.core.annotation.NameInMap("PropertyKey")
         private String propertyKey;
 
-        @NameInMap("SavePropertyValueModel")
+        @com.aliyun.core.annotation.NameInMap("SavePropertyValueModel")
         private SavePropertyValueModel savePropertyValueModel;
 
         private UpdateResult(Builder builder) {

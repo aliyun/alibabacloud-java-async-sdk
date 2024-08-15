@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePropertyRequest</p>
  */
 public class UpdatePropertyRequest extends Request {
-    @Body
-    @NameInMap("PropertyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PropertyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long propertyId;
 
-    @Body
-    @NameInMap("PropertyKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PropertyKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String propertyKey;
 
-    @Body
-    @NameInMap("PropertyValues")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PropertyValues")
     private java.util.List < PropertyValues> propertyValues;
 
     private UpdatePropertyRequest(Builder builder) {
@@ -118,10 +117,10 @@ public class UpdatePropertyRequest extends Request {
     } 
 
     public static class PropertyValues extends TeaModel {
-        @NameInMap("PropertyValue")
+        @com.aliyun.core.annotation.NameInMap("PropertyValue")
         private String propertyValue;
 
-        @NameInMap("PropertyValueId")
+        @com.aliyun.core.annotation.NameInMap("PropertyValueId")
         private Long propertyValueId;
 
         private PropertyValues(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetManagerInfoByAuthCodeResponseBody</p>
  */
 public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
-    @NameInMap("OrgId")
+    @com.aliyun.core.annotation.NameInMap("OrgId")
     private String orgId;
 
-    @NameInMap("Phone")
+    @com.aliyun.core.annotation.NameInMap("Phone")
     private String phone;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TeamName")
+    @com.aliyun.core.annotation.NameInMap("TeamName")
     private String teamName;
 
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
-    @NameInMap("WaId")
+    @com.aliyun.core.annotation.NameInMap("WaId")
     private Long waId;
 
     private GetManagerInfoByAuthCodeResponseBody(Builder builder) {
@@ -138,7 +137,7 @@ public class GetManagerInfoByAuthCodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the WUYING Workspace account.
+         * The ID of the Elastic Desktop Service account.
          */
         public Builder waId(Long waId) {
             this.waId = waId;

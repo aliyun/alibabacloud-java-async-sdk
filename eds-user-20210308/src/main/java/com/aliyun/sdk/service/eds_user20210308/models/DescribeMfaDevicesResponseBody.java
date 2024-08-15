@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMfaDevicesResponseBody</p>
  */
 public class DescribeMfaDevicesResponseBody extends TeaModel {
-    @NameInMap("MfaDevices")
+    @com.aliyun.core.annotation.NameInMap("MfaDevices")
     private java.util.List < MfaDevices> mfaDevices;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMfaDevicesResponseBody(Builder builder) {
@@ -92,31 +91,31 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
     } 
 
     public static class MfaDevices extends TeaModel {
-        @NameInMap("ConsecutiveFails")
+        @com.aliyun.core.annotation.NameInMap("ConsecutiveFails")
         private Integer consecutiveFails;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("GmtEnabled")
+        @com.aliyun.core.annotation.NameInMap("GmtEnabled")
         private String gmtEnabled;
 
-        @NameInMap("GmtUnlock")
+        @com.aliyun.core.annotation.NameInMap("GmtUnlock")
         private String gmtUnlock;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private MfaDevices(Builder builder) {

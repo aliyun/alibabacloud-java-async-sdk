@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUsersRequest</p>
  */
 public class CreateUsersRequest extends Request {
-    @Query
-    @NameInMap("AutoLockTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoLockTime")
     private String autoLockTime;
 
-    @Query
-    @NameInMap("IsLocalAdmin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsLocalAdmin")
     private Boolean isLocalAdmin;
 
-    @Body
-    @NameInMap("Password")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String password;
 
-    @Query
-    @NameInMap("PasswordExpireDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpireDays")
     private String passwordExpireDays;
 
-    @Body
-    @NameInMap("Users")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Users")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Users> users;
 
     private CreateUsersRequest(Builder builder) {
@@ -164,29 +163,29 @@ public class CreateUsersRequest extends Request {
     } 
 
     public static class Users extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EndUserId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endUserId;
 
-        @NameInMap("OrgId")
+        @com.aliyun.core.annotation.NameInMap("OrgId")
         private String orgId;
 
-        @NameInMap("OwnerType")
+        @com.aliyun.core.annotation.NameInMap("OwnerType")
         private String ownerType;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("RealNickName")
+        @com.aliyun.core.annotation.NameInMap("RealNickName")
         private String realNickName;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private Users(Builder builder) {

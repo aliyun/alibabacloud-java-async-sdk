@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eds_user20210308.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnlockUsersResponseBody</p>
  */
 public class UnlockUsersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UnlockUsersResult")
+    @com.aliyun.core.annotation.NameInMap("UnlockUsersResult")
     private UnlockUsersResult unlockUsersResult;
 
     private UnlockUsersResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class UnlockUsersResponseBody extends TeaModel {
     } 
 
     public static class FailedUsers extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
         private FailedUsers(Builder builder) {
@@ -153,10 +152,10 @@ public class UnlockUsersResponseBody extends TeaModel {
 
     }
     public static class UnlockUsersResult extends TeaModel {
-        @NameInMap("FailedUsers")
+        @com.aliyun.core.annotation.NameInMap("FailedUsers")
         private java.util.List < FailedUsers> failedUsers;
 
-        @NameInMap("UnlockedUsers")
+        @com.aliyun.core.annotation.NameInMap("UnlockedUsers")
         private java.util.List < String > unlockedUsers;
 
         private UnlockUsersResult(Builder builder) {
