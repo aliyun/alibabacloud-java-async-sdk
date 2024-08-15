@@ -4641,6 +4641,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DtsJobName")
         private String dtsJobName;
 
+        @com.aliyun.core.annotation.NameInMap("DuRealUsage")
+        private String duRealUsage;
+
         @com.aliyun.core.annotation.NameInMap("DuUsage")
         private Long duUsage;
 
@@ -4759,6 +4762,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             this.dtsJobDirection = builder.dtsJobDirection;
             this.dtsJobId = builder.dtsJobId;
             this.dtsJobName = builder.dtsJobName;
+            this.duRealUsage = builder.duRealUsage;
             this.duUsage = builder.duUsage;
             this.endTimestamp = builder.endTimestamp;
             this.errorDetails = builder.errorDetails;
@@ -4946,6 +4950,13 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
          */
         public String getDtsJobName() {
             return this.dtsJobName;
+        }
+
+        /**
+         * @return duRealUsage
+         */
+        public String getDuRealUsage() {
+            return this.duRealUsage;
         }
 
         /**
@@ -5194,6 +5205,7 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             private String dtsJobDirection; 
             private String dtsJobId; 
             private String dtsJobName; 
+            private String duRealUsage; 
             private Long duUsage; 
             private String endTimestamp; 
             private java.util.List < ErrorDetails> errorDetails; 
@@ -5405,6 +5417,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
+                return this;
+            }
+
+            /**
+             * DuRealUsage.
+             */
+            public Builder duRealUsage(String duRealUsage) {
+                this.duRealUsage = duRealUsage;
                 return this;
             }
 

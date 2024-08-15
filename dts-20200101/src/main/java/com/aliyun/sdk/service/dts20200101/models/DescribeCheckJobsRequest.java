@@ -16,6 +16,10 @@ public class DescribeCheckJobsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckJobId")
+    private String checkJobId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckType")
     private Integer checkType;
 
@@ -44,6 +48,7 @@ public class DescribeCheckJobsRequest extends Request {
     private DescribeCheckJobsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.checkJobId = builder.checkJobId;
         this.checkType = builder.checkType;
         this.instanceId = builder.instanceId;
         this.jobName = builder.jobName;
@@ -70,6 +75,13 @@ public class DescribeCheckJobsRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return checkJobId
+     */
+    public String getCheckJobId() {
+        return this.checkJobId;
     }
 
     /**
@@ -116,6 +128,7 @@ public class DescribeCheckJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCheckJobsRequest, Builder> {
         private String regionId; 
+        private String checkJobId; 
         private Integer checkType; 
         private String instanceId; 
         private String jobName; 
@@ -130,6 +143,7 @@ public class DescribeCheckJobsRequest extends Request {
         private Builder(DescribeCheckJobsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.checkJobId = request.checkJobId;
             this.checkType = request.checkType;
             this.instanceId = request.instanceId;
             this.jobName = request.jobName;
@@ -144,6 +158,15 @@ public class DescribeCheckJobsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CheckJobId.
+         */
+        public Builder checkJobId(String checkJobId) {
+            this.putQueryParameter("CheckJobId", checkJobId);
+            this.checkJobId = checkJobId;
             return this;
         }
 
