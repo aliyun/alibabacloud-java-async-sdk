@@ -19,6 +19,10 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AnalyzeConversationResponse> analyzeConversation(AnalyzeConversationRequest request);
+
+    ResponseIterable<AnalyzeConversationResponseBody> analyzeConversationWithResponseIterable(AnalyzeConversationRequest request);
+
     CompletableFuture<RunCompletionResponse> runCompletion(RunCompletionRequest request);
 
     ResponseIterable<RunCompletionResponseBody> runCompletionWithResponseIterable(RunCompletionRequest request);
