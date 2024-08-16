@@ -114,6 +114,9 @@ public class ExportInsightSpaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")
         private String category;
 
+        @com.aliyun.core.annotation.NameInMap("customCode")
+        private String customCode;
+
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
@@ -152,6 +155,7 @@ public class ExportInsightSpaceResponseBody extends TeaModel {
 
         private Result(Builder builder) {
             this.category = builder.category;
+            this.customCode = builder.customCode;
             this.description = builder.description;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -179,6 +183,13 @@ public class ExportInsightSpaceResponseBody extends TeaModel {
          */
         public String getCategory() {
             return this.category;
+        }
+
+        /**
+         * @return customCode
+         */
+        public String getCustomCode() {
+            return this.customCode;
         }
 
         /**
@@ -267,6 +278,7 @@ public class ExportInsightSpaceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String category; 
+            private String customCode; 
             private String description; 
             private Long gmtCreate; 
             private Long gmtModified; 
@@ -285,6 +297,14 @@ public class ExportInsightSpaceResponseBody extends TeaModel {
              */
             public Builder category(String category) {
                 this.category = category;
+                return this;
+            }
+
+            /**
+             * customCode.
+             */
+            public Builder customCode(String customCode) {
+                this.customCode = customCode;
                 return this;
             }
 
