@@ -741,7 +741,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CdnDomain.
+             * The domain name of the SDK.
              */
             public Builder cdnDomain(String cdnDomain) {
                 this.cdnDomain = cdnDomain;

@@ -21,6 +21,7 @@ public class GetRumDataForPageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer endTime;
 
     @com.aliyun.core.annotation.Query
@@ -33,6 +34,7 @@ public class GetRumDataForPageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Query")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String query;
 
     @com.aliyun.core.annotation.Query
@@ -42,6 +44,7 @@ public class GetRumDataForPageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer startTime;
 
     private GetRumDataForPageRequest(Builder builder) {

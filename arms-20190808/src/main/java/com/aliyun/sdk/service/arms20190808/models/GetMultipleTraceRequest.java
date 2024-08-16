@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetMultipleTraceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
@@ -22,6 +23,7 @@ public class GetMultipleTraceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     @com.aliyun.core.annotation.Query

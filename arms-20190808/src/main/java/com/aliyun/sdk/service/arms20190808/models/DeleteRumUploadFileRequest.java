@@ -125,7 +125,7 @@ public class DeleteRumUploadFileRequest extends Request {
         } 
 
         /**
-         * BatchItems.
+         * Information of files to be deleted in JSON array format. If a single file needs to be deleted, this field should be left empty. If multiple files need to be deleted, just fill in this field.
          */
         public Builder batchItems(String batchItems) {
             this.putQueryParameter("BatchItems", batchItems);

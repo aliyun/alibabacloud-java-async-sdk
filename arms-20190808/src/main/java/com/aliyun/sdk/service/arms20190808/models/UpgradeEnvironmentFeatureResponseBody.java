@@ -85,7 +85,7 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The status of the job.
          */
         public Builder data(java.util.Map < String, String > data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,11 @@ public class UpgradeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

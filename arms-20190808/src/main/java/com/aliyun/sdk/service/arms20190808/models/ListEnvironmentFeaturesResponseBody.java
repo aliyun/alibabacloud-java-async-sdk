@@ -85,7 +85,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Status Code. Description 200 indicates success.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -101,7 +101,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +117,11 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the alert rule was deleted. Valid values:
+         * <p>
+         * 
+         * *   `true`: The alert rule was deleted.
+         * *   `false`: The alert rule failed to be deleted.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -337,7 +341,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * Managed.
+             * Whether hosted scenario.
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;

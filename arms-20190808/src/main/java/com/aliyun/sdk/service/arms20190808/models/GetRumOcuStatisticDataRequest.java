@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetRumOcuStatisticDataRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
@@ -25,10 +26,12 @@ public class GetRumOcuStatisticDataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Page")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer page;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
@@ -41,6 +44,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private GetRumOcuStatisticDataRequest(Builder builder) {

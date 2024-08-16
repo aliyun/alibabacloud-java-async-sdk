@@ -73,7 +73,7 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Status code. 200 means success, other status codes are exceptions.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * More Information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +89,7 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,11 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Indicates whether the alert rule was deleted. Valid values:
+         * <p>
+         * 
+         * *   `true`: The alert rule was deleted.
+         * *   `false`: The alert rule failed to be deleted.
          */
         public Builder success(Boolean success) {
             this.success = success;

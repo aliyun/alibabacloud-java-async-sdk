@@ -85,7 +85,7 @@ public class DeleteEnvironmentFeatureResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class DeleteEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned message.
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class DeleteEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class DeleteEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class DeleteEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;

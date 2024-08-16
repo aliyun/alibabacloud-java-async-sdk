@@ -81,7 +81,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * The returned message.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -600,7 +600,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Backend data storage status.
+             * The data storage status at the backend.
              */
             public Builder dbInstanceStatus(String dbInstanceStatus) {
                 this.dbInstanceStatus = dbInstanceStatus;
@@ -608,7 +608,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable access token authentication.
+             * Indicates whether access token authentication is enabled.
              */
             public Builder enableAuthToken(String enableAuthToken) {
                 this.enableAuthToken = enableAuthToken;
@@ -652,10 +652,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The product to which the prometheus instance belongs.
-             * <p>
-             * - arms
-             * - cms
+             * The product to which the Prometheus instance belongs. Valid values: arms and cms.
              */
             public Builder product(String product) {
                 this.product = product;

@@ -125,7 +125,7 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         } 
 
         /**
-         * AliyunLang.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -134,7 +134,7 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * EnvironmentId.
+         * The environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -143,7 +143,7 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * FeatureName.
+         * The feature name. Valid values: app-agent-pilot, metric-agent, ebpf-agent, and service-check.
          */
         public Builder featureName(String featureName) {
             this.putQueryParameter("FeatureName", featureName);
@@ -152,7 +152,7 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * FeatureVersion.
+         * The version of the feature.
          */
         public Builder featureVersion(String featureVersion) {
             this.putQueryParameter("FeatureVersion", featureVersion);
@@ -161,7 +161,7 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +170,7 @@ public class UpgradeEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * Values.
+         * Specifies whether to enable service discovery. For PodAnnotation, set the value to run or mini. For PodMonitor and ServiceMonitor, set the value to true or false.
          */
         public Builder values(String values) {
             this.putQueryParameter("Values", values);

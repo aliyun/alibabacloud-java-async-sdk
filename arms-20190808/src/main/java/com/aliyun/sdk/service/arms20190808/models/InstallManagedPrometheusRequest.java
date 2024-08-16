@@ -201,7 +201,15 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The type of the cluster. Valid values: ask and ecs.
+         * The cluster type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ecs: ECS
+         * *   one: ACK One
+         * *   ask: ASK
+         * *   pro: Container Monitoring Pro
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -210,7 +218,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The ID of the Grafana workspace in which the cluster resides. If you set this parameter to free or leave this parameter empty, the cluster is deployed in a shared Grafana workspace.
+         * The ID of the managed Grafana workspace that is associated with the cluster. If you set this parameter to free or leave this parameter empty, the cluster is associated with a shared Grafana workspace.
          */
         public Builder grafanaInstanceId(String grafanaInstanceId) {
             this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
@@ -219,7 +227,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The parameter is not supported.
+         * This parameter is not supported.
          */
         public Builder kubeConfig(String kubeConfig) {
             this.putQueryParameter("KubeConfig", kubeConfig);
@@ -237,7 +245,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * Prometheus实例的资源组ID。
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -68,11 +68,7 @@ public class DeletePrometheusAlertRuleRequest extends Request {
         } 
 
         /**
-         * Indicates whether the alert rule was deleted. Valid values:
-         * <p>
-         * 
-         * *   `true`: The alert rule was deleted.
-         * *   `false`: The alert rule failed to be deleted.
+         * The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -81,7 +77,7 @@ public class DeletePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The cluster ID of the Prometheus monitoring alarm rule.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

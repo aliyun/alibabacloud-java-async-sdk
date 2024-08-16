@@ -3234,7 +3234,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
-      * Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
+      * This operation is available only for ASK, ECS, and ACK One clusters. Before you call this operation, make sure that a managed Prometheus agent is installed for your cluster.
       *
      */
     @Override

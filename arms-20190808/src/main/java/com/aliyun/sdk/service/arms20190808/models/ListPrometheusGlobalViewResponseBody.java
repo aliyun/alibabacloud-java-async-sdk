@@ -73,7 +73,7 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * Status code. Description 200 means success.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The list of global aggregation instances. The value of this parameter is a string in the JSON format.
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * More information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +97,7 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

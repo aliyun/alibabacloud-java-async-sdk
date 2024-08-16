@@ -83,7 +83,7 @@ public class RestartEnvironmentFeatureRequest extends Request {
         } 
 
         /**
-         * EnvironmentId.
+         * The ID of the environment.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -92,7 +92,7 @@ public class RestartEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * FeatureName.
+         * The feature name. Valid values: app-agent-pilot, metric-agent, ebpf-agent, and service-check.
          */
         public Builder featureName(String featureName) {
             this.putQueryParameter("FeatureName", featureName);
@@ -101,7 +101,7 @@ public class RestartEnvironmentFeatureRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Default value: cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

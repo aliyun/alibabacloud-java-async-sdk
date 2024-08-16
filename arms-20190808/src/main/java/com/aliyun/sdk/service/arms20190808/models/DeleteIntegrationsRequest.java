@@ -54,7 +54,7 @@ public class DeleteIntegrationsRequest extends Request {
         } 
 
         /**
-         * IntegrationId.
+         * The ID of the alert integration.
          */
         public Builder integrationId(Long integrationId) {
             this.putQueryParameter("IntegrationId", integrationId);

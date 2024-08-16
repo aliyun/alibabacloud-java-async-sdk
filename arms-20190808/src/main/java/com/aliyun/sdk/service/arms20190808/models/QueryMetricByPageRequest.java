@@ -236,7 +236,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: `1`.
+         * The page number. Default value: `1`.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -281,7 +281,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The time interval at which data entries are aggregated. Unit: milliseconds. Minimum value: 60000.
+         * The time interval at which you want to query metric data. Unit: milliseconds. Minimum value: 60000.
          */
         public Builder intervalInSec(Integer intervalInSec) {
             this.putQueryParameter("IntervalInSec", intervalInSec);
@@ -332,7 +332,7 @@ public class QueryMetricByPageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. This parameter is no longer supported. The number of entries to return on each page.
+         * This parameter is no longer supported. The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

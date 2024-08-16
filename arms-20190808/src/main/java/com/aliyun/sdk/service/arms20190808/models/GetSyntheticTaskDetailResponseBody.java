@@ -718,7 +718,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * 周期结束时间 ，格式为yyyy-MM-dd HH。
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -750,7 +750,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * 周期开始时间，格式yyyy-MM-dd HH 。
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -835,7 +835,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorType.
+             * 监测类型：
+             * <p>
+             * - IDC
+             * - LastMilie
+             * - Mobile
              */
             public Builder monitorType(Long monitorType) {
                 this.monitorType = monitorType;
@@ -843,7 +847,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetServiceId.
+             * 运营商ID。
              */
             public Builder netServiceId(Long netServiceId) {
                 this.netServiceId = netServiceId;
@@ -851,7 +855,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SendCount.
+             * 下发次数。
              */
             public Builder sendCount(Long sendCount) {
                 this.sendCount = sendCount;
@@ -2636,7 +2640,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IntervalType.
+             * 监测周期类型：
+             * <p>
+             * 
+             * 0：每天
+             * 1：自定义扩展频率
              */
             public Builder intervalType(Long intervalType) {
                 this.intervalType = intervalType;
@@ -2644,7 +2652,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IpType.
+             * IP类型：
+             * <p>
+             * 
+             * 0：自动
+             * 1：IPv4
+             * 2：IPv6
              */
             public Builder ipType(Long ipType) {
                 this.ipType = ipType;
@@ -2652,7 +2665,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorList.
+             * 拨测任务的检测点列表。
              */
             public Builder monitorList(java.util.List < MonitorList> monitorList) {
                 this.monitorList = monitorList;
@@ -2708,7 +2721,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * 任务类型：
+             * <p>
+             * 
+             * 3：网页性能-IE
+             * 34：网页性能-Chrome
+             * 0：网络质量
+             * 40：文件下载
+             * 7：API性能
              */
             public Builder taskType(Long taskType) {
                 this.taskType = taskType;

@@ -91,7 +91,7 @@ public class ListEnvironmentFeaturesRequest extends Request {
         }
 
         /**
-         * EnvironmentId.
+         * The environment ID.
          */
         public Builder environmentId(String environmentId) {
             this.putQueryParameter("EnvironmentId", environmentId);
@@ -100,7 +100,7 @@ public class ListEnvironmentFeaturesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

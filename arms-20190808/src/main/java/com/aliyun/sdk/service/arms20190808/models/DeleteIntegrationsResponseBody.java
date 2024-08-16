@@ -49,7 +49,11 @@ public class DeleteIntegrationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * Indicates whether the alert integration is deleted. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -57,7 +61,7 @@ public class DeleteIntegrationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

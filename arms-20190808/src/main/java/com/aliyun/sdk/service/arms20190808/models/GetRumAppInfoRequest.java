@@ -17,6 +17,7 @@ public class GetRumAppInfoRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Pid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pid;
 
     @com.aliyun.core.annotation.Query

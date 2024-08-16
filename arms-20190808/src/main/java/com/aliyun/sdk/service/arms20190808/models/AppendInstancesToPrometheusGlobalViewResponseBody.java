@@ -73,7 +73,7 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * Code.
+         * Status code. 200 means success, other status codes are exceptions.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -89,7 +89,7 @@ public class AppendInstancesToPrometheusGlobalViewResponseBody extends TeaModel 
         }
 
         /**
-         * Message.
+         * Additional message.
          */
         public Builder message(String message) {
             this.message = message;
