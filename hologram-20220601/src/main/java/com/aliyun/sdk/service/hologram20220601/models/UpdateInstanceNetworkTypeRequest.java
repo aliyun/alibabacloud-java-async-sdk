@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceNetworkTypeRequest</p>
  */
 public class UpdateInstanceNetworkTypeRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("anyTunnelToSingleTunnel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("anyTunnelToSingleTunnel")
     private String anyTunnelToSingleTunnel;
 
-    @Body
-    @NameInMap("networkTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("networkTypes")
     private String networkTypes;
 
-    @Body
-    @NameInMap("vSwitchId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vSwitchId")
     private String vSwitchId;
 
-    @Body
-    @NameInMap("vpcId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcId")
     private String vpcId;
 
-    @Body
-    @NameInMap("vpcOwnerId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcOwnerId")
     private String vpcOwnerId;
 
-    @Body
-    @NameInMap("vpcRegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcRegionId")
     private String vpcRegionId;
 
     private UpdateInstanceNetworkTypeRequest(Builder builder) {

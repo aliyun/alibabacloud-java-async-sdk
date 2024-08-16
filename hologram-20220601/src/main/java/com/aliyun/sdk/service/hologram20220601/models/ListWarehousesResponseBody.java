@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWarehousesResponseBody</p>
  */
 public class ListWarehousesResponseBody extends TeaModel {
-    @NameInMap("WarehouseList")
+    @com.aliyun.core.annotation.NameInMap("WarehouseList")
     private java.util.List < WarehouseList> warehouseList;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListWarehousesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListWarehousesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * WarehouseList.
+         * The list of virtual warehouse instances.
          */
         public Builder warehouseList(java.util.List < WarehouseList> warehouseList) {
             this.warehouseList = warehouseList;
@@ -58,7 +57,7 @@ public class ListWarehousesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,22 +71,22 @@ public class ListWarehousesResponseBody extends TeaModel {
     } 
 
     public static class WarehouseList extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Long cpu;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Long mem;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodeCount")
+        @com.aliyun.core.annotation.NameInMap("NodeCount")
         private Long nodeCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private WarehouseList(Builder builder) {
@@ -158,7 +157,7 @@ public class ListWarehousesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * cpu
+             * The number of CPU cores.
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
@@ -166,7 +165,7 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * The ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -174,7 +173,7 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * Mem.
+             * The memory capacity.
              */
             public Builder mem(Long mem) {
                 this.mem = mem;
@@ -182,7 +181,7 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the virtual warehouse instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +189,7 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeCount.
+             * The number of compute nodes.
              */
             public Builder nodeCount(Long nodeCount) {
                 this.nodeCount = nodeCount;
@@ -198,7 +197,50 @@ public class ListWarehousesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   kRunning
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   kSuspended
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   kInit
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   kFailed
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   kAllocating
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;

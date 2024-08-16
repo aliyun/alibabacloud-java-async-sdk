@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("Instance")
+    @com.aliyun.core.annotation.NameInMap("Instance")
     private Instance instance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class GetInstanceResponseBody extends TeaModel {
     } 
 
     public static class Endpoints extends TeaModel {
-        @NameInMap("AlternativeEndpoints")
+        @com.aliyun.core.annotation.NameInMap("AlternativeEndpoints")
         private String alternativeEndpoints;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
         private Endpoints(Builder builder) {
@@ -389,10 +388,10 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -450,91 +449,91 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("AutoRenewal")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private String autoRenewal;
 
-        @NameInMap("ColdStorage")
+        @com.aliyun.core.annotation.NameInMap("ColdStorage")
         private Long coldStorage;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("ComputeNodeCount")
+        @com.aliyun.core.annotation.NameInMap("ComputeNodeCount")
         private Long computeNodeCount;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Long cpu;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private String disk;
 
-        @NameInMap("EnableHiveAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableHiveAccess")
         private String enableHiveAccess;
 
-        @NameInMap("EnableServerless")
+        @com.aliyun.core.annotation.NameInMap("EnableServerless")
         private Boolean enableServerless;
 
-        @NameInMap("Endpoints")
+        @com.aliyun.core.annotation.NameInMap("Endpoints")
         private java.util.List < Endpoints> endpoints;
 
-        @NameInMap("ExpirationTime")
+        @com.aliyun.core.annotation.NameInMap("ExpirationTime")
         private String expirationTime;
 
-        @NameInMap("GatewayCount")
+        @com.aliyun.core.annotation.NameInMap("GatewayCount")
         private Long gatewayCount;
 
-        @NameInMap("GatewayCpu")
+        @com.aliyun.core.annotation.NameInMap("GatewayCpu")
         private Long gatewayCpu;
 
-        @NameInMap("GatewayMemory")
+        @com.aliyun.core.annotation.NameInMap("GatewayMemory")
         private Long gatewayMemory;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceOwner")
+        @com.aliyun.core.annotation.NameInMap("InstanceOwner")
         private String instanceOwner;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("LeaderInstanceId")
+        @com.aliyun.core.annotation.NameInMap("LeaderInstanceId")
         private String leaderInstanceId;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ReplicaRole")
+        @com.aliyun.core.annotation.NameInMap("ReplicaRole")
         private String replicaRole;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SuspendReason")
+        @com.aliyun.core.annotation.NameInMap("SuspendReason")
         private String suspendReason;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Instance(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWarehouseDetailResponseBody</p>
  */
 public class GetWarehouseDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WarehouseDetail")
+    @com.aliyun.core.annotation.NameInMap("WarehouseDetail")
     private WarehouseDetail warehouseDetail;
 
     private GetWarehouseDetailResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         private WarehouseDetail warehouseDetail; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
 
         /**
-         * WarehouseDetail.
+         * The values returned.
          */
         public Builder warehouseDetail(WarehouseDetail warehouseDetail) {
             this.warehouseDetail = warehouseDetail;
@@ -72,30 +71,42 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
     } 
 
     public static class WarehouseList extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Long cpu;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("DefaultWarehouse")
+        private Boolean defaultWarehouse;
+
+        @com.aliyun.core.annotation.NameInMap("ElasticCpu")
+        private Long elasticCpu;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Long mem;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NodeCount")
+        @com.aliyun.core.annotation.NameInMap("NodeCount")
         private Long nodeCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("RebalanceStatus")
+        private String rebalanceStatus;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private WarehouseList(Builder builder) {
             this.cpu = builder.cpu;
+            this.defaultWarehouse = builder.defaultWarehouse;
+            this.elasticCpu = builder.elasticCpu;
             this.id = builder.id;
             this.mem = builder.mem;
             this.name = builder.name;
             this.nodeCount = builder.nodeCount;
+            this.rebalanceStatus = builder.rebalanceStatus;
             this.status = builder.status;
         }
 
@@ -112,6 +123,20 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
          */
         public Long getCpu() {
             return this.cpu;
+        }
+
+        /**
+         * @return defaultWarehouse
+         */
+        public Boolean getDefaultWarehouse() {
+            return this.defaultWarehouse;
+        }
+
+        /**
+         * @return elasticCpu
+         */
+        public Long getElasticCpu() {
+            return this.elasticCpu;
         }
 
         /**
@@ -143,6 +168,13 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return rebalanceStatus
+         */
+        public String getRebalanceStatus() {
+            return this.rebalanceStatus;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -151,14 +183,17 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long cpu; 
+            private Boolean defaultWarehouse; 
+            private Long elasticCpu; 
             private Long id; 
             private Long mem; 
             private String name; 
             private Long nodeCount; 
+            private String rebalanceStatus; 
             private String status; 
 
             /**
-             * cpu
+             * The number of CPU cores.
              */
             public Builder cpu(Long cpu) {
                 this.cpu = cpu;
@@ -166,7 +201,23 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * DefaultWarehouse.
+             */
+            public Builder defaultWarehouse(Boolean defaultWarehouse) {
+                this.defaultWarehouse = defaultWarehouse;
+                return this;
+            }
+
+            /**
+             * ElasticCpu.
+             */
+            public Builder elasticCpu(Long elasticCpu) {
+                this.elasticCpu = elasticCpu;
+                return this;
+            }
+
+            /**
+             * The ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -174,7 +225,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Mem.
+             * The memory capacity.
              */
             public Builder mem(Long mem) {
                 this.mem = mem;
@@ -182,7 +233,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the virtual warehouse instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -190,7 +241,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NodeCount.
+             * The number of compute nodes.
              */
             public Builder nodeCount(Long nodeCount) {
                 this.nodeCount = nodeCount;
@@ -198,7 +249,58 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * RebalanceStatus.
+             */
+            public Builder rebalanceStatus(String rebalanceStatus) {
+                this.rebalanceStatus = rebalanceStatus;
+                return this;
+            }
+
+            /**
+             * The status.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   kRunning
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   kSuspended
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   kInit
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   kFailed
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   kAllocating
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -213,18 +315,22 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
 
     }
     public static class WarehouseDetail extends TeaModel {
-        @NameInMap("RemainingCpu")
+        @com.aliyun.core.annotation.NameInMap("RemainingCpu")
         private String remainingCpu;
 
-        @NameInMap("ReservedCpu")
+        @com.aliyun.core.annotation.NameInMap("ReservedCpu")
         private String reservedCpu;
 
-        @NameInMap("WarehouseList")
+        @com.aliyun.core.annotation.NameInMap("TimedElasticCpu")
+        private String timedElasticCpu;
+
+        @com.aliyun.core.annotation.NameInMap("WarehouseList")
         private java.util.List < WarehouseList> warehouseList;
 
         private WarehouseDetail(Builder builder) {
             this.remainingCpu = builder.remainingCpu;
             this.reservedCpu = builder.reservedCpu;
+            this.timedElasticCpu = builder.timedElasticCpu;
             this.warehouseList = builder.warehouseList;
         }
 
@@ -251,6 +357,13 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return timedElasticCpu
+         */
+        public String getTimedElasticCpu() {
+            return this.timedElasticCpu;
+        }
+
+        /**
          * @return warehouseList
          */
         public java.util.List < WarehouseList> getWarehouseList() {
@@ -260,10 +373,11 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String remainingCpu; 
             private String reservedCpu; 
+            private String timedElasticCpu; 
             private java.util.List < WarehouseList> warehouseList; 
 
             /**
-             * RemainingCpu.
+             * The remaining unallocated computing resources of the virtual warehouse instance.
              */
             public Builder remainingCpu(String remainingCpu) {
                 this.remainingCpu = remainingCpu;
@@ -271,7 +385,7 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ReservedCpu.
+             * The reserved computing resources. The amount of computing resources in all running virtual warehouses in an instance cannot exceed the amount of reserved computing resources in the virtual warehouses.
              */
             public Builder reservedCpu(String reservedCpu) {
                 this.reservedCpu = reservedCpu;
@@ -279,7 +393,15 @@ public class GetWarehouseDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WarehouseList.
+             * TimedElasticCpu.
+             */
+            public Builder timedElasticCpu(String timedElasticCpu) {
+                this.timedElasticCpu = timedElasticCpu;
+                return this;
+            }
+
+            /**
+             * The list of virtual warehouses.
              */
             public Builder warehouseList(java.util.List < WarehouseList> warehouseList) {
                 this.warehouseList = warehouseList;

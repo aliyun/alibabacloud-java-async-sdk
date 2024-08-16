@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeResourceGroupRequest</p>
  */
 public class ChangeResourceGroupRequest extends Request {
-    @Body
-    @NameInMap("instanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceId")
     private String instanceId;
 
-    @Body
-    @NameInMap("newResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("newResourceGroupId")
     private String newResourceGroupId;
 
     private ChangeResourceGroupRequest(Builder builder) {

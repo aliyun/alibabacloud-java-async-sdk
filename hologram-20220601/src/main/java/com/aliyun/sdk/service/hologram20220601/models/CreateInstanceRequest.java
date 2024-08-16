@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,88 +11,88 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Body
-    @NameInMap("autoPay")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoPay")
     private Boolean autoPay;
 
-    @Body
-    @NameInMap("autoRenew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoRenew")
     private Boolean autoRenew;
 
-    @Body
-    @NameInMap("chargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("chargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Body
-    @NameInMap("coldStorageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("coldStorageSize")
     private Long coldStorageSize;
 
-    @Body
-    @NameInMap("cpu")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpu")
     private Long cpu;
 
-    @Body
-    @NameInMap("duration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
 
-    @Body
-    @NameInMap("enableServerlessComputing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableServerlessComputing")
     private Boolean enableServerlessComputing;
 
-    @Body
-    @NameInMap("gatewayCount")
-    @Validation(maximum = 50, minimum = 2)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gatewayCount")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 2)
     private Long gatewayCount;
 
-    @Body
-    @NameInMap("initialDatabases")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("initialDatabases")
     private String initialDatabases;
 
-    @Body
-    @NameInMap("instanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Body
-    @NameInMap("instanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Body
-    @NameInMap("leaderInstanceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("leaderInstanceId")
     private String leaderInstanceId;
 
-    @Body
-    @NameInMap("pricingCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pricingCycle")
     private String pricingCycle;
 
-    @Body
-    @NameInMap("regionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("regionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Body
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("storageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("storageSize")
     private Long storageSize;
 
-    @Body
-    @NameInMap("vSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Body
-    @NameInMap("vpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("vpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Body
-    @NameInMap("zoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("zoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateInstanceRequest(Builder builder) {

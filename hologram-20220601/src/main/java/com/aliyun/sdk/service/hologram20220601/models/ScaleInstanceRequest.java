@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hologram20220601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScaleInstanceRequest</p>
  */
 public class ScaleInstanceRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("coldStorageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("coldStorageSize")
     private Long coldStorageSize;
 
-    @Body
-    @NameInMap("cpu")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpu")
     private Long cpu;
 
-    @Body
-    @NameInMap("enableServerlessComputing")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableServerlessComputing")
     private Boolean enableServerlessComputing;
 
-    @Body
-    @NameInMap("gatewayCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("gatewayCount")
     private Long gatewayCount;
 
-    @Body
-    @NameInMap("scaleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scaleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scaleType;
 
-    @Body
-    @NameInMap("storageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("storageSize")
     private Long storageSize;
 
     private ScaleInstanceRequest(Builder builder) {
