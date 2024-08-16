@@ -23,11 +23,16 @@ public class GetDocStructureResultRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RevealMarkdown")
     private Boolean revealMarkdown;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseUrlResponseBody")
+    private Boolean useUrlResponseBody;
+
     private GetDocStructureResultRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
         this.imageStrategy = builder.imageStrategy;
         this.revealMarkdown = builder.revealMarkdown;
+        this.useUrlResponseBody = builder.useUrlResponseBody;
     }
 
     public static Builder builder() {
@@ -64,10 +69,18 @@ public class GetDocStructureResultRequest extends Request {
         return this.revealMarkdown;
     }
 
+    /**
+     * @return useUrlResponseBody
+     */
+    public Boolean getUseUrlResponseBody() {
+        return this.useUrlResponseBody;
+    }
+
     public static final class Builder extends Request.Builder<GetDocStructureResultRequest, Builder> {
         private String id; 
         private String imageStrategy; 
         private Boolean revealMarkdown; 
+        private Boolean useUrlResponseBody; 
 
         private Builder() {
             super();
@@ -78,6 +91,7 @@ public class GetDocStructureResultRequest extends Request {
             this.id = request.id;
             this.imageStrategy = request.imageStrategy;
             this.revealMarkdown = request.revealMarkdown;
+            this.useUrlResponseBody = request.useUrlResponseBody;
         } 
 
         /**
@@ -104,6 +118,15 @@ public class GetDocStructureResultRequest extends Request {
         public Builder revealMarkdown(Boolean revealMarkdown) {
             this.putQueryParameter("RevealMarkdown", revealMarkdown);
             this.revealMarkdown = revealMarkdown;
+            return this;
+        }
+
+        /**
+         * UseUrlResponseBody.
+         */
+        public Builder useUrlResponseBody(Boolean useUrlResponseBody) {
+            this.putQueryParameter("UseUrlResponseBody", useUrlResponseBody);
+            this.useUrlResponseBody = useUrlResponseBody;
             return this;
         }
 

@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AyncTradeDocumentPackageExtractSmartAppResponse> ayncTradeDocumentPackageExtractSmartApp(AyncTradeDocumentPackageExtractSmartAppRequest request);
 
+    CompletableFuture<GetDocParserResultResponse> getDocParserResult(GetDocParserResultRequest request);
+
     CompletableFuture<GetDocStructureResultResponse> getDocStructureResult(GetDocStructureResultRequest request);
 
     CompletableFuture<GetDocumentCompareResultResponse> getDocumentCompareResult(GetDocumentCompareResultRequest request);
@@ -32,6 +34,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPageNumResponse> getPageNum(GetPageNumRequest request);
 
     CompletableFuture<GetTableUnderstandingResultResponse> getTableUnderstandingResult(GetTableUnderstandingResultRequest request);
+
+    CompletableFuture<QueryDocParserStatusResponse> queryDocParserStatus(QueryDocParserStatusRequest request);
 
     CompletableFuture<SubmitConvertImageToExcelJobResponse> submitConvertImageToExcelJob(SubmitConvertImageToExcelJobRequest request);
 
