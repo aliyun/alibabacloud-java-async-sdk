@@ -225,7 +225,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteExecutionsResponse> deleteExecutions(DeleteExecutionsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteExecutions").setMethod(HttpMethod.POST).setPathRegex("/DeleteExecutions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteExecutions").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteExecutionsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

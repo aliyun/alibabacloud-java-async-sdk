@@ -17,12 +17,17 @@ public class DeleteExecutionsRequest extends Request {
     private String executionIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DeleteExecutionsRequest(Builder builder) {
         super(builder);
         this.executionIds = builder.executionIds;
+        this.force = builder.force;
         this.regionId = builder.regionId;
     }
 
@@ -47,6 +52,13 @@ public class DeleteExecutionsRequest extends Request {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -55,6 +67,7 @@ public class DeleteExecutionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteExecutionsRequest, Builder> {
         private String executionIds; 
+        private Boolean force; 
         private String regionId; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class DeleteExecutionsRequest extends Request {
         private Builder(DeleteExecutionsRequest request) {
             super(request);
             this.executionIds = request.executionIds;
+            this.force = request.force;
             this.regionId = request.regionId;
         } 
 
@@ -76,6 +90,15 @@ public class DeleteExecutionsRequest extends Request {
         public Builder executionIds(String executionIds) {
             this.putQueryParameter("ExecutionIds", executionIds);
             this.executionIds = executionIds;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 
