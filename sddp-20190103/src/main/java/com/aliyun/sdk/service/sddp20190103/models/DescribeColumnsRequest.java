@@ -16,6 +16,10 @@ public class DescribeColumnsRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineType")
+    private String engineType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private Long instanceId;
 
@@ -28,6 +32,10 @@ public class DescribeColumnsRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModelTagId")
+    private String modelTagId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -38,6 +46,10 @@ public class DescribeColumnsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductId")
+    private String productId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RiskLevelId")
@@ -63,21 +75,34 @@ public class DescribeColumnsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private String templateId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateRuleId")
+    private String templateRuleId;
+
     private DescribeColumnsRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.engineType = builder.engineType;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.lang = builder.lang;
+        this.modelTagId = builder.modelTagId;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
         this.productCode = builder.productCode;
+        this.productId = builder.productId;
         this.riskLevelId = builder.riskLevelId;
         this.ruleId = builder.ruleId;
         this.ruleName = builder.ruleName;
         this.sensLevelName = builder.sensLevelName;
         this.tableId = builder.tableId;
         this.tableName = builder.tableName;
+        this.templateId = builder.templateId;
+        this.templateRuleId = builder.templateRuleId;
     }
 
     public static Builder builder() {
@@ -98,6 +123,13 @@ public class DescribeColumnsRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return engineType
+     */
+    public String getEngineType() {
+        return this.engineType;
     }
 
     /**
@@ -122,6 +154,13 @@ public class DescribeColumnsRequest extends Request {
     }
 
     /**
+     * @return modelTagId
+     */
+    public String getModelTagId() {
+        return this.modelTagId;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -140,6 +179,13 @@ public class DescribeColumnsRequest extends Request {
      */
     public String getProductCode() {
         return this.productCode;
+    }
+
+    /**
+     * @return productId
+     */
+    public String getProductId() {
+        return this.productId;
     }
 
     /**
@@ -184,20 +230,39 @@ public class DescribeColumnsRequest extends Request {
         return this.tableName;
     }
 
+    /**
+     * @return templateId
+     */
+    public String getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
+     * @return templateRuleId
+     */
+    public String getTemplateRuleId() {
+        return this.templateRuleId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeColumnsRequest, Builder> {
         private Integer currentPage; 
+        private String engineType; 
         private Long instanceId; 
         private String instanceName; 
         private String lang; 
+        private String modelTagId; 
         private String name; 
         private Integer pageSize; 
         private String productCode; 
+        private String productId; 
         private Long riskLevelId; 
         private Long ruleId; 
         private String ruleName; 
         private String sensLevelName; 
         private Long tableId; 
         private String tableName; 
+        private String templateId; 
+        private String templateRuleId; 
 
         private Builder() {
             super();
@@ -206,18 +271,23 @@ public class DescribeColumnsRequest extends Request {
         private Builder(DescribeColumnsRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.engineType = request.engineType;
             this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.lang = request.lang;
+            this.modelTagId = request.modelTagId;
             this.name = request.name;
             this.pageSize = request.pageSize;
             this.productCode = request.productCode;
+            this.productId = request.productId;
             this.riskLevelId = request.riskLevelId;
             this.ruleId = request.ruleId;
             this.ruleName = request.ruleName;
             this.sensLevelName = request.sensLevelName;
             this.tableId = request.tableId;
             this.tableName = request.tableName;
+            this.templateId = request.templateId;
+            this.templateRuleId = request.templateRuleId;
         } 
 
         /**
@@ -226,6 +296,15 @@ public class DescribeColumnsRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * EngineType.
+         */
+        public Builder engineType(String engineType) {
+            this.putQueryParameter("EngineType", engineType);
+            this.engineType = engineType;
             return this;
         }
 
@@ -264,6 +343,15 @@ public class DescribeColumnsRequest extends Request {
         }
 
         /**
+         * ModelTagId.
+         */
+        public Builder modelTagId(String modelTagId) {
+            this.putQueryParameter("ModelTagId", modelTagId);
+            this.modelTagId = modelTagId;
+            return this;
+        }
+
+        /**
          * The search keyword. Fuzzy match is supported.
          * <p>
          * 
@@ -290,6 +378,15 @@ public class DescribeColumnsRequest extends Request {
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
             this.productCode = productCode;
+            return this;
+        }
+
+        /**
+         * ProductId.
+         */
+        public Builder productId(String productId) {
+            this.putQueryParameter("ProductId", productId);
+            this.productId = productId;
             return this;
         }
 
@@ -364,6 +461,24 @@ public class DescribeColumnsRequest extends Request {
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
             this.tableName = tableName;
+            return this;
+        }
+
+        /**
+         * TemplateId.
+         */
+        public Builder templateId(String templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * TemplateRuleId.
+         */
+        public Builder templateRuleId(String templateRuleId) {
+            this.putQueryParameter("TemplateRuleId", templateRuleId);
+            this.templateRuleId = templateRuleId;
             return this;
         }
 

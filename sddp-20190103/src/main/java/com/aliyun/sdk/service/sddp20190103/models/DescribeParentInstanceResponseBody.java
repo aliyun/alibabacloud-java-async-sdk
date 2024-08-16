@@ -170,6 +170,9 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
@@ -202,6 +205,7 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             this.localName = builder.localName;
             this.memberAccount = builder.memberAccount;
             this.parentId = builder.parentId;
+            this.regionId = builder.regionId;
             this.resourceType = builder.resourceType;
             this.supportConnectNodes = builder.supportConnectNodes;
             this.tenantId = builder.tenantId;
@@ -310,6 +314,13 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -365,6 +376,7 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
             private String localName; 
             private Long memberAccount; 
             private String parentId; 
+            private String regionId; 
             private String resourceType; 
             private String supportConnectNodes; 
             private String tenantId; 
@@ -473,6 +485,14 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 

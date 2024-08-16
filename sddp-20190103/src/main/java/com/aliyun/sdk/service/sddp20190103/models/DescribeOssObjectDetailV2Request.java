@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeOssObjectDetailV2Request extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketName")
+    private String bucketName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
@@ -19,10 +23,26 @@ public class DescribeOssObjectDetailV2Request extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectKey")
+    private String objectKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceRegionId")
+    private String serviceRegionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private Long templateId;
+
     private DescribeOssObjectDetailV2Request(Builder builder) {
         super(builder);
+        this.bucketName = builder.bucketName;
         this.id = builder.id;
         this.lang = builder.lang;
+        this.objectKey = builder.objectKey;
+        this.serviceRegionId = builder.serviceRegionId;
+        this.templateId = builder.templateId;
     }
 
     public static Builder builder() {
@@ -39,6 +59,13 @@ public class DescribeOssObjectDetailV2Request extends Request {
     }
 
     /**
+     * @return bucketName
+     */
+    public String getBucketName() {
+        return this.bucketName;
+    }
+
+    /**
      * @return id
      */
     public String getId() {
@@ -52,9 +79,34 @@ public class DescribeOssObjectDetailV2Request extends Request {
         return this.lang;
     }
 
+    /**
+     * @return objectKey
+     */
+    public String getObjectKey() {
+        return this.objectKey;
+    }
+
+    /**
+     * @return serviceRegionId
+     */
+    public String getServiceRegionId() {
+        return this.serviceRegionId;
+    }
+
+    /**
+     * @return templateId
+     */
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeOssObjectDetailV2Request, Builder> {
+        private String bucketName; 
         private String id; 
         private String lang; 
+        private String objectKey; 
+        private String serviceRegionId; 
+        private Long templateId; 
 
         private Builder() {
             super();
@@ -62,9 +114,22 @@ public class DescribeOssObjectDetailV2Request extends Request {
 
         private Builder(DescribeOssObjectDetailV2Request request) {
             super(request);
+            this.bucketName = request.bucketName;
             this.id = request.id;
             this.lang = request.lang;
+            this.objectKey = request.objectKey;
+            this.serviceRegionId = request.serviceRegionId;
+            this.templateId = request.templateId;
         } 
+
+        /**
+         * BucketName.
+         */
+        public Builder bucketName(String bucketName) {
+            this.putQueryParameter("BucketName", bucketName);
+            this.bucketName = bucketName;
+            return this;
+        }
 
         /**
          * Id.
@@ -81,6 +146,33 @@ public class DescribeOssObjectDetailV2Request extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ObjectKey.
+         */
+        public Builder objectKey(String objectKey) {
+            this.putQueryParameter("ObjectKey", objectKey);
+            this.objectKey = objectKey;
+            return this;
+        }
+
+        /**
+         * ServiceRegionId.
+         */
+        public Builder serviceRegionId(String serviceRegionId) {
+            this.putQueryParameter("ServiceRegionId", serviceRegionId);
+            this.serviceRegionId = serviceRegionId;
+            return this;
+        }
+
+        /**
+         * TemplateId.
+         */
+        public Builder templateId(Long templateId) {
+            this.putQueryParameter("TemplateId", templateId);
+            this.templateId = templateId;
             return this;
         }
 

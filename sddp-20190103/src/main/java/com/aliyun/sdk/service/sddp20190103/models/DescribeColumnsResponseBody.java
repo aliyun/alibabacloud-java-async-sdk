@@ -232,6 +232,9 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
         @com.aliyun.core.annotation.NameInMap("RevisionId")
         private Long revisionId;
 
@@ -273,6 +276,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             this.odpsRiskLevelName = builder.odpsRiskLevelName;
             this.odpsRiskLevelValue = builder.odpsRiskLevelValue;
             this.productCode = builder.productCode;
+            this.regionId = builder.regionId;
             this.revisionId = builder.revisionId;
             this.revisionStatus = builder.revisionStatus;
             this.riskLevelId = builder.riskLevelId;
@@ -364,6 +368,13 @@ public class DescribeColumnsResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
          * @return revisionId
          */
         public Long getRevisionId() {
@@ -444,6 +455,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
             private String odpsRiskLevelName; 
             private Integer odpsRiskLevelValue; 
             private String productCode; 
+            private String regionId; 
             private Long revisionId; 
             private Long revisionStatus; 
             private Long riskLevelId; 
@@ -546,6 +558,14 @@ public class DescribeColumnsResponseBody extends TeaModel {
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
                 return this;
             }
 
