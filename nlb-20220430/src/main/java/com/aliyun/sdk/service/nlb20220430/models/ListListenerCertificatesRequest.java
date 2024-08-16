@@ -16,6 +16,10 @@ public class ListListenerCertificatesRequest extends Request {
     private String certType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertificateIds")
+    private java.util.List < String > certificateIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ListenerId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
@@ -36,6 +40,7 @@ public class ListListenerCertificatesRequest extends Request {
     private ListListenerCertificatesRequest(Builder builder) {
         super(builder);
         this.certType = builder.certType;
+        this.certificateIds = builder.certificateIds;
         this.listenerId = builder.listenerId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -60,6 +65,13 @@ public class ListListenerCertificatesRequest extends Request {
      */
     public String getCertType() {
         return this.certType;
+    }
+
+    /**
+     * @return certificateIds
+     */
+    public java.util.List < String > getCertificateIds() {
+        return this.certificateIds;
     }
 
     /**
@@ -92,6 +104,7 @@ public class ListListenerCertificatesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListListenerCertificatesRequest, Builder> {
         private String certType; 
+        private java.util.List < String > certificateIds; 
         private String listenerId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -104,6 +117,7 @@ public class ListListenerCertificatesRequest extends Request {
         private Builder(ListListenerCertificatesRequest request) {
             super(request);
             this.certType = request.certType;
+            this.certificateIds = request.certificateIds;
             this.listenerId = request.listenerId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -120,6 +134,15 @@ public class ListListenerCertificatesRequest extends Request {
         public Builder certType(String certType) {
             this.putBodyParameter("CertType", certType);
             this.certType = certType;
+            return this;
+        }
+
+        /**
+         * CertificateIds.
+         */
+        public Builder certificateIds(java.util.List < String > certificateIds) {
+            this.putBodyParameter("CertificateIds", certificateIds);
+            this.certificateIds = certificateIds;
             return this;
         }
 

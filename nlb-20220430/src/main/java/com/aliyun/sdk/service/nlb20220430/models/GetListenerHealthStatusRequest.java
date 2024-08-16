@@ -17,22 +17,12 @@ public class GetListenerHealthStatusRequest extends Request {
     private String listenerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("MaxResults")
-    private Integer maxResults;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NextToken")
-    private String nextToken;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private GetListenerHealthStatusRequest(Builder builder) {
         super(builder);
         this.listenerId = builder.listenerId;
-        this.maxResults = builder.maxResults;
-        this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
     }
 
@@ -57,20 +47,6 @@ public class GetListenerHealthStatusRequest extends Request {
     }
 
     /**
-     * @return maxResults
-     */
-    public Integer getMaxResults() {
-        return this.maxResults;
-    }
-
-    /**
-     * @return nextToken
-     */
-    public String getNextToken() {
-        return this.nextToken;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -79,8 +55,6 @@ public class GetListenerHealthStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetListenerHealthStatusRequest, Builder> {
         private String listenerId; 
-        private Integer maxResults; 
-        private String nextToken; 
         private String regionId; 
 
         private Builder() {
@@ -90,8 +64,6 @@ public class GetListenerHealthStatusRequest extends Request {
         private Builder(GetListenerHealthStatusRequest request) {
             super(request);
             this.listenerId = request.listenerId;
-            this.maxResults = request.maxResults;
-            this.nextToken = request.nextToken;
             this.regionId = request.regionId;
         } 
 
@@ -101,28 +73,6 @@ public class GetListenerHealthStatusRequest extends Request {
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
             this.listenerId = listenerId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
-         */
-        public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
-            this.maxResults = maxResults;
-            return this;
-        }
-
-        /**
-         * The token that is used for the next query. Valid values:
-         * <p>
-         * 
-         * *   If this is your first query or no next query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
-         */
-        public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
-            this.nextToken = nextToken;
             return this;
         }
 
