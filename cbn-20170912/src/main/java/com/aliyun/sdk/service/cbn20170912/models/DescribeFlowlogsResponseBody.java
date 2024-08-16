@@ -97,7 +97,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * A list of flow logs.
+         * The information about the flow log.
          */
         public Builder flowLogs(FlowLogs flowLogs) {
             this.flowLogs = flowLogs;
@@ -451,7 +451,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * The ID of the CEN instance.
+             * The ID of the Cloud Enterprise Network (CEN) instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -502,7 +502,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.
+             * The time window for collecting log data. Unit: seconds. Valid values: **60** or **600** Default value: **600**.
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
@@ -518,7 +518,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore where the flow log is stored.
+             * The Logstore that stores the captured traffic data.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -526,7 +526,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the project where the flow log is stored.
+             * The name of the project that stores the captured traffic data.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -534,7 +534,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the flow log is deployed.
+             * The region ID of the flow log.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -562,7 +562,7 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the network instance connection.
+             * The ID of the network instance connection
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;

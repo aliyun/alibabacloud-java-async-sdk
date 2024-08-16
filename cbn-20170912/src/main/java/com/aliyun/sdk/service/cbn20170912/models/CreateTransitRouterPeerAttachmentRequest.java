@@ -346,10 +346,10 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
         }
 
         /**
-         * The ID of the bandwidth plan that is used to allocate bandwidth to the inter-region connection.
+         * The ID of the bandwidth plan that you want to associate with the inter-region connection.
          * <p>
          * 
-         * *   If you set **BandwidthType** to **DataTransfer**, you do not need to set this parameter.
+         * >  If you set **BandwidthType** to **DataTransfer**, you can skip this parameter.
          */
         public Builder cenBandwidthPackageId(String cenBandwidthPackageId) {
             this.putQueryParameter("CenBandwidthPackageId", cenBandwidthPackageId);
@@ -370,9 +370,9 @@ public class CreateTransitRouterPeerAttachmentRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

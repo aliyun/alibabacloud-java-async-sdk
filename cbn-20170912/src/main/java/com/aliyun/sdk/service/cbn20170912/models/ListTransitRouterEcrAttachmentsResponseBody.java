@@ -85,7 +85,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         private java.util.List < TransitRouterAttachments> transitRouterAttachments; 
 
         /**
-         * MaxResults.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +93,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +101,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +117,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterAttachments.
+         * The information about the ECR connections.
          */
         public Builder transitRouterAttachments(java.util.List < TransitRouterAttachments> transitRouterAttachments) {
             this.transitRouterAttachments = transitRouterAttachments;
@@ -169,7 +169,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +177,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -374,7 +374,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             private String transitRouterRegionId; 
 
             /**
-             * AutoPublishRouteEnabled.
+             * Indicates whether the Enterprise Edition transit router can automatically advertise routes to ECRs.
+             * <p>
+             * 
+             * The value is **true**, which indicates that the Enterprise Edition transit router can automatically advertise routes to ECRs.
              */
             public Builder autoPublishRouteEnabled(Boolean autoPublishRouteEnabled) {
                 this.autoPublishRouteEnabled = autoPublishRouteEnabled;
@@ -382,7 +385,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * CenId.
+             * The ID of the CEN instance.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -390,7 +393,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the ECR connection was created.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -398,7 +404,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * EcrId.
+             * The ID of the ECR with which the ECR connection is associated.
              */
             public Builder ecrId(String ecrId) {
                 this.ecrId = ecrId;
@@ -406,7 +412,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * EcrOwnerId.
+             * The ID of the Alibaba Cloud account to which the ECR connection belongs.
              */
             public Builder ecrOwnerId(Long ecrOwnerId) {
                 this.ecrOwnerId = ecrOwnerId;
@@ -414,7 +420,11 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * The entity that pays the fees of the network instance. Valid values: Valid values:
+             * <p>
+             * 
+             * *   **PayByCenOwner**: The Alibaba Cloud account to which the transit router belongs pays the connection and data forwarding fees of the ECR.
+             * *   **PayByResourceOwner**: The Alibaba Cloud account to which the ECR belongs pays the connection and data forwarding fees of the ECR.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -422,7 +432,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of resource to which the transit router is connected. Valid values:
+             * <p>
+             * 
+             * The value is **ECR**, which indicates ECR connections.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -430,7 +443,12 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the ECR connection. Valid values:
+             * <p>
+             * 
+             * *   **Attached**
+             * *   **Attaching**
+             * *   **Detaching**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -438,7 +456,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -446,7 +464,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterAttachmentDescription.
+             * The description of the ECR connection.
              */
             public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
                 this.transitRouterAttachmentDescription = transitRouterAttachmentDescription;
@@ -454,7 +472,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterAttachmentId.
+             * The ID of the ECR connection.
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
@@ -462,7 +480,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterAttachmentName.
+             * The name of the ECR connection.
              */
             public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
                 this.transitRouterAttachmentName = transitRouterAttachmentName;
@@ -470,7 +488,7 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterId.
+             * The ID of the Enterprise Edition transit router.
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
@@ -478,7 +496,10 @@ public class ListTransitRouterEcrAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TransitRouterRegionId.
+             * The region ID of the transit router.
+             * <p>
+             * 
+             * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
              */
             public Builder transitRouterRegionId(String transitRouterRegionId) {
                 this.transitRouterRegionId = transitRouterRegionId;

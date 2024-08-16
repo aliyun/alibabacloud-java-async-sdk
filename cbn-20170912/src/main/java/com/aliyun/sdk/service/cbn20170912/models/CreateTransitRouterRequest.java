@@ -321,10 +321,7 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * The information about the tags.
-         * <p>
-         * 
-         * You can specify at most 20 tags in each call.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -333,12 +330,7 @@ public class CreateTransitRouterRequest extends Request {
         }
 
         /**
-         * The CIDR blocks of the transit router.
-         * <p>
-         * 
-         * You can add up to five CIDR blocks at a time. For more information about CIDR blocks of transit routers, see [CIDR blocks of transit routers](~~462635~~).
-         * 
-         * >  Only Enterprise Edition transit routers support CIDR blocks.
+         * The CIDR blocks to be added to the transit router.
          */
         public Builder transitRouterCidrList(java.util.List < TransitRouterCidrList> transitRouterCidrList) {
             String transitRouterCidrListShrink = shrink(transitRouterCidrList, "TransitRouterCidrList", "json");
@@ -420,9 +412,9 @@ public class CreateTransitRouterRequest extends Request {
              * The tag key.
              * <p>
              * 
-             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The tag keys cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
              * 
-             * You can specify at most 20 tag keys.
+             * You can specify at most 20 tag keys in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -433,9 +425,9 @@ public class CreateTransitRouterRequest extends Request {
              * The tag value.
              * <p>
              * 
-             * The tag value can be 0 to 128 characters in length, and cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
+             * The tag value can be an empty string or up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
              * 
-             * Each tag key has a unique tag value. You can specify at most 20 tag values in each call.
+             * Each key-value must be unique. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -520,7 +512,7 @@ public class CreateTransitRouterRequest extends Request {
             }
 
             /**
-             * The description of the CIDR block.
+             * The description of the transit router CIDR block.
              * <p>
              * 
              * The description must be 1 to 256 characters in length.
@@ -531,7 +523,7 @@ public class CreateTransitRouterRequest extends Request {
             }
 
             /**
-             * The name of the CIDR block.
+             * The name of the transit router CIDR block.
              * <p>
              * 
              * The name must be 1 to 128 characters in length.
@@ -545,15 +537,15 @@ public class CreateTransitRouterRequest extends Request {
              * Specifies whether to allow the system to automatically add a route that points to the CIDR block to the route table of the transit router.
              * <p>
              * 
-             * *   **true** (default): yes.
+             * *   **true** (default)
              * 
-             *     A value of true specifies that after you create a private VPN connection and enable route learning for the connection, the system automatically adds a blackhole route to the route table of the transit router to which the VPN connection is attached.
+             *     If you set the value to true, after you create a VPN attachment on a private VPN gateway and enable route learning for the VPN attachment, the system automatically adds the following route to the route table of the transit router that is in route learning relationship with the VPN attachment:
              * 
-             *     The destination CIDR block of the blackhole route is the CIDR block of the transit router. The CIDR block of the transit router refers to the CIDR block from which gateway IP addresses are allocated to IPsec-VPN connections.
+             *     A blackhole route whose destination CIDR block is the transit router CIDR block, which refers to the CIDR block from which gateway IP addresses are allocated to the IPsec-VPN connection.
              * 
-             *     The blackhole route is only advertised to the route table of the virtual border router (VBR) that is connected to the transit router.
+             *     The blackhole route is advertised only to the route tables of virtual border routers (VBRs) connected to the transit router.
              * 
-             * *   **false**: no.
+             * *   **false**
              */
             public Builder publishCidrRoute(Boolean publishCidrRoute) {
                 this.publishCidrRoute = publishCidrRoute;

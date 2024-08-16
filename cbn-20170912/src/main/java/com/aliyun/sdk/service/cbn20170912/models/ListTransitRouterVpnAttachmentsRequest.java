@@ -242,7 +242,7 @@ public class ListTransitRouterVpnAttachmentsRequest extends Request {
         }
 
         /**
-         * The ID of the region where the transit router is deployed.
+         * The region ID of the transit router.
          * <p>
          * 
          * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.

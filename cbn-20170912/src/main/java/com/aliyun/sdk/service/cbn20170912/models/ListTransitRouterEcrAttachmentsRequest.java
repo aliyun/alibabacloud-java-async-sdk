@@ -193,7 +193,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -202,7 +202,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -211,7 +211,11 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -238,7 +242,10 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the transit router.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -265,7 +272,10 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -274,7 +284,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the ECR connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -283,7 +293,7 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -337,7 +347,12 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -345,7 +360,12 @@ public class ListTransitRouterEcrAttachmentsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+             * 
+             * Each key-value must be unique. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

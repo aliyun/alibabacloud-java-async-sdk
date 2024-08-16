@@ -306,7 +306,7 @@ public class CreateTransitRouterCidrRequest extends Request {
         }
 
         /**
-         * The region ID of the transit router.
+         * The ID of the region to which the transfer router belongs.
          * <p>
          * 
          * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.

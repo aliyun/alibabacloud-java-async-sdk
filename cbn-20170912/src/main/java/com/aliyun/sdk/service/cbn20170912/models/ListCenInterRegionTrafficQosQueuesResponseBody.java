@@ -61,11 +61,11 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         private java.util.List < TrafficQosQueues> trafficQosQueues; 
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * - If NextToken was not returned, it indicates that no additional results exist.
-         * - If NextToken was returned in the previous query, specify the value to obtain the next set of results.
+         * *   If **NextToken** is empty, no next page exists.
+         * *   If a value of **NextToken** is returned, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -81,7 +81,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * A list of queues.
+         * The information about the QoS queue.
          */
         public Builder trafficQosQueues(java.util.List < TrafficQosQueues> trafficQosQueues) {
             this.trafficQosQueues = trafficQosQueues;
@@ -217,7 +217,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
-             * The differentiated services code point (DSCP) value that matches the current queue.
+             * The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
@@ -225,10 +225,10 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The percentage of bandwidth resources that can be allocated to the current queue.
+             * The percentage of the inter-region bandwidth that can be consumed by the QoS queue.
              * <p>
              * 
-             * For example, a value of 1 indicates that 1 percent of bandwidth resources can be allocated to the queue.
+             * A value of **1** indicates that the QoS queue can consume at most 1% of the inter-region bandwidth.
              */
             public Builder remainBandwidthPercent(Integer remainBandwidthPercent) {
                 this.remainBandwidthPercent = remainBandwidthPercent;
@@ -236,12 +236,12 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the queue. Valid values:
+             * The status of the QoS queue. Valid values:
              * <p>
              * 
-             * - **Creating**: The queue is being created. 
-             * - **Active**: The queue is available. 
-             * - **Deleting**: The queue is being deleted.
+             * *   **Creating**
+             * *   **Active**
+             * *   **Deleting**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -257,7 +257,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the queue.
+             * The description of the QoS queue.
              */
             public Builder trafficQosQueueDescription(String trafficQosQueueDescription) {
                 this.trafficQosQueueDescription = trafficQosQueueDescription;
@@ -265,7 +265,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the queue.
+             * The ID of the QoS queue.
              */
             public Builder trafficQosQueueId(String trafficQosQueueId) {
                 this.trafficQosQueueId = trafficQosQueueId;
@@ -273,7 +273,7 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the queue.
+             * The name of the QoS queue.
              */
             public Builder trafficQosQueueName(String trafficQosQueueName) {
                 this.trafficQosQueueName = trafficQosQueueName;

@@ -85,7 +85,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The array of routes.
+         * A list of route entries.
          */
         public Builder cenRouteEntries(CenRouteEntries cenRouteEntries) {
             this.cenRouteEntries = cenRouteEntries;
@@ -101,7 +101,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +109,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +210,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             private String routeMapId; 
 
             /**
-             * The ID of the region where the route map is applied.
+             * The ID of the region where the routing policy is applied.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -218,7 +218,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route map.
+             * The ID of the routing policy.
              */
             public Builder routeMapId(String routeMapId) {
                 this.routeMapId = routeMapId;
@@ -312,7 +312,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             private String routeMapId; 
 
             /**
-             * The ID of the region where the route map is applied.
+             * The ID of the region where the routing policy is applied.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -320,7 +320,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route map.
+             * The ID of the routing policy.
              */
             public Builder routeMapId(String routeMapId) {
                 this.routeMapId = routeMapId;
@@ -575,7 +575,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The AS paths of the routes.
+             * The AS paths of the route.
              */
             public Builder asPaths(AsPaths asPaths) {
                 this.asPaths = asPaths;
@@ -583,7 +583,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The route maps that the routes match in the outbound direction.
+             * The routing policy that the routes match in the outbound direction.
              */
             public Builder cenOutRouteMapRecords(CenOutRouteMapRecords cenOutRouteMapRecords) {
                 this.cenOutRouteMapRecords = cenOutRouteMapRecords;
@@ -591,7 +591,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The route maps that the routes match in the inbound direction.
+             * The routing policy that the routes match in the inbound direction.
              */
             public Builder cenRouteMapRecords(CenRouteMapRecords cenRouteMapRecords) {
                 this.cenRouteMapRecords = cenRouteMapRecords;
@@ -599,7 +599,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The community attributes of the routes.
+             * The communities of the route.
              */
             public Builder communities(Communities communities) {
                 this.communities = communities;
@@ -623,7 +623,7 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the network instance specified as the next hop in the route belongs.
+             * The ID of the region to which the network instance specified as the next hop in the route belongs.
              */
             public Builder nextHopRegionId(String nextHopRegionId) {
                 this.nextHopRegionId = nextHopRegionId;
@@ -631,13 +631,13 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the network instance specified as the next hop in the route. 
+             * The type of the instance specified as the next hop in the route. Valid values:
              * <p>
              * 
-             * - **VPC**
-             * - **VBR**
-             * - **CCN**
-             * - **local_service**: system route. No next hop is specified.
+             * *   **VPC**: virtual private cloud (VPC)
+             * *   **VBR**: virtual border router (VBR)
+             * *   **CCN**: Cloud Connect Network (CCN) instance
+             * *   **local_service**: system route. No next hop is specified.
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -645,10 +645,10 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of the route. 
+             * The route priority.
              * <p>
              * 
-             * > A smaller value indicates a higher priority.
+             * A smaller value indicates a higher priority.
              */
             public Builder preference(Integer preference) {
                 this.preference = preference;
@@ -656,13 +656,13 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the route. Valid values: 
+             * The route status. Valid values:
              * <p>
              * 
-             * - **Active**: The route is active.
-             * - **Candidate**: The route is a standby route.
-             * - **Rejected**: The route is rejected.
-             * - **Prohibited**: The route is prohibited.
+             * *   **Active**: available
+             * *   **Candidate**: standby
+             * *   **Rejected**: rejected
+             * *   **Prohibited**: prohibited
              */
             public Builder status(String status) {
                 this.status = status;
@@ -670,11 +670,11 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether the route can be advertised to other regions. Valid values: 
+             * Indicates whether the route can be advertised to other regions. Valid values:
              * <p>
              * 
-             * - **Active**: The route can be advertised to other regions.
-             * - **Prohibited**: The route cannot be advertised to other regions.
+             * *   **Active**: The route can be advertised to other regions.
+             * *   **Prohibited**: The route cannot be advertised to other regions.
              */
             public Builder toOtherRegionStatus(String toOtherRegionStatus) {
                 this.toOtherRegionStatus = toOtherRegionStatus;
@@ -682,12 +682,12 @@ public class DescribeCenRegionDomainRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the route. Valid values: 
+             * The route type. Valid values:
              * <p>
              * 
-             * - **CEN**: route that is advertised through CEN
-             * - **Custom**: custom route
-             * - **System**: system route
+             * *   **CEN**: route that is advertised through CEN
+             * *   **Custom**: custom route
+             * *   **System**: system route
              */
             public Builder type(String type) {
                 this.type = type;

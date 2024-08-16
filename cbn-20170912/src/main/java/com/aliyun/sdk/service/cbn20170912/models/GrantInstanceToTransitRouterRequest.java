@@ -210,12 +210,13 @@ public class GrantInstanceToTransitRouterRequest extends Request {
         }
 
         /**
-         * The type of the network instance. Valid values:
+         * The type of network instance. Valid values:
          * <p>
          * 
          * *   **VPC**: VPC
          * *   **ExpressConnect**: VBR
-         * *   **VPN**: IPsec connection
+         * *   **VPN**: IPsec-VPN connection
+         * *   **ECR**: ECR
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

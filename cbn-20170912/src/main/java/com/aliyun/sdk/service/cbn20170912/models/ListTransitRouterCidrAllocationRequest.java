@@ -305,9 +305,9 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, ClientToken is set to the value of RequestId. The value of RequestId for each API request may be different.
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -341,14 +341,14 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * *   If you do not set **MaxResults**, it indicates that you do not need to query results in batches. The value of **MaxResults** indicates the total number of entries.
+         * *   If you do not specify a value for **MaxResults**, entries are returned in one response. After you send the request, the value of **MaxResults** includes all entries.
          * 
-         * *   If a value is specified for **MaxResults**, it indicates that you need to query results in batches. Valid values: **1** to **100**. We recommend that you set **MaxResults** to **20**.
+         * *   If you specify a value for **MaxResults**, entries are returned in batches. Valid values: **1** to **100**. We recommend that you set **MaxResults** to **20**.
          * 
-         *     The value of **MaxResults** in the response indicates the number of entries in the current batch.
+         *     The value of **MaxResults** in the response indicates that number of entries in the current batch.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -388,7 +388,7 @@ public class ListTransitRouterCidrAllocationRequest extends Request {
         }
 
         /**
-         * The ID of the region where the transit router is deployed.
+         * The region ID of the transit router.
          * <p>
          * 
          * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.

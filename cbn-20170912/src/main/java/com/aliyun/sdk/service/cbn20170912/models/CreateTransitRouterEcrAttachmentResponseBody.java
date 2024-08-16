@@ -49,7 +49,7 @@ public class CreateTransitRouterEcrAttachmentResponseBody extends TeaModel {
         private String transitRouterAttachmentId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class CreateTransitRouterEcrAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the ECR connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.transitRouterAttachmentId = transitRouterAttachmentId;

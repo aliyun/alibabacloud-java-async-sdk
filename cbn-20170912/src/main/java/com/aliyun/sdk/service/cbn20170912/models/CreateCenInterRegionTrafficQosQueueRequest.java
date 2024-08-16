@@ -42,7 +42,6 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RemainBandwidthPercent")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String remainBandwidthPercent;
 
     @com.aliyun.core.annotation.Query

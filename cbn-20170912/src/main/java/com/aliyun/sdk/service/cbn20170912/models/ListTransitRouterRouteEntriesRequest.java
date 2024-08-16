@@ -408,9 +408,6 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
 
         /**
          * The route ID.
-         * <p>
-         * 
-         * >  You can use this parameter to query only static routes in the specified route table. This parameter is incompatible with query conditions other than TransitRouterRouteEntryNames.
          */
         public Builder transitRouterRouteEntryIds(java.util.List < String > transitRouterRouteEntryIds) {
             this.putQueryParameter("TransitRouterRouteEntryIds", transitRouterRouteEntryIds);
@@ -419,12 +416,7 @@ public class ListTransitRouterRouteEntriesRequest extends Request {
         }
 
         /**
-         * The name of the route.
-         * <p>
-         * 
-         * The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
-         * 
-         * >  You can use this parameter to query only static routes in the specified route table. This parameter conflicts with other query conditions except for TransitRouterRouteEntryIds.
+         * The route name.
          */
         public Builder transitRouterRouteEntryNames(java.util.List < String > transitRouterRouteEntryNames) {
             this.putQueryParameter("TransitRouterRouteEntryNames", transitRouterRouteEntryNames);

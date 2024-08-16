@@ -303,7 +303,7 @@ public class DescribeFlowlogsRequest extends Request {
          * The description of the flow log.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * The description is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -324,7 +324,7 @@ public class DescribeFlowlogsRequest extends Request {
          * The name of the flow log.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
+         * The name is optional. If you enter a name, it must be 1 to 128 characters in length, and cannot start with http:// or https://.
          */
         public Builder flowLogName(String flowLogName) {
             this.putQueryParameter("FlowLogName", flowLogName);

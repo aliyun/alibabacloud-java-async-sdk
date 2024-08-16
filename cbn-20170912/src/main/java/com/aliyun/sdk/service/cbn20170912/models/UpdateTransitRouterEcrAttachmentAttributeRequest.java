@@ -166,7 +166,12 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -175,7 +180,11 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, the operation is performed.
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, a request ID is returned.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -220,7 +229,10 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentDescription.
+         * The new description of the ECR connection.
+         * <p>
+         * 
+         * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -229,7 +241,7 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentId.
+         * The ID of the ECR connection.
          */
         public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
             this.putQueryParameter("TransitRouterAttachmentId", transitRouterAttachmentId);
@@ -238,7 +250,10 @@ public class UpdateTransitRouterEcrAttachmentAttributeRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentName.
+         * The new name of the ECR connection.
+         * <p>
+         * 
+         * The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);

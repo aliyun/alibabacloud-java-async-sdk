@@ -488,7 +488,11 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * The entity that pays the fees of the network instance. Valid values:
+             * <p>
+             * 
+             * *   **PayByCenOwner**: the Alibaba Cloud account that owns the CEN instance.
+             * *   **PayByResourceOwner**: the Alibaba Cloud account that owns the network instance.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -576,10 +580,10 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the IPsec-VPN connection.
+             * The ID of the region to which the IPsec-VPN connection belongs.
              * <p>
              * 
-             * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+             * You can call the [DescribeRegions](~~36063~~) operation to query the region ID.
              */
             public Builder vpnRegionId(String vpnRegionId) {
                 this.vpnRegionId = vpnRegionId;

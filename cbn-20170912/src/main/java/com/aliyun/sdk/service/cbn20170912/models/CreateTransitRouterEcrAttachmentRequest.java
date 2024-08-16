@@ -236,7 +236,7 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         } 
 
         /**
-         * CenId.
+         * The ID of the Cloud Enterprise Network (CEN) instance.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -245,7 +245,12 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -254,7 +259,11 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and performs the actual request.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -263,7 +272,7 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * EcrId.
+         * The ID of the ECR.
          */
         public Builder ecrId(String ecrId) {
             this.putQueryParameter("EcrId", ecrId);
@@ -272,7 +281,10 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * EcrOwnerId.
+         * The ID of the Alibaba Cloud account to which the ECR belongs. By default, the ID of the current Alibaba Cloud account is specified.
+         * <p>
+         * 
+         * >  If you want to connect to a network instance that belongs to a different account, this parameter is required.
          */
         public Builder ecrOwnerId(Long ecrOwnerId) {
             this.putQueryParameter("EcrOwnerId", ecrOwnerId);
@@ -299,7 +311,10 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the transit router.
+         * <p>
+         * 
+         * You can call the [DescribeChildInstanceRegions](~~132080~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -326,7 +341,10 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
+         * <p>
+         * 
+         * You can specify at most 20 tags in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -335,7 +353,10 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentDescription.
+         * The description of the ECR connection.
+         * <p>
+         * 
+         * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
          */
         public Builder transitRouterAttachmentDescription(String transitRouterAttachmentDescription) {
             this.putQueryParameter("TransitRouterAttachmentDescription", transitRouterAttachmentDescription);
@@ -344,7 +365,10 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterAttachmentName.
+         * The name of the ECR connection.
+         * <p>
+         * 
+         * The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.
          */
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
@@ -353,7 +377,7 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
         }
 
         /**
-         * TransitRouterId.
+         * The ID of the transit router.
          */
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
@@ -407,7 +431,12 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+             * 
+             * You can specify at most 20 tag keys in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -415,7 +444,12 @@ public class CreateTransitRouterEcrAttachmentRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be an empty string or up to 128 characters in length. It cannot start with `aliyun` or `acs:` and cannot contain `http://` or `https://`.
+             * 
+             * Each key-value pair must be unique. You can specify values for at most 20 tag keys in each call.
              */
             public Builder value(String value) {
                 this.value = value;

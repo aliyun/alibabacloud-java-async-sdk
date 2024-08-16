@@ -195,6 +195,9 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
 
         /**
          * The traffic classification rules to be added to the traffic marking policy.
+         * <p>
+         * 
+         * You can add at most 50 traffic classification rules in each call.
          */
         public Builder addTrafficMatchRules(java.util.List < AddTrafficMatchRules> addTrafficMatchRules) {
             this.putQueryParameter("AddTrafficMatchRules", addTrafficMatchRules);
@@ -429,7 +432,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
              * The destination CIDR block that is used to match packets.
              * <p>
              * 
-             * Packets whose destination IP addresses fall into the specified destination CIDR block are considered a match. If you do not specify a destination CIDR block, packets are considered a match regardless of the destination IP address.
+             * Packets whose destination IP addresses fall into the specified destination CIDR block meet the traffic classification rule. If you do not specify a destination CIDR block, all packets meet the traffic classification rule.
              * 
              * You can create up to 50 traffic classification rules in each call. You can specify a destination CIDR block for each traffic classification rule.
              */
@@ -442,13 +445,13 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
              * The destination port range that is used to match packets. Valid values: **-1** and **1** to **65535**.
              * <p>
              * 
-             * Packets whose destination ports fall into the specified destination port range are considered a match. If you do not specify a destination port range, packets are considered a match regardless of the destination port.
+             * Packets whose destination ports fall within the specified destination port range are considered a match. If you do not specify a destination port range, packets are considered a match regardless of the destination port.
              * 
              * You can enter up to two port numbers. Take note of the following rules:
              * 
-             * *   If you enter only one port number, such as 1, packets whose destination port is 1 match the traffic classification rule.
+             * *   If you enter only one port number, such as 1, packets whose destination port is 1 match the traffic classification rule. A value of -1 specifies all destination ports.
              * *   If you enter two port numbers, such as 1 and 200, packets whose destination ports fall into 1 and 200 are considered a match.
-             * *   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the destination port.
+             * *   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.
              * 
              * You can create up to 50 traffic classification rules in each call. You can specify a destination port range for each traffic classification rule.
              */
@@ -491,7 +494,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
              * *   If the protocol is **Mysql**, set the destination port to **3306**.
              * *   If the protocol is **RDP**, set the destination port to **3389**.
              * *   If the protocol is **Postgre SQL**, set the destination port to **5432**.
-             * *   If the protocol is **Redis**, set the destination port to **6379**.
+             * *   If the protocol is **Redis**, the destination port must be **6379**.
              * 
              * You can create up to 50 traffic classification rules in each call. You can specify a protocol for each traffic classification rule.
              */
@@ -504,7 +507,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
              * The source CIDR block that is used to match packets.
              * <p>
              * 
-             * Packets whose source IP addresses fall into the specified source CIDR block are considered a match. If you do not specify a source CIDR block, packets are considered a match regardless of the source IP address.
+             * Packets whose source IP addresses fall into the specified source CIDR block meet the traffic classification rule. If you do not specify a source CIDR block, all packets meet the traffic classification rule.
              * 
              * You can create up to 50 traffic classification rules in each call. You can specify a source CIDR block for each traffic classification rule.
              */
@@ -517,13 +520,13 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
              * The source port range that is used to match packets. Valid values: **-1** and **1** to **65535**.
              * <p>
              * 
-             * Packets whose source ports fall into the specified source port range are considered a match. If you do not specify a source port range, packets are considered a match regardless of the source port.
+             * The traffic classification rule matches the packets whose source ports fall within the source port range. If you do not specify this parameter, packets are considered a match regardless of the source port.
              * 
              * You can enter up to two port numbers. Take note of the following rules:
              * 
-             * *   If you enter only one port number, such as 1, packets whose source port is 1 are considered a match.
+             * *   If you enter only one port number, such as 1, packets whose source port is 1 are considered a match. A value of -1 specifies all source ports.
              * *   If you enter two port numbers, such as 1 and 200, packets whose source ports fall into 1 and 200 are considered a match.
-             * *   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, packets are considered a match regardless of the source port.
+             * *   If you enter two port numbers and one of them is -1, the other port number must also be -1. In this case, all packets meet the traffic classification rule.
              * 
              * You can create up to 50 traffic classification rules in each call. You can specify a source port range for each traffic classification rule.
              */
@@ -538,7 +541,7 @@ public class UpdateTrafficMarkingPolicyAttributeRequest extends Request {
              * 
              * You can create up to 50 traffic classification rules in each call. You can specify a description for each traffic classification rule.
              * 
-             * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length, and cannot start with http:// or https://.
+             * This parameter is optional. If you enter a description, it must be 1 to 256 characters in length and cannot start with http:// or https://.
              */
             public Builder trafficMatchRuleDescription(String trafficMatchRuleDescription) {
                 this.trafficMatchRuleDescription = trafficMatchRuleDescription;
