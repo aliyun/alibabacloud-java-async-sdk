@@ -31,8 +31,8 @@ public class AnalyzeConversationRequest extends Request {
     private Dialogue dialogue;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("exampleList")
-    private java.util.List < ExampleList> exampleList;
+    @com.aliyun.core.annotation.NameInMap("examples")
+    private java.util.List < Examples> examples;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("fields")
@@ -66,7 +66,7 @@ public class AnalyzeConversationRequest extends Request {
         this.appId = builder.appId;
         this.regionId = builder.regionId;
         this.dialogue = builder.dialogue;
-        this.exampleList = builder.exampleList;
+        this.examples = builder.examples;
         this.fields = builder.fields;
         this.modelCode = builder.modelCode;
         this.resultTypes = builder.resultTypes;
@@ -117,10 +117,10 @@ public class AnalyzeConversationRequest extends Request {
     }
 
     /**
-     * @return exampleList
+     * @return examples
      */
-    public java.util.List < ExampleList> getExampleList() {
-        return this.exampleList;
+    public java.util.List < Examples> getExamples() {
+        return this.examples;
     }
 
     /**
@@ -170,7 +170,7 @@ public class AnalyzeConversationRequest extends Request {
         private String appId; 
         private String regionId; 
         private Dialogue dialogue; 
-        private java.util.List < ExampleList> exampleList; 
+        private java.util.List < Examples> examples; 
         private java.util.List < Fields> fields; 
         private String modelCode; 
         private java.util.List < String > resultTypes; 
@@ -188,7 +188,7 @@ public class AnalyzeConversationRequest extends Request {
             this.appId = request.appId;
             this.regionId = request.regionId;
             this.dialogue = request.dialogue;
-            this.exampleList = request.exampleList;
+            this.examples = request.examples;
             this.fields = request.fields;
             this.modelCode = request.modelCode;
             this.resultTypes = request.resultTypes;
@@ -234,11 +234,11 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * exampleList.
+         * examples.
          */
-        public Builder exampleList(java.util.List < ExampleList> exampleList) {
-            this.putBodyParameter("exampleList", exampleList);
-            this.exampleList = exampleList;
+        public Builder examples(java.util.List < Examples> examples) {
+            this.putBodyParameter("examples", examples);
+            this.examples = examples;
             return this;
         }
 
@@ -428,7 +428,7 @@ public class AnalyzeConversationRequest extends Request {
         } 
 
     }
-    public static class SentenceList extends TeaModel {
+    public static class ExamplesSentences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("chatId")
         private String chatId;
 
@@ -440,7 +440,7 @@ public class AnalyzeConversationRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String text;
 
-        private SentenceList(Builder builder) {
+        private ExamplesSentences(Builder builder) {
             this.chatId = builder.chatId;
             this.role = builder.role;
             this.text = builder.text;
@@ -450,7 +450,7 @@ public class AnalyzeConversationRequest extends Request {
             return new Builder();
         }
 
-        public static SentenceList create() {
+        public static ExamplesSentences create() {
             return builder().build();
         }
 
@@ -504,32 +504,32 @@ public class AnalyzeConversationRequest extends Request {
                 return this;
             }
 
-            public SentenceList build() {
-                return new SentenceList(this);
+            public ExamplesSentences build() {
+                return new ExamplesSentences(this);
             } 
 
         } 
 
     }
-    public static class ExampleList extends TeaModel {
+    public static class Examples extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")
         @com.aliyun.core.annotation.Validation(required = true)
         private String output;
 
-        @com.aliyun.core.annotation.NameInMap("sentenceList")
+        @com.aliyun.core.annotation.NameInMap("sentences")
         @com.aliyun.core.annotation.Validation(required = true)
-        private java.util.List < SentenceList> sentenceList;
+        private java.util.List < ExamplesSentences> sentences;
 
-        private ExampleList(Builder builder) {
+        private Examples(Builder builder) {
             this.output = builder.output;
-            this.sentenceList = builder.sentenceList;
+            this.sentences = builder.sentences;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static ExampleList create() {
+        public static Examples create() {
             return builder().build();
         }
 
@@ -541,15 +541,15 @@ public class AnalyzeConversationRequest extends Request {
         }
 
         /**
-         * @return sentenceList
+         * @return sentences
          */
-        public java.util.List < SentenceList> getSentenceList() {
-            return this.sentenceList;
+        public java.util.List < ExamplesSentences> getSentences() {
+            return this.sentences;
         }
 
         public static final class Builder {
             private String output; 
-            private java.util.List < SentenceList> sentenceList; 
+            private java.util.List < ExamplesSentences> sentences; 
 
             /**
              * output.
@@ -560,15 +560,15 @@ public class AnalyzeConversationRequest extends Request {
             }
 
             /**
-             * sentenceList.
+             * sentences.
              */
-            public Builder sentenceList(java.util.List < SentenceList> sentenceList) {
-                this.sentenceList = sentenceList;
+            public Builder sentences(java.util.List < ExamplesSentences> sentences) {
+                this.sentences = sentences;
                 return this;
             }
 
-            public ExampleList build() {
-                return new ExampleList(this);
+            public Examples build() {
+                return new Examples(this);
             } 
 
         } 
