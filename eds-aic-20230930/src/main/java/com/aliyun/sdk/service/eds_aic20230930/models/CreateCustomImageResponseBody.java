@@ -11,10 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomImageResponseBody</p>
  */
 public class CreateCustomImageResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    private String imageId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCustomImageResponseBody(Builder builder) {
+        this.imageId = builder.imageId;
         this.requestId = builder.requestId;
     }
 
@@ -27,6 +31,13 @@ public class CreateCustomImageResponseBody extends TeaModel {
     }
 
     /**
+     * @return imageId
+     */
+    public String getImageId() {
+        return this.imageId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -34,7 +45,16 @@ public class CreateCustomImageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String imageId; 
         private String requestId; 
+
+        /**
+         * ImageId.
+         */
+        public Builder imageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
 
         /**
          * RequestId.

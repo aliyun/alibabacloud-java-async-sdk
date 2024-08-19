@@ -14,6 +14,9 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("InstanceGroupIds")
     private java.util.List < String > instanceGroupIds;
 
+    @com.aliyun.core.annotation.NameInMap("InstanceGroupInfos")
+    private java.util.List < InstanceGroupInfos> instanceGroupInfos;
+
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
@@ -22,6 +25,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
 
     private CreateAndroidInstanceGroupResponseBody(Builder builder) {
         this.instanceGroupIds = builder.instanceGroupIds;
+        this.instanceGroupInfos = builder.instanceGroupInfos;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
@@ -42,6 +46,13 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return instanceGroupInfos
+     */
+    public java.util.List < InstanceGroupInfos> getInstanceGroupInfos() {
+        return this.instanceGroupInfos;
+    }
+
+    /**
      * @return orderId
      */
     public String getOrderId() {
@@ -57,6 +68,7 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < String > instanceGroupIds; 
+        private java.util.List < InstanceGroupInfos> instanceGroupInfos; 
         private String orderId; 
         private String requestId; 
 
@@ -65,6 +77,14 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
          */
         public Builder instanceGroupIds(java.util.List < String > instanceGroupIds) {
             this.instanceGroupIds = instanceGroupIds;
+            return this;
+        }
+
+        /**
+         * InstanceGroupInfos.
+         */
+        public Builder instanceGroupInfos(java.util.List < InstanceGroupInfos> instanceGroupInfos) {
+            this.instanceGroupInfos = instanceGroupInfos;
             return this;
         }
 
@@ -90,4 +110,65 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
 
     } 
 
+    public static class InstanceGroupInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceGroupId")
+        private String instanceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceIds")
+        private java.util.List < String > instanceIds;
+
+        private InstanceGroupInfos(Builder builder) {
+            this.instanceGroupId = builder.instanceGroupId;
+            this.instanceIds = builder.instanceIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceGroupInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceGroupId
+         */
+        public String getInstanceGroupId() {
+            return this.instanceGroupId;
+        }
+
+        /**
+         * @return instanceIds
+         */
+        public java.util.List < String > getInstanceIds() {
+            return this.instanceIds;
+        }
+
+        public static final class Builder {
+            private String instanceGroupId; 
+            private java.util.List < String > instanceIds; 
+
+            /**
+             * InstanceGroupId.
+             */
+            public Builder instanceGroupId(String instanceGroupId) {
+                this.instanceGroupId = instanceGroupId;
+                return this;
+            }
+
+            /**
+             * InstanceIds.
+             */
+            public Builder instanceIds(java.util.List < String > instanceIds) {
+                this.instanceIds = instanceIds;
+                return this;
+            }
+
+            public InstanceGroupInfos build() {
+                return new InstanceGroupInfos(this);
+            } 
+
+        } 
+
+    }
 }

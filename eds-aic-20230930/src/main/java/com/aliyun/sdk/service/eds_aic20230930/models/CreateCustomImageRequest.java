@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCustomImageRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -27,6 +32,7 @@ public class CreateCustomImageRequest extends Request {
 
     private CreateCustomImageRequest(Builder builder) {
         super(builder);
+        this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.imageName = builder.imageName;
         this.instanceId = builder.instanceId;
@@ -43,6 +49,13 @@ public class CreateCustomImageRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -67,6 +80,7 @@ public class CreateCustomImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCustomImageRequest, Builder> {
+        private String clientToken; 
         private String description; 
         private String imageName; 
         private String instanceId; 
@@ -77,10 +91,20 @@ public class CreateCustomImageRequest extends Request {
 
         private Builder(CreateCustomImageRequest request) {
             super(request);
+            this.clientToken = request.clientToken;
             this.description = request.description;
             this.imageName = request.imageName;
             this.instanceId = request.instanceId;
         } 
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putBodyParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
 
         /**
          * Description.

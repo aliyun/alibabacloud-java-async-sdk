@@ -28,6 +28,10 @@ public class ModifyPolicyGroupRequest extends Request {
     private String localDrive;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NetRedirectPolicy")
+    private NetRedirectPolicy netRedirectPolicy;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
     private String policyGroupId;
 
@@ -49,6 +53,7 @@ public class ModifyPolicyGroupRequest extends Request {
         this.clipboard = builder.clipboard;
         this.html5FileTransfer = builder.html5FileTransfer;
         this.localDrive = builder.localDrive;
+        this.netRedirectPolicy = builder.netRedirectPolicy;
         this.policyGroupId = builder.policyGroupId;
         this.policyGroupName = builder.policyGroupName;
         this.resolutionHeight = builder.resolutionHeight;
@@ -97,6 +102,13 @@ public class ModifyPolicyGroupRequest extends Request {
     }
 
     /**
+     * @return netRedirectPolicy
+     */
+    public NetRedirectPolicy getNetRedirectPolicy() {
+        return this.netRedirectPolicy;
+    }
+
+    /**
      * @return policyGroupId
      */
     public String getPolicyGroupId() {
@@ -129,6 +141,7 @@ public class ModifyPolicyGroupRequest extends Request {
         private String clipboard; 
         private String html5FileTransfer; 
         private String localDrive; 
+        private NetRedirectPolicy netRedirectPolicy; 
         private String policyGroupId; 
         private String policyGroupName; 
         private Integer resolutionHeight; 
@@ -144,6 +157,7 @@ public class ModifyPolicyGroupRequest extends Request {
             this.clipboard = request.clipboard;
             this.html5FileTransfer = request.html5FileTransfer;
             this.localDrive = request.localDrive;
+            this.netRedirectPolicy = request.netRedirectPolicy;
             this.policyGroupId = request.policyGroupId;
             this.policyGroupName = request.policyGroupName;
             this.resolutionHeight = request.resolutionHeight;
@@ -183,6 +197,16 @@ public class ModifyPolicyGroupRequest extends Request {
         public Builder localDrive(String localDrive) {
             this.putBodyParameter("LocalDrive", localDrive);
             this.localDrive = localDrive;
+            return this;
+        }
+
+        /**
+         * NetRedirectPolicy.
+         */
+        public Builder netRedirectPolicy(NetRedirectPolicy netRedirectPolicy) {
+            String netRedirectPolicyShrink = shrink(netRedirectPolicy, "NetRedirectPolicy", "json");
+            this.putBodyParameter("NetRedirectPolicy", netRedirectPolicyShrink);
+            this.netRedirectPolicy = netRedirectPolicy;
             return this;
         }
 
@@ -229,4 +253,146 @@ public class ModifyPolicyGroupRequest extends Request {
 
     } 
 
+    public static class NetRedirectRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Policy")
+        private String policy;
+
+        @com.aliyun.core.annotation.NameInMap("RuleType")
+        private String ruleType;
+
+        @com.aliyun.core.annotation.NameInMap("Target")
+        private String target;
+
+        private NetRedirectRule(Builder builder) {
+            this.policy = builder.policy;
+            this.ruleType = builder.ruleType;
+            this.target = builder.target;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetRedirectRule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        /**
+         * @return ruleType
+         */
+        public String getRuleType() {
+            return this.ruleType;
+        }
+
+        /**
+         * @return target
+         */
+        public String getTarget() {
+            return this.target;
+        }
+
+        public static final class Builder {
+            private String policy; 
+            private String ruleType; 
+            private String target; 
+
+            /**
+             * Policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            /**
+             * RuleType.
+             */
+            public Builder ruleType(String ruleType) {
+                this.ruleType = ruleType;
+                return this;
+            }
+
+            /**
+             * Target.
+             */
+            public Builder target(String target) {
+                this.target = target;
+                return this;
+            }
+
+            public NetRedirectRule build() {
+                return new NetRedirectRule(this);
+            } 
+
+        } 
+
+    }
+    public static class NetRedirectPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NetRedirect")
+        private String netRedirect;
+
+        @com.aliyun.core.annotation.NameInMap("NetRedirectRule")
+        private java.util.List < NetRedirectRule> netRedirectRule;
+
+        private NetRedirectPolicy(Builder builder) {
+            this.netRedirect = builder.netRedirect;
+            this.netRedirectRule = builder.netRedirectRule;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetRedirectPolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return netRedirect
+         */
+        public String getNetRedirect() {
+            return this.netRedirect;
+        }
+
+        /**
+         * @return netRedirectRule
+         */
+        public java.util.List < NetRedirectRule> getNetRedirectRule() {
+            return this.netRedirectRule;
+        }
+
+        public static final class Builder {
+            private String netRedirect; 
+            private java.util.List < NetRedirectRule> netRedirectRule; 
+
+            /**
+             * NetRedirect.
+             */
+            public Builder netRedirect(String netRedirect) {
+                this.netRedirect = netRedirect;
+                return this;
+            }
+
+            /**
+             * NetRedirectRule.
+             */
+            public Builder netRedirectRule(java.util.List < NetRedirectRule> netRedirectRule) {
+                this.netRedirectRule = netRedirectRule;
+                return this;
+            }
+
+            public NetRedirectPolicy build() {
+                return new NetRedirectPolicy(this);
+            } 
+
+        } 
+
+    }
 }

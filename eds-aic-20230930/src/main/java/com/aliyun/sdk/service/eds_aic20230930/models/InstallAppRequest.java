@@ -19,10 +19,15 @@ public class InstallAppRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceGroupIdList")
     private java.util.List < String > instanceGroupIdList;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIdList")
+    private java.util.List < String > instanceIdList;
+
     private InstallAppRequest(Builder builder) {
         super(builder);
         this.appIdList = builder.appIdList;
         this.instanceGroupIdList = builder.instanceGroupIdList;
+        this.instanceIdList = builder.instanceIdList;
     }
 
     public static Builder builder() {
@@ -52,9 +57,17 @@ public class InstallAppRequest extends Request {
         return this.instanceGroupIdList;
     }
 
+    /**
+     * @return instanceIdList
+     */
+    public java.util.List < String > getInstanceIdList() {
+        return this.instanceIdList;
+    }
+
     public static final class Builder extends Request.Builder<InstallAppRequest, Builder> {
         private java.util.List < String > appIdList; 
         private java.util.List < String > instanceGroupIdList; 
+        private java.util.List < String > instanceIdList; 
 
         private Builder() {
             super();
@@ -64,6 +77,7 @@ public class InstallAppRequest extends Request {
             super(request);
             this.appIdList = request.appIdList;
             this.instanceGroupIdList = request.instanceGroupIdList;
+            this.instanceIdList = request.instanceIdList;
         } 
 
         /**
@@ -81,6 +95,15 @@ public class InstallAppRequest extends Request {
         public Builder instanceGroupIdList(java.util.List < String > instanceGroupIdList) {
             this.putQueryParameter("InstanceGroupIdList", instanceGroupIdList);
             this.instanceGroupIdList = instanceGroupIdList;
+            return this;
+        }
+
+        /**
+         * InstanceIdList.
+         */
+        public Builder instanceIdList(java.util.List < String > instanceIdList) {
+            this.putQueryParameter("InstanceIdList", instanceIdList);
+            this.instanceIdList = instanceIdList;
             return this;
         }
 

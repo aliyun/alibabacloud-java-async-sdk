@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateAndroidInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer amount;
 
     @com.aliyun.core.annotation.Query
@@ -31,6 +32,10 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
@@ -83,6 +88,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
+        this.clientToken = builder.clientToken;
         this.gpuAcceleration = builder.gpuAcceleration;
         this.imageId = builder.imageId;
         this.instanceGroupName = builder.instanceGroupName;
@@ -141,6 +147,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -219,6 +232,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         private Boolean autoRenew; 
         private String bizRegionId; 
         private String chargeType; 
+        private String clientToken; 
         private Boolean gpuAcceleration; 
         private String imageId; 
         private String instanceGroupName; 
@@ -241,6 +255,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
+            this.clientToken = request.clientToken;
             this.gpuAcceleration = request.gpuAcceleration;
             this.imageId = request.imageId;
             this.instanceGroupName = request.instanceGroupName;
@@ -295,6 +310,15 @@ public class CreateAndroidInstanceGroupRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

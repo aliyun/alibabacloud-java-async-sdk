@@ -24,6 +24,10 @@ public class DescribeAndroidInstancesRequest extends Request {
     private String instanceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceGroupIds")
+    private java.util.List < String > instanceGroupIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairId")
     private String keyPairId;
 
@@ -48,6 +52,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         this.androidInstanceIds = builder.androidInstanceIds;
         this.androidInstanceName = builder.androidInstanceName;
         this.instanceGroupId = builder.instanceGroupId;
+        this.instanceGroupIds = builder.instanceGroupIds;
         this.keyPairId = builder.keyPairId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -90,6 +95,13 @@ public class DescribeAndroidInstancesRequest extends Request {
     }
 
     /**
+     * @return instanceGroupIds
+     */
+    public java.util.List < String > getInstanceGroupIds() {
+        return this.instanceGroupIds;
+    }
+
+    /**
      * @return keyPairId
      */
     public String getKeyPairId() {
@@ -128,6 +140,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         private java.util.List < String > androidInstanceIds; 
         private String androidInstanceName; 
         private String instanceGroupId; 
+        private java.util.List < String > instanceGroupIds; 
         private String keyPairId; 
         private Integer maxResults; 
         private String nextToken; 
@@ -143,6 +156,7 @@ public class DescribeAndroidInstancesRequest extends Request {
             this.androidInstanceIds = request.androidInstanceIds;
             this.androidInstanceName = request.androidInstanceName;
             this.instanceGroupId = request.instanceGroupId;
+            this.instanceGroupIds = request.instanceGroupIds;
             this.keyPairId = request.keyPairId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -174,6 +188,15 @@ public class DescribeAndroidInstancesRequest extends Request {
         public Builder instanceGroupId(String instanceGroupId) {
             this.putQueryParameter("InstanceGroupId", instanceGroupId);
             this.instanceGroupId = instanceGroupId;
+            return this;
+        }
+
+        /**
+         * InstanceGroupIds.
+         */
+        public Builder instanceGroupIds(java.util.List < String > instanceGroupIds) {
+            this.putQueryParameter("InstanceGroupIds", instanceGroupIds);
+            this.instanceGroupIds = instanceGroupIds;
             return this;
         }
 
