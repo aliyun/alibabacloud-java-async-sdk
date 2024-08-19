@@ -843,6 +843,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Long mem;
 
+        @com.aliyun.core.annotation.NameInMap("ObRpmVersion")
+        private String obRpmVersion;
+
         @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
@@ -893,6 +896,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.maintainTime = builder.maintainTime;
             this.mem = builder.mem;
+            this.obRpmVersion = builder.obRpmVersion;
             this.payType = builder.payType;
             this.resource = builder.resource;
             this.resourceGroupId = builder.resourceGroupId;
@@ -1067,6 +1071,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return obRpmVersion
+         */
+        public String getObRpmVersion() {
+            return this.obRpmVersion;
+        }
+
+        /**
          * @return payType
          */
         public String getPayType() {
@@ -1152,6 +1163,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String instanceType; 
             private String maintainTime; 
             private Long mem; 
+            private String obRpmVersion; 
             private String payType; 
             private Resource resource; 
             private String resourceGroupId; 
@@ -1358,6 +1370,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder mem(Long mem) {
                 this.mem = mem;
+                return this;
+            }
+
+            /**
+             * ObRpmVersion.
+             */
+            public Builder obRpmVersion(String obRpmVersion) {
+                this.obRpmVersion = obRpmVersion;
                 return this;
             }
 

@@ -99,6 +99,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAvailableZoneResponse> describeAvailableZone(DescribeAvailableZoneRequest request);
 
+    CompletableFuture<DescribeBackupEncryptedStringResponse> describeBackupEncryptedString(DescribeBackupEncryptedStringRequest request);
+
     CompletableFuture<DescribeBackupSetDownloadLinkResponse> describeBackupSetDownloadLink(DescribeBackupSetDownloadLinkRequest request);
 
     CompletableFuture<DescribeCharsetResponse> describeCharset(DescribeCharsetRequest request);
@@ -114,6 +116,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceSSLResponse> describeInstanceSSL(DescribeInstanceSSLRequest request);
 
     CompletableFuture<DescribeInstanceSecurityConfigsResponse> describeInstanceSecurityConfigs(DescribeInstanceSecurityConfigsRequest request);
+
+    CompletableFuture<DescribeInstanceSummaryResponse> describeInstanceSummary(DescribeInstanceSummaryRequest request);
 
     CompletableFuture<DescribeInstanceTagsResponse> describeInstanceTags(DescribeInstanceTagsRequest request);
 
@@ -159,6 +163,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeRecommendIndexResponse> describeRecommendIndex(DescribeRecommendIndexRequest request);
 
+    CompletableFuture<DescribeRestorableTenantsResponse> describeRestorableTenants(DescribeRestorableTenantsRequest request);
+
     CompletableFuture<DescribeSQLDetailsResponse> describeSQLDetails(DescribeSQLDetailsRequest request);
 
     CompletableFuture<DescribeSQLHistoryListResponse> describeSQLHistoryList(DescribeSQLHistoryListRequest request);
@@ -178,6 +184,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSlowSQLHistoryListResponse> describeSlowSQLHistoryList(DescribeSlowSQLHistoryListRequest request);
 
     CompletableFuture<DescribeSlowSQLListResponse> describeSlowSQLList(DescribeSlowSQLListRequest request);
+
+    CompletableFuture<DescribeStandbyCreateModeResponse> describeStandbyCreateMode(DescribeStandbyCreateModeRequest request);
 
     CompletableFuture<DescribeTagValuesResponse> describeTagValues(DescribeTagValuesRequest request);
 
