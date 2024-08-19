@@ -97,12 +97,16 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableAllPatch")
         private Integer enableAllPatch;
 
+        @com.aliyun.core.annotation.NameInMap("RuleClass")
+        private Integer ruleClass;
+
         @com.aliyun.core.annotation.NameInMap("RunMode")
         private Integer runMode;
 
         private IpsConfig(Builder builder) {
             this.basicRules = builder.basicRules;
             this.enableAllPatch = builder.enableAllPatch;
+            this.ruleClass = builder.ruleClass;
             this.runMode = builder.runMode;
         }
 
@@ -129,6 +133,13 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleClass
+         */
+        public Integer getRuleClass() {
+            return this.ruleClass;
+        }
+
+        /**
          * @return runMode
          */
         public Integer getRunMode() {
@@ -138,6 +149,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
         public static final class Builder {
             private Integer basicRules; 
             private Integer enableAllPatch; 
+            private Integer ruleClass; 
             private Integer runMode; 
 
             /**
@@ -161,6 +173,14 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
              */
             public Builder enableAllPatch(Integer enableAllPatch) {
                 this.enableAllPatch = enableAllPatch;
+                return this;
+            }
+
+            /**
+             * RuleClass.
+             */
+            public Builder ruleClass(Integer ruleClass) {
+                this.ruleClass = ruleClass;
                 return this;
             }
 

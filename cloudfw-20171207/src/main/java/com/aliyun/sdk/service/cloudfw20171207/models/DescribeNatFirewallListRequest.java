@@ -179,7 +179,10 @@ public class DescribeNatFirewallListRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * *   **zh** (default)
+         * *   **en**
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -188,7 +191,7 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * MemberUid.
+         * The UID of the member that is managed by your Alibaba Cloud account.
          */
         public Builder memberUid(Long memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
@@ -197,7 +200,7 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -206,7 +209,7 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number.
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -215,7 +218,12 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Default value: 10. 
+         * 
+         *  Maximum value: 50.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -224,7 +232,7 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * ProxyId.
+         * The ID of the NAT firewall.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
@@ -233,7 +241,7 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * ProxyName.
+         * The name of the NAT firewall. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). The name cannot start with an underscore.
          */
         public Builder proxyName(String proxyName) {
             this.putQueryParameter("ProxyName", proxyName);
@@ -242,7 +250,7 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * The region ID of the virtual private cloud (VPC).
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -251,7 +259,16 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the NAT firewall. Valid values:
+         * <p>
+         * 
+         * *   configuring
+         * *   deleting
+         * *   normal
+         * *   abnormal
+         * *   opening
+         * *   closing
+         * *   closed
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -260,7 +277,7 @@ public class DescribeNatFirewallListRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

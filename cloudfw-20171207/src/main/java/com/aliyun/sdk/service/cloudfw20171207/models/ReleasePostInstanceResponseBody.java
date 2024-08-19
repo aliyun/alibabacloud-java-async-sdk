@@ -73,7 +73,7 @@ public class ReleasePostInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -81,7 +81,11 @@ public class ReleasePostInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ReleaseStatus.
+         * Indicates whether the release was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder releaseStatus(Boolean releaseStatus) {
             this.releaseStatus = releaseStatus;
@@ -89,7 +93,7 @@ public class ReleasePostInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +101,7 @@ public class ReleasePostInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

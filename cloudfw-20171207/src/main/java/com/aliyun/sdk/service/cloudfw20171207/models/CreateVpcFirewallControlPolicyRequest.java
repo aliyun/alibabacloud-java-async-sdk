@@ -52,6 +52,10 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
     private String destinationType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainResolveType")
+    private String domainResolveType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
@@ -123,6 +127,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         this.destPortType = builder.destPortType;
         this.destination = builder.destination;
         this.destinationType = builder.destinationType;
+        this.domainResolveType = builder.domainResolveType;
         this.endTime = builder.endTime;
         this.lang = builder.lang;
         this.memberUid = builder.memberUid;
@@ -213,6 +218,13 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
      */
     public String getDestinationType() {
         return this.destinationType;
+    }
+
+    /**
+     * @return domainResolveType
+     */
+    public String getDomainResolveType() {
+        return this.domainResolveType;
     }
 
     /**
@@ -323,6 +335,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         private String destPortType; 
         private String destination; 
         private String destinationType; 
+        private String domainResolveType; 
         private Long endTime; 
         private String lang; 
         private String memberUid; 
@@ -353,6 +366,7 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
             this.destPortType = request.destPortType;
             this.destination = request.destination;
             this.destinationType = request.destinationType;
+            this.domainResolveType = request.domainResolveType;
             this.endTime = request.endTime;
             this.lang = request.lang;
             this.memberUid = request.memberUid;
@@ -489,6 +503,15 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
             this.destinationType = destinationType;
+            return this;
+        }
+
+        /**
+         * DomainResolveType.
+         */
+        public Builder domainResolveType(String domainResolveType) {
+            this.putQueryParameter("DomainResolveType", domainResolveType);
+            this.domainResolveType = domainResolveType;
             return this;
         }
 

@@ -57,6 +57,10 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
     private String destinationType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainResolveType")
+    private String domainResolveType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
@@ -120,6 +124,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
         this.destPortType = builder.destPortType;
         this.destination = builder.destination;
         this.destinationType = builder.destinationType;
+        this.domainResolveType = builder.domainResolveType;
         this.endTime = builder.endTime;
         this.lang = builder.lang;
         this.proto = builder.proto;
@@ -218,6 +223,13 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
     }
 
     /**
+     * @return domainResolveType
+     */
+    public String getDomainResolveType() {
+        return this.domainResolveType;
+    }
+
+    /**
      * @return endTime
      */
     public Long getEndTime() {
@@ -312,6 +324,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
         private String destPortType; 
         private String destination; 
         private String destinationType; 
+        private String domainResolveType; 
         private Long endTime; 
         private String lang; 
         private String proto; 
@@ -341,6 +354,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
             this.destPortType = request.destPortType;
             this.destination = request.destination;
             this.destinationType = request.destinationType;
+            this.domainResolveType = request.domainResolveType;
             this.endTime = request.endTime;
             this.lang = request.lang;
             this.proto = request.proto;
@@ -384,7 +398,7 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The application type used in the access control policy.
+         * The type of the application that the access control policy supports.
          * <p>
          * 
          * Valid values:
@@ -495,6 +509,15 @@ public class ModifyVpcFirewallControlPolicyRequest extends Request {
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
             this.destinationType = destinationType;
+            return this;
+        }
+
+        /**
+         * DomainResolveType.
+         */
+        public Builder domainResolveType(String domainResolveType) {
+            this.putQueryParameter("DomainResolveType", domainResolveType);
+            this.domainResolveType = domainResolveType;
             return this;
         }
 

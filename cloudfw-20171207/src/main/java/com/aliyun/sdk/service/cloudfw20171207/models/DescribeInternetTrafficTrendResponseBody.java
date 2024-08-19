@@ -277,7 +277,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * MaxDayExceedBytes.
+         * The maximum volume of excess traffic allowed per day.
          */
         public Builder maxDayExceedBytes(Long maxDayExceedBytes) {
             this.maxDayExceedBytes = maxDayExceedBytes;
@@ -333,7 +333,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
         }
 
         /**
-         * TotalExceedBytes.
+         * The total volume of excess traffic.
          */
         public Builder totalExceedBytes(Long totalExceedBytes) {
             this.totalExceedBytes = totalExceedBytes;
@@ -537,7 +537,7 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.
+             * The outbound network throughput, which indicates the number of bits that are sent outbound per second. Unit: bit/s.
              */
             public Builder outBps(Long outBps) {
                 this.outBps = outBps;
@@ -570,6 +570,9 @@ public class DescribeInternetTrafficTrendResponseBody extends TeaModel {
 
             /**
              * The time when traffic is generated. The value is a UNIX timestamp. Unit: seconds.
+             * <p>
+             * 
+             * If processing is not complete at this point in time, -1 is returned for all other fields.
              */
             public Builder time(Integer time) {
                 this.time = time;

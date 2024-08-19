@@ -49,7 +49,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeResponseBody extends TeaModel {
         private String trFirewallRoutePolicyId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeResponseBody extends TeaModel {
         }
 
         /**
-         * TrFirewallRoutePolicyId.
+         * The ID of the routing policy.
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.trFirewallRoutePolicyId = trFirewallRoutePolicyId;

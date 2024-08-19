@@ -109,7 +109,7 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The page number. Default value: 1.
          */
         public Builder currentPage(String currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -118,7 +118,7 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * FirewallId.
+         * The instance ID of the virtual private cloud (VPC) firewall.
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -127,7 +127,11 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -136,7 +140,7 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,7 +149,7 @@ public class DescribeTrFirewallsV2RouteListRequest extends Request {
         }
 
         /**
-         * TrFirewallRoutePolicyId.
+         * The ID of the routing policy.
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.putQueryParameter("TrFirewallRoutePolicyId", trFirewallRoutePolicyId);

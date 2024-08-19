@@ -139,6 +139,9 @@ public class ModifyVpcFirewallControlPolicyPositionRequest extends Request {
 
         /**
          * The new priority of the access control policy.
+         * <p>
+         * 
+         * >  For more information about the valid values of the new priority, see [DescribeVpcFirewallPolicyPriorUsed](~~474145~~).
          */
         public Builder newOrder(String newOrder) {
             this.putQueryParameter("NewOrder", newOrder);

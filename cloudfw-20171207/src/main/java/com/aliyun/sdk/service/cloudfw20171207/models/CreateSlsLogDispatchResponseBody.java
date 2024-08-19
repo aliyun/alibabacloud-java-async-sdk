@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteControlPolicyResponseBody} extends {@link TeaModel}
+ * {@link CreateSlsLogDispatchResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteControlPolicyResponseBody</p>
+ * <p>CreateSlsLogDispatchResponseBody</p>
  */
-public class DeleteControlPolicyResponseBody extends TeaModel {
+public class CreateSlsLogDispatchResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteControlPolicyResponseBody(Builder builder) {
+    private CreateSlsLogDispatchResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class DeleteControlPolicyResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteControlPolicyResponseBody create() {
+    public static CreateSlsLogDispatchResponseBody create() {
         return builder().build();
     }
 
@@ -44,8 +44,8 @@ public class DeleteControlPolicyResponseBody extends TeaModel {
             return this;
         }
 
-        public DeleteControlPolicyResponseBody build() {
-            return new DeleteControlPolicyResponseBody(this);
+        public CreateSlsLogDispatchResponseBody build() {
+            return new CreateSlsLogDispatchResponseBody(this);
         } 
 
     } 

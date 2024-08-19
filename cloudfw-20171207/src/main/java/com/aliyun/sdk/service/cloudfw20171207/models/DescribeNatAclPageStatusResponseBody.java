@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNatAclPageStatusResponseBody</p>
  */
 public class DescribeNatAclPageStatusResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Detail")
+    private String detail;
+
     @com.aliyun.core.annotation.NameInMap("NatAclPageEnable")
     private Boolean natAclPageEnable;
 
@@ -18,6 +21,7 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeNatAclPageStatusResponseBody(Builder builder) {
+        this.detail = builder.detail;
         this.natAclPageEnable = builder.natAclPageEnable;
         this.requestId = builder.requestId;
     }
@@ -28,6 +32,13 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
 
     public static DescribeNatAclPageStatusResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return detail
+     */
+    public String getDetail() {
+        return this.detail;
     }
 
     /**
@@ -45,8 +56,17 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String detail; 
         private Boolean natAclPageEnable; 
         private String requestId; 
+
+        /**
+         * Detail.
+         */
+        public Builder detail(String detail) {
+            this.detail = detail;
+            return this;
+        }
 
         /**
          * Indicates whether pagination for access control policies for NAT firewalls is supported.

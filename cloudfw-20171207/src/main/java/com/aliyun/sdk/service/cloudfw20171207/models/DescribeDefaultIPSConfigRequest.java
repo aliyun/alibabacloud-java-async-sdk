@@ -15,14 +15,9 @@ public class DescribeDefaultIPSConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SourceIp")
-    private String sourceIp;
-
     private DescribeDefaultIPSConfigRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -45,16 +40,8 @@ public class DescribeDefaultIPSConfigRequest extends Request {
         return this.lang;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDefaultIPSConfigRequest, Builder> {
         private String lang; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -63,24 +50,18 @@ public class DescribeDefaultIPSConfigRequest extends Request {
         private Builder(DescribeDefaultIPSConfigRequest request) {
             super(request);
             this.lang = request.lang;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default)
+         * *   **en**
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * SourceIp.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

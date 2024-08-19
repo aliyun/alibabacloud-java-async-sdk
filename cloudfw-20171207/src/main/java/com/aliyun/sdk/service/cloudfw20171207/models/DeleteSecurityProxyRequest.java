@@ -68,7 +68,11 @@ public class DeleteSecurityProxyRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,7 @@ public class DeleteSecurityProxyRequest extends Request {
         }
 
         /**
-         * ProxyId.
+         * The ID of the NAT firewall.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("ProxyId", proxyId);

@@ -11,20 +11,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDefaultIPSConfigResponseBody</p>
  */
 public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("AiRules")
-    private Integer aiRules;
-
     @com.aliyun.core.annotation.NameInMap("BasicRules")
     private Integer basicRules;
 
     @com.aliyun.core.annotation.NameInMap("CtiRules")
     private Integer ctiRules;
-
-    @com.aliyun.core.annotation.NameInMap("EnableAllPatch")
-    private Integer enableAllPatch;
-
-    @com.aliyun.core.annotation.NameInMap("EnableDefault")
-    private Integer enableDefault;
 
     @com.aliyun.core.annotation.NameInMap("PatchRules")
     private Integer patchRules;
@@ -39,11 +30,8 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     private Integer runMode;
 
     private DescribeDefaultIPSConfigResponseBody(Builder builder) {
-        this.aiRules = builder.aiRules;
         this.basicRules = builder.basicRules;
         this.ctiRules = builder.ctiRules;
-        this.enableAllPatch = builder.enableAllPatch;
-        this.enableDefault = builder.enableDefault;
         this.patchRules = builder.patchRules;
         this.requestId = builder.requestId;
         this.ruleClass = builder.ruleClass;
@@ -59,13 +47,6 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return aiRules
-     */
-    public Integer getAiRules() {
-        return this.aiRules;
-    }
-
-    /**
      * @return basicRules
      */
     public Integer getBasicRules() {
@@ -77,20 +58,6 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
      */
     public Integer getCtiRules() {
         return this.ctiRules;
-    }
-
-    /**
-     * @return enableAllPatch
-     */
-    public Integer getEnableAllPatch() {
-        return this.enableAllPatch;
-    }
-
-    /**
-     * @return enableDefault
-     */
-    public Integer getEnableDefault() {
-        return this.enableDefault;
     }
 
     /**
@@ -122,26 +89,19 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer aiRules; 
         private Integer basicRules; 
         private Integer ctiRules; 
-        private Integer enableAllPatch; 
-        private Integer enableDefault; 
         private Integer patchRules; 
         private String requestId; 
         private Integer ruleClass; 
         private Integer runMode; 
 
         /**
-         * AiRules.
-         */
-        public Builder aiRules(Integer aiRules) {
-            this.aiRules = aiRules;
-            return this;
-        }
-
-        /**
-         * BasicRules.
+         * Indicates whether basic protection is enabled. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder basicRules(Integer basicRules) {
             this.basicRules = basicRules;
@@ -149,7 +109,11 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * CtiRules.
+         * Indicates whether threat intelligence is enabled. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder ctiRules(Integer ctiRules) {
             this.ctiRules = ctiRules;
@@ -157,23 +121,11 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * EnableAllPatch.
-         */
-        public Builder enableAllPatch(Integer enableAllPatch) {
-            this.enableAllPatch = enableAllPatch;
-            return this;
-        }
-
-        /**
-         * EnableDefault.
-         */
-        public Builder enableDefault(Integer enableDefault) {
-            this.enableDefault = enableDefault;
-            return this;
-        }
-
-        /**
-         * PatchRules.
+         * Indicates whether virtual patching is enabled. Valid values:
+         * <p>
+         * 
+         * *   **1**: yes
+         * *   **0**: no
          */
         public Builder patchRules(Integer patchRules) {
             this.patchRules = patchRules;
@@ -181,7 +133,7 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +141,12 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RuleClass.
+         * The level of the rule group for the IPS. Valid values:
+         * <p>
+         * 
+         * *   **1**: loose
+         * *   **2**: medium
+         * *   **3**: strict
          */
         public Builder ruleClass(Integer ruleClass) {
             this.ruleClass = ruleClass;
@@ -197,7 +154,11 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RunMode.
+         * The mode of the IPS. Valid values:
+         * <p>
+         * 
+         * *   **1**: block mode
+         * *   **0**: monitor mode
          */
         public Builder runMode(Integer runMode) {
             this.runMode = runMode;

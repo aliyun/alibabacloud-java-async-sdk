@@ -57,6 +57,10 @@ public class AddControlPolicyRequest extends Request {
     private String direction;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainResolveType")
+    private String domainResolveType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
@@ -129,6 +133,7 @@ public class AddControlPolicyRequest extends Request {
         this.destination = builder.destination;
         this.destinationType = builder.destinationType;
         this.direction = builder.direction;
+        this.domainResolveType = builder.domainResolveType;
         this.endTime = builder.endTime;
         this.ipVersion = builder.ipVersion;
         this.lang = builder.lang;
@@ -226,6 +231,13 @@ public class AddControlPolicyRequest extends Request {
      */
     public String getDirection() {
         return this.direction;
+    }
+
+    /**
+     * @return domainResolveType
+     */
+    public String getDomainResolveType() {
+        return this.domainResolveType;
     }
 
     /**
@@ -337,6 +349,7 @@ public class AddControlPolicyRequest extends Request {
         private String destination; 
         private String destinationType; 
         private String direction; 
+        private String domainResolveType; 
         private Long endTime; 
         private String ipVersion; 
         private String lang; 
@@ -368,6 +381,7 @@ public class AddControlPolicyRequest extends Request {
             this.destination = request.destination;
             this.destinationType = request.destinationType;
             this.direction = request.direction;
+            this.domainResolveType = request.domainResolveType;
             this.endTime = request.endTime;
             this.ipVersion = request.ipVersion;
             this.lang = request.lang;
@@ -545,6 +559,20 @@ public class AddControlPolicyRequest extends Request {
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
             this.direction = direction;
+            return this;
+        }
+
+        /**
+         * The domain name resolution method of the access control policy. Valid values:
+         * <p>
+         * 
+         * * **FQDN**: fully qualified domain name (FQDN)-based resolution
+         * * **DNS**: DNS-based dynamic resolution
+         * * **FQDN_AND_DNS**: FQDN and DNS-based dynamic resolution
+         */
+        public Builder domainResolveType(String domainResolveType) {
+            this.putQueryParameter("DomainResolveType", domainResolveType);
+            this.domainResolveType = domainResolveType;
             return this;
         }
 

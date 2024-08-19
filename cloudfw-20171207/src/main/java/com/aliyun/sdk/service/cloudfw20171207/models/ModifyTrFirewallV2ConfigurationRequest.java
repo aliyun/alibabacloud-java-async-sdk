@@ -81,7 +81,7 @@ public class ModifyTrFirewallV2ConfigurationRequest extends Request {
         } 
 
         /**
-         * FirewallId.
+         * The instance ID of the VPC firewall.
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -90,7 +90,7 @@ public class ModifyTrFirewallV2ConfigurationRequest extends Request {
         }
 
         /**
-         * FirewallName.
+         * The instance name of the VPC firewall.
          */
         public Builder firewallName(String firewallName) {
             this.putQueryParameter("FirewallName", firewallName);
@@ -99,7 +99,11 @@ public class ModifyTrFirewallV2ConfigurationRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

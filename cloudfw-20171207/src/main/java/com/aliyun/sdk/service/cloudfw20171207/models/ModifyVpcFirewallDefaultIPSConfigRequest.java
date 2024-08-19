@@ -30,6 +30,10 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
     private String memberUid;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleClass")
+    private String ruleClass;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RunMode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String runMode;
@@ -50,6 +54,7 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
         this.enableAllPatch = builder.enableAllPatch;
         this.lang = builder.lang;
         this.memberUid = builder.memberUid;
+        this.ruleClass = builder.ruleClass;
         this.runMode = builder.runMode;
         this.sourceIp = builder.sourceIp;
         this.vpcFirewallId = builder.vpcFirewallId;
@@ -97,6 +102,13 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
     }
 
     /**
+     * @return ruleClass
+     */
+    public String getRuleClass() {
+        return this.ruleClass;
+    }
+
+    /**
      * @return runMode
      */
     public String getRunMode() {
@@ -122,6 +134,7 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
         private String enableAllPatch; 
         private String lang; 
         private String memberUid; 
+        private String ruleClass; 
         private String runMode; 
         private String sourceIp; 
         private String vpcFirewallId; 
@@ -136,6 +149,7 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
             this.enableAllPatch = request.enableAllPatch;
             this.lang = request.lang;
             this.memberUid = request.memberUid;
+            this.ruleClass = request.ruleClass;
             this.runMode = request.runMode;
             this.sourceIp = request.sourceIp;
             this.vpcFirewallId = request.vpcFirewallId;
@@ -186,6 +200,15 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
         public Builder memberUid(String memberUid) {
             this.putQueryParameter("MemberUid", memberUid);
             this.memberUid = memberUid;
+            return this;
+        }
+
+        /**
+         * RuleClass.
+         */
+        public Builder ruleClass(String ruleClass) {
+            this.putQueryParameter("RuleClass", ruleClass);
+            this.ruleClass = ruleClass;
             return this;
         }
 

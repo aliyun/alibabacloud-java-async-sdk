@@ -125,7 +125,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         } 
 
         /**
-         * DestCandidateList.
+         * The secondary traffic redirection instances.
          */
         public Builder destCandidateList(java.util.List < DestCandidateList> destCandidateList) {
             String destCandidateListShrink = shrink(destCandidateList, "DestCandidateList", "json");
@@ -135,7 +135,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * FirewallId.
+         * The instance ID of the virtual private cloud (VPC) firewall.
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -144,7 +144,11 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *  **zh** (default): Chinese
+         * *  **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -153,7 +157,11 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * ShouldRecover.
+         * Specifies whether to restore the traffic redirection configurations. Valid values:
+         * <p>
+         * 
+         * *   true: roll back
+         * *   false: withdraw
          */
         public Builder shouldRecover(String shouldRecover) {
             this.putQueryParameter("ShouldRecover", shouldRecover);
@@ -162,7 +170,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * SrcCandidateList.
+         * The primary traffic redirection instances.
          */
         public Builder srcCandidateList(java.util.List < SrcCandidateList> srcCandidateList) {
             String srcCandidateListShrink = shrink(srcCandidateList, "SrcCandidateList", "json");
@@ -172,7 +180,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
         }
 
         /**
-         * TrFirewallRoutePolicyId.
+         * The ID of the routing policy.
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.putQueryParameter("TrFirewallRoutePolicyId", trFirewallRoutePolicyId);
@@ -226,7 +234,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             private String candidateType; 
 
             /**
-             * CandidateId.
+             * The ID of the traffic redirection instance.
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -234,7 +242,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             }
 
             /**
-             * CandidateType.
+             * The type of the traffic redirection instance.
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -287,7 +295,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             private String candidateType; 
 
             /**
-             * CandidateId.
+             * The ID of the traffic redirection instance.
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -295,7 +303,7 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends Request {
             }
 
             /**
-             * CandidateType.
+             * The type of the traffic redirection instance.
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;

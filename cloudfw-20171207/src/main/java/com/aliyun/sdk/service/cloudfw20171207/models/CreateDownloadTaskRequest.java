@@ -19,10 +19,15 @@ public class CreateDownloadTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TaskData")
     private String taskData;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeZone")
+    private String timeZone;
+
     private CreateDownloadTaskRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
         this.taskData = builder.taskData;
+        this.timeZone = builder.timeZone;
     }
 
     public static Builder builder() {
@@ -52,9 +57,17 @@ public class CreateDownloadTaskRequest extends Request {
         return this.taskData;
     }
 
+    /**
+     * @return timeZone
+     */
+    public String getTimeZone() {
+        return this.timeZone;
+    }
+
     public static final class Builder extends Request.Builder<CreateDownloadTaskRequest, Builder> {
         private String lang; 
         private String taskData; 
+        private String timeZone; 
 
         private Builder() {
             super();
@@ -64,6 +77,7 @@ public class CreateDownloadTaskRequest extends Request {
             super(request);
             this.lang = request.lang;
             this.taskData = request.taskData;
+            this.timeZone = request.timeZone;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class CreateDownloadTaskRequest extends Request {
         public Builder taskData(String taskData) {
             this.putQueryParameter("TaskData", taskData);
             this.taskData = taskData;
+            return this;
+        }
+
+        /**
+         * The time zone of the time information in the downloaded file. The value must be an identifier of a time zone in the Internet Assigned Numbers Authority (IANA) database. The default value is Asia/Shanghai, which indicates UTC+8.
+         */
+        public Builder timeZone(String timeZone) {
+            this.putQueryParameter("TimeZone", timeZone);
+            this.timeZone = timeZone;
             return this;
         }
 

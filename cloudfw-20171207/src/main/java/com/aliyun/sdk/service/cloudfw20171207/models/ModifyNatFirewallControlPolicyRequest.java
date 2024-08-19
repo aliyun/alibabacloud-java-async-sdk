@@ -541,7 +541,7 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The protocol type supported by the access control policy. Valid values:
+         * The protocol type in the access control policy. Valid values:
          * <p>
          * 
          * *   **ANY**
@@ -549,7 +549,9 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
          * *   **UDP**
          * *   **ICMP**
          * 
-         * > The value **ANY** indicates all types of protocols.
+         * >  The value **ANY** indicates all types of applications.
+         * 
+         * >  If the destination address type is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto to TCP. If you set Proto to TCP, you can set application types to HTTP, HTTPS, SMTP, SMTPS, and SSL.
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);

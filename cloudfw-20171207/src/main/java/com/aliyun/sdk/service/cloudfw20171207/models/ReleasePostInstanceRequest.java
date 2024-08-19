@@ -53,7 +53,7 @@ public class ReleasePostInstanceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the Cloud Firewall instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

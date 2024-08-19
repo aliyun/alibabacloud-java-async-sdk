@@ -180,10 +180,14 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         private String direction;
 
         @com.aliyun.core.annotation.NameInMap("DnsResult")
+        @Deprecated
         private String dnsResult;
 
         @com.aliyun.core.annotation.NameInMap("DnsResultTime")
         private Long dnsResultTime;
+
+        @com.aliyun.core.annotation.NameInMap("DomainResolveType")
+        private String domainResolveType;
 
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
@@ -258,6 +262,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             this.direction = builder.direction;
             this.dnsResult = builder.dnsResult;
             this.dnsResultTime = builder.dnsResultTime;
+            this.domainResolveType = builder.domainResolveType;
             this.endTime = builder.endTime;
             this.hitLastTime = builder.hitLastTime;
             this.hitTimes = builder.hitTimes;
@@ -413,6 +418,13 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return domainResolveType
+         */
+        public String getDomainResolveType() {
+            return this.domainResolveType;
+        }
+
+        /**
          * @return endTime
          */
         public Long getEndTime() {
@@ -557,6 +569,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             private String direction; 
             private String dnsResult; 
             private Long dnsResultTime; 
+            private String domainResolveType; 
             private Long endTime; 
             private Long hitLastTime; 
             private Long hitTimes; 
@@ -766,6 +779,19 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
              */
             public Builder dnsResultTime(Long dnsResultTime) {
                 this.dnsResultTime = dnsResultTime;
+                return this;
+            }
+
+            /**
+             * The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:
+             * <p>
+             * 
+             * * **FQDN**: fully qualified domain name (FQDN)-based resolution
+             * * **DNS**: DNS-based dynamic resolution
+             * * **FQDN_AND_DNS**: FQDN and DNS-based dynamic resolution
+             */
+            public Builder domainResolveType(String domainResolveType) {
+                this.domainResolveType = domainResolveType;
                 return this;
             }
 

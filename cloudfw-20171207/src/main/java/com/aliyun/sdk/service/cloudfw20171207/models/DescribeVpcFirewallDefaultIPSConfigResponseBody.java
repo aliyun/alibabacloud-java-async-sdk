@@ -20,6 +20,9 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("RuleClass")
+    private Integer ruleClass;
+
     @com.aliyun.core.annotation.NameInMap("RunMode")
     private Integer runMode;
 
@@ -27,6 +30,7 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         this.basicRules = builder.basicRules;
         this.enableAllPatch = builder.enableAllPatch;
         this.requestId = builder.requestId;
+        this.ruleClass = builder.ruleClass;
         this.runMode = builder.runMode;
     }
 
@@ -60,6 +64,13 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return ruleClass
+     */
+    public Integer getRuleClass() {
+        return this.ruleClass;
+    }
+
+    /**
      * @return runMode
      */
     public Integer getRunMode() {
@@ -70,6 +81,7 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
         private Integer basicRules; 
         private Integer enableAllPatch; 
         private String requestId; 
+        private Integer ruleClass; 
         private Integer runMode; 
 
         /**
@@ -101,6 +113,14 @@ public class DescribeVpcFirewallDefaultIPSConfigResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RuleClass.
+         */
+        public Builder ruleClass(Integer ruleClass) {
+            this.ruleClass = ruleClass;
             return this;
         }
 

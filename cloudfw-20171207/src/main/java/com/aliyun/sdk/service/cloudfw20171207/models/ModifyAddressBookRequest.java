@@ -39,6 +39,10 @@ public class ModifyAddressBookRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyMode")
+    private String modifyMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
     @Deprecated
     private String sourceIp;
@@ -59,6 +63,7 @@ public class ModifyAddressBookRequest extends Request {
         this.groupName = builder.groupName;
         this.groupUuid = builder.groupUuid;
         this.lang = builder.lang;
+        this.modifyMode = builder.modifyMode;
         this.sourceIp = builder.sourceIp;
         this.tagList = builder.tagList;
         this.tagRelation = builder.tagRelation;
@@ -120,6 +125,13 @@ public class ModifyAddressBookRequest extends Request {
     }
 
     /**
+     * @return modifyMode
+     */
+    public String getModifyMode() {
+        return this.modifyMode;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -147,6 +159,7 @@ public class ModifyAddressBookRequest extends Request {
         private String groupName; 
         private String groupUuid; 
         private String lang; 
+        private String modifyMode; 
         private String sourceIp; 
         private java.util.List < TagList> tagList; 
         private String tagRelation; 
@@ -163,6 +176,7 @@ public class ModifyAddressBookRequest extends Request {
             this.groupName = request.groupName;
             this.groupUuid = request.groupUuid;
             this.lang = request.lang;
+            this.modifyMode = request.modifyMode;
             this.sourceIp = request.sourceIp;
             this.tagList = request.tagList;
             this.tagRelation = request.tagRelation;
@@ -235,6 +249,15 @@ public class ModifyAddressBookRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * ModifyMode.
+         */
+        public Builder modifyMode(String modifyMode) {
+            this.putQueryParameter("ModifyMode", modifyMode);
+            this.modifyMode = modifyMode;
             return this;
         }
 

@@ -83,7 +83,11 @@ public class SwitchSecurityProxyRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content within the request and the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default)
+         * *   **en**
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -92,7 +96,7 @@ public class SwitchSecurityProxyRequest extends Request {
         }
 
         /**
-         * ProxyId.
+         * The ID of the NAT firewall.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("ProxyId", proxyId);
@@ -101,7 +105,11 @@ public class SwitchSecurityProxyRequest extends Request {
         }
 
         /**
-         * Switch.
+         * Specifies whether to enable the NAT firewall. Valid values:
+         * <p>
+         * 
+         * *   open: yes
+         * *   close: no
          */
         public Builder _switch(String _switch) {
             this.putQueryParameter("Switch", _switch);

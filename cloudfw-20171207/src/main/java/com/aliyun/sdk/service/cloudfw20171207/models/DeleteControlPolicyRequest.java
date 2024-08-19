@@ -18,7 +18,6 @@ public class DeleteControlPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Direction")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String direction;
 
     @com.aliyun.core.annotation.Query
@@ -98,10 +97,10 @@ public class DeleteControlPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the access control policy.
+         * The UUID of the access control policy.
          * <p>
          * 
-         * To delete an access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](~~138866~~) operation to query the ID.
+         * To delete an access control policy, you must specify the UUID of the policy. You can call the [DescribeControlPolicy](~~138866~~) operation to query the UUID.
          */
         public Builder aclUuid(String aclUuid) {
             this.putQueryParameter("AclUuid", aclUuid);
@@ -125,13 +124,13 @@ public class DeleteControlPolicyRequest extends Request {
         }
 
         /**
-         * The natural language of the request and response.
+         * The language of the content within the request and response.
          * <p>
          * 
          * Valid values:
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * *   **zh** (default)
+         * *   **en**
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

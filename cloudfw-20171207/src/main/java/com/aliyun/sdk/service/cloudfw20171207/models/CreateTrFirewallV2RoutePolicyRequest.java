@@ -137,7 +137,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         } 
 
         /**
-         * DestCandidateList.
+         * The secondary traffic redirection instances.
          */
         public Builder destCandidateList(java.util.List < DestCandidateList> destCandidateList) {
             String destCandidateListShrink = shrink(destCandidateList, "DestCandidateList", "json");
@@ -147,7 +147,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * FirewallId.
+         * The instance ID of the VPC firewall.
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -156,7 +156,11 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -165,7 +169,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * PolicyDescription.
+         * The description of the traffic redirection instance.
          */
         public Builder policyDescription(String policyDescription) {
             this.putQueryParameter("PolicyDescription", policyDescription);
@@ -174,7 +178,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the traffic redirection instance.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -183,7 +187,12 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the traffic redirection scenario of the VPC firewall. Valid values:
+         * <p>
+         * 
+         * *   **fullmesh**: interconnected instances
+         * *   **one_to_one**: instance to instance
+         * *   **end_to_end**: instance to instances
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -192,7 +201,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
         }
 
         /**
-         * SrcCandidateList.
+         * The primary traffic redirection instances.
          */
         public Builder srcCandidateList(java.util.List < SrcCandidateList> srcCandidateList) {
             String srcCandidateListShrink = shrink(srcCandidateList, "SrcCandidateList", "json");
@@ -247,7 +256,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
             private String candidateType; 
 
             /**
-             * CandidateId.
+             * The ID of the traffic redirection instance.
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -255,7 +264,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
             }
 
             /**
-             * CandidateType.
+             * The type of the traffic redirection instance.
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;
@@ -308,7 +317,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
             private String candidateType; 
 
             /**
-             * CandidateId.
+             * The ID of the traffic redirection instance.
              */
             public Builder candidateId(String candidateId) {
                 this.candidateId = candidateId;
@@ -316,7 +325,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends Request {
             }
 
             /**
-             * CandidateType.
+             * The type of the traffic redirection instance.
              */
             public Builder candidateType(String candidateType) {
                 this.candidateType = candidateType;

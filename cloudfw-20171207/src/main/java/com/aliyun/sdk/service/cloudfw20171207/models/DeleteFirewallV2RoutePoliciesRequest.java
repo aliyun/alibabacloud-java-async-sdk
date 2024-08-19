@@ -81,7 +81,7 @@ public class DeleteFirewallV2RoutePoliciesRequest extends Request {
         } 
 
         /**
-         * FirewallId.
+         * The instance ID of the VPC firewall.
          */
         public Builder firewallId(String firewallId) {
             this.putQueryParameter("FirewallId", firewallId);
@@ -90,7 +90,11 @@ public class DeleteFirewallV2RoutePoliciesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -99,7 +103,7 @@ public class DeleteFirewallV2RoutePoliciesRequest extends Request {
         }
 
         /**
-         * TrFirewallRoutePolicyId.
+         * The ID of the routing policy.
          */
         public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
             this.putQueryParameter("TrFirewallRoutePolicyId", trFirewallRoutePolicyId);

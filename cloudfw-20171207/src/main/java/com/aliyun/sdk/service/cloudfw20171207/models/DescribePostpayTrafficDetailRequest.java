@@ -163,7 +163,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * The end of the time range to query. Specify a value in the YYYYMMDD format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -216,7 +216,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * The beginning of the time range to query. Specify a value in the YYYYMMDD format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -229,7 +229,8 @@ public class DescribePostpayTrafficDetailRequest extends Request {
          * <p>
          * 
          * *   **EIP_TRAFFIC**: traffic for the Internet firewall
-         * *   **NatGateway_TRAFFIC**: traffic for the NAT firewall
+         * *   **NatGateway_TRAFFIC**: traffic for NAT firewalls
+         * *   **VPC_TRAFFIC**: traffic for virtual private cloud (VPC) firewalls
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);

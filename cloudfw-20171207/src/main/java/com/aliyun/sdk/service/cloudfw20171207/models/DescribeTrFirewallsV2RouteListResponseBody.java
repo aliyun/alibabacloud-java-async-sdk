@@ -49,7 +49,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FirewallRouteDetailList.
+         * The route tables of Cloud Firewall.
          */
         public Builder firewallRouteDetailList(java.util.List < FirewallRouteDetailList> firewallRouteDetailList) {
             this.firewallRouteDetailList = firewallRouteDetailList;
@@ -57,7 +57,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +133,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             private String trFirewallRouteTableId; 
 
             /**
-             * TrFirewallRouteDestination.
+             * The destination address of the route.
              */
             public Builder trFirewallRouteDestination(String trFirewallRouteDestination) {
                 this.trFirewallRouteDestination = trFirewallRouteDestination;
@@ -141,7 +141,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             }
 
             /**
-             * TrFirewallRouteNexthop.
+             * The ID of the next hop for the route.
              */
             public Builder trFirewallRouteNexthop(String trFirewallRouteNexthop) {
                 this.trFirewallRouteNexthop = trFirewallRouteNexthop;
@@ -149,7 +149,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             }
 
             /**
-             * TrFirewallRoutePolicyId.
+             * The ID of the routing policy.
              */
             public Builder trFirewallRoutePolicyId(String trFirewallRoutePolicyId) {
                 this.trFirewallRoutePolicyId = trFirewallRoutePolicyId;
@@ -157,7 +157,7 @@ public class DescribeTrFirewallsV2RouteListResponseBody extends TeaModel {
             }
 
             /**
-             * TrFirewallRouteTableId.
+             * The ID of the route table to which the route entry belongs.
              */
             public Builder trFirewallRouteTableId(String trFirewallRouteTableId) {
                 this.trFirewallRouteTableId = trFirewallRouteTableId;

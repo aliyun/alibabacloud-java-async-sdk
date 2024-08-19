@@ -77,7 +77,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The traffic statistics.
+         * The statistics on traffic.
          */
         public Builder trafficList(java.util.List < TrafficList> trafficList) {
             this.trafficList = trafficList;
@@ -103,6 +103,9 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutBytes")
         private Long outBytes;
 
+        @com.aliyun.core.annotation.NameInMap("ProtectionDuration")
+        private Long protectionDuration;
+
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
@@ -120,6 +123,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.outBytes = builder.outBytes;
+            this.protectionDuration = builder.protectionDuration;
             this.resourceId = builder.resourceId;
             this.totalBytes = builder.totalBytes;
             this.trafficDay = builder.trafficDay;
@@ -163,6 +167,13 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return protectionDuration
+         */
+        public Long getProtectionDuration() {
+            return this.protectionDuration;
+        }
+
+        /**
          * @return resourceId
          */
         public String getResourceId() {
@@ -195,13 +206,14 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceType; 
             private Long outBytes; 
+            private Long protectionDuration; 
             private String resourceId; 
             private Long totalBytes; 
             private String trafficDay; 
             private String trafficType; 
 
             /**
-             * The inbound network throughput, which indicates the total number of bytes that are received. Unit: bytes.
+             * The inbound network throughput, which indicates the total number of bytes that are received Unit: bytes.
              */
             public Builder inBytes(Long inBytes) {
                 this.inBytes = inBytes;
@@ -217,7 +229,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the asset. This value takes effect only for the Internet firewall.
+             * The asset type. This value takes effect only for the Internet firewall.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -233,6 +245,14 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
+             * ProtectionDuration.
+             */
+            public Builder protectionDuration(Long protectionDuration) {
+                this.protectionDuration = protectionDuration;
+                return this;
+            }
+
+            /**
              * The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.
              */
             public Builder resourceId(String resourceId) {
@@ -241,7 +261,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total inbound and outbound network throughput, which indicates the total number of bytes that are sent and received. Unit: bytes.
+             * The total inbound and outbound network throughput, which indicates the total number of bytes that are received and sent. Unit: bytes.
              */
             public Builder totalBytes(Long totalBytes) {
                 this.totalBytes = totalBytes;
@@ -261,7 +281,8 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
              * <p>
              * 
              * *   **EIP_TRAFFIC**: traffic for the Internet firewall
-             * *   **NatGateway_TRAFFIC**: traffic for the NAT firewall
+             * *   **NatGateway_TRAFFIC**: traffic for NAT firewalls
+             * *   **VPC_TRAFFIC**: traffic for VPC firewalls
              */
             public Builder trafficType(String trafficType) {
                 this.trafficType = trafficType;

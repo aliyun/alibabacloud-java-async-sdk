@@ -66,6 +66,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSecurityProxyResponse> createSecurityProxy(CreateSecurityProxyRequest request);
 
+    CompletableFuture<CreateSlsLogDispatchResponse> createSlsLogDispatch(CreateSlsLogDispatchRequest request);
+
     CompletableFuture<CreateTrFirewallV2Response> createTrFirewallV2(CreateTrFirewallV2Request request);
 
     CompletableFuture<CreateTrFirewallV2RoutePolicyResponse> createTrFirewallV2RoutePolicy(CreateTrFirewallV2RoutePolicyRequest request);
@@ -103,8 +105,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAddressBookResponse> deleteAddressBook(DeleteAddressBookRequest request);
 
     /**
-      * You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.  
-      * ## Limits
+      * You can call the DeleteControlPolicy operation to delete an access control policy that applies to inbound or outbound traffic.
+      * ## [](#qps-)Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
@@ -262,8 +264,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribePolicyPriorUsedResponse> describePolicyPriorUsed(DescribePolicyPriorUsedRequest request);
 
+    /**
+      * If you use Cloud Firewall that uses the pay-as-you-go billing method, you can call this operation to query traffic details accurate to the granularity of specific resource instances. If you use Cloud Firewall that uses the subscription billing method, you can call this operation to query the overall traffic details.
+      *
+     */
     CompletableFuture<DescribePostpayTrafficDetailResponse> describePostpayTrafficDetail(DescribePostpayTrafficDetailRequest request);
 
+    /**
+      * You can call this operation to query statistics of the current Cloud Firewall from the date of purchase.
+      *
+     */
     CompletableFuture<DescribePostpayTrafficTotalResponse> describePostpayTrafficTotal(DescribePostpayTrafficTotalRequest request);
 
     CompletableFuture<DescribePrefixListsResponse> describePrefixLists(DescribePrefixListsRequest request);
@@ -410,6 +420,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyNatFirewallControlPolicyResponse> modifyNatFirewallControlPolicy(ModifyNatFirewallControlPolicyRequest request);
 
     CompletableFuture<ModifyNatFirewallControlPolicyPositionResponse> modifyNatFirewallControlPolicyPosition(ModifyNatFirewallControlPolicyPositionRequest request);
+
+    CompletableFuture<ModifyObjectGroupOperationResponse> modifyObjectGroupOperation(ModifyObjectGroupOperationRequest request);
 
     /**
       * You can call the ModifyPolicyAdvancedConfig operation to enable or disable the strict mode for an access control policy.  

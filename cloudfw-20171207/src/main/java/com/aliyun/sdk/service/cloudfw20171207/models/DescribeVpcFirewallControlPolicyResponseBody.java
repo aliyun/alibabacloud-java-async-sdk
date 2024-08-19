@@ -136,6 +136,9 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationType")
         private String destinationType;
 
+        @com.aliyun.core.annotation.NameInMap("DomainResolveType")
+        private String domainResolveType;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
@@ -206,6 +209,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             this.destinationGroupCidrs = builder.destinationGroupCidrs;
             this.destinationGroupType = builder.destinationGroupType;
             this.destinationType = builder.destinationType;
+            this.domainResolveType = builder.domainResolveType;
             this.endTime = builder.endTime;
             this.hitLastTime = builder.hitLastTime;
             this.hitTimes = builder.hitTimes;
@@ -337,6 +341,13 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
          */
         public String getDestinationType() {
             return this.destinationType;
+        }
+
+        /**
+         * @return domainResolveType
+         */
+        public String getDomainResolveType() {
+            return this.domainResolveType;
         }
 
         /**
@@ -481,6 +492,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
             private java.util.List < String > destinationGroupCidrs; 
             private String destinationGroupType; 
             private String destinationType; 
+            private String domainResolveType; 
             private Long endTime; 
             private Long hitLastTime; 
             private Long hitTimes; 
@@ -656,6 +668,19 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
              */
             public Builder destinationType(String destinationType) {
                 this.destinationType = destinationType;
+                return this;
+            }
+
+            /**
+             * The domain name resolution method of the access control policy. By default, an access control policy is enabled after the policy is created. Valid values:
+             * <p>
+             * 
+             * * **FQDN**: fully qualified domain name (FQDN)-based resolution
+             * * **DNS**: DNS-based dynamic resolution
+             * * **FQDN_AND_DNS**: FQDN and DNS-based dynamic resolution
+             */
+            public Builder domainResolveType(String domainResolveType) {
+                this.domainResolveType = domainResolveType;
                 return this;
             }
 
