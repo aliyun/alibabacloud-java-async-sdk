@@ -49,7 +49,7 @@ public class CreateFailoverTestJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * The ID of the failover test.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -57,7 +57,7 @@ public class CreateFailoverTestJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

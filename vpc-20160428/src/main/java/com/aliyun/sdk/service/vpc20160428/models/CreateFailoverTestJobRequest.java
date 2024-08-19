@@ -211,7 +211,12 @@ public class CreateFailoverTestJobRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -220,7 +225,10 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the failover test.
+         * <p>
+         * 
+         * The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -229,7 +237,7 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * If you set the value to true, the system performs only a dry run without actually performing the actual request. If you set the value to false, the system performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -238,7 +246,7 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * JobDuration.
+         * The duration of the failover test. Unit: minutes. Valid values: **1 to 4320**.
          */
         public Builder jobDuration(Integer jobDuration) {
             this.putQueryParameter("JobDuration", jobDuration);
@@ -247,7 +255,11 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * JobType.
+         * The type of the failover test. Valid values:
+         * <p>
+         * 
+         * *   **StartNow**
+         * *   **StartLater**
          */
         public Builder jobType(String jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -256,7 +268,10 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the failover test.
+         * <p>
+         * 
+         * The name must be 0 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -283,7 +298,10 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the failover test.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -292,7 +310,7 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The IDs of failover test resources. You can add at most 16 resources.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -310,7 +328,7 @@ public class CreateFailoverTestJobRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type of the failover test. Set the value to **PHYSICALCONNECTION**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

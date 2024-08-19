@@ -360,6 +360,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateExpressConnectTrafficQosRuleResponse> createExpressConnectTrafficQosRule(CreateExpressConnectTrafficQosRuleRequest request);
 
+    /**
+      * You cannot create a failover test in the following scenarios:
+      * *   You have created a failover test in the region and its type is StartNow.
+      * *   The Express Connect circuit or hosted connection has pending orders or overdue payments.
+      * *   A failover test is already performed on the Express Connect circuit or hosted connection.
+      * *   More than one hosted connection is created over the Express Connect circuit.
+      * *   More than one cross-account VBR is created on the Express Connect circuit.
+      * *   No VBR is associated with the hosted connection.
+      * *   The VLAN ID of the hosted connection is set to 0.
+      *
+     */
     CompletableFuture<CreateFailoverTestJobResponse> createFailoverTestJob(CreateFailoverTestJobRequest request);
 
     /**
@@ -1625,6 +1636,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListVpcGatewayEndpointsResponse> listVpcGatewayEndpoints(ListVpcGatewayEndpointsRequest request);
 
+    CompletableFuture<ListVpcPublishedRouteEntriesResponse> listVpcPublishedRouteEntries(ListVpcPublishedRouteEntriesRequest request);
+
     /**
       * When you call **ListVpnCertificateAssociations**, take note of the following information:
       * *   If you specify only **RegionId**, the SSL certificates associated with all VPN gateways in the specified region are queried.
@@ -2001,6 +2014,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<OpenTrafficMirrorServiceResponse> openTrafficMirrorService(OpenTrafficMirrorServiceRequest request);
 
+    CompletableFuture<PublishVpcRouteEntriesResponse> publishVpcRouteEntries(PublishVpcRouteEntriesRequest request);
+
     CompletableFuture<PublishVpnRouteEntryResponse> publishVpnRouteEntry(PublishVpnRouteEntryRequest request);
 
     /**
@@ -2296,5 +2311,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<VpcDescribeVpcNatGatewayNetworkInterfaceQuotaResponse> vpcDescribeVpcNatGatewayNetworkInterfaceQuota(VpcDescribeVpcNatGatewayNetworkInterfaceQuotaRequest request);
+
+    CompletableFuture<WithdrawVpcPublishedRouteEntriesResponse> withdrawVpcPublishedRouteEntries(WithdrawVpcPublishedRouteEntriesRequest request);
 
 }
