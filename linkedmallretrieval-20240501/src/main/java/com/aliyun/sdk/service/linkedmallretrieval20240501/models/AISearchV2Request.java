@@ -13,16 +13,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AISearchV2Request extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("query")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String query;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("sessionId")
     private String sessionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("timeRange")
+    private String timeRange;
+
     private AISearchV2Request(Builder builder) {
         super(builder);
         this.query = builder.query;
         this.sessionId = builder.sessionId;
+        this.timeRange = builder.timeRange;
     }
 
     public static Builder builder() {
@@ -52,9 +58,17 @@ public class AISearchV2Request extends Request {
         return this.sessionId;
     }
 
+    /**
+     * @return timeRange
+     */
+    public String getTimeRange() {
+        return this.timeRange;
+    }
+
     public static final class Builder extends Request.Builder<AISearchV2Request, Builder> {
         private String query; 
         private String sessionId; 
+        private String timeRange; 
 
         private Builder() {
             super();
@@ -64,6 +78,7 @@ public class AISearchV2Request extends Request {
             super(request);
             this.query = request.query;
             this.sessionId = request.sessionId;
+            this.timeRange = request.timeRange;
         } 
 
         /**
@@ -81,6 +96,15 @@ public class AISearchV2Request extends Request {
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("sessionId", sessionId);
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * timeRange.
+         */
+        public Builder timeRange(String timeRange) {
+            this.putQueryParameter("timeRange", timeRange);
+            this.timeRange = timeRange;
             return this;
         }
 
