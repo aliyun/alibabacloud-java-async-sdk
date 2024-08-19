@@ -256,6 +256,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyRuleStatusResponse> modifyRuleStatus(ModifyRuleStatusRequest request);
 
+    CompletableFuture<ScanOssObjectV1Response> scanOssObjectV1(ScanOssObjectV1Request request);
+
     /**
       * You can call this operation to stop a de-identification task that is running. For example, you can stop a de-identification task that is used to de-identify specific data.
       * # Limits
