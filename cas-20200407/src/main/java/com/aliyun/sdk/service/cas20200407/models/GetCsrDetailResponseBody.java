@@ -14,11 +14,15 @@ public class GetCsrDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Csr")
     private String csr;
 
+    @com.aliyun.core.annotation.NameInMap("PrivateKey")
+    private String privateKey;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCsrDetailResponseBody(Builder builder) {
         this.csr = builder.csr;
+        this.privateKey = builder.privateKey;
         this.requestId = builder.requestId;
     }
 
@@ -38,6 +42,13 @@ public class GetCsrDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return privateKey
+     */
+    public String getPrivateKey() {
+        return this.privateKey;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -46,6 +57,7 @@ public class GetCsrDetailResponseBody extends TeaModel {
 
     public static final class Builder {
         private String csr; 
+        private String privateKey; 
         private String requestId; 
 
         /**
@@ -53,6 +65,14 @@ public class GetCsrDetailResponseBody extends TeaModel {
          */
         public Builder csr(String csr) {
             this.csr = csr;
+            return this;
+        }
+
+        /**
+         * The private key. Specify a Base64-encoded string.
+         */
+        public Builder privateKey(String privateKey) {
+            this.privateKey = privateKey;
             return this;
         }
 
