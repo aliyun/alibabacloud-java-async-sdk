@@ -85,7 +85,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +101,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -421,7 +421,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * The unit that is used to measure the resources deducted from deduction plans.
+             * The unit that is used to measure the resources that are deducted.
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -429,7 +429,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The currency in which deduction plans were priced.
+             * The type of the currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -437,7 +437,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of the resources deducted from deduction plans.
+             * The amount of the deducted resources.
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -461,7 +461,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of a deduction plan.
+             * The instance type.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -509,7 +509,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The fee of purchased deduction plans.
+             * The fee of the deduction plan.
              */
             public Builder reservationCost(String reservationCost) {
                 this.reservationCost = reservationCost;
@@ -517,7 +517,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of a deduction plan.
+             * The ID of the deduction plan.
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
@@ -549,7 +549,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the state.
+             * The name of the status.
              */
             public Builder statusName(String statusName) {
                 this.statusName = statusName;
@@ -557,7 +557,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total capacity of deduction plans.
+             * The total capacity of the deduction plan.
              */
             public Builder totalQuantity(Float totalQuantity) {
                 this.totalQuantity = totalQuantity;
@@ -565,7 +565,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The usage of deduction plans.
+             * The usage rate of the deduction plan.
              */
             public Builder usagePercentage(Float usagePercentage) {
                 this.usagePercentage = usagePercentage;
@@ -573,7 +573,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account.
+             * The account ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -589,7 +589,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the zone.
+             * The zone.
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -597,7 +597,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The zone.
+             * The code of the zone.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -690,7 +690,7 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The token of the next page.
+             * A pagination token. It can be used in the next request to retrieve a new page of results.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

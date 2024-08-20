@@ -126,7 +126,7 @@ public class DescribeSavingsPlansCoverageDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the account for which you want to query coverage details. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.
+         * The ID of the account for which you want to query coverage details.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);

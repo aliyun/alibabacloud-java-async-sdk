@@ -51,6 +51,10 @@ public class QuerySavingsPlansDiscountRequest extends Request {
     private String spec;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpnCommodityCode")
+    private String spnCommodityCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpnType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String spnType;
@@ -66,6 +70,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         this.payMode = builder.payMode;
         this.region = builder.region;
         this.spec = builder.spec;
+        this.spnCommodityCode = builder.spnCommodityCode;
         this.spnType = builder.spnType;
     }
 
@@ -146,6 +151,13 @@ public class QuerySavingsPlansDiscountRequest extends Request {
     }
 
     /**
+     * @return spnCommodityCode
+     */
+    public String getSpnCommodityCode() {
+        return this.spnCommodityCode;
+    }
+
+    /**
      * @return spnType
      */
     public String getSpnType() {
@@ -162,6 +174,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         private String payMode; 
         private String region; 
         private String spec; 
+        private String spnCommodityCode; 
         private String spnType; 
 
         private Builder() {
@@ -179,6 +192,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
             this.payMode = request.payMode;
             this.region = request.region;
             this.spec = request.spec;
+            this.spnCommodityCode = request.spnCommodityCode;
             this.spnType = request.spnType;
         } 
 
@@ -202,6 +216,12 @@ public class QuerySavingsPlansDiscountRequest extends Request {
 
         /**
          * The identifier of the language.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   EN: English.
+         * *   ZH: Chinese.
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -237,7 +257,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The payment mode.
+         * The payment mode. Valid values: total: all upfront. half: half upfront. zero: no upfront.
          */
         public Builder payMode(String payMode) {
             this.putQueryParameter("PayMode", payMode);
@@ -264,7 +284,16 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * The type of the savings plan.
+         * SpnCommodityCode.
+         */
+        public Builder spnCommodityCode(String spnCommodityCode) {
+            this.putQueryParameter("SpnCommodityCode", spnCommodityCode);
+            this.spnCommodityCode = spnCommodityCode;
+            return this;
+        }
+
+        /**
+         * The type of the savings plan. Valid values: ecs: Elastic Compute Service (ECS) compute type. universal: general-purpose type.
          */
         public Builder spnType(String spnType) {
             this.putQueryParameter("SpnType", spnType);

@@ -302,7 +302,11 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * IsHideZeroCharge.
+         * Specifies whether to filter bills if both the pretax gross amount and pretax amount are 0. Valid values:
+         * <p>
+         * 
+         * *   false: does not filter bills.
+         * *   true: filters bills.
          */
         public Builder isHideZeroCharge(Boolean isHideZeroCharge) {
             this.putQueryParameter("IsHideZeroCharge", isHideZeroCharge);
@@ -338,7 +342,7 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
-         * PipCode.
+         * The code of the service. The code is the same as that in Cost Center.
          */
         public Builder pipCode(String pipCode) {
             this.putQueryParameter("PipCode", pipCode);

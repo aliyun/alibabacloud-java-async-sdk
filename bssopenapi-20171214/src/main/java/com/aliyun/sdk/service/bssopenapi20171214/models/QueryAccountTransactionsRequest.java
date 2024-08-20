@@ -197,7 +197,7 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The number of the page to return. Default value is 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -206,7 +206,7 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries to return on each page. Default value is 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -345,7 +345,7 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * PipCode.
+         * The code of the service. The code is the same as that in Cost Center.
          */
         public Builder pipCode(String pipCode) {
             this.putQueryParameter("PipCode", pipCode);

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QuerySavingsPlansInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    private String commodityCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
@@ -45,6 +49,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
 
     private QuerySavingsPlansInstanceRequest(Builder builder) {
         super(builder);
+        this.commodityCode = builder.commodityCode;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.locale = builder.locale;
@@ -66,6 +71,13 @@ public class QuerySavingsPlansInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return commodityCode
+     */
+    public String getCommodityCode() {
+        return this.commodityCode;
     }
 
     /**
@@ -125,6 +137,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QuerySavingsPlansInstanceRequest, Builder> {
+        private String commodityCode; 
         private String endTime; 
         private String instanceId; 
         private String locale; 
@@ -140,6 +153,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
 
         private Builder(QuerySavingsPlansInstanceRequest request) {
             super(request);
+            this.commodityCode = request.commodityCode;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.locale = request.locale;
@@ -149,6 +163,15 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             this.status = request.status;
             this.tag = request.tag;
         } 
+
+        /**
+         * CommodityCode.
+         */
+        public Builder commodityCode(String commodityCode) {
+            this.putQueryParameter("CommodityCode", commodityCode);
+            this.commodityCode = commodityCode;
+            return this;
+        }
 
         /**
          * The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.

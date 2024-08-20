@@ -226,7 +226,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * ExtendMap.
+         * The extended parameters.
          */
         public Builder extendMap(java.util.Map < String, String > extendMap) {
             String extendMapShrink = shrink(extendMap, "ExtendMap", "json");
@@ -259,7 +259,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The unit of the service duration. This parameter is used together with the During parameter. Valid values:
+         * The unit of the subscription duration. This parameter is used together with Duration. Valid values:
          * <p>
          * 
          * *   Year
@@ -307,7 +307,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
          * <p>
          * 
          * *   universal: general-purpose type
-         * *   ecs: ECS compute type
+         * *   ecs: Elastic Compute Service (ECS) compute type
          * *   elasticy: elastic type
          */
         public Builder type(String type) {

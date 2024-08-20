@@ -67,7 +67,7 @@ public class GetAccountRelationRequest extends Request {
         } 
 
         /**
-         * The ID of the financial relationship.
+         * The ID of the financial relationship. Value returned by calling the AddAccountRelation operation.
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);

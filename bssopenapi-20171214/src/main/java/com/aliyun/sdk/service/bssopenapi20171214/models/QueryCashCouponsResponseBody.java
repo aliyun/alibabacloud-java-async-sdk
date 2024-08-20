@@ -317,7 +317,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the voucher.
              */
             public Builder description(String description) {
                 this.description = description;

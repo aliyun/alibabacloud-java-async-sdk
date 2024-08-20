@@ -141,7 +141,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         } 
 
         /**
-         * BillOwnerId.
+         * The ID of the account whose data you want to query. If you do not specify this parameter, the data of the current Alibaba Cloud account and its Resource Access Management (RAM) users is queried. To query the data of a RAM user, specify the ID of the RAM user.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -159,7 +159,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return. Default value: 20. Maximum value: 300.
+         * The maximum number of entries to return. Default value: 20. The maximum value is 300.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -168,7 +168,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         }
 
         /**
-         * The token that is used to retrieve the next page of results. You do not need to set this parameter if you query usage details within a specific time range for the first time. The response returns a token that you can use to query usage details that are displayed on the next page. If a null value is returned for the NextToken parameter, no more usage details can be queried.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -186,7 +186,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         }
 
         /**
-         * The type of deduction plans whose usage details are queried. Valid values: RI and SCU.
+         * The type of deduction plan whose usage details are queried. Valid values: RI and SCU.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -195,7 +195,7 @@ public class DescribeResourceUsageDetailRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * The beginning of the time range to query. The beginning is included in the time range. Specify the time in the yyyy-MM-dd HH:mm:ss format.
          */
         public Builder startPeriod(String startPeriod) {
             this.putQueryParameter("StartPeriod", startPeriod);

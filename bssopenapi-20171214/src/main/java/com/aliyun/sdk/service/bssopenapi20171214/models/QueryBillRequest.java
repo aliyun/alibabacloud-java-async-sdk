@@ -286,9 +286,7 @@ public class QueryBillRequest extends Request {
          * *   Subscription
          * *   PayAsYouGo
          * 
-         * **
-         * 
-         * ****This parameter must be used together with the ProductCode parameter.
+         * This parameter must be used together with the ProductCode parameter.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

@@ -262,7 +262,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaLimit.
+             * The quota limit for eco customers.
              */
             public Builder quotaLimit(String quotaLimit) {
                 this.quotaLimit = quotaLimit;

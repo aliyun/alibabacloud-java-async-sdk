@@ -93,7 +93,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -326,7 +326,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * RegionCode.
+             * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
              */
             public Builder regionCode(String regionCode) {
                 this.regionCode = regionCode;

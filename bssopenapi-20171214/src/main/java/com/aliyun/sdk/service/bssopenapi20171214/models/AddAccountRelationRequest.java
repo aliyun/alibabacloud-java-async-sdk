@@ -178,6 +178,8 @@ public class AddAccountRelationRequest extends Request {
          * *   CHECK_FINANCE_INFO: requests to view information about the financial relationship.
          * *   MANAGE_TARGET_INVOICE: allows the member to manage invoices.
          * *   CHECK_TARGET_CONSUMPTION: allows the member to view the bills.
+         * 
+         * The params[PermissionCodes, RoleCodes] can not be null at the same time.
          */
         public Builder permissionCodes(java.util.List < String > permissionCodes) {
             this.putQueryParameter("PermissionCodes", permissionCodes);

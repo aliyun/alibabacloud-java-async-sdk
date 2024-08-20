@@ -489,7 +489,7 @@ public class QueryBillOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * AfterTaxAmount.
+             * The amount paid after the tax is deducted.
              */
             public Builder afterTaxAmount(Float afterTaxAmount) {
                 this.afterTaxAmount = afterTaxAmount;
@@ -620,7 +620,7 @@ public class QueryBillOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentCurrency.
+             * The currency used for payment.
              */
             public Builder paymentCurrency(String paymentCurrency) {
                 this.paymentCurrency = paymentCurrency;
@@ -644,7 +644,7 @@ public class QueryBillOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * PretaxAmountLocal.
+             * The pretax amount paid in local currency.
              */
             public Builder pretaxAmountLocal(Float pretaxAmountLocal) {
                 this.pretaxAmountLocal = pretaxAmountLocal;
@@ -712,7 +712,7 @@ public class QueryBillOverviewResponseBody extends TeaModel {
             }
 
             /**
-             * Tax.
+             * The tax.
              */
             public Builder tax(Float tax) {
                 this.tax = tax;
