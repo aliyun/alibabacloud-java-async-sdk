@@ -27,12 +27,22 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeUploadTokenResponse> describeUploadToken(DescribeUploadTokenRequest request);
 
+    /**
+      * *   Billing: This operation is free of charge.
+      * *   Query timeout: We recommend that you query moderation results at least 480 seconds after you send an asynchronous moderation request. Content Moderation retains moderation results for up to 3 days. After 3 days, the results are deleted.
+      * *   You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<DescribeUrlModerationResultResponse> describeUrlModerationResult(DescribeUrlModerationResultRequest request);
 
     CompletableFuture<FileModerationResponse> fileModeration(FileModerationRequest request);
 
     CompletableFuture<ImageAsyncModerationResponse> imageAsyncModeration(ImageAsyncModerationRequest request);
 
+    /**
+      * **Before you call this operation, make sure that you are familiar with the [billing](~~467826~~)[](https://www.aliyun.com/price/product?#/lvwang/detail/cdibag) of Image Moderation 2.0.
+      *
+     */
     CompletableFuture<ImageModerationResponse> imageModeration(ImageModerationRequest request);
 
     CompletableFuture<TextModerationResponse> textModeration(TextModerationRequest request);

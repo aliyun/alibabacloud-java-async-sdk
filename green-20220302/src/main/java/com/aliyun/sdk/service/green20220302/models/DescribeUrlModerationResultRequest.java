@@ -53,7 +53,7 @@ public class DescribeUrlModerationResultRequest extends Request {
         } 
 
         /**
-         * The reqId field returned by the Url Async Moderation API.
+         * The ReqId field returned by an asynchronous URL moderation operation.
          */
         public Builder reqId(String reqId) {
             this.putBodyParameter("ReqId", reqId);

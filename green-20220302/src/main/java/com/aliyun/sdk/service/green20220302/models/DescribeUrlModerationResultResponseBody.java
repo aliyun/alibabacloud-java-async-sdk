@@ -73,7 +73,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * The returned HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -161,7 +161,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             private String siteType; 
 
             /**
-             * ICP record number.
+             * The ICP number.
              */
             public Builder icpNo(String icpNo) {
                 this.icpNo = icpNo;
@@ -169,7 +169,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * ICP filing type.
+             * The type of the ICP filing.
              */
             public Builder icpType(String icpType) {
                 this.icpType = icpType;
@@ -177,7 +177,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * SiteType.
+             * The type of site
              */
             public Builder siteType(String siteType) {
                 this.siteType = siteType;
@@ -230,7 +230,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
+             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -238,7 +238,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The labels returned after the url async moderation.
+             * The labels returned after the asynchronous URL moderation.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -315,7 +315,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             private java.util.List < Result> result; 
 
             /**
-             * The ID of the moderated object.
+             * The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -323,7 +323,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Supplementary information.
+             * The supplementary information.
              */
             public Builder extraInfo(ExtraInfo extraInfo) {
                 this.extraInfo = extraInfo;
@@ -331,7 +331,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The reqId field returned by the Url Async Moderation API.
+             * The ReqId field returned by an asynchronous URL moderation operation.
              */
             public Builder reqId(String reqId) {
                 this.reqId = reqId;
@@ -339,7 +339,7 @@ public class DescribeUrlModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The results of url async moderation parameters such as the label parameter and the confidence parameter.
+             * The returned results.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

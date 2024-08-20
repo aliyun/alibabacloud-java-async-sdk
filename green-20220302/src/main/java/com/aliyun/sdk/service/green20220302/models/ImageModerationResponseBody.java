@@ -73,7 +73,7 @@ public class ImageModerationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * The returned HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The moderation results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The request ID, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -659,7 +659,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * The height of the text area, in pixels.
+             * The height
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -667,7 +667,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The width of the text area, in pixels.
+             * The weight
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -675,7 +675,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The distance between the upper-left corner of the text area and the y-axis, using the upper-left corner of the image as the coordinate origin, in pixels.
+             * X coordinate
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -683,7 +683,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The distance between the upper left corner of the text area and the x-axis, with the upper left corner of the image as the coordinate origin, in pixels.
+             * Y coordinate
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -764,7 +764,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Location information.
+             * the data array of location info
              */
             public Builder location(java.util.List < PublicFigureLocation> location) {
                 this.location = location;
@@ -1308,11 +1308,15 @@ public class ImageModerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private Result(Builder builder) {
             this.confidence = builder.confidence;
+            this.description = builder.description;
             this.label = builder.label;
         }
 
@@ -1332,6 +1336,13 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return label
          */
         public String getLabel() {
@@ -1340,6 +1351,7 @@ public class ImageModerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float confidence; 
+            private String description; 
             private String label; 
 
             /**
@@ -1351,7 +1363,15 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The labels returned after the image moderation.
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The labels returned after the image moderation. Multiple risk labels and the corresponding scores of confidence levels may be returned for an image.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -1429,6 +1449,9 @@ public class ImageModerationResponseBody extends TeaModel {
 
             /**
              * The ID of the moderated object.
+             * <p>
+             * 
+             * >  If you specify the dataId parameter in the request, the value of the dataId parameter is returned in the response.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -1444,7 +1467,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * The results of image moderation parameters such as the label parameter and the confidence parameter.
+             * The results of image moderation parameters such as the label parameter and the confidence parameter, which are an array structure.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

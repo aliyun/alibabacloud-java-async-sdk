@@ -67,7 +67,28 @@ public class ImageModerationRequest extends Request {
         } 
 
         /**
-         * The type of the moderation service.
+         * The moderation services supported by Image Moderation 2.0. Valid values:
+         * <p>
+         * 
+         * *   baselineCheck: common baseline moderation
+         * *   baselineCheck_pro: common baseline moderation_Professional
+         * *   baselineCheck_cb: common baseline moderation_For regions outside the Chinese mainland
+         * *   tonalityImprove: content governance moderation
+         * *   aigcCheck: AI-generated image identification
+         * *   profilePhotoCheck: avatar image moderation
+         * *   advertisingCheck: marketing material identification
+         * *   liveStreamCheck: moderation of screenshots of videos and live streams
+         * 
+         * Valid values:
+         * 
+         * *   liveStreamCheck: moderation of screenshots of videos and live streams
+         * *   baselineCheck: common baseline moderation
+         * *   aigcCheck: AI-generated image identification
+         * *   baselineCheck_pro: common baseline moderation_Professional
+         * *   advertisingCheck: marketing material identification
+         * *   baselineCheck_cb: common baseline moderation_For regions outside the Chinese mainland
+         * *   tonalityImprove: content governance moderation
+         * *   profilePhotoCheck: avatar image moderation
          */
         public Builder service(String service) {
             this.putBodyParameter("Service", service);
@@ -77,6 +98,10 @@ public class ImageModerationRequest extends Request {
 
         /**
          * The parameters required by the moderation service. The value is a JSON string.
+         * <p>
+         * 
+         * *   imageUrl: the URL of the object that you want to moderate. This parameter is required.
+         * *   dataId: the ID of the object that you want to moderate. This parameter is optional.
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);
