@@ -384,11 +384,17 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoStopConfiguration")
         private AutoStopConfiguration autoStopConfiguration;
 
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
+
         @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
         @com.aliyun.core.annotation.NameInMap("draftId")
         private String draftId;
+
+        @com.aliyun.core.annotation.NameInMap("fusion")
+        private Boolean fusion;
 
         @com.aliyun.core.annotation.NameInMap("kind")
         private String kind;
@@ -427,8 +433,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             this.applicationConfigs = builder.applicationConfigs;
             this.autoStartConfiguration = builder.autoStartConfiguration;
             this.autoStopConfiguration = builder.autoStopConfiguration;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
             this.domain = builder.domain;
             this.draftId = builder.draftId;
+            this.fusion = builder.fusion;
             this.kind = builder.kind;
             this.name = builder.name;
             this.queueName = builder.queueName;
@@ -472,6 +480,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
+        /**
          * @return domain
          */
         public String getDomain() {
@@ -483,6 +498,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
          */
         public String getDraftId() {
             return this.draftId;
+        }
+
+        /**
+         * @return fusion
+         */
+        public Boolean getFusion() {
+            return this.fusion;
         }
 
         /**
@@ -566,8 +588,10 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private java.util.List < ApplicationConfigs> applicationConfigs; 
             private AutoStartConfiguration autoStartConfiguration; 
             private AutoStopConfiguration autoStopConfiguration; 
+            private String displayReleaseVersion; 
             private String domain; 
             private String draftId; 
+            private Boolean fusion; 
             private String kind; 
             private String name; 
             private String queueName; 
@@ -605,6 +629,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
+             * displayReleaseVersion.
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
              * domain.
              */
             public Builder domain(String domain) {
@@ -617,6 +649,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
              */
             public Builder draftId(String draftId) {
                 this.draftId = draftId;
+                return this;
+            }
+
+            /**
+             * fusion.
+             */
+            public Builder fusion(Boolean fusion) {
+                this.fusion = fusion;
                 return this;
             }
 

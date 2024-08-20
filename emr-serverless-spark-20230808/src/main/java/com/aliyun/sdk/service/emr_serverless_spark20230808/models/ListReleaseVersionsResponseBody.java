@@ -137,6 +137,12 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cpuArchitectures")
         private java.util.List < String > cpuArchitectures;
 
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
+
+        @com.aliyun.core.annotation.NameInMap("fusion")
+        private Boolean fusion;
+
         @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
@@ -158,6 +164,8 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         private ReleaseVersions(Builder builder) {
             this.communityVersion = builder.communityVersion;
             this.cpuArchitectures = builder.cpuArchitectures;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
+            this.fusion = builder.fusion;
             this.gmtCreate = builder.gmtCreate;
             this.iaasType = builder.iaasType;
             this.releaseVersion = builder.releaseVersion;
@@ -186,6 +194,20 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
          */
         public java.util.List < String > getCpuArchitectures() {
             return this.cpuArchitectures;
+        }
+
+        /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
+        /**
+         * @return fusion
+         */
+        public Boolean getFusion() {
+            return this.fusion;
         }
 
         /**
@@ -233,6 +255,8 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         public static final class Builder {
             private String communityVersion; 
             private java.util.List < String > cpuArchitectures; 
+            private String displayReleaseVersion; 
+            private Boolean fusion; 
             private Long gmtCreate; 
             private String iaasType; 
             private String releaseVersion; 
@@ -253,6 +277,22 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
              */
             public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
                 this.cpuArchitectures = cpuArchitectures;
+                return this;
+            }
+
+            /**
+             * displayReleaseVersion.
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
+             * fusion.
+             */
+            public Builder fusion(Boolean fusion) {
+                this.fusion = fusion;
                 return this;
             }
 

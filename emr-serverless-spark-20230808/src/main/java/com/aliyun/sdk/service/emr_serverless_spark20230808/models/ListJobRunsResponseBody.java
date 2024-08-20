@@ -242,11 +242,17 @@ public class ListJobRunsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
+
         @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
         @com.aliyun.core.annotation.NameInMap("executionTimeoutSeconds")
         private Integer executionTimeoutSeconds;
+
+        @com.aliyun.core.annotation.NameInMap("fusion")
+        private Boolean fusion;
 
         @com.aliyun.core.annotation.NameInMap("jobDriver")
         private JobDriver jobDriver;
@@ -285,8 +291,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             this.codeType = builder.codeType;
             this.configurationOverrides = builder.configurationOverrides;
             this.creator = builder.creator;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
             this.endTime = builder.endTime;
             this.executionTimeoutSeconds = builder.executionTimeoutSeconds;
+            this.fusion = builder.fusion;
             this.jobDriver = builder.jobDriver;
             this.jobRunId = builder.jobRunId;
             this.log = builder.log;
@@ -330,6 +338,13 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
+        /**
          * @return endTime
          */
         public Long getEndTime() {
@@ -341,6 +356,13 @@ public class ListJobRunsResponseBody extends TeaModel {
          */
         public Integer getExecutionTimeoutSeconds() {
             return this.executionTimeoutSeconds;
+        }
+
+        /**
+         * @return fusion
+         */
+        public Boolean getFusion() {
+            return this.fusion;
         }
 
         /**
@@ -424,8 +446,10 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String codeType; 
             private ConfigurationOverrides configurationOverrides; 
             private String creator; 
+            private String displayReleaseVersion; 
             private Long endTime; 
             private Integer executionTimeoutSeconds; 
+            private Boolean fusion; 
             private JobDriver jobDriver; 
             private String jobRunId; 
             private RunLog log; 
@@ -470,6 +494,14 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
+             * displayReleaseVersion.
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
+                return this;
+            }
+
+            /**
              * The end time of the job.
              */
             public Builder endTime(Long endTime) {
@@ -482,6 +514,14 @@ public class ListJobRunsResponseBody extends TeaModel {
              */
             public Builder executionTimeoutSeconds(Integer executionTimeoutSeconds) {
                 this.executionTimeoutSeconds = executionTimeoutSeconds;
+                return this;
+            }
+
+            /**
+             * fusion.
+             */
+            public Builder fusion(Boolean fusion) {
+                this.fusion = fusion;
                 return this;
             }
 

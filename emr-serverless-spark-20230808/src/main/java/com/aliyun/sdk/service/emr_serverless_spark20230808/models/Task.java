@@ -55,6 +55,9 @@ public class Task extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("files")
     private java.util.List < String > files;
 
+    @com.aliyun.core.annotation.NameInMap("fusion")
+    private Boolean fusion;
+
     @com.aliyun.core.annotation.NameInMap("gmtCreated")
     @com.aliyun.core.annotation.Validation(required = true)
     private String gmtCreated;
@@ -152,6 +155,7 @@ public class Task extends TeaModel {
         this.extraArtifactIds = builder.extraArtifactIds;
         this.extraSparkSubmitParams = builder.extraSparkSubmitParams;
         this.files = builder.files;
+        this.fusion = builder.fusion;
         this.gmtCreated = builder.gmtCreated;
         this.gmtModified = builder.gmtModified;
         this.hasChanged = builder.hasChanged;
@@ -281,6 +285,13 @@ public class Task extends TeaModel {
      */
     public java.util.List < String > getFiles() {
         return this.files;
+    }
+
+    /**
+     * @return fusion
+     */
+    public Boolean getFusion() {
+        return this.fusion;
     }
 
     /**
@@ -459,6 +470,7 @@ public class Task extends TeaModel {
         private java.util.List < String > extraArtifactIds; 
         private String extraSparkSubmitParams; 
         private java.util.List < String > files; 
+        private Boolean fusion; 
         private String gmtCreated; 
         private String gmtModified; 
         private Boolean hasChanged; 
@@ -592,6 +604,14 @@ public class Task extends TeaModel {
          */
         public Builder files(java.util.List < String > files) {
             this.files = files;
+            return this;
+        }
+
+        /**
+         * fusion.
+         */
+        public Builder fusion(Boolean fusion) {
+            this.fusion = fusion;
             return this;
         }
 

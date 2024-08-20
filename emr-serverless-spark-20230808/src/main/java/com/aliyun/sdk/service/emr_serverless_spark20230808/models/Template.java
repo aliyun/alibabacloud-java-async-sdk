@@ -15,6 +15,12 @@ public class Template extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long creator;
 
+    @com.aliyun.core.annotation.NameInMap("displaySparkVersion")
+    private String displaySparkVersion;
+
+    @com.aliyun.core.annotation.NameInMap("fusion")
+    private Boolean fusion;
+
     @com.aliyun.core.annotation.NameInMap("gmtCreated")
     @com.aliyun.core.annotation.Validation(required = true)
     private String gmtCreated;
@@ -63,6 +69,8 @@ public class Template extends TeaModel {
 
     private Template(Builder builder) {
         this.creator = builder.creator;
+        this.displaySparkVersion = builder.displaySparkVersion;
+        this.fusion = builder.fusion;
         this.gmtCreated = builder.gmtCreated;
         this.gmtModified = builder.gmtModified;
         this.modifier = builder.modifier;
@@ -90,6 +98,20 @@ public class Template extends TeaModel {
      */
     public Long getCreator() {
         return this.creator;
+    }
+
+    /**
+     * @return displaySparkVersion
+     */
+    public String getDisplaySparkVersion() {
+        return this.displaySparkVersion;
+    }
+
+    /**
+     * @return fusion
+     */
+    public Boolean getFusion() {
+        return this.fusion;
     }
 
     /**
@@ -178,6 +200,8 @@ public class Template extends TeaModel {
 
     public static final class Builder {
         private Long creator; 
+        private String displaySparkVersion; 
+        private Boolean fusion; 
         private String gmtCreated; 
         private String gmtModified; 
         private Long modifier; 
@@ -196,6 +220,22 @@ public class Template extends TeaModel {
          */
         public Builder creator(Long creator) {
             this.creator = creator;
+            return this;
+        }
+
+        /**
+         * displaySparkVersion.
+         */
+        public Builder displaySparkVersion(String displaySparkVersion) {
+            this.displaySparkVersion = displaySparkVersion;
+            return this;
+        }
+
+        /**
+         * fusion.
+         */
+        public Builder fusion(Boolean fusion) {
+            this.fusion = fusion;
             return this;
         }
 

@@ -29,8 +29,16 @@ public class StartJobRunRequest extends Request {
     private ConfigurationOverrides configurationOverrides;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+    private String displayReleaseVersion;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("executionTimeoutSeconds")
     private Integer executionTimeoutSeconds;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fusion")
+    private Boolean fusion;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("jobDriver")
@@ -66,7 +74,9 @@ public class StartJobRunRequest extends Request {
         this.clientToken = builder.clientToken;
         this.codeType = builder.codeType;
         this.configurationOverrides = builder.configurationOverrides;
+        this.displayReleaseVersion = builder.displayReleaseVersion;
         this.executionTimeoutSeconds = builder.executionTimeoutSeconds;
+        this.fusion = builder.fusion;
         this.jobDriver = builder.jobDriver;
         this.jobId = builder.jobId;
         this.name = builder.name;
@@ -118,10 +128,24 @@ public class StartJobRunRequest extends Request {
     }
 
     /**
+     * @return displayReleaseVersion
+     */
+    public String getDisplayReleaseVersion() {
+        return this.displayReleaseVersion;
+    }
+
+    /**
      * @return executionTimeoutSeconds
      */
     public Integer getExecutionTimeoutSeconds() {
         return this.executionTimeoutSeconds;
+    }
+
+    /**
+     * @return fusion
+     */
+    public Boolean getFusion() {
+        return this.fusion;
     }
 
     /**
@@ -178,7 +202,9 @@ public class StartJobRunRequest extends Request {
         private String clientToken; 
         private String codeType; 
         private ConfigurationOverrides configurationOverrides; 
+        private String displayReleaseVersion; 
         private Integer executionTimeoutSeconds; 
+        private Boolean fusion; 
         private JobDriver jobDriver; 
         private String jobId; 
         private String name; 
@@ -197,7 +223,9 @@ public class StartJobRunRequest extends Request {
             this.clientToken = request.clientToken;
             this.codeType = request.codeType;
             this.configurationOverrides = request.configurationOverrides;
+            this.displayReleaseVersion = request.displayReleaseVersion;
             this.executionTimeoutSeconds = request.executionTimeoutSeconds;
+            this.fusion = request.fusion;
             this.jobDriver = request.jobDriver;
             this.jobId = request.jobId;
             this.name = request.name;
@@ -249,11 +277,29 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
+         * displayReleaseVersion.
+         */
+        public Builder displayReleaseVersion(String displayReleaseVersion) {
+            this.putBodyParameter("displayReleaseVersion", displayReleaseVersion);
+            this.displayReleaseVersion = displayReleaseVersion;
+            return this;
+        }
+
+        /**
          * The timeout period of the job.
          */
         public Builder executionTimeoutSeconds(Integer executionTimeoutSeconds) {
             this.putBodyParameter("executionTimeoutSeconds", executionTimeoutSeconds);
             this.executionTimeoutSeconds = executionTimeoutSeconds;
+            return this;
+        }
+
+        /**
+         * fusion.
+         */
+        public Builder fusion(Boolean fusion) {
+            this.putBodyParameter("fusion", fusion);
+            this.fusion = fusion;
             return this;
         }
 

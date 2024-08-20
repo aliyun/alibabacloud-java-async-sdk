@@ -207,6 +207,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dlfCatalogId")
         private String dlfCatalogId;
 
+        @com.aliyun.core.annotation.NameInMap("dlfType")
+        private String dlfType;
+
         @com.aliyun.core.annotation.NameInMap("duration")
         private Integer duration;
 
@@ -255,6 +258,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             this.autoRenewPeriodUnit = builder.autoRenewPeriodUnit;
             this.createTime = builder.createTime;
             this.dlfCatalogId = builder.dlfCatalogId;
+            this.dlfType = builder.dlfType;
             this.duration = builder.duration;
             this.endTime = builder.endTime;
             this.failReason = builder.failReason;
@@ -312,6 +316,13 @@ public class ListWorkspacesResponseBody extends TeaModel {
          */
         public String getDlfCatalogId() {
             return this.dlfCatalogId;
+        }
+
+        /**
+         * @return dlfType
+         */
+        public String getDlfType() {
+            return this.dlfType;
         }
 
         /**
@@ -418,6 +429,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private String autoRenewPeriodUnit; 
             private Long createTime; 
             private String dlfCatalogId; 
+            private String dlfType; 
             private Integer duration; 
             private Long endTime; 
             private String failReason; 
@@ -470,6 +482,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
              */
             public Builder dlfCatalogId(String dlfCatalogId) {
                 this.dlfCatalogId = dlfCatalogId;
+                return this;
+            }
+
+            /**
+             * dlfType.
+             */
+            public Builder dlfType(String dlfType) {
+                this.dlfType = dlfType;
                 return this;
             }
 
