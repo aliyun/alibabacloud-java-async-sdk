@@ -218,6 +218,9 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogTime")
         private Long logTime;
 
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
         @com.aliyun.core.annotation.NameInMap("QueryName")
         private String queryName;
 
@@ -248,6 +251,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         private Log(Builder builder) {
             this.dnsMsgId = builder.dnsMsgId;
             this.logTime = builder.logTime;
+            this.protocol = builder.protocol;
             this.queryName = builder.queryName;
             this.queryType = builder.queryType;
             this.rt = builder.rt;
@@ -279,6 +283,13 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
          */
         public Long getLogTime() {
             return this.logTime;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
         }
 
         /**
@@ -347,6 +358,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
         public static final class Builder {
             private String dnsMsgId; 
             private Long logTime; 
+            private String protocol; 
             private String queryName; 
             private String queryType; 
             private Integer rt; 
@@ -370,6 +382,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
              */
             public Builder logTime(Long logTime) {
                 this.logTime = logTime;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
                 return this;
             }
 
