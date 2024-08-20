@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
+    CompletableFuture<CreateHoloWarehouseResponse> createHoloWarehouse(CreateHoloWarehouseRequest request);
+
     /**
       * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
       * *   For more information about the billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/developer-reference/api-hologram-2022-06-01-createinstance).
@@ -45,6 +47,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
+    CompletableFuture<DeleteHoloWarehouseResponse> deleteHoloWarehouse(DeleteHoloWarehouseRequest request);
+
     /**
       * > Before you call this operation, read the documentation and make sure that you understand the prerequisites and impacts of this operation.
       * *   After you delete a Hologres instance, data and objects in the instance cannot be restored. Proceed with caution. For more information, see [Billing overview](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview#section-h6a-x58-jc0).
@@ -66,6 +70,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListWarehousesResponse> listWarehouses(ListWarehousesRequest request);
 
+    CompletableFuture<RebalanceHoloWarehouseResponse> rebalanceHoloWarehouse(RebalanceHoloWarehouseRequest request);
+
+    CompletableFuture<RenameHoloWarehouseResponse> renameHoloWarehouse(RenameHoloWarehouseRequest request);
+
     /**
       * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
       * *   For more information about billing details of Hologres, see [Pricing](https://www.alibabacloud.com/help/en/hologres/product-overview/billing-overview).
@@ -75,9 +83,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request);
 
+    CompletableFuture<RestartHoloWarehouseResponse> restartHoloWarehouse(RestartHoloWarehouseRequest request);
+
     CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request);
 
+    CompletableFuture<ResumeHoloWarehouseResponse> resumeHoloWarehouse(ResumeHoloWarehouseRequest request);
+
     CompletableFuture<ResumeInstanceResponse> resumeInstance(ResumeInstanceRequest request);
+
+    CompletableFuture<ScaleHoloWarehouseResponse> scaleHoloWarehouse(ScaleHoloWarehouseRequest request);
 
     /**
       * > Before you call this operation, make sure that you understand the billing method and pricing of Hologres because this operation is charged.
@@ -88,6 +102,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ScaleInstanceResponse> scaleInstance(ScaleInstanceRequest request);
 
     CompletableFuture<StopInstanceResponse> stopInstance(StopInstanceRequest request);
+
+    CompletableFuture<SuspendHoloWarehouseResponse> suspendHoloWarehouse(SuspendHoloWarehouseRequest request);
 
     CompletableFuture<UpdateInstanceNameResponse> updateInstanceName(UpdateInstanceNameRequest request);
 
