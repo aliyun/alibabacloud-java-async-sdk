@@ -22,6 +22,10 @@ public class ModifyAuditLogConfigRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineType")
+    private String engineType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -46,6 +50,7 @@ public class ModifyAuditLogConfigRequest extends Request {
         super(builder);
         this.auditLogStatus = builder.auditLogStatus;
         this.DBClusterId = builder.DBClusterId;
+        this.engineType = builder.engineType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -78,6 +83,13 @@ public class ModifyAuditLogConfigRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return engineType
+     */
+    public String getEngineType() {
+        return this.engineType;
     }
 
     /**
@@ -118,6 +130,7 @@ public class ModifyAuditLogConfigRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyAuditLogConfigRequest, Builder> {
         private String auditLogStatus; 
         private String DBClusterId; 
+        private String engineType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -132,6 +145,7 @@ public class ModifyAuditLogConfigRequest extends Request {
             super(request);
             this.auditLogStatus = request.auditLogStatus;
             this.DBClusterId = request.DBClusterId;
+            this.engineType = request.engineType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -163,6 +177,15 @@ public class ModifyAuditLogConfigRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * EngineType.
+         */
+        public Builder engineType(String engineType) {
+            this.putQueryParameter("EngineType", engineType);
+            this.engineType = engineType;
             return this;
         }
 
