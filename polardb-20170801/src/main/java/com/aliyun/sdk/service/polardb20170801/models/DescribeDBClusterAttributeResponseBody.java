@@ -152,6 +152,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SourceDBCluster")
     private String sourceDBCluster;
 
+    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
+    private String sourceRegionId;
+
     @com.aliyun.core.annotation.NameInMap("StandbyHAMode")
     private String standbyHAMode;
 
@@ -239,6 +242,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.SQLSize = builder.SQLSize;
         this.serverlessType = builder.serverlessType;
         this.sourceDBCluster = builder.sourceDBCluster;
+        this.sourceRegionId = builder.sourceRegionId;
         this.standbyHAMode = builder.standbyHAMode;
         this.storageMax = builder.storageMax;
         this.storagePayType = builder.storagePayType;
@@ -592,6 +596,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return sourceRegionId
+     */
+    public String getSourceRegionId() {
+        return this.sourceRegionId;
+    }
+
+    /**
      * @return standbyHAMode
      */
     public String getStandbyHAMode() {
@@ -730,6 +741,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private Long SQLSize; 
         private String serverlessType; 
         private String sourceDBCluster; 
+        private String sourceRegionId; 
         private String standbyHAMode; 
         private Long storageMax; 
         private String storagePayType; 
@@ -1183,6 +1195,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder sourceDBCluster(String sourceDBCluster) {
             this.sourceDBCluster = sourceDBCluster;
+            return this;
+        }
+
+        /**
+         * SourceRegionId.
+         */
+        public Builder sourceRegionId(String sourceRegionId) {
+            this.sourceRegionId = sourceRegionId;
             return this;
         }
 
