@@ -38,6 +38,10 @@ public class CreateDtsInstanceRequest extends Request {
     private String destinationRegion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtsRegion")
+    private String dtsRegion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Du")
     private Integer du;
 
@@ -111,6 +115,7 @@ public class CreateDtsInstanceRequest extends Request {
         this.databaseCount = builder.databaseCount;
         this.destinationEndpointEngineName = builder.destinationEndpointEngineName;
         this.destinationRegion = builder.destinationRegion;
+        this.dtsRegion = builder.dtsRegion;
         this.du = builder.du;
         this.feeType = builder.feeType;
         this.instanceClass = builder.instanceClass;
@@ -182,6 +187,13 @@ public class CreateDtsInstanceRequest extends Request {
      */
     public String getDestinationRegion() {
         return this.destinationRegion;
+    }
+
+    /**
+     * @return dtsRegion
+     */
+    public String getDtsRegion() {
+        return this.dtsRegion;
     }
 
     /**
@@ -303,6 +315,7 @@ public class CreateDtsInstanceRequest extends Request {
         private Integer databaseCount; 
         private String destinationEndpointEngineName; 
         private String destinationRegion; 
+        private String dtsRegion; 
         private Integer du; 
         private String feeType; 
         private String instanceClass; 
@@ -332,6 +345,7 @@ public class CreateDtsInstanceRequest extends Request {
             this.databaseCount = request.databaseCount;
             this.destinationEndpointEngineName = request.destinationEndpointEngineName;
             this.destinationRegion = request.destinationRegion;
+            this.dtsRegion = request.dtsRegion;
             this.du = request.du;
             this.feeType = request.feeType;
             this.instanceClass = request.instanceClass;
@@ -442,6 +456,15 @@ public class CreateDtsInstanceRequest extends Request {
         public Builder destinationRegion(String destinationRegion) {
             this.putQueryParameter("DestinationRegion", destinationRegion);
             this.destinationRegion = destinationRegion;
+            return this;
+        }
+
+        /**
+         * DtsRegion.
+         */
+        public Builder dtsRegion(String dtsRegion) {
+            this.putQueryParameter("DtsRegion", dtsRegion);
+            this.dtsRegion = dtsRegion;
             return this;
         }
 
