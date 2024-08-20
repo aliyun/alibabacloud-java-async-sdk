@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnSMCertificateListResponseBody</p>
  */
 public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
-    @NameInMap("CertificateListModel")
+    @com.aliyun.core.annotation.NameInMap("CertificateListModel")
     private CertificateListModel certificateListModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnSMCertificateListResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
     } 
 
     public static class CertList extends TeaModel {
-        @NameInMap("CertIdentifier")
+        @com.aliyun.core.annotation.NameInMap("CertIdentifier")
         private String certIdentifier;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("Common")
+        @com.aliyun.core.annotation.NameInMap("Common")
         private String common;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
         private CertList(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeDcdnSMCertificateListResponseBody extends TeaModel {
 
     }
     public static class CertificateListModel extends TeaModel {
-        @NameInMap("CertList")
+        @com.aliyun.core.annotation.NameInMap("CertList")
         private java.util.List < CertList> certList;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private CertificateListModel(Builder builder) {

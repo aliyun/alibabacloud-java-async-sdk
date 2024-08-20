@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefreshErObjectCachesRequest</p>
  */
 public class RefreshErObjectCachesRequest extends Request {
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("MergeDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MergeDomainName")
     private String mergeDomainName;
 
-    @Query
-    @NameInMap("ObjectPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String objectPath;
 
-    @Query
-    @NameInMap("ObjectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String objectType;
 
-    @Query
-    @NameInMap("RoutineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoutineId")
     private String routineId;
 
     private RefreshErObjectCachesRequest(Builder builder) {
@@ -125,10 +124,10 @@ public class RefreshErObjectCachesRequest extends Request {
         }
 
         /**
-         * Domain names that are merged for refreshing. POPs that provide services for the domain names are refreshed.
+         * The domain names that are merged for refreshing. POPs that provide services for the domain names are refreshed.
          * <p>
          * 
-         * > Separate multiple domain names with commas (,).
+         * >  Separate multiple domain names with commas (,).
          */
         public Builder mergeDomainName(String mergeDomainName) {
             this.putQueryParameter("MergeDomainName", mergeDomainName);
@@ -154,12 +153,12 @@ public class RefreshErObjectCachesRequest extends Request {
          * The refresh type. Valid values:
          * <p>
          * 
-         * *   **File** (default): refreshes resources based on URLs.
-         * *   **Directory**: refreshes resources based on directories.
+         * *   **File** (default): refreshes content based on URLs.
+         * *   **Directory**: refreshes content based on directories.
          * *   **Regex**: refreshes content based on regular expressions.
-         * *   **IgnoreParams**: removes the question mark (`?`) and parameters after `?` in a request URL and refreshes content. After you call this operation with the request URL submitted, the system compares the submitted URL with the URL of the cached resource that does not include the query string. If the URLs match, the DCDN POPs refresh the cached resource.
+         * *   **IgnoreParams**: removes the question mark (`?`) and parameters after the question mark (`?`) in a request URL and refreshes content. After you call this operation with the request URL submitted, the system compares the submitted URL with the URL of the cached resource without specific parameters. If the URLs match, the points of presence (POPs) refresh the cached resource.
          * 
-         * > *   If you set ObjectType to Directory, the resources in the directory that you want to refresh are marked as expired. You cannot delete the directory. If clients request resources after the resources on POPs are marked as expired, DCDN checks whether the resources on your origin server are updated with a later version. If a later version exists, DCDN retrieves the resources of the later version and returns the resources to the clients. Otherwise, DCDN retrieves the 304 status code from the origin server.
+         * >  If you refresh the files in one or more directories, the resources in the directory that you want to refresh are marked as expired. You cannot delete the directory. If clients request resources on POPs that are marked as expired, Dynamic Content Delivery Network (DCDN) checks whether the resources on your origin server are updated. If resources are updated, DCDN retrieves the latest version of the resources and returns the resources to the clients. Otherwise, the origin server returns the 304 status code.
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -168,7 +167,7 @@ public class RefreshErObjectCachesRequest extends Request {
         }
 
         /**
-         * RoutineId.
+         * The ID of the routine, which is in the format of "Name.Subdomain" and is the unique identifier of a custom routine.
          */
         public Builder routineId(String routineId) {
             this.putQueryParameter("RoutineId", routineId);

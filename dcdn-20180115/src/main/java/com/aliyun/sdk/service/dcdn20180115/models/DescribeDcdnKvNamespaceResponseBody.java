@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnKvNamespaceResponseBody</p>
  */
 public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
-    @NameInMap("CapacityString")
+    @com.aliyun.core.annotation.NameInMap("Capacity")
+    private Long capacity;
+
+    @com.aliyun.core.annotation.NameInMap("CapacityString")
     private String capacityString;
 
-    @NameInMap("CapacityUsedString")
+    @com.aliyun.core.annotation.NameInMap("CapacityUsed")
+    private Long capacityUsed;
+
+    @com.aliyun.core.annotation.NameInMap("CapacityUsedString")
     private String capacityUsedString;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
     private String namespaceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDcdnKvNamespaceResponseBody(Builder builder) {
+        this.capacity = builder.capacity;
         this.capacityString = builder.capacityString;
+        this.capacityUsed = builder.capacityUsed;
         this.capacityUsedString = builder.capacityUsedString;
         this.description = builder.description;
         this.mode = builder.mode;
@@ -56,10 +63,24 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
     }
 
     /**
+     * @return capacity
+     */
+    public Long getCapacity() {
+        return this.capacity;
+    }
+
+    /**
      * @return capacityString
      */
     public String getCapacityString() {
         return this.capacityString;
+    }
+
+    /**
+     * @return capacityUsed
+     */
+    public Long getCapacityUsed() {
+        return this.capacityUsed;
     }
 
     /**
@@ -112,7 +133,9 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long capacity; 
         private String capacityString; 
+        private Long capacityUsed; 
         private String capacityUsedString; 
         private String description; 
         private String mode; 
@@ -122,10 +145,26 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         private String status; 
 
         /**
+         * Capacity.
+         */
+        public Builder capacity(Long capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+
+        /**
          * The available capacity of all namespaces in your account.
          */
         public Builder capacityString(String capacityString) {
             this.capacityString = capacityString;
+            return this;
+        }
+
+        /**
+         * CapacityUsed.
+         */
+        public Builder capacityUsed(Long capacityUsed) {
+            this.capacityUsed = capacityUsed;
             return this;
         }
 
@@ -146,7 +185,11 @@ public class DescribeDcdnKvNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Mode.
+         * The system behavior when a key-value pair fails to be obtained at the edge. Valid values:
+         * <p>
+         * 
+         * *   Normal (default): If a key-value pair fails to be obtained at the edge, DCDN attempts to query the key-value pair from the origin server to ensure global data consistency.
+         * *   Rapid: If a key-value pair fails to be obtained at the edge, an error message indicating that the key does not exist is returned. This feature enhances key-value query performance but may decrease the hit rate of queries. To enable this feature, submit a ticket.
          */
         public Builder mode(String mode) {
             this.mode = mode;

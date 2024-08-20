@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainIspDataResponseBody</p>
  */
 public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private Value value;
 
     private DescribeDcdnDomainIspDataResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
     } 
 
     public static class IspProportionData extends TeaModel {
-        @NameInMap("AvgObjectSize")
+        @com.aliyun.core.annotation.NameInMap("AvgObjectSize")
         private String avgObjectSize;
 
-        @NameInMap("AvgResponseRate")
+        @com.aliyun.core.annotation.NameInMap("AvgResponseRate")
         private String avgResponseRate;
 
-        @NameInMap("AvgResponseTime")
+        @com.aliyun.core.annotation.NameInMap("AvgResponseTime")
         private String avgResponseTime;
 
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private String bps;
 
-        @NameInMap("BytesProportion")
+        @com.aliyun.core.annotation.NameInMap("BytesProportion")
         private String bytesProportion;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("IspEname")
+        @com.aliyun.core.annotation.NameInMap("IspEname")
         private String ispEname;
 
-        @NameInMap("Proportion")
+        @com.aliyun.core.annotation.NameInMap("Proportion")
         private String proportion;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private String qps;
 
-        @NameInMap("TotalBytes")
+        @com.aliyun.core.annotation.NameInMap("TotalBytes")
         private String totalBytes;
 
-        @NameInMap("TotalQuery")
+        @com.aliyun.core.annotation.NameInMap("TotalQuery")
         private String totalQuery;
 
         private IspProportionData(Builder builder) {
@@ -393,7 +392,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
 
     }
     public static class Value extends TeaModel {
-        @NameInMap("IspProportionData")
+        @com.aliyun.core.annotation.NameInMap("IspProportionData")
         private java.util.List < IspProportionData> ispProportionData;
 
         private Value(Builder builder) {

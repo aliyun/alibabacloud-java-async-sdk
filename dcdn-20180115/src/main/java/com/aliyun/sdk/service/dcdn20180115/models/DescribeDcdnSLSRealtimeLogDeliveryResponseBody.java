@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnSLSRealtimeLogDeliveryResponseBody</p>
  */
 public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnSLSRealtimeLogDeliveryResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class DescribeDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
     } 
 
     public static class Content extends TeaModel {
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("DataCenter")
+        @com.aliyun.core.annotation.NameInMap("DataCenter")
         private String dataCenter;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("SLSLogStore")
+        @com.aliyun.core.annotation.NameInMap("SLSLogStore")
         private String SLSLogStore;
 
-        @NameInMap("SLSProject")
+        @com.aliyun.core.annotation.NameInMap("SLSProject")
         private String SLSProject;
 
-        @NameInMap("SLSRegion")
+        @com.aliyun.core.annotation.NameInMap("SLSRegion")
         private String SLSRegion;
 
-        @NameInMap("SamplingRate")
+        @com.aliyun.core.annotation.NameInMap("SamplingRate")
         private String samplingRate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Content(Builder builder) {

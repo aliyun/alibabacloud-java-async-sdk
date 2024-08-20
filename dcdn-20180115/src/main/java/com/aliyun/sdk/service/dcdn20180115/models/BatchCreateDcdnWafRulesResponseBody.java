@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchCreateDcdnWafRulesResponseBody</p>
  */
 public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleIds")
+    @com.aliyun.core.annotation.NameInMap("RuleIds")
     private RuleIds ruleIds;
 
     private BatchCreateDcdnWafRulesResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class BatchCreateDcdnWafRulesResponseBody extends TeaModel {
     } 
 
     public static class RuleIds extends TeaModel {
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private java.util.List < String > ruleId;
 
         private RuleIds(Builder builder) {

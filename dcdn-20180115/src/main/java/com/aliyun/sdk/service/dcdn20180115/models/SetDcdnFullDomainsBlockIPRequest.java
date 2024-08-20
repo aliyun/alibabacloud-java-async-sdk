@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetDcdnFullDomainsBlockIPRequest</p>
  */
 public class SetDcdnFullDomainsBlockIPRequest extends Request {
-    @Body
-    @NameInMap("BlockInterval")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BlockInterval")
     private Integer blockInterval;
 
-    @Body
-    @NameInMap("IPList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IPList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String IPList;
 
-    @Body
-    @NameInMap("OperationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OperationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operationType;
 
-    @Body
-    @NameInMap("UpdateType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpdateType")
     private String updateType;
 
     private SetDcdnFullDomainsBlockIPRequest(Builder builder) {

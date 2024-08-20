@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnBlockedRegionsResponseBody</p>
  */
 public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
-    @NameInMap("InfoList")
+    @com.aliyun.core.annotation.NameInMap("InfoList")
     private InfoList infoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnBlockedRegionsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
     } 
 
     public static class InfoItem extends TeaModel {
-        @NameInMap("Continent")
+        @com.aliyun.core.annotation.NameInMap("Continent")
         private String continent;
 
-        @NameInMap("CountriesAndRegions")
+        @com.aliyun.core.annotation.NameInMap("CountriesAndRegions")
         private String countriesAndRegions;
 
-        @NameInMap("CountriesAndRegionsName")
+        @com.aliyun.core.annotation.NameInMap("CountriesAndRegionsName")
         private String countriesAndRegionsName;
 
         private InfoItem(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
 
     }
     public static class InfoList extends TeaModel {
-        @NameInMap("InfoItem")
+        @com.aliyun.core.annotation.NameInMap("InfoItem")
         private java.util.List < InfoItem> infoItem;
 
         private InfoList(Builder builder) {

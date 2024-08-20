@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnUserDomainsResponseBody</p>
  */
 public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private Domains domains;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDcdnUserDomainsResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.
+         * The information about the queried domains.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -132,19 +131,19 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
     } 
 
     public static class Source extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private Source(Builder builder) {
@@ -222,7 +221,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The priority.
+             * The priority of the origin server.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -238,7 +237,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The weight.
+             * The weight of the origin server.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -253,7 +252,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
 
     }
     public static class Sources extends TeaModel {
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private java.util.List < Source> source;
 
         private Sources(Builder builder) {
@@ -294,43 +293,43 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
 
     }
     public static class PageData extends TeaModel {
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private Long domainId;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainStatus")
         private String domainStatus;
 
-        @NameInMap("FunctionType")
+        @com.aliyun.core.annotation.NameInMap("FunctionType")
         private String functionType;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SSLProtocol")
+        @com.aliyun.core.annotation.NameInMap("SSLProtocol")
         private String SSLProtocol;
 
-        @NameInMap("Sandbox")
+        @com.aliyun.core.annotation.NameInMap("Sandbox")
         private String sandbox;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Sources")
+        @com.aliyun.core.annotation.NameInMap("Sources")
         private Sources sources;
 
         private PageData(Builder builder) {
@@ -464,7 +463,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             private Sources sources; 
 
             /**
-             * The CNAME assigned to the accelerated domain name.
+             * The CNAME of the domain.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -472,7 +471,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the accelerated domain name failed the review.
+             * The reason why the domain failed the review.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -480,7 +479,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the accelerated domain name.
+             * The domain ID.
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -488,7 +487,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the accelerated domain name.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -496,15 +495,15 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the accelerated domain name.
+             * The domain status.
              * <p>
              * 
-             * *   **online**: enabled
-             * *   **offline**: disabled
-             * *   **configuring**: configuring
-             * *   **configure_failed**: configuration failed
-             * *   **checking**: reviewing
-             * *   **check_failed:** review failed
+             * *   **online**: The domain is active.
+             * *   **offline**: The domain is suspended.
+             * *   **configuring**: The domain is being configured.
+             * *   **configure_failed**: The domain failed to be configured.
+             * *   **checking**: The domain is under review.
+             * *   **check_failed**: The domain failed the review.
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -512,7 +511,12 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionType.
+             * The computing service type. Valid values:
+             * <p>
+             * 
+             * *   **routine**
+             * *   **image**
+             * *   **cloudFunction**
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -520,7 +524,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the accelerated domain name was added to Dynamic Content Delivery Network (DCDN).
+             * The time when the domain was added to DCDN.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -528,7 +532,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the accelerated domain name was modified.
+             * The time when the domain was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -544,11 +548,11 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of HTTPS.
+             * Indicates whether HTTPS was enabled.
              * <p>
              * 
-             * *   **on**
-             * *   **off**
+             * *   **on**: enabled.
+             * *   **off**: disabled.
              */
             public Builder SSLProtocol(String SSLProtocol) {
                 this.SSLProtocol = SSLProtocol;
@@ -556,7 +560,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the accelerated domain name was in a sandbox.
+             * The sandbox status.
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -564,7 +568,13 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * The acceleration scenario. Valid values:
+             * <p>
+             * 
+             * *   **apiscene**: accelerates response to API calls.
+             * *   **webservicescene**: accelerates content delivery for websites.
+             * *   **staticscene**: accelerates the delivery of videos, images, and text.
+             * *   **If you leave this parameter empty, no scenarios are supported.
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -572,7 +582,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the origin server.
+             * The information about the origin servers.
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -587,7 +597,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
 
     }
     public static class Domains extends TeaModel {
-        @NameInMap("PageData")
+        @com.aliyun.core.annotation.NameInMap("PageData")
         private java.util.List < PageData> pageData;
 
         private Domains(Builder builder) {

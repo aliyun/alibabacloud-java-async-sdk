@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnSLSRealTimeLogTypeResponseBody</p>
  */
 public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnSLSRealTimeLogTypeResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
     } 
 
     public static class Business extends TeaModel {
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
         private Business(Builder builder) {
@@ -138,7 +137,7 @@ public class DescribeDcdnSLSRealTimeLogTypeResponseBody extends TeaModel {
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("Business")
+        @com.aliyun.core.annotation.NameInMap("Business")
         private java.util.List < Business> business;
 
         private Content(Builder builder) {

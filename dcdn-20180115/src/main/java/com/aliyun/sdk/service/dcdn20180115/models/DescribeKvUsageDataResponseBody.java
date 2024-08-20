@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKvUsageDataResponseBody</p>
  */
 public class DescribeKvUsageDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("KvUsageData")
+    @com.aliyun.core.annotation.NameInMap("KvUsageData")
     private java.util.List < KvUsageData> kvUsageData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeKvUsageDataResponseBody(Builder builder) {
@@ -82,7 +81,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed usage data.
+         * The usage details.
          */
         public Builder kvUsageData(java.util.List < KvUsageData> kvUsageData) {
             this.kvUsageData = kvUsageData;
@@ -112,16 +111,16 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
     } 
 
     public static class KvUsageData extends TeaModel {
-        @NameInMap("Acc")
+        @com.aliyun.core.annotation.NameInMap("Acc")
         private Long acc;
 
-        @NameInMap("AccessType")
+        @com.aliyun.core.annotation.NameInMap("AccessType")
         private String accessType;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private KvUsageData(Builder builder) {
@@ -182,7 +181,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The request method. This parameter is returned only if **SplitBy** is set to **type**.
+             * The request method. This parameter is available only when the **SplitBy** parameter is set to **type**.
              */
             public Builder accessType(String accessType) {
                 this.accessType = accessType;
@@ -190,7 +189,7 @@ public class DescribeKvUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace. This parameter is returned only if **SplitBy** is set to **namespace**.
+             * The namespace ID. This parameter is available only when the **SplitBy** parameter is set to **namespace**.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainQpsDataResponseBody</p>
  */
 public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("QpsDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("QpsDataPerInterval")
     private QpsDataPerInterval qpsDataPerInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnDomainQpsDataResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("Acc")
+        @com.aliyun.core.annotation.NameInMap("Acc")
         private Float acc;
 
-        @NameInMap("DynamicHttpAcc")
+        @com.aliyun.core.annotation.NameInMap("DynamicHttpAcc")
         private Float dynamicHttpAcc;
 
-        @NameInMap("DynamicHttpQps")
+        @com.aliyun.core.annotation.NameInMap("DynamicHttpQps")
         private Float dynamicHttpQps;
 
-        @NameInMap("DynamicHttpsAcc")
+        @com.aliyun.core.annotation.NameInMap("DynamicHttpsAcc")
         private Float dynamicHttpsAcc;
 
-        @NameInMap("DynamicHttpsQps")
+        @com.aliyun.core.annotation.NameInMap("DynamicHttpsQps")
         private Float dynamicHttpsQps;
 
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private Float qps;
 
-        @NameInMap("StaticHttpAcc")
+        @com.aliyun.core.annotation.NameInMap("StaticHttpAcc")
         private Float staticHttpAcc;
 
-        @NameInMap("StaticHttpQps")
+        @com.aliyun.core.annotation.NameInMap("StaticHttpQps")
         private Float staticHttpQps;
 
-        @NameInMap("StaticHttpsAcc")
+        @com.aliyun.core.annotation.NameInMap("StaticHttpsAcc")
         private Float staticHttpsAcc;
 
-        @NameInMap("StaticHttpsQps")
+        @com.aliyun.core.annotation.NameInMap("StaticHttpsQps")
         private Float staticHttpsQps;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DataModule(Builder builder) {
@@ -393,7 +392,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
 
     }
     public static class QpsDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private QpsDataPerInterval(Builder builder) {

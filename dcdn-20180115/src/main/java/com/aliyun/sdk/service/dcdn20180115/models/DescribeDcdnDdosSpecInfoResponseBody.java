@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDdosSpecInfoResponseBody</p>
  */
 public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
-    @NameInMap("BandwidthLimit")
+    @com.aliyun.core.annotation.NameInMap("BandwidthLimit")
     private String bandwidthLimit;
 
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private String enable;
 
-    @NameInMap("IsSpecialPort")
+    @com.aliyun.core.annotation.NameInMap("IsSpecialPort")
     private String isSpecialPort;
 
-    @NameInMap("ProtectedArea")
+    @com.aliyun.core.annotation.NameInMap("ProtectedArea")
     private String protectedArea;
 
-    @NameInMap("QpsLimit")
+    @com.aliyun.core.annotation.NameInMap("QpsLimit")
     private String qpsLimit;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SpecInfos")
+    @com.aliyun.core.annotation.NameInMap("SpecInfos")
     private java.util.List < SpecInfos> specInfos;
 
     private DescribeDcdnDdosSpecInfoResponseBody(Builder builder) {
@@ -212,13 +211,13 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
     } 
 
     public static class Configs extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("Expr")
+        @com.aliyun.core.annotation.NameInMap("Expr")
         private String expr;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Configs(Builder builder) {
@@ -301,10 +300,10 @@ public class DescribeDcdnDdosSpecInfoResponseBody extends TeaModel {
 
     }
     public static class SpecInfos extends TeaModel {
-        @NameInMap("Configs")
+        @com.aliyun.core.annotation.NameInMap("Configs")
         private java.util.List < Configs> configs;
 
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private String rule;
 
         private SpecInfos(Builder builder) {

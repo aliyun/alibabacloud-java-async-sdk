@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnUserRealTimeDeliveryFieldResponseBody</p>
  */
 public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnUserRealTimeDeliveryFieldResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
     } 
 
     public static class Fields extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
-        @NameInMap("Selected")
+        @com.aliyun.core.annotation.NameInMap("Selected")
         private Boolean selected;
 
         private Fields(Builder builder) {
@@ -157,7 +156,7 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("Fields")
+        @com.aliyun.core.annotation.NameInMap("Fields")
         private java.util.List < Fields> fields;
 
         private Content(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>WafQuotaInteger</p>
  */
 public class WafQuotaInteger extends TeaModel {
-    @NameInMap("Equal")
+    @com.aliyun.core.annotation.NameInMap("Equal")
     private Integer equal;
 
-    @NameInMap("GreaterThan")
+    @com.aliyun.core.annotation.NameInMap("GreaterThan")
     private Integer greaterThan;
 
-    @NameInMap("GreaterThanOrEqual")
+    @com.aliyun.core.annotation.NameInMap("GreaterThanOrEqual")
     private Integer greaterThanOrEqual;
 
-    @NameInMap("LessThan")
+    @com.aliyun.core.annotation.NameInMap("LessThan")
     private Integer lessThan;
 
-    @NameInMap("LessThanOrEqual")
+    @com.aliyun.core.annotation.NameInMap("LessThanOrEqual")
     private Integer lessThanOrEqual;
 
     private WafQuotaInteger(Builder builder) {

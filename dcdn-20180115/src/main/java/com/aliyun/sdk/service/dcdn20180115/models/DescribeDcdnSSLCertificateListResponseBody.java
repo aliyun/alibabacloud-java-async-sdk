@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnSSLCertificateListResponseBody</p>
  */
 public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
-    @NameInMap("CertificateListModel")
+    @com.aliyun.core.annotation.NameInMap("CertificateListModel")
     private CertificateListModel certificateListModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnSSLCertificateListResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
     } 
 
     public static class Cert extends TeaModel {
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private Long certId;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CertRegion")
+        @com.aliyun.core.annotation.NameInMap("CertRegion")
         private String certRegion;
 
-        @NameInMap("Common")
+        @com.aliyun.core.annotation.NameInMap("Common")
         private String common;
 
-        @NameInMap("Fingerprint")
+        @com.aliyun.core.annotation.NameInMap("Fingerprint")
         private String fingerprint;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
         private Cert(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
 
     }
     public static class CertList extends TeaModel {
-        @NameInMap("Cert")
+        @com.aliyun.core.annotation.NameInMap("Cert")
         private java.util.List < Cert> cert;
 
         private CertList(Builder builder) {
@@ -274,16 +273,16 @@ public class DescribeDcdnSSLCertificateListResponseBody extends TeaModel {
 
     }
     public static class CertificateListModel extends TeaModel {
-        @NameInMap("CertList")
+        @com.aliyun.core.annotation.NameInMap("CertList")
         private CertList certList;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
         private CertificateListModel(Builder builder) {

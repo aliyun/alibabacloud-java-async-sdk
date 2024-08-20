@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainCnameResponseBody</p>
  */
 public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
-    @NameInMap("CnameDatas")
+    @com.aliyun.core.annotation.NameInMap("CnameDatas")
     private CnameDatas cnameDatas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnDomainCnameResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Data(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
 
     }
     public static class CnameDatas extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < Data> data;
 
         private CnameDatas(Builder builder) {

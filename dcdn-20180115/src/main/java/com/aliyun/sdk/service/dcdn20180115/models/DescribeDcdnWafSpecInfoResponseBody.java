@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnWafSpecInfoResponseBody</p>
  */
 public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SpecInfos")
+    @com.aliyun.core.annotation.NameInMap("SpecInfos")
     private java.util.List < SpecInfos> specInfos;
 
     private DescribeDcdnWafSpecInfoResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
     } 
 
     public static class Configs extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("Expr")
+        @com.aliyun.core.annotation.NameInMap("Expr")
         private String expr;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Configs(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeDcdnWafSpecInfoResponseBody extends TeaModel {
 
     }
     public static class SpecInfos extends TeaModel {
-        @NameInMap("Configs")
+        @com.aliyun.core.annotation.NameInMap("Configs")
         private java.util.List < Configs> configs;
 
-        @NameInMap("DefenseScene")
+        @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
         private SpecInfos(Builder builder) {

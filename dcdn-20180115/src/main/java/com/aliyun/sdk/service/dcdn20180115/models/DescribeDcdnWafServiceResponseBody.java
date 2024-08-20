@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnWafServiceResponseBody</p>
  */
 public class DescribeDcdnWafServiceResponseBody extends TeaModel {
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private String enabled;
 
-    @NameInMap("OpeningTime")
+    @com.aliyun.core.annotation.NameInMap("OpeningTime")
     private String openingTime;
 
-    @NameInMap("RequestBillingType")
+    @com.aliyun.core.annotation.NameInMap("RequestBillingType")
     private String requestBillingType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleBillingType")
+    @com.aliyun.core.annotation.NameInMap("RuleBillingType")
     private String ruleBillingType;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDcdnWafServiceResponseBody(Builder builder) {

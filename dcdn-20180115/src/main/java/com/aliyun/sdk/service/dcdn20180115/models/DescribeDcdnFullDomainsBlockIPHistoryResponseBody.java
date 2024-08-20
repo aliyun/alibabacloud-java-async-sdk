@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnFullDomainsBlockIPHistoryResponseBody</p>
  */
 public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("IPBlockInfo")
+    @com.aliyun.core.annotation.NameInMap("IPBlockInfo")
     private java.util.List < IPBlockInfo> IPBlockInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnFullDomainsBlockIPHistoryResponseBody(Builder builder) {
@@ -119,13 +118,13 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
     } 
 
     public static class IPBlockInfo extends TeaModel {
-        @NameInMap("BlockIP")
+        @com.aliyun.core.annotation.NameInMap("BlockIP")
         private String blockIP;
 
-        @NameInMap("DeliverTime")
+        @com.aliyun.core.annotation.NameInMap("DeliverTime")
         private String deliverTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private IPBlockInfo(Builder builder) {

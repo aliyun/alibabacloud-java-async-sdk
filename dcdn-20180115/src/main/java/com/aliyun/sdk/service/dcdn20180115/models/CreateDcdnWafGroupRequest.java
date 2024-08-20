@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDcdnWafGroupRequest</p>
  */
 public class CreateDcdnWafGroupRequest extends Request {
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Subscribe")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Subscribe")
     private String subscribe;
 
-    @Body
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private Long templateId;
 
     private CreateDcdnWafGroupRequest(Builder builder) {

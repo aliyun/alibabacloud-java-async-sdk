@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnBgpBpsDataResponseBody</p>
  */
 public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
-    @NameInMap("BgpDataInterval")
+    @com.aliyun.core.annotation.NameInMap("BgpDataInterval")
     private java.util.List < BgpDataInterval> bgpDataInterval;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnBgpBpsDataResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
     } 
 
     public static class BgpDataInterval extends TeaModel {
-        @NameInMap("In")
+        @com.aliyun.core.annotation.NameInMap("In")
         private Float in;
 
-        @NameInMap("Out")
+        @com.aliyun.core.annotation.NameInMap("Out")
         private Float out;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private BgpDataInterval(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnUserBillTypeResponseBody</p>
  */
 public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
-    @NameInMap("BillTypeData")
+    @com.aliyun.core.annotation.NameInMap("BillTypeData")
     private BillTypeData billTypeData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnUserBillTypeResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
     } 
 
     public static class BillTypeDataItem extends TeaModel {
-        @NameInMap("BillType")
+        @com.aliyun.core.annotation.NameInMap("BillType")
         private String billType;
 
-        @NameInMap("BillingCycle")
+        @com.aliyun.core.annotation.NameInMap("BillingCycle")
         private String billingCycle;
 
-        @NameInMap("Dimension")
+        @com.aliyun.core.annotation.NameInMap("Dimension")
         private String dimension;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private BillTypeDataItem(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
 
     }
     public static class BillTypeData extends TeaModel {
-        @NameInMap("BillTypeDataItem")
+        @com.aliyun.core.annotation.NameInMap("BillTypeDataItem")
         private java.util.List < BillTypeDataItem> billTypeDataItem;
 
         private BillTypeData(Builder builder) {

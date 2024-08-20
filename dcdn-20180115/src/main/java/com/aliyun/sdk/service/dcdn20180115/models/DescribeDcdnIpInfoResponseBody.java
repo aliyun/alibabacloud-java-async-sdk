@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnIpInfoResponseBody</p>
  */
 public class DescribeDcdnIpInfoResponseBody extends TeaModel {
-    @NameInMap("DcdnIp")
+    @com.aliyun.core.annotation.NameInMap("DcdnIp")
     private String dcdnIp;
 
-    @NameInMap("ISP")
+    @com.aliyun.core.annotation.NameInMap("ISP")
     private String ISP;
 
-    @NameInMap("IspEname")
+    @com.aliyun.core.annotation.NameInMap("IspEname")
     private String ispEname;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RegionEname")
+    @com.aliyun.core.annotation.NameInMap("RegionEname")
     private String regionEname;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnIpInfoResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHighlightInfoResponseBody</p>
  */
 public class DescribeHighlightInfoResponseBody extends TeaModel {
-    @NameInMap("DataModule")
+    @com.aliyun.core.annotation.NameInMap("DataModule")
     private java.util.List < DataModule> dataModule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHighlightInfoResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The model of the highlighted data.
+         * The data model of the highlighted data.
          */
         public Builder dataModule(java.util.List < DataModule> dataModule) {
             this.dataModule = dataModule;
@@ -72,13 +71,13 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("Hit")
+        @com.aliyun.core.annotation.NameInMap("Hit")
         private String hit;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Raw")
+        @com.aliyun.core.annotation.NameInMap("Raw")
         private String raw;
 
         private DataModule(Builder builder) {
@@ -130,7 +129,7 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the highlight data.
+             * The type of the highlighted data.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -138,7 +137,7 @@ public class DescribeHighlightInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Complete data.
+             * The complete data.
              */
             public Builder raw(String raw) {
                 this.raw = raw;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnWafDomainDetailResponseBody</p>
  */
 public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private Domain domain;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnWafDomainDetailResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
     } 
 
     public static class DefenseScenes extends TeaModel {
-        @NameInMap("DefenseScene")
+        @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
-        @NameInMap("PolicyId")
+        @com.aliyun.core.annotation.NameInMap("PolicyId")
         private Long policyId;
 
-        @NameInMap("PolicyIds")
+        @com.aliyun.core.annotation.NameInMap("PolicyIds")
         private String policyIds;
 
         private DefenseScenes(Builder builder) {
@@ -158,10 +157,10 @@ public class DescribeDcdnWafDomainDetailResponseBody extends TeaModel {
 
     }
     public static class Domain extends TeaModel {
-        @NameInMap("DefenseScenes")
+        @com.aliyun.core.annotation.NameInMap("DefenseScenes")
         private java.util.List < DefenseScenes> defenseScenes;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         private Domain(Builder builder) {

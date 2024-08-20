@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnErUsageDataResponseBody</p>
  */
 public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("ErAccData")
+    @com.aliyun.core.annotation.NameInMap("ErAccData")
     private ErAccData erAccData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnErUsageDataResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
     } 
 
     public static class ErAccItem extends TeaModel {
-        @NameInMap("ErAcc")
+        @com.aliyun.core.annotation.NameInMap("ErAcc")
         private Long erAcc;
 
-        @NameInMap("Routine")
+        @com.aliyun.core.annotation.NameInMap("Routine")
         private String routine;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private ErAccItem(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeDcdnErUsageDataResponseBody extends TeaModel {
 
     }
     public static class ErAccData extends TeaModel {
-        @NameInMap("ErAccItem")
+        @com.aliyun.core.annotation.NameInMap("ErAccItem")
         private java.util.List < ErAccItem> erAccItem;
 
         private ErAccData(Builder builder) {

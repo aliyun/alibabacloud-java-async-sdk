@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnUserQuotaResponseBody</p>
  */
 public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
-    @NameInMap("BlockQuota")
+    @com.aliyun.core.annotation.NameInMap("BlockQuota")
     private Integer blockQuota;
 
-    @NameInMap("BlockRemain")
+    @com.aliyun.core.annotation.NameInMap("BlockRemain")
     private Integer blockRemain;
 
-    @NameInMap("DomainQuota")
+    @com.aliyun.core.annotation.NameInMap("DomainQuota")
     private Integer domainQuota;
 
-    @NameInMap("IgnoreParamsQuota")
+    @com.aliyun.core.annotation.NameInMap("IgnoreParamsQuota")
     private Integer ignoreParamsQuota;
 
-    @NameInMap("IgnoreParamsRemain")
+    @com.aliyun.core.annotation.NameInMap("IgnoreParamsRemain")
     private Integer ignoreParamsRemain;
 
-    @NameInMap("PreloadQuota")
+    @com.aliyun.core.annotation.NameInMap("PreloadQuota")
     private Integer preloadQuota;
 
-    @NameInMap("PreloadRemain")
+    @com.aliyun.core.annotation.NameInMap("PreloadRemain")
     private Integer preloadRemain;
 
-    @NameInMap("RefreshDirQuota")
+    @com.aliyun.core.annotation.NameInMap("RefreshDirQuota")
     private Integer refreshDirQuota;
 
-    @NameInMap("RefreshDirRemain")
+    @com.aliyun.core.annotation.NameInMap("RefreshDirRemain")
     private Integer refreshDirRemain;
 
-    @NameInMap("RefreshUrlQuota")
+    @com.aliyun.core.annotation.NameInMap("RefreshUrlQuota")
     private Integer refreshUrlQuota;
 
-    @NameInMap("RefreshUrlRemain")
+    @com.aliyun.core.annotation.NameInMap("RefreshUrlRemain")
     private Integer refreshUrlRemain;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnUserQuotaResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnOriginSiteHealthStatusResponseBody</p>
  */
 public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
-    @NameInMap("OriginSiteStatus")
+    @com.aliyun.core.annotation.NameInMap("OriginSiteStatus")
     private java.util.List < OriginSiteStatus> originSiteStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnOriginSiteHealthStatusResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDcdnOriginSiteHealthStatusResponseBody extends TeaModel {
     } 
 
     public static class OriginSiteStatus extends TeaModel {
-        @NameInMap("HealthStatus")
+        @com.aliyun.core.annotation.NameInMap("HealthStatus")
         private String healthStatus;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
         private OriginSiteStatus(Builder builder) {

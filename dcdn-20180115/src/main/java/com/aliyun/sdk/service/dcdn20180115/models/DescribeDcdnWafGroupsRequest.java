@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnWafGroupsRequest</p>
  */
 public class DescribeDcdnWafGroupsRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryArgs")
     private String queryArgs;
 
     private DescribeDcdnWafGroupsRequest(Builder builder) {
@@ -99,8 +98,8 @@ public class DescribeDcdnWafGroupsRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * *  **en**: English
-         * *   **zh**: Chinese
+         * *   **en** (default): English.
+         * *   **zh**: Chinese.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);

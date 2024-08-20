@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnTopDomainsByFlowResponseBody</p>
  */
 public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
-    @NameInMap("DomainCount")
+    @com.aliyun.core.annotation.NameInMap("DomainCount")
     private Long domainCount;
 
-    @NameInMap("DomainOnlineCount")
+    @com.aliyun.core.annotation.NameInMap("DomainOnlineCount")
     private Long domainOnlineCount;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TopDomains")
+    @com.aliyun.core.annotation.NameInMap("TopDomains")
     private TopDomains topDomains;
 
     private DescribeDcdnTopDomainsByFlowResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
     } 
 
     public static class TopDomain extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("MaxBps")
+        @com.aliyun.core.annotation.NameInMap("MaxBps")
         private Long maxBps;
 
-        @NameInMap("MaxBpsTime")
+        @com.aliyun.core.annotation.NameInMap("MaxBpsTime")
         private String maxBpsTime;
 
-        @NameInMap("Rank")
+        @com.aliyun.core.annotation.NameInMap("Rank")
         private Long rank;
 
-        @NameInMap("TotalAccess")
+        @com.aliyun.core.annotation.NameInMap("TotalAccess")
         private Long totalAccess;
 
-        @NameInMap("TotalTraffic")
+        @com.aliyun.core.annotation.NameInMap("TotalTraffic")
         private String totalTraffic;
 
-        @NameInMap("TrafficPercent")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercent")
         private String trafficPercent;
 
         private TopDomain(Builder builder) {
@@ -313,7 +312,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
 
     }
     public static class TopDomains extends TeaModel {
-        @NameInMap("TopDomain")
+        @com.aliyun.core.annotation.NameInMap("TopDomain")
         private java.util.List < TopDomain> topDomain;
 
         private TopDomains(Builder builder) {

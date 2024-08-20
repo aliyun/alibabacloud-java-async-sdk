@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHighlightInfoRequest</p>
  */
 public class DescribeHighlightInfoRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Lang")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lang;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("TraceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TraceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String traceId;
 
     private DescribeHighlightInfoRequest(Builder builder) {
@@ -111,8 +110,8 @@ public class DescribeHighlightInfoRequest extends Request {
          * The access language. Valid values:
          * <p>
          * 
-         * *   **en-US** (default): English
-         * *   **zh-CN**: Chinese
+         * *   **en-US** (default): English.
+         * *   **zh-CN**: Chinese.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

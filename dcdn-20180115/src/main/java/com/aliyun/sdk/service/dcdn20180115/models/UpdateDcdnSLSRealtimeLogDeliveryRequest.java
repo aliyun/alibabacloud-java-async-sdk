@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDcdnSLSRealtimeLogDeliveryRequest</p>
  */
 public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
-    @Body
-    @NameInMap("DataCenter")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataCenter")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataCenter;
 
-    @Body
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("SLSLogStore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SLSLogStore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SLSLogStore;
 
-    @Body
-    @NameInMap("SLSProject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SLSProject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SLSProject;
 
-    @Body
-    @NameInMap("SLSRegion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SLSRegion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SLSRegion;
 
-    @Body
-    @NameInMap("SamplingRate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SamplingRate")
     private String samplingRate;
 
     private UpdateDcdnSLSRealtimeLogDeliveryRequest(Builder builder) {

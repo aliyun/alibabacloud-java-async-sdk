@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainTopUrlVisitResponseBody</p>
  */
 public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
-    @NameInMap("AllUrlList")
+    @com.aliyun.core.annotation.NameInMap("AllUrlList")
     private AllUrlList allUrlList;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Url200List")
+    @com.aliyun.core.annotation.NameInMap("Url200List")
     private Url200List url200List;
 
-    @NameInMap("Url300List")
+    @com.aliyun.core.annotation.NameInMap("Url300List")
     private Url300List url300List;
 
-    @NameInMap("Url400List")
+    @com.aliyun.core.annotation.NameInMap("Url400List")
     private Url400List url400List;
 
-    @NameInMap("Url500List")
+    @com.aliyun.core.annotation.NameInMap("Url500List")
     private Url500List url500List;
 
     private DescribeDcdnDomainTopUrlVisitResponseBody(Builder builder) {
@@ -192,19 +191,19 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
     } 
 
     public static class UrlList extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("FlowProportion")
+        @com.aliyun.core.annotation.NameInMap("FlowProportion")
         private Float flowProportion;
 
-        @NameInMap("UrlDetail")
+        @com.aliyun.core.annotation.NameInMap("UrlDetail")
         private String urlDetail;
 
-        @NameInMap("VisitData")
+        @com.aliyun.core.annotation.NameInMap("VisitData")
         private String visitData;
 
-        @NameInMap("VisitProportion")
+        @com.aliyun.core.annotation.NameInMap("VisitProportion")
         private Float visitProportion;
 
         private UrlList(Builder builder) {
@@ -313,7 +312,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
     public static class AllUrlList extends TeaModel {
-        @NameInMap("UrlList")
+        @com.aliyun.core.annotation.NameInMap("UrlList")
         private java.util.List < UrlList> urlList;
 
         private AllUrlList(Builder builder) {
@@ -354,19 +353,19 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
     public static class Url200ListUrlList extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("FlowProportion")
+        @com.aliyun.core.annotation.NameInMap("FlowProportion")
         private Float flowProportion;
 
-        @NameInMap("UrlDetail")
+        @com.aliyun.core.annotation.NameInMap("UrlDetail")
         private String urlDetail;
 
-        @NameInMap("VisitData")
+        @com.aliyun.core.annotation.NameInMap("VisitData")
         private String visitData;
 
-        @NameInMap("VisitProportion")
+        @com.aliyun.core.annotation.NameInMap("VisitProportion")
         private Float visitProportion;
 
         private Url200ListUrlList(Builder builder) {
@@ -475,7 +474,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
     public static class Url200List extends TeaModel {
-        @NameInMap("UrlList")
+        @com.aliyun.core.annotation.NameInMap("UrlList")
         private java.util.List < Url200ListUrlList> urlList;
 
         private Url200List(Builder builder) {
@@ -516,19 +515,19 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
     public static class Url300ListUrlList extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("FlowProportion")
+        @com.aliyun.core.annotation.NameInMap("FlowProportion")
         private Float flowProportion;
 
-        @NameInMap("UrlDetail")
+        @com.aliyun.core.annotation.NameInMap("UrlDetail")
         private String urlDetail;
 
-        @NameInMap("VisitData")
+        @com.aliyun.core.annotation.NameInMap("VisitData")
         private String visitData;
 
-        @NameInMap("VisitProportion")
+        @com.aliyun.core.annotation.NameInMap("VisitProportion")
         private Float visitProportion;
 
         private Url300ListUrlList(Builder builder) {
@@ -637,7 +636,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
     public static class Url300List extends TeaModel {
-        @NameInMap("UrlList")
+        @com.aliyun.core.annotation.NameInMap("UrlList")
         private java.util.List < Url300ListUrlList> urlList;
 
         private Url300List(Builder builder) {
@@ -678,19 +677,19 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
     public static class Url400ListUrlList extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("FlowProportion")
+        @com.aliyun.core.annotation.NameInMap("FlowProportion")
         private Float flowProportion;
 
-        @NameInMap("UrlDetail")
+        @com.aliyun.core.annotation.NameInMap("UrlDetail")
         private String urlDetail;
 
-        @NameInMap("VisitData")
+        @com.aliyun.core.annotation.NameInMap("VisitData")
         private String visitData;
 
-        @NameInMap("VisitProportion")
+        @com.aliyun.core.annotation.NameInMap("VisitProportion")
         private Float visitProportion;
 
         private Url400ListUrlList(Builder builder) {
@@ -799,7 +798,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
     public static class Url400List extends TeaModel {
-        @NameInMap("UrlList")
+        @com.aliyun.core.annotation.NameInMap("UrlList")
         private java.util.List < Url400ListUrlList> urlList;
 
         private Url400List(Builder builder) {
@@ -840,19 +839,19 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
     public static class Url500ListUrlList extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("FlowProportion")
+        @com.aliyun.core.annotation.NameInMap("FlowProportion")
         private Float flowProportion;
 
-        @NameInMap("UrlDetail")
+        @com.aliyun.core.annotation.NameInMap("UrlDetail")
         private String urlDetail;
 
-        @NameInMap("VisitData")
+        @com.aliyun.core.annotation.NameInMap("VisitData")
         private String visitData;
 
-        @NameInMap("VisitProportion")
+        @com.aliyun.core.annotation.NameInMap("VisitProportion")
         private Float visitProportion;
 
         private Url500ListUrlList(Builder builder) {
@@ -961,7 +960,7 @@ public class DescribeDcdnDomainTopUrlVisitResponseBody extends TeaModel {
 
     }
     public static class Url500List extends TeaModel {
-        @NameInMap("UrlList")
+        @com.aliyun.core.annotation.NameInMap("UrlList")
         private java.util.List < Url500ListUrlList> urlList;
 
         private Url500List(Builder builder) {

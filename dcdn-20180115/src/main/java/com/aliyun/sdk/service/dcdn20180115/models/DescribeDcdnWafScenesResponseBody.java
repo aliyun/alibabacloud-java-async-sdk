@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnWafScenesResponseBody</p>
  */
 public class DescribeDcdnWafScenesResponseBody extends TeaModel {
-    @NameInMap("DefenseScenes")
+    @com.aliyun.core.annotation.NameInMap("DefenseScenes")
     private java.util.List < DefenseScenes> defenseScenes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnWafScenesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDcdnWafScenesResponseBody extends TeaModel {
     } 
 
     public static class DefenseScenes extends TeaModel {
-        @NameInMap("DefenseScene")
+        @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
-        @NameInMap("PolicyCount")
+        @com.aliyun.core.annotation.NameInMap("PolicyCount")
         private Integer policyCount;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
         private DefenseScenes(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainBpsDataByLayerResponseBody</p>
  */
 public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
-    @NameInMap("BpsDataInterval")
+    @com.aliyun.core.annotation.NameInMap("BpsDataInterval")
     private BpsDataInterval bpsDataInterval;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnDomainBpsDataByLayerResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("DynamicTrafficValue")
+        @com.aliyun.core.annotation.NameInMap("DynamicTrafficValue")
         private String dynamicTrafficValue;
 
-        @NameInMap("DynamicValue")
+        @com.aliyun.core.annotation.NameInMap("DynamicValue")
         private String dynamicValue;
 
-        @NameInMap("StaticTrafficValue")
+        @com.aliyun.core.annotation.NameInMap("StaticTrafficValue")
         private String staticTrafficValue;
 
-        @NameInMap("StaticValue")
+        @com.aliyun.core.annotation.NameInMap("StaticValue")
         private String staticValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("TrafficValue")
+        @com.aliyun.core.annotation.NameInMap("TrafficValue")
         private String trafficValue;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
 
     }
     public static class BpsDataInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private BpsDataInterval(Builder builder) {

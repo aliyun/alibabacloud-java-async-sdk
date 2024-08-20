@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnWafUsageDataResponseBody</p>
  */
 public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("WafUsageData")
+    @com.aliyun.core.annotation.NameInMap("WafUsageData")
     private WafUsageData wafUsageData;
 
     private DescribeDcdnWafUsageDataResponseBody(Builder builder) {
@@ -116,22 +115,22 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
     } 
 
     public static class WafUsageDataItem extends TeaModel {
-        @NameInMap("AccessCnt")
+        @com.aliyun.core.annotation.NameInMap("AccessCnt")
         private Long accessCnt;
 
-        @NameInMap("BlockCnt")
+        @com.aliyun.core.annotation.NameInMap("BlockCnt")
         private Long blockCnt;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("ObserveCnt")
+        @com.aliyun.core.annotation.NameInMap("ObserveCnt")
         private Long observeCnt;
 
-        @NameInMap("SecCu")
+        @com.aliyun.core.annotation.NameInMap("SecCu")
         private Long secCu;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private WafUsageDataItem(Builder builder) {
@@ -260,7 +259,7 @@ public class DescribeDcdnWafUsageDataResponseBody extends TeaModel {
 
     }
     public static class WafUsageData extends TeaModel {
-        @NameInMap("WafUsageDataItem")
+        @com.aliyun.core.annotation.NameInMap("WafUsageDataItem")
         private java.util.List < WafUsageDataItem> wafUsageDataItem;
 
         private WafUsageData(Builder builder) {

@@ -211,20 +211,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<BatchDeleteDcdnKvWithHighCapacityResponse> batchDeleteDcdnKvWithHighCapacity(BatchDeleteDcdnKvWithHighCapacityRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchDeleteDcdnKvWithHighCapacity").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchDeleteDcdnKvWithHighCapacityResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<BatchDeleteDcdnKvWithHighCapacityResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     /**
       * *   You can call this operation up to 20 times per second per account.
       * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
@@ -276,20 +262,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<BatchPutDcdnKvWithHighCapacityResponse> batchPutDcdnKvWithHighCapacity(BatchPutDcdnKvWithHighCapacityRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchPutDcdnKvWithHighCapacity").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchPutDcdnKvWithHighCapacityResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<BatchPutDcdnKvWithHighCapacityResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
     /**
       * > You can call this operation up to 10 times per second per account.
       *
@@ -309,7 +281,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
+      * *   You can specify up to 50 domain names in each request.
       * *   You can call this operation up to 30 times per second per account.
       *
      */
@@ -457,7 +429,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can call this operation up to three times per second per account.
+      * **
+      * **You can call this operation up to three times per second.
       *
      */
     @Override
@@ -1173,9 +1146,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > 
-      * *   You can query the configurations of one or more features in a request.
-      * *   You can call this operation up to 30 times per second per account.
+      * > *   You can query the configurations of one or more features in a request.
+      * > *   You can call this operation up to 30 times per second per account.
       *
      */
     @Override
@@ -1563,6 +1535,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not specify **StartTime** or **EndTime**, the request returns the data collected in the last hour by default. If you specify both parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|3 to 4 hours|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRealTimeBpsDataResponse> describeDcdnDomainRealTimeBpsData(DescribeDcdnDomainRealTimeBpsDataRequest request) {
         try {
@@ -2058,9 +2042,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   If you specify IP addresses or CIDR blocks, IP addresses that are effective and corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.
-      * *   The results are written to OSS and returned as OSS URLs. The OSS objects are in the format of `IP address-Corresponding expiration time`. The expiration time is in the yyyy-MM-dd HH:mm:ss format.
-      * *   You can share URLs of OSS objects with others. The shared URLs are valid for three days.
+      * > *   If you specify IP addresses or CIDR blocks, IP addresses that are effective and the corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.
+      * > *   The results are written to OSS and returned as OSS URLs. The content in OSS objects is in the format of `IP address-Corresponding expiration time`. The expiration time is in the YYYY-MM-DD hh:mm:ss format.
+      * > *   You can share OSS URLs with others. The shared URLs are valid for three days.
       *
      */
     @Override
@@ -2267,6 +2251,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > *   To use this operation, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex).
+      * > *   You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnL2IpsResponse> describeDcdnL2Ips(DescribeDcdnL2IpsRequest request) {
         try {
@@ -2598,9 +2587,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > 
-      * *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
-      * *   You can call this API operation up to three times per second per account.
+      * > *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
+      * > *   You can call this API operation up to three times per second per account.
       *
      */
     @Override
@@ -2686,7 +2674,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > You can call this operation up to 100 times per second per account.
+      * You can call this operation up to 100 times per second per account.
       *
      */
     @Override
@@ -2794,8 +2782,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **
-      * **The maximum number of times that each user can call this operation per second is 30.
+      * The maximum number of times that each user can call this operation per second is 30.
       *
      */
     @Override
@@ -2867,7 +2854,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation up to 30 times per second per account.
+      * >  You can call this operation up to 30 times per second per account.
       *
      */
     @Override
@@ -3313,10 +3300,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * * You can call this operation up to 5 times per second per account.
+      * **Note*** You can call this operation up to 5 times per second per account.
       * * The usage data indicates the number of requests.
       * **Time granularity:** This operation supports only the time granularity of 1 hour.
-      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |Time granularity|Time range to query|Historical data available|Data latency|
       * |---|---|---|---|
       * |1 hour|31 days|90 days|3 to 4 hours|
       *
@@ -3866,16 +3853,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   DCDN supports POST requests in which parameters are sent as a form.
-      * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
-      * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories per day, including subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. DCDN evaluates your application based on your workloads.
-      * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
-      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
+      * *   Dynamic Content Delivery Network (DCDN) supports POST requests in which parameters are sent as a form.
+      * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to purge content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
+      * *   By default, each Alibaba Cloud account can purge content from a maximum of 10,000 URLs and 100 directories including subdirectories per day. If the daily peak bandwidth of your Alibaba Cloud account exceeds 200 Mbit/s, [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. Alibaba Cloud determines whether to approve your application based on your workloads.
+      * *   You can specify up to 1,000 URLs or 100 directories that you want to purge in each request.
+      * *   You can specify up to 1,000 URLs that you want to purge per minute for each domain name.
       * *   You can call this operation up to 30 times per second per account.
       * #### [](#)Precautions
-      * *   After a refresh task is submitted and completed, your resources that are stored on DCDN POPs are removed. When a POP receives a request to your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on the POP. If you frequently run refresh tasks, more requests will be redirected to the origin server for resources, which result in high bandwidth costs and undue pressure on the origin server.
-      * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than 5 minutes, you wait for it to expire instead of manually running a refresh task.
-      * *   If you want to use RAM users to refresh or prefetch resources, you need to obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~445051~~).
+      * *   After a purge task is completed, your resources that are cached on points of presence (POPs) are removed. When a POP receives a request for your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on POPs. If you frequently run purge tasks, more requests are redirected to the origin server for resources. This results in high bandwidth costs and more loads on the origin server.
+      * *   A purge task takes effect 5 to 6 minutes after being submitted. If the resource you want to purge has a TTL of less than 5 minutes, you wait for it to expire instead of manually running a purge task.
+      * *   To allow RAM users to perform this operation, you need to first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~445051~~).
       *
      */
     @Override
@@ -3893,12 +3880,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   DCDN supports POST requests in which parameters are sent as a form.
-      * *   Related operation: such as [RefreshDcdnObjectCaches](~~130620~~).
-      * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories including subdirectories per day.
-      * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
-      * *   You can refresh a maximum of 1,000 URLs per minute for each domain name.
-      * *   You can call this operation up to 30 times per second per account.
+      * > *   Dynamic Content Delivery Network (DCDN) supports POST requests in which parameters are sent as a form.
+      * > *   Related operation: [RefreshDcdnObjectCaches](~~130620~~).
+      * > *   By default, each Alibaba Cloud account can purge content from a maxim> um of 10,000 URLs and 100 directories including subdirectories per day.
+      * > *   You can specify up to 1,000 URLs or 100 directories that you want to purge in each request.
+      * > *   You can specify up to 1,000 URLs that you want to purge per minute for each domain name.
+      * > *   You can call this operation up to 30 times per second per account.
       *
      */
     @Override

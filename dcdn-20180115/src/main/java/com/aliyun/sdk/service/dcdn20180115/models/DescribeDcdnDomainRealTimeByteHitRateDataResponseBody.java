@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainRealTimeByteHitRateDataResponseBody</p>
  */
 public class DescribeDcdnDomainRealTimeByteHitRateDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnDomainRealTimeByteHitRateDataResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDcdnDomainRealTimeByteHitRateDataResponseBody extends TeaMo
     } 
 
     public static class ByteHitRateDataModel extends TeaModel {
-        @NameInMap("ByteHitRate")
+        @com.aliyun.core.annotation.NameInMap("ByteHitRate")
         private Float byteHitRate;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private ByteHitRateDataModel(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeDcdnDomainRealTimeByteHitRateDataResponseBody extends TeaMo
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ByteHitRateDataModel")
+        @com.aliyun.core.annotation.NameInMap("ByteHitRateDataModel")
         private java.util.List < ByteHitRateDataModel> byteHitRateDataModel;
 
         private Data(Builder builder) {

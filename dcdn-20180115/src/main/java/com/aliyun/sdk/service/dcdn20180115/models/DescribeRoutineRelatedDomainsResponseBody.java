@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRoutineRelatedDomainsResponseBody</p>
  */
 public class DescribeRoutineRelatedDomainsResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.Map < String, ? > content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRoutineRelatedDomainsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeRoutineRelatedDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of domain names associated with the routine.
+         * The domain names associated with a routine.
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;

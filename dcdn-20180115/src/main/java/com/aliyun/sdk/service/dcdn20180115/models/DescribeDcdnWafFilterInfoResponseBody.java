@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnWafFilterInfoResponseBody</p>
  */
 public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.List < Content> content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnWafFilterInfoResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
     } 
 
     public static class Regexp extends TeaModel {
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("Pattern")
+        @com.aliyun.core.annotation.NameInMap("Pattern")
         private String pattern;
 
         private Regexp(Builder builder) {
@@ -133,25 +132,25 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     }
     public static class LogicalSymbol extends TeaModel {
-        @NameInMap("Attributes")
+        @com.aliyun.core.annotation.NameInMap("Attributes")
         private Integer attributes;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MaxLength")
+        @com.aliyun.core.annotation.NameInMap("MaxLength")
         private Integer maxLength;
 
-        @NameInMap("Regexp")
+        @com.aliyun.core.annotation.NameInMap("Regexp")
         private Regexp regexp;
 
-        @NameInMap("Symbol")
+        @com.aliyun.core.annotation.NameInMap("Symbol")
         private String symbol;
 
-        @NameInMap("Tip")
+        @com.aliyun.core.annotation.NameInMap("Tip")
         private String tip;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private LogicalSymbol(Builder builder) {
@@ -310,13 +309,13 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     }
     public static class Fields extends TeaModel {
-        @NameInMap("ExtendField")
+        @com.aliyun.core.annotation.NameInMap("ExtendField")
         private String extendField;
 
-        @NameInMap("LogicalSymbol")
+        @com.aliyun.core.annotation.NameInMap("LogicalSymbol")
         private java.util.List < LogicalSymbol> logicalSymbol;
 
-        @NameInMap("MatchField")
+        @com.aliyun.core.annotation.NameInMap("MatchField")
         private String matchField;
 
         private Fields(Builder builder) {
@@ -391,10 +390,10 @@ public class DescribeDcdnWafFilterInfoResponseBody extends TeaModel {
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("DefenseScene")
+        @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
-        @NameInMap("Fields")
+        @com.aliyun.core.annotation.NameInMap("Fields")
         private java.util.List < Fields> fields;
 
         private Content(Builder builder) {

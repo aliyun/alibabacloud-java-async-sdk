@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchSetDcdnDomainConfigsResponseBody</p>
  */
 public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("DomainConfigList")
+    @com.aliyun.core.annotation.NameInMap("DomainConfigList")
     private DomainConfigList domainConfigList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BatchSetDcdnDomainConfigsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 域名配置清单。
+         * The list of domain configurations.
          */
         public Builder domainConfigList(DomainConfigList domainConfigList) {
             this.domainConfigList = domainConfigList;
@@ -72,13 +71,13 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
     } 
 
     public static class DomainConfigModel extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private Long configId;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
         private DomainConfigModel(Builder builder) {
@@ -122,7 +121,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
             private String functionName; 
 
             /**
-             * 配置ID，如果返回为0，则表示该条配置未配置成功，需要重新配置。
+             * The ID of the configuration.
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -130,7 +129,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 域名。
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -138,7 +137,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 功能名称。
+             * The name of the feature.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -153,7 +152,7 @@ public class BatchSetDcdnDomainConfigsResponseBody extends TeaModel {
 
     }
     public static class DomainConfigList extends TeaModel {
-        @NameInMap("DomainConfigModel")
+        @com.aliyun.core.annotation.NameInMap("DomainConfigModel")
         private java.util.List < DomainConfigModel> domainConfigModel;
 
         private DomainConfigList(Builder builder) {

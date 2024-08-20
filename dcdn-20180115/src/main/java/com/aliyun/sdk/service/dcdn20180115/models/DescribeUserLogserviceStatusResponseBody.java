@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserLogserviceStatusResponseBody</p>
  */
 public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @NameInMap("InDebt")
+    @com.aliyun.core.annotation.NameInMap("InDebt")
     private Boolean inDebt;
 
-    @NameInMap("InDebtOverdue")
+    @com.aliyun.core.annotation.NameInMap("InDebtOverdue")
     private Boolean inDebtOverdue;
 
-    @NameInMap("OnService")
+    @com.aliyun.core.annotation.NameInMap("OnService")
     private Boolean onService;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUserLogserviceStatusResponseBody(Builder builder) {

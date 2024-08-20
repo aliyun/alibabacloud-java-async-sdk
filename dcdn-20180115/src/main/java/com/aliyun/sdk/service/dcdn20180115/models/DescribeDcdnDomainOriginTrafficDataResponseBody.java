@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainOriginTrafficDataResponseBody</p>
  */
 public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("OriginTrafficDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("OriginTrafficDataPerInterval")
     private OriginTrafficDataPerInterval originTrafficDataPerInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnDomainOriginTrafficDataResponseBody(Builder builder) {
@@ -152,22 +151,22 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("DynamicHttpOriginTraffic")
+        @com.aliyun.core.annotation.NameInMap("DynamicHttpOriginTraffic")
         private Float dynamicHttpOriginTraffic;
 
-        @NameInMap("DynamicHttpsOriginTraffic")
+        @com.aliyun.core.annotation.NameInMap("DynamicHttpsOriginTraffic")
         private Float dynamicHttpsOriginTraffic;
 
-        @NameInMap("OriginTraffic")
+        @com.aliyun.core.annotation.NameInMap("OriginTraffic")
         private Float originTraffic;
 
-        @NameInMap("StaticHttpOriginTraffic")
+        @com.aliyun.core.annotation.NameInMap("StaticHttpOriginTraffic")
         private Float staticHttpOriginTraffic;
 
-        @NameInMap("StaticHttpsOriginTraffic")
+        @com.aliyun.core.annotation.NameInMap("StaticHttpsOriginTraffic")
         private Float staticHttpsOriginTraffic;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DataModule(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
 
     }
     public static class OriginTrafficDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private OriginTrafficDataPerInterval(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckDcdnProjectExistResponseBody</p>
  */
 public class CheckDcdnProjectExistResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckDcdnProjectExistResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
     } 
 
     public static class Content extends TeaModel {
-        @NameInMap("Exist")
+        @com.aliyun.core.annotation.NameInMap("Exist")
         private String exist;
 
         private Content(Builder builder) {

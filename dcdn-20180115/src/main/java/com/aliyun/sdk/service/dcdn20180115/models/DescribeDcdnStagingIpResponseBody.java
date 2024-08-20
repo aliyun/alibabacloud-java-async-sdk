@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnStagingIpResponseBody</p>
  */
 public class DescribeDcdnStagingIpResponseBody extends TeaModel {
-    @NameInMap("IPV4s")
+    @com.aliyun.core.annotation.NameInMap("IPV4s")
     private IPV4s IPV4s;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnStagingIpResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeDcdnStagingIpResponseBody extends TeaModel {
     } 
 
     public static class IPV4s extends TeaModel {
-        @NameInMap("IPV4")
+        @com.aliyun.core.annotation.NameInMap("IPV4")
         private java.util.List < String > IPV4;
 
         private IPV4s(Builder builder) {

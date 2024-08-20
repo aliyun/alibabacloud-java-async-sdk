@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,11 +11,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainsBySourceResponseBody</p>
  */
 public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
-    @NameInMap("DomainInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("DomainInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < DomainInfo> domainInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnDomainsBySourceResponseBody(Builder builder) {
@@ -73,22 +72,22 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
     } 
 
     public static class DomainList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainCname")
+        @com.aliyun.core.annotation.NameInMap("DomainCname")
         private String domainCname;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private DomainList(Builder builder) {
@@ -226,10 +225,10 @@ public class DescribeDcdnDomainsBySourceResponseBody extends TeaModel {
 
     }
     public static class DomainInfo extends TeaModel {
-        @NameInMap("DomainList")
+        @com.aliyun.core.annotation.NameInMap("DomainList")
         private java.util.List < DomainList> domainList;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private DomainInfo(Builder builder) {

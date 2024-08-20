@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PreloadDcdnObjectCachesRequest</p>
  */
 public class PreloadDcdnObjectCachesRequest extends Request {
-    @Query
-    @NameInMap("Area")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Area")
     private String area;
 
-    @Query
-    @NameInMap("L2Preload")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("L2Preload")
     private Boolean l2Preload;
 
-    @Query
-    @NameInMap("ObjectPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String objectPath;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("WithHeader")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithHeader")
     private String withHeader;
 
     private PreloadDcdnObjectCachesRequest(Builder builder) {

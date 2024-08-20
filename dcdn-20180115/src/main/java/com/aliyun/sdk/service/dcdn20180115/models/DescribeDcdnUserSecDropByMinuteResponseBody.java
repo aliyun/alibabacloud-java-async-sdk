@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnUserSecDropByMinuteResponseBody</p>
  */
 public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Len")
+    @com.aliyun.core.annotation.NameInMap("Len")
     private Integer len;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rows")
+    @com.aliyun.core.annotation.NameInMap("Rows")
     private java.util.List < Rows> rows;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDcdnUserSecDropByMinuteResponseBody(Builder builder) {
@@ -172,22 +171,22 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
     } 
 
     public static class Rows extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Drops")
+        @com.aliyun.core.annotation.NameInMap("Drops")
         private Integer drops;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("SecFunc")
+        @com.aliyun.core.annotation.NameInMap("SecFunc")
         private String secFunc;
 
-        @NameInMap("TmStr")
+        @com.aliyun.core.annotation.NameInMap("TmStr")
         private String tmStr;
 
         private Rows(Builder builder) {

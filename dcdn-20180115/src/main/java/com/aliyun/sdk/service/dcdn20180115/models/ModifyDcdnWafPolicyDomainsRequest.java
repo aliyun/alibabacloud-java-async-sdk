@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDcdnWafPolicyDomainsRequest</p>
  */
 public class ModifyDcdnWafPolicyDomainsRequest extends Request {
-    @Body
-    @NameInMap("BindDomains")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BindDomains")
     private String bindDomains;
 
-    @Body
-    @NameInMap("Method")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Method")
     private Integer method;
 
-    @Body
-    @NameInMap("PolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long policyId;
 
-    @Body
-    @NameInMap("UnbindDomains")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnbindDomains")
     private String unbindDomains;
 
     private ModifyDcdnWafPolicyDomainsRequest(Builder builder) {

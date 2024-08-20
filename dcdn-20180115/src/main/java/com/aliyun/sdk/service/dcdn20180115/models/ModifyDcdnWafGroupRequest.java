@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDcdnWafGroupRequest</p>
  */
 public class ModifyDcdnWafGroupRequest extends Request {
-    @Body
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private String rules;
 
     private ModifyDcdnWafGroupRequest(Builder builder) {
@@ -101,7 +100,7 @@ public class ModifyDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * The incremental modification of the rules in the custom WAF rule group. The value is a string in the JSON format.
+         * The incremental modifications of the rules in the custom WAF rule group. The value is a JSON string.
          */
         public Builder rules(String rules) {
             this.putBodyParameter("Rules", rules);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainByCertificateRequest</p>
  */
 public class DescribeDcdnDomainByCertificateRequest extends Request {
-    @Query
-    @NameInMap("Exact")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Exact")
     private Boolean exact;
 
-    @Query
-    @NameInMap("SSLPub")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLPub")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SSLPub;
 
-    @Query
-    @NameInMap("SSLStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLStatus")
     private Boolean SSLStatus;
 
     private DescribeDcdnDomainByCertificateRequest(Builder builder) {
@@ -83,11 +82,10 @@ public class DescribeDcdnDomainByCertificateRequest extends Request {
         } 
 
         /**
-         * Specifies whether the domain name list to return match the SSL certificate.
+         * Specifies whether the domain name list to return matches the SSL certificate.
          * <p>
-         * 
-         * - **true**: The domain name list match the SSL certificate.
-         * - **false**: The domain name list do not match the SSL certificate.
+         * - **true**: The domain name list matches the SSL certificate.
+         * - **false**: The domain name list does not match the SSL certificate.
          */
         public Builder exact(Boolean exact) {
             this.putQueryParameter("Exact", exact);

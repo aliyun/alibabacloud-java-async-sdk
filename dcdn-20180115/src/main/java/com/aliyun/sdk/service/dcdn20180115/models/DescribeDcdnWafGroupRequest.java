@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnWafGroupRequest</p>
  */
 public class DescribeDcdnWafGroupRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("Language")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String language;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryArgs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryArgs")
     private String queryArgs;
 
-    @Query
-    @NameInMap("Scope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scope;
 
     private DescribeDcdnWafGroupRequest(Builder builder) {
@@ -139,8 +138,8 @@ public class DescribeDcdnWafGroupRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * *   **en**: English
-         * *    **zh**: Chinese
+         * *   **en**: English.
+         * *   **zh**: Chinese.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -167,12 +166,12 @@ public class DescribeDcdnWafGroupRequest extends Request {
         }
 
         /**
-         * The query conditions. The value needs to be a JSON string in the following format: Format:
+         * The query conditions. The value is a JSON string in the following format:
          * <p>
          * 
-         * `QueryArgs={"PolicyIds":"IDs of protection policies","RuleIds":"IDs of protection rules","RuleNameLike":"Names of protection rules","DomainNames":"Protected domain names","DefenseScenes":"waf_group","RuleStatus":"on","OrderBy":"GmtModified","Desc":"false"}`
+         * `QueryArgs={"PolicyIds":"The range of protection policy IDs","RuleIds":"The range of protection rule IDs","RuleNameLike":"The name of the protection rule","DomainNames":"The protected domain names","DefenseScenes":"waf_group","RuleStatus":"on","OrderBy":"GmtModified","Desc":"false"}`
          * 
-         * > If you do not specify this parameter, all protection rules are queried.
+         * >  If you do not specify this parameter, all protection rules are queried.
          */
         public Builder queryArgs(String queryArgs) {
             this.putQueryParameter("QueryArgs", queryArgs);
@@ -184,8 +183,8 @@ public class DescribeDcdnWafGroupRequest extends Request {
          * The range of the rule group to be queried.
          * <p>
          * 
-         * *   **in**: rules in the rule group are returned.
-         * *  **out**: rules that are in the full rule set but are not in the rule group are returned.
+         * *   **in**: Rules in the rule group are returned.
+         * *   **out**: Rules that are in the full rule set but are not in the rule group are returned.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnWafGeoInfoResponseBody</p>
  */
 public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private java.util.List < Content> content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnWafGeoInfoResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
     } 
 
     public static class Regions extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Regions(Builder builder) {
@@ -133,10 +132,10 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
 
     }
     public static class Continents extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Regions")
+        @com.aliyun.core.annotation.NameInMap("Regions")
         private java.util.List < Regions> regions;
 
         private Continents(Builder builder) {
@@ -194,10 +193,10 @@ public class DescribeDcdnWafGeoInfoResponseBody extends TeaModel {
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("Continents")
+        @com.aliyun.core.annotation.NameInMap("Continents")
         private java.util.List < Continents> continents;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Content(Builder builder) {

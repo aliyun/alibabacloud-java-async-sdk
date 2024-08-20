@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnsecServiceResponseBody</p>
  */
 public class DescribeDcdnsecServiceResponseBody extends TeaModel {
-    @NameInMap("ChangingAffectTime")
+    @com.aliyun.core.annotation.NameInMap("ChangingAffectTime")
     private String changingAffectTime;
 
-    @NameInMap("ChangingChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChangingChargeType")
     private String changingChargeType;
 
-    @NameInMap("DomainNum")
+    @com.aliyun.core.annotation.NameInMap("DomainNum")
     private String domainNum;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("FlowType")
+    @com.aliyun.core.annotation.NameInMap("FlowType")
     private String flowType;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @NameInMap("OperationLocks")
+    @com.aliyun.core.annotation.NameInMap("OperationLocks")
     private OperationLocks operationLocks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestType")
+    @com.aliyun.core.annotation.NameInMap("RequestType")
     private String requestType;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Version")
+    @com.aliyun.core.annotation.NameInMap("Version")
     private String version;
 
     private DescribeDcdnsecServiceResponseBody(Builder builder) {
@@ -290,7 +289,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
     } 
 
     public static class LockReason extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
         private LockReason(Builder builder) {
@@ -331,7 +330,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
 
     }
     public static class OperationLocks extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private java.util.List < LockReason> lockReason;
 
         private OperationLocks(Builder builder) {

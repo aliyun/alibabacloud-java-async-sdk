@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnUserVipsByDomainResponseBody</p>
  */
 public class DescribeDcdnUserVipsByDomainResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Vips")
+    @com.aliyun.core.annotation.NameInMap("Vips")
     private Vips vips;
 
     private DescribeDcdnUserVipsByDomainResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class DescribeDcdnUserVipsByDomainResponseBody extends TeaModel {
     } 
 
     public static class Vips extends TeaModel {
-        @NameInMap("Vip")
+        @com.aliyun.core.annotation.NameInMap("Vip")
         private java.util.List < String > vip;
 
         private Vips(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainRealTimeBpsDataResponseBody</p>
  */
 public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnDomainRealTimeBpsDataResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of the data returned.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -72,10 +71,10 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
     } 
 
     public static class BpsModel extends TeaModel {
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Float bps;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private BpsModel(Builder builder) {
@@ -110,7 +109,7 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The bandwidth, in bit/s.
+             * The bandwidth. Unit: bit/s.
              */
             public Builder bps(Float bps) {
                 this.bps = bps;
@@ -133,7 +132,7 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BpsModel")
+        @com.aliyun.core.annotation.NameInMap("BpsModel")
         private java.util.List < BpsModel> bpsModel;
 
         private Data(Builder builder) {

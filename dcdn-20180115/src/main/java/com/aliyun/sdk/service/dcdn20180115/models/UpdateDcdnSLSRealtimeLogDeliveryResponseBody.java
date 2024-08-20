@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDcdnSLSRealtimeLogDeliveryResponseBody</p>
  */
 public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateDcdnSLSRealtimeLogDeliveryResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
     } 
 
     public static class Domains extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Domains(Builder builder) {
@@ -177,7 +176,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("Domains")
+        @com.aliyun.core.annotation.NameInMap("Domains")
         private java.util.List < Domains> domains;
 
         private Content(Builder builder) {

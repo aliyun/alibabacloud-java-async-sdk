@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDdosServiceResponseBody</p>
  */
 public class DescribeDcdnDdosServiceResponseBody extends TeaModel {
-    @NameInMap("ChangingAffectTime")
+    @com.aliyun.core.annotation.NameInMap("ChangingAffectTime")
     private String changingAffectTime;
 
-    @NameInMap("ChangingChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChangingChargeType")
     private String changingChargeType;
 
-    @NameInMap("ChangingDomianNum")
+    @com.aliyun.core.annotation.NameInMap("ChangingDomianNum")
     private Integer changingDomianNum;
 
-    @NameInMap("ChangingEdition")
+    @com.aliyun.core.annotation.NameInMap("ChangingEdition")
     private String changingEdition;
 
-    @NameInMap("ChangingProtectNum")
+    @com.aliyun.core.annotation.NameInMap("ChangingProtectNum")
     private Integer changingProtectNum;
 
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @NameInMap("DomianNum")
+    @com.aliyun.core.annotation.NameInMap("DomianNum")
     private Integer domianNum;
 
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private String enabled;
 
-    @NameInMap("EndingTime")
+    @com.aliyun.core.annotation.NameInMap("EndingTime")
     private String endingTime;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("OpeningTime")
+    @com.aliyun.core.annotation.NameInMap("OpeningTime")
     private String openingTime;
 
-    @NameInMap("ProtectNum")
+    @com.aliyun.core.annotation.NameInMap("ProtectNum")
     private Integer protectNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDcdnDdosServiceResponseBody(Builder builder) {

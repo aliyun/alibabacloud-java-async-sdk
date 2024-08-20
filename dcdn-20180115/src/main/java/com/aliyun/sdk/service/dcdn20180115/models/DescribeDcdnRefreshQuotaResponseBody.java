@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnRefreshQuotaResponseBody</p>
  */
 public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
-    @NameInMap("BlockQuota")
+    @com.aliyun.core.annotation.NameInMap("BlockQuota")
     private String blockQuota;
 
-    @NameInMap("BlockRemain")
+    @com.aliyun.core.annotation.NameInMap("BlockRemain")
     private String blockRemain;
 
-    @NameInMap("DirQuota")
+    @com.aliyun.core.annotation.NameInMap("DirQuota")
     private String dirQuota;
 
-    @NameInMap("DirRemain")
+    @com.aliyun.core.annotation.NameInMap("DirRemain")
     private String dirRemain;
 
-    @NameInMap("IgnoreParamsQuota")
+    @com.aliyun.core.annotation.NameInMap("IgnoreParamsQuota")
     private String ignoreParamsQuota;
 
-    @NameInMap("IgnoreParamsRemain")
+    @com.aliyun.core.annotation.NameInMap("IgnoreParamsRemain")
     private String ignoreParamsRemain;
 
-    @NameInMap("PreloadQuota")
+    @com.aliyun.core.annotation.NameInMap("PreloadQuota")
     private String preloadQuota;
 
-    @NameInMap("PreloadRemain")
+    @com.aliyun.core.annotation.NameInMap("PreloadRemain")
     private String preloadRemain;
 
-    @NameInMap("RegexQuota")
+    @com.aliyun.core.annotation.NameInMap("RegexQuota")
     private String regexQuota;
 
-    @NameInMap("RegexRemain")
+    @com.aliyun.core.annotation.NameInMap("RegexRemain")
     private String regexRemain;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UrlQuota")
+    @com.aliyun.core.annotation.NameInMap("UrlQuota")
     private String urlQuota;
 
-    @NameInMap("UrlRemain")
+    @com.aliyun.core.annotation.NameInMap("UrlRemain")
     private String urlRemain;
 
     private DescribeDcdnRefreshQuotaResponseBody(Builder builder) {

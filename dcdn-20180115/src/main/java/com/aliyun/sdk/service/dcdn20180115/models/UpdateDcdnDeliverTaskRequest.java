@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDcdnDeliverTaskRequest</p>
  */
 public class UpdateDcdnDeliverTaskRequest extends Request {
-    @Body
-    @NameInMap("Deliver")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Deliver")
     private String deliver;
 
-    @Body
-    @NameInMap("DeliverId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliverId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long deliverId;
 
-    @Body
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Reports")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Reports")
     private String reports;
 
-    @Body
-    @NameInMap("Schedule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Schedule")
     private String schedule;
 
     private UpdateDcdnDeliverTaskRequest(Builder builder) {

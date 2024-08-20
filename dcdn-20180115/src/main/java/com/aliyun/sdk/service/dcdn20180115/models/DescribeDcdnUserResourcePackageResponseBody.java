@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnUserResourcePackageResponseBody</p>
  */
 public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourcePackageInfos")
+    @com.aliyun.core.annotation.NameInMap("ResourcePackageInfos")
     private ResourcePackageInfos resourcePackageInfos;
 
     private DescribeDcdnUserResourcePackageResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
     } 
 
     public static class ResourcePackageInfo extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CurrCapacity")
+        @com.aliyun.core.annotation.NameInMap("CurrCapacity")
         private String currCapacity;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InitCapacity")
+        @com.aliyun.core.annotation.NameInMap("InitCapacity")
         private String initCapacity;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private ResourcePackageInfo(Builder builder) {
@@ -285,7 +284,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
 
     }
     public static class ResourcePackageInfos extends TeaModel {
-        @NameInMap("ResourcePackageInfo")
+        @com.aliyun.core.annotation.NameInMap("ResourcePackageInfo")
         private java.util.List < ResourcePackageInfo> resourcePackageInfo;
 
         private ResourcePackageInfos(Builder builder) {

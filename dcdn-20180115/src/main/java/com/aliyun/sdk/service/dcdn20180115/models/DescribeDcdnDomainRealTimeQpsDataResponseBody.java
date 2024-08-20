@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainRealTimeQpsDataResponseBody</p>
  */
 public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnDomainRealTimeQpsDataResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
     } 
 
     public static class QpsModel extends TeaModel {
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private Float qps;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private QpsModel(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeDcdnDomainRealTimeQpsDataResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("QpsModel")
+        @com.aliyun.core.annotation.NameInMap("QpsModel")
         private java.util.List < QpsModel> qpsModel;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainTopReferVisitResponseBody</p>
  */
 public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TopReferList")
+    @com.aliyun.core.annotation.NameInMap("TopReferList")
     private TopReferList topReferList;
 
     private DescribeDcdnDomainTopReferVisitResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
     } 
 
     public static class ReferList extends TeaModel {
-        @NameInMap("Flow")
+        @com.aliyun.core.annotation.NameInMap("Flow")
         private String flow;
 
-        @NameInMap("FlowProportion")
+        @com.aliyun.core.annotation.NameInMap("FlowProportion")
         private Float flowProportion;
 
-        @NameInMap("ReferDetail")
+        @com.aliyun.core.annotation.NameInMap("ReferDetail")
         private String referDetail;
 
-        @NameInMap("VisitData")
+        @com.aliyun.core.annotation.NameInMap("VisitData")
         private String visitData;
 
-        @NameInMap("VisitProportion")
+        @com.aliyun.core.annotation.NameInMap("VisitProportion")
         private Float visitProportion;
 
         private ReferList(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
 
     }
     public static class TopReferList extends TeaModel {
-        @NameInMap("ReferList")
+        @com.aliyun.core.annotation.NameInMap("ReferList")
         private java.util.List < ReferList> referList;
 
         private TopReferList(Builder builder) {

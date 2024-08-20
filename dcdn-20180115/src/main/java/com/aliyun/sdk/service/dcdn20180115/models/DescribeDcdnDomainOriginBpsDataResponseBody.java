@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnDomainOriginBpsDataResponseBody</p>
  */
 public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("OriginBpsDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("OriginBpsDataPerInterval")
     private OriginBpsDataPerInterval originBpsDataPerInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeDcdnDomainOriginBpsDataResponseBody(Builder builder) {
@@ -152,22 +151,22 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("DynamicHttpOriginBps")
+        @com.aliyun.core.annotation.NameInMap("DynamicHttpOriginBps")
         private Float dynamicHttpOriginBps;
 
-        @NameInMap("DynamicHttpsOriginBps")
+        @com.aliyun.core.annotation.NameInMap("DynamicHttpsOriginBps")
         private Float dynamicHttpsOriginBps;
 
-        @NameInMap("OriginBps")
+        @com.aliyun.core.annotation.NameInMap("OriginBps")
         private Float originBps;
 
-        @NameInMap("StaticHttpOriginBps")
+        @com.aliyun.core.annotation.NameInMap("StaticHttpOriginBps")
         private Float staticHttpOriginBps;
 
-        @NameInMap("StaticHttpsOriginBps")
+        @com.aliyun.core.annotation.NameInMap("StaticHttpsOriginBps")
         private Float staticHttpsOriginBps;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DataModule(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
 
     }
     public static class OriginBpsDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private OriginBpsDataPerInterval(Builder builder) {

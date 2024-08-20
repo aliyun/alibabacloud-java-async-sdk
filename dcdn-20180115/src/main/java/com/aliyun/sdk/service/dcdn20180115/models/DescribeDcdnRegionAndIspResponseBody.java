@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnRegionAndIspResponseBody</p>
  */
 public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
-    @NameInMap("Isps")
+    @com.aliyun.core.annotation.NameInMap("Isps")
     private Isps isps;
 
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDcdnRegionAndIspResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
     } 
 
     public static class Isp extends TeaModel {
-        @NameInMap("NameEn")
+        @com.aliyun.core.annotation.NameInMap("NameEn")
         private String nameEn;
 
-        @NameInMap("NameZh")
+        @com.aliyun.core.annotation.NameInMap("NameZh")
         private String nameZh;
 
         private Isp(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
 
     }
     public static class Isps extends TeaModel {
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private java.util.List < Isp> isp;
 
         private Isps(Builder builder) {
@@ -194,10 +193,10 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
 
     }
     public static class Region extends TeaModel {
-        @NameInMap("NameEn")
+        @com.aliyun.core.annotation.NameInMap("NameEn")
         private String nameEn;
 
-        @NameInMap("NameZh")
+        @com.aliyun.core.annotation.NameInMap("NameZh")
         private String nameZh;
 
         private Region(Builder builder) {
@@ -255,7 +254,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
 
     }
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private java.util.List < Region> region;
 
         private Regions(Builder builder) {

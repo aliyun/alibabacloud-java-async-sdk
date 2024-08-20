@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dcdn20180115.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSlrAndSlsProjectResponseBody</p>
  */
 public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsInfo")
+    @com.aliyun.core.annotation.NameInMap("SlsInfo")
     private SlsInfo slsInfo;
 
     private CreateSlrAndSlsProjectResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
     } 
 
     public static class SlsInfo extends TeaModel {
-        @NameInMap("EndPoint")
+        @com.aliyun.core.annotation.NameInMap("EndPoint")
         private String endPoint;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private SlsInfo(Builder builder) {
