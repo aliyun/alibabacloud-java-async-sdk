@@ -43,6 +43,10 @@ public class CreateClusterRequest extends Request {
     private String deployMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeAttributes")
     @com.aliyun.core.annotation.Validation(required = true)
     private NodeAttributes nodeAttributes;
@@ -91,6 +95,7 @@ public class CreateClusterRequest extends Request {
         this.clusterName = builder.clusterName;
         this.clusterType = builder.clusterType;
         this.deployMode = builder.deployMode;
+        this.description = builder.description;
         this.nodeAttributes = builder.nodeAttributes;
         this.nodeGroups = builder.nodeGroups;
         this.paymentType = builder.paymentType;
@@ -165,6 +170,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return nodeAttributes
      */
     public NodeAttributes getNodeAttributes() {
@@ -235,6 +247,7 @@ public class CreateClusterRequest extends Request {
         private String clusterName; 
         private String clusterType; 
         private String deployMode; 
+        private String description; 
         private NodeAttributes nodeAttributes; 
         private java.util.List < NodeGroupConfig > nodeGroups; 
         private String paymentType; 
@@ -258,6 +271,7 @@ public class CreateClusterRequest extends Request {
             this.clusterName = request.clusterName;
             this.clusterType = request.clusterType;
             this.deployMode = request.deployMode;
+            this.description = request.description;
             this.nodeAttributes = request.nodeAttributes;
             this.nodeGroups = request.nodeGroups;
             this.paymentType = request.paymentType;
@@ -343,6 +357,15 @@ public class CreateClusterRequest extends Request {
         public Builder deployMode(String deployMode) {
             this.putQueryParameter("DeployMode", deployMode);
             this.deployMode = deployMode;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 

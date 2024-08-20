@@ -244,6 +244,35 @@ public class ListClustersRequest extends Request {
 
         /**
          * The region ID.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   cn-qingdao
+         * *   cn-beijing
+         * *   cn-zhangjiakou
+         * *   cn-huhehaote
+         * *   cn-hangzhou
+         * *   cn-shanghai
+         * *   cn-shenzhen
+         * *   cn-chengdu
+         * *   cn-hongkong
+         * *   cn-wulanchabu
+         * *   cn-heyuan-acdr-1
+         * *   cn-qingdao-acdr-ut-1
+         * *   ap-northeast-1
+         * *   ap-southeast-1
+         * *   ap-southeast-2
+         * *   ap-southeast-3
+         * *   ap-southeast-5
+         * *   ap-south-1
+         * *   us-east-1
+         * *   us-west-1
+         * *   me-east-1
+         * *   me-central-1
+         * *   eu-central-1
+         * *   eu-west-1
+         * *   cn-north-2-gov-1
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -261,7 +290,7 @@ public class ListClustersRequest extends Request {
         }
 
         /**
-         * The tags. You can specify a maximum of 20 items.
+         * The tags. Number of elements in the array: 1 to 20.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putQueryParameter("Tags", tags);
