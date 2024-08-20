@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddTextFeedbackResponse> addTextFeedback(AddTextFeedbackRequest request);
 
+    CompletableFuture<BatchGetProjectTaskResponse> batchGetProjectTask(BatchGetProjectTaskRequest request);
+
     CompletableFuture<CheckSessionResponse> checkSession(CheckSessionRequest request);
 
     CompletableFuture<CountTextResponse> countText(CountTextRequest request);

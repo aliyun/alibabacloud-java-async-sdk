@@ -54,6 +54,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<BatchGetProjectTaskResponse> batchGetProjectTask(BatchGetProjectTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchGetProjectTask").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/digitalHuman/project/batchGetProjectTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchGetProjectTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchGetProjectTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<CheckSessionResponse> checkSession(CheckSessionRequest request) {
         try {
             this.handler.validateRequestModel(request);
