@@ -29,6 +29,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
 
+    CompletableFuture<CreateMemoryResponse> createMemory(CreateMemoryRequest request);
+
+    CompletableFuture<CreateMemoryNodeResponse> createMemoryNode(CreateMemoryNodeRequest request);
+
     CompletableFuture<DeleteAgentResponse> deleteAgent(DeleteAgentRequest request);
 
     CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
@@ -39,9 +43,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteIndexDocumentResponse> deleteIndexDocument(DeleteIndexDocumentRequest request);
 
+    CompletableFuture<DeleteMemoryResponse> deleteMemory(DeleteMemoryRequest request);
+
+    CompletableFuture<DeleteMemoryNodeResponse> deleteMemoryNode(DeleteMemoryNodeRequest request);
+
     CompletableFuture<DescribeFileResponse> describeFile(DescribeFileRequest request);
 
     CompletableFuture<GetIndexJobStatusResponse> getIndexJobStatus(GetIndexJobStatusRequest request);
+
+    CompletableFuture<GetMemoryResponse> getMemory(GetMemoryRequest request);
+
+    CompletableFuture<GetMemoryNodeResponse> getMemoryNode(GetMemoryNodeRequest request);
 
     CompletableFuture<GetPublishedAgentResponse> getPublishedAgent(GetPublishedAgentRequest request);
 
@@ -55,6 +67,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListIndicesResponse> listIndices(ListIndicesRequest request);
 
+    CompletableFuture<ListMemoriesResponse> listMemories(ListMemoriesRequest request);
+
+    CompletableFuture<ListMemoryNodesResponse> listMemoryNodes(ListMemoryNodesRequest request);
+
     CompletableFuture<ListPublishedAgentResponse> listPublishedAgent(ListPublishedAgentRequest request);
 
     CompletableFuture<RetrieveResponse> retrieve(RetrieveRequest request);
@@ -64,5 +80,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitIndexJobResponse> submitIndexJob(SubmitIndexJobRequest request);
 
     CompletableFuture<UpdateAndPublishAgentResponse> updateAndPublishAgent(UpdateAndPublishAgentRequest request);
+
+    CompletableFuture<UpdateMemoryResponse> updateMemory(UpdateMemoryRequest request);
+
+    CompletableFuture<UpdateMemoryNodeResponse> updateMemoryNode(UpdateMemoryNodeRequest request);
 
 }

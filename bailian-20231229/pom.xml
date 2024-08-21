@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-bailian20231229</artifactId>
-  <version>1.0.8</version>
+  <version>1.0.9</version>
   <packaging>jar</packaging>
   <name>alibabacloud-bailian20231229</name>
   <description>Alibaba Cloud bailian (20231229) Async SDK for Java

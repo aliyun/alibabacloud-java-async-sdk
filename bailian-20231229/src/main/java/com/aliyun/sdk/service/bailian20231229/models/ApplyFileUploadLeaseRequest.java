@@ -32,7 +32,7 @@ public class ApplyFileUploadLeaseRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Md5")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 1)
     private String md5;
 
     @com.aliyun.core.annotation.Body

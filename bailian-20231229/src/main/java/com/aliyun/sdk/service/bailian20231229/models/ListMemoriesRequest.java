@@ -6,13 +6,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListFileRequest} extends {@link RequestModel}
+ * {@link ListMemoriesRequest} extends {@link RequestModel}
  *
- * <p>ListFileRequest</p>
+ * <p>ListMemoriesRequest</p>
  */
-public class ListFileRequest extends Request {
+public class ListMemoriesRequest extends Request {
     @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
@@ -21,23 +21,17 @@ public class ListFileRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CategoryId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String categoryId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    private ListFileRequest(Builder builder) {
+    private ListMemoriesRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
-        this.categoryId = builder.categoryId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
     }
@@ -46,7 +40,7 @@ public class ListFileRequest extends Request {
         return new Builder();
     }
 
-    public static ListFileRequest create() {
+    public static ListMemoriesRequest create() {
         return builder().build();
     }
 
@@ -70,13 +64,6 @@ public class ListFileRequest extends Request {
     }
 
     /**
-     * @return categoryId
-     */
-    public String getCategoryId() {
-        return this.categoryId;
-    }
-
-    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -90,10 +77,9 @@ public class ListFileRequest extends Request {
         return this.nextToken;
     }
 
-    public static final class Builder extends Request.Builder<ListFileRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListMemoriesRequest, Builder> {
         private String workspaceId; 
         private String regionId; 
-        private String categoryId; 
         private Integer maxResults; 
         private String nextToken; 
 
@@ -101,20 +87,19 @@ public class ListFileRequest extends Request {
             super();
         } 
 
-        private Builder(ListFileRequest request) {
+        private Builder(ListMemoriesRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
-            this.categoryId = request.categoryId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
         } 
 
         /**
-         * WorkspaceId.
+         * workspaceId.
          */
         public Builder workspaceId(String workspaceId) {
-            this.putPathParameter("WorkspaceId", workspaceId);
+            this.putPathParameter("workspaceId", workspaceId);
             this.workspaceId = workspaceId;
             return this;
         }
@@ -129,35 +114,26 @@ public class ListFileRequest extends Request {
         }
 
         /**
-         * CategoryId.
-         */
-        public Builder categoryId(String categoryId) {
-            this.putQueryParameter("CategoryId", categoryId);
-            this.categoryId = categoryId;
-            return this;
-        }
-
-        /**
-         * MaxResults.
+         * maxResults.
          */
         public Builder maxResults(Integer maxResults) {
-            this.putQueryParameter("MaxResults", maxResults);
+            this.putQueryParameter("maxResults", maxResults);
             this.maxResults = maxResults;
             return this;
         }
 
         /**
-         * NextToken.
+         * nextToken.
          */
         public Builder nextToken(String nextToken) {
-            this.putQueryParameter("NextToken", nextToken);
+            this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
             return this;
         }
 
         @Override
-        public ListFileRequest build() {
-            return new ListFileRequest(this);
+        public ListMemoriesRequest build() {
+            return new ListMemoriesRequest(this);
         } 
 
     } 
