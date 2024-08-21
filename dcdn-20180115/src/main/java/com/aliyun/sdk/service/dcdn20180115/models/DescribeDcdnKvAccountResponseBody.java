@@ -11,8 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDcdnKvAccountResponseBody</p>
  */
 public class DescribeDcdnKvAccountResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Capacity")
+    private Long capacity;
+
     @com.aliyun.core.annotation.NameInMap("CapacityString")
     private String capacityString;
+
+    @com.aliyun.core.annotation.NameInMap("CapacityUsed")
+    private Long capacityUsed;
 
     @com.aliyun.core.annotation.NameInMap("CapacityUsedString")
     private String capacityUsedString;
@@ -33,7 +39,9 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
     private String status;
 
     private DescribeDcdnKvAccountResponseBody(Builder builder) {
+        this.capacity = builder.capacity;
         this.capacityString = builder.capacityString;
+        this.capacityUsed = builder.capacityUsed;
         this.capacityUsedString = builder.capacityUsedString;
         this.namespaceList = builder.namespaceList;
         this.namespaceQuota = builder.namespaceQuota;
@@ -51,10 +59,24 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
     }
 
     /**
+     * @return capacity
+     */
+    public Long getCapacity() {
+        return this.capacity;
+    }
+
+    /**
      * @return capacityString
      */
     public String getCapacityString() {
         return this.capacityString;
+    }
+
+    /**
+     * @return capacityUsed
+     */
+    public Long getCapacityUsed() {
+        return this.capacityUsed;
     }
 
     /**
@@ -100,7 +122,9 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long capacity; 
         private String capacityString; 
+        private Long capacityUsed; 
         private String capacityUsedString; 
         private java.util.List < NamespaceList> namespaceList; 
         private Integer namespaceQuota; 
@@ -109,10 +133,26 @@ public class DescribeDcdnKvAccountResponseBody extends TeaModel {
         private String status; 
 
         /**
+         * Capacity.
+         */
+        public Builder capacity(Long capacity) {
+            this.capacity = capacity;
+            return this;
+        }
+
+        /**
          * The available capacity of all namespaces.
          */
         public Builder capacityString(String capacityString) {
             this.capacityString = capacityString;
+            return this;
+        }
+
+        /**
+         * CapacityUsed.
+         */
+        public Builder capacityUsed(Long capacityUsed) {
+            this.capacityUsed = capacityUsed;
             return this;
         }
 
