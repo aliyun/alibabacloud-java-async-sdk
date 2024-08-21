@@ -475,8 +475,14 @@ public class DescribeIngressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
+        @com.aliyun.core.annotation.NameInMap("RequestTimeout")
+        private Integer requestTimeout;
+
         @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
+        private String securityPolicyId;
 
         @com.aliyun.core.annotation.NameInMap("SlbId")
         private String slbId;
@@ -495,7 +501,9 @@ public class DescribeIngressResponseBody extends TeaModel {
             this.loadBalanceType = builder.loadBalanceType;
             this.name = builder.name;
             this.namespaceId = builder.namespaceId;
+            this.requestTimeout = builder.requestTimeout;
             this.rules = builder.rules;
+            this.securityPolicyId = builder.securityPolicyId;
             this.slbId = builder.slbId;
             this.slbType = builder.slbType;
         }
@@ -579,10 +587,24 @@ public class DescribeIngressResponseBody extends TeaModel {
         }
 
         /**
+         * @return requestTimeout
+         */
+        public Integer getRequestTimeout() {
+            return this.requestTimeout;
+        }
+
+        /**
          * @return rules
          */
         public java.util.List < Rules> getRules() {
             return this.rules;
+        }
+
+        /**
+         * @return securityPolicyId
+         */
+        public String getSecurityPolicyId() {
+            return this.securityPolicyId;
         }
 
         /**
@@ -610,7 +632,9 @@ public class DescribeIngressResponseBody extends TeaModel {
             private String loadBalanceType; 
             private String name; 
             private String namespaceId; 
+            private Integer requestTimeout; 
             private java.util.List < Rules> rules; 
+            private String securityPolicyId; 
             private String slbId; 
             private String slbType; 
 
@@ -705,10 +729,26 @@ public class DescribeIngressResponseBody extends TeaModel {
             }
 
             /**
+             * RequestTimeout.
+             */
+            public Builder requestTimeout(Integer requestTimeout) {
+                this.requestTimeout = requestTimeout;
+                return this;
+            }
+
+            /**
              * The ID of the application specified in the forwarding rule.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
+                return this;
+            }
+
+            /**
+             * SecurityPolicyId.
+             */
+            public Builder securityPolicyId(String securityPolicyId) {
+                this.securityPolicyId = securityPolicyId;
                 return this;
             }
 

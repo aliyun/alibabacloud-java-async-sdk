@@ -46,10 +46,18 @@ public class CreateIngressRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
+    private Integer requestTimeout;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Rules")
     @com.aliyun.core.annotation.Validation(required = true)
     private String rules;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
+    private String securityPolicyId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlbId")
@@ -66,7 +74,9 @@ public class CreateIngressRequest extends Request {
         this.listenerProtocol = builder.listenerProtocol;
         this.loadBalanceType = builder.loadBalanceType;
         this.namespaceId = builder.namespaceId;
+        this.requestTimeout = builder.requestTimeout;
         this.rules = builder.rules;
+        this.securityPolicyId = builder.securityPolicyId;
         this.slbId = builder.slbId;
     }
 
@@ -140,10 +150,24 @@ public class CreateIngressRequest extends Request {
     }
 
     /**
+     * @return requestTimeout
+     */
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
+    }
+
+    /**
      * @return rules
      */
     public String getRules() {
         return this.rules;
+    }
+
+    /**
+     * @return securityPolicyId
+     */
+    public String getSecurityPolicyId() {
+        return this.securityPolicyId;
     }
 
     /**
@@ -162,7 +186,9 @@ public class CreateIngressRequest extends Request {
         private String listenerProtocol; 
         private String loadBalanceType; 
         private String namespaceId; 
+        private Integer requestTimeout; 
         private String rules; 
+        private String securityPolicyId; 
         private String slbId; 
 
         private Builder() {
@@ -179,7 +205,9 @@ public class CreateIngressRequest extends Request {
             this.listenerProtocol = request.listenerProtocol;
             this.loadBalanceType = request.loadBalanceType;
             this.namespaceId = request.namespaceId;
+            this.requestTimeout = request.requestTimeout;
             this.rules = request.rules;
+            this.securityPolicyId = request.securityPolicyId;
             this.slbId = request.slbId;
         } 
 
@@ -256,11 +284,29 @@ public class CreateIngressRequest extends Request {
         }
 
         /**
+         * RequestTimeout.
+         */
+        public Builder requestTimeout(Integer requestTimeout) {
+            this.putQueryParameter("RequestTimeout", requestTimeout);
+            this.requestTimeout = requestTimeout;
+            return this;
+        }
+
+        /**
          * Rules.
          */
         public Builder rules(String rules) {
             this.putBodyParameter("Rules", rules);
             this.rules = rules;
+            return this;
+        }
+
+        /**
+         * SecurityPolicyId.
+         */
+        public Builder securityPolicyId(String securityPolicyId) {
+            this.putQueryParameter("SecurityPolicyId", securityPolicyId);
+            this.securityPolicyId = securityPolicyId;
             return this;
         }
 

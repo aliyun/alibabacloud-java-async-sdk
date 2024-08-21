@@ -44,9 +44,17 @@ public class UpdateIngressRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("LoadBalanceType")
     private String loadBalanceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
+    private Integer requestTimeout;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Rules")
     private String rules;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
+    private String securityPolicyId;
 
     private UpdateIngressRequest(Builder builder) {
         super(builder);
@@ -58,7 +66,9 @@ public class UpdateIngressRequest extends Request {
         this.listenerPort = builder.listenerPort;
         this.listenerProtocol = builder.listenerProtocol;
         this.loadBalanceType = builder.loadBalanceType;
+        this.requestTimeout = builder.requestTimeout;
         this.rules = builder.rules;
+        this.securityPolicyId = builder.securityPolicyId;
     }
 
     public static Builder builder() {
@@ -131,10 +141,24 @@ public class UpdateIngressRequest extends Request {
     }
 
     /**
+     * @return requestTimeout
+     */
+    public Integer getRequestTimeout() {
+        return this.requestTimeout;
+    }
+
+    /**
      * @return rules
      */
     public String getRules() {
         return this.rules;
+    }
+
+    /**
+     * @return securityPolicyId
+     */
+    public String getSecurityPolicyId() {
+        return this.securityPolicyId;
     }
 
     public static final class Builder extends Request.Builder<UpdateIngressRequest, Builder> {
@@ -146,7 +170,9 @@ public class UpdateIngressRequest extends Request {
         private String listenerPort; 
         private String listenerProtocol; 
         private String loadBalanceType; 
+        private Integer requestTimeout; 
         private String rules; 
+        private String securityPolicyId; 
 
         private Builder() {
             super();
@@ -162,7 +188,9 @@ public class UpdateIngressRequest extends Request {
             this.listenerPort = request.listenerPort;
             this.listenerProtocol = request.listenerProtocol;
             this.loadBalanceType = request.loadBalanceType;
+            this.requestTimeout = request.requestTimeout;
             this.rules = request.rules;
+            this.securityPolicyId = request.securityPolicyId;
         } 
 
         /**
@@ -238,11 +266,29 @@ public class UpdateIngressRequest extends Request {
         }
 
         /**
+         * RequestTimeout.
+         */
+        public Builder requestTimeout(Integer requestTimeout) {
+            this.putQueryParameter("RequestTimeout", requestTimeout);
+            this.requestTimeout = requestTimeout;
+            return this;
+        }
+
+        /**
          * Rules.
          */
         public Builder rules(String rules) {
             this.putBodyParameter("Rules", rules);
             this.rules = rules;
+            return this;
+        }
+
+        /**
+         * SecurityPolicyId.
+         */
+        public Builder securityPolicyId(String securityPolicyId) {
+            this.putQueryParameter("SecurityPolicyId", securityPolicyId);
+            this.securityPolicyId = securityPolicyId;
             return this;
         }
 
