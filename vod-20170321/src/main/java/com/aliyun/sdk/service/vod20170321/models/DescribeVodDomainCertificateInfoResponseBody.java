@@ -77,6 +77,9 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertExpireTime")
         private String certExpireTime;
 
+        @com.aliyun.core.annotation.NameInMap("CertId")
+        private String certId;
+
         @com.aliyun.core.annotation.NameInMap("CertLife")
         private String certLife;
 
@@ -86,11 +89,26 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertOrg")
         private String certOrg;
 
+        @com.aliyun.core.annotation.NameInMap("CertRegion")
+        private String certRegion;
+
+        @com.aliyun.core.annotation.NameInMap("CertStartTime")
+        private String certStartTime;
+
         @com.aliyun.core.annotation.NameInMap("CertType")
         private String certType;
 
+        @com.aliyun.core.annotation.NameInMap("CertUpdateTime")
+        private String certUpdateTime;
+
+        @com.aliyun.core.annotation.NameInMap("DomainCnameStatus")
+        private String domainCnameStatus;
+
         @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
+
+        @com.aliyun.core.annotation.NameInMap("ServerCertificate")
+        private String serverCertificate;
 
         @com.aliyun.core.annotation.NameInMap("ServerCertificateStatus")
         private String serverCertificateStatus;
@@ -101,11 +119,17 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         private CertInfo(Builder builder) {
             this.certDomainName = builder.certDomainName;
             this.certExpireTime = builder.certExpireTime;
+            this.certId = builder.certId;
             this.certLife = builder.certLife;
             this.certName = builder.certName;
             this.certOrg = builder.certOrg;
+            this.certRegion = builder.certRegion;
+            this.certStartTime = builder.certStartTime;
             this.certType = builder.certType;
+            this.certUpdateTime = builder.certUpdateTime;
+            this.domainCnameStatus = builder.domainCnameStatus;
             this.domainName = builder.domainName;
+            this.serverCertificate = builder.serverCertificate;
             this.serverCertificateStatus = builder.serverCertificateStatus;
             this.status = builder.status;
         }
@@ -133,6 +157,13 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return certId
+         */
+        public String getCertId() {
+            return this.certId;
+        }
+
+        /**
          * @return certLife
          */
         public String getCertLife() {
@@ -154,6 +185,20 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return certRegion
+         */
+        public String getCertRegion() {
+            return this.certRegion;
+        }
+
+        /**
+         * @return certStartTime
+         */
+        public String getCertStartTime() {
+            return this.certStartTime;
+        }
+
+        /**
          * @return certType
          */
         public String getCertType() {
@@ -161,10 +206,31 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return certUpdateTime
+         */
+        public String getCertUpdateTime() {
+            return this.certUpdateTime;
+        }
+
+        /**
+         * @return domainCnameStatus
+         */
+        public String getDomainCnameStatus() {
+            return this.domainCnameStatus;
+        }
+
+        /**
          * @return domainName
          */
         public String getDomainName() {
             return this.domainName;
+        }
+
+        /**
+         * @return serverCertificate
+         */
+        public String getServerCertificate() {
+            return this.serverCertificate;
         }
 
         /**
@@ -184,11 +250,17 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String certDomainName; 
             private String certExpireTime; 
+            private String certId; 
             private String certLife; 
             private String certName; 
             private String certOrg; 
+            private String certRegion; 
+            private String certStartTime; 
             private String certType; 
+            private String certUpdateTime; 
+            private String domainCnameStatus; 
             private String domainName; 
+            private String serverCertificate; 
             private String serverCertificateStatus; 
             private String status; 
 
@@ -205,6 +277,14 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
+                return this;
+            }
+
+            /**
+             * CertId.
+             */
+            public Builder certId(String certId) {
+                this.certId = certId;
                 return this;
             }
 
@@ -233,6 +313,22 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
+             * CertRegion.
+             */
+            public Builder certRegion(String certRegion) {
+                this.certRegion = certRegion;
+                return this;
+            }
+
+            /**
+             * CertStartTime.
+             */
+            public Builder certStartTime(String certStartTime) {
+                this.certStartTime = certStartTime;
+                return this;
+            }
+
+            /**
              * The type of the certificate. Valid values:
              * <p>
              * 
@@ -246,10 +342,34 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
+             * CertUpdateTime.
+             */
+            public Builder certUpdateTime(String certUpdateTime) {
+                this.certUpdateTime = certUpdateTime;
+                return this;
+            }
+
+            /**
+             * DomainCnameStatus.
+             */
+            public Builder domainCnameStatus(String domainCnameStatus) {
+                this.domainCnameStatus = domainCnameStatus;
+                return this;
+            }
+
+            /**
              * The accelerated domain name whose ICP filing status you want to update.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * ServerCertificate.
+             */
+            public Builder serverCertificate(String serverCertificate) {
+                this.serverCertificate = serverCertificate;
                 return this;
             }
 

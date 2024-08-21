@@ -110,7 +110,7 @@ public class DecryptKMSDataKeyRequest extends Request {
         } 
 
         /**
-         * CipherText.
+         * The ciphertext to be decrypted.
          */
         public Builder cipherText(String cipherText) {
             this.putQueryParameter("CipherText", cipherText);
