@@ -218,7 +218,7 @@ public class DescribeDatabasesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer.
+         * The page number. Pages start from 1.
          * <p>
          * 
          * Default value: **1**.

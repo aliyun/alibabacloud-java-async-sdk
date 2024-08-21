@@ -1,0 +1,187 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.rds20140815.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeRCDeploymentSetsRequest} extends {@link RequestModel}
+ *
+ * <p>DescribeRCDeploymentSetsRequest</p>
+ */
+public class DescribeRCDeploymentSetsRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetIds")
+    private String deploymentSetIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetName")
+    private String deploymentSetName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Strategy")
+    private String strategy;
+
+    private DescribeRCDeploymentSetsRequest(Builder builder) {
+        super(builder);
+        this.deploymentSetIds = builder.deploymentSetIds;
+        this.deploymentSetName = builder.deploymentSetName;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.strategy = builder.strategy;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeRCDeploymentSetsRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return deploymentSetIds
+     */
+    public String getDeploymentSetIds() {
+        return this.deploymentSetIds;
+    }
+
+    /**
+     * @return deploymentSetName
+     */
+    public String getDeploymentSetName() {
+        return this.deploymentSetName;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return strategy
+     */
+    public String getStrategy() {
+        return this.strategy;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeRCDeploymentSetsRequest, Builder> {
+        private String deploymentSetIds; 
+        private String deploymentSetName; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String regionId; 
+        private String strategy; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribeRCDeploymentSetsRequest request) {
+            super(request);
+            this.deploymentSetIds = request.deploymentSetIds;
+            this.deploymentSetName = request.deploymentSetName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.strategy = request.strategy;
+        } 
+
+        /**
+         * DeploymentSetIds.
+         */
+        public Builder deploymentSetIds(String deploymentSetIds) {
+            this.putQueryParameter("DeploymentSetIds", deploymentSetIds);
+            this.deploymentSetIds = deploymentSetIds;
+            return this;
+        }
+
+        /**
+         * DeploymentSetName.
+         */
+        public Builder deploymentSetName(String deploymentSetName) {
+            this.putQueryParameter("DeploymentSetName", deploymentSetName);
+            this.deploymentSetName = deploymentSetName;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Strategy.
+         */
+        public Builder strategy(String strategy) {
+            this.putQueryParameter("Strategy", strategy);
+            this.strategy = strategy;
+            return this;
+        }
+
+        @Override
+        public DescribeRCDeploymentSetsRequest build() {
+            return new DescribeRCDeploymentSetsRequest(this);
+        } 
+
+    } 
+
+}

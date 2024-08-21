@@ -607,7 +607,7 @@ public class ModifyBackupPolicyRequest extends Request {
          * <p>
          * 
          * *   **True** or **1**: enables the log backup feature.
-         * *   **False** or **0**: enables the log backup feature.
+         * *   **False** or **0**: disables the log backup feature.
          * 
          * > *   You must specify this parameter when you set the **BackupPolicyMode** parameter to **LogBackupPolicy**.
          * > *   This parameter takes effect only when you set the **BackupPolicyMode** parameter to **LogBackupPolicy**.
@@ -638,8 +638,8 @@ public class ModifyBackupPolicyRequest extends Request {
          * Specifies whether to forcefully delete log backup files from the instance when the storage usage of the instance exceeds 80% or the amount of remaining storage on the instance is less than 5 GB. Valid values: **Enable and Disable**. You can retain the default value.
          * <p>
          * 
-         * > *   This parameter must be specified when **BackupPolicyMode** is set to **LogBackupPolicy**.
-         * > *   This parameter takes effect only when **BackupPolicyMode** is set to **LogBackupPolicy**.
+         * > *   You must specify this parameter when you set the **BackupPolicyMode** parameter to **LogBackupPolicy**.
+         * > *   This parameter takes effect only when you set the **BackupPolicyMode** parameter to **LogBackupPolicy**.
          */
         public Builder highSpaceUsageProtection(String highSpaceUsageProtection) {
             this.putQueryParameter("HighSpaceUsageProtection", highSpaceUsageProtection);
@@ -694,7 +694,7 @@ public class ModifyBackupPolicyRequest extends Request {
          * <p>
          * 
          * > *   This parameter takes effect only when you set the **BackupPolicyMode** parameter to **LogBackupPolicy**.
-         * > *   If the instance runs MySQL, you can set this parameter to **-1**. The value **-1** specifies that an unlimited number of binary log files can be retained on the instance.
+         * > *   If the instance runs MySQL, you can set this parameter to \*\*-1\*\*. The value \*\*-1\*\* specifies that an unlimited number of binary log files can be retained on the instance.
          */
         public Builder logBackupLocalRetentionNumber(Integer logBackupLocalRetentionNumber) {
             this.putQueryParameter("LogBackupLocalRetentionNumber", logBackupLocalRetentionNumber);
@@ -769,14 +769,15 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:
+         * The policy that is used to retain archived backup files if the instance is released. Valid values:
          * <p>
          * 
          * *   **None**: No archived backup files are retained.
          * *   **Lastest**: Only the last archived backup file is retained.
          * *   **All**: All archived backup files are retained.
          * 
-         * > This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
+         * > *   This parameter takes effect only when you set the **BackupPolicyMode** parameter to **DataBackupPolicy**.
+         * > *   If the instance uses cloud disks and was created on or after February 1, 2024, this parameter is automatically set to **Lastest**. If the instance uses local disks in the same scenario, this parameter is automatically set to **None**. For more information, see [Backup for deleted instances](~~2836955~~).
          */
         public Builder releasedKeepPolicy(String releasedKeepPolicy) {
             this.putQueryParameter("ReleasedKeepPolicy", releasedKeepPolicy);

@@ -303,7 +303,7 @@ public class ModifyParameterRequest extends Request {
          * The time at which the modification takes effect. Valid values:
          * <p>
          * 
-         * *   **Immediately**: immediately modifies the parameter. This is the default value.
+         * *   **Immediate**: immediately modifies the parameter. This is the default value.
          * *   **MaintainTime**: modifies the parameter during the maintenance window of the instance. You can call the ModifyDBInstanceMaintainTime operation to change the maintenance window.
          * *   **ScheduleTime**: modifies the parameter at the point in time that you specify. If you specify this value, you must also specify **SwitchTime**.
          */

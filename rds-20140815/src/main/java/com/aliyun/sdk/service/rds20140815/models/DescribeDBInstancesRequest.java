@@ -641,11 +641,11 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query instances that have expired. Valid values:
+         * Specifies whether the instances have expired. Valid values:
          * <p>
          * 
-         * *   **True**: queries instances that have expired.
-         * *   **False**: does not query instances that have expired.
+         * *   **True**
+         * *   **False**
          */
         public Builder expired(String expired) {
             this.putQueryParameter("Expired", expired);
@@ -732,7 +732,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: any non-zero positive integer.
+         * The page number. Pages start from 1.
          * <p>
          * 
          * Default value: **1**.

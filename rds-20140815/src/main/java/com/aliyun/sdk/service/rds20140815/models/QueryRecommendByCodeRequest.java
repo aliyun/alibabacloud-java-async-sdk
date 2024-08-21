@@ -30,7 +30,7 @@ public class QueryRecommendByCodeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
-    private String resourceOwnerId;
+    private Long resourceOwnerId;
 
     private QueryRecommendByCodeRequest(Builder builder) {
         super(builder);
@@ -85,7 +85,7 @@ public class QueryRecommendByCodeRequest extends Request {
     /**
      * @return resourceOwnerId
      */
-    public String getResourceOwnerId() {
+    public Long getResourceOwnerId() {
         return this.resourceOwnerId;
     }
 
@@ -94,7 +94,7 @@ public class QueryRecommendByCodeRequest extends Request {
         private String ownerId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
-        private String resourceOwnerId; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -148,7 +148,7 @@ public class QueryRecommendByCodeRequest extends Request {
         /**
          * ResourceOwnerId.
          */
-        public Builder resourceOwnerId(String resourceOwnerId) {
+        public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
             return this;

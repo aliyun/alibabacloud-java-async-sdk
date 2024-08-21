@@ -360,7 +360,7 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
-         * The page number. Valid values: any non-zero positive integer. Default value: **1**.
+         * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);

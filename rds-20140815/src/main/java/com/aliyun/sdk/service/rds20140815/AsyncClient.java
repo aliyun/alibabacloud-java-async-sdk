@@ -484,6 +484,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreatePostgresExtensionsResponse> createPostgresExtensions(CreatePostgresExtensionsRequest request);
 
+    CompletableFuture<CreateRCDeploymentSetResponse> createRCDeploymentSet(CreateRCDeploymentSetRequest request);
+
     /**
       * ### Supported database engines
       * *   MySQL
@@ -497,6 +499,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<CreateReadOnlyDBInstanceResponse> createReadOnlyDBInstance(CreateReadOnlyDBInstanceRequest request);
+
+    CompletableFuture<CreateReplicationLinkResponse> createReplicationLink(CreateReplicationLinkRequest request);
 
     /**
       * ### [](#)Supported database engines
@@ -689,6 +693,14 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeletePostgresExtensionsResponse> deletePostgresExtensions(DeletePostgresExtensionsRequest request);
+
+    CompletableFuture<DeleteRCDeploymentSetResponse> deleteRCDeploymentSet(DeleteRCDeploymentSetRequest request);
+
+    CompletableFuture<DeleteRCInstanceResponse> deleteRCInstance(DeleteRCInstanceRequest request);
+
+    CompletableFuture<DeleteRCInstancesResponse> deleteRCInstances(DeleteRCInstancesRequest request);
+
+    CompletableFuture<DeleteReplicationLinkResponse> deleteReplicationLink(DeleteReplicationLinkRequest request);
 
     CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
 
@@ -1576,6 +1588,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeQuickSaleConfigResponse> describeQuickSaleConfig(DescribeQuickSaleConfigRequest request);
 
+    CompletableFuture<DescribeRCDeploymentSetsResponse> describeRCDeploymentSets(DescribeRCDeploymentSetsRequest request);
+
+    CompletableFuture<DescribeRCImageListResponse> describeRCImageList(DescribeRCImageListRequest request);
+
+    CompletableFuture<DescribeRCInstanceAttributeResponse> describeRCInstanceAttribute(DescribeRCInstanceAttributeRequest request);
+
+    CompletableFuture<DescribeRCInstancesResponse> describeRCInstances(DescribeRCInstancesRequest request);
+
+    CompletableFuture<DescribeRCMetricListResponse> describeRCMetricList(DescribeRCMetricListRequest request);
+
     /**
       * @deprecated
       *
@@ -1619,6 +1641,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeRenewalPriceResponse> describeRenewalPrice(DescribeRenewalPriceRequest request);
+
+    CompletableFuture<DescribeReplicationLinkLogsResponse> describeReplicationLinkLogs(DescribeReplicationLinkLogsRequest request);
 
     CompletableFuture<DescribeResourceDetailsResponse> describeResourceDetails(DescribeResourceDetailsRequest request);
 
@@ -2492,6 +2516,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyParameterGroupResponse> modifyParameterGroup(ModifyParameterGroupRequest request);
 
+    CompletableFuture<ModifyRCInstanceResponse> modifyRCInstance(ModifyRCInstanceRequest request);
+
+    CompletableFuture<ModifyRCInstanceChargeTypeResponse> modifyRCInstanceChargeType(ModifyRCInstanceChargeTypeRequest request);
+
     /**
       * ### [](#)Supported database engines
       * *   MySQL
@@ -2630,11 +2658,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryRecommendByCodeResponse> queryRecommendByCode(QueryRecommendByCodeRequest request);
 
+    CompletableFuture<RebootRCInstanceResponse> rebootRCInstance(RebootRCInstanceRequest request);
+
     /**
       * Dedicated clusters allow you to manage a number of instances at a time. You can create multiple dedicated clusters in a single region. Each dedicated cluster consists of multiple hosts. You can create multiple instances on each host. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
       *
      */
     CompletableFuture<RebuildDBInstanceResponse> rebuildDBInstance(RebuildDBInstanceRequest request);
+
+    /**
+      * ### [](#)Supported database engine
+      * *   PostgreSQL
+      *
+     */
+    CompletableFuture<RebuildReplicationLinkResponse> rebuildReplicationLink(RebuildReplicationLinkRequest request);
 
     /**
       * The operation is phased out.
@@ -2758,6 +2795,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request);
 
+    CompletableFuture<ResizeRCInstanceDiskResponse> resizeRCInstanceDisk(ResizeRCInstanceDiskRequest request);
+
     /**
       * ### Supported database engines
       * *   RDS MySQL
@@ -2825,6 +2864,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<RevokeOperatorPermissionResponse> revokeOperatorPermission(RevokeOperatorPermissionRequest request);
 
+    CompletableFuture<RunRCInstancesResponse> runRCInstances(RunRCInstancesRequest request);
+
     /**
       * ### Supported database engines
       * *   MySQL
@@ -2839,6 +2880,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<StartDBInstanceResponse> startDBInstance(StartDBInstanceRequest request);
 
+    CompletableFuture<StartRCInstanceResponse> startRCInstance(StartRCInstanceRequest request);
+
     /**
       * ### Supported database engines
       * *   MySQL
@@ -2852,6 +2895,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<StopDBInstanceResponse> stopDBInstance(StopDBInstanceRequest request);
+
+    CompletableFuture<StopRCInstanceResponse> stopRCInstance(StopRCInstanceRequest request);
 
     /**
       * ### Supported database engines
@@ -2897,6 +2942,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SwitchDBInstanceVpcResponse> switchDBInstanceVpc(SwitchDBInstanceVpcRequest request);
+
+    CompletableFuture<SyncRCKeyPairResponse> syncRCKeyPair(SyncRCKeyPairRequest request);
 
     /**
       * ### [](#)Supported database engines
