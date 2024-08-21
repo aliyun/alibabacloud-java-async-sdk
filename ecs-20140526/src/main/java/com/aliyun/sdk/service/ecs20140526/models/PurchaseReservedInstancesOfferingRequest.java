@@ -87,6 +87,10 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
     private String scope;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -114,6 +118,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.scope = builder.scope;
+        this.startTime = builder.startTime;
         this.tag = builder.tag;
         this.zoneId = builder.zoneId;
     }
@@ -258,6 +263,13 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -290,6 +302,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String scope; 
+        private String startTime; 
         private java.util.List < Tag> tag; 
         private String zoneId; 
 
@@ -317,6 +330,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.scope = request.scope;
+            this.startTime = request.startTime;
             this.tag = request.tag;
             this.zoneId = request.zoneId;
         } 
@@ -523,6 +537,15 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
             this.scope = scope;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

@@ -209,7 +209,7 @@ public class DescribeImageSharePermissionRequest extends Request {
          * 
          * Pages start from page 1.
          * 
-         * Default value: 1.
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);

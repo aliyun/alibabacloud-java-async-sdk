@@ -241,7 +241,7 @@ public class DescribeImageComponentsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 500.
+         * The maximum number of entries per page. Valid values: 1 to 500.
          * <p>
          * 
          * Default value: 50.
