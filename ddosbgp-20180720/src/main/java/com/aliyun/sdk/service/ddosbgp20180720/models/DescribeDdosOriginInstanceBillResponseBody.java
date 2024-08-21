@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDdosOriginInstanceBillResponseBody</p>
  */
 public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AssetStatus")
+    private Integer assetStatus;
+
     @com.aliyun.core.annotation.NameInMap("DebtStatus")
     private Long debtStatus;
 
@@ -57,6 +60,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     private Long totalFlowOv;
 
     private DescribeDdosOriginInstanceBillResponseBody(Builder builder) {
+        this.assetStatus = builder.assetStatus;
         this.debtStatus = builder.debtStatus;
         this.flowList = builder.flowList;
         this.flowRegion = builder.flowRegion;
@@ -80,6 +84,13 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
 
     public static DescribeDdosOriginInstanceBillResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return assetStatus
+     */
+    public Integer getAssetStatus() {
+        return this.assetStatus;
     }
 
     /**
@@ -188,6 +199,7 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer assetStatus; 
         private Long debtStatus; 
         private java.util.List < FlowList> flowList; 
         private java.util.Map < String, ? > flowRegion; 
@@ -203,6 +215,14 @@ public class DescribeDdosOriginInstanceBillResponseBody extends TeaModel {
         private Long status; 
         private Long totalFlowCn; 
         private Long totalFlowOv; 
+
+        /**
+         * AssetStatus.
+         */
+        public Builder assetStatus(Integer assetStatus) {
+            this.assetStatus = assetStatus;
+            return this;
+        }
 
         /**
          * The payment status. Valid values:
