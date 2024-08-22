@@ -20,6 +20,14 @@ public class AddTaskRequest extends Request {
     private String callbackUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlashSmsTemplateId")
+    private Long flashSmsTemplateId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlashSmsType")
+    private Long flashSmsType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxConcurrency")
     private Long maxConcurrency;
 
@@ -97,6 +105,8 @@ public class AddTaskRequest extends Request {
         super(builder);
         this.callTimeList = builder.callTimeList;
         this.callbackUrl = builder.callbackUrl;
+        this.flashSmsTemplateId = builder.flashSmsTemplateId;
+        this.flashSmsType = builder.flashSmsType;
         this.maxConcurrency = builder.maxConcurrency;
         this.name = builder.name;
         this.ownerId = builder.ownerId;
@@ -142,6 +152,20 @@ public class AddTaskRequest extends Request {
      */
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    /**
+     * @return flashSmsTemplateId
+     */
+    public Long getFlashSmsTemplateId() {
+        return this.flashSmsTemplateId;
+    }
+
+    /**
+     * @return flashSmsType
+     */
+    public Long getFlashSmsType() {
+        return this.flashSmsType;
     }
 
     /**
@@ -273,6 +297,8 @@ public class AddTaskRequest extends Request {
     public static final class Builder extends Request.Builder<AddTaskRequest, Builder> {
         private java.util.List < CallTimeList> callTimeList; 
         private String callbackUrl; 
+        private Long flashSmsTemplateId; 
+        private Long flashSmsType; 
         private Long maxConcurrency; 
         private String name; 
         private Long ownerId; 
@@ -300,6 +326,8 @@ public class AddTaskRequest extends Request {
             super(request);
             this.callTimeList = request.callTimeList;
             this.callbackUrl = request.callbackUrl;
+            this.flashSmsTemplateId = request.flashSmsTemplateId;
+            this.flashSmsType = request.flashSmsType;
             this.maxConcurrency = request.maxConcurrency;
             this.name = request.name;
             this.ownerId = request.ownerId;
@@ -336,6 +364,24 @@ public class AddTaskRequest extends Request {
         public Builder callbackUrl(String callbackUrl) {
             this.putQueryParameter("CallbackUrl", callbackUrl);
             this.callbackUrl = callbackUrl;
+            return this;
+        }
+
+        /**
+         * 当发送闪信配置为1时，闪信模板ID必填
+         */
+        public Builder flashSmsTemplateId(Long flashSmsTemplateId) {
+            this.putQueryParameter("FlashSmsTemplateId", flashSmsTemplateId);
+            this.flashSmsTemplateId = flashSmsTemplateId;
+            return this;
+        }
+
+        /**
+         * 发送闪信配置
+         */
+        public Builder flashSmsType(Long flashSmsType) {
+            this.putQueryParameter("FlashSmsType", flashSmsType);
+            this.flashSmsType = flashSmsType;
             return this;
         }
 

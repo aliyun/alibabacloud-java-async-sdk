@@ -247,6 +247,15 @@ public class TaskListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("FlashSmsTemplateId")
+        private Long flashSmsTemplateId;
+
+        @com.aliyun.core.annotation.NameInMap("FlashSmsTemplateName")
+        private String flashSmsTemplateName;
+
+        @com.aliyun.core.annotation.NameInMap("FlashSmsType")
+        private Long flashSmsType;
+
         @com.aliyun.core.annotation.NameInMap("ImportTime")
         private String importTime;
 
@@ -301,6 +310,9 @@ public class TaskListResponseBody extends TeaModel {
             this.allowDayOfWeek = builder.allowDayOfWeek;
             this.callType = builder.callType;
             this.createTime = builder.createTime;
+            this.flashSmsTemplateId = builder.flashSmsTemplateId;
+            this.flashSmsTemplateName = builder.flashSmsTemplateName;
+            this.flashSmsType = builder.flashSmsType;
             this.importTime = builder.importTime;
             this.intentTags = builder.intentTags;
             this.invalidReCall = builder.invalidReCall;
@@ -360,6 +372,27 @@ public class TaskListResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return flashSmsTemplateId
+         */
+        public Long getFlashSmsTemplateId() {
+            return this.flashSmsTemplateId;
+        }
+
+        /**
+         * @return flashSmsTemplateName
+         */
+        public String getFlashSmsTemplateName() {
+            return this.flashSmsTemplateName;
+        }
+
+        /**
+         * @return flashSmsType
+         */
+        public Long getFlashSmsType() {
+            return this.flashSmsType;
         }
 
         /**
@@ -480,6 +513,9 @@ public class TaskListResponseBody extends TeaModel {
             private String allowDayOfWeek; 
             private Long callType; 
             private String createTime; 
+            private Long flashSmsTemplateId; 
+            private String flashSmsTemplateName; 
+            private Long flashSmsType; 
             private String importTime; 
             private java.util.List < IntentTags> intentTags; 
             private Long invalidReCall; 
@@ -534,6 +570,30 @@ public class TaskListResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * 闪信模板id
+             */
+            public Builder flashSmsTemplateId(Long flashSmsTemplateId) {
+                this.flashSmsTemplateId = flashSmsTemplateId;
+                return this;
+            }
+
+            /**
+             * 闪信模板名称
+             */
+            public Builder flashSmsTemplateName(String flashSmsTemplateName) {
+                this.flashSmsTemplateName = flashSmsTemplateName;
+                return this;
+            }
+
+            /**
+             * 发送闪信配置，可选0，1；0表示否，1表示是
+             */
+            public Builder flashSmsType(Long flashSmsType) {
+                this.flashSmsType = flashSmsType;
                 return this;
             }
 

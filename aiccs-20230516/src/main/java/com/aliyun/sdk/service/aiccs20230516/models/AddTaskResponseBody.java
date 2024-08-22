@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddTaskResponseBody</p>
  */
 public class AddTaskResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
@@ -30,6 +33,7 @@ public class AddTaskResponseBody extends TeaModel {
     private Long timestamp;
 
     private AddTaskResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
         this.model = builder.model;
@@ -44,6 +48,13 @@ public class AddTaskResponseBody extends TeaModel {
 
     public static AddTaskResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -89,12 +100,21 @@ public class AddTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Long code; 
         private String message; 
         private Model model; 
         private String requestId; 
         private Boolean success; 
         private Long timestamp; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * Code.
