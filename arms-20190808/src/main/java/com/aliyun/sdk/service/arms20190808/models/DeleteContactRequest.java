@@ -54,7 +54,7 @@ public class DeleteContactRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **DeleteContact**.
+         * The ID of the alert contact.
          */
         public Builder contactId(Long contactId) {
             this.putQueryParameter("ContactId", contactId);

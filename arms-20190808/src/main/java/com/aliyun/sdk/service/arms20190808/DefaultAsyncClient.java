@@ -383,6 +383,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ************
+      *
+     */
     @Override
     public CompletableFuture<CreateAlertContactGroupResponse> createAlertContactGroup(CreateAlertContactGroupRequest request) {
         try {
@@ -819,6 +823,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The current operation is no longer maintained. Call the DeleteAlertRule operation of Alert Management (New) to delete alert rules.
+      *
+     */
     @Override
     public CompletableFuture<DeleteAlertRulesResponse> deleteAlertRules(DeleteAlertRulesRequest request) {
         try {
@@ -1006,7 +1014,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+      * *   You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+      * *   You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the [User Center](https://usercenter2.aliyun.com/refund/refund) to unsubscribe from workspaces.
       *
      */
     @Override
@@ -1885,6 +1894,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     @Override
     public CompletableFuture<GetRumDataForPageResponse> getRumDataForPage(GetRumDataForPageRequest request) {
         try {
@@ -1899,6 +1912,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     @Override
     public CompletableFuture<GetRumExceptionStackResponse> getRumExceptionStack(GetRumExceptionStackRequest request) {
         try {
@@ -2450,6 +2467,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
+      *
+     */
     @Override
     public CompletableFuture<ListGrafanaWorkspaceResponse> listGrafanaWorkspace(ListGrafanaWorkspaceRequest request) {
         try {

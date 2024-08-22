@@ -49,7 +49,7 @@ public class QueryReleaseMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned metric data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class QueryReleaseMetricResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -73,7 +73,15 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code returned.
+         * <p>
+         * 
+         * *   1001: The request was successful.
+         * *   1002: The request failed.
+         * *   1003: Parameter errors occurred.
+         * *   1004: Authentication failed.
+         * *   1006: The task does not exist.
+         * *   1099: Internal errors occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +89,7 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the synthetic monitoring task.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -89,7 +97,7 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * The message that is returned when the task failed to be created.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +105,7 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +145,7 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
             private Long taskId; 
 
             /**
-             * TaskId.
+             * The ID of the synthetic monitoring task.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;

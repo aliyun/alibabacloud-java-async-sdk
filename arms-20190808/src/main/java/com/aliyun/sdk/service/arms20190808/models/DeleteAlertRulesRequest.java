@@ -69,7 +69,7 @@ public class DeleteAlertRulesRequest extends Request {
         } 
 
         /**
-         * AlertIds.
+         * The IDs of the alert rules that you want to delete. The value is a JSON array, for example, `[123, 234]`. You can call the SearchAlertRules operation and view the `Id` parameter in the response to obtain the alert rule ID. For more information, see [SearchAlertRules](~~175825~~).
          */
         public Builder alertIds(String alertIds) {
             this.putQueryParameter("AlertIds", alertIds);
@@ -78,7 +78,7 @@ public class DeleteAlertRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Default value: `cn-hangzhou`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

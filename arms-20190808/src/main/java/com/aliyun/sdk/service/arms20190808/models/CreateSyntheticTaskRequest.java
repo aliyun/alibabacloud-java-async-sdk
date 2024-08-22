@@ -257,7 +257,7 @@ public class CreateSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * CommonParam.
+         * The common parameters.
          */
         public Builder commonParam(CommonParam commonParam) {
             String commonParamShrink = shrink(commonParam, "CommonParam", "json");
@@ -267,7 +267,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * Download.
+         * The file download task.
          */
         public Builder download(Download download) {
             String downloadShrink = shrink(download, "Download", "json");
@@ -277,7 +277,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * ExtendInterval.
+         * The frequency.
          */
         public Builder extendInterval(ExtendInterval extendInterval) {
             String extendIntervalShrink = shrink(extendInterval, "ExtendInterval", "json");
@@ -287,7 +287,23 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * IntervalTime.
+         * The interval at which synthetic monitoring is performed. Unit: minutes. Valid values:
+         * <p>
+         * 
+         * *   1
+         * *   5
+         * *   10
+         * *   15
+         * *   20
+         * *   30
+         * *   60
+         * *   120
+         * *   180
+         * *   240
+         * *   360
+         * *   480
+         * *   720
+         * *   1440
          */
         public Builder intervalTime(String intervalTime) {
             this.putQueryParameter("IntervalTime", intervalTime);
@@ -296,7 +312,11 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * IntervalType.
+         * The interval type.
+         * <p>
+         * 
+         * *   0: daily
+         * *   1: custom frequency
          */
         public Builder intervalType(String intervalType) {
             this.putQueryParameter("IntervalType", intervalType);
@@ -305,7 +325,12 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * IpType.
+         * The IP address type:
+         * <p>
+         * 
+         * *   0: an automatic IP address
+         * *   1: IPv4
+         * *   2: IPv6
          */
         public Builder ipType(Long ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -314,7 +339,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * MonitorList.
+         * The list of monitoring points.
          */
         public Builder monitorList(java.util.List < MonitorList> monitorList) {
             String monitorListShrink = shrink(monitorList, "MonitorList", "json");
@@ -324,7 +349,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * Navigation.
+         * The monitoring items that are associated with the browse tasks.
          */
         public Builder navigation(Navigation navigation) {
             String navigationShrink = shrink(navigation, "Navigation", "json");
@@ -334,7 +359,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * Net.
+         * The network synthetic monitoring task.
          */
         public Builder net(Net net) {
             String netShrink = shrink(net, "Net", "json");
@@ -344,7 +369,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The API performance synthetic monitoring task.
          */
         public Builder protocol(Protocol protocol) {
             String protocolShrink = shrink(protocol, "Protocol", "json");
@@ -354,7 +379,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the application is located.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -363,7 +388,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the task. To update a synthetic monitoring task, enter the task name and set the **UpdateTask** parameter to **true**.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -372,7 +397,14 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the monitoring task. Valid values:
+         * <p>
+         * 
+         * 1.  3: web page performance - IE
+         * 2.  34: web Page Performance - Chrome
+         * 3.  0: network quality
+         * 4.  40: file download
+         * 5.  7:API performance
          */
         public Builder taskType(Long taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -381,7 +413,11 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * UpdateTask.
+         * Specifies whether to update existing synthetic monitoring tasks.
+         * <p>
+         * 
+         * *   true: updates existing synthetic monitoring tasks.
+         * *   false: creates new synthetic monitoring tasks.
          */
         public Builder updateTask(Boolean updateTask) {
             this.putQueryParameter("UpdateTask", updateTask);
@@ -390,7 +426,7 @@ public class CreateSyntheticTaskRequest extends Request {
         }
 
         /**
-         * Url.
+         * The URL for synthetic monitoring.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);
@@ -456,7 +492,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long symbols; 
 
             /**
-             * IsCritical.
+             * Specifies whether the condition must be met.
              */
             public Builder isCritical(Long isCritical) {
                 this.isCritical = isCritical;
@@ -464,7 +500,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the alert rule.
+             * <p>
+             * 
+             * For network synthetic monitoring, use the following names:
+             * 
+             * *   Latency: PING_SET
+             * *   Packet loss rate: PING_LOST_RATE
+             * *   Hijacking: HIJACKPER
              */
             public Builder name(String name) {
                 this.name = name;
@@ -472,7 +515,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Symbols.
+             * Specifies how the condition is evaluated. Valid values:
+             * <p>
+             * 
+             * *   1: greater than
+             * *   0: less than
              */
             public Builder symbols(Long symbols) {
                 this.symbols = symbols;
@@ -573,7 +620,11 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long startExecutionTime; 
 
             /**
-             * AlarmFlag.
+             * Specifies whether to create an alert rule.
+             * <p>
+             * 
+             * *   1: creates an alert.
+             * *   0: does not create an alert.
              */
             public Builder alarmFlag(String alarmFlag) {
                 this.alarmFlag = alarmFlag;
@@ -581,7 +632,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * AlertList.
+             * The alert parameters.
              */
             public Builder alertList(java.util.List < AlertList> alertList) {
                 this.alertList = alertList;
@@ -589,7 +640,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * AlertNotifierId.
+             * The ID of the alert recipient. Separate multiple recipients with commas (,).
              */
             public Builder alertNotifierId(String alertNotifierId) {
                 this.alertNotifierId = alertNotifierId;
@@ -597,7 +648,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * AlertPolicyId.
+             * The ID of the notification policy.
              */
             public Builder alertPolicyId(String alertPolicyId) {
                 this.alertPolicyId = alertPolicyId;
@@ -605,7 +656,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * MonitorSamples.
+             * Specifies whether to evenly distribute monitoring samples. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder monitorSamples(Long monitorSamples) {
                 this.monitorSamples = monitorSamples;
@@ -613,7 +668,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * StartExecutionTime.
+             * The time when execution starts.
              */
             public Builder startExecutionTime(Long startExecutionTime) {
                 this.startExecutionTime = startExecutionTime;
@@ -798,7 +853,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private String whiteList; 
 
             /**
-             * ConnectionTimeout.
+             * The connection timeout period.
              */
             public Builder connectionTimeout(Double connectionTimeout) {
                 this.connectionTimeout = connectionTimeout;
@@ -806,7 +861,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * DownloadCustomHeaderContent.
+             * The items to be ignored in a certificate error. Pass the values of the check boxes that are separated with vertical bars (|).
              */
             public Builder downloadCustomHeaderContent(String downloadCustomHeaderContent) {
                 this.downloadCustomHeaderContent = downloadCustomHeaderContent;
@@ -814,7 +869,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * DownloadCustomHost.
+             * The custom host mode.
+             * <p>
+             * 
+             * *   1: round robin
+             * *   0: random
              */
             public Builder downloadCustomHost(Long downloadCustomHost) {
                 this.downloadCustomHost = downloadCustomHost;
@@ -822,7 +881,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * DownloadCustomHostIp.
+             * The custom host IP address. You can enter multiple IP addresses. Separate the IP addresses with commas (,).
              */
             public Builder downloadCustomHostIp(String downloadCustomHostIp) {
                 this.downloadCustomHostIp = downloadCustomHostIp;
@@ -830,7 +889,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * DownloadIgnoreCertificateError.
+             * The items to be ignored in a certificate error. Pass the values of the check boxes that are separated with vertical bars (|).
              */
             public Builder downloadIgnoreCertificateError(String downloadIgnoreCertificateError) {
                 this.downloadIgnoreCertificateError = downloadIgnoreCertificateError;
@@ -838,7 +897,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * DownloadKernel.
+             * The kernel type.
+             * <p>
+             * 
+             * *   1: curl
+             * *   0: WinInet
              */
             public Builder downloadKernel(Long downloadKernel) {
                 this.downloadKernel = downloadKernel;
@@ -846,7 +909,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * DownloadRedirection.
+             * Specifies whether to support redirection.
              */
             public Builder downloadRedirection(Long downloadRedirection) {
                 this.downloadRedirection = downloadRedirection;
@@ -854,7 +917,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * DownloadTransmissionSize.
+             * The size of the download file. Unit: KB.
              */
             public Builder downloadTransmissionSize(Long downloadTransmissionSize) {
                 this.downloadTransmissionSize = downloadTransmissionSize;
@@ -862,7 +925,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * MonitorTimeout.
+             * The monitoring duration.
              */
             public Builder monitorTimeout(Long monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
@@ -870,7 +933,12 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * QuickProtocol.
+             * The QUIC protocol type.
+             * <p>
+             * 
+             * *   1: http1
+             * *   2: http2
+             * *   3: http3
              */
             public Builder quickProtocol(String quickProtocol) {
                 this.quickProtocol = quickProtocol;
@@ -878,7 +946,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ValidateKeywords.
+             * The keyword that is used in verification.
              */
             public Builder validateKeywords(String validateKeywords) {
                 this.validateKeywords = validateKeywords;
@@ -886,7 +954,12 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * VerifyWay.
+             * The verification method.
+             * <p>
+             * 
+             * *   0: no verification
+             * *   1: string verification
+             * *   2: MD5 verification
              */
             public Builder verifyWay(Long verifyWay) {
                 this.verifyWay = verifyWay;
@@ -894,7 +967,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * WhiteList.
+             * The whitelist for DNS hijacking.
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -1007,7 +1080,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private String startTime; 
 
             /**
-             * Days.
+             * The day on which synthetic monitoring is performed.
              */
             public Builder days(java.util.List < Long > days) {
                 this.days = days;
@@ -1015,7 +1088,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * EndHour.
+             * The hour at which synthetic monitoring ends.
              */
             public Builder endHour(Long endHour) {
                 this.endHour = endHour;
@@ -1023,7 +1096,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * EndMinute.
+             * The minute at which synthetic monitoring ends.
              */
             public Builder endMinute(Long endMinute) {
                 this.endMinute = endMinute;
@@ -1031,7 +1104,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * EndTime.
+             * The time when synthetic monitoring ends. The format is `yyyy-MM-dd HH`.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -1039,7 +1112,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * StartHour.
+             * The hour at which synthetic monitoring starts.
              */
             public Builder startHour(Long startHour) {
                 this.startHour = startHour;
@@ -1047,7 +1120,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * StartMinute.
+             * The minute at which synthetic monitoring starts.
              */
             public Builder startMinute(Long startMinute) {
                 this.startMinute = startMinute;
@@ -1055,7 +1128,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * StartTime.
+             * The time when synthetic monitoring starts. The format is `yyyy-MM-dd HH`.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1123,7 +1196,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long netServiceId; 
 
             /**
-             * CityCode.
+             * The ID of the city to which the monitoring point belongs.
              */
             public Builder cityCode(Long cityCode) {
                 this.cityCode = cityCode;
@@ -1131,7 +1204,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * MonitorType.
+             * The carrier type:
+             * <p>
+             * 
+             * *   IDC
+             * *   LastMilie
              */
             public Builder monitorType(Long monitorType) {
                 this.monitorType = monitorType;
@@ -1139,7 +1216,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetServiceId.
+             * The ID of the carrier.
              */
             public Builder netServiceId(Long netServiceId) {
                 this.netServiceId = netServiceId;
@@ -1516,7 +1593,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private Double waitCompletionTime; 
 
             /**
-             * DNSHijackWhiteList.
+             * The whitelist for DNS hijacking.
              */
             public Builder DNSHijackWhiteList(String DNSHijackWhiteList) {
                 this.DNSHijackWhiteList = DNSHijackWhiteList;
@@ -1524,7 +1601,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ElementBlacklist.
+             * The element blacklist.
              */
             public Builder elementBlacklist(String elementBlacklist) {
                 this.elementBlacklist = elementBlacklist;
@@ -1532,7 +1609,13 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ExecuteActiveX.
+             * Specifies whether to execute ActiveX.
+             * <p>
+             * 
+             * *   3: yes
+             * *   0: no
+             * 
+             * >  This parameter is supported only by IE Full Elements.
              */
             public Builder executeActiveX(Long executeActiveX) {
                 this.executeActiveX = executeActiveX;
@@ -1540,7 +1623,13 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ExecuteApplication.
+             * Specifies whether to run applets.
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
+             * 
+             * >  This parameter is supported only by IE Full Elements.
              */
             public Builder executeApplication(Long executeApplication) {
                 this.executeApplication = executeApplication;
@@ -1548,7 +1637,13 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ExecuteScript.
+             * Specifies whether to execute scripts.
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
+             * 
+             * >  This parameter is supported only by IE Full Elements.
              */
             public Builder executeScript(Long executeScript) {
                 this.executeScript = executeScript;
@@ -1556,7 +1651,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * FilterInvalidIP.
+             * Specifies whether to filter invalid IP addresses.
+             * <p>
+             * 
+             * *   1: no
+             * *   0: yes
              */
             public Builder filterInvalidIP(Long filterInvalidIP) {
                 this.filterInvalidIP = filterInvalidIP;
@@ -1564,7 +1663,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * FlowHijackJumpTimes.
+             * The element that is used in DNS hijacking.
              */
             public Builder flowHijackJumpTimes(Long flowHijackJumpTimes) {
                 this.flowHijackJumpTimes = flowHijackJumpTimes;
@@ -1572,7 +1671,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * FlowHijackLogo.
+             * The tag that is used in DNS hijacking.
              */
             public Builder flowHijackLogo(String flowHijackLogo) {
                 this.flowHijackLogo = flowHijackLogo;
@@ -1580,7 +1679,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * MonitorTimeout.
+             * The timeout period of monitoring. Unit: seconds.
              */
             public Builder monitorTimeout(String monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
@@ -1588,7 +1687,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NavAutomaticScrolling.
+             * Specifies whether to automatically scroll up and down the screen to load a page.
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
              */
             public Builder navAutomaticScrolling(String navAutomaticScrolling) {
                 this.navAutomaticScrolling = navAutomaticScrolling;
@@ -1596,7 +1699,12 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NavCustomHeader.
+             * The method that is used to customize the header. Valid values:
+             * <p>
+             * 
+             * *   0: disables the customer header.
+             * *   1: modifies the first package.
+             * *   2: modifies all packages.
              */
             public Builder navCustomHeader(String navCustomHeader) {
                 this.navCustomHeader = navCustomHeader;
@@ -1604,7 +1712,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NavCustomHeaderContent.
+             * The format of the custom header. You can specify multiple fields. Separate the fields with vertical bars (|).
              */
             public Builder navCustomHeaderContent(String navCustomHeaderContent) {
                 this.navCustomHeaderContent = navCustomHeaderContent;
@@ -1612,7 +1720,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NavCustomHost.
+             * The custom host mode.
+             * <p>
+             * 
+             * *   1: round robin
+             * *   0: random
              */
             public Builder navCustomHost(Long navCustomHost) {
                 this.navCustomHost = navCustomHost;
@@ -1620,7 +1732,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NavCustomHostIp.
+             * The custom host IP address. You can enter multiple IP addresses. Separate the IP addresses with commas (,).
              */
             public Builder navCustomHostIp(String navCustomHostIp) {
                 this.navCustomHostIp = navCustomHostIp;
@@ -1628,7 +1740,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NavDisableCache.
+             * Specifies whether to disable caching.
+             * <p>
+             * 
+             * *   1: disable
+             * *   0: enable
              */
             public Builder navDisableCache(Long navDisableCache) {
                 this.navDisableCache = navDisableCache;
@@ -1636,7 +1752,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NavDisableCompression.
+             * Specifies whether to enable the feature of using the Accept-Encoding field to determine whether to accept compressed files.
+             * <p>
+             * 
+             * *   1: disable
+             * *   0: enable
              */
             public Builder navDisableCompression(String navDisableCompression) {
                 this.navDisableCompression = navDisableCompression;
@@ -1644,7 +1764,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NavIgnoreCertificateError.
+             * Specifies whether to ignore certificate errors during certificate verification in the SSL handshake and continue browsing.
+             * <p>
+             * 
+             * *   1: ignore
+             * *   0: does not ignore
              */
             public Builder navIgnoreCertificateError(Long navIgnoreCertificateError) {
                 this.navIgnoreCertificateError = navIgnoreCertificateError;
@@ -1652,7 +1776,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NavRedirection.
+             * Specifies whether to continue browsing after a redirection occurs.
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
              */
             public Builder navRedirection(Long navRedirection) {
                 this.navRedirection = navRedirection;
@@ -1660,7 +1788,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NavReturnElement.
+             * Specifies whether to return the elements on the page.
+             * <p>
+             * 
+             * *   1: no. Returns the basic document data.
+             * *   2: yes. Returns all document data.
              */
             public Builder navReturnElement(Long navReturnElement) {
                 this.navReturnElement = navReturnElement;
@@ -1668,7 +1800,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * PageTamper.
+             * The web page defacement.
              */
             public Builder pageTamper(String pageTamper) {
                 this.pageTamper = pageTamper;
@@ -1676,7 +1808,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ProcessName.
+             * The process ID.
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -1684,7 +1816,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * QUICDomain.
+             * The domain name of the QUIC request element.
+             * <p>
+             * 
+             * >  This parameter is supported by all elements of only Chrome
              */
             public Builder QUICDomain(String QUICDomain) {
                 this.QUICDomain = QUICDomain;
@@ -1692,7 +1827,16 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * QUICVersion.
+             * The Quick UDP Internet Connections (QUIC) protocol version. Default value: 0. Valid values:
+             * <p>
+             * 
+             * *
+             * *   35
+             * *   39
+             * *   43
+             * *   44
+             * 
+             * >  This parameter is supported by all elements of only Chrome
              */
             public Builder QUICVersion(Long QUICVersion) {
                 this.QUICVersion = QUICVersion;
@@ -1700,7 +1844,12 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * RequestHeader.
+             * Specifies whether to return the request header.
+             * <p>
+             * 
+             * *   0: does not return the response header.
+             * *   1: returns the basic document header.
+             * *   2: returns all headers.
              */
             public Builder requestHeader(Long requestHeader) {
                 this.requestHeader = requestHeader;
@@ -1708,7 +1857,12 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ResponseHeader.
+             * The method that is used to return the response header. Valid values:
+             * <p>
+             * 
+             * *   0: does not return the response header.
+             * *   1: returns the basic document header.
+             * *   2: returns all headers.
              */
             public Builder responseHeader(Long responseHeader) {
                 this.responseHeader = responseHeader;
@@ -1716,7 +1870,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * SlowElementThreshold.
+             * The time threshold that is used to define a slow element. Unit: seconds.
              */
             public Builder slowElementThreshold(Double slowElementThreshold) {
                 this.slowElementThreshold = slowElementThreshold;
@@ -1724,7 +1878,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * VerifyStringBlacklist.
+             * The blacklist for string verification.
              */
             public Builder verifyStringBlacklist(String verifyStringBlacklist) {
                 this.verifyStringBlacklist = verifyStringBlacklist;
@@ -1732,7 +1886,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * VerifyStringWhiteList.
+             * The whitelist for string verification.
              */
             public Builder verifyStringWhiteList(String verifyStringWhiteList) {
                 this.verifyStringWhiteList = verifyStringWhiteList;
@@ -1740,7 +1894,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * WaitCompletionTime.
+             * The timeout period of waiting for the monitoring to complete.
              */
             public Builder waitCompletionTime(Double waitCompletionTime) {
                 this.waitCompletionTime = waitCompletionTime;
@@ -1973,7 +2127,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private String whiteList; 
 
             /**
-             * NetDNSNs.
+             * The DNS server.
              */
             public Builder netDNSNs(String netDNSNs) {
                 this.netDNSNs = netDNSNs;
@@ -1981,7 +2135,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetDNSQueryMethod.
+             * The DNS query method. Valid values:
+             * <p>
+             * 
+             * *   1: recursion
+             * *   2: iteration
              */
             public Builder netDNSQueryMethod(Long netDNSQueryMethod) {
                 this.netDNSQueryMethod = netDNSQueryMethod;
@@ -1989,7 +2147,12 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetDNSServer.
+             * The IP address type of the DNS server.
+             * <p>
+             * 
+             * *   0: IPv4
+             * *   1: IPv6
+             * *   2: an automatic IP address
              */
             public Builder netDNSServer(Long netDNSServer) {
                 this.netDNSServer = netDNSServer;
@@ -1997,7 +2160,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetDNSSwitch.
+             * Specifies whether to enable domain name system (DNS) monitoring.
+             * <p>
+             * 
+             * *   0: Off.
+             * *   1: On. You must set DNS parameters if you want to enable DNS monitoring.
              */
             public Builder netDNSSwitch(Long netDNSSwitch) {
                 this.netDNSSwitch = netDNSSwitch;
@@ -2005,7 +2172,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetDNSTimeout.
+             * The timeout period of DNS monitoring. Default value: 5 seconds. Valid values: 0 to 45 seconds.
              */
             public Builder netDNSTimeout(Long netDNSTimeout) {
                 this.netDNSTimeout = netDNSTimeout;
@@ -2013,7 +2180,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetDigSwitch.
+             * Specifies whether to display the data in the DIG format. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder netDigSwitch(Long netDigSwitch) {
                 this.netDigSwitch = netDigSwitch;
@@ -2021,7 +2192,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetICMPActive.
+             * The protocol type. Valid values:
+             * <p>
+             * 
+             * *   0: ICMP
+             * *   1: TCP
              */
             public Builder netICMPActive(Long netICMPActive) {
                 this.netICMPActive = netICMPActive;
@@ -2029,7 +2204,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetICMPDataCut.
+             * Specifies whether to split packages.
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder netICMPDataCut(Long netICMPDataCut) {
                 this.netICMPDataCut = netICMPDataCut;
@@ -2037,7 +2216,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetICMPInterval.
+             * The interval at which the network synthetic monitoring task is executed. Unit: seconds.
              */
             public Builder netICMPInterval(Long netICMPInterval) {
                 this.netICMPInterval = netICMPInterval;
@@ -2045,7 +2224,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetICMPNum.
+             * The number of packages.
              */
             public Builder netICMPNum(Long netICMPNum) {
                 this.netICMPNum = netICMPNum;
@@ -2053,7 +2232,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetICMPSize.
+             * The package size.
              */
             public Builder netICMPSize(Long netICMPSize) {
                 this.netICMPSize = netICMPSize;
@@ -2061,7 +2240,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetICMPSwitch.
+             * Specifies whether to enable ping monitoring.
+             * <p>
+             * 
+             * *   0: Off.
+             * *   1: On. You must set Internet control message protocol (ICMP) parameters if you want to enable ping monitoring.
              */
             public Builder netICMPSwitch(Long netICMPSwitch) {
                 this.netICMPSwitch = netICMPSwitch;
@@ -2069,7 +2252,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetICMPTimeout.
+             * The timeout period of Ping monitoring.
              */
             public Builder netICMPTimeout(Long netICMPTimeout) {
                 this.netICMPTimeout = netICMPTimeout;
@@ -2077,7 +2260,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetTraceRouteNum.
+             * The maximum number of active monitoring points.
              */
             public Builder netTraceRouteNum(Long netTraceRouteNum) {
                 this.netTraceRouteNum = netTraceRouteNum;
@@ -2085,7 +2268,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetTraceRouteSwitch.
+             * Specifies whether to enable tracert monitoring.
+             * <p>
+             * 
+             * *   0: Off.
+             * *   1: On. You must set the tracert parameters if you want to enable tracert monitoring.
              */
             public Builder netTraceRouteSwitch(Long netTraceRouteSwitch) {
                 this.netTraceRouteSwitch = netTraceRouteSwitch;
@@ -2093,7 +2280,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * NetTraceRouteTimeout.
+             * The timeout period of tracert monitoring. Valid values: 0 to 300 seconds.
              */
             public Builder netTraceRouteTimeout(Long netTraceRouteTimeout) {
                 this.netTraceRouteTimeout = netTraceRouteTimeout;
@@ -2101,7 +2288,10 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * WhiteList.
+             * The whitelist for DNS hijacking. The format is `Domain name: Matching rule`.
+             * <p>
+             * 
+             * >  Wireless application protocol (WAP) networks do not support DNS hijacking.
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -2154,7 +2344,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of **form-data**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2162,7 +2352,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of **form-data**.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2215,7 +2405,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of **x-www-form-urlencoded**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2223,7 +2413,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of **x-www-form-urlencoded**.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2312,7 +2502,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private java.util.List < UrlEncoding> urlEncoding; 
 
             /**
-             * FormData.
+             * The data that is passed when the **Mode** parameter is set to **form-data**.
              */
             public Builder formData(java.util.List < FormData> formData) {
                 this.formData = formData;
@@ -2320,7 +2510,14 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Language.
+             * The language that is selected when the Mode parameter is set to raw.
+             * <p>
+             * 
+             * *   json
+             * *   xml
+             * *   javascript
+             * *   html
+             * *   text
              */
             public Builder language(String language) {
                 this.language = language;
@@ -2328,7 +2525,12 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Mode.
+             * The data type of the content.
+             * <p>
+             * 
+             * *   form-data
+             * *   x-www-form-urlencoded
+             * *   raw
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -2336,7 +2538,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Raw.
+             * The data that is passed when the **Mode** parameter is set to **raw**.
              */
             public Builder raw(String raw) {
                 this.raw = raw;
@@ -2344,7 +2546,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * UrlEncoding.
+             * The data that is passed when the **Mode** parameter is set to **x-www-form-urlencoded**.
              */
             public Builder urlEncoding(java.util.List < UrlEncoding> urlEncoding) {
                 this.urlEncoding = urlEncoding;
@@ -2397,7 +2599,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the request header.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2405,7 +2607,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the request header.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2470,7 +2672,7 @@ public class CreateSyntheticTaskRequest extends Request {
             private String method; 
 
             /**
-             * Body.
+             * The custom body of a request to initiate an API performance synthetic monitoring task.
              */
             public Builder body(RequestContentBody body) {
                 this.body = body;
@@ -2478,7 +2680,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Header.
+             * The custom header of a request to initiate an API performance synthetic monitoring task.
              */
             public Builder header(java.util.List < RequestContentHeader> header) {
                 this.header = header;
@@ -2486,7 +2688,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Method.
+             * The request method.
+             * <p>
+             * 
+             * *   POST
+             * *   GET
              */
             public Builder method(String method) {
                 this.method = method;
@@ -2623,7 +2829,13 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long verifyWay; 
 
             /**
-             * CharacterEncoding.
+             * The encoding format.
+             * <p>
+             * 
+             * *   0: UTF-8
+             * *   1: GBK
+             * *   2: GB2312
+             * *   3: Unicode
              */
             public Builder characterEncoding(Long characterEncoding) {
                 this.characterEncoding = characterEncoding;
@@ -2631,7 +2843,11 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * CustomHost.
+             * The custom host mode.
+             * <p>
+             * 
+             * *   1: round robin
+             * *   0: random
              */
             public Builder customHost(Long customHost) {
                 this.customHost = customHost;
@@ -2639,7 +2855,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * CustomHostIp.
+             * The custom host IP address. You can enter multiple IP addresses. Separate the IP addresses with commas (,).
              */
             public Builder customHostIp(String customHostIp) {
                 this.customHostIp = customHostIp;
@@ -2647,7 +2863,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ProtocolConnectionTime.
+             * The connection timeout period of the protocol. Unit: seconds.
              */
             public Builder protocolConnectionTime(Long protocolConnectionTime) {
                 this.protocolConnectionTime = protocolConnectionTime;
@@ -2655,7 +2871,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ProtocolMonitorTimeout.
+             * The timeout period of API performance synthetic monitoring. Unit: seconds.
              */
             public Builder protocolMonitorTimeout(String protocolMonitorTimeout) {
                 this.protocolMonitorTimeout = protocolMonitorTimeout;
@@ -2663,7 +2879,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ReceivedDataSize.
+             * The size of the received data. This parameter is required when you set the value of the VerifyWay parameter to 2.
              */
             public Builder receivedDataSize(Long receivedDataSize) {
                 this.receivedDataSize = receivedDataSize;
@@ -2671,7 +2887,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * RequestContent.
+             * The request content, including the request header and request body.
              */
             public Builder requestContent(RequestContent requestContent) {
                 this.requestContent = requestContent;
@@ -2679,7 +2895,7 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * VerifyContent.
+             * The verification string.
              */
             public Builder verifyContent(String verifyContent) {
                 this.verifyContent = verifyContent;
@@ -2687,7 +2903,13 @@ public class CreateSyntheticTaskRequest extends Request {
             }
 
             /**
-             * VerifyWay.
+             * The method that is used to verify the response content.
+             * <p>
+             * 
+             * *   0: no verification.
+             * *   1: exact match with the verification string.
+             * *   2: partial match with the verification string.
+             * *   3: MD5 verification.
              */
             public Builder verifyWay(Long verifyWay) {
                 this.verifyWay = verifyWay;

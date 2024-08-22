@@ -205,7 +205,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > versionConfigs; 
 
             /**
-             * defaultConfig.
+             * The default configuration of the application.
              */
             public Builder defaultConfig(java.util.Map < String, DataBonreeSDKConfigModuleConfigDefaultConfigValue > defaultConfig) {
                 this.defaultConfig = defaultConfig;
@@ -213,7 +213,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * enable.
+             * Indicates whether the configuration is enabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -221,7 +221,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * versionConfigs.
+             * The version configurations of the application.
              */
             public Builder versionConfigs(java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValue > versionConfigs) {
                 this.versionConfigs = versionConfigs;
@@ -262,7 +262,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private ModuleConfig moduleConfig; 
 
             /**
-             * moduleConfig.
+             * The module configuration.
              */
             public Builder moduleConfig(ModuleConfig moduleConfig) {
                 this.moduleConfig = moduleConfig;
@@ -717,7 +717,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AppGroup.
+             * The group to which the application belongs.
              */
             public Builder appGroup(String appGroup) {
                 this.appGroup = appGroup;
@@ -733,7 +733,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BonreeSDKConfig.
+             * The mobile collection configurations.
              */
             public Builder bonreeSDKConfig(BonreeSDKConfig bonreeSDKConfig) {
                 this.bonreeSDKConfig = bonreeSDKConfig;

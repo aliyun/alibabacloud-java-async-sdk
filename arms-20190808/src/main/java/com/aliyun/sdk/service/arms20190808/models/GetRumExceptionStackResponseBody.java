@@ -97,7 +97,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The responses code. The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +129,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * Id of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder success(String success) {
             this.success = success;
@@ -189,7 +193,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             private String threadId; 
 
             /**
-             * Lines.
+             * The list of stacks.
              */
             public Builder lines(java.util.List < String > lines) {
                 this.lines = lines;
@@ -197,7 +201,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             }
 
             /**
-             * ThreadId.
+             * The thread ID.
              */
             public Builder threadId(String threadId) {
                 this.threadId = threadId;

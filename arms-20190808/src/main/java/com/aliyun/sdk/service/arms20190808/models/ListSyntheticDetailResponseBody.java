@@ -73,7 +73,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code returned. The status code 200 indicates that the request was successful.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -89,7 +89,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -193,7 +193,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number.
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -201,7 +201,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned on each page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -209,7 +209,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TaskCreateTime.
+             * A reserved field.
              */
             public Builder taskCreateTime(Long taskCreateTime) {
                 this.taskCreateTime = taskCreateTime;
@@ -217,7 +217,7 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries.
              */
             public Builder total(Integer total) {
                 this.total = total;

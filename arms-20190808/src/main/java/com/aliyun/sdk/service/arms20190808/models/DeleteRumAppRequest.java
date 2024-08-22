@@ -83,7 +83,7 @@ public class DeleteRumAppRequest extends Request {
         } 
 
         /**
-         * AppGroup.
+         * The group where the application resides.
          */
         public Builder appGroup(String appGroup) {
             this.putQueryParameter("AppGroup", appGroup);
@@ -92,7 +92,7 @@ public class DeleteRumAppRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -101,7 +101,7 @@ public class DeleteRumAppRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

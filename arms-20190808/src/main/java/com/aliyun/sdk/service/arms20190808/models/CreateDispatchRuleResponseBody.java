@@ -49,7 +49,7 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DispatchRuleId.
+         * The ID of the dispatch policy.
          */
         public Builder dispatchRuleId(Long dispatchRuleId) {
             this.dispatchRuleId = dispatchRuleId;
@@ -57,7 +57,7 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

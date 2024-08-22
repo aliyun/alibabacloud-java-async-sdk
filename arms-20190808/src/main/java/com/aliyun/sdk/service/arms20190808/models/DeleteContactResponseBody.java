@@ -49,7 +49,11 @@ public class DeleteContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * Indicates whether the alert contact is deleted. Valid values:
+         * <p>
+         * 
+         * *   `true`: The alert contact is deleted.
+         * *   `false`: The alert contact is not deleted.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -57,7 +61,7 @@ public class DeleteContactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -341,7 +341,7 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether hosted scenario.
+             * Indicates whether the component is fully managed.
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;

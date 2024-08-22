@@ -49,7 +49,11 @@ public class DeleteAlertRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsSuccess.
+         * Indicates whether the alert rule was deleted.
+         * <p>
+         * 
+         * *   `true`: The alert rule was deleted.
+         * *   `false`: The alert rule failed to be deleted.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -57,7 +61,7 @@ public class DeleteAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

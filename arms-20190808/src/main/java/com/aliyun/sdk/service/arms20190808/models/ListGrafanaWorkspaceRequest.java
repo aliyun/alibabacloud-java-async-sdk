@@ -96,7 +96,7 @@ public class ListGrafanaWorkspaceRequest extends Request {
         } 
 
         /**
-         * AliyunLang.
+         * The language. Valid values: zh and en. Default value: zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);
@@ -105,7 +105,7 @@ public class ListGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Default value: cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -114,7 +114,7 @@ public class ListGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group to which the Prometheus instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -123,7 +123,7 @@ public class ListGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -178,7 +178,7 @@ public class ListGrafanaWorkspaceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -186,7 +186,7 @@ public class ListGrafanaWorkspaceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

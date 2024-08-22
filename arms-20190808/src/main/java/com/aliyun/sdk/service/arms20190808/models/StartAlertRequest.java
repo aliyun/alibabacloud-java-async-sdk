@@ -69,7 +69,7 @@ public class StartAlertRequest extends Request {
         } 
 
         /**
-         * AlertId.
+         * The ID of the alert rule. You can call the SearchAlertRules operation and view the `Id` parameter in the response. For more information, see [SearchAlertRules](~~175825~~).
          */
         public Builder alertId(String alertId) {
             this.putQueryParameter("AlertId", alertId);
@@ -78,7 +78,7 @@ public class StartAlertRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. Set the value to `cn-hangzhou`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

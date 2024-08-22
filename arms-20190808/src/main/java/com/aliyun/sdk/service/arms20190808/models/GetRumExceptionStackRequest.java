@@ -124,7 +124,7 @@ public class GetRumExceptionStackRequest extends Request {
         } 
 
         /**
-         * ExceptionBinaryImages.
+         * The binary images, which represent all executable files loaded into the process address space when a crash occurs.
          */
         public Builder exceptionBinaryImages(String exceptionBinaryImages) {
             this.putQueryParameter("ExceptionBinaryImages", exceptionBinaryImages);
@@ -133,7 +133,7 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * ExceptionStack.
+         * The exception stack information. Set the value to a JSON string. call_stack.info represents the stack information, call_stack.thread.name represents the thread name, and call_stack.thread.id represents the thread ID. This parameter is exactly the same as the exception.stack parameter in the logstore-rum Logstore of Simple Log Service.
          */
         public Builder exceptionStack(String exceptionStack) {
             this.putQueryParameter("ExceptionStack", exceptionStack);
@@ -142,7 +142,7 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * ExceptionThreadId.
+         * The ID of the exception thread.
          */
         public Builder exceptionThreadId(String exceptionThreadId) {
             this.putQueryParameter("ExceptionThreadId", exceptionThreadId);
@@ -151,7 +151,7 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The application ID.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -160,7 +160,7 @@ public class GetRumExceptionStackRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -172,9 +172,9 @@ public class GetRumExceptionStackRequest extends Request {
          * The file type. Valid values:
          * <p>
          * 
-         * *   source-map: SourceMap files
-         * *   mapping: symbol table files for Android
-         * *   dsym: dSYM files for iOS
+         * - source-map: SourceMap files
+         * - mapping: symbol table files for Android
+         * - dsym: dSYM files for iOS
          */
         public Builder sourcemapType(String sourcemapType) {
             this.putQueryParameter("SourcemapType", sourcemapType);

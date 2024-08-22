@@ -112,7 +112,7 @@ public class ListIntegrationRequest extends Request {
         } 
 
         /**
-         * IntegrationName.
+         * The name of the alert integration.
          */
         public Builder integrationName(String integrationName) {
             this.putQueryParameter("IntegrationName", integrationName);
@@ -121,7 +121,11 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * IntegrationProductType.
+         * The type of the alert integration. Valid values:
+         * <p>
+         * 
+         * *   CLOUD_MONITOR: CloudMonitor
+         * *   LOG_SERVICE: Log Service
          */
         public Builder integrationProductType(String integrationProductType) {
             this.putQueryParameter("IntegrationProductType", integrationProductType);
@@ -130,7 +134,11 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * IsDetail.
+         * Specifies whether to display the details of each alert integration:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isDetail(Boolean isDetail) {
             this.putQueryParameter("IsDetail", isDetail);
@@ -139,7 +147,7 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * Page.
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -148,7 +156,7 @@ public class ListIntegrationRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of alert integrations to return on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

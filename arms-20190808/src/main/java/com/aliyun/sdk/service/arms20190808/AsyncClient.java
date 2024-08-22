@@ -77,6 +77,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateAlertContactResponse> createAlertContact(CreateAlertContactRequest request);
 
+    /**
+      * ************
+      *
+     */
     CompletableFuture<CreateAlertContactGroupResponse> createAlertContactGroup(CreateAlertContactGroupRequest request);
 
     CompletableFuture<CreateDispatchRuleResponse> createDispatchRule(CreateDispatchRuleRequest request);
@@ -153,6 +157,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteAlertRuleResponse> deleteAlertRule(DeleteAlertRuleRequest request);
 
+    /**
+      * The current operation is no longer maintained. Call the DeleteAlertRule operation of Alert Management (New) to delete alert rules.
+      *
+     */
     CompletableFuture<DeleteAlertRulesResponse> deleteAlertRules(DeleteAlertRulesRequest request);
 
     CompletableFuture<DeleteAppListResponse> deleteAppList(DeleteAppListRequest request);
@@ -184,7 +192,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteGrafanaResourceResponse> deleteGrafanaResource(DeleteGrafanaResourceRequest request);
 
     /**
-      * >  You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+      * *   You can delete workspaces only in Managed Service for Prometheus Beta Edition, which is `free of charge`.
+      * *   You cannot delete workspaces in Managed Service for Prometheus Developer Edition, Pro Edition, and Advanced Edition. You can go to the [User Center](https://usercenter2.aliyun.com/refund/refund) to unsubscribe from workspaces.
       *
      */
     CompletableFuture<DeleteGrafanaWorkspaceResponse> deleteGrafanaWorkspace(DeleteGrafanaWorkspaceRequest request);
@@ -343,8 +352,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetRumAppsResponse> getRumApps(GetRumAppsRequest request);
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     CompletableFuture<GetRumDataForPageResponse> getRumDataForPage(GetRumDataForPageRequest request);
 
+    /**
+      * Real User Monitoring (RUM) is available only in the China (Hangzhou), Singapore, and US (Silicon Valley) regions. Select the correct endpoint.
+      *
+     */
     CompletableFuture<GetRumExceptionStackResponse> getRumExceptionStack(GetRumExceptionStackRequest request);
 
     /**
@@ -452,6 +469,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListEventBridgeIntegrationsResponse> listEventBridgeIntegrations(ListEventBridgeIntegrationsRequest request);
 
+    /**
+      * >The list returned by this operation includes the workspaces of Developer Edition, Expert Edition, and Advanced Edition. The list does not include the workspaces of Shared Edition.
+      *
+     */
     CompletableFuture<ListGrafanaWorkspaceResponse> listGrafanaWorkspace(ListGrafanaWorkspaceRequest request);
 
     CompletableFuture<ListInsightsEventsResponse> listInsightsEvents(ListInsightsEventsRequest request);

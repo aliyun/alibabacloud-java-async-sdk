@@ -109,7 +109,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -117,7 +117,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -125,7 +125,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -141,7 +141,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -149,7 +149,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the application is deleted.
+         * The message that appears when the application is deleted.
          */
         public Builder result(String result) {
             this.result = result;
@@ -157,7 +157,7 @@ public class DeleteRumAppResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;

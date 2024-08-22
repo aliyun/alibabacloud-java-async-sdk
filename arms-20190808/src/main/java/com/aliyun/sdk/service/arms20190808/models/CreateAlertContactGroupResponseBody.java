@@ -49,7 +49,7 @@ public class CreateAlertContactGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContactGroupId.
+         * The ID of the alert contact group.
          */
         public Builder contactGroupId(String contactGroupId) {
             this.contactGroupId = contactGroupId;
@@ -57,7 +57,7 @@ public class CreateAlertContactGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -155,7 +155,7 @@ public class GetRumDataForPageRequest extends Request {
         } 
 
         /**
-         * AppGroup.
+         * The group to which the application belongs.
          */
         public Builder appGroup(String appGroup) {
             this.putQueryParameter("AppGroup", appGroup);
@@ -164,7 +164,7 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * The page number.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -173,7 +173,7 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The beginning of the time range to query. The time is accurate to seconds.
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -182,7 +182,7 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -191,7 +191,7 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The application ID.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -200,7 +200,7 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * Query.
+         * A query statement that complies with the query syntax of Simple Log Service Logstore. For more information, see the parameters corresponding to this operation on the console page.
          */
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
@@ -209,7 +209,7 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -218,7 +218,7 @@ public class GetRumDataForPageRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The time is accurate to seconds.
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);

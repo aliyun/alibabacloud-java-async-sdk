@@ -49,7 +49,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PrometheusAlertTemplates.
+         * The returned struct.
          */
         public Builder prometheusAlertTemplates(java.util.List < PrometheusAlertTemplates> prometheusAlertTemplates) {
             this.prometheusAlertTemplates = prometheusAlertTemplates;
@@ -57,7 +57,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the annotation.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -117,7 +117,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the annotation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -170,7 +170,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the tag.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -303,7 +303,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * AlertName.
+             * The name of the alert rule.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -311,7 +311,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Annotations.
+             * The annotations of the alert rule.
              */
             public Builder annotations(java.util.List < Annotations> annotations) {
                 this.annotations = annotations;
@@ -319,7 +319,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The content of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -327,7 +327,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the alert. Valid values: 1 to 1440. Unit: minutes.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -335,7 +335,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * The expression of the alert rule.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -343,7 +343,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The tags of the alert rule.
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -351,7 +351,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the alert rule.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -359,7 +359,7 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the alert rule.
              */
             public Builder version(String version) {
                 this.version = version;

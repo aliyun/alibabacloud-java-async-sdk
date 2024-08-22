@@ -266,7 +266,7 @@ public class ListAddonsResponseBody extends TeaModel {
             private java.util.List < String > services; 
 
             /**
-             * Dependency cluster types.
+             * The supported cluster types.
              */
             public Builder clusterTypes(java.util.List < String > clusterTypes) {
                 this.clusterTypes = clusterTypes;

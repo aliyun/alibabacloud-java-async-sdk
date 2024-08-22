@@ -73,7 +73,15 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code returned.
+         * <p>
+         * 
+         * *   1001: The request was successful.
+         * *   1002: The request failed.
+         * *   1003: Parameter errors occurred.
+         * *   1004: Authentication failed.
+         * *   1006: The task does not exist.
+         * *   1099: Internal errors occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +89,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the monitoring point.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -89,7 +97,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * The message that is returned when the request failed.
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -97,7 +105,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -209,7 +217,11 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             private String netServiceName; 
 
             /**
-             * Busy.
+             * The task status.
+             * <p>
+             * 
+             * *   0: active
+             * *   1: busy
              */
             public Builder busy(Long busy) {
                 this.busy = busy;
@@ -217,7 +229,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * City.
+             * The name of the city to which the monitoring point belongs.
              */
             public Builder city(String city) {
                 this.city = city;
@@ -225,7 +237,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * CityCode.
+             * The ID of the city to which the monitoring point belongs.
              */
             public Builder cityCode(Long cityCode) {
                 this.cityCode = cityCode;
@@ -233,7 +245,11 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * ClientType.
+             * The client type:
+             * <p>
+             * 
+             * *   1: IDC
+             * *   2: Last mile
              */
             public Builder clientType(Long clientType) {
                 this.clientType = clientType;
@@ -241,7 +257,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * District.
+             * The region to which the monitoring point belongs.
              */
             public Builder district(String district) {
                 this.district = district;
@@ -249,7 +265,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * NetServiceId.
+             * The ID of the carrier.
              */
             public Builder netServiceId(Long netServiceId) {
                 this.netServiceId = netServiceId;
@@ -257,7 +273,7 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             }
 
             /**
-             * NetServiceName.
+             * The name of the carrier.
              */
             public Builder netServiceName(String netServiceName) {
                 this.netServiceName = netServiceName;

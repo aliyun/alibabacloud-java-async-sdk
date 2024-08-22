@@ -181,7 +181,7 @@ public class CreateRumUploadFileUrlRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * The process ID (PID) of the application.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);

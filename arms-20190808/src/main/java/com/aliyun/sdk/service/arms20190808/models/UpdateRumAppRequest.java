@@ -190,7 +190,7 @@ public class UpdateRumAppRequest extends Request {
         }
 
         /**
-         * BonreeSDKConfigJson.
+         * The collection configurations of the mobile SDK. You can enable or disable collection configurations based on the app version.
          */
         public Builder bonreeSDKConfigJson(String bonreeSDKConfigJson) {
             this.putQueryParameter("BonreeSDKConfigJson", bonreeSDKConfigJson);

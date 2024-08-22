@@ -333,7 +333,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * Whether or not it is a managed component.
+             * Indicates whether the component is fully managed.
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -571,7 +571,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * Binded resource ID.
+             * The ID of the resource.
              */
             public Builder bindResourceId(String bindResourceId) {
                 this.bindResourceId = bindResourceId;
@@ -587,7 +587,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * IPs for Pod.
+             * The IP address of the pod.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -611,7 +611,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -632,7 +632,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch ID.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

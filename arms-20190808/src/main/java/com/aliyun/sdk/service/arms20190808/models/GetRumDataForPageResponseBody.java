@@ -97,7 +97,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The responses code. The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The result of the operation.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +129,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder success(String success) {
             this.success = success;
@@ -249,7 +253,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             private String total; 
 
             /**
-             * Authentication.
+             * A reserved parameter. Ignore this parameter.
              */
             public Builder authentication(String authentication) {
                 this.authentication = authentication;
@@ -257,7 +261,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * Completion.
+             * Indicates whether the query ends. Valid values: true and false.
              */
             public Builder completion(String completion) {
                 this.completion = completion;
@@ -265,7 +269,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The queried data.
              */
             public Builder items(java.util.List < java.util.Map<String, ?>> items) {
                 this.items = items;
@@ -273,7 +277,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number.
              */
             public Builder page(String page) {
                 this.page = page;
@@ -281,7 +285,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries per page.
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -289,7 +293,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * Preference.
+             * A reserved parameter. Ignore this parameter.
              */
             public Builder preference(String preference) {
                 this.preference = preference;
@@ -297,7 +301,7 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(String total) {
                 this.total = total;

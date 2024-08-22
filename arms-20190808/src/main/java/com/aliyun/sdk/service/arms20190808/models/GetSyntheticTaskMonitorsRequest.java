@@ -54,7 +54,7 @@ public class GetSyntheticTaskMonitorsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region in which the application is located.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

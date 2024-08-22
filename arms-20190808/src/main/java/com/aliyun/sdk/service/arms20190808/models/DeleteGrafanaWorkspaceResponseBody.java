@@ -97,7 +97,7 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +105,11 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the workspace was deleted. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -113,7 +117,7 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +125,7 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +133,11 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +145,7 @@ public class DeleteGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The ID of the trace. The ID is used to query the details of a request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

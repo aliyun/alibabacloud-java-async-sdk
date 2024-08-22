@@ -870,7 +870,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * DirectedMode.
+             * Specifies whether to enable simple mode.
              */
             public Builder directedMode(Boolean directedMode) {
                 this.directedMode = directedMode;

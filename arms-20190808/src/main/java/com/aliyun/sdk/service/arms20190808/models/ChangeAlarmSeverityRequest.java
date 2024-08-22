@@ -110,7 +110,7 @@ public class ChangeAlarmSeverityRequest extends Request {
         }
 
         /**
-         * HandlerId.
+         * The ID of the handler.
          */
         public Builder handlerId(Long handlerId) {
             this.putQueryParameter("HandlerId", handlerId);
@@ -119,7 +119,7 @@ public class ChangeAlarmSeverityRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

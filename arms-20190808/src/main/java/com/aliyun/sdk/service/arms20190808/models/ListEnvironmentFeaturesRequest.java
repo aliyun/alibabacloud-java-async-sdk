@@ -82,7 +82,13 @@ public class ListEnvironmentFeaturesRequest extends Request {
         } 
 
         /**
-         * The language. Valid values: zh and en. Default value: zh.
+         * The language. Default value: zh.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   en: English.
+         * *   zh: Chinese.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);

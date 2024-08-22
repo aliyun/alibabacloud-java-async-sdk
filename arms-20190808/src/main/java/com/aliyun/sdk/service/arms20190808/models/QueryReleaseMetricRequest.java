@@ -178,7 +178,7 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * ChangeOrderId.
+         * The ID of the change order.
          */
         public Builder changeOrderId(String changeOrderId) {
             this.putQueryParameter("ChangeOrderId", changeOrderId);
@@ -187,7 +187,7 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * CreateTime.
+         * The time when the change order was created.
          */
         public Builder createTime(Long createTime) {
             this.putQueryParameter("CreateTime", createTime);
@@ -196,7 +196,7 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * MetricType.
+         * The type of the metric that you want to query.
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);
@@ -205,7 +205,7 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The ID of the Enterprise Distributed Application Service (EDAS) or Kubernetes application.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -214,7 +214,7 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * ProxyUserId.
+         * This parameter is not in use.
          */
         public Builder proxyUserId(String proxyUserId) {
             this.putQueryParameter("ProxyUserId", proxyUserId);
@@ -223,7 +223,7 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * ReleaseEndTime.
+         * The end time of the version release.
          */
         public Builder releaseEndTime(Long releaseEndTime) {
             this.putQueryParameter("ReleaseEndTime", releaseEndTime);
@@ -232,7 +232,7 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * ReleaseStartTime.
+         * The start time of the version release.
          */
         public Builder releaseStartTime(Long releaseStartTime) {
             this.putQueryParameter("ReleaseStartTime", releaseStartTime);
@@ -241,7 +241,7 @@ public class QueryReleaseMetricRequest extends Request {
         }
 
         /**
-         * Service.
+         * The service that you want to query.
          */
         public Builder service(String service) {
             this.putQueryParameter("Service", service);

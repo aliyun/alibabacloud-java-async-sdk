@@ -97,7 +97,7 @@ public class DescribeEnvironmentFeatureRequest extends Request {
         } 
 
         /**
-         * Language, en | zh.
+         * The language. Valid values: en and zh.
          */
         public Builder aliyunLang(String aliyunLang) {
             this.putQueryParameter("AliyunLang", aliyunLang);

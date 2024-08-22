@@ -97,7 +97,7 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned result.
          */
         public Builder data(java.util.List < GrafanaWorkspace > data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request parameters are invalid.
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +121,7 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -137,7 +137,7 @@ public class ListGrafanaWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * TraceId.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;

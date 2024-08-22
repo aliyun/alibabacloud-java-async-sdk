@@ -73,7 +73,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         private Long updateTime; 
 
         /**
-         * useCustom.
+         * Indicates whether the custom configuration is used.
          */
         public Builder useCustom(Boolean useCustom) {
             this.useCustom = useCustom;
@@ -81,7 +81,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         }
 
         /**
-         * customConfig.
+         * The custom configuration.
          */
         public Builder customConfig(java.util.Map < String, DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue > customConfig) {
             this.customConfig = customConfig;
@@ -89,7 +89,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         }
 
         /**
-         * description.
+         * The description of the version configuration.
          */
         public Builder description(String description) {
             this.description = description;
@@ -97,7 +97,7 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         }
 
         /**
-         * updateTime.
+         * The time when the version configuration was updated.
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;

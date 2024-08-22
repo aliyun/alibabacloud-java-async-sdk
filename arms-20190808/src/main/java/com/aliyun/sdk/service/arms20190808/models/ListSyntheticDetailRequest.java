@@ -235,7 +235,7 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * Category.
+         * The type of the results. Set the value to SYNTHETIC.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -262,7 +262,7 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The timestamp of the end time of the query. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -271,7 +271,7 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * ExactFilters.
+         * A reserved field.
          */
         public Builder exactFilters(java.util.List < ExactFilters> exactFilters) {
             String exactFiltersShrink = shrink(exactFilters, "ExactFilters", "json");
@@ -295,7 +295,11 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order in which results are sorted. Valid values:
+         * <p>
+         * 
+         * - `ASC`: ascending order
+         * - `DESC`: descending order
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -304,7 +308,7 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The field based on which results are sorted. Set the value to timestamp.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -313,7 +317,7 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * Page.
+         * The page number. Pages start from page 1.
          */
         public Builder page(Integer page) {
             this.putQueryParameter("Page", page);
@@ -322,7 +326,7 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -331,7 +335,7 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. Set the value to cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -340,7 +344,7 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The timestamp of the start time of the query. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -349,7 +353,7 @@ public class ListSyntheticDetailRequest extends Request {
         }
 
         /**
-         * SyntheticType.
+         * The type of the synthetic test. Valid values: 1 and 2. 1 represents an immediate test, and 2 represents a scheduled test.
          */
         public Builder syntheticType(Integer syntheticType) {
             this.putQueryParameter("SyntheticType", syntheticType);
@@ -500,11 +504,7 @@ public class ListSyntheticDetailRequest extends Request {
             private Object value; 
 
             /**
-             * The filter condition. The taskType and dataId fields are supported.
-             * <p>
-             * 
-             * *   To query the list of synthetic test results, set the key to taskType.
-             * *   To query the result details of a synthetic monitoring task, set the key to dataId.
+             * A reserved field.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -512,7 +512,7 @@ public class ListSyntheticDetailRequest extends Request {
             }
 
             /**
-             * The type of the filter condition. Valid values: eq and in. eq: equal to. in: include.
+             * A reserved field.
              */
             public Builder opType(String opType) {
                 this.opType = opType;
@@ -520,7 +520,7 @@ public class ListSyntheticDetailRequest extends Request {
             }
 
             /**
-             * The value of the filter condition. The type of the task. Valid values: 1: ICMP 2: TCP 3: DNS 4: HTTP 5: website speed measurement 6: file download
+             * A reserved field.
              */
             public Builder value(Object value) {
                 this.value = value;

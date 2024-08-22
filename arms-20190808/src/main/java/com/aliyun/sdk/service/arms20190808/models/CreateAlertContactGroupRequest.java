@@ -83,7 +83,7 @@ public class CreateAlertContactGroupRequest extends Request {
         } 
 
         /**
-         * ContactGroupName.
+         * The name of the alert contact group.
          */
         public Builder contactGroupName(String contactGroupName) {
             this.putQueryParameter("ContactGroupName", contactGroupName);
@@ -92,7 +92,7 @@ public class CreateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * ContactIds.
+         * The IDs of contacts in the contact group. Separate multiple contact IDs with spaces. You can call the SearchAlertContact operation to query the contact IDs. For more information, see [SearchAlertContact](~~130703~~).
          */
         public Builder contactIds(String contactIds) {
             this.putQueryParameter("ContactIds", contactIds);
@@ -101,7 +101,7 @@ public class CreateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. Default value: `cn-hangzhou`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

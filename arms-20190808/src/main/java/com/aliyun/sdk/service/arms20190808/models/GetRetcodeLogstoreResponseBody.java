@@ -49,7 +49,7 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned struct.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +121,7 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * Logstore.
+             * The Log Service Logstore.
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -129,7 +129,7 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The Log Service project.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -137,7 +137,7 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -202,7 +202,7 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Message.
+             * The content of the log.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -210,7 +210,7 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             }
 
             /**
-             * RetcodeSLSConfig.
+             * The information about Log Service.
              */
             public Builder retcodeSLSConfig(RetcodeSLSConfig retcodeSLSConfig) {
                 this.retcodeSLSConfig = retcodeSLSConfig;
@@ -218,7 +218,7 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the request.
              */
             public Builder status(String status) {
                 this.status = status;

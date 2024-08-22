@@ -37,7 +37,7 @@ public class DataBonreeSDKConfigModuleConfigDefaultConfigValue extends TeaModel 
         private Boolean enable; 
 
         /**
-         * enable.
+         * Indicates whether the configuration is enabled.
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;

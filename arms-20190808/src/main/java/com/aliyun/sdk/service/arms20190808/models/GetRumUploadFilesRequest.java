@@ -106,7 +106,7 @@ public class GetRumUploadFilesRequest extends Request {
         }
 
         /**
-         * The application ID.
+         * The process ID (PID) of the application.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -124,7 +124,7 @@ public class GetRumUploadFilesRequest extends Request {
         }
 
         /**
-         * The version ID. When this field is not provided, the default response includes all versions.
+         * The version number of the files. If you do not specify this parameter, all versions of the files are returned by default.
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

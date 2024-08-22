@@ -69,7 +69,7 @@ public class DeleteDispatchRuleRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the dispatch policy.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -78,7 +78,7 @@ public class DeleteDispatchRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
