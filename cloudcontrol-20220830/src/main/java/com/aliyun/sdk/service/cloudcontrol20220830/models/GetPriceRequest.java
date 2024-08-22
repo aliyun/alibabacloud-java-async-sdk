@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPriceRequest</p>
  */
 public class GetPriceRequest extends Request {
-    @Path
-    @NameInMap("requestPath")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("requestPath")
     private String requestPath;
 
-    @Query
-    @NameInMap("regionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    @Query
-    @NameInMap("resourceAttributes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceAttributes")
     private java.util.Map < String, ? > resourceAttributes;
 
     private GetPriceRequest(Builder builder) {

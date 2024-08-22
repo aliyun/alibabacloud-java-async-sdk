@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourcesRequest</p>
  */
 public class ListDataSourcesRequest extends Request {
-    @Path
-    @NameInMap("requestPath")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("requestPath")
     private String requestPath;
 
-    @Query
-    @NameInMap("attributeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("attributeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String attributeName;
 
-    @Query
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filter")
     private java.util.Map < String, ? > filter;
 
     private ListDataSourcesRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceTypesResponseBody</p>
  */
 public class ListResourceTypesResponseBody extends TeaModel {
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("resourceTypes")
+    @com.aliyun.core.annotation.NameInMap("resourceTypes")
     private java.util.List < ResourceTypes> resourceTypes;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListResourceTypesResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
     } 
 
     public static class Create extends TeaModel {
-        @NameInMap("permissions")
+        @com.aliyun.core.annotation.NameInMap("permissions")
         private java.util.List < String > permissions;
 
         private Create(Builder builder) {
@@ -173,7 +172,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     }
     public static class Delete extends TeaModel {
-        @NameInMap("permissions")
+        @com.aliyun.core.annotation.NameInMap("permissions")
         private java.util.List < String > permissions;
 
         private Delete(Builder builder) {
@@ -214,7 +213,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     }
     public static class Get extends TeaModel {
-        @NameInMap("permissions")
+        @com.aliyun.core.annotation.NameInMap("permissions")
         private java.util.List < String > permissions;
 
         private Get(Builder builder) {
@@ -255,7 +254,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("permissions")
+        @com.aliyun.core.annotation.NameInMap("permissions")
         private java.util.List < String > permissions;
 
         private List(Builder builder) {
@@ -296,7 +295,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     }
     public static class Update extends TeaModel {
-        @NameInMap("permissions")
+        @com.aliyun.core.annotation.NameInMap("permissions")
         private java.util.List < String > permissions;
 
         private Update(Builder builder) {
@@ -337,19 +336,19 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     }
     public static class Handlers extends TeaModel {
-        @NameInMap("create")
+        @com.aliyun.core.annotation.NameInMap("create")
         private Create create;
 
-        @NameInMap("delete")
+        @com.aliyun.core.annotation.NameInMap("delete")
         private Delete delete;
 
-        @NameInMap("get")
+        @com.aliyun.core.annotation.NameInMap("get")
         private Get get;
 
-        @NameInMap("list")
+        @com.aliyun.core.annotation.NameInMap("list")
         private List list;
 
-        @NameInMap("update")
+        @com.aliyun.core.annotation.NameInMap("update")
         private Update update;
 
         private Handlers(Builder builder) {
@@ -458,16 +457,16 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     }
     public static class Info extends TeaModel {
-        @NameInMap("chargeType")
+        @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
 
-        @NameInMap("deliveryScope")
+        @com.aliyun.core.annotation.NameInMap("deliveryScope")
         private String deliveryScope;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Info(Builder builder) {
@@ -559,61 +558,61 @@ public class ListResourceTypesResponseBody extends TeaModel {
 
     }
     public static class ResourceTypes extends TeaModel {
-        @NameInMap("createOnlyProperties")
+        @com.aliyun.core.annotation.NameInMap("createOnlyProperties")
         private java.util.List < String > createOnlyProperties;
 
-        @NameInMap("deleteOnlyProperties")
+        @com.aliyun.core.annotation.NameInMap("deleteOnlyProperties")
         private java.util.List < String > deleteOnlyProperties;
 
-        @NameInMap("filterProperties")
+        @com.aliyun.core.annotation.NameInMap("filterProperties")
         private java.util.List < String > filterProperties;
 
-        @NameInMap("getOnlyProperties")
+        @com.aliyun.core.annotation.NameInMap("getOnlyProperties")
         private java.util.List < String > getOnlyProperties;
 
-        @NameInMap("getResponseProperties")
+        @com.aliyun.core.annotation.NameInMap("getResponseProperties")
         private java.util.List < String > getResponseProperties;
 
-        @NameInMap("handlers")
+        @com.aliyun.core.annotation.NameInMap("handlers")
         private Handlers handlers;
 
-        @NameInMap("info")
+        @com.aliyun.core.annotation.NameInMap("info")
         private Info info;
 
-        @NameInMap("listOnlyProperties")
+        @com.aliyun.core.annotation.NameInMap("listOnlyProperties")
         private java.util.List < String > listOnlyProperties;
 
-        @NameInMap("listResponseProperties")
+        @com.aliyun.core.annotation.NameInMap("listResponseProperties")
         private java.util.List < String > listResponseProperties;
 
-        @NameInMap("primaryIdentifier")
+        @com.aliyun.core.annotation.NameInMap("primaryIdentifier")
         private String primaryIdentifier;
 
-        @NameInMap("product")
+        @com.aliyun.core.annotation.NameInMap("product")
         private String product;
 
-        @NameInMap("properties")
+        @com.aliyun.core.annotation.NameInMap("properties")
         private java.util.Map < String, ? > properties;
 
-        @NameInMap("publicProperties")
+        @com.aliyun.core.annotation.NameInMap("publicProperties")
         private java.util.List < String > publicProperties;
 
-        @NameInMap("readOnlyProperties")
+        @com.aliyun.core.annotation.NameInMap("readOnlyProperties")
         private java.util.List < String > readOnlyProperties;
 
-        @NameInMap("required")
+        @com.aliyun.core.annotation.NameInMap("required")
         private java.util.List < String > required;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
-        @NameInMap("sensitiveInfoProperties")
+        @com.aliyun.core.annotation.NameInMap("sensitiveInfoProperties")
         private java.util.List < String > sensitiveInfoProperties;
 
-        @NameInMap("updateOnlyProperties")
+        @com.aliyun.core.annotation.NameInMap("updateOnlyProperties")
         private java.util.List < String > updateOnlyProperties;
 
-        @NameInMap("updateTypeProperties")
+        @com.aliyun.core.annotation.NameInMap("updateTypeProperties")
         private java.util.List < String > updateTypeProperties;
 
         private ResourceTypes(Builder builder) {

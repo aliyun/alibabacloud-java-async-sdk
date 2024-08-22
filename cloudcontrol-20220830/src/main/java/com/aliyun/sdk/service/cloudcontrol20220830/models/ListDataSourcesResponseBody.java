@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDataSourcesResponseBody</p>
  */
 public class ListDataSourcesResponseBody extends TeaModel {
-    @NameInMap("dataSources")
+    @com.aliyun.core.annotation.NameInMap("dataSources")
     private java.util.List < DataSources> dataSources;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListDataSourcesResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
     } 
 
     public static class DataSources extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
         private DataSources(Builder builder) {

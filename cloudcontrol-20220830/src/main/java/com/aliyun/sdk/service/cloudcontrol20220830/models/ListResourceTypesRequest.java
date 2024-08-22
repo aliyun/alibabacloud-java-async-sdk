@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudcontrol20220830.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceTypesRequest</p>
  */
 public class ListResourceTypesRequest extends Request {
-    @Path
-    @NameInMap("provider")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("provider")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String provider;
 
-    @Path
-    @NameInMap("product")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("product")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String product;
 
-    @Query
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("resourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceTypes")
     private java.util.List < String > resourceTypes;
 
-    @Header
-    @NameInMap("x-acs-accept-language")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-accept-language")
     private String xAcsAcceptLanguage;
 
     private ListResourceTypesRequest(Builder builder) {
