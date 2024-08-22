@@ -35,6 +35,9 @@ public class CustomContainerConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("port")
     private Integer port;
 
+    @com.aliyun.core.annotation.NameInMap("registryConfig")
+    private RegistryConfig registryConfig;
+
     @com.aliyun.core.annotation.NameInMap("resolvedImageUri")
     private String resolvedImageUri;
 
@@ -47,6 +50,7 @@ public class CustomContainerConfig extends TeaModel {
         this.healthCheckConfig = builder.healthCheckConfig;
         this.image = builder.image;
         this.port = builder.port;
+        this.registryConfig = builder.registryConfig;
         this.resolvedImageUri = builder.resolvedImageUri;
     }
 
@@ -115,6 +119,13 @@ public class CustomContainerConfig extends TeaModel {
     }
 
     /**
+     * @return registryConfig
+     */
+    public RegistryConfig getRegistryConfig() {
+        return this.registryConfig;
+    }
+
+    /**
      * @return resolvedImageUri
      */
     public String getResolvedImageUri() {
@@ -130,6 +141,7 @@ public class CustomContainerConfig extends TeaModel {
         private CustomHealthCheckConfig healthCheckConfig; 
         private String image; 
         private Integer port; 
+        private RegistryConfig registryConfig; 
         private String resolvedImageUri; 
 
         /**
@@ -193,6 +205,14 @@ public class CustomContainerConfig extends TeaModel {
          */
         public Builder port(Integer port) {
             this.port = port;
+            return this;
+        }
+
+        /**
+         * registryConfig.
+         */
+        public Builder registryConfig(RegistryConfig registryConfig) {
+            this.registryConfig = registryConfig;
             return this;
         }
 

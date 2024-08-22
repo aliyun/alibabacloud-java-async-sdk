@@ -23,8 +23,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request);
 
+    /**
+      * If you wish to access applications or functions created in Function Compute via a fixed domain name in a production environment, or if you need to address the forced download behavior when accessing HTTP triggers, you can achieve this by binding a custom domain to your application or function.
+      *
+     */
     CompletableFuture<CreateCustomDomainResponse> createCustomDomain(CreateCustomDomainRequest request);
 
+    /**
+      * In Function Compute, a function serves as the smallest unit of resource scheduling and execution, typically referring to a piece of code written by users that can execute independently in response to specific events or requests.
+      *
+     */
     CompletableFuture<CreateFunctionResponse> createFunction(CreateFunctionRequest request);
 
     CompletableFuture<CreateLayerVersionResponse> createLayerVersion(CreateLayerVersionRequest request);
@@ -121,6 +129,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopAsyncTaskResponse> stopAsyncTask(StopAsyncTaskRequest request);
 
+    /**
+      * Tags are used to identify resources. Tags allow you to categorize, search for, and aggregate resources that have the same characteristics from different dimensions. This facilitates resource management. For more information, see [Tag overview](~~156983~~).
+      *
+     */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);

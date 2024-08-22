@@ -37,6 +37,9 @@ public class TargetTrackingPolicy extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("startTime")
     private String startTime;
 
+    @com.aliyun.core.annotation.NameInMap("timeZone")
+    private String timeZone;
+
     private TargetTrackingPolicy(Builder builder) {
         this.endTime = builder.endTime;
         this.maxCapacity = builder.maxCapacity;
@@ -45,6 +48,7 @@ public class TargetTrackingPolicy extends TeaModel {
         this.minCapacity = builder.minCapacity;
         this.name = builder.name;
         this.startTime = builder.startTime;
+        this.timeZone = builder.timeZone;
     }
 
     public static Builder builder() {
@@ -104,6 +108,13 @@ public class TargetTrackingPolicy extends TeaModel {
         return this.startTime;
     }
 
+    /**
+     * @return timeZone
+     */
+    public String getTimeZone() {
+        return this.timeZone;
+    }
+
     public static final class Builder {
         private String endTime; 
         private Long maxCapacity; 
@@ -112,6 +123,7 @@ public class TargetTrackingPolicy extends TeaModel {
         private Long minCapacity; 
         private String name; 
         private String startTime; 
+        private String timeZone; 
 
         /**
          * endTime.
@@ -166,6 +178,14 @@ public class TargetTrackingPolicy extends TeaModel {
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * timeZone.
+         */
+        public Builder timeZone(String timeZone) {
+            this.timeZone = timeZone;
             return this;
         }
 

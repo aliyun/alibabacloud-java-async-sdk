@@ -29,12 +29,16 @@ public class ScheduledAction extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private Long target;
 
+    @com.aliyun.core.annotation.NameInMap("timeZone")
+    private String timeZone;
+
     private ScheduledAction(Builder builder) {
         this.endTime = builder.endTime;
         this.name = builder.name;
         this.scheduleExpression = builder.scheduleExpression;
         this.startTime = builder.startTime;
         this.target = builder.target;
+        this.timeZone = builder.timeZone;
     }
 
     public static Builder builder() {
@@ -80,12 +84,20 @@ public class ScheduledAction extends TeaModel {
         return this.target;
     }
 
+    /**
+     * @return timeZone
+     */
+    public String getTimeZone() {
+        return this.timeZone;
+    }
+
     public static final class Builder {
         private String endTime; 
         private String name; 
         private String scheduleExpression; 
         private String startTime; 
         private Long target; 
+        private String timeZone; 
 
         /**
          * endTime.
@@ -124,6 +136,14 @@ public class ScheduledAction extends TeaModel {
          */
         public Builder target(Long target) {
             this.target = target;
+            return this;
+        }
+
+        /**
+         * timeZone.
+         */
+        public Builder timeZone(String timeZone) {
+            this.timeZone = timeZone;
             return this;
         }
 

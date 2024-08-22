@@ -92,7 +92,7 @@ public class PutLayerACLRequest extends Request {
         }
 
         /**
-         * acl.
+         * Specify the access permission of the layer. A value of 1 indicates public and a value of 0 indicates private. The default value is 0.
          */
         public Builder acl(String acl) {
             this.putQueryParameter("acl", acl);
@@ -101,7 +101,7 @@ public class PutLayerACLRequest extends Request {
         }
 
         /**
-         * Specifies whether the layer is a public layer. Valid values: true and false.
+         * Specify whether the layer is a public layer. Valid values: true and false.
          */
         public Builder _public(String _public) {
             this.putQueryParameter("public", _public);

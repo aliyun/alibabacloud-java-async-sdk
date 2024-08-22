@@ -92,7 +92,7 @@ public class GetAsyncTaskRequest extends Request {
         }
 
         /**
-         * The asynchronous task ID.
+         * The ID of the asynchronous task.
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -101,7 +101,7 @@ public class GetAsyncTaskRequest extends Request {
         }
 
         /**
-         * The function version or alias.
+         * The version or alias of the function.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

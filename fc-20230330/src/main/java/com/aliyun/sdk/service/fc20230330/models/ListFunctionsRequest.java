@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListFunctionsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("fcVersion")
+    private String fcVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("limit")
     private Integer limit;
 
@@ -25,6 +29,7 @@ public class ListFunctionsRequest extends Request {
 
     private ListFunctionsRequest(Builder builder) {
         super(builder);
+        this.fcVersion = builder.fcVersion;
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
         this.prefix = builder.prefix;
@@ -41,6 +46,13 @@ public class ListFunctionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return fcVersion
+     */
+    public String getFcVersion() {
+        return this.fcVersion;
     }
 
     /**
@@ -65,6 +77,7 @@ public class ListFunctionsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListFunctionsRequest, Builder> {
+        private String fcVersion; 
         private Integer limit; 
         private String nextToken; 
         private String prefix; 
@@ -75,10 +88,20 @@ public class ListFunctionsRequest extends Request {
 
         private Builder(ListFunctionsRequest request) {
             super(request);
+            this.fcVersion = request.fcVersion;
             this.limit = request.limit;
             this.nextToken = request.nextToken;
             this.prefix = request.prefix;
         } 
+
+        /**
+         * fcVersion.
+         */
+        public Builder fcVersion(String fcVersion) {
+            this.putQueryParameter("fcVersion", fcVersion);
+            this.fcVersion = fcVersion;
+            return this;
+        }
 
         /**
          * The number of functions to return. The minimum value is 1 and the maximum value is 100.

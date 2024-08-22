@@ -92,7 +92,7 @@ public class PutAsyncInvokeConfigRequest extends Request {
         }
 
         /**
-         * The configurations of asynchronous function invocation.
+         * The asynchronous invocation configurations.
          */
         public Builder body(PutAsyncInvokeConfigInput body) {
             this.putBodyParameter("body", body);

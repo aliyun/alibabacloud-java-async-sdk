@@ -231,7 +231,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The function version or alias.
+         * The version or alias of the function.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -253,7 +253,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The start time of the period in which the asynchronous tasks are launched.
+         * The start time of the period during which the asynchronous tasks are initiated.
          */
         public Builder startedTimeBegin(Long startedTimeBegin) {
             this.putQueryParameter("startedTimeBegin", startedTimeBegin);
@@ -262,7 +262,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * The end time of the period in which the asynchronous tasks are launched.
+         * The end time of the period during which the asynchronous tasks are initiated.
          */
         public Builder startedTimeEnd(Long startedTimeEnd) {
             this.putQueryParameter("startedTimeEnd", startedTimeEnd);
