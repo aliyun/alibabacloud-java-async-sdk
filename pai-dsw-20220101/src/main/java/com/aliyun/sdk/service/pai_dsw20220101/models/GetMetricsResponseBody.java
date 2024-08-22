@@ -14,8 +14,8 @@ public class GetMetricsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @com.aliyun.core.annotation.NameInMap("DataPoints")
-    private String dataPoints;
+    @com.aliyun.core.annotation.NameInMap("Datapoints")
+    private String datapoints;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -34,7 +34,7 @@ public class GetMetricsResponseBody extends TeaModel {
 
     private GetMetricsResponseBody(Builder builder) {
         this.code = builder.code;
-        this.dataPoints = builder.dataPoints;
+        this.datapoints = builder.datapoints;
         this.message = builder.message;
         this.nextToken = builder.nextToken;
         this.period = builder.period;
@@ -58,10 +58,10 @@ public class GetMetricsResponseBody extends TeaModel {
     }
 
     /**
-     * @return dataPoints
+     * @return datapoints
      */
-    public String getDataPoints() {
-        return this.dataPoints;
+    public String getDatapoints() {
+        return this.datapoints;
     }
 
     /**
@@ -101,7 +101,7 @@ public class GetMetricsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private String dataPoints; 
+        private String datapoints; 
         private String message; 
         private String nextToken; 
         private String period; 
@@ -117,10 +117,10 @@ public class GetMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * DataPoints.
+         * Datapoints.
          */
-        public Builder dataPoints(String dataPoints) {
-            this.dataPoints = dataPoints;
+        public Builder datapoints(String datapoints) {
+            this.datapoints = datapoints;
             return this;
         }
 
