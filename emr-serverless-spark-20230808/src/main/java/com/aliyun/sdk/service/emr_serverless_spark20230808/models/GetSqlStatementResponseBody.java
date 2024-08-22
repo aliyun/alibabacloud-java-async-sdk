@@ -49,7 +49,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;

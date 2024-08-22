@@ -182,7 +182,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * The SQL Compute ID. You can create an SQL Compute in the workspace created in EMR Serverless Spark.
+         * The SQL compute ID. You can create an SQL compute in the workspace created in EMR Serverless Spark.
          */
         public Builder sqlComputeId(String sqlComputeId) {
             this.putBodyParameter("sqlComputeId", sqlComputeId);

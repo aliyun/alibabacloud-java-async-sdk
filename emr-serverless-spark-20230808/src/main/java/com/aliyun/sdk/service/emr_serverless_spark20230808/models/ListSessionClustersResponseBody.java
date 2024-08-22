@@ -109,7 +109,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The SQL Computes.
+         * The SQL computes.
          */
         public Builder sessionClusters(java.util.List < SessionClusters> sessionClusters) {
             this.sessionClusters = sessionClusters;

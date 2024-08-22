@@ -179,11 +179,17 @@ public class GetJobRunResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("configurationOverrides")
         private ConfigurationOverrides configurationOverrides;
 
+        @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
+        private String displayReleaseVersion;
+
         @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
         @com.aliyun.core.annotation.NameInMap("executionTimeoutSeconds")
         private Integer executionTimeoutSeconds;
+
+        @com.aliyun.core.annotation.NameInMap("fusion")
+        private Boolean fusion;
 
         @com.aliyun.core.annotation.NameInMap("jobDriver")
         private JobDriver jobDriver;
@@ -227,8 +233,10 @@ public class GetJobRunResponseBody extends TeaModel {
         private JobRun(Builder builder) {
             this.codeType = builder.codeType;
             this.configurationOverrides = builder.configurationOverrides;
+            this.displayReleaseVersion = builder.displayReleaseVersion;
             this.endTime = builder.endTime;
             this.executionTimeoutSeconds = builder.executionTimeoutSeconds;
+            this.fusion = builder.fusion;
             this.jobDriver = builder.jobDriver;
             this.jobRunId = builder.jobRunId;
             this.log = builder.log;
@@ -267,6 +275,13 @@ public class GetJobRunResponseBody extends TeaModel {
         }
 
         /**
+         * @return displayReleaseVersion
+         */
+        public String getDisplayReleaseVersion() {
+            return this.displayReleaseVersion;
+        }
+
+        /**
          * @return endTime
          */
         public Long getEndTime() {
@@ -278,6 +293,13 @@ public class GetJobRunResponseBody extends TeaModel {
          */
         public Integer getExecutionTimeoutSeconds() {
             return this.executionTimeoutSeconds;
+        }
+
+        /**
+         * @return fusion
+         */
+        public Boolean getFusion() {
+            return this.fusion;
         }
 
         /**
@@ -374,8 +396,10 @@ public class GetJobRunResponseBody extends TeaModel {
         public static final class Builder {
             private String codeType; 
             private ConfigurationOverrides configurationOverrides; 
+            private String displayReleaseVersion; 
             private Long endTime; 
             private Integer executionTimeoutSeconds; 
+            private Boolean fusion; 
             private JobDriver jobDriver; 
             private String jobRunId; 
             private RunLog log; 
@@ -404,10 +428,18 @@ public class GetJobRunResponseBody extends TeaModel {
             }
 
             /**
-             * The task configurations of Spark.
+             * The job configurations of Spark.
              */
             public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
                 this.configurationOverrides = configurationOverrides;
+                return this;
+            }
+
+            /**
+             * displayReleaseVersion.
+             */
+            public Builder displayReleaseVersion(String displayReleaseVersion) {
+                this.displayReleaseVersion = displayReleaseVersion;
                 return this;
             }
 
@@ -424,6 +456,14 @@ public class GetJobRunResponseBody extends TeaModel {
              */
             public Builder executionTimeoutSeconds(Integer executionTimeoutSeconds) {
                 this.executionTimeoutSeconds = executionTimeoutSeconds;
+                return this;
+            }
+
+            /**
+             * fusion.
+             */
+            public Builder fusion(Boolean fusion) {
+                this.fusion = fusion;
                 return this;
             }
 
