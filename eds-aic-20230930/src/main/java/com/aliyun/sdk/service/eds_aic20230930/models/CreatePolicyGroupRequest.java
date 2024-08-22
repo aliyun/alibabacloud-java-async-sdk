@@ -230,97 +230,12 @@ public class CreatePolicyGroupRequest extends Request {
 
     } 
 
-    public static class NetRedirectRule extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Policy")
-        private String policy;
-
-        @com.aliyun.core.annotation.NameInMap("RuleType")
-        private String ruleType;
-
-        @com.aliyun.core.annotation.NameInMap("Target")
-        private String target;
-
-        private NetRedirectRule(Builder builder) {
-            this.policy = builder.policy;
-            this.ruleType = builder.ruleType;
-            this.target = builder.target;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static NetRedirectRule create() {
-            return builder().build();
-        }
-
-        /**
-         * @return policy
-         */
-        public String getPolicy() {
-            return this.policy;
-        }
-
-        /**
-         * @return ruleType
-         */
-        public String getRuleType() {
-            return this.ruleType;
-        }
-
-        /**
-         * @return target
-         */
-        public String getTarget() {
-            return this.target;
-        }
-
-        public static final class Builder {
-            private String policy; 
-            private String ruleType; 
-            private String target; 
-
-            /**
-             * Policy.
-             */
-            public Builder policy(String policy) {
-                this.policy = policy;
-                return this;
-            }
-
-            /**
-             * RuleType.
-             */
-            public Builder ruleType(String ruleType) {
-                this.ruleType = ruleType;
-                return this;
-            }
-
-            /**
-             * Target.
-             */
-            public Builder target(String target) {
-                this.target = target;
-                return this;
-            }
-
-            public NetRedirectRule build() {
-                return new NetRedirectRule(this);
-            } 
-
-        } 
-
-    }
     public static class NetRedirectPolicy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetRedirect")
         private String netRedirect;
 
-        @com.aliyun.core.annotation.NameInMap("NetRedirectRule")
-        private java.util.List < NetRedirectRule> netRedirectRule;
-
         private NetRedirectPolicy(Builder builder) {
             this.netRedirect = builder.netRedirect;
-            this.netRedirectRule = builder.netRedirectRule;
         }
 
         public static Builder builder() {
@@ -338,30 +253,14 @@ public class CreatePolicyGroupRequest extends Request {
             return this.netRedirect;
         }
 
-        /**
-         * @return netRedirectRule
-         */
-        public java.util.List < NetRedirectRule> getNetRedirectRule() {
-            return this.netRedirectRule;
-        }
-
         public static final class Builder {
             private String netRedirect; 
-            private java.util.List < NetRedirectRule> netRedirectRule; 
 
             /**
              * NetRedirect.
              */
             public Builder netRedirect(String netRedirect) {
                 this.netRedirect = netRedirect;
-                return this;
-            }
-
-            /**
-             * NetRedirectRule.
-             */
-            public Builder netRedirectRule(java.util.List < NetRedirectRule> netRedirectRule) {
-                this.netRedirectRule = netRedirectRule;
                 return this;
             }
 

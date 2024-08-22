@@ -123,6 +123,9 @@ public class DescribeTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
+        @com.aliyun.core.annotation.NameInMap("Result")
+        private String result;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -140,6 +143,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             this.invokeId = builder.invokeId;
             this.regionId = builder.regionId;
             this.resourceId = builder.resourceId;
+            this.result = builder.result;
             this.startTime = builder.startTime;
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
@@ -183,6 +187,13 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return result
+         */
+        public String getResult() {
+            return this.result;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -215,6 +226,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String invokeId; 
             private String regionId; 
             private String resourceId; 
+            private String result; 
             private String startTime; 
             private String taskId; 
             private String taskStatus; 
@@ -249,6 +261,14 @@ public class DescribeTasksResponseBody extends TeaModel {
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
+                return this;
+            }
+
+            /**
+             * Result.
+             */
+            public Builder result(String result) {
+                this.result = result;
                 return this;
             }
 
