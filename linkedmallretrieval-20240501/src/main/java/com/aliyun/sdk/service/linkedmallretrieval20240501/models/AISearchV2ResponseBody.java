@@ -98,7 +98,7 @@ public class AISearchV2ResponseBody extends TeaModel {
         private String eventId;
 
         @com.aliyun.core.annotation.NameInMap("responseTime")
-        private String responseTime;
+        private Long responseTime;
 
         private AISearchV2ResponseBodyHeader(Builder builder) {
             this.event = builder.event;
@@ -131,14 +131,14 @@ public class AISearchV2ResponseBody extends TeaModel {
         /**
          * @return responseTime
          */
-        public String getResponseTime() {
+        public Long getResponseTime() {
             return this.responseTime;
         }
 
         public static final class Builder {
             private String event; 
             private String eventId; 
-            private String responseTime; 
+            private Long responseTime; 
 
             /**
              * event.
@@ -159,7 +159,7 @@ public class AISearchV2ResponseBody extends TeaModel {
             /**
              * responseTime.
              */
-            public Builder responseTime(String responseTime) {
+            public Builder responseTime(Long responseTime) {
                 this.responseTime = responseTime;
                 return this;
             }
