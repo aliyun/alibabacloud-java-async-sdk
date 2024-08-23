@@ -69,6 +69,10 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
     private String targetMajorVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpgradeMode")
+    private String upgradeMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
@@ -108,6 +112,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         this.switchTime = builder.switchTime;
         this.switchTimeMode = builder.switchTimeMode;
         this.targetMajorVersion = builder.targetMajorVersion;
+        this.upgradeMode = builder.upgradeMode;
         this.usedTime = builder.usedTime;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
@@ -228,6 +233,13 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
     }
 
     /**
+     * @return upgradeMode
+     */
+    public String getUpgradeMode() {
+        return this.upgradeMode;
+    }
+
+    /**
      * @return usedTime
      */
     public String getUsedTime() {
@@ -284,6 +296,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         private String switchTime; 
         private String switchTimeMode; 
         private String targetMajorVersion; 
+        private String upgradeMode; 
         private String usedTime; 
         private String VPCId; 
         private String vSwitchId; 
@@ -311,6 +324,7 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
             this.switchTime = request.switchTime;
             this.switchTimeMode = request.switchTimeMode;
             this.targetMajorVersion = request.targetMajorVersion;
+            this.upgradeMode = request.upgradeMode;
             this.usedTime = request.usedTime;
             this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
@@ -507,6 +521,15 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         public Builder targetMajorVersion(String targetMajorVersion) {
             this.putQueryParameter("TargetMajorVersion", targetMajorVersion);
             this.targetMajorVersion = targetMajorVersion;
+            return this;
+        }
+
+        /**
+         * UpgradeMode.
+         */
+        public Builder upgradeMode(String upgradeMode) {
+            this.putQueryParameter("UpgradeMode", upgradeMode);
+            this.upgradeMode = upgradeMode;
             return this;
         }
 
