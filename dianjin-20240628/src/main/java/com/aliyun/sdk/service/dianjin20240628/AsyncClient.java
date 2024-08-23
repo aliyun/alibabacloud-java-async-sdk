@@ -53,6 +53,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RunChatResultGenerationResponse> runChatResultGeneration(RunChatResultGenerationRequest request);
 
+    ResponseIterable<RunChatResultGenerationResponseBody> runChatResultGenerationWithResponseIterable(RunChatResultGenerationRequest request);
+
     CompletableFuture<UpdateDocumentResponse> updateDocument(UpdateDocumentRequest request);
 
     CompletableFuture<UpdateLibraryResponse> updateLibrary(UpdateLibraryRequest request);
