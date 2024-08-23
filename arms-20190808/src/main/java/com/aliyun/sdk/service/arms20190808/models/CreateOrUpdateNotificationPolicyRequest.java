@@ -259,19 +259,15 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
          * <p>
          * 
          * *   If you do not specify the groupingFields field, all alerts will be sent to contacts based on `alertname`.
-         * 
          * *   If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.
          * 
-         *     Sample statement:
+         * Sample statement:
          * 
-         * ```
-         * 
-         * { 
-         * "groupWait":5,    // The waiting time for grouping. 
-         * "groupInterval":30,     // The time interval of grouping. 
-         * "groupingFields":["alertname"]       // The field that is used to group alert events. 
-         * }
-         * ```
+         *     { 
+         *     "groupWait":5,    // The waiting time for grouping. 
+         *     "groupInterval":30,     // The time interval of grouping. 
+         *     "groupingFields":["alertname"]       // The field that is used to group alert events. 
+         *     }
          */
         public Builder groupRule(String groupRule) {
             this.putBodyParameter("GroupRule", groupRule);
@@ -302,23 +298,20 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * The matching rules. Sample statement:
+         * The matching rules. Format:
          * <p>
          * 
-         * ```
-         * 
-         * [
-         *  {
-         *  "matchingConditions": [
-         *  { 
-         *  "value": "test",    // The value of the matching condition. 
-         *  "key": "alertname",     // The key of the matching condition. 
-         *  "operator": "eq"   // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
-         *  }
-         *  ]
-         *  } 
-         *  ]
-         * ```
+         *     [
+         *      {
+         *      "matchingConditions": [
+         *      { 
+         *      "value": "test",    // The value of the matching condition. 
+         *      "key": "alertname",     // The key of the matching condition. 
+         *      "operator": "eq"   // The logical operator of the matching condition, including eq (equal to), neq (not equal to), in (contains), nin (does not contain), re (regular expression match), and nre (regular expression mismatch).   
+         *      }
+         *      ]
+         *      } 
+         *      ]
          */
         public Builder matchingRules(String matchingRules) {
             this.putBodyParameter("MatchingRules", matchingRules);
@@ -344,14 +337,9 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
          *      "notifyEndTime":"23:59",       // The end time of the notification window. 
          *      "notifyChannels":["dingTalk", "email", "sms", "tts", "webhook"],       // The notification methods. Valid values: dingTalk, email, sms, tts, and webhook. 
          *      "notifyObjects":[{       // An array of notification objects. 
-         *      "notifyObjectType":"CONTACT",       // The type of the notification object. Valid values: CONTACT (contact), CONTACT_GROUP (contact group), ARMS_CONTACT (ARMS contact), ARMS_CONTACT_GROUP (ARMS contact group), DING_ROBOT_GROUP (DingTalk, Lark, WeCom, or IM chatbot), and CONTACT_SCHEDULE (user on duty defined by a schedule). 
+         *      "notifyObjectType":"CONTACT",       // The type of the notification object. Valid values: CONTACT (contact), CONTACT_GROUP (contact group), ARMS_CONTACT (ARMS contact), ARMS_CONTACT_GROUP (ARMS contact group), DING_ROBOT_GROUP (DingTalk, Lark, WeCom, or IM robot), and CONTACT_SCHEDULE (user on duty defined by a schedule). 
          *      "notifyObjectId":123,       // The ID of the notification object. 
          *      "notifyObjectName":"test"       // The name of the notification object. 
-         *      "notifyChannels": [ // The notification methods specified for a contact. Valid values: email, sms, and tts.
-         *                     "email",		
-         *                     "sms",
-         *                     "tts"
-         *                 ],
          *      }]
          */
         public Builder notifyRule(String notifyRule) {
@@ -401,7 +389,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         }
 
         /**
-         * Indicates whether the system sends a notification to the contacts when the status of an alert changes to Resolved. Default value: true. Valid values:
+         * Specifies whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. ARMS notifies contacts when the alert status changes to Resolved.
          * <p>
          * 
          * *   `true`: The system sends a notification.

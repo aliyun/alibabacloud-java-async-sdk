@@ -137,7 +137,11 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The field that is used for grouping.
+             * An array of alert event group objects.
+             * <p>
+             * 
+             * *   If you do not specify the groupingFields field, all alerts will be sent to contacts based on `alertname`.
+             * *   If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.
              */
             public Builder groupingFields(java.util.List < String > groupingFields) {
                 this.groupingFields = groupingFields;
@@ -352,7 +356,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the notification contact.
+             * The ID of the notification object.
              */
             public Builder notifyObjectId(Long notifyObjectId) {
                 this.notifyObjectId = notifyObjectId;
@@ -371,11 +375,11 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
              * The type of the notification object. Valid values:
              * <p>
              * 
-             * *   CONTACT: individual contact
+             * *   CONTACT: contact
              * *   CONTACT_GROUP: contact group
-             * *   ARMS_CONTACT: individual ARMS contact
+             * *   ARMS_CONTACT: ARMS contact
              * *   ARMS_CONTACT_GROUP: ARMS contact group
-             * *   DING_ROBOT_GROUP: DingTalk, Lark, or WeCom IM chatbot
+             * *   DING_ROBOT_GROUP: DingTalk, Lark, WeCom, or IM robot
              * *   CONTACT_SCHEDULE: user on duty defined by a schedule
              */
             public Builder notifyObjectType(String notifyObjectType) {
@@ -453,14 +457,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private String notifyStartTime; 
 
             /**
-             * The notification methods. Valid values: 
-             * <p>
-             * 
-             * - `dingTalk`: DingTalk
-             * - `email`: email
-             * - `sms`: text message
-             * - `tts`: phone call
-             * - `webhook`: webhook
+             * The notification method.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -476,7 +473,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array of notification contact objects.
+             * An array of notification objects.
              */
             public Builder notifyObjects(java.util.List < NotifyObjects> notifyObjects) {
                 this.notifyObjects = notifyObjects;
@@ -910,7 +907,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array of alert event matching rule objects.
+             * The matching rules.
              */
             public Builder matchingRules(java.util.List < MatchingRules> matchingRules) {
                 this.matchingRules = matchingRules;
@@ -934,7 +931,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * An array of notification template objects.
+             * The notification template.
              */
             public Builder notifyTemplate(NotifyTemplate notifyTemplate) {
                 this.notifyTemplate = notifyTemplate;
@@ -942,11 +939,11 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a notification is resent for a long-lasting unresolved alert. Default value: true. Valid values:  
+             * Indicates whether a notification is resent for a long-lasting unresolved alert. Default value: true. Valid values:
              * <p>
              * 
-             * - `true`: The system resends a notification for a long-lasting unresolved alert at a specified time interval.
-             * - `false`: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.
+             * *   `true`: The system resends a notification for a long-lasting unresolved alert at a specified time interval.
+             * *   `false`: The system sends a notification for a long-lasting unresolved alert based on an escalation policy.
              */
             public Builder repeat(Boolean repeat) {
                 this.repeat = repeat;
@@ -962,11 +959,11 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system sends a notification to the contacts when the status of an alert changes to Resolved. Default value: true. Valid values:   
+             * Indicates whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. ARMS notifies contacts when the alert status changes to Resolved.
              * <p>
              * 
-             * - `true`: The system sends a notification.
-             * - `false`: The system does not send a notification.
+             * *   `true`: The system sends a notification.
+             * *   `false`: The system does not send a notification.
              */
             public Builder sendRecoverMessage(Boolean sendRecoverMessage) {
                 this.sendRecoverMessage = sendRecoverMessage;

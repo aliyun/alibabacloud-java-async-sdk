@@ -85,7 +85,7 @@ public class DoInsightsActionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Status code. 200 means success, other status codes are exceptions.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +93,38 @@ public class DoInsightsActionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters vary with the value of module.
+         * <p>
+         * 
+         * *   QueryTopo
+         * 
+         *         {
+         *          "nodes": [Node] # The collection of nodes. For more information, see the "Node" section of this topic.
+         *          "edges": [Edge] # The collection of edges. For more information, see the "Edge" section of this topic.
+         *         }
+         * 
+         * *   QueryTopoRed
+         * 
+         *         {
+         *           "nodeRed": {
+         *           	"nodeId": {
+         *           		"count": double, # The total number of requests in the specified time range.
+         *           		"error": double, # The total number of errors in the specified time range.
+         *           		"rt": double, # The average response time in the specified time range. Unit: milliseconds.
+         *           	}
+         *           },
+         *           "edgeRed": {
+         *           	"edgeId": {
+         *           	    "count": double, # The total number of requests in the specified time range.
+         *           		"error": double, # The total number of errors in the specified time range.
+         *           		"rt": double, # The average response time in the specified time range. Unit: milliseconds.
+         *           	}
+         *           }
+         * 
+         * }
+         * 
+         * ```
+         * ```
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,7 +132,7 @@ public class DoInsightsActionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Information returned when the call fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +140,7 @@ public class DoInsightsActionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +148,11 @@ public class DoInsightsActionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Whether the query is successful:
+         * <p>
+         * 
+         * - true
+         * - false
          */
         public Builder success(Boolean success) {
             this.success = success;

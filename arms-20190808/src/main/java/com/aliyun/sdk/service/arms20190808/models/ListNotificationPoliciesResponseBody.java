@@ -121,7 +121,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private java.util.List < String > groupingFields; 
 
             /**
-             * The time interval for grouping. Unit: seconds. Default value: 30.
+             * The time interval of grouping. Unit: seconds. Default value: 30.
              */
             public Builder groupInterval(Long groupInterval) {
                 this.groupInterval = groupInterval;
@@ -137,11 +137,11 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The fields that are used to group events.
+             * An array of alert event group objects.
              * <p>
              * 
-             * *   If this parameter is not returned, all alert notifications are sent to the alert contacts that belong to the `alertname` group. By default, this parameter is not returned.
-             * *   If this parameter is returned, alerts with the same fields are sent to the alert contacts in one notification.
+             * *   If you do not specify the groupingFields field, all alerts will be sent to contacts based on `alertname`.
+             * *   If you specify the groupingFields field, alerts with the same field will be sent to contacts in one notification.
              */
             public Builder groupingFields(java.util.List < String > groupingFields) {
                 this.groupingFields = groupingFields;
@@ -375,10 +375,10 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * The type of the notification object. Valid values:
              * <p>
              * 
-             * *   CONTACT: an individual contact
-             * *   CONTACT_GROUP: a contact group
-             * *   DING_ROBOT: an instant messaging (IM) chatbot
-             * *   CONTACT_SCHEDULE: a person on duty based on an established schedule
+             * - CONTACT: an individual contact
+             * - CONTACT_GROUP: a contact group
+             * - DING_ROBOT: an instant messaging (IM) chatbot
+             * - CONTACT_SCHEDULE: a person on duty based on an established schedule
              */
             public Builder notifyObjectType(String notifyObjectType) {
                 this.notifyObjectType = notifyObjectType;
@@ -455,7 +455,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private String notifyStartTime; 
 
             /**
-             * The notification methods.
+             * The notification method.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -940,8 +940,8 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * Indicates whether the system resends notifications for a long-lasting unresolved alert. Valid values:
              * <p>
              * 
-             * *   `true` (default): The system resends notifications for a long-lasting unresolved alert at a specified time interval.
-             * *   `false`: The system resends notifications for a long-lasting unresolved alert based on an escalation policy.
+             * - `true` (default): The system resends notifications for a long-lasting unresolved alert at a specified time interval.
+             * - `false`: The system resends notifications for a long-lasting unresolved alert based on an escalation policy.
              */
             public Builder repeat(Boolean repeat) {
                 this.repeat = repeat;
@@ -949,7 +949,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time interval at which notifications are resent for a long-lasting unresolved alert. Unit: seconds.
+             * The time interval at which a notification is resent for a long-lasting unresolved alert. Unit: seconds.
              */
             public Builder repeatInterval(Long repeatInterval) {
                 this.repeatInterval = repeatInterval;
@@ -960,8 +960,8 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
              * Indicates whether the status of an alert automatically changes to Resolved when all events related to the alert change to the Restored state. The system sends a notification to the alert contacts when the alert status changes to Resolved.
              * <p>
              * 
-             * *   `true` (default): The system sends a notification.
-             * *   `false`: The system does not send a notification.
+             * - `true` (default): The system sends a notification.
+             * - `false`: The system does not send a notification.
              */
             public Builder sendRecoverMessage(Boolean sendRecoverMessage) {
                 this.sendRecoverMessage = sendRecoverMessage;

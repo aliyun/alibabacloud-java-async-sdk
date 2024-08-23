@@ -49,7 +49,11 @@ public class DeleteSourceMapResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Indicates whether the SourceMap files are deleted. Valid values:
+         * <p>
+         * 
+         * *   success: The SourceMap files are deleted.
+         * *   false: The SourceMap files fail to be deleted.
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,7 +61,7 @@ public class DeleteSourceMapResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

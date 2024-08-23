@@ -188,7 +188,7 @@ public class ListNotificationPoliciesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the region. Default value: **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
