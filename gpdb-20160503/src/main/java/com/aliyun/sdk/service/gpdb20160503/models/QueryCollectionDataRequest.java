@@ -319,7 +319,10 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -328,7 +331,12 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The filter condition that is used to query data. Specify the parameter in the WHERE clause format. The parameter is an expression that returns a Boolean value of TRUE or FALSE. The parameter can contain comparison operators, such as Equal To (=), Not Equal To (<> or !=), Greater Than (>), Less Than (<), Greater Than or Equal To (>=), and Less Than or Equal To (<=), logical operators, such as AND, OR, and NOT, and keywords, such as IN, BETWEEN, and LIKE.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   For more information, see https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-where/.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);

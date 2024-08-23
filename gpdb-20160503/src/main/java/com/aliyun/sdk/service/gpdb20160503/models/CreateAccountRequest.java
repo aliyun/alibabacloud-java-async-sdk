@@ -26,6 +26,10 @@ public class CreateAccountRequest extends Request {
     private String accountPassword;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
+    private String accountType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -47,6 +51,7 @@ public class CreateAccountRequest extends Request {
         this.accountDescription = builder.accountDescription;
         this.accountName = builder.accountName;
         this.accountPassword = builder.accountPassword;
+        this.accountType = builder.accountType;
         this.DBInstanceId = builder.DBInstanceId;
         this.databaseName = builder.databaseName;
         this.ownerId = builder.ownerId;
@@ -88,6 +93,13 @@ public class CreateAccountRequest extends Request {
     }
 
     /**
+     * @return accountType
+     */
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -119,6 +131,7 @@ public class CreateAccountRequest extends Request {
         private String accountDescription; 
         private String accountName; 
         private String accountPassword; 
+        private String accountType; 
         private String DBInstanceId; 
         private String databaseName; 
         private Long ownerId; 
@@ -133,6 +146,7 @@ public class CreateAccountRequest extends Request {
             this.accountDescription = request.accountDescription;
             this.accountName = request.accountName;
             this.accountPassword = request.accountPassword;
+            this.accountType = request.accountType;
             this.DBInstanceId = request.DBInstanceId;
             this.databaseName = request.databaseName;
             this.ownerId = request.ownerId;
@@ -174,6 +188,15 @@ public class CreateAccountRequest extends Request {
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
             this.accountPassword = accountPassword;
+            return this;
+        }
+
+        /**
+         * AccountType.
+         */
+        public Builder accountType(String accountType) {
+            this.putQueryParameter("AccountType", accountType);
+            this.accountType = accountType;
             return this;
         }
 

@@ -80,6 +80,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
+        @com.aliyun.core.annotation.NameInMap("AccountType")
+        private String accountType;
+
         @com.aliyun.core.annotation.NameInMap("DBInstanceId")
         private String DBInstanceId;
 
@@ -87,6 +90,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             this.accountDescription = builder.accountDescription;
             this.accountName = builder.accountName;
             this.accountStatus = builder.accountStatus;
+            this.accountType = builder.accountType;
             this.DBInstanceId = builder.DBInstanceId;
         }
 
@@ -120,6 +124,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * @return accountType
+         */
+        public String getAccountType() {
+            return this.accountType;
+        }
+
+        /**
          * @return DBInstanceId
          */
         public String getDBInstanceId() {
@@ -130,6 +141,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountDescription; 
             private String accountName; 
             private String accountStatus; 
+            private String accountType; 
             private String DBInstanceId; 
 
             /**
@@ -158,6 +170,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
+                return this;
+            }
+
+            /**
+             * AccountType.
+             */
+            public Builder accountType(String accountType) {
+                this.accountType = accountType;
                 return this;
             }
 

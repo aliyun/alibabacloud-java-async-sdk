@@ -16,6 +16,10 @@ public class DescribeAccountsRequest extends Request {
     private String accountName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountType")
+    private String accountType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -23,6 +27,7 @@ public class DescribeAccountsRequest extends Request {
     private DescribeAccountsRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
+        this.accountType = builder.accountType;
         this.DBInstanceId = builder.DBInstanceId;
     }
 
@@ -47,6 +52,13 @@ public class DescribeAccountsRequest extends Request {
     }
 
     /**
+     * @return accountType
+     */
+    public String getAccountType() {
+        return this.accountType;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -55,6 +67,7 @@ public class DescribeAccountsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAccountsRequest, Builder> {
         private String accountName; 
+        private String accountType; 
         private String DBInstanceId; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class DescribeAccountsRequest extends Request {
         private Builder(DescribeAccountsRequest request) {
             super(request);
             this.accountName = request.accountName;
+            this.accountType = request.accountType;
             this.DBInstanceId = request.DBInstanceId;
         } 
 
@@ -73,6 +87,15 @@ public class DescribeAccountsRequest extends Request {
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
             this.accountName = accountName;
+            return this;
+        }
+
+        /**
+         * AccountType.
+         */
+        public Builder accountType(String accountType) {
+            this.putQueryParameter("AccountType", accountType);
+            this.accountType = accountType;
             return this;
         }
 

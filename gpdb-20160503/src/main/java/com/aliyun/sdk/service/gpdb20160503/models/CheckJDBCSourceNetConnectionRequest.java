@@ -17,8 +17,11 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
+    private String dataSourceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JdbcConnectionString")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String jdbcConnectionString;
 
     @com.aliyun.core.annotation.Query
@@ -28,6 +31,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
     private CheckJDBCSourceNetConnectionRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.dataSourceId = builder.dataSourceId;
         this.jdbcConnectionString = builder.jdbcConnectionString;
         this.regionId = builder.regionId;
     }
@@ -53,6 +57,13 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
     }
 
     /**
+     * @return dataSourceId
+     */
+    public String getDataSourceId() {
+        return this.dataSourceId;
+    }
+
+    /**
      * @return jdbcConnectionString
      */
     public String getJdbcConnectionString() {
@@ -68,6 +79,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
 
     public static final class Builder extends Request.Builder<CheckJDBCSourceNetConnectionRequest, Builder> {
         private String DBInstanceId; 
+        private String dataSourceId; 
         private String jdbcConnectionString; 
         private String regionId; 
 
@@ -78,6 +90,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         private Builder(CheckJDBCSourceNetConnectionRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.dataSourceId = request.dataSourceId;
             this.jdbcConnectionString = request.jdbcConnectionString;
             this.regionId = request.regionId;
         } 
@@ -92,6 +105,15 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
+         * DataSourceId.
+         */
+        public Builder dataSourceId(String dataSourceId) {
+            this.putQueryParameter("DataSourceId", dataSourceId);
+            this.dataSourceId = dataSourceId;
+            return this;
+        }
+
+        /**
          * The JDBC connection string.
          */
         public Builder jdbcConnectionString(String jdbcConnectionString) {
@@ -101,7 +123,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

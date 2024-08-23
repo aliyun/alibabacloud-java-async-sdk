@@ -35,6 +35,9 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EmrInstanceId")
     private String emrInstanceId;
 
+    @com.aliyun.core.annotation.NameInMap("ExternalDataServiceId")
+    private String externalDataServiceId;
+
     @com.aliyun.core.annotation.NameInMap("HDFSConf")
     private String HDFSConf;
 
@@ -52,6 +55,9 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("MapReduceConf")
     private String mapReduceConf;
+
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
+    private String modifyTime;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -71,12 +77,14 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         this.dataSourceStatus = builder.dataSourceStatus;
         this.dataSourceType = builder.dataSourceType;
         this.emrInstanceId = builder.emrInstanceId;
+        this.externalDataServiceId = builder.externalDataServiceId;
         this.HDFSConf = builder.HDFSConf;
         this.hadoopCoreConf = builder.hadoopCoreConf;
         this.hadoopCreateType = builder.hadoopCreateType;
         this.hadoopHostsAddress = builder.hadoopHostsAddress;
         this.hiveConf = builder.hiveConf;
         this.mapReduceConf = builder.mapReduceConf;
+        this.modifyTime = builder.modifyTime;
         this.requestId = builder.requestId;
         this.statusMessage = builder.statusMessage;
         this.yarnConf = builder.yarnConf;
@@ -147,6 +155,13 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     }
 
     /**
+     * @return externalDataServiceId
+     */
+    public String getExternalDataServiceId() {
+        return this.externalDataServiceId;
+    }
+
+    /**
      * @return HDFSConf
      */
     public String getHDFSConf() {
@@ -189,6 +204,13 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
     }
 
     /**
+     * @return modifyTime
+     */
+    public String getModifyTime() {
+        return this.modifyTime;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -218,12 +240,14 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         private String dataSourceStatus; 
         private String dataSourceType; 
         private String emrInstanceId; 
+        private String externalDataServiceId; 
         private String HDFSConf; 
         private String hadoopCoreConf; 
         private String hadoopCreateType; 
         private String hadoopHostsAddress; 
         private String hiveConf; 
         private String mapReduceConf; 
+        private String modifyTime; 
         private String requestId; 
         private String statusMessage; 
         private String yarnConf; 
@@ -298,6 +322,14 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
+         * ExternalDataServiceId.
+         */
+        public Builder externalDataServiceId(String externalDataServiceId) {
+            this.externalDataServiceId = externalDataServiceId;
+            return this;
+        }
+
+        /**
          * The content of the Hadoop hdfs-site.xml file.
          */
         public Builder HDFSConf(String HDFSConf) {
@@ -348,6 +380,14 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
          */
         public Builder mapReduceConf(String mapReduceConf) {
             this.mapReduceConf = mapReduceConf;
+            return this;
+        }
+
+        /**
+         * ModifyTime.
+         */
+        public Builder modifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
             return this;
         }
 

@@ -281,7 +281,10 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

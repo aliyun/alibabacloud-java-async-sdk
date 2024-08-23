@@ -276,7 +276,7 @@ public class ExecuteStatementRequest extends Request {
         }
 
         /**
-         * The name of the set of SQL statements that you want to execute.
+         * The name of the set of SQL statements that you want to execute. This parameter takes effect when the RunType parameter is set to asynchronous.
          */
         public Builder statementName(String statementName) {
             this.putQueryParameter("StatementName", statementName);

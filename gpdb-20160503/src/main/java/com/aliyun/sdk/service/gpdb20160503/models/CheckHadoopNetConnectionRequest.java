@@ -17,8 +17,11 @@ public class CheckHadoopNetConnectionRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceId")
+    private String dataSourceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EmrInstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String emrInstanceId;
 
     @com.aliyun.core.annotation.Query
@@ -28,6 +31,7 @@ public class CheckHadoopNetConnectionRequest extends Request {
     private CheckHadoopNetConnectionRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.dataSourceId = builder.dataSourceId;
         this.emrInstanceId = builder.emrInstanceId;
         this.regionId = builder.regionId;
     }
@@ -53,6 +57,13 @@ public class CheckHadoopNetConnectionRequest extends Request {
     }
 
     /**
+     * @return dataSourceId
+     */
+    public String getDataSourceId() {
+        return this.dataSourceId;
+    }
+
+    /**
      * @return emrInstanceId
      */
     public String getEmrInstanceId() {
@@ -68,6 +79,7 @@ public class CheckHadoopNetConnectionRequest extends Request {
 
     public static final class Builder extends Request.Builder<CheckHadoopNetConnectionRequest, Builder> {
         private String DBInstanceId; 
+        private String dataSourceId; 
         private String emrInstanceId; 
         private String regionId; 
 
@@ -78,6 +90,7 @@ public class CheckHadoopNetConnectionRequest extends Request {
         private Builder(CheckHadoopNetConnectionRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.dataSourceId = request.dataSourceId;
             this.emrInstanceId = request.emrInstanceId;
             this.regionId = request.regionId;
         } 
@@ -88,6 +101,15 @@ public class CheckHadoopNetConnectionRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DataSourceId.
+         */
+        public Builder dataSourceId(String dataSourceId) {
+            this.putQueryParameter("DataSourceId", dataSourceId);
+            this.dataSourceId = dataSourceId;
             return this;
         }
 

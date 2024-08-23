@@ -73,7 +73,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The time when the table was last deleted, inserted, or updated.
+         * The queried index usage.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -121,7 +121,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         private String indexName;
 
         @com.aliyun.core.annotation.NameInMap("IndexScanTimes")
-        private Integer indexScanTimes;
+        private Long indexScanTimes;
 
         @com.aliyun.core.annotation.NameInMap("IndexSize")
         private String indexSize;
@@ -186,7 +186,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
         /**
          * @return indexScanTimes
          */
-        public Integer getIndexScanTimes() {
+        public Long getIndexScanTimes() {
             return this.indexScanTimes;
         }
 
@@ -236,7 +236,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             private String databaseName; 
             private String indexDef; 
             private String indexName; 
-            private Integer indexScanTimes; 
+            private Long indexScanTimes; 
             private String indexSize; 
             private Boolean isPartitionTable; 
             private String parentTableName; 
@@ -271,7 +271,7 @@ public class DescribeDBInstanceIndexUsageResponseBody extends TeaModel {
             /**
              * The number of index scans.
              */
-            public Builder indexScanTimes(Integer indexScanTimes) {
+            public Builder indexScanTimes(Long indexScanTimes) {
                 this.indexScanTimes = indexScanTimes;
                 return this;
             }

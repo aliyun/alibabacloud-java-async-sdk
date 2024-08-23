@@ -29,6 +29,9 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataSourceType")
     private String dataSourceType;
 
+    @com.aliyun.core.annotation.NameInMap("ExternalDataServiceId")
+    private String externalDataServiceId;
+
     @com.aliyun.core.annotation.NameInMap("JDBCConnectionString")
     private String JDBCConnectionString;
 
@@ -37,6 +40,9 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("JDBCUserName")
     private String JDBCUserName;
+
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
+    private String modifyTime;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -51,9 +57,11 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         this.dataSourceName = builder.dataSourceName;
         this.dataSourceStatus = builder.dataSourceStatus;
         this.dataSourceType = builder.dataSourceType;
+        this.externalDataServiceId = builder.externalDataServiceId;
         this.JDBCConnectionString = builder.JDBCConnectionString;
         this.JDBCPassword = builder.JDBCPassword;
         this.JDBCUserName = builder.JDBCUserName;
+        this.modifyTime = builder.modifyTime;
         this.requestId = builder.requestId;
         this.statusMessage = builder.statusMessage;
     }
@@ -109,6 +117,13 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
     }
 
     /**
+     * @return externalDataServiceId
+     */
+    public String getExternalDataServiceId() {
+        return this.externalDataServiceId;
+    }
+
+    /**
      * @return JDBCConnectionString
      */
     public String getJDBCConnectionString() {
@@ -127,6 +142,13 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
      */
     public String getJDBCUserName() {
         return this.JDBCUserName;
+    }
+
+    /**
+     * @return modifyTime
+     */
+    public String getModifyTime() {
+        return this.modifyTime;
     }
 
     /**
@@ -150,9 +172,11 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         private String dataSourceName; 
         private String dataSourceStatus; 
         private String dataSourceType; 
+        private String externalDataServiceId; 
         private String JDBCConnectionString; 
         private String JDBCPassword; 
         private String JDBCUserName; 
+        private String modifyTime; 
         private String requestId; 
         private String statusMessage; 
 
@@ -210,6 +234,14 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
+         * ExternalDataServiceId.
+         */
+        public Builder externalDataServiceId(String externalDataServiceId) {
+            this.externalDataServiceId = externalDataServiceId;
+            return this;
+        }
+
+        /**
          * The JDBC connection string.
          */
         public Builder JDBCConnectionString(String JDBCConnectionString) {
@@ -230,6 +262,14 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
          */
         public Builder JDBCUserName(String JDBCUserName) {
             this.JDBCUserName = JDBCUserName;
+            return this;
+        }
+
+        /**
+         * ModifyTime.
+         */
+        public Builder modifyTime(String modifyTime) {
+            this.modifyTime = modifyTime;
             return this;
         }
 

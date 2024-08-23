@@ -17,6 +17,14 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
     private String DBInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Database")
+    private String database;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
+    private String orderBy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -27,6 +35,8 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
     private DescribeDBInstanceDataBloatRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.database = builder.database;
+        this.orderBy = builder.orderBy;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -52,6 +62,20 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
     }
 
     /**
+     * @return database
+     */
+    public String getDatabase() {
+        return this.database;
+    }
+
+    /**
+     * @return orderBy
+     */
+    public String getOrderBy() {
+        return this.orderBy;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -67,6 +91,8 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDBInstanceDataBloatRequest, Builder> {
         private String DBInstanceId; 
+        private String database; 
+        private String orderBy; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -77,6 +103,8 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
         private Builder(DescribeDBInstanceDataBloatRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.database = request.database;
+            this.orderBy = request.orderBy;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
@@ -90,6 +118,24 @@ public class DescribeDBInstanceDataBloatRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * Database.
+         */
+        public Builder database(String database) {
+            this.putQueryParameter("Database", database);
+            this.database = database;
+            return this;
+        }
+
+        /**
+         * OrderBy.
+         */
+        public Builder orderBy(String orderBy) {
+            this.putQueryParameter("OrderBy", orderBy);
+            this.orderBy = orderBy;
             return this;
         }
 
