@@ -231,7 +231,7 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * The description of the activation code. It must be 1 to 100 characters in length.
+         * The description of the activation code. The description must be 1 to 100 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -252,12 +252,12 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * The default instance name prefix. The instance name prefix must be 2 to 50 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:).
+         * The default instance name prefix. The prefix must be 2 to 50 characters in length and can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:). The prefix must start with a letter and cannot start with a digit, a special character, `http://`, or `https://`.
          * <p>
          * 
-         * If you use the activation code that is created by calling this operation (CreateActivation) to register managed instances, the instances are assigned sequential names that are prefixed by the value of this parameter. You can also specify a new instance name to replace the assigned sequential name when you register a managed instance.
+         * If you use the activation code that is created by calling the CreateActivation operation to register managed instances, the instances are assigned sequential names that include the value of this parameter as a prefix. You can also specify a new instance name to replace the assigned sequential name when you register a managed instance.
          * 
-         * If you specify InstanceName when you register a managed instance, an instance name in the format of `<InstanceName>-<Number>` is generated. The number of digits in the \<Number> value is determined by that in the `InstanceCount` value. Example: `001`. If you do not specify InstanceName, the hostname (Hostname) is used as the instance name.
+         * If you specify InstanceName when you register a managed instance, an instance name in the `<InstanceName>-<Number>` format is generated. The number of digits in the \<Number> value varies based on the number of digits in the `InstanceCount` value. Example: `001`. If you do not specify InstanceName, the hostname (Hostname) is used as the instance name.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -293,10 +293,7 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the activation code. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia).
-         * <p>
-         * 
-         * You can all the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Ulanqab), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), China (Guangzhou), China (Chengdu), China (Hong Kong), Singapore, Japan (Tokyo), US (Silicon Valley), and US (Virginia). You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -341,7 +338,7 @@ public class CreateActivationRequest extends Request {
         }
 
         /**
-         * The validity period of the activation code. The activation code can no longer be used to register instances after the period expires. Unit: hours. Valid values: 1 to 876576, which represents a range of time from 1 hour to 100 years.
+         * The validity period of the activation code. After the validity period ends, you can no longer use the activation code to register managed instances. Unit: hours. Valid values: 1 to 876576. 876576 hours is equal to 100 years.
          * <p>
          * 
          * Default value: 4.

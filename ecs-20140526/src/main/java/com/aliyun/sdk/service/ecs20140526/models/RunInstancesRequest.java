@@ -1214,7 +1214,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The desired number of ECS instances. Valid values: 1 to 100.
+         * The desired number of ECS instances that you want to create. Valid values: 1 to 100.
          * <p>
          * 
          * The number of ECS instances that can be created varies based on the Amount and MinAmount values.
@@ -1236,7 +1236,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * >  This parameter is not publicly available.
          */
         public Builder arn(java.util.List < Arn> arn) {
             this.putQueryParameter("Arn", arn);
@@ -1344,7 +1344,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated host on which to create the instance. If you set the `DedicatedHostId` parameter, the `SpotStrategy` and `SpotPriceLimit` parameters are ignored. This is because preemptible instances cannot be created on dedicated hosts.
+         * The ID of the dedicated host on which to create the instance. Preemptible instances cannot be created on dedicated hosts. If you specify `DedicatedHostId`, `SpotStrategy` and `SpotPriceLimit` are ignored.
          * <p>
          * 
          * You can call the [DescribeDedicatedHosts](~~134242~~) operation to query the list of dedicated host IDs.
@@ -1507,9 +1507,13 @@ public class RunInstancesRequest extends Request {
          * The name of the image family. You can set this parameter to obtain the latest available custom image from the specified image family to create instances.
          * <p>
          * 
+         * The name must be 2 to 128 characters in length. The name cannot start with a digit, a special character, http://, or https://. The name can contain letters, digits, periods (.), underscores (\_), hyphens (-), and colons (:).
+         * 
+         * Take note of the following items:
+         * 
          * *   If you specify `ImageId`, you cannot specify ImageFamily.
-         * *   If you do not specify `ImageId` but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that has the `ImageId` parameter specified, you cannot specify ImageFamily.
-         * *   If you do not specify `ImageId` but use the `LaunchTemplateId` or `LaunchTemplateName` parameter to specify a launch template that does not have the `ImageId` parameter specified, you can specify ImageFamily.
+         * *   If you do not specify `ImageId` but use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template that has `ImageId` specified, you cannot specify ImageFamily.
+         * *   If you do not specify `ImageId` but use `LaunchTemplateId` or `LaunchTemplateName` to specify a launch template that does not have `ImageId` specified, you can specify ImageFamily.
          * *   If you do not specify `ImageId`, `LaunchTemplateId`, or `LaunchTemplateName`, you can specify ImageFamily.
          * 
          * >  For information about image families that are associated with Alibaba Cloud official images, see [Overview of public images](~~108393~~).
@@ -1722,7 +1726,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The minimum number of ECS instances to be created. Valid values: 1 to 100.
+         * The minimum number of ECS instances that you want to create. Valid values: 1 to 100.
          * <p>
          * 
          * The number of ECS instances that can be created varies based on the Amount and MinAmount values.
@@ -1851,7 +1855,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * PrivateDnsNameOptions.
+         * >  This parameter is in invitational preview and is not publicly available.
          */
         public Builder privateDnsNameOptions(PrivateDnsNameOptions privateDnsNameOptions) {
             this.putQueryParameter("PrivateDnsNameOptions", privateDnsNameOptions);
@@ -1991,7 +1995,7 @@ public class RunInstancesRequest extends Request {
          * 
          * *   Terminate: The instance is released.
          * 
-         * *   Stop: The instance is stopped in economical mode. To use the economical mode, submit a ticket.
+         * *   Stop: The instance is stopped in economical mode.
          * 
          *     For information about the economical mode, see [Economical mode](~~63353~~).
          * 
@@ -2877,7 +2881,7 @@ public class RunInstancesRequest extends Request {
             private String rolearn; 
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is not publicly available.
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -2885,7 +2889,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is not publicly available.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -2893,7 +2897,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is not publicly available.
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -3114,8 +3118,8 @@ public class RunInstancesRequest extends Request {
              * Specifies whether to enable the performance burst feature for data disk N. Valid values:
              * <p>
              * 
-             * *   true: enables the performance burst feature for the data disk.
-             * *   false: disables the performance burst feature for the data disk.
+             * *   true
+             * *   false
              * 
              * >  This parameter is available only if you set DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
@@ -3159,8 +3163,8 @@ public class RunInstancesRequest extends Request {
              * Specifies whether to release data disk N when the instance is released. Valid values:
              * <p>
              * 
-             * *   true: releases data disk N when the instance is released.
-             * *   false: does not release data disk N when the instance is released.
+             * *   true
+             * *   false
              * 
              * Default value: true.
              */
@@ -3211,8 +3215,8 @@ public class RunInstancesRequest extends Request {
              * Specifies whether to encrypt data disk N. Valid values:
              * <p>
              * 
-             * *   true: encrypts data disk N.
-             * *   false: does not encrypt data disk N.
+             * *   true
+             * *   false
              * 
              * Default value: false.
              */
@@ -3964,7 +3968,7 @@ public class RunInstancesRequest extends Request {
             private String hostnameType; 
 
             /**
-             * EnableInstanceIdDnsAAAARecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableInstanceIdDnsAAAARecord(Boolean enableInstanceIdDnsAAAARecord) {
                 this.enableInstanceIdDnsAAAARecord = enableInstanceIdDnsAAAARecord;
@@ -3972,7 +3976,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * EnableInstanceIdDnsARecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableInstanceIdDnsARecord(Boolean enableInstanceIdDnsARecord) {
                 this.enableInstanceIdDnsARecord = enableInstanceIdDnsARecord;
@@ -3980,7 +3984,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * EnableIpDnsARecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableIpDnsARecord(Boolean enableIpDnsARecord) {
                 this.enableIpDnsARecord = enableIpDnsARecord;
@@ -3988,7 +3992,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * EnableIpDnsPtrRecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableIpDnsPtrRecord(Boolean enableIpDnsPtrRecord) {
                 this.enableIpDnsPtrRecord = enableIpDnsPtrRecord;
@@ -3996,7 +4000,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * HostnameType.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder hostnameType(String hostnameType) {
                 this.hostnameType = hostnameType;

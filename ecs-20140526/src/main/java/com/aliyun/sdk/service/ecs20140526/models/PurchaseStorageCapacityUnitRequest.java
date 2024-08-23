@@ -384,10 +384,10 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The time at which the SCU takes effect. It can be up to six months later than the time at which the SCU is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * The time at which the SCU takes effect. The time can be up to six months from the creation time of the SCU. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHHZ format. The time must be in UTC.
          * <p>
          * 
-         * This parameter is empty by default. If this parameter is left empty, the SCU takes effect immediately after it is created.
+         * This parameter is left empty by default, which indicates that the SCU takes effect immediately after it is created.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

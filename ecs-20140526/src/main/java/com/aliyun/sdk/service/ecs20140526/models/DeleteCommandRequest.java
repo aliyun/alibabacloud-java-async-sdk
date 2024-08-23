@@ -148,7 +148,7 @@ public class DeleteCommandRequest extends Request {
         }
 
         /**
-         * CommandId.
+         * The ID of the command. You can call the [DescribeCommands](~~64843~~) operation to query all available command IDs.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
@@ -175,7 +175,7 @@ public class DeleteCommandRequest extends Request {
         }
 
         /**
-         * $.parameters[1].schema.enumValueTitles
+         * The region ID of the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

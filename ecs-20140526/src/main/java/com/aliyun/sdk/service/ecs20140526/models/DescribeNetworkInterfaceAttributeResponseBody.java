@@ -469,7 +469,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is not publicly available.
+         * >  This parameter is not publicly available.
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
             this.connectionTrackingConfiguration = connectionTrackingConfiguration;
@@ -1235,7 +1235,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             private Integer udpTimeout; 
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is not publicly available.
              */
             public Builder tcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
                 this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
@@ -1243,7 +1243,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is not publicly available.
              */
             public Builder tcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
                 this.tcpEstablishedTimeout = tcpEstablishedTimeout;
@@ -1251,7 +1251,7 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is not publicly available.
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;

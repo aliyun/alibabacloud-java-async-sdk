@@ -377,11 +377,10 @@ public class ModifyInstanceAttributeRequest extends Request {
          * Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:
          * <p>
          * 
-         * true
+         * *   true
+         * *   false
          * 
-         * false
-         * 
-         * You can enable the Jumbo Frames feature only for specific instance types. For more information, see [MTUs](~~200512~~).
+         * You can enable the Jumbo Frames feature only for specific instance types. For more information, see [MTU and jumbo frames](~~200512~~).
          */
         public Builder enableJumboFrame(Boolean enableJumboFrame) {
             this.putQueryParameter("EnableJumboFrame", enableJumboFrame);
@@ -469,7 +468,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * PrivateDnsNameOptions.
+         * >  This parameter is in invitational preview and is not publicly available.
          */
         public Builder privateDnsNameOptions(PrivateDnsNameOptions privateDnsNameOptions) {
             this.putQueryParameter("PrivateDnsNameOptions", privateDnsNameOptions);
@@ -522,7 +521,7 @@ public class ModifyInstanceAttributeRequest extends Request {
          * *   You can move the instance to security groups of a different type. However, the list cannot contain the IDs of both basic and advanced security groups.
          * *   The security groups and the instance must belong to the same VPC.
          * *   The valid values of N vary based on the maximum number of security groups to which the instance can belong. For more information, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section in the "Limits and quotas" topic.
-         * *   New security groups become valid for the instance after a short latency.
+         * *   New security groups become valid for the instance after a short delay.
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -677,7 +676,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             private String hostnameType; 
 
             /**
-             * EnableInstanceIdDnsAAAARecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableInstanceIdDnsAAAARecord(Boolean enableInstanceIdDnsAAAARecord) {
                 this.enableInstanceIdDnsAAAARecord = enableInstanceIdDnsAAAARecord;
@@ -685,7 +684,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * EnableInstanceIdDnsARecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableInstanceIdDnsARecord(Boolean enableInstanceIdDnsARecord) {
                 this.enableInstanceIdDnsARecord = enableInstanceIdDnsARecord;
@@ -693,7 +692,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * EnableIpDnsARecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableIpDnsARecord(Boolean enableIpDnsARecord) {
                 this.enableIpDnsARecord = enableIpDnsARecord;
@@ -701,7 +700,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * EnableIpDnsPtrRecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableIpDnsPtrRecord(Boolean enableIpDnsPtrRecord) {
                 this.enableIpDnsPtrRecord = enableIpDnsPtrRecord;
@@ -709,7 +708,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * HostnameType.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder hostnameType(String hostnameType) {
                 this.hostnameType = hostnameType;

@@ -198,7 +198,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
          * 
          * Default value: enabled.
          * 
-         * > For more information about instance metadata, see [Overview of ECS instance metadata](~~49122~~).
+         * >  For information about instance metadata, see [Obtain instance metadata](~~49122~~).
          */
         public Builder httpEndpoint(String httpEndpoint) {
             this.putQueryParameter("HttpEndpoint", httpEndpoint);
@@ -207,7 +207,7 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is not publicly available.
+         * >  This parameter is in invitational preview and is not publicly available.
          */
         public Builder httpPutResponseHopLimit(Integer httpPutResponseHopLimit) {
             this.putQueryParameter("HttpPutResponseHopLimit", httpPutResponseHopLimit);
@@ -216,15 +216,15 @@ public class ModifyInstanceMetadataOptionsRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully use the security-enhanced mode (IMDSv2) to access instance metadata. Valid values:
+         * Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:
          * <p>
          * 
-         * *   optional: does not forcefully use the security-enhanced mode (IMDSv2).
-         * *   required: forcefully uses the security-enhanced mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
+         * *   optional: does not forcefully use the security hardening mode (IMDSv2).
+         * *   required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.
          * 
          * Default value: optional.
          * 
-         * > For more information about the modes of accessing instance metadata, see [Access mode of instance metadata](~~150575~~).
+         * >  For more information about modes of accessing instance metadata, see [Obtain instance metadata](~~150575~~).
          */
         public Builder httpTokens(String httpTokens) {
             this.putQueryParameter("HttpTokens", httpTokens);

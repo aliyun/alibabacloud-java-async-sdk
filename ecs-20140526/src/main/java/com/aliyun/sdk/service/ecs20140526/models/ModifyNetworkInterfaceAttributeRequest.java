@@ -288,7 +288,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * >  This parameter is in invitational preview and is not publicly available.
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
             this.putQueryParameter("ConnectionTrackingConfiguration", connectionTrackingConfiguration);
@@ -520,7 +520,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             private Integer udpTimeout; 
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder tcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
                 this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
@@ -528,7 +528,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder tcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
                 this.tcpEstablishedTimeout = tcpEstablishedTimeout;
@@ -536,7 +536,7 @@ public class ModifyNetworkInterfaceAttributeRequest extends Request {
             }
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;

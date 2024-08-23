@@ -478,7 +478,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
+         * This parameter is deprecated. Use `Permissions.N.IpProtocol` to specify the protocol.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -832,7 +832,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             private String sourcePortRange; 
 
             /**
-             * The description of security group rule N. The description must be 1 to 512 characters in length.
+             * The description of the security group rule. The description must be 1 to 512 characters in length.
              * <p>
              * 
              * Valid values of N: 1 to 100.
@@ -843,7 +843,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The destination IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.
+             * The destination IPv4 CIDR block of the security group rule. IPv4 CIDR blocks and IPv4 addresses are supported.
              * <p>
              * 
              * Valid values of N: 1 to 100.
@@ -854,17 +854,17 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The ID of the source security group that is referenced in security group rule N.
+             * The ID of the destination security group from which you want to remove access control configurations.
              * <p>
              * 
-             * *   At least one of `DestGroupId`, `DestCidrIp`, `Ipv6DestCidrIp`, and `DestPrefixListId` must be specified.
-             * *   If `DestGroupId` is specified but `DestCidrIp` is not specified, the `NicType` parameter must be set to intranet.
-             * *   If both `DestGroupId` and `DestCidrIp` are specified, `DestCidrIp` takes precedence.
+             * *   You must specify at least one of the following parameters: `DestGroupId`, `DestCidrIp`, `Ipv6DestCidrIp`, and `DestPrefixListId`.
+             * *   If you specify `DestGroupId` but do not specify `DestCidrIp`, you must set `NicType` to intranet.
+             * *   If you specify both `DestGroupId` and `DestCidrIp`, `DestCidrIp` takes precedence.
              * 
-             * Take note of the following items:
+             * When you specify this parameter, take note of the following items:
              * 
-             * *   For advanced security groups, security groups cannot be used as authorization objects.
-             * *   For each basic security group, a maximum of 20 security groups can be used as authorization objects.
+             * *   In advanced security groups, security groups cannot be used as authorization objects.
+             * *   In each basic security group, up to 20 security groups can be used as authorization objects in security group rules.
              * 
              * Valid values of N: 1 to 100.
              */
@@ -874,11 +874,11 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The Alibaba Cloud account that manages the destination security group when you delete security group rules N across accounts.
+             * The Alibaba Cloud account that manages the destination security group specified in the security group rule.
              * <p>
              * 
-             * *   If both `DestGroupOwnerAccount` and `DestGroupOwnerId` are not specified, the access control is revoked from another security group managed by your account.
-             * *   If `DestCidrIp` is specified, `DestGroupOwnerAccount` is ignored.
+             * *   If both `DestGroupOwnerAccount` and `DestGroupOwnerId` are empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.
+             * *   If you specify `DestCidrIp`, `DestGroupOwnerAccount` is ignored.
              * 
              * Valid values of N: 1 to 100.
              */
@@ -888,11 +888,11 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that manages the destination security group when you delete security group rule N across accounts.
+             * The ID of the Alibaba Cloud account that manages the destination security group specified in the security group rule.
              * <p>
              * 
-             * *   If both `DestGroupOwnerId` and `DestGroupOwnerAccount` are not specified, the access control is revoked from another security group managed by your account.
-             * *   If `DestCidrIp` is specified, `DestGroupOwnerId` is invalid.
+             * *   If both `DestGroupOwnerId` and `DestGroupOwnerAccount` are empty, access control configurations are removed from another security group managed by your Alibaba Cloud account.
+             * *   If you specify `DestCidrIp`, `DestGroupOwnerId` is invalid.
              * 
              * Valid values of N: 1 to 100.
              */
@@ -902,12 +902,12 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The ID of the destination prefix list that is referenced in security group rule N. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
+             * The ID of the destination prefix list of the security group rule. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
              * <p>
              * 
-             * Take note of the following items:
+             * When you specify this parameter, take note of the following items:
              * 
-             * *   If a security group is in the classic network, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
+             * *   If a security group resides in the classic network, you cannot specify prefix lists in the rules of the security group. For information about the limits on security groups and prefix lists, see the [Security group limits](~~25412#SecurityGroupQuota1~~) section of the "Limits and quotas" topic.
              * *   If you specify `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, this parameter is ignored.
              * 
              * Valid values of N: 1 to 100.
@@ -918,14 +918,14 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The transport layer protocol of security group rule N. The value of this parameter is case-insensitive. Valid values:
+             * The protocol. The values of this parameter are case-insensitive. Valid values:
              * <p>
              * 
-             * *   TCP
-             * *   UDP
-             * *   ICMP
-             * *   ICMPv6
-             * *   GRE
+             * *   TCP.
+             * *   UDP.
+             * *   ICMP.
+             * *   ICMPv6.
+             * *   GRE.
              * *   ALL: All protocols are supported.
              * 
              * Valid values of N: 1 to 100.
@@ -936,12 +936,12 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The destination IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.
+             * The destination IPv6 CIDR block of the security group rule. IPv6 CIDR blocks and IPv6 addresses are supported.
              * <p>
              * 
              * Valid values of N: 1 to 100.
              * 
-             * > This parameter is valid only when the destination is Elastic Compute Service (ECS) instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.
+             * >  This parameter is valid only for Elastic Compute Service (ECS) instances that reside in virtual private clouds (VPCs) and support IPv6 CIDR blocks. You cannot specify both this parameter and `DestCidrIp` in the same request.
              */
             public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
                 this.ipv6DestCidrIp = ipv6DestCidrIp;
@@ -949,14 +949,14 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The source IPv6 CIDR block. CIDR blocks and IPv6 addresses are supported.
+             * The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.
              * <p>
              * 
-             * This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+             * This parameter is used to support quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
              * 
              * Valid values of N: 1 to 100.
              * 
-             * > This parameter is valid only when the source is ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and the `SourceCidrIp` parameter.
+             * >  This parameter is valid only for ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and `DestCidrIp` in the same request.
              */
             public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
                 this.ipv6SourceCidrIp = ipv6SourceCidrIp;
@@ -964,15 +964,15 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The network interface controller (NIC) type of security group rule N when the security group is in the classic network. Valid values:
+             * The network interface controller (NIC) type of the security group rule if the security group resides in the classic network. Valid values:
              * <p>
              * 
              * *   internet: public NIC.
              * *   intranet: internal NIC.
              * 
-             * If the security group is in a VPC, this parameter is set to intranet by default and cannot be modified.
+             * If the security group resides in a VPC, this parameter is set to intranet by default and cannot be modified.
              * 
-             * If you specify only `SourceGroupId` when you configure access between security groups, this parameter must be set to intranet.
+             * If you specify only `SourceGroupId` when you remove access control configurations between security groups, you must set this parameter to intranet.
              * 
              * Default value: internet.
              * 
@@ -984,11 +984,11 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The action of security group rule N that determines whether to allow outbound access. Valid values:
+             * The action of the security group rule. Valid values:
              * <p>
              * 
-             * *   accept: allows access.
-             * *   drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.
+             * *   accept: allows outbound traffic.
+             * *   drop: denies outbound traffic and returns no responses. In this case, the request times out or the connection cannot be established.
              * 
              * Default value: accept.
              * 
@@ -1000,13 +1000,13 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:
+             * The range of destination port numbers for the protocols specified in the security group rule. Valid values:
              * <p>
              * 
-             * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
+             * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.
              * *   If you set IpProtocol to ICMP, the port number range is -1/-1.
              * *   If you set IpProtocol to GRE, the port number range is -1/-1.
-             * *   If you set IpProtocol to ALL, the port number range is -1/-1.
+             * *   If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.
              * 
              * Valid values of N: 1 to 100.
              */
@@ -1016,7 +1016,7 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The priority of security group rule N. A smaller value indicates a higher priority. Valid values: 1 to 100.
+             * The priority of the security group rule. A smaller value specifies a higher priority. Valid values: 1 to 100.
              * <p>
              * 
              * Default value: 1.
@@ -1029,10 +1029,10 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The source IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.
+             * The source IPv4 CIDR block. IPv4 CIDR blocks and IPv4 addresses are supported.
              * <p>
              * 
-             * This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+             * This parameter is used to support quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
              * 
              * Valid values of N: 1 to 100.
              */
@@ -1042,15 +1042,15 @@ public class RevokeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The range of source ports that correspond to the transport layer protocol for security group rule N. Valid values:
+             * The range of source port numbers for the protocols specified in the security group rule. Valid values:
              * <p>
              * 
-             * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
+             * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Specify a port number range in the format of \<Start port number>/\<End port number>. Example: 1/200.
              * *   If you set IpProtocol to ICMP, the port number range is -1/-1.
              * *   If you set IpProtocol to GRE, the port number range is -1/-1.
-             * *   If you set IpProtocol to ALL, the port number range is -1/-1.
+             * *   If you set IpProtocol to ALL, the port number range is -1/-1, which indicates all port numbers.
              * 
-             * This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+             * This parameter is used to support quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
              * 
              * Valid values of N: 1 to 100.
              */

@@ -6,24 +6,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateNetworkInterfacePermissionRequest} extends {@link RequestModel}
+ * {@link RenewElasticityAssurancesRequest} extends {@link RequestModel}
  *
- * <p>CreateNetworkInterfacePermissionRequest</p>
+ * <p>RenewElasticityAssurancesRequest</p>
  */
-public class CreateNetworkInterfacePermissionRequest extends Request {
+public class RenewElasticityAssurancesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
+    private PrivatePoolOptions privatePoolOptions;
+
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("SourceRegionId")
     private String sourceRegionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AccountId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Long accountId;
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String networkInterfaceId;
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -34,13 +36,15 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Permission")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String permission;
+    @com.aliyun.core.annotation.NameInMap("Period")
+    private Integer period;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+    private String periodUnit;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     @com.aliyun.core.annotation.Query
@@ -51,14 +55,16 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private CreateNetworkInterfacePermissionRequest(Builder builder) {
+    private RenewElasticityAssurancesRequest(Builder builder) {
         super(builder);
+        this.privatePoolOptions = builder.privatePoolOptions;
         this.sourceRegionId = builder.sourceRegionId;
-        this.accountId = builder.accountId;
-        this.networkInterfaceId = builder.networkInterfaceId;
+        this.autoPay = builder.autoPay;
+        this.clientToken = builder.clientToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.permission = builder.permission;
+        this.period = builder.period;
+        this.periodUnit = builder.periodUnit;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -68,13 +74,20 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         return new Builder();
     }
 
-    public static CreateNetworkInterfacePermissionRequest create() {
+    public static RenewElasticityAssurancesRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return privatePoolOptions
+     */
+    public PrivatePoolOptions getPrivatePoolOptions() {
+        return this.privatePoolOptions;
     }
 
     /**
@@ -85,17 +98,17 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
     }
 
     /**
-     * @return accountId
+     * @return autoPay
      */
-    public Long getAccountId() {
-        return this.accountId;
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
-     * @return networkInterfaceId
+     * @return clientToken
      */
-    public String getNetworkInterfaceId() {
-        return this.networkInterfaceId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -113,10 +126,17 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
     }
 
     /**
-     * @return permission
+     * @return period
      */
-    public String getPermission() {
-        return this.permission;
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    /**
+     * @return periodUnit
+     */
+    public String getPeriodUnit() {
+        return this.periodUnit;
     }
 
     /**
@@ -140,13 +160,15 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<CreateNetworkInterfacePermissionRequest, Builder> {
+    public static final class Builder extends Request.Builder<RenewElasticityAssurancesRequest, Builder> {
+        private PrivatePoolOptions privatePoolOptions; 
         private String sourceRegionId; 
-        private Long accountId; 
-        private String networkInterfaceId; 
+        private Boolean autoPay; 
+        private String clientToken; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String permission; 
+        private Integer period; 
+        private String periodUnit; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -155,18 +177,29 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
             super();
         } 
 
-        private Builder(CreateNetworkInterfacePermissionRequest request) {
+        private Builder(RenewElasticityAssurancesRequest request) {
             super(request);
+            this.privatePoolOptions = request.privatePoolOptions;
             this.sourceRegionId = request.sourceRegionId;
-            this.accountId = request.accountId;
-            this.networkInterfaceId = request.networkInterfaceId;
+            this.autoPay = request.autoPay;
+            this.clientToken = request.clientToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.permission = request.permission;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * PrivatePoolOptions.
+         */
+        public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+            this.putQueryParameter("PrivatePoolOptions", privatePoolOptions);
+            this.privatePoolOptions = privatePoolOptions;
+            return this;
+        }
 
         /**
          * SourceRegionId.
@@ -178,20 +211,20 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud partner (a certified ISV) or individual user.
+         * AutoPay.
          */
-        public Builder accountId(Long accountId) {
-            this.putQueryParameter("AccountId", accountId);
-            this.accountId = accountId;
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
             return this;
         }
 
         /**
-         * The ID of the ENI.
+         * ClientToken.
          */
-        public Builder networkInterfaceId(String networkInterfaceId) {
-            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
-            this.networkInterfaceId = networkInterfaceId;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -214,19 +247,25 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * The permission on the ENI. Valid values:
-         * <p>
-         * 
-         * InstanceAttach: the permission to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.
+         * Period.
          */
-        public Builder permission(String permission) {
-            this.putQueryParameter("Permission", permission);
-            this.permission = permission;
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
             return this;
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * PeriodUnit.
+         */
+        public Builder periodUnit(String periodUnit) {
+            this.putQueryParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,10 +292,51 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         @Override
-        public CreateNetworkInterfacePermissionRequest build() {
-            return new CreateNetworkInterfacePermissionRequest(this);
+        public RenewElasticityAssurancesRequest build() {
+            return new RenewElasticityAssurancesRequest(this);
         } 
 
     } 
 
+    public static class PrivatePoolOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private java.util.List < String > id;
+
+        private PrivatePoolOptions(Builder builder) {
+            this.id = builder.id;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivatePoolOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public java.util.List < String > getId() {
+            return this.id;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > id; 
+
+            /**
+             * Id.
+             */
+            public Builder id(java.util.List < String > id) {
+                this.id = id;
+                return this;
+            }
+
+            public PrivatePoolOptions build() {
+                return new PrivatePoolOptions(this);
+            } 
+
+        } 
+
+    }
 }

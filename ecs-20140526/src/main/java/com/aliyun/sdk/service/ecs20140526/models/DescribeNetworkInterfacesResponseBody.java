@@ -715,7 +715,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateDnsName.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder privateDnsName(String privateDnsName) {
                 this.privateDnsName = privateDnsName;

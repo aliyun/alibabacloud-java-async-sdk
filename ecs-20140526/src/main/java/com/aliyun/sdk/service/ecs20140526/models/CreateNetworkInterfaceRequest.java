@@ -560,7 +560,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * >  This parameter is not publicly available.
          */
         public Builder connectionTrackingConfiguration(ConnectionTrackingConfiguration connectionTrackingConfiguration) {
             this.putQueryParameter("ConnectionTrackingConfiguration", connectionTrackingConfiguration);
@@ -594,7 +594,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * >  This parameter is unavailable.
          */
         public Builder enhancedNetwork(EnhancedNetwork enhancedNetwork) {
             this.putQueryParameter("EnhancedNetwork", enhancedNetwork);
@@ -978,7 +978,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             private Integer udpTimeout; 
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is not publicly available.
              */
             public Builder tcpClosedAndTimeWaitTimeout(Integer tcpClosedAndTimeWaitTimeout) {
                 this.tcpClosedAndTimeWaitTimeout = tcpClosedAndTimeWaitTimeout;
@@ -986,7 +986,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is not publicly available.
              */
             public Builder tcpEstablishedTimeout(Integer tcpEstablishedTimeout) {
                 this.tcpEstablishedTimeout = tcpEstablishedTimeout;
@@ -994,7 +994,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is not publicly available.
              */
             public Builder udpTimeout(Integer udpTimeout) {
                 this.udpTimeout = udpTimeout;
@@ -1035,7 +1035,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             private Boolean enableSriov; 
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is not publicly available.
              */
             public Builder enableSriov(Boolean enableSriov) {
                 this.enableSriov = enableSriov;

@@ -129,7 +129,11 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Integer vfQueueNumberPerEni; 
 
             /**
-             * This parameter is unavailable for public use.
+             * *
+             * <p>
+             * *
+             * 
+             * >  This parameter is not publicly available.
              */
             public Builder sriovSupport(Boolean sriovSupport) {
                 this.sriovSupport = sriovSupport;
@@ -137,7 +141,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * >  This parameter is not publicly available.
              */
             public Builder vfQueueNumberPerEni(Integer vfQueueNumberPerEni) {
                 this.vfQueueNumberPerEni = vfQueueNumberPerEni;
@@ -821,7 +825,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is unavailable for public use.
+             * >  This parameter is not publicly available.
              */
             public Builder enhancedNetwork(EnhancedNetwork enhancedNetwork) {
                 this.enhancedNetwork = enhancedNetwork;
@@ -1057,7 +1061,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The information of the network cards.
+             * The information about the network cards.
              */
             public Builder networkCards(NetworkCards networkCards) {
                 this.networkCards = networkCards;

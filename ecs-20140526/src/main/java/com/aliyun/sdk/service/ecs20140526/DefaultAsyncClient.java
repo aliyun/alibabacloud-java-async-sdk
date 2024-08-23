@@ -696,8 +696,8 @@ public final class DefaultAsyncClient implements AsyncClient {
       * Take note of the following items:
       * *   Only custom images that are in the `Available` state can be copied.
       * *   Custom images that you want to copy must belong to your Alibaba Cloud account or be shared to you by others, and cannot be copied across accounts.
-      * *   When an image is being copied, the image cannot be deleted by calling the [DeleteImage](~~25537~~) operation. However, you can cancel the ongoing image copy task by calling the [CancelCopyImage](~~25539~~) operation.
-      * *   A region can have only one ongoing image copy task at a time. Other image copy tasks queue up to run in sequence after the ongoing task is completed.
+      * *   When an image is being copied, the image copy cannot be deleted by calling the [DeleteImage](~~25537~~) operation. However, you can cancel the ongoing image copy task by calling the [CancelCopyImage](~~25539~~) operation.
+      * *   A region supports only up to five concurrent image copy tasks. Excess image copy tasks are queued for execution.
       * *   You can configure `ResourceGroupId` to specify the resource group to which to assign the new image. If you do not configure `ResourceGroupId`, the new image is assigned to the default resource group.
       *
      */
@@ -737,19 +737,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * After you use an activation code to register a server that is not provided by Alibaba Cloud as an Alibaba Cloud managed instance, you can use various online services of Alibaba Cloud, such as Cloud Assistant, CloudOps Orchestration Service (OOS), and Apsara Devops, on the managed instance. 
-      * If a server is not provided by Alibaba Cloud, you can register the server as an Alibaba Cloud managed instance only if the server has Internet connectivity and runs an operating system of one of the following versions: 
-      * - Alibaba Cloud Linux 2, Alibaba Cloud Linux 3, and later
-      * - CentOS 6, CentOS 7, CentOS 8, and later
-      * - Debian 8, Debian 9, Debian 10, and later
-      * - Ubuntu 12, Ubuntu 14, Ubuntu 16, Ubuntu 18, and later
-      * - CoreOS
-      * - OpenSUSE
-      * - Red Hat 5, Red Hat 6, Red Hat 7, and later
-      * - SUSE Linux Enterprise Server (SLES) 11, SLES 12, SLES 15, and later
-      * - Windows Server 2012, Windows Server 2016, Windows Server 2019, and later
-      * You can have up to 5,000 activation codes per Alibaba Cloud region. When the number of activation codes exceeds 1,000, the usage of the activation codes must be greater than 50% before you can proceed to create more activation codes. 
-      * >To query the usage of activation codes, go to the Cloud Assistant page in the Elastic Compute Service (ECS) console, click the Manage Instances tab, and then click Register Instance.
+      * ## [](#)Usage notes
+      * After you use an activation code to register a server that is not provided by Alibaba Cloud as an Alibaba Cloud managed instance, you can use a variety of online services provided by Alibaba Cloud, such as Cloud Assistant, CloudOps Orchestration Service (OOS), and Apsara Devops on the managed instance.
+      * If a server is not provided by Alibaba Cloud, you can register the server as an Alibaba Cloud managed instance only if the server has Internet connectivity and runs one of the following operating systems:
+      * *   Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 and later
+      * *   CentOS 6, CentOS 7, and CentOS 8 and later
+      * *   Debian 8, Debian 9, and Debian 10 and later
+      * *   Ubuntu 12, Ubuntu 14, Ubuntu 16, and Ubuntu 18 and later
+      * *   CoreOS
+      * *   OpenSUSE
+      * *   Red Hat 5, Red Hat 6, and Red Hat 7 and later
+      * *   SUSE Linux Enterprise Server 11, SUSE Linux Enterprise Server 12, and SUSE Linux Enterprise Server 15 and later
+      * *   Windows Server 2012, Windows Server 2016, and Windows Server 2019 and later
+      * You can have up to 5,000 activation codes per Alibaba Cloud region. When the number of activation codes exceeds 1,000, the usage of the activation codes must be greater than 50% before you can create additional activation codes.
+      * >  To obtain the usage of activation codes, go to the **ECS Cloud Assistant** page, click the **Manage Instances** tab, and then click **Register Instance**.
       *
      */
     @Override
@@ -1280,6 +1281,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, submit a ticket to apply for using this operation.
+      *
+     */
     @Override
     public CompletableFuture<CreateNetworkInterfacePermissionResponse> createNetworkInterfacePermission(CreateNetworkInterfacePermissionRequest request) {
         try {
@@ -1996,7 +2001,7 @@ public final class DefaultAsyncClient implements AsyncClient {
       *     *   If the ENI is in the Deleting state, the ENI deletion request is sent and the ENI is being deleted.
       *     *   If the ENI is not found, the ENI is deleted.
       *     *   If the ENI is stuck in the Deleting state, the ENI fails to be deleted. You can re-initiate the request to delete the ENI.
-      * For information about examples on how to call the DeleteNetworkInterface operation, see[Delete an ENI](~~471553~~).
+      * For information about examples on how to call the DeleteNetworkInterface operation, see [Delete an ENI](~~471553~~).
       *
      */
     @Override
@@ -3555,8 +3560,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * ## [](#)Usage notes
-      * The `DescribeNetworkInterfaces` operation supports paged queries. During a paged query, when you call the DescribeNetworkInterfaces operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token that can be used in the next call to retrieve a new page of results. When you call the DescribeNetworkInterfaces operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
-      * >  If you specify `MaxResults` or `NextToken`, the system uses the preceding paged query method to return results. Otherwise, the system returns results based on the combination of `PageNumber` and `PageSize`.
+      * You can call the `DescribeNetworkInterfaces` operation for paged query by specifying the `MaxResults` or `NextToken` parameter. Take note of the following items:
+      * *   During a paged query, when you call the DescribeNetworkInterfaces operation to retrieve the first page of results, set `MaxResults` to specify the maximum number of entries to return in the call. The return value of `NextToken` is a pagination token that can be used in the next call to retrieve a new page of results.
+      * *   When you call the DescribeNetworkInterfaces operation to retrieve a new page of results, set `NextToken` to the `NextToken` value returned in the previous call and set `MaxResults` to specify the maximum number of entries to return in this call.
       *
      */
     @Override
@@ -6249,6 +6255,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ## [](#)Usage notes
       * Before you call this operation, make sure that you are familiar with the billing and pricing of SCUs. For more information, see [Storage capacity units](~~137897~~).
       *
      */
@@ -6545,6 +6552,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RenewDedicatedHostsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<RenewElasticityAssurancesResponse> renewElasticityAssurances(RenewElasticityAssurancesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RenewElasticityAssurances").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenewElasticityAssurancesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RenewElasticityAssurancesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

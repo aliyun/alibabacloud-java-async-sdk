@@ -776,22 +776,22 @@ public class DescribeInstanceTypesRequest extends Request {
          * 
          * >  Valid values of N: 1 to 10.
          * 
-         * *   General-purpose
-         * *   Compute-optimized
-         * *   Memory-optimized
-         * *   Big data
-         * *   Local SSDs
-         * *   High Clock Speed
-         * *   Enhanced
-         * *   Shared
-         * *   Compute-optimized with GPU
-         * *   Visual Compute-optimized
-         * *   Heterogeneous Service
-         * *   Compute-optimized with FPGA
-         * *   Compute-optimized with NPU
-         * *   ECS Bare Metal
-         * *   Super Computing Cluster
-         * *   High Performance Compute
+         * *   General-purpose: general-purpose instance type
+         * *   Compute-optimized: compute-optimized instance type
+         * *   Memory-optimized: memory-optimized instance type
+         * *   Big data: big data instance type
+         * *   Local SSDs: instance type with local SSDs
+         * *   High Clock Speed: instance type with high clock speeds
+         * *   Enhanced: enhanced instance type
+         * *   Shared: shared instance type
+         * *   Compute-optimized with GPU: GPU-accelerated compute-optimized instance type
+         * *   Visual Compute-optimized: visual compute-optimized instance type
+         * *   Heterogeneous Service: heterogeneous service instance type
+         * *   Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type
+         * *   Compute-optimized with NPU: NPU-accelerated compute-optimized instance type
+         * *   ECS Bare Metal: ECS Bare Metal Instance type
+         * *   Super Computing Cluster: SCC instance type
+         * *   High Performance Compute: high-performance computing instance type
          */
         public Builder instanceCategories(java.util.List < String > instanceCategories) {
             this.putQueryParameter("InstanceCategories", instanceCategories);
@@ -889,6 +889,11 @@ public class DescribeInstanceTypesRequest extends Request {
          * 
          * *   local_hdd_pro: local Serial Advanced Technology Attachment (SATA) HDDs, which are attached to d1ne or d1 instances.
          * *   local_ssd_pro: local Non-Volatile Memory Express (NVMe) SSDs, which are attached to i2, i2g, i1, ga1, or gn5 instances.
+         * 
+         * Valid values:
+         * 
+         * *   local_hdd_pro
+         * *   local_ssd_pro
          */
         public Builder localStorageCategory(String localStorageCategory) {
             this.putQueryParameter("LocalStorageCategory", localStorageCategory);
@@ -897,7 +902,7 @@ public class DescribeInstanceTypesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries per page. Maximum value: 1600.
+         * The maximum number of entries per page. Valid values: 1 to 1600.
          * <p>
          * 
          * Default value: 1600.

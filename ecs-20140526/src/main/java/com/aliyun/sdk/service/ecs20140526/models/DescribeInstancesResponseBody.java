@@ -1119,7 +1119,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateDnsName.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder privateDnsName(String privateDnsName) {
                 this.privateDnsName = privateDnsName;
@@ -1341,7 +1341,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the private IP addresses of the ENI.
+             * The private IP addresses of the ENI.
              */
             public Builder privateIpSets(PrivateIpSets privateIpSets) {
                 this.privateIpSets = privateIpSets;
@@ -1599,7 +1599,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String hostnameType; 
 
             /**
-             * EnableInstanceIdDnsAAAARecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableInstanceIdDnsAAAARecord(Boolean enableInstanceIdDnsAAAARecord) {
                 this.enableInstanceIdDnsAAAARecord = enableInstanceIdDnsAAAARecord;
@@ -1607,7 +1607,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableInstanceIdDnsARecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableInstanceIdDnsARecord(Boolean enableInstanceIdDnsARecord) {
                 this.enableInstanceIdDnsARecord = enableInstanceIdDnsARecord;
@@ -1615,7 +1615,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableIpDnsARecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableIpDnsARecord(Boolean enableIpDnsARecord) {
                 this.enableIpDnsARecord = enableIpDnsARecord;
@@ -1623,7 +1623,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableIpDnsPtrRecord.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder enableIpDnsPtrRecord(Boolean enableIpDnsPtrRecord) {
                 this.enableIpDnsPtrRecord = enableIpDnsPtrRecord;
@@ -1631,7 +1631,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * HostnameType.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder hostnameType(String hostnameType) {
                 this.hostnameType = hostnameType;
@@ -3204,7 +3204,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateDnsNameOptions.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder privateDnsNameOptions(PrivateDnsNameOptions privateDnsNameOptions) {
                 this.privateDnsNameOptions = privateDnsNameOptions;

@@ -358,7 +358,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The tags to add to the snapshot.
+         * The tags to add to the automatic snapshot policy.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -651,7 +651,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * The key of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -659,7 +659,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.
+             * The value of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.
              */
             public Builder value(String value) {
                 this.value = value;
