@@ -108,6 +108,14 @@ public class InitializeRequest extends Request {
     private String securityLevel;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowAlbumIcon")
+    private String showAlbumIcon;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowOcrResult")
+    private String showOcrResult;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StyleConfig")
     private String styleConfig;
 
@@ -137,6 +145,8 @@ public class InitializeRequest extends Request {
         this.returnUrl = builder.returnUrl;
         this.sceneCode = builder.sceneCode;
         this.securityLevel = builder.securityLevel;
+        this.showAlbumIcon = builder.showAlbumIcon;
+        this.showOcrResult = builder.showOcrResult;
         this.styleConfig = builder.styleConfig;
     }
 
@@ -322,6 +332,20 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return showAlbumIcon
+     */
+    public String getShowAlbumIcon() {
+        return this.showAlbumIcon;
+    }
+
+    /**
+     * @return showOcrResult
+     */
+    public String getShowOcrResult() {
+        return this.showOcrResult;
+    }
+
+    /**
      * @return styleConfig
      */
     public String getStyleConfig() {
@@ -353,6 +377,8 @@ public class InitializeRequest extends Request {
         private String returnUrl; 
         private String sceneCode; 
         private String securityLevel; 
+        private String showAlbumIcon; 
+        private String showOcrResult; 
         private String styleConfig; 
 
         private Builder() {
@@ -385,6 +411,8 @@ public class InitializeRequest extends Request {
             this.returnUrl = request.returnUrl;
             this.sceneCode = request.sceneCode;
             this.securityLevel = request.securityLevel;
+            this.showAlbumIcon = request.showAlbumIcon;
+            this.showOcrResult = request.showOcrResult;
             this.styleConfig = request.styleConfig;
         } 
 
@@ -601,6 +629,24 @@ public class InitializeRequest extends Request {
         public Builder securityLevel(String securityLevel) {
             this.putQueryParameter("SecurityLevel", securityLevel);
             this.securityLevel = securityLevel;
+            return this;
+        }
+
+        /**
+         * ShowAlbumIcon.
+         */
+        public Builder showAlbumIcon(String showAlbumIcon) {
+            this.putQueryParameter("ShowAlbumIcon", showAlbumIcon);
+            this.showAlbumIcon = showAlbumIcon;
+            return this;
+        }
+
+        /**
+         * ShowOcrResult.
+         */
+        public Builder showOcrResult(String showOcrResult) {
+            this.putQueryParameter("ShowOcrResult", showOcrResult);
+            this.showOcrResult = showOcrResult;
             return this;
         }
 
