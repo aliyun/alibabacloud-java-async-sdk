@@ -17,6 +17,9 @@ public class KnowledgeFile extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("drive_id")
     private String driveId;
 
+    @com.aliyun.core.annotation.NameInMap("drive_name")
+    private String driveName;
+
     @com.aliyun.core.annotation.NameInMap("file_category")
     private String fileCategory;
 
@@ -31,6 +34,12 @@ public class KnowledgeFile extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("file_image_time")
     private Long fileImageTime;
+
+    @com.aliyun.core.annotation.NameInMap("file_last_modifier_id")
+    private String fileLastModifierId;
+
+    @com.aliyun.core.annotation.NameInMap("file_last_modifier_type")
+    private String fileLastModifierType;
 
     @com.aliyun.core.annotation.NameInMap("file_name")
     private String fileName;
@@ -59,11 +68,14 @@ public class KnowledgeFile extends TeaModel {
     private KnowledgeFile(Builder builder) {
         this.creatorId = builder.creatorId;
         this.driveId = builder.driveId;
+        this.driveName = builder.driveName;
         this.fileCategory = builder.fileCategory;
         this.fileCreatedAt = builder.fileCreatedAt;
         this.fileCreatorId = builder.fileCreatorId;
         this.fileId = builder.fileId;
         this.fileImageTime = builder.fileImageTime;
+        this.fileLastModifierId = builder.fileLastModifierId;
+        this.fileLastModifierType = builder.fileLastModifierType;
         this.fileName = builder.fileName;
         this.fileNamePath = builder.fileNamePath;
         this.fileSize = builder.fileSize;
@@ -94,6 +106,13 @@ public class KnowledgeFile extends TeaModel {
      */
     public String getDriveId() {
         return this.driveId;
+    }
+
+    /**
+     * @return driveName
+     */
+    public String getDriveName() {
+        return this.driveName;
     }
 
     /**
@@ -129,6 +148,20 @@ public class KnowledgeFile extends TeaModel {
      */
     public Long getFileImageTime() {
         return this.fileImageTime;
+    }
+
+    /**
+     * @return fileLastModifierId
+     */
+    public String getFileLastModifierId() {
+        return this.fileLastModifierId;
+    }
+
+    /**
+     * @return fileLastModifierType
+     */
+    public String getFileLastModifierType() {
+        return this.fileLastModifierType;
     }
 
     /**
@@ -190,11 +223,14 @@ public class KnowledgeFile extends TeaModel {
     public static final class Builder {
         private String creatorId; 
         private String driveId; 
+        private String driveName; 
         private String fileCategory; 
         private Long fileCreatedAt; 
         private String fileCreatorId; 
         private String fileId; 
         private Long fileImageTime; 
+        private String fileLastModifierId; 
+        private String fileLastModifierType; 
         private String fileName; 
         private String fileNamePath; 
         private Long fileSize; 
@@ -217,6 +253,14 @@ public class KnowledgeFile extends TeaModel {
          */
         public Builder driveId(String driveId) {
             this.driveId = driveId;
+            return this;
+        }
+
+        /**
+         * drive_name.
+         */
+        public Builder driveName(String driveName) {
+            this.driveName = driveName;
             return this;
         }
 
@@ -257,6 +301,22 @@ public class KnowledgeFile extends TeaModel {
          */
         public Builder fileImageTime(Long fileImageTime) {
             this.fileImageTime = fileImageTime;
+            return this;
+        }
+
+        /**
+         * file_last_modifier_id.
+         */
+        public Builder fileLastModifierId(String fileLastModifierId) {
+            this.fileLastModifierId = fileLastModifierId;
+            return this;
+        }
+
+        /**
+         * file_last_modifier_type.
+         */
+        public Builder fileLastModifierType(String fileLastModifierType) {
+            this.fileLastModifierType = fileLastModifierType;
             return this;
         }
 

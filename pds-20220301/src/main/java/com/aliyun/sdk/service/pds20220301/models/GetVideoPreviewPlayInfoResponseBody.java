@@ -11,9 +11,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVideoPreviewPlayInfoResponseBody</p>
  */
 public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("code")
-    private String code;
-
     @com.aliyun.core.annotation.NameInMap("domain_id")
     private String domainId;
 
@@ -23,12 +20,6 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("file_id")
     private String fileId;
 
-    @com.aliyun.core.annotation.NameInMap("master_url")
-    private String masterUrl;
-
-    @com.aliyun.core.annotation.NameInMap("message")
-    private String message;
-
     @com.aliyun.core.annotation.NameInMap("share_id")
     private String shareId;
 
@@ -36,12 +27,9 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     private VideoPreviewPlayInfo videoPreviewPlayInfo;
 
     private GetVideoPreviewPlayInfoResponseBody(Builder builder) {
-        this.code = builder.code;
         this.domainId = builder.domainId;
         this.driveId = builder.driveId;
         this.fileId = builder.fileId;
-        this.masterUrl = builder.masterUrl;
-        this.message = builder.message;
         this.shareId = builder.shareId;
         this.videoPreviewPlayInfo = builder.videoPreviewPlayInfo;
     }
@@ -52,13 +40,6 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
 
     public static GetVideoPreviewPlayInfoResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return code
-     */
-    public String getCode() {
-        return this.code;
     }
 
     /**
@@ -83,20 +64,6 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     }
 
     /**
-     * @return masterUrl
-     */
-    public String getMasterUrl() {
-        return this.masterUrl;
-    }
-
-    /**
-     * @return message
-     */
-    public String getMessage() {
-        return this.message;
-    }
-
-    /**
      * @return shareId
      */
     public String getShareId() {
@@ -111,22 +78,11 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
         private String domainId; 
         private String driveId; 
         private String fileId; 
-        private String masterUrl; 
-        private String message; 
         private String shareId; 
         private VideoPreviewPlayInfo videoPreviewPlayInfo; 
-
-        /**
-         * code.
-         */
-        public Builder code(String code) {
-            this.code = code;
-            return this;
-        }
 
         /**
          * The domain ID.
@@ -149,22 +105,6 @@ public class GetVideoPreviewPlayInfoResponseBody extends TeaModel {
          */
         public Builder fileId(String fileId) {
             this.fileId = fileId;
-            return this;
-        }
-
-        /**
-         * master_url.
-         */
-        public Builder masterUrl(String masterUrl) {
-            this.masterUrl = masterUrl;
-            return this;
-        }
-
-        /**
-         * message.
-         */
-        public Builder message(String message) {
-            this.message = message;
             return this;
         }
 

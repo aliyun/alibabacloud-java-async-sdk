@@ -38,6 +38,10 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
     private Boolean getWithoutUrl;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("re_transcode")
+    private Boolean reTranscode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("share_id")
     private String shareId;
 
@@ -57,6 +61,7 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
         this.fileId = builder.fileId;
         this.getMasterUrl = builder.getMasterUrl;
         this.getWithoutUrl = builder.getWithoutUrl;
+        this.reTranscode = builder.reTranscode;
         this.shareId = builder.shareId;
         this.templateId = builder.templateId;
         this.urlExpireSec = builder.urlExpireSec;
@@ -118,6 +123,13 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
     }
 
     /**
+     * @return reTranscode
+     */
+    public Boolean getReTranscode() {
+        return this.reTranscode;
+    }
+
+    /**
      * @return shareId
      */
     public String getShareId() {
@@ -145,6 +157,7 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
         private String fileId; 
         private Boolean getMasterUrl; 
         private Boolean getWithoutUrl; 
+        private Boolean reTranscode; 
         private String shareId; 
         private String templateId; 
         private Long urlExpireSec; 
@@ -161,6 +174,7 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
             this.fileId = request.fileId;
             this.getMasterUrl = request.getMasterUrl;
             this.getWithoutUrl = request.getWithoutUrl;
+            this.reTranscode = request.reTranscode;
             this.shareId = request.shareId;
             this.templateId = request.templateId;
             this.urlExpireSec = request.urlExpireSec;
@@ -223,6 +237,15 @@ public class GetVideoPreviewPlayInfoRequest extends Request {
         public Builder getWithoutUrl(Boolean getWithoutUrl) {
             this.putBodyParameter("get_without_url", getWithoutUrl);
             this.getWithoutUrl = getWithoutUrl;
+            return this;
+        }
+
+        /**
+         * re_transcode.
+         */
+        public Builder reTranscode(Boolean reTranscode) {
+            this.putBodyParameter("re_transcode", reTranscode);
+            this.reTranscode = reTranscode;
             return this;
         }
 

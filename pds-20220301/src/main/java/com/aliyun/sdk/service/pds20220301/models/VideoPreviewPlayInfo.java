@@ -17,6 +17,9 @@ public class VideoPreviewPlayInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("live_transcoding_task_list")
     private java.util.List < LiveTranscodingTaskList> liveTranscodingTaskList;
 
+    @com.aliyun.core.annotation.NameInMap("master_url")
+    private String masterUrl;
+
     @com.aliyun.core.annotation.NameInMap("meta")
     private Meta meta;
 
@@ -26,6 +29,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
     private VideoPreviewPlayInfo(Builder builder) {
         this.category = builder.category;
         this.liveTranscodingTaskList = builder.liveTranscodingTaskList;
+        this.masterUrl = builder.masterUrl;
         this.meta = builder.meta;
         this.offlineVideoTranscodingList = builder.offlineVideoTranscodingList;
     }
@@ -53,6 +57,13 @@ public class VideoPreviewPlayInfo extends TeaModel {
     }
 
     /**
+     * @return masterUrl
+     */
+    public String getMasterUrl() {
+        return this.masterUrl;
+    }
+
+    /**
      * @return meta
      */
     public Meta getMeta() {
@@ -69,6 +80,7 @@ public class VideoPreviewPlayInfo extends TeaModel {
     public static final class Builder {
         private String category; 
         private java.util.List < LiveTranscodingTaskList> liveTranscodingTaskList; 
+        private String masterUrl; 
         private Meta meta; 
         private java.util.List < OfflineVideoTranscodingList> offlineVideoTranscodingList; 
 
@@ -85,6 +97,14 @@ public class VideoPreviewPlayInfo extends TeaModel {
          */
         public Builder liveTranscodingTaskList(java.util.List < LiveTranscodingTaskList> liveTranscodingTaskList) {
             this.liveTranscodingTaskList = liveTranscodingTaskList;
+            return this;
+        }
+
+        /**
+         * master_url.
+         */
+        public Builder masterUrl(String masterUrl) {
+            this.masterUrl = masterUrl;
             return this;
         }
 
