@@ -167,6 +167,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetHistoryListByBizTypeResponse> getHistoryListByBizType(GetHistoryListByBizTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetHistoryListByBizType").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/api/history/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetHistoryListByBizTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetHistoryListByBizTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<GetLibraryResponse> getLibrary(GetLibraryRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -283,6 +297,30 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.validateRequestModel(request);
         TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunChatResultGeneration").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/run/chat/generation").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
         RunChatResultGenerationResponseBodyIterator iterator = RunChatResultGenerationResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    @Override
+    public CompletableFuture<RunLibraryChatGenerationResponse> runLibraryChatGeneration(RunLibraryChatGenerationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunLibraryChatGeneration").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/run/library/chat/generation").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunLibraryChatGenerationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunLibraryChatGenerationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunLibraryChatGenerationResponseBody> runLibraryChatGenerationWithResponseIterable(RunLibraryChatGenerationRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunLibraryChatGeneration").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/api/run/library/chat/generation").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        RunLibraryChatGenerationResponseBodyIterator iterator = RunLibraryChatGenerationResponseBodyIterator.create();
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);

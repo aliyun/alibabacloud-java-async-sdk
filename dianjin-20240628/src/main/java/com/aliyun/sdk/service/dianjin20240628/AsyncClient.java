@@ -37,6 +37,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFilterDocumentListResponse> getFilterDocumentList(GetFilterDocumentListRequest request);
 
+    CompletableFuture<GetHistoryListByBizTypeResponse> getHistoryListByBizType(GetHistoryListByBizTypeRequest request);
+
     CompletableFuture<GetLibraryResponse> getLibrary(GetLibraryRequest request);
 
     CompletableFuture<GetLibraryListResponse> getLibraryList(GetLibraryListRequest request);
@@ -54,6 +56,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunChatResultGenerationResponse> runChatResultGeneration(RunChatResultGenerationRequest request);
 
     ResponseIterable<RunChatResultGenerationResponseBody> runChatResultGenerationWithResponseIterable(RunChatResultGenerationRequest request);
+
+    CompletableFuture<RunLibraryChatGenerationResponse> runLibraryChatGeneration(RunLibraryChatGenerationRequest request);
+
+    ResponseIterable<RunLibraryChatGenerationResponseBody> runLibraryChatGenerationWithResponseIterable(RunLibraryChatGenerationRequest request);
 
     CompletableFuture<UpdateDocumentResponse> updateDocument(UpdateDocumentRequest request);
 
