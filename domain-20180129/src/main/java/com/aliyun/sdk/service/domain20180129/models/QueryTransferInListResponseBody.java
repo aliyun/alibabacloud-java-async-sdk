@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTransferInListResponseBody</p>
  */
 public class QueryTransferInListResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("NextPage")
+    @com.aliyun.core.annotation.NameInMap("NextPage")
     private Boolean nextPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrePage")
+    @com.aliyun.core.annotation.NameInMap("PrePage")
     private Boolean prePage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryTransferInListResponseBody(Builder builder) {
@@ -192,67 +191,67 @@ public class QueryTransferInListResponseBody extends TeaModel {
     } 
 
     public static class TransferInInfo extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("ExpirationDate")
+        @com.aliyun.core.annotation.NameInMap("ExpirationDate")
         private String expirationDate;
 
-        @NameInMap("ExpirationDateLong")
+        @com.aliyun.core.annotation.NameInMap("ExpirationDateLong")
         private Long expirationDateLong;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ModificationDate")
+        @com.aliyun.core.annotation.NameInMap("ModificationDate")
         private String modificationDate;
 
-        @NameInMap("ModificationDateLong")
+        @com.aliyun.core.annotation.NameInMap("ModificationDateLong")
         private Long modificationDateLong;
 
-        @NameInMap("NeedMailCheck")
+        @com.aliyun.core.annotation.NameInMap("NeedMailCheck")
         private Boolean needMailCheck;
 
-        @NameInMap("ProgressBarType")
+        @com.aliyun.core.annotation.NameInMap("ProgressBarType")
         private Integer progressBarType;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
 
-        @NameInMap("ResultDate")
+        @com.aliyun.core.annotation.NameInMap("ResultDate")
         private String resultDate;
 
-        @NameInMap("ResultDateLong")
+        @com.aliyun.core.annotation.NameInMap("ResultDateLong")
         private Long resultDateLong;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
-        @NameInMap("SimpleTransferInStatus")
+        @com.aliyun.core.annotation.NameInMap("SimpleTransferInStatus")
         private String simpleTransferInStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubmissionDate")
+        @com.aliyun.core.annotation.NameInMap("SubmissionDate")
         private String submissionDate;
 
-        @NameInMap("SubmissionDateLong")
+        @com.aliyun.core.annotation.NameInMap("SubmissionDateLong")
         private Long submissionDateLong;
 
-        @NameInMap("TransferAuthorizationCodeSubmissionDate")
+        @com.aliyun.core.annotation.NameInMap("TransferAuthorizationCodeSubmissionDate")
         private String transferAuthorizationCodeSubmissionDate;
 
-        @NameInMap("TransferAuthorizationCodeSubmissionDateLong")
+        @com.aliyun.core.annotation.NameInMap("TransferAuthorizationCodeSubmissionDateLong")
         private Long transferAuthorizationCodeSubmissionDateLong;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("WhoisMailStatus")
+        @com.aliyun.core.annotation.NameInMap("WhoisMailStatus")
         private Boolean whoisMailStatus;
 
         private TransferInInfo(Builder builder) {
@@ -633,7 +632,7 @@ public class QueryTransferInListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("TransferInInfo")
+        @com.aliyun.core.annotation.NameInMap("TransferInInfo")
         private java.util.List < TransferInInfo> transferInInfo;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,106 +11,106 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDomainByDomainNameResponseBody</p>
  */
 public class QueryDomainByDomainNameResponseBody extends TeaModel {
-    @NameInMap("DnsList")
+    @com.aliyun.core.annotation.NameInMap("DnsList")
     private DnsList dnsList;
 
-    @NameInMap("DomainGroupId")
+    @com.aliyun.core.annotation.NameInMap("DomainGroupId")
     private Long domainGroupId;
 
-    @NameInMap("DomainGroupName")
+    @com.aliyun.core.annotation.NameInMap("DomainGroupName")
     private String domainGroupName;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("DomainNameProxyService")
+    @com.aliyun.core.annotation.NameInMap("DomainNameProxyService")
     private Boolean domainNameProxyService;
 
-    @NameInMap("DomainNameVerificationStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainNameVerificationStatus")
     private String domainNameVerificationStatus;
 
-    @NameInMap("DomainStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainStatus")
     private String domainStatus;
 
-    @NameInMap("DomainType")
+    @com.aliyun.core.annotation.NameInMap("DomainType")
     private String domainType;
 
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @NameInMap("EmailVerificationClientHold")
+    @com.aliyun.core.annotation.NameInMap("EmailVerificationClientHold")
     private Boolean emailVerificationClientHold;
 
-    @NameInMap("EmailVerificationStatus")
+    @com.aliyun.core.annotation.NameInMap("EmailVerificationStatus")
     private Integer emailVerificationStatus;
 
-    @NameInMap("ExpirationCurrDateDiff")
+    @com.aliyun.core.annotation.NameInMap("ExpirationCurrDateDiff")
     private Integer expirationCurrDateDiff;
 
-    @NameInMap("ExpirationDate")
+    @com.aliyun.core.annotation.NameInMap("ExpirationDate")
     private String expirationDate;
 
-    @NameInMap("ExpirationDateLong")
+    @com.aliyun.core.annotation.NameInMap("ExpirationDateLong")
     private Long expirationDateLong;
 
-    @NameInMap("ExpirationDateStatus")
+    @com.aliyun.core.annotation.NameInMap("ExpirationDateStatus")
     private String expirationDateStatus;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("Premium")
+    @com.aliyun.core.annotation.NameInMap("Premium")
     private Boolean premium;
 
-    @NameInMap("RealNameStatus")
+    @com.aliyun.core.annotation.NameInMap("RealNameStatus")
     private String realNameStatus;
 
-    @NameInMap("RegistrantName")
+    @com.aliyun.core.annotation.NameInMap("RegistrantName")
     private String registrantName;
 
-    @NameInMap("RegistrantOrganization")
+    @com.aliyun.core.annotation.NameInMap("RegistrantOrganization")
     private String registrantOrganization;
 
-    @NameInMap("RegistrantType")
+    @com.aliyun.core.annotation.NameInMap("RegistrantType")
     private String registrantType;
 
-    @NameInMap("RegistrantUpdatingStatus")
+    @com.aliyun.core.annotation.NameInMap("RegistrantUpdatingStatus")
     private String registrantUpdatingStatus;
 
-    @NameInMap("RegistrationDate")
+    @com.aliyun.core.annotation.NameInMap("RegistrationDate")
     private String registrationDate;
 
-    @NameInMap("RegistrationDateLong")
+    @com.aliyun.core.annotation.NameInMap("RegistrationDateLong")
     private Long registrationDateLong;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private Tag tag;
 
-    @NameInMap("TransferOutStatus")
+    @com.aliyun.core.annotation.NameInMap("TransferOutStatus")
     private String transferOutStatus;
 
-    @NameInMap("TransferProhibitionLock")
+    @com.aliyun.core.annotation.NameInMap("TransferProhibitionLock")
     private String transferProhibitionLock;
 
-    @NameInMap("UpdateProhibitionLock")
+    @com.aliyun.core.annotation.NameInMap("UpdateProhibitionLock")
     private String updateProhibitionLock;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("ZhRegistrantName")
+    @com.aliyun.core.annotation.NameInMap("ZhRegistrantName")
     private String zhRegistrantName;
 
-    @NameInMap("ZhRegistrantOrganization")
+    @com.aliyun.core.annotation.NameInMap("ZhRegistrantOrganization")
     private String zhRegistrantOrganization;
 
     private QueryDomainByDomainNameResponseBody(Builder builder) {
@@ -764,7 +763,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
     } 
 
     public static class DnsList extends TeaModel {
-        @NameInMap("Dns")
+        @com.aliyun.core.annotation.NameInMap("Dns")
         private java.util.List < String > dns;
 
         private DnsList(Builder builder) {
@@ -805,10 +804,10 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
 
     }
     public static class TagTag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Vaue")
+        @com.aliyun.core.annotation.NameInMap("Vaue")
         private String vaue;
 
         private TagTag(Builder builder) {
@@ -866,7 +865,7 @@ public class QueryDomainByDomainNameResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < TagTag> tag;
 
         private Tag(Builder builder) {

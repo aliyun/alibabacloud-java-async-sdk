@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTaskListResponseBody</p>
  */
 public class QueryTaskListResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("NextPage")
+    @com.aliyun.core.annotation.NameInMap("NextPage")
     private Boolean nextPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrePage")
+    @com.aliyun.core.annotation.NameInMap("PrePage")
     private Boolean prePage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryTaskListResponseBody(Builder builder) {
@@ -192,34 +191,34 @@ public class QueryTaskListResponseBody extends TeaModel {
     } 
 
     public static class TaskInfo extends TeaModel {
-        @NameInMap("Clientip")
+        @com.aliyun.core.annotation.NameInMap("Clientip")
         private String clientip;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("TaskCancelStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskCancelStatus")
         private String taskCancelStatus;
 
-        @NameInMap("TaskCancelStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskCancelStatusCode")
         private Integer taskCancelStatusCode;
 
-        @NameInMap("TaskNo")
+        @com.aliyun.core.annotation.NameInMap("TaskNo")
         private String taskNo;
 
-        @NameInMap("TaskNum")
+        @com.aliyun.core.annotation.NameInMap("TaskNum")
         private Integer taskNum;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusCode")
         private Integer taskStatusCode;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeDescription")
         private String taskTypeDescription;
 
         private TaskInfo(Builder builder) {
@@ -413,7 +412,7 @@ public class QueryTaskListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("TaskInfo")
+        @com.aliyun.core.annotation.NameInMap("TaskInfo")
         private java.util.List < TaskInfo> taskInfo;
 
         private Data(Builder builder) {

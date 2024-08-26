@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryOperationAuditInfoDetailResponseBody</p>
  */
 public class QueryOperationAuditInfoDetailResponseBody extends TeaModel {
-    @NameInMap("AuditInfo")
+    @com.aliyun.core.annotation.NameInMap("AuditInfo")
     private String auditInfo;
 
-    @NameInMap("AuditStatus")
+    @com.aliyun.core.annotation.NameInMap("AuditStatus")
     private Integer auditStatus;
 
-    @NameInMap("AuditType")
+    @com.aliyun.core.annotation.NameInMap("AuditType")
     private Integer auditType;
 
-    @NameInMap("BusinessName")
+    @com.aliyun.core.annotation.NameInMap("BusinessName")
     private String businessName;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private Long updateTime;
 
     private QueryOperationAuditInfoDetailResponseBody(Builder builder) {

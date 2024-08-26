@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,97 +11,97 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScrollDomainListRequest</p>
  */
 public class ScrollDomainListRequest extends Request {
-    @Query
-    @NameInMap("DomainGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainGroupId")
     private Long domainGroupId;
 
-    @Query
-    @NameInMap("DomainStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainStatus")
     private Integer domainStatus;
 
-    @Query
-    @NameInMap("EndExpirationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndExpirationDate")
     private Long endExpirationDate;
 
-    @Query
-    @NameInMap("EndLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndLength")
     private Integer endLength;
 
-    @Query
-    @NameInMap("EndRegistrationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndRegistrationDate")
     private Long endRegistrationDate;
 
-    @Query
-    @NameInMap("Excluded")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Excluded")
     private String excluded;
 
-    @Query
-    @NameInMap("ExcludedPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludedPrefix")
     private Boolean excludedPrefix;
 
-    @Query
-    @NameInMap("ExcludedSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludedSuffix")
     private Boolean excludedSuffix;
 
-    @Query
-    @NameInMap("Form")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Form")
     private Integer form;
 
-    @Query
-    @NameInMap("KeyWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWord")
     private String keyWord;
 
-    @Query
-    @NameInMap("KeyWordPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWordPrefix")
     private Boolean keyWordPrefix;
 
-    @Query
-    @NameInMap("KeyWordSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWordSuffix")
     private Boolean keyWordSuffix;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductDomainType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductDomainType")
     private String productDomainType;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ScrollId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScrollId")
     private String scrollId;
 
-    @Query
-    @NameInMap("StartExpirationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartExpirationDate")
     private Long startExpirationDate;
 
-    @Query
-    @NameInMap("StartLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartLength")
     private Integer startLength;
 
-    @Query
-    @NameInMap("StartRegistrationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartRegistrationDate")
     private Long startRegistrationDate;
 
-    @Query
-    @NameInMap("Suffixs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Suffixs")
     private String suffixs;
 
-    @Query
-    @NameInMap("TradeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TradeType")
     private Integer tradeType;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private ScrollDomainListRequest(Builder builder) {

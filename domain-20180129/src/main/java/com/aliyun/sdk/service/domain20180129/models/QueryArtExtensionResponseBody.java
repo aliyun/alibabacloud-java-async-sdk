@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryArtExtensionResponseBody</p>
  */
 public class QueryArtExtensionResponseBody extends TeaModel {
-    @NameInMap("DateOrPeriod")
+    @com.aliyun.core.annotation.NameInMap("DateOrPeriod")
     private String dateOrPeriod;
 
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private String dimensions;
 
-    @NameInMap("Features")
+    @com.aliyun.core.annotation.NameInMap("Features")
     private String features;
 
-    @NameInMap("InscriptionsAndMarkings")
+    @com.aliyun.core.annotation.NameInMap("InscriptionsAndMarkings")
     private String inscriptionsAndMarkings;
 
-    @NameInMap("Maker")
+    @com.aliyun.core.annotation.NameInMap("Maker")
     private String maker;
 
-    @NameInMap("MaterialsAndTechniques")
+    @com.aliyun.core.annotation.NameInMap("MaterialsAndTechniques")
     private String materialsAndTechniques;
 
-    @NameInMap("ObjectType")
+    @com.aliyun.core.annotation.NameInMap("ObjectType")
     private String objectType;
 
-    @NameInMap("Reference")
+    @com.aliyun.core.annotation.NameInMap("Reference")
     private String reference;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Subject")
+    @com.aliyun.core.annotation.NameInMap("Subject")
     private String subject;
 
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private QueryArtExtensionResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitOperationCredentialsRequest</p>
  */
 public class SubmitOperationCredentialsRequest extends Request {
-    @Query
-    @NameInMap("AuditRecordId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditRecordId")
     private Long auditRecordId;
 
-    @Query
-    @NameInMap("AuditType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditType")
     private Integer auditType;
 
-    @Query
-    @NameInMap("Credentials")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Credentials")
     private String credentials;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("RegType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegType")
     private Integer regType;
 
     private SubmitOperationCredentialsRequest(Builder builder) {

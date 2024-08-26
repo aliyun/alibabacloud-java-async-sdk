@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDomainAdminDivisionResponseBody</p>
  */
 public class QueryDomainAdminDivisionResponseBody extends TeaModel {
-    @NameInMap("AdminDivisions")
+    @com.aliyun.core.annotation.NameInMap("AdminDivisions")
     private AdminDivisions adminDivisions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryDomainAdminDivisionResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
     } 
 
     public static class Children extends TeaModel {
-        @NameInMap("ChildDivisionName")
+        @com.aliyun.core.annotation.NameInMap("ChildDivisionName")
         private String childDivisionName;
 
         private Children(Builder builder) {
@@ -113,7 +112,7 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
 
     }
     public static class AdminDivisionChildren extends TeaModel {
-        @NameInMap("Children")
+        @com.aliyun.core.annotation.NameInMap("Children")
         private java.util.List < Children> children;
 
         private AdminDivisionChildren(Builder builder) {
@@ -154,10 +153,10 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
 
     }
     public static class AdminDivision extends TeaModel {
-        @NameInMap("Children")
+        @com.aliyun.core.annotation.NameInMap("Children")
         private AdminDivisionChildren children;
 
-        @NameInMap("DivisionName")
+        @com.aliyun.core.annotation.NameInMap("DivisionName")
         private String divisionName;
 
         private AdminDivision(Builder builder) {
@@ -215,7 +214,7 @@ public class QueryDomainAdminDivisionResponseBody extends TeaModel {
 
     }
     public static class AdminDivisions extends TeaModel {
-        @NameInMap("AdminDivision")
+        @com.aliyun.core.annotation.NameInMap("AdminDivision")
         private java.util.List < AdminDivision> adminDivision;
 
         private AdminDivisions(Builder builder) {

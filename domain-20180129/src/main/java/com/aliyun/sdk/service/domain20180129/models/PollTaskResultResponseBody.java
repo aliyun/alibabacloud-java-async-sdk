@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PollTaskResultResponseBody</p>
  */
 public class PollTaskResultResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("NextPage")
+    @com.aliyun.core.annotation.NameInMap("NextPage")
     private Boolean nextPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrePage")
+    @com.aliyun.core.annotation.NameInMap("PrePage")
     private Boolean prePage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private PollTaskResultResponseBody(Builder builder) {
@@ -192,43 +191,43 @@ public class PollTaskResultResponseBody extends TeaModel {
     } 
 
     public static class TaskDetail extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TaskDetailNo")
+        @com.aliyun.core.annotation.NameInMap("TaskDetailNo")
         private String taskDetailNo;
 
-        @NameInMap("TaskNo")
+        @com.aliyun.core.annotation.NameInMap("TaskNo")
         private String taskNo;
 
-        @NameInMap("TaskResult")
+        @com.aliyun.core.annotation.NameInMap("TaskResult")
         private String taskResult;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusCode")
         private Integer taskStatusCode;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeDescription")
         private String taskTypeDescription;
 
-        @NameInMap("TryCount")
+        @com.aliyun.core.annotation.NameInMap("TryCount")
         private Integer tryCount;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private TaskDetail(Builder builder) {
@@ -473,7 +472,7 @@ public class PollTaskResultResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("TaskDetail")
+        @com.aliyun.core.annotation.NameInMap("TaskDetail")
         private java.util.List < TaskDetail> taskDetail;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveBatchTaskForReserveDropListDomainRequest</p>
  */
 public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
-    @Query
-    @NameInMap("ContactTemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactTemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactTemplateId;
 
-    @Query
-    @NameInMap("Domains")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domains")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Domains> domains;
 
     private SaveBatchTaskForReserveDropListDomainRequest(Builder builder) {
@@ -95,14 +94,14 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
     } 
 
     public static class Domains extends TeaModel {
-        @NameInMap("Dns1")
+        @com.aliyun.core.annotation.NameInMap("Dns1")
         private String dns1;
 
-        @NameInMap("Dns2")
+        @com.aliyun.core.annotation.NameInMap("Dns2")
         private String dns2;
 
-        @NameInMap("DomainName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DomainName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domainName;
 
         private Domains(Builder builder) {

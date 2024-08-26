@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDomainSpecialBizDetailResponseBody</p>
  */
 public class QueryDomainSpecialBizDetailResponseBody extends TeaModel {
-    @NameInMap("AllowRetry")
+    @com.aliyun.core.annotation.NameInMap("AllowRetry")
     private Boolean allowRetry;
 
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorArgs")
+    @com.aliyun.core.annotation.NameInMap("ErrorArgs")
     private java.util.List < ? > errorArgs;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.NameInMap("Module")
     private Module module;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Synchro")
+    @com.aliyun.core.annotation.NameInMap("Synchro")
     private Boolean synchro;
 
     private QueryDomainSpecialBizDetailResponseBody(Builder builder) {
@@ -276,79 +275,79 @@ public class QueryDomainSpecialBizDetailResponseBody extends TeaModel {
     } 
 
     public static class DomainSpecialBizContact extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private Long bizId;
 
-        @NameInMap("CCity")
+        @com.aliyun.core.annotation.NameInMap("CCity")
         private String cCity;
 
-        @NameInMap("CCompany")
+        @com.aliyun.core.annotation.NameInMap("CCompany")
         private String cCompany;
 
-        @NameInMap("CCountry")
+        @com.aliyun.core.annotation.NameInMap("CCountry")
         private String cCountry;
 
-        @NameInMap("CName")
+        @com.aliyun.core.annotation.NameInMap("CName")
         private String cName;
 
-        @NameInMap("CProvince")
+        @com.aliyun.core.annotation.NameInMap("CProvince")
         private String cProvince;
 
-        @NameInMap("CVenu")
+        @com.aliyun.core.annotation.NameInMap("CVenu")
         private String cVenu;
 
-        @NameInMap("ECity")
+        @com.aliyun.core.annotation.NameInMap("ECity")
         private String eCity;
 
-        @NameInMap("ECompany")
+        @com.aliyun.core.annotation.NameInMap("ECompany")
         private String eCompany;
 
-        @NameInMap("EName")
+        @com.aliyun.core.annotation.NameInMap("EName")
         private String eName;
 
-        @NameInMap("EProvince")
+        @com.aliyun.core.annotation.NameInMap("EProvince")
         private String eProvince;
 
-        @NameInMap("EVenu")
+        @com.aliyun.core.annotation.NameInMap("EVenu")
         private String eVenu;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Extend")
+        @com.aliyun.core.annotation.NameInMap("Extend")
         private String extend;
 
-        @NameInMap("FaxArea")
+        @com.aliyun.core.annotation.NameInMap("FaxArea")
         private String faxArea;
 
-        @NameInMap("FaxExt")
+        @com.aliyun.core.annotation.NameInMap("FaxExt")
         private String faxExt;
 
-        @NameInMap("FaxMain")
+        @com.aliyun.core.annotation.NameInMap("FaxMain")
         private String faxMain;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("Postalcode")
+        @com.aliyun.core.annotation.NameInMap("Postalcode")
         private String postalcode;
 
-        @NameInMap("RegType")
+        @com.aliyun.core.annotation.NameInMap("RegType")
         private Integer regType;
 
-        @NameInMap("RegistrantId")
+        @com.aliyun.core.annotation.NameInMap("RegistrantId")
         private String registrantId;
 
-        @NameInMap("TelArea")
+        @com.aliyun.core.annotation.NameInMap("TelArea")
         private String telArea;
 
-        @NameInMap("TelExt")
+        @com.aliyun.core.annotation.NameInMap("TelExt")
         private String telExt;
 
-        @NameInMap("TelMain")
+        @com.aliyun.core.annotation.NameInMap("TelMain")
         private String telMain;
 
-        @NameInMap("VspContactId")
+        @com.aliyun.core.annotation.NameInMap("VspContactId")
         private String vspContactId;
 
         private DomainSpecialBizContact(Builder builder) {
@@ -797,25 +796,25 @@ public class QueryDomainSpecialBizDetailResponseBody extends TeaModel {
 
     }
     public static class DomainSpecialBizCredentials extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private Long bizId;
 
-        @NameInMap("CredentialNo")
+        @com.aliyun.core.annotation.NameInMap("CredentialNo")
         private String credentialNo;
 
-        @NameInMap("CredentialType")
+        @com.aliyun.core.annotation.NameInMap("CredentialType")
         private String credentialType;
 
-        @NameInMap("CredentialUrl")
+        @com.aliyun.core.annotation.NameInMap("CredentialUrl")
         private String credentialUrl;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("HolderCert")
+        @com.aliyun.core.annotation.NameInMap("HolderCert")
         private Integer holderCert;
 
-        @NameInMap("SaleId")
+        @com.aliyun.core.annotation.NameInMap("SaleId")
         private String saleId;
 
         private DomainSpecialBizCredentials(Builder builder) {
@@ -958,31 +957,31 @@ public class QueryDomainSpecialBizDetailResponseBody extends TeaModel {
 
     }
     public static class DomainSpecialOrderResult extends TeaModel {
-        @NameInMap("ActionType")
+        @com.aliyun.core.annotation.NameInMap("ActionType")
         private String actionType;
 
-        @NameInMap("OrderAmount")
+        @com.aliyun.core.annotation.NameInMap("OrderAmount")
         private Double orderAmount;
 
-        @NameInMap("OrderCurrency")
+        @com.aliyun.core.annotation.NameInMap("OrderCurrency")
         private String orderCurrency;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("OrderStatus")
+        @com.aliyun.core.annotation.NameInMap("OrderStatus")
         private String orderStatus;
 
-        @NameInMap("OrderTime")
+        @com.aliyun.core.annotation.NameInMap("OrderTime")
         private String orderTime;
 
-        @NameInMap("OrderYear")
+        @com.aliyun.core.annotation.NameInMap("OrderYear")
         private Integer orderYear;
 
-        @NameInMap("SaleId")
+        @com.aliyun.core.annotation.NameInMap("SaleId")
         private String saleId;
 
-        @NameInMap("SubOrderId")
+        @com.aliyun.core.annotation.NameInMap("SubOrderId")
         private String subOrderId;
 
         private DomainSpecialOrderResult(Builder builder) {
@@ -1159,64 +1158,64 @@ public class QueryDomainSpecialBizDetailResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("AuditMsg")
+        @com.aliyun.core.annotation.NameInMap("AuditMsg")
         private String auditMsg;
 
-        @NameInMap("BizName")
+        @com.aliyun.core.annotation.NameInMap("BizName")
         private String bizName;
 
-        @NameInMap("BizNo")
+        @com.aliyun.core.annotation.NameInMap("BizNo")
         private String bizNo;
 
-        @NameInMap("BizStatus")
+        @com.aliyun.core.annotation.NameInMap("BizStatus")
         private String bizStatus;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainSpecialBizContact")
+        @com.aliyun.core.annotation.NameInMap("DomainSpecialBizContact")
         private DomainSpecialBizContact domainSpecialBizContact;
 
-        @NameInMap("DomainSpecialBizCredentials")
+        @com.aliyun.core.annotation.NameInMap("DomainSpecialBizCredentials")
         private java.util.List < DomainSpecialBizCredentials> domainSpecialBizCredentials;
 
-        @NameInMap("DomainSpecialOrderResult")
+        @com.aliyun.core.annotation.NameInMap("DomainSpecialOrderResult")
         private DomainSpecialOrderResult domainSpecialOrderResult;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("SaleId")
+        @com.aliyun.core.annotation.NameInMap("SaleId")
         private String saleId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Module(Builder builder) {

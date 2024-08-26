@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryQualificationDetailResponseBody</p>
  */
 public class QueryQualificationDetailResponseBody extends TeaModel {
-    @NameInMap("AuditStatus")
+    @com.aliyun.core.annotation.NameInMap("AuditStatus")
     private Integer auditStatus;
 
-    @NameInMap("Credentials")
+    @com.aliyun.core.annotation.NameInMap("Credentials")
     private Credentials credentials;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrackId")
+    @com.aliyun.core.annotation.NameInMap("TrackId")
     private String trackId;
 
     private QueryQualificationDetailResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
     } 
 
     public static class QualificationCredential extends TeaModel {
-        @NameInMap("CredentialNo")
+        @com.aliyun.core.annotation.NameInMap("CredentialNo")
         private String credentialNo;
 
-        @NameInMap("CredentialType")
+        @com.aliyun.core.annotation.NameInMap("CredentialType")
         private String credentialType;
 
-        @NameInMap("CredentialUrl")
+        @com.aliyun.core.annotation.NameInMap("CredentialUrl")
         private String credentialUrl;
 
         private QualificationCredential(Builder builder) {
@@ -193,7 +192,7 @@ public class QueryQualificationDetailResponseBody extends TeaModel {
 
     }
     public static class Credentials extends TeaModel {
-        @NameInMap("QualificationCredential")
+        @com.aliyun.core.annotation.NameInMap("QualificationCredential")
         private java.util.List < QualificationCredential> qualificationCredential;
 
         private Credentials(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveBatchTaskForCreatingOrderActivateRequest</p>
  */
 public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("OrderActivateParam")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderActivateParam")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < OrderActivateParam> orderActivateParam;
 
-    @Query
-    @NameInMap("PromotionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionNo")
     private String promotionNo;
 
-    @Query
-    @NameInMap("UseCoupon")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseCoupon")
     private Boolean useCoupon;
 
-    @Query
-    @NameInMap("UsePromotion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsePromotion")
     private Boolean usePromotion;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveBatchTaskForCreatingOrderActivateRequest(Builder builder) {
@@ -209,85 +208,86 @@ public class SaveBatchTaskForCreatingOrderActivateRequest extends Request {
     } 
 
     public static class OrderActivateParam extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("AliyunDns")
+        @com.aliyun.core.annotation.NameInMap("AliyunDns")
         private Boolean aliyunDns;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("Dns1")
+        @com.aliyun.core.annotation.NameInMap("Dns1")
         private String dns1;
 
-        @NameInMap("Dns2")
+        @com.aliyun.core.annotation.NameInMap("Dns2")
         private String dns2;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domainName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EnableDomainProxy")
+        @com.aliyun.core.annotation.NameInMap("EnableDomainProxy")
         private Boolean enableDomainProxy;
 
-        @NameInMap("PermitPremiumActivation")
+        @com.aliyun.core.annotation.NameInMap("PermitPremiumActivation")
         private Boolean permitPremiumActivation;
 
-        @NameInMap("PostalCode")
+        @com.aliyun.core.annotation.NameInMap("PostalCode")
         private String postalCode;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("RegistrantName")
+        @com.aliyun.core.annotation.NameInMap("RegistrantName")
         private String registrantName;
 
-        @NameInMap("RegistrantOrganization")
+        @com.aliyun.core.annotation.NameInMap("RegistrantOrganization")
         private String registrantOrganization;
 
-        @NameInMap("RegistrantProfileId")
+        @com.aliyun.core.annotation.NameInMap("RegistrantProfileId")
         private Long registrantProfileId;
 
-        @NameInMap("RegistrantType")
+        @com.aliyun.core.annotation.NameInMap("RegistrantType")
         private String registrantType;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SubscriptionDuration")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionDuration")
         private Integer subscriptionDuration;
 
-        @NameInMap("TelArea")
+        @com.aliyun.core.annotation.NameInMap("TelArea")
         private String telArea;
 
-        @NameInMap("TelExt")
+        @com.aliyun.core.annotation.NameInMap("TelExt")
         private String telExt;
 
-        @NameInMap("Telephone")
+        @com.aliyun.core.annotation.NameInMap("Telephone")
         private String telephone;
 
-        @NameInMap("TrademarkDomainActivation")
+        @com.aliyun.core.annotation.NameInMap("TrademarkDomainActivation")
         private Boolean trademarkDomainActivation;
 
-        @NameInMap("ZhAddress")
+        @com.aliyun.core.annotation.NameInMap("ZhAddress")
         private String zhAddress;
 
-        @NameInMap("ZhCity")
+        @com.aliyun.core.annotation.NameInMap("ZhCity")
         private String zhCity;
 
-        @NameInMap("ZhProvince")
+        @com.aliyun.core.annotation.NameInMap("ZhProvince")
         private String zhProvince;
 
-        @NameInMap("ZhRegistrantName")
+        @com.aliyun.core.annotation.NameInMap("ZhRegistrantName")
         private String zhRegistrantName;
 
-        @NameInMap("ZhRegistrantOrganization")
+        @com.aliyun.core.annotation.NameInMap("ZhRegistrantOrganization")
         private String zhRegistrantOrganization;
 
         private OrderActivateParam(Builder builder) {

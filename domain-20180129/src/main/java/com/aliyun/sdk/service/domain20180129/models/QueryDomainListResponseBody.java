@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDomainListResponseBody</p>
  */
 public class QueryDomainListResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("NextPage")
+    @com.aliyun.core.annotation.NameInMap("NextPage")
     private Boolean nextPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrePage")
+    @com.aliyun.core.annotation.NameInMap("PrePage")
     private Boolean prePage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryDomainListResponseBody(Builder builder) {
@@ -192,10 +191,10 @@ public class QueryDomainListResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -253,7 +252,7 @@ public class QueryDomainListResponseBody extends TeaModel {
 
     }
     public static class DomainTag extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private DomainTag(Builder builder) {
@@ -294,68 +293,72 @@ public class QueryDomainListResponseBody extends TeaModel {
 
     }
     public static class Domain extends TeaModel {
-        @NameInMap("Ccompany")
+        @com.aliyun.core.annotation.NameInMap("Ccompany")
         private String ccompany;
 
-        @NameInMap("DomainAuditStatus")
+        @com.aliyun.core.annotation.NameInMap("ChgholderStatus")
+        private String chgholderStatus;
+
+        @com.aliyun.core.annotation.NameInMap("DomainAuditStatus")
         private String domainAuditStatus;
 
-        @NameInMap("DomainGroupId")
+        @com.aliyun.core.annotation.NameInMap("DomainGroupId")
         private String domainGroupId;
 
-        @NameInMap("DomainGroupName")
+        @com.aliyun.core.annotation.NameInMap("DomainGroupName")
         private String domainGroupName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainStatus")
         private String domainStatus;
 
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("ExpirationCurrDateDiff")
+        @com.aliyun.core.annotation.NameInMap("ExpirationCurrDateDiff")
         private Integer expirationCurrDateDiff;
 
-        @NameInMap("ExpirationDate")
+        @com.aliyun.core.annotation.NameInMap("ExpirationDate")
         private String expirationDate;
 
-        @NameInMap("ExpirationDateLong")
+        @com.aliyun.core.annotation.NameInMap("ExpirationDateLong")
         private Long expirationDateLong;
 
-        @NameInMap("ExpirationDateStatus")
+        @com.aliyun.core.annotation.NameInMap("ExpirationDateStatus")
         private String expirationDateStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Premium")
+        @com.aliyun.core.annotation.NameInMap("Premium")
         private Boolean premium;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("RegistrantType")
+        @com.aliyun.core.annotation.NameInMap("RegistrantType")
         private String registrantType;
 
-        @NameInMap("RegistrationDate")
+        @com.aliyun.core.annotation.NameInMap("RegistrationDate")
         private String registrationDate;
 
-        @NameInMap("RegistrationDateLong")
+        @com.aliyun.core.annotation.NameInMap("RegistrationDateLong")
         private Long registrationDateLong;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private DomainTag tag;
 
         private Domain(Builder builder) {
             this.ccompany = builder.ccompany;
+            this.chgholderStatus = builder.chgholderStatus;
             this.domainAuditStatus = builder.domainAuditStatus;
             this.domainGroupId = builder.domainGroupId;
             this.domainGroupName = builder.domainGroupName;
@@ -390,6 +393,13 @@ public class QueryDomainListResponseBody extends TeaModel {
          */
         public String getCcompany() {
             return this.ccompany;
+        }
+
+        /**
+         * @return chgholderStatus
+         */
+        public String getChgholderStatus() {
+            return this.chgholderStatus;
         }
 
         /**
@@ -527,6 +537,7 @@ public class QueryDomainListResponseBody extends TeaModel {
 
         public static final class Builder {
             private String ccompany; 
+            private String chgholderStatus; 
             private String domainAuditStatus; 
             private String domainGroupId; 
             private String domainGroupName; 
@@ -552,6 +563,14 @@ public class QueryDomainListResponseBody extends TeaModel {
              */
             public Builder ccompany(String ccompany) {
                 this.ccompany = ccompany;
+                return this;
+            }
+
+            /**
+             * ChgholderStatus.
+             */
+            public Builder chgholderStatus(String chgholderStatus) {
+                this.chgholderStatus = chgholderStatus;
                 return this;
             }
 
@@ -739,7 +758,7 @@ public class QueryDomainListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private java.util.List < Domain> domain;
 
         private Data(Builder builder) {

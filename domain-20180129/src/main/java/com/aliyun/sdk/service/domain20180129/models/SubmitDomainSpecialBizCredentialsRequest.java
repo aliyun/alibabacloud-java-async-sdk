@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180129.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitDomainSpecialBizCredentialsRequest</p>
  */
 public class SubmitDomainSpecialBizCredentialsRequest extends Request {
-    @Body
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private Long bizId;
 
-    @Body
-    @NameInMap("Credentials")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Credentials")
     private String credentials;
 
-    @Body
-    @NameInMap("Extend")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SubmitDomainSpecialBizCredentialsRequest(Builder builder) {
