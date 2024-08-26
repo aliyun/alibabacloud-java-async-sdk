@@ -44,8 +44,30 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteNetworkReachableAnalysisResponse> deleteNetworkReachableAnalysis(DeleteNetworkReachableAnalysisRequest request);
 
+    CompletableFuture<DeleteNisInspectionReportResponse> deleteNisInspectionReport(DeleteNisInspectionReportRequest request);
+
+    CompletableFuture<DeleteNisInspectionTaskResponse> deleteNisInspectionTask(DeleteNisInspectionTaskRequest request);
+
+    CompletableFuture<DescribeNisInspectionRecommendationResourcesResponse> describeNisInspectionRecommendationResources(DescribeNisInspectionRecommendationResourcesRequest request);
+
+    CompletableFuture<DescribeNisInspectionReportCheckItemsResponse> describeNisInspectionReportCheckItems(DescribeNisInspectionReportCheckItemsRequest request);
+
+    CompletableFuture<DescribeNisInspectionReportStatusResponse> describeNisInspectionReportStatus(DescribeNisInspectionReportStatusRequest request);
+
+    CompletableFuture<DescribeNisInspectionReportSummaryResponse> describeNisInspectionReportSummary(DescribeNisInspectionReportSummaryRequest request);
+
+    CompletableFuture<DescribeNisInspectionTaskResponse> describeNisInspectionTask(DescribeNisInspectionTaskRequest request);
+
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetInternetTupleResponse> getInternetTuple(GetInternetTupleRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetNatTopNResponse> getNatTopN(GetNatTopNRequest request);
 
     /**
@@ -60,8 +82,26 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetNisNetworkRankingResponse> getNisNetworkRanking(GetNisNetworkRankingRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetTransitRouterFlowTopNResponse> getTransitRouterFlowTopN(GetTransitRouterFlowTopNRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetVbrFlowTopNResponse> getVbrFlowTopN(GetVbrFlowTopNRequest request);
+
+    CompletableFuture<ListNisInspectionResourceTypeResponse> listNisInspectionResourceType(ListNisInspectionResourceTypeRequest request);
+
+    CompletableFuture<ListNisInspectionTaskReportsResponse> listNisInspectionTaskReports(ListNisInspectionTaskReportsRequest request);
+
+    CompletableFuture<ListNisInspectionTasksResponse> listNisInspectionTasks(ListNisInspectionTasksRequest request);
+
+    CompletableFuture<StartNisInspectionTaskResponse> startNisInspectionTask(StartNisInspectionTaskRequest request);
+
+    CompletableFuture<UpdateNisInspectionTaskResponse> updateNisInspectionTask(UpdateNisInspectionTaskRequest request);
 
 }
