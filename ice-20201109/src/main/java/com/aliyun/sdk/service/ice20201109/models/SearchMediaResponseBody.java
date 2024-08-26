@@ -1379,6 +1379,67 @@ public class SearchMediaResponseBody extends TeaModel {
         } 
 
     }
+    public static class IndexStatusList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IndexStatus")
+        private String indexStatus;
+
+        @com.aliyun.core.annotation.NameInMap("IndexType")
+        private String indexType;
+
+        private IndexStatusList(Builder builder) {
+            this.indexStatus = builder.indexStatus;
+            this.indexType = builder.indexType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IndexStatusList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return indexStatus
+         */
+        public String getIndexStatus() {
+            return this.indexStatus;
+        }
+
+        /**
+         * @return indexType
+         */
+        public String getIndexType() {
+            return this.indexType;
+        }
+
+        public static final class Builder {
+            private String indexStatus; 
+            private String indexType; 
+
+            /**
+             * IndexStatus.
+             */
+            public Builder indexStatus(String indexStatus) {
+                this.indexStatus = indexStatus;
+                return this;
+            }
+
+            /**
+             * IndexType.
+             */
+            public Builder indexType(String indexType) {
+                this.indexType = indexType;
+                return this;
+            }
+
+            public IndexStatusList build() {
+                return new IndexStatusList(this);
+            } 
+
+        } 
+
+    }
     public static class MediaBasicInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Biz")
         private String biz;
@@ -1870,6 +1931,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FileInfoList")
         private java.util.List < FileInfoList> fileInfoList;
 
+        @com.aliyun.core.annotation.NameInMap("IndexStatusList")
+        private java.util.List < IndexStatusList> indexStatusList;
+
         @com.aliyun.core.annotation.NameInMap("MediaBasicInfo")
         private MediaBasicInfo mediaBasicInfo;
 
@@ -1880,6 +1944,7 @@ public class SearchMediaResponseBody extends TeaModel {
             this.aiData = builder.aiData;
             this.aiRoughData = builder.aiRoughData;
             this.fileInfoList = builder.fileInfoList;
+            this.indexStatusList = builder.indexStatusList;
             this.mediaBasicInfo = builder.mediaBasicInfo;
             this.mediaId = builder.mediaId;
         }
@@ -1914,6 +1979,13 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
+         * @return indexStatusList
+         */
+        public java.util.List < IndexStatusList> getIndexStatusList() {
+            return this.indexStatusList;
+        }
+
+        /**
          * @return mediaBasicInfo
          */
         public MediaBasicInfo getMediaBasicInfo() {
@@ -1931,6 +2003,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private AiData aiData; 
             private AiRoughData aiRoughData; 
             private java.util.List < FileInfoList> fileInfoList; 
+            private java.util.List < IndexStatusList> indexStatusList; 
             private MediaBasicInfo mediaBasicInfo; 
             private String mediaId; 
 
@@ -1955,6 +2028,14 @@ public class SearchMediaResponseBody extends TeaModel {
              */
             public Builder fileInfoList(java.util.List < FileInfoList> fileInfoList) {
                 this.fileInfoList = fileInfoList;
+                return this;
+            }
+
+            /**
+             * IndexStatusList.
+             */
+            public Builder indexStatusList(java.util.List < IndexStatusList> indexStatusList) {
+                this.indexStatusList = indexStatusList;
                 return this;
             }
 

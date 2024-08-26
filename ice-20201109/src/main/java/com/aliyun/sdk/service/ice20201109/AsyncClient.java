@@ -269,6 +269,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListPublicMediaBasicInfosResponse> listPublicMediaBasicInfos(ListPublicMediaBasicInfosRequest request);
 
+    CompletableFuture<ListSearchLibResponse> listSearchLib(ListSearchLibRequest request);
+
     CompletableFuture<ListSmartJobsResponse> listSmartJobs(ListSmartJobsRequest request);
 
     CompletableFuture<ListSmartSysAvatarModelsResponse> listSmartSysAvatarModels(ListSmartSysAvatarModelsRequest request);
@@ -306,6 +308,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RegisterMediaStreamResponse> registerMediaStream(RegisterMediaStreamRequest request);
 
     CompletableFuture<SearchEditingProjectResponse> searchEditingProject(SearchEditingProjectRequest request);
+
+    CompletableFuture<SearchIndexJobRerunResponse> searchIndexJobRerun(SearchIndexJobRerunRequest request);
 
     /**
       * If you have questions about how to use the media asset search feature in Intelligent Media Services (IMS), contact technical support in the DingTalk group (ID 30415005038).
