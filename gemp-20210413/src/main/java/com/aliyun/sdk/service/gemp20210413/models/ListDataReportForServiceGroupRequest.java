@@ -16,6 +16,14 @@ public class ListDataReportForServiceGroupRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    private Long pageNumber;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    private Long pageSize;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("serviceGroupName")
     private String serviceGroupName;
 
@@ -26,6 +34,8 @@ public class ListDataReportForServiceGroupRequest extends Request {
     private ListDataReportForServiceGroupRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.serviceGroupName = builder.serviceGroupName;
         this.startTime = builder.startTime;
     }
@@ -51,6 +61,20 @@ public class ListDataReportForServiceGroupRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Long getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return serviceGroupName
      */
     public String getServiceGroupName() {
@@ -66,6 +90,8 @@ public class ListDataReportForServiceGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListDataReportForServiceGroupRequest, Builder> {
         private String endTime; 
+        private Long pageNumber; 
+        private Long pageSize; 
         private String serviceGroupName; 
         private String startTime; 
 
@@ -76,6 +102,8 @@ public class ListDataReportForServiceGroupRequest extends Request {
         private Builder(ListDataReportForServiceGroupRequest request) {
             super(request);
             this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.serviceGroupName = request.serviceGroupName;
             this.startTime = request.startTime;
         } 
@@ -86,6 +114,24 @@ public class ListDataReportForServiceGroupRequest extends Request {
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * pageNumber.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putBodyParameter("pageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * pageSize.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putBodyParameter("pageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
