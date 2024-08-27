@@ -47,6 +47,10 @@ public class CreateDdrInstanceRequest extends Request {
     private String DBInstanceStorageType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
+    private String encryptionKey;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Engine")
     @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
@@ -108,6 +112,10 @@ public class CreateDdrInstanceRequest extends Request {
     private String restoreType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleARN")
+    private String roleARN;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityIPList")
     @com.aliyun.core.annotation.Validation(required = true)
     private String securityIPList;
@@ -150,6 +158,7 @@ public class CreateDdrInstanceRequest extends Request {
         this.DBInstanceNetType = builder.DBInstanceNetType;
         this.DBInstanceStorage = builder.DBInstanceStorage;
         this.DBInstanceStorageType = builder.DBInstanceStorageType;
+        this.encryptionKey = builder.encryptionKey;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
         this.instanceNetworkType = builder.instanceNetworkType;
@@ -164,6 +173,7 @@ public class CreateDdrInstanceRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreTime = builder.restoreTime;
         this.restoreType = builder.restoreType;
+        this.roleARN = builder.roleARN;
         this.securityIPList = builder.securityIPList;
         this.sourceDBInstanceName = builder.sourceDBInstanceName;
         this.sourceRegion = builder.sourceRegion;
@@ -241,6 +251,13 @@ public class CreateDdrInstanceRequest extends Request {
      */
     public String getDBInstanceStorageType() {
         return this.DBInstanceStorageType;
+    }
+
+    /**
+     * @return encryptionKey
+     */
+    public String getEncryptionKey() {
+        return this.encryptionKey;
     }
 
     /**
@@ -342,6 +359,13 @@ public class CreateDdrInstanceRequest extends Request {
     }
 
     /**
+     * @return roleARN
+     */
+    public String getRoleARN() {
+        return this.roleARN;
+    }
+
+    /**
      * @return securityIPList
      */
     public String getSecurityIPList() {
@@ -406,6 +430,7 @@ public class CreateDdrInstanceRequest extends Request {
         private String DBInstanceNetType; 
         private Integer DBInstanceStorage; 
         private String DBInstanceStorageType; 
+        private String encryptionKey; 
         private String engine; 
         private String engineVersion; 
         private String instanceNetworkType; 
@@ -420,6 +445,7 @@ public class CreateDdrInstanceRequest extends Request {
         private Long resourceOwnerId; 
         private String restoreTime; 
         private String restoreType; 
+        private String roleARN; 
         private String securityIPList; 
         private String sourceDBInstanceName; 
         private String sourceRegion; 
@@ -443,6 +469,7 @@ public class CreateDdrInstanceRequest extends Request {
             this.DBInstanceNetType = request.DBInstanceNetType;
             this.DBInstanceStorage = request.DBInstanceStorage;
             this.DBInstanceStorageType = request.DBInstanceStorageType;
+            this.encryptionKey = request.encryptionKey;
             this.engine = request.engine;
             this.engineVersion = request.engineVersion;
             this.instanceNetworkType = request.instanceNetworkType;
@@ -457,6 +484,7 @@ public class CreateDdrInstanceRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreTime = request.restoreTime;
             this.restoreType = request.restoreType;
+            this.roleARN = request.roleARN;
             this.securityIPList = request.securityIPList;
             this.sourceDBInstanceName = request.sourceDBInstanceName;
             this.sourceRegion = request.sourceRegion;
@@ -552,6 +580,15 @@ public class CreateDdrInstanceRequest extends Request {
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
             this.DBInstanceStorageType = DBInstanceStorageType;
+            return this;
+        }
+
+        /**
+         * EncryptionKey.
+         */
+        public Builder encryptionKey(String encryptionKey) {
+            this.putQueryParameter("EncryptionKey", encryptionKey);
+            this.encryptionKey = encryptionKey;
             return this;
         }
 
@@ -713,6 +750,15 @@ public class CreateDdrInstanceRequest extends Request {
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);
             this.restoreType = restoreType;
+            return this;
+        }
+
+        /**
+         * RoleARN.
+         */
+        public Builder roleARN(String roleARN) {
+            this.putQueryParameter("RoleARN", roleARN);
+            this.roleARN = roleARN;
             return this;
         }
 

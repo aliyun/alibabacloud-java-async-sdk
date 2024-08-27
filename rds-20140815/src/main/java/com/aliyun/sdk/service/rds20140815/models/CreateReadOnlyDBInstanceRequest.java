@@ -550,12 +550,11 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         } 
 
         /**
-         * 是否自动创建代理。取值范围：
+         * Specifies whether to automatically create database proxies. Valid values:
          * <p>
          * 
-         * - **true**：开启自动创建，默认为通用代理。
-         * 
-         * - **false**：不开启自动创建。
+         * *   **true**: enables the feature. By default, general-purpose database proxies are created.
+         * *   **false**: disables the feature. No database proxies are created.
          */
         public Builder autoCreateProxy(Boolean autoCreateProxy) {
             this.putQueryParameter("AutoCreateProxy", autoCreateProxy);
