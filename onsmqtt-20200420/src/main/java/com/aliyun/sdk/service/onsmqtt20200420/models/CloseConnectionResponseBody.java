@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateCustomAuthPermissionResponseBody} extends {@link TeaModel}
+ * {@link CloseConnectionResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateCustomAuthPermissionResponseBody</p>
+ * <p>CloseConnectionResponseBody</p>
  */
-public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
+public class CloseConnectionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -23,7 +23,7 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private UpdateCustomAuthPermissionResponseBody(Builder builder) {
+    private CloseConnectionResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -34,7 +34,7 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateCustomAuthPermissionResponseBody create() {
+    public static CloseConnectionResponseBody create() {
         return builder().build();
     }
 
@@ -104,8 +104,8 @@ public class UpdateCustomAuthPermissionResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateCustomAuthPermissionResponseBody build() {
-            return new UpdateCustomAuthPermissionResponseBody(this);
+        public CloseConnectionResponseBody build() {
+            return new CloseConnectionResponseBody(this);
         } 
 
     } 

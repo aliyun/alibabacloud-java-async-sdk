@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCustomAuthIdentityRequest</p>
  */
 public class QueryCustomAuthIdentityRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
-    @Query
-    @NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
     private String identityType;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Size")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Size")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer size;
 
-    @Query
-    @NameInMap("Username")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
     private String username;
 
     private QueryCustomAuthIdentityRequest(Builder builder) {
@@ -126,7 +125,7 @@ public class QueryCustomAuthIdentityRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * The client ID if you set IdentityType to CLIENT.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -135,7 +134,13 @@ public class QueryCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * IdentityType.
+         * The identity type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   USER
+         * *   CLIENT
          */
         public Builder identityType(String identityType) {
             this.putQueryParameter("IdentityType", identityType);
@@ -144,7 +149,7 @@ public class QueryCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for MQTT instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +158,7 @@ public class QueryCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -162,7 +167,7 @@ public class QueryCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of identities to be queried. Maximum value: 100.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("Size", size);
@@ -171,7 +176,7 @@ public class QueryCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * Username.
+         * The username.
          */
         public Builder username(String username) {
             this.putQueryParameter("Username", username);

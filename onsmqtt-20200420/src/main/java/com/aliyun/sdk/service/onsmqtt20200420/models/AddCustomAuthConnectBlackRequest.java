@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddCustomAuthConnectBlackRequest</p>
  */
 public class AddCustomAuthConnectBlackRequest extends Request {
-    @Body
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private AddCustomAuthConnectBlackRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class AddCustomAuthConnectBlackRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * The client ID of the device whose connections you want to disable.
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -79,7 +78,7 @@ public class AddCustomAuthConnectBlackRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for MQTT instance.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

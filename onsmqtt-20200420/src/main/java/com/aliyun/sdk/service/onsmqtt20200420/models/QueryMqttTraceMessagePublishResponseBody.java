@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMqttTraceMessagePublishResponseBody</p>
  */
 public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
-    @NameInMap("MessageTraceLists")
+    @com.aliyun.core.annotation.NameInMap("MessageTraceLists")
     private java.util.List < MessageTraceLists> messageTraceLists;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryMqttTraceMessagePublishResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class QueryMqttTraceMessagePublishResponseBody extends TeaModel {
     } 
 
     public static class MessageTraceLists extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionCode")
+        @com.aliyun.core.annotation.NameInMap("ActionCode")
         private String actionCode;
 
-        @NameInMap("ActionInfo")
+        @com.aliyun.core.annotation.NameInMap("ActionInfo")
         private String actionInfo;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("MsgId")
+        @com.aliyun.core.annotation.NameInMap("MsgId")
         private String msgId;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private MessageTraceLists(Builder builder) {

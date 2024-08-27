@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRegisterCodeResponseBody</p>
  */
 public class GetRegisterCodeResponseBody extends TeaModel {
-    @NameInMap("RegisterCode")
+    @com.aliyun.core.annotation.NameInMap("RegisterCode")
     private String registerCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRegisterCodeResponseBody(Builder builder) {

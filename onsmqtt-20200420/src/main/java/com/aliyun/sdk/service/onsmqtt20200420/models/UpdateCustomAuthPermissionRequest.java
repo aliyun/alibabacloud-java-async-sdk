@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCustomAuthPermissionRequest</p>
  */
 public class UpdateCustomAuthPermissionRequest extends Request {
-    @Body
-    @NameInMap("Effect")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Effect")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String effect;
 
-    @Body
-    @NameInMap("Identity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Identity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identity;
 
-    @Body
-    @NameInMap("IdentityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityType;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("PermitAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PermitAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String permitAction;
 
-    @Body
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private UpdateCustomAuthPermissionRequest(Builder builder) {

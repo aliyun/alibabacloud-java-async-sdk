@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDeviceCredentialClientIdResponseBody</p>
  */
 public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
-    @NameInMap("DeviceCredentialClientIdList")
+    @com.aliyun.core.annotation.NameInMap("DeviceCredentialClientIdList")
     private DeviceCredentialClientIdList deviceCredentialClientIdList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDeviceCredentialClientIdResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class ListDeviceCredentialClientIdResponseBody extends TeaModel {
     } 
 
     public static class DeviceCredentialClientIdList extends TeaModel {
-        @NameInMap("ClientIdList")
+        @com.aliyun.core.annotation.NameInMap("ClientIdList")
         private java.util.List < String > clientIdList;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private String pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private String pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private String total;
 
         private DeviceCredentialClientIdList(Builder builder) {

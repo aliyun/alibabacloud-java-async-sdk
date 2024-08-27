@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMqttTraceDeviceResponseBody</p>
  */
 public class QueryMqttTraceDeviceResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("DeviceInfoList")
+    @com.aliyun.core.annotation.NameInMap("DeviceInfoList")
     private java.util.List < DeviceInfoList> deviceInfoList;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private QueryMqttTraceDeviceResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class QueryMqttTraceDeviceResponseBody extends TeaModel {
     } 
 
     public static class DeviceInfoList extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionCode")
+        @com.aliyun.core.annotation.NameInMap("ActionCode")
         private String actionCode;
 
-        @NameInMap("ActionInfo")
+        @com.aliyun.core.annotation.NameInMap("ActionInfo")
         private String actionInfo;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private DeviceInfoList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDeviceCertificateResponseBody</p>
  */
 public class ListDeviceCertificateResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDeviceCertificateResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListDeviceCertificateResponseBody extends TeaModel {
     } 
 
     public static class DeviceCertificateVOS extends TeaModel {
-        @NameInMap("CaSn")
+        @com.aliyun.core.annotation.NameInMap("CaSn")
         private String caSn;
 
-        @NameInMap("DeviceContent")
+        @com.aliyun.core.annotation.NameInMap("DeviceContent")
         private String deviceContent;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("DeviceSn")
+        @com.aliyun.core.annotation.NameInMap("DeviceSn")
         private String deviceSn;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ValidBegin")
+        @com.aliyun.core.annotation.NameInMap("ValidBegin")
         private String validBegin;
 
-        @NameInMap("ValidEnd")
+        @com.aliyun.core.annotation.NameInMap("ValidEnd")
         private String validEnd;
 
         private DeviceCertificateVOS(Builder builder) {
@@ -233,16 +232,16 @@ public class ListDeviceCertificateResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DeviceCertificateVOS")
+        @com.aliyun.core.annotation.NameInMap("DeviceCertificateVOS")
         private java.util.List < DeviceCertificateVOS> deviceCertificateVOS;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {

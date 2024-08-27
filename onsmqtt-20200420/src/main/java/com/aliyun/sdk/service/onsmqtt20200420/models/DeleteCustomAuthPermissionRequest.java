@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCustomAuthPermissionRequest</p>
  */
 public class DeleteCustomAuthPermissionRequest extends Request {
-    @Body
-    @NameInMap("Identity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Identity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identity;
 
-    @Body
-    @NameInMap("IdentityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityType;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private DeleteCustomAuthPermissionRequest(Builder builder) {
@@ -100,7 +99,7 @@ public class DeleteCustomAuthPermissionRequest extends Request {
         } 
 
         /**
-         * Identity.
+         * The username or client ID.
          */
         public Builder identity(String identity) {
             this.putBodyParameter("Identity", identity);
@@ -109,7 +108,11 @@ public class DeleteCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * IdentityType.
+         * The identity type. Valid values:
+         * <p>
+         * 
+         * *   USER
+         * *   CLIENT
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("IdentityType", identityType);
@@ -118,7 +121,7 @@ public class DeleteCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for MQTT instance.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -127,7 +130,7 @@ public class DeleteCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * Topic.
+         * The topic on which you want to grant permissions. Multi-level topics and Wildcard characters are supported.
          */
         public Builder topic(String topic) {
             this.putBodyParameter("Topic", topic);

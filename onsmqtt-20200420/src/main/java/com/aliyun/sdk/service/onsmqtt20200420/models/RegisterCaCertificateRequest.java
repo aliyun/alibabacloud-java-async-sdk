@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RegisterCaCertificateRequest</p>
  */
 public class RegisterCaCertificateRequest extends Request {
-    @Query
-    @NameInMap("CaContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caContent;
 
-    @Query
-    @NameInMap("CaName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caName;
 
-    @Query
-    @NameInMap("MqttInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MqttInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mqttInstanceId;
 
-    @Query
-    @NameInMap("VerificationContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerificationContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String verificationContent;
 
     private RegisterCaCertificateRequest(Builder builder) {

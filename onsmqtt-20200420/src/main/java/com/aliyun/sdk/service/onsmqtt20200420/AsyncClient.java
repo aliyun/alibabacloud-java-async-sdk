@@ -44,6 +44,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<BatchQuerySessionByClientIdsResponse> batchQuerySessionByClientIds(BatchQuerySessionByClientIdsRequest request);
 
+    CompletableFuture<CloseConnectionResponse> closeConnection(CloseConnectionRequest request);
+
     /**
       * Each successful call to the **CreateGroupId** operation increases the messaging transactions per second (TPS) by one. This affects the billing of your instance. For more information, see [Billing rules](~~52819~~).
       *

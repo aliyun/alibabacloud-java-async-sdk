@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddCustomAuthIdentityRequest</p>
  */
 public class AddCustomAuthIdentityRequest extends Request {
-    @Body
-    @NameInMap("ClientId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
-    @Body
-    @NameInMap("IdentityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityType;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Secret")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Secret")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secret;
 
-    @Body
-    @NameInMap("SignMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SignMode")
     private String signMode;
 
-    @Body
-    @NameInMap("Username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private AddCustomAuthIdentityRequest(Builder builder) {
@@ -128,7 +127,7 @@ public class AddCustomAuthIdentityRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * The client ID if you set IdentityType to CLIENT.
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -137,7 +136,7 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * IdentityType.
+         * The identity type. Valid values: USER and CLIENT.
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("IdentityType", identityType);
@@ -146,7 +145,7 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Message Queue for MQTT instance.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -155,7 +154,7 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * Secret.
+         * The AccessKey secret.
          */
         public Builder secret(String secret) {
             this.putBodyParameter("Secret", secret);
@@ -164,7 +163,7 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * SignMode.
+         * The signature verification mode. ORIGIN: compares the password and the AccessKey secret. SIGNED: uses the HMAC_SHA1 algorithm to sign the client ID to obtain a password and then compares the password.
          */
         public Builder signMode(String signMode) {
             this.putBodyParameter("SignMode", signMode);
@@ -173,7 +172,7 @@ public class AddCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * Username.
+         * The username.
          */
         public Builder username(String username) {
             this.putBodyParameter("Username", username);

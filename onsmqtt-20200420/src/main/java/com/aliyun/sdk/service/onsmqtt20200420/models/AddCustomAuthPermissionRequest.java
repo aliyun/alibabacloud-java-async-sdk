@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddCustomAuthPermissionRequest</p>
  */
 public class AddCustomAuthPermissionRequest extends Request {
-    @Body
-    @NameInMap("Effect")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Effect")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String effect;
 
-    @Body
-    @NameInMap("Identity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Identity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identity;
 
-    @Body
-    @NameInMap("IdentityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityType;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("PermitAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PermitAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String permitAction;
 
-    @Body
-    @NameInMap("Topic")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Topic")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topic;
 
     private AddCustomAuthPermissionRequest(Builder builder) {
@@ -130,7 +129,7 @@ public class AddCustomAuthPermissionRequest extends Request {
         } 
 
         /**
-         * Effect.
+         * Specify whether to allow or deny the permissions.
          */
         public Builder effect(String effect) {
             this.putBodyParameter("Effect", effect);
@@ -139,7 +138,7 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * Identity.
+         * The username or client ID.
          */
         public Builder identity(String identity) {
             this.putBodyParameter("Identity", identity);
@@ -148,7 +147,7 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * IdentityType.
+         * The identity type. Valid values: USER and CLIENT.
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("IdentityType", identityType);
@@ -157,7 +156,7 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for MQTT instance.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -166,7 +165,7 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * PermitAction.
+         * The permissions that you want to add.
          */
         public Builder permitAction(String permitAction) {
             this.putBodyParameter("PermitAction", permitAction);
@@ -175,7 +174,7 @@ public class AddCustomAuthPermissionRequest extends Request {
         }
 
         /**
-         * Topic.
+         * The topic on which you want to add the permissions. Multi-level topics and wildcard characters are supported.
          */
         public Builder topic(String topic) {
             this.putBodyParameter("Topic", topic);

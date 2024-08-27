@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RefreshDeviceCredentialResponse} extends {@link TeaModel}
+ * {@link CloseConnectionResponse} extends {@link TeaModel}
  *
- * <p>RefreshDeviceCredentialResponse</p>
+ * <p>CloseConnectionResponse</p>
  */
-public class RefreshDeviceCredentialResponse extends Response {
+public class CloseConnectionResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class RefreshDeviceCredentialResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private RefreshDeviceCredentialResponseBody body;
+    private CloseConnectionResponseBody body;
 
-    private RefreshDeviceCredentialResponse(BuilderImpl builder) {
+    private CloseConnectionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RefreshDeviceCredentialResponse create() {
+    public static CloseConnectionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class RefreshDeviceCredentialResponse extends Response {
     /**
      * @return body
      */
-    public RefreshDeviceCredentialResponseBody getBody() {
+    public CloseConnectionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RefreshDeviceCredentialResponse, Builder> {
+    public interface Builder extends Response.Builder<CloseConnectionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RefreshDeviceCredentialResponseBody body);
+        Builder body(CloseConnectionResponseBody body);
 
         @Override
-        RefreshDeviceCredentialResponse build();
+        CloseConnectionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RefreshDeviceCredentialResponse, Builder>
+            extends Response.BuilderImpl<CloseConnectionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private RefreshDeviceCredentialResponseBody body; 
+        private CloseConnectionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RefreshDeviceCredentialResponse response) {
+        private BuilderImpl(CloseConnectionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class RefreshDeviceCredentialResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RefreshDeviceCredentialResponseBody body) {
+        public Builder body(CloseConnectionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RefreshDeviceCredentialResponse build() {
-            return new RefreshDeviceCredentialResponse(this);
+        public CloseConnectionResponse build() {
+            return new CloseConnectionResponse(this);
         } 
 
     } 

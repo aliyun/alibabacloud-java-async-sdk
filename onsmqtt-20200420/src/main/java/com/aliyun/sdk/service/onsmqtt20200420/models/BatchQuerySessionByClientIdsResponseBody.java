@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchQuerySessionByClientIdsResponseBody</p>
  */
 public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
-    @NameInMap("OnlineStatusList")
+    @com.aliyun.core.annotation.NameInMap("OnlineStatusList")
     private java.util.List < OnlineStatusList> onlineStatusList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BatchQuerySessionByClientIdsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class BatchQuerySessionByClientIdsResponseBody extends TeaModel {
     } 
 
     public static class OnlineStatusList extends TeaModel {
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("OnlineStatus")
+        @com.aliyun.core.annotation.NameInMap("OnlineStatus")
         private Boolean onlineStatus;
 
         private OnlineStatusList(Builder builder) {

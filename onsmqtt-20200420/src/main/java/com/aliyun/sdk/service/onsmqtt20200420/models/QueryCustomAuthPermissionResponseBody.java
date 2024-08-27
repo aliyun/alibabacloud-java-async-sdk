@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCustomAuthPermissionResponseBody</p>
  */
 public class QueryCustomAuthPermissionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCustomAuthPermissionResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +101,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +109,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -132,19 +131,19 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
     } 
 
     public static class Results extends TeaModel {
-        @NameInMap("Effect")
+        @com.aliyun.core.annotation.NameInMap("Effect")
         private String effect;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("IdentityType")
+        @com.aliyun.core.annotation.NameInMap("IdentityType")
         private String identityType;
 
-        @NameInMap("PermitAction")
+        @com.aliyun.core.annotation.NameInMap("PermitAction")
         private String permitAction;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private Results(Builder builder) {
@@ -206,7 +205,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * Effect.
+             * Indicates whether to allow or deny access.
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -214,7 +213,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Identity.
+             * The username or client ID.
              */
             public Builder identity(String identity) {
                 this.identity = identity;
@@ -222,7 +221,11 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * IdentityType.
+             * The identity type. Valid values:
+             * <p>
+             * 
+             * *   USER
+             * *   CLIENT
              */
             public Builder identityType(String identityType) {
                 this.identityType = identityType;
@@ -230,7 +233,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * PermitAction.
+             * The authorized permissions.
              */
             public Builder permitAction(String permitAction) {
                 this.permitAction = permitAction;
@@ -238,7 +241,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The topic name. Multi-level topics and wildcard characters are supported.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -253,10 +256,10 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("Results")
+        @com.aliyun.core.annotation.NameInMap("Results")
         private java.util.List < Results> results;
 
         private Data(Builder builder) {
@@ -291,7 +294,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
             private java.util.List < Results> results; 
 
             /**
-             * NextToken.
+             * The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -299,7 +302,7 @@ public class QueryCustomAuthPermissionResponseBody extends TeaModel {
             }
 
             /**
-             * Results.
+             * The response results.
              */
             public Builder results(java.util.List < Results> results) {
                 this.results = results;

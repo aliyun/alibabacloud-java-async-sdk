@@ -6,15 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UnRegisterDeviceCredentialRequest} extends {@link RequestModel}
+ * {@link CloseConnectionRequest} extends {@link RequestModel}
  *
- * <p>UnRegisterDeviceCredentialRequest</p>
+ * <p>CloseConnectionRequest</p>
  */
-public class UnRegisterDeviceCredentialRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
+public class CloseConnectionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -25,9 +21,8 @@ public class UnRegisterDeviceCredentialRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    private UnRegisterDeviceCredentialRequest(Builder builder) {
+    private CloseConnectionRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.clientId = builder.clientId;
         this.instanceId = builder.instanceId;
     }
@@ -36,20 +31,13 @@ public class UnRegisterDeviceCredentialRequest extends Request {
         return new Builder();
     }
 
-    public static UnRegisterDeviceCredentialRequest create() {
+    public static CloseConnectionRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -66,8 +54,7 @@ public class UnRegisterDeviceCredentialRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<UnRegisterDeviceCredentialRequest, Builder> {
-        private String regionId; 
+    public static final class Builder extends Request.Builder<CloseConnectionRequest, Builder> {
         private String clientId; 
         private String instanceId; 
 
@@ -75,24 +62,14 @@ public class UnRegisterDeviceCredentialRequest extends Request {
             super();
         } 
 
-        private Builder(UnRegisterDeviceCredentialRequest request) {
+        private Builder(CloseConnectionRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.clientId = request.clientId;
             this.instanceId = request.instanceId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The client ID of the device whose access credential you want to deregister.
+         * ClientId.
          */
         public Builder clientId(String clientId) {
             this.putQueryParameter("ClientId", clientId);
@@ -101,7 +78,7 @@ public class UnRegisterDeviceCredentialRequest extends Request {
         }
 
         /**
-         * The ID of the ApsaraMQ for MQTT instance. The ID must be consistent with the ID of the instance that the ApsaraMQ for MQTT client uses. You can obtain the instance ID on the **Instance Details** page that corresponds to the instance in the ApsaraMQ for MQTT console.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -110,8 +87,8 @@ public class UnRegisterDeviceCredentialRequest extends Request {
         }
 
         @Override
-        public UnRegisterDeviceCredentialRequest build() {
-            return new UnRegisterDeviceCredentialRequest(this);
+        public CloseConnectionRequest build() {
+            return new CloseConnectionRequest(this);
         } 
 
     } 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMqttTraceMessageOfClientResponseBody</p>
  */
 public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("MessageOfClientList")
+    @com.aliyun.core.annotation.NameInMap("MessageOfClientList")
     private java.util.List < MessageOfClientList> messageOfClientList;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private QueryMqttTraceMessageOfClientResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class QueryMqttTraceMessageOfClientResponseBody extends TeaModel {
     } 
 
     public static class MessageOfClientList extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionCode")
+        @com.aliyun.core.annotation.NameInMap("ActionCode")
         private String actionCode;
 
-        @NameInMap("ActionInfo")
+        @com.aliyun.core.annotation.NameInMap("ActionInfo")
         private String actionInfo;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("MsgId")
+        @com.aliyun.core.annotation.NameInMap("MsgId")
         private String msgId;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private MessageOfClientList(Builder builder) {

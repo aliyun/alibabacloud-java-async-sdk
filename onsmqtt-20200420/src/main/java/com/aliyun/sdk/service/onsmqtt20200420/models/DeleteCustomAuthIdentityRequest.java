@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCustomAuthIdentityRequest</p>
  */
 public class DeleteCustomAuthIdentityRequest extends Request {
-    @Body
-    @NameInMap("ClientId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientId")
     private String clientId;
 
-    @Body
-    @NameInMap("IdentityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityType;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private DeleteCustomAuthIdentityRequest(Builder builder) {
@@ -99,7 +98,7 @@ public class DeleteCustomAuthIdentityRequest extends Request {
         } 
 
         /**
-         * ClientId.
+         * The client ID if you set IdentityType to CLIENT.
          */
         public Builder clientId(String clientId) {
             this.putBodyParameter("ClientId", clientId);
@@ -108,7 +107,11 @@ public class DeleteCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * IdentityType.
+         * The identity type. Valid values:
+         * <p>
+         * 
+         * *   USER
+         * *   CLIENT
          */
         public Builder identityType(String identityType) {
             this.putBodyParameter("IdentityType", identityType);
@@ -117,7 +120,7 @@ public class DeleteCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for MQTT instance.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -126,7 +129,7 @@ public class DeleteCustomAuthIdentityRequest extends Request {
         }
 
         /**
-         * Username.
+         * The username.
          */
         public Builder username(String username) {
             this.putBodyParameter("Username", username);

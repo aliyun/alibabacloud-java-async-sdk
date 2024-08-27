@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDeviceCertificateByCaSnRequest</p>
  */
 public class ListDeviceCertificateByCaSnRequest extends Request {
-    @Query
-    @NameInMap("CaSn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaSn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String caSn;
 
-    @Query
-    @NameInMap("MqttInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MqttInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mqttInstanceId;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pageSize;
 
     private ListDeviceCertificateByCaSnRequest(Builder builder) {

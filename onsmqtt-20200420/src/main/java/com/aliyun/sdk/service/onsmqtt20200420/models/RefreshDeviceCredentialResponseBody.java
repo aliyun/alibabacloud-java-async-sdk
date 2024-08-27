@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefreshDeviceCredentialResponseBody</p>
  */
 public class RefreshDeviceCredentialResponseBody extends TeaModel {
-    @NameInMap("DeviceCredential")
+    @com.aliyun.core.annotation.NameInMap("DeviceCredential")
     private DeviceCredential deviceCredential;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RefreshDeviceCredentialResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class RefreshDeviceCredentialResponseBody extends TeaModel {
     } 
 
     public static class DeviceCredential extends TeaModel {
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DeviceAccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("DeviceAccessKeyId")
         private String deviceAccessKeyId;
 
-        @NameInMap("DeviceAccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("DeviceAccessKeySecret")
         private String deviceAccessKeySecret;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private DeviceCredential(Builder builder) {

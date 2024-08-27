@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.onsmqtt20200420.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCaCertificateResponseBody</p>
  */
 public class ListCaCertificateResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCaCertificateResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListCaCertificateResponseBody extends TeaModel {
     } 
 
     public static class CaCertificateVOS extends TeaModel {
-        @NameInMap("CaContent")
+        @com.aliyun.core.annotation.NameInMap("CaContent")
         private String caContent;
 
-        @NameInMap("CaName")
+        @com.aliyun.core.annotation.NameInMap("CaName")
         private String caName;
 
-        @NameInMap("RegistrationCode")
+        @com.aliyun.core.annotation.NameInMap("RegistrationCode")
         private String registrationCode;
 
-        @NameInMap("Sn")
+        @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("ValidBegin")
+        @com.aliyun.core.annotation.NameInMap("ValidBegin")
         private String validBegin;
 
-        @NameInMap("ValidEnd")
+        @com.aliyun.core.annotation.NameInMap("ValidEnd")
         private String validEnd;
 
-        @NameInMap("VerificationContent")
+        @com.aliyun.core.annotation.NameInMap("VerificationContent")
         private String verificationContent;
 
         private CaCertificateVOS(Builder builder) {
@@ -253,16 +252,16 @@ public class ListCaCertificateResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CaCertificateVOS")
+        @com.aliyun.core.annotation.NameInMap("CaCertificateVOS")
         private java.util.List < CaCertificateVOS> caCertificateVOS;
 
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Integer pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Data(Builder builder) {
