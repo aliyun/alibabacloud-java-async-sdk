@@ -21,6 +21,10 @@ public class DescribeDBProxyPerformanceRequest extends Request {
     private String DBEndpointId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeId")
+    private String DBNodeId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
@@ -47,6 +51,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.DBEndpointId = builder.DBEndpointId;
+        this.DBNodeId = builder.DBNodeId;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.key = builder.key;
@@ -79,6 +84,13 @@ public class DescribeDBProxyPerformanceRequest extends Request {
      */
     public String getDBEndpointId() {
         return this.DBEndpointId;
+    }
+
+    /**
+     * @return DBNodeId
+     */
+    public String getDBNodeId() {
+        return this.DBNodeId;
     }
 
     /**
@@ -119,6 +131,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDBProxyPerformanceRequest, Builder> {
         private String DBClusterId; 
         private String DBEndpointId; 
+        private String DBNodeId; 
         private String endTime; 
         private String interval; 
         private String key; 
@@ -133,6 +146,7 @@ public class DescribeDBProxyPerformanceRequest extends Request {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.DBEndpointId = request.DBEndpointId;
+            this.DBNodeId = request.DBNodeId;
             this.endTime = request.endTime;
             this.interval = request.interval;
             this.key = request.key;
@@ -155,6 +169,15 @@ public class DescribeDBProxyPerformanceRequest extends Request {
         public Builder DBEndpointId(String DBEndpointId) {
             this.putQueryParameter("DBEndpointId", DBEndpointId);
             this.DBEndpointId = DBEndpointId;
+            return this;
+        }
+
+        /**
+         * DBNodeId.
+         */
+        public Builder DBNodeId(String DBNodeId) {
+            this.putQueryParameter("DBNodeId", DBNodeId);
+            this.DBNodeId = DBNodeId;
             return this;
         }
 
