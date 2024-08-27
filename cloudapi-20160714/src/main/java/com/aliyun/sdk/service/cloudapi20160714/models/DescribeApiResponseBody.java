@@ -2029,7 +2029,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum parameter length when ParameterType is set to String.
+             * The maximum parameter length when **ParameterType** is set to String.
              */
             public Builder maxLength(Long maxLength) {
                 this.maxLength = maxLength;
@@ -2037,7 +2037,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum parameter value when ParameterType is set to Int, Long, Float, or Double.
+             * The maximum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
              */
             public Builder maxValue(Long maxValue) {
                 this.maxValue = maxValue;
@@ -2045,7 +2045,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum parameter length when ParameterType is set to String.
+             * The minimum parameter length when **ParameterType** is set to String.
              */
             public Builder minLength(Long minLength) {
                 this.minLength = minLength;
@@ -2053,7 +2053,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum parameter value when ParameterType is set to Int, Long, Float, or Double.
+             * The minimum parameter value when **ParameterType** is set to Int, Long, Float, or Double.
              */
             public Builder minValue(Long minValue) {
                 this.minValue = minValue;
@@ -2069,7 +2069,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The regular expression that is used for parameter validation when ParameterType is set to String.
+             * The regular expression that is used for parameter validation when **ParameterType** is set to String.
              */
             public Builder regularExpression(String regularExpression) {
                 this.regularExpression = regularExpression;

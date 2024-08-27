@@ -82,7 +82,7 @@ public class CreateAppKeyRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -91,7 +91,7 @@ public class CreateAppKeyRequest extends Request {
         }
 
         /**
-         * AppKey.
+         * The application AppKey.
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);
@@ -100,7 +100,7 @@ public class CreateAppKeyRequest extends Request {
         }
 
         /**
-         * AppSecret.
+         * The application AppSecret.
          */
         public Builder appSecret(String appSecret) {
             this.putQueryParameter("AppSecret", appSecret);

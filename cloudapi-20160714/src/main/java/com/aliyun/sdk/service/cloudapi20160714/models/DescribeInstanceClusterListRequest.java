@@ -109,7 +109,7 @@ public class DescribeInstanceClusterListRequest extends Request {
         } 
 
         /**
-         * InstanceClusterId.
+         * The cluster ID.
          */
         public Builder instanceClusterId(String instanceClusterId) {
             this.putQueryParameter("InstanceClusterId", instanceClusterId);
@@ -118,7 +118,7 @@ public class DescribeInstanceClusterListRequest extends Request {
         }
 
         /**
-         * InstanceClusterName.
+         * The cluster name.
          */
         public Builder instanceClusterName(String instanceClusterName) {
             this.putQueryParameter("InstanceClusterName", instanceClusterName);
@@ -127,7 +127,7 @@ public class DescribeInstanceClusterListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -136,7 +136,7 @@ public class DescribeInstanceClusterListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

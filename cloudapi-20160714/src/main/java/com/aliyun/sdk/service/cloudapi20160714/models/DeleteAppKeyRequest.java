@@ -69,7 +69,7 @@ public class DeleteAppKeyRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -78,7 +78,7 @@ public class DeleteAppKeyRequest extends Request {
         }
 
         /**
-         * AppKey.
+         * The AppKey of the application. The AppKey is used for calling an API.
          */
         public Builder appKey(String appKey) {
             this.putQueryParameter("AppKey", appKey);

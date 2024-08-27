@@ -123,13 +123,13 @@ public class DescribeApiDocRequest extends Request {
         }
 
         /**
-         * The environment to which the API is published. Valid values:
+         * The environment name. Valid values:
          * <p>
          * 
          * *   **RELEASE**
          * *   **TEST**
          * 
-         * If this parameter is not specified, the default value is used, which is RELEASE.
+         * If this parameter is not specified, the default value RELEASE is used.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

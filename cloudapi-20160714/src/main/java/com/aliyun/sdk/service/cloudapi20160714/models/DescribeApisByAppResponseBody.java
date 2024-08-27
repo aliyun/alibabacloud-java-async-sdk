@@ -377,7 +377,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP request method of the API.
+             * The HTTP method of the API.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -413,7 +413,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Environmental alias.
+             * The environment alias.
              */
             public Builder stageAlias(String stageAlias) {
                 this.stageAlias = stageAlias;
@@ -421,7 +421,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * The environment.
+             * The environment name.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

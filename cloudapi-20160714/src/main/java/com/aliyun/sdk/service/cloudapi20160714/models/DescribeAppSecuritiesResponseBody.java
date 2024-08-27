@@ -49,7 +49,7 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppSecuritys.
+         * The associated security policy information.
          */
         public Builder appSecuritys(AppSecuritys appSecuritys) {
             this.appSecuritys = appSecuritys;
@@ -57,7 +57,7 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +145,7 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             private String modifiedTime; 
 
             /**
-             * AppCode.
+             * The application AppCode.
              */
             public Builder appCode(String appCode) {
                 this.appCode = appCode;
@@ -153,7 +153,7 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             }
 
             /**
-             * AppKey.
+             * The application AppKey.
              */
             public Builder appKey(String appKey) {
                 this.appKey = appKey;
@@ -161,7 +161,7 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             }
 
             /**
-             * AppSecret.
+             * The application AppSecret.
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
@@ -169,7 +169,7 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the AppKey was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -177,7 +177,7 @@ public class DescribeAppSecuritiesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the AppSecret was last modified. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;

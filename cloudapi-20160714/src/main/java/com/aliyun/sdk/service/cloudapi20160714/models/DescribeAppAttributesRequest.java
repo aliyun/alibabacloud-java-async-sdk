@@ -239,7 +239,7 @@ public class DescribeAppAttributesRequest extends Request {
         }
 
         /**
-         * The extended information.
+         * 扩展信息
          */
         public Builder extend(String extend) {
             this.putQueryParameter("Extend", extend);
@@ -343,10 +343,10 @@ public class DescribeAppAttributesRequest extends Request {
             private String value; 
 
             /**
-             * The value of tag N.
+             * The key of the tag.
              * <p>
              * 
-             * Valid values of n: `[1, 20]`.
+             * N can be an integer from 1 to 20.``
              */
             public Builder key(String key) {
                 this.key = key;
@@ -354,10 +354,10 @@ public class DescribeAppAttributesRequest extends Request {
             }
 
             /**
-             * The key of tag N.
+             * The key of the tag.
              * <p>
              * 
-             * Valid values of n: `[1, 20]`.
+             * N can be an integer from 1 to 20.``
              */
             public Builder value(String value) {
                 this.value = value;

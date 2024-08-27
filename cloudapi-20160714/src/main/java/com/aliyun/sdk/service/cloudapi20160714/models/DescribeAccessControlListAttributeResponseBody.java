@@ -109,7 +109,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The IP version. Valid values: **ipv4** and **ipv6**.
+         * The IP protocol version. Valid values: **ipv4** and **ipv6**.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
@@ -169,7 +169,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             private String aclEntryIp; 
 
             /**
-             * The description of an entry.
+             * The entry description.
              */
             public Builder aclEntryComment(String aclEntryComment) {
                 this.aclEntryComment = aclEntryComment;
@@ -177,7 +177,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The entries of the access control policy.
+             * The ACL entry.
              */
             public Builder aclEntryIp(String aclEntryIp) {
                 this.aclEntryIp = aclEntryIp;

@@ -91,11 +91,11 @@ public class CreateAccessControlListRequest extends Request {
         }
 
         /**
-         * The IP version of the Classic Load Balancer (CLB) instance with which the ACL is associated. Valid values:
+         * The IP protocol version of the ACL. Valid values:
          * <p>
          * 
-         * *   **ipv4**
-         * *   **ipv6**
+         * *   **IPv4**
+         * *   **IPv6**
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);

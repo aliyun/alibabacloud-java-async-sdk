@@ -85,7 +85,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApiVpcAccessInfos.
+         * The returned API information. It is an array consisting of ApiInfo data.
          */
         public Builder apiVpcAccessInfos(ApiVpcAccessInfos apiVpcAccessInfos) {
             this.apiVpcAccessInfos = apiVpcAccessInfos;
@@ -93,7 +93,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +101,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +109,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -313,7 +313,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * ApiId.
+             * The API ID.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -321,7 +321,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * The API name.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -329,7 +329,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description, which can be up to 200 characters in length.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -337,7 +337,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group to which the API belongs.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -345,7 +345,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the API group to which the API belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -353,7 +353,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID or IP address in the VPC access authorization.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -361,7 +361,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The HTTP request method of the API.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -369,7 +369,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The request path of the API.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -377,7 +377,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -385,7 +385,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -393,7 +393,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * StageId.
+             * The environment ID.
              */
             public Builder stageId(String stageId) {
                 this.stageId = stageId;
@@ -401,7 +401,12 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The environment to which the API is published. Valid values:
+             * <p>
+             * 
+             * *   **RELEASE**: the production environment
+             * *   **PRE**: the staging environment
+             * *   **TEST**: the test environment
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
@@ -417,7 +422,7 @@ public class DescribeApisByVpcAccessResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * The name of the VPC access authorization.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

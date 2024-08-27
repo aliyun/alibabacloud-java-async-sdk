@@ -169,7 +169,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * 标签的键
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +177,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * 标签值
              */
             public Builder value(String value) {
                 this.value = value;
@@ -323,7 +323,7 @@ public class DescribeDatasetListResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the dataset.
+             * 标签
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

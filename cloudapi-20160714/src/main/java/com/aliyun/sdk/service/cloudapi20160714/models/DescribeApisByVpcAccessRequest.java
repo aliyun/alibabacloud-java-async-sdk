@@ -95,7 +95,7 @@ public class DescribeApisByVpcAccessRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -104,7 +104,7 @@ public class DescribeApisByVpcAccessRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -122,7 +122,7 @@ public class DescribeApisByVpcAccessRequest extends Request {
         }
 
         /**
-         * VpcName.
+         * The name of the VPC access authorization.
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);

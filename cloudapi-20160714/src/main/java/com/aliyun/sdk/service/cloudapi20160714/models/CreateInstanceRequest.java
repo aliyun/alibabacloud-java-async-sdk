@@ -266,10 +266,10 @@ public class CreateInstanceRequest extends Request {
          * The subscription duration of the instance.
          * <p>
          * 
-         * *   Valid values if PricingCycle is set to **Month**: **1** to **9**
-         * *   Valid values if PricingCycle is set to **Year**: **1** to **3**
+         * *   If PricingCycle is set to **Month**, set this parameter to an integer ranges from **1** to **9**.
+         * *   If PricingCycle is set to **Year**, set this parameter to an integer ranges from **1** to **3**.
          * 
-         * >  This parameter is available and required only if the ChargeType parameter is set to **PrePaid**.
+         * >  This parameter is valid and required only if the ChargeType parameter is set to **PrePaid**.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -345,7 +345,7 @@ public class CreateInstanceRequest extends Request {
          * *   **year**
          * *   **month**
          * 
-         * >  This parameter is available and required only if the ChargeType parameter is set to PrePaid.
+         * >  This parameter is required if the ChargeType parameter is set to Prepaid.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);

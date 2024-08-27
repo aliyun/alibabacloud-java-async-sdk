@@ -169,7 +169,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CreatedTime.
+         * The time when the cluster was created.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -177,7 +177,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The cluster description, which can be up to 200 characters in length.
          */
         public Builder description(String description) {
             this.description = description;
@@ -185,7 +185,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceClusterAttribute.
+         * The cluster details.
          */
         public Builder instanceClusterAttribute(InstanceClusterAttribute instanceClusterAttribute) {
             this.instanceClusterAttribute = instanceClusterAttribute;
@@ -193,7 +193,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceClusterId.
+         * The cluster ID.
          */
         public Builder instanceClusterId(String instanceClusterId) {
             this.instanceClusterId = instanceClusterId;
@@ -201,7 +201,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceClusterName.
+         * The cluster name.
          */
         public Builder instanceClusterName(String instanceClusterName) {
             this.instanceClusterName = instanceClusterName;
@@ -209,7 +209,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceClusterStatus.
+         * The cluster status.
          */
         public Builder instanceClusterStatus(String instanceClusterStatus) {
             this.instanceClusterStatus = instanceClusterStatus;
@@ -217,7 +217,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceClusterType.
+         * The cluster type.
          */
         public Builder instanceClusterType(String instanceClusterType) {
             this.instanceClusterType = instanceClusterType;
@@ -225,7 +225,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceClusterVersion.
+         * The cluster version.
          */
         public Builder instanceClusterVersion(String instanceClusterVersion) {
             this.instanceClusterVersion = instanceClusterVersion;
@@ -233,7 +233,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceList.
+         * The dedicated instances contained in the cluster.
          */
         public Builder instanceList(InstanceList instanceList) {
             this.instanceList = instanceList;
@@ -241,7 +241,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedTime.
+         * The time when the cluster was last modified.
          */
         public Builder modifiedTime(String modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -249,7 +249,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -257,7 +257,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -549,7 +549,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             private Boolean vpcSlbIntranetEnable; 
 
             /**
-             * ConnectCidrBlocks.
+             * The internal CIDR block of the user VPC that can be accessed by the cluster if the cluster consists of VPC integration instances.
              */
             public Builder connectCidrBlocks(String connectCidrBlocks) {
                 this.connectCidrBlocks = connectCidrBlocks;
@@ -557,7 +557,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectVpcId.
+             * The ID of the user VPC that is connected to the cluster if the cluster consists of VPC integration instances.
              */
             public Builder connectVpcId(String connectVpcId) {
                 this.connectVpcId = connectVpcId;
@@ -565,7 +565,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EgressIpv6Enable.
+             * Indicates whether outbound IPv6 traffic is supported.
              */
             public Builder egressIpv6Enable(Boolean egressIpv6Enable) {
                 this.egressIpv6Enable = egressIpv6Enable;
@@ -573,7 +573,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPolicies.
+             * The HTTPS security policy.
              */
             public Builder httpsPolicies(String httpsPolicies) {
                 this.httpsPolicies = httpsPolicies;
@@ -581,7 +581,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPV4AclId.
+             * The ID of the IPv4 access control list (ACL).
              */
             public Builder IPV4AclId(String IPV4AclId) {
                 this.IPV4AclId = IPV4AclId;
@@ -589,7 +589,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPV4AclName.
+             * The name of the IPv4 ACL.
              */
             public Builder IPV4AclName(String IPV4AclName) {
                 this.IPV4AclName = IPV4AclName;
@@ -597,7 +597,11 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPV4AclStatus.
+             * Indicates whether IPv4 access control is enabled. Valid values:
+             * <p>
+             * 
+             * *   on
+             * *   off
              */
             public Builder IPV4AclStatus(String IPV4AclStatus) {
                 this.IPV4AclStatus = IPV4AclStatus;
@@ -605,7 +609,11 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPV4AclType.
+             * The type of the IPv4 ACL.
+             * <p>
+             * 
+             * *   black: blacklist
+             * *   white: whitelist
              */
             public Builder IPV4AclType(String IPV4AclType) {
                 this.IPV4AclType = IPV4AclType;
@@ -613,7 +621,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclId.
+             * The ID of the IPv6 ACL.
              */
             public Builder IPV6AclId(String IPV6AclId) {
                 this.IPV6AclId = IPV6AclId;
@@ -621,7 +629,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclName.
+             * The name of the IPv6 ACL.
              */
             public Builder IPV6AclName(String IPV6AclName) {
                 this.IPV6AclName = IPV6AclName;
@@ -629,7 +637,11 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclStatus.
+             * Indicates whether IPv6 access control is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder IPV6AclStatus(String IPV6AclStatus) {
                 this.IPV6AclStatus = IPV6AclStatus;
@@ -637,7 +649,11 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPV6AclType.
+             * The type of the IPv6 ACL. Valid values:
+             * <p>
+             * 
+             * *   black: blacklist
+             * *   white: whitelist
              */
             public Builder IPV6AclType(String IPV6AclType) {
                 this.IPV6AclType = IPV6AclType;
@@ -645,7 +661,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InternetEgressAddress.
+             * The outbound public IP address.
              */
             public Builder internetEgressAddress(String internetEgressAddress) {
                 this.internetEgressAddress = internetEgressAddress;
@@ -653,7 +669,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetEgressAddress.
+             * The outbound private IP address.
              */
             public Builder intranetEgressAddress(String intranetEgressAddress) {
                 this.intranetEgressAddress = intranetEgressAddress;
@@ -661,7 +677,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetSegments.
+             * The custom CIDR block. The configured CIDR block is considered as a private block.
              */
             public Builder intranetSegments(String intranetSegments) {
                 this.intranetSegments = intranetSegments;
@@ -669,7 +685,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SupportIpv6.
+             * Indicates whether IPv6 traffic is supported.
              */
             public Builder supportIpv6(Boolean supportIpv6) {
                 this.supportIpv6 = supportIpv6;
@@ -677,7 +693,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserVpcId.
+             * The ID of the client VPC.
              */
             public Builder userVpcId(String userVpcId) {
                 this.userVpcId = userVpcId;
@@ -685,7 +701,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserVswitchId.
+             * The vSwitch of the client VPC.
              */
             public Builder userVswitchId(String userVswitchId) {
                 this.userVswitchId = userVswitchId;
@@ -693,7 +709,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VipTypeList.
+             * The VIPs of the cluster.
              */
             public Builder vipTypeList(String vipTypeList) {
                 this.vipTypeList = vipTypeList;
@@ -701,7 +717,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VpcIntranetEnable.
+             * Indicates whether a virtual private cloud (VPC) domain name is enabled.
              */
             public Builder vpcIntranetEnable(Boolean vpcIntranetEnable) {
                 this.vpcIntranetEnable = vpcIntranetEnable;
@@ -709,7 +725,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VpcOwnerId.
+             * The ID of the account to which the VPC belongs.
              */
             public Builder vpcOwnerId(Long vpcOwnerId) {
                 this.vpcOwnerId = vpcOwnerId;
@@ -717,7 +733,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VpcSlbIntranetEnable.
+             * Indicates whether self-calling is enabled.
              */
             public Builder vpcSlbIntranetEnable(Boolean vpcSlbIntranetEnable) {
                 this.vpcSlbIntranetEnable = vpcSlbIntranetEnable;
@@ -794,7 +810,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The error message returned if the call fails.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -802,7 +818,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -810,7 +826,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -818,7 +834,7 @@ public class DescribeInstanceClusterInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The instance status.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -168,7 +168,7 @@ public class CreateApiStageVariableRequest extends Request {
         }
 
         /**
-         * Environmental routing model.
+         * The routing model of the environment.
          */
         public Builder stageRouteModel(String stageRouteModel) {
             this.putQueryParameter("StageRouteModel", stageRouteModel);

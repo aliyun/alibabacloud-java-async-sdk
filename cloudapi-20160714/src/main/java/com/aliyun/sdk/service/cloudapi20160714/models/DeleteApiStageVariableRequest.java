@@ -116,7 +116,7 @@ public class DeleteApiStageVariableRequest extends Request {
         }
 
         /**
-         * The ID of the runtime environment.
+         * The ID of the environment.
          */
         public Builder stageId(String stageId) {
             this.putQueryParameter("StageId", stageId);

@@ -123,14 +123,12 @@ public class DeleteBackendModelRequest extends Request {
         }
 
         /**
-         * The environment to which the API is published. Valid values:
+         * The name of the runtime environment. Valid values:
          * <p>
          * 
          * *   **RELEASE**
          * *   **PRE**
          * *   **TEST**
-         * 
-         * If you do not specify this parameter, APIs in the draft state are returned.
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

@@ -289,7 +289,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * ToConnectVpcIpBlock.
+         * The information about the CIDR block that API Gateway can use to access the virtual private cloud (VPC) of the backend service.
          */
         public Builder toConnectVpcIpBlock(ToConnectVpcIpBlock toConnectVpcIpBlock) {
             String toConnectVpcIpBlockShrink = shrink(toConnectVpcIpBlock, "ToConnectVpcIpBlock", "json");
@@ -386,7 +386,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             private String zoneId; 
 
             /**
-             * CidrBlock.
+             * The CIDR block of the VSwitch.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -394,7 +394,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * Customized.
+             * Specifies whether the CIDR block is a custom CIDR block.
              */
             public Builder customized(Boolean customized) {
                 this.customized = customized;
@@ -402,7 +402,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * VswitchId.
+             * The vSwitch ID.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -410,7 +410,7 @@ public class ModifyInstanceAttributeRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

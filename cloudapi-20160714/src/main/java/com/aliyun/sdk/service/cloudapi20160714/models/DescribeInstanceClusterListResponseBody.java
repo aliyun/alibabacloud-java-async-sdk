@@ -93,7 +93,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +101,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +109,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -241,7 +241,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * CreatedTime.
+             * The time when the cluster was created. The time is displayed in UTC.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -249,7 +249,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The cluster description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -257,7 +257,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClusterId.
+             * The cluster ID.
              */
             public Builder instanceClusterId(String instanceClusterId) {
                 this.instanceClusterId = instanceClusterId;
@@ -265,7 +265,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClusterName.
+             * The cluster name.
              */
             public Builder instanceClusterName(String instanceClusterName) {
                 this.instanceClusterName = instanceClusterName;
@@ -273,7 +273,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClusterStatus.
+             * The cluster status.
              */
             public Builder instanceClusterStatus(String instanceClusterStatus) {
                 this.instanceClusterStatus = instanceClusterStatus;
@@ -281,7 +281,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClusterType.
+             * The cluster type.
              */
             public Builder instanceClusterType(String instanceClusterType) {
                 this.instanceClusterType = instanceClusterType;
@@ -289,7 +289,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the cluster was last modified. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -297,7 +297,7 @@ public class DescribeInstanceClusterListResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

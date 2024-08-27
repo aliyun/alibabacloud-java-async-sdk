@@ -93,7 +93,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +101,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +109,7 @@ public class DescribeModelsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +169,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +177,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -363,7 +363,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The definition of the model description.
+             * The description of the model definition.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -403,7 +403,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * The last modification time of the model.
+             * The time when the model was last modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -419,7 +419,7 @@ public class DescribeModelsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the model.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

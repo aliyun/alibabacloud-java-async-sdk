@@ -202,7 +202,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The HTTP method of the API request.
+         * ApiMethod.
          */
         public Builder apiMethod(String apiMethod) {
             this.putQueryParameter("ApiMethod", apiMethod);
@@ -220,7 +220,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The request path of the API.
+         * ApiPath.
          */
         public Builder apiPath(String apiPath) {
             this.putQueryParameter("ApiPath", apiPath);
@@ -287,7 +287,7 @@ public class DescribeDeployedApisRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

@@ -68,7 +68,7 @@ public class DescribeAppSecuritiesRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(Long appId) {
             this.putQueryParameter("AppId", appId);

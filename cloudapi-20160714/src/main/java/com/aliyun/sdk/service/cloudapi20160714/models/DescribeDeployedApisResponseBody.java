@@ -277,7 +277,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             private String visibility; 
 
             /**
-             * The API ID.
+             * The ID of the API.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -285,7 +285,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method of the API request.
+             * ApiMethod.
              */
             public Builder apiMethod(String apiMethod) {
                 this.apiMethod = apiMethod;
@@ -293,7 +293,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The API name.
+             * The name of the API.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -301,7 +301,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The request path of the API.
+             * ApiPath.
              */
             public Builder apiPath(String apiPath) {
                 this.apiPath = apiPath;
@@ -309,7 +309,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the API was published. The time is displayed in UTC.
+             * The publising time (UTC) of the API.
              */
             public Builder deployedTime(String deployedTime) {
                 this.deployedTime = deployedTime;
@@ -317,7 +317,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The API description.
+             * The description of the API.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -325,7 +325,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The API group ID.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -333,7 +333,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the API group to which the API belongs.
+             * The name of the group to which the API belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -341,7 +341,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the API.
+             * The region where the API is located.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -349,7 +349,7 @@ public class DescribeDeployedApisResponseBody extends TeaModel {
             }
 
             /**
-             * The environment name. Valid values:
+             * The name of the runtime environment. Valid values:
              * <p>
              * 
              * *   **RELEASE**

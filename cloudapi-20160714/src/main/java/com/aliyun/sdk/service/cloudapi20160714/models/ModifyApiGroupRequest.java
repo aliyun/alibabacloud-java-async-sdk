@@ -36,6 +36,10 @@ public class ModifyApiGroupRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterAppCodeForBackend")
+    private String filterAppCodeForBackend;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
@@ -76,6 +80,7 @@ public class ModifyApiGroupRequest extends Request {
         this.customerConfigs = builder.customerConfigs;
         this.defaultDomain = builder.defaultDomain;
         this.description = builder.description;
+        this.filterAppCodeForBackend = builder.filterAppCodeForBackend;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
         this.passthroughHeaders = builder.passthroughHeaders;
@@ -142,6 +147,13 @@ public class ModifyApiGroupRequest extends Request {
     }
 
     /**
+     * @return filterAppCodeForBackend
+     */
+    public String getFilterAppCodeForBackend() {
+        return this.filterAppCodeForBackend;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
@@ -204,6 +216,7 @@ public class ModifyApiGroupRequest extends Request {
         private String customerConfigs; 
         private String defaultDomain; 
         private String description; 
+        private String filterAppCodeForBackend; 
         private String groupId; 
         private String groupName; 
         private String passthroughHeaders; 
@@ -225,6 +238,7 @@ public class ModifyApiGroupRequest extends Request {
             this.customerConfigs = request.customerConfigs;
             this.defaultDomain = request.defaultDomain;
             this.description = request.description;
+            this.filterAppCodeForBackend = request.filterAppCodeForBackend;
             this.groupId = request.groupId;
             this.groupName = request.groupName;
             this.passthroughHeaders = request.passthroughHeaders;
@@ -286,6 +300,15 @@ public class ModifyApiGroupRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * FilterAppCodeForBackend.
+         */
+        public Builder filterAppCodeForBackend(String filterAppCodeForBackend) {
+            this.putQueryParameter("FilterAppCodeForBackend", filterAppCodeForBackend);
+            this.filterAppCodeForBackend = filterAppCodeForBackend;
             return this;
         }
 

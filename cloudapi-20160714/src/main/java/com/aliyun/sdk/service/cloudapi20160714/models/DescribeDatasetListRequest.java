@@ -145,7 +145,7 @@ public class DescribeDatasetListRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * 指定规则所适用的对象标签，可设置多个
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -199,7 +199,7 @@ public class DescribeDatasetListRequest extends Request {
             private String value; 
 
             /**
-             * The tag key.
+             * 标签键
              */
             public Builder key(String key) {
                 this.key = key;
@@ -207,7 +207,7 @@ public class DescribeDatasetListRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * 标签值
              */
             public Builder value(String value) {
                 this.value = value;

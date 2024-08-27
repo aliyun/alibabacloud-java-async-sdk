@@ -205,7 +205,7 @@ public class DescribeDomainResponseBody extends TeaModel {
         private String subDomain; 
 
         /**
-         * The certificate content.
+         * The content of the certificate.
          */
         public Builder certificateBody(String certificateBody) {
             this.certificateBody = certificateBody;
@@ -221,7 +221,7 @@ public class DescribeDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The SSL certificate name.
+         * The name of the SSL certificate.
          */
         public Builder certificateName(String certificateName) {
             this.certificateName = certificateName;
@@ -237,7 +237,7 @@ public class DescribeDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the certificate expires. The value is a timestamp. Unit: milliseconds.
+         * 证书失效时间戳（毫秒）
          */
         public Builder certificateValidEnd(Long certificateValidEnd) {
             this.certificateValidEnd = certificateValidEnd;
@@ -245,7 +245,7 @@ public class DescribeDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the certificate takes effect. The value is a timestamp. Unit: milliseconds.
+         * 证书生效时间戳（毫秒）
          */
         public Builder certificateValidStart(Long certificateValidStart) {
             this.certificateValidStart = certificateValidStart;
@@ -256,8 +256,8 @@ public class DescribeDomainResponseBody extends TeaModel {
          * The binding status of the custom domain name. Valid values:
          * <p>
          * 
-         * *   BINDING: The domain name is bound to the API group.
-         * *   BOUND: The domain name is not bound to the API group.
+         * *   BINDING: The domain name has been bound.
+         * *   BOUND: The domain name has not been bound.
          */
         public Builder domainBindingStatus(String domainBindingStatus) {
             this.domainBindingStatus = domainBindingStatus;
@@ -281,7 +281,7 @@ public class DescribeDomainResponseBody extends TeaModel {
          * <p>
          * 
          * *   NORMAL
-         * *   ABNORMAL: This status affects API calls and must be rectified as soon as possible.
+         * *   ABNORMAL: This status affects API calls and must be resolved as soon as possible.
          */
         public Builder domainLegalStatus(String domainLegalStatus) {
             this.domainLegalStatus = domainLegalStatus;
@@ -321,7 +321,7 @@ public class DescribeDomainResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

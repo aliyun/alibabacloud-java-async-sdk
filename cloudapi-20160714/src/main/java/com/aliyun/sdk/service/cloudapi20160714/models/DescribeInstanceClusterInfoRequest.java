@@ -67,7 +67,7 @@ public class DescribeInstanceClusterInfoRequest extends Request {
         } 
 
         /**
-         * InstanceClusterName.
+         * The name of the dedicated instance cluster.
          */
         public Builder instanceClusterName(String instanceClusterName) {
             this.putQueryParameter("InstanceClusterName", instanceClusterName);

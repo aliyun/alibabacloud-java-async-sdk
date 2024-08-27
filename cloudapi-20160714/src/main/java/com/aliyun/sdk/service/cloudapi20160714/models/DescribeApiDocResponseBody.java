@@ -353,7 +353,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
         }
 
         /**
-         * The returned API frontend definition information. It is an array consisting of RequestConfig data.
+         * The returned API frontend definition. It is an array consisting of RequestConfig data.
          */
         public Builder requestConfig(RequestConfig requestConfig) {
             this.requestConfig = requestConfig;
@@ -477,7 +477,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the error code.
+             * The error description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -960,7 +960,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * The parameter description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -984,7 +984,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
+             * The hash values that are supported when **ParameterType** is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -1048,7 +1048,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
             }
 
             /**
-             * The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.
+             * The regular expression that is used for parameter validation when **ParameterType** is set to String.
              */
             public Builder regularExpression(String regularExpression) {
                 this.regularExpression = regularExpression;

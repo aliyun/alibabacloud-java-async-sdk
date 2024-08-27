@@ -149,7 +149,7 @@ public class SetAppsAuthoritiesRequest extends Request {
         }
 
         /**
-         * The API ID for the specified operation. Separate multiple API IDs with commas (,). A maximum of 100 API IDs can be entered.
+         * The IDs of applications. Separate multiple application IDs with commas (,). A maximum of 100 applications IDs can be entered.
          */
         public Builder appIds(String appIds) {
             this.putQueryParameter("AppIds", appIds);

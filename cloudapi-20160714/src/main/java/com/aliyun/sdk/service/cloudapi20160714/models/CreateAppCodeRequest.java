@@ -68,7 +68,7 @@ public class CreateAppCodeRequest extends Request {
         } 
 
         /**
-         * AppCode.
+         * The application AppCode.
          */
         public Builder appCode(String appCode) {
             this.putQueryParameter("AppCode", appCode);
@@ -77,7 +77,7 @@ public class CreateAppCodeRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

@@ -915,7 +915,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String wildcardDomainPatterns; 
 
             /**
-             * Bind runtime environment alias
+             * The alias of the associated environment.
              */
             public Builder bindStageAlias(String bindStageAlias) {
                 this.bindStageAlias = bindStageAlias;

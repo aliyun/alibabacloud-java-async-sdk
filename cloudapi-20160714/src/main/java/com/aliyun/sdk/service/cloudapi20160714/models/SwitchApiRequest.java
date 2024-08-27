@@ -127,7 +127,7 @@ public class SwitchApiRequest extends Request {
         } 
 
         /**
-         * The ID of the API.
+         * The API ID.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -136,7 +136,7 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The description of the switch operation.
+         * The description. The description can be up to 200 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -145,7 +145,7 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The ID of the API group.
+         * The API group ID.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -154,7 +154,7 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The historical version that you want to switch to.
+         * The historical version number of the API.
          */
         public Builder historyVersion(String historyVersion) {
             this.putQueryParameter("HistoryVersion", historyVersion);
@@ -172,11 +172,12 @@ public class SwitchApiRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
+         * The environment. Valid values:
          * <p>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * *   **RELEASE**: the production environment
+         * *   **PRE**: the staging environment
+         * *   **TEST**: the test environment
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

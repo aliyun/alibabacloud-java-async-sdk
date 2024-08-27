@@ -1519,7 +1519,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   This API is intended for API providers.
-      * *   API providers can use the app IDs or their Apsara Stack tenant accounts to query app information.
+      * *   API providers can use the app IDs or their Alibaba Cloud accounts to query app information.
       * *   Each provider can call this operation for a maximum of 200 times every day in a region.
       *
      */
@@ -1702,7 +1702,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is intended for API callers.
+      * *   This API is intended for API providers.
       *
      */
     @Override
@@ -2894,7 +2894,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * *   This operation is intended for API providers.
       * *   You must solve the problem that is mentioned in the domain name exception prompt before you can reactivate the domain name.
-      * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to access APIs.
+      * *   A typical reason why a custom domain name becomes abnormal is that the domain name does not have an ICP filing or the domain name is included in a blacklist by the administration. When a custom domain name is abnormal, users cannot use it to call APIs.
       * *   You can call this operation to reactivate the domain name to resume normal access.
       *
      */
@@ -3193,8 +3193,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   This operation is intended for API providers and callers.
-      * *   API providers can authorize any apps to call their APIs.
-      * *   API callers can authorize their own apps to call the APIs that they have purchased.
+      * *   API providers can authorize all applications to call their APIs.
+      * *   API callers can authorize their own applications to call the APIs that they have purchased.
       *
      */
     @Override
@@ -3227,8 +3227,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   This operation is intended for API providers and callers.
-      * *   API providers can authorize any apps to call their APIs.
-      * *   API callers can authorize their own apps to call the APIs that they have purchased.
+      * *   API providers can authorize all applications to call their APIs.
+      * *   API callers can authorize their own applications to call the APIs that they have purchased.
       *
      */
     @Override
@@ -3392,14 +3392,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * *   This API is intended for API providers.
-      * *   The historical version can be obtained by calling the **DescribeHistoryApis** operation.
-      * *   Only APIs that have been published more than once have historical versions.
-      * *   This operation can only be performed on running APIs. Exercise caution when you perform this operation because the operation cannot be undone. The operation takes up to 5 seconds.
-      * *   The switch operation is essentially a publish operation. A reason for this operation must be provided.
-      *
-     */
     @Override
     public CompletableFuture<SwitchApiResponse> switchApi(SwitchApiRequest request) {
         try {
