@@ -212,6 +212,9 @@ public class ListTerminalsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocationInfo")
         private String locationInfo;
 
+        @com.aliyun.core.annotation.NameInMap("ManageTime")
+        private String manageTime;
+
         @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
 
@@ -223,6 +226,9 @@ public class ListTerminalsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
+
+        @com.aliyun.core.annotation.NameInMap("SetPasswordFreeLoginUserTime")
+        private String setPasswordFreeLoginUserTime;
 
         @com.aliyun.core.annotation.NameInMap("TerminalGroupId")
         private String terminalGroupId;
@@ -238,10 +244,12 @@ public class ListTerminalsResponseBody extends TeaModel {
             this.currentLoginUser = builder.currentLoginUser;
             this.ipv4 = builder.ipv4;
             this.locationInfo = builder.locationInfo;
+            this.manageTime = builder.manageTime;
             this.model = builder.model;
             this.online = builder.online;
             this.passwordFreeLoginUser = builder.passwordFreeLoginUser;
             this.serialNumber = builder.serialNumber;
+            this.setPasswordFreeLoginUserTime = builder.setPasswordFreeLoginUserTime;
             this.terminalGroupId = builder.terminalGroupId;
             this.uuid = builder.uuid;
         }
@@ -304,6 +312,13 @@ public class ListTerminalsResponseBody extends TeaModel {
         }
 
         /**
+         * @return manageTime
+         */
+        public String getManageTime() {
+            return this.manageTime;
+        }
+
+        /**
          * @return model
          */
         public String getModel() {
@@ -332,6 +347,13 @@ public class ListTerminalsResponseBody extends TeaModel {
         }
 
         /**
+         * @return setPasswordFreeLoginUserTime
+         */
+        public String getSetPasswordFreeLoginUserTime() {
+            return this.setPasswordFreeLoginUserTime;
+        }
+
+        /**
          * @return terminalGroupId
          */
         public String getTerminalGroupId() {
@@ -353,10 +375,12 @@ public class ListTerminalsResponseBody extends TeaModel {
             private String currentLoginUser; 
             private String ipv4; 
             private String locationInfo; 
+            private String manageTime; 
             private String model; 
             private Boolean online; 
             private String passwordFreeLoginUser; 
             private String serialNumber; 
+            private String setPasswordFreeLoginUserTime; 
             private String terminalGroupId; 
             private String uuid; 
 
@@ -417,6 +441,14 @@ public class ListTerminalsResponseBody extends TeaModel {
             }
 
             /**
+             * ManageTime.
+             */
+            public Builder manageTime(String manageTime) {
+                this.manageTime = manageTime;
+                return this;
+            }
+
+            /**
              * Model.
              */
             public Builder model(String model) {
@@ -445,6 +477,14 @@ public class ListTerminalsResponseBody extends TeaModel {
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
+                return this;
+            }
+
+            /**
+             * SetPasswordFreeLoginUserTime.
+             */
+            public Builder setPasswordFreeLoginUserTime(String setPasswordFreeLoginUserTime) {
+                this.setPasswordFreeLoginUserTime = setPasswordFreeLoginUserTime;
                 return this;
             }
 
