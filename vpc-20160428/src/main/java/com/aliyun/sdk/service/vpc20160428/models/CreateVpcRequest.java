@@ -28,6 +28,10 @@ public class CreateVpcRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDnsHostname")
+    private Boolean enableDnsHostname;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableIpv6")
     private Boolean enableIpv6;
 
@@ -90,6 +94,7 @@ public class CreateVpcRequest extends Request {
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.dryRun = builder.dryRun;
+        this.enableDnsHostname = builder.enableDnsHostname;
         this.enableIpv6 = builder.enableIpv6;
         this.ipv4CidrMask = builder.ipv4CidrMask;
         this.ipv4IpamPoolId = builder.ipv4IpamPoolId;
@@ -145,6 +150,13 @@ public class CreateVpcRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return enableDnsHostname
+     */
+    public Boolean getEnableDnsHostname() {
+        return this.enableDnsHostname;
     }
 
     /**
@@ -250,6 +262,7 @@ public class CreateVpcRequest extends Request {
         private String clientToken; 
         private String description; 
         private Boolean dryRun; 
+        private Boolean enableDnsHostname; 
         private Boolean enableIpv6; 
         private Integer ipv4CidrMask; 
         private String ipv4IpamPoolId; 
@@ -275,6 +288,7 @@ public class CreateVpcRequest extends Request {
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.dryRun = request.dryRun;
+            this.enableDnsHostname = request.enableDnsHostname;
             this.enableIpv6 = request.enableIpv6;
             this.ipv4CidrMask = request.ipv4CidrMask;
             this.ipv4IpamPoolId = request.ipv4IpamPoolId;
@@ -340,6 +354,15 @@ public class CreateVpcRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * EnableDnsHostname.
+         */
+        public Builder enableDnsHostname(Boolean enableDnsHostname) {
+            this.putQueryParameter("EnableDnsHostname", enableDnsHostname);
+            this.enableDnsHostname = enableDnsHostname;
             return this;
         }
 

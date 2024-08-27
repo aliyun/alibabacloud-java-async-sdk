@@ -271,7 +271,7 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * The metering method of the contiguous EIP group. Valid values:
+         * The metering method of contiguous EIPs. Valid values:
          * <p>
          * 
          * *   **PayByBandwidth** (default)

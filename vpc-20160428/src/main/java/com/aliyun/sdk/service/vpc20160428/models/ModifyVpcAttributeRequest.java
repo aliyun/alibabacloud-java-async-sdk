@@ -20,6 +20,10 @@ public class ModifyVpcAttributeRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableDnsHostname")
+    private Boolean enableDnsHostname;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableIPv6")
     private Boolean enableIPv6;
 
@@ -64,6 +68,7 @@ public class ModifyVpcAttributeRequest extends Request {
         super(builder);
         this.cidrBlock = builder.cidrBlock;
         this.description = builder.description;
+        this.enableDnsHostname = builder.enableDnsHostname;
         this.enableIPv6 = builder.enableIPv6;
         this.ipv6CidrBlock = builder.ipv6CidrBlock;
         this.ipv6Isp = builder.ipv6Isp;
@@ -101,6 +106,13 @@ public class ModifyVpcAttributeRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enableDnsHostname
+     */
+    public Boolean getEnableDnsHostname() {
+        return this.enableDnsHostname;
     }
 
     /**
@@ -176,6 +188,7 @@ public class ModifyVpcAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyVpcAttributeRequest, Builder> {
         private String cidrBlock; 
         private String description; 
+        private Boolean enableDnsHostname; 
         private Boolean enableIPv6; 
         private String ipv6CidrBlock; 
         private String ipv6Isp; 
@@ -195,6 +208,7 @@ public class ModifyVpcAttributeRequest extends Request {
             super(request);
             this.cidrBlock = request.cidrBlock;
             this.description = request.description;
+            this.enableDnsHostname = request.enableDnsHostname;
             this.enableIPv6 = request.enableIPv6;
             this.ipv6CidrBlock = request.ipv6CidrBlock;
             this.ipv6Isp = request.ipv6Isp;
@@ -230,6 +244,15 @@ public class ModifyVpcAttributeRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnableDnsHostname.
+         */
+        public Builder enableDnsHostname(Boolean enableDnsHostname) {
+            this.putQueryParameter("EnableDnsHostname", enableDnsHostname);
+            this.enableDnsHostname = enableDnsHostname;
             return this;
         }
 

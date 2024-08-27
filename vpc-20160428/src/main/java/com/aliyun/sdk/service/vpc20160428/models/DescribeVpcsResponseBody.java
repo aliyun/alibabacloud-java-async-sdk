@@ -566,6 +566,9 @@ public class DescribeVpcsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DhcpOptionsSetStatus")
         private String dhcpOptionsSetStatus;
 
+        @com.aliyun.core.annotation.NameInMap("DnsHostnameStatus")
+        private String dnsHostnameStatus;
+
         @com.aliyun.core.annotation.NameInMap("EnabledIpv6")
         private Boolean enabledIpv6;
 
@@ -624,6 +627,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             this.description = builder.description;
             this.dhcpOptionsSetId = builder.dhcpOptionsSetId;
             this.dhcpOptionsSetStatus = builder.dhcpOptionsSetStatus;
+            this.dnsHostnameStatus = builder.dnsHostnameStatus;
             this.enabledIpv6 = builder.enabledIpv6;
             this.ipv6CidrBlock = builder.ipv6CidrBlock;
             this.ipv6CidrBlocks = builder.ipv6CidrBlocks;
@@ -691,6 +695,13 @@ public class DescribeVpcsResponseBody extends TeaModel {
          */
         public String getDhcpOptionsSetStatus() {
             return this.dhcpOptionsSetStatus;
+        }
+
+        /**
+         * @return dnsHostnameStatus
+         */
+        public String getDnsHostnameStatus() {
+            return this.dnsHostnameStatus;
         }
 
         /**
@@ -819,6 +830,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private String description; 
             private String dhcpOptionsSetId; 
             private String dhcpOptionsSetStatus; 
+            private String dnsHostnameStatus; 
             private Boolean enabledIpv6; 
             private String ipv6CidrBlock; 
             private Ipv6CidrBlocks ipv6CidrBlocks; 
@@ -888,6 +900,14 @@ public class DescribeVpcsResponseBody extends TeaModel {
              */
             public Builder dhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
                 this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
+                return this;
+            }
+
+            /**
+             * DnsHostnameStatus.
+             */
+            public Builder dnsHostnameStatus(String dnsHostnameStatus) {
+                this.dnsHostnameStatus = dnsHostnameStatus;
                 return this;
             }
 
