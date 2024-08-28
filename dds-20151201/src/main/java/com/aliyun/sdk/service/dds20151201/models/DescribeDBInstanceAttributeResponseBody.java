@@ -74,6 +74,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectString")
         private String connectString;
 
+        @com.aliyun.core.annotation.NameInMap("LockMode")
+        private String lockMode;
+
         @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
@@ -100,6 +103,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         private ConfigserverAttribute(Builder builder) {
             this.connectString = builder.connectString;
+            this.lockMode = builder.lockMode;
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
             this.nodeClass = builder.nodeClass;
@@ -123,6 +127,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getConnectString() {
             return this.connectString;
+        }
+
+        /**
+         * @return lockMode
+         */
+        public String getLockMode() {
+            return this.lockMode;
         }
 
         /**
@@ -183,6 +194,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String connectString; 
+            private String lockMode; 
             private Integer maxConnections; 
             private Integer maxIOPS; 
             private String nodeClass; 
@@ -197,6 +209,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder connectString(String connectString) {
                 this.connectString = connectString;
+                return this;
+            }
+
+            /**
+             * LockMode.
+             */
+            public Builder lockMode(String lockMode) {
+                this.lockMode = lockMode;
                 return this;
             }
 
@@ -316,6 +336,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectSting")
         private String connectSting;
 
+        @com.aliyun.core.annotation.NameInMap("LockMode")
+        private String lockMode;
+
         @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
@@ -348,6 +371,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         private MongosAttribute(Builder builder) {
             this.connectSting = builder.connectSting;
+            this.lockMode = builder.lockMode;
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
             this.nodeClass = builder.nodeClass;
@@ -373,6 +397,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getConnectSting() {
             return this.connectSting;
+        }
+
+        /**
+         * @return lockMode
+         */
+        public String getLockMode() {
+            return this.lockMode;
         }
 
         /**
@@ -447,6 +478,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String connectSting; 
+            private String lockMode; 
             private Integer maxConnections; 
             private Integer maxIOPS; 
             private String nodeClass; 
@@ -463,6 +495,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder connectSting(String connectSting) {
                 this.connectSting = connectSting;
+                return this;
+            }
+
+            /**
+             * LockMode.
+             */
+            public Builder lockMode(String lockMode) {
+                this.lockMode = lockMode;
                 return this;
             }
 
@@ -823,6 +863,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectString")
         private String connectString;
 
+        @com.aliyun.core.annotation.NameInMap("LockMode")
+        private String lockMode;
+
         @com.aliyun.core.annotation.NameInMap("MaxConnections")
         private Integer maxConnections;
 
@@ -855,6 +898,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         private ShardAttribute(Builder builder) {
             this.connectString = builder.connectString;
+            this.lockMode = builder.lockMode;
             this.maxConnections = builder.maxConnections;
             this.maxDiskMbps = builder.maxDiskMbps;
             this.maxIOPS = builder.maxIOPS;
@@ -880,6 +924,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getConnectString() {
             return this.connectString;
+        }
+
+        /**
+         * @return lockMode
+         */
+        public String getLockMode() {
+            return this.lockMode;
         }
 
         /**
@@ -954,6 +1005,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String connectString; 
+            private String lockMode; 
             private Integer maxConnections; 
             private String maxDiskMbps; 
             private Integer maxIOPS; 
@@ -970,6 +1022,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder connectString(String connectString) {
                 this.connectString = connectString;
+                return this;
+            }
+
+            /**
+             * LockMode.
+             */
+            public Builder lockMode(String lockMode) {
+                this.lockMode = lockMode;
                 return this;
             }
 
