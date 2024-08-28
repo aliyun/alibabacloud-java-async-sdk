@@ -742,10 +742,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the backup file of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup file that is specified by this parameter. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup files.
+         * If your instance is a cloud-native cluster instance, we recommend that you use [DescribeClusterBackupList](~~2679158~~) to query the backup set ID of the cluster instance, such as cb-xx. Then, set the ClusterBackupId request parameter to the backup set ID to clone the cluster instance. This eliminates the need to specify the backup set ID of each shard.
          * <p>
          * 
-         * > After you specify the **SrcDBInstanceId** parameter, you must use the **BackupId** or **RestoreTime** parameter to specify the backup file.
+         * You can set the BackupId parameter to the backup set ID of the source instance. The system uses the data stored in the backup set to create an instance. You can call the [DescribeBackups](~~61081~~) operation to query backup set IDs. If the source instance is a cluster instance, set the BackupId parameter to the backup set IDs of all shards of the source instance, separated by commas (,). Example: "10\*\*,11\*\*,15\*\*".
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -788,7 +788,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The backup set ID.
+         * This parameter is supported for specific new cluster instances. You can query the backup set ID by using the [DescribeClusterBackupList](~~2679158~~) operation.
+         * <p>
+         * 
+         * *   If this parameter is supported, you can specify the backup set ID. In this case, you do not need to specify the **BackupId** parameter.
+         * *   If this parameter is not supported, set the BackupId parameter to the IDs of backup sets for all shards of the source instance, separated by commas (,). Example: "2158\*\*\*\*20,2158\*\*\*\*22".
          */
         public Builder clusterBackupId(String clusterBackupId) {
             this.putQueryParameter("ClusterBackupId", clusterBackupId);
@@ -837,10 +841,20 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance. Valid values: **4.0**, **5.0**, **6.0**, and **7.0**.
+         * The engine version. Valid values for **classic instances**:
          * <p>
          * 
-         * > The default value is **5.0**.
+         * *   **2.8** (not recommended due to [scheduled EOFS](~~2674657~~))
+         * *   **4.0** (not recommended)
+         * *   **5.0**
+         * 
+         * Valid values for **cloud-native instances**:
+         * 
+         * *   **5.0**
+         * *   **6.0** (recommended)
+         * *   **7.0**
+         * 
+         * >  The default value is **5.0**.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -1017,7 +1031,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The number of read-only nodes in the instance. This parameter is available only if you create a read/write splitting instance that uses cloud disks. Valid values: 1 to 5.
+         * The number of read replicas in the primary zone. This parameter applies only to read/write splitting instances that use cloud disks. You can use this parameter to customize the number of read replicas. Valid values: 1 to 9.
+         * <p>
+         * 
+         * >  The sum of the values of this parameter and SlaveReadOnlyCount cannot be greater than 9.
          */
         public Builder readOnlyCount(Integer readOnlyCount) {
             this.putQueryParameter("ReadOnlyCount", readOnlyCount);
@@ -1071,10 +1088,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The point in time at which the specified original instance is backed up. The point in time must be within the retention period of backup files of the original instance. If you want to create an instance based on a backup file of a specified instance, you can set this parameter to specify a point in time after you set the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup file that was created at the specified point in time for the original instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
-         * 
-         * > After you specify the **SrcDBInstanceId** parameter, you must use the **BackupId** or **RestoreTime** parameter to specify the backup file.
+         * If data flashback is enabled for the source instance, you can use this parameter to specify a point in time within the backup retention period of the source instance. The system uses the backup data of the source instance at the point in time to create an instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -1113,7 +1127,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * SlaveReadOnlyCount.
+         * The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed across multiple zones. The sum of the values of this parameter and ReadOnlyCount cannot be greater than 9.
+         * <p>
+         * 
+         * > When you create a multi-zone read/write splitting instance, you must specify both SlaveReadOnlyCount and SecondaryZoneId.
          */
         public Builder slaveReadOnlyCount(Integer slaveReadOnlyCount) {
             this.putQueryParameter("SlaveReadOnlyCount", slaveReadOnlyCount);
@@ -1122,7 +1139,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the original instance. If you want to create an instance based on a backup file of a specified instance, you can specify this parameter and use the **BackupId** or **RestoreTime** parameter to specify the backup file.
+         * If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance.
+         * <p>
+         * 
+         * >  After you specify the SrcDBInstanceId parameter, use the **BackupId**, **ClusterBackupId** (recommended for cloud-native cluster instances), or **RestoreTime** parameter to specify the backup set or the specific point in time that you want to use to create an instance. The SrcDBInstanceId parameter must be used in combination with one of the preceding three parameters.
          */
         public Builder srcDBInstanceId(String srcDBInstanceId) {
             this.putQueryParameter("SrcDBInstanceId", srcDBInstanceId);

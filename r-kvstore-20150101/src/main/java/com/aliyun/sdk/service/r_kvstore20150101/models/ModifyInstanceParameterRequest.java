@@ -11,10 +11,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceParameterRequest</p>
  */
 public class ModifyInstanceParameterRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -37,6 +33,11 @@ public class ModifyInstanceParameterRequest extends Request {
     private String parameters;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -50,12 +51,12 @@ public class ModifyInstanceParameterRequest extends Request {
 
     private ModifyInstanceParameterRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.parameterGroupId = builder.parameterGroupId;
         this.parameters = builder.parameters;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -72,13 +73,6 @@ public class ModifyInstanceParameterRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -117,6 +111,13 @@ public class ModifyInstanceParameterRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -138,12 +139,12 @@ public class ModifyInstanceParameterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyInstanceParameterRequest, Builder> {
-        private String regionId; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String parameterGroupId; 
         private String parameters; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -154,25 +155,16 @@ public class ModifyInstanceParameterRequest extends Request {
 
         private Builder(ModifyInstanceParameterRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.parameterGroupId = request.parameterGroupId;
             this.parameters = request.parameters;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * InstanceId.
@@ -216,6 +208,15 @@ public class ModifyInstanceParameterRequest extends Request {
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
             this.parameters = parameters;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

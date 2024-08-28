@@ -89,6 +89,10 @@ public class DescribePriceRequest extends Request {
     private String securityToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShardCount")
+    private Integer shardCount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
@@ -113,6 +117,7 @@ public class DescribePriceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.shardCount = builder.shardCount;
         this.zoneId = builder.zoneId;
     }
 
@@ -263,6 +268,13 @@ public class DescribePriceRequest extends Request {
     }
 
     /**
+     * @return shardCount
+     */
+    public Integer getShardCount() {
+        return this.shardCount;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -289,6 +301,7 @@ public class DescribePriceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private Integer shardCount; 
         private String zoneId; 
 
         private Builder() {
@@ -316,6 +329,7 @@ public class DescribePriceRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
+            this.shardCount = request.shardCount;
             this.zoneId = request.zoneId;
         } 
 
@@ -527,6 +541,15 @@ public class DescribePriceRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * ShardCount.
+         */
+        public Builder shardCount(Integer shardCount) {
+            this.putQueryParameter("ShardCount", shardCount);
+            this.shardCount = shardCount;
             return this;
         }
 

@@ -50,6 +50,10 @@ public class GrantAccountPrivilegeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceBiz")
+    private String sourceBiz;
+
     private GrantAccountPrivilegeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -61,6 +65,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.sourceBiz = builder.sourceBiz;
     }
 
     public static Builder builder() {
@@ -139,6 +144,13 @@ public class GrantAccountPrivilegeRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return sourceBiz
+     */
+    public String getSourceBiz() {
+        return this.sourceBiz;
+    }
+
     public static final class Builder extends Request.Builder<GrantAccountPrivilegeRequest, Builder> {
         private String regionId; 
         private String accountName; 
@@ -149,6 +161,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private String sourceBiz; 
 
         private Builder() {
             super();
@@ -165,6 +178,7 @@ public class GrantAccountPrivilegeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
+            this.sourceBiz = request.sourceBiz;
         } 
 
         /**
@@ -249,6 +263,15 @@ public class GrantAccountPrivilegeRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * SourceBiz.
+         */
+        public Builder sourceBiz(String sourceBiz) {
+            this.putQueryParameter("SourceBiz", sourceBiz);
+            this.sourceBiz = sourceBiz;
             return this;
         }
 

@@ -35,6 +35,7 @@ public class ModifyParameterGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ParameterGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parameterGroupName;
 
     @com.aliyun.core.annotation.Query

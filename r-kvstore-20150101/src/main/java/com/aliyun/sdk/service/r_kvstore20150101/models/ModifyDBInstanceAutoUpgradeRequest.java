@@ -162,7 +162,7 @@ public class ModifyDBInstanceAutoUpgradeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID. You can call the DescribeDBInstances operation to obtain the ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -216,7 +216,11 @@ public class ModifyDBInstanceAutoUpgradeRequest extends Request {
         }
 
         /**
-         * Value.
+         * Specifies whether to enable automatic minor version update. Valid values:
+         * <p>
+         * 
+         * *   **1**: enables automatic minor version update.
+         * *   **0**: disables automatic minor version update.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

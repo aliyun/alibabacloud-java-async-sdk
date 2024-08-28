@@ -6,29 +6,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyAccountDescriptionRequest} extends {@link RequestModel}
+ * {@link ModifyActiveOperationTasksRequest} extends {@link RequestModel}
  *
- * <p>ModifyAccountDescriptionRequest</p>
+ * <p>ModifyActiveOperationTasksRequest</p>
  */
-public class ModifyAccountDescriptionRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
+public class ModifyActiveOperationTasksRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String ids;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AccountDescription")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String accountDescription;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AccountName")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String accountName;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String instanceId;
+    @com.aliyun.core.annotation.NameInMap("ImmediateStart")
+    private Integer immediateStart;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -51,28 +41,27 @@ public class ModifyAccountDescriptionRequest extends Request {
     private String securityToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SourceBiz")
-    private String sourceBiz;
+    @com.aliyun.core.annotation.NameInMap("SwitchTime")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String switchTime;
 
-    private ModifyAccountDescriptionRequest(Builder builder) {
+    private ModifyActiveOperationTasksRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.accountDescription = builder.accountDescription;
-        this.accountName = builder.accountName;
-        this.instanceId = builder.instanceId;
+        this.ids = builder.ids;
+        this.immediateStart = builder.immediateStart;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
-        this.sourceBiz = builder.sourceBiz;
+        this.switchTime = builder.switchTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyAccountDescriptionRequest create() {
+    public static ModifyActiveOperationTasksRequest create() {
         return builder().build();
     }
 
@@ -82,31 +71,17 @@ public class ModifyAccountDescriptionRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return ids
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getIds() {
+        return this.ids;
     }
 
     /**
-     * @return accountDescription
+     * @return immediateStart
      */
-    public String getAccountDescription() {
-        return this.accountDescription;
-    }
-
-    /**
-     * @return accountName
-     */
-    public String getAccountName() {
-        return this.accountName;
-    }
-
-    /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
+    public Integer getImmediateStart() {
+        return this.immediateStart;
     }
 
     /**
@@ -145,80 +120,53 @@ public class ModifyAccountDescriptionRequest extends Request {
     }
 
     /**
-     * @return sourceBiz
+     * @return switchTime
      */
-    public String getSourceBiz() {
-        return this.sourceBiz;
+    public String getSwitchTime() {
+        return this.switchTime;
     }
 
-    public static final class Builder extends Request.Builder<ModifyAccountDescriptionRequest, Builder> {
-        private String regionId; 
-        private String accountDescription; 
-        private String accountName; 
-        private String instanceId; 
+    public static final class Builder extends Request.Builder<ModifyActiveOperationTasksRequest, Builder> {
+        private String ids; 
+        private Integer immediateStart; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
-        private String sourceBiz; 
+        private String switchTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyAccountDescriptionRequest request) {
+        private Builder(ModifyActiveOperationTasksRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.accountDescription = request.accountDescription;
-            this.accountName = request.accountName;
-            this.instanceId = request.instanceId;
+            this.ids = request.ids;
+            this.immediateStart = request.immediateStart;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
-            this.sourceBiz = request.sourceBiz;
+            this.switchTime = request.switchTime;
         } 
 
         /**
-         * RegionId.
+         * Ids.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder ids(String ids) {
+            this.putQueryParameter("Ids", ids);
+            this.ids = ids;
             return this;
         }
 
         /**
-         * The description of the account.
-         * <p>
-         * 
-         * *   The description must start with a letter and cannot start with `http://` or `https://`.
-         * *   The description can contain letters, digits, underscores (\_), and hyphens (-).
-         * *   The description must be 2 to 256 characters in length.
+         * ImmediateStart.
          */
-        public Builder accountDescription(String accountDescription) {
-            this.putQueryParameter("AccountDescription", accountDescription);
-            this.accountDescription = accountDescription;
-            return this;
-        }
-
-        /**
-         * The username of the account. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.
-         */
-        public Builder accountName(String accountName) {
-            this.putQueryParameter("AccountName", accountName);
-            this.accountName = accountName;
-            return this;
-        }
-
-        /**
-         * The ID of the instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder immediateStart(Integer immediateStart) {
+            this.putQueryParameter("ImmediateStart", immediateStart);
+            this.immediateStart = immediateStart;
             return this;
         }
 
@@ -268,17 +216,17 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * SourceBiz.
+         * SwitchTime.
          */
-        public Builder sourceBiz(String sourceBiz) {
-            this.putQueryParameter("SourceBiz", sourceBiz);
-            this.sourceBiz = sourceBiz;
+        public Builder switchTime(String switchTime) {
+            this.putQueryParameter("SwitchTime", switchTime);
+            this.switchTime = switchTime;
             return this;
         }
 
         @Override
-        public ModifyAccountDescriptionRequest build() {
-            return new ModifyAccountDescriptionRequest(this);
+        public ModifyActiveOperationTasksRequest build() {
+            return new ModifyActiveOperationTasksRequest(this);
         } 
 
     } 

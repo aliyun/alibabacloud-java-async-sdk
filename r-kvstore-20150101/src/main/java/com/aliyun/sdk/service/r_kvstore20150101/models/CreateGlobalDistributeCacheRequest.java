@@ -175,7 +175,11 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The time when you want to restart the instance. Default value: Immediately. Valid values:
+         * <p>
+         * 
+         * *   **Immediately**: immediately restarts the instance.
+         * *   **MaintainTime**: restarts the instance during the maintenance window.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);

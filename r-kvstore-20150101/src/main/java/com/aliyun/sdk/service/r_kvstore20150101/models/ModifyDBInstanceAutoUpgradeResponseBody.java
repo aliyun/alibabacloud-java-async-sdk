@@ -37,7 +37,7 @@ public class ModifyDBInstanceAutoUpgradeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the request
+         * ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
