@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,71 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Instance</p>
  */
 public class Instance extends TeaModel {
-    @NameInMap("CurrentAmount")
+    @com.aliyun.core.annotation.NameInMap("CurrentAmount")
     private Float currentAmount;
 
-    @NameInMap("HostIP")
+    @com.aliyun.core.annotation.NameInMap("ExternalIP")
+    private String externalIP;
+
+    @com.aliyun.core.annotation.NameInMap("ExternalInstancePort")
+    private Integer externalInstancePort;
+
+    @com.aliyun.core.annotation.NameInMap("HostIP")
     private String hostIP;
 
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @NameInMap("InnerIP")
+    @com.aliyun.core.annotation.NameInMap("InnerIP")
     private String innerIP;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("InstancePort")
+    @com.aliyun.core.annotation.NameInMap("InstancePort")
     private Integer instancePort;
 
-    @NameInMap("IsSpot")
+    @com.aliyun.core.annotation.NameInMap("IsSpot")
     private Boolean isSpot;
 
-    @NameInMap("Isolated")
+    @com.aliyun.core.annotation.NameInMap("Isolated")
     private Boolean isolated;
 
-    @NameInMap("LastState")
+    @com.aliyun.core.annotation.NameInMap("LastState")
     private java.util.List < java.util.Map<String, ?>> lastState;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("OriginalAmount")
+    @com.aliyun.core.annotation.NameInMap("OriginalAmount")
     private Float originalAmount;
 
-    @NameInMap("ReadyProcesses")
+    @com.aliyun.core.annotation.NameInMap("ReadyProcesses")
     private Integer readyProcesses;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("RestartCount")
+    @com.aliyun.core.annotation.NameInMap("RestartCount")
     private Integer restartCount;
 
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @NameInMap("StartAt")
+    @com.aliyun.core.annotation.NameInMap("StartAt")
+    @Deprecated
     private String startAt;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TenantHostIP")
+    @com.aliyun.core.annotation.NameInMap("TenantHostIP")
     private String tenantHostIP;
 
-    @NameInMap("TenantInstanceIP")
+    @com.aliyun.core.annotation.NameInMap("TenantInstanceIP")
     private String tenantInstanceIP;
 
-    @NameInMap("TotalProcesses")
+    @com.aliyun.core.annotation.NameInMap("TotalProcesses")
     private Integer totalProcesses;
+
+    @com.aliyun.core.annotation.NameInMap("Zone")
+    private String zone;
 
     private Instance(Builder builder) {
         this.currentAmount = builder.currentAmount;
+        this.externalIP = builder.externalIP;
+        this.externalInstancePort = builder.externalInstancePort;
         this.hostIP = builder.hostIP;
         this.hostName = builder.hostName;
         this.innerIP = builder.innerIP;
@@ -93,10 +107,12 @@ public class Instance extends TeaModel {
         this.restartCount = builder.restartCount;
         this.role = builder.role;
         this.startAt = builder.startAt;
+        this.startTime = builder.startTime;
         this.status = builder.status;
         this.tenantHostIP = builder.tenantHostIP;
         this.tenantInstanceIP = builder.tenantInstanceIP;
         this.totalProcesses = builder.totalProcesses;
+        this.zone = builder.zone;
     }
 
     public static Builder builder() {
@@ -112,6 +128,20 @@ public class Instance extends TeaModel {
      */
     public Float getCurrentAmount() {
         return this.currentAmount;
+    }
+
+    /**
+     * @return externalIP
+     */
+    public String getExternalIP() {
+        return this.externalIP;
+    }
+
+    /**
+     * @return externalInstancePort
+     */
+    public Integer getExternalInstancePort() {
+        return this.externalInstancePort;
     }
 
     /**
@@ -227,6 +257,13 @@ public class Instance extends TeaModel {
     }
 
     /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -254,8 +291,17 @@ public class Instance extends TeaModel {
         return this.totalProcesses;
     }
 
+    /**
+     * @return zone
+     */
+    public String getZone() {
+        return this.zone;
+    }
+
     public static final class Builder {
         private Float currentAmount; 
+        private String externalIP; 
+        private Integer externalInstancePort; 
         private String hostIP; 
         private String hostName; 
         private String innerIP; 
@@ -272,16 +318,34 @@ public class Instance extends TeaModel {
         private Integer restartCount; 
         private String role; 
         private String startAt; 
+        private String startTime; 
         private String status; 
         private String tenantHostIP; 
         private String tenantInstanceIP; 
         private Integer totalProcesses; 
+        private String zone; 
 
         /**
          * CurrentAmount.
          */
         public Builder currentAmount(Float currentAmount) {
             this.currentAmount = currentAmount;
+            return this;
+        }
+
+        /**
+         * ExternalIP.
+         */
+        public Builder externalIP(String externalIP) {
+            this.externalIP = externalIP;
+            return this;
+        }
+
+        /**
+         * ExternalInstancePort.
+         */
+        public Builder externalInstancePort(Integer externalInstancePort) {
+            this.externalInstancePort = externalInstancePort;
             return this;
         }
 
@@ -414,6 +478,14 @@ public class Instance extends TeaModel {
         }
 
         /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
          * Status.
          */
         public Builder status(String status) {
@@ -442,6 +514,14 @@ public class Instance extends TeaModel {
          */
         public Builder totalProcesses(Integer totalProcesses) {
             this.totalProcesses = totalProcesses;
+            return this;
+        }
+
+        /**
+         * Zone.
+         */
+        public Builder zone(String zone) {
+            this.zone = zone;
             return this;
         }
 

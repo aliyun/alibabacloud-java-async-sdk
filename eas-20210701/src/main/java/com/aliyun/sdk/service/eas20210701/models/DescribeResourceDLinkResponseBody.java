@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceDLinkResponseBody</p>
  */
 public class DescribeResourceDLinkResponseBody extends TeaModel {
-    @NameInMap("AuxVSwitchList")
+    @com.aliyun.core.annotation.NameInMap("AuxVSwitchList")
     private java.util.List < String > auxVSwitchList;
 
-    @NameInMap("DestinationCIDRs")
+    @com.aliyun.core.annotation.NameInMap("DestinationCIDRs")
     private String destinationCIDRs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeResourceDLinkResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * AuxVSwitchList.
+         * The IDs of the secondary vSwitches that are directly connected.
          */
         public Builder auxVSwitchList(java.util.List < String > auxVSwitchList) {
             this.auxVSwitchList = auxVSwitchList;
@@ -106,7 +105,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * The CIDR blocks of the clients that you want to connect to. The CIDR blocks are added to the back-to-origin route of the server.
+         * The CIDR blocks of the clients that you want to connect to. After this parameter is specified, the CIDR blocks are added to the back-to-origin route of the server. Either this parameter or the VSwitchIdList parameter can be used to determine CIDR blocks.
          */
         public Builder destinationCIDRs(String destinationCIDRs) {
             this.destinationCIDRs = destinationCIDRs;
@@ -114,7 +113,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +121,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group that is directly connected.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
@@ -130,7 +129,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the primary vSwitch that is directly connected.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -138,7 +137,7 @@ public class DescribeResourceDLinkResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC that is directly connected.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

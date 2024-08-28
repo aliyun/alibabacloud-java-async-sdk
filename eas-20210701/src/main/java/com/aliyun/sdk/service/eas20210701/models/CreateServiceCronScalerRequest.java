@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceCronScalerRequest</p>
  */
 public class CreateServiceCronScalerRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Body
-    @NameInMap("ExcludeDates")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeDates")
     private java.util.List < String > excludeDates;
 
-    @Body
-    @NameInMap("ScaleJobs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScaleJobs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ScaleJobs> scaleJobs;
 
     private CreateServiceCronScalerRequest(Builder builder) {
@@ -99,7 +98,7 @@ public class CreateServiceCronScalerRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The region ID of the service.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -108,7 +107,7 @@ public class CreateServiceCronScalerRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -117,7 +116,7 @@ public class CreateServiceCronScalerRequest extends Request {
         }
 
         /**
-         * ExcludeDates.
+         * The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.
          */
         public Builder excludeDates(java.util.List < String > excludeDates) {
             this.putBodyParameter("ExcludeDates", excludeDates);
@@ -126,7 +125,7 @@ public class CreateServiceCronScalerRequest extends Request {
         }
 
         /**
-         * ScaleJobs.
+         * The description of the CronHPA job.
          */
         public Builder scaleJobs(java.util.List < ScaleJobs> scaleJobs) {
             this.putBodyParameter("ScaleJobs", scaleJobs);
@@ -142,15 +141,15 @@ public class CreateServiceCronScalerRequest extends Request {
     } 
 
     public static class ScaleJobs extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Schedule")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Schedule")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String schedule;
 
-        @NameInMap("TargetSize")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TargetSize")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer targetSize;
 
         private ScaleJobs(Builder builder) {
@@ -194,7 +193,7 @@ public class CreateServiceCronScalerRequest extends Request {
             private Integer targetSize; 
 
             /**
-             * Name.
+             * The name of the CronHPA job.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +201,7 @@ public class CreateServiceCronScalerRequest extends Request {
             }
 
             /**
-             * Schedule.
+             * The cron expression that is used to configure the execution time of the CronHPA job. For more information about how to configure cron expressions, see **Description of special characters** in this topic.
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -210,7 +209,7 @@ public class CreateServiceCronScalerRequest extends Request {
             }
 
             /**
-             * TargetSize.
+             * The number of instances that you want to configure for the CronHPA job.
              */
             public Builder targetSize(Integer targetSize) {
                 this.targetSize = targetSize;

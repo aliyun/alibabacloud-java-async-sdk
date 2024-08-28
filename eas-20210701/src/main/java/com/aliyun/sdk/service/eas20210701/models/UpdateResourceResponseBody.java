@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateResourceResponseBody</p>
  */
 public class UpdateResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
     private UpdateResourceResponseBody(Builder builder) {

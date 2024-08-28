@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceRequest</p>
  */
 public class CreateServiceRequest extends Request {
-    @Query
-    @NameInMap("Develop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Develop")
     private String develop;
 
-    @Query
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.Map < String, String > labels;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private String body;
 
     private CreateServiceRequest(Builder builder) {
@@ -124,7 +123,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * Labels.
+         * The custom label.
          */
         public Builder labels(java.util.Map < String, String > labels) {
             String labelsShrink = shrink(labels, "Labels", "json");
@@ -134,7 +133,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);
@@ -143,7 +142,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body. For more information about the key request parameters, see **Table 1. Request body parameters** and **Table 2. Metadata parameters**. For more information about all related parameters, see [Parameters of model services](~~450525~~).
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

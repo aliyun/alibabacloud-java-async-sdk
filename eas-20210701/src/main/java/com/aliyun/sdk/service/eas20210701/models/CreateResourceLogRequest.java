@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateResourceLogRequest</p>
  */
 public class CreateResourceLogRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Body
-    @NameInMap("LogStore")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogStore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logStore;
 
-    @Body
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
     private CreateResourceLogRequest(Builder builder) {
@@ -98,7 +99,7 @@ public class CreateResourceLogRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region to which the resource group belongs.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +108,7 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -116,7 +117,7 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * LogStore.
+         * The Logstore of Log Service. For more information about how to query a Logstore, see [ListLogStores](~~426970~~).
          */
         public Builder logStore(String logStore) {
             this.putBodyParameter("LogStore", logStore);
@@ -125,7 +126,7 @@ public class CreateResourceLogRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The Log Service project that is associated with the resource group. For more information about how to query the project, see [ListProject](~~74955~~).
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);

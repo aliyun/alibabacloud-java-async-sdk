@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DevelopServiceRequest</p>
  */
 public class DevelopServiceRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Query
-    @NameInMap("Exit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Exit")
     private String exit;
 
     private DevelopServiceRequest(Builder builder) {
@@ -84,7 +83,7 @@ public class DevelopServiceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region where the service is deployed.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +92,7 @@ public class DevelopServiceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -105,8 +104,8 @@ public class DevelopServiceRequest extends Request {
          * Specifies whether to exit development mode. Valid values:
          * <p>
          * 
-         * *   true
-         * *   false (default)
+         * *   true: exits development mode.
+         * *   false (default): enters development mode.
          */
         public Builder exit(String exit) {
             this.putQueryParameter("Exit", exit);

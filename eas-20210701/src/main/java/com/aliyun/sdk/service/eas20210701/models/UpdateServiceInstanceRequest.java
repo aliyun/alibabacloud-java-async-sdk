@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateServiceInstanceRequest</p>
  */
 public class UpdateServiceInstanceRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Path
-    @NameInMap("InstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
-    @Body
-    @NameInMap("Isolate")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Isolate")
     private Boolean isolate;
 
     private UpdateServiceInstanceRequest(Builder builder) {
@@ -108,7 +107,7 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The service name.
+         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -117,7 +116,7 @@ public class UpdateServiceInstanceRequest extends Request {
         }
 
         /**
-         * The name of the service instance.
+         * The instance name. For more information about how to query the instance name, see [ListServiceInstances](~~412108~~).
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("InstanceName", instanceName);

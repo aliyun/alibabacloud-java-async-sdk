@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteResourceInstancesRequest</p>
  */
 public class DeleteResourceInstancesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("AllFailed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllFailed")
     private Boolean allFailed;
 
-    @Query
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private String instanceList;
 
     private DeleteResourceInstancesRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class DeleteResourceInstancesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region to which the resource group belongs.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +106,7 @@ public class DeleteResourceInstancesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -116,7 +115,11 @@ public class DeleteResourceInstancesRequest extends Request {
         }
 
         /**
-         * AllFailed.
+         * Specifies whether to delete all the instances that fail to be created. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder allFailed(Boolean allFailed) {
             this.putQueryParameter("AllFailed", allFailed);
@@ -125,7 +128,7 @@ public class DeleteResourceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceList.
+         * The instances. Separate multiple instances with commas (,), such as `instanceId1,instanceId2`. For more information about how to query the instances, see [ListResourceInstances](~~412129~~).
          */
         public Builder instanceList(String instanceList) {
             this.putQueryParameter("InstanceList", instanceList);

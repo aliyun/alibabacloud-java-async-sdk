@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGroupRequest</p>
  */
 public class DescribeGroupRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("GroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("GroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupName;
 
     private DescribeGroupRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class DescribeGroupRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region to which the service group belongs.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +78,7 @@ public class DescribeGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the service group. For more information about how to query the group name, see [ListServices](~~412109~~).
          */
         public Builder groupName(String groupName) {
             this.putPathParameter("GroupName", groupName);

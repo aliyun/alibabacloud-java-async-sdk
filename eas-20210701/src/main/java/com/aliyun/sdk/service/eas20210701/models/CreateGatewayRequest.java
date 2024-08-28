@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGatewayRequest</p>
  */
 public class CreateGatewayRequest extends Request {
-    @Query
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
-    @Body
-    @NameInMap("EnableInternet")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableInternet")
     private Boolean enableInternet;
 
-    @Body
-    @NameInMap("EnableIntranet")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableIntranet")
     private Boolean enableIntranet;
 
-    @Body
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Replicas")
+    private Integer replicas;
 
     private CreateGatewayRequest(Builder builder) {
         super(builder);
@@ -40,6 +43,7 @@ public class CreateGatewayRequest extends Request {
         this.enableIntranet = builder.enableIntranet;
         this.instanceType = builder.instanceType;
         this.name = builder.name;
+        this.replicas = builder.replicas;
     }
 
     public static Builder builder() {
@@ -90,12 +94,20 @@ public class CreateGatewayRequest extends Request {
         return this.name;
     }
 
+    /**
+     * @return replicas
+     */
+    public Integer getReplicas() {
+        return this.replicas;
+    }
+
     public static final class Builder extends Request.Builder<CreateGatewayRequest, Builder> {
         private String resourceName; 
         private Boolean enableInternet; 
         private Boolean enableIntranet; 
         private String instanceType; 
         private String name; 
+        private Integer replicas; 
 
         private Builder() {
             super();
@@ -108,6 +120,7 @@ public class CreateGatewayRequest extends Request {
             this.enableIntranet = request.enableIntranet;
             this.instanceType = request.instanceType;
             this.name = request.name;
+            this.replicas = request.replicas;
         } 
 
         /**
@@ -171,6 +184,15 @@ public class CreateGatewayRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * Replicas.
+         */
+        public Builder replicas(Integer replicas) {
+            this.putBodyParameter("Replicas", replicas);
+            this.replicas = replicas;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateResourceInstanceRequest</p>
  */
 public class UpdateResourceInstanceRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Action")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Action")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String action;
 
     private UpdateResourceInstanceRequest(Builder builder) {
@@ -100,7 +99,7 @@ public class UpdateResourceInstanceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region to which the instance belongs.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -109,7 +108,7 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group to which the instance belongs. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -118,7 +117,7 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID. For more information about how to query the instance ID, see [ListResourceInstances](~~412129~~).
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -127,7 +126,12 @@ public class UpdateResourceInstanceRequest extends Request {
         }
 
         /**
-         * Action.
+         * The operation that updates the scheduling state of the instance in a dedicated resource group. Valid values:
+         * <p>
+         * 
+         * *   Uncordon: allows scheduling the service to this instance.
+         * *   Cordon: prohibits scheduling the service to this instance.
+         * *   Drain: evicts the service that has been scheduled to this instance.
          */
         public Builder action(String action) {
             this.putBodyParameter("Action", action);

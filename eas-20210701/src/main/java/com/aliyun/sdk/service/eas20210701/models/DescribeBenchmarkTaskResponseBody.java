@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBenchmarkTaskResponseBody</p>
  */
 public class DescribeBenchmarkTaskResponseBody extends TeaModel {
-    @NameInMap("AvailableAgent")
+    @com.aliyun.core.annotation.NameInMap("AvailableAgent")
     private Long availableAgent;
 
-    @NameInMap("CallerUid")
+    @com.aliyun.core.annotation.NameInMap("CallerUid")
     private String callerUid;
 
-    @NameInMap("DesiredAgent")
+    @com.aliyun.core.annotation.NameInMap("DesiredAgent")
     private Long desiredAgent;
 
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ParentUid")
+    @com.aliyun.core.annotation.NameInMap("ParentUid")
     private String parentUid;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private DescribeBenchmarkTaskResponseBody(Builder builder) {

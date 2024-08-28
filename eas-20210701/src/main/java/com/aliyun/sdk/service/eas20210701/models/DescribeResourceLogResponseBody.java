@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceLogResponseBody</p>
  */
 public class DescribeResourceLogResponseBody extends TeaModel {
-    @NameInMap("LogStore")
+    @com.aliyun.core.annotation.NameInMap("LogStore")
     private String logStore;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeResourceLogResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * LogStore.
+         * The Logstore of Log Service.
          */
         public Builder logStore(String logStore) {
             this.logStore = logStore;
@@ -94,7 +93,7 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +101,7 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectName.
+         * The Log Service project that is associated with the resource group.
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -110,7 +109,7 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class DescribeResourceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the resource group.
          */
         public Builder status(String status) {
             this.status = status;

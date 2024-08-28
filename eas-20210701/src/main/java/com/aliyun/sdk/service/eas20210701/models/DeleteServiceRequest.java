@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteServiceRequest</p>
  */
 public class DeleteServiceRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
     private DeleteServiceRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class DeleteServiceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region where the service is deployed.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +78,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);

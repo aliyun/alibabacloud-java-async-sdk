@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,66 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceInstancesRequest</p>
  */
 public class ListServiceInstancesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("HostIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostIP")
     private String hostIP;
 
-    @Query
-    @NameInMap("InstanceIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIP")
     private String instanceIP;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("IsSpot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsSpot")
     private Boolean isSpot;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
     private ListServiceInstancesRequest(Builder builder) {
@@ -252,7 +251,7 @@ public class ListServiceInstancesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region where the service is deployed.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -261,7 +260,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -270,7 +269,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The keyword used to query instances. Instances can be queried based on instance name, instance IP address, IP address of the server where the instance resides, and instance type.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -279,7 +278,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * HostIP.
+         * The IP address of the server where the instance resides.
          */
         public Builder hostIP(String hostIP) {
             this.putQueryParameter("HostIP", hostIP);
@@ -288,7 +287,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIP.
+         * The IP address of the instance.
          */
         public Builder instanceIP(String instanceIP) {
             this.putQueryParameter("InstanceIP", instanceIP);
@@ -297,7 +296,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The instance name.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -306,7 +305,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * The instance state.
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -315,7 +314,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The instance type.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -324,7 +323,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * IsSpot.
+         * Specifies whether the instance is a preemptible instance.
          */
         public Builder isSpot(Boolean isSpot) {
             this.putQueryParameter("IsSpot", isSpot);
@@ -338,23 +337,29 @@ public class ListServiceInstancesRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   asc: The instances are sorted in ascending order.
+         * *   asc
+         * 
+         *     <!-- -->
+         * 
+         *     :
          * 
          *     <!-- -->
          * 
          *     <!-- -->
          * 
-         *     <!-- -->
+         *     The instances are sorted in ascending order.
          * 
          * *   desc
          * 
          *     <!-- -->
          * 
-         *     : The instances are sorted in descending order.
+         *     :
          * 
          *     <!-- -->
          * 
          *     <!-- -->
+         * 
+         *     The instances are sorted in descending order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -363,7 +368,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -372,7 +377,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -381,7 +386,26 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource group to which the instance belongs.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   PublicResource
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DedicatedResource
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -390,7 +414,66 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Role.
+         * The service role.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   DataSet
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     dataset service
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   SDProxy
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     Stable-Diffusion proxy service
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   Standard
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     standard service
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   Queue
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     queue service
+         * 
+         *     <!-- -->
+         * 
+         *     .
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -399,7 +482,20 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Sort.
+         * The field that you use to sort the query results.
+         * <p>
+         * 
+         * *   Set the value to StartTime.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     The value specifies that the query results are sorted based on the time when the instances were created
+         * 
+         *     <!-- -->
+         * 
+         *     .
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

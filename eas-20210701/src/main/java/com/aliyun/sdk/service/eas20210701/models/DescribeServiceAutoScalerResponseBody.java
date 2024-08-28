@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServiceAutoScalerResponseBody</p>
  */
 public class DescribeServiceAutoScalerResponseBody extends TeaModel {
-    @NameInMap("Behavior")
+    @com.aliyun.core.annotation.NameInMap("Behavior")
     private java.util.Map < String, ? > behavior;
 
-    @NameInMap("CurrentMetrics")
+    @com.aliyun.core.annotation.NameInMap("CurrentMetrics")
     private java.util.List < CurrentMetrics> currentMetrics;
 
-    @NameInMap("MaxReplica")
+    @com.aliyun.core.annotation.NameInMap("MaxReplica")
     private Integer maxReplica;
 
-    @NameInMap("MinReplica")
+    @com.aliyun.core.annotation.NameInMap("MinReplica")
     private Integer minReplica;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScaleStrategies")
+    @com.aliyun.core.annotation.NameInMap("ScaleStrategies")
     private java.util.List < ScaleStrategies> scaleStrategies;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
     private DescribeServiceAutoScalerResponseBody(Builder builder) {
@@ -110,7 +109,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         private String serviceName; 
 
         /**
-         * Behavior.
+         * The additional information about the Autoscaler policy, such as the interval of triggering Autoscaler.
          */
         public Builder behavior(java.util.Map < String, ? > behavior) {
             this.behavior = behavior;
@@ -118,7 +117,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentMetrics.
+         * The metrics.
          */
         public Builder currentMetrics(java.util.List < CurrentMetrics> currentMetrics) {
             this.currentMetrics = currentMetrics;
@@ -126,7 +125,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * MaxReplica.
+         * The maximum number of instances in the service.
          */
         public Builder maxReplica(Integer maxReplica) {
             this.maxReplica = maxReplica;
@@ -134,7 +133,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * MinReplica.
+         * The minimum number of instances in the service.
          */
         public Builder minReplica(Integer minReplica) {
             this.minReplica = minReplica;
@@ -142,7 +141,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +149,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * ScaleStrategies.
+         * The auto scaling policies.
          */
         public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
             this.scaleStrategies = scaleStrategies;
@@ -158,7 +157,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -172,13 +171,13 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
     } 
 
     public static class CurrentMetrics extends TeaModel {
-        @NameInMap("metricName")
+        @com.aliyun.core.annotation.NameInMap("metricName")
         private String metricName;
 
-        @NameInMap("service")
+        @com.aliyun.core.annotation.NameInMap("service")
         private String service;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private Float value;
 
         private CurrentMetrics(Builder builder) {
@@ -222,7 +221,11 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * metricName.
+             * The metric name. Valid values:
+             * <p>
+             * 
+             * *   QPS
+             * *   CPU
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -230,7 +233,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             }
 
             /**
-             * service.
+             * The service for which the metric is specified.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -238,7 +241,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * The metric value.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -253,13 +256,13 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
 
     }
     public static class ScaleStrategies extends TeaModel {
-        @NameInMap("metricName")
+        @com.aliyun.core.annotation.NameInMap("metricName")
         private String metricName;
 
-        @NameInMap("service")
+        @com.aliyun.core.annotation.NameInMap("service")
         private String service;
 
-        @NameInMap("threshold")
+        @com.aliyun.core.annotation.NameInMap("threshold")
         private Float threshold;
 
         private ScaleStrategies(Builder builder) {
@@ -303,7 +306,11 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * metricName.
+             * The metric name. Valid values:
+             * <p>
+             * 
+             * *   QPS: the queries per second (QPS) for an individual instance.
+             * *   CPU: the CPU utilization.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -311,7 +318,7 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             }
 
             /**
-             * service.
+             * The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -319,7 +326,11 @@ public class DescribeServiceAutoScalerResponseBody extends TeaModel {
             }
 
             /**
-             * threshold.
+             * The threshold of the metric that triggers auto scaling.
+             * <p>
+             * 
+             * *   If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.
+             * *   If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

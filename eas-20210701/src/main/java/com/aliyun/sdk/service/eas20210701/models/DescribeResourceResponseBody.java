@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceResponseBody</p>
  */
 public class DescribeResourceResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("CpuCount")
+    @com.aliyun.core.annotation.NameInMap("CpuCount")
     private Integer cpuCount;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ExtraData")
+    @com.aliyun.core.annotation.NameInMap("ExtraData")
     private String extraData;
 
-    @NameInMap("GpuCount")
+    @com.aliyun.core.annotation.NameInMap("GpuCount")
     private Integer gpuCount;
 
-    @NameInMap("InstanceCount")
+    @com.aliyun.core.annotation.NameInMap("InstanceCount")
     private Integer instanceCount;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OwnerUid")
+    @com.aliyun.core.annotation.NameInMap("OwnerUid")
     private String ownerUid;
 
-    @NameInMap("PostPaidInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("PostPaidInstanceCount")
     private Integer postPaidInstanceCount;
 
-    @NameInMap("PrePaidInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("PrePaidInstanceCount")
     private Integer prePaidInstanceCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
     private DescribeResourceResponseBody(Builder builder) {
@@ -322,11 +321,11 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the resource. Valid values:
+         * The type of the resource group. Valid values:
          * <p>
          * 
-         * - Dedicated
-         * - SelfManaged
+         * *   Dedicated: the dedicated resource group.
+         * *   SelfManaged: the self-managed resource group.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;

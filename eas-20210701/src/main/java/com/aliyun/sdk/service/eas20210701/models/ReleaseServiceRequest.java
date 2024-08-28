@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReleaseServiceRequest</p>
  */
 public class ReleaseServiceRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Body
-    @NameInMap("TrafficState")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrafficState")
     private String trafficState;
 
-    @Body
-    @NameInMap("Weight")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Weight")
     private Integer weight;
 
     private ReleaseServiceRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class ReleaseServiceRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region where the service is deployed.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +106,7 @@ public class ReleaseServiceRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -116,7 +115,11 @@ public class ReleaseServiceRequest extends Request {
         }
 
         /**
-         * TrafficState.
+         * The traffic state. Valid values:
+         * <p>
+         * 
+         * *   standalone: independent traffic.
+         * *   grouping: grouped traffic.
          */
         public Builder trafficState(String trafficState) {
             this.putBodyParameter("TrafficState", trafficState);
@@ -125,7 +128,7 @@ public class ReleaseServiceRequest extends Request {
         }
 
         /**
-         * Weight.
+         * The weight of the canary release. Valid values: 0 to 100.
          */
         public Builder weight(Integer weight) {
             this.putBodyParameter("Weight", weight);

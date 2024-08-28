@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServiceCronScalerResponseBody</p>
  */
 public class DescribeServiceCronScalerResponseBody extends TeaModel {
-    @NameInMap("ExcludeDates")
+    @com.aliyun.core.annotation.NameInMap("ExcludeDates")
     private java.util.List < String > excludeDates;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScaleJobs")
+    @com.aliyun.core.annotation.NameInMap("ScaleJobs")
     private java.util.List < ScaleJobs> scaleJobs;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
     private DescribeServiceCronScalerResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         private String serviceName; 
 
         /**
-         * ExcludeDates.
+         * The points in time that are excluded when you schedule a CronHPA job. The points in time must be specified by using a cron expression.
          */
         public Builder excludeDates(java.util.List < String > excludeDates) {
             this.excludeDates = excludeDates;
@@ -82,7 +81,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +89,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         }
 
         /**
-         * ScaleJobs.
+         * The CronHPA jobs.
          */
         public Builder scaleJobs(java.util.List < ScaleJobs> scaleJobs) {
             this.scaleJobs = scaleJobs;
@@ -98,7 +97,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -112,25 +111,25 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
     } 
 
     public static class ScaleJobs extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("LastProbeTime")
+        @com.aliyun.core.annotation.NameInMap("LastProbeTime")
         private String lastProbeTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Schedule")
+        @com.aliyun.core.annotation.NameInMap("Schedule")
         private String schedule;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TargetSize")
+        @com.aliyun.core.annotation.NameInMap("TargetSize")
         private Integer targetSize;
 
         private ScaleJobs(Builder builder) {
@@ -210,7 +209,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             private Integer targetSize; 
 
             /**
-             * CreateTime.
+             * The time when the most recent CronHPA job was created. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -218,7 +217,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * LastProbeTime.
+             * The time when the most recent CronHPA job ran. The time is displayed in UTC.
              */
             public Builder lastProbeTime(String lastProbeTime) {
                 this.lastProbeTime = lastProbeTime;
@@ -226,7 +225,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The returned message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -234,7 +233,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the CronHPA job.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -242,7 +241,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * Schedule.
+             * The cron expression that is used to configure the execution time of the CronHPA job.
              */
             public Builder schedule(String schedule) {
                 this.schedule = schedule;
@@ -250,7 +249,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the most recent CronHPA job.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -258,7 +257,7 @@ public class DescribeServiceCronScalerResponseBody extends TeaModel {
             }
 
             /**
-             * TargetSize.
+             * The number of instances that you expect to configure for the CronHPA job.
              */
             public Builder targetSize(Integer targetSize) {
                 this.targetSize = targetSize;

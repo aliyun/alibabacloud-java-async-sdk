@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateServiceAutoScalerRequest</p>
  */
 public class UpdateServiceAutoScalerRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Body
-    @NameInMap("behavior")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("behavior")
     private Behavior behavior;
 
-    @Body
-    @NameInMap("max")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("max")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer max;
 
-    @Body
-    @NameInMap("min")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("min")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer min;
 
-    @Body
-    @NameInMap("scaleStrategies")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scaleStrategies")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ScaleStrategies> scaleStrategies;
 
     private UpdateServiceAutoScalerRequest(Builder builder) {
@@ -129,7 +128,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The region ID of the service.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -138,7 +137,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -147,7 +146,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * behavior.
+         * The Autoscaler operation.
          */
         public Builder behavior(Behavior behavior) {
             this.putBodyParameter("behavior", behavior);
@@ -156,7 +155,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * max.
+         * The maximum number of instances. The value must be greater than that of the min parameter.
          */
         public Builder max(Integer max) {
             this.putBodyParameter("max", max);
@@ -165,7 +164,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * min.
+         * The minimum number of instances. The value must be greater than 0.
          */
         public Builder min(Integer min) {
             this.putBodyParameter("min", min);
@@ -174,7 +173,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
         }
 
         /**
-         * scaleStrategies.
+         * The auto scaling policies.
          */
         public Builder scaleStrategies(java.util.List < ScaleStrategies> scaleStrategies) {
             this.putBodyParameter("scaleStrategies", scaleStrategies);
@@ -190,10 +189,10 @@ public class UpdateServiceAutoScalerRequest extends Request {
     } 
 
     public static class OnZero extends TeaModel {
-        @NameInMap("scaleDownGracePeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("scaleDownGracePeriodSeconds")
         private Integer scaleDownGracePeriodSeconds;
 
-        @NameInMap("scaleUpActivationReplicas")
+        @com.aliyun.core.annotation.NameInMap("scaleUpActivationReplicas")
         private Integer scaleUpActivationReplicas;
 
         private OnZero(Builder builder) {
@@ -228,7 +227,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
             private Integer scaleUpActivationReplicas; 
 
             /**
-             * scaleDownGracePeriodSeconds.
+             * The time window that is required before the number of instances is reduced to 0. Default value: 600. The number of instances can be reduced to 0 only if no request is available or no traffic exists in the specified time window.
              */
             public Builder scaleDownGracePeriodSeconds(Integer scaleDownGracePeriodSeconds) {
                 this.scaleDownGracePeriodSeconds = scaleDownGracePeriodSeconds;
@@ -236,7 +235,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * scaleUpActivationReplicas.
+             * The number of instances that you want to create at a time if the number of instances is scaled out from 0. Default value: 1.
              */
             public Builder scaleUpActivationReplicas(Integer scaleUpActivationReplicas) {
                 this.scaleUpActivationReplicas = scaleUpActivationReplicas;
@@ -251,7 +250,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
 
     }
     public static class ScaleDown extends TeaModel {
-        @NameInMap("stabilizationWindowSeconds")
+        @com.aliyun.core.annotation.NameInMap("stabilizationWindowSeconds")
         private Integer stabilizationWindowSeconds;
 
         private ScaleDown(Builder builder) {
@@ -277,7 +276,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
             private Integer stabilizationWindowSeconds; 
 
             /**
-             * stabilizationWindowSeconds.
+             * The time window that is required before the scale-in operation is performed. Default value: 300. The scale-in operation can be performed only if the specified metric drops below the threshold in the specified time window.
              */
             public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
                 this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -292,7 +291,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
 
     }
     public static class ScaleUp extends TeaModel {
-        @NameInMap("stabilizationWindowSeconds")
+        @com.aliyun.core.annotation.NameInMap("stabilizationWindowSeconds")
         private Integer stabilizationWindowSeconds;
 
         private ScaleUp(Builder builder) {
@@ -318,7 +317,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
             private Integer stabilizationWindowSeconds; 
 
             /**
-             * stabilizationWindowSeconds.
+             * The time window that is required before the scale-out operation is performed. Default value: 0. The scale-out operation can be performed only if the specified metric exceeds the specified threshold in the specified time window.
              */
             public Builder stabilizationWindowSeconds(Integer stabilizationWindowSeconds) {
                 this.stabilizationWindowSeconds = stabilizationWindowSeconds;
@@ -333,13 +332,13 @@ public class UpdateServiceAutoScalerRequest extends Request {
 
     }
     public static class Behavior extends TeaModel {
-        @NameInMap("onZero")
+        @com.aliyun.core.annotation.NameInMap("onZero")
         private OnZero onZero;
 
-        @NameInMap("scaleDown")
+        @com.aliyun.core.annotation.NameInMap("scaleDown")
         private ScaleDown scaleDown;
 
-        @NameInMap("scaleUp")
+        @com.aliyun.core.annotation.NameInMap("scaleUp")
         private ScaleUp scaleUp;
 
         private Behavior(Builder builder) {
@@ -383,7 +382,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
             private ScaleUp scaleUp; 
 
             /**
-             * onZero.
+             * The operation that reduces the number of instances to 0.
              */
             public Builder onZero(OnZero onZero) {
                 this.onZero = onZero;
@@ -391,7 +390,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * scaleDown.
+             * The scale-in operation.
              */
             public Builder scaleDown(ScaleDown scaleDown) {
                 this.scaleDown = scaleDown;
@@ -399,7 +398,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * scaleUp.
+             * The scale-out operation.
              */
             public Builder scaleUp(ScaleUp scaleUp) {
                 this.scaleUp = scaleUp;
@@ -414,15 +413,15 @@ public class UpdateServiceAutoScalerRequest extends Request {
 
     }
     public static class ScaleStrategies extends TeaModel {
-        @NameInMap("metricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("metricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("service")
+        @com.aliyun.core.annotation.NameInMap("service")
         private String service;
 
-        @NameInMap("threshold")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("threshold")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Float threshold;
 
         private ScaleStrategies(Builder builder) {
@@ -466,7 +465,11 @@ public class UpdateServiceAutoScalerRequest extends Request {
             private Float threshold; 
 
             /**
-             * metricName.
+             * The name of the metric for triggering auto scaling. Valid values:
+             * <p>
+             * 
+             * *   qps: the queries per second (QPS) for an individual instance.
+             * *   cpu: the CPU utilization.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -474,7 +477,7 @@ public class UpdateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * service.
+             * The service for which the metric is specified. If you do not set this parameter, the current service is specified by default.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -482,7 +485,11 @@ public class UpdateServiceAutoScalerRequest extends Request {
             }
 
             /**
-             * threshold.
+             * The threshold of the metric that triggers auto scaling.
+             * <p>
+             * 
+             * *   If you set metricName to QPS, scale-out is triggered when the average QPS for a single instance is greater than this threshold.
+             * *   If you set metricName to CPU, scale-out is triggered when the average CPU utilization for a single instance is greater than this threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

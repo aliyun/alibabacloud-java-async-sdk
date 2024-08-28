@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAppServiceResponseBody</p>
  */
 public class CreateAppServiceResponseBody extends TeaModel {
-    @NameInMap("InternetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("InternetEndpoint")
     private String internetEndpoint;
 
-    @NameInMap("IntranetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("IntranetEndpoint")
     private String intranetEndpoint;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private CreateAppServiceResponseBody(Builder builder) {

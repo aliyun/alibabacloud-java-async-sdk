@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateResourceInstanceResponseBody</p>
  */
 public class UpdateResourceInstanceResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
     private UpdateResourceInstanceResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         private String resourceId; 
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +69,7 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +77,7 @@ public class UpdateResourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServiceEventResponseBody</p>
  */
 public class DescribeServiceEventResponseBody extends TeaModel {
-    @NameInMap("Events")
+    @com.aliyun.core.annotation.NameInMap("Events")
     private java.util.List < Events> events;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Long totalPageNum;
 
     private DescribeServiceEventResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         private Long totalPageNum; 
 
         /**
-         * Events.
+         * The events.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -94,7 +93,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * The page number.
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -102,7 +101,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +109,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +117,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * The total number of pages returned.
          */
         public Builder totalPageNum(Long totalPageNum) {
             this.totalPageNum = totalPageNum;
@@ -132,16 +131,16 @@ public class DescribeServiceEventResponseBody extends TeaModel {
     } 
 
     public static class Events extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Events(Builder builder) {
@@ -194,7 +193,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Message.
+             * The returned message. The message is formatted and returned in the JSON format.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -202,7 +201,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The cause of the event. The information about the change in the service status is returned.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -210,7 +209,7 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the event occurred. The time must be in UTC.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -218,7 +217,11 @@ public class DescribeServiceEventResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The event type. Valid values:
+             * <p>
+             * 
+             * *   Normal
+             * *   Warning
              */
             public Builder type(String type) {
                 this.type = type;

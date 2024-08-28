@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceContainersRequest</p>
  */
 public class ListServiceContainersRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Path
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceName;
 
     private ListServiceContainersRequest(Builder builder) {
@@ -82,7 +84,7 @@ public class ListServiceContainersRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The region ID of the service.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -91,7 +93,7 @@ public class ListServiceContainersRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -100,7 +102,7 @@ public class ListServiceContainersRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance that runs the service.
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("InstanceName", instanceName);

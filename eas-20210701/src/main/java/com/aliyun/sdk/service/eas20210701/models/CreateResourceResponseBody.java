@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateResourceResponseBody</p>
  */
 public class CreateResourceResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
-    @NameInMap("OwnerUid")
+    @com.aliyun.core.annotation.NameInMap("OwnerUid")
     private String ownerUid;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
     private CreateResourceResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class CreateResourceResponseBody extends TeaModel {
         private String resourceName; 
 
         /**
-         * ClusterId.
+         * The ID of the cluster to which the resource group belongs.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -106,7 +105,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceIds.
+         * The instance IDs.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.instanceIds = instanceIds;
@@ -114,7 +113,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerUid.
+         * The user ID (UID) of the resource group owner.
          */
         public Builder ownerUid(String ownerUid) {
             this.ownerUid = ownerUid;
@@ -122,7 +121,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +129,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -138,7 +137,7 @@ public class CreateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceName.
+         * The name of the resource group.
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;

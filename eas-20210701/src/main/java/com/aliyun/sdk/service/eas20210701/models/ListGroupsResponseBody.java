@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGroupsResponseBody</p>
  */
 public class ListGroupsResponseBody extends TeaModel {
-    @NameInMap("Groups")
+    @com.aliyun.core.annotation.NameInMap("Groups")
     private java.util.List < Group > groups;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListGroupsResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Groups.
+         * The service groups.
          */
         public Builder groups(java.util.List < Group > groups) {
             this.groups = groups;
@@ -94,7 +93,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +101,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +109,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGroupsRequest</p>
  */
 public class ListGroupsRequest extends Request {
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListGroupsRequest(Builder builder) {
@@ -96,7 +95,7 @@ public class ListGroupsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The name of the filter that is used to filter out unwanted service groups. Fuzzy match is supported.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -105,7 +104,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -114,7 +113,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 100.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -123,7 +122,7 @@ public class ListGroupsRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

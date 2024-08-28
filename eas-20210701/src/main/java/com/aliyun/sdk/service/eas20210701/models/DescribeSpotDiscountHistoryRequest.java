@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSpotDiscountHistoryRequest</p>
  */
 public class DescribeSpotDiscountHistoryRequest extends Request {
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("IsProtect")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsProtect")
     private Boolean isProtect;
 
     private DescribeSpotDiscountHistoryRequest(Builder builder) {
@@ -68,7 +68,7 @@ public class DescribeSpotDiscountHistoryRequest extends Request {
         } 
 
         /**
-         * InstanceType.
+         * The type of the Elastic Algorithm Service (EAS) instance.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -77,7 +77,7 @@ public class DescribeSpotDiscountHistoryRequest extends Request {
         }
 
         /**
-         * IsProtect.
+         * Specifies whether the preemptible instance has a protection period. During the 1-hour protection period of the preemptible instance, the preemptible instance will not be released.
          */
         public Builder isProtect(Boolean isProtect) {
             this.putQueryParameter("IsProtect", isProtect);

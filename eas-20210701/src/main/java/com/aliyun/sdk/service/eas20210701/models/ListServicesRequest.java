@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServicesRequest</p>
  */
 public class ListServicesRequest extends Request {
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Gateway")
+    private String gateway;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Label")
     private java.util.Map < String, String > label;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ParentServiceUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentServiceUid")
     private String parentServiceUid;
 
-    @Query
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @Query
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("ServiceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceStatus")
     private String serviceStatus;
 
-    @Query
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @Query
-    @NameInMap("ServiceUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceUid")
     private String serviceUid;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListServicesRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
+        this.gateway = builder.gateway;
         this.groupName = builder.groupName;
         this.label = builder.label;
         this.order = builder.order;
@@ -109,6 +113,13 @@ public class ListServicesRequest extends Request {
      */
     public String getFilter() {
         return this.filter;
+    }
+
+    /**
+     * @return gateway
+     */
+    public String getGateway() {
+        return this.gateway;
     }
 
     /**
@@ -211,6 +222,7 @@ public class ListServicesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
         private String filter; 
+        private String gateway; 
         private String groupName; 
         private java.util.Map < String, String > label; 
         private String order; 
@@ -233,6 +245,7 @@ public class ListServicesRequest extends Request {
         private Builder(ListServicesRequest request) {
             super(request);
             this.filter = request.filter;
+            this.gateway = request.gateway;
             this.groupName = request.groupName;
             this.label = request.label;
             this.order = request.order;
@@ -250,62 +263,7 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * {
-         * <p>
-         *   "RequestId": "40325405-579C-4D82-9624-EC2B1779848E",
-         *   "Services": [
-         *     {
-         *       "ServiceId": "200516454695942578",
-         *       "ServiceName": "vipserver",
-         *       "ParentUid": "1628454689805075",
-         *       "CallerUid": "eas",
-         *       "CurrentVersion": 1,
-         *       "Cpu": 1,
-         *       "Gpu": 0,
-         *       "Memory": 900,
-         *       "Image": "registry.cn-zhangjiakou.aliyuncs.com/eas/ndisearch_v1_inner_zhangbei:v0.0.3-20200302145109",
-         *       "Resource": "seccontent_inner_2080ti_5",
-         *       "Namespace": "vipserver",
-         *       "CreateTime": "2019-10-25T10:37:53Z",
-         *       "UpdateTime": "2019-10-30T16:50:59Z",
-         *       "TotalInstance": 1,
-         *       "RunningInstance": 1,
-         *       "PendingInstance": 0,
-         *       "LatestVersion": 1,
-         *       "Status": "Running",
-         *       "Reason": "RUNNING",
-         *       "Message": "Service is now scaling",
-         *       "AccessToken": "",
-         *       "Weight": 0
-         *     },
-         *     {
-         *       "ServiceId": 97097,
-         *       "ServiceName": "a1",
-         *       "CallerUid": "eas",
-         *       "CurrentVersion": 1,
-         *       "Cpu": 1,
-         *       "Gpu": 0,
-         *       "Memory": 900,
-         *       "Image": "registry.cn-hangzhou.aliyuncs.com/eas/pi_imemb_tb:v0.0.1-20191023130701",
-         *       "Resource": "seccontent_inner_b",
-         *       "Namespace": "a1",
-         *       "CreateTime": "2020-05-26T18:03:11Z",
-         *       "UpdateTime": "2020-05-26T18:03:11Z",
-         *       "TotalInstance": 1,
-         *       "RunningInstance": 0,
-         *       "PendingInstance": 1,
-         *       "LatestVersion": 1,
-         *       "Status": "Failed",
-         *       "Reason": "FAILED",
-         *       "Message": "the server could not find the requested resource (post services.meta.k8s.io)",
-         *       "AccessToken": "regression_test_token",
-         *       "Weight": 0
-         *     }
-         *   ],
-         *   "PageNumber": 1,
-         *   "PageSize": 2,
-         *   "TotalCount": 2
-         * }
+         * The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -314,7 +272,16 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * Gateway.
+         */
+        public Builder gateway(String gateway) {
+            this.putQueryParameter("Gateway", gateway);
+            this.gateway = gateway;
+            return this;
+        }
+
+        /**
+         * The name of the service group. For more information about how to query the name of a service group, see [ListServices](~~412109~~).
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -323,7 +290,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * Label.
+         * The tag that is used to filter services.
          */
         public Builder label(java.util.Map < String, String > label) {
             String labelShrink = shrink(label, "Label", "json");
@@ -333,7 +300,11 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * Order.
+         * The sorting order. Valid values:
+         * <p>
+         * 
+         * *   desc (default): The query results are sorted in descending order.
+         * *   asc: The query results are sorted in ascending order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -342,7 +313,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 376577
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -351,7 +322,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -360,7 +331,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ParentServiceUid.
+         * The ID of the primary service that corresponds to the Band member service.
          */
         public Builder parentServiceUid(String parentServiceUid) {
             this.putQueryParameter("ParentServiceUid", parentServiceUid);
@@ -369,7 +340,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * QuotaId.
+         * The quota ID.
          */
         public Builder quotaId(String quotaId) {
             this.putQueryParameter("QuotaId", quotaId);
@@ -378,7 +349,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ResourceName.
+         * The name or ID of the resource group to which the service belongs.
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -387,7 +358,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -396,7 +367,154 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ServiceStatus.
+         * The service state.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Creating
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Stopped
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Failed
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Complete
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Cloning
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Stopping
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Updating
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Waiting
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   HotUpdate
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Committing
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Starting
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   DeleteFailed
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Running
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Developing
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Scaling
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Deleted
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Pending
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Deleting
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder serviceStatus(String serviceStatus) {
             this.putQueryParameter("ServiceStatus", serviceStatus);
@@ -405,7 +523,47 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * The service type. Valid values:
+         * <p>
+         * 
+         * *   Async
+         * *   Standard
+         * *   Offline Task
+         * *   Proxima
+         * 
+         * Valid values:
+         * 
+         * *   Async
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Standard
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   OfflineTask
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Proxima
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -414,7 +572,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ServiceUid.
+         * The user ID (UID) of the service.
          */
         public Builder serviceUid(String serviceUid) {
             this.putQueryParameter("ServiceUid", serviceUid);
@@ -423,7 +581,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * Sort.
+         * The sort field. By default, the query results are sorted by the timestamp type in descending order.
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -432,7 +590,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

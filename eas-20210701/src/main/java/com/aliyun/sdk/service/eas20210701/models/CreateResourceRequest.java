@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateResourceRequest</p>
  */
 public class CreateResourceRequest extends Request {
-    @Body
-    @NameInMap("AutoRenewal")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenewal")
     private Boolean autoRenewal;
 
-    @Body
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Body
-    @NameInMap("EcsInstanceCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EcsInstanceCount")
     private Integer ecsInstanceCount;
 
-    @Body
-    @NameInMap("EcsInstanceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EcsInstanceType")
     private String ecsInstanceType;
 
-    @Body
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Body
-    @NameInMap("SelfManagedResourceOptions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SelfManagedResourceOptions")
     private SelfManagedResourceOptions selfManagedResourceOptions;
 
-    @Body
-    @NameInMap("SystemDiskSize")
-    @Validation(maximum = 2000, minimum = 200)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
+    @com.aliyun.core.annotation.Validation(maximum = 2000, minimum = 200)
     private Integer systemDiskSize;
 
-    @Body
-    @NameInMap("Zone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Zone")
     private String zone;
 
     private CreateResourceRequest(Builder builder) {
@@ -153,9 +152,10 @@ public class CreateResourceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable auto-renewal. Valid values: false (default)
+         * Specifies whether to enable auto-renewal. Valid values:
          * <p>
          * 
+         * *   false (default)
          * *   true
          */
         public Builder autoRenewal(Boolean autoRenewal) {
@@ -165,11 +165,13 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
+         * The billing method. Valid values:
          * <p>
          * 
          * *   PrePaid: the subscription billing method.
          * *   PostPaid: the pay-as-you-go billing method.
+         * 
+         * >  This parameter is required when the ResourceType parameter is set to Dedicated.
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
@@ -179,6 +181,9 @@ public class CreateResourceRequest extends Request {
 
         /**
          * The number of ECS instances.
+         * <p>
+         * 
+         * >  This parameter is required when the ResourceType parameter is set to Dedicated.
          */
         public Builder ecsInstanceCount(Integer ecsInstanceCount) {
             this.putBodyParameter("EcsInstanceCount", ecsInstanceCount);
@@ -188,6 +193,9 @@ public class CreateResourceRequest extends Request {
 
         /**
          * The type of the Elastic Compute Service (ECS) instance.
+         * <p>
+         * 
+         * >  This parameter is required when the ResourceType parameter is set to Dedicated.
          */
         public Builder ecsInstanceType(String ecsInstanceType) {
             this.putBodyParameter("EcsInstanceType", ecsInstanceType);
@@ -196,7 +204,13 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource group. Valid values:
+         * <p>
+         * 
+         * *   Dedicated: the dedicated resource group.
+         * *   SelfManaged: the self-managed resource group.
+         * 
+         * >  If you use a self-managed resource group, you must configure a whitelist.
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
@@ -205,7 +219,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * SelfManagedResourceOptions.
+         * The configurations of the self-managed resource group.
          */
         public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
             this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
@@ -223,7 +237,7 @@ public class CreateResourceRequest extends Request {
         }
 
         /**
-         * The zone to which the instance belongs.
+         * The ID of the zone in which the instance resides.
          */
         public Builder zone(String zone) {
             this.putBodyParameter("Zone", zone);
@@ -239,16 +253,16 @@ public class CreateResourceRequest extends Request {
     } 
 
     public static class NodeTolerations extends TeaModel {
-        @NameInMap("effect")
+        @com.aliyun.core.annotation.NameInMap("effect")
         private String effect;
 
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private NodeTolerations(Builder builder) {
@@ -301,7 +315,14 @@ public class CreateResourceRequest extends Request {
             private String value; 
 
             /**
-             * effect.
+             * The result.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   PreferNoSchedule
+             * *   NoSchedule
+             * *   NoExecute
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -309,7 +330,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * key.
+             * The key name.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -317,7 +338,13 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * operator.
+             * The relationship between key names and key values.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Equal
+             * *   Exists
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -325,7 +352,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * value.
+             * The key value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -340,16 +367,16 @@ public class CreateResourceRequest extends Request {
 
     }
     public static class SelfManagedResourceOptions extends TeaModel {
-        @NameInMap("ExternalClusterId")
+        @com.aliyun.core.annotation.NameInMap("ExternalClusterId")
         private String externalClusterId;
 
-        @NameInMap("NodeMatchLabels")
+        @com.aliyun.core.annotation.NameInMap("NodeMatchLabels")
         private java.util.Map < String, String > nodeMatchLabels;
 
-        @NameInMap("NodeTolerations")
+        @com.aliyun.core.annotation.NameInMap("NodeTolerations")
         private java.util.List < NodeTolerations> nodeTolerations;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
         private SelfManagedResourceOptions(Builder builder) {
@@ -402,7 +429,7 @@ public class CreateResourceRequest extends Request {
             private String roleName; 
 
             /**
-             * ExternalClusterId.
+             * The ID of the self-managed cluster.
              */
             public Builder externalClusterId(String externalClusterId) {
                 this.externalClusterId = externalClusterId;
@@ -410,7 +437,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * NodeMatchLabels.
+             * The tag key-value pairs for nodes.
              */
             public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;
@@ -418,7 +445,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * NodeTolerations.
+             * Tolerations for nodes.
              */
             public Builder nodeTolerations(java.util.List < NodeTolerations> nodeTolerations) {
                 this.nodeTolerations = nodeTolerations;
@@ -426,7 +453,7 @@ public class CreateResourceRequest extends Request {
             }
 
             /**
-             * RoleName.
+             * The name of the RAM user to which the permissions on Elastic Algorithm Service of Platform for AI (PAI-EAS) are granted.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

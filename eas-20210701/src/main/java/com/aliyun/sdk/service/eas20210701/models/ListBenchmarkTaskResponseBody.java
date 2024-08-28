@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBenchmarkTaskResponseBody</p>
  */
 public class ListBenchmarkTaskResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tasks")
+    @com.aliyun.core.annotation.NameInMap("Tasks")
     private java.util.List < Tasks> tasks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListBenchmarkTaskResponseBody(Builder builder) {
@@ -110,7 +109,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the stress testing task was updated.
+         * The stress testing tasks.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -132,31 +131,31 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
     } 
 
     public static class Tasks extends TeaModel {
-        @NameInMap("AvailableAgent")
+        @com.aliyun.core.annotation.NameInMap("AvailableAgent")
         private Long availableAgent;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Tasks(Builder builder) {
@@ -254,7 +253,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AvailableAgent.
+             * The number of instances that are available for stress testing.
              */
             public Builder availableAgent(Long availableAgent) {
                 this.availableAgent = availableAgent;
@@ -262,7 +261,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the stress testing task was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +269,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The returned message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -278,7 +277,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID of the stress testing task.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -286,7 +285,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the service on which you want to perform a stress testing.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -294,7 +293,82 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the stress testing task.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   Creating
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Starting
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DeleteFailed
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Running
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Stopping
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Error
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Updating
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   Deleting
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   CreateFailed
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;
@@ -302,7 +376,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the stress testing task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -310,7 +384,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the stress testing task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -318,7 +392,7 @@ public class ListBenchmarkTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the stress testing task was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

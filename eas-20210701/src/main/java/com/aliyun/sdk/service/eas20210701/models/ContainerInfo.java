@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ContainerInfo</p>
  */
 public class ContainerInfo extends TeaModel {
-    @NameInMap("CurrentReaon")
+    @com.aliyun.core.annotation.NameInMap("CurrentReaon")
     private String currentReaon;
 
-    @NameInMap("CurrentStatus")
+    @com.aliyun.core.annotation.NameInMap("CurrentStatus")
     private String currentStatus;
 
-    @NameInMap("CurrentTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CurrentTimestamp")
     private String currentTimestamp;
 
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.NameInMap("Image")
     private String image;
 
-    @NameInMap("LastReason")
+    @com.aliyun.core.annotation.NameInMap("LastReason")
     private String lastReason;
 
-    @NameInMap("LastStatus")
+    @com.aliyun.core.annotation.NameInMap("LastStatus")
     private String lastStatus;
 
-    @NameInMap("LastTimestamp")
+    @com.aliyun.core.annotation.NameInMap("LastTimestamp")
     private String lastTimestamp;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Integer port;
 
-    @NameInMap("Ready")
+    @com.aliyun.core.annotation.NameInMap("Ready")
     private Boolean ready;
 
-    @NameInMap("RestartCount")
+    @com.aliyun.core.annotation.NameInMap("RestartCount")
     private Integer restartCount;
 
     private ContainerInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateResourceRequest</p>
  */
 public class UpdateResourceRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Body
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
-    @Body
-    @NameInMap("SelfManagedResourceOptions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SelfManagedResourceOptions")
     private SelfManagedResourceOptions selfManagedResourceOptions;
 
     private UpdateResourceRequest(Builder builder) {
@@ -125,7 +124,7 @@ public class UpdateResourceRequest extends Request {
         }
 
         /**
-         * The configurable options for self managed resource group.
+         * The configuration items of the self-managed resource group.
          */
         public Builder selfManagedResourceOptions(SelfManagedResourceOptions selfManagedResourceOptions) {
             this.putBodyParameter("SelfManagedResourceOptions", selfManagedResourceOptions);
@@ -141,16 +140,16 @@ public class UpdateResourceRequest extends Request {
     } 
 
     public static class NodeTolerations extends TeaModel {
-        @NameInMap("effect")
+        @com.aliyun.core.annotation.NameInMap("effect")
         private String effect;
 
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private NodeTolerations(Builder builder) {
@@ -205,7 +204,6 @@ public class UpdateResourceRequest extends Request {
             /**
              * The effect.
              * <p>
-             * 
              * Valid values:
              * - PreferNoSchedule
              * - NoSchedule
@@ -217,7 +215,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
-             * The name of the key.
+             * The key name.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -237,7 +235,7 @@ public class UpdateResourceRequest extends Request {
             }
 
             /**
-             * The name of the value.
+             * The key value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -252,10 +250,10 @@ public class UpdateResourceRequest extends Request {
 
     }
     public static class SelfManagedResourceOptions extends TeaModel {
-        @NameInMap("NodeMatchLabels")
+        @com.aliyun.core.annotation.NameInMap("NodeMatchLabels")
         private java.util.Map < String, String > nodeMatchLabels;
 
-        @NameInMap("NodeTolerations")
+        @com.aliyun.core.annotation.NameInMap("NodeTolerations")
         private java.util.List < NodeTolerations> nodeTolerations;
 
         private SelfManagedResourceOptions(Builder builder) {
@@ -290,7 +288,7 @@ public class UpdateResourceRequest extends Request {
             private java.util.List < NodeTolerations> nodeTolerations; 
 
             /**
-             * The key-value pairs for matched nodes.
+             * Tag tag key-value pairs for nodes.
              */
             public Builder nodeMatchLabels(java.util.Map < String, String > nodeMatchLabels) {
                 this.nodeMatchLabels = nodeMatchLabels;

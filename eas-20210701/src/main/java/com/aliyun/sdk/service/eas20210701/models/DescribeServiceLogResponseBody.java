@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServiceLogResponseBody</p>
  */
 public class DescribeServiceLogResponseBody extends TeaModel {
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private java.util.List < String > logs;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Long totalPageNum;
 
     private DescribeServiceLogResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         private Long totalPageNum; 
 
         /**
-         * Logs.
+         * The returned logs.
          */
         public Builder logs(java.util.List < String > logs) {
             this.logs = logs;
@@ -94,7 +93,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * The page number.
          */
         public Builder pageNum(Long pageNum) {
             this.pageNum = pageNum;
@@ -102,7 +101,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +109,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +117,7 @@ public class DescribeServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPageNum.
+         * The total number of pages returned.
          */
         public Builder totalPageNum(Long totalPageNum) {
             this.totalPageNum = totalPageNum;

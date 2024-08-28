@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceResponseBody</p>
  */
 public class CreateServiceResponseBody extends TeaModel {
-    @NameInMap("InternetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("InternetEndpoint")
     private String internetEndpoint;
 
-    @NameInMap("IntranetEndpoint")
+    @com.aliyun.core.annotation.NameInMap("IntranetEndpoint")
     private String intranetEndpoint;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private CreateServiceResponseBody(Builder builder) {
@@ -110,7 +109,7 @@ public class CreateServiceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * InternetEndpoint.
+         * The public endpoint of the created service.
          */
         public Builder internetEndpoint(String internetEndpoint) {
             this.internetEndpoint = internetEndpoint;
@@ -118,7 +117,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetEndpoint.
+         * The internal endpoint of the created service.
          */
         public Builder intranetEndpoint(String intranetEndpoint) {
             this.intranetEndpoint = intranetEndpoint;
@@ -126,7 +125,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * The region ID of the created service.
          */
         public Builder region(String region) {
             this.region = region;
@@ -134,7 +133,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +141,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The ID of the created service.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -150,7 +149,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The name of the created service.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -158,7 +157,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The service state.
          */
         public Builder status(String status) {
             this.status = status;

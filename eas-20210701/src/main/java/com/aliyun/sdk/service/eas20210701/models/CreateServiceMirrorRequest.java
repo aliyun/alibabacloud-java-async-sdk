@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceMirrorRequest</p>
  */
 public class CreateServiceMirrorRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Body
-    @NameInMap("Ratio")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ratio")
     private Integer ratio;
 
-    @Body
-    @NameInMap("Target")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Target")
     private java.util.List < String > target;
 
     private CreateServiceMirrorRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class CreateServiceMirrorRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region where the service is deployed.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +106,7 @@ public class CreateServiceMirrorRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -116,7 +115,7 @@ public class CreateServiceMirrorRequest extends Request {
         }
 
         /**
-         * Ratio.
+         * The percentage of the traffic that is mirrored to the destination service. Valid values: 0 to 100.
          */
         public Builder ratio(Integer ratio) {
             this.putBodyParameter("Ratio", ratio);
@@ -125,7 +124,7 @@ public class CreateServiceMirrorRequest extends Request {
         }
 
         /**
-         * Target.
+         * The instances.
          */
         public Builder target(java.util.List < String > target) {
             this.putBodyParameter("Target", target);

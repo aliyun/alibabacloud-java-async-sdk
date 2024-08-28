@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceInstancesResponseBody</p>
  */
 public class ListServiceInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instance > instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListServiceInstancesResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Instances.
+         * The instances.
          */
         public Builder instances(java.util.List < Instance > instances) {
             this.instances = instances;
@@ -94,7 +93,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +101,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +109,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

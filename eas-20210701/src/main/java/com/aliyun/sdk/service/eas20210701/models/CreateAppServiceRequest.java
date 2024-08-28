@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAppServiceRequest</p>
  */
 public class CreateAppServiceRequest extends Request {
-    @Query
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    @Body
-    @NameInMap("AppType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appType;
 
-    @Body
-    @NameInMap("AppVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
-    @Body
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Config")
     private java.util.Map < String, ? > config;
 
-    @Body
-    @NameInMap("Replicas")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Replicas")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer replicas;
 
-    @Body
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Body
-    @NameInMap("ServiceSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceSpec;
 
     private CreateAppServiceRequest(Builder builder) {

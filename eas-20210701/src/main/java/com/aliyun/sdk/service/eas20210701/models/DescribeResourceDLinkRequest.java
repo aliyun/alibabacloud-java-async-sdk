@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceDLinkRequest</p>
  */
 public class DescribeResourceDLinkRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
     private DescribeResourceDLinkRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class DescribeResourceDLinkRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region to which the resource group belongs.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +78,7 @@ public class DescribeResourceDLinkRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);

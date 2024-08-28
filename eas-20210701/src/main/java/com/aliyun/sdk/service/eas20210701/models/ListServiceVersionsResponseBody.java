@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceVersionsResponseBody</p>
  */
 public class ListServiceVersionsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Versions")
+    @com.aliyun.core.annotation.NameInMap("Versions")
     private java.util.List < Versions> versions;
 
     private ListServiceVersionsResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         private java.util.List < Versions> versions; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +93,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +101,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +109,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +117,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The versions of the service.
+         * The historical versions of the service.
          */
         public Builder versions(java.util.List < Versions> versions) {
             this.versions = versions;
@@ -132,22 +131,22 @@ public class ListServiceVersionsResponseBody extends TeaModel {
     } 
 
     public static class Versions extends TeaModel {
-        @NameInMap("BuildTime")
+        @com.aliyun.core.annotation.NameInMap("BuildTime")
         private String buildTime;
 
-        @NameInMap("ImageAvailable")
+        @com.aliyun.core.annotation.NameInMap("ImageAvailable")
         private String imageAvailable;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private Integer imageId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ServiceConfig")
+        @com.aliyun.core.annotation.NameInMap("ServiceConfig")
         private String serviceConfig;
 
-        @NameInMap("ServiceRunnable")
+        @com.aliyun.core.annotation.NameInMap("ServiceRunnable")
         private String serviceRunnable;
 
         private Versions(Builder builder) {
@@ -239,7 +238,7 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The image ID.
              */
             public Builder imageId(Integer imageId) {
                 this.imageId = imageId;
@@ -263,12 +262,12 @@ public class ListServiceVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether EAS is enabled. Valid values:
+             * Indicates whether Elastic Algorithm service (EAS) is activated. Valid values:
              * <p>
              * 
-             * *   true: EAS is enabled.
-             * *   false: EAS is not enabled.
-             * *   unknown: The enabling status of EAS is unknown.
+             * *   true: EAS is activated.
+             * *   false: EAS is not activated.
+             * *   unknown: The activation of EAS is unknown.
              */
             public Builder serviceRunnable(String serviceRunnable) {
                 this.serviceRunnable = serviceRunnable;

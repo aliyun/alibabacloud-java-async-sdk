@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServiceInstanceDiagnosisResponseBody</p>
  */
 public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
-    @NameInMap("Diagnosis")
+    @com.aliyun.core.annotation.NameInMap("Diagnosis")
     private Diagnosis diagnosis;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeServiceInstanceDiagnosisResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Diagnosis.
+         * The diagnostics information.
          */
         public Builder diagnosis(Diagnosis diagnosis) {
             this.diagnosis = diagnosis;
@@ -58,7 +57,7 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,13 +71,13 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
     } 
 
     public static class Diagnosis extends TeaModel {
-        @NameInMap("Advices")
+        @com.aliyun.core.annotation.NameInMap("Advices")
         private java.util.List < String > advices;
 
-        @NameInMap("Causes")
+        @com.aliyun.core.annotation.NameInMap("Causes")
         private java.util.List < String > causes;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
         private Diagnosis(Builder builder) {
@@ -122,7 +121,7 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
             private String error; 
 
             /**
-             * Advices.
+             * The solutions to the errors.
              */
             public Builder advices(java.util.List < String > advices) {
                 this.advices = advices;
@@ -130,7 +129,7 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
             }
 
             /**
-             * Causes.
+             * The causes of the errors.
              */
             public Builder causes(java.util.List < String > causes) {
                 this.causes = causes;
@@ -138,7 +137,7 @@ public class DescribeServiceInstanceDiagnosisResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * The error message.
              */
             public Builder error(String error) {
                 this.error = error;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Resource</p>
  */
 public class Resource extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("CpuCount")
+    @com.aliyun.core.annotation.NameInMap("CpuCount")
     private Integer cpuCount;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ExtraData")
+    @com.aliyun.core.annotation.NameInMap("ExtraData")
     private java.util.Map < String, ? > extraData;
 
-    @NameInMap("GpuCount")
+    @com.aliyun.core.annotation.NameInMap("GpuCount")
     private Integer gpuCount;
 
-    @NameInMap("InstanceCount")
+    @com.aliyun.core.annotation.NameInMap("InstanceCount")
     private Integer instanceCount;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PostPaidInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("PostPaidInstanceCount")
     private Integer postPaidInstanceCount;
 
-    @NameInMap("PrePaidInstanceCount")
+    @com.aliyun.core.annotation.NameInMap("PrePaidInstanceCount")
     private Integer prePaidInstanceCount;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
+
+    @com.aliyun.core.annotation.NameInMap("Vendor")
+    private String vendor;
 
     private Resource(Builder builder) {
         this.clusterId = builder.clusterId;
@@ -69,6 +71,7 @@ public class Resource extends TeaModel {
         this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
+        this.vendor = builder.vendor;
     }
 
     public static Builder builder() {
@@ -177,6 +180,13 @@ public class Resource extends TeaModel {
         return this.updateTime;
     }
 
+    /**
+     * @return vendor
+     */
+    public String getVendor() {
+        return this.vendor;
+    }
+
     public static final class Builder {
         private String clusterId; 
         private Integer cpuCount; 
@@ -192,6 +202,7 @@ public class Resource extends TeaModel {
         private String resourceType; 
         private String status; 
         private String updateTime; 
+        private String vendor; 
 
         /**
          * ClusterId.
@@ -302,6 +313,14 @@ public class Resource extends TeaModel {
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
+            return this;
+        }
+
+        /**
+         * Vendor.
+         */
+        public Builder vendor(String vendor) {
+            this.vendor = vendor;
             return this;
         }
 

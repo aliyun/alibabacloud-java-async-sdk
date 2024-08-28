@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBenchmarkTaskReportResponseBody</p>
  */
 public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Object data;
 
-    @NameInMap("ReportUrl")
+    @com.aliyun.core.annotation.NameInMap("ReportUrl")
     private String reportUrl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBenchmarkTaskReportResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * If the value of ReportType is set to RAW, the details about the stress testing report are returned.
          */
         public Builder data(Object data) {
             this.data = data;
@@ -70,7 +69,7 @@ public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
         }
 
         /**
-         * ReportUrl.
+         * If the value of ReportType is set to Report, the URL of the stress testing report is returned.
          */
         public Builder reportUrl(String reportUrl) {
             this.reportUrl = reportUrl;
@@ -78,7 +77,7 @@ public class DescribeBenchmarkTaskReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceInstancesRequest</p>
  */
 public class ListResourceInstancesRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private String chargeType;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("InstanceIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIP")
     private String instanceIP;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
     private ListResourceInstancesRequest(Builder builder) {
@@ -210,7 +209,7 @@ public class ListResourceInstancesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region to which the resource group belongs.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -219,7 +218,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource group. For more information about how to query the ID of a resource group, see [ListResources](~~412133~~).
          */
         public Builder resourceId(String resourceId) {
             this.putPathParameter("ResourceId", resourceId);
@@ -228,7 +227,11 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   PrePaid: subscription.
+         * *   PostPaid: pay-as-you-go.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -237,7 +240,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The keyword used to query instances. Instances can be queried by instance ID or instance IP address.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -246,7 +249,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIP.
+         * The IP address of the instance.
          */
         public Builder instanceIP(String instanceIP) {
             this.putQueryParameter("InstanceIP", instanceIP);
@@ -255,7 +258,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID. For more information about how to query the instance ID, see [ListResourceInstances](~~412129~~).
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -264,7 +267,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The instance name.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -273,7 +276,104 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * The instance state.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Ready-SchedulingDisabled
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     The instance is available but unschedulable
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   Ready
+         * 
+         *     <!-- -->
+         * 
+         *     : The instance
+         * 
+         *     <!-- -->
+         * 
+         *     is running
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   NotReady
+         * 
+         *     <!-- -->
+         * 
+         *     : The instance is unready.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Stopped
+         * 
+         *     <!-- -->
+         * 
+         *     : The instance has stopped.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   NotReady-SchedulingDisabled
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     The instance is unavailable and unschedulable
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   Attaching
+         * 
+         *     <!-- -->
+         * 
+         *     : The instance
+         * 
+         *     <!-- -->
+         * 
+         *     is starting
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   Deleting
+         * 
+         *     <!-- -->
+         * 
+         *     : The instance is being deleted.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CreateFailed: The instance failed to be created.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -282,7 +382,28 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * Order.
+         * The sorting order.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   asc: The instances are sorted in ascending order.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   desc
+         * 
+         *     <!-- -->
+         * 
+         *     : The instances are sorted in descending order.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -291,7 +412,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -300,7 +421,7 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -309,7 +430,66 @@ public class ListResourceInstancesRequest extends Request {
         }
 
         /**
-         * Sort.
+         * The field that you use to sort the query results.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   CreateTime
+         * 
+         *     <!-- -->
+         * 
+         *     : The instances are sorted based on the time when the instances were created.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   MemoryUsed
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     The instances are sorted based on the memory usage of the instances
+         * 
+         *     <!-- -->
+         * 
+         *     .
+         * 
+         * *   GpuUsed
+         * 
+         *     <!-- -->
+         * 
+         *     : The instances are sorted based on the
+         * 
+         *     <!-- -->
+         * 
+         *     GPU usage of the instances.
+         * 
+         *     <!-- -->
+         * 
+         * *   ExpireTime: The instances are sorted based on the time when the instances expired.
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CpuUsed
+         * 
+         *     <!-- -->
+         * 
+         *     :
+         * 
+         *     <!-- -->
+         * 
+         *     The instances are sorted based on the CPU utilization of the instances.
+         * 
+         *     <!-- -->
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);

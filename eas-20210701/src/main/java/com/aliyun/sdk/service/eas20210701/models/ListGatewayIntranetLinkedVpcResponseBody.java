@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGatewayIntranetLinkedVpcResponseBody</p>
  */
 public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
-    @NameInMap("GatewayId")
+    @com.aliyun.core.annotation.NameInMap("GatewayId")
     private String gatewayId;
 
-    @NameInMap("IntranetLinkedVpcList")
+    @com.aliyun.core.annotation.NameInMap("IntranetLinkedVpcList")
     private java.util.List < IntranetLinkedVpcList> intranetLinkedVpcList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListGatewayIntranetLinkedVpcResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class ListGatewayIntranetLinkedVpcResponseBody extends TeaModel {
     } 
 
     public static class IntranetLinkedVpcList extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private IntranetLinkedVpcList(Builder builder) {

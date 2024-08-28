@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServiceEventRequest</p>
  */
 public class DescribeServiceEventRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("ServiceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private String pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeServiceEventRequest(Builder builder) {
@@ -154,7 +153,7 @@ public class DescribeServiceEventRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The region ID of the service.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -163,7 +162,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * ServiceName.
+         * The service name. For more information about how to query the service name, see [ListServices](~~412109~~).
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("ServiceName", serviceName);
@@ -172,7 +171,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. By default, the current point in time is the end of the time range to query.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -181,7 +180,11 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The event type. Valid values:
+         * <p>
+         * 
+         * *   Normal
+         * *   Warning
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -190,7 +193,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * The instance name. For more information about how to obtain the instance name, see [ListServiceInstances](~~412108~~).
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -199,7 +202,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The page number. Default value: 1.
          */
         public Builder pageNum(String pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -208,7 +211,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 100.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -217,7 +220,7 @@ public class DescribeServiceEventRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The time must be in UTC. The default value is seven days ago.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBenchmarkTaskReportRequest</p>
  */
 public class DescribeBenchmarkTaskReportRequest extends Request {
-    @Path
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Path
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("ReportType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportType")
     private String reportType;
 
     private DescribeBenchmarkTaskReportRequest(Builder builder) {
@@ -84,7 +83,7 @@ public class DescribeBenchmarkTaskReportRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the region where the stress testing task is performed.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +92,7 @@ public class DescribeBenchmarkTaskReportRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the stress testing task. For more information about how to query the name of a stress testing task, see [ListBenchmarkTask](~~432976~~).
          */
         public Builder taskName(String taskName) {
             this.putPathParameter("TaskName", taskName);
@@ -102,7 +101,7 @@ public class DescribeBenchmarkTaskReportRequest extends Request {
         }
 
         /**
-         * ReportType.
+         * The report type of the stress testing task. Valid values: RAW and Report.
          */
         public Builder reportType(String reportType) {
             this.putQueryParameter("ReportType", reportType);

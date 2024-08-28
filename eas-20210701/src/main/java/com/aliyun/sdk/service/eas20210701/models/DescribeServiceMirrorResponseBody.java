@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServiceMirrorResponseBody</p>
  */
 public class DescribeServiceMirrorResponseBody extends TeaModel {
-    @NameInMap("Ratio")
+    @com.aliyun.core.annotation.NameInMap("Ratio")
     private String ratio;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @NameInMap("Target")
+    @com.aliyun.core.annotation.NameInMap("Target")
     private String target;
 
     private DescribeServiceMirrorResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         private String target; 
 
         /**
-         * Ratio.
+         * The percentage of traffic that you want to mirror. Valid values: 0 to 100.
          */
         public Builder ratio(String ratio) {
             this.ratio = ratio;
@@ -82,7 +81,7 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +89,7 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The service name.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -98,7 +97,7 @@ public class DescribeServiceMirrorResponseBody extends TeaModel {
         }
 
         /**
-         * Target.
+         * The destination services to which you want to mirror traffic.
          */
         public Builder target(String target) {
             this.target = target;

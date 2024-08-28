@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eas20210701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSpotDiscountHistoryResponseBody</p>
  */
 public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SpotDiscounts")
+    @com.aliyun.core.annotation.NameInMap("SpotDiscounts")
     private java.util.List < SpotDiscounts> spotDiscounts;
 
     private DescribeSpotDiscountHistoryResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
         private java.util.List < SpotDiscounts> spotDiscounts; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * SpotDiscounts.
+         * The discount for the preemptible instance.
          */
         public Builder spotDiscounts(java.util.List < SpotDiscounts> spotDiscounts) {
             this.spotDiscounts = spotDiscounts;
@@ -72,16 +71,16 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
     } 
 
     public static class SpotDiscounts extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotDiscount")
+        @com.aliyun.core.annotation.NameInMap("SpotDiscount")
         private String spotDiscount;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private SpotDiscounts(Builder builder) {
@@ -134,7 +133,7 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * InstanceType.
+             * The type of the ECS instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -142,7 +141,7 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SpotDiscount.
+             * The discount for the preemptible instance. For example, 0.1 represents a 90% discount.
              */
             public Builder spotDiscount(String spotDiscount) {
                 this.spotDiscount = spotDiscount;
@@ -150,7 +149,7 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The time when the discount is available. The time must be in UTC.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -158,7 +157,7 @@ public class DescribeSpotDiscountHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

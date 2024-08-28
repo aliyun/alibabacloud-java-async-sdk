@@ -23,6 +23,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CommitServiceResponse> commitService(CommitServiceRequest request);
 
+    CompletableFuture<CreateAclPolicyResponse> createAclPolicy(CreateAclPolicyRequest request);
+
     CompletableFuture<CreateAppServiceResponse> createAppService(CreateAppServiceRequest request);
 
     CompletableFuture<CreateBenchmarkTaskResponse> createBenchmarkTask(CreateBenchmarkTaskRequest request);
@@ -41,6 +43,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateResourceLogResponse> createResourceLog(CreateResourceLogRequest request);
 
+    /**
+      * **Before you call this operation, make sure that you are familiar with the [billing](~~144261~~) of Elastic Algorithm Service (EAS).
+      *
+     */
     CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
 
     CompletableFuture<CreateServiceAutoScalerResponse> createServiceAutoScaler(CreateServiceAutoScalerRequest request);
@@ -48,6 +54,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceCronScalerResponse> createServiceCronScaler(CreateServiceCronScalerRequest request);
 
     CompletableFuture<CreateServiceMirrorResponse> createServiceMirror(CreateServiceMirrorRequest request);
+
+    CompletableFuture<DeleteAclPolicyResponse> deleteAclPolicy(DeleteAclPolicyRequest request);
 
     CompletableFuture<DeleteBenchmarkTaskResponse> deleteBenchmarkTask(DeleteBenchmarkTaskRequest request);
 
@@ -109,7 +117,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DevelopServiceResponse> developService(DevelopServiceRequest request);
 
+    CompletableFuture<ListAclPolicyResponse> listAclPolicy(ListAclPolicyRequest request);
+
     CompletableFuture<ListBenchmarkTaskResponse> listBenchmarkTask(ListBenchmarkTaskRequest request);
+
+    CompletableFuture<ListGatewayResponse> listGateway(ListGatewayRequest request);
 
     CompletableFuture<ListGatewayIntranetLinkedVpcResponse> listGatewayIntranetLinkedVpc(ListGatewayIntranetLinkedVpcRequest request);
 
@@ -119,6 +131,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListResourceInstancesResponse> listResourceInstances(ListResourceInstancesRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListResourceServicesResponse> listResourceServices(ListResourceServicesRequest request);
 
     CompletableFuture<ListResourcesResponse> listResources(ListResourcesRequest request);
