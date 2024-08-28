@@ -147,6 +147,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
+    CompletableFuture<ListTenantAddonsResponse> listTenantAddons(ListTenantAddonsRequest request);
+
+    CompletableFuture<ReinstallTenantAddonResponse> reinstallTenantAddon(ReinstallTenantAddonRequest request);
+
     CompletableFuture<ReleaseServiceResponse> releaseService(ReleaseServiceRequest request);
 
     CompletableFuture<RestartServiceResponse> restartService(RestartServiceRequest request);

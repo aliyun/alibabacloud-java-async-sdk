@@ -272,7 +272,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * Gateway.
+         * The ID of the private gateway.
          */
         public Builder gateway(String gateway) {
             this.putQueryParameter("Gateway", gateway);
