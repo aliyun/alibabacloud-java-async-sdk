@@ -95,7 +95,11 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh-CN: Chinese
+         * *   en-US (default): English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -104,7 +108,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -113,7 +117,10 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends Request {
         }
 
         /**
-         * ConfigId.
+         * The configuration ID of the access domain name. Two configuration IDs exist when the access domain name is bound to the same GTM instance but an A record and an AAAA record are configured for the access domain name. The configuration ID uniquely identifies a configuration.
+         * <p>
+         * 
+         * You can call the [ListCloudGtmInstanceConfigs](~~ListCloudGtmInstanceConfigs~~) operation to query the value of ConfigId for the access domain name.
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -122,7 +129,7 @@ public class DescribeCloudGtmInstanceConfigFullInfoRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the GTM 3.0 instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

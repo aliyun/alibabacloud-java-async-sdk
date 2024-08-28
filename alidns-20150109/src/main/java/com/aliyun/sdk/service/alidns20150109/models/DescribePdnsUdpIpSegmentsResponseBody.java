@@ -154,6 +154,12 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
+        private Long createTimestamp;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
@@ -163,6 +169,9 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("SecretKey")
+        private String secretKey;
+
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
@@ -171,9 +180,12 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
 
         private IpSegments(Builder builder) {
             this.createDate = builder.createDate;
+            this.createTimestamp = builder.createTimestamp;
+            this.id = builder.id;
             this.ip = builder.ip;
             this.mask = builder.mask;
             this.name = builder.name;
+            this.secretKey = builder.secretKey;
             this.state = builder.state;
             this.updateDate = builder.updateDate;
         }
@@ -191,6 +203,20 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
          */
         public String getCreateDate() {
             return this.createDate;
+        }
+
+        /**
+         * @return createTimestamp
+         */
+        public Long getCreateTimestamp() {
+            return this.createTimestamp;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
         }
 
         /**
@@ -215,6 +241,13 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return secretKey
+         */
+        public String getSecretKey() {
+            return this.secretKey;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -230,9 +263,12 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createDate; 
+            private Long createTimestamp; 
+            private String id; 
             private String ip; 
             private Long mask; 
             private String name; 
+            private String secretKey; 
             private String state; 
             private String updateDate; 
 
@@ -241,6 +277,22 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
+                return this;
+            }
+
+            /**
+             * CreateTimestamp.
+             */
+            public Builder createTimestamp(Long createTimestamp) {
+                this.createTimestamp = createTimestamp;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
                 return this;
             }
 
@@ -265,6 +317,14 @@ public class DescribePdnsUdpIpSegmentsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * SecretKey.
+             */
+            public Builder secretKey(String secretKey) {
+                this.secretKey = secretKey;
                 return this;
             }
 

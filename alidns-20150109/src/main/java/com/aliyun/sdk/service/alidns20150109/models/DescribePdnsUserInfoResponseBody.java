@@ -77,6 +77,9 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PdnsId")
         private Long pdnsId;
 
+        @com.aliyun.core.annotation.NameInMap("SecretKey")
+        private String secretKey;
+
         @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
@@ -92,6 +95,7 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         private UserInfo(Builder builder) {
             this.availableService = builder.availableService;
             this.pdnsId = builder.pdnsId;
+            this.secretKey = builder.secretKey;
             this.serviceType = builder.serviceType;
             this.state = builder.state;
             this.statisticSwitchStatus = builder.statisticSwitchStatus;
@@ -118,6 +122,13 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
          */
         public Long getPdnsId() {
             return this.pdnsId;
+        }
+
+        /**
+         * @return secretKey
+         */
+        public String getSecretKey() {
+            return this.secretKey;
         }
 
         /**
@@ -151,6 +162,7 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String availableService; 
             private Long pdnsId; 
+            private String secretKey; 
             private String serviceType; 
             private String state; 
             private String statisticSwitchStatus; 
@@ -169,6 +181,14 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
              */
             public Builder pdnsId(Long pdnsId) {
                 this.pdnsId = pdnsId;
+                return this;
+            }
+
+            /**
+             * SecretKey.
+             */
+            public Builder secretKey(String secretKey) {
+                this.secretKey = secretKey;
                 return this;
             }
 
