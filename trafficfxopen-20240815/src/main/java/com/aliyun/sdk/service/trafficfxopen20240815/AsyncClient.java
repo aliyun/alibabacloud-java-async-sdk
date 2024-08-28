@@ -21,4 +21,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
 
+    CompletableFuture<SearchResponse> search(SearchRequest request);
+
 }
