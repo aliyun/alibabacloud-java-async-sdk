@@ -506,6 +506,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("RunningTime")
         private Integer runningTime;
 
@@ -533,6 +536,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.productCode = builder.productCode;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.runningTime = builder.runningTime;
             this.sgId = builder.sgId;
             this.vpcId = builder.vpcId;
@@ -626,6 +630,13 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return runningTime
          */
         public Integer getRunningTime() {
@@ -672,6 +683,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Integer payType; 
             private String productCode; 
             private String regionId; 
+            private String resourceGroupId; 
             private Integer runningTime; 
             private String sgId; 
             private String vpcId; 
@@ -763,6 +775,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

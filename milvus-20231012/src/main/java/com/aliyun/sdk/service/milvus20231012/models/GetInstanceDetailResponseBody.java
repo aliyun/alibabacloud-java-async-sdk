@@ -492,6 +492,227 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         } 
 
     }
+    public static class MeasureConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DataNodeCuNum")
+        private Integer dataNodeCuNum;
+
+        @com.aliyun.core.annotation.NameInMap("DataNodeReplica")
+        private Integer dataNodeReplica;
+
+        @com.aliyun.core.annotation.NameInMap("IndexNodeCuNum")
+        private Integer indexNodeCuNum;
+
+        @com.aliyun.core.annotation.NameInMap("IndexNodeReplica")
+        private Integer indexNodeReplica;
+
+        @com.aliyun.core.annotation.NameInMap("MixCoodinatorNodeCuNum")
+        private Integer mixCoodinatorNodeCuNum;
+
+        @com.aliyun.core.annotation.NameInMap("MixCoodinatorNodeReplica")
+        private Integer mixCoodinatorNodeReplica;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyNodeCuNum")
+        private Integer proxyNodeCuNum;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyNodeReplica")
+        private Integer proxyNodeReplica;
+
+        @com.aliyun.core.annotation.NameInMap("QueryNodeCuNum")
+        private Integer queryNodeCuNum;
+
+        @com.aliyun.core.annotation.NameInMap("QueryNodeReplica")
+        private Integer queryNodeReplica;
+
+        private MeasureConfig(Builder builder) {
+            this.dataNodeCuNum = builder.dataNodeCuNum;
+            this.dataNodeReplica = builder.dataNodeReplica;
+            this.indexNodeCuNum = builder.indexNodeCuNum;
+            this.indexNodeReplica = builder.indexNodeReplica;
+            this.mixCoodinatorNodeCuNum = builder.mixCoodinatorNodeCuNum;
+            this.mixCoodinatorNodeReplica = builder.mixCoodinatorNodeReplica;
+            this.proxyNodeCuNum = builder.proxyNodeCuNum;
+            this.proxyNodeReplica = builder.proxyNodeReplica;
+            this.queryNodeCuNum = builder.queryNodeCuNum;
+            this.queryNodeReplica = builder.queryNodeReplica;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MeasureConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dataNodeCuNum
+         */
+        public Integer getDataNodeCuNum() {
+            return this.dataNodeCuNum;
+        }
+
+        /**
+         * @return dataNodeReplica
+         */
+        public Integer getDataNodeReplica() {
+            return this.dataNodeReplica;
+        }
+
+        /**
+         * @return indexNodeCuNum
+         */
+        public Integer getIndexNodeCuNum() {
+            return this.indexNodeCuNum;
+        }
+
+        /**
+         * @return indexNodeReplica
+         */
+        public Integer getIndexNodeReplica() {
+            return this.indexNodeReplica;
+        }
+
+        /**
+         * @return mixCoodinatorNodeCuNum
+         */
+        public Integer getMixCoodinatorNodeCuNum() {
+            return this.mixCoodinatorNodeCuNum;
+        }
+
+        /**
+         * @return mixCoodinatorNodeReplica
+         */
+        public Integer getMixCoodinatorNodeReplica() {
+            return this.mixCoodinatorNodeReplica;
+        }
+
+        /**
+         * @return proxyNodeCuNum
+         */
+        public Integer getProxyNodeCuNum() {
+            return this.proxyNodeCuNum;
+        }
+
+        /**
+         * @return proxyNodeReplica
+         */
+        public Integer getProxyNodeReplica() {
+            return this.proxyNodeReplica;
+        }
+
+        /**
+         * @return queryNodeCuNum
+         */
+        public Integer getQueryNodeCuNum() {
+            return this.queryNodeCuNum;
+        }
+
+        /**
+         * @return queryNodeReplica
+         */
+        public Integer getQueryNodeReplica() {
+            return this.queryNodeReplica;
+        }
+
+        public static final class Builder {
+            private Integer dataNodeCuNum; 
+            private Integer dataNodeReplica; 
+            private Integer indexNodeCuNum; 
+            private Integer indexNodeReplica; 
+            private Integer mixCoodinatorNodeCuNum; 
+            private Integer mixCoodinatorNodeReplica; 
+            private Integer proxyNodeCuNum; 
+            private Integer proxyNodeReplica; 
+            private Integer queryNodeCuNum; 
+            private Integer queryNodeReplica; 
+
+            /**
+             * DataNodeCuNum.
+             */
+            public Builder dataNodeCuNum(Integer dataNodeCuNum) {
+                this.dataNodeCuNum = dataNodeCuNum;
+                return this;
+            }
+
+            /**
+             * DataNodeReplica.
+             */
+            public Builder dataNodeReplica(Integer dataNodeReplica) {
+                this.dataNodeReplica = dataNodeReplica;
+                return this;
+            }
+
+            /**
+             * IndexNodeCuNum.
+             */
+            public Builder indexNodeCuNum(Integer indexNodeCuNum) {
+                this.indexNodeCuNum = indexNodeCuNum;
+                return this;
+            }
+
+            /**
+             * IndexNodeReplica.
+             */
+            public Builder indexNodeReplica(Integer indexNodeReplica) {
+                this.indexNodeReplica = indexNodeReplica;
+                return this;
+            }
+
+            /**
+             * MixCoodinatorNodeCuNum.
+             */
+            public Builder mixCoodinatorNodeCuNum(Integer mixCoodinatorNodeCuNum) {
+                this.mixCoodinatorNodeCuNum = mixCoodinatorNodeCuNum;
+                return this;
+            }
+
+            /**
+             * MixCoodinatorNodeReplica.
+             */
+            public Builder mixCoodinatorNodeReplica(Integer mixCoodinatorNodeReplica) {
+                this.mixCoodinatorNodeReplica = mixCoodinatorNodeReplica;
+                return this;
+            }
+
+            /**
+             * ProxyNodeCuNum.
+             */
+            public Builder proxyNodeCuNum(Integer proxyNodeCuNum) {
+                this.proxyNodeCuNum = proxyNodeCuNum;
+                return this;
+            }
+
+            /**
+             * ProxyNodeReplica.
+             */
+            public Builder proxyNodeReplica(Integer proxyNodeReplica) {
+                this.proxyNodeReplica = proxyNodeReplica;
+                return this;
+            }
+
+            /**
+             * QueryNodeCuNum.
+             */
+            public Builder queryNodeCuNum(Integer queryNodeCuNum) {
+                this.queryNodeCuNum = queryNodeCuNum;
+                return this;
+            }
+
+            /**
+             * QueryNodeReplica.
+             */
+            public Builder queryNodeReplica(Integer queryNodeReplica) {
+                this.queryNodeReplica = queryNodeReplica;
+                return this;
+            }
+
+            public MeasureConfig build() {
+                return new MeasureConfig(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
@@ -520,6 +741,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
+        @com.aliyun.core.annotation.NameInMap("MeasureConfig")
+        private MeasureConfig measureConfig;
+
         @com.aliyun.core.annotation.NameInMap("OpenPublicNet")
         private Boolean openPublicNet;
 
@@ -534,6 +758,9 @@ public class GetInstanceDetailResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("RunningTime")
         private Long runningTime;
@@ -569,11 +796,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             this.expireTime = builder.expireTime;
             this.instanceId = builder.instanceId;
             this.instanceStatus = builder.instanceStatus;
+            this.measureConfig = builder.measureConfig;
             this.openPublicNet = builder.openPublicNet;
             this.packageType = builder.packageType;
             this.payType = builder.payType;
             this.productCode = builder.productCode;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.runningTime = builder.runningTime;
             this.sgId = builder.sgId;
             this.templateVersion = builder.templateVersion;
@@ -656,6 +885,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return measureConfig
+         */
+        public MeasureConfig getMeasureConfig() {
+            return this.measureConfig;
+        }
+
+        /**
          * @return openPublicNet
          */
         public Boolean getOpenPublicNet() {
@@ -688,6 +924,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         /**
@@ -756,11 +999,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             private Long expireTime; 
             private String instanceId; 
             private String instanceStatus; 
+            private MeasureConfig measureConfig; 
             private Boolean openPublicNet; 
             private String packageType; 
             private Integer payType; 
             private String productCode; 
             private String regionId; 
+            private String resourceGroupId; 
             private Long runningTime; 
             private String sgId; 
             private String templateVersion; 
@@ -843,6 +1088,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
+             * MeasureConfig.
+             */
+            public Builder measureConfig(MeasureConfig measureConfig) {
+                this.measureConfig = measureConfig;
+                return this;
+            }
+
+            /**
              * OpenPublicNet.
              */
             public Builder openPublicNet(Boolean openPublicNet) {
@@ -879,6 +1132,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
