@@ -29,6 +29,7 @@ public class CreateIpamRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperatingRegionList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > operatingRegionList;
 
     @com.aliyun.core.annotation.Query

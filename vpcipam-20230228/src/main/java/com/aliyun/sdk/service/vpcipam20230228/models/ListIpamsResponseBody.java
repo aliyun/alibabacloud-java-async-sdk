@@ -195,6 +195,12 @@ public class ListIpamsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DefaultResourceDiscoveryAssociationId")
+        private String defaultResourceDiscoveryAssociationId;
+
+        @com.aliyun.core.annotation.NameInMap("DefaultResourceDiscoveryId")
+        private String defaultResourceDiscoveryId;
+
         @com.aliyun.core.annotation.NameInMap("IpamDescription")
         private String ipamDescription;
 
@@ -222,6 +228,9 @@ public class ListIpamsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceDiscoveryAssociationCount")
+        private Integer resourceDiscoveryAssociationCount;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
@@ -233,6 +242,8 @@ public class ListIpamsResponseBody extends TeaModel {
 
         private Ipams(Builder builder) {
             this.createTime = builder.createTime;
+            this.defaultResourceDiscoveryAssociationId = builder.defaultResourceDiscoveryAssociationId;
+            this.defaultResourceDiscoveryId = builder.defaultResourceDiscoveryId;
             this.ipamDescription = builder.ipamDescription;
             this.ipamId = builder.ipamId;
             this.ipamName = builder.ipamName;
@@ -242,6 +253,7 @@ public class ListIpamsResponseBody extends TeaModel {
             this.privateDefaultScopeId = builder.privateDefaultScopeId;
             this.publicDefaultScopeId = builder.publicDefaultScopeId;
             this.regionId = builder.regionId;
+            this.resourceDiscoveryAssociationCount = builder.resourceDiscoveryAssociationCount;
             this.resourceGroupId = builder.resourceGroupId;
             this.scopeCount = builder.scopeCount;
             this.tags = builder.tags;
@@ -260,6 +272,20 @@ public class ListIpamsResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return defaultResourceDiscoveryAssociationId
+         */
+        public String getDefaultResourceDiscoveryAssociationId() {
+            return this.defaultResourceDiscoveryAssociationId;
+        }
+
+        /**
+         * @return defaultResourceDiscoveryId
+         */
+        public String getDefaultResourceDiscoveryId() {
+            return this.defaultResourceDiscoveryId;
         }
 
         /**
@@ -326,6 +352,13 @@ public class ListIpamsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceDiscoveryAssociationCount
+         */
+        public Integer getResourceDiscoveryAssociationCount() {
+            return this.resourceDiscoveryAssociationCount;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -348,6 +381,8 @@ public class ListIpamsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private String defaultResourceDiscoveryAssociationId; 
+            private String defaultResourceDiscoveryId; 
             private String ipamDescription; 
             private String ipamId; 
             private String ipamName; 
@@ -357,6 +392,7 @@ public class ListIpamsResponseBody extends TeaModel {
             private String privateDefaultScopeId; 
             private String publicDefaultScopeId; 
             private String regionId; 
+            private Integer resourceDiscoveryAssociationCount; 
             private String resourceGroupId; 
             private Integer scopeCount; 
             private java.util.List < Tags> tags; 
@@ -366,6 +402,22 @@ public class ListIpamsResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DefaultResourceDiscoveryAssociationId.
+             */
+            public Builder defaultResourceDiscoveryAssociationId(String defaultResourceDiscoveryAssociationId) {
+                this.defaultResourceDiscoveryAssociationId = defaultResourceDiscoveryAssociationId;
+                return this;
+            }
+
+            /**
+             * DefaultResourceDiscoveryId.
+             */
+            public Builder defaultResourceDiscoveryId(String defaultResourceDiscoveryId) {
+                this.defaultResourceDiscoveryId = defaultResourceDiscoveryId;
                 return this;
             }
 
@@ -438,6 +490,14 @@ public class ListIpamsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceDiscoveryAssociationCount.
+             */
+            public Builder resourceDiscoveryAssociationCount(Integer resourceDiscoveryAssociationCount) {
+                this.resourceDiscoveryAssociationCount = resourceDiscoveryAssociationCount;
                 return this;
             }
 
