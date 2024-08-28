@@ -83,7 +83,7 @@ public class CreateConfigMapRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description. The description must be 1 to 255 characters in length, and cannot contain spaces.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -92,7 +92,7 @@ public class CreateConfigMapRequest extends Request {
         }
 
         /**
-         * cn-hangzhou
+         * The name of the ConfigMap. The name can contain digits, letters, and underscores (\_). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -101,7 +101,7 @@ public class CreateConfigMapRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the namespace to which the ConfigMap instance belongs.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

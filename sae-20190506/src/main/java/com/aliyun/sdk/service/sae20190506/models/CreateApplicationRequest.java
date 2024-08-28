@@ -77,6 +77,10 @@ public class CreateApplicationRequest extends Request {
     private String enableEbpf;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableNewArms")
+    private Boolean enableNewArms;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Envs")
     private String envs;
 
@@ -277,6 +281,7 @@ public class CreateApplicationRequest extends Request {
         this.deploy = builder.deploy;
         this.edasContainerVersion = builder.edasContainerVersion;
         this.enableEbpf = builder.enableEbpf;
+        this.enableNewArms = builder.enableNewArms;
         this.envs = builder.envs;
         this.imagePullSecrets = builder.imagePullSecrets;
         this.imageUrl = builder.imageUrl;
@@ -447,6 +452,13 @@ public class CreateApplicationRequest extends Request {
      */
     public String getEnableEbpf() {
         return this.enableEbpf;
+    }
+
+    /**
+     * @return enableNewArms
+     */
+    public Boolean getEnableNewArms() {
+        return this.enableNewArms;
     }
 
     /**
@@ -781,6 +793,7 @@ public class CreateApplicationRequest extends Request {
         private Boolean deploy; 
         private String edasContainerVersion; 
         private String enableEbpf; 
+        private Boolean enableNewArms; 
         private String envs; 
         private String imagePullSecrets; 
         private String imageUrl; 
@@ -849,6 +862,7 @@ public class CreateApplicationRequest extends Request {
             this.deploy = request.deploy;
             this.edasContainerVersion = request.edasContainerVersion;
             this.enableEbpf = request.enableEbpf;
+            this.enableNewArms = request.enableNewArms;
             this.envs = request.envs;
             this.imagePullSecrets = request.imagePullSecrets;
             this.imageUrl = request.imageUrl;
@@ -1037,6 +1051,15 @@ public class CreateApplicationRequest extends Request {
         public Builder enableEbpf(String enableEbpf) {
             this.putQueryParameter("EnableEbpf", enableEbpf);
             this.enableEbpf = enableEbpf;
+            return this;
+        }
+
+        /**
+         * EnableNewArms.
+         */
+        public Builder enableNewArms(Boolean enableNewArms) {
+            this.putQueryParameter("EnableNewArms", enableNewArms);
+            this.enableNewArms = enableNewArms;
             return this;
         }
 

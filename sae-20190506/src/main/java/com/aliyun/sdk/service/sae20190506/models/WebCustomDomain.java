@@ -11,9 +11,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>WebCustomDomain</p>
  */
 public class WebCustomDomain extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("AccountId")
-    private String accountId;
-
     @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
@@ -32,6 +29,9 @@ public class WebCustomDomain extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
+    @com.aliyun.core.annotation.NameInMap("RouteConfig")
+    private RouteConfig routeConfig;
+
     @com.aliyun.core.annotation.NameInMap("WebCertConfig")
     private WebCertConfig webCertConfig;
 
@@ -41,17 +41,21 @@ public class WebCustomDomain extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("WebWAFConfig")
     private WebWAFConfig webWAFConfig;
 
+    @com.aliyun.core.annotation.NameInMap("accountId")
+    private String accountId;
+
     private WebCustomDomain(Builder builder) {
-        this.accountId = builder.accountId;
         this.createdTime = builder.createdTime;
         this.defaultForwardingAppName = builder.defaultForwardingAppName;
         this.domainName = builder.domainName;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.namespaceId = builder.namespaceId;
         this.protocol = builder.protocol;
+        this.routeConfig = builder.routeConfig;
         this.webCertConfig = builder.webCertConfig;
         this.webTLSConfig = builder.webTLSConfig;
         this.webWAFConfig = builder.webWAFConfig;
+        this.accountId = builder.accountId;
     }
 
     public static Builder builder() {
@@ -60,13 +64,6 @@ public class WebCustomDomain extends TeaModel {
 
     public static WebCustomDomain create() {
         return builder().build();
-    }
-
-    /**
-     * @return accountId
-     */
-    public String getAccountId() {
-        return this.accountId;
     }
 
     /**
@@ -112,6 +109,13 @@ public class WebCustomDomain extends TeaModel {
     }
 
     /**
+     * @return routeConfig
+     */
+    public RouteConfig getRouteConfig() {
+        return this.routeConfig;
+    }
+
+    /**
      * @return webCertConfig
      */
     public WebCertConfig getWebCertConfig() {
@@ -132,25 +136,25 @@ public class WebCustomDomain extends TeaModel {
         return this.webWAFConfig;
     }
 
+    /**
+     * @return accountId
+     */
+    public String getAccountId() {
+        return this.accountId;
+    }
+
     public static final class Builder {
-        private String accountId; 
         private String createdTime; 
         private String defaultForwardingAppName; 
         private String domainName; 
         private String lastModifiedTime; 
         private String namespaceId; 
         private String protocol; 
+        private RouteConfig routeConfig; 
         private WebCertConfig webCertConfig; 
         private WebTLSConfig webTLSConfig; 
         private WebWAFConfig webWAFConfig; 
-
-        /**
-         * AccountId.
-         */
-        public Builder accountId(String accountId) {
-            this.accountId = accountId;
-            return this;
-        }
+        private String accountId; 
 
         /**
          * CreatedTime.
@@ -201,6 +205,14 @@ public class WebCustomDomain extends TeaModel {
         }
 
         /**
+         * RouteConfig.
+         */
+        public Builder routeConfig(RouteConfig routeConfig) {
+            this.routeConfig = routeConfig;
+            return this;
+        }
+
+        /**
          * WebCertConfig.
          */
         public Builder webCertConfig(WebCertConfig webCertConfig) {
@@ -221,6 +233,14 @@ public class WebCustomDomain extends TeaModel {
          */
         public Builder webWAFConfig(WebWAFConfig webWAFConfig) {
             this.webWAFConfig = webWAFConfig;
+            return this;
+        }
+
+        /**
+         * accountId.
+         */
+        public Builder accountId(String accountId) {
+            this.accountId = accountId;
             return this;
         }
 

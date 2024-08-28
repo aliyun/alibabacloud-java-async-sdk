@@ -564,6 +564,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableIdle")
         private Boolean enableIdle;
 
+        @com.aliyun.core.annotation.NameInMap("EnableNewArms")
+        private Boolean enableNewArms;
+
         @com.aliyun.core.annotation.NameInMap("Envs")
         private String envs;
 
@@ -735,6 +738,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.enableAhas = builder.enableAhas;
             this.enableGreyTagRoute = builder.enableGreyTagRoute;
             this.enableIdle = builder.enableIdle;
+            this.enableNewArms = builder.enableNewArms;
             this.envs = builder.envs;
             this.imagePullSecrets = builder.imagePullSecrets;
             this.imageUrl = builder.imageUrl;
@@ -913,6 +917,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public Boolean getEnableIdle() {
             return this.enableIdle;
+        }
+
+        /**
+         * @return enableNewArms
+         */
+        public Boolean getEnableNewArms() {
+            return this.enableNewArms;
         }
 
         /**
@@ -1290,6 +1301,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private String enableAhas; 
             private Boolean enableGreyTagRoute; 
             private Boolean enableIdle; 
+            private Boolean enableNewArms; 
             private String envs; 
             private String imagePullSecrets; 
             private String imageUrl; 
@@ -1517,6 +1529,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder enableIdle(Boolean enableIdle) {
                 this.enableIdle = enableIdle;
+                return this;
+            }
+
+            /**
+             * EnableNewArms.
+             */
+            public Builder enableNewArms(Boolean enableNewArms) {
+                this.enableNewArms = enableNewArms;
                 return this;
             }
 

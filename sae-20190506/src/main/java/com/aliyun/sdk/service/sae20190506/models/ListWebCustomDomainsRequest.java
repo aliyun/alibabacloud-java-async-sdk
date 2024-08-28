@@ -21,7 +21,6 @@ public class ListWebCustomDomainsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NamespaceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
     @com.aliyun.core.annotation.Query

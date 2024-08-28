@@ -21,6 +21,9 @@ public class CreateWebCustomDomainInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
+    @com.aliyun.core.annotation.NameInMap("RouteConfig")
+    private RouteConfig routeConfig;
+
     @com.aliyun.core.annotation.NameInMap("WebCertConfig")
     private WebCertConfig webCertConfig;
 
@@ -34,6 +37,7 @@ public class CreateWebCustomDomainInput extends TeaModel {
         this.defaultForwardingAppName = builder.defaultForwardingAppName;
         this.domainName = builder.domainName;
         this.protocol = builder.protocol;
+        this.routeConfig = builder.routeConfig;
         this.webCertConfig = builder.webCertConfig;
         this.webTLSConfig = builder.webTLSConfig;
         this.webWAFConfig = builder.webWAFConfig;
@@ -69,6 +73,13 @@ public class CreateWebCustomDomainInput extends TeaModel {
     }
 
     /**
+     * @return routeConfig
+     */
+    public RouteConfig getRouteConfig() {
+        return this.routeConfig;
+    }
+
+    /**
      * @return webCertConfig
      */
     public WebCertConfig getWebCertConfig() {
@@ -93,6 +104,7 @@ public class CreateWebCustomDomainInput extends TeaModel {
         private String defaultForwardingAppName; 
         private String domainName; 
         private String protocol; 
+        private RouteConfig routeConfig; 
         private WebCertConfig webCertConfig; 
         private WebTLSConfig webTLSConfig; 
         private WebWAFConfig webWAFConfig; 
@@ -118,6 +130,14 @@ public class CreateWebCustomDomainInput extends TeaModel {
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
+            return this;
+        }
+
+        /**
+         * RouteConfig.
+         */
+        public Builder routeConfig(RouteConfig routeConfig) {
+            this.routeConfig = routeConfig;
             return this;
         }
 

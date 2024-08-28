@@ -18,7 +18,7 @@ public class DescribeWebCustomDomainResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private WebCustomDomainBody body;
+    private WebCustomDomain body;
 
     private DescribeWebCustomDomainResponse(BuilderImpl builder) {
         super(builder);
@@ -53,7 +53,7 @@ public class DescribeWebCustomDomainResponse extends Response {
     /**
      * @return body
      */
-    public WebCustomDomainBody getBody() {
+    public WebCustomDomain getBody() {
         return this.body;
     }
 
@@ -63,7 +63,7 @@ public class DescribeWebCustomDomainResponse extends Response {
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(WebCustomDomainBody body);
+        Builder body(WebCustomDomain body);
 
         @Override
         DescribeWebCustomDomainResponse build();
@@ -75,7 +75,7 @@ public class DescribeWebCustomDomainResponse extends Response {
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private WebCustomDomainBody body; 
+        private WebCustomDomain body; 
 
         private BuilderImpl() {
             super();
@@ -110,7 +110,7 @@ public class DescribeWebCustomDomainResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(WebCustomDomainBody body) {
+        public Builder body(WebCustomDomain body) {
             this.body = body;
             return this;
         }

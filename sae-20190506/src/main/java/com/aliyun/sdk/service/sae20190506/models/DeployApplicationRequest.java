@@ -77,6 +77,10 @@ public class DeployApplicationRequest extends Request {
     private Boolean enableGreyTagRoute;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableNewArms")
+    private Boolean enableNewArms;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Envs")
     private String envs;
 
@@ -271,6 +275,7 @@ public class DeployApplicationRequest extends Request {
         this.edasContainerVersion = builder.edasContainerVersion;
         this.enableAhas = builder.enableAhas;
         this.enableGreyTagRoute = builder.enableGreyTagRoute;
+        this.enableNewArms = builder.enableNewArms;
         this.envs = builder.envs;
         this.imagePullSecrets = builder.imagePullSecrets;
         this.imageUrl = builder.imageUrl;
@@ -440,6 +445,13 @@ public class DeployApplicationRequest extends Request {
      */
     public Boolean getEnableGreyTagRoute() {
         return this.enableGreyTagRoute;
+    }
+
+    /**
+     * @return enableNewArms
+     */
+    public Boolean getEnableNewArms() {
+        return this.enableNewArms;
     }
 
     /**
@@ -767,6 +779,7 @@ public class DeployApplicationRequest extends Request {
         private String edasContainerVersion; 
         private String enableAhas; 
         private Boolean enableGreyTagRoute; 
+        private Boolean enableNewArms; 
         private String envs; 
         private String imagePullSecrets; 
         private String imageUrl; 
@@ -834,6 +847,7 @@ public class DeployApplicationRequest extends Request {
             this.edasContainerVersion = request.edasContainerVersion;
             this.enableAhas = request.enableAhas;
             this.enableGreyTagRoute = request.enableGreyTagRoute;
+            this.enableNewArms = request.enableNewArms;
             this.envs = request.envs;
             this.imagePullSecrets = request.imagePullSecrets;
             this.imageUrl = request.imageUrl;
@@ -1067,6 +1081,15 @@ public class DeployApplicationRequest extends Request {
         public Builder enableGreyTagRoute(Boolean enableGreyTagRoute) {
             this.putQueryParameter("EnableGreyTagRoute", enableGreyTagRoute);
             this.enableGreyTagRoute = enableGreyTagRoute;
+            return this;
+        }
+
+        /**
+         * EnableNewArms.
+         */
+        public Builder enableNewArms(Boolean enableNewArms) {
+            this.putQueryParameter("EnableNewArms", enableNewArms);
+            this.enableNewArms = enableNewArms;
             return this;
         }
 

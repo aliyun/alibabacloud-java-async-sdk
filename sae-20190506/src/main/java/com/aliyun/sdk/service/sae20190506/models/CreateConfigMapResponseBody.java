@@ -109,11 +109,13 @@ public class CreateConfigMapResponseBody extends TeaModel {
         private String traceId; 
 
         /**
-         * Indicates whether the ConfigMap instance was created. Valid values:
+         * The HTTP status code. Valid values:
          * <p>
          * 
-         * *   **true**: The instance was created.
-         * *   **false**: The call failed to be created.
+         * *   **2xx**: The call was successful.
+         * *   **3xx**: The call was redirected.
+         * *   **4xx**: The call failed.
+         * *   **5xx**: A server error occurred.
          */
         public Builder code(String code) {
             this.code = code;
@@ -121,7 +123,7 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ConfigMap instance that was created.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -129,13 +131,11 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code. Valid values:
+         * The error code. Valid values:
          * <p>
          * 
-         * *   **2xx**: indicates that the call was successful.
-         * *   **3xx**: indicates that the call was redirected.
-         * *   **4xx**: indicates that the call failed.
-         * *   **5xx**: indicates that a server error occurred.
+         * *   If the call is successful, the **ErrorCode** parameter is not returned.
+         * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the **Error codes** section in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -143,7 +143,7 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the trace. The ID is used to query the details of a request.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +151,7 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned information.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +159,11 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the ConfigMap was created. Valid values:
+         * <p>
+         * 
+         * *   **true**: The ConfigMap was created.
+         * *   **false**: The ConfigMap failed to be created.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -167,7 +171,7 @@ public class CreateConfigMapResponseBody extends TeaModel {
         }
 
         /**
-         * The returned result.
+         * The trace ID that is used to query the details of the request.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -207,11 +211,7 @@ public class CreateConfigMapResponseBody extends TeaModel {
             private Long configMapId; 
 
             /**
-             * The returned error code. Valid values:
-             * <p>
-             * 
-             * *   If the call is successful, the **ErrorCode** parameter is not returned.
-             * *   If the call fails, the **ErrorCode** parameter is returned. For more information, see the "**Error codes**" section of this topic.
+             * The ID of the ConfigMap that was created.
              */
             public Builder configMapId(Long configMapId) {
                 this.configMapId = configMapId;
