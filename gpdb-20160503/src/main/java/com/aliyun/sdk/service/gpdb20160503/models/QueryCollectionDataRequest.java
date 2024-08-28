@@ -75,6 +75,10 @@ public class QueryCollectionDataRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationalTableFilter")
+    private RelationalTableFilter relationalTableFilter;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TopK")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long topK;
@@ -104,6 +108,7 @@ public class QueryCollectionDataRequest extends Request {
         this.orderBy = builder.orderBy;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.relationalTableFilter = builder.relationalTableFilter;
         this.topK = builder.topK;
         this.vector = builder.vector;
         this.workspaceId = builder.workspaceId;
@@ -228,6 +233,13 @@ public class QueryCollectionDataRequest extends Request {
     }
 
     /**
+     * @return relationalTableFilter
+     */
+    public RelationalTableFilter getRelationalTableFilter() {
+        return this.relationalTableFilter;
+    }
+
+    /**
      * @return topK
      */
     public Long getTopK() {
@@ -264,6 +276,7 @@ public class QueryCollectionDataRequest extends Request {
         private String orderBy; 
         private Long ownerId; 
         private String regionId; 
+        private RelationalTableFilter relationalTableFilter; 
         private Long topK; 
         private java.util.List < Double > vector; 
         private String workspaceId; 
@@ -289,6 +302,7 @@ public class QueryCollectionDataRequest extends Request {
             this.orderBy = request.orderBy;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.relationalTableFilter = request.relationalTableFilter;
             this.topK = request.topK;
             this.vector = request.vector;
             this.workspaceId = request.workspaceId;
@@ -501,6 +515,16 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
+         * RelationalTableFilter.
+         */
+        public Builder relationalTableFilter(RelationalTableFilter relationalTableFilter) {
+            String relationalTableFilterShrink = shrink(relationalTableFilter, "RelationalTableFilter", "json");
+            this.putQueryParameter("RelationalTableFilter", relationalTableFilterShrink);
+            this.relationalTableFilter = relationalTableFilter;
+            return this;
+        }
+
+        /**
          * TopK.
          */
         public Builder topK(Long topK) {
@@ -538,4 +562,105 @@ public class QueryCollectionDataRequest extends Request {
 
     } 
 
+    public static class RelationalTableFilter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CollectionMetadataField")
+        private String collectionMetadataField;
+
+        @com.aliyun.core.annotation.NameInMap("Condition")
+        private String condition;
+
+        @com.aliyun.core.annotation.NameInMap("TableField")
+        private String tableField;
+
+        @com.aliyun.core.annotation.NameInMap("TableName")
+        private String tableName;
+
+        private RelationalTableFilter(Builder builder) {
+            this.collectionMetadataField = builder.collectionMetadataField;
+            this.condition = builder.condition;
+            this.tableField = builder.tableField;
+            this.tableName = builder.tableName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RelationalTableFilter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return collectionMetadataField
+         */
+        public String getCollectionMetadataField() {
+            return this.collectionMetadataField;
+        }
+
+        /**
+         * @return condition
+         */
+        public String getCondition() {
+            return this.condition;
+        }
+
+        /**
+         * @return tableField
+         */
+        public String getTableField() {
+            return this.tableField;
+        }
+
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public static final class Builder {
+            private String collectionMetadataField; 
+            private String condition; 
+            private String tableField; 
+            private String tableName; 
+
+            /**
+             * CollectionMetadataField.
+             */
+            public Builder collectionMetadataField(String collectionMetadataField) {
+                this.collectionMetadataField = collectionMetadataField;
+                return this;
+            }
+
+            /**
+             * Condition.
+             */
+            public Builder condition(String condition) {
+                this.condition = condition;
+                return this;
+            }
+
+            /**
+             * TableField.
+             */
+            public Builder tableField(String tableField) {
+                this.tableField = tableField;
+                return this;
+            }
+
+            /**
+             * TableName.
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
+                return this;
+            }
+
+            public RelationalTableFilter build() {
+                return new RelationalTableFilter(this);
+            } 
+
+        } 
+
+    }
 }

@@ -154,7 +154,7 @@ public class CreateAccountRequest extends Request {
         } 
 
         /**
-         * The description of the privileged account.
+         * The description of the initial account.
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -163,7 +163,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The name of the privileged account.
+         * The name of the initial account.
          * <p>
          * 
          * *   The name can contain lowercase letters, digits, and underscores (\_).
@@ -178,9 +178,8 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * The password of the privileged account.
+         * The password of the initial account.
          * <p>
-         * 
          * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
          * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
          * *   The password must be 8 to 32 characters in length.
@@ -192,7 +191,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * The type of the initial account. Default value: Super, which specifies a privileged account. To create a standard account, set the value to Normal.
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);

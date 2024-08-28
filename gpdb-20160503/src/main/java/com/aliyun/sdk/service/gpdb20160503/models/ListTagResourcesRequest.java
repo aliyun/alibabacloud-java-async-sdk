@@ -230,11 +230,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The storage mode of the instance. Valid values:
-         * <p>
-         * 
-         * *   `instance`: reserved storage mode
-         * *   `ALIYUN::GPDB::INSTANCE`: elastic storage mode
+         * The resource type. Set the value to instance.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

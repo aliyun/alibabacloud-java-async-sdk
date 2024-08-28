@@ -52,8 +52,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckServiceLinkedRoleResponse> checkServiceLinkedRole(CheckServiceLinkedRoleRequest request);
 
     /**
-      * *   Before you can use an AnalyticDB for PostgreSQL instance, you must create a privileged account for the instance.
-      * *   You can call this operation to create only privileged accounts. For information about how to create other types of accounts, see [Create a database account](~~50206~~).
+      * *   Before you can use an AnalyticDB for PostgreSQL instance, you must create an initial account for the instance.
+      * *   You can call this operation to create only initial accounts. For information about how to create other types of accounts, see [Create a database account](~~50206~~).
       * ## Limits
       * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *

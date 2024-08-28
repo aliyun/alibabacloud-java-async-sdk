@@ -133,7 +133,7 @@ public class DescribeDataShareInstancesRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
