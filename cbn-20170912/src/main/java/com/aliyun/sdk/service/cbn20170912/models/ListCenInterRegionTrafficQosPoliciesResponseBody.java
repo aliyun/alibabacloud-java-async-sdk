@@ -135,8 +135,14 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
     } 
 
     public static class TrafficQosQueues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
+        private String bandwidth;
+
         @com.aliyun.core.annotation.NameInMap("Dscps")
         private java.util.List < Integer > dscps;
+
+        @com.aliyun.core.annotation.NameInMap("EffectiveBandwidth")
+        private String effectiveBandwidth;
 
         @com.aliyun.core.annotation.NameInMap("QosQueueDescription")
         private String qosQueueDescription;
@@ -151,7 +157,9 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         private Integer remainBandwidthPercent;
 
         private TrafficQosQueues(Builder builder) {
+            this.bandwidth = builder.bandwidth;
             this.dscps = builder.dscps;
+            this.effectiveBandwidth = builder.effectiveBandwidth;
             this.qosQueueDescription = builder.qosQueueDescription;
             this.qosQueueId = builder.qosQueueId;
             this.qosQueueName = builder.qosQueueName;
@@ -167,10 +175,24 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return bandwidth
+         */
+        public String getBandwidth() {
+            return this.bandwidth;
+        }
+
+        /**
          * @return dscps
          */
         public java.util.List < Integer > getDscps() {
             return this.dscps;
+        }
+
+        /**
+         * @return effectiveBandwidth
+         */
+        public String getEffectiveBandwidth() {
+            return this.effectiveBandwidth;
         }
 
         /**
@@ -202,17 +224,35 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bandwidth; 
             private java.util.List < Integer > dscps; 
+            private String effectiveBandwidth; 
             private String qosQueueDescription; 
             private String qosQueueId; 
             private String qosQueueName; 
             private Integer remainBandwidthPercent; 
 
             /**
+             * Bandwidth.
+             */
+            public Builder bandwidth(String bandwidth) {
+                this.bandwidth = bandwidth;
+                return this;
+            }
+
+            /**
              * The differentiated services code point (DSCP) value that is used to match packets.
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
+                return this;
+            }
+
+            /**
+             * EffectiveBandwidth.
+             */
+            public Builder effectiveBandwidth(String effectiveBandwidth) {
+                this.effectiveBandwidth = effectiveBandwidth;
                 return this;
             }
 
@@ -256,6 +296,9 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
 
     }
     public static class TrafficQosPolicies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthGuaranteeMode")
+        private String bandwidthGuaranteeMode;
+
         @com.aliyun.core.annotation.NameInMap("TrafficQosPolicyDescription")
         private String trafficQosPolicyDescription;
 
@@ -278,6 +321,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         private String transitRouterId;
 
         private TrafficQosPolicies(Builder builder) {
+            this.bandwidthGuaranteeMode = builder.bandwidthGuaranteeMode;
             this.trafficQosPolicyDescription = builder.trafficQosPolicyDescription;
             this.trafficQosPolicyId = builder.trafficQosPolicyId;
             this.trafficQosPolicyName = builder.trafficQosPolicyName;
@@ -293,6 +337,13 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
 
         public static TrafficQosPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return bandwidthGuaranteeMode
+         */
+        public String getBandwidthGuaranteeMode() {
+            return this.bandwidthGuaranteeMode;
         }
 
         /**
@@ -345,6 +396,7 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bandwidthGuaranteeMode; 
             private String trafficQosPolicyDescription; 
             private String trafficQosPolicyId; 
             private String trafficQosPolicyName; 
@@ -352,6 +404,14 @@ public class ListCenInterRegionTrafficQosPoliciesResponseBody extends TeaModel {
             private java.util.List < TrafficQosQueues> trafficQosQueues; 
             private String transitRouterAttachmentId; 
             private String transitRouterId; 
+
+            /**
+             * BandwidthGuaranteeMode.
+             */
+            public Builder bandwidthGuaranteeMode(String bandwidthGuaranteeMode) {
+                this.bandwidthGuaranteeMode = bandwidthGuaranteeMode;
+                return this;
+            }
 
             /**
              * The description of the QoS policy.

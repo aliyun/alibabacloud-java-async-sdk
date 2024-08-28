@@ -95,8 +95,14 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
     } 
 
     public static class TrafficQosQueues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
+        private String bandwidth;
+
         @com.aliyun.core.annotation.NameInMap("Dscps")
         private java.util.List < Integer > dscps;
+
+        @com.aliyun.core.annotation.NameInMap("EffectiveBandwidth")
+        private String effectiveBandwidth;
 
         @com.aliyun.core.annotation.NameInMap("RemainBandwidthPercent")
         private Integer remainBandwidthPercent;
@@ -123,7 +129,9 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         private String transitRouterId;
 
         private TrafficQosQueues(Builder builder) {
+            this.bandwidth = builder.bandwidth;
             this.dscps = builder.dscps;
+            this.effectiveBandwidth = builder.effectiveBandwidth;
             this.remainBandwidthPercent = builder.remainBandwidthPercent;
             this.status = builder.status;
             this.trafficQosPolicyId = builder.trafficQosPolicyId;
@@ -143,10 +151,24 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         }
 
         /**
+         * @return bandwidth
+         */
+        public String getBandwidth() {
+            return this.bandwidth;
+        }
+
+        /**
          * @return dscps
          */
         public java.util.List < Integer > getDscps() {
             return this.dscps;
+        }
+
+        /**
+         * @return effectiveBandwidth
+         */
+        public String getEffectiveBandwidth() {
+            return this.effectiveBandwidth;
         }
 
         /**
@@ -206,7 +228,9 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String bandwidth; 
             private java.util.List < Integer > dscps; 
+            private String effectiveBandwidth; 
             private Integer remainBandwidthPercent; 
             private String status; 
             private String trafficQosPolicyId; 
@@ -217,10 +241,26 @@ public class ListCenInterRegionTrafficQosQueuesResponseBody extends TeaModel {
             private String transitRouterId; 
 
             /**
+             * Bandwidth.
+             */
+            public Builder bandwidth(String bandwidth) {
+                this.bandwidth = bandwidth;
+                return this;
+            }
+
+            /**
              * The Differentiated Services Code Point (DSCP) value that matches the current QoS queue.
              */
             public Builder dscps(java.util.List < Integer > dscps) {
                 this.dscps = dscps;
+                return this;
+            }
+
+            /**
+             * EffectiveBandwidth.
+             */
+            public Builder effectiveBandwidth(String effectiveBandwidth) {
+                this.effectiveBandwidth = effectiveBandwidth;
                 return this;
             }
 

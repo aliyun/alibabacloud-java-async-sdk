@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveBandwidthFilter")
+    private EffectiveBandwidthFilter effectiveBandwidthFilter;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -61,6 +65,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
 
     private ListCenInterRegionTrafficQosQueuesRequest(Builder builder) {
         super(builder);
+        this.effectiveBandwidthFilter = builder.effectiveBandwidthFilter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
@@ -86,6 +91,13 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return effectiveBandwidthFilter
+     */
+    public EffectiveBandwidthFilter getEffectiveBandwidthFilter() {
+        return this.effectiveBandwidthFilter;
     }
 
     /**
@@ -173,6 +185,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCenInterRegionTrafficQosQueuesRequest, Builder> {
+        private EffectiveBandwidthFilter effectiveBandwidthFilter; 
         private Integer maxResults; 
         private String nextToken; 
         private String ownerAccount; 
@@ -192,6 +205,7 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
 
         private Builder(ListCenInterRegionTrafficQosQueuesRequest request) {
             super(request);
+            this.effectiveBandwidthFilter = request.effectiveBandwidthFilter;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
@@ -205,6 +219,15 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
             this.transitRouterAttachmentId = request.transitRouterAttachmentId;
             this.transitRouterId = request.transitRouterId;
         } 
+
+        /**
+         * EffectiveBandwidthFilter.
+         */
+        public Builder effectiveBandwidthFilter(EffectiveBandwidthFilter effectiveBandwidthFilter) {
+            this.putQueryParameter("EffectiveBandwidthFilter", effectiveBandwidthFilter);
+            this.effectiveBandwidthFilter = effectiveBandwidthFilter;
+            return this;
+        }
 
         /**
          * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
@@ -331,4 +354,65 @@ public class ListCenInterRegionTrafficQosQueuesRequest extends Request {
 
     } 
 
+    public static class EffectiveBandwidthFilter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Gte")
+        private Long gte;
+
+        @com.aliyun.core.annotation.NameInMap("Lte")
+        private Long lte;
+
+        private EffectiveBandwidthFilter(Builder builder) {
+            this.gte = builder.gte;
+            this.lte = builder.lte;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EffectiveBandwidthFilter create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gte
+         */
+        public Long getGte() {
+            return this.gte;
+        }
+
+        /**
+         * @return lte
+         */
+        public Long getLte() {
+            return this.lte;
+        }
+
+        public static final class Builder {
+            private Long gte; 
+            private Long lte; 
+
+            /**
+             * Gte.
+             */
+            public Builder gte(Long gte) {
+                this.gte = gte;
+                return this;
+            }
+
+            /**
+             * Lte.
+             */
+            public Builder lte(Long lte) {
+                this.lte = lte;
+                return this;
+            }
+
+            public EffectiveBandwidthFilter build() {
+                return new EffectiveBandwidthFilter(this);
+            } 
+
+        } 
+
+    }
 }

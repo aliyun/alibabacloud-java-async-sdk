@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwidthGuaranteeMode")
+    private String bandwidthGuaranteeMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -59,6 +63,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
     private CreateCenInterRegionTrafficQosPolicyRequest(Builder builder) {
         super(builder);
+        this.bandwidthGuaranteeMode = builder.bandwidthGuaranteeMode;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
@@ -83,6 +88,13 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bandwidthGuaranteeMode
+     */
+    public String getBandwidthGuaranteeMode() {
+        return this.bandwidthGuaranteeMode;
     }
 
     /**
@@ -163,6 +175,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCenInterRegionTrafficQosPolicyRequest, Builder> {
+        private String bandwidthGuaranteeMode; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ownerAccount; 
@@ -181,6 +194,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
         private Builder(CreateCenInterRegionTrafficQosPolicyRequest request) {
             super(request);
+            this.bandwidthGuaranteeMode = request.bandwidthGuaranteeMode;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
@@ -193,6 +207,15 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
             this.transitRouterAttachmentId = request.transitRouterAttachmentId;
             this.transitRouterId = request.transitRouterId;
         } 
+
+        /**
+         * BandwidthGuaranteeMode.
+         */
+        public Builder bandwidthGuaranteeMode(String bandwidthGuaranteeMode) {
+            this.putQueryParameter("BandwidthGuaranteeMode", bandwidthGuaranteeMode);
+            this.bandwidthGuaranteeMode = bandwidthGuaranteeMode;
+            return this;
+        }
 
         /**
          * The client token that is used to ensure the idempotence of the request.
@@ -317,6 +340,9 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
     } 
 
     public static class TrafficQosQueues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
+        private String bandwidth;
+
         @com.aliyun.core.annotation.NameInMap("Dscps")
         private java.util.List < Integer > dscps;
 
@@ -330,6 +356,7 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         private String remainBandwidthPercent;
 
         private TrafficQosQueues(Builder builder) {
+            this.bandwidth = builder.bandwidth;
             this.dscps = builder.dscps;
             this.qosQueueDescription = builder.qosQueueDescription;
             this.qosQueueName = builder.qosQueueName;
@@ -342,6 +369,13 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
 
         public static TrafficQosQueues create() {
             return builder().build();
+        }
+
+        /**
+         * @return bandwidth
+         */
+        public String getBandwidth() {
+            return this.bandwidth;
         }
 
         /**
@@ -373,10 +407,19 @@ public class CreateCenInterRegionTrafficQosPolicyRequest extends Request {
         }
 
         public static final class Builder {
+            private String bandwidth; 
             private java.util.List < Integer > dscps; 
             private String qosQueueDescription; 
             private String qosQueueName; 
             private String remainBandwidthPercent; 
+
+            /**
+             * Bandwidth.
+             */
+            public Builder bandwidth(String bandwidth) {
+                this.bandwidth = bandwidth;
+                return this;
+            }
 
             /**
              * The Differentiated Services Code Point (DSCP) value that matches the current queue.

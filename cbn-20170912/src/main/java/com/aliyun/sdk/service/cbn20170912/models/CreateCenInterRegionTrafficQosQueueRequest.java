@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    private Long bandwidth;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -59,6 +63,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
 
     private CreateCenInterRegionTrafficQosQueueRequest(Builder builder) {
         super(builder);
+        this.bandwidth = builder.bandwidth;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.dscps = builder.dscps;
@@ -83,6 +88,13 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bandwidth
+     */
+    public Long getBandwidth() {
+        return this.bandwidth;
     }
 
     /**
@@ -163,6 +175,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateCenInterRegionTrafficQosQueueRequest, Builder> {
+        private Long bandwidth; 
         private String clientToken; 
         private Boolean dryRun; 
         private java.util.List < Integer > dscps; 
@@ -181,6 +194,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
 
         private Builder(CreateCenInterRegionTrafficQosQueueRequest request) {
             super(request);
+            this.bandwidth = request.bandwidth;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.dscps = request.dscps;
@@ -193,6 +207,15 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.trafficQosPolicyId = request.trafficQosPolicyId;
         } 
+
+        /**
+         * Bandwidth.
+         */
+        public Builder bandwidth(Long bandwidth) {
+            this.putQueryParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
+            return this;
+        }
 
         /**
          * ClientToken.
