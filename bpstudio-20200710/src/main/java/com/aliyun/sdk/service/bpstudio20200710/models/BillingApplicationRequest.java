@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BillingApplicationRequest</p>
  */
 public class BillingApplicationRequest extends Request {
-    @Body
-    @NameInMap("Month")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Month")
     private Integer month;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("Year")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Year")
     private Integer year;
 
     private BillingApplicationRequest(Builder builder) {

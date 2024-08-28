@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bpstudio20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDeployDetailResponseBody</p>
  */
 public class GetDeployDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private Long nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private GetDeployDetailResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class GetDeployDetailResponseBody extends TeaModel {
     } 
 
     public static class Operation extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Operations")
+        @com.aliyun.core.annotation.NameInMap("Operations")
         private java.util.Map < String, ? > operations;
 
         private Operation(Builder builder) {
@@ -212,44 +211,148 @@ public class GetDeployDetailResponseBody extends TeaModel {
         } 
 
     }
+    public static class ResourceTimeList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BizId")
+        private String bizId;
+
+        @com.aliyun.core.annotation.NameInMap("CreationEndTime")
+        private Long creationEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("CreationStartTime")
+        private Long creationStartTime;
+
+        @com.aliyun.core.annotation.NameInMap("id")
+        private Long id;
+
+        private ResourceTimeList(Builder builder) {
+            this.bizId = builder.bizId;
+            this.creationEndTime = builder.creationEndTime;
+            this.creationStartTime = builder.creationStartTime;
+            this.id = builder.id;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTimeList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bizId
+         */
+        public String getBizId() {
+            return this.bizId;
+        }
+
+        /**
+         * @return creationEndTime
+         */
+        public Long getCreationEndTime() {
+            return this.creationEndTime;
+        }
+
+        /**
+         * @return creationStartTime
+         */
+        public Long getCreationStartTime() {
+            return this.creationStartTime;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        public static final class Builder {
+            private String bizId; 
+            private Long creationEndTime; 
+            private Long creationStartTime; 
+            private Long id; 
+
+            /**
+             * BizId.
+             */
+            public Builder bizId(String bizId) {
+                this.bizId = bizId;
+                return this;
+            }
+
+            /**
+             * CreationEndTime.
+             */
+            public Builder creationEndTime(Long creationEndTime) {
+                this.creationEndTime = creationEndTime;
+                return this;
+            }
+
+            /**
+             * CreationStartTime.
+             */
+            public Builder creationStartTime(Long creationStartTime) {
+                this.creationStartTime = creationStartTime;
+                return this;
+            }
+
+            /**
+             * id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            public ResourceTimeList build() {
+                return new ResourceTimeList(this);
+            } 
+
+        } 
+
+    }
     public static class ResourceList extends TeaModel {
-        @NameInMap("BuyDuration")
+        @com.aliyun.core.annotation.NameInMap("BuyDuration")
         private String buyDuration;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("ExecutionStrategy")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStrategy")
         private String executionStrategy;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("MonitorURL")
+        @com.aliyun.core.annotation.NameInMap("MonitorURL")
         private String monitorURL;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Operation")
+        @com.aliyun.core.annotation.NameInMap("Operation")
         private Operation operation;
 
-        @NameInMap("RefId")
+        @com.aliyun.core.annotation.NameInMap("RefId")
         private Long refId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ResourceCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceCode")
         private String resourceCode;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceTimeList")
+        private java.util.List < ResourceTimeList> resourceTimeList;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ResourceList(Builder builder) {
@@ -264,6 +367,7 @@ public class GetDeployDetailResponseBody extends TeaModel {
             this.remark = builder.remark;
             this.resourceCode = builder.resourceCode;
             this.resourceId = builder.resourceId;
+            this.resourceTimeList = builder.resourceTimeList;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
         }
@@ -354,6 +458,13 @@ public class GetDeployDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceTimeList
+         */
+        public java.util.List < ResourceTimeList> getResourceTimeList() {
+            return this.resourceTimeList;
+        }
+
+        /**
          * @return resourceType
          */
         public String getResourceType() {
@@ -379,6 +490,7 @@ public class GetDeployDetailResponseBody extends TeaModel {
             private String remark; 
             private String resourceCode; 
             private String resourceId; 
+            private java.util.List < ResourceTimeList> resourceTimeList; 
             private String resourceType; 
             private String status; 
 
@@ -471,6 +583,14 @@ public class GetDeployDetailResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceTimeList.
+             */
+            public Builder resourceTimeList(java.util.List < ResourceTimeList> resourceTimeList) {
+                this.resourceTimeList = resourceTimeList;
+                return this;
+            }
+
+            /**
              * ResourceType.
              */
             public Builder resourceType(String resourceType) {
@@ -494,52 +614,52 @@ public class GetDeployDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CurrentProcess")
+        @com.aliyun.core.annotation.NameInMap("CurrentProcess")
         private String currentProcess;
 
-        @NameInMap("DeletingNodeList")
+        @com.aliyun.core.annotation.NameInMap("DeletingNodeList")
         private java.util.List < java.util.Map<String, ?>> deletingNodeList;
 
-        @NameInMap("DeployPercent")
+        @com.aliyun.core.annotation.NameInMap("DeployPercent")
         private Double deployPercent;
 
-        @NameInMap("DeployedNodeList")
+        @com.aliyun.core.annotation.NameInMap("DeployedNodeList")
         private java.util.List < java.util.Map<String, ?>> deployedNodeList;
 
-        @NameInMap("DeployingNodeList")
+        @com.aliyun.core.annotation.NameInMap("DeployingNodeList")
         private java.util.List < java.util.Map<String, ?>> deployingNodeList;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("ExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionTime")
         private Integer executionTime;
 
-        @NameInMap("FailStatus")
+        @com.aliyun.core.annotation.NameInMap("FailStatus")
         private Integer failStatus;
 
-        @NameInMap("OrderIdList")
+        @com.aliyun.core.annotation.NameInMap("OrderIdList")
         private java.util.List < String > orderIdList;
 
-        @NameInMap("PdfUrl")
+        @com.aliyun.core.annotation.NameInMap("PdfUrl")
         private String pdfUrl;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ResourceList")
+        @com.aliyun.core.annotation.NameInMap("ResourceList")
         private java.util.List < ResourceList> resourceList;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TerraformScriptUrl")
+        @com.aliyun.core.annotation.NameInMap("TerraformScriptUrl")
         private String terraformScriptUrl;
 
         private Data(Builder builder) {
