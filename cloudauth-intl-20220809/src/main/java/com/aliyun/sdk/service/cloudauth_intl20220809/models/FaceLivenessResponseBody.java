@@ -111,8 +111,14 @@ public class FaceLivenessResponseBody extends TeaModel {
     } 
 
     public static class ExtFaceInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FaceAge")
+        private Integer faceAge;
+
         @com.aliyun.core.annotation.NameInMap("FaceAttack")
         private String faceAttack;
+
+        @com.aliyun.core.annotation.NameInMap("FaceGender")
+        private String faceGender;
 
         @com.aliyun.core.annotation.NameInMap("FaceQualityScore")
         private Double faceQualityScore;
@@ -121,7 +127,9 @@ public class FaceLivenessResponseBody extends TeaModel {
         private String occlusionResult;
 
         private ExtFaceInfo(Builder builder) {
+            this.faceAge = builder.faceAge;
             this.faceAttack = builder.faceAttack;
+            this.faceGender = builder.faceGender;
             this.faceQualityScore = builder.faceQualityScore;
             this.occlusionResult = builder.occlusionResult;
         }
@@ -135,10 +143,24 @@ public class FaceLivenessResponseBody extends TeaModel {
         }
 
         /**
+         * @return faceAge
+         */
+        public Integer getFaceAge() {
+            return this.faceAge;
+        }
+
+        /**
          * @return faceAttack
          */
         public String getFaceAttack() {
             return this.faceAttack;
+        }
+
+        /**
+         * @return faceGender
+         */
+        public String getFaceGender() {
+            return this.faceGender;
         }
 
         /**
@@ -156,15 +178,33 @@ public class FaceLivenessResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer faceAge; 
             private String faceAttack; 
+            private String faceGender; 
             private Double faceQualityScore; 
             private String occlusionResult; 
+
+            /**
+             * FaceAge.
+             */
+            public Builder faceAge(Integer faceAge) {
+                this.faceAge = faceAge;
+                return this;
+            }
 
             /**
              * FaceAttack.
              */
             public Builder faceAttack(String faceAttack) {
                 this.faceAttack = faceAttack;
+                return this;
+            }
+
+            /**
+             * FaceGender.
+             */
+            public Builder faceGender(String faceGender) {
+                this.faceGender = faceGender;
                 return this;
             }
 
