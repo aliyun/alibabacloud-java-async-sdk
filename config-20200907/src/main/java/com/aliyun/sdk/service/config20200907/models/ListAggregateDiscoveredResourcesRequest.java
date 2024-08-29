@@ -17,6 +17,14 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
     private String aggregatorId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUpdateTimestamp")
+    private Long endUpdateTimestamp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeResourceTypes")
+    private String excludeResourceTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer maxResults;
@@ -51,9 +59,15 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartUpdateTimestamp")
+    private Long startUpdateTimestamp;
+
     private ListAggregateDiscoveredResourcesRequest(Builder builder) {
         super(builder);
         this.aggregatorId = builder.aggregatorId;
+        this.endUpdateTimestamp = builder.endUpdateTimestamp;
+        this.excludeResourceTypes = builder.excludeResourceTypes;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regions = builder.regions;
@@ -62,6 +76,7 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         this.resourceId = builder.resourceId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceTypes = builder.resourceTypes;
+        this.startUpdateTimestamp = builder.startUpdateTimestamp;
     }
 
     public static Builder builder() {
@@ -82,6 +97,20 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
      */
     public String getAggregatorId() {
         return this.aggregatorId;
+    }
+
+    /**
+     * @return endUpdateTimestamp
+     */
+    public Long getEndUpdateTimestamp() {
+        return this.endUpdateTimestamp;
+    }
+
+    /**
+     * @return excludeResourceTypes
+     */
+    public String getExcludeResourceTypes() {
+        return this.excludeResourceTypes;
     }
 
     /**
@@ -140,8 +169,17 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         return this.resourceTypes;
     }
 
+    /**
+     * @return startUpdateTimestamp
+     */
+    public Long getStartUpdateTimestamp() {
+        return this.startUpdateTimestamp;
+    }
+
     public static final class Builder extends Request.Builder<ListAggregateDiscoveredResourcesRequest, Builder> {
         private String aggregatorId; 
+        private Long endUpdateTimestamp; 
+        private String excludeResourceTypes; 
         private Integer maxResults; 
         private String nextToken; 
         private String regions; 
@@ -150,6 +188,7 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         private String resourceId; 
         private Long resourceOwnerId; 
         private String resourceTypes; 
+        private Long startUpdateTimestamp; 
 
         private Builder() {
             super();
@@ -158,6 +197,8 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         private Builder(ListAggregateDiscoveredResourcesRequest request) {
             super(request);
             this.aggregatorId = request.aggregatorId;
+            this.endUpdateTimestamp = request.endUpdateTimestamp;
+            this.excludeResourceTypes = request.excludeResourceTypes;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regions = request.regions;
@@ -166,6 +207,7 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
             this.resourceId = request.resourceId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceTypes = request.resourceTypes;
+            this.startUpdateTimestamp = request.startUpdateTimestamp;
         } 
 
         /**
@@ -177,6 +219,24 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
             this.aggregatorId = aggregatorId;
+            return this;
+        }
+
+        /**
+         * EndUpdateTimestamp.
+         */
+        public Builder endUpdateTimestamp(Long endUpdateTimestamp) {
+            this.putQueryParameter("EndUpdateTimestamp", endUpdateTimestamp);
+            this.endUpdateTimestamp = endUpdateTimestamp;
+            return this;
+        }
+
+        /**
+         * ExcludeResourceTypes.
+         */
+        public Builder excludeResourceTypes(String excludeResourceTypes) {
+            this.putQueryParameter("ExcludeResourceTypes", excludeResourceTypes);
+            this.excludeResourceTypes = excludeResourceTypes;
             return this;
         }
 
@@ -253,6 +313,15 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
             this.resourceTypes = resourceTypes;
+            return this;
+        }
+
+        /**
+         * StartUpdateTimestamp.
+         */
+        public Builder startUpdateTimestamp(Long startUpdateTimestamp) {
+            this.putQueryParameter("StartUpdateTimestamp", startUpdateTimestamp);
+            this.startUpdateTimestamp = startUpdateTimestamp;
             return this;
         }
 

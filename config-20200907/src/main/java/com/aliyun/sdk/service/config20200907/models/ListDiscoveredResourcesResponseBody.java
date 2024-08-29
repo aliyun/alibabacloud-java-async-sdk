@@ -101,6 +101,9 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private Long updateTime;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
@@ -115,6 +118,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             this.resourceStatus = builder.resourceStatus;
             this.resourceType = builder.resourceType;
             this.tags = builder.tags;
+            this.updateTime = builder.updateTime;
             this.version = builder.version;
         }
 
@@ -197,6 +201,13 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return updateTime
+         */
+        public Long getUpdateTime() {
+            return this.updateTime;
+        }
+
+        /**
          * @return version
          */
         public Long getVersion() {
@@ -214,6 +225,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             private String resourceStatus; 
             private String resourceType; 
             private String tags; 
+            private Long updateTime; 
             private Long version; 
 
             /**
@@ -301,6 +313,14 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
              */
             public Builder tags(String tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(Long updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 

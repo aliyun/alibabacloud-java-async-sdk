@@ -12,6 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDiscoveredResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUpdateTimestamp")
+    private Long endUpdateTimestamp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExcludeResourceTypes")
+    private String excludeResourceTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer maxResults;
@@ -36,14 +44,21 @@ public class ListDiscoveredResourcesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartUpdateTimestamp")
+    private Long startUpdateTimestamp;
+
     private ListDiscoveredResourcesRequest(Builder builder) {
         super(builder);
+        this.endUpdateTimestamp = builder.endUpdateTimestamp;
+        this.excludeResourceTypes = builder.excludeResourceTypes;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regions = builder.regions;
         this.resourceDeleted = builder.resourceDeleted;
         this.resourceId = builder.resourceId;
         this.resourceTypes = builder.resourceTypes;
+        this.startUpdateTimestamp = builder.startUpdateTimestamp;
     }
 
     public static Builder builder() {
@@ -57,6 +72,20 @@ public class ListDiscoveredResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endUpdateTimestamp
+     */
+    public Long getEndUpdateTimestamp() {
+        return this.endUpdateTimestamp;
+    }
+
+    /**
+     * @return excludeResourceTypes
+     */
+    public String getExcludeResourceTypes() {
+        return this.excludeResourceTypes;
     }
 
     /**
@@ -101,13 +130,23 @@ public class ListDiscoveredResourcesRequest extends Request {
         return this.resourceTypes;
     }
 
+    /**
+     * @return startUpdateTimestamp
+     */
+    public Long getStartUpdateTimestamp() {
+        return this.startUpdateTimestamp;
+    }
+
     public static final class Builder extends Request.Builder<ListDiscoveredResourcesRequest, Builder> {
+        private Long endUpdateTimestamp; 
+        private String excludeResourceTypes; 
         private Integer maxResults; 
         private String nextToken; 
         private String regions; 
         private Integer resourceDeleted; 
         private String resourceId; 
         private String resourceTypes; 
+        private Long startUpdateTimestamp; 
 
         private Builder() {
             super();
@@ -115,13 +154,34 @@ public class ListDiscoveredResourcesRequest extends Request {
 
         private Builder(ListDiscoveredResourcesRequest request) {
             super(request);
+            this.endUpdateTimestamp = request.endUpdateTimestamp;
+            this.excludeResourceTypes = request.excludeResourceTypes;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regions = request.regions;
             this.resourceDeleted = request.resourceDeleted;
             this.resourceId = request.resourceId;
             this.resourceTypes = request.resourceTypes;
+            this.startUpdateTimestamp = request.startUpdateTimestamp;
         } 
+
+        /**
+         * EndUpdateTimestamp.
+         */
+        public Builder endUpdateTimestamp(Long endUpdateTimestamp) {
+            this.putQueryParameter("EndUpdateTimestamp", endUpdateTimestamp);
+            this.endUpdateTimestamp = endUpdateTimestamp;
+            return this;
+        }
+
+        /**
+         * ExcludeResourceTypes.
+         */
+        public Builder excludeResourceTypes(String excludeResourceTypes) {
+            this.putQueryParameter("ExcludeResourceTypes", excludeResourceTypes);
+            this.excludeResourceTypes = excludeResourceTypes;
+            return this;
+        }
 
         /**
          * The maximum number of entries returned for a single request. Valid values: 1 to 100.
@@ -178,6 +238,15 @@ public class ListDiscoveredResourcesRequest extends Request {
         public Builder resourceTypes(String resourceTypes) {
             this.putQueryParameter("ResourceTypes", resourceTypes);
             this.resourceTypes = resourceTypes;
+            return this;
+        }
+
+        /**
+         * StartUpdateTimestamp.
+         */
+        public Builder startUpdateTimestamp(Long startUpdateTimestamp) {
+            this.putQueryParameter("StartUpdateTimestamp", startUpdateTimestamp);
+            this.startUpdateTimestamp = startUpdateTimestamp;
             return this;
         }
 

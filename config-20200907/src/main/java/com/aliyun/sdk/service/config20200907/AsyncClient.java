@@ -593,7 +593,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAggregateResourceRelationsResponse> listAggregateResourceRelations(ListAggregateResourceRelationsRequest request);
 
     /**
-      * When you write a `SELECT` statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema](javascript:void\\(0\\))
+      * When you write a `SELECT` statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema]
       * > 
       * *   Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the `ACS::ECS::Instance` resource type is named `ACS_ECS_Instance.properties.json`. Property files of different resource types are placed under the `config/properties/resource-types` path.
       * *   For more information about the examples and limits on SQL query statements, see [Examples of SQL query statements](~~398718~~) and [Limits on SQL query statements](~~398750~~).
@@ -695,7 +695,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListResourceRelationsResponse> listResourceRelations(ListResourceRelationsRequest request);
 
     /**
-      * When you write a `SELECT` statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema](javascript:void\\(0\\)).
+      * When you write a `SELECT` statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema].
       * > 
       * *   Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the `ACS::ECS::Instance` resource type is named `ACS_ECS_Instance.properties.json`. Property files of different resource types are placed under the `config/properties/resource-types` path.
       * *   For more information about the examples and limits on SQL query statements, see [Examples of SQL query statements](~~398718~~) and [Limits on SQL query statements](~~398750~~).
