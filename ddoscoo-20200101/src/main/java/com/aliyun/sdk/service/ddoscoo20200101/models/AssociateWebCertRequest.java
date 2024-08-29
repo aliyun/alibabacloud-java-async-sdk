@@ -193,7 +193,10 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * CertIdentifier.
+         * The globally unique ID of the certificate. The value is in the "Certificate ID-cn-hangzhou" format. For example, if the ID of the certificate is 123, the value of the CertIdentifier parameter is 123-cn-hangzhou.
+         * <p>
+         * 
+         * >  You can specify only one of this parameter and the CertId parameter.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putBodyParameter("CertIdentifier", certIdentifier);
@@ -211,7 +214,7 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * CertRegion.
+         * The region of the certificate. Valid values: **cn-hangzhou** and **ap-southeast-1**. Default value: **cn-hangzhou**.
          */
         public Builder certRegion(String certRegion) {
             this.putBodyParameter("CertRegion", certRegion);

@@ -1,3 +1,6 @@
+2024-08-29 Version: 3.0.10
+- Generated java-async 2020-01-01 for ddoscoo.
+
 2024-07-30 Version: 3.0.9
 - Generated java-async 2020-01-01 for ddoscoo.
 

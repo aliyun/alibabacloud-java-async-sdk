@@ -104,7 +104,7 @@ public class DescribeBackSourceCidrRequest extends Request {
         }
 
         /**
-         * The IP version of the back-to-origin CIDR block.
+         * The IP version of the back-to-origin CIDR blocks.
          * <p>
          * 
          * *   **Ipv4**

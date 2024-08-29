@@ -35,6 +35,10 @@ public class CreatePortRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyEnable")
+    private Long proxyEnable;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RealServers")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > realServers;
@@ -46,6 +50,7 @@ public class CreatePortRequest extends Request {
         this.frontendPort = builder.frontendPort;
         this.frontendProtocol = builder.frontendProtocol;
         this.instanceId = builder.instanceId;
+        this.proxyEnable = builder.proxyEnable;
         this.realServers = builder.realServers;
     }
 
@@ -98,6 +103,13 @@ public class CreatePortRequest extends Request {
     }
 
     /**
+     * @return proxyEnable
+     */
+    public Long getProxyEnable() {
+        return this.proxyEnable;
+    }
+
+    /**
      * @return realServers
      */
     public java.util.List < String > getRealServers() {
@@ -110,6 +122,7 @@ public class CreatePortRequest extends Request {
         private String frontendPort; 
         private String frontendProtocol; 
         private String instanceId; 
+        private Long proxyEnable; 
         private java.util.List < String > realServers; 
 
         private Builder() {
@@ -123,6 +136,7 @@ public class CreatePortRequest extends Request {
             this.frontendPort = request.frontendPort;
             this.frontendProtocol = request.frontendProtocol;
             this.instanceId = request.instanceId;
+            this.proxyEnable = request.proxyEnable;
             this.realServers = request.realServers;
         } 
 
@@ -175,6 +189,15 @@ public class CreatePortRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * ProxyEnable.
+         */
+        public Builder proxyEnable(Long proxyEnable) {
+            this.putQueryParameter("ProxyEnable", proxyEnable);
+            this.proxyEnable = proxyEnable;
             return this;
         }
 

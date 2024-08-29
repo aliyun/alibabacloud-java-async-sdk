@@ -49,7 +49,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IP address and ISP line information about the instance.
+         * The IP address and ISP line information about the Anti-DDoS Proxy instance.
          */
         public Builder instanceDetails(java.util.List < InstanceDetails> instanceDetails) {
             this.instanceDetails = instanceDetails;
@@ -57,7 +57,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,7 +181,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             private String tlsVersion; 
 
             /**
-             * CertConfigured.
+             * Indicates whether a custom certificate is configured.
              */
             public Builder certConfigured(Boolean certConfigured) {
                 this.certConfigured = certConfigured;
@@ -197,7 +197,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionVersion.
+             * The type of the instance.
              */
             public Builder functionVersion(String functionVersion) {
                 this.functionVersion = functionVersion;
@@ -229,7 +229,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Ssl13Enabled.
+             * Indicates whether the TLS 1.3 version is supported.
              */
             public Builder ssl13Enabled(Boolean ssl13Enabled) {
                 this.ssl13Enabled = ssl13Enabled;
@@ -252,7 +252,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TlsVersion.
+             * The Transport Layer Security (TLS) version that is configured.
              */
             public Builder tlsVersion(String tlsVersion) {
                 this.tlsVersion = tlsVersion;
@@ -317,7 +317,7 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             private String line; 
 
             /**
-             * The information about the IP address of the instance.
+             * The IP address information about the Anti-DDoS Proxy instance.
              */
             public Builder eipInfos(java.util.List < EipInfos> eipInfos) {
                 this.eipInfos = eipInfos;

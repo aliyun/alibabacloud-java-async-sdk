@@ -103,8 +103,17 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsAutoCreate")
         private Boolean isAutoCreate;
 
+        @com.aliyun.core.annotation.NameInMap("PayloadRuleEnable")
+        private Long payloadRuleEnable;
+
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyEnable")
+        private Long proxyEnable;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyStatus")
+        private String proxyStatus;
 
         @com.aliyun.core.annotation.NameInMap("RealServers")
         private java.util.List < String > realServers;
@@ -117,7 +126,10 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             this.frontendPort = builder.frontendPort;
             this.instanceId = builder.instanceId;
             this.isAutoCreate = builder.isAutoCreate;
+            this.payloadRuleEnable = builder.payloadRuleEnable;
             this.protocol = builder.protocol;
+            this.proxyEnable = builder.proxyEnable;
+            this.proxyStatus = builder.proxyStatus;
             this.realServers = builder.realServers;
             this.remark = builder.remark;
         }
@@ -159,10 +171,31 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return payloadRuleEnable
+         */
+        public Long getPayloadRuleEnable() {
+            return this.payloadRuleEnable;
+        }
+
+        /**
          * @return protocol
          */
         public String getProtocol() {
             return this.protocol;
+        }
+
+        /**
+         * @return proxyEnable
+         */
+        public Long getProxyEnable() {
+            return this.proxyEnable;
+        }
+
+        /**
+         * @return proxyStatus
+         */
+        public String getProxyStatus() {
+            return this.proxyStatus;
         }
 
         /**
@@ -184,7 +217,10 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             private Integer frontendPort; 
             private String instanceId; 
             private Boolean isAutoCreate; 
+            private Long payloadRuleEnable; 
             private String protocol; 
+            private Long proxyEnable; 
+            private String proxyStatus; 
             private java.util.List < String > realServers; 
             private String remark; 
 
@@ -225,6 +261,14 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
+             * PayloadRuleEnable.
+             */
+            public Builder payloadRuleEnable(Long payloadRuleEnable) {
+                this.payloadRuleEnable = payloadRuleEnable;
+                return this;
+            }
+
+            /**
              * The forwarding protocol. Valid values:
              * <p>
              * 
@@ -233,6 +277,22 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * ProxyEnable.
+             */
+            public Builder proxyEnable(Long proxyEnable) {
+                this.proxyEnable = proxyEnable;
+                return this;
+            }
+
+            /**
+             * ProxyStatus.
+             */
+            public Builder proxyStatus(String proxyStatus) {
+                this.proxyStatus = proxyStatus;
                 return this;
             }
 
