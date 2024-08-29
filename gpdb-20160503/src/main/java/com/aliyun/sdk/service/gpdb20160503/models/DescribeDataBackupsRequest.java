@@ -34,7 +34,6 @@ public class DescribeDataBackupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
     @com.aliyun.core.annotation.Query
@@ -49,7 +48,6 @@ public class DescribeDataBackupsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeDataBackupsRequest(Builder builder) {

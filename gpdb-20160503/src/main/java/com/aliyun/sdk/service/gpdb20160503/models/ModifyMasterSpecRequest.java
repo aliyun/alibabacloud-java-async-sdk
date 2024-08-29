@@ -22,6 +22,7 @@ public class ModifyMasterSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MasterCU")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer masterCU;
 
     @com.aliyun.core.annotation.Query
