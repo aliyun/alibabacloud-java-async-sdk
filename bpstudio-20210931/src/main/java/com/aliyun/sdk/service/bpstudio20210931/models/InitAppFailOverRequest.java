@@ -53,7 +53,7 @@ public class InitAppFailOverRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * The application ID.
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);

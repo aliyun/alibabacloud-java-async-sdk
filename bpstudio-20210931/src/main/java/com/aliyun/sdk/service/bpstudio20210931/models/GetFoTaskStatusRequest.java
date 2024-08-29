@@ -53,7 +53,7 @@ public class GetFoTaskStatusRequest extends Request {
         } 
 
         /**
-         * TaskId.
+         * The disaster recovery switchover task ID.
          */
         public Builder taskId(Integer taskId) {
             this.putBodyParameter("TaskId", taskId);

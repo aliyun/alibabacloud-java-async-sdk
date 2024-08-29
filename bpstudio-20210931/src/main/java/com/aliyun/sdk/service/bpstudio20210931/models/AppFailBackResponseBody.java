@@ -73,7 +73,7 @@ public class AppFailBackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class AppFailBackResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The disaster recovery switchback task ID.
          */
         public Builder data(Integer data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class AppFailBackResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +97,7 @@ public class AppFailBackResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

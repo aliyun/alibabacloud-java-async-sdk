@@ -43,7 +43,7 @@ public class CreateApplicationRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Variables")
-    private java.util.Map < String, String > variables;
+    private java.util.Map < String, ? > variables;
 
     private CreateApplicationRequest(Builder builder) {
         super(builder);
@@ -122,7 +122,7 @@ public class CreateApplicationRequest extends Request {
     /**
      * @return variables
      */
-    public java.util.Map < String, String > getVariables() {
+    public java.util.Map < String, ? > getVariables() {
         return this.variables;
     }
 
@@ -134,7 +134,7 @@ public class CreateApplicationRequest extends Request {
         private String name; 
         private String resourceGroupId; 
         private String templateId; 
-        private java.util.Map < String, String > variables; 
+        private java.util.Map < String, ? > variables; 
 
         private Builder() {
             super();
@@ -224,7 +224,7 @@ public class CreateApplicationRequest extends Request {
         /**
          * The parameter values that are contained in the template. If the template contains no parameter values, the default values are used.
          */
-        public Builder variables(java.util.Map < String, String > variables) {
+        public Builder variables(java.util.Map < String, ? > variables) {
             String variablesShrink = shrink(variables, "Variables", "json");
             this.putBodyParameter("Variables", variablesShrink);
             this.variables = variables;

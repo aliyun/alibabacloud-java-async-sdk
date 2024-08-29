@@ -19,8 +19,16 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+      * You can call this operation to switch a disaster recovery application back to the primary zone.
+      *
+     */
     CompletableFuture<AppFailBackResponse> appFailBack(AppFailBackRequest request);
 
+    /**
+      * You can call this operation to switch a disaster recovery application to another supported zone.
+      *
+     */
     CompletableFuture<AppFailOverResponse> appFailOver(AppFailOverRequest request);
 
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
@@ -41,10 +49,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);
 
+    CompletableFuture<GetApplicationVariables4FailResponse> getApplicationVariables4Fail(GetApplicationVariables4FailRequest request);
+
     CompletableFuture<GetExecuteOperationResultResponse> getExecuteOperationResult(GetExecuteOperationResultRequest request);
 
+    /**
+      * You can call this operation to query the status of a disaster recovery switchover task by task ID.
+      *
+     */
     CompletableFuture<GetFoTaskStatusResponse> getFoTaskStatus(GetFoTaskStatusRequest request);
 
+    /**
+      * You can call this operation to query the zones where the specified disaster recovery service can be switched.
+      *
+     */
     CompletableFuture<GetPotentialFailZonesResponse> getPotentialFailZones(GetPotentialFailZonesRequest request);
 
     CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
@@ -56,15 +74,25 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
 
+    /**
+      * You can call this operation to prepare for application switchover and initiate a switchover task.
+      *
+     */
     CompletableFuture<InitAppFailOverResponse> initAppFailOver(InitAppFailOverRequest request);
 
     CompletableFuture<ListApplicationResponse> listApplication(ListApplicationRequest request);
 
+    /**
+      * You can call this operation to query all disaster recovery plans.
+      *
+     */
     CompletableFuture<ListFoCreatedAppsResponse> listFoCreatedApps(ListFoCreatedAppsRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     CompletableFuture<ListTemplateResponse> listTemplate(ListTemplateRequest request);
+
+    CompletableFuture<ReConfigApplicationResponse> reConfigApplication(ReConfigApplicationRequest request);
 
     CompletableFuture<ReleaseApplicationResponse> releaseApplication(ReleaseApplicationRequest request);
 

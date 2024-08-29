@@ -67,7 +67,7 @@ public class AppFailOverRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * The application ID.
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);
@@ -76,7 +76,7 @@ public class AppFailOverRequest extends Request {
         }
 
         /**
-         * FailZone.
+         * The destination zone to which you want to switch the disaster recovery application.
          */
         public Builder failZone(String failZone) {
             this.putBodyParameter("FailZone", failZone);

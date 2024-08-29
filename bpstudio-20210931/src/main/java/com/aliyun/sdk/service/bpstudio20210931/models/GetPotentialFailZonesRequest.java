@@ -67,7 +67,7 @@ public class GetPotentialFailZonesRequest extends Request {
         } 
 
         /**
-         * IsPlanId.
+         * Specifies whether the value of this parameter is the ID of a disaster recovery set.
          */
         public Builder isPlanId(Boolean isPlanId) {
             this.putBodyParameter("IsPlanId", isPlanId);
@@ -76,7 +76,7 @@ public class GetPotentialFailZonesRequest extends Request {
         }
 
         /**
-         * ObjectId.
+         * If you set IsPlanId to false, specify the ID of a disaster recovery application. If you set IsPlanId to true, specify the ID of a disaster recovery set.
          */
         public Builder objectId(String objectId) {
             this.putBodyParameter("ObjectId", objectId);

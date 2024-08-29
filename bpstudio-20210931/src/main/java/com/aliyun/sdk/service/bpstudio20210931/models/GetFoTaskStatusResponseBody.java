@@ -73,7 +73,7 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The status of the switchover task.
          */
         public Builder data(String data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +97,7 @@ public class GetFoTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

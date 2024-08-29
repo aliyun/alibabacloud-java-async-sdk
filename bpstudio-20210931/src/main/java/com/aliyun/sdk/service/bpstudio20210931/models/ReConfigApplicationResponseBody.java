@@ -6,16 +6,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetPotentialFailZonesResponseBody} extends {@link TeaModel}
+ * {@link ReConfigApplicationResponseBody} extends {@link TeaModel}
  *
- * <p>GetPotentialFailZonesResponseBody</p>
+ * <p>ReConfigApplicationResponseBody</p>
  */
-public class GetPotentialFailZonesResponseBody extends TeaModel {
+public class ReConfigApplicationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
-    private String code;
-
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < String > data;
+    private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -23,9 +20,8 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetPotentialFailZonesResponseBody(Builder builder) {
+    private ReConfigApplicationResponseBody(Builder builder) {
         this.code = builder.code;
-        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
     }
@@ -34,22 +30,15 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetPotentialFailZonesResponseBody create() {
+    public static ReConfigApplicationResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return code
      */
-    public String getCode() {
+    public Integer getCode() {
         return this.code;
-    }
-
-    /**
-     * @return data
-     */
-    public java.util.List < String > getData() {
-        return this.data;
     }
 
     /**
@@ -67,29 +56,20 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String code; 
-        private java.util.List < String > data; 
+        private Integer code; 
         private String message; 
         private String requestId; 
 
         /**
-         * The response code.
+         * Code.
          */
-        public Builder code(String code) {
+        public Builder code(Integer code) {
             this.code = code;
             return this;
         }
 
         /**
-         * The zones where the current disaster recovery service can be switched.
-         */
-        public Builder data(java.util.List < String > data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
-         * The error message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,15 +77,15 @@ public class GetPotentialFailZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetPotentialFailZonesResponseBody build() {
-            return new GetPotentialFailZonesResponseBody(this);
+        public ReConfigApplicationResponseBody build() {
+            return new ReConfigApplicationResponseBody(this);
         } 
 
     } 

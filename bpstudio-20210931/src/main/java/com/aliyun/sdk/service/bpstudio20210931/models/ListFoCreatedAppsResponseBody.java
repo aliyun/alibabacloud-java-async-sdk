@@ -73,7 +73,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about disaster recovery plans.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -89,7 +89,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -97,7 +97,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +173,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * ApplicationId.
+             * 应用ID
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -181,7 +181,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * ReportUrl.
+             * The URL of an error report.
              */
             public Builder reportUrl(String reportUrl) {
                 this.reportUrl = reportUrl;
@@ -189,7 +189,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the disaster recovery plan.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -197,7 +197,7 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title.
              */
             public Builder title(String title) {
                 this.title = title;
