@@ -47,6 +47,10 @@ public class ModifyDBNodeClassRequest extends Request {
     private String plannedEndTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlannedFlashingOffTime")
+    private String plannedFlashingOffTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PlannedStartTime")
     private String plannedStartTime;
 
@@ -72,6 +76,7 @@ public class ModifyDBNodeClassRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.plannedEndTime = builder.plannedEndTime;
+        this.plannedFlashingOffTime = builder.plannedFlashingOffTime;
         this.plannedStartTime = builder.plannedStartTime;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -148,6 +153,13 @@ public class ModifyDBNodeClassRequest extends Request {
     }
 
     /**
+     * @return plannedFlashingOffTime
+     */
+    public String getPlannedFlashingOffTime() {
+        return this.plannedFlashingOffTime;
+    }
+
+    /**
      * @return plannedStartTime
      */
     public String getPlannedStartTime() {
@@ -184,6 +196,7 @@ public class ModifyDBNodeClassRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String plannedEndTime; 
+        private String plannedFlashingOffTime; 
         private String plannedStartTime; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -203,6 +216,7 @@ public class ModifyDBNodeClassRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.plannedEndTime = request.plannedEndTime;
+            this.plannedFlashingOffTime = request.plannedFlashingOffTime;
             this.plannedStartTime = request.plannedStartTime;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -291,6 +305,15 @@ public class ModifyDBNodeClassRequest extends Request {
         public Builder plannedEndTime(String plannedEndTime) {
             this.putQueryParameter("PlannedEndTime", plannedEndTime);
             this.plannedEndTime = plannedEndTime;
+            return this;
+        }
+
+        /**
+         * PlannedFlashingOffTime.
+         */
+        public Builder plannedFlashingOffTime(String plannedFlashingOffTime) {
+            this.putQueryParameter("PlannedFlashingOffTime", plannedFlashingOffTime);
+            this.plannedFlashingOffTime = plannedFlashingOffTime;
             return this;
         }
 

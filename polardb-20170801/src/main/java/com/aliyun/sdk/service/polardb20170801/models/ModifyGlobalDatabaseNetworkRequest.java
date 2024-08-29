@@ -16,8 +16,11 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableGlobalDomainName")
+    private Boolean enableGlobalDomainName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GDNDescription")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String GDNDescription;
 
     @com.aliyun.core.annotation.Query
@@ -52,6 +55,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
     private ModifyGlobalDatabaseNetworkRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.enableGlobalDomainName = builder.enableGlobalDomainName;
         this.GDNDescription = builder.GDNDescription;
         this.GDNId = builder.GDNId;
         this.ownerAccount = builder.ownerAccount;
@@ -80,6 +84,13 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return enableGlobalDomainName
+     */
+    public Boolean getEnableGlobalDomainName() {
+        return this.enableGlobalDomainName;
     }
 
     /**
@@ -140,6 +151,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyGlobalDatabaseNetworkRequest, Builder> {
         private String regionId; 
+        private Boolean enableGlobalDomainName; 
         private String GDNDescription; 
         private String GDNId; 
         private String ownerAccount; 
@@ -156,6 +168,7 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         private Builder(ModifyGlobalDatabaseNetworkRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.enableGlobalDomainName = request.enableGlobalDomainName;
             this.GDNDescription = request.GDNDescription;
             this.GDNId = request.GDNId;
             this.ownerAccount = request.ownerAccount;
@@ -172,6 +185,15 @@ public class ModifyGlobalDatabaseNetworkRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * EnableGlobalDomainName.
+         */
+        public Builder enableGlobalDomainName(Boolean enableGlobalDomainName) {
+            this.putQueryParameter("EnableGlobalDomainName", enableGlobalDomainName);
+            this.enableGlobalDomainName = enableGlobalDomainName;
             return this;
         }
 

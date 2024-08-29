@@ -21,6 +21,10 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableGlobalDomainName")
+    private Boolean enableGlobalDomainName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GDNDescription")
     private String GDNDescription;
 
@@ -52,6 +56,7 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.DBClusterId = builder.DBClusterId;
+        this.enableGlobalDomainName = builder.enableGlobalDomainName;
         this.GDNDescription = builder.GDNDescription;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -86,6 +91,13 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return enableGlobalDomainName
+     */
+    public Boolean getEnableGlobalDomainName() {
+        return this.enableGlobalDomainName;
     }
 
     /**
@@ -140,6 +152,7 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
     public static final class Builder extends Request.Builder<CreateGlobalDatabaseNetworkRequest, Builder> {
         private String regionId; 
         private String DBClusterId; 
+        private Boolean enableGlobalDomainName; 
         private String GDNDescription; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -156,6 +169,7 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.DBClusterId = request.DBClusterId;
+            this.enableGlobalDomainName = request.enableGlobalDomainName;
             this.GDNDescription = request.GDNDescription;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -180,6 +194,15 @@ public class CreateGlobalDatabaseNetworkRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * EnableGlobalDomainName.
+         */
+        public Builder enableGlobalDomainName(Boolean enableGlobalDomainName) {
+            this.putQueryParameter("EnableGlobalDomainName", enableGlobalDomainName);
+            this.enableGlobalDomainName = enableGlobalDomainName;
             return this;
         }
 

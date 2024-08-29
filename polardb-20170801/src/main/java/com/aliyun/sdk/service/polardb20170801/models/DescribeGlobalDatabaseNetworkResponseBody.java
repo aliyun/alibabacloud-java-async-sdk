@@ -38,6 +38,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GDNStatus")
     private String GDNStatus;
 
+    @com.aliyun.core.annotation.NameInMap("GlobalDomainName")
+    private String globalDomainName;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -54,6 +57,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         this.GDNDescription = builder.GDNDescription;
         this.GDNId = builder.GDNId;
         this.GDNStatus = builder.GDNStatus;
+        this.globalDomainName = builder.globalDomainName;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -130,6 +134,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
     }
 
     /**
+     * @return globalDomainName
+     */
+    public String getGlobalDomainName() {
+        return this.globalDomainName;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -153,6 +164,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         private String GDNDescription; 
         private String GDNId; 
         private String GDNStatus; 
+        private String globalDomainName; 
         private String requestId; 
         private String resourceGroupId; 
 
@@ -238,6 +250,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
          */
         public Builder GDNStatus(String GDNStatus) {
             this.GDNStatus = GDNStatus;
+            return this;
+        }
+
+        /**
+         * GlobalDomainName.
+         */
+        public Builder globalDomainName(String globalDomainName) {
+            this.globalDomainName = globalDomainName;
             return this;
         }
 
@@ -563,6 +583,9 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
     }
     public static class DBClusters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
+
         @com.aliyun.core.annotation.NameInMap("DBClusterDescription")
         private String DBClusterDescription;
 
@@ -609,6 +632,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         private String storageUsed;
 
         private DBClusters(Builder builder) {
+            this.category = builder.category;
             this.DBClusterDescription = builder.DBClusterDescription;
             this.DBClusterId = builder.DBClusterId;
             this.DBClusterStatus = builder.DBClusterStatus;
@@ -632,6 +656,13 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
 
         public static DBClusters create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -740,6 +771,7 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String category; 
             private String DBClusterDescription; 
             private String DBClusterId; 
             private String DBClusterStatus; 
@@ -755,6 +787,14 @@ public class DescribeGlobalDatabaseNetworkResponseBody extends TeaModel {
             private String role; 
             private String serverlessType; 
             private String storageUsed; 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * The description of the cluster.

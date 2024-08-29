@@ -132,6 +132,9 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PlannedEndTime")
         private String plannedEndTime;
 
+        @com.aliyun.core.annotation.NameInMap("PlannedFlashingOffTime")
+        private String plannedFlashingOffTime;
+
         @com.aliyun.core.annotation.NameInMap("PlannedStartTime")
         private String plannedStartTime;
 
@@ -157,6 +160,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             this.dbClusterStatus = builder.dbClusterStatus;
             this.orderId = builder.orderId;
             this.plannedEndTime = builder.plannedEndTime;
+            this.plannedFlashingOffTime = builder.plannedFlashingOffTime;
             this.plannedStartTime = builder.plannedStartTime;
             this.plannedTime = builder.plannedTime;
             this.region = builder.region;
@@ -216,6 +220,13 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return plannedFlashingOffTime
+         */
+        public String getPlannedFlashingOffTime() {
+            return this.plannedFlashingOffTime;
+        }
+
+        /**
          * @return plannedStartTime
          */
         public String getPlannedStartTime() {
@@ -264,6 +275,7 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
             private String dbClusterStatus; 
             private String orderId; 
             private String plannedEndTime; 
+            private String plannedFlashingOffTime; 
             private String plannedStartTime; 
             private String plannedTime; 
             private String region; 
@@ -319,6 +331,14 @@ public class DescribeScheduleTasksResponseBody extends TeaModel {
              */
             public Builder plannedEndTime(String plannedEndTime) {
                 this.plannedEndTime = plannedEndTime;
+                return this;
+            }
+
+            /**
+             * PlannedFlashingOffTime.
+             */
+            public Builder plannedFlashingOffTime(String plannedFlashingOffTime) {
+                this.plannedFlashingOffTime = plannedFlashingOffTime;
                 return this;
             }
 
