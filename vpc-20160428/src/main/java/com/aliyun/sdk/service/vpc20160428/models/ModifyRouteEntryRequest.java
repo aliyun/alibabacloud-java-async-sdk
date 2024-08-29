@@ -16,6 +16,10 @@ public class ModifyRouteEntryRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+    private String destinationCidrBlock;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NewNextHopId")
     private String newNextHopId;
 
@@ -46,16 +50,20 @@ public class ModifyRouteEntryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteEntryId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String routeEntryId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteEntryName")
     private String routeEntryName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
+    private String routeTableId;
+
     private ModifyRouteEntryRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
+        this.destinationCidrBlock = builder.destinationCidrBlock;
         this.newNextHopId = builder.newNextHopId;
         this.newNextHopType = builder.newNextHopType;
         this.ownerAccount = builder.ownerAccount;
@@ -65,6 +73,7 @@ public class ModifyRouteEntryRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.routeEntryId = builder.routeEntryId;
         this.routeEntryName = builder.routeEntryName;
+        this.routeTableId = builder.routeTableId;
     }
 
     public static Builder builder() {
@@ -85,6 +94,13 @@ public class ModifyRouteEntryRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return destinationCidrBlock
+     */
+    public String getDestinationCidrBlock() {
+        return this.destinationCidrBlock;
     }
 
     /**
@@ -150,8 +166,16 @@ public class ModifyRouteEntryRequest extends Request {
         return this.routeEntryName;
     }
 
+    /**
+     * @return routeTableId
+     */
+    public String getRouteTableId() {
+        return this.routeTableId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyRouteEntryRequest, Builder> {
         private String description; 
+        private String destinationCidrBlock; 
         private String newNextHopId; 
         private String newNextHopType; 
         private String ownerAccount; 
@@ -161,6 +185,7 @@ public class ModifyRouteEntryRequest extends Request {
         private Long resourceOwnerId; 
         private String routeEntryId; 
         private String routeEntryName; 
+        private String routeTableId; 
 
         private Builder() {
             super();
@@ -169,6 +194,7 @@ public class ModifyRouteEntryRequest extends Request {
         private Builder(ModifyRouteEntryRequest request) {
             super(request);
             this.description = request.description;
+            this.destinationCidrBlock = request.destinationCidrBlock;
             this.newNextHopId = request.newNextHopId;
             this.newNextHopType = request.newNextHopType;
             this.ownerAccount = request.ownerAccount;
@@ -178,6 +204,7 @@ public class ModifyRouteEntryRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.routeEntryId = request.routeEntryId;
             this.routeEntryName = request.routeEntryName;
+            this.routeTableId = request.routeTableId;
         } 
 
         /**
@@ -189,6 +216,15 @@ public class ModifyRouteEntryRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DestinationCidrBlock.
+         */
+        public Builder destinationCidrBlock(String destinationCidrBlock) {
+            this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
+            this.destinationCidrBlock = destinationCidrBlock;
             return this;
         }
 
@@ -276,6 +312,15 @@ public class ModifyRouteEntryRequest extends Request {
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
             this.routeEntryName = routeEntryName;
+            return this;
+        }
+
+        /**
+         * RouteTableId.
+         */
+        public Builder routeTableId(String routeTableId) {
+            this.putQueryParameter("RouteTableId", routeTableId);
+            this.routeTableId = routeTableId;
             return this;
         }
 
