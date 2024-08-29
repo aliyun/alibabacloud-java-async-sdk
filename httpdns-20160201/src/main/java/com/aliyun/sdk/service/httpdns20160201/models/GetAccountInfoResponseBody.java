@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccountInfoResponseBody</p>
  */
 public class GetAccountInfoResponseBody extends TeaModel {
-    @NameInMap("AccountInfo")
+    @com.aliyun.core.annotation.NameInMap("AccountInfo")
     private AccountInfo accountInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountInfoResponseBody(Builder builder) {
@@ -72,39 +71,47 @@ public class GetAccountInfoResponseBody extends TeaModel {
     } 
 
     public static class AccountInfo extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("MonthFreeCount")
+        @com.aliyun.core.annotation.NameInMap("MonthFreeCount")
         private Integer monthFreeCount;
 
-        @NameInMap("MonthHttpsResolveCount")
+        @com.aliyun.core.annotation.NameInMap("MonthHttpsResolveCount")
         private Integer monthHttpsResolveCount;
 
-        @NameInMap("MonthResolveCount")
+        @com.aliyun.core.annotation.NameInMap("MonthResolveCount")
         private Integer monthResolveCount;
 
-        @NameInMap("SignSecret")
+        @com.aliyun.core.annotation.NameInMap("PackageCount")
+        private Integer packageCount;
+
+        @com.aliyun.core.annotation.NameInMap("SignSecret")
         private String signSecret;
 
-        @NameInMap("SignedCount")
+        @com.aliyun.core.annotation.NameInMap("SignedCount")
         private Long signedCount;
 
-        @NameInMap("UnsignedCount")
+        @com.aliyun.core.annotation.NameInMap("UnsignedCount")
         private Long unsignedCount;
 
-        @NameInMap("UnsignedEnabled")
+        @com.aliyun.core.annotation.NameInMap("UnsignedEnabled")
         private Boolean unsignedEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("UserStatus")
+        private Integer userStatus;
 
         private AccountInfo(Builder builder) {
             this.accountId = builder.accountId;
             this.monthFreeCount = builder.monthFreeCount;
             this.monthHttpsResolveCount = builder.monthHttpsResolveCount;
             this.monthResolveCount = builder.monthResolveCount;
+            this.packageCount = builder.packageCount;
             this.signSecret = builder.signSecret;
             this.signedCount = builder.signedCount;
             this.unsignedCount = builder.unsignedCount;
             this.unsignedEnabled = builder.unsignedEnabled;
+            this.userStatus = builder.userStatus;
         }
 
         public static Builder builder() {
@@ -144,6 +151,13 @@ public class GetAccountInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return packageCount
+         */
+        public Integer getPackageCount() {
+            return this.packageCount;
+        }
+
+        /**
          * @return signSecret
          */
         public String getSignSecret() {
@@ -171,15 +185,24 @@ public class GetAccountInfoResponseBody extends TeaModel {
             return this.unsignedEnabled;
         }
 
+        /**
+         * @return userStatus
+         */
+        public Integer getUserStatus() {
+            return this.userStatus;
+        }
+
         public static final class Builder {
             private String accountId; 
             private Integer monthFreeCount; 
             private Integer monthHttpsResolveCount; 
             private Integer monthResolveCount; 
+            private Integer packageCount; 
             private String signSecret; 
             private Long signedCount; 
             private Long unsignedCount; 
             private Boolean unsignedEnabled; 
+            private Integer userStatus; 
 
             /**
              * AccountId.
@@ -214,6 +237,14 @@ public class GetAccountInfoResponseBody extends TeaModel {
             }
 
             /**
+             * PackageCount.
+             */
+            public Builder packageCount(Integer packageCount) {
+                this.packageCount = packageCount;
+                return this;
+            }
+
+            /**
              * SignSecret.
              */
             public Builder signSecret(String signSecret) {
@@ -242,6 +273,14 @@ public class GetAccountInfoResponseBody extends TeaModel {
              */
             public Builder unsignedEnabled(Boolean unsignedEnabled) {
                 this.unsignedEnabled = unsignedEnabled;
+                return this;
+            }
+
+            /**
+             * UserStatus.
+             */
+            public Builder userStatus(Integer userStatus) {
+                this.userStatus = userStatus;
                 return this;
             }
 

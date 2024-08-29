@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDomainsResponseBody</p>
  */
 public class ListDomainsResponseBody extends TeaModel {
-    @NameInMap("DomainInfos")
+    @com.aliyun.core.annotation.NameInMap("DomainInfos")
     private DomainInfos domainInfos;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDomainsResponseBody(Builder builder) {
@@ -132,20 +131,23 @@ public class ListDomainsResponseBody extends TeaModel {
     } 
 
     public static class DomainInfo extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Resolved")
+        @com.aliyun.core.annotation.NameInMap("Resolved")
         private Long resolved;
 
-        @NameInMap("Resolved6")
+        @com.aliyun.core.annotation.NameInMap("Resolved6")
         private Long resolved6;
 
-        @NameInMap("ResolvedHttps")
+        @com.aliyun.core.annotation.NameInMap("ResolvedHttps")
         private Long resolvedHttps;
 
-        @NameInMap("ResolvedHttps6")
+        @com.aliyun.core.annotation.NameInMap("ResolvedHttps6")
         private Long resolvedHttps6;
+
+        @com.aliyun.core.annotation.NameInMap("TimeModified")
+        private Long timeModified;
 
         private DomainInfo(Builder builder) {
             this.domainName = builder.domainName;
@@ -153,6 +155,7 @@ public class ListDomainsResponseBody extends TeaModel {
             this.resolved6 = builder.resolved6;
             this.resolvedHttps = builder.resolvedHttps;
             this.resolvedHttps6 = builder.resolvedHttps6;
+            this.timeModified = builder.timeModified;
         }
 
         public static Builder builder() {
@@ -198,12 +201,20 @@ public class ListDomainsResponseBody extends TeaModel {
             return this.resolvedHttps6;
         }
 
+        /**
+         * @return timeModified
+         */
+        public Long getTimeModified() {
+            return this.timeModified;
+        }
+
         public static final class Builder {
             private String domainName; 
             private Long resolved; 
             private Long resolved6; 
             private Long resolvedHttps; 
             private Long resolvedHttps6; 
+            private Long timeModified; 
 
             /**
              * DomainName.
@@ -245,6 +256,14 @@ public class ListDomainsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * TimeModified.
+             */
+            public Builder timeModified(Long timeModified) {
+                this.timeModified = timeModified;
+                return this;
+            }
+
             public DomainInfo build() {
                 return new DomainInfo(this);
             } 
@@ -253,7 +272,7 @@ public class ListDomainsResponseBody extends TeaModel {
 
     }
     public static class DomainInfos extends TeaModel {
-        @NameInMap("DomainInfo")
+        @com.aliyun.core.annotation.NameInMap("DomainInfo")
         private java.util.List < DomainInfo> domainInfo;
 
         private DomainInfos(Builder builder) {

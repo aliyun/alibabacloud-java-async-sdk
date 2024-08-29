@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResolveStatisticsResponseBody</p>
  */
 public class GetResolveStatisticsResponseBody extends TeaModel {
-    @NameInMap("DataPoints")
+    @com.aliyun.core.annotation.NameInMap("DataPoints")
     private DataPoints dataPoints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetResolveStatisticsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
     } 
 
     public static class DataPoint extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Integer time;
 
         private DataPoint(Builder builder) {
@@ -133,7 +132,7 @@ public class GetResolveStatisticsResponseBody extends TeaModel {
 
     }
     public static class DataPoints extends TeaModel {
-        @NameInMap("DataPoint")
+        @com.aliyun.core.annotation.NameInMap("DataPoint")
         private java.util.List < DataPoint> dataPoint;
 
         private DataPoints(Builder builder) {

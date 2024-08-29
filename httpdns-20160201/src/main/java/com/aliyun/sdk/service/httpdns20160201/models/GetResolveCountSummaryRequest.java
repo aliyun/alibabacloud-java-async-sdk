@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResolveCountSummaryRequest</p>
  */
 public class GetResolveCountSummaryRequest extends Request {
-    @Query
-    @NameInMap("Granularity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Granularity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String granularity;
 
-    @Query
-    @NameInMap("TimeSpan")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeSpan")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeSpan;
 
     private GetResolveCountSummaryRequest(Builder builder) {
@@ -63,10 +62,10 @@ public class GetResolveCountSummaryRequest extends Request {
             super();
         } 
 
-        private Builder(GetResolveCountSummaryRequest response) {
-            super(response);
-            this.granularity = response.granularity;
-            this.timeSpan = response.timeSpan;
+        private Builder(GetResolveCountSummaryRequest request) {
+            super(request);
+            this.granularity = request.granularity;
+            this.timeSpan = request.timeSpan;
         } 
 
         /**

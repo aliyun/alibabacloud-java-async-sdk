@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddDomainRequest</p>
  */
 public class AddDomainRequest extends Request {
-    @Query
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
     private AddDomainRequest(Builder builder) {
@@ -62,10 +61,10 @@ public class AddDomainRequest extends Request {
             super();
         } 
 
-        private Builder(AddDomainRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.domainName = response.domainName;
+        private Builder(AddDomainRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.domainName = request.domainName;
         } 
 
         /**

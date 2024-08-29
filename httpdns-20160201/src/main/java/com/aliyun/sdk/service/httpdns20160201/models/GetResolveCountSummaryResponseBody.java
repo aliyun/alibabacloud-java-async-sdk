@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResolveCountSummaryResponseBody</p>
  */
 public class GetResolveCountSummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResolveSummary")
+    @com.aliyun.core.annotation.NameInMap("ResolveSummary")
     private ResolveSummary resolveSummary;
 
     private GetResolveCountSummaryResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
     } 
 
     public static class ResolveSummary extends TeaModel {
-        @NameInMap("Http")
+        @com.aliyun.core.annotation.NameInMap("Http")
         private Long http;
 
-        @NameInMap("Http6")
+        @com.aliyun.core.annotation.NameInMap("Http6")
         private Long http6;
 
-        @NameInMap("Https")
+        @com.aliyun.core.annotation.NameInMap("Https")
         private Long https;
 
-        @NameInMap("Https6")
+        @com.aliyun.core.annotation.NameInMap("Https6")
         private Long https6;
 
         private ResolveSummary(Builder builder) {

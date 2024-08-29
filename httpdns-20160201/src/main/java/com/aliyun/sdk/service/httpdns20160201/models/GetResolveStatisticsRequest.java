@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.httpdns20160201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResolveStatisticsRequest</p>
  */
 public class GetResolveStatisticsRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Granularity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Granularity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String granularity;
 
-    @Query
-    @NameInMap("ProtocolName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolName")
     private String protocolName;
 
-    @Query
-    @NameInMap("TimeSpan")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeSpan")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeSpan;
 
     private GetResolveStatisticsRequest(Builder builder) {
@@ -90,12 +89,12 @@ public class GetResolveStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetResolveStatisticsRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.granularity = response.granularity;
-            this.protocolName = response.protocolName;
-            this.timeSpan = response.timeSpan;
+        private Builder(GetResolveStatisticsRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.granularity = request.granularity;
+            this.protocolName = request.protocolName;
+            this.timeSpan = request.timeSpan;
         } 
 
         /**
