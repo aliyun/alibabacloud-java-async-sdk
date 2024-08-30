@@ -17,6 +17,10 @@ public class CreateApplicationScalingRuleRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableIdle")
+    private Boolean enableIdle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MinReadyInstanceRatio")
     private Integer minReadyInstanceRatio;
 
@@ -49,6 +53,7 @@ public class CreateApplicationScalingRuleRequest extends Request {
     private CreateApplicationScalingRuleRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.enableIdle = builder.enableIdle;
         this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
         this.minReadyInstances = builder.minReadyInstances;
         this.scalingRuleEnable = builder.scalingRuleEnable;
@@ -76,6 +81,13 @@ public class CreateApplicationScalingRuleRequest extends Request {
      */
     public String getAppId() {
         return this.appId;
+    }
+
+    /**
+     * @return enableIdle
+     */
+    public Boolean getEnableIdle() {
+        return this.enableIdle;
     }
 
     /**
@@ -129,6 +141,7 @@ public class CreateApplicationScalingRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateApplicationScalingRuleRequest, Builder> {
         private String appId; 
+        private Boolean enableIdle; 
         private Integer minReadyInstanceRatio; 
         private Integer minReadyInstances; 
         private Boolean scalingRuleEnable; 
@@ -144,6 +157,7 @@ public class CreateApplicationScalingRuleRequest extends Request {
         private Builder(CreateApplicationScalingRuleRequest request) {
             super(request);
             this.appId = request.appId;
+            this.enableIdle = request.enableIdle;
             this.minReadyInstanceRatio = request.minReadyInstanceRatio;
             this.minReadyInstances = request.minReadyInstances;
             this.scalingRuleEnable = request.scalingRuleEnable;
@@ -159,6 +173,15 @@ public class CreateApplicationScalingRuleRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * EnableIdle.
+         */
+        public Builder enableIdle(Boolean enableIdle) {
+            this.putQueryParameter("EnableIdle", enableIdle);
+            this.enableIdle = enableIdle;
             return this;
         }
 

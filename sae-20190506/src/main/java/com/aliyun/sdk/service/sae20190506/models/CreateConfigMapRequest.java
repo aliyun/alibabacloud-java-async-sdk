@@ -83,7 +83,12 @@ public class CreateConfigMapRequest extends Request {
         } 
 
         /**
-         * The description. The description must be 1 to 255 characters in length, and cannot contain spaces.
+         * The key-value pairs of the ConfigMap in the JSON format. Format:
+         * <p>
+         * 
+         * {"Data":"{"k1":"v1", "k2":"v2"}"}
+         * 
+         * k specifies a key and v specifies a value. For more information, see [Manage a Kubernetes ConfigMap](~~171326~~).
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -92,7 +97,7 @@ public class CreateConfigMapRequest extends Request {
         }
 
         /**
-         * The name of the ConfigMap. The name can contain digits, letters, and underscores (\_). The name must start with a letter.
+         * The name of the ConfigMap. The name can contain digits, letters, and underscores (_). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

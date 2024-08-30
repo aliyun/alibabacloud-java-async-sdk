@@ -601,6 +601,9 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("EnableIdle")
+        private Boolean enableIdle;
+
         @com.aliyun.core.annotation.NameInMap("LastDisableTime")
         private Long lastDisableTime;
 
@@ -625,6 +628,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.appId = builder.appId;
             this.createTime = builder.createTime;
+            this.enableIdle = builder.enableIdle;
             this.lastDisableTime = builder.lastDisableTime;
             this.metric = builder.metric;
             this.scaleRuleEnabled = builder.scaleRuleEnabled;
@@ -654,6 +658,13 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return enableIdle
+         */
+        public Boolean getEnableIdle() {
+            return this.enableIdle;
         }
 
         /**
@@ -708,6 +719,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private Long createTime; 
+            private Boolean enableIdle; 
             private Long lastDisableTime; 
             private Metric metric; 
             private Boolean scaleRuleEnabled; 
@@ -729,6 +741,14 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * EnableIdle.
+             */
+            public Builder enableIdle(Boolean enableIdle) {
+                this.enableIdle = enableIdle;
                 return this;
             }
 
