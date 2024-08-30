@@ -135,6 +135,67 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
 
     } 
 
+    public static class QueryProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private QueryProperties(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueryProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public QueryProperties build() {
+                return new QueryProperties(this);
+            } 
+
+        } 
+
+    }
     public static class Querys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
@@ -162,6 +223,9 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ProcessId")
         private String processId;
+
+        @com.aliyun.core.annotation.NameInMap("QueryProperties")
+        private java.util.List < QueryProperties> queryProperties;
 
         @com.aliyun.core.annotation.NameInMap("QueueTime")
         private Long queueTime;
@@ -215,6 +279,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             this.outputRows = builder.outputRows;
             this.peakMemory = builder.peakMemory;
             this.processId = builder.processId;
+            this.queryProperties = builder.queryProperties;
             this.queueTime = builder.queueTime;
             this.rcHost = builder.rcHost;
             this.resourceCostRank = builder.resourceCostRank;
@@ -300,6 +365,13 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
          */
         public String getProcessId() {
             return this.processId;
+        }
+
+        /**
+         * @return queryProperties
+         */
+        public java.util.List < QueryProperties> getQueryProperties() {
+            return this.queryProperties;
         }
 
         /**
@@ -410,6 +482,7 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             private Long outputRows; 
             private Long peakMemory; 
             private String processId; 
+            private java.util.List < QueryProperties> queryProperties; 
             private Long queueTime; 
             private String rcHost; 
             private Integer resourceCostRank; 
@@ -497,6 +570,14 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
              */
             public Builder processId(String processId) {
                 this.processId = processId;
+                return this;
+            }
+
+            /**
+             * QueryProperties.
+             */
+            public Builder queryProperties(java.util.List < QueryProperties> queryProperties) {
+                this.queryProperties = queryProperties;
                 return this;
             }
 
