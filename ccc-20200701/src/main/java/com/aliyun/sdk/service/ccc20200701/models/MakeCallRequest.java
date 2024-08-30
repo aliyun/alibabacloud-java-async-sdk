@@ -25,6 +25,10 @@ public class MakeCallRequest extends Request {
     private String deviceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlashSmsVariables")
+    private String flashSmsVariables;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -55,6 +59,7 @@ public class MakeCallRequest extends Request {
         this.callee = builder.callee;
         this.caller = builder.caller;
         this.deviceId = builder.deviceId;
+        this.flashSmsVariables = builder.flashSmsVariables;
         this.instanceId = builder.instanceId;
         this.maskedCallee = builder.maskedCallee;
         this.mediaType = builder.mediaType;
@@ -95,6 +100,13 @@ public class MakeCallRequest extends Request {
      */
     public String getDeviceId() {
         return this.deviceId;
+    }
+
+    /**
+     * @return flashSmsVariables
+     */
+    public String getFlashSmsVariables() {
+        return this.flashSmsVariables;
     }
 
     /**
@@ -143,6 +155,7 @@ public class MakeCallRequest extends Request {
         private String callee; 
         private String caller; 
         private String deviceId; 
+        private String flashSmsVariables; 
         private String instanceId; 
         private String maskedCallee; 
         private String mediaType; 
@@ -159,6 +172,7 @@ public class MakeCallRequest extends Request {
             this.callee = request.callee;
             this.caller = request.caller;
             this.deviceId = request.deviceId;
+            this.flashSmsVariables = request.flashSmsVariables;
             this.instanceId = request.instanceId;
             this.maskedCallee = request.maskedCallee;
             this.mediaType = request.mediaType;
@@ -191,6 +205,15 @@ public class MakeCallRequest extends Request {
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
             this.deviceId = deviceId;
+            return this;
+        }
+
+        /**
+         * FlashSmsVariables.
+         */
+        public Builder flashSmsVariables(String flashSmsVariables) {
+            this.putQueryParameter("FlashSmsVariables", flashSmsVariables);
+            this.flashSmsVariables = flashSmsVariables;
             return this;
         }
 
