@@ -241,6 +241,9 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QuotaArn")
         private String quotaArn;
 
+        @com.aliyun.core.annotation.NameInMap("QuotaCategory")
+        private String quotaCategory;
+
         @com.aliyun.core.annotation.NameInMap("QuotaDescription")
         private String quotaDescription;
 
@@ -271,6 +274,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             this.productCode = builder.productCode;
             this.quotaActionCode = builder.quotaActionCode;
             this.quotaArn = builder.quotaArn;
+            this.quotaCategory = builder.quotaCategory;
             this.quotaDescription = builder.quotaDescription;
             this.quotaName = builder.quotaName;
             this.quotaUnit = builder.quotaUnit;
@@ -385,6 +389,13 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return quotaCategory
+         */
+        public String getQuotaCategory() {
+            return this.quotaCategory;
+        }
+
+        /**
          * @return quotaDescription
          */
         public String getQuotaDescription() {
@@ -434,6 +445,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
             private String productCode; 
             private String quotaActionCode; 
             private String quotaArn; 
+            private String quotaCategory; 
             private String quotaDescription; 
             private String quotaName; 
             private String quotaUnit; 
@@ -553,6 +565,14 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
              */
             public Builder quotaArn(String quotaArn) {
                 this.quotaArn = quotaArn;
+                return this;
+            }
+
+            /**
+             * QuotaCategory.
+             */
+            public Builder quotaCategory(String quotaCategory) {
+                this.quotaCategory = quotaCategory;
                 return this;
             }
 
