@@ -61,8 +61,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDeploymentJobResponse> createDeploymentJob(CreateDeploymentJobRequest request);
 
-    CompletableFuture<CreateWHClientCertificateResponse> createWHClientCertificate(CreateWHClientCertificateRequest request);
-
     /**
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
@@ -174,12 +172,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RenewCertificateOrderForPackageRequestResponse> renewCertificateOrderForPackageRequest(RenewCertificateOrderForPackageRequestRequest request);
 
     /**
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-     */
-    CompletableFuture<RevokeWHClientCertificateResponse> revokeWHClientCertificate(RevokeWHClientCertificateRequest request);
-
-    /**
       * You can call the Sign operation to sign a private certificate in a certificate application repository.
       * ### Limits
       * You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
@@ -196,14 +188,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateWorkerResourceStatusResponse> updateWorkerResourceStatus(UpdateWorkerResourceStatusRequest request);
 
     CompletableFuture<UploadCsrResponse> uploadCsr(UploadCsrRequest request);
-
-    /**
-      * You can call this operation to upload a private certificate to a certificate repository.
-      * ## [](#qps-)Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
-      *
-     */
-    CompletableFuture<UploadPCACertResponse> uploadPCACert(UploadPCACertRequest request);
 
     /**
       * You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
