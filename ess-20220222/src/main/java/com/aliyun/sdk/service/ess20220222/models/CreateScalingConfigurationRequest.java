@@ -2608,14 +2608,14 @@ public class CreateScalingConfigurationRequest extends Request {
             private java.util.List < String > physicalProcessorModels; 
 
             /**
-             * The architecture types of the instance types. Valid values:
+             * The architecture types of instance types. Valid values:
              * <p>
              * 
-             * *   X86: x86
-             * *   Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated
-             * *   BareMetal: ECS Bare Metal Instance
-             * *   Arm: Arm
-             * *   SuperComputeCluster: Super Computing Cluster
+             * *   X86: x86.
+             * *   Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.
+             * *   BareMetal: ECS Bare Metal Instance.
+             * *   Arm: Arm.
+             * *   SuperComputeCluster: Super Computing Cluster.
              * 
              * By default, all values are included.
              */
@@ -2640,14 +2640,14 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The number of vCPUs per instance type in intelligent configuration mode. You can use this parameter to filter the available instance types that meet the specified criteria. For more information, see [Overview of instance families](~~25378~~).
+             * The number of vCPUs per instance type in intelligent configuration mode. You can use this parameter to match the available instance types. For more information, see [Overview of instance families](~~25378~~).
              * <p>
              * 
-             * Before you specify this parameter, take note of the following items:
+             * Take note of the following items:
              * 
-             * *   InstancePatternInfos is applicable only to the scaling groups that reside in virtual private clouds (VPCs).
+             * *   InstancePatternInfos applies only to the scaling groups that reside in virtual private clouds (VPCs).
              * *   If you specify InstancePatternInfos, you must also specify InstancePatternInfos.Cores and InstancePatternInfos.Memory.
-             * *   If you specify InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type specified by InstanceType or InstanceTypes to create instances during scale-out events. If the specified instance type does not have sufficient inventory, Auto Scaling uses the lowest-priced instance type specified by InstancePatternInfos to create instances during scale-out events.
+             * *   If you specify InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type specified by InstanceType or InstanceTypes to create instances during scale-out events. If the specified instance type has insufficient inventory, Auto Scaling uses the lowest-priced instance type specified by InstancePatternInfos to create instances during scale-out events.
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -2655,7 +2655,13 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * CpuArchitectures.
+             * The CPU architectures of instance types. Valid values:
+             * <p>
+             * 
+             * >  You can specify 1 to 2 CPU architectures.
+             * 
+             * *   x86
+             * *   Arm
              */
             public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
                 this.cpuArchitectures = cpuArchitectures;
@@ -2675,7 +2681,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * GpuSpecs.
+             * The GPU models.
              */
             public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
                 this.gpuSpecs = gpuSpecs;
@@ -2683,7 +2689,27 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * InstanceCategories.
+             * The categories of instance types. Valid values:
+             * <p>
+             * 
+             * >  You can specify up to 10 categories.
+             * 
+             * *   General-purpose
+             * *   Compute-optimized
+             * *   Memory-optimized
+             * *   Big data
+             * *   Local SSDs
+             * *   High Clock Speed
+             * *   Enhanced
+             * *   Shared
+             * *   Compute-optimized with GPU
+             * *   Visual Compute-optimized
+             * *   Heterogeneous Service
+             * *   Compute-optimized with FPGA
+             * *   Compute-optimized with NPU
+             * *   ECS Bare Metal
+             * *   Super Computing Cluster
+             * *   High Performance Compute
              */
             public Builder instanceCategories(java.util.List < String > instanceCategories) {
                 this.instanceCategories = instanceCategories;
@@ -2691,7 +2717,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The level of the instance family. You can specify this parameter to specify the available instance types. This parameter takes effect only if you set `CostOptimization` to true. Valid values:
+             * The level of the instance family. You can use this parameter to match the available instance types. This parameter takes effect only if you set `CostOptimization` to true. Valid values:
              * <p>
              * 
              * *   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
@@ -2704,7 +2730,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * InstanceTypeFamilies.
+             * The instance families that you want to specify. You can specify up to 10 instance families in each call.
              */
             public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
                 this.instanceTypeFamilies = instanceTypeFamilies;
@@ -2723,7 +2749,10 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MaximumCpuCoreCount.
+             * The maximum number of vCPUs per instance type.
+             * <p>
+             * 
+             * >  The value of MaximumCpuCoreCount cannot exceed four times the value of MinimumCpuCoreCount.
              */
             public Builder maximumCpuCoreCount(Integer maximumCpuCoreCount) {
                 this.maximumCpuCoreCount = maximumCpuCoreCount;
@@ -2731,7 +2760,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MaximumGpuAmount.
+             * The maximum number of GPUs per instance. The value must be a positive integer.
              */
             public Builder maximumGpuAmount(Integer maximumGpuAmount) {
                 this.maximumGpuAmount = maximumGpuAmount;
@@ -2739,7 +2768,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MaximumMemorySize.
+             * The maximum memory size per instance. Unit: GiB.
              */
             public Builder maximumMemorySize(Float maximumMemorySize) {
                 this.maximumMemorySize = maximumMemorySize;
@@ -2747,7 +2776,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The memory size per instance type in intelligent configuration mode. Unit: GiB. You can specify this parameter to filter the available instance types.
+             * The memory size per instance type in intelligent configuration mode. Unit: GiB. You can use this parameter to match the available instance types.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -2755,7 +2784,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MinimumBaselineCredit.
+             * The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
              */
             public Builder minimumBaselineCredit(Integer minimumBaselineCredit) {
                 this.minimumBaselineCredit = minimumBaselineCredit;
@@ -2763,7 +2792,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MinimumCpuCoreCount.
+             * The minimum number of vCPUs per instance type.
              */
             public Builder minimumCpuCoreCount(Integer minimumCpuCoreCount) {
                 this.minimumCpuCoreCount = minimumCpuCoreCount;
@@ -2771,7 +2800,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MinimumEniIpv6AddressQuantity.
+             * The minimum number of IPv6 addresses per ENI.
              */
             public Builder minimumEniIpv6AddressQuantity(Integer minimumEniIpv6AddressQuantity) {
                 this.minimumEniIpv6AddressQuantity = minimumEniIpv6AddressQuantity;
@@ -2779,7 +2808,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MinimumEniPrivateIpAddressQuantity.
+             * The minimum number of IPv4 addresses per ENI.
              */
             public Builder minimumEniPrivateIpAddressQuantity(Integer minimumEniPrivateIpAddressQuantity) {
                 this.minimumEniPrivateIpAddressQuantity = minimumEniPrivateIpAddressQuantity;
@@ -2787,7 +2816,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MinimumEniQuantity.
+             * The minimum number of elastic network interfaces (ENIs) per instance.
              */
             public Builder minimumEniQuantity(Integer minimumEniQuantity) {
                 this.minimumEniQuantity = minimumEniQuantity;
@@ -2795,7 +2824,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MinimumGpuAmount.
+             * The minimum number of GPUs per instance. The value must be a positive integer.
              */
             public Builder minimumGpuAmount(Integer minimumGpuAmount) {
                 this.minimumGpuAmount = minimumGpuAmount;
@@ -2803,7 +2832,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MinimumInitialCredit.
+             * The initial vCPU credits per t5 or t6 burstable instance.
              */
             public Builder minimumInitialCredit(Integer minimumInitialCredit) {
                 this.minimumInitialCredit = minimumInitialCredit;
@@ -2811,7 +2840,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * MinimumMemorySize.
+             * The minimum memory size per instance. Unit: GiB.
              */
             public Builder minimumMemorySize(Float minimumMemorySize) {
                 this.minimumMemorySize = minimumMemorySize;
@@ -2819,7 +2848,7 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
-             * PhysicalProcessorModels.
+             * The processor models of instance types. You can specify up to 10 processor models.
              */
             public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
                 this.physicalProcessorModels = physicalProcessorModels;

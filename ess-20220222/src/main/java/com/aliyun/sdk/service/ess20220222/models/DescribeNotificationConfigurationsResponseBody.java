@@ -49,7 +49,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the notifications.
+         * The notification settings.
          */
         public Builder notificationConfigurationModels(java.util.List < NotificationConfigurationModels> notificationConfigurationModels) {
             this.notificationConfigurationModels = notificationConfigurationModels;
@@ -169,7 +169,7 @@ public class DescribeNotificationConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * TimeZone.
+             * The time zone of the notification. The value must be in UTC. For example, a value of UTC+8 indicates that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 indicates that the time is 7 hours behind Coordinated Universal Time.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

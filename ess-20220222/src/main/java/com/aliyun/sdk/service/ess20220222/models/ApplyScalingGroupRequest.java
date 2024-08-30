@@ -91,7 +91,7 @@ public class ApplyScalingGroupRequest extends Request {
         }
 
         /**
-         * Format.
+         * Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.
          */
         public Builder format(String format) {
             this.putQueryParameter("Format", format);
@@ -100,7 +100,7 @@ public class ApplyScalingGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

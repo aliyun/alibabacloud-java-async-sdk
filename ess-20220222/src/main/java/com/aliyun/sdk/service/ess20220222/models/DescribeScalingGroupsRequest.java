@@ -226,8 +226,8 @@ public class DescribeScalingGroupsRequest extends Request {
          * The type of instances that are managed by the scaling group. Valid values:
          * <p>
          * 
-         * *   ECS: ECS instances
-         * *   ECI: elastic container instances
+         * *   ECS: Elastic Compute Service (ECS) instances.
+         * *   ECI: elastic container instances.
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -278,7 +278,7 @@ public class DescribeScalingGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -287,7 +287,10 @@ public class DescribeScalingGroupsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the scaling group that you want to query belongs.
+         * <p>
+         * 
+         * >  If no scaling group belongs to the specified resource group, the query result is empty and no error is reported.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -314,7 +317,10 @@ public class DescribeScalingGroupsRequest extends Request {
         }
 
         /**
-         * ScalingGroupIds.
+         * The IDs of the scaling groups that you want to query.
+         * <p>
+         * 
+         * The IDs of inactive scaling groups are not included in the query results, and no error is returned.
          */
         public Builder scalingGroupIds(java.util.List < String > scalingGroupIds) {
             this.putQueryParameter("ScalingGroupIds", scalingGroupIds);
@@ -323,7 +329,7 @@ public class DescribeScalingGroupsRequest extends Request {
         }
 
         /**
-         * ScalingGroupName.
+         * The name of the scaling group.
          */
         public Builder scalingGroupName(String scalingGroupName) {
             this.putQueryParameter("ScalingGroupName", scalingGroupName);
@@ -332,7 +338,10 @@ public class DescribeScalingGroupsRequest extends Request {
         }
 
         /**
-         * ScalingGroupNames.
+         * The names of the scaling groups that you want to query.
+         * <p>
+         * 
+         * The names of inactive scaling groups are not displayed in the query results, and no error is reported.
          */
         public Builder scalingGroupNames(java.util.List < String > scalingGroupNames) {
             this.putQueryParameter("ScalingGroupNames", scalingGroupNames);
@@ -341,7 +350,7 @@ public class DescribeScalingGroupsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags of the scaling group.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -395,7 +404,7 @@ public class DescribeScalingGroupsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the scaling group.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -403,7 +412,7 @@ public class DescribeScalingGroupsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value of the scaling group.
              */
             public Builder value(String value) {
                 this.value = value;

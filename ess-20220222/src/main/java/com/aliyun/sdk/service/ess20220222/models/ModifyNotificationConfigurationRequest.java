@@ -206,7 +206,7 @@ public class ModifyNotificationConfigurationRequest extends Request {
         }
 
         /**
-         * TimeZone.
+         * The time zone of the notification. Specify the value in UTC. For example, a value of UTC+8 specifies that the time is 8 hours ahead of Coordinated Universal Time, and a value of UTC-7 specifies that the time is 7 hours behind Coordinated Universal Time.
          */
         public Builder timeZone(String timeZone) {
             this.putQueryParameter("TimeZone", timeZone);

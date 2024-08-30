@@ -745,7 +745,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         } 
 
         /**
-         * Information about the Container Registry Enterprise Edition instance.
+         * The Container Registry Enterprise Edition instances.
          */
         public Builder acrRegistryInfos(java.util.List < AcrRegistryInfos> acrRegistryInfos) {
             this.putQueryParameter("AcrRegistryInfos", acrRegistryInfos);
@@ -754,7 +754,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The validity period. Unit: seconds.
+         * The validity period of the scaling configuration. Unit: seconds.
          */
         public Builder activeDeadlineSeconds(Long activeDeadlineSeconds) {
             this.putQueryParameter("ActiveDeadlineSeconds", activeDeadlineSeconds);
@@ -763,7 +763,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically create an elastic IP address (EIP) and bind the EIP to the elastic container instance.
+         * Specifies whether to automatically create elastic IP addresses (EIPs) and bind the EIPs to elastic container instances.
          */
         public Builder autoCreateEip(Boolean autoCreateEip) {
             this.putQueryParameter("AutoCreateEip", autoCreateEip);
@@ -772,7 +772,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically match the image cache.
+         * Specifies whether to automatically match image caches.
          * <p>
          * 
          * Default value: false.
@@ -784,11 +784,11 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the elastic container instance. The name must meet the following requirements:
+         * The name series of elastic container instances. Naming conventions:
          * <p>
          * 
-         * *   The name must be 2 to 128 characters in length
-         * *   The name can contain only lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).
+         * *   The name must be 2 to 128 characters in length.
+         * *   The name can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).
          */
         public Builder containerGroupName(String containerGroupName) {
             this.putQueryParameter("ContainerGroupName", containerGroupName);
@@ -806,7 +806,13 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * ContainersUpdateType.
+         * The update mode of containers. Valid values:
+         * <p>
+         * 
+         * *   RenewUpdate: full update mode. This value takes effect based on the value of Containers in an update request. This value indicates that the previous setting of Containers is overwritten.
+         * *   IncrementalUpdate: incremental update mode. Container matching is performed based on the Container.name value. Only the parameters that are included in the request parameters are updated.
+         * 
+         * Default value: RenewUpdate.
          */
         public Builder containersUpdateType(String containersUpdateType) {
             this.putQueryParameter("ContainersUpdateType", containersUpdateType);
@@ -815,7 +821,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the cost optimization feature. Valid values:
+         * Specifies whether to enable the Cost Optimization feature. Valid values:
          * <p>
          * 
          * *   true
@@ -830,7 +836,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The number of vCPUs of the elastic container instance.
+         * The number of vCPUs per elastic container instance.
          */
         public Builder cpu(Float cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -839,7 +845,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The number of physical CPU cores. This parameter is not available for all instance types. For more information, see [Specify custom CPU options](~~197781~~).
+         * The number of physical CPU cores. You can specify this parameter for only specific ECS instance types. For more information, see [Specify CPU options](~~197781~~).
          */
         public Builder cpuOptionsCore(Integer cpuOptionsCore) {
             this.putQueryParameter("CpuOptionsCore", cpuOptionsCore);
@@ -848,7 +854,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The number of threads per core. This parameter is not available for all instance types. A value of 1 indicates that Hyper-Threading is disabled. For more information, see [Specify custom CPU options](~~197781~~).
+         * The number of threads per core. You can specify this parameter for only specific instance types. A value of 1 specifies that Hyper-Threading is disabled. For more information, see [Specify CPU options](~~197781~~).
          */
         public Builder cpuOptionsThreadsPerCore(Integer cpuOptionsThreadsPerCore) {
             this.putQueryParameter("CpuOptionsThreadsPerCore", cpuOptionsThreadsPerCore);
@@ -857,7 +863,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DataCacheBucket.
+         * The bucket in which data caches are stored.
          */
         public Builder dataCacheBucket(String dataCacheBucket) {
             this.putQueryParameter("DataCacheBucket", dataCacheBucket);
@@ -866,7 +872,15 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DataCacheBurstingEnabled.
+         * Specifies whether to enable the Performance Burst feature for the ESSD AutoPL disk in which data caches are stored. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
+         * 
+         * >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).
          */
         public Builder dataCacheBurstingEnabled(Boolean dataCacheBurstingEnabled) {
             this.putQueryParameter("DataCacheBurstingEnabled", dataCacheBurstingEnabled);
@@ -875,7 +889,17 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DataCachePL.
+         * The performance level (PL) of the cloud disk in which data caches are stored. We recommend that you use Enterprise SSDs (ESSDs). Valid values:
+         * <p>
+         * 
+         * *   PL0: An ESSD can deliver up to 10,000 random read/write IOPS.
+         * *   PL1: An ESSD can deliver up to 50,000 random read/write IOPS.
+         * *   PL2: An ESSD can deliver up to 100,000 random read/write IOPS.
+         * *   PL3: An ESSD can deliver up to 1,000,000 random read/write IOPS.
+         * 
+         * Default value: PL1.
+         * 
+         * >  For more information about ESSDs, see [ESSDs](~~122389~~).
          */
         public Builder dataCachePL(String dataCachePL) {
             this.putQueryParameter("DataCachePL", dataCachePL);
@@ -884,7 +908,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DataCacheProvisionedIops.
+         * The provisioned read/write IOPS of the ESSD AutoPL disk in which data caches are stored. Valid values: 0 to min{50,000, 1,000 × *Capacity - Baseline IOPS}. Baseline IOPS = min{1,800+50 x *Capacity, 50,000}.
+         * <p>
+         * 
+         * >  For more information about ESSD AutoPL disks, see [ESSD AutoPL disks](~~368372~~).
          */
         public Builder dataCacheProvisionedIops(Integer dataCacheProvisionedIops) {
             this.putQueryParameter("DataCacheProvisionedIops", dataCacheProvisionedIops);
@@ -893,7 +920,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * >  This parameter is unavailable.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -902,7 +929,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The IP addresses of the DNS servers.
+         * The IP addresses of DNS servers.
          */
         public Builder dnsConfigNameServers(java.util.List < String > dnsConfigNameServers) {
             this.putQueryParameter("DnsConfigNameServers", dnsConfigNameServers);
@@ -920,7 +947,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The DNS lookup domains.
+         * The search domains of DNS servers.
          */
         public Builder dnsConfigSearchs(java.util.List < String > dnsConfigSearchs) {
             this.putQueryParameter("DnsConfigSearchs", dnsConfigSearchs);
@@ -932,8 +959,8 @@ public class ModifyEciScalingConfigurationRequest extends Request {
          * The Domain Name System (DNS) policy. Valid values:
          * <p>
          * 
-         * *   None: uses the DNS that is set for the DnsConfig field.
-         * *   Default: use the DNS that is set for the runtime environment.
+         * *   None: uses the DNS that is specified by DnsConfig.
+         * *   Default: uses the DNS that is specified for the runtime environment.
          */
         public Builder dnsPolicy(String dnsPolicy) {
             this.putQueryParameter("DnsPolicy", dnsPolicy);
@@ -951,7 +978,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The bandwidth of the EIP.
+         * The EIP bandwidth.
          * <p>
          * 
          * Default value: 5. Unit: Mbit/s.
@@ -963,7 +990,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * >  This parameter is not available for use.
          */
         public Builder enableSls(Boolean enableSls) {
             this.putQueryParameter("EnableSls", enableSls);
@@ -972,7 +999,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The size of the temporary storage space. By default, an enhanced SSD (ESSD) of the PL1 level is used. Unit: GiB.
+         * The size of the temporary storage space. By default, an Enterprise SSD (ESSD) of the PL1 type is used. Unit: GiB.
          */
         public Builder ephemeralStorage(Integer ephemeralStorage) {
             this.putQueryParameter("EphemeralStorage", ephemeralStorage);
@@ -981,7 +1008,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Information about the hosts.
+         * The hosts.
          */
         public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
             this.putQueryParameter("HostAliases", hostAliases);
@@ -990,7 +1017,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the elastic container instance.
+         * The hostname series of elastic container instances.
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -999,7 +1026,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Information about the image repository.
+         * The image repositories.
          */
         public Builder imageRegistryCredentials(java.util.List < ImageRegistryCredentials> imageRegistryCredentials) {
             this.putQueryParameter("ImageRegistryCredentials", imageRegistryCredentials);
@@ -1035,12 +1062,12 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The level of the instance type, which is used to filter the instance types that meet the specified criteria. This parameter takes effect only if you set the `CostOptimization` parameter to true. Valid values:
+         * The level of the instance family, which is used to filter instance types that meet the specified criteria. This parameter takes effect only if you set `CostOptimization` to true. Valid values:
          * <p>
          * 
-         * *   EntryLevel: shared instance type. Instances of this level are the most cost-effective but may not provide stable computing performance in a consistent manner. Instances of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
-         * *   EnterpriseLevel: Instances of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Instance family](~~25378~~).
-         * *   CreditEntryLevel: This value is valid only for burstable instances. CPU credits are used to ensure computing performance. Instances of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see the [Overview](~~59977~~) topic of burstable instances.
+         * *   EntryLevel: entry level (shared instance type). Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
+         * *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources, and are suitable for business scenarios that require high stability. For more information, see [Overview of instance families](~~25378~~).
+         * *   CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview](~~59977~~) of burstable instances.
          */
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.putQueryParameter("InstanceFamilyLevel", instanceFamilyLevel);
@@ -1049,7 +1076,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * InstanceTypes.
+         * The ECS instance types. You can specify up to five instance types.
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -1067,7 +1094,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The weight of the elastic container instance as a backend server. Valid values: 1 to 100.
+         * The load balancing weight of each backend server. Valid values: 1 to 100.
          */
         public Builder loadBalancerWeight(Integer loadBalancerWeight) {
             this.putQueryParameter("LoadBalancerWeight", loadBalancerWeight);
@@ -1076,7 +1103,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The memory size of the elastic container instance. Unit: GiB.
+         * The memory size per elastic container instance. Unit: GiB.
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -1085,7 +1112,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The domain names of the NTP server.
+         * The endpoints of Network Time Protocol (NTP) servers.
          */
         public Builder ntpServers(java.util.List < String > ntpServers) {
             this.putQueryParameter("NtpServers", ntpServers);
@@ -1103,7 +1130,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the RAM role for the instance. You can use an instance RAM role to access both elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](~~61178~~).
+         * The name of the instance Resource Access Management (RAM) role. You can use the same RAM role to access elastic container instances and Elastic Compute Service (ECS) instances. For more information, see [Use an instance RAM role by calling API operations](~~61178~~).
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -1133,9 +1160,9 @@ public class ModifyEciScalingConfigurationRequest extends Request {
          * The instance restart policy. Valid values:
          * <p>
          * 
-         * *   Always: always restarts the elastic container instance.
-         * *   Never: never restarts the elastic container instance.
-         * *   OnFailure: restarts the elastic container instance upon failures.
+         * *   Always: always restarts elastic container instances.
+         * *   Never: never restarts elastic container instances.
+         * *   OnFailure: restarts elastic container instances upon failures.
          * 
          * Default value: Always.
          */
@@ -1155,10 +1182,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.
+         * The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.
          * <p>
          * 
-         * The name of the scaling configuration must be unique within a scaling group in a region. If you do not specify this parameter, the value of the ScalingConfigurationId parameter is used.
+         * The name of a scaling configuration must be unique in the specified region. If you do not specify this parameter, the value of ScalingConfigurationId is used.
          */
         public Builder scalingConfigurationName(String scalingConfigurationName) {
             this.putQueryParameter("ScalingConfigurationName", scalingConfigurationName);
@@ -1167,7 +1194,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The system information of the security context in which the elastic container instance runs.
+         * The security contexts in which the elastic container instance runs.
          */
         public Builder securityContextSysCtls(java.util.List < SecurityContextSysCtls> securityContextSysCtls) {
             this.putQueryParameter("SecurityContextSysCtls", securityContextSysCtls);
@@ -1176,10 +1203,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the security group with which you want to associate the elastic container instance. Elastic container instances that are associated with the same security group can access each other.
+         * The ID of the security group to which elastic container instances belong. Elastic container instances that belong to the same security group can communicate with each other.
          * <p>
          * 
-         * If you do not specify a security group, the system uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the protocols and the port numbers of the containers that you want to expose. If you do not have a default security group in the region, the system creates a default security group, and then adds the declared container protocols and port numbers to the inbound rules of the security group.
+         * If you do not specify a security group, the system uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the protocols and port numbers of the containers that you want to expose. If you do not have a default security group in the region, the system creates a default security group and then adds the container protocols and port numbers that you specified to the inbound rules of the security group.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1188,10 +1215,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places.
+         * The maximum hourly price of preemptible elastic container instances. The value can be accurate to three decimal places.
          * <p>
          * 
-         * If you set the SpotStrategy parameter to SpotWithPriceLimit, you must also specify the SpotPriceLimit parameter.
+         * If you set SpotStrategy to SpotWithPriceLimit, you must specify SpotPriceLimit.
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -1200,12 +1227,12 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The bidding policy for the elastic container instance. Valid values:
+         * The instance bidding policy. Valid values:
          * <p>
          * 
-         * *   NoSpot: The instance is a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.
+         * *   NoSpot: The instances are created as pay-as-you-go instances.
+         * *   SpotWithPriceLimit: The instances are preemptible instances for which you can specify the maximum hourly price.
+         * *   SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.
          * 
          * Default value: NoSpot.
          */
@@ -1216,7 +1243,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Information about the tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -1225,7 +1252,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The buffer time in which the program handles operations before the program is stopped. Unit: seconds.
+         * The buffer period during which the program handles operations before the program is stopped. Unit: seconds.
          */
         public Builder terminationGracePeriodSeconds(Long terminationGracePeriodSeconds) {
             this.putQueryParameter("TerminationGracePeriodSeconds", terminationGracePeriodSeconds);
@@ -1312,7 +1339,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String regionId; 
 
             /**
-             * The domain names of the Container Registry Enterprise Edition instances. By default, all domain names of the Container Registry Enterprise Edition instances are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).
+             * The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. Separate multiple domain names with commas (,).
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -2268,7 +2295,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (\_), and digits. It cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
+             * The name of the environment variable. The name can be 1 to 128 characters in length, and can contain letters, underscores (\_), and digits. The name cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2433,7 +2460,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
              * The directory within the container onto which you want to mount the volume.
              * <p>
              * 
-             * >  The information stored within this directory will be overridden by the data present on the mounted volume. Specify this parameter with caution.
+             * >  The information stored within this directory is overwritten by the data on the mounted volume. Exercise caution when you specify this parameter.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -2441,12 +2468,12 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The mount propagation setting of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:
+             * The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:
              * <p>
              * 
-             * *   None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the already established volume mount.
-             * *   HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount.
-             * *   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.
+             * *   None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.
+             * *   HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.
+             * *   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. In addition, volume mounts executed on the container propagate back to the underlying instance and to all containers across every pod that uses the same volume.
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -2454,7 +2481,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The volume name. The value of this parameter is the same as the value of Volume.N.Name.
+             * The volume name. The value of this parameter is the same as the name of the volume that is mounted to containers.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2473,7 +2500,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The subdirectory of the volume.
+             * The volume subdirectory.
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -2921,7 +2948,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The command that you want to run by using the CLI for liveness probing within the container.
+             * The commands that you can run in the container when you use the CLI to perform a liveness probe.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -2929,7 +2956,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The number of vCPUs that you want to allocate to the container.
+             * The number of vCPUs per container.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -2945,7 +2972,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The number of GPUs that you want to allocate to the container.
+             * The number of GPUs per container.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -2953,7 +2980,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The image of the container.
+             * The container image.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -2964,7 +2991,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
              * The image pulling policy. Valid values:
              * <p>
              * 
-             * *   Always: Each time instances are created, image pulling is performed.
+             * *   Always: Image pulling is performed each time instances are created.
              * *   IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
              * *   Never: On-premises images are always used. Image pulling is not performed.
              */
@@ -2974,7 +3001,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The commands that you want to run by using the CLI for configuring the postStart callback function within the container.
+             * The commands that you can run within the container to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerExecs(java.util.List < String > lifecyclePostStartHandlerExecs) {
                 this.lifecyclePostStartHandlerExecs = lifecyclePostStartHandlerExecs;
@@ -2982,7 +3009,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The IP address of the host to which you want to send the HTTP GET requests for configuring the postStart callback function.
+             * The IP address of the host to which you want to send the HTTP GET request to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
                 this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
@@ -2990,7 +3017,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The path to which you want to send the HTTP GET requests for configuring the postStart callback function.
+             * The path to which you want to send the HTTP GET request to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
                 this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
@@ -2998,7 +3025,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The port over which you want to send the HTTP GET requests for configuring the postStart callback function.
+             * The port over which you want to send the HTTP GET request to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
                 this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
@@ -3006,7 +3033,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The protocol type of the HTTP GET requests that you want to send for configuring the postStart callback function. Valid values:
+             * The protocol type of the HTTP GET request that you want to send to configure the postStart callback function. Valid values:
              * <p>
              * 
              * *   HTTP
@@ -3018,7 +3045,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The IP address of the host detected by the TCP sockets that you want to use for configuring the postStart callback function.
+             * The IP address of the host detected by the TCP socket that you want to use to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
                 this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
@@ -3026,7 +3053,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The port detected by the TCP sockets that you want to use for configuring the postStart callback function.
+             * The port detected by the TCP socket that you want to use to configure the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
                 this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
@@ -3034,7 +3061,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The commands that you want to run by using the CLI for configuring the preStop callback function within the container.
+             * The commands that you can run within the container to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerExecs(java.util.List < String > lifecyclePreStopHandlerExecs) {
                 this.lifecyclePreStopHandlerExecs = lifecyclePreStopHandlerExecs;
@@ -3042,7 +3069,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The IP address of the host to which you want to send the HTTP GET requests for configuring the preStop callback function.
+             * The IP address of the host to which you want to send the HTTP GET request to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
                 this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
@@ -3050,7 +3077,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The path to which you want to send the HTTP GET requests for configuring the preStop callback function.
+             * The path to which you want to send the HTTP GET request to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
                 this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
@@ -3058,7 +3085,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The port over which you want to send the HTTP GET requests for configuring the preStop callback function.
+             * The port over which you want to send the HTTP GET request to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
                 this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
@@ -3066,7 +3093,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The protocol type of the HTTP GET requests that you want to send for configuring the preStop callback function. Valid values:
+             * The protocol type of the HTTP GET request that you want to send to configure the preStop callback function. Valid values:
              * <p>
              * 
              * *   HTTP
@@ -3078,7 +3105,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The IP address of the host detected by the TCP sockets that you want to use for configuring the preStop callback function.
+             * The IP address of the host detected by the TCP socket that you want to use to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
                 this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
@@ -3086,7 +3113,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The port detected by the TCP sockets that you want to use for configuring the preStop callback function.
+             * The port detected by the TCP socket that you want to use to configure the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
                 this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
@@ -3094,7 +3121,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The memory size that you want to allocate to the container. Unit: GiB.
+             * The memory size per container. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -3132,7 +3159,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
              * Specifies whether standard input streams remain connected during multiple sessions when StdinOnce is set to true.
              * <p>
              * 
-             * If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container is restarted.
+             * If you set StdinOnce to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected and remain disconnected until the container is restarted.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -3140,7 +3167,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the Interaction feature. Default value: false.
+             * Specifies whether to enable Interaction. Default value: false.
              * <p>
              * 
              * If the command is a /bin/bash command, set this parameter to true.
@@ -3273,7 +3300,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String ip; 
 
             /**
-             * The hostnames that you want to add.
+             * The names of the hosts that you want to add.
              */
             public Builder hostnames(java.util.List < String > hostnames) {
                 this.hostnames = hostnames;
@@ -3346,7 +3373,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String userName; 
 
             /**
-             * The password that is used to access the image repository.
+             * The password of the image repository.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -3354,7 +3381,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The domain name of the image repository.
+             * The address of the image repository.
              */
             public Builder server(String server) {
                 this.server = server;
@@ -3362,7 +3389,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The username that is used to access the image repository.
+             * The username of the image repository.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -3600,7 +3627,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The key of the environment variable. The key must be 1 to 128 characters in length. Specify the name in the `[0-9a-zA-Z]` format. The name can contain underscores and cannot start with a digit.
+             * The name of the environment variable. The name can be 1 to 128 characters in length, and can contain letters, underscores (\_), and digits. The name cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3608,7 +3635,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The value of the environment variable. The value must be 0 to 256 characters in length.
+             * The value of the environment variable. The value can be up to 256 characters in length.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3669,7 +3696,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The type of the protocol. Valid values:
+             * The protocol type. Valid values:
              * <p>
              * 
              * *   TCP
@@ -3762,10 +3789,10 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String subPath; 
 
             /**
-             * The path where the container mounts the volume.
+             * The directory within the init container onto which you want to mount the volume.
              * <p>
              * 
-             * >  Data stored in the path of the container is overwritten by the content of the volume.
+             * >  The information stored within this directory is overwritten by the data on the mounted volume. Exercise caution when you specify this parameter.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -3773,12 +3800,12 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The mount propagation setting of the volume. Mount propagation allows the sharing of volumes that are mounted on one container with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * The mount propagation settings of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:
              * <p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are mounted to this volume or its subdirectories.
-             * *   HostToCotainer: The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories.
-             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives all subsequent mounts that are mounted to this volume or its subdirectories. In addition, all volume mounts that are created by the container are propagated back to the instance and to all containers of all pods that use the same volume.
+             * *   None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.
+             * *   HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.
+             * *   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. In addition, volume mounts executed on the container propagate back to the underlying instance and to all containers across every pod that uses the same volume.
              * 
              * Default value: None.
              */
@@ -3807,7 +3834,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The subdirectory of the volume. The elastic container instance can mount different directories of the same volume to different subdirectories of containers.
+             * The volume subdirectory. The pod can mount different directories of the same volume to different subdirectories of init containers.
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -4001,7 +4028,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The startup parameter of the container.
+             * The container startup arguments.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -4009,7 +4036,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The commands that you want to run to start the container.
+             * The commands that you can run to start the init container.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -4017,7 +4044,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The number of vCPUs that you want to allocate to the container.
+             * The number of vCPUs per init container.
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -4025,7 +4052,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The number of GPUs that you want to allocate to the container.
+             * The number of GPUs per init container.
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -4033,7 +4060,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The container image.
+             * The image of the init container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -4044,9 +4071,9 @@ public class ModifyEciScalingConfigurationRequest extends Request {
              * The image pulling policy. Valid values:
              * <p>
              * 
-             * *   Always: pulls images each time.
-             * *   IfNotPresent: pulls images only if no on-premises images are available. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
-             * *   Never: never pulls images. On-premises images are always used. Image pulling is not performed.
+             * *   Always: Image pulling is performed each time instances are created.
+             * *   IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
+             * *   Never: On-premises images are always used. Image pulling is not performed.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -4070,7 +4097,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * Information about the volume mounts of the init container.
+             * The volume mounts of the init container.
              */
             public Builder initContainerVolumeMounts(java.util.List < InitContainerVolumeMounts> initContainerVolumeMounts) {
                 this.initContainerVolumeMounts = initContainerVolumeMounts;
@@ -4078,7 +4105,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The size of the memory. Unit: GiB.
+             * The memory size per init container. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -4086,7 +4113,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The name of the container.
+             * The name of the init container.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4147,7 +4174,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * The name of the security context in which the elastic container instance runs.
+             * The variable name of the security context in which the elastic container instance runs.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4208,7 +4235,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -4216,7 +4243,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4584,7 +4611,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The domain name of the image repository.
+             * The address of the image repository.
              */
             public Builder server(String server) {
                 this.server = server;
@@ -4847,7 +4874,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * The paths to configuration files.
+             * The paths to the configuration files.
              */
             public Builder configFileVolumeConfigFileToPath(java.util.List < ConfigFileVolumeConfigFileToPath> configFileVolumeConfigFileToPath) {
                 this.configFileVolumeConfigFileToPath = configFileVolumeConfigFileToPath;

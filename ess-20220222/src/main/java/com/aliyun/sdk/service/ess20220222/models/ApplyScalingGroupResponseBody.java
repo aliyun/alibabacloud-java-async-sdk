@@ -49,7 +49,7 @@ public class ApplyScalingGroupResponseBody extends TeaModel {
         private String scalingGroupId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class ApplyScalingGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ScalingGroupId.
+         * The ID of the enabled scaling group.
          */
         public Builder scalingGroupId(String scalingGroupId) {
             this.scalingGroupId = scalingGroupId;

@@ -208,7 +208,7 @@ public class DescribeLimitationResponseBody extends TeaModel {
          * The maximum number of Application Load Balancer (ALB) server groups that can be attached to a scaling group.
          * <p>
          * 
-         * >  To view the server group quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfAlbServerGroup(Integer maxNumberOfAlbServerGroup) {
             this.maxNumberOfAlbServerGroup = maxNumberOfAlbServerGroup;
@@ -216,10 +216,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of ApsaraDB RDS instances that can be attached to a scaling group.
+         * The maximum number of ApsaraDB RDS instances that can be associated with a scaling group.
          * <p>
          * 
-         * >  To view the database quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfDBInstances(Integer maxNumberOfDBInstances) {
             this.maxNumberOfDBInstances = maxNumberOfDBInstances;
@@ -227,7 +227,7 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfLifecycleHooks.
+         * The maximum number of lifecycle hooks that can be created in a scaling group.
          */
         public Builder maxNumberOfLifecycleHooks(Integer maxNumberOfLifecycleHooks) {
             this.maxNumberOfLifecycleHooks = maxNumberOfLifecycleHooks;
@@ -235,7 +235,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfLoadBalancers.
+         * The maximum number of Classic Load Balancer (CLB, formerly known as SLB) instances that can be associated with a scaling group.
+         * <p>
+         * 
+         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfLoadBalancers(Integer maxNumberOfLoadBalancers) {
             this.maxNumberOfLoadBalancers = maxNumberOfLoadBalancers;
@@ -243,7 +246,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfMaxSize.
+         * The maximum number of instances that can be contained in a scaling group.
+         * <p>
+         * 
+         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfMaxSize(Integer maxNumberOfMaxSize) {
             this.maxNumberOfMaxSize = maxNumberOfMaxSize;
@@ -259,7 +265,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfNlbServerGroup.
+         * The maximum number of Network Load Balancer (NLB) server groups that can be attached to a scaling group.
+         * <p>
+         * 
+         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfNlbServerGroup(Integer maxNumberOfNlbServerGroup) {
             this.maxNumberOfNlbServerGroup = maxNumberOfNlbServerGroup;
@@ -267,7 +276,7 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfNotificationConfigurations.
+         * The maximum number of notification rules that can be created in a scaling group.
          */
         public Builder maxNumberOfNotificationConfigurations(Integer maxNumberOfNotificationConfigurations) {
             this.maxNumberOfNotificationConfigurations = maxNumberOfNotificationConfigurations;
@@ -278,7 +287,7 @@ public class DescribeLimitationResponseBody extends TeaModel {
          * The maximum number of scaling configurations that can be created in a scaling group.
          * <p>
          * 
-         * >  To view the scaling configuration quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfScalingConfigurations(Integer maxNumberOfScalingConfigurations) {
             this.maxNumberOfScalingConfigurations = maxNumberOfScalingConfigurations;
@@ -289,7 +298,7 @@ public class DescribeLimitationResponseBody extends TeaModel {
          * The maximum number of scaling groups that can be created in a region by using an Alibaba Cloud account.
          * <p>
          * 
-         * >  To view the scaling group quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfScalingGroups(Integer maxNumberOfScalingGroups) {
             this.maxNumberOfScalingGroups = maxNumberOfScalingGroups;
@@ -297,7 +306,7 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfScalingInstances.
+         * The maximum number of Elastic Compute Service (ECS) instances or elastic container instances that can be automatically scaled in a scaling group at the same time.
          */
         public Builder maxNumberOfScalingInstances(Integer maxNumberOfScalingInstances) {
             this.maxNumberOfScalingInstances = maxNumberOfScalingInstances;
@@ -308,7 +317,7 @@ public class DescribeLimitationResponseBody extends TeaModel {
          * The maximum number of scaling rules that can be created in a scaling group.
          * <p>
          * 
-         * >  To view the scaling rule quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
+         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfScalingRules(Integer maxNumberOfScalingRules) {
             this.maxNumberOfScalingRules = maxNumberOfScalingRules;
@@ -316,7 +325,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfScheduledTasks.
+         * The maximum number of scheduled tasks that can be created in a region by using an Alibaba Cloud account.
+         * <p>
+         * 
+         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfScheduledTasks(Integer maxNumberOfScheduledTasks) {
             this.maxNumberOfScheduledTasks = maxNumberOfScheduledTasks;
@@ -324,7 +336,10 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * MaxNumberOfVServerGroups.
+         * The maximum number of CLB vServer groups that can be attached to a scaling group.
+         * <p>
+         * 
+         * >  To view the quota or request a quota increase, go to [Quota Center](https://quotas.console.aliyun.com/products/ess/quotas).
          */
         public Builder maxNumberOfVServerGroups(Integer maxNumberOfVServerGroups) {
             this.maxNumberOfVServerGroups = maxNumberOfVServerGroups;
@@ -332,7 +347,7 @@ public class DescribeLimitationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

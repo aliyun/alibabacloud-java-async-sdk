@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyEciScalingConfigurationResponseBody} extends {@link TeaModel}
+ * {@link RollbackInstanceRefreshResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyEciScalingConfigurationResponseBody</p>
+ * <p>RollbackInstanceRefreshResponseBody</p>
  */
-public class ModifyEciScalingConfigurationResponseBody extends TeaModel {
+public class RollbackInstanceRefreshResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ModifyEciScalingConfigurationResponseBody(Builder builder) {
+    private RollbackInstanceRefreshResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class ModifyEciScalingConfigurationResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyEciScalingConfigurationResponseBody create() {
+    public static RollbackInstanceRefreshResponseBody create() {
         return builder().build();
     }
 
@@ -37,15 +37,15 @@ public class ModifyEciScalingConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyEciScalingConfigurationResponseBody build() {
-            return new ModifyEciScalingConfigurationResponseBody(this);
+        public RollbackInstanceRefreshResponseBody build() {
+            return new RollbackInstanceRefreshResponseBody(this);
         } 
 
     } 

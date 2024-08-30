@@ -235,6 +235,9 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceRefreshTaskId")
+        private String instanceRefreshTaskId;
+
         @com.aliyun.core.annotation.NameInMap("LifecycleHookContext")
         private LifecycleHookContext lifecycleHookContext;
 
@@ -294,6 +297,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.errorCode = builder.errorCode;
             this.errorMessage = builder.errorMessage;
+            this.instanceRefreshTaskId = builder.instanceRefreshTaskId;
             this.lifecycleHookContext = builder.lifecycleHookContext;
             this.progress = builder.progress;
             this.scalingActivityId = builder.scalingActivityId;
@@ -408,6 +412,13 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
          */
         public String getErrorMessage() {
             return this.errorMessage;
+        }
+
+        /**
+         * @return instanceRefreshTaskId
+         */
+        public String getInstanceRefreshTaskId() {
+            return this.instanceRefreshTaskId;
         }
 
         /**
@@ -529,6 +540,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private String endTime; 
             private String errorCode; 
             private String errorMessage; 
+            private String instanceRefreshTaskId; 
             private LifecycleHookContext lifecycleHookContext; 
             private Integer progress; 
             private String scalingActivityId; 
@@ -646,6 +658,14 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * InstanceRefreshTaskId.
+             */
+            public Builder instanceRefreshTaskId(String instanceRefreshTaskId) {
+                this.instanceRefreshTaskId = instanceRefreshTaskId;
                 return this;
             }
 

@@ -859,7 +859,13 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * CpuArchitectures.
+             * The CPU architectures of the instance types. Valid values:
+             * <p>
+             * 
+             * >  You can specify 1 to 2 CPU architectures.
+             * 
+             * *   x86
+             * *   Arm
              */
             public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
                 this.cpuArchitectures = cpuArchitectures;
@@ -879,7 +885,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * GpuSpecs.
+             * The GPU models.
              */
             public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
                 this.gpuSpecs = gpuSpecs;
@@ -887,7 +893,27 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCategories.
+             * The categories of the instance.families. Valid values:
+             * <p>
+             * 
+             * >  You can specify 1 to 10 categories.
+             * 
+             * *   General-purpose
+             * *   Compute-optimized
+             * *   Memory-optimized
+             * *   Big data
+             * *   Local SSDs
+             * *   High Clock Speed
+             * *   Enhanced
+             * *   Shared
+             * *   Compute-optimized with GPU
+             * *   Visual Compute-optimized
+             * *   Heterogeneous Service
+             * *   Compute-optimized with FPGA
+             * *   Compute-optimized with NPU
+             * *   ECS Bare Metal
+             * *   Super Computing Cluster
+             * *   High Performance Compute
              */
             public Builder instanceCategories(java.util.List < String > instanceCategories) {
                 this.instanceCategories = instanceCategories;
@@ -908,7 +934,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamilies.
+             * The instance families that are queried. You can query 1 to 10 instance families in each call.
              */
             public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
                 this.instanceTypeFamilies = instanceTypeFamilies;
@@ -924,7 +950,10 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MaximumCpuCoreCount.
+             * The maximum number of vCPUs per instance type.
+             * <p>
+             * 
+             * >  The value of MaximumCpuCoreCount cannot exceed four times the value of MinimumCpuCoreCount.
              */
             public Builder maximumCpuCoreCount(Integer maximumCpuCoreCount) {
                 this.maximumCpuCoreCount = maximumCpuCoreCount;
@@ -932,7 +961,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MaximumGpuAmount.
+             * The maximum number of GPUs per instance. The value must be a positive integer.
              */
             public Builder maximumGpuAmount(Integer maximumGpuAmount) {
                 this.maximumGpuAmount = maximumGpuAmount;
@@ -940,7 +969,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MaximumMemorySize.
+             * The maximum memory size per instance. Unit: GiB.
              */
             public Builder maximumMemorySize(Float maximumMemorySize) {
                 this.maximumMemorySize = maximumMemorySize;
@@ -956,7 +985,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumBaselineCredit.
+             * The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.
              */
             public Builder minimumBaselineCredit(Integer minimumBaselineCredit) {
                 this.minimumBaselineCredit = minimumBaselineCredit;
@@ -964,7 +993,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumCpuCoreCount.
+             * The minimum number of vCPUs per instance type.
              */
             public Builder minimumCpuCoreCount(Integer minimumCpuCoreCount) {
                 this.minimumCpuCoreCount = minimumCpuCoreCount;
@@ -972,7 +1001,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumEniIpv6AddressQuantity.
+             * The minimum number of IPv6 addresses per ENI.
              */
             public Builder minimumEniIpv6AddressQuantity(Integer minimumEniIpv6AddressQuantity) {
                 this.minimumEniIpv6AddressQuantity = minimumEniIpv6AddressQuantity;
@@ -980,7 +1009,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumEniPrivateIpAddressQuantity.
+             * The minimum number of IPv4 addresses per ENI.
              */
             public Builder minimumEniPrivateIpAddressQuantity(Integer minimumEniPrivateIpAddressQuantity) {
                 this.minimumEniPrivateIpAddressQuantity = minimumEniPrivateIpAddressQuantity;
@@ -988,7 +1017,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumEniQuantity.
+             * The minimum number of elastic network interfaces (ENIs) per instance.
              */
             public Builder minimumEniQuantity(Integer minimumEniQuantity) {
                 this.minimumEniQuantity = minimumEniQuantity;
@@ -996,7 +1025,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumGpuAmount.
+             * The minimum number of GPUs per instance. The value must be a positive integer.
              */
             public Builder minimumGpuAmount(Integer minimumGpuAmount) {
                 this.minimumGpuAmount = minimumGpuAmount;
@@ -1004,7 +1033,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumInitialCredit.
+             * The initial vCPU credits per t5 or t6 burstable instance.
              */
             public Builder minimumInitialCredit(Integer minimumInitialCredit) {
                 this.minimumInitialCredit = minimumInitialCredit;
@@ -1012,7 +1041,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumMemorySize.
+             * The minimum memory size per instance. Unit: GiB.
              */
             public Builder minimumMemorySize(Float minimumMemorySize) {
                 this.minimumMemorySize = minimumMemorySize;
@@ -1020,7 +1049,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicalProcessorModels.
+             * The processor models of the instance types. You can specify 1 to 10 processor models.
              */
             public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
                 this.physicalProcessorModels = physicalProcessorModels;
@@ -2356,7 +2385,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * The intelligent configuration settings, which determine the available instance types.
+             * The information about the intelligent configuration settings, which determine the available instance types.
              */
             public Builder instancePatternInfos(java.util.List < InstancePatternInfos> instancePatternInfos) {
                 this.instancePatternInfos = instancePatternInfos;
@@ -2489,7 +2518,7 @@ public class DescribeScalingConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordSetted.
+             * Indicates whether a password is configured for the instance.
              */
             public Builder passwordSetted(Boolean passwordSetted) {
                 this.passwordSetted = passwordSetted;

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeScalingActivitiesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceRefreshTaskId")
+    private String instanceRefreshTaskId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -55,6 +59,7 @@ public class DescribeScalingActivitiesRequest extends Request {
 
     private DescribeScalingActivitiesRequest(Builder builder) {
         super(builder);
+        this.instanceRefreshTaskId = builder.instanceRefreshTaskId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -78,6 +83,13 @@ public class DescribeScalingActivitiesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return instanceRefreshTaskId
+     */
+    public String getInstanceRefreshTaskId() {
+        return this.instanceRefreshTaskId;
     }
 
     /**
@@ -151,6 +163,7 @@ public class DescribeScalingActivitiesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeScalingActivitiesRequest, Builder> {
+        private String instanceRefreshTaskId; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -168,6 +181,7 @@ public class DescribeScalingActivitiesRequest extends Request {
 
         private Builder(DescribeScalingActivitiesRequest request) {
             super(request);
+            this.instanceRefreshTaskId = request.instanceRefreshTaskId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -179,6 +193,15 @@ public class DescribeScalingActivitiesRequest extends Request {
             this.scalingGroupId = request.scalingGroupId;
             this.statusCode = request.statusCode;
         } 
+
+        /**
+         * InstanceRefreshTaskId.
+         */
+        public Builder instanceRefreshTaskId(String instanceRefreshTaskId) {
+            this.putQueryParameter("InstanceRefreshTaskId", instanceRefreshTaskId);
+            this.instanceRefreshTaskId = instanceRefreshTaskId;
+            return this;
+        }
 
         /**
          * OwnerAccount.

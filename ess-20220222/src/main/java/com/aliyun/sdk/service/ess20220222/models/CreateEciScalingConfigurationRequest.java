@@ -773,7 +773,10 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The name of the elastic container instance.
+         * The name series of elastic container instances.
+         * <p>
+         * 
+         * If you want to use an ordered container group name, specify the value for this parameter in the following format: name_prefix\[begin_number,bits]name_suffix.
          */
         public Builder containerGroupName(String containerGroupName) {
             this.putQueryParameter("ContainerGroupName", containerGroupName);
