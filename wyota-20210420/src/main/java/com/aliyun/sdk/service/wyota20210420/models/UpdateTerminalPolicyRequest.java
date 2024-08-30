@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateTerminalPolicyRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BackgroundModeTitle")
+    private String backgroundModeTitle;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisplayLayout")
     private String displayLayout;
 
@@ -32,12 +36,20 @@ public class UpdateTerminalPolicyRequest extends Request {
     private Integer enableAutoLogin;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableBackgroundMode")
+    private Integer enableBackgroundMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EnableBluetooth")
     private Integer enableBluetooth;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EnableModifyPassword")
     private Integer enableModifyPassword;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableScheduledReboot")
+    private Integer enableScheduledReboot;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EnableScheduledShutdown")
@@ -80,6 +92,10 @@ public class UpdateTerminalPolicyRequest extends Request {
     private Integer powerOnBehavior;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ScheduledReboot")
+    private String scheduledReboot;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ScheduledShutdown")
     private String scheduledShutdown;
 
@@ -93,13 +109,16 @@ public class UpdateTerminalPolicyRequest extends Request {
 
     private UpdateTerminalPolicyRequest(Builder builder) {
         super(builder);
+        this.backgroundModeTitle = builder.backgroundModeTitle;
         this.displayLayout = builder.displayLayout;
         this.displayResolution = builder.displayResolution;
         this.displayScaleRatio = builder.displayScaleRatio;
         this.enableAutoLockScreen = builder.enableAutoLockScreen;
         this.enableAutoLogin = builder.enableAutoLogin;
+        this.enableBackgroundMode = builder.enableBackgroundMode;
         this.enableBluetooth = builder.enableBluetooth;
         this.enableModifyPassword = builder.enableModifyPassword;
+        this.enableScheduledReboot = builder.enableScheduledReboot;
         this.enableScheduledShutdown = builder.enableScheduledShutdown;
         this.enableSwitchPersonal = builder.enableSwitchPersonal;
         this.enableWlan = builder.enableWlan;
@@ -110,6 +129,7 @@ public class UpdateTerminalPolicyRequest extends Request {
         this.powerButtonDefineForAs = builder.powerButtonDefineForAs;
         this.powerButtonDefineForNs = builder.powerButtonDefineForNs;
         this.powerOnBehavior = builder.powerOnBehavior;
+        this.scheduledReboot = builder.scheduledReboot;
         this.scheduledShutdown = builder.scheduledShutdown;
         this.settingLock = builder.settingLock;
         this.terminalPolicyId = builder.terminalPolicyId;
@@ -126,6 +146,13 @@ public class UpdateTerminalPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return backgroundModeTitle
+     */
+    public String getBackgroundModeTitle() {
+        return this.backgroundModeTitle;
     }
 
     /**
@@ -164,6 +191,13 @@ public class UpdateTerminalPolicyRequest extends Request {
     }
 
     /**
+     * @return enableBackgroundMode
+     */
+    public Integer getEnableBackgroundMode() {
+        return this.enableBackgroundMode;
+    }
+
+    /**
      * @return enableBluetooth
      */
     public Integer getEnableBluetooth() {
@@ -175,6 +209,13 @@ public class UpdateTerminalPolicyRequest extends Request {
      */
     public Integer getEnableModifyPassword() {
         return this.enableModifyPassword;
+    }
+
+    /**
+     * @return enableScheduledReboot
+     */
+    public Integer getEnableScheduledReboot() {
+        return this.enableScheduledReboot;
     }
 
     /**
@@ -248,6 +289,13 @@ public class UpdateTerminalPolicyRequest extends Request {
     }
 
     /**
+     * @return scheduledReboot
+     */
+    public String getScheduledReboot() {
+        return this.scheduledReboot;
+    }
+
+    /**
      * @return scheduledShutdown
      */
     public String getScheduledShutdown() {
@@ -269,13 +317,16 @@ public class UpdateTerminalPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateTerminalPolicyRequest, Builder> {
+        private String backgroundModeTitle; 
         private String displayLayout; 
         private String displayResolution; 
         private String displayScaleRatio; 
         private Integer enableAutoLockScreen; 
         private Integer enableAutoLogin; 
+        private Integer enableBackgroundMode; 
         private Integer enableBluetooth; 
         private Integer enableModifyPassword; 
+        private Integer enableScheduledReboot; 
         private Integer enableScheduledShutdown; 
         private Integer enableSwitchPersonal; 
         private Integer enableWlan; 
@@ -286,6 +337,7 @@ public class UpdateTerminalPolicyRequest extends Request {
         private Integer powerButtonDefineForAs; 
         private Integer powerButtonDefineForNs; 
         private Integer powerOnBehavior; 
+        private String scheduledReboot; 
         private String scheduledShutdown; 
         private Integer settingLock; 
         private String terminalPolicyId; 
@@ -296,13 +348,16 @@ public class UpdateTerminalPolicyRequest extends Request {
 
         private Builder(UpdateTerminalPolicyRequest request) {
             super(request);
+            this.backgroundModeTitle = request.backgroundModeTitle;
             this.displayLayout = request.displayLayout;
             this.displayResolution = request.displayResolution;
             this.displayScaleRatio = request.displayScaleRatio;
             this.enableAutoLockScreen = request.enableAutoLockScreen;
             this.enableAutoLogin = request.enableAutoLogin;
+            this.enableBackgroundMode = request.enableBackgroundMode;
             this.enableBluetooth = request.enableBluetooth;
             this.enableModifyPassword = request.enableModifyPassword;
+            this.enableScheduledReboot = request.enableScheduledReboot;
             this.enableScheduledShutdown = request.enableScheduledShutdown;
             this.enableSwitchPersonal = request.enableSwitchPersonal;
             this.enableWlan = request.enableWlan;
@@ -313,10 +368,20 @@ public class UpdateTerminalPolicyRequest extends Request {
             this.powerButtonDefineForAs = request.powerButtonDefineForAs;
             this.powerButtonDefineForNs = request.powerButtonDefineForNs;
             this.powerOnBehavior = request.powerOnBehavior;
+            this.scheduledReboot = request.scheduledReboot;
             this.scheduledShutdown = request.scheduledShutdown;
             this.settingLock = request.settingLock;
             this.terminalPolicyId = request.terminalPolicyId;
         } 
+
+        /**
+         * BackgroundModeTitle.
+         */
+        public Builder backgroundModeTitle(String backgroundModeTitle) {
+            this.putBodyParameter("BackgroundModeTitle", backgroundModeTitle);
+            this.backgroundModeTitle = backgroundModeTitle;
+            return this;
+        }
 
         /**
          * DisplayLayout.
@@ -364,6 +429,15 @@ public class UpdateTerminalPolicyRequest extends Request {
         }
 
         /**
+         * EnableBackgroundMode.
+         */
+        public Builder enableBackgroundMode(Integer enableBackgroundMode) {
+            this.putBodyParameter("EnableBackgroundMode", enableBackgroundMode);
+            this.enableBackgroundMode = enableBackgroundMode;
+            return this;
+        }
+
+        /**
          * EnableBluetooth.
          */
         public Builder enableBluetooth(Integer enableBluetooth) {
@@ -378,6 +452,15 @@ public class UpdateTerminalPolicyRequest extends Request {
         public Builder enableModifyPassword(Integer enableModifyPassword) {
             this.putBodyParameter("EnableModifyPassword", enableModifyPassword);
             this.enableModifyPassword = enableModifyPassword;
+            return this;
+        }
+
+        /**
+         * EnableScheduledReboot.
+         */
+        public Builder enableScheduledReboot(Integer enableScheduledReboot) {
+            this.putBodyParameter("EnableScheduledReboot", enableScheduledReboot);
+            this.enableScheduledReboot = enableScheduledReboot;
             return this;
         }
 
@@ -468,6 +551,15 @@ public class UpdateTerminalPolicyRequest extends Request {
         public Builder powerOnBehavior(Integer powerOnBehavior) {
             this.putBodyParameter("PowerOnBehavior", powerOnBehavior);
             this.powerOnBehavior = powerOnBehavior;
+            return this;
+        }
+
+        /**
+         * ScheduledReboot.
+         */
+        public Builder scheduledReboot(String scheduledReboot) {
+            this.putBodyParameter("ScheduledReboot", scheduledReboot);
+            this.scheduledReboot = scheduledReboot;
             return this;
         }
 

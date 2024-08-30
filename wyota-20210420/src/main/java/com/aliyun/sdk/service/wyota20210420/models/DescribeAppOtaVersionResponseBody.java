@@ -132,6 +132,9 @@ public class DescribeAppOtaVersionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
+        @com.aliyun.core.annotation.NameInMap("OtaType")
+        private Integer otaType;
+
         @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
@@ -170,6 +173,7 @@ public class DescribeAppOtaVersionResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.md5 = builder.md5;
             this.osType = builder.osType;
+            this.otaType = builder.otaType;
             this.project = builder.project;
             this.protocolType = builder.protocolType;
             this.releaseNote = builder.releaseNote;
@@ -237,6 +241,13 @@ public class DescribeAppOtaVersionResponseBody extends TeaModel {
          */
         public String getOsType() {
             return this.osType;
+        }
+
+        /**
+         * @return otaType
+         */
+        public Integer getOtaType() {
+            return this.otaType;
         }
 
         /**
@@ -317,6 +328,7 @@ public class DescribeAppOtaVersionResponseBody extends TeaModel {
             private String gmtCreate; 
             private String md5; 
             private String osType; 
+            private Integer otaType; 
             private String project; 
             private String protocolType; 
             private String releaseNote; 
@@ -381,6 +393,14 @@ public class DescribeAppOtaVersionResponseBody extends TeaModel {
              */
             public Builder osType(String osType) {
                 this.osType = osType;
+                return this;
+            }
+
+            /**
+             * OtaType.
+             */
+            public Builder otaType(Integer otaType) {
+                this.otaType = otaType;
                 return this;
             }
 
