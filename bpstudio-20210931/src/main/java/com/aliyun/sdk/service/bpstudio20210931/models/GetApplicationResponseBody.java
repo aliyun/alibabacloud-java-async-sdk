@@ -582,6 +582,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Lifecycle")
         private String lifecycle;
 
+        @com.aliyun.core.annotation.NameInMap("NodeLabel")
+        private String nodeLabel;
+
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
@@ -603,6 +606,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private ResourceList(Builder builder) {
             this.chargeType = builder.chargeType;
             this.lifecycle = builder.lifecycle;
+            this.nodeLabel = builder.nodeLabel;
             this.remark = builder.remark;
             this.resourceCode = builder.resourceCode;
             this.resourceId = builder.resourceId;
@@ -631,6 +635,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public String getLifecycle() {
             return this.lifecycle;
+        }
+
+        /**
+         * @return nodeLabel
+         */
+        public String getNodeLabel() {
+            return this.nodeLabel;
         }
 
         /**
@@ -678,6 +689,7 @@ public class GetApplicationResponseBody extends TeaModel {
         public static final class Builder {
             private String chargeType; 
             private String lifecycle; 
+            private String nodeLabel; 
             private String remark; 
             private String resourceCode; 
             private String resourceId; 
@@ -698,6 +710,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder lifecycle(String lifecycle) {
                 this.lifecycle = lifecycle;
+                return this;
+            }
+
+            /**
+             * NodeLabel.
+             */
+            public Builder nodeLabel(String nodeLabel) {
+                this.nodeLabel = nodeLabel;
                 return this;
             }
 
@@ -766,6 +786,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("DeployPercent")
+        private Double deployPercent;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -797,6 +820,7 @@ public class GetApplicationResponseBody extends TeaModel {
             this.applicationId = builder.applicationId;
             this.checklist = builder.checklist;
             this.createTime = builder.createTime;
+            this.deployPercent = builder.deployPercent;
             this.description = builder.description;
             this.error = builder.error;
             this.imageURL = builder.imageURL;
@@ -835,6 +859,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return deployPercent
+         */
+        public Double getDeployPercent() {
+            return this.deployPercent;
         }
 
         /**
@@ -904,6 +935,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String applicationId; 
             private java.util.List < Checklist> checklist; 
             private String createTime; 
+            private Double deployPercent; 
             private String description; 
             private String error; 
             private String imageURL; 
@@ -935,6 +967,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DeployPercent.
+             */
+            public Builder deployPercent(Double deployPercent) {
+                this.deployPercent = deployPercent;
                 return this;
             }
 
