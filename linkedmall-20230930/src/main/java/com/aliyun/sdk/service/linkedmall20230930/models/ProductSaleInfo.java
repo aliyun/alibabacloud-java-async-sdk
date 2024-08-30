@@ -20,6 +20,9 @@ public class ProductSaleInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("fuzzyQuantity")
     private String fuzzyQuantity;
 
+    @com.aliyun.core.annotation.NameInMap("limitRules")
+    private java.util.List < LimitRule > limitRules;
+
     @com.aliyun.core.annotation.NameInMap("lmItemId")
     private String lmItemId;
 
@@ -48,6 +51,7 @@ public class ProductSaleInfo extends TeaModel {
         this.canSell = builder.canSell;
         this.divisionCode = builder.divisionCode;
         this.fuzzyQuantity = builder.fuzzyQuantity;
+        this.limitRules = builder.limitRules;
         this.lmItemId = builder.lmItemId;
         this.productId = builder.productId;
         this.productStatus = builder.productStatus;
@@ -85,6 +89,13 @@ public class ProductSaleInfo extends TeaModel {
      */
     public String getFuzzyQuantity() {
         return this.fuzzyQuantity;
+    }
+
+    /**
+     * @return limitRules
+     */
+    public java.util.List < LimitRule > getLimitRules() {
+        return this.limitRules;
     }
 
     /**
@@ -147,6 +158,7 @@ public class ProductSaleInfo extends TeaModel {
         private Boolean canSell; 
         private String divisionCode; 
         private String fuzzyQuantity; 
+        private java.util.List < LimitRule > limitRules; 
         private String lmItemId; 
         private String productId; 
         private String productStatus; 
@@ -177,6 +189,14 @@ public class ProductSaleInfo extends TeaModel {
          */
         public Builder fuzzyQuantity(String fuzzyQuantity) {
             this.fuzzyQuantity = fuzzyQuantity;
+            return this;
+        }
+
+        /**
+         * limitRules.
+         */
+        public Builder limitRules(java.util.List < LimitRule > limitRules) {
+            this.limitRules = limitRules;
             return this;
         }
 

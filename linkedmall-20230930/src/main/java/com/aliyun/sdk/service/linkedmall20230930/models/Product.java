@@ -38,6 +38,9 @@ public class Product extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("images")
     private java.util.List < String > images;
 
+    @com.aliyun.core.annotation.NameInMap("limitRules")
+    private java.util.List < LimitRule > limitRules;
+
     @com.aliyun.core.annotation.NameInMap("lmItemId")
     private String lmItemId;
 
@@ -93,6 +96,7 @@ public class Product extends TeaModel {
         this.extendProperties = builder.extendProperties;
         this.fuzzyQuantity = builder.fuzzyQuantity;
         this.images = builder.images;
+        this.limitRules = builder.limitRules;
         this.lmItemId = builder.lmItemId;
         this.picUrl = builder.picUrl;
         this.productId = builder.productId;
@@ -179,6 +183,13 @@ public class Product extends TeaModel {
      */
     public java.util.List < String > getImages() {
         return this.images;
+    }
+
+    /**
+     * @return limitRules
+     */
+    public java.util.List < LimitRule > getLimitRules() {
+        return this.limitRules;
     }
 
     /**
@@ -296,6 +307,7 @@ public class Product extends TeaModel {
         private java.util.List < ProductExtendProperty > extendProperties; 
         private String fuzzyQuantity; 
         private java.util.List < String > images; 
+        private java.util.List < LimitRule > limitRules; 
         private String lmItemId; 
         private String picUrl; 
         private String productId; 
@@ -381,6 +393,14 @@ public class Product extends TeaModel {
          */
         public Builder images(java.util.List < String > images) {
             this.images = images;
+            return this;
+        }
+
+        /**
+         * limitRules.
+         */
+        public Builder limitRules(java.util.List < LimitRule > limitRules) {
+            this.limitRules = limitRules;
             return this;
         }
 
