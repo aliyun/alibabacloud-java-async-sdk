@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAlgorithmVersionsResponseBody</p>
  */
 public class ListAlgorithmVersionsResponseBody extends TeaModel {
-    @NameInMap("AlgorithmVersions")
+    @com.aliyun.core.annotation.NameInMap("AlgorithmVersions")
     private java.util.List < AlgorithmVersions> algorithmVersions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListAlgorithmVersionsResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class ListAlgorithmVersionsResponseBody extends TeaModel {
     } 
 
     public static class AlgorithmVersions extends TeaModel {
-        @NameInMap("AlgorithmId")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmId")
         private String algorithmId;
 
-        @NameInMap("AlgorithmName")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmName")
         private String algorithmName;
 
-        @NameInMap("AlgorithmProvider")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmProvider")
         private String algorithmProvider;
 
-        @NameInMap("AlgorithmVersion")
+        @com.aliyun.core.annotation.NameInMap("AlgorithmVersion")
         private String algorithmVersion;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private AlgorithmVersions(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateResourceGroupRequest</p>
  */
 public class CreateResourceGroupRequest extends Request {
-    @Body
-    @NameInMap("ComputingResourceProvider")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ComputingResourceProvider")
     private String computingResourceProvider;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Body
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Body
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
     private CreateResourceGroupRequest(Builder builder) {
@@ -185,10 +184,10 @@ public class CreateResourceGroupRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,63 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueueInfo</p>
  */
 public class QueueInfo extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CodeType")
+    @com.aliyun.core.annotation.NameInMap("CodeType")
     private String codeType;
 
-    @NameInMap("GmtDequeuedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
+    private String gmtCreatedTime;
+
+    @com.aliyun.core.annotation.NameInMap("GmtDequeuedTime")
     private String gmtDequeuedTime;
 
-    @NameInMap("GmtEnqueuedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtEnqueuedTime")
     private String gmtEnqueuedTime;
 
-    @NameInMap("GmtPositionModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtPositionModifiedTime")
     private String gmtPositionModifiedTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Position")
+    @com.aliyun.core.annotation.NameInMap("Position")
     private Long position;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
-    @NameInMap("QueueStrategy")
+    @com.aliyun.core.annotation.NameInMap("QueueStrategy")
     private String queueStrategy;
 
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private ResourceAmount resource;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SubStatus")
+    @com.aliyun.core.annotation.NameInMap("SubStatus")
     private String subStatus;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("WorkloadId")
+    @com.aliyun.core.annotation.NameInMap("UserName")
+    private String userName;
+
+    @com.aliyun.core.annotation.NameInMap("WorkloadId")
     private String workloadId;
 
-    @NameInMap("WorkloadType")
+    @com.aliyun.core.annotation.NameInMap("WorkloadName")
+    private String workloadName;
+
+    @com.aliyun.core.annotation.NameInMap("WorkloadType")
     private String workloadType;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private QueueInfo(Builder builder) {
         this.code = builder.code;
         this.codeType = builder.codeType;
+        this.gmtCreatedTime = builder.gmtCreatedTime;
         this.gmtDequeuedTime = builder.gmtDequeuedTime;
         this.gmtEnqueuedTime = builder.gmtEnqueuedTime;
         this.gmtPositionModifiedTime = builder.gmtPositionModifiedTime;
@@ -82,7 +91,9 @@ public class QueueInfo extends TeaModel {
         this.status = builder.status;
         this.subStatus = builder.subStatus;
         this.userId = builder.userId;
+        this.userName = builder.userName;
         this.workloadId = builder.workloadId;
+        this.workloadName = builder.workloadName;
         this.workloadType = builder.workloadType;
         this.workspaceId = builder.workspaceId;
     }
@@ -107,6 +118,13 @@ public class QueueInfo extends TeaModel {
      */
     public String getCodeType() {
         return this.codeType;
+    }
+
+    /**
+     * @return gmtCreatedTime
+     */
+    public String getGmtCreatedTime() {
+        return this.gmtCreatedTime;
     }
 
     /**
@@ -201,10 +219,24 @@ public class QueueInfo extends TeaModel {
     }
 
     /**
+     * @return userName
+     */
+    public String getUserName() {
+        return this.userName;
+    }
+
+    /**
      * @return workloadId
      */
     public String getWorkloadId() {
         return this.workloadId;
+    }
+
+    /**
+     * @return workloadName
+     */
+    public String getWorkloadName() {
+        return this.workloadName;
     }
 
     /**
@@ -224,6 +256,7 @@ public class QueueInfo extends TeaModel {
     public static final class Builder {
         private String code; 
         private String codeType; 
+        private String gmtCreatedTime; 
         private String gmtDequeuedTime; 
         private String gmtEnqueuedTime; 
         private String gmtPositionModifiedTime; 
@@ -237,7 +270,9 @@ public class QueueInfo extends TeaModel {
         private String status; 
         private String subStatus; 
         private String userId; 
+        private String userName; 
         private String workloadId; 
+        private String workloadName; 
         private String workloadType; 
         private String workspaceId; 
 
@@ -254,6 +289,14 @@ public class QueueInfo extends TeaModel {
          */
         public Builder codeType(String codeType) {
             this.codeType = codeType;
+            return this;
+        }
+
+        /**
+         * GmtCreatedTime.
+         */
+        public Builder gmtCreatedTime(String gmtCreatedTime) {
+            this.gmtCreatedTime = gmtCreatedTime;
             return this;
         }
 
@@ -362,10 +405,26 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
+         * UserName.
+         */
+        public Builder userName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+
+        /**
          * WorkloadId.
          */
         public Builder workloadId(String workloadId) {
             this.workloadId = workloadId;
+            return this;
+        }
+
+        /**
+         * WorkloadName.
+         */
+        public Builder workloadName(String workloadName) {
+            this.workloadName = workloadName;
             return this;
         }
 

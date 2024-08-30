@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotasRequest</p>
  */
 public class ListQuotasRequest extends Request {
-    @Query
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Query
-    @NameInMap("LayoutMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LayoutMode")
     private String layoutMode;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ParentQuotaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentQuotaId")
     private String parentQuotaId;
 
-    @Query
-    @NameInMap("QuotaIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuotaIds")
     private String quotaIds;
 
-    @Query
-    @NameInMap("QuotaName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuotaName")
     private String quotaName;
 
-    @Query
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("Statuses")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Statuses")
     private String statuses;
 
-    @Query
-    @NameInMap("WorkspaceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Verbose")
+    private Boolean verbose;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceIds")
     private String workspaceIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
+    private String workspaceName;
 
     private ListQuotasRequest(Builder builder) {
         super(builder);
@@ -73,7 +80,9 @@ public class ListQuotasRequest extends Request {
         this.resourceType = builder.resourceType;
         this.sortBy = builder.sortBy;
         this.statuses = builder.statuses;
+        this.verbose = builder.verbose;
         this.workspaceIds = builder.workspaceIds;
+        this.workspaceName = builder.workspaceName;
     }
 
     public static Builder builder() {
@@ -167,10 +176,24 @@ public class ListQuotasRequest extends Request {
     }
 
     /**
+     * @return verbose
+     */
+    public Boolean getVerbose() {
+        return this.verbose;
+    }
+
+    /**
      * @return workspaceIds
      */
     public String getWorkspaceIds() {
         return this.workspaceIds;
+    }
+
+    /**
+     * @return workspaceName
+     */
+    public String getWorkspaceName() {
+        return this.workspaceName;
     }
 
     public static final class Builder extends Request.Builder<ListQuotasRequest, Builder> {
@@ -185,7 +208,9 @@ public class ListQuotasRequest extends Request {
         private String resourceType; 
         private String sortBy; 
         private String statuses; 
+        private Boolean verbose; 
         private String workspaceIds; 
+        private String workspaceName; 
 
         private Builder() {
             super();
@@ -204,7 +229,9 @@ public class ListQuotasRequest extends Request {
             this.resourceType = request.resourceType;
             this.sortBy = request.sortBy;
             this.statuses = request.statuses;
+            this.verbose = request.verbose;
             this.workspaceIds = request.workspaceIds;
+            this.workspaceName = request.workspaceName;
         } 
 
         /**
@@ -307,11 +334,29 @@ public class ListQuotasRequest extends Request {
         }
 
         /**
+         * Verbose.
+         */
+        public Builder verbose(Boolean verbose) {
+            this.putQueryParameter("Verbose", verbose);
+            this.verbose = verbose;
+            return this;
+        }
+
+        /**
          * WorkspaceIds.
          */
         public Builder workspaceIds(String workspaceIds) {
             this.putQueryParameter("WorkspaceIds", workspaceIds);
             this.workspaceIds = workspaceIds;
+            return this;
+        }
+
+        /**
+         * WorkspaceName.
+         */
+        public Builder workspaceName(String workspaceName) {
+            this.putQueryParameter("WorkspaceName", workspaceName);
+            this.workspaceName = workspaceName;
             return this;
         }
 

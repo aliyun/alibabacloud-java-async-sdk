@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceGroupRequestRequest</p>
  */
 public class GetResourceGroupRequestRequest extends Request {
-    @Query
-    @NameInMap("PodStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PodStatus")
     private String podStatus;
 
-    @Query
-    @NameInMap("ResourceGroupID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupID;
 
     private GetResourceGroupRequestRequest(Builder builder) {

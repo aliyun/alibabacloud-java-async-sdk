@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTrainingJobMetricsResponseBody</p>
  */
 public class ListTrainingJobMetricsResponseBody extends TeaModel {
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.List < Metrics> metrics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListTrainingJobMetricsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListTrainingJobMetricsResponseBody extends TeaModel {
     } 
 
     public static class Metrics extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Double value;
 
         private Metrics(Builder builder) {

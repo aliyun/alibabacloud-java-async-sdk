@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HyperParameterRange</p>
  */
 public class HyperParameterRange extends TeaModel {
-    @NameInMap("Enum")
+    @com.aliyun.core.annotation.NameInMap("Enum")
     private java.util.List < String > _enum;
 
-    @NameInMap("ExclusiveMaximum")
+    @com.aliyun.core.annotation.NameInMap("ExclusiveMaximum")
     private Boolean exclusiveMaximum;
 
-    @NameInMap("ExclusiveMinimum")
+    @com.aliyun.core.annotation.NameInMap("ExclusiveMinimum")
     private Boolean exclusiveMinimum;
 
-    @NameInMap("MaxLength")
+    @com.aliyun.core.annotation.NameInMap("MaxLength")
     private Long maxLength;
 
-    @NameInMap("Maximum")
+    @com.aliyun.core.annotation.NameInMap("Maximum")
     private String maximum;
 
-    @NameInMap("MinLength")
+    @com.aliyun.core.annotation.NameInMap("MinLength")
     private Long minLength;
 
-    @NameInMap("Minimum")
+    @com.aliyun.core.annotation.NameInMap("Minimum")
     private String minimum;
 
-    @NameInMap("Pattern")
+    @com.aliyun.core.annotation.NameInMap("Pattern")
     private String pattern;
 
     private HyperParameterRange(Builder builder) {

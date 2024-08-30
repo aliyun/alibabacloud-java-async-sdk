@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>WorkspaceSpec</p>
  */
 public class WorkspaceSpec extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CodeType")
+    @com.aliyun.core.annotation.NameInMap("CodeType")
     private String codeType;
 
-    @NameInMap("IsGuaranteedValid")
+    @com.aliyun.core.annotation.NameInMap("IsGuaranteedValid")
     private Boolean isGuaranteedValid;
 
-    @NameInMap("IsOverSoldValid")
+    @com.aliyun.core.annotation.NameInMap("IsOverSoldValid")
     private Boolean isOverSoldValid;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private ResourceAmount spec;
 
-    @NameInMap("SpecName")
+    @com.aliyun.core.annotation.NameInMap("SpecName")
     private String specName;
 
     private WorkspaceSpec(Builder builder) {

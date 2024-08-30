@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConditionExpression</p>
  */
 public class ConditionExpression extends TeaModel {
-    @NameInMap("Key")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Key")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String key;
 
-    @NameInMap("Operator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Operator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operator;
 
-    @NameInMap("Values")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Values")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > values;
 
     private ConditionExpression(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuotaConfig</p>
  */
 public class QuotaConfig extends TeaModel {
-    @NameInMap("ACS")
+    @com.aliyun.core.annotation.NameInMap("ACS")
     private ACS ACS;
 
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("DefaultGPUDriver")
+    @com.aliyun.core.annotation.NameInMap("DefaultGPUDriver")
     private String defaultGPUDriver;
 
-    @NameInMap("ResourceSpecs")
+    @com.aliyun.core.annotation.NameInMap("EnablePreemptSubquotaWorkloads")
+    private Boolean enablePreemptSubquotaWorkloads;
+
+    @com.aliyun.core.annotation.NameInMap("ResourceSpecs")
     private java.util.List < WorkspaceSpecs > resourceSpecs;
 
-    @NameInMap("SupportGPUDrivers")
+    @com.aliyun.core.annotation.NameInMap("SupportGPUDrivers")
     private java.util.List < String > supportGPUDrivers;
 
-    @NameInMap("SupportRDMA")
+    @com.aliyun.core.annotation.NameInMap("SupportRDMA")
     private Boolean supportRDMA;
 
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
     private QuotaConfig(Builder builder) {
         this.ACS = builder.ACS;
         this.clusterId = builder.clusterId;
         this.defaultGPUDriver = builder.defaultGPUDriver;
+        this.enablePreemptSubquotaWorkloads = builder.enablePreemptSubquotaWorkloads;
         this.resourceSpecs = builder.resourceSpecs;
         this.supportGPUDrivers = builder.supportGPUDrivers;
         this.supportRDMA = builder.supportRDMA;
@@ -73,6 +76,13 @@ public class QuotaConfig extends TeaModel {
     }
 
     /**
+     * @return enablePreemptSubquotaWorkloads
+     */
+    public Boolean getEnablePreemptSubquotaWorkloads() {
+        return this.enablePreemptSubquotaWorkloads;
+    }
+
+    /**
      * @return resourceSpecs
      */
     public java.util.List < WorkspaceSpecs > getResourceSpecs() {
@@ -104,6 +114,7 @@ public class QuotaConfig extends TeaModel {
         private ACS ACS; 
         private String clusterId; 
         private String defaultGPUDriver; 
+        private Boolean enablePreemptSubquotaWorkloads; 
         private java.util.List < WorkspaceSpecs > resourceSpecs; 
         private java.util.List < String > supportGPUDrivers; 
         private Boolean supportRDMA; 
@@ -130,6 +141,14 @@ public class QuotaConfig extends TeaModel {
          */
         public Builder defaultGPUDriver(String defaultGPUDriver) {
             this.defaultGPUDriver = defaultGPUDriver;
+            return this;
+        }
+
+        /**
+         * EnablePreemptSubquotaWorkloads.
+         */
+        public Builder enablePreemptSubquotaWorkloads(Boolean enablePreemptSubquotaWorkloads) {
+            this.enablePreemptSubquotaWorkloads = enablePreemptSubquotaWorkloads;
             return this;
         }
 

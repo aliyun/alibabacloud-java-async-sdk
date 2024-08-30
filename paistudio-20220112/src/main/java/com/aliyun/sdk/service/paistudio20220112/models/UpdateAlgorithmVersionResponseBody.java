@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAlgorithmVersionResponseBody</p>
  */
 public class UpdateAlgorithmVersionResponseBody extends TeaModel {
-    @NameInMap("AlgorithmId")
+    @com.aliyun.core.annotation.NameInMap("AlgorithmId")
     private String algorithmId;
 
-    @NameInMap("AlgorithmVersion")
+    @com.aliyun.core.annotation.NameInMap("AlgorithmVersion")
     private String algorithmVersion;
 
     private UpdateAlgorithmVersionResponseBody(Builder builder) {

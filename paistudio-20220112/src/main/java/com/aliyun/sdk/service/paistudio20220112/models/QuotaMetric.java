@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuotaMetric</p>
  */
 public class QuotaMetric extends TeaModel {
-    @NameInMap("GPUType")
+    @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.List < Metric > metrics;
 
     private QuotaMetric(Builder builder) {

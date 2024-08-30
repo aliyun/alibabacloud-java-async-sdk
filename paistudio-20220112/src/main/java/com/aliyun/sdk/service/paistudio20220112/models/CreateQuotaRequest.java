@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQuotaRequest</p>
  */
 public class CreateQuotaRequest extends Request {
-    @Body
-    @NameInMap("AllocateStrategy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AllocateStrategy")
     private String allocateStrategy;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @Body
-    @NameInMap("Min")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Min")
     private ResourceSpec min;
 
-    @Body
-    @NameInMap("ParentQuotaId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParentQuotaId")
     private String parentQuotaId;
 
-    @Body
-    @NameInMap("QueueStrategy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueueStrategy")
     private String queueStrategy;
 
-    @Body
-    @NameInMap("QuotaConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaConfig")
     private QuotaConfig quotaConfig;
 
-    @Body
-    @NameInMap("QuotaName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaName")
     private String quotaName;
 
-    @Body
-    @NameInMap("ResourceGroupIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
     private java.util.List < String > resourceGroupIds;
 
-    @Body
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
     private CreateQuotaRequest(Builder builder) {

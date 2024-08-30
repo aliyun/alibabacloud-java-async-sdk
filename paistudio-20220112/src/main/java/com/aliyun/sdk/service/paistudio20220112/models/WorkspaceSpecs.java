@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>WorkspaceSpecs</p>
  */
 public class WorkspaceSpecs extends TeaModel {
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @NameInMap("Specs")
+    @com.aliyun.core.annotation.NameInMap("Specs")
     private java.util.List < WorkspaceSpec > specs;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private WorkspaceSpecs(Builder builder) {

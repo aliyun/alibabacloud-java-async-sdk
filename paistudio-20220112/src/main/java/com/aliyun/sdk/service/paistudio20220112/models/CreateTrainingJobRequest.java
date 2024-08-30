@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,78 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTrainingJobRequest</p>
  */
 public class CreateTrainingJobRequest extends Request {
-    @Body
-    @NameInMap("AlgorithmName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlgorithmName")
     private String algorithmName;
 
-    @Body
-    @NameInMap("AlgorithmProvider")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlgorithmProvider")
     private String algorithmProvider;
 
-    @Body
-    @NameInMap("AlgorithmSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlgorithmSpec")
     private AlgorithmSpec algorithmSpec;
 
-    @Body
-    @NameInMap("AlgorithmVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlgorithmVersion")
     private String algorithmVersion;
 
-    @Body
-    @NameInMap("CodeDir")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeDir")
     private Location codeDir;
 
-    @Body
-    @NameInMap("ComputeResource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ComputeResource")
     private ComputeResource computeResource;
 
-    @Body
-    @NameInMap("ExperimentConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Environments")
+    private java.util.Map < String, String > environments;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExperimentConfig")
     private ExperimentConfig experimentConfig;
 
-    @Body
-    @NameInMap("HyperParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("HyperParameters")
     private java.util.List < HyperParameters> hyperParameters;
 
-    @Body
-    @NameInMap("InputChannels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputChannels")
     private java.util.List < InputChannels> inputChannels;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Labels> labels;
 
-    @Body
-    @NameInMap("OutputChannels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutputChannels")
     private java.util.List < OutputChannels> outputChannels;
 
-    @Body
-    @NameInMap("RoleArn")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PythonRequirements")
+    private java.util.List < String > pythonRequirements;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
-    @Body
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private Scheduler scheduler;
 
-    @Body
-    @NameInMap("Settings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Settings")
     private Settings settings;
 
-    @Body
-    @NameInMap("TrainingJobDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrainingJobDescription")
     private String trainingJobDescription;
 
-    @Body
-    @NameInMap("TrainingJobName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrainingJobName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trainingJobName;
 
-    @Body
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private CreateTrainingJobRequest(Builder builder) {
@@ -94,11 +101,13 @@ public class CreateTrainingJobRequest extends Request {
         this.algorithmVersion = builder.algorithmVersion;
         this.codeDir = builder.codeDir;
         this.computeResource = builder.computeResource;
+        this.environments = builder.environments;
         this.experimentConfig = builder.experimentConfig;
         this.hyperParameters = builder.hyperParameters;
         this.inputChannels = builder.inputChannels;
         this.labels = builder.labels;
         this.outputChannels = builder.outputChannels;
+        this.pythonRequirements = builder.pythonRequirements;
         this.roleArn = builder.roleArn;
         this.scheduler = builder.scheduler;
         this.settings = builder.settings;
@@ -164,6 +173,13 @@ public class CreateTrainingJobRequest extends Request {
     }
 
     /**
+     * @return environments
+     */
+    public java.util.Map < String, String > getEnvironments() {
+        return this.environments;
+    }
+
+    /**
      * @return experimentConfig
      */
     public ExperimentConfig getExperimentConfig() {
@@ -196,6 +212,13 @@ public class CreateTrainingJobRequest extends Request {
      */
     public java.util.List < OutputChannels> getOutputChannels() {
         return this.outputChannels;
+    }
+
+    /**
+     * @return pythonRequirements
+     */
+    public java.util.List < String > getPythonRequirements() {
+        return this.pythonRequirements;
     }
 
     /**
@@ -254,11 +277,13 @@ public class CreateTrainingJobRequest extends Request {
         private String algorithmVersion; 
         private Location codeDir; 
         private ComputeResource computeResource; 
+        private java.util.Map < String, String > environments; 
         private ExperimentConfig experimentConfig; 
         private java.util.List < HyperParameters> hyperParameters; 
         private java.util.List < InputChannels> inputChannels; 
         private java.util.List < Labels> labels; 
         private java.util.List < OutputChannels> outputChannels; 
+        private java.util.List < String > pythonRequirements; 
         private String roleArn; 
         private Scheduler scheduler; 
         private Settings settings; 
@@ -279,11 +304,13 @@ public class CreateTrainingJobRequest extends Request {
             this.algorithmVersion = request.algorithmVersion;
             this.codeDir = request.codeDir;
             this.computeResource = request.computeResource;
+            this.environments = request.environments;
             this.experimentConfig = request.experimentConfig;
             this.hyperParameters = request.hyperParameters;
             this.inputChannels = request.inputChannels;
             this.labels = request.labels;
             this.outputChannels = request.outputChannels;
+            this.pythonRequirements = request.pythonRequirements;
             this.roleArn = request.roleArn;
             this.scheduler = request.scheduler;
             this.settings = request.settings;
@@ -348,6 +375,15 @@ public class CreateTrainingJobRequest extends Request {
         }
 
         /**
+         * Environments.
+         */
+        public Builder environments(java.util.Map < String, String > environments) {
+            this.putBodyParameter("Environments", environments);
+            this.environments = environments;
+            return this;
+        }
+
+        /**
          * ExperimentConfig.
          */
         public Builder experimentConfig(ExperimentConfig experimentConfig) {
@@ -389,6 +425,15 @@ public class CreateTrainingJobRequest extends Request {
         public Builder outputChannels(java.util.List < OutputChannels> outputChannels) {
             this.putBodyParameter("OutputChannels", outputChannels);
             this.outputChannels = outputChannels;
+            return this;
+        }
+
+        /**
+         * PythonRequirements.
+         */
+        public Builder pythonRequirements(java.util.List < String > pythonRequirements) {
+            this.putBodyParameter("PythonRequirements", pythonRequirements);
+            this.pythonRequirements = pythonRequirements;
             return this;
         }
 
@@ -463,19 +508,19 @@ public class CreateTrainingJobRequest extends Request {
     } 
 
     public static class InstanceSpec extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
 
-        @NameInMap("GPU")
+        @com.aliyun.core.annotation.NameInMap("GPU")
         private String GPU;
 
-        @NameInMap("GPUType")
+        @com.aliyun.core.annotation.NameInMap("GPUType")
         private String GPUType;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
-        @NameInMap("SharedMemory")
+        @com.aliyun.core.annotation.NameInMap("SharedMemory")
         private String sharedMemory;
 
         private InstanceSpec(Builder builder) {
@@ -583,21 +628,88 @@ public class CreateTrainingJobRequest extends Request {
         } 
 
     }
+    public static class SpotSpec extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SpotDiscountLimit")
+        private Float spotDiscountLimit;
+
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+        private String spotStrategy;
+
+        private SpotSpec(Builder builder) {
+            this.spotDiscountLimit = builder.spotDiscountLimit;
+            this.spotStrategy = builder.spotStrategy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SpotSpec create() {
+            return builder().build();
+        }
+
+        /**
+         * @return spotDiscountLimit
+         */
+        public Float getSpotDiscountLimit() {
+            return this.spotDiscountLimit;
+        }
+
+        /**
+         * @return spotStrategy
+         */
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        public static final class Builder {
+            private Float spotDiscountLimit; 
+            private String spotStrategy; 
+
+            /**
+             * SpotDiscountLimit.
+             */
+            public Builder spotDiscountLimit(Float spotDiscountLimit) {
+                this.spotDiscountLimit = spotDiscountLimit;
+                return this;
+            }
+
+            /**
+             * SpotStrategy.
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            public SpotSpec build() {
+                return new SpotSpec(this);
+            } 
+
+        } 
+
+    }
     public static class ComputeResource extends TeaModel {
-        @NameInMap("EcsCount")
+        @com.aliyun.core.annotation.NameInMap("EcsCount")
         private Long ecsCount;
 
-        @NameInMap("EcsSpec")
+        @com.aliyun.core.annotation.NameInMap("EcsSpec")
         private String ecsSpec;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Long instanceCount;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private InstanceSpec instanceSpec;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
+
+        @com.aliyun.core.annotation.NameInMap("SpotSpec")
+        private SpotSpec spotSpec;
+
+        @com.aliyun.core.annotation.NameInMap("UseSpotInstance")
+        private Boolean useSpotInstance;
 
         private ComputeResource(Builder builder) {
             this.ecsCount = builder.ecsCount;
@@ -605,6 +717,8 @@ public class CreateTrainingJobRequest extends Request {
             this.instanceCount = builder.instanceCount;
             this.instanceSpec = builder.instanceSpec;
             this.resourceId = builder.resourceId;
+            this.spotSpec = builder.spotSpec;
+            this.useSpotInstance = builder.useSpotInstance;
         }
 
         public static Builder builder() {
@@ -650,12 +764,28 @@ public class CreateTrainingJobRequest extends Request {
             return this.resourceId;
         }
 
+        /**
+         * @return spotSpec
+         */
+        public SpotSpec getSpotSpec() {
+            return this.spotSpec;
+        }
+
+        /**
+         * @return useSpotInstance
+         */
+        public Boolean getUseSpotInstance() {
+            return this.useSpotInstance;
+        }
+
         public static final class Builder {
             private Long ecsCount; 
             private String ecsSpec; 
             private Long instanceCount; 
             private InstanceSpec instanceSpec; 
             private String resourceId; 
+            private SpotSpec spotSpec; 
+            private Boolean useSpotInstance; 
 
             /**
              * EcsCount.
@@ -697,6 +827,22 @@ public class CreateTrainingJobRequest extends Request {
                 return this;
             }
 
+            /**
+             * SpotSpec.
+             */
+            public Builder spotSpec(SpotSpec spotSpec) {
+                this.spotSpec = spotSpec;
+                return this;
+            }
+
+            /**
+             * UseSpotInstance.
+             */
+            public Builder useSpotInstance(Boolean useSpotInstance) {
+                this.useSpotInstance = useSpotInstance;
+                return this;
+            }
+
             public ComputeResource build() {
                 return new ComputeResource(this);
             } 
@@ -705,7 +851,7 @@ public class CreateTrainingJobRequest extends Request {
 
     }
     public static class ExperimentConfig extends TeaModel {
-        @NameInMap("ExperimentId")
+        @com.aliyun.core.annotation.NameInMap("ExperimentId")
         private String experimentId;
 
         private ExperimentConfig(Builder builder) {
@@ -746,10 +892,10 @@ public class CreateTrainingJobRequest extends Request {
 
     }
     public static class HyperParameters extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private HyperParameters(Builder builder) {
@@ -807,19 +953,23 @@ public class CreateTrainingJobRequest extends Request {
 
     }
     public static class InputChannels extends TeaModel {
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("InputUri")
+        @com.aliyun.core.annotation.NameInMap("InputUri")
         private String inputUri;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private String options;
 
         private InputChannels(Builder builder) {
             this.datasetId = builder.datasetId;
             this.inputUri = builder.inputUri;
             this.name = builder.name;
+            this.options = builder.options;
         }
 
         public static Builder builder() {
@@ -851,10 +1001,18 @@ public class CreateTrainingJobRequest extends Request {
             return this.name;
         }
 
+        /**
+         * @return options
+         */
+        public String getOptions() {
+            return this.options;
+        }
+
         public static final class Builder {
             private String datasetId; 
             private String inputUri; 
             private String name; 
+            private String options; 
 
             /**
              * DatasetId.
@@ -880,6 +1038,14 @@ public class CreateTrainingJobRequest extends Request {
                 return this;
             }
 
+            /**
+             * Options.
+             */
+            public Builder options(String options) {
+                this.options = options;
+                return this;
+            }
+
             public InputChannels build() {
                 return new InputChannels(this);
             } 
@@ -888,10 +1054,10 @@ public class CreateTrainingJobRequest extends Request {
 
     }
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -949,13 +1115,13 @@ public class CreateTrainingJobRequest extends Request {
 
     }
     public static class OutputChannels extends TeaModel {
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OutputUri")
+        @com.aliyun.core.annotation.NameInMap("OutputUri")
         private String outputUri;
 
         private OutputChannels(Builder builder) {
@@ -1030,7 +1196,7 @@ public class CreateTrainingJobRequest extends Request {
 
     }
     public static class Scheduler extends TeaModel {
-        @NameInMap("MaxRunningTimeInSeconds")
+        @com.aliyun.core.annotation.NameInMap("MaxRunningTimeInSeconds")
         private Long maxRunningTimeInSeconds;
 
         private Scheduler(Builder builder) {
@@ -1071,16 +1237,16 @@ public class CreateTrainingJobRequest extends Request {
 
     }
     public static class Settings extends TeaModel {
-        @NameInMap("AIMasterType")
+        @com.aliyun.core.annotation.NameInMap("AIMasterType")
         private String AIMasterType;
 
-        @NameInMap("EnableErrorMonitoringInAIMaster")
+        @com.aliyun.core.annotation.NameInMap("EnableErrorMonitoringInAIMaster")
         private Boolean enableErrorMonitoringInAIMaster;
 
-        @NameInMap("ErrorMonitoringArgs")
+        @com.aliyun.core.annotation.NameInMap("ErrorMonitoringArgs")
         private String errorMonitoringArgs;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         private Settings(Builder builder) {
@@ -1172,19 +1338,19 @@ public class CreateTrainingJobRequest extends Request {
 
     }
     public static class UserVpc extends TeaModel {
-        @NameInMap("DefaultRoute")
+        @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
 
-        @NameInMap("ExtendedCIDRs")
+        @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
         private java.util.List < String > extendedCIDRs;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SwitchId")
+        @com.aliyun.core.annotation.NameInMap("SwitchId")
         private String switchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private UserVpc(Builder builder) {
@@ -1278,7 +1444,7 @@ public class CreateTrainingJobRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * VPC ID。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

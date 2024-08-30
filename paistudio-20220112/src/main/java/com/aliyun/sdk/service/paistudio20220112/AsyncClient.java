@@ -19,9 +19,13 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CheckInstanceWebTerminalResponse> checkInstanceWebTerminal(CheckInstanceWebTerminalRequest request);
+
     CompletableFuture<CreateAlgorithmResponse> createAlgorithm(CreateAlgorithmRequest request);
 
     CompletableFuture<CreateAlgorithmVersionResponse> createAlgorithmVersion(CreateAlgorithmVersionRequest request);
+
+    CompletableFuture<CreateInstanceWebTerminalResponse> createInstanceWebTerminal(CreateInstanceWebTerminalRequest request);
 
     CompletableFuture<CreateQuotaResponse> createQuota(CreateQuotaRequest request);
 
@@ -29,18 +33,38 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTrainingJobResponse> createTrainingJob(CreateTrainingJobRequest request);
 
+    CompletableFuture<DeleteAlgorithmResponse> deleteAlgorithm(DeleteAlgorithmRequest request);
+
+    CompletableFuture<DeleteAlgorithmVersionResponse> deleteAlgorithmVersion(DeleteAlgorithmVersionRequest request);
+
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DeleteMachineGroupResponse> deleteMachineGroup(DeleteMachineGroupRequest request);
 
     CompletableFuture<DeleteQuotaResponse> deleteQuota(DeleteQuotaRequest request);
 
     CompletableFuture<DeleteResourceGroupResponse> deleteResourceGroup(DeleteResourceGroupRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DeleteResourceGroupMachineGroupResponse> deleteResourceGroupMachineGroup(DeleteResourceGroupMachineGroupRequest request);
+
+    CompletableFuture<DeleteTrainingJobResponse> deleteTrainingJob(DeleteTrainingJobRequest request);
+
+    CompletableFuture<DeleteTrainingJobLabelsResponse> deleteTrainingJobLabels(DeleteTrainingJobLabelsRequest request);
 
     CompletableFuture<GetAlgorithmResponse> getAlgorithm(GetAlgorithmRequest request);
 
     CompletableFuture<GetAlgorithmVersionResponse> getAlgorithmVersion(GetAlgorithmVersionRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetMachineGroupResponse> getMachineGroup(GetMachineGroupRequest request);
 
     CompletableFuture<GetNodeMetricsResponse> getNodeMetrics(GetNodeMetricsRequest request);
@@ -55,7 +79,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetResourceGroupTotalResponse> getResourceGroupTotal(GetResourceGroupTotalRequest request);
 
+    CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
+
     CompletableFuture<GetTrainingJobResponse> getTrainingJob(GetTrainingJobRequest request);
+
+    CompletableFuture<GetTrainingJobErrorInfoResponse> getTrainingJobErrorInfo(GetTrainingJobErrorInfoRequest request);
+
+    CompletableFuture<GetTrainingJobLatestMetricsResponse> getTrainingJobLatestMetrics(GetTrainingJobLatestMetricsRequest request);
 
     CompletableFuture<GetUserViewMetricsResponse> getUserViewMetrics(GetUserViewMetricsRequest request);
 
@@ -63,15 +93,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAlgorithmsResponse> listAlgorithms(ListAlgorithmsRequest request);
 
+    CompletableFuture<ListNodesResponse> listNodes(ListNodesRequest request);
+
     CompletableFuture<ListQuotasResponse> listQuotas(ListQuotasRequest request);
 
     CompletableFuture<ListResourceGroupMachineGroupsResponse> listResourceGroupMachineGroups(ListResourceGroupMachineGroupsRequest request);
 
     CompletableFuture<ListResourceGroupsResponse> listResourceGroups(ListResourceGroupsRequest request);
 
+    CompletableFuture<ListTrainingJobEventsResponse> listTrainingJobEvents(ListTrainingJobEventsRequest request);
+
+    CompletableFuture<ListTrainingJobInstanceEventsResponse> listTrainingJobInstanceEvents(ListTrainingJobInstanceEventsRequest request);
+
+    CompletableFuture<ListTrainingJobInstanceMetricsResponse> listTrainingJobInstanceMetrics(ListTrainingJobInstanceMetricsRequest request);
+
     CompletableFuture<ListTrainingJobLogsResponse> listTrainingJobLogs(ListTrainingJobLogsRequest request);
 
     CompletableFuture<ListTrainingJobMetricsResponse> listTrainingJobMetrics(ListTrainingJobMetricsRequest request);
+
+    CompletableFuture<ListTrainingJobOutputModelsResponse> listTrainingJobOutputModels(ListTrainingJobOutputModelsRequest request);
 
     CompletableFuture<ListTrainingJobsResponse> listTrainingJobs(ListTrainingJobsRequest request);
 

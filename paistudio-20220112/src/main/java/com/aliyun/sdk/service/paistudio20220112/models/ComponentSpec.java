@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ComponentSpec</p>
  */
 public class ComponentSpec extends TeaModel {
-    @NameInMap("CodeDir")
+    @com.aliyun.core.annotation.NameInMap("CodeDir")
     private Location codeDir;
 
-    @NameInMap("Command")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Command")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String command;
 
-    @NameInMap("HyperParameters")
+    @com.aliyun.core.annotation.NameInMap("HyperParameters")
     private java.util.List < HyperParameterDefinition > hyperParameters;
 
-    @NameInMap("Image")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Image")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String image;
 
-    @NameInMap("InputChannels")
+    @com.aliyun.core.annotation.NameInMap("InputChannels")
     private java.util.List < Channel > inputChannels;
 
-    @NameInMap("JobType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("JobType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobType;
 
-    @NameInMap("MetricDefinitions")
+    @com.aliyun.core.annotation.NameInMap("MetricDefinitions")
     private java.util.List < MetricDefinition > metricDefinitions;
 
-    @NameInMap("OutputChannels")
+    @com.aliyun.core.annotation.NameInMap("OutputChannels")
     private java.util.List < Channel > outputChannels;
 
-    @NameInMap("ResourceRequirements")
+    @com.aliyun.core.annotation.NameInMap("ResourceRequirements")
     private java.util.List < ConditionExpression > resourceRequirements;
 
     private ComponentSpec(Builder builder) {

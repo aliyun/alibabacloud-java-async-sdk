@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HyperParameterDefinition</p>
  */
 public class HyperParameterDefinition extends TeaModel {
-    @NameInMap("DefaultValue")
+    @com.aliyun.core.annotation.NameInMap("DefaultValue")
     private String defaultValue;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("Range")
+    @com.aliyun.core.annotation.NameInMap("Range")
     private HyperParameterRange range;
 
-    @NameInMap("Required")
+    @com.aliyun.core.annotation.NameInMap("Required")
     private Boolean required;
 
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private HyperParameterDefinition(Builder builder) {

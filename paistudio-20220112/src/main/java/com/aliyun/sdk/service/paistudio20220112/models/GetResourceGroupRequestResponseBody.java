@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceGroupRequestResponseBody</p>
  */
 public class GetResourceGroupRequestResponseBody extends TeaModel {
-    @NameInMap("requestCPU")
+    @com.aliyun.core.annotation.NameInMap("requestCPU")
     private Integer requestCPU;
 
-    @NameInMap("requestGPU")
+    @com.aliyun.core.annotation.NameInMap("requestGPU")
     private Integer requestGPU;
 
-    @NameInMap("requestGPUInfos")
+    @com.aliyun.core.annotation.NameInMap("requestGPUInfos")
     private java.util.List < GPUInfo > requestGPUInfos;
 
-    @NameInMap("requestMemory")
+    @com.aliyun.core.annotation.NameInMap("requestMemory")
     private Integer requestMemory;
 
     private GetResourceGroupRequestResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UserVpc</p>
  */
 public class UserVpc extends TeaModel {
-    @NameInMap("DefaultRoute")
+    @com.aliyun.core.annotation.NameInMap("DefaultRoute")
     private String defaultRoute;
 
-    @NameInMap("ExtendedCIDRs")
+    @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
     private java.util.List < String > extendedCIDRs;
 
-    @NameInMap("RoleArn")
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @NameInMap("SwitchId")
+    @com.aliyun.core.annotation.NameInMap("SwitchId")
     private String switchId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private UserVpc(Builder builder) {

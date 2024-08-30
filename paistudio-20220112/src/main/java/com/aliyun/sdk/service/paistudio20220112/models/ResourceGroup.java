@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResourceGroup</p>
  */
 public class ResourceGroup extends TeaModel {
-    @NameInMap("CreatorID")
+    @com.aliyun.core.annotation.NameInMap("CreatorID")
     private String creatorID;
 
-    @NameInMap("GmtCreatedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("NodeCount")
+    @com.aliyun.core.annotation.NameInMap("NodeCount")
     private Integer nodeCount;
 
-    @NameInMap("ResourceGroupID")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
     private String resourceGroupID;
 
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
-    @NameInMap("WorkspaceID")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceID")
     private String workspaceID;
 
     private ResourceGroup(Builder builder) {

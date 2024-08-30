@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NodeMetric</p>
  */
 public class NodeMetric extends TeaModel {
-    @NameInMap("GPUType")
+    @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.List < Metric > metrics;
 
-    @NameInMap("NodeID")
+    @com.aliyun.core.annotation.NameInMap("NodeID")
     private String nodeID;
 
     private NodeMetric(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuotaNodeViewMetric</p>
  */
 public class QuotaNodeViewMetric extends TeaModel {
-    @NameInMap("CPUUsageRate")
+    @com.aliyun.core.annotation.NameInMap("CPUUsageRate")
     private String CPUUsageRate;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("DiskReadRate")
+    @com.aliyun.core.annotation.NameInMap("DiskReadRate")
     private String diskReadRate;
 
-    @NameInMap("DiskWriteRate")
+    @com.aliyun.core.annotation.NameInMap("DiskWriteRate")
     private String diskWriteRate;
 
-    @NameInMap("GPUType")
+    @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
-    @NameInMap("MemoryUsageRate")
+    @com.aliyun.core.annotation.NameInMap("MemoryUsageRate")
     private String memoryUsageRate;
 
-    @NameInMap("NetworkInputRate")
+    @com.aliyun.core.annotation.NameInMap("NetworkInputRate")
     private String networkInputRate;
 
-    @NameInMap("NetworkOutputRate")
+    @com.aliyun.core.annotation.NameInMap("NetworkOutputRate")
     private String networkOutputRate;
 
-    @NameInMap("NodeID")
+    @com.aliyun.core.annotation.NameInMap("NodeID")
     private String nodeID;
 
-    @NameInMap("NodeStatus")
+    @com.aliyun.core.annotation.NameInMap("NodeStatus")
     private String nodeStatus;
 
-    @NameInMap("NodeType")
+    @com.aliyun.core.annotation.NameInMap("NodeType")
     private String nodeType;
 
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @NameInMap("RequestCPU")
+    @com.aliyun.core.annotation.NameInMap("RequestCPU")
     private Long requestCPU;
 
-    @NameInMap("RequestGPU")
+    @com.aliyun.core.annotation.NameInMap("RequestGPU")
     private Long requestGPU;
 
-    @NameInMap("RequestMemory")
+    @com.aliyun.core.annotation.NameInMap("RequestMemory")
     private Long requestMemory;
 
-    @NameInMap("TaskIdMap")
+    @com.aliyun.core.annotation.NameInMap("TaskIdMap")
     private java.util.Map < String, ? > taskIdMap;
 
-    @NameInMap("TotalCPU")
+    @com.aliyun.core.annotation.NameInMap("TotalCPU")
     private Long totalCPU;
 
-    @NameInMap("TotalGPU")
+    @com.aliyun.core.annotation.NameInMap("TotalGPU")
     private Long totalGPU;
 
-    @NameInMap("TotalMemory")
+    @com.aliyun.core.annotation.NameInMap("TotalMemory")
     private Long totalMemory;
 
-    @NameInMap("TotalTasks")
+    @com.aliyun.core.annotation.NameInMap("TotalTasks")
     private Long totalTasks;
 
-    @NameInMap("UserIDs")
+    @com.aliyun.core.annotation.NameInMap("UserIDs")
     private java.util.List < String > userIDs;
 
-    @NameInMap("UserNumber")
+    @com.aliyun.core.annotation.NameInMap("UserNumber")
     private String userNumber;
 
     private QuotaNodeViewMetric(Builder builder) {

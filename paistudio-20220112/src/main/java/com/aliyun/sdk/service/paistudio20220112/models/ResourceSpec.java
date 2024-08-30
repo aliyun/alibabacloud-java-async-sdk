@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResourceSpec</p>
  */
 public class ResourceSpec extends TeaModel {
-    @NameInMap("NodeSpecs")
+    @com.aliyun.core.annotation.NameInMap("NodeSpecs")
     private java.util.List < NodeSpec > nodeSpecs;
 
     private ResourceSpec(Builder builder) {

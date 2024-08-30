@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuotaIdName</p>
  */
 public class QuotaIdName extends TeaModel {
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @NameInMap("QuotaName")
+    @com.aliyun.core.annotation.NameInMap("QuotaName")
     private String quotaName;
 
     private QuotaIdName(Builder builder) {

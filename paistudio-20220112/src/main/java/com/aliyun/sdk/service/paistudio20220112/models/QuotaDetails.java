@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuotaDetails</p>
  */
 public class QuotaDetails extends TeaModel {
-    @NameInMap("ActualMinQuota")
+    @com.aliyun.core.annotation.NameInMap("ActualMinQuota")
     private ResourceAmount actualMinQuota;
 
-    @NameInMap("DesiredMinQuota")
+    @com.aliyun.core.annotation.NameInMap("DesiredMinQuota")
     private ResourceAmount desiredMinQuota;
 
-    @NameInMap("RequestedQuota")
+    @com.aliyun.core.annotation.NameInMap("RequestedQuota")
     private ResourceAmount requestedQuota;
 
-    @NameInMap("UsedQuota")
+    @com.aliyun.core.annotation.NameInMap("UsedQuota")
     private ResourceAmount usedQuota;
 
     private QuotaDetails(Builder builder) {

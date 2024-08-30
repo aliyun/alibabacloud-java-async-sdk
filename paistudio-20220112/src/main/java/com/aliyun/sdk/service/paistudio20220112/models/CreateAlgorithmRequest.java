@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAlgorithmRequest</p>
  */
 public class CreateAlgorithmRequest extends Request {
-    @Body
-    @NameInMap("AlgorithmDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlgorithmDescription")
     private String algorithmDescription;
 
-    @Body
-    @NameInMap("AlgorithmName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlgorithmName")
     private String algorithmName;
 
-    @Body
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateAlgorithmRequest(Builder builder) {

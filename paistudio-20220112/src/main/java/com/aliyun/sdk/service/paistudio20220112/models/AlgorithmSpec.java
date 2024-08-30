@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AlgorithmSpec</p>
  */
 public class AlgorithmSpec extends TeaModel {
-    @NameInMap("CodeDir")
+    @com.aliyun.core.annotation.NameInMap("CodeDir")
     private Location codeDir;
 
-    @NameInMap("Command")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Command")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > command;
 
-    @NameInMap("ComputeResource")
+    @com.aliyun.core.annotation.NameInMap("ComputeResource")
     private ComputeResource computeResource;
 
-    @NameInMap("Customization")
+    @com.aliyun.core.annotation.NameInMap("Customization")
     private Customization customization;
 
-    @NameInMap("HyperParameters")
+    @com.aliyun.core.annotation.NameInMap("HyperParameters")
     private java.util.List < HyperParameterDefinition > hyperParameters;
 
-    @NameInMap("Image")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Image")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String image;
 
-    @NameInMap("InputChannels")
+    @com.aliyun.core.annotation.NameInMap("InputChannels")
     private java.util.List < Channel > inputChannels;
 
-    @NameInMap("JobType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("JobType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobType;
 
-    @NameInMap("MetricDefinitions")
+    @com.aliyun.core.annotation.NameInMap("MetricDefinitions")
     private java.util.List < MetricDefinition > metricDefinitions;
 
-    @NameInMap("OutputChannels")
+    @com.aliyun.core.annotation.NameInMap("OutputChannels")
     private java.util.List < Channel > outputChannels;
 
-    @NameInMap("ProgressDefinitions")
+    @com.aliyun.core.annotation.NameInMap("ProgressDefinitions")
     private ProgressDefinitions progressDefinitions;
 
-    @NameInMap("ResourceRequirements")
+    @com.aliyun.core.annotation.NameInMap("ResourceRequirements")
     private java.util.List < ConditionExpression > resourceRequirements;
 
-    @NameInMap("SupportedInstanceTypes")
+    @com.aliyun.core.annotation.NameInMap("SupportedInstanceTypes")
     @Deprecated
     private java.util.List < String > supportedInstanceTypes;
 
-    @NameInMap("SupportsDistributedTraining")
+    @com.aliyun.core.annotation.NameInMap("SupportsDistributedTraining")
     private Boolean supportsDistributedTraining;
 
     private AlgorithmSpec(Builder builder) {
@@ -316,12 +315,12 @@ public class AlgorithmSpec extends TeaModel {
     } 
 
     public static class Policy extends TeaModel {
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
-        @NameInMap("Version")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Version")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String version;
 
         private Policy(Builder builder) {
@@ -379,8 +378,8 @@ public class AlgorithmSpec extends TeaModel {
 
     }
     public static class ComputeResource extends TeaModel {
-        @NameInMap("Policy")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Policy")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Policy policy;
 
         private ComputeResource(Builder builder) {
@@ -421,7 +420,7 @@ public class AlgorithmSpec extends TeaModel {
 
     }
     public static class Customization extends TeaModel {
-        @NameInMap("CodeDir")
+        @com.aliyun.core.annotation.NameInMap("CodeDir")
         private Boolean codeDir;
 
         private Customization(Builder builder) {
@@ -462,10 +461,10 @@ public class AlgorithmSpec extends TeaModel {
 
     }
     public static class OverallProgress extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Regex")
+        @com.aliyun.core.annotation.NameInMap("Regex")
         private String regex;
 
         private OverallProgress(Builder builder) {
@@ -523,10 +522,10 @@ public class AlgorithmSpec extends TeaModel {
 
     }
     public static class RemainingTime extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Regex")
+        @com.aliyun.core.annotation.NameInMap("Regex")
         private String regex;
 
         private RemainingTime(Builder builder) {
@@ -584,10 +583,10 @@ public class AlgorithmSpec extends TeaModel {
 
     }
     public static class ProgressDefinitions extends TeaModel {
-        @NameInMap("OverallProgress")
+        @com.aliyun.core.annotation.NameInMap("OverallProgress")
         private OverallProgress overallProgress;
 
-        @NameInMap("RemainingTime")
+        @com.aliyun.core.annotation.NameInMap("RemainingTime")
         private RemainingTime remainingTime;
 
         private ProgressDefinitions(Builder builder) {

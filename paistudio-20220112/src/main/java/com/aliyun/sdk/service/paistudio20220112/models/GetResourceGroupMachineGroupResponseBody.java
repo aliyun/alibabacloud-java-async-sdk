@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,67 +11,67 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceGroupMachineGroupResponseBody</p>
  */
 public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private String cpu;
 
-    @NameInMap("DefaultDriver")
+    @com.aliyun.core.annotation.NameInMap("DefaultDriver")
     private String defaultDriver;
 
-    @NameInMap("EcsCount")
+    @com.aliyun.core.annotation.NameInMap("EcsCount")
     private Long ecsCount;
 
-    @NameInMap("EcsSpec")
+    @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
-    @NameInMap("GmtCreatedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
-    @NameInMap("GmtExpiredTime")
+    @com.aliyun.core.annotation.NameInMap("GmtExpiredTime")
     private String gmtExpiredTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("GmtStartedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtStartedTime")
     private String gmtStartedTime;
 
-    @NameInMap("Gpu")
+    @com.aliyun.core.annotation.NameInMap("Gpu")
     private String gpu;
 
-    @NameInMap("GpuType")
+    @com.aliyun.core.annotation.NameInMap("GpuType")
     private String gpuType;
 
-    @NameInMap("MachineGroupID")
+    @com.aliyun.core.annotation.NameInMap("MachineGroupID")
     private String machineGroupID;
 
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private String memory;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
     private String paymentDuration;
 
-    @NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
     private String paymentDurationUnit;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupID")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
     private String resourceGroupID;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupportedDrivers")
+    @com.aliyun.core.annotation.NameInMap("SupportedDrivers")
     private java.util.List < String > supportedDrivers;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
     private GetResourceGroupMachineGroupResponseBody(Builder builder) {
@@ -452,10 +451,10 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {

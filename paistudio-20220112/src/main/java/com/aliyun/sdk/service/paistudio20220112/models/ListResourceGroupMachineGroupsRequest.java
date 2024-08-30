@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceGroupMachineGroupsRequest</p>
  */
 public class ListResourceGroupMachineGroupsRequest extends Request {
-    @Path
-    @NameInMap("ResourceGroupID")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
     private String resourceGroupID;
 
-    @Query
-    @NameInMap("CreatorID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatorID")
     private String creatorID;
 
-    @Query
-    @NameInMap("EcsSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderInstanceId")
+    private String orderInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
     private String paymentDuration;
 
-    @Query
-    @NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
     private String paymentDurationUnit;
 
-    @Query
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListResourceGroupMachineGroupsRequest(Builder builder) {
@@ -67,6 +70,7 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         this.ecsSpec = builder.ecsSpec;
         this.name = builder.name;
         this.order = builder.order;
+        this.orderInstanceId = builder.orderInstanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.paymentDuration = builder.paymentDuration;
@@ -125,6 +129,13 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
     }
 
     /**
+     * @return orderInstanceId
+     */
+    public String getOrderInstanceId() {
+        return this.orderInstanceId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -179,6 +190,7 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         private String ecsSpec; 
         private String name; 
         private String order; 
+        private String orderInstanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String paymentDuration; 
@@ -198,6 +210,7 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
             this.ecsSpec = request.ecsSpec;
             this.name = request.name;
             this.order = request.order;
+            this.orderInstanceId = request.orderInstanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.paymentDuration = request.paymentDuration;
@@ -249,6 +262,15 @@ public class ListResourceGroupMachineGroupsRequest extends Request {
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
             this.order = order;
+            return this;
+        }
+
+        /**
+         * OrderInstanceId.
+         */
+        public Builder orderInstanceId(String orderInstanceId) {
+            this.putQueryParameter("OrderInstanceId", orderInstanceId);
+            this.orderInstanceId = orderInstanceId;
             return this;
         }
 

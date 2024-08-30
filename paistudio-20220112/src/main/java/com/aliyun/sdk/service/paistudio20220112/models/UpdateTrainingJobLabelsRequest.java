@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTrainingJobLabelsRequest</p>
  */
 public class UpdateTrainingJobLabelsRequest extends Request {
-    @Path
-    @NameInMap("TrainingJobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TrainingJobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trainingJobId;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Labels> labels;
 
     private UpdateTrainingJobLabelsRequest(Builder builder) {
@@ -94,10 +93,10 @@ public class UpdateTrainingJobLabelsRequest extends Request {
     } 
 
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {

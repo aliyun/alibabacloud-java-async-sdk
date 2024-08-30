@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResourceAmount</p>
  */
 public class ResourceAmount extends TeaModel {
-    @NameInMap("CPU")
+    @com.aliyun.core.annotation.NameInMap("CPU")
     private String CPU;
 
-    @NameInMap("GPU")
+    @com.aliyun.core.annotation.NameInMap("GPU")
     private String GPU;
 
-    @NameInMap("GPUType")
+    @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private String memory;
 
     private ResourceAmount(Builder builder) {

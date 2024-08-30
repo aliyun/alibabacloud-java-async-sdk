@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceGroupMachineGroupRequest</p>
  */
 public class GetResourceGroupMachineGroupRequest extends Request {
-    @Path
-    @NameInMap("MachineGroupID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("MachineGroupID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String machineGroupID;
 
-    @Path
-    @NameInMap("ResourceGroupID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupID;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private GetResourceGroupMachineGroupRequest(Builder builder) {
@@ -119,10 +118,10 @@ public class GetResourceGroupMachineGroupRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

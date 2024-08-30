@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateResourceGroupRequest</p>
  */
 public class UpdateResourceGroupRequest extends Request {
-    @Path
-    @NameInMap("ResourceGroupID")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
     private String resourceGroupID;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Body
-    @NameInMap("Unbind")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Unbind")
     private Boolean unbind;
 
-    @Body
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
     private UpdateResourceGroupRequest(Builder builder) {

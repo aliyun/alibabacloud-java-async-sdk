@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNodeMetricsRequest</p>
  */
 public class GetNodeMetricsRequest extends Request {
-    @Path
-    @NameInMap("ResourceGroupID")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupID;
 
-    @Path
-    @NameInMap("MetricType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("MetricType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricType;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("GPUType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("TimeStep")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeStep")
     private String timeStep;
 
-    @Query
-    @NameInMap("Verbose")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Verbose")
     private Boolean verbose;
 
     private GetNodeMetricsRequest(Builder builder) {

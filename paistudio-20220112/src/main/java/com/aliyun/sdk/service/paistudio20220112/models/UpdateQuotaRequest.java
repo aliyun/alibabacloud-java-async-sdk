@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateQuotaRequest</p>
  */
 public class UpdateQuotaRequest extends Request {
-    @Path
-    @NameInMap("QuotaId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("QuotaId")
     private String quotaId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @Body
-    @NameInMap("QueueStrategy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueueStrategy")
     private String queueStrategy;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaConfig")
+    private QuotaConfig quotaConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaName")
+    private String quotaName;
 
     private UpdateQuotaRequest(Builder builder) {
         super(builder);
@@ -34,6 +41,8 @@ public class UpdateQuotaRequest extends Request {
         this.description = builder.description;
         this.labels = builder.labels;
         this.queueStrategy = builder.queueStrategy;
+        this.quotaConfig = builder.quotaConfig;
+        this.quotaName = builder.quotaName;
     }
 
     public static Builder builder() {
@@ -77,11 +86,27 @@ public class UpdateQuotaRequest extends Request {
         return this.queueStrategy;
     }
 
+    /**
+     * @return quotaConfig
+     */
+    public QuotaConfig getQuotaConfig() {
+        return this.quotaConfig;
+    }
+
+    /**
+     * @return quotaName
+     */
+    public String getQuotaName() {
+        return this.quotaName;
+    }
+
     public static final class Builder extends Request.Builder<UpdateQuotaRequest, Builder> {
         private String quotaId; 
         private String description; 
         private java.util.List < Label > labels; 
         private String queueStrategy; 
+        private QuotaConfig quotaConfig; 
+        private String quotaName; 
 
         private Builder() {
             super();
@@ -93,6 +118,8 @@ public class UpdateQuotaRequest extends Request {
             this.description = request.description;
             this.labels = request.labels;
             this.queueStrategy = request.queueStrategy;
+            this.quotaConfig = request.quotaConfig;
+            this.quotaName = request.quotaName;
         } 
 
         /**
@@ -128,6 +155,24 @@ public class UpdateQuotaRequest extends Request {
         public Builder queueStrategy(String queueStrategy) {
             this.putBodyParameter("QueueStrategy", queueStrategy);
             this.queueStrategy = queueStrategy;
+            return this;
+        }
+
+        /**
+         * QuotaConfig.
+         */
+        public Builder quotaConfig(QuotaConfig quotaConfig) {
+            this.putBodyParameter("QuotaConfig", quotaConfig);
+            this.quotaConfig = quotaConfig;
+            return this;
+        }
+
+        /**
+         * QuotaName.
+         */
+        public Builder quotaName(String quotaName) {
+            this.putBodyParameter("QuotaName", quotaName);
+            this.quotaName = quotaName;
             return this;
         }
 

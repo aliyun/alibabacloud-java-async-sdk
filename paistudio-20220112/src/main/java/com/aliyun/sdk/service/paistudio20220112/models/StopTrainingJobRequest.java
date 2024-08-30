@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StopTrainingJobRequest</p>
  */
 public class StopTrainingJobRequest extends Request {
-    @Path
-    @NameInMap("TrainingJobId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("TrainingJobId")
     private String trainingJobId;
 
     private StopTrainingJobRequest(Builder builder) {

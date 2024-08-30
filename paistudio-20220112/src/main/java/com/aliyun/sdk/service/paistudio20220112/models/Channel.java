@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Channel</p>
  */
 public class Channel extends TeaModel {
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("Properties")
+    @com.aliyun.core.annotation.NameInMap("Properties")
     private java.util.Map < String, ? > properties;
 
-    @NameInMap("Required")
+    @com.aliyun.core.annotation.NameInMap("Required")
     private Boolean required;
 
-    @NameInMap("SupportedChannelTypes")
+    @com.aliyun.core.annotation.NameInMap("SupportedChannelTypes")
     private java.util.List < String > supportedChannelTypes;
 
     private Channel(Builder builder) {

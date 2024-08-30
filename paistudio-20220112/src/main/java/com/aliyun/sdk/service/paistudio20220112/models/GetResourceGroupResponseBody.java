@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceGroupResponseBody</p>
  */
 public class GetResourceGroupResponseBody extends TeaModel {
-    @NameInMap("ClusterID")
+    @com.aliyun.core.annotation.NameInMap("ClusterID")
     private String clusterID;
 
-    @NameInMap("ComputingResourceProvider")
+    @com.aliyun.core.annotation.NameInMap("ComputingResourceProvider")
     private String computingResourceProvider;
 
-    @NameInMap("CreatorID")
+    @com.aliyun.core.annotation.NameInMap("CreatorID")
     private String creatorID;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("GmtCreatedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreatedTime")
     private String gmtCreatedTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SupportRDMA")
+    @com.aliyun.core.annotation.NameInMap("SupportRDMA")
     private Boolean supportRDMA;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
-    @NameInMap("WorkspaceID")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceID")
     private String workspaceID;
 
     private GetResourceGroupResponseBody(Builder builder) {
@@ -312,10 +311,10 @@ public class GetResourceGroupResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {

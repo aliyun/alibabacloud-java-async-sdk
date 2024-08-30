@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paistudio20220112.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceGroupMachineGroupsResponseBody</p>
  */
 public class ListResourceGroupMachineGroupsResponseBody extends TeaModel {
-    @NameInMap("MachineGroups")
+    @com.aliyun.core.annotation.NameInMap("MachineGroups")
     private java.util.List < MachineGroup > machineGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListResourceGroupMachineGroupsResponseBody(Builder builder) {
