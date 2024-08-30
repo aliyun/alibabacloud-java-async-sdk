@@ -95,6 +95,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SupportVolumeShadowCopy")
     private Integer supportVolumeShadowCopy;
 
+    @com.aliyun.core.annotation.NameInMap("SupportsHighFrequencyBackup")
+    private Long supportsHighFrequencyBackup;
+
     private DescribeBackupPolicyResponseBody(Builder builder) {
         this.archiveBackupKeepCount = builder.archiveBackupKeepCount;
         this.archiveBackupKeepPolicy = builder.archiveBackupKeepPolicy;
@@ -124,6 +127,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.supportModifyBackupPriority = builder.supportModifyBackupPriority;
         this.supportReleasedKeep = builder.supportReleasedKeep;
         this.supportVolumeShadowCopy = builder.supportVolumeShadowCopy;
+        this.supportsHighFrequencyBackup = builder.supportsHighFrequencyBackup;
     }
 
     public static Builder builder() {
@@ -330,6 +334,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return this.supportVolumeShadowCopy;
     }
 
+    /**
+     * @return supportsHighFrequencyBackup
+     */
+    public Long getSupportsHighFrequencyBackup() {
+        return this.supportsHighFrequencyBackup;
+    }
+
     public static final class Builder {
         private String archiveBackupKeepCount; 
         private String archiveBackupKeepPolicy; 
@@ -359,6 +370,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private Boolean supportModifyBackupPriority; 
         private Integer supportReleasedKeep; 
         private Integer supportVolumeShadowCopy; 
+        private Long supportsHighFrequencyBackup; 
 
         /**
          * The number of archived backup files that are retained.
@@ -662,6 +674,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder supportVolumeShadowCopy(Integer supportVolumeShadowCopy) {
             this.supportVolumeShadowCopy = supportVolumeShadowCopy;
+            return this;
+        }
+
+        /**
+         * SupportsHighFrequencyBackup.
+         */
+        public Builder supportsHighFrequencyBackup(Long supportsHighFrequencyBackup) {
+            this.supportsHighFrequencyBackup = supportsHighFrequencyBackup;
             return this;
         }
 

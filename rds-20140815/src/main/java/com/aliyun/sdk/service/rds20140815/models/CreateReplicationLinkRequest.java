@@ -195,7 +195,7 @@ public class CreateReplicationLinkRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -204,7 +204,11 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run but does not create the instance. The system checks items such as the request parameters, request format, service limits, and available resources.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, the instance is created.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -213,7 +217,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * ReplicatorAccount.
+         * The account of the database that is used for data synchronization.
          */
         public Builder replicatorAccount(String replicatorAccount) {
             this.putQueryParameter("ReplicatorAccount", replicatorAccount);
@@ -222,7 +226,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * ReplicatorPassword.
+         * The password of the account.
          */
         public Builder replicatorPassword(String replicatorPassword) {
             this.putQueryParameter("ReplicatorPassword", replicatorPassword);
@@ -231,7 +235,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * SourceAddress.
+         * The endpoint of the source instance.
          */
         public Builder sourceAddress(String sourceAddress) {
             this.putQueryParameter("SourceAddress", sourceAddress);
@@ -240,7 +244,11 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * SourceCategory.
+         * The type of the source instance. Valid values:
+         * <p>
+         * 
+         * *   **other**: other instances
+         * *   **aliyunRDS**: an ApsaraDB RDS instance
          */
         public Builder sourceCategory(String sourceCategory) {
             this.putQueryParameter("SourceCategory", sourceCategory);
@@ -249,7 +257,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * SourceInstanceName.
+         * The name of the source instance.
+         * <p>
+         * 
+         * >  You must specify this parameter if **SourceCategory** is set to **aliyunRDS**.
          */
         public Builder sourceInstanceName(String sourceInstanceName) {
             this.putQueryParameter("SourceInstanceName", sourceInstanceName);
@@ -258,7 +269,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * SourceInstanceRegionId.
+         * The ID of the region where the source instance is located.
+         * <p>
+         * 
+         * >  You must specify this parameter if **SourceCategory** is set to **aliyunRDS**.
          */
         public Builder sourceInstanceRegionId(String sourceInstanceRegionId) {
             this.putQueryParameter("SourceInstanceRegionId", sourceInstanceRegionId);
@@ -267,7 +281,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * SourcePort.
+         * The port number of the source instance.
          */
         public Builder sourcePort(Long sourcePort) {
             this.putQueryParameter("SourcePort", sourcePort);
@@ -276,7 +290,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The task ID of the successful dry run.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -285,7 +299,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the task. You can specify a custom task name. If you do not specify this parameter, ApsaraDB RDS automatically generates a task name.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

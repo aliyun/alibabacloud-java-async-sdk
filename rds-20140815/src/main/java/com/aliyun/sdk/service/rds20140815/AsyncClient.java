@@ -500,6 +500,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateReadOnlyDBInstanceResponse> createReadOnlyDBInstance(CreateReadOnlyDBInstanceRequest request);
 
+    /**
+      * ### [](#)Supported database engine
+      * *   PostgreSQL
+      *
+     */
     CompletableFuture<CreateReplicationLinkResponse> createReplicationLink(CreateReplicationLinkRequest request);
 
     /**
@@ -700,6 +705,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteRCInstancesResponse> deleteRCInstances(DeleteRCInstancesRequest request);
 
+    /**
+      * ### [](#)Supported database engine
+      * *   PostgreSQL
+      *
+     */
     CompletableFuture<DeleteReplicationLinkResponse> deleteReplicationLink(DeleteReplicationLinkRequest request);
 
     CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
@@ -1642,6 +1652,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeRenewalPriceResponse> describeRenewalPrice(DescribeRenewalPriceRequest request);
 
+    /**
+      * ### [](#)Supported database engine
+      * *   PostgreSQL
+      *
+     */
     CompletableFuture<DescribeReplicationLinkLogsResponse> describeReplicationLinkLogs(DescribeReplicationLinkLogsRequest request);
 
     CompletableFuture<DescribeResourceDetailsResponse> describeResourceDetails(DescribeResourceDetailsRequest request);

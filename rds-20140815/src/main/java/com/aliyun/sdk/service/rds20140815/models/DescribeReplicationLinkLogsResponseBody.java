@@ -73,7 +73,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         private Integer totalSize; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +81,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The items.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -89,7 +89,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalSize.
+         * The total number of entries returned.
          */
         public Builder totalSize(Integer totalSize) {
             this.totalSize = totalSize;
@@ -317,7 +317,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * Detail.
+             * The details of the task.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -325,7 +325,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * The creation time. The time is displayed in UTC.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -333,7 +333,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The modification time. The time is displayed in UTC.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -341,7 +341,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationInfo.
+             * The synchronization information. This parameter is a reserved parameter.
              */
             public Builder replicationInfo(String replicationInfo) {
                 this.replicationInfo = replicationInfo;
@@ -349,7 +349,12 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationState.
+             * The status of the synchronization. Valid values:
+             * <p>
+             * 
+             * *   **steaming**: The synchronization is in progress.
+             * *   **finish**: The synchronization is complete.
+             * *   **disconnect**: The synchronization is disconnected.
              */
             public Builder replicationState(String replicationState) {
                 this.replicationState = replicationState;
@@ -357,7 +362,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicatorAccount.
+             * The account of the database that is used for data synchronization.
              */
             public Builder replicatorAccount(String replicatorAccount) {
                 this.replicatorAccount = replicatorAccount;
@@ -365,7 +370,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicatorPassword.
+             * The password of the account.
              */
             public Builder replicatorPassword(String replicatorPassword) {
                 this.replicatorPassword = replicatorPassword;
@@ -373,7 +378,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceAddress.
+             * The endpoint of the source instance.
              */
             public Builder sourceAddress(String sourceAddress) {
                 this.sourceAddress = sourceAddress;
@@ -381,7 +386,11 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCategory.
+             * The type of the source instance. Valid values:
+             * <p>
+             * 
+             * *   other: other instances
+             * *   aliyunRDS: an ApsaraDB RDS instance
              */
             public Builder sourceCategory(String sourceCategory) {
                 this.sourceCategory = sourceCategory;
@@ -389,7 +398,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SourcePort.
+             * The port number of the source instance.
              */
             public Builder sourcePort(Long sourcePort) {
                 this.sourcePort = sourcePort;
@@ -397,7 +406,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetInstanceId.
+             * The destination instance ID.
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -405,7 +414,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -413,7 +422,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -421,7 +430,13 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStage.
+             * The stage of the task. Valid values:
+             * <p>
+             * 
+             * *   **precheck**: the precheck stage.
+             * *   **basebackup**: the basic backup stage.
+             * *   **startup**: the startup stage.
+             * *   **increment**: the incremental synchronization stage.
              */
             public Builder taskStage(String taskStage) {
                 this.taskStage = taskStage;
@@ -429,7 +444,12 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **success**
+             * *   **failure**
+             * *   **running**
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -437,7 +457,11 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **create**: creates a synchronization link.
+             * *   **create-dryrun**: performs a precheck before a synchronization link is created.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

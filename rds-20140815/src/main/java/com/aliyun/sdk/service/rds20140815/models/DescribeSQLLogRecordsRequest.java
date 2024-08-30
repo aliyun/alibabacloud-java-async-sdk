@@ -349,9 +349,9 @@ public class DescribeSQLLogRecordsRequest extends Request {
          * 
          * *   When you call this operation and set the **Form** parameter to **File** to generate an audit file, you cannot filter log entries by keyword.
          * *   You can specify up to 10 keywords. The keywords are evaluated by using the **AND** operator. Separate multiple keywords with spaces.
-         * *   If a field name in the specified SQL statement is enclosed in backquotes (\`) and you want to use the field name as a keyword, you must enter the backquotes (\`) as part of the field name. For example, if the field name is \`id\`, enter \`id\` instead of id.
+         * *   If a field name in the specified SQL statement is enclosed in grave accents (\`) and you want to use the field name as a keyword, you must enter the grave accents (\`) as part of the field name. For example, if the field name is \`id\`, enter \`id\` instead of id.
          * 
-         * >  After you enter a keyword, the system matches the keyword based on the **Database**, **User**, and **QueryKeywords** parameters. The parameters are evaluated by using the **OR** operator.
+         * >  After you enter a keyword, the system matches the keyword based on the **Database**, **User**, and **QueryKeywords** parameters. The parameters are evaluated by using the **AND** operator.
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);

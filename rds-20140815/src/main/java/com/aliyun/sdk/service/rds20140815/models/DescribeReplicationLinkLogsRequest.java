@@ -125,7 +125,7 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -134,7 +134,7 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -143,7 +143,7 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,7 +152,7 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task. You can call the **CreateReplicationLink** operation to create the task ID of the disaster recovery instance.
          */
         public Builder taskId(Long taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -161,7 +161,7 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the task. You can call the **CreateReplicationLink** operation to create a disaster recovery instance. You can specify a task name in the request parameters of the call.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -170,7 +170,16 @@ public class DescribeReplicationLinkLogsRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the task. Valid values:
+         * <p>
+         * 
+         * *   **create**: creates a synchronization link.
+         * *   **create-dryrun**: performs a precheck before a synchronization link is created.
+         * 
+         * Valid values:
+         * 
+         * *   create: creates a replication link.
+         * *   create-dryrun: performs a precheck before a replication link is created.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

@@ -49,7 +49,7 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the task.
+         * The queried tasks.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -109,16 +109,16 @@ public class DescribeHistoryTasksStatResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The task status. Valid values:
+             * The status of the task. Valid values:
              * <p>
              * 
-             * *   Scheduled
-             * *   Running
-             * *   Succeed
-             * *   Failed
-             * *   Cancelling
-             * *   Canceled
-             * *   Waiting
+             * *   **Scheduled**
+             * *   **Running**
+             * *   **Succeed**
+             * *   **Failed**
+             * *   **Cancelling**
+             * *   **Canceled**
+             * *   **Waiting**
              */
             public Builder status(String status) {
                 this.status = status;

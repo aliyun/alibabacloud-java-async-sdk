@@ -439,6 +439,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class Extra extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountSecurityPolicy")
+        private String accountSecurityPolicy;
+
         @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
         private DBInstanceIds DBInstanceIds;
 
@@ -446,6 +449,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String recoveryModel;
 
         private Extra(Builder builder) {
+            this.accountSecurityPolicy = builder.accountSecurityPolicy;
             this.DBInstanceIds = builder.DBInstanceIds;
             this.recoveryModel = builder.recoveryModel;
         }
@@ -456,6 +460,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static Extra create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountSecurityPolicy
+         */
+        public String getAccountSecurityPolicy() {
+            return this.accountSecurityPolicy;
         }
 
         /**
@@ -473,8 +484,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountSecurityPolicy; 
             private DBInstanceIds DBInstanceIds; 
             private String recoveryModel; 
+
+            /**
+             * AccountSecurityPolicy.
+             */
+            public Builder accountSecurityPolicy(String accountSecurityPolicy) {
+                this.accountSecurityPolicy = accountSecurityPolicy;
+                return this;
+            }
 
             /**
              * The instance IDs.
@@ -873,6 +893,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeletionProtection")
         private Boolean deletionProtection;
 
+        @com.aliyun.core.annotation.NameInMap("DisasterRecoveryInfo")
+        private String disasterRecoveryInfo;
+
+        @com.aliyun.core.annotation.NameInMap("DisasterRecoveryInstances")
+        private String disasterRecoveryInstances;
+
         @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
@@ -1038,6 +1064,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBMaxQuantity = builder.DBMaxQuantity;
             this.dedicatedHostGroupId = builder.dedicatedHostGroupId;
             this.deletionProtection = builder.deletionProtection;
+            this.disasterRecoveryInfo = builder.disasterRecoveryInfo;
+            this.disasterRecoveryInstances = builder.disasterRecoveryInstances;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
@@ -1314,6 +1342,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Boolean getDeletionProtection() {
             return this.deletionProtection;
+        }
+
+        /**
+         * @return disasterRecoveryInfo
+         */
+        public String getDisasterRecoveryInfo() {
+            return this.disasterRecoveryInfo;
+        }
+
+        /**
+         * @return disasterRecoveryInstances
+         */
+        public String getDisasterRecoveryInstances() {
+            return this.disasterRecoveryInstances;
         }
 
         /**
@@ -1657,6 +1699,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer DBMaxQuantity; 
             private String dedicatedHostGroupId; 
             private Boolean deletionProtection; 
+            private String disasterRecoveryInfo; 
+            private String disasterRecoveryInstances; 
             private String engine; 
             private String engineVersion; 
             private String expireTime; 
@@ -2013,6 +2057,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
+                return this;
+            }
+
+            /**
+             * DisasterRecoveryInfo.
+             */
+            public Builder disasterRecoveryInfo(String disasterRecoveryInfo) {
+                this.disasterRecoveryInfo = disasterRecoveryInfo;
+                return this;
+            }
+
+            /**
+             * DisasterRecoveryInstances.
+             */
+            public Builder disasterRecoveryInstances(String disasterRecoveryInstances) {
+                this.disasterRecoveryInstances = disasterRecoveryInstances;
                 return this;
             }
 

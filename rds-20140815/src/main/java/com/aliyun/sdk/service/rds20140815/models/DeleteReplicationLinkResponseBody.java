@@ -73,7 +73,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         private String taskName; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +81,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +89,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(Long taskId) {
             this.taskId = taskId;
@@ -97,7 +97,7 @@ public class DeleteReplicationLinkResponseBody extends TeaModel {
         }
 
         /**
-         * TaskName.
+         * The name of the task.
          */
         public Builder taskName(String taskName) {
             this.taskName = taskName;

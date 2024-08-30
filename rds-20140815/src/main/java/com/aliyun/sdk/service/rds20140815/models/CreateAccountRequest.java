@@ -234,7 +234,7 @@ public class CreateAccountRequest extends Request {
          * *   **Super**: privileged account.
          * *   **Sysadmin**: system admin account. The account type is available only for ApsaraDB RDS for SQL Server instances.
          * 
-         * Before you create a system admin account, check whether the RDS instance meets all prerequisites. For more information, see [Create a system admin account](~~170736~~).
+         * Before you create a system admin account, check whether the instance meets all prerequisites. For more information, see [Create a system admin account](~~170736~~).
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);

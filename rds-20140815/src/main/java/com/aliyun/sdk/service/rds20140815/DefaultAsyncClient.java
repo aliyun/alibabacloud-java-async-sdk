@@ -1058,6 +1058,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engine
+      * *   PostgreSQL
+      *
+     */
     @Override
     public CompletableFuture<CreateReplicationLinkResponse> createReplicationLink(CreateReplicationLinkRequest request) {
         try {
@@ -1534,6 +1539,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engine
+      * *   PostgreSQL
+      *
+     */
     @Override
     public CompletableFuture<DeleteReplicationLinkResponse> deleteReplicationLink(DeleteReplicationLinkRequest request) {
         try {
@@ -3808,6 +3818,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Supported database engine
+      * *   PostgreSQL
+      *
+     */
     @Override
     public CompletableFuture<DescribeReplicationLinkLogsResponse> describeReplicationLinkLogs(DescribeReplicationLinkLogsRequest request) {
         try {

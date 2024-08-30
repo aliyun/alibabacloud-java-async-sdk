@@ -83,7 +83,7 @@ public class DeleteReplicationLinkRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +92,11 @@ public class DeleteReplicationLinkRequest extends Request {
         }
 
         /**
-         * PromoteToMaster.
+         * Specifies whether to promote the disaster recovery instance to the primary instance. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder promoteToMaster(Boolean promoteToMaster) {
             this.putQueryParameter("PromoteToMaster", promoteToMaster);
