@@ -101,7 +101,7 @@ public class CreateAlertContactGroupRequest extends Request {
         }
 
         /**
-         * The ID of the region. Default value: `cn-hangzhou`.
+         * The region ID. Default value: `cn-hangzhou`.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

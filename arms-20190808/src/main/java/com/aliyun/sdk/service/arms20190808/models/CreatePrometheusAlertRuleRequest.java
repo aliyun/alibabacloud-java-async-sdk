@@ -213,7 +213,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         } 
 
         /**
-         * AlertName.
+         * The name of the alert rule.
          */
         public Builder alertName(String alertName) {
             this.putQueryParameter("AlertName", alertName);
@@ -222,7 +222,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Annotations.
+         * The annotations that are described in a JSON string. You must specify the name and value of each annotation.
          */
         public Builder annotations(String annotations) {
             this.putQueryParameter("Annotations", annotations);
@@ -231,7 +231,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -240,7 +240,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * DispatchRuleId.
+         * The ID of the notification policy. This parameter is required if the NotifyType parameter is set to `DISPATCH_RULE`.
          */
         public Builder dispatchRuleId(Long dispatchRuleId) {
             this.putQueryParameter("DispatchRuleId", dispatchRuleId);
@@ -249,7 +249,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The duration. The value ranges from 1 to 1440 minutes.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -258,7 +258,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Expression.
+         * The expression of the alert rule. The expression must follow the PromQL syntax.
          */
         public Builder expression(String expression) {
             this.putQueryParameter("Expression", expression);
@@ -267,7 +267,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Labels.
+         * The tags that are described in a JSON string. You must specify the name and value of each tag.
          */
         public Builder labels(String labels) {
             this.putQueryParameter("Labels", labels);
@@ -276,7 +276,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Message.
+         * The content of the alert notification. Tags can be referenced in the {{$labels.xxx}} format.
          */
         public Builder message(String message) {
             this.putQueryParameter("Message", message);
@@ -285,7 +285,11 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * NotifyType.
+         * The method that is used to send alert notifications. Valid values:
+         * <p>
+         * 
+         * - `ALERT_MANAGER`: Alert notifications are sent by Operation Center. This is the default value.
+         * - `DISPATCH_RULE`: Alert notifications are sent based on the specified notification policy.
          */
         public Builder notifyType(String notifyType) {
             this.putQueryParameter("NotifyType", notifyType);
@@ -294,7 +298,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -303,7 +307,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -312,7 +316,11 @@ public class CreatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the alert rule. Valid values:
+         * <p>
+         * 
+         * - 99: custom alert
+         * - 101: Prometheus Service alert
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -366,7 +374,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -374,7 +382,7 @@ public class CreatePrometheusAlertRuleRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

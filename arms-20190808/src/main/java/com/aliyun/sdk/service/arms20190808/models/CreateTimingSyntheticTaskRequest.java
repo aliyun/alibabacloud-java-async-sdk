@@ -214,7 +214,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * AvailableAssertions.
+         * The list of assertions.
          */
         public Builder availableAssertions(java.util.List < AvailableAssertions> availableAssertions) {
             String availableAssertionsShrink = shrink(availableAssertions, "AvailableAssertions", "json");
@@ -234,7 +234,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * CustomPeriod.
+         * The general settings.
          */
         public Builder customPeriod(CustomPeriod customPeriod) {
             String customPeriodShrink = shrink(customPeriod, "CustomPeriod", "json");
@@ -244,7 +244,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * Frequency.
+         * The detection frequency. Valid values: 1m, 5m, 10m, 15m, 20m, 30m, 1h, 2h, 3h, 4h, 6h, 8h, 12h, and 24h.
          */
         public Builder frequency(String frequency) {
             this.putQueryParameter("Frequency", frequency);
@@ -253,7 +253,11 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * MonitorCategory.
+         * The detection point type. Valid values:
+         * <p>
+         * 
+         * - 1: PC
+         * - 2: mobile device
          */
         public Builder monitorCategory(Integer monitorCategory) {
             this.putQueryParameter("MonitorCategory", monitorCategory);
@@ -272,7 +276,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * Monitors.
+         * The list of detection points.
          */
         public Builder monitors(java.util.List < Monitors> monitors) {
             String monitorsShrink = shrink(monitors, "Monitors", "json");
@@ -300,7 +304,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The parameter is optional.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -309,7 +313,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag list.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -403,7 +407,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private String type; 
 
             /**
-             * Expect.
+             * The expected value.
              */
             public Builder expect(String expect) {
                 this.expect = expect;
@@ -411,7 +415,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Operator.
+             * The condition. gt: greater than. gte: greater than or equal to. lt: less than. lte: less than or equal to. eq: equal to. neq: not equal to. ctn: contain. nctn: does not contain. exist: exist. n_exist: does not exist. belong: belong to. n_belong: does not belong to. reg_match: regular expression.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -419,7 +423,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Target.
+             * The check target. If you set the type parameter to HttpResCode, HttpResBody, or HttpResponseTime, you do not need to set the target parameter. If you set the type parameter to HttpResHead, you must specify the key in the header. If you set the type parameter to HttpResBodyJson, use jsonPath.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -427,7 +431,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Type.
+             * The assertion type. Valid values: HttpResCode, HttpResHead, HttpResBody, HttpResBodyJson, HttpResponseTime, IcmpPackLoss (packet loss rate), IcmpPackMaxLatency (maximum packet latency), IcmpPackAvgLatency (average packet latency), TraceRouteHops (number of hops), DnsARecord (A record), DnsCName (CNAME), websiteTTFB (time to first packet), websiteTTLB (time to last packet), websiteFST (first paint time), websiteFFST (first meaningful paint), websiteOnload (full loaded time). For more information, see the following description.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -495,7 +499,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private java.util.List < String > ips; 
 
             /**
-             * The domain name
+             * The domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -648,7 +652,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private java.util.Map < String, String > prometheusLabels; 
 
             /**
-             * PrometheusClusterId.
+             * A reserved parameter.
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -656,7 +660,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * PrometheusClusterRegion.
+             * A reserved parameter.
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -664,7 +668,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * PrometheusLabels.
+             * A reserved parameter.
              */
             public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
                 this.prometheusLabels = prometheusLabels;
@@ -898,7 +902,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * CustomPrometheusSetting.
+             * The reserved parameters.
              */
             public Builder customPrometheusSetting(CustomPrometheusSetting customPrometheusSetting) {
                 this.customPrometheusSetting = customPrometheusSetting;
@@ -1015,7 +1019,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Integer startHour; 
 
             /**
-             * EndHour.
+             * The custom host settings.
              */
             public Builder endHour(Integer endHour) {
                 this.endHour = endHour;
@@ -1023,7 +1027,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * StartHour.
+             * The list of hosts.
              */
             public Builder startHour(Integer startHour) {
                 this.startHour = startHour;
@@ -1234,7 +1238,16 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ProtocolAlpnProtocol.
+             * The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:
+             * <p>
+             * 
+             * 0: default
+             * 
+             * 1: http/1.1
+             * 
+             * 2: h2
+             * 
+             * 3: disables the ALPN protocol
              */
             public Builder protocolAlpnProtocol(Integer protocolAlpnProtocol) {
                 this.protocolAlpnProtocol = protocolAlpnProtocol;
@@ -1759,7 +1772,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              * The IP version of the DNS server.
              * <p>
              * 
-             * *   0 (default value): IPv4.
+             * *   0 (default): IPv4.
              * *   1: IPv6.
              * *   2: A version is automatically selected.
              */
@@ -1780,7 +1793,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              * The DNS query method. Valid values:
              * <p>
              * 
-             * *   0 (default value): recursive
+             * *   0 (default): recursive
              * *   1: iterative
              */
             public Builder queryMethod(Integer queryMethod) {
@@ -2298,7 +2311,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              * <p>
              * 
              * *   1: resource URL
-             * *   0 (default value): page URL
+             * *   0 (default): page URL
              */
             public Builder streamAddressType(Integer streamAddressType) {
                 this.streamAddressType = streamAddressType;
@@ -2591,7 +2604,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              * Specifies whether to automatically scroll up and down the screen to load a page.
              * <p>
              * 
-             * *   0 (default value): no
+             * *   0 (default): no
              * *   1: yes
              */
             public Builder automaticScrolling(Integer automaticScrolling) {
@@ -2603,7 +2616,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              * Specifies whether to create a custom header.
              * <p>
              * 
-             * *   0 (default value): No custom header is created.
+             * *   0 (default): No custom header is created.
              * *   1: A custom header is created for the first packet.
              * *   2: A custom header is created for all packets.
              */
@@ -2636,7 +2649,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
              * <p>
              * 
              * *   0: no
-             * *   1 (default value): yes
+             * *   1 (default): yes
              */
             public Builder disableCache(Integer disableCache) {
                 this.disableCache = disableCache;
@@ -2980,7 +2993,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private String operatorCode; 
 
             /**
-             * CityCode.
+             * The city code.
              */
             public Builder cityCode(String cityCode) {
                 this.cityCode = cityCode;
@@ -2988,7 +3001,13 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ClientType.
+             * The client type of the detection point. Valid values:
+             * <p>
+             * 
+             * - 1: data center
+             * - 2: Internet
+             * - 3: mobile device
+             * - 4: ECS instance
              */
             public Builder clientType(Integer clientType) {
                 this.clientType = clientType;
@@ -2996,7 +3015,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * OperatorCode.
+             * The carrier code.
              */
             public Builder operatorCode(String operatorCode) {
                 this.operatorCode = operatorCode;
@@ -3049,7 +3068,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3057,7 +3076,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

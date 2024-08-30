@@ -327,7 +327,7 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -390,7 +390,7 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -398,7 +398,7 @@ public class UpdatePrometheusAlertRuleRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

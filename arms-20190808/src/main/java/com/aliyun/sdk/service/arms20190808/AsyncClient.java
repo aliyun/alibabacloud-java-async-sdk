@@ -33,6 +33,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddPrometheusGlobalViewByAliClusterIdsResponse> addPrometheusGlobalViewByAliClusterIds(AddPrometheusGlobalViewByAliClusterIdsRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<AddPrometheusInstanceResponse> addPrometheusInstance(AddPrometheusInstanceRequest request);
 
     CompletableFuture<AddPrometheusIntegrationResponse> addPrometheusIntegration(AddPrometheusIntegrationRequest request);
@@ -78,7 +82,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAlertContactResponse> createAlertContact(CreateAlertContactRequest request);
 
     /**
-      * ************
+      * The current API operation is no longer maintained. Call the CreateOrUpdateContactGroup operation of the new Alert Management module to create or modify alert contact groups.
       *
      */
     CompletableFuture<CreateAlertContactGroupResponse> createAlertContactGroup(CreateAlertContactGroupRequest request);
@@ -274,6 +278,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAgentDownloadUrlResponse> getAgentDownloadUrl(GetAgentDownloadUrlRequest request);
 
+    CompletableFuture<GetAgentDownloadUrlV2Response> getAgentDownloadUrlV2(GetAgentDownloadUrlV2Request request);
+
     CompletableFuture<GetAlertRulesResponse> getAlertRules(GetAlertRulesRequest request);
 
     CompletableFuture<GetAppApiByPageResponse> getAppApiByPage(GetAppApiByPageRequest request);
@@ -288,6 +294,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetCloudClusterAllUrlResponse> getCloudClusterAllUrl(GetCloudClusterAllUrlRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetClusterAllUrlResponse> getClusterAllUrl(GetClusterAllUrlRequest request);
 
     CompletableFuture<GetCommercialStatusResponse> getCommercialStatus(GetCommercialStatusRequest request);
@@ -451,6 +461,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListDashboardsByNameResponse> listDashboardsByName(ListDashboardsByNameRequest request);
 
+    /**
+      * The current API operation is no longer maintained. To query the notification policy information, call the ListNotificationPolicies operation instead.
+      *
+     */
     CompletableFuture<ListDispatchRuleResponse> listDispatchRule(ListDispatchRuleRequest request);
 
     CompletableFuture<ListEnvCustomJobsResponse> listEnvCustomJobs(ListEnvCustomJobsRequest request);

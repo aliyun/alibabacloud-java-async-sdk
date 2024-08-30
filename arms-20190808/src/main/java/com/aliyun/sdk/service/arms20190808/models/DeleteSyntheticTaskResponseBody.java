@@ -49,7 +49,7 @@ public class DeleteSyntheticTaskResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,11 @@ public class DeleteSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the specified tasks are deleted.
+         * <p>
+         * 
+         * *   `true`: The tasks are deleted.
+         * *   `false`: The tasks fail to be deleted.
          */
         public Builder result(String result) {
             this.result = result;

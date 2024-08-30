@@ -85,7 +85,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +101,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PrometheusAlertRules.
+         * The returned struct.
          */
         public Builder prometheusAlertRules(java.util.List < PrometheusAlertRules> prometheusAlertRules) {
             this.prometheusAlertRules = prometheusAlertRules;
@@ -109,7 +109,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -169,7 +169,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the annotation.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -177,7 +177,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the annotation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -230,7 +230,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the tag.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -238,7 +238,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag associated with the instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -291,7 +291,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -299,7 +299,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -484,7 +484,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AlertId.
+             * The ID of the alert rule.
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -492,7 +492,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertName.
+             * The name of the alert rule.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -500,7 +500,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Annotations.
+             * The annotations of the alert rule.
              */
             public Builder annotations(java.util.List < Annotations> annotations) {
                 this.annotations = annotations;
@@ -508,7 +508,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -516,7 +516,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchRuleId.
+             * The ID of the notification policy. This parameter is returned if the NotifyType parameter is set to `DISPATCH_RULE`.
              */
             public Builder dispatchRuleId(Long dispatchRuleId) {
                 this.dispatchRuleId = dispatchRuleId;
@@ -524,7 +524,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the alert. Valid values: 1 to 1440. Unit: minutes.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -532,7 +532,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * The expression of the alert rule.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -540,7 +540,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The tags of the alert rule.
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -548,7 +548,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The alert message. Tags can be referenced in the {{$labels.xxx}} format.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -556,7 +556,11 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyType.
+             * The method that is used to send alert notifications. Valid values:
+             * <p>
+             * 
+             * - ALERT_MANAGER: Alert notifications are sent by Operation Center.
+             * - DISPATCH_RULE: Alert notifications are
              */
             public Builder notifyType(String notifyType) {
                 this.notifyType = notifyType;
@@ -564,7 +568,11 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the alert rule is enabled. Valid values:
+             * <p>
+             * 
+             * - 1: The alert rule is enabled.
+             * - 0: The alert rule is disabled.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -572,7 +580,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -580,7 +588,7 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the alert rule.
              */
             public Builder type(String type) {
                 this.type = type;

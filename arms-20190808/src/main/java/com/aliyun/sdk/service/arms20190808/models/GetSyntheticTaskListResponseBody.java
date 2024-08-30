@@ -49,7 +49,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageInfo.
+         * The query results.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -57,7 +57,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +193,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             private Float usable; 
 
             /**
-             * CreateTime.
+             * The time when the task was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -201,7 +201,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorNumber.
+             * The number of detection points.
              */
             public Builder monitorNumber(Long monitorNumber) {
                 this.monitorNumber = monitorNumber;
@@ -209,7 +209,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the synthetic monitoring task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -217,7 +217,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The task name.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -225,7 +225,12 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **0**: The task is stopped.
+             * *   **1**: The task is started.
+             * *   **9**: The task is ended.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -233,7 +238,14 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * 1.  3: web page performance - IE
+             * 2.  34: web page performance - Chrome
+             * 3.  0: network quality
+             * 4.  40: file download
+             * 5.  7: API performance
              */
             public Builder taskType(Long taskType) {
                 this.taskType = taskType;
@@ -241,7 +253,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTypeName.
+             * The name of the task type.
              */
             public Builder taskTypeName(String taskTypeName) {
                 this.taskTypeName = taskTypeName;
@@ -249,7 +261,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL for synthetic monitoring.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -257,7 +269,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Usable.
+             * The availability. Only the data of the last day is counted. If no data is available for the last day, an empty value is returned.
              */
             public Builder usable(Float usable) {
                 this.usable = usable;
@@ -442,7 +454,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * HasNextPage.
+             * Indicates whether the current page is followed by a page.
              */
             public Builder hasNextPage(String hasNextPage) {
                 this.hasNextPage = hasNextPage;
@@ -450,7 +462,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * HasPreviousPage.
+             * Indicates whether a previous page exists.
              */
             public Builder hasPreviousPage(Boolean hasPreviousPage) {
                 this.hasPreviousPage = hasPreviousPage;
@@ -458,7 +470,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * IsFirstPage.
+             * Indicates whether the page is the first page.
              */
             public Builder isFirstPage(Boolean isFirstPage) {
                 this.isFirstPage = isFirstPage;
@@ -466,7 +478,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * IsLastPage.
+             * Indicates whether the page is the last page.
              */
             public Builder isLastPage(Boolean isLastPage) {
                 this.isLastPage = isLastPage;
@@ -474,7 +486,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * List.
+             * The task information.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
@@ -482,7 +494,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * NavigateFirstPage.
+             * The first page on the navigation bar.
              */
             public Builder navigateFirstPage(String navigateFirstPage) {
                 this.navigateFirstPage = navigateFirstPage;
@@ -490,7 +502,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * NavigateLastPage.
+             * The last page on the navigation bar.
              */
             public Builder navigateLastPage(String navigateLastPage) {
                 this.navigateLastPage = navigateLastPage;
@@ -498,7 +510,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * NavigatePageNums.
+             * All navigation page numbers.
              */
             public Builder navigatePageNums(String navigatePageNums) {
                 this.navigatePageNums = navigatePageNums;
@@ -506,7 +518,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * NextPage.
+             * The next page.
              */
             public Builder nextPage(String nextPage) {
                 this.nextPage = nextPage;
@@ -514,7 +526,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Pages.
+             * The total number of pages returned.
              */
             public Builder pages(String pages) {
                 this.pages = pages;
@@ -522,7 +534,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Prepage.
+             * The previous page.
              */
             public Builder prepage(String prepage) {
                 this.prepage = prepage;
@@ -530,7 +542,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of entries per page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -538,7 +550,7 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

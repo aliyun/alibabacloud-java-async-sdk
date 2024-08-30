@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListActivatedAlertsResponseBody</p>
  */
 public class ListActivatedAlertsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
     @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
@@ -18,6 +21,7 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     private String requestId;
 
     private ListActivatedAlertsResponseBody(Builder builder) {
+        this.message = builder.message;
         this.page = builder.page;
         this.requestId = builder.requestId;
     }
@@ -28,6 +32,13 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
 
     public static ListActivatedAlertsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -45,8 +56,17 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String message; 
         private Page page; 
         private String requestId; 
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
 
         /**
          * The struct returned.

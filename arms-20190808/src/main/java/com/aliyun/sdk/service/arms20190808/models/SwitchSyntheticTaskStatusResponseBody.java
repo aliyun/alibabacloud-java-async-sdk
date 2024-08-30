@@ -49,7 +49,7 @@ public class SwitchSyntheticTaskStatusResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,11 @@ public class SwitchSyntheticTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder result(String result) {
             this.result = result;

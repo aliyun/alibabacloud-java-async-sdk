@@ -139,7 +139,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -148,7 +148,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * MatchExpressions.
+         * The tag match conditions that are described in a JSON string. For more information about this parameter, see the **Additional description of the MatchExpressions parameter** section.
          */
         public Builder matchExpressions(String matchExpressions) {
             this.putQueryParameter("MatchExpressions", matchExpressions);
@@ -157,7 +157,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the alert rule.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -166,7 +166,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,7 +175,11 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies whether the alert rule is enabled. Valid values:
+         * <p>
+         * 
+         * - 1: enables the alert rule.
+         * - 0: disables the alert rule.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -184,7 +188,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -193,7 +197,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the alert rule.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -247,7 +251,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -255,7 +259,7 @@ public class ListPrometheusAlertRulesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

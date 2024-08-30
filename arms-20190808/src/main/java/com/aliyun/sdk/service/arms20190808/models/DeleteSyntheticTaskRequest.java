@@ -69,7 +69,7 @@ public class DeleteSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. Default value: cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +78,7 @@ public class DeleteSyntheticTaskRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * The task IDs.
          */
         public Builder taskIds(java.util.List < String > taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

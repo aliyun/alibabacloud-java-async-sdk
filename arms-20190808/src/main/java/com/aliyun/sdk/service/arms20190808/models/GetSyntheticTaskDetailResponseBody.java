@@ -49,7 +49,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         private TaskDetail taskDetail; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 任务详情。
+         * The details of the task.
          */
         public Builder taskDetail(TaskDetail taskDetail) {
             this.taskDetail = taskDetail;
@@ -145,7 +145,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String symbols; 
 
             /**
-             * GeneralAlert.
+             * The low-risk alert.
              */
             public Builder generalAlert(String generalAlert) {
                 this.generalAlert = generalAlert;
@@ -153,7 +153,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IsCritical.
+             * Indicates whether the condition is essential.
              */
             public Builder isCritical(String isCritical) {
                 this.isCritical = isCritical;
@@ -161,7 +161,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The alert name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -169,7 +169,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SeriousAlert.
+             * The Critical-level alert.
              */
             public Builder seriousAlert(String seriousAlert) {
                 this.seriousAlert = seriousAlert;
@@ -177,7 +177,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Symbols.
+             * Greater than or less than.
              */
             public Builder symbols(String symbols) {
                 this.symbols = symbols;
@@ -278,7 +278,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String startExecutionTime; 
 
             /**
-             * AlarmFlag.
+             * The identifier of the alert.
              */
             public Builder alarmFlag(Long alarmFlag) {
                 this.alarmFlag = alarmFlag;
@@ -286,7 +286,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AlertList.
+             * The list of alerts.
              */
             public Builder alertList(java.util.List < AlertList> alertList) {
                 this.alertList = alertList;
@@ -294,7 +294,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AlertNotifierId.
+             * The ID of the alert identifier.
              */
             public Builder alertNotifierId(String alertNotifierId) {
                 this.alertNotifierId = alertNotifierId;
@@ -302,7 +302,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * AlertPolicyId.
+             * The ID of the alert policy.
              */
             public Builder alertPolicyId(String alertPolicyId) {
                 this.alertPolicyId = alertPolicyId;
@@ -310,7 +310,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorSamples.
+             * The monitoring samples.
              */
             public Builder monitorSamples(String monitorSamples) {
                 this.monitorSamples = monitorSamples;
@@ -318,7 +318,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StartExecutionTime.
+             * The start time of the execution.
              */
             public Builder startExecutionTime(String startExecutionTime) {
                 this.startExecutionTime = startExecutionTime;
@@ -491,7 +491,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * ConnectionTimeout.
+             * The timeout period of the file download task.
              */
             public Builder connectionTimeout(Long connectionTimeout) {
                 this.connectionTimeout = connectionTimeout;
@@ -499,7 +499,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadCustomHeaderContent.
+             * The items to be ignored in a certificate error. Multiple values are concatenated with vertical bars (|).
              */
             public Builder downloadCustomHeaderContent(String downloadCustomHeaderContent) {
                 this.downloadCustomHeaderContent = downloadCustomHeaderContent;
@@ -507,7 +507,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadCustomHost.
+             * The custom host. Valid values:
+             * <p>
+             * 
+             * *   1: round robin
+             * *   0: random
              */
             public Builder downloadCustomHost(Long downloadCustomHost) {
                 this.downloadCustomHost = downloadCustomHost;
@@ -515,7 +519,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadCustomHostIp.
+             * The custom IP address of the host. Multiple IP addresses are separated with commas (,).
              */
             public Builder downloadCustomHostIp(String downloadCustomHostIp) {
                 this.downloadCustomHostIp = downloadCustomHostIp;
@@ -523,7 +527,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadKernel.
+             * The kernel type. Valid values:
+             * <p>
+             * 
+             * *   1: curl
+             * *   0: WinInet
              */
             public Builder downloadKernel(Long downloadKernel) {
                 this.downloadKernel = downloadKernel;
@@ -531,7 +539,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadRedirect.
+             * Indicates whether redirection is supported.
              */
             public Builder downloadRedirect(Long downloadRedirect) {
                 this.downloadRedirect = downloadRedirect;
@@ -539,7 +547,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DownloadTransmissionSize.
+             * The file size. Unit: KB.
              */
             public Builder downloadTransmissionSize(Long downloadTransmissionSize) {
                 this.downloadTransmissionSize = downloadTransmissionSize;
@@ -547,7 +555,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorTimeout.
+             * The monitoring duration.
              */
             public Builder monitorTimeout(Long monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
@@ -555,7 +563,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * QuickProtocol.
+             * The QUIC protocol type. Valid values:
+             * <p>
+             * 
+             * *   1: HTTP/1
+             * *   2: HTTP/2
+             * *   3: http3
              */
             public Builder quickProtocol(String quickProtocol) {
                 this.quickProtocol = quickProtocol;
@@ -563,7 +576,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ValidateKeywords.
+             * The keyword that is used in verification.
              */
             public Builder validateKeywords(String validateKeywords) {
                 this.validateKeywords = validateKeywords;
@@ -571,7 +584,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyWay.
+             * The method that is used to verify the response content. Valid values:
+             * <p>
+             * 
+             * *   0: no verification.
+             * *   1: exact match with the verification string.
+             * *   2: partial match with the verification string.
+             * *   3: MD5 verification.
              */
             public Builder verifyWay(Long verifyWay) {
                 this.verifyWay = verifyWay;
@@ -579,7 +598,10 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteList.
+             * The whitelisted objects that are used to avoid DNS hijacking. Format: `<domain name>:<objects>`.
+             * <p>
+             * 
+             * >  WAP networks do not support hijacking.
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -692,17 +714,17 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * 拨测执行周期。
+             * The day on which synthetic monitoring is performed. Valid values:
              * <p>
              * 
-             * - -1：每天
-             * - 0：周日
-             * - 1：周一
-             * - 2：周二
-             * - 3：周三
-             * - 4：周四
-             * - 5：周五
-             * - 6：周六
+             * *   \-1: every day
+             * *   0: Sunday
+             * *   1: Monday
+             * *   2: Tuesday
+             * *   3: Wednesday
+             * *   4: Thursday
+             * *   5: Friday
+             * *   6: Saturday
              */
             public Builder days(java.util.List < Long > days) {
                 this.days = days;
@@ -710,7 +732,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 当天结束分钟数。
+             * The minute at which synthetic monitoring ends.
              */
             public Builder endMinute(Long endMinute) {
                 this.endMinute = endMinute;
@@ -718,7 +740,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 周期结束时间 ，格式为yyyy-MM-dd HH。
+             * The time when synthetic monitoring ends. Format: `yyyy-MM-dd HH`.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -726,7 +748,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 当天结束小时数。
+             * The hour at which synthetic monitoring ends.
              */
             public Builder endhour(Long endhour) {
                 this.endhour = endhour;
@@ -734,7 +756,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 当天开始拨测时间的小时数。
+             * The hour at which synthetic monitoring starts.
              */
             public Builder startHour(Long startHour) {
                 this.startHour = startHour;
@@ -742,7 +764,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 当天开始拨测时间的分钟数。
+             * The minute at which synthetic monitoring starts.
              */
             public Builder startMinute(Long startMinute) {
                 this.startMinute = startMinute;
@@ -750,7 +772,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 周期开始时间，格式yyyy-MM-dd HH 。
+             * The time when synthetic monitoring starts. Format: yyyy-MM-dd HH.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -827,7 +849,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private Long sendCount; 
 
             /**
-             * 城市编码。
+             * The city code.
              */
             public Builder cityCode(Long cityCode) {
                 this.cityCode = cityCode;
@@ -835,11 +857,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 监测类型：
-             * <p>
-             * - IDC
-             * - LastMilie
-             * - Mobile
+             * The type of the detection point.
              */
             public Builder monitorType(Long monitorType) {
                 this.monitorType = monitorType;
@@ -847,7 +865,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 运营商ID。
+             * The ID of the network service.
              */
             public Builder netServiceId(Long netServiceId) {
                 this.netServiceId = netServiceId;
@@ -855,7 +873,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 下发次数。
+             * The number of times that the system sends detection requests.
              */
             public Builder sendCount(Long sendCount) {
                 this.sendCount = sendCount;
@@ -1220,7 +1238,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private Long waitCompletionTime; 
 
             /**
-             * DnsHijackWhitelist.
+             * The DNS whitelist.
              */
             public Builder dnsHijackWhitelist(String dnsHijackWhitelist) {
                 this.dnsHijackWhitelist = dnsHijackWhitelist;
@@ -1228,7 +1246,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ElementBlacklist.
+             * The element blacklist.
              */
             public Builder elementBlacklist(String elementBlacklist) {
                 this.elementBlacklist = elementBlacklist;
@@ -1236,7 +1254,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteActiveX.
+             * Indicates whether ActiveX is executed. Valid values:
+             * <p>
+             * 
+             * *   3: yes
+             * *   0: no
+             * 
+             * >  Only IE elements support this parameter.
              */
             public Builder executeActiveX(Long executeActiveX) {
                 this.executeActiveX = executeActiveX;
@@ -1244,7 +1268,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteApplet.
+             * Indicates whether the applet is executed. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder executeApplet(Long executeApplet) {
                 this.executeApplet = executeApplet;
@@ -1252,7 +1280,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteScript.
+             * Indicates whether scripts are executed. Valid values:
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
+             * 
+             * >  Only IE elements support this parameter.
              */
             public Builder executeScript(Long executeScript) {
                 this.executeScript = executeScript;
@@ -1260,7 +1294,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FilterInvalidIP.
+             * Indicates whether invalid IP addresses are excluded. Valid values:
+             * <p>
+             * 
+             * *   1: no
+             * *   0: yes
              */
             public Builder filterInvalidIP(Long filterInvalidIP) {
                 this.filterInvalidIP = filterInvalidIP;
@@ -1268,7 +1306,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FlowHijackJumpTimes.
+             * The element that is used in DNS hijacking.
              */
             public Builder flowHijackJumpTimes(Long flowHijackJumpTimes) {
                 this.flowHijackJumpTimes = flowHijackJumpTimes;
@@ -1276,7 +1314,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FlowHijackLogo.
+             * The tag that is used in DNS hijacking.
              */
             public Builder flowHijackLogo(String flowHijackLogo) {
                 this.flowHijackLogo = flowHijackLogo;
@@ -1284,7 +1322,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorTimeout.
+             * The monitoring timeout period.
              */
             public Builder monitorTimeout(Long monitorTimeout) {
                 this.monitorTimeout = monitorTimeout;
@@ -1292,7 +1330,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NavAutomaticScrolling.
+             * Indicates whether the screen is automatically scrolled up and down to load a page. Valid values:
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
              */
             public Builder navAutomaticScrolling(Long navAutomaticScrolling) {
                 this.navAutomaticScrolling = navAutomaticScrolling;
@@ -1300,7 +1342,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NavCustomHeader.
+             * Indicates whether a custom header is created. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: A custom header is created for the first packet.
+             * *   2: A custom header is created for all packets.
              */
             public Builder navCustomHeader(String navCustomHeader) {
                 this.navCustomHeader = navCustomHeader;
@@ -1308,7 +1355,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NavCustomHeaderContent.
+             * The format of the custom header. Multiple fields are separated with vertical bars (|).
              */
             public Builder navCustomHeaderContent(String navCustomHeaderContent) {
                 this.navCustomHeaderContent = navCustomHeaderContent;
@@ -1316,7 +1363,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NavCustomHost.
+             * The custom host mode. Valid values:
+             * <p>
+             * 
+             * *   1: round robin
+             * *   0: random
              */
             public Builder navCustomHost(Long navCustomHost) {
                 this.navCustomHost = navCustomHost;
@@ -1324,7 +1375,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NavCustomHostIp.
+             * The custom IP address of the host. Multiple IP addresses are separated with commas (,).
              */
             public Builder navCustomHostIp(String navCustomHostIp) {
                 this.navCustomHostIp = navCustomHostIp;
@@ -1332,7 +1383,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NavDisableCache.
+             * Indicates whether caching is disabled. Valid values:
+             * <p>
+             * 
+             * *   1: Caching is disabled.
+             * *   0: Caching is enabled.
              */
             public Builder navDisableCache(Long navDisableCache) {
                 this.navDisableCache = navDisableCache;
@@ -1340,7 +1395,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NavDisableCompression.
+             * Indicates whether compression is disabled. Valid values:
+             * <p>
+             * 
+             * *   0: Compression is enabled.
+             * *   1: Compression is disabled.
              */
             public Builder navDisableCompression(Long navDisableCompression) {
                 this.navDisableCompression = navDisableCompression;
@@ -1348,7 +1407,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NavIgnoreCertificateError.
+             * Indicates whether certificate errors are ignored during certificate verification in the SSL handshake. Valid values:
+             * <p>
+             * 
+             * *   1: yes
+             * *   0: no
              */
             public Builder navIgnoreCertificateError(Long navIgnoreCertificateError) {
                 this.navIgnoreCertificateError = navIgnoreCertificateError;
@@ -1356,7 +1419,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NavRedirect.
+             * Indicates whether redirection is enabled. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder navRedirect(Long navRedirect) {
                 this.navRedirect = navRedirect;
@@ -1364,7 +1431,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NavReturnElement.
+             * Indicates whether the elements on the page are returned.
+             * <p>
+             * 
+             * *   1: no. The basic document data is returned.
+             * *   2: yes. All document data is returned.
              */
             public Builder navReturnElement(Long navReturnElement) {
                 this.navReturnElement = navReturnElement;
@@ -1372,7 +1443,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageTampering.
+             * The page tampering.
              */
             public Builder pageTampering(String pageTampering) {
                 this.pageTampering = pageTampering;
@@ -1380,7 +1451,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessName.
+             * The process ID.
              */
             public Builder processName(String processName) {
                 this.processName = processName;
@@ -1388,7 +1459,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * QuicDomain.
+             * The domain name of the QUIC request element.
              */
             public Builder quicDomain(String quicDomain) {
                 this.quicDomain = quicDomain;
@@ -1396,7 +1467,15 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * QuicVersion.
+             * The QUIC version. Default value: 0. Valid values:
+             * <p>
+             * 
+             * *   35
+             * *   39
+             * *   43
+             * *   44
+             * 
+             * >  Only Chrome elements support this parameter.
              */
             public Builder quicVersion(Long quicVersion) {
                 this.quicVersion = quicVersion;
@@ -1404,7 +1483,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHeader.
+             * Indicates whether request headers are returned. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: The headers of base documents are returned.
+             * *   2: All headers are returned.
              */
             public Builder requestHeader(Long requestHeader) {
                 this.requestHeader = requestHeader;
@@ -1412,7 +1496,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SlowElementThreshold.
+             * The time threshold that is used to define a slow element. Unit: seconds.
              */
             public Builder slowElementThreshold(Long slowElementThreshold) {
                 this.slowElementThreshold = slowElementThreshold;
@@ -1420,7 +1504,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyStringBlacklist.
+             * The blacklist for string verification.
              */
             public Builder verifyStringBlacklist(String verifyStringBlacklist) {
                 this.verifyStringBlacklist = verifyStringBlacklist;
@@ -1428,7 +1512,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyStringWhitelist.
+             * The whitelist for string verification.
              */
             public Builder verifyStringWhitelist(String verifyStringWhitelist) {
                 this.verifyStringWhitelist = verifyStringWhitelist;
@@ -1436,7 +1520,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WaitCompletionTime.
+             * The timeout period of waiting for the monitoring to complete.
              */
             public Builder waitCompletionTime(Long waitCompletionTime) {
                 this.waitCompletionTime = waitCompletionTime;
@@ -1669,7 +1753,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * NetDigSwitch.
+             * Indicates whether the data is displayed in the DIG format. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder netDigSwitch(Long netDigSwitch) {
                 this.netDigSwitch = netDigSwitch;
@@ -1677,7 +1765,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetDnsNs.
+             * The NS server.
              */
             public Builder netDnsNs(String netDnsNs) {
                 this.netDnsNs = netDnsNs;
@@ -1685,7 +1773,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetDnsQueryMethod.
+             * The DNS query method. Valid values:
+             * <p>
+             * 
+             * *   1: recursive
+             * *   2: iterative
              */
             public Builder netDnsQueryMethod(String netDnsQueryMethod) {
                 this.netDnsQueryMethod = netDnsQueryMethod;
@@ -1693,7 +1785,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetDnsServer.
+             * The type of the DNS server. Valid values:
+             * <p>
+             * 
+             * *   0: ipv4
+             * *   1: ipv6
+             * *   2: A version is automatically selected.
              */
             public Builder netDnsServer(Long netDnsServer) {
                 this.netDnsServer = netDnsServer;
@@ -1701,7 +1798,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetDnsSwitch.
+             * Indicates whether DNS test is enabled. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder netDnsSwitch(Long netDnsSwitch) {
                 this.netDnsSwitch = netDnsSwitch;
@@ -1709,7 +1810,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetDnsTimeout.
+             * The timeout period of DNS requests.
              */
             public Builder netDnsTimeout(String netDnsTimeout) {
                 this.netDnsTimeout = netDnsTimeout;
@@ -1717,7 +1818,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetIcmpActive.
+             * The protocol type. Valid values:
+             * <p>
+             * 
+             * *   0 : ICMP
+             * *   1 : TCP
              */
             public Builder netIcmpActive(Long netIcmpActive) {
                 this.netIcmpActive = netIcmpActive;
@@ -1725,7 +1830,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetIcmpDataCut.
+             * Indicates whether packets are split. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes
              */
             public Builder netIcmpDataCut(Long netIcmpDataCut) {
                 this.netIcmpDataCut = netIcmpDataCut;
@@ -1733,7 +1842,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetIcmpInterval.
+             * The interval at which the synthetic monitoring task is executed.
              */
             public Builder netIcmpInterval(Long netIcmpInterval) {
                 this.netIcmpInterval = netIcmpInterval;
@@ -1741,7 +1850,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetIcmpNum.
+             * The number of packets.
              */
             public Builder netIcmpNum(Long netIcmpNum) {
                 this.netIcmpNum = netIcmpNum;
@@ -1749,7 +1858,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetIcmpSize.
+             * The packet size.
              */
             public Builder netIcmpSize(Long netIcmpSize) {
                 this.netIcmpSize = netIcmpSize;
@@ -1757,7 +1866,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetIcmpSwitch.
+             * Indicates whether ICMP test is enabled. Valid values:
+             * <p>
+             * 
+             * *   0: no.
+             * *   1: yes. If you set this parameter to 1, you must also set the Icmp parameter.
              */
             public Builder netIcmpSwitch(Long netIcmpSwitch) {
                 this.netIcmpSwitch = netIcmpSwitch;
@@ -1765,7 +1878,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetIcmpTimeout.
+             * The monitoring timeout period.
              */
             public Builder netIcmpTimeout(Long netIcmpTimeout) {
                 this.netIcmpTimeout = netIcmpTimeout;
@@ -1773,7 +1886,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetTraceRouteNum.
+             * The maximum number of active detection points.
              */
             public Builder netTraceRouteNum(Long netTraceRouteNum) {
                 this.netTraceRouteNum = netTraceRouteNum;
@@ -1781,7 +1894,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetTraceRouteSwitch.
+             * Indicates whether Tracert test is enabled. Valid values:
+             * <p>
+             * 
+             * *   0: no
+             * *   1: yes. If you set this parameter to 1, you must also set the Tracert parameter.
              */
             public Builder netTraceRouteSwitch(Long netTraceRouteSwitch) {
                 this.netTraceRouteSwitch = netTraceRouteSwitch;
@@ -1789,7 +1906,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NetTraceRouteTimeout.
+             * The monitoring timeout period. Valid values: 0 to 300. Unit: seconds.
              */
             public Builder netTraceRouteTimeout(Long netTraceRouteTimeout) {
                 this.netTraceRouteTimeout = netTraceRouteTimeout;
@@ -1797,7 +1914,10 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WhiteList.
+             * The whitelisted objects that are used to avoid DNS hijacking. Format: `<domain name>:<objects>`.
+             * <p>
+             * 
+             * >  WAP networks do not support hijacking.
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;
@@ -1850,7 +1970,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the **form-data**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1858,7 +1978,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the form-data.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1911,7 +2031,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1919,7 +2039,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2008,7 +2128,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private Urlencoded urlencoded; 
 
             /**
-             * Formdata.
+             * The data content. This parameter is returned when Mode is set to form-data.
              */
             public Builder formdata(Formdata formdata) {
                 this.formdata = formdata;
@@ -2016,7 +2136,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The language used when Mode is set to raw. Valid values:
+             * <p>
+             * 
+             * *   json
+             * *   xml
+             * *   javascript
+             * *   html
+             * *   text
              */
             public Builder language(String language) {
                 this.language = language;
@@ -2024,7 +2151,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The type of the content. Valid values:
+             * <p>
+             * 
+             * *   form-data
+             * *   x-www-form-urlencoded
+             * *   raw
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -2032,7 +2164,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Raw.
+             * The data content. This parameter is returned when **Mode** is set to **raw**.
              */
             public Builder raw(String raw) {
                 this.raw = raw;
@@ -2040,7 +2172,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Urlencoded.
+             * The URL of the body content.
              */
             public Builder urlencoded(Urlencoded urlencoded) {
                 this.urlencoded = urlencoded;
@@ -2093,7 +2225,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the header in the request parameters.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2101,7 +2233,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the header in the request parameters.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2166,7 +2298,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String method; 
 
             /**
-             * Body.
+             * The content of the request body.
              */
             public Builder body(RequestContentBody body) {
                 this.body = body;
@@ -2174,7 +2306,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Header.
+             * The request header.
              */
             public Builder header(java.util.List < RequestContentHeader> header) {
                 this.header = header;
@@ -2182,7 +2314,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The request method. Valid values:
+             * <p>
+             * 
+             * *   POST
+             * *   GET
              */
             public Builder method(String method) {
                 this.method = method;
@@ -2319,7 +2455,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private Long verifyWay; 
 
             /**
-             * CharacterEncoding.
+             * The encoding format. Valid values:
+             * <p>
+             * 
+             * *   0: UTF-8
+             * *   1: GBK
+             * *   2: GB2312
+             * *   3: Unicode
              */
             public Builder characterEncoding(Long characterEncoding) {
                 this.characterEncoding = characterEncoding;
@@ -2327,7 +2469,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CustomHost.
+             * The custom host. Valid values:
+             * <p>
+             * 
+             * *   1: round robin
+             * *   0: random
              */
             public Builder customHost(Long customHost) {
                 this.customHost = customHost;
@@ -2335,7 +2481,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CustomHostIp.
+             * The custom IP address of the host. Multiple IP addresses are separated with commas (,).
              */
             public Builder customHostIp(String customHostIp) {
                 this.customHostIp = customHostIp;
@@ -2343,7 +2489,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolConnectionTimeout.
+             * The timeout period.
              */
             public Builder protocolConnectionTimeout(Long protocolConnectionTimeout) {
                 this.protocolConnectionTimeout = protocolConnectionTimeout;
@@ -2351,7 +2497,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProtocolMonitorTimeout.
+             * The timeout period of API performance monitoring. Unit: seconds.
              */
             public Builder protocolMonitorTimeout(Long protocolMonitorTimeout) {
                 this.protocolMonitorTimeout = protocolMonitorTimeout;
@@ -2359,7 +2505,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ReceivedDataSize.
+             * The size of the received data. This parameter is returned when **VerifyWay** is set to 2.
              */
             public Builder receivedDataSize(Long receivedDataSize) {
                 this.receivedDataSize = receivedDataSize;
@@ -2367,7 +2513,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RequestContent.
+             * The request content, including the header and body.
              */
             public Builder requestContent(RequestContent requestContent) {
                 this.requestContent = requestContent;
@@ -2375,7 +2521,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyContent.
+             * The verification string.
              */
             public Builder verifyContent(String verifyContent) {
                 this.verifyContent = verifyContent;
@@ -2383,7 +2529,13 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VerifyWay.
+             * The method that is used to verify the response content. Valid values:
+             * <p>
+             * 
+             * *   0: no verification.
+             * *   1: exact match with the verification string.
+             * *   2: partial match with the verification string.
+             * *   3: MD5 verification.
              */
             public Builder verifyWay(Long verifyWay) {
                 this.verifyWay = verifyWay;
@@ -2592,7 +2744,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * CommonParam.
+             * The list of common parameters.
              */
             public Builder commonParam(CommonParam commonParam) {
                 this.commonParam = commonParam;
@@ -2600,7 +2752,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 文件下载任务。
+             * The file download task.
              */
             public Builder download(Download download) {
                 this.download = download;
@@ -2608,7 +2760,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义扩展频率。
+             * The frequency.
              */
             public Builder extendInterval(ExtendInterval extendInterval) {
                 this.extendInterval = extendInterval;
@@ -2616,23 +2768,23 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 拨测频率，单位为分钟。可选频率如下：
+             * The interval at which synthetic monitoring is performed. Unit: minutes. Valid values:
              * <p>
              * 
-             * - 1
-             * - 5
-             * - 10
-             * - 15
-             * - 20
-             * - 30
-             * - 60
-             * - 120
-             * - 180
-             * - 240
-             * - 360
-             * - 480
-             * - 720
-             * - 1440
+             * *   1
+             * *   5
+             * *   10
+             * *   15
+             * *   20
+             * *   30
+             * *   60
+             * *   120
+             * *   180
+             * *   240
+             * *   360
+             * *   480
+             * *   720
+             * *   1440
              */
             public Builder intervalTime(Long intervalTime) {
                 this.intervalTime = intervalTime;
@@ -2640,11 +2792,11 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 监测周期类型：
+             * The interval type. Valid values:
              * <p>
              * 
-             * 0：每天
-             * 1：自定义扩展频率
+             * *   0: daily
+             * *   1: custom frequency
              */
             public Builder intervalType(Long intervalType) {
                 this.intervalType = intervalType;
@@ -2652,12 +2804,12 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * IP类型：
+             * The IP version. Valid values:
              * <p>
              * 
-             * 0：自动
-             * 1：IPv4
-             * 2：IPv6
+             * *   0: A version is automatically selected.
+             * *   1: IPv4.
+             * *   2: IPv6.
              */
             public Builder ipType(Long ipType) {
                 this.ipType = ipType;
@@ -2665,7 +2817,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 拨测任务的检测点列表。
+             * The detection points.
              */
             public Builder monitorList(java.util.List < MonitorList> monitorList) {
                 this.monitorList = monitorList;
@@ -2673,7 +2825,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MonitorListString.
+             * The detection points.
              */
             public Builder monitorListString(String monitorListString) {
                 this.monitorListString = monitorListString;
@@ -2681,7 +2833,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Nav.
+             * The browser test task.
              */
             public Builder nav(Nav nav) {
                 this.nav = nav;
@@ -2689,7 +2841,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Net.
+             * The network synthetic monitoring task.
              */
             public Builder net(Net net) {
                 this.net = net;
@@ -2697,7 +2849,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The synthetic monitoring task of the API performance type.
              */
             public Builder protocol(Protocol protocol) {
                 this.protocol = protocol;
@@ -2705,7 +2857,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 云拨测任务ID。
+             * The ID of the synthetic monitoring task.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -2713,7 +2865,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务名称。
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -2721,14 +2873,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务类型：
+             * The type of the task. Valid values:
              * <p>
              * 
-             * 3：网页性能-IE
-             * 34：网页性能-Chrome
-             * 0：网络质量
-             * 40：文件下载
-             * 7：API性能
+             * 1.  3: web page performance - IE
+             * 2.  34: web page performance - Chrome
+             * 3.  0: network quality
+             * 4.  40: file download
+             * 5.  7: API performance
              */
             public Builder taskType(Long taskType) {
                 this.taskType = taskType;
@@ -2736,7 +2888,7 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 拨测地址。
+             * The URL for synthetic monitoring.
              */
             public Builder url(String url) {
                 this.url = url;

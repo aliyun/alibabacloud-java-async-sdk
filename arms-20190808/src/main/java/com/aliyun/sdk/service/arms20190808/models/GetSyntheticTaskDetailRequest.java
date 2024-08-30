@@ -68,7 +68,7 @@ public class GetSyntheticTaskDetailRequest extends Request {
         } 
 
         /**
-         * 地域ID。默认为cn-hangzhou。
+         * The region ID. Default value: cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -77,7 +77,7 @@ public class GetSyntheticTaskDetailRequest extends Request {
         }
 
         /**
-         * 云拨测任务ID。
+         * The ID of the synthetic monitoring task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

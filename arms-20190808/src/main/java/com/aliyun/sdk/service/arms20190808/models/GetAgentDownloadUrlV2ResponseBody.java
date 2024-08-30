@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateTimingSyntheticTaskResponseBody} extends {@link TeaModel}
+ * {@link GetAgentDownloadUrlV2ResponseBody} extends {@link TeaModel}
  *
- * <p>CreateTimingSyntheticTaskResponseBody</p>
+ * <p>GetAgentDownloadUrlV2ResponseBody</p>
  */
-public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
+public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
@@ -26,7 +26,7 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private CreateTimingSyntheticTaskResponseBody(Builder builder) {
+    private GetAgentDownloadUrlV2ResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -38,7 +38,7 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateTimingSyntheticTaskResponseBody create() {
+    public static GetAgentDownloadUrlV2ResponseBody create() {
         return builder().build();
     }
 
@@ -85,7 +85,7 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned. The status code 200 indicates that the request was successful.
+         * Code.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The struct returned.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,7 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,29 +117,29 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values: true and false.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public CreateTimingSyntheticTaskResponseBody build() {
-            return new CreateTimingSyntheticTaskResponseBody(this);
+        public GetAgentDownloadUrlV2ResponseBody build() {
+            return new GetAgentDownloadUrlV2ResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Status")
-        private String status;
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
 
-        @com.aliyun.core.annotation.NameInMap("TaskId")
-        private String taskId;
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
 
         private Data(Builder builder) {
-            this.status = builder.status;
-            this.taskId = builder.taskId;
+            this.url = builder.url;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -151,46 +151,36 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
+         * @return url
          */
-        public String getStatus() {
-            return this.status;
+        public String getUrl() {
+            return this.url;
         }
 
         /**
-         * @return taskId
+         * @return version
          */
-        public String getTaskId() {
-            return this.taskId;
+        public String getVersion() {
+            return this.version;
         }
 
         public static final class Builder {
-            private String status; 
-            private String taskId; 
+            private String url; 
+            private String version; 
 
             /**
-             * The task status. Valid values:
-             * <p>
-             * 
-             * - INIT: The task is in the initial state.
-             * - RELEASE: The task is being parsed.
-             * - RUNNING: The task is running.
-             * - STOP: The task is suspended.
-             * - SYSTEM_STOP: The task is suspended by the system.
-             * - CANCEL: The task is canceled.
-             * - SYSTEM_CANCEL: The task is canceled by the system.
-             * - DONE: The task is complete.
+             * Url.
              */
-            public Builder status(String status) {
-                this.status = status;
+            public Builder url(String url) {
+                this.url = url;
                 return this;
             }
 
             /**
-             * The ID of the synthetic monitoring task.
+             * Version.
              */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

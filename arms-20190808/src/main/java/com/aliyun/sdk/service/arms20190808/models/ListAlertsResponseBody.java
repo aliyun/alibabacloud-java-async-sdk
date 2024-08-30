@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAlertsResponseBody</p>
  */
 public class ListAlertsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
+
     @com.aliyun.core.annotation.NameInMap("PageBean")
     private PageBean pageBean;
 
@@ -18,6 +21,7 @@ public class ListAlertsResponseBody extends TeaModel {
     private String requestId;
 
     private ListAlertsResponseBody(Builder builder) {
+        this.message = builder.message;
         this.pageBean = builder.pageBean;
         this.requestId = builder.requestId;
     }
@@ -28,6 +32,13 @@ public class ListAlertsResponseBody extends TeaModel {
 
     public static ListAlertsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -45,8 +56,17 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String message; 
         private PageBean pageBean; 
         private String requestId; 
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
 
         /**
          * The information about the array object.

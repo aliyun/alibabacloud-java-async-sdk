@@ -165,7 +165,11 @@ public class GetSyntheticTaskListRequest extends Request {
         } 
 
         /**
-         * Direction.
+         * The order by which the queried tasks are sorted. Valid values:
+         * <p>
+         * 
+         * *   **asc**: ascending
+         * *   **desc**: descending
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -174,7 +178,7 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * Order.
+         * The condition by which the queried tasks are sorted.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -183,7 +187,7 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The page number.
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -192,7 +196,7 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -201,7 +205,7 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Default value: **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +214,7 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The task name.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -219,7 +223,12 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * TaskStatus.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   **0**: The task is stopped.
+         * *   **1**: The task is started.
+         * *   **9**: The task is ended.
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);
@@ -228,7 +237,14 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the task. Valid values:
+         * <p>
+         * 
+         * 1.  3: web page performance - IE
+         * 2.  34: web page performance - Chrome
+         * 3.  0: network quality
+         * 4.  40: file download
+         * 5.  7: API performance
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
@@ -237,7 +253,7 @@ public class GetSyntheticTaskListRequest extends Request {
         }
 
         /**
-         * Url.
+         * The URL for synthetic monitoring.
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

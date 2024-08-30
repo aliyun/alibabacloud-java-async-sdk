@@ -49,7 +49,7 @@ public class ListDispatchRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DispatchRules.
+         * The returned struct.
          */
         public Builder dispatchRules(java.util.List < DispatchRules> dispatchRules) {
             this.dispatchRules = dispatchRules;
@@ -57,7 +57,7 @@ public class ListDispatchRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +121,7 @@ public class ListDispatchRuleResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * Name.
+             * The name of the notification policy.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -129,7 +129,7 @@ public class ListDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the notification policy.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -137,7 +137,11 @@ public class ListDispatchRuleResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * Indicates whether the notification policy is enabled. Valid values:
+             * <p>
+             * 
+             * *   `true`
+             * *   `false`
              */
             public Builder state(String state) {
                 this.state = state;

@@ -77,7 +77,7 @@ public class DescribePrometheusAlertRuleRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the Prometheus instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

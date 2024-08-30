@@ -196,7 +196,15 @@ public class CreateGrafanaWorkspaceRequest extends Request {
         }
 
         /**
-         * GrafanaWorkspaceEdition.
+         * The edition.
+         * <p>
+         * 
+         * **Valid values:**
+         * 
+         * *   standard: `Beta Edition or Standard Edition`
+         * *   personal_edition: Developer Edition
+         * *   experts_edition: Pro Edition
+         * *   advanced_edition: Advanced Edition
          */
         public Builder grafanaWorkspaceEdition(String grafanaWorkspaceEdition) {
             this.putQueryParameter("GrafanaWorkspaceEdition", grafanaWorkspaceEdition);

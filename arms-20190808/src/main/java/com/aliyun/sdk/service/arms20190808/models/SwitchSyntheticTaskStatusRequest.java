@@ -67,7 +67,11 @@ public class SwitchSyntheticTaskStatusRequest extends Request {
         } 
 
         /**
-         * SwitchStatus.
+         * Specifies whether to start or stop the task. Valid values:
+         * <p>
+         * 
+         * *   **0**: stops the task
+         * *   **1**: starts the task
          */
         public Builder switchStatus(Long switchStatus) {
             this.putQueryParameter("SwitchStatus", switchStatus);
@@ -76,7 +80,7 @@ public class SwitchSyntheticTaskStatusRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * The task IDs. You can specify up to 30 task IDs at a time.
          */
         public Builder taskIds(java.util.List < Long > taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

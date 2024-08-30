@@ -67,7 +67,7 @@ public class StartTimingSyntheticTaskRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. Default value: cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -76,7 +76,7 @@ public class StartTimingSyntheticTaskRequest extends Request {
         }
 
         /**
-         * TaskIds.
+         * The task IDs.
          */
         public Builder taskIds(java.util.List < String > taskIds) {
             String taskIdsShrink = shrink(taskIds, "TaskIds", "json");

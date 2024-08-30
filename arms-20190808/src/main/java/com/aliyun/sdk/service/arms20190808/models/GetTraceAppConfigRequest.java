@@ -80,7 +80,16 @@ public class GetTraceAppConfigRequest extends Request {
          * The process ID (PID) of the application.
          * <p>
          * 
-         * Log on to the ARMS console. In the left-side navigation pane, choose **Application Monitoring** > **Application List**. On the Application List page, click the name of an application. The URL in the address bar contains the PID of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is xxx%4074xxx, you must replace %40 with an at sign (@) to obtain xxx@74xxx.
+         * You can use one of the following methods to obtain the PID:
+         * 
+         * *   API: Call the [ListTraceApps](~~2588008~~) operation
+         * *   Console: Log on to the Application Real-Time Monitoring Service (ARMS) console. In the left-side navigation pane, choose **Application Monitoring** > **Application List**. On the Application List page, click the name of your application. The URL in the address bar contains the PID of the application. The PID is indicated in the pid=xxx format. The PID is usually percent encoded as xxx%40xxx. You must modify this value to remove the percent encoding. For example, if the PID in the URL is xxx%4074xxx, you must replace %40 with an at sign (@) to obtain xxx@74xxx.
+         * 
+         * > 
+         * 
+         * *   To obtain the PID in the console, your application must be monitored by Application Monitoring rather than Managed Service for OpenTelemetry.
+         * 
+         * *   The GetTraceAppConfig operation can query only the custom settings of applications that are monitored by Application Monitoring.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);

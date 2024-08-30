@@ -607,7 +607,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private java.util.Map < String, String > prometheusLabels; 
 
             /**
-             * PrometheusClusterId.
+             * A reserved parameter.
              */
             public Builder prometheusClusterId(String prometheusClusterId) {
                 this.prometheusClusterId = prometheusClusterId;
@@ -615,7 +615,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * PrometheusClusterRegion.
+             * A reserved parameter.
              */
             public Builder prometheusClusterRegion(String prometheusClusterRegion) {
                 this.prometheusClusterRegion = prometheusClusterRegion;
@@ -623,7 +623,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * PrometheusLabels.
+             * The reserved parameters.
              */
             public Builder prometheusLabels(java.util.Map < String, String > prometheusLabels) {
                 this.prometheusLabels = prometheusLabels;
@@ -857,7 +857,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * CustomPrometheusSetting.
+             * The reserved parameters.
              */
             public Builder customPrometheusSetting(CustomPrometheusSetting customPrometheusSetting) {
                 this.customPrometheusSetting = customPrometheusSetting;
@@ -897,8 +897,8 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              * Specifies whether to evenly distribute monitoring samples. Valid values:
              * <p>
              * 
-             * *   0: no.
-             * *   1: yes.
+             * *   0: no
+             * *   1: yes
              */
             public Builder monitorSamples(Integer monitorSamples) {
                 this.monitorSamples = monitorSamples;
@@ -1033,7 +1033,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private String type; 
 
             /**
-             * The content of the request body. Format: JSON string. The parameter is required if the type parameter is set to text/plain, application/json, application/xml, or text/html.
+             * The content of the request body. Format: JSON string. The parameter is required if the Type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1166,7 +1166,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Long timeout; 
 
             /**
-             * Specifies whether to verify the certificate. Default value: No.
+             * Specifies whether to verify the certificate. Default value: false.
              */
             public Builder checkCert(Boolean checkCert) {
                 this.checkCert = checkCert;
@@ -1182,7 +1182,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The request method.
+             * The request method. Valid values:
              * <p>
              * 
              * *   POST
@@ -1194,7 +1194,16 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * ProtocolAlpnProtocol.
+             * The ALPN protocol version. You can configure this parameter when you perform an HTTPS synthetic test on a WAP mobile client. Valid values:
+             * <p>
+             * 
+             * 0: default
+             * 
+             * 1-http/1.1
+             * 
+             * 2-h2
+             * 
+             * 3: disables the ALPN protocol
              */
             public Builder protocolAlpnProtocol(Integer protocolAlpnProtocol) {
                 this.protocolAlpnProtocol = protocolAlpnProtocol;
@@ -1499,7 +1508,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore CA certificate authentication errors. Valid values: 0: No. 1: Yes. Default value: 1.
+             * Specifies whether to ignore CA certificate authentication errors. Valid values: 0: no. 1: yes. Default value: 1.
              */
             public Builder ignoreCertificateAuthError(Integer ignoreCertificateAuthError) {
                 this.ignoreCertificateAuthError = ignoreCertificateAuthError;
@@ -1507,7 +1516,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate revocation errors. Valid values: 0: No. 1: Yes. Default value: 1.
+             * Specifies whether to ignore certificate revocation errors. Valid values: 0: no. 1: yes. Default value: 1.
              */
             public Builder ignoreCertificateCanceledError(Integer ignoreCertificateCanceledError) {
                 this.ignoreCertificateCanceledError = ignoreCertificateCanceledError;
@@ -1515,7 +1524,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate invalidity. Valid values: 0: No. 1: Yes. Default value: 1.
+             * Specifies whether to ignore certificate invalidity. Valid values: 0: no. 1: yes. Default value: 1.
              */
             public Builder ignoreCertificateOutOfDateError(Integer ignoreCertificateOutOfDateError) {
                 this.ignoreCertificateOutOfDateError = ignoreCertificateOutOfDateError;
@@ -1523,7 +1532,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate status errors. 0: No. 1: Yes. Default value: 1.
+             * Specifies whether to ignore certificate status errors. 0: no. 1: yes. Default value: 1.
              */
             public Builder ignoreCertificateStatusError(Integer ignoreCertificateStatusError) {
                 this.ignoreCertificateStatusError = ignoreCertificateStatusError;
@@ -1531,7 +1540,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate incredibility. Valid values: 0: No. 1: Yes. Default value: 1.
+             * Specifies whether to ignore certificate incredibility. Valid values: 0: no. 1: yes. Default value: 1.
              */
             public Builder ignoreCertificateUntrustworthyError(Integer ignoreCertificateUntrustworthyError) {
                 this.ignoreCertificateUntrustworthyError = ignoreCertificateUntrustworthyError;
@@ -1539,7 +1548,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore certificate usage errors. Valid values: 0: No. 1: Yes. Default value: 1.
+             * Specifies whether to ignore certificate usage errors. Valid values: 0: no. 1: yes. Default value: 1.
              */
             public Builder ignoreCertificateUsingError(Integer ignoreCertificateUsingError) {
                 this.ignoreCertificateUsingError = ignoreCertificateUsingError;
@@ -1547,7 +1556,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore host invalidity. Valid values: 0: No. 1: Yes. Default value: 1.
+             * Specifies whether to ignore host invalidity. Valid values: 0: no. 1: yes. Default value: 1.
              */
             public Builder ignoreInvalidHostError(Integer ignoreInvalidHostError) {
                 this.ignoreInvalidHostError = ignoreInvalidHostError;
@@ -1568,7 +1577,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              * 
              * *   1: HTTP/1
              * *   2: HTTP/2
-             * *   3: HTTP/3
+             * *   3: http3
              */
             public Builder quickProtocol(Integer quickProtocol) {
                 this.quickProtocol = quickProtocol;
@@ -1576,7 +1585,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to support redirection. Valid values: 0: No. 1: Yes. Default value: 1.
+             * Specifies whether to support redirection. Valid values: 0: no. 1: yes. Default value: 1.
              */
             public Builder redirection(Integer redirection) {
                 this.redirection = redirection;
@@ -1722,7 +1731,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Long timeout; 
 
             /**
-             * Specifies whether to use the dig command to display the data. Valid values: 0: No. 1: Yes.
+             * Specifies whether to use the dig command to display the data. Valid values: 0: no. 1: yes.
              */
             public Builder dig(Integer dig) {
                 this.dig = dig;
@@ -1762,7 +1771,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The timeout period for the DNS synthetic test. Unit: milliseconds. The minimum value is 1000 and the maximum value is 45000. Default value: 5000.
+             * The timeout period for the DNS synthetic test. Unit: milliseconds. Minimum value: 1000. Maximum value: 45000. Default value: 5000.
              */
             public Builder timeout(Long timeout) {
                 this.timeout = timeout;
@@ -2260,8 +2269,8 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              * The address type of the resource. Valid values:
              * <p>
              * 
-             * *   1: resource URL
-             * *   0: page URL Default value: 0.
+             * *   1: resource URL.
+             * *   0: page URL. Default value: 0.
              */
             public Builder streamAddressType(Integer streamAddressType) {
                 this.streamAddressType = streamAddressType;
@@ -2550,7 +2559,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             private Long waitCompletionTime; 
 
             /**
-             * Specifies whether to automatically scroll up and down the screen to load a page. Valid values: 0: No. 1: Yes. Default value: 0.
+             * Specifies whether to automatically scroll up and down the screen to load a page. Valid values: 0: no. 1: yes. Default value: 0.
              */
             public Builder automaticScrolling(Integer automaticScrolling) {
                 this.automaticScrolling = automaticScrolling;
@@ -2558,7 +2567,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to create a custom header. Valid values: 0: No. 1: The first packet is modified. 2: All packets are modified. Default value: 0.
+             * Specifies whether to create a custom header. Valid values: 0: no. 1: The first packet is modified. 2: All packets are modified. Default value: 0.
              */
             public Builder customHeader(Integer customHeader) {
                 this.customHeader = customHeader;
@@ -2585,7 +2594,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to disable the cache. Valid values: 0: No. 1: Yes. Default value: 1.
+             * Specifies whether to disable the cache. Valid values: 0: no. 1: yes. Default value: 1.
              */
             public Builder disableCache(Integer disableCache) {
                 this.disableCache = disableCache;
@@ -2593,7 +2602,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: No. 1: Yes. Default value: 0.
+             * Specifies whether to accept compressed files based on the HTTP Accept-Encoding request header. Valid values: 0: no. 1: yes. Default value: 0.
              */
             public Builder disableCompression(Integer disableCompression) {
                 this.disableCompression = disableCompression;
@@ -2612,8 +2621,8 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
              * Specifies whether to exclude invalid IP addresses. Valid values:
              * <p>
              * 
-             * *   1: No
-             * *   0: Yes
+             * *   1: no
+             * *   0: yes
              */
             public Builder filterInvalidIP(Integer filterInvalidIP) {
                 this.filterInvalidIP = filterInvalidIP;
@@ -2637,7 +2646,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to ignore SSL certificate errors during browsing. Valid values: 0: No. 1: Yes. Default value: 1.
+             * Specifies whether to ignore SSL certificate errors during browsing. Valid values: 0: no. 1: yes. Default value: 1.
              */
             public Builder ignoreCertificateError(Integer ignoreCertificateError) {
                 this.ignoreCertificateError = ignoreCertificateError;
@@ -2661,7 +2670,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * Specifies whether to continue browsing after redirection. Valid values: 0: No. 1:Yes. Default value: 1.
+             * Specifies whether to continue browsing after redirection. Valid values: 0: no. 1: yes. Default value: 1.
              */
             public Builder redirection(Integer redirection) {
                 this.redirection = redirection;
@@ -2846,7 +2855,7 @@ public class UpdateTimingSyntheticTaskRequest extends Request {
             }
 
             /**
-             * The parameters of the TCP synthetic test. This parameter is required if the TaskType parameter is set to 2.
+             * The parameters of the TCP synthetic test.
              */
             public Builder netTCP(NetTCP netTCP) {
                 this.netTCP = netTCP;
