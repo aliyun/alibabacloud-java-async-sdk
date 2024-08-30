@@ -30,12 +30,10 @@ public class DescribePortRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
     private DescribePortRequest(Builder builder) {

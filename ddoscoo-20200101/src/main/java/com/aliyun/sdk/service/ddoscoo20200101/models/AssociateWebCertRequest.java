@@ -44,10 +44,6 @@ public class AssociateWebCertRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
-    private String resourceGroupId;
-
     private AssociateWebCertRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -58,7 +54,6 @@ public class AssociateWebCertRequest extends Request {
         this.certRegion = builder.certRegion;
         this.domain = builder.domain;
         this.key = builder.key;
-        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -130,13 +125,6 @@ public class AssociateWebCertRequest extends Request {
         return this.key;
     }
 
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
-    }
-
     public static final class Builder extends Request.Builder<AssociateWebCertRequest, Builder> {
         private String regionId; 
         private String cert; 
@@ -146,7 +134,6 @@ public class AssociateWebCertRequest extends Request {
         private String certRegion; 
         private String domain; 
         private String key; 
-        private String resourceGroupId; 
 
         private Builder() {
             super();
@@ -162,7 +149,6 @@ public class AssociateWebCertRequest extends Request {
             this.certRegion = request.certRegion;
             this.domain = request.domain;
             this.key = request.key;
-            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -237,15 +223,6 @@ public class AssociateWebCertRequest extends Request {
         public Builder key(String key) {
             this.putBodyParameter("Key", key);
             this.key = key;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

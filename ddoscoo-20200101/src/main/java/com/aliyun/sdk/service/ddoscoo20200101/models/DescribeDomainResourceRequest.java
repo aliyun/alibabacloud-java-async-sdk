@@ -29,7 +29,6 @@ public class DescribeDomainResourceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query

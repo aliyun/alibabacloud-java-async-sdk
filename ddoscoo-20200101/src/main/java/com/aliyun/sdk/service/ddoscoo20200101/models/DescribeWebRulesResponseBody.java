@@ -363,6 +363,9 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SslProtocols")
         private String sslProtocols;
 
+        @com.aliyun.core.annotation.NameInMap("UserCertName")
+        private String userCertName;
+
         @com.aliyun.core.annotation.NameInMap("WhiteList")
         private java.util.List < String > whiteList;
 
@@ -390,6 +393,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             this.ssl13Enabled = builder.ssl13Enabled;
             this.sslCiphers = builder.sslCiphers;
             this.sslProtocols = builder.sslProtocols;
+            this.userCertName = builder.userCertName;
             this.whiteList = builder.whiteList;
         }
 
@@ -563,6 +567,13 @@ public class DescribeWebRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return userCertName
+         */
+        public String getUserCertName() {
+            return this.userCertName;
+        }
+
+        /**
          * @return whiteList
          */
         public java.util.List < String > getWhiteList() {
@@ -593,6 +604,7 @@ public class DescribeWebRulesResponseBody extends TeaModel {
             private Boolean ssl13Enabled; 
             private String sslCiphers; 
             private String sslProtocols; 
+            private String userCertName; 
             private java.util.List < String > whiteList; 
 
             /**
@@ -776,6 +788,14 @@ public class DescribeWebRulesResponseBody extends TeaModel {
              */
             public Builder sslProtocols(String sslProtocols) {
                 this.sslProtocols = sslProtocols;
+                return this;
+            }
+
+            /**
+             * UserCertName.
+             */
+            public Builder userCertName(String userCertName) {
+                this.userCertName = userCertName;
                 return this;
             }
 
