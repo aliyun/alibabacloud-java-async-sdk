@@ -33,6 +33,10 @@ public class CreateRumAppRequest extends Request {
     private String packageName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealRegionId")
+    private String realRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -61,6 +65,7 @@ public class CreateRumAppRequest extends Request {
         this.description = builder.description;
         this.nickName = builder.nickName;
         this.packageName = builder.packageName;
+        this.realRegionId = builder.realRegionId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.siteType = builder.siteType;
@@ -117,6 +122,13 @@ public class CreateRumAppRequest extends Request {
     }
 
     /**
+     * @return realRegionId
+     */
+    public String getRealRegionId() {
+        return this.realRegionId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -157,6 +169,7 @@ public class CreateRumAppRequest extends Request {
         private String description; 
         private String nickName; 
         private String packageName; 
+        private String realRegionId; 
         private String regionId; 
         private String resourceGroupId; 
         private String siteType; 
@@ -174,6 +187,7 @@ public class CreateRumAppRequest extends Request {
             this.description = request.description;
             this.nickName = request.nickName;
             this.packageName = request.packageName;
+            this.realRegionId = request.realRegionId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.siteType = request.siteType;
@@ -223,6 +237,15 @@ public class CreateRumAppRequest extends Request {
         public Builder packageName(String packageName) {
             this.putQueryParameter("PackageName", packageName);
             this.packageName = packageName;
+            return this;
+        }
+
+        /**
+         * RealRegionId.
+         */
+        public Builder realRegionId(String realRegionId) {
+            this.putQueryParameter("RealRegionId", realRegionId);
+            this.realRegionId = realRegionId;
             return this;
         }
 

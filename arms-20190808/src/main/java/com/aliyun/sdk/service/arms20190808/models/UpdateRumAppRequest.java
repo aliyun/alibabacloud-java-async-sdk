@@ -37,6 +37,10 @@ public class UpdateRumAppRequest extends Request {
     private String pid;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealRegionId")
+    private String realRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -61,6 +65,7 @@ public class UpdateRumAppRequest extends Request {
         this.isSubscribe = builder.isSubscribe;
         this.nickname = builder.nickname;
         this.pid = builder.pid;
+        this.realRegionId = builder.realRegionId;
         this.regionId = builder.regionId;
         this.restart = builder.restart;
         this.serviceDomainOperationJson = builder.serviceDomainOperationJson;
@@ -123,6 +128,13 @@ public class UpdateRumAppRequest extends Request {
     }
 
     /**
+     * @return realRegionId
+     */
+    public String getRealRegionId() {
+        return this.realRegionId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -157,6 +169,7 @@ public class UpdateRumAppRequest extends Request {
         private Boolean isSubscribe; 
         private String nickname; 
         private String pid; 
+        private String realRegionId; 
         private String regionId; 
         private Boolean restart; 
         private String serviceDomainOperationJson; 
@@ -174,6 +187,7 @@ public class UpdateRumAppRequest extends Request {
             this.isSubscribe = request.isSubscribe;
             this.nickname = request.nickname;
             this.pid = request.pid;
+            this.realRegionId = request.realRegionId;
             this.regionId = request.regionId;
             this.restart = request.restart;
             this.serviceDomainOperationJson = request.serviceDomainOperationJson;
@@ -231,6 +245,15 @@ public class UpdateRumAppRequest extends Request {
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
             this.pid = pid;
+            return this;
+        }
+
+        /**
+         * RealRegionId.
+         */
+        public Builder realRegionId(String realRegionId) {
+            this.putQueryParameter("RealRegionId", realRegionId);
+            this.realRegionId = realRegionId;
             return this;
         }
 

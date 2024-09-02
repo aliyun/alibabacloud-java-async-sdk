@@ -178,6 +178,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArchiveDuration")
         private Integer archiveDuration;
 
+        @com.aliyun.core.annotation.NameInMap("AuthFreeReadPolicy")
+        private String authFreeReadPolicy;
+
+        @com.aliyun.core.annotation.NameInMap("AuthFreeWritePolicy")
+        private String authFreeWritePolicy;
+
         @com.aliyun.core.annotation.NameInMap("AuthToken")
         private String authToken;
 
@@ -192,6 +198,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DbInstanceStatus")
         private String dbInstanceStatus;
+
+        @com.aliyun.core.annotation.NameInMap("EnableAuthFreeRead")
+        private Boolean enableAuthFreeRead;
+
+        @com.aliyun.core.annotation.NameInMap("EnableAuthFreeWrite")
+        private Boolean enableAuthFreeWrite;
 
         @com.aliyun.core.annotation.NameInMap("EnableAuthToken")
         private String enableAuthToken;
@@ -265,11 +277,15 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.accessType = builder.accessType;
             this.archiveDuration = builder.archiveDuration;
+            this.authFreeReadPolicy = builder.authFreeReadPolicy;
+            this.authFreeWritePolicy = builder.authFreeWritePolicy;
             this.authToken = builder.authToken;
             this.clusterId = builder.clusterId;
             this.clusterName = builder.clusterName;
             this.clusterType = builder.clusterType;
             this.dbInstanceStatus = builder.dbInstanceStatus;
+            this.enableAuthFreeRead = builder.enableAuthFreeRead;
+            this.enableAuthFreeWrite = builder.enableAuthFreeWrite;
             this.enableAuthToken = builder.enableAuthToken;
             this.grafanaInstanceId = builder.grafanaInstanceId;
             this.httpApiInterUrl = builder.httpApiInterUrl;
@@ -318,6 +334,20 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return authFreeReadPolicy
+         */
+        public String getAuthFreeReadPolicy() {
+            return this.authFreeReadPolicy;
+        }
+
+        /**
+         * @return authFreeWritePolicy
+         */
+        public String getAuthFreeWritePolicy() {
+            return this.authFreeWritePolicy;
+        }
+
+        /**
          * @return authToken
          */
         public String getAuthToken() {
@@ -350,6 +380,20 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         public String getDbInstanceStatus() {
             return this.dbInstanceStatus;
+        }
+
+        /**
+         * @return enableAuthFreeRead
+         */
+        public Boolean getEnableAuthFreeRead() {
+            return this.enableAuthFreeRead;
+        }
+
+        /**
+         * @return enableAuthFreeWrite
+         */
+        public Boolean getEnableAuthFreeWrite() {
+            return this.enableAuthFreeWrite;
         }
 
         /**
@@ -516,11 +560,15 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String accessType; 
             private Integer archiveDuration; 
+            private String authFreeReadPolicy; 
+            private String authFreeWritePolicy; 
             private String authToken; 
             private String clusterId; 
             private String clusterName; 
             private String clusterType; 
             private String dbInstanceStatus; 
+            private Boolean enableAuthFreeRead; 
+            private Boolean enableAuthFreeWrite; 
             private String enableAuthToken; 
             private String grafanaInstanceId; 
             private String httpApiInterUrl; 
@@ -558,6 +606,22 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder archiveDuration(Integer archiveDuration) {
                 this.archiveDuration = archiveDuration;
+                return this;
+            }
+
+            /**
+             * Read the whitelist policy for password-free addresses.
+             */
+            public Builder authFreeReadPolicy(String authFreeReadPolicy) {
+                this.authFreeReadPolicy = authFreeReadPolicy;
+                return this;
+            }
+
+            /**
+             * Write exempt password address whitelist policy.
+             */
+            public Builder authFreeWritePolicy(String authFreeWritePolicy) {
+                this.authFreeWritePolicy = authFreeWritePolicy;
                 return this;
             }
 
@@ -604,6 +668,22 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder dbInstanceStatus(String dbInstanceStatus) {
                 this.dbInstanceStatus = dbInstanceStatus;
+                return this;
+            }
+
+            /**
+             * Whether to enable password-free reading.
+             */
+            public Builder enableAuthFreeRead(Boolean enableAuthFreeRead) {
+                this.enableAuthFreeRead = enableAuthFreeRead;
+                return this;
+            }
+
+            /**
+             * Whether to enable write access without password.
+             */
+            public Builder enableAuthFreeWrite(Boolean enableAuthFreeWrite) {
+                this.enableAuthFreeWrite = enableAuthFreeWrite;
                 return this;
             }
 
@@ -756,7 +836,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportAuthTypes.
+             * Supported authentication types.
              */
             public Builder supportAuthTypes(java.util.List < String > supportAuthTypes) {
                 this.supportAuthTypes = supportAuthTypes;

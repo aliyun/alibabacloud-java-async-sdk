@@ -21,6 +21,10 @@ public class DeleteRumAppRequest extends Request {
     private String appId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealRegionId")
+    private String realRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -29,6 +33,7 @@ public class DeleteRumAppRequest extends Request {
         super(builder);
         this.appGroup = builder.appGroup;
         this.appId = builder.appId;
+        this.realRegionId = builder.realRegionId;
         this.regionId = builder.regionId;
     }
 
@@ -60,6 +65,13 @@ public class DeleteRumAppRequest extends Request {
     }
 
     /**
+     * @return realRegionId
+     */
+    public String getRealRegionId() {
+        return this.realRegionId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -69,6 +81,7 @@ public class DeleteRumAppRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteRumAppRequest, Builder> {
         private String appGroup; 
         private String appId; 
+        private String realRegionId; 
         private String regionId; 
 
         private Builder() {
@@ -79,6 +92,7 @@ public class DeleteRumAppRequest extends Request {
             super(request);
             this.appGroup = request.appGroup;
             this.appId = request.appId;
+            this.realRegionId = request.realRegionId;
             this.regionId = request.regionId;
         } 
 
@@ -97,6 +111,15 @@ public class DeleteRumAppRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * RealRegionId.
+         */
+        public Builder realRegionId(String realRegionId) {
+            this.putQueryParameter("RealRegionId", realRegionId);
+            this.realRegionId = realRegionId;
             return this;
         }
 
