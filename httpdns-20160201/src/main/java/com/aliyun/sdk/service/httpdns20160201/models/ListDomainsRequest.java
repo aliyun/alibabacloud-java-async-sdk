@@ -24,11 +24,16 @@ public class ListDomainsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Search")
     private String search;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WithoutMeteringData")
+    private Boolean withoutMeteringData;
+
     private ListDomainsRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.search = builder.search;
+        this.withoutMeteringData = builder.withoutMeteringData;
     }
 
     public static Builder builder() {
@@ -65,10 +70,18 @@ public class ListDomainsRequest extends Request {
         return this.search;
     }
 
+    /**
+     * @return withoutMeteringData
+     */
+    public Boolean getWithoutMeteringData() {
+        return this.withoutMeteringData;
+    }
+
     public static final class Builder extends Request.Builder<ListDomainsRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String search; 
+        private Boolean withoutMeteringData; 
 
         private Builder() {
             super();
@@ -79,6 +92,7 @@ public class ListDomainsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.search = request.search;
+            this.withoutMeteringData = request.withoutMeteringData;
         } 
 
         /**
@@ -105,6 +119,15 @@ public class ListDomainsRequest extends Request {
         public Builder search(String search) {
             this.putQueryParameter("Search", search);
             this.search = search;
+            return this;
+        }
+
+        /**
+         * WithoutMeteringData.
+         */
+        public Builder withoutMeteringData(Boolean withoutMeteringData) {
+            this.putQueryParameter("WithoutMeteringData", withoutMeteringData);
+            this.withoutMeteringData = withoutMeteringData;
             return this;
         }
 
