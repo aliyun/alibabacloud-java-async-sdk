@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSortScriptFileResponseBody</p>
  */
 public class GetSortScriptFileResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetSortScriptFileResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GetSortScriptFileResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,16 +71,16 @@ public class GetSortScriptFileResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("modifyTime")
+        @com.aliyun.core.annotation.NameInMap("modifyTime")
         private String modifyTime;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private Long version;
 
         private Result(Builder builder) {
@@ -150,7 +149,7 @@ public class GetSortScriptFileResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the script was last modified.
+             * The time when the script was last modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -158,7 +157,7 @@ public class GetSortScriptFileResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the script.
+             * The version of the script content.
              */
             public Builder version(Long version) {
                 this.version = version;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyFirstRankResponseBody</p>
  */
 public class ModifyFirstRankResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private ModifyFirstRankResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ModifyFirstRankResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,13 +71,13 @@ public class ModifyFirstRankResponseBody extends TeaModel {
     } 
 
     public static class Meta extends TeaModel {
-        @NameInMap("arg")
+        @com.aliyun.core.annotation.NameInMap("arg")
         private String arg;
 
-        @NameInMap("attribute")
+        @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
 
-        @NameInMap("weight")
+        @com.aliyun.core.annotation.NameInMap("weight")
         private Float weight;
 
         private Meta(Builder builder) {
@@ -131,9 +130,6 @@ public class ModifyFirstRankResponseBody extends TeaModel {
 
             /**
              * The attribute, feature function, or field to be searched for.
-             * <p>
-             * 
-             * For more information about supported feature functions, see Rough sort functions.
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -141,10 +137,7 @@ public class ModifyFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The weight.
-             * <p>
-             * 
-             * Valid values: \[-100000,100000] (excluding 0).
+             * The weight. Valid values: -100000 to 100000. The value cannot be 0.
              */
             public Builder weight(Float weight) {
                 this.weight = weight;
@@ -159,16 +152,16 @@ public class ModifyFirstRankResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("meta")
+        @com.aliyun.core.annotation.NameInMap("meta")
         private java.util.List < Meta> meta;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Result(Builder builder) {
@@ -229,7 +222,7 @@ public class ModifyFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the expression.
+             * The description of the rough sort expression.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -237,7 +230,7 @@ public class ModifyFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the expression.
+             * The information about the expression.
              */
             public Builder meta(java.util.List < Meta> meta) {
                 this.meta = meta;

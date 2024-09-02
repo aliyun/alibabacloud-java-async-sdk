@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAppGroupQuotaRequest</p>
  */
 public class ModifyAppGroupQuotaRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private Quota body;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private ModifyAppGroupQuotaRequest(Builder builder) {
@@ -83,7 +82,7 @@ public class ModifyAppGroupQuotaRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -92,7 +91,7 @@ public class ModifyAppGroupQuotaRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(Quota body) {
             this.putBodyParameter("body", body);
@@ -101,7 +100,7 @@ public class ModifyAppGroupQuotaRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to verify the application before modification. Valid values: true and false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

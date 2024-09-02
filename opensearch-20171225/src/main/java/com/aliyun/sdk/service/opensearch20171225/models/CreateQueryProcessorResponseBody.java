@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQueryProcessorResponseBody</p>
  */
 public class CreateQueryProcessorResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private CreateQueryProcessorResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class CreateQueryProcessorResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("indexes")
+        @com.aliyun.core.annotation.NameInMap("indexes")
         private java.util.List < String > indexes;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("processors")
+        @com.aliyun.core.annotation.NameInMap("processors")
         private java.util.List < java.util.Map<String, ?>> processors;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {

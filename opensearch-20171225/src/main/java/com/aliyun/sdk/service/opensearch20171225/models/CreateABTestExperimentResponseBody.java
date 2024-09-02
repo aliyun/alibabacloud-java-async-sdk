@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateABTestExperimentResponseBody</p>
  */
 public class CreateABTestExperimentResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private CreateABTestExperimentResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class CreateABTestExperimentResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("online")
+        @com.aliyun.core.annotation.NameInMap("online")
         private Boolean online;
 
-        @NameInMap("params")
+        @com.aliyun.core.annotation.NameInMap("params")
         private java.util.Map < String, ? > params;
 
-        @NameInMap("traffic")
+        @com.aliyun.core.annotation.NameInMap("traffic")
         private Integer traffic;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {

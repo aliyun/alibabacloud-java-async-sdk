@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ABTestExperiment</p>
  */
 public class ABTestExperiment extends TeaModel {
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("online")
+    @com.aliyun.core.annotation.NameInMap("online")
     private Boolean online;
 
-    @NameInMap("params")
+    @com.aliyun.core.annotation.NameInMap("params")
     private java.util.Map < String, String > params;
 
-    @NameInMap("serialNumber")
+    @com.aliyun.core.annotation.NameInMap("serialNumber")
     private Integer serialNumber;
 
-    @NameInMap("traffic")
+    @com.aliyun.core.annotation.NameInMap("traffic")
     private Integer traffic;
 
     private ABTestExperiment(Builder builder) {

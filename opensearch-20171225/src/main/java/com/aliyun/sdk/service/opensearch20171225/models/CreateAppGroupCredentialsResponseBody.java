@@ -6,18 +6,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListSlowQueryQueriesResponseBody} extends {@link TeaModel}
+ * {@link CreateAppGroupCredentialsResponseBody} extends {@link TeaModel}
  *
- * <p>ListSlowQueryQueriesResponseBody</p>
+ * <p>CreateAppGroupCredentialsResponseBody</p>
  */
-public class ListSlowQueryQueriesResponseBody extends TeaModel {
+public class CreateAppGroupCredentialsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    private ListSlowQueryQueriesResponseBody(Builder builder) {
+    private CreateAppGroupCredentialsResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.result = builder.result;
     }
@@ -26,7 +26,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListSlowQueryQueriesResponseBody create() {
+    public static CreateAppGroupCredentialsResponseBody create() {
         return builder().build();
     }
 
@@ -49,7 +49,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,37 +57,37 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * The return result.
+         * result.
          */
         public Builder result(Result result) {
             this.result = result;
             return this;
         }
 
-        public ListSlowQueryQueriesResponseBody build() {
-            return new ListSlowQueryQueriesResponseBody(this);
+        public CreateAppGroupCredentialsResponseBody build() {
+            return new CreateAppGroupCredentialsResponseBody(this);
         } 
 
     } 
 
     public static class Result extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("appQuery")
-        private String appQuery;
+        @com.aliyun.core.annotation.NameInMap("appGroupId")
+        private Long appGroupId;
 
-        @com.aliyun.core.annotation.NameInMap("end")
-        private Integer end;
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
 
-        @com.aliyun.core.annotation.NameInMap("index")
-        private Integer index;
+        @com.aliyun.core.annotation.NameInMap("token")
+        private String token;
 
-        @com.aliyun.core.annotation.NameInMap("start")
-        private Integer start;
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
 
         private Result(Builder builder) {
-            this.appQuery = builder.appQuery;
-            this.end = builder.end;
-            this.index = builder.index;
-            this.start = builder.start;
+            this.appGroupId = builder.appGroupId;
+            this.enabled = builder.enabled;
+            this.token = builder.token;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -99,68 +99,68 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * @return appQuery
+         * @return appGroupId
          */
-        public String getAppQuery() {
-            return this.appQuery;
+        public Long getAppGroupId() {
+            return this.appGroupId;
         }
 
         /**
-         * @return end
+         * @return enabled
          */
-        public Integer getEnd() {
-            return this.end;
+        public Boolean getEnabled() {
+            return this.enabled;
         }
 
         /**
-         * @return index
+         * @return token
          */
-        public Integer getIndex() {
-            return this.index;
+        public String getToken() {
+            return this.token;
         }
 
         /**
-         * @return start
+         * @return type
          */
-        public Integer getStart() {
-            return this.start;
+        public String getType() {
+            return this.type;
         }
 
         public static final class Builder {
-            private String appQuery; 
-            private Integer end; 
-            private Integer index; 
-            private Integer start; 
+            private Long appGroupId; 
+            private Boolean enabled; 
+            private String token; 
+            private String type; 
 
             /**
-             * The content of the optimization suggestion for the query.
+             * appGroupId.
              */
-            public Builder appQuery(String appQuery) {
-                this.appQuery = appQuery;
+            public Builder appGroupId(Long appGroupId) {
+                this.appGroupId = appGroupId;
                 return this;
             }
 
             /**
-             * The end of the time range that was queried.
+             * enabled.
              */
-            public Builder end(Integer end) {
-                this.end = end;
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
                 return this;
             }
 
             /**
-             * The ID of the optimization suggestion.
+             * token.
              */
-            public Builder index(Integer index) {
-                this.index = index;
+            public Builder token(String token) {
+                this.token = token;
                 return this;
             }
 
             /**
-             * The beginning of the time range that was queried.
+             * type.
              */
-            public Builder start(Integer start) {
-                this.start = start;
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 

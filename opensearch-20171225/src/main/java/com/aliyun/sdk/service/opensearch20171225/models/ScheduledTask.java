@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScheduledTask</p>
  */
 public class ScheduledTask extends TeaModel {
-    @NameInMap("autoSwitch")
+    @com.aliyun.core.annotation.NameInMap("autoSwitch")
     private Boolean autoSwitch;
 
-    @NameInMap("cron")
+    @com.aliyun.core.annotation.NameInMap("cron")
     private String cron;
 
-    @NameInMap("enabled")
+    @com.aliyun.core.annotation.NameInMap("enabled")
     private Boolean enabled;
 
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.NameInMap("filter")
     private Filter filter;
 
-    @NameInMap("forkedAppId")
+    @com.aliyun.core.annotation.NameInMap("forkedAppId")
     private String forkedAppId;
 
-    @NameInMap("permanent")
+    @com.aliyun.core.annotation.NameInMap("permanent")
     private Boolean permanent;
 
-    @NameInMap("runNow")
+    @com.aliyun.core.annotation.NameInMap("runNow")
     private Boolean runNow;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @NameInMap("version")
+    @com.aliyun.core.annotation.NameInMap("version")
     private String version;
 
     private ScheduledTask(Builder builder) {
@@ -212,16 +211,16 @@ public class ScheduledTask extends TeaModel {
     } 
 
     public static class Filter extends TeaModel {
-        @NameInMap("days")
+        @com.aliyun.core.annotation.NameInMap("days")
         private Integer days;
 
-        @NameInMap("expression")
+        @com.aliyun.core.annotation.NameInMap("expression")
         private String expression;
 
-        @NameInMap("field")
+        @com.aliyun.core.annotation.NameInMap("field")
         private String field;
 
-        @NameInMap("unit")
+        @com.aliyun.core.annotation.NameInMap("unit")
         private String unit;
 
         private Filter(Builder builder) {

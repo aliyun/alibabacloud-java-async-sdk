@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteFunctionResourceRequest</p>
  */
 public class DeleteFunctionResourceRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Path
-    @NameInMap("resourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("resourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceName;
 
     private DeleteFunctionResourceRequest(Builder builder) {
@@ -85,7 +84,7 @@ public class DeleteFunctionResourceRequest extends Request {
         } 
 
         /**
-         * appGroupIdentity.
+         * The application ID.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -94,7 +93,7 @@ public class DeleteFunctionResourceRequest extends Request {
         }
 
         /**
-         * functionName.
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -103,7 +102,7 @@ public class DeleteFunctionResourceRequest extends Request {
         }
 
         /**
-         * resourceName.
+         * The name of the resource.
          */
         public Builder resourceName(String resourceName) {
             this.putPathParameter("resourceName", resourceName);

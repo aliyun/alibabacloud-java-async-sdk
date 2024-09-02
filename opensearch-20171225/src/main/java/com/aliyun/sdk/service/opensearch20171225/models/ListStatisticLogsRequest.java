@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStatisticLogsRequest</p>
  */
 public class ListStatisticLogsRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("moduleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("moduleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String moduleName;
 
-    @Query
-    @NameInMap("columns")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("columns")
     private String columns;
 
-    @Query
-    @NameInMap("distinct")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("distinct")
     private Boolean distinct;
 
-    @Query
-    @NameInMap("pageNumber")
-    @Validation(maximum = 1000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
-    @Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("query")
     private String query;
 
-    @Query
-    @NameInMap("sortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("startTime")
-    @Validation(maximum = 9999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999999D)
     private Integer startTime;
 
-    @Query
-    @NameInMap("stopTime")
-    @Validation(maximum = 9999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("stopTime")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999999D)
     private Integer stopTime;
 
     private ListStatisticLogsRequest(Builder builder) {
@@ -186,7 +185,7 @@ public class ListStatisticLogsRequest extends Request {
         } 
 
         /**
-         * The name of the application.
+         * The application name.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -195,14 +194,14 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The name of the module. Valid values:
+         * The module name. Valid values:
          * <p>
          * 
-         * - hot:the rankings of hotwords
-         * - error: application error logs
-         * - slow-log: slow query logs
+         * *   hot: rankings of hotwords.
+         * *   error: application error logs.
+         * *   slow-log: slow query logs.
          * 
-         * Only hot is supported.
+         * Set the value to hot.
          */
         public Builder moduleName(String moduleName) {
             this.putPathParameter("moduleName", moduleName);
@@ -211,10 +210,10 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The fields to query. Example: columns=wordsTopPv.
+         * The fields to query. Format: columns=wordsTopPv.
          * <p>
          * 
-         * For more information, see [Metrics in statistical reports](https://www.alibabacloud.com/help/en/opensearch/latest/statistical-report).
+         * For more information, see [Metrics in statistical reports](~~187665~~).
          */
         public Builder columns(String columns) {
             this.putQueryParameter("columns", columns);
@@ -223,7 +222,7 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The content of the query clause.
+         * Specifies whether to use the distinct clause.
          */
         public Builder distinct(Boolean distinct) {
             this.putQueryParameter("distinct", distinct);
@@ -232,7 +231,7 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -241,7 +240,7 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

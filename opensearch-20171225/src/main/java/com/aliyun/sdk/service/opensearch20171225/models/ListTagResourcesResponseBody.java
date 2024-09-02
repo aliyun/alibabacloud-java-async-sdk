@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTagResourcesResponseBody</p>
  */
 public class ListTagResourcesResponseBody extends TeaModel {
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ListTagResourcesResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class ListTagResourcesResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("resourceId")
+        @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
-        @NameInMap("tagKey")
+        @com.aliyun.core.annotation.NameInMap("tagKey")
         private String tagKey;
 
-        @NameInMap("tagValue")
+        @com.aliyun.core.annotation.NameInMap("tagValue")
         private String tagValue;
 
         private Result(Builder builder) {

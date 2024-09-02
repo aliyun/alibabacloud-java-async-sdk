@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFunctionResourcesRequest</p>
  */
 public class ListFunctionResourcesRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Query
-    @NameInMap("output")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("output")
     private String output;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("resourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceType")
     private String resourceType;
 
     private ListFunctionResourcesRequest(Builder builder) {
@@ -126,7 +125,7 @@ public class ListFunctionResourcesRequest extends Request {
         } 
 
         /**
-         * appGroupIdentity.
+         * The application ID.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -135,7 +134,7 @@ public class ListFunctionResourcesRequest extends Request {
         }
 
         /**
-         * functionName.
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -144,7 +143,14 @@ public class ListFunctionResourcesRequest extends Request {
         }
 
         /**
-         * output.
+         * The output level.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   simple
+         * *   normal
+         * *   detail
          */
         public Builder output(String output) {
             this.putQueryParameter("output", output);
@@ -153,7 +159,7 @@ public class ListFunctionResourcesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -162,7 +168,7 @@ public class ListFunctionResourcesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -171,7 +177,26 @@ public class ListFunctionResourcesRequest extends Request {
         }
 
         /**
-         * resourceType.
+         * The type of the resource.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   feature_generator
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   raw_file
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);

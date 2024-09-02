@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFunctionInstanceResponseBody</p>
  */
 public class GetFunctionInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private Long httpCode;
 
-    @NameInMap("Latency")
+    @com.aliyun.core.annotation.NameInMap("Latency")
     private Long latency;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private GetFunctionInstanceResponseBody(Builder builder) {
@@ -172,13 +171,13 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
     } 
 
     public static class Belongs extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
         private Belongs(Builder builder) {
@@ -253,10 +252,10 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
 
     }
     public static class CreateParameters extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private CreateParameters(Builder builder) {
@@ -314,10 +313,10 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
 
     }
     public static class Task extends TeaModel {
-        @NameInMap("DagStatus")
+        @com.aliyun.core.annotation.NameInMap("DagStatus")
         private String dagStatus;
 
-        @NameInMap("LastRunTime")
+        @com.aliyun.core.annotation.NameInMap("LastRunTime")
         private Long lastRunTime;
 
         private Task(Builder builder) {
@@ -382,10 +381,10 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
 
     }
     public static class UsageParameters extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private UsageParameters(Builder builder) {
@@ -443,49 +442,49 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Belongs")
+        @com.aliyun.core.annotation.NameInMap("Belongs")
         private Belongs belongs;
 
-        @NameInMap("CreateParameters")
+        @com.aliyun.core.annotation.NameInMap("CreateParameters")
         private java.util.List < CreateParameters> createParameters;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Cron")
+        @com.aliyun.core.annotation.NameInMap("Cron")
         private String cron;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExtendInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtendInfo")
         private String extendInfo;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("FunctionType")
+        @com.aliyun.core.annotation.NameInMap("FunctionType")
         private String functionType;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("ModelType")
+        @com.aliyun.core.annotation.NameInMap("ModelType")
         private String modelType;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Task")
+        @com.aliyun.core.annotation.NameInMap("Task")
         private Task task;
 
-        @NameInMap("UsageParameters")
+        @com.aliyun.core.annotation.NameInMap("UsageParameters")
         private java.util.List < UsageParameters> usageParameters;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private Long versionId;
 
         private Result(Builder builder) {

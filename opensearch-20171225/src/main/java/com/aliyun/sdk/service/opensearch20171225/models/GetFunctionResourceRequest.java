@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFunctionResourceRequest</p>
  */
 public class GetFunctionResourceRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("functionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("functionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionName;
 
-    @Path
-    @NameInMap("resourceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("resourceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceName;
 
-    @Query
-    @NameInMap("output")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("output")
     private String output;
 
     private GetFunctionResourceRequest(Builder builder) {
@@ -99,7 +98,7 @@ public class GetFunctionResourceRequest extends Request {
         } 
 
         /**
-         * appGroupIdentity.
+         * The ID of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -108,7 +107,7 @@ public class GetFunctionResourceRequest extends Request {
         }
 
         /**
-         * functionName.
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -117,7 +116,7 @@ public class GetFunctionResourceRequest extends Request {
         }
 
         /**
-         * resourceName.
+         * The name of the instance.
          */
         public Builder resourceName(String resourceName) {
             this.putPathParameter("resourceName", resourceName);
@@ -126,7 +125,14 @@ public class GetFunctionResourceRequest extends Request {
         }
 
         /**
-         * output.
+         * The output level.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   simple
+         * *   normal
+         * *   detail
          */
         public Builder output(String output) {
             this.putQueryParameter("output", output);

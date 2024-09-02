@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Schema</p>
  */
 public class Schema extends TeaModel {
-    @NameInMap("indexSortConfig")
+    @com.aliyun.core.annotation.NameInMap("indexSortConfig")
     private java.util.List < IndexSortConfig> indexSortConfig;
 
-    @NameInMap("indexes")
+    @com.aliyun.core.annotation.NameInMap("indexes")
     private Indexes indexes;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("routeField")
+    @com.aliyun.core.annotation.NameInMap("routeField")
     private String routeField;
 
-    @NameInMap("routeFieldValues")
+    @com.aliyun.core.annotation.NameInMap("routeFieldValues")
     private java.util.List < String > routeFieldValues;
 
-    @NameInMap("secondRouteField")
+    @com.aliyun.core.annotation.NameInMap("secondRouteField")
     private String secondRouteField;
 
-    @NameInMap("tables")
+    @com.aliyun.core.annotation.NameInMap("tables")
     private java.util.Map < String, SchemaTablesValue > tables;
 
-    @NameInMap("ttlField")
+    @com.aliyun.core.annotation.NameInMap("ttlField")
     private TtlField ttlField;
 
     private Schema(Builder builder) {
@@ -192,10 +191,10 @@ public class Schema extends TeaModel {
     } 
 
     public static class IndexSortConfig extends TeaModel {
-        @NameInMap("direction")
+        @com.aliyun.core.annotation.NameInMap("direction")
         private String direction;
 
-        @NameInMap("field")
+        @com.aliyun.core.annotation.NameInMap("field")
         private String field;
 
         private IndexSortConfig(Builder builder) {
@@ -253,10 +252,10 @@ public class Schema extends TeaModel {
 
     }
     public static class Indexes extends TeaModel {
-        @NameInMap("filterFields")
+        @com.aliyun.core.annotation.NameInMap("filterFields")
         private java.util.List < String > filterFields;
 
-        @NameInMap("searchFields")
+        @com.aliyun.core.annotation.NameInMap("searchFields")
         private java.util.Map < String, SchemaIndexesSearchFieldsValue > searchFields;
 
         private Indexes(Builder builder) {
@@ -314,10 +313,10 @@ public class Schema extends TeaModel {
 
     }
     public static class TtlField extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("ttl")
+        @com.aliyun.core.annotation.NameInMap("ttl")
         private Long ttl;
 
         private TtlField(Builder builder) {

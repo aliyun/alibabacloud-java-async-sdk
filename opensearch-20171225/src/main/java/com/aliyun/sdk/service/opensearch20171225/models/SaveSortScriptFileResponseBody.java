@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveSortScriptFileResponseBody</p>
  */
 public class SaveSortScriptFileResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private SaveSortScriptFileResponseBody(Builder builder) {
@@ -38,7 +37,7 @@ public class SaveSortScriptFileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

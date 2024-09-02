@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyFirstRankRequest</p>
  */
 public class ModifyFirstRankRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("appId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer appId;
 
-    @Path
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private FirstRank body;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private ModifyFirstRankRequest(Builder builder) {
@@ -113,7 +112,7 @@ public class ModifyFirstRankRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -122,7 +121,7 @@ public class ModifyFirstRankRequest extends Request {
         }
 
         /**
-         * 110157886
+         * The version number of the application.
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -131,7 +130,7 @@ public class ModifyFirstRankRequest extends Request {
         }
 
         /**
-         * test
+         * The name of the rough sort expression
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -140,7 +139,7 @@ public class ModifyFirstRankRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(FirstRank body) {
             this.putBodyParameter("body", body);
@@ -149,7 +148,7 @@ public class ModifyFirstRankRequest extends Request {
         }
 
         /**
-         * true
+         * Specifies whether the request is a dry run.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

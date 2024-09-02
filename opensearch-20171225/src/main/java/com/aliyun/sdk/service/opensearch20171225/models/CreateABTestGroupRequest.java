@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateABTestGroupRequest</p>
  */
 public class CreateABTestGroupRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("sceneId")
-    @Validation(maximum = 999999999)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("sceneId")
+    @com.aliyun.core.annotation.Validation(maximum = 999999999)
     private Integer sceneId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private ABTestGroup body;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private CreateABTestGroupRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class CreateABTestGroupRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -107,7 +106,7 @@ public class CreateABTestGroupRequest extends Request {
         }
 
         /**
-         * 20404
+         * The scenario ID.
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -116,7 +115,7 @@ public class CreateABTestGroupRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body. For more information, see [ABTestGroup](~~178935~~).
          */
         public Builder body(ABTestGroup body) {
             this.putBodyParameter("body", body);
@@ -125,7 +124,13 @@ public class CreateABTestGroupRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to check the validity of input parameters. Default value: false.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **true**: checks only the validity of input parameters.
+         * *   **false**: checks the validity of input parameters and creates an attribution configuration.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

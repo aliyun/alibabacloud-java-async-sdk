@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInterventionDictionaryEntriesResponseBody</p>
  */
 public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListInterventionDictionaryEntriesResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +69,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about each intervention entry.
+         * The information about intervention entries.
          * <p>
          * 
          * For more information, see [InterventionDictionaryEntry](~~173606~~).
@@ -95,16 +94,16 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
     } 
 
     public static class Tokens extends TeaModel {
-        @NameInMap("order")
+        @com.aliyun.core.annotation.NameInMap("order")
         private Integer order;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
-        @NameInMap("tagLabel")
+        @com.aliyun.core.annotation.NameInMap("tagLabel")
         private String tagLabel;
 
-        @NameInMap("token")
+        @com.aliyun.core.annotation.NameInMap("token")
         private String token;
 
         private Tokens(Builder builder) {
@@ -234,25 +233,25 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("cmd")
+        @com.aliyun.core.annotation.NameInMap("cmd")
         private String cmd;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Long created;
 
-        @NameInMap("relevance")
+        @com.aliyun.core.annotation.NameInMap("relevance")
         private java.util.Map < String, ? > relevance;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("tokens")
+        @com.aliyun.core.annotation.NameInMap("tokens")
         private java.util.List < Tokens> tokens;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Long updated;
 
-        @NameInMap("word")
+        @com.aliyun.core.annotation.NameInMap("word")
         private String word;
 
         private Result(Builder builder) {
@@ -332,7 +331,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             private String word; 
 
             /**
-             * The action. Valid values:
+             * The command. Valid values:
              * <p>
              * 
              * *   add
@@ -352,12 +351,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The content of an intervention entry for category prediction.
-             * <p>
-             * 
-             * The parameter returns key-value pairs. The key in a key-value pair indicates the ID of the category. The value in a key-value pair indicates the relevance value of the category. A value of 0 indicates irrelevant. A value of 1 indicates slightly relevant. A value of 2 indicates relevant.
-             * 
-             * Example: {"2":1, "100":0}
+             * The content of an intervention entry for category prediction. The field value consists of key-value pairs. The key in a key-value pair indicates the ID of the category. The value in a key-value pair indicates the relevance to the category. A value of 0 indicates irrelevant. A value of 1 indicates slightly relevant. A value of 2 indicates relevant. Example: {"2":1, "100":0}
              */
             public Builder relevance(java.util.Map < String, ? > relevance) {
                 this.relevance = relevance;
@@ -376,7 +370,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The content of an intervention entry for term weight analysis.
+             * The content of the intervention entry for term weight analysis.
              */
             public Builder tokens(java.util.List < Tokens> tokens) {
                 this.tokens = tokens;
@@ -392,7 +386,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The intervention query in the intervention entry.
+             * The intervention entry.
              */
             public Builder word(String word) {
                 this.word = word;

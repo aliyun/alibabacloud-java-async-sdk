@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInterventionDictionariesRequest</p>
  */
 public class ListInterventionDictionariesRequest extends Request {
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("types")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("types")
     private String types;
 
     private ListInterventionDictionariesRequest(Builder builder) {
@@ -82,7 +81,7 @@ public class ListInterventionDictionariesRequest extends Request {
         } 
 
         /**
-         * 1
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -91,7 +90,7 @@ public class ListInterventionDictionariesRequest extends Request {
         }
 
         /**
-         * 10
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -100,7 +99,15 @@ public class ListInterventionDictionariesRequest extends Request {
         }
 
         /**
-         * \-
+         * The type of the intervention dictionary. Valid values:
+         * <p>
+         * 
+         * *   stopword: an intervention dictionary for stop word filtering
+         * *   synonym: an intervention dictionary for synonym configuration
+         * *   correction: an intervention dictionary for spelling correction
+         * *   category_prediction: an intervention dictionary for category prediction
+         * *   ner: an intervention dictionary for named entity recognition (NER)
+         * *   term_weighting: an intervention dictionary for term weight analysis
          */
         public Builder types(String types) {
             this.putQueryParameter("types", types);

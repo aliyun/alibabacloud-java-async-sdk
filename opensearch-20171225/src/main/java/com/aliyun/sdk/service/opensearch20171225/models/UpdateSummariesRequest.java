@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSummariesRequest</p>
  */
 public class UpdateSummariesRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("appId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer appId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.util.List < UpdateSummariesRequestBody> body;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private UpdateSummariesRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class UpdateSummariesRequest extends Request {
         } 
 
         /**
-         * "my_app_group_name"
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -107,7 +106,7 @@ public class UpdateSummariesRequest extends Request {
         }
 
         /**
-         * 10157886
+         * The version number of the application.
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -116,7 +115,7 @@ public class UpdateSummariesRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(java.util.List < UpdateSummariesRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -125,7 +124,7 @@ public class UpdateSummariesRequest extends Request {
         }
 
         /**
-         * true
+         * Specifies whether the request is a dry run.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -141,19 +140,19 @@ public class UpdateSummariesRequest extends Request {
     } 
 
     public static class UpdateSummariesRequestBody extends TeaModel {
-        @NameInMap("element")
+        @com.aliyun.core.annotation.NameInMap("element")
         private String element;
 
-        @NameInMap("ellipsis")
+        @com.aliyun.core.annotation.NameInMap("ellipsis")
         private String ellipsis;
 
-        @NameInMap("field")
+        @com.aliyun.core.annotation.NameInMap("field")
         private String field;
 
-        @NameInMap("len")
+        @com.aliyun.core.annotation.NameInMap("len")
         private Integer len;
 
-        @NameInMap("snippet")
+        @com.aliyun.core.annotation.NameInMap("snippet")
         private Integer snippet;
 
         private UpdateSummariesRequestBody(Builder builder) {
@@ -215,7 +214,7 @@ public class UpdateSummariesRequest extends Request {
             private Integer snippet; 
 
             /**
-             * element.
+             * The HTML tag that is used to highlight terms in red.
              */
             public Builder element(String element) {
                 this.element = element;
@@ -223,7 +222,7 @@ public class UpdateSummariesRequest extends Request {
             }
 
             /**
-             * ellipsis.
+             * The connector that is used to connect segments.
              */
             public Builder ellipsis(String ellipsis) {
                 this.ellipsis = ellipsis;
@@ -231,7 +230,7 @@ public class UpdateSummariesRequest extends Request {
             }
 
             /**
-             * field.
+             * The field.
              */
             public Builder field(String field) {
                 this.field = field;
@@ -239,7 +238,7 @@ public class UpdateSummariesRequest extends Request {
             }
 
             /**
-             * len.
+             * The length of a segment.
              */
             public Builder len(Integer len) {
                 this.len = len;
@@ -247,7 +246,7 @@ public class UpdateSummariesRequest extends Request {
             }
 
             /**
-             * snippet.
+             * The number of segments.
              */
             public Builder snippet(Integer snippet) {
                 this.snippet = snippet;

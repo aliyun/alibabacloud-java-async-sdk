@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SchemaTablesValueFieldsValue</p>
  */
 public class SchemaTablesValueFieldsValue extends TeaModel {
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("primaryKey")
+    @com.aliyun.core.annotation.NameInMap("primaryKey")
     private Boolean primaryKey;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @NameInMap("joinWith")
+    @com.aliyun.core.annotation.NameInMap("joinWith")
     private java.util.List < String > joinWith;
 
-    @NameInMap("label")
+    @com.aliyun.core.annotation.NameInMap("label")
     private String label;
 
     private SchemaTablesValueFieldsValue(Builder builder) {

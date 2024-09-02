@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFunctionCurrentVersionResponseBody</p>
  */
 public class GetFunctionCurrentVersionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private Long httpCode;
 
-    @NameInMap("Latency")
+    @com.aliyun.core.annotation.NameInMap("Latency")
     private Long latency;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private GetFunctionCurrentVersionResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
     } 
 
     public static class CreateParameters extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private String required;
 
         private CreateParameters(Builder builder) {
@@ -233,13 +232,13 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
 
     }
     public static class Depends extends TeaModel {
-        @NameInMap("Condition")
+        @com.aliyun.core.annotation.NameInMap("Condition")
         private String condition;
 
-        @NameInMap("Dependency")
+        @com.aliyun.core.annotation.NameInMap("Dependency")
         private String dependency;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private Depends(Builder builder) {
@@ -314,10 +313,10 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
 
     }
     public static class UsageParameters extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private String required;
 
         private UsageParameters(Builder builder) {
@@ -375,13 +374,13 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
 
     }
     public static class VersionConfig extends TeaModel {
-        @NameInMap("CreateParameters")
+        @com.aliyun.core.annotation.NameInMap("CreateParameters")
         private java.util.List < CreateParameters> createParameters;
 
-        @NameInMap("Depends")
+        @com.aliyun.core.annotation.NameInMap("Depends")
         private java.util.List < Depends> depends;
 
-        @NameInMap("UsageParameters")
+        @com.aliyun.core.annotation.NameInMap("UsageParameters")
         private java.util.List < UsageParameters> usageParameters;
 
         private VersionConfig(Builder builder) {
@@ -456,22 +455,22 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("FunctionType")
+        @com.aliyun.core.annotation.NameInMap("FunctionType")
         private String functionType;
 
-        @NameInMap("ModelType")
+        @com.aliyun.core.annotation.NameInMap("ModelType")
         private String modelType;
 
-        @NameInMap("VersionConfig")
+        @com.aliyun.core.annotation.NameInMap("VersionConfig")
         private VersionConfig versionConfig;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private Long versionId;
 
-        @NameInMap("VersionName")
+        @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
         private Result(Builder builder) {

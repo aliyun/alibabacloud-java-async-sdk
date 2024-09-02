@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateABTestGroupResponseBody</p>
  */
 public class UpdateABTestGroupResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private UpdateABTestGroupResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {
@@ -162,7 +161,7 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the test group.
+             * The alias of the test group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +181,7 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the test group was last modified.
+             * The time when the test group was last updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

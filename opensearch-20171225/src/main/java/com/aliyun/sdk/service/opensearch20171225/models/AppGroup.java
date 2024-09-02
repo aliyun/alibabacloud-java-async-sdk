@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AppGroup</p>
  */
 public class AppGroup extends TeaModel {
-    @NameInMap("chargeType")
+    @com.aliyun.core.annotation.NameInMap("chargeType")
     private String chargeType;
 
-    @NameInMap("chargingWay")
-    private String chargingWay;
-
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("domain")
+    @com.aliyun.core.annotation.NameInMap("domain")
     private String domain;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("quota")
+    @com.aliyun.core.annotation.NameInMap("order")
+    private Order order;
+
+    @com.aliyun.core.annotation.NameInMap("quota")
     private Quota quota;
 
-    @NameInMap("type")
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private AppGroup(Builder builder) {
         this.chargeType = builder.chargeType;
-        this.chargingWay = builder.chargingWay;
         this.description = builder.description;
         this.domain = builder.domain;
         this.name = builder.name;
+        this.order = builder.order;
         this.quota = builder.quota;
+        this.resourceGroupId = builder.resourceGroupId;
         this.type = builder.type;
     }
 
@@ -56,13 +59,6 @@ public class AppGroup extends TeaModel {
      */
     public String getChargeType() {
         return this.chargeType;
-    }
-
-    /**
-     * @return chargingWay
-     */
-    public String getChargingWay() {
-        return this.chargingWay;
     }
 
     /**
@@ -87,10 +83,24 @@ public class AppGroup extends TeaModel {
     }
 
     /**
+     * @return order
+     */
+    public Order getOrder() {
+        return this.order;
+    }
+
+    /**
      * @return quota
      */
     public Quota getQuota() {
         return this.quota;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -102,11 +112,12 @@ public class AppGroup extends TeaModel {
 
     public static final class Builder {
         private String chargeType; 
-        private String chargingWay; 
         private String description; 
         private String domain; 
         private String name; 
+        private Order order; 
         private Quota quota; 
+        private String resourceGroupId; 
         private String type; 
 
         /**
@@ -114,14 +125,6 @@ public class AppGroup extends TeaModel {
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
-            return this;
-        }
-
-        /**
-         * chargingWay.
-         */
-        public Builder chargingWay(String chargingWay) {
-            this.chargingWay = chargingWay;
             return this;
         }
 
@@ -150,10 +153,26 @@ public class AppGroup extends TeaModel {
         }
 
         /**
+         * order.
+         */
+        public Builder order(Order order) {
+            this.order = order;
+            return this;
+        }
+
+        /**
          * quota.
          */
         public Builder quota(Quota quota) {
             this.quota = quota;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -171,4 +190,85 @@ public class AppGroup extends TeaModel {
 
     } 
 
+    public static class Order extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("autoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("duration")
+        private Long duration;
+
+        @com.aliyun.core.annotation.NameInMap("pricingCycle")
+        private String pricingCycle;
+
+        private Order(Builder builder) {
+            this.autoRenew = builder.autoRenew;
+            this.duration = builder.duration;
+            this.pricingCycle = builder.pricingCycle;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Order create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return duration
+         */
+        public Long getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return pricingCycle
+         */
+        public String getPricingCycle() {
+            return this.pricingCycle;
+        }
+
+        public static final class Builder {
+            private Boolean autoRenew; 
+            private Long duration; 
+            private String pricingCycle; 
+
+            /**
+             * autoRenew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * duration.
+             */
+            public Builder duration(Long duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * pricingCycle.
+             */
+            public Builder pricingCycle(String pricingCycle) {
+                this.pricingCycle = pricingCycle;
+                return this;
+            }
+
+            public Order build() {
+                return new Order(this);
+            } 
+
+        } 
+
+    }
 }

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindESUserAnalyzerRequest</p>
  */
 public class BindESUserAnalyzerRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("esInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("esInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String esInstanceId;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private Object body;
 
     private BindESUserAnalyzerRequest(Builder builder) {
@@ -84,7 +83,7 @@ public class BindESUserAnalyzerRequest extends Request {
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -93,7 +92,7 @@ public class BindESUserAnalyzerRequest extends Request {
         }
 
         /**
-         * esInstanceId.
+         * The ID of the instance.
          */
         public Builder esInstanceId(String esInstanceId) {
             this.putPathParameter("esInstanceId", esInstanceId);
@@ -102,7 +101,7 @@ public class BindESUserAnalyzerRequest extends Request {
         }
 
         /**
-         * body.
+         * The request parameters.
          */
         public Builder body(Object body) {
             this.putBodyParameter("body", body);

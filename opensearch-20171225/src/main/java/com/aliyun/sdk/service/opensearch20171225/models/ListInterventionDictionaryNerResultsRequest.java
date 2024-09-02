@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInterventionDictionaryNerResultsRequest</p>
  */
 public class ListInterventionDictionaryNerResultsRequest extends Request {
-    @Path
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("query")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("query")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String query;
 
     private ListInterventionDictionaryNerResultsRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class ListInterventionDictionaryNerResultsRequest extends Request {
         } 
 
         /**
-         * my_dict
+         * The dictionary name.
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -79,7 +78,7 @@ public class ListInterventionDictionaryNerResultsRequest extends Request {
         }
 
         /**
-         * Soymilk
+         * Query keywords.
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);

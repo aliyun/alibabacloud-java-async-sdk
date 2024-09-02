@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateMergedTableResponseBody</p>
  */
 public class GenerateMergedTableResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GenerateMergedTableResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GenerateMergedTableResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class GenerateMergedTableResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The response parameters.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -72,13 +71,13 @@ public class GenerateMergedTableResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("fromTable")
+        @com.aliyun.core.annotation.NameInMap("fromTable")
         private java.util.Map < String, ? > fromTable;
 
-        @NameInMap("mergeTable")
+        @com.aliyun.core.annotation.NameInMap("mergeTable")
         private java.util.Map < String, ? > mergeTable;
 
-        @NameInMap("primaryKey")
+        @com.aliyun.core.annotation.NameInMap("primaryKey")
         private String primaryKey;
 
         private Result(Builder builder) {
@@ -122,7 +121,7 @@ public class GenerateMergedTableResponseBody extends TeaModel {
             private String primaryKey; 
 
             /**
-             * fromTable.
+             * The tables on which the JOIN operation is performed.
              */
             public Builder fromTable(java.util.Map < String, ? > fromTable) {
                 this.fromTable = fromTable;
@@ -130,7 +129,7 @@ public class GenerateMergedTableResponseBody extends TeaModel {
             }
 
             /**
-             * mergeTable.
+             * The wide table that is generated after the JOIN operation is performed on multiple tables.
              */
             public Builder mergeTable(java.util.Map < String, ? > mergeTable) {
                 this.mergeTable = mergeTable;
@@ -138,7 +137,7 @@ public class GenerateMergedTableResponseBody extends TeaModel {
             }
 
             /**
-             * primaryKey.
+             * The primary key.
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStatisticReportRequest</p>
  */
 public class ListStatisticReportRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("moduleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("moduleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String moduleName;
 
-    @Query
-    @NameInMap("columns")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("columns")
     private String columns;
 
-    @Query
-    @NameInMap("endTime")
-    @Validation(maximum = 9999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("endTime")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999999D)
     private Integer endTime;
 
-    @Query
-    @NameInMap("pageNumber")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
-    @Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("query")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("query")
     private String query;
 
-    @Query
-    @NameInMap("startTime")
-    @Validation(maximum = 9999999999D)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("startTime")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999999D)
     private Integer startTime;
 
     private ListStatisticReportRequest(Builder builder) {

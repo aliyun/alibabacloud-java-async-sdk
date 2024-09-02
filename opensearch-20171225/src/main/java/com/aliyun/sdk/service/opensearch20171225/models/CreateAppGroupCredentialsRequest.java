@@ -6,34 +6,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateSecondRankRequest} extends {@link RequestModel}
+ * {@link CreateAppGroupCredentialsRequest} extends {@link RequestModel}
  *
- * <p>CreateSecondRankRequest</p>
+ * <p>CreateAppGroupCredentialsRequest</p>
  */
-public class CreateSecondRankRequest extends Request {
+public class CreateAppGroupCredentialsRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("appId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private Integer appId;
-
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("body")
-    private SecondRank body;
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
-    private CreateSecondRankRequest(Builder builder) {
+    private CreateAppGroupCredentialsRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
-        this.appId = builder.appId;
-        this.body = builder.body;
+        this.type = builder.type;
         this.dryRun = builder.dryRun;
     }
 
@@ -41,7 +35,7 @@ public class CreateSecondRankRequest extends Request {
         return new Builder();
     }
 
-    public static CreateSecondRankRequest create() {
+    public static CreateAppGroupCredentialsRequest create() {
         return builder().build();
     }
 
@@ -58,17 +52,10 @@ public class CreateSecondRankRequest extends Request {
     }
 
     /**
-     * @return appId
+     * @return type
      */
-    public Integer getAppId() {
-        return this.appId;
-    }
-
-    /**
-     * @return body
-     */
-    public SecondRank getBody() {
-        return this.body;
+    public String getType() {
+        return this.type;
     }
 
     /**
@@ -78,26 +65,24 @@ public class CreateSecondRankRequest extends Request {
         return this.dryRun;
     }
 
-    public static final class Builder extends Request.Builder<CreateSecondRankRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateAppGroupCredentialsRequest, Builder> {
         private String appGroupIdentity; 
-        private Integer appId; 
-        private SecondRank body; 
+        private String type; 
         private Boolean dryRun; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateSecondRankRequest request) {
+        private Builder(CreateAppGroupCredentialsRequest request) {
             super(request);
             this.appGroupIdentity = request.appGroupIdentity;
-            this.appId = request.appId;
-            this.body = request.body;
+            this.type = request.type;
             this.dryRun = request.dryRun;
         } 
 
         /**
-         * The name of the application.
+         * appGroupIdentity.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -106,25 +91,16 @@ public class CreateSecondRankRequest extends Request {
         }
 
         /**
-         * The version number of the application.
+         * type.
          */
-        public Builder appId(Integer appId) {
-            this.putPathParameter("appId", appId);
-            this.appId = appId;
+        public Builder type(String type) {
+            this.putBodyParameter("type", type);
+            this.type = type;
             return this;
         }
 
         /**
-         * The request body. For more information, see [SecondRank](~~170008~~).
-         */
-        public Builder body(SecondRank body) {
-            this.putBodyParameter("body", body);
-            this.body = body;
-            return this;
-        }
-
-        /**
-         * Specifies whether to perform a dry run.
+         * dryRun.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -133,8 +109,8 @@ public class CreateSecondRankRequest extends Request {
         }
 
         @Override
-        public CreateSecondRankRequest build() {
-            return new CreateSecondRankRequest(this);
+        public CreateAppGroupCredentialsRequest build() {
+            return new CreateAppGroupCredentialsRequest(this);
         } 
 
     } 

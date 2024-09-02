@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTagResourcesRequest</p>
  */
 public class ListTagResourcesRequest extends Request {
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("resourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceId")
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("resourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tag")
     private java.util.List < Tag> tag;
 
     private ListTagResourcesRequest(Builder builder) {
@@ -142,10 +141,10 @@ public class ListTagResourcesRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tag(Builder builder) {

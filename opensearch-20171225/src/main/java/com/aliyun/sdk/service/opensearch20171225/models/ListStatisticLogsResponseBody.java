@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListStatisticLogsResponseBody</p>
  */
 public class ListStatisticLogsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < java.util.Map<String, ?>> result;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListStatisticLogsResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class ListStatisticLogsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,10 +69,10 @@ public class ListStatisticLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The return result. For more information, see:
+         * The returned result. For more information, see
          * <p>
          * 
-         * *   [Parameters of hotwords rankings](~~421248~~)
+         * *   [Parameters of hotwords rankings](~~421248~~).
          */
         public Builder result(java.util.List < java.util.Map<String, ?>> result) {
             this.result = result;
@@ -81,7 +80,7 @@ public class ListStatisticLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of the queried logs.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

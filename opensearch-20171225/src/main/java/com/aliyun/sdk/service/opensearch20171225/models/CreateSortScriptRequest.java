@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSortScriptRequest</p>
  */
 public class CreateSortScriptRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("appVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appVersionId;
 
-    @Body
-    @NameInMap("scope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
-    @Body
-    @NameInMap("scriptName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scriptName")
     private String scriptName;
 
-    @Body
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private CreateSortScriptRequest(Builder builder) {
@@ -112,7 +111,7 @@ public class CreateSortScriptRequest extends Request {
         } 
 
         /**
-         * search
+         * The application name or ID.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -121,7 +120,7 @@ public class CreateSortScriptRequest extends Request {
         }
 
         /**
-         * 1234567
+         * The ID of the report in the application.
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -130,7 +129,7 @@ public class CreateSortScriptRequest extends Request {
         }
 
         /**
-         * 脚本的作用范围
+         * The sort phase to which the script applies.
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);
@@ -139,7 +138,7 @@ public class CreateSortScriptRequest extends Request {
         }
 
         /**
-         * 脚本名称
+         * The script name.
          */
         public Builder scriptName(String scriptName) {
             this.putBodyParameter("scriptName", scriptName);
@@ -148,7 +147,7 @@ public class CreateSortScriptRequest extends Request {
         }
 
         /**
-         * 脚本的类型，目前只支持cava_script
+         * The script type. Set the value to cava_script.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

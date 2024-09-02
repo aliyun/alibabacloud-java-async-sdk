@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySecondRankResponseBody</p>
  */
 public class ModifySecondRankResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private ModifySecondRankResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,31 +71,31 @@ public class ModifySecondRankResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("isDefault")
+        @com.aliyun.core.annotation.NameInMap("isDefault")
         private String isDefault;
 
-        @NameInMap("isSys")
+        @com.aliyun.core.annotation.NameInMap("isSys")
         private String isSys;
 
-        @NameInMap("meta")
+        @com.aliyun.core.annotation.NameInMap("meta")
         private String meta;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {
@@ -202,7 +201,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The time when the expression was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -218,7 +217,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the expression. This parameter appears only in the response.
+             * The expression ID. This parameter is displayed only in the response.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -226,11 +225,11 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the expression is the default one. This parameter appears only in the response. Valid values:
+             * Indicates whether the expression is the default one. This parameter is displayed only in the response. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: the expression is the default one.
+             * *   false: the expression is not the default one.
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -238,11 +237,11 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the expression is a system expression. This parameter appears only in the response. Valid values:
+             * Indicates whether the expression is a system expression. This parameter is displayed only in the response. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: The expression is a system expression.
+             * *   false:The expression is not a system expression
              */
             public Builder isSys(String isSys) {
                 this.isSys = isSys;
@@ -250,10 +249,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the fine sort expression.
-             * <p>
-             * 
-             * You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.
+             * The content of the fine sort expression. You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -261,7 +257,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the expression.
+             * The expression name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -269,7 +265,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the expression was updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

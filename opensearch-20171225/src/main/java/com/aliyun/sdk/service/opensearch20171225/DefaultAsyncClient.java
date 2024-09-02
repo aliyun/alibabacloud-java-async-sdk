@@ -159,6 +159,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<CreateAppGroupCredentialsResponse> createAppGroupCredentials(CreateAppGroupCredentialsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateAppGroupCredentials").setMethod(HttpMethod.POST).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/credentials").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateAppGroupCredentialsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateAppGroupCredentialsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<CreateFirstRankResponse> createFirstRank(CreateFirstRankRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -173,7 +187,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of the current feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
+      * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of a feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
       *
      */
     @Override
@@ -302,11 +316,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * ## Debugging
-      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=CreateUserAnalyzer\\&type=ROA\\&version=2017-12-25)
-      *
-     */
     @Override
     public CompletableFuture<CreateUserAnalyzerResponse> createUserAnalyzer(CreateUserAnalyzerRequest request) {
         try {
@@ -911,7 +920,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   This operation allows you to query applications by application name, instance ID, and application type.
-      * *   This operation can sort the applications based on their creation time.
+      * *   This operation allows you to sort the applications based on their creation time.
       * *   This operation supports the parameters for paging.
       *
      */
@@ -1434,20 +1443,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<RankPreviewQueryResponse> rankPreviewQuery(RankPreviewQueryRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RankPreviewQuery").setMethod(HttpMethod.POST).setPathRegex("/v4/openapi/app-groups/{appGroupIdentity}/algorithm/models/{modelName}/actions/query-rank").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RankPreviewQueryResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RankPreviewQueryResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<ReleaseSortScriptResponse> releaseSortScript(ReleaseSortScriptRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1672,7 +1667,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the request.
+      * You can call this operation to unbind a custom analyzer from an Elasticsearch instance.
       *
      */
     @Override
@@ -1815,6 +1810,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to update the information about resources by resource name. You can modify only the values of data and description.
+      *
+     */
     @Override
     public CompletableFuture<UpdateFunctionResourceResponse> updateFunctionResource(UpdateFunctionResourceRequest request) {
         try {

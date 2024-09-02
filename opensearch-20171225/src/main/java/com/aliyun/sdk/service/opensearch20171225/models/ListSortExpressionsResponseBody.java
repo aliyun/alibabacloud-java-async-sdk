@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSortExpressionsResponseBody</p>
  */
 public class ListSortExpressionsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ListSortExpressionsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the rough sort or fine sort expressions that were returned.
+         * The information about the rough sort or fine sort expressions that are returned.
          * <p>
          * 
          * For more information, see [FirstRank](~~170007~~) and [SecondRank](~~170008~~).
@@ -75,19 +74,19 @@ public class ListSortExpressionsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {
@@ -157,7 +156,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the expression was created.
+             * The timestamp when the sort expression was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -165,7 +164,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the expression.
+             * The description of the sort expression.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -173,7 +172,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the expression.
+             * The name of the sort expression.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -181,7 +180,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the expression was last updated.
+             * The timestamp when the sort expression was updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

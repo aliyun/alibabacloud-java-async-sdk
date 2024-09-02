@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserAnalyzersResponseBody</p>
  */
 public class ListUserAnalyzersResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListUserAnalyzersResponseBody(Builder builder) {
@@ -95,25 +94,25 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
     } 
 
     public static class Dicts extends TeaModel {
-        @NameInMap("available")
+        @com.aliyun.core.annotation.NameInMap("available")
         private Boolean available;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("entriesCount")
+        @com.aliyun.core.annotation.NameInMap("entriesCount")
         private Integer entriesCount;
 
-        @NameInMap("entriesLimit")
+        @com.aliyun.core.annotation.NameInMap("entriesLimit")
         private Integer entriesLimit;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Dicts(Builder builder) {
@@ -259,25 +258,25 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("available")
+        @com.aliyun.core.annotation.NameInMap("available")
         private Boolean available;
 
-        @NameInMap("business")
+        @com.aliyun.core.annotation.NameInMap("business")
         private String business;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("dicts")
+        @com.aliyun.core.annotation.NameInMap("dicts")
         private java.util.List < Dicts> dicts;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {

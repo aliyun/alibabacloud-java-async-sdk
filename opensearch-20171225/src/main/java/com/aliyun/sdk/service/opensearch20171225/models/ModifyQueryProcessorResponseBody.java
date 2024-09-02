@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyQueryProcessorResponseBody</p>
  */
 public class ModifyQueryProcessorResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private ModifyQueryProcessorResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,25 +71,25 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
 
-        @NameInMap("created")
+        @com.aliyun.core.annotation.NameInMap("created")
         private Integer created;
 
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("indexes")
+        @com.aliyun.core.annotation.NameInMap("indexes")
         private java.util.List < String > indexes;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("processors")
+        @com.aliyun.core.annotation.NameInMap("processors")
         private java.util.List < java.util.Map<String, ?>> processors;
 
-        @NameInMap("updated")
+        @com.aliyun.core.annotation.NameInMap("updated")
         private Integer updated;
 
         private Result(Builder builder) {
@@ -170,7 +169,7 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * Indicates whether the query analysis rule is the default one.
+             * Indicates whether the query analysis rule is a default rule.
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -186,7 +185,7 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the industry. Valid values:
+             * The type of the industry to which the query analysis rule is applied. Valid values:
              * <p>
              * 
              * *   GENERAL
@@ -199,7 +198,7 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
             }
 
             /**
-             * The indexes to which the query analysis rule applies.
+             * The indexes to which the query analysis rule is applied.
              */
             public Builder indexes(java.util.List < String > indexes) {
                 this.indexes = indexes;
@@ -223,7 +222,7 @@ public class ModifyQueryProcessorResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent update time.
+             * The time when the rule was updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

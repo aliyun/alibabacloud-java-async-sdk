@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFunctionTaskResponseBody</p>
  */
 public class GetFunctionTaskResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private Long httpCode;
 
-    @NameInMap("Latency")
+    @com.aliyun.core.annotation.NameInMap("Latency")
     private Long latency;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private GetFunctionTaskResponseBody(Builder builder) {
@@ -172,28 +171,28 @@ public class GetFunctionTaskResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ExtendInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtendInfo")
         private String extendInfo;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("Generation")
+        @com.aliyun.core.annotation.NameInMap("Generation")
         private String generation;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Long progress;
 
-        @NameInMap("RunId")
+        @com.aliyun.core.annotation.NameInMap("RunId")
         private String runId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Result(Builder builder) {

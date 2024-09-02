@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueryProcessorNersResponseBody</p>
  */
 public class ListQueryProcessorNersResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private ListQueryProcessorNersResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,16 +74,16 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("label")
+        @com.aliyun.core.annotation.NameInMap("label")
         private String label;
 
-        @NameInMap("order")
+        @com.aliyun.core.annotation.NameInMap("order")
         private Integer order;
 
-        @NameInMap("priority")
+        @com.aliyun.core.annotation.NameInMap("priority")
         private String priority;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
         private Result(Builder builder) {
@@ -145,10 +144,7 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
             }
 
             /**
-             * The priority of an entity type among entity types that have the same priority level.
-             * <p>
-             * 
-             * A smaller value indicates a higher priority. Default value: 0.
+             * The priority of an entity type among entity types that have the same priority level. A smaller value indicates a higher priority. Default value: 0.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -156,7 +152,7 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
             }
 
             /**
-             * The priority level of the entity type.
+             * The priority level of the entity type. Valid values:
              * <p>
              * 
              * *   HIGH

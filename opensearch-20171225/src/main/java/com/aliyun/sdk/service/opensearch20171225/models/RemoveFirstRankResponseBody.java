@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveFirstRankResponseBody</p>
  */
 public class RemoveFirstRankResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private RemoveFirstRankResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class RemoveFirstRankResponseBody extends TeaModel {
     } 
 
     public static class Meta extends TeaModel {
-        @NameInMap("arg")
+        @com.aliyun.core.annotation.NameInMap("arg")
         private String arg;
 
-        @NameInMap("attribute")
+        @com.aliyun.core.annotation.NameInMap("attribute")
         private String attribute;
 
-        @NameInMap("weight")
+        @com.aliyun.core.annotation.NameInMap("weight")
         private Float weight;
 
         private Meta(Builder builder) {
@@ -162,16 +161,16 @@ public class RemoveFirstRankResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("active")
+        @com.aliyun.core.annotation.NameInMap("active")
         private Boolean active;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("meta")
+        @com.aliyun.core.annotation.NameInMap("meta")
         private java.util.List < Meta> meta;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Result(Builder builder) {

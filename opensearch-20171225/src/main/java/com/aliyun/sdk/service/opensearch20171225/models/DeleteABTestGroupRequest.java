@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteABTestGroupRequest</p>
  */
 public class DeleteABTestGroupRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("sceneId")
-    @Validation(required = true, maximum = 999999999)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("sceneId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999)
     private Integer sceneId;
 
-    @Path
-    @NameInMap("groupId")
-    @Validation(required = true, maximum = 999999999)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("groupId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999)
     private Integer groupId;
 
     private DeleteABTestGroupRequest(Builder builder) {
@@ -85,7 +84,7 @@ public class DeleteABTestGroupRequest extends Request {
         } 
 
         /**
-         * my_app_group_name
+         * The application name.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -94,7 +93,7 @@ public class DeleteABTestGroupRequest extends Request {
         }
 
         /**
-         * 20404
+         * The scenario ID.
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -103,7 +102,7 @@ public class DeleteABTestGroupRequest extends Request {
         }
 
         /**
-         * 13467
+         * The group ID.
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);

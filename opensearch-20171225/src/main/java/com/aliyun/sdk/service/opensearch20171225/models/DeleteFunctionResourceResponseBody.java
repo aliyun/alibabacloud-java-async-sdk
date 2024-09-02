@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteFunctionResourceResponseBody</p>
  */
 public class DeleteFunctionResourceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpCode")
+    @com.aliyun.core.annotation.NameInMap("HttpCode")
     private Long httpCode;
 
-    @NameInMap("Latency")
+    @com.aliyun.core.annotation.NameInMap("Latency")
     private Double latency;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DeleteFunctionResourceResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Code.
+         * The error code returned. If no error occurs, this value is empty.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +105,7 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code returned.
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -114,7 +113,7 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Latency.
+         * The time consumed for the request. Unit: milliseconds.
          */
         public Builder latency(Double latency) {
             this.latency = latency;
@@ -122,7 +121,7 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +129,7 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +137,11 @@ public class DeleteFunctionResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status code. Valid values:
+         * <p>
+         * 
+         * *   OK
+         * *   FAIL
          */
         public Builder status(String status) {
             this.status = status;

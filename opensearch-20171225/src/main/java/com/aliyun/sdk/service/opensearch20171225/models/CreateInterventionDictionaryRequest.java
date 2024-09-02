@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInterventionDictionaryRequest</p>
  */
 public class CreateInterventionDictionaryRequest extends Request {
-    @Body
-    @NameInMap("analyzerType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("analyzerType")
     private String analyzerType;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
-    @Query
-    @NameInMap("dryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dryRun")
     private Boolean dryRun;
 
     private CreateInterventionDictionaryRequest(Builder builder) {

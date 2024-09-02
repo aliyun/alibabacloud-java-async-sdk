@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The result that was returned.
+         * The results returned.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -72,16 +71,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("consoleUrl")
+        @com.aliyun.core.annotation.NameInMap("consoleUrl")
         private String consoleUrl;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("localName")
+        @com.aliyun.core.annotation.NameInMap("localName")
         private String localName;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
         private Result(Builder builder) {
@@ -134,7 +133,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The URL of the OpenSearch console.
+             * The console URL.
              */
             public Builder consoleUrl(String consoleUrl) {
                 this.consoleUrl = consoleUrl;
@@ -142,7 +141,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the region.
+             * The endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -150,7 +149,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region.
+             * The region name.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -158,7 +157,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

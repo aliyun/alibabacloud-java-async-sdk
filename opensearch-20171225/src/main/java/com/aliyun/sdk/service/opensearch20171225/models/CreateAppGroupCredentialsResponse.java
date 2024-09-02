@@ -1,37 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RankPreviewQueryResponse} extends {@link TeaModel}
+ * {@link CreateAppGroupCredentialsResponse} extends {@link TeaModel}
  *
- * <p>RankPreviewQueryResponse</p>
+ * <p>CreateAppGroupCredentialsResponse</p>
  */
-public class RankPreviewQueryResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+public class CreateAppGroupCredentialsResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private RankPreviewQueryResponseBody body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private CreateAppGroupCredentialsResponseBody body;
 
-    private RankPreviewQueryResponse(BuilderImpl builder) {
+    private CreateAppGroupCredentialsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RankPreviewQueryResponse create() {
+    public static CreateAppGroupCredentialsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +53,35 @@ public class RankPreviewQueryResponse extends Response {
     /**
      * @return body
      */
-    public RankPreviewQueryResponseBody getBody() {
+    public CreateAppGroupCredentialsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RankPreviewQueryResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateAppGroupCredentialsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RankPreviewQueryResponseBody body);
+        Builder body(CreateAppGroupCredentialsResponseBody body);
 
         @Override
-        RankPreviewQueryResponse build();
+        CreateAppGroupCredentialsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RankPreviewQueryResponse, Builder>
+            extends Response.BuilderImpl<CreateAppGroupCredentialsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private RankPreviewQueryResponseBody body; 
+        private CreateAppGroupCredentialsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RankPreviewQueryResponse response) {
+        private BuilderImpl(CreateAppGroupCredentialsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +110,14 @@ public class RankPreviewQueryResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RankPreviewQueryResponseBody body) {
+        public Builder body(CreateAppGroupCredentialsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RankPreviewQueryResponse build() {
-            return new RankPreviewQueryResponse(this);
+        public CreateAppGroupCredentialsResponse build() {
+            return new CreateAppGroupCredentialsResponse(this);
         } 
 
     } 

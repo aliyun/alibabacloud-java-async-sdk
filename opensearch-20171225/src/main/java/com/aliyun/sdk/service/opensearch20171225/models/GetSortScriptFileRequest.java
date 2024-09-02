@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.opensearch20171225.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSortScriptFileRequest</p>
  */
 public class GetSortScriptFileRequest extends Request {
-    @Path
-    @NameInMap("appGroupIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appGroupIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appGroupIdentity;
 
-    @Path
-    @NameInMap("scriptName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("scriptName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptName;
 
-    @Path
-    @NameInMap("appVersionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appVersionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appVersionId;
 
-    @Path
-    @NameInMap("fileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("fileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
     private GetSortScriptFileRequest(Builder builder) {
@@ -100,7 +99,7 @@ public class GetSortScriptFileRequest extends Request {
         } 
 
         /**
-         * my_app
+         * The name or ID of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -109,7 +108,7 @@ public class GetSortScriptFileRequest extends Request {
         }
 
         /**
-         * UserScorer.cava
+         * The name of the script.
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
@@ -118,7 +117,7 @@ public class GetSortScriptFileRequest extends Request {
         }
 
         /**
-         * 123456
+         * The version ID of the application.
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -127,7 +126,7 @@ public class GetSortScriptFileRequest extends Request {
         }
 
         /**
-         * script1
+         * The name of the script file.
          */
         public Builder fileName(String fileName) {
             this.putPathParameter("fileName", fileName);
