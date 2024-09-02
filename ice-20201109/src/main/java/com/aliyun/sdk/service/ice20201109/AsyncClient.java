@@ -109,6 +109,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
 
+    CompletableFuture<DescribeAIAgentInstanceResponse> describeAIAgentInstance(DescribeAIAgentInstanceRequest request);
+
     CompletableFuture<DescribeMeterImsEditUsageResponse> describeMeterImsEditUsage(DescribeMeterImsEditUsageRequest request);
 
     CompletableFuture<DescribeMeterImsMediaConvertUHDUsageResponse> describeMeterImsMediaConvertUHDUsage(DescribeMeterImsMediaConvertUHDUsageRequest request);
@@ -119,6 +121,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeMeterImsSummaryResponse> describeMeterImsSummary(DescribeMeterImsSummaryRequest request);
 
+    CompletableFuture<DescribeNotifyConfigResponse> describeNotifyConfig(DescribeNotifyConfigRequest request);
+
     CompletableFuture<DescribePlayListResponse> describePlayList(DescribePlayListRequest request);
 
     CompletableFuture<DescribeRtcRobotInstanceResponse> describeRtcRobotInstance(DescribeRtcRobotInstanceRequest request);
@@ -128,6 +132,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DropSearchIndexResponse> dropSearchIndex(DropSearchIndexRequest request);
 
     CompletableFuture<DropSearchLibResponse> dropSearchLib(DropSearchLibRequest request);
+
+    CompletableFuture<GenerateAIAgentCallResponse> generateAIAgentCall(GenerateAIAgentCallRequest request);
 
     CompletableFuture<GenerateKMSDataKeyResponse> generateKMSDataKey(GenerateKMSDataKeyRequest request);
 
@@ -216,6 +222,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWorkflowTaskResponse> getWorkflowTask(GetWorkflowTaskRequest request);
 
     CompletableFuture<InsertMediaToSearchLibResponse> insertMediaToSearchLib(InsertMediaToSearchLibRequest request);
+
+    CompletableFuture<ListAIAgentInstanceResponse> listAIAgentInstance(ListAIAgentInstanceRequest request);
 
     CompletableFuture<ListAllPublicMediaTagsResponse> listAllPublicMediaTags(ListAllPublicMediaTagsRequest request);
 
@@ -329,6 +337,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SearchPublicMediaInfoResponse> searchPublicMediaInfo(SearchPublicMediaInfoRequest request);
 
+    CompletableFuture<SendAIAgentSpeechResponse> sendAIAgentSpeech(SendAIAgentSpeechRequest request);
+
     CompletableFuture<SendLiveSnapshotJobCommandResponse> sendLiveSnapshotJobCommand(SendLiveSnapshotJobCommandRequest request);
 
     CompletableFuture<SendLiveTranscodeJobCommandResponse> sendLiveTranscodeJobCommand(SendLiveTranscodeJobCommandRequest request);
@@ -341,9 +351,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SetEventCallbackResponse> setEventCallback(SetEventCallbackRequest request);
 
+    CompletableFuture<SetNotifyConfigResponse> setNotifyConfig(SetNotifyConfigRequest request);
+
+    CompletableFuture<StartAIAgentInstanceResponse> startAIAgentInstance(StartAIAgentInstanceRequest request);
+
     CompletableFuture<StartRtcRobotInstanceResponse> startRtcRobotInstance(StartRtcRobotInstanceRequest request);
 
     CompletableFuture<StartWorkflowResponse> startWorkflow(StartWorkflowRequest request);
+
+    CompletableFuture<StopAIAgentInstanceResponse> stopAIAgentInstance(StopAIAgentInstanceRequest request);
 
     CompletableFuture<StopRtcRobotInstanceResponse> stopRtcRobotInstance(StopRtcRobotInstanceRequest request);
 
@@ -400,6 +416,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitTranscodeJobResponse> submitTranscodeJob(SubmitTranscodeJobRequest request);
 
     CompletableFuture<SubmitVideoTranslationJobResponse> submitVideoTranslationJob(SubmitVideoTranslationJobRequest request);
+
+    CompletableFuture<UpdateAIAgentInstanceResponse> updateAIAgentInstance(UpdateAIAgentInstanceRequest request);
 
     CompletableFuture<UpdateAvatarTrainingJobResponse> updateAvatarTrainingJob(UpdateAvatarTrainingJobRequest request);
 
