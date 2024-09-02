@@ -336,7 +336,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         private String tenantId;
 
         @com.aliyun.core.annotation.NameInMap("TenantMode")
-        private Long tenantMode;
+        private String tenantMode;
 
         @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
@@ -481,7 +481,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
         /**
          * @return tenantMode
          */
-        public Long getTenantMode() {
+        public String getTenantMode() {
             return this.tenantMode;
         }
 
@@ -528,7 +528,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             private String tenantAlias; 
             private Integer tenantDataBackupRemainDays; 
             private String tenantId; 
-            private Long tenantMode; 
+            private String tenantMode; 
             private String tenantName; 
             private java.util.List < TimeIntervalList> timeIntervalList; 
             private Long unitNum; 
@@ -649,7 +649,7 @@ public class DescribeRestorableTenantsResponseBody extends TeaModel {
             /**
              * TenantMode.
              */
-            public Builder tenantMode(Long tenantMode) {
+            public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;
                 return this;
             }
