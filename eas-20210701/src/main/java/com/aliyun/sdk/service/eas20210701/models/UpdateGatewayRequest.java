@@ -217,7 +217,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * IsDefault.
+         * Indicates whether it is the default private gateway.
          */
         public Builder isDefault(Boolean isDefault) {
             this.putBodyParameter("IsDefault", isDefault);
@@ -235,7 +235,7 @@ public class UpdateGatewayRequest extends Request {
         }
 
         /**
-         * Replicas.
+         * The number of nodes in the private gateway.
          */
         public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);

@@ -124,7 +124,7 @@ public class CreateGatewayRequest extends Request {
         } 
 
         /**
-         * The name of the resource group.
+         * The resource group ID. To obtain a resource group ID, see the ResourceId field in the response of the [ListResources](~~412133~~) operation.
          */
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
@@ -139,20 +139,7 @@ public class CreateGatewayRequest extends Request {
          * Valid values:
          * 
          * *   true
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
          * *   false
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
-         * 
-         *     <!-- -->
          */
         public Builder enableInternet(Boolean enableInternet) {
             this.putBodyParameter("EnableInternet", enableInternet);
@@ -161,7 +148,13 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable internal network access. Default value: true.
+         * Specifies whether to enable private access. Default value: true.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true
+         * *   false
          */
         public Builder enableIntranet(Boolean enableIntranet) {
             this.putBodyParameter("EnableIntranet", enableIntranet);
@@ -170,7 +163,13 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * The instance type used for the private gateway.
+         * The instance type used by the private gateway. Valid values:
+         * <p>
+         * 
+         * *   2c4g
+         * *   4c8g
+         * *   8c16g
+         * *   16c32g
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("InstanceType", instanceType);
@@ -179,7 +178,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * The private gateway alias.
+         * The alias of the private gateway.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -188,7 +187,7 @@ public class CreateGatewayRequest extends Request {
         }
 
         /**
-         * Replicas.
+         * The number of nodes in the private gateway.
          */
         public Builder replicas(Integer replicas) {
             this.putBodyParameter("Replicas", replicas);

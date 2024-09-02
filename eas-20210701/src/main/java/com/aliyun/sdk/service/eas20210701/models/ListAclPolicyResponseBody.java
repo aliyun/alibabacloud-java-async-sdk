@@ -110,16 +110,73 @@ public class ListAclPolicyResponseBody extends TeaModel {
 
     } 
 
-    public static class InternetAclPolicyList extends TeaModel {
+    public static class AclPolicyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
         @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
 
-        private InternetAclPolicyList(Builder builder) {
+        private AclPolicyList(Builder builder) {
             this.comment = builder.comment;
             this.entry = builder.entry;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AclPolicyList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return comment
+         */
+        public String getComment() {
+            return this.comment;
+        }
+
+        /**
+         * @return entry
+         */
+        public String getEntry() {
+            return this.entry;
+        }
+
+        public static final class Builder {
+            private String comment; 
+            private String entry; 
+
+            /**
+             * Comment.
+             */
+            public Builder comment(String comment) {
+                this.comment = comment;
+                return this;
+            }
+
+            /**
+             * Entry.
+             */
+            public Builder entry(String entry) {
+                this.entry = entry;
+                return this;
+            }
+
+            public AclPolicyList build() {
+                return new AclPolicyList(this);
+            } 
+
+        } 
+
+    }
+    public static class InternetAclPolicyList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AclPolicyList")
+        private java.util.List < AclPolicyList> aclPolicyList;
+
+        private InternetAclPolicyList(Builder builder) {
+            this.aclPolicyList = builder.aclPolicyList;
         }
 
         public static Builder builder() {
@@ -131,36 +188,20 @@ public class ListAclPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * @return comment
+         * @return aclPolicyList
          */
-        public String getComment() {
-            return this.comment;
-        }
-
-        /**
-         * @return entry
-         */
-        public String getEntry() {
-            return this.entry;
+        public java.util.List < AclPolicyList> getAclPolicyList() {
+            return this.aclPolicyList;
         }
 
         public static final class Builder {
-            private String comment; 
-            private String entry; 
+            private java.util.List < AclPolicyList> aclPolicyList; 
 
             /**
-             * Comment.
+             * AclPolicyList.
              */
-            public Builder comment(String comment) {
-                this.comment = comment;
-                return this;
-            }
-
-            /**
-             * Entry.
-             */
-            public Builder entry(String entry) {
-                this.entry = entry;
+            public Builder aclPolicyList(java.util.List < AclPolicyList> aclPolicyList) {
+                this.aclPolicyList = aclPolicyList;
                 return this;
             }
 
@@ -171,14 +212,14 @@ public class ListAclPolicyResponseBody extends TeaModel {
         } 
 
     }
-    public static class IntranetAclPolicyList extends TeaModel {
+    public static class IntranetVpcAclPolicyListAclPolicyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
         @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
 
-        private IntranetAclPolicyList(Builder builder) {
+        private IntranetVpcAclPolicyListAclPolicyList(Builder builder) {
             this.comment = builder.comment;
             this.entry = builder.entry;
         }
@@ -187,7 +228,7 @@ public class ListAclPolicyResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static IntranetAclPolicyList create() {
+        public static IntranetVpcAclPolicyListAclPolicyList create() {
             return builder().build();
         }
 
@@ -225,22 +266,22 @@ public class ListAclPolicyResponseBody extends TeaModel {
                 return this;
             }
 
-            public IntranetAclPolicyList build() {
-                return new IntranetAclPolicyList(this);
+            public IntranetVpcAclPolicyListAclPolicyList build() {
+                return new IntranetVpcAclPolicyListAclPolicyList(this);
             } 
 
         } 
 
     }
     public static class IntranetVpcAclPolicyList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("IntranetAclPolicyList")
-        private java.util.List < IntranetAclPolicyList> intranetAclPolicyList;
+        @com.aliyun.core.annotation.NameInMap("AclPolicyList")
+        private java.util.List < IntranetVpcAclPolicyListAclPolicyList> aclPolicyList;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private IntranetVpcAclPolicyList(Builder builder) {
-            this.intranetAclPolicyList = builder.intranetAclPolicyList;
+            this.aclPolicyList = builder.aclPolicyList;
             this.vpcId = builder.vpcId;
         }
 
@@ -253,10 +294,10 @@ public class ListAclPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * @return intranetAclPolicyList
+         * @return aclPolicyList
          */
-        public java.util.List < IntranetAclPolicyList> getIntranetAclPolicyList() {
-            return this.intranetAclPolicyList;
+        public java.util.List < IntranetVpcAclPolicyListAclPolicyList> getAclPolicyList() {
+            return this.aclPolicyList;
         }
 
         /**
@@ -267,14 +308,14 @@ public class ListAclPolicyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < IntranetAclPolicyList> intranetAclPolicyList; 
+            private java.util.List < IntranetVpcAclPolicyListAclPolicyList> aclPolicyList; 
             private String vpcId; 
 
             /**
-             * IntranetAclPolicyList.
+             * AclPolicyList.
              */
-            public Builder intranetAclPolicyList(java.util.List < IntranetAclPolicyList> intranetAclPolicyList) {
-                this.intranetAclPolicyList = intranetAclPolicyList;
+            public Builder aclPolicyList(java.util.List < IntranetVpcAclPolicyListAclPolicyList> aclPolicyList) {
+                this.aclPolicyList = aclPolicyList;
                 return this;
             }
 

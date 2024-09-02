@@ -217,7 +217,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The private gateway alias.
+         * The alias of the private gateway.
          */
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = gatewayName;
@@ -225,7 +225,15 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The instance type used for the private gateway.
+         * The instance type used by the private gateway.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   8c16g
+         * *   4c8g
+         * *   2c4g
+         * *   16c32g
          */
         public Builder instanceType(String instanceType) {
             this.instanceType = instanceType;
@@ -249,7 +257,16 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * InternetStatus.
+         * Indicates whether Internet access is enabled.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Creating: Internet access is being enabled.
+         * *   Failed: Internet access failed to be enabled or deleted.
+         * *   Running: Internet access is running.
+         * *   Deleted: Internet access is deleted.
+         * *   Deleting: Internet access is being deleted.
          */
         public Builder internetStatus(String internetStatus) {
             this.internetStatus = internetStatus;
@@ -265,7 +282,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * IsDefault.
+         * Indicates whether it is the default private gateway.
          */
         public Builder isDefault(Boolean isDefault) {
             this.isDefault = isDefault;
@@ -273,7 +290,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Replicas.
+         * The number of nodes in the private gateway.
          */
         public Builder replicas(Integer replicas) {
             this.replicas = replicas;
@@ -289,7 +306,18 @@ public class DescribeGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The state of the private gateway.
+         * The status of the private gateway.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Creating
+         * *   Stopped
+         * *   Failed
+         * *   Running
+         * *   Deleted
+         * *   Deleting
+         * *   Waiting
          */
         public Builder status(String status) {
             this.status = status;
