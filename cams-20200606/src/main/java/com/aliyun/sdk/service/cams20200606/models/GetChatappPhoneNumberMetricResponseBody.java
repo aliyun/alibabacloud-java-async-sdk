@@ -233,13 +233,12 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The metric granularity.
+             * The granularity of the metric.
              * <p>
              * 
-             * >  Valid values:
+             * Valid values:
              * 
              * *   DAILY
-             * 
              * *   HALF_HOUR
              */
             public Builder granularity(String granularity) {

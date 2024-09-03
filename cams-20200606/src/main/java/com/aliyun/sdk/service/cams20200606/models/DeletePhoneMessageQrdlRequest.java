@@ -92,7 +92,7 @@ public class DeletePhoneMessageQrdlRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The phone number. Add the country code before the phone number.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putBodyParameter("PhoneNumber", phoneNumber);

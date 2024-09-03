@@ -154,7 +154,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         } 
 
         /**
-         * The space ID of the user within the ISV account.
+         * The space ID of the RAM user within the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -172,12 +172,13 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The metric granularity.
+         * The granularity of the metric.
          * <p>
          * 
-         * >  Valid values:
+         * Valid values:
          * 
          * *   DAILY
+         * *   HALF_HOUR
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -186,7 +187,7 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.
+         * The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -222,7 +223,13 @@ public class GetChatappTemplateMetricRequest extends Request {
         }
 
         /**
-         * The template type. Valid values: WHATSAPP and VIBER. If you do not specify this parameter, WHATSAPP is used by default.
+         * The template type. If you do not specify this parameter, the default value WHATSAPP is used.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   VIBER
+         * *   WHATSAPP
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

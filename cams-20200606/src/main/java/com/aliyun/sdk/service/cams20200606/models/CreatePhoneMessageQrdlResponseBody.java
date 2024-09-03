@@ -81,7 +81,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -213,7 +213,7 @@ public class CreatePhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * The phone number.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;

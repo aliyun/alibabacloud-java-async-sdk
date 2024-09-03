@@ -81,7 +81,7 @@ public class ListFlowRequest extends Request {
         } 
 
         /**
-         * The space ID of the user within the independent software vendor (ISV) account.
+         * The space ID of the RAM user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -90,7 +90,7 @@ public class ListFlowRequest extends Request {
         }
 
         /**
-         * The name of the Flow.
+         * The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.
          */
         public Builder flowName(String flowName) {
             this.putBodyParameter("FlowName", flowName);

@@ -81,7 +81,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -149,7 +149,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
             private String flowId; 
 
             /**
-             * FilePath.
+             * The file path.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -157,7 +157,7 @@ public class GetFlowJSONAssestResponseBody extends TeaModel {
             }
 
             /**
-             * flow ID。
+             * The Flow ID.
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;

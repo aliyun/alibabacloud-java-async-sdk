@@ -161,6 +161,12 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthInternationalRateEligibility")
         private java.util.Map < String, ? > authInternationalRateEligibility;
 
+        @com.aliyun.core.annotation.NameInMap("BusinessId")
+        private String businessId;
+
+        @com.aliyun.core.annotation.NameInMap("BusinessName")
+        private String businessName;
+
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
@@ -179,6 +185,8 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.accountReviewStatus = builder.accountReviewStatus;
             this.authInternationalRateEligibility = builder.authInternationalRateEligibility;
+            this.businessId = builder.businessId;
+            this.businessName = builder.businessName;
             this.currency = builder.currency;
             this.id = builder.id;
             this.messageTemplateNamespace = builder.messageTemplateNamespace;
@@ -206,6 +214,20 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
          */
         public java.util.Map < String, ? > getAuthInternationalRateEligibility() {
             return this.authInternationalRateEligibility;
+        }
+
+        /**
+         * @return businessId
+         */
+        public String getBusinessId() {
+            return this.businessId;
+        }
+
+        /**
+         * @return businessName
+         */
+        public String getBusinessName() {
+            return this.businessName;
         }
 
         /**
@@ -246,6 +268,8 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public static final class Builder {
             private String accountReviewStatus; 
             private java.util.Map < String, ? > authInternationalRateEligibility; 
+            private String businessId; 
+            private String businessName; 
             private String currency; 
             private String id; 
             private String messageTemplateNamespace; 
@@ -276,6 +300,22 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
              */
             public Builder authInternationalRateEligibility(java.util.Map < String, ? > authInternationalRateEligibility) {
                 this.authInternationalRateEligibility = authInternationalRateEligibility;
+                return this;
+            }
+
+            /**
+             * BusinessId.
+             */
+            public Builder businessId(String businessId) {
+                this.businessId = businessId;
+                return this;
+            }
+
+            /**
+             * BusinessName.
+             */
+            public Builder businessName(String businessName) {
+                this.businessName = businessName;
                 return this;
             }
 

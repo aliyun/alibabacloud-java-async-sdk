@@ -101,7 +101,7 @@ public class UpdateFlowJSONAssetRequest extends Request {
         }
 
         /**
-         * Flow ID。
+         * The Flow ID.
          */
         public Builder flowId(String flowId) {
             this.putBodyParameter("FlowId", flowId);

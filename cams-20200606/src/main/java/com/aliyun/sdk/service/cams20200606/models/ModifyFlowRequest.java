@@ -97,7 +97,7 @@ public class ModifyFlowRequest extends Request {
         } 
 
         /**
-         * The categories of the Flow.
+         * The information about the categories of the Flow.
          */
         public Builder categories(java.util.List < String > categories) {
             String categoriesShrink = shrink(categories, "Categories", "json");

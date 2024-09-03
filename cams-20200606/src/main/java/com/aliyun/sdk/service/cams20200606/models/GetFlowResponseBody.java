@@ -229,7 +229,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The API version.
+             * The version number of the API.
              */
             public Builder dataApiVersion(String dataApiVersion) {
                 this.dataApiVersion = dataApiVersion;
@@ -245,7 +245,7 @@ public class GetFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Flow.
+             * The Flow name.
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;

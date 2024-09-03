@@ -91,7 +91,7 @@ public class GetPermissionByCodeRequest extends Request {
         }
 
         /**
-         * CustSpaceId.
+         * The space ID of the RAM user within the independent software vendor (ISV) account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -100,7 +100,7 @@ public class GetPermissionByCodeRequest extends Request {
         }
 
         /**
-         * Permissions.
+         * The permissions.
          */
         public Builder permissions(java.util.List < String > permissions) {
             String permissionsShrink = shrink(permissions, "Permissions", "json");

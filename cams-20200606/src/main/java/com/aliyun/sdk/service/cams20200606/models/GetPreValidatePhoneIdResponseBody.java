@@ -73,7 +73,11 @@ public class GetPreValidatePhoneIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response code. The value OK indicates the request was successful.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [Error codes](https://www.alibabacloud.com/help/zh/cams/latest/api-error-codes).
          */
         public Builder code(String code) {
             this.code = code;

@@ -81,7 +81,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class UpdateFlowJSONAssetResponseBody extends TeaModel {
             private String flowId; 
 
             /**
-             * Flow ID。
+             * The Flow ID.
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;

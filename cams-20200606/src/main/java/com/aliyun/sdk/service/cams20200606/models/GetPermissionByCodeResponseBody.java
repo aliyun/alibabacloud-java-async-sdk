@@ -61,7 +61,11 @@ public class GetPermissionByCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -77,7 +81,7 @@ public class GetPermissionByCodeResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

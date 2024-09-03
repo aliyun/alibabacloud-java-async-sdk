@@ -81,7 +81,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +161,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
             private String phoneNumber; 
 
             /**
-             * EncryptionPublicKey.
+             * The public key.
              */
             public Builder encryptionPublicKey(String encryptionPublicKey) {
                 this.encryptionPublicKey = encryptionPublicKey;
@@ -169,7 +169,11 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptionPublicKeyStatus.
+             * The validity state of the public key. Valid values:
+             * <p>
+             * 
+             * *   MISMATCH: The public key is invalid.
+             * *   VALID: The public key is valid.
              */
             public Builder encryptionPublicKeyStatus(String encryptionPublicKeyStatus) {
                 this.encryptionPublicKeyStatus = encryptionPublicKeyStatus;
@@ -177,7 +181,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * The phone number.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;

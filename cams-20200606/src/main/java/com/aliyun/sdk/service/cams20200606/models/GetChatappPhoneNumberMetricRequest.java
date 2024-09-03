@@ -125,7 +125,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         } 
 
         /**
-         * The space ID of the user within the ISV account.
+         * The space ID of the RAM user within the ISV account.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -143,7 +143,13 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * The metric granularity.
+         * The granularity of the metric.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   DAILY
+         * *   HALF_HOUR
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -152,7 +158,7 @@ public class GetChatappPhoneNumberMetricRequest extends Request {
         }
 
         /**
-         * The verification code used to verify whether the RAM user is authorized by the independent software vendor (ISV) account.
+         * The independent software vendor (ISV) verification code, which is used to verify whether the RAM user is authorized by the ISV account.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);

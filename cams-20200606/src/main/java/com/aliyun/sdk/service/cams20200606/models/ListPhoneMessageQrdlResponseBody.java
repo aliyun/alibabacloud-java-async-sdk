@@ -81,7 +81,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +197,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             private String qrdlCode; 
 
             /**
-             * DeepLinkUrl.
+             * The URL of the deep link.
              */
             public Builder deepLinkUrl(String deepLinkUrl) {
                 this.deepLinkUrl = deepLinkUrl;
@@ -205,7 +205,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * GenerateQrImage.
+             * The format of the generated image.
              */
             public Builder generateQrImage(String generateQrImage) {
                 this.generateQrImage = generateQrImage;
@@ -213,7 +213,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * The phone number.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -221,7 +221,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * PrefilledMessage.
+             * The message content.
              */
             public Builder prefilledMessage(String prefilledMessage) {
                 this.prefilledMessage = prefilledMessage;
@@ -229,7 +229,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * QrImageUrl.
+             * The URL of the QR code.
              */
             public Builder qrImageUrl(String qrImageUrl) {
                 this.qrImageUrl = qrImageUrl;
@@ -237,7 +237,7 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
             }
 
             /**
-             * QrdlCode.
+             * The mode of the quick-response (QR) code.
              */
             public Builder qrdlCode(String qrdlCode) {
                 this.qrdlCode = qrdlCode;

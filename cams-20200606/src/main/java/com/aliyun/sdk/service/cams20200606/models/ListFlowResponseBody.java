@@ -177,7 +177,7 @@ public class ListFlowResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Flow.
+             * The Flow name.
              */
             public Builder flowName(String flowName) {
                 this.flowName = flowName;
