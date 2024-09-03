@@ -981,6 +981,9 @@ public class GetFileResponseBody extends TeaModel {
 
     }
     public static class NodeConfiguration extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApplyScheduleImmediately")
+        private String applyScheduleImmediately;
+
         @com.aliyun.core.annotation.NameInMap("AutoRerunIntervalMillis")
         private Integer autoRerunIntervalMillis;
 
@@ -1036,6 +1039,7 @@ public class GetFileResponseBody extends TeaModel {
         private Boolean stop;
 
         private NodeConfiguration(Builder builder) {
+            this.applyScheduleImmediately = builder.applyScheduleImmediately;
             this.autoRerunIntervalMillis = builder.autoRerunIntervalMillis;
             this.autoRerunTimes = builder.autoRerunTimes;
             this.cronExpress = builder.cronExpress;
@@ -1062,6 +1066,13 @@ public class GetFileResponseBody extends TeaModel {
 
         public static NodeConfiguration create() {
             return builder().build();
+        }
+
+        /**
+         * @return applyScheduleImmediately
+         */
+        public String getApplyScheduleImmediately() {
+            return this.applyScheduleImmediately;
         }
 
         /**
@@ -1191,6 +1202,7 @@ public class GetFileResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String applyScheduleImmediately; 
             private Integer autoRerunIntervalMillis; 
             private Integer autoRerunTimes; 
             private String cronExpress; 
@@ -1209,6 +1221,14 @@ public class GetFileResponseBody extends TeaModel {
             private Long startEffectDate; 
             private Boolean startImmediately; 
             private Boolean stop; 
+
+            /**
+             * ApplyScheduleImmediately.
+             */
+            public Builder applyScheduleImmediately(String applyScheduleImmediately) {
+                this.applyScheduleImmediately = applyScheduleImmediately;
+                return this;
+            }
 
             /**
              * The interval between automatic reruns after an error occurs. Unit: milliseconds.

@@ -20,6 +20,10 @@ public class CreateFileRequest extends Request {
     private String advancedSettings;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplyScheduleImmediately")
+    private Boolean applyScheduleImmediately;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AutoParsing")
     private Boolean autoParsing;
 
@@ -145,6 +149,7 @@ public class CreateFileRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.advancedSettings = builder.advancedSettings;
+        this.applyScheduleImmediately = builder.applyScheduleImmediately;
         this.autoParsing = builder.autoParsing;
         this.autoRerunIntervalMillis = builder.autoRerunIntervalMillis;
         this.autoRerunTimes = builder.autoRerunTimes;
@@ -202,6 +207,13 @@ public class CreateFileRequest extends Request {
      */
     public String getAdvancedSettings() {
         return this.advancedSettings;
+    }
+
+    /**
+     * @return applyScheduleImmediately
+     */
+    public Boolean getApplyScheduleImmediately() {
+        return this.applyScheduleImmediately;
     }
 
     /**
@@ -417,6 +429,7 @@ public class CreateFileRequest extends Request {
     public static final class Builder extends Request.Builder<CreateFileRequest, Builder> {
         private String regionId; 
         private String advancedSettings; 
+        private Boolean applyScheduleImmediately; 
         private Boolean autoParsing; 
         private Integer autoRerunIntervalMillis; 
         private Integer autoRerunTimes; 
@@ -456,6 +469,7 @@ public class CreateFileRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.advancedSettings = request.advancedSettings;
+            this.applyScheduleImmediately = request.applyScheduleImmediately;
             this.autoParsing = request.autoParsing;
             this.autoRerunIntervalMillis = request.autoRerunIntervalMillis;
             this.autoRerunTimes = request.autoRerunTimes;
@@ -508,6 +522,15 @@ public class CreateFileRequest extends Request {
         public Builder advancedSettings(String advancedSettings) {
             this.putBodyParameter("AdvancedSettings", advancedSettings);
             this.advancedSettings = advancedSettings;
+            return this;
+        }
+
+        /**
+         * ApplyScheduleImmediately.
+         */
+        public Builder applyScheduleImmediately(Boolean applyScheduleImmediately) {
+            this.putBodyParameter("ApplyScheduleImmediately", applyScheduleImmediately);
+            this.applyScheduleImmediately = applyScheduleImmediately;
             return this;
         }
 

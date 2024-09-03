@@ -691,6 +691,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTableThemeResponse> listTableTheme(ListTableThemeRequest request);
 
+    CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
+
     CompletableFuture<ListTopicsResponse> listTopics(ListTopicsRequest request);
 
     CompletableFuture<MountDirectoryResponse> mountDirectory(MountDirectoryRequest request);
