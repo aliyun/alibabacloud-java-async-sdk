@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListEvaluationScoreHistoryRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    private Long accountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
@@ -25,6 +29,7 @@ public class ListEvaluationScoreHistoryRequest extends Request {
 
     private ListEvaluationScoreHistoryRequest(Builder builder) {
         super(builder);
+        this.accountId = builder.accountId;
         this.endDate = builder.endDate;
         this.regionId = builder.regionId;
         this.startDate = builder.startDate;
@@ -41,6 +46,13 @@ public class ListEvaluationScoreHistoryRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountId
+     */
+    public Long getAccountId() {
+        return this.accountId;
     }
 
     /**
@@ -65,6 +77,7 @@ public class ListEvaluationScoreHistoryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListEvaluationScoreHistoryRequest, Builder> {
+        private Long accountId; 
         private String endDate; 
         private String regionId; 
         private String startDate; 
@@ -75,10 +88,20 @@ public class ListEvaluationScoreHistoryRequest extends Request {
 
         private Builder(ListEvaluationScoreHistoryRequest request) {
             super(request);
+            this.accountId = request.accountId;
             this.endDate = request.endDate;
             this.regionId = request.regionId;
             this.startDate = request.startDate;
         } 
+
+        /**
+         * AccountId.
+         */
+        public Builder accountId(Long accountId) {
+            this.putQueryParameter("AccountId", accountId);
+            this.accountId = accountId;
+            return this;
+        }
 
         /**
          * EndDate.

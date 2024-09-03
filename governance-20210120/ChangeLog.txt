@@ -1,3 +1,6 @@
+2024-09-03 Version: 0.0.8
+- Generated java-async 2021-01-20 for governance.
+
 2024-08-23 Version: 0.0.7
 - Generated java-async 2021-01-20 for governance.
 
