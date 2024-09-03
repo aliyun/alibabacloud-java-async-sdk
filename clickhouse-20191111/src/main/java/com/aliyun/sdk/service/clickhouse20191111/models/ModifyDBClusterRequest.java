@@ -35,6 +35,10 @@ public class ModifyDBClusterRequest extends Request {
     private String dbNodeStorageType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisableWriteWindows")
+    private String disableWriteWindows;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -62,6 +66,7 @@ public class ModifyDBClusterRequest extends Request {
         this.DBNodeGroupCount = builder.DBNodeGroupCount;
         this.DBNodeStorage = builder.DBNodeStorage;
         this.dbNodeStorageType = builder.dbNodeStorageType;
+        this.disableWriteWindows = builder.disableWriteWindows;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -118,6 +123,13 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
+     * @return disableWriteWindows
+     */
+    public String getDisableWriteWindows() {
+        return this.disableWriteWindows;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -158,6 +170,7 @@ public class ModifyDBClusterRequest extends Request {
         private String DBNodeGroupCount; 
         private String DBNodeStorage; 
         private String dbNodeStorageType; 
+        private String disableWriteWindows; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -175,6 +188,7 @@ public class ModifyDBClusterRequest extends Request {
             this.DBNodeGroupCount = request.DBNodeGroupCount;
             this.DBNodeStorage = request.DBNodeStorage;
             this.dbNodeStorageType = request.dbNodeStorageType;
+            this.disableWriteWindows = request.disableWriteWindows;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -252,6 +266,15 @@ public class ModifyDBClusterRequest extends Request {
         public Builder dbNodeStorageType(String dbNodeStorageType) {
             this.putQueryParameter("DbNodeStorageType", dbNodeStorageType);
             this.dbNodeStorageType = dbNodeStorageType;
+            return this;
+        }
+
+        /**
+         * DisableWriteWindows.
+         */
+        public Builder disableWriteWindows(String disableWriteWindows) {
+            this.putQueryParameter("DisableWriteWindows", disableWriteWindows);
+            this.disableWriteWindows = disableWriteWindows;
             return this;
         }
 

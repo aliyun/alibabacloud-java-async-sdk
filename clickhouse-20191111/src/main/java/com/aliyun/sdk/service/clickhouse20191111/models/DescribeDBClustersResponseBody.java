@@ -380,6 +380,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("ScaleOutDisableWriteWindows")
+        private String scaleOutDisableWriteWindows;
+
         @com.aliyun.core.annotation.NameInMap("ScaleOutStatus")
         private ScaleOutStatus scaleOutStatus;
 
@@ -427,6 +430,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             this.port = builder.port;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.scaleOutDisableWriteWindows = builder.scaleOutDisableWriteWindows;
             this.scaleOutStatus = builder.scaleOutStatus;
             this.storageType = builder.storageType;
             this.tags = builder.tags;
@@ -620,6 +624,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return scaleOutDisableWriteWindows
+         */
+        public String getScaleOutDisableWriteWindows() {
+            return this.scaleOutDisableWriteWindows;
+        }
+
+        /**
          * @return scaleOutStatus
          */
         public ScaleOutStatus getScaleOutStatus() {
@@ -694,6 +705,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private Integer port; 
             private String regionId; 
             private String resourceGroupId; 
+            private String scaleOutDisableWriteWindows; 
             private ScaleOutStatus scaleOutStatus; 
             private String storageType; 
             private Tags tags; 
@@ -963,6 +975,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * ScaleOutDisableWriteWindows.
+             */
+            public Builder scaleOutDisableWriteWindows(String scaleOutDisableWriteWindows) {
+                this.scaleOutDisableWriteWindows = scaleOutDisableWriteWindows;
                 return this;
             }
 
