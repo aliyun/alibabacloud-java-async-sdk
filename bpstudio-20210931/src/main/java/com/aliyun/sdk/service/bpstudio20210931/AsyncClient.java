@@ -49,6 +49,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);
 
+    CompletableFuture<GetApplicationVariablesResponse> getApplicationVariables(GetApplicationVariablesRequest request);
+
     CompletableFuture<GetApplicationVariables4FailResponse> getApplicationVariables4Fail(GetApplicationVariables4FailRequest request);
 
     CompletableFuture<GetExecuteOperationResultResponse> getExecuteOperationResult(GetExecuteOperationResultRequest request);
