@@ -23,11 +23,21 @@ public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("order")
     private Order order;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List < Tags> tags;
+
     private CreateInstanceRequest(Builder builder) {
         super(builder);
         this.chargeType = builder.chargeType;
         this.components = builder.components;
         this.order = builder.order;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -64,10 +74,26 @@ public class CreateInstanceRequest extends Request {
         return this.order;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String chargeType; 
         private java.util.List < Components> components; 
         private Order order; 
+        private String resourceGroupId; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -78,6 +104,8 @@ public class CreateInstanceRequest extends Request {
             this.chargeType = request.chargeType;
             this.components = request.components;
             this.order = request.order;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -104,6 +132,24 @@ public class CreateInstanceRequest extends Request {
         public Builder order(Order order) {
             this.putBodyParameter("order", order);
             this.order = order;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -251,6 +297,67 @@ public class CreateInstanceRequest extends Request {
 
             public Order build() {
                 return new Order(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of the specification.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
