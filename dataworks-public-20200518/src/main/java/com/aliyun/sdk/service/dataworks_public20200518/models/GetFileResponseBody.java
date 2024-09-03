@@ -1438,6 +1438,47 @@ public class GetFileResponseBody extends TeaModel {
         } 
 
     }
+    public static class ResourceDownloadLink extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("downloadLink")
+        private String downloadLink;
+
+        private ResourceDownloadLink(Builder builder) {
+            this.downloadLink = builder.downloadLink;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceDownloadLink create() {
+            return builder().build();
+        }
+
+        /**
+         * @return downloadLink
+         */
+        public String getDownloadLink() {
+            return this.downloadLink;
+        }
+
+        public static final class Builder {
+            private String downloadLink; 
+
+            /**
+             * downloadLink.
+             */
+            public Builder downloadLink(String downloadLink) {
+                this.downloadLink = downloadLink;
+                return this;
+            }
+
+            public ResourceDownloadLink build() {
+                return new ResourceDownloadLink(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("File")
         private File file;
@@ -1445,9 +1486,13 @@ public class GetFileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeConfiguration")
         private NodeConfiguration nodeConfiguration;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceDownloadLink")
+        private ResourceDownloadLink resourceDownloadLink;
+
         private Data(Builder builder) {
             this.file = builder.file;
             this.nodeConfiguration = builder.nodeConfiguration;
+            this.resourceDownloadLink = builder.resourceDownloadLink;
         }
 
         public static Builder builder() {
@@ -1472,9 +1517,17 @@ public class GetFileResponseBody extends TeaModel {
             return this.nodeConfiguration;
         }
 
+        /**
+         * @return resourceDownloadLink
+         */
+        public ResourceDownloadLink getResourceDownloadLink() {
+            return this.resourceDownloadLink;
+        }
+
         public static final class Builder {
             private File file; 
             private NodeConfiguration nodeConfiguration; 
+            private ResourceDownloadLink resourceDownloadLink; 
 
             /**
              * The basic information about the file.
@@ -1489,6 +1542,14 @@ public class GetFileResponseBody extends TeaModel {
              */
             public Builder nodeConfiguration(NodeConfiguration nodeConfiguration) {
                 this.nodeConfiguration = nodeConfiguration;
+                return this;
+            }
+
+            /**
+             * ResourceDownloadLink.
+             */
+            public Builder resourceDownloadLink(ResourceDownloadLink resourceDownloadLink) {
+                this.resourceDownloadLink = resourceDownloadLink;
                 return this;
             }
 
