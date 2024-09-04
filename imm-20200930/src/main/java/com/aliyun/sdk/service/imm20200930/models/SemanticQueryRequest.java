@@ -43,6 +43,10 @@ public class SemanticQueryRequest extends Request {
     private String query;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmartClusterIds")
+    private java.util.List < String > smartClusterIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WithFields")
     private java.util.List < String > withFields;
 
@@ -55,6 +59,7 @@ public class SemanticQueryRequest extends Request {
         this.nextToken = builder.nextToken;
         this.projectName = builder.projectName;
         this.query = builder.query;
+        this.smartClusterIds = builder.smartClusterIds;
         this.withFields = builder.withFields;
     }
 
@@ -121,6 +126,13 @@ public class SemanticQueryRequest extends Request {
     }
 
     /**
+     * @return smartClusterIds
+     */
+    public java.util.List < String > getSmartClusterIds() {
+        return this.smartClusterIds;
+    }
+
+    /**
      * @return withFields
      */
     public java.util.List < String > getWithFields() {
@@ -135,6 +147,7 @@ public class SemanticQueryRequest extends Request {
         private String nextToken; 
         private String projectName; 
         private String query; 
+        private java.util.List < String > smartClusterIds; 
         private java.util.List < String > withFields; 
 
         private Builder() {
@@ -150,6 +163,7 @@ public class SemanticQueryRequest extends Request {
             this.nextToken = request.nextToken;
             this.projectName = request.projectName;
             this.query = request.query;
+            this.smartClusterIds = request.smartClusterIds;
             this.withFields = request.withFields;
         } 
 
@@ -214,6 +228,16 @@ public class SemanticQueryRequest extends Request {
         public Builder query(String query) {
             this.putQueryParameter("Query", query);
             this.query = query;
+            return this;
+        }
+
+        /**
+         * SmartClusterIds.
+         */
+        public Builder smartClusterIds(java.util.List < String > smartClusterIds) {
+            String smartClusterIdsShrink = shrink(smartClusterIds, "SmartClusterIds", "json");
+            this.putQueryParameter("SmartClusterIds", smartClusterIdsShrink);
+            this.smartClusterIds = smartClusterIds;
             return this;
         }
 
