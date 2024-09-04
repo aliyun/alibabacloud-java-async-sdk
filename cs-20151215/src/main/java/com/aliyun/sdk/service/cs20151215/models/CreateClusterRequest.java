@@ -131,6 +131,10 @@ public class CreateClusterRequest extends Request {
     private String kubernetesVersion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("load_balancer_id")
+    private String loadBalancerId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("load_balancer_spec")
     private String loadBalancerSpec;
 
@@ -427,6 +431,7 @@ public class CreateClusterRequest extends Request {
         this.keepInstanceName = builder.keepInstanceName;
         this.keyPair = builder.keyPair;
         this.kubernetesVersion = builder.kubernetesVersion;
+        this.loadBalancerId = builder.loadBalancerId;
         this.loadBalancerSpec = builder.loadBalancerSpec;
         this.loggingType = builder.loggingType;
         this.loginPassword = builder.loginPassword;
@@ -705,6 +710,13 @@ public class CreateClusterRequest extends Request {
      */
     public String getKubernetesVersion() {
         return this.kubernetesVersion;
+    }
+
+    /**
+     * @return loadBalancerId
+     */
+    public String getLoadBalancerId() {
+        return this.loadBalancerId;
     }
 
     /**
@@ -1171,6 +1183,7 @@ public class CreateClusterRequest extends Request {
         private Boolean keepInstanceName; 
         private String keyPair; 
         private String kubernetesVersion; 
+        private String loadBalancerId; 
         private String loadBalancerSpec; 
         private String loggingType; 
         private String loginPassword; 
@@ -1269,6 +1282,7 @@ public class CreateClusterRequest extends Request {
             this.keepInstanceName = request.keepInstanceName;
             this.keyPair = request.keyPair;
             this.kubernetesVersion = request.kubernetesVersion;
+            this.loadBalancerId = request.loadBalancerId;
             this.loadBalancerSpec = request.loadBalancerSpec;
             this.loggingType = request.loggingType;
             this.loginPassword = request.loginPassword;
@@ -1731,6 +1745,15 @@ public class CreateClusterRequest extends Request {
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putBodyParameter("kubernetes_version", kubernetesVersion);
             this.kubernetesVersion = kubernetesVersion;
+            return this;
+        }
+
+        /**
+         * load_balancer_id.
+         */
+        public Builder loadBalancerId(String loadBalancerId) {
+            this.putBodyParameter("load_balancer_id", loadBalancerId);
+            this.loadBalancerId = loadBalancerId;
             return this;
         }
 
