@@ -135,6 +135,9 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Requires")
         private String requires;
 
+        @com.aliyun.core.annotation.NameInMap("Uid")
+        private String uid;
+
         private InstalledExtensions(Builder builder) {
             this.category = builder.category;
             this.comment = builder.comment;
@@ -144,6 +147,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             this.owner = builder.owner;
             this.priority = builder.priority;
             this.requires = builder.requires;
+            this.uid = builder.uid;
         }
 
         public static Builder builder() {
@@ -210,6 +214,13 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             return this.requires;
         }
 
+        /**
+         * @return uid
+         */
+        public String getUid() {
+            return this.uid;
+        }
+
         public static final class Builder {
             private String category; 
             private String comment; 
@@ -219,6 +230,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             private String owner; 
             private String priority; 
             private String requires; 
+            private String uid; 
 
             /**
              * The category of the extension.
@@ -301,6 +313,14 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * Uid.
+             */
+            public Builder uid(String uid) {
+                this.uid = uid;
+                return this;
+            }
+
             public InstalledExtensions build() {
                 return new InstalledExtensions(this);
             } 
@@ -333,6 +353,9 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Requires")
         private String requires;
 
+        @com.aliyun.core.annotation.NameInMap("Uid")
+        private String uid;
+
         private UninstalledExtensions(Builder builder) {
             this.category = builder.category;
             this.comment = builder.comment;
@@ -342,6 +365,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             this.owner = builder.owner;
             this.priority = builder.priority;
             this.requires = builder.requires;
+            this.uid = builder.uid;
         }
 
         public static Builder builder() {
@@ -408,6 +432,13 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             return this.requires;
         }
 
+        /**
+         * @return uid
+         */
+        public String getUid() {
+            return this.uid;
+        }
+
         public static final class Builder {
             private String category; 
             private String comment; 
@@ -417,6 +448,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             private String owner; 
             private String priority; 
             private String requires; 
+            private String uid; 
 
             /**
              * The category of the extension.
@@ -479,6 +511,14 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
              */
             public Builder requires(String requires) {
                 this.requires = requires;
+                return this;
+            }
+
+            /**
+             * Uid.
+             */
+            public Builder uid(String uid) {
+                this.uid = uid;
                 return this;
             }
 

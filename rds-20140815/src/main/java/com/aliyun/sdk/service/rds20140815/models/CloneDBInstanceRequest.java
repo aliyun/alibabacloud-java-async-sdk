@@ -475,7 +475,7 @@ public class CloneDBInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable the automatic payment feature. Valid values:
+         * Specifies whether to enable the automatic payment feature for the new instance. Valid values:
          * <p>
          * 
          * 1.  **true**: enables the feature. You must make sure that your account balance is sufficient.
@@ -601,16 +601,17 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage type of the instance. Valid values:
+         * The storage type of the new instance. Valid values:
          * <p>
          * 
-         * *   **local_ssd**: local SSDs
-         * *   **cloud_ssd**: standard SSDs
-         * *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
-         * *   **cloud_essd2**: ESSDs of PL2
-         * *   **cloud_essd3**: ESSD of PL3
+         * *   **general_essd** (recommend): general Enterprise SSD (ESSD)
+         * *   **local_ssd**: local SSD
+         * *   **cloud_ssd**: standard SSD
+         * *   **cloud_essd**: performance level 1 (PL1) ESSD
+         * *   **cloud_essd2**: PL2 ESSD
+         * *   **cloud_essd3**: PL3 ESSD
          * 
-         * > Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.
+         * >  Serverless instances support only PL1 ESSDs and general ESSDs.
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -637,7 +638,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the release protection feature for the instance. Valid values:
+         * Specifies whether to enable the release protection feature for the new instance. Valid values:
          * <p>
          * 
          * *   **true**
