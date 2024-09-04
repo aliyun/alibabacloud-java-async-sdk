@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EditZeroCreditShutdownRequest</p>
  */
 public class EditZeroCreditShutdownRequest extends Request {
-    @Query
-    @NameInMap("ShutdownPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShutdownPolicy")
     private String shutdownPolicy;
 
-    @Query
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private Long uid;
 
     private EditZeroCreditShutdownRequest(Builder builder) {

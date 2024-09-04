@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EditEndUserStatusRequest</p>
  */
 public class EditEndUserStatusRequest extends Request {
-    @Query
-    @NameInMap("CreditStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreditStatus")
     private String creditStatus;
 
-    @Query
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private Long uid;
 
     private EditEndUserStatusRequest(Builder builder) {

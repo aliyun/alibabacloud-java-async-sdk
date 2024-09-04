@@ -6,16 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateCustomerResponseBody} extends {@link TeaModel}
+ * {@link GetCoupondeductProductCodeResponseBody} extends {@link TeaModel}
  *
- * <p>CreateCustomerResponseBody</p>
+ * <p>GetCoupondeductProductCodeResponseBody</p>
  */
-public class CreateCustomerResponseBody extends TeaModel {
+public class GetCoupondeductProductCodeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Boolean data;
+    private java.util.List < Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -26,7 +26,7 @@ public class CreateCustomerResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private CreateCustomerResponseBody(Builder builder) {
+    private GetCoupondeductProductCodeResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -38,7 +38,7 @@ public class CreateCustomerResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateCustomerResponseBody create() {
+    public static GetCoupondeductProductCodeResponseBody create() {
         return builder().build();
     }
 
@@ -52,7 +52,7 @@ public class CreateCustomerResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public Boolean getData() {
+    public java.util.List < Data> getData() {
         return this.data;
     }
 
@@ -79,13 +79,13 @@ public class CreateCustomerResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Boolean data; 
+        private java.util.List < Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Code indicating whether the call was successful.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,15 +93,15 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Data indicating whether a customer was successfully created. If it\"s "true", the Message contains CID.
+         * Data.
          */
-        public Builder data(Boolean data) {
+        public Builder data(java.util.List < Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * Massage indicating whether the call was successful.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Request ID, Alibaba Cloud will track errors with this.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,17 +117,58 @@ public class CreateCustomerResponseBody extends TeaModel {
         }
 
         /**
-         * Candidate Value: True/False, which indicates whether the current API call it self was successful. It does not guarantee the success of subsequent business operations.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public CreateCustomerResponseBody build() {
-            return new CreateCustomerResponseBody(this);
+        public GetCoupondeductProductCodeResponseBody build() {
+            return new GetCoupondeductProductCodeResponseBody(this);
         } 
 
     } 
 
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ProductType")
+        private Object productType;
+
+        private Data(Builder builder) {
+            this.productType = builder.productType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return productType
+         */
+        public Object getProductType() {
+            return this.productType;
+        }
+
+        public static final class Builder {
+            private Object productType; 
+
+            /**
+             * ProductType.
+             */
+            public Builder productType(Object productType) {
+                this.productType = productType;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

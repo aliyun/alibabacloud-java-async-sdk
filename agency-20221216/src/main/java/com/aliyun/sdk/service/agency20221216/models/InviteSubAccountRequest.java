@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InviteSubAccountRequest</p>
  */
 public class InviteSubAccountRequest extends Request {
-    @Query
-    @NameInMap("AccountInfoList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountInfoList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AccountInfoList> accountInfoList;
 
     private InviteSubAccountRequest(Builder builder) {
@@ -73,38 +72,38 @@ public class InviteSubAccountRequest extends Request {
     } 
 
     public static class AccountInfoList extends TeaModel {
-        @NameInMap("AccountNickname")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AccountNickname")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String accountNickname;
 
-        @NameInMap("CreditLine")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CreditLine")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String creditLine;
 
-        @NameInMap("CustomerBd")
+        @com.aliyun.core.annotation.NameInMap("CustomerBd")
         private String customerBd;
 
-        @NameInMap("CustomerId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CustomerId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String customerId;
 
-        @NameInMap("EmailAddress")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EmailAddress")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String emailAddress;
 
-        @NameInMap("NewBuyStatus")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NewBuyStatus")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String newBuyStatus;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("SubAccountType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SubAccountType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String subAccountType;
 
-        @NameInMap("ZeroCreditShutdownPolicy")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ZeroCreditShutdownPolicy")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String zeroCreditShutdownPolicy;
 
         private AccountInfoList(Builder builder) {

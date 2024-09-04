@@ -28,6 +28,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CancelSubscriptionBillResponse> cancelSubscriptionBill(CancelSubscriptionBillRequest request);
 
+    CompletableFuture<CreateCouponTemplateResponse> createCouponTemplate(CreateCouponTemplateRequest request);
+
     CompletableFuture<CreateCustomerResponse> createCustomer(CreateCustomerRequest request);
 
     CompletableFuture<CustomerQuotaRecordListResponse> customerQuotaRecordList(CustomerQuotaRecordListRequest request);
@@ -68,7 +70,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAccountInfoResponse> getAccountInfo(GetAccountInfoRequest request);
 
+    CompletableFuture<GetCoupondeductProductCodeResponse> getCoupondeductProductCode(GetCoupondeductProductCodeRequest request);
+
     CompletableFuture<GetCreditInfoResponse> getCreditInfo(GetCreditInfoRequest request);
+
+    CompletableFuture<GetCustomerOrdersResponse> getCustomerOrders(GetCustomerOrdersRequest request);
 
     CompletableFuture<GetDailyBillResponse> getDailyBill(GetDailyBillRequest request);
 
@@ -83,6 +89,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<InviteSubAccountResponse> inviteSubAccount(InviteSubAccountRequest request);
+
+    CompletableFuture<IssueCouponForCustomerResponse> issueCouponForCustomer(IssueCouponForCustomerRequest request);
 
     /**
       * The current API request rate for cloud products has not been disclosed.

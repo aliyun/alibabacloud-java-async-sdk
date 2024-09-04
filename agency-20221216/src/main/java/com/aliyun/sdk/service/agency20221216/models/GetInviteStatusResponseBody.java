@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInviteStatusResponseBody</p>
  */
 public class GetInviteStatusResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetInviteStatusResponseBody(Builder builder) {
@@ -135,25 +134,25 @@ public class GetInviteStatusResponseBody extends TeaModel {
     } 
 
     public static class InviteStatusList extends TeaModel {
-        @NameInMap("AssociationSuccessTime")
+        @com.aliyun.core.annotation.NameInMap("AssociationSuccessTime")
         private String associationSuccessTime;
 
-        @NameInMap("Cid")
+        @com.aliyun.core.annotation.NameInMap("Cid")
         private Long cid;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SubAccountType")
+        @com.aliyun.core.annotation.NameInMap("SubAccountType")
         private String subAccountType;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private Long uid;
 
         private InviteStatusList(Builder builder) {
@@ -307,16 +306,16 @@ public class GetInviteStatusResponseBody extends TeaModel {
 
     }
     public static class InviteStatus extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("InviteStatusList")
+        @com.aliyun.core.annotation.NameInMap("InviteStatusList")
         private InviteStatusList inviteStatusList;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private InviteStatus(Builder builder) {
@@ -411,7 +410,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("InviteStatus")
+        @com.aliyun.core.annotation.NameInMap("InviteStatus")
         private java.util.List < InviteStatus> inviteStatus;
 
         private Data(Builder builder) {

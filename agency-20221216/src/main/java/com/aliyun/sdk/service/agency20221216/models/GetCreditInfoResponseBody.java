@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCreditInfoResponseBody</p>
  */
 public class GetCreditInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCreditInfoResponseBody(Builder builder) {
@@ -135,28 +134,28 @@ public class GetCreditInfoResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccountStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountStatus")
         private String accountStatus;
 
-        @NameInMap("AlarmThreshold")
+        @com.aliyun.core.annotation.NameInMap("AlarmThreshold")
         private String alarmThreshold;
 
-        @NameInMap("AvailableCredit")
+        @com.aliyun.core.annotation.NameInMap("AvailableCredit")
         private String availableCredit;
 
-        @NameInMap("ConsumedUndeductedValue")
+        @com.aliyun.core.annotation.NameInMap("ConsumedUndeductedValue")
         private String consumedUndeductedValue;
 
-        @NameInMap("CreditLine")
+        @com.aliyun.core.annotation.NameInMap("CreditLine")
         private String creditLine;
 
-        @NameInMap("OutstandingBalance")
+        @com.aliyun.core.annotation.NameInMap("OutstandingBalance")
         private String outstandingBalance;
 
-        @NameInMap("ZeroCreditShutdownPolicy")
+        @com.aliyun.core.annotation.NameInMap("ZeroCreditShutdownPolicy")
         private String zeroCreditShutdownPolicy;
 
-        @NameInMap("newBuyStatus")
+        @com.aliyun.core.annotation.NameInMap("newBuyStatus")
         private String newBuyStatus;
 
         private Data(Builder builder) {

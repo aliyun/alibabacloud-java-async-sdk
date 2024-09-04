@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InviteSubAccountResponseBody</p>
  */
 public class InviteSubAccountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private Results results;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private InviteSubAccountResponseBody(Builder builder) {
@@ -135,13 +134,13 @@ public class InviteSubAccountResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Days")
+        @com.aliyun.core.annotation.NameInMap("Days")
         private Integer days;
 
-        @NameInMap("InviteId")
+        @com.aliyun.core.annotation.NameInMap("InviteId")
         private Long inviteId;
 
-        @NameInMap("RegUrl")
+        @com.aliyun.core.annotation.NameInMap("RegUrl")
         private String regUrl;
 
         private Result(Builder builder) {
@@ -216,16 +215,16 @@ public class InviteSubAccountResponseBody extends TeaModel {
 
     }
     public static class ResultsResult extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private ResultsResult(Builder builder) {
@@ -317,7 +316,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
 
     }
     public static class Results extends TeaModel {
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < ResultsResult> result;
 
         private Results(Builder builder) {

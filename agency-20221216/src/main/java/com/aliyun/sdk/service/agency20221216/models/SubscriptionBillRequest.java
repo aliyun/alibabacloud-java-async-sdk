@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubscriptionBillRequest</p>
  */
 public class SubscriptionBillRequest extends Request {
-    @Query
-    @NameInMap("BeginBillingCycle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginBillingCycle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String beginBillingCycle;
 
-    @Query
-    @NameInMap("BillFormat")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billFormat;
 
-    @Query
-    @NameInMap("BucketOwnerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketOwnerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long bucketOwnerId;
 
-    @Query
-    @NameInMap("SubscribeBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscribeBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscribeBucket;
 
-    @Query
-    @NameInMap("SubscribeSegmentSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscribeSegmentSize")
     private Integer subscribeSegmentSize;
 
-    @Query
-    @NameInMap("SubscribeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscribeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscribeType;
 
     private SubscriptionBillRequest(Builder builder) {

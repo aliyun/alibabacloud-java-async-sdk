@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUnassociatedCustomerResponseBody</p>
  */
 public class GetUnassociatedCustomerResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("InviteInfoList")
+    @com.aliyun.core.annotation.NameInMap("InviteInfoList")
     private InviteInfoList inviteInfoList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetUnassociatedCustomerResponseBody(Builder builder) {
@@ -155,19 +154,19 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
     } 
 
     public static class InviteInfo extends TeaModel {
-        @NameInMap("AccountNickname")
+        @com.aliyun.core.annotation.NameInMap("AccountNickname")
         private String accountNickname;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("InviteId")
+        @com.aliyun.core.annotation.NameInMap("InviteId")
         private Long inviteId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private InviteInfo(Builder builder) {
@@ -281,7 +280,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
 
     }
     public static class InviteInfoList extends TeaModel {
-        @NameInMap("InviteInfo")
+        @com.aliyun.core.annotation.NameInMap("InviteInfo")
         private java.util.List < InviteInfo> inviteInfo;
 
         private InviteInfoList(Builder builder) {
@@ -322,13 +321,13 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private PageInfo(Builder builder) {

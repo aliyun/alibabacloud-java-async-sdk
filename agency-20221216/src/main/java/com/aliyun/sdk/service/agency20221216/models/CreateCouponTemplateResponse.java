@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SetCreditLineResponse} extends {@link TeaModel}
+ * {@link CreateCouponTemplateResponse} extends {@link TeaModel}
  *
- * <p>SetCreditLineResponse</p>
+ * <p>CreateCouponTemplateResponse</p>
  */
-public class SetCreditLineResponse extends Response {
+public class CreateCouponTemplateResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class SetCreditLineResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private SetCreditLineResponseBody body;
+    private CreateCouponTemplateResponseBody body;
 
-    private SetCreditLineResponse(BuilderImpl builder) {
+    private CreateCouponTemplateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SetCreditLineResponse create() {
+    public static CreateCouponTemplateResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class SetCreditLineResponse extends Response {
     /**
      * @return body
      */
-    public SetCreditLineResponseBody getBody() {
+    public CreateCouponTemplateResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SetCreditLineResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateCouponTemplateResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SetCreditLineResponseBody body);
+        Builder body(CreateCouponTemplateResponseBody body);
 
         @Override
-        SetCreditLineResponse build();
+        CreateCouponTemplateResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SetCreditLineResponse, Builder>
+            extends Response.BuilderImpl<CreateCouponTemplateResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private SetCreditLineResponseBody body; 
+        private CreateCouponTemplateResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SetCreditLineResponse response) {
+        private BuilderImpl(CreateCouponTemplateResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class SetCreditLineResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SetCreditLineResponseBody body) {
+        public Builder body(CreateCouponTemplateResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SetCreditLineResponse build() {
-            return new SetCreditLineResponse(this);
+        public CreateCouponTemplateResponse build() {
+            return new CreateCouponTemplateResponse(this);
         } 
 
     } 

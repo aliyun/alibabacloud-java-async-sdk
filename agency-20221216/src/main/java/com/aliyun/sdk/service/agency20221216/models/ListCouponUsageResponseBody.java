@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCouponUsageResponseBody</p>
  */
 public class ListCouponUsageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageInfo")
+    @com.aliyun.core.annotation.NameInMap("PageInfo")
     private PageInfo pageInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCouponUsageResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class ListCouponUsageResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
 
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Double amount;
 
-        @NameInMap("Balance")
+        @com.aliyun.core.annotation.NameInMap("Balance")
         private Double balance;
 
-        @NameInMap("CouponId")
+        @com.aliyun.core.annotation.NameInMap("CouponId")
         private String couponId;
 
-        @NameInMap("CouponTemplateId")
+        @com.aliyun.core.annotation.NameInMap("CouponTemplateId")
         private Long couponTemplateId;
 
-        @NameInMap("EffDate")
+        @com.aliyun.core.annotation.NameInMap("EffDate")
         private String effDate;
 
-        @NameInMap("PublishDate")
+        @com.aliyun.core.annotation.NameInMap("PublishDate")
         private String publishDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private Long uid;
 
         private Data(Builder builder) {
@@ -333,13 +332,13 @@ public class ListCouponUsageResponseBody extends TeaModel {
 
     }
     public static class PageInfo extends TeaModel {
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Integer page;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private PageInfo(Builder builder) {

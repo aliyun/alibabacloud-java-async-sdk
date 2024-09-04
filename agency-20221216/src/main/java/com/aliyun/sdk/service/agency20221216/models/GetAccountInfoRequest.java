@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccountInfoRequest</p>
  */
 public class GetAccountInfoRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maximum = 20, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Uid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
     private Long uid;
 
-    @Query
-    @NameInMap("UserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserType")
     private String userType;
 
     private GetAccountInfoRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class GetAccountInfoRequest extends Request {
         } 
 
         /**
-         * Pagination, current page.
+         * Message
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -107,7 +106,7 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * Pagination, record number on each page, maximum 20.
+         * Success
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -116,7 +115,7 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * Account UID of Distribution Customer. This parameter and the UserType parameter must have one filled. If this parameter is empty, then check all Distribution Customer accounts of the selected UserType.
+         * 10 (Value <= 20)
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);
@@ -125,11 +124,13 @@ public class GetAccountInfoRequest extends Request {
         }
 
         /**
-         * Distribution Customer\"s Account Type:
+         * Result Code - Error Code. Value Range:
          * <p>
-         * - 1 End User
-         * - 2 Enterprise
-         * - 3 T2 Partner
+         * - 200 OK
+         * - 1109 System Error
+         * - 3029: Invalid UID
+         * - 3062: UID and UserType are both empty.
+         * - 3063: UserType value out of range.
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

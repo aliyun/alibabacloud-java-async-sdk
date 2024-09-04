@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetAccountInfoRequest</p>
  */
 public class SetAccountInfoRequest extends Request {
-    @Query
-    @NameInMap("AccountNickname")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountNickname")
     private String accountNickname;
 
-    @Query
-    @NameInMap("CustomerBd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerBd")
     private String customerBd;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("Uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long uid;
 
     private SetAccountInfoRequest(Builder builder) {
@@ -97,10 +96,12 @@ public class SetAccountInfoRequest extends Request {
         } 
 
         /**
-         * Sub Account Nickname. 
+         * Result Code:
          * <p>
-         * * Use the official name of Company, if Sub Account is an enterprise.
-         * * Use the official name of Partner, if Sub Account is a T2 reseller.
+         * *   200 OK
+         * *   1109 System error
+         * *   3030 Sub Account Nickname exceeds maximum length,  maximum length 150 bytes.
+         * *   3031 Remark exceeds maximum length,  maximum length 3000 bytes.
          */
         public Builder accountNickname(String accountNickname) {
             this.putQueryParameter("AccountNickname", accountNickname);
@@ -109,7 +110,7 @@ public class SetAccountInfoRequest extends Request {
         }
 
         /**
-         * CustomerBd.
+         * Customer manager（limited 50 character）
          */
         public Builder customerBd(String customerBd) {
             this.putQueryParameter("CustomerBd", customerBd);
@@ -118,7 +119,7 @@ public class SetAccountInfoRequest extends Request {
         }
 
         /**
-         * Description of Sub Account.
+         * success
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -127,7 +128,7 @@ public class SetAccountInfoRequest extends Request {
         }
 
         /**
-         * The UID of Sub Account.
+         * Request ID, Alibaba Cloud will track errors with this.
          */
         public Builder uid(Long uid) {
             this.putQueryParameter("Uid", uid);

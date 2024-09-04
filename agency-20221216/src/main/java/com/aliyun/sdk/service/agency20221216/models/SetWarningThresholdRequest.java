@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetWarningThresholdRequest</p>
  */
 public class SetWarningThresholdRequest extends Request {
-    @Query
-    @NameInMap("Uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long uid;
 
-    @Query
-    @NameInMap("WarningValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WarningValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String warningValue;
 
     private SetWarningThresholdRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCreditInfoRequest</p>
  */
 public class GetCreditInfoRequest extends Request {
-    @Query
-    @NameInMap("Uid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long uid;
 
     private GetCreditInfoRequest(Builder builder) {

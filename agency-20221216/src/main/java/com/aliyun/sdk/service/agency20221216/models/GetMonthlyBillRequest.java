@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMonthlyBillRequest</p>
  */
 public class GetMonthlyBillRequest extends Request {
-    @Query
-    @NameInMap("BillOwner")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillOwner")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billOwner;
 
-    @Query
-    @NameInMap("BillType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billType;
 
-    @Query
-    @NameInMap("Month")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Month")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String month;
 
     private GetMonthlyBillRequest(Builder builder) {

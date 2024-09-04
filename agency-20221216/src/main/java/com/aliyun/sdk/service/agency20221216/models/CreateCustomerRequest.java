@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomerRequest</p>
  */
 public class CreateCustomerRequest extends Request {
-    @Query
-    @NameInMap("CustomerName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String customerName;
 
-    @Query
-    @NameInMap("CustomerSource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerSource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String customerSource;
 
-    @Query
-    @NameInMap("CustomerSubTrade")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerSubTrade")
     private String customerSubTrade;
 
-    @Query
-    @NameInMap("CustomerTrade")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerTrade")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String customerTrade;
 
-    @Query
-    @NameInMap("Nation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Nation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nation;
 
     private CreateCustomerRequest(Builder builder) {

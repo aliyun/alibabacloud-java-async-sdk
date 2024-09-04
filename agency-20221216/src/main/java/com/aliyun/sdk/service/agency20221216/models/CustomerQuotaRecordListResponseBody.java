@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CustomerQuotaRecordListResponseBody</p>
  */
 public class CustomerQuotaRecordListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private CustomerQuotaRecordListResponseBody(Builder builder) {
@@ -172,28 +171,28 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("OperationSubmitType")
+        @com.aliyun.core.annotation.NameInMap("OperationSubmitType")
         private String operationSubmitType;
 
-        @NameInMap("OperationTime")
+        @com.aliyun.core.annotation.NameInMap("OperationTime")
         private String operationTime;
 
-        @NameInMap("OperationTypeCode")
+        @com.aliyun.core.annotation.NameInMap("OperationTypeCode")
         private String operationTypeCode;
 
-        @NameInMap("OperationTypeDesc")
+        @com.aliyun.core.annotation.NameInMap("OperationTypeDesc")
         private String operationTypeDesc;
 
-        @NameInMap("OperationUid")
+        @com.aliyun.core.annotation.NameInMap("OperationUid")
         private String operationUid;
 
-        @NameInMap("UpdateAfterAmount")
+        @com.aliyun.core.annotation.NameInMap("UpdateAfterAmount")
         private String updateAfterAmount;
 
-        @NameInMap("UpdateAmount")
+        @com.aliyun.core.annotation.NameInMap("UpdateAmount")
         private String updateAmount;
 
-        @NameInMap("UpdateBeforeAmount")
+        @com.aliyun.core.annotation.NameInMap("UpdateBeforeAmount")
         private String updateBeforeAmount;
 
         private Data(Builder builder) {

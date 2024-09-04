@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.agency20221216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMonthlyBillResponseBody</p>
  */
 public class GetMonthlyBillResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMonthlyBillResponseBody(Builder builder) {
@@ -137,28 +136,28 @@ public class GetMonthlyBillResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BillLinkCSV")
+        @com.aliyun.core.annotation.NameInMap("BillLinkCSV")
         private String billLinkCSV;
 
-        @NameInMap("BillLinkXLSX")
+        @com.aliyun.core.annotation.NameInMap("BillLinkXLSX")
         private String billLinkXLSX;
 
-        @NameInMap("BillOwner")
+        @com.aliyun.core.annotation.NameInMap("BillOwner")
         private String billOwner;
 
-        @NameInMap("BillType")
+        @com.aliyun.core.annotation.NameInMap("BillType")
         private String billType;
 
-        @NameInMap("InvoiceLink")
+        @com.aliyun.core.annotation.NameInMap("InvoiceLink")
         private String invoiceLink;
 
-        @NameInMap("RefundInvoiceFlag")
+        @com.aliyun.core.annotation.NameInMap("RefundInvoiceFlag")
         private Boolean refundInvoiceFlag;
 
-        @NameInMap("RefundInvoiceLink")
+        @com.aliyun.core.annotation.NameInMap("RefundInvoiceLink")
         private String refundInvoiceLink;
 
-        @NameInMap("SpendingTime")
+        @com.aliyun.core.annotation.NameInMap("SpendingTime")
         private String spendingTime;
 
         private Data(Builder builder) {
