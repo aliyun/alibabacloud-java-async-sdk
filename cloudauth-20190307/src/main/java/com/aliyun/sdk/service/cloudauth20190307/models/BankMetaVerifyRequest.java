@@ -24,6 +24,10 @@ public class BankMetaVerifyRequest extends Request {
     private String identifyNum;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
+    private String identityType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
@@ -48,6 +52,7 @@ public class BankMetaVerifyRequest extends Request {
         this.regionId = builder.regionId;
         this.bankCard = builder.bankCard;
         this.identifyNum = builder.identifyNum;
+        this.identityType = builder.identityType;
         this.mobile = builder.mobile;
         this.paramType = builder.paramType;
         this.productType = builder.productType;
@@ -90,6 +95,13 @@ public class BankMetaVerifyRequest extends Request {
     }
 
     /**
+     * @return identityType
+     */
+    public String getIdentityType() {
+        return this.identityType;
+    }
+
+    /**
      * @return mobile
      */
     public String getMobile() {
@@ -128,6 +140,7 @@ public class BankMetaVerifyRequest extends Request {
         private String regionId; 
         private String bankCard; 
         private String identifyNum; 
+        private String identityType; 
         private String mobile; 
         private String paramType; 
         private String productType; 
@@ -143,6 +156,7 @@ public class BankMetaVerifyRequest extends Request {
             this.regionId = request.regionId;
             this.bankCard = request.bankCard;
             this.identifyNum = request.identifyNum;
+            this.identityType = request.identityType;
             this.mobile = request.mobile;
             this.paramType = request.paramType;
             this.productType = request.productType;
@@ -174,6 +188,15 @@ public class BankMetaVerifyRequest extends Request {
         public Builder identifyNum(String identifyNum) {
             this.putQueryParameter("IdentifyNum", identifyNum);
             this.identifyNum = identifyNum;
+            return this;
+        }
+
+        /**
+         * IdentityType.
+         */
+        public Builder identityType(String identityType) {
+            this.putQueryParameter("IdentityType", identityType);
+            this.identityType = identityType;
             return this;
         }
 

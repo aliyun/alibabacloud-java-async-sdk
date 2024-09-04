@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-cloudauth20190307</artifactId>
-  <version>1.0.9</version>
+  <version>1.0.10</version>
   <packaging>jar</packaging>
   <name>alibabacloud-cloudauth20190307</name>
   <description>Alibaba Cloud Cloudauth (20190307) Async SDK for Java
