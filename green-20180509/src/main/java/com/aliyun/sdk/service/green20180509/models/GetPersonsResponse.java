@@ -17,10 +17,14 @@ public class GetPersonsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
+    @com.aliyun.core.annotation.NameInMap("body")
+    private GetPersonsResponseBody body;
+
     private GetPersonsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
+        this.body = builder.body;
     }
 
     public static GetPersonsResponse create() {
@@ -46,11 +50,20 @@ public class GetPersonsResponse extends Response {
         return this.statusCode;
     }
 
+    /**
+     * @return body
+     */
+    public GetPersonsResponseBody getBody() {
+        return this.body;
+    }
+
     public interface Builder extends Response.Builder<GetPersonsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
+
+        Builder body(GetPersonsResponseBody body);
 
         @Override
         GetPersonsResponse build();
@@ -62,6 +75,7 @@ public class GetPersonsResponse extends Response {
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
+        private GetPersonsResponseBody body; 
 
         private BuilderImpl() {
             super();
@@ -71,6 +85,7 @@ public class GetPersonsResponse extends Response {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
+            this.body = response.body;
         } 
 
         /**
@@ -88,6 +103,15 @@ public class GetPersonsResponse extends Response {
         @Override
         public Builder statusCode(Integer statusCode) {
             this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetPersonsResponseBody body) {
+            this.body = body;
             return this;
         }
 

@@ -17,10 +17,14 @@ public class DeleteSimilarityImageResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
+    @com.aliyun.core.annotation.NameInMap("body")
+    private DeleteSimilarityImageResponseBody body;
+
     private DeleteSimilarityImageResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
+        this.body = builder.body;
     }
 
     public static DeleteSimilarityImageResponse create() {
@@ -46,11 +50,20 @@ public class DeleteSimilarityImageResponse extends Response {
         return this.statusCode;
     }
 
+    /**
+     * @return body
+     */
+    public DeleteSimilarityImageResponseBody getBody() {
+        return this.body;
+    }
+
     public interface Builder extends Response.Builder<DeleteSimilarityImageResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
+
+        Builder body(DeleteSimilarityImageResponseBody body);
 
         @Override
         DeleteSimilarityImageResponse build();
@@ -62,6 +75,7 @@ public class DeleteSimilarityImageResponse extends Response {
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
+        private DeleteSimilarityImageResponseBody body; 
 
         private BuilderImpl() {
             super();
@@ -71,6 +85,7 @@ public class DeleteSimilarityImageResponse extends Response {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
+            this.body = response.body;
         } 
 
         /**
@@ -88,6 +103,15 @@ public class DeleteSimilarityImageResponse extends Response {
         @Override
         public Builder statusCode(Integer statusCode) {
             this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DeleteSimilarityImageResponseBody body) {
+            this.body = body;
             return this;
         }
 

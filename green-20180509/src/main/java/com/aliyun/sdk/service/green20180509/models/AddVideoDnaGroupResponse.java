@@ -17,10 +17,14 @@ public class AddVideoDnaGroupResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
+    @com.aliyun.core.annotation.NameInMap("body")
+    private AddVideoDnaGroupResponseBody body;
+
     private AddVideoDnaGroupResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
+        this.body = builder.body;
     }
 
     public static AddVideoDnaGroupResponse create() {
@@ -46,11 +50,20 @@ public class AddVideoDnaGroupResponse extends Response {
         return this.statusCode;
     }
 
+    /**
+     * @return body
+     */
+    public AddVideoDnaGroupResponseBody getBody() {
+        return this.body;
+    }
+
     public interface Builder extends Response.Builder<AddVideoDnaGroupResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
+
+        Builder body(AddVideoDnaGroupResponseBody body);
 
         @Override
         AddVideoDnaGroupResponse build();
@@ -62,6 +75,7 @@ public class AddVideoDnaGroupResponse extends Response {
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
+        private AddVideoDnaGroupResponseBody body; 
 
         private BuilderImpl() {
             super();
@@ -71,6 +85,7 @@ public class AddVideoDnaGroupResponse extends Response {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
+            this.body = response.body;
         } 
 
         /**
@@ -88,6 +103,15 @@ public class AddVideoDnaGroupResponse extends Response {
         @Override
         public Builder statusCode(Integer statusCode) {
             this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(AddVideoDnaGroupResponseBody body) {
+            this.body = body;
             return this;
         }
 

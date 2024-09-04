@@ -62,7 +62,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<AddFacesResponse> addFaces(AddFacesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddFaces").setMethod(HttpMethod.POST).setPathRegex("/green/sface/face/add").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddFaces").setMethod(HttpMethod.POST).setPathRegex("/green/sface/face/add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddFacesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -76,7 +76,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<AddGroupsResponse> addGroups(AddGroupsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddGroups").setMethod(HttpMethod.POST).setPathRegex("/green/sface/person/groups/add").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddGroups").setMethod(HttpMethod.POST).setPathRegex("/green/sface/person/groups/add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddGroupsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -90,7 +90,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<AddPersonResponse> addPerson(AddPersonRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddPerson").setMethod(HttpMethod.POST).setPathRegex("/green/sface/person/add").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddPerson").setMethod(HttpMethod.POST).setPathRegex("/green/sface/person/add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddPersonResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -104,7 +104,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<AddSimilarityImageResponse> addSimilarityImage(AddSimilarityImageRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddSimilarityImage").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/image/add").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddSimilarityImage").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/image/add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddSimilarityImageResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -118,7 +118,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<AddSimilarityLibraryResponse> addSimilarityLibrary(AddSimilarityLibraryRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddSimilarityLibrary").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/library/add").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddSimilarityLibrary").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/library/add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddSimilarityLibraryResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -132,7 +132,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<AddVideoDnaResponse> addVideoDna(AddVideoDnaRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddVideoDna").setMethod(HttpMethod.POST).setPathRegex("/green/video/dna/add").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddVideoDna").setMethod(HttpMethod.POST).setPathRegex("/green/video/dna/add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddVideoDnaResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -146,7 +146,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<AddVideoDnaGroupResponse> addVideoDnaGroup(AddVideoDnaGroupRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddVideoDnaGroup").setMethod(HttpMethod.POST).setPathRegex("/green/video/dna/group/add").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AddVideoDnaGroup").setMethod(HttpMethod.POST).setPathRegex("/green/video/dna/group/add").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddVideoDnaGroupResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -160,7 +160,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteFacesResponse> deleteFaces(DeleteFacesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteFaces").setMethod(HttpMethod.POST).setPathRegex("/green/sface/face/delete").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteFaces").setMethod(HttpMethod.POST).setPathRegex("/green/sface/face/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFacesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -174,7 +174,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteGroupsResponse> deleteGroups(DeleteGroupsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteGroups").setMethod(HttpMethod.POST).setPathRegex("/green/sface/person/groups/delete").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteGroups").setMethod(HttpMethod.POST).setPathRegex("/green/sface/person/groups/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteGroupsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -188,7 +188,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeletePersonResponse> deletePerson(DeletePersonRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeletePerson").setMethod(HttpMethod.POST).setPathRegex("/green/sface/person/delete").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeletePerson").setMethod(HttpMethod.POST).setPathRegex("/green/sface/person/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeletePersonResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -202,7 +202,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteSimilarityImageResponse> deleteSimilarityImage(DeleteSimilarityImageRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteSimilarityImage").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/image/delete").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteSimilarityImage").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/image/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSimilarityImageResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -216,7 +216,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteSimilarityLibraryResponse> deleteSimilarityLibrary(DeleteSimilarityLibraryRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteSimilarityLibrary").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/library/delete").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteSimilarityLibrary").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/library/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteSimilarityLibraryResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -230,7 +230,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteVideoDnaResponse> deleteVideoDna(DeleteVideoDnaRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteVideoDna").setMethod(HttpMethod.POST).setPathRegex("/green/video/dna/delete").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteVideoDna").setMethod(HttpMethod.POST).setPathRegex("/green/video/dna/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteVideoDnaResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -244,7 +244,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteVideoDnaGroupResponse> deleteVideoDnaGroup(DeleteVideoDnaGroupRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteVideoDnaGroup").setMethod(HttpMethod.POST).setPathRegex("/green/video/dna/group/delete").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteVideoDnaGroup").setMethod(HttpMethod.POST).setPathRegex("/green/video/dna/group/delete").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteVideoDnaGroupResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -258,7 +258,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DetectFaceResponse> detectFace(DetectFaceRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DetectFace").setMethod(HttpMethod.POST).setPathRegex("/green/face/detect").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DetectFace").setMethod(HttpMethod.POST).setPathRegex("/green/face/detect").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DetectFaceResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -272,7 +272,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<FileAsyncScanResponse> fileAsyncScan(FileAsyncScanRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FileAsyncScan").setMethod(HttpMethod.POST).setPathRegex("/green/file/asyncscan").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FileAsyncScan").setMethod(HttpMethod.POST).setPathRegex("/green/file/asyncscan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FileAsyncScanResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -286,7 +286,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<FileAsyncScanResultsResponse> fileAsyncScanResults(FileAsyncScanResultsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FileAsyncScanResults").setMethod(HttpMethod.POST).setPathRegex("/green/file/results").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FileAsyncScanResults").setMethod(HttpMethod.POST).setPathRegex("/green/file/results").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FileAsyncScanResultsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -328,7 +328,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetGroupsResponse> getGroups(GetGroupsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGroups").setMethod(HttpMethod.POST).setPathRegex("/green/sface/groups").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetGroups").setMethod(HttpMethod.POST).setPathRegex("/green/sface/groups").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetGroupsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -342,7 +342,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetPersonResponse> getPerson(GetPersonRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPerson").setMethod(HttpMethod.POST).setPathRegex("/green/sface/person").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPerson").setMethod(HttpMethod.POST).setPathRegex("/green/sface/person").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPersonResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -356,7 +356,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetPersonsResponse> getPersons(GetPersonsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPersons").setMethod(HttpMethod.POST).setPathRegex("/green/sface/group/persons").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetPersons").setMethod(HttpMethod.POST).setPathRegex("/green/sface/group/persons").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetPersonsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -370,7 +370,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetSimilarityImageResponse> getSimilarityImage(GetSimilarityImageRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSimilarityImage").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/image/get").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSimilarityImage").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/image/get").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSimilarityImageResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -384,7 +384,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetSimilarityLibraryResponse> getSimilarityLibrary(GetSimilarityLibraryRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSimilarityLibrary").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/library/get").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetSimilarityLibrary").setMethod(HttpMethod.POST).setPathRegex("/green/similarity/library/get").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSimilarityLibraryResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -398,7 +398,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ImageAsyncManualScanResponse> imageAsyncManualScan(ImageAsyncManualScanRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageAsyncManualScan").setMethod(HttpMethod.POST).setPathRegex("/green/image/manual/asyncScan").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageAsyncManualScan").setMethod(HttpMethod.POST).setPathRegex("/green/image/manual/asyncScan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImageAsyncManualScanResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -412,7 +412,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ImageAsyncManualScanResultsResponse> imageAsyncManualScanResults(ImageAsyncManualScanResultsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageAsyncManualScanResults").setMethod(HttpMethod.POST).setPathRegex("/green/image/manual/scan/results").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageAsyncManualScanResults").setMethod(HttpMethod.POST).setPathRegex("/green/image/manual/scan/results").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImageAsyncManualScanResultsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -426,7 +426,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ImageAsyncScanResponse> imageAsyncScan(ImageAsyncScanRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageAsyncScan").setMethod(HttpMethod.POST).setPathRegex("/green/image/asyncscan").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageAsyncScan").setMethod(HttpMethod.POST).setPathRegex("/green/image/asyncscan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImageAsyncScanResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -440,7 +440,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ImageAsyncScanResultsResponse> imageAsyncScanResults(ImageAsyncScanResultsRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageAsyncScanResults").setMethod(HttpMethod.POST).setPathRegex("/green/image/results").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageAsyncScanResults").setMethod(HttpMethod.POST).setPathRegex("/green/image/results").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImageAsyncScanResultsResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -454,7 +454,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ImageScanFeedbackResponse> imageScanFeedback(ImageScanFeedbackRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageScanFeedback").setMethod(HttpMethod.POST).setPathRegex("/green/image/feedback").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageScanFeedback").setMethod(HttpMethod.POST).setPathRegex("/green/image/feedback").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImageScanFeedbackResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -468,7 +468,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ImageSyncScanResponse> imageSyncScan(ImageSyncScanRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageSyncScan").setMethod(HttpMethod.POST).setPathRegex("/green/image/scan").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ImageSyncScan").setMethod(HttpMethod.POST).setPathRegex("/green/image/scan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImageSyncScanResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
