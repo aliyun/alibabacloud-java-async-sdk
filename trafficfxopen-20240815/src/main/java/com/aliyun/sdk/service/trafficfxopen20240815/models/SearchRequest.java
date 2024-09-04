@@ -32,7 +32,6 @@ public class SearchRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("userId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     @com.aliyun.core.annotation.Header

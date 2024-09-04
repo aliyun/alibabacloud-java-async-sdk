@@ -1,3 +1,6 @@
+2024-09-04 Version: 1.0.4
+- Generated java-async 2024-08-15 for TrafficFxOpen.
+
 2024-09-04 Version: 1.0.3
 - Generated java-async 2024-08-15 for TrafficFxOpen.
 
