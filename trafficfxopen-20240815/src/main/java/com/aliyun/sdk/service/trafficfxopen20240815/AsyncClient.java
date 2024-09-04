@@ -19,6 +19,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ConvertUrlResponse> convertUrl(ConvertUrlRequest request);
+
     CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
 
     CompletableFuture<SearchResponse> search(SearchRequest request);
