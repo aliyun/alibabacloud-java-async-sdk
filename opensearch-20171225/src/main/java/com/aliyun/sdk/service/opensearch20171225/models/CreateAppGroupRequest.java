@@ -28,6 +28,10 @@ public class CreateAppGroupRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
+    private java.util.List < Tags> tags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
@@ -37,6 +41,7 @@ public class CreateAppGroupRequest extends Request {
         this.name = builder.name;
         this.quota = builder.quota;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tags = builder.tags;
         this.type = builder.type;
     }
 
@@ -82,6 +87,13 @@ public class CreateAppGroupRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -93,6 +105,7 @@ public class CreateAppGroupRequest extends Request {
         private String name; 
         private Quota quota; 
         private String resourceGroupId; 
+        private java.util.List < Tags> tags; 
         private String type; 
 
         private Builder() {
@@ -105,6 +118,7 @@ public class CreateAppGroupRequest extends Request {
             this.name = request.name;
             this.quota = request.quota;
             this.resourceGroupId = request.resourceGroupId;
+            this.tags = request.tags;
             this.type = request.type;
         } 
 
@@ -141,6 +155,15 @@ public class CreateAppGroupRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putBodyParameter("tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -236,6 +259,67 @@ public class CreateAppGroupRequest extends Request {
 
             public Quota build() {
                 return new Quota(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
