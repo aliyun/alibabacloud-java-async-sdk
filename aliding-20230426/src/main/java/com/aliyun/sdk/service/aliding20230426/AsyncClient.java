@@ -215,6 +215,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSheetResponse> getSheet(GetSheetRequest request);
 
+    CompletableFuture<GetSheetContentJobIdResponse> getSheetContentJobId(GetSheetContentJobIdRequest request);
+
     CompletableFuture<GetSpaceDirectoriesResponse> getSpaceDirectories(GetSpaceDirectoriesRequest request);
 
     CompletableFuture<GetSubscribedCalendarResponse> getSubscribedCalendar(GetSubscribedCalendarRequest request);
@@ -224,6 +226,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTemplateListByUserIdResponse> getTemplateListByUserId(GetTemplateListByUserIdRequest request);
 
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
+
+    CompletableFuture<GetUserIdResponse> getUserId(GetUserIdRequest request);
 
     CompletableFuture<GetUserLatestPlanResponse> getUserLatestPlan(GetUserLatestPlanRequest request);
 

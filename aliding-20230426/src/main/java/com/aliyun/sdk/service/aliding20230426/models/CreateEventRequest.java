@@ -20,6 +20,10 @@ public class CreateEventRequest extends Request {
     private java.util.List < Attendees> attendees;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CardInstances")
+    private java.util.List < CardInstances> cardInstances;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -78,6 +82,7 @@ public class CreateEventRequest extends Request {
         super(builder);
         this.accountContext = builder.accountContext;
         this.attendees = builder.attendees;
+        this.cardInstances = builder.cardInstances;
         this.description = builder.description;
         this.end = builder.end;
         this.extra = builder.extra;
@@ -118,6 +123,13 @@ public class CreateEventRequest extends Request {
      */
     public java.util.List < Attendees> getAttendees() {
         return this.attendees;
+    }
+
+    /**
+     * @return cardInstances
+     */
+    public java.util.List < CardInstances> getCardInstances() {
+        return this.cardInstances;
     }
 
     /**
@@ -214,6 +226,7 @@ public class CreateEventRequest extends Request {
     public static final class Builder extends Request.Builder<CreateEventRequest, Builder> {
         private AccountContext accountContext; 
         private java.util.List < Attendees> attendees; 
+        private java.util.List < CardInstances> cardInstances; 
         private String description; 
         private End end; 
         private java.util.Map < String, String > extra; 
@@ -236,6 +249,7 @@ public class CreateEventRequest extends Request {
             super(request);
             this.accountContext = request.accountContext;
             this.attendees = request.attendees;
+            this.cardInstances = request.cardInstances;
             this.description = request.description;
             this.end = request.end;
             this.extra = request.extra;
@@ -268,6 +282,16 @@ public class CreateEventRequest extends Request {
             String attendeesShrink = shrink(attendees, "Attendees", "json");
             this.putBodyParameter("Attendees", attendeesShrink);
             this.attendees = attendees;
+            return this;
+        }
+
+        /**
+         * CardInstances.
+         */
+        public Builder cardInstances(java.util.List < CardInstances> cardInstances) {
+            String cardInstancesShrink = shrink(cardInstances, "CardInstances", "json");
+            this.putBodyParameter("CardInstances", cardInstancesShrink);
+            this.cardInstances = cardInstances;
             return this;
         }
 
@@ -502,6 +526,67 @@ public class CreateEventRequest extends Request {
 
             public Attendees build() {
                 return new Attendees(this);
+            } 
+
+        } 
+
+    }
+    public static class CardInstances extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OutTrackId")
+        private String outTrackId;
+
+        @com.aliyun.core.annotation.NameInMap("Scenario")
+        private String scenario;
+
+        private CardInstances(Builder builder) {
+            this.outTrackId = builder.outTrackId;
+            this.scenario = builder.scenario;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CardInstances create() {
+            return builder().build();
+        }
+
+        /**
+         * @return outTrackId
+         */
+        public String getOutTrackId() {
+            return this.outTrackId;
+        }
+
+        /**
+         * @return scenario
+         */
+        public String getScenario() {
+            return this.scenario;
+        }
+
+        public static final class Builder {
+            private String outTrackId; 
+            private String scenario; 
+
+            /**
+             * OutTrackId.
+             */
+            public Builder outTrackId(String outTrackId) {
+                this.outTrackId = outTrackId;
+                return this;
+            }
+
+            /**
+             * Scenario.
+             */
+            public Builder scenario(String scenario) {
+                this.scenario = scenario;
+                return this;
+            }
+
+            public CardInstances build() {
+                return new CardInstances(this);
             } 
 
         } 
