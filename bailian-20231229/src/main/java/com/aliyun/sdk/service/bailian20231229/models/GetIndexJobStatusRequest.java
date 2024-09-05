@@ -26,11 +26,21 @@ public class GetIndexJobStatusRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    private Integer pageSize;
+
     private GetIndexJobStatusRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.indexId = builder.indexId;
         this.jobId = builder.jobId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
@@ -67,10 +77,26 @@ public class GetIndexJobStatusRequest extends Request {
         return this.jobId;
     }
 
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public static final class Builder extends Request.Builder<GetIndexJobStatusRequest, Builder> {
         private String workspaceId; 
         private String indexId; 
         private String jobId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
 
         private Builder() {
             super();
@@ -81,6 +107,8 @@ public class GetIndexJobStatusRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.indexId = request.indexId;
             this.jobId = request.jobId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
@@ -107,6 +135,24 @@ public class GetIndexJobStatusRequest extends Request {
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
             this.jobId = jobId;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * pageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("pageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
