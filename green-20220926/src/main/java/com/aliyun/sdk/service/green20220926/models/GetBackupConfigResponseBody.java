@@ -20,6 +20,12 @@ public class GetBackupConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
+    @com.aliyun.core.annotation.NameInMap("EnableBackup")
+    private Boolean enableBackup;
+
+    @com.aliyun.core.annotation.NameInMap("EnableBackupVoice")
+    private Boolean enableBackupVoice;
+
     @com.aliyun.core.annotation.NameInMap("ExpireSeconds")
     private Integer expireSeconds;
 
@@ -28,6 +34,9 @@ public class GetBackupConfigResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
+
+    @com.aliyun.core.annotation.NameInMap("PathVoice")
+    private String pathVoice;
 
     @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
@@ -48,9 +57,12 @@ public class GetBackupConfigResponseBody extends TeaModel {
         this.backupMode = builder.backupMode;
         this.bucket = builder.bucket;
         this.enable = builder.enable;
+        this.enableBackup = builder.enableBackup;
+        this.enableBackupVoice = builder.enableBackupVoice;
         this.expireSeconds = builder.expireSeconds;
         this.gmtModified = builder.gmtModified;
         this.path = builder.path;
+        this.pathVoice = builder.pathVoice;
         this.region = builder.region;
         this.requestId = builder.requestId;
         this.resourceType = builder.resourceType;
@@ -88,6 +100,20 @@ public class GetBackupConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return enableBackup
+     */
+    public Boolean getEnableBackup() {
+        return this.enableBackup;
+    }
+
+    /**
+     * @return enableBackupVoice
+     */
+    public Boolean getEnableBackupVoice() {
+        return this.enableBackupVoice;
+    }
+
+    /**
      * @return expireSeconds
      */
     public Integer getExpireSeconds() {
@@ -106,6 +132,13 @@ public class GetBackupConfigResponseBody extends TeaModel {
      */
     public String getPath() {
         return this.path;
+    }
+
+    /**
+     * @return pathVoice
+     */
+    public String getPathVoice() {
+        return this.pathVoice;
     }
 
     /**
@@ -147,9 +180,12 @@ public class GetBackupConfigResponseBody extends TeaModel {
         private Integer backupMode; 
         private String bucket; 
         private Boolean enable; 
+        private Boolean enableBackup; 
+        private Boolean enableBackupVoice; 
         private Integer expireSeconds; 
         private String gmtModified; 
         private String path; 
+        private String pathVoice; 
         private String region; 
         private String requestId; 
         private String resourceType; 
@@ -181,6 +217,22 @@ public class GetBackupConfigResponseBody extends TeaModel {
         }
 
         /**
+         * EnableBackup.
+         */
+        public Builder enableBackup(Boolean enableBackup) {
+            this.enableBackup = enableBackup;
+            return this;
+        }
+
+        /**
+         * EnableBackupVoice.
+         */
+        public Builder enableBackupVoice(Boolean enableBackupVoice) {
+            this.enableBackupVoice = enableBackupVoice;
+            return this;
+        }
+
+        /**
          * ExpireSeconds.
          */
         public Builder expireSeconds(Integer expireSeconds) {
@@ -201,6 +253,14 @@ public class GetBackupConfigResponseBody extends TeaModel {
          */
         public Builder path(String path) {
             this.path = path;
+            return this;
+        }
+
+        /**
+         * PathVoice.
+         */
+        public Builder pathVoice(String pathVoice) {
+            this.pathVoice = pathVoice;
             return this;
         }
 
