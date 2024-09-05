@@ -16,6 +16,10 @@ public class CheckResourceStockRequest extends Request {
     private String acpSpecId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    private Integer amount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String bizRegionId;
@@ -31,6 +35,7 @@ public class CheckResourceStockRequest extends Request {
     private CheckResourceStockRequest(Builder builder) {
         super(builder);
         this.acpSpecId = builder.acpSpecId;
+        this.amount = builder.amount;
         this.bizRegionId = builder.bizRegionId;
         this.gpuAcceleration = builder.gpuAcceleration;
         this.zoneId = builder.zoneId;
@@ -57,6 +62,13 @@ public class CheckResourceStockRequest extends Request {
     }
 
     /**
+     * @return amount
+     */
+    public Integer getAmount() {
+        return this.amount;
+    }
+
+    /**
      * @return bizRegionId
      */
     public String getBizRegionId() {
@@ -79,6 +91,7 @@ public class CheckResourceStockRequest extends Request {
 
     public static final class Builder extends Request.Builder<CheckResourceStockRequest, Builder> {
         private String acpSpecId; 
+        private Integer amount; 
         private String bizRegionId; 
         private Boolean gpuAcceleration; 
         private String zoneId; 
@@ -90,6 +103,7 @@ public class CheckResourceStockRequest extends Request {
         private Builder(CheckResourceStockRequest request) {
             super(request);
             this.acpSpecId = request.acpSpecId;
+            this.amount = request.amount;
             this.bizRegionId = request.bizRegionId;
             this.gpuAcceleration = request.gpuAcceleration;
             this.zoneId = request.zoneId;
@@ -101,6 +115,15 @@ public class CheckResourceStockRequest extends Request {
         public Builder acpSpecId(String acpSpecId) {
             this.putQueryParameter("AcpSpecId", acpSpecId);
             this.acpSpecId = acpSpecId;
+            return this;
+        }
+
+        /**
+         * Amount.
+         */
+        public Builder amount(Integer amount) {
+            this.putQueryParameter("Amount", amount);
+            this.amount = amount;
             return this;
         }
 
