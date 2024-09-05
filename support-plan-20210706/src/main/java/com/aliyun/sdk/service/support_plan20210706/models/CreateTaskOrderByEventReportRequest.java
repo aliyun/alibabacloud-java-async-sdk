@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTaskOrderByEventReportRequest</p>
  */
 public class CreateTaskOrderByEventReportRequest extends Request {
-    @Query
-    @NameInMap("Business")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Business")
     private String business;
 
-    @Query
-    @NameInMap("CreateRealName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateRealName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String createRealName;
 
-    @Query
-    @NameInMap("CreateUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String createUserId;
 
-    @Query
-    @NameInMap("EventBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventBody")
     private EventBody eventBody;
 
-    @Query
-    @NameInMap("Extinfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Extinfo")
     private java.util.List < Extinfo> extinfo;
 
-    @Query
-    @NameInMap("ImportantDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImportantDesc")
     private String importantDesc;
 
-    @Query
-    @NameInMap("JoinChildGroupUserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JoinChildGroupUserIds")
     private String joinChildGroupUserIds;
 
-    @Query
-    @NameInMap("MonitorCongregation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorCongregation")
     private String monitorCongregation;
 
-    @Query
-    @NameInMap("OpenGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String openGroupId;
 
-    @Query
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
     private CreateTaskOrderByEventReportRequest(Builder builder) {
@@ -169,22 +168,22 @@ public class CreateTaskOrderByEventReportRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTaskOrderByEventReportRequest response) {
-            super(response);
-            this.business = response.business;
-            this.createRealName = response.createRealName;
-            this.createUserId = response.createUserId;
-            this.eventBody = response.eventBody;
-            this.extinfo = response.extinfo;
-            this.importantDesc = response.importantDesc;
-            this.joinChildGroupUserIds = response.joinChildGroupUserIds;
-            this.monitorCongregation = response.monitorCongregation;
-            this.openGroupId = response.openGroupId;
-            this.productType = response.productType;
+        private Builder(CreateTaskOrderByEventReportRequest request) {
+            super(request);
+            this.business = request.business;
+            this.createRealName = request.createRealName;
+            this.createUserId = request.createUserId;
+            this.eventBody = request.eventBody;
+            this.extinfo = request.extinfo;
+            this.importantDesc = request.importantDesc;
+            this.joinChildGroupUserIds = request.joinChildGroupUserIds;
+            this.monitorCongregation = request.monitorCongregation;
+            this.openGroupId = request.openGroupId;
+            this.productType = request.productType;
         } 
 
         /**
-         * 告警所属业务
+         * Business.
          */
         public Builder business(String business) {
             this.putQueryParameter("Business", business);
@@ -193,7 +192,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
         }
 
         /**
-         * 提交人姓名
+         * CreateRealName.
          */
         public Builder createRealName(String createRealName) {
             this.putQueryParameter("CreateRealName", createRealName);
@@ -202,7 +201,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
         }
 
         /**
-         * 提交人userId
+         * CreateUserId.
          */
         public Builder createUserId(String createUserId) {
             this.putQueryParameter("CreateUserId", createUserId);
@@ -211,25 +210,27 @@ public class CreateTaskOrderByEventReportRequest extends Request {
         }
 
         /**
-         * 告警描述
+         * EventBody.
          */
         public Builder eventBody(EventBody eventBody) {
-            this.putQueryParameter("EventBody", eventBody);
+            String eventBodyShrink = shrink(eventBody, "EventBody", "json");
+            this.putQueryParameter("EventBody", eventBodyShrink);
             this.eventBody = eventBody;
             return this;
         }
 
         /**
-         * 扩展信息
+         * Extinfo.
          */
         public Builder extinfo(java.util.List < Extinfo> extinfo) {
-            this.putQueryParameter("Extinfo", extinfo);
+            String extinfoShrink = shrink(extinfo, "Extinfo", "json");
+            this.putQueryParameter("Extinfo", extinfoShrink);
             this.extinfo = extinfo;
             return this;
         }
 
         /**
-         * 当eventLevel为warn时，必传
+         * ImportantDesc.
          */
         public Builder importantDesc(String importantDesc) {
             this.putQueryParameter("ImportantDesc", importantDesc);
@@ -238,7 +239,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
         }
 
         /**
-         * 建单入群人员
+         * JoinChildGroupUserIds.
          */
         public Builder joinChildGroupUserIds(String joinChildGroupUserIds) {
             this.putQueryParameter("JoinChildGroupUserIds", joinChildGroupUserIds);
@@ -247,7 +248,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
         }
 
         /**
-         * 监控集如：视频业务的质量监控
+         * MonitorCongregation.
          */
         public Builder monitorCongregation(String monitorCongregation) {
             this.putQueryParameter("MonitorCongregation", monitorCongregation);
@@ -256,7 +257,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
         }
 
         /**
-         * 告警关联主群id
+         * OpenGroupId.
          */
         public Builder openGroupId(String openGroupId) {
             this.putQueryParameter("OpenGroupId", openGroupId);
@@ -265,7 +266,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
         }
 
         /**
-         * 问题分类
+         * ProductType.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -281,7 +282,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
     } 
 
     public static class EventLocation extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
         private EventLocation(Builder builder) {
@@ -307,7 +308,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
             private String domain; 
 
             /**
-             * domian域名
+             * Domain.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -322,20 +323,20 @@ public class CreateTaskOrderByEventReportRequest extends Request {
 
     }
     public static class EventBody extends TeaModel {
-        @NameInMap("EventDesc")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EventDesc")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String eventDesc;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("EventLevel")
+        @com.aliyun.core.annotation.NameInMap("EventLevel")
         private String eventLevel;
 
-        @NameInMap("EventLocation")
+        @com.aliyun.core.annotation.NameInMap("EventLocation")
         private EventLocation eventLocation;
 
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private String eventTime;
 
         private EventBody(Builder builder) {
@@ -397,7 +398,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
             private String eventTime; 
 
             /**
-             * 当前告警描述信息
+             * EventDesc.
              */
             public Builder eventDesc(String eventDesc) {
                 this.eventDesc = eventDesc;
@@ -405,7 +406,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
             }
 
             /**
-             * 事件id
+             * EventId.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -413,7 +414,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
             }
 
             /**
-             * 事件级别
+             * EventLevel.
              */
             public Builder eventLevel(String eventLevel) {
                 this.eventLevel = eventLevel;
@@ -421,7 +422,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
             }
 
             /**
-             * 事件源标识，自定义和TAM在云企配置的Location指标一致
+             * EventLocation.
              */
             public Builder eventLocation(EventLocation eventLocation) {
                 this.eventLocation = eventLocation;
@@ -429,7 +430,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
             }
 
             /**
-             * 事件上报时间
+             * EventTime.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -444,10 +445,10 @@ public class CreateTaskOrderByEventReportRequest extends Request {
 
     }
     public static class Extinfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Extinfo(Builder builder) {
@@ -482,7 +483,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
             private String value; 
 
             /**
-             * 扩展信息名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -490,7 +491,7 @@ public class CreateTaskOrderByEventReportRequest extends Request {
             }
 
             /**
-             * 扩展信息value值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

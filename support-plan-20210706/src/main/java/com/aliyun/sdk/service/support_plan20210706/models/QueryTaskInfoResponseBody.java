@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTaskInfoResponseBody</p>
  */
 public class QueryTaskInfoResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
-    private String data;
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryTaskInfoResponseBody(Builder builder) {
@@ -53,7 +52,7 @@ public class QueryTaskInfoResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -80,13 +79,13 @@ public class QueryTaskInfoResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private String data; 
+        private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * code
+         * The status code or error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,15 +93,15 @@ public class QueryTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * The data returned.
          */
-        public Builder data(String data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
 
         /**
-         * msg
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +109,7 @@ public class QueryTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class QueryTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -131,4 +130,65 @@ public class QueryTaskInfoResponseBody extends TeaModel {
 
     } 
 
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OrderId")
+        private String orderId;
+
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
+        private String taskStatus;
+
+        private Data(Builder builder) {
+            this.orderId = builder.orderId;
+            this.taskStatus = builder.taskStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return orderId
+         */
+        public String getOrderId() {
+            return this.orderId;
+        }
+
+        /**
+         * @return taskStatus
+         */
+        public String getTaskStatus() {
+            return this.taskStatus;
+        }
+
+        public static final class Builder {
+            private String orderId; 
+            private String taskStatus; 
+
+            /**
+             * OrderId.
+             */
+            public Builder orderId(String orderId) {
+                this.orderId = orderId;
+                return this;
+            }
+
+            /**
+             * TaskStatus.
+             */
+            public Builder taskStatus(String taskStatus) {
+                this.taskStatus = taskStatus;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

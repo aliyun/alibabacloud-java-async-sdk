@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTaskOrderRequest</p>
  */
 public class CreateTaskOrderRequest extends Request {
-    @Query
-    @NameInMap("CustomerRealName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerRealName")
     private String customerRealName;
 
-    @Query
-    @NameInMap("CustomerUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerUserId")
     private String customerUserId;
 
-    @Query
-    @NameInMap("ImportantDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImportantDescription")
     private String importantDescription;
 
-    @Query
-    @NameInMap("IsImportant")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsImportant")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isImportant;
 
-    @Query
-    @NameInMap("OpenGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String openGroupId;
 
-    @Query
-    @NameInMap("ProductType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
 
-    @Query
-    @NameInMap("ProductTypeName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductTypeName")
     private String productTypeName;
 
-    @Query
-    @NameInMap("TaskTitle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskTitle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskTitle;
 
     private CreateTaskOrderRequest(Builder builder) {
@@ -143,20 +142,20 @@ public class CreateTaskOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTaskOrderRequest response) {
-            super(response);
-            this.customerRealName = response.customerRealName;
-            this.customerUserId = response.customerUserId;
-            this.importantDescription = response.importantDescription;
-            this.isImportant = response.isImportant;
-            this.openGroupId = response.openGroupId;
-            this.productType = response.productType;
-            this.productTypeName = response.productTypeName;
-            this.taskTitle = response.taskTitle;
+        private Builder(CreateTaskOrderRequest request) {
+            super(request);
+            this.customerRealName = request.customerRealName;
+            this.customerUserId = request.customerUserId;
+            this.importantDescription = request.importantDescription;
+            this.isImportant = request.isImportant;
+            this.openGroupId = request.openGroupId;
+            this.productType = request.productType;
+            this.productTypeName = request.productTypeName;
+            this.taskTitle = request.taskTitle;
         } 
 
         /**
-         * 建单人姓名：快手客户
+         * CustomerRealName.
          */
         public Builder customerRealName(String customerRealName) {
             this.putQueryParameter("CustomerRealName", customerRealName);
@@ -165,7 +164,7 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * 建单人：固定值
+         * CustomerUserId.
          */
         public Builder customerUserId(String customerUserId) {
             this.putQueryParameter("CustomerUserId", customerUserId);
@@ -174,7 +173,7 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * 重要性描述
+         * ImportantDescription.
          */
         public Builder importantDescription(String importantDescription) {
             this.putQueryParameter("ImportantDescription", importantDescription);
@@ -183,7 +182,7 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * 是否紧急
+         * IsImportant.
          */
         public Builder isImportant(String isImportant) {
             this.putQueryParameter("IsImportant", isImportant);
@@ -192,7 +191,7 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * 主群关联Id
+         * OpenGroupId.
          */
         public Builder openGroupId(String openGroupId) {
             this.putQueryParameter("OpenGroupId", openGroupId);
@@ -210,7 +209,7 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * 问题分类名称
+         * ProductTypeName.
          */
         public Builder productTypeName(String productTypeName) {
             this.putQueryParameter("ProductTypeName", productTypeName);
@@ -219,7 +218,7 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * 任务单标题
+         * taskTitle
          */
         public Builder taskTitle(String taskTitle) {
             this.putQueryParameter("TaskTitle", taskTitle);

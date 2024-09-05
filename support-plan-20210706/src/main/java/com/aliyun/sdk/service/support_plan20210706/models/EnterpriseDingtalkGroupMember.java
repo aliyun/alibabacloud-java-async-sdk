@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EnterpriseDingtalkGroupMember</p>
  */
 public class EnterpriseDingtalkGroupMember extends TeaModel {
-    @NameInMap("IsAdmin")
+    @com.aliyun.core.annotation.NameInMap("IsAdmin")
     private Boolean isAdmin;
 
-    @NameInMap("Mobile")
+    @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private EnterpriseDingtalkGroupMember(Builder builder) {

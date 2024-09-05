@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RestOpenTaskOrderRequest</p>
  */
 public class RestOpenTaskOrderRequest extends Request {
-    @Query
-    @NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenGroupId")
     private String openGroupId;
 
-    @Query
-    @NameInMap("OrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderId;
 
-    @Query
-    @NameInMap("ResetContent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetContent")
     private String resetContent;
 
-    @Query
-    @NameInMap("ResetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResetType")
     private String resetType;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private RestOpenTaskOrderRequest(Builder builder) {
@@ -101,17 +100,17 @@ public class RestOpenTaskOrderRequest extends Request {
             super();
         } 
 
-        private Builder(RestOpenTaskOrderRequest response) {
-            super(response);
-            this.openGroupId = response.openGroupId;
-            this.orderId = response.orderId;
-            this.resetContent = response.resetContent;
-            this.resetType = response.resetType;
-            this.userName = response.userName;
+        private Builder(RestOpenTaskOrderRequest request) {
+            super(request);
+            this.openGroupId = request.openGroupId;
+            this.orderId = request.orderId;
+            this.resetContent = request.resetContent;
+            this.resetType = request.resetType;
+            this.userName = request.userName;
         } 
 
         /**
-         * 主群关联Id
+         * OpenGroupId.
          */
         public Builder openGroupId(String openGroupId) {
             this.putQueryParameter("OpenGroupId", openGroupId);
@@ -120,7 +119,7 @@ public class RestOpenTaskOrderRequest extends Request {
         }
 
         /**
-         * 任务单ID
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -129,7 +128,7 @@ public class RestOpenTaskOrderRequest extends Request {
         }
 
         /**
-         * 重开说明
+         * ResetContent.
          */
         public Builder resetContent(String resetContent) {
             this.putQueryParameter("ResetContent", resetContent);
@@ -138,7 +137,7 @@ public class RestOpenTaskOrderRequest extends Request {
         }
 
         /**
-         * 重开类型
+         * ResetType.
          */
         public Builder resetType(String resetType) {
             this.putQueryParameter("ResetType", resetType);
@@ -147,7 +146,7 @@ public class RestOpenTaskOrderRequest extends Request {
         }
 
         /**
-         * 操作人姓名
+         * UserName.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

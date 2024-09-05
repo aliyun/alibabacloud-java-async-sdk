@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteEnterpriseDingtalkGroupCustomerMemberRequest</p>
  */
 public class DeleteEnterpriseDingtalkGroupCustomerMemberRequest extends Request {
-    @Body
-    @NameInMap("Mobiles")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Mobiles")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > mobiles;
 
-    @Body
-    @NameInMap("OpenGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String openGroupId;
 
     private DeleteEnterpriseDingtalkGroupCustomerMemberRequest(Builder builder) {
@@ -63,17 +62,18 @@ public class DeleteEnterpriseDingtalkGroupCustomerMemberRequest extends Request 
             super();
         } 
 
-        private Builder(DeleteEnterpriseDingtalkGroupCustomerMemberRequest response) {
-            super(response);
-            this.mobiles = response.mobiles;
-            this.openGroupId = response.openGroupId;
+        private Builder(DeleteEnterpriseDingtalkGroupCustomerMemberRequest request) {
+            super(request);
+            this.mobiles = request.mobiles;
+            this.openGroupId = request.openGroupId;
         } 
 
         /**
          * Mobiles.
          */
         public Builder mobiles(java.util.List < String > mobiles) {
-            this.putBodyParameter("Mobiles", mobiles);
+            String mobilesShrink = shrink(mobiles, "Mobiles", "json");
+            this.putBodyParameter("Mobiles", mobilesShrink);
             this.mobiles = mobiles;
             return this;
         }

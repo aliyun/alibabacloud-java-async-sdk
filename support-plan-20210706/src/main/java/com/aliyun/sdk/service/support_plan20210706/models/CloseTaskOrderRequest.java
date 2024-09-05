@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CloseTaskOrderRequest</p>
  */
 public class CloseTaskOrderRequest extends Request {
-    @Query
-    @NameInMap("OrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderId;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private CloseTaskOrderRequest(Builder builder) {
@@ -62,14 +61,14 @@ public class CloseTaskOrderRequest extends Request {
             super();
         } 
 
-        private Builder(CloseTaskOrderRequest response) {
-            super(response);
-            this.orderId = response.orderId;
-            this.userName = response.userName;
+        private Builder(CloseTaskOrderRequest request) {
+            super(request);
+            this.orderId = request.orderId;
+            this.userName = request.userName;
         } 
 
         /**
-         * 任务单id
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -78,7 +77,7 @@ public class CloseTaskOrderRequest extends Request {
         }
 
         /**
-         * 操作人姓名
+         * UserName.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetEnterpriseDingtalkGroupCustomerMemberRequest</p>
  */
 public class GetEnterpriseDingtalkGroupCustomerMemberRequest extends Request {
-    @Body
-    @NameInMap("Mobile")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Mobile")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mobile;
 
-    @Body
-    @NameInMap("OpenGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String openGroupId;
 
     private GetEnterpriseDingtalkGroupCustomerMemberRequest(Builder builder) {
@@ -63,10 +62,10 @@ public class GetEnterpriseDingtalkGroupCustomerMemberRequest extends Request {
             super();
         } 
 
-        private Builder(GetEnterpriseDingtalkGroupCustomerMemberRequest response) {
-            super(response);
-            this.mobile = response.mobile;
-            this.openGroupId = response.openGroupId;
+        private Builder(GetEnterpriseDingtalkGroupCustomerMemberRequest request) {
+            super(request);
+            this.mobile = request.mobile;
+            this.openGroupId = request.openGroupId;
         } 
 
         /**

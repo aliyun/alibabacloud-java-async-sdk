@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,8 +34,8 @@ public class ListEnterpriseDingtalkGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListEnterpriseDingtalkGroupsRequest response) {
-            super(response);
+        private Builder(ListEnterpriseDingtalkGroupsRequest request) {
+            super(request);
         } 
 
         @Override

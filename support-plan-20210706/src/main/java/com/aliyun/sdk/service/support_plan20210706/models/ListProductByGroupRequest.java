@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProductByGroupRequest</p>
  */
 public class ListProductByGroupRequest extends Request {
-    @Query
-    @NameInMap("OpenGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String openGroupId;
 
     private ListProductByGroupRequest(Builder builder) {
@@ -49,13 +48,13 @@ public class ListProductByGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ListProductByGroupRequest response) {
-            super(response);
-            this.openGroupId = response.openGroupId;
+        private Builder(ListProductByGroupRequest request) {
+            super(request);
+            this.openGroupId = request.openGroupId;
         } 
 
         /**
-         * 主群关联Id
+         * OpenGroupId.
          */
         public Builder openGroupId(String openGroupId) {
             this.putQueryParameter("OpenGroupId", openGroupId);

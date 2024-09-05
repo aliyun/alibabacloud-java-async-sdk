@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTaskInfoRequest</p>
  */
 public class QueryTaskInfoRequest extends Request {
-    @Query
-    @NameInMap("OrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderId;
 
     private QueryTaskInfoRequest(Builder builder) {
@@ -49,13 +48,13 @@ public class QueryTaskInfoRequest extends Request {
             super();
         } 
 
-        private Builder(QueryTaskInfoRequest response) {
-            super(response);
-            this.orderId = response.orderId;
+        private Builder(QueryTaskInfoRequest request) {
+            super(request);
+            this.orderId = request.orderId;
         } 
 
         /**
-         * 任务单ID
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);

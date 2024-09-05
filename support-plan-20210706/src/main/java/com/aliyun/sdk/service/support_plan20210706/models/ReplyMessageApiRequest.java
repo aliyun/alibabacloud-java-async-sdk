@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.support_plan20210706.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReplyMessageApiRequest</p>
  */
 public class ReplyMessageApiRequest extends Request {
-    @Query
-    @NameInMap("MsgContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MsgContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String msgContent;
 
-    @Query
-    @NameInMap("MsgType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MsgType")
     private String msgType;
 
-    @Query
-    @NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenGroupId")
     private String openGroupId;
 
-    @Query
-    @NameInMap("OrderId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderId;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @Query
-    @NameInMap("UserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
     private ReplyMessageApiRequest(Builder builder) {
@@ -116,18 +115,18 @@ public class ReplyMessageApiRequest extends Request {
             super();
         } 
 
-        private Builder(ReplyMessageApiRequest response) {
-            super(response);
-            this.msgContent = response.msgContent;
-            this.msgType = response.msgType;
-            this.openGroupId = response.openGroupId;
-            this.orderId = response.orderId;
-            this.userId = response.userId;
-            this.userName = response.userName;
+        private Builder(ReplyMessageApiRequest request) {
+            super(request);
+            this.msgContent = request.msgContent;
+            this.msgType = request.msgType;
+            this.openGroupId = request.openGroupId;
+            this.orderId = request.orderId;
+            this.userId = request.userId;
+            this.userName = request.userName;
         } 
 
         /**
-         * 消息内容
+         * MsgContent.
          */
         public Builder msgContent(String msgContent) {
             this.putQueryParameter("MsgContent", msgContent);
@@ -136,7 +135,7 @@ public class ReplyMessageApiRequest extends Request {
         }
 
         /**
-         * 消息类型
+         * MsgType.
          */
         public Builder msgType(String msgType) {
             this.putQueryParameter("MsgType", msgType);
@@ -145,7 +144,7 @@ public class ReplyMessageApiRequest extends Request {
         }
 
         /**
-         * 群Id
+         * OpenGroupId.
          */
         public Builder openGroupId(String openGroupId) {
             this.putQueryParameter("OpenGroupId", openGroupId);
@@ -154,7 +153,7 @@ public class ReplyMessageApiRequest extends Request {
         }
 
         /**
-         * 任务单Id
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -163,7 +162,7 @@ public class ReplyMessageApiRequest extends Request {
         }
 
         /**
-         * 消息发送人Id
+         * UserId.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -172,7 +171,7 @@ public class ReplyMessageApiRequest extends Request {
         }
 
         /**
-         * 消息发送人
+         * UserName.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
