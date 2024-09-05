@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceRequest</p>
  */
 public class ListInstanceRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Num")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Num")
     private Long num;
 
-    @Query
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Long page;
 
-    @Query
-    @NameInMap("SaleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleId")
     private String saleId;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListInstanceRequest(Builder builder) {
@@ -149,10 +148,10 @@ public class ListInstanceRequest extends Request {
          * The status of the instance. Valid values:
          * <p>
          * 
-         * *   normal
-         * *   expired
-         * *   deleting
-         * *   stopped
+         * - normal
+         * - expired
+         * - deleting
+         * - stopped
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

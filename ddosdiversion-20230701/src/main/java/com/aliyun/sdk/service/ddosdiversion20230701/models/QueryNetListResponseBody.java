@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryNetListResponseBody</p>
  */
 public class QueryNetListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryNetListResponseBody(Builder builder) {
@@ -77,8 +76,8 @@ public class QueryNetListResponseBody extends TeaModel {
          * The status code.
          * <p>
          * 
-         * *   **200**: The request was successful.
-         * *   Other codes: The request failed.
+         * - 200: The request was successful.
+         * - Other codes: The request failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -116,10 +115,10 @@ public class QueryNetListResponseBody extends TeaModel {
     } 
 
     public static class CleanTh extends TeaModel {
-        @NameInMap("Mbps")
+        @com.aliyun.core.annotation.NameInMap("Mbps")
         private Integer mbps;
 
-        @NameInMap("Pps")
+        @com.aliyun.core.annotation.NameInMap("Pps")
         private Integer pps;
 
         private CleanTh(Builder builder) {
@@ -154,7 +153,7 @@ public class QueryNetListResponseBody extends TeaModel {
             private Integer pps; 
 
             /**
-             * Mbps.
+             * The traffic scrubbing threshold in Mbit/s.
              */
             public Builder mbps(Integer mbps) {
                 this.mbps = mbps;
@@ -162,7 +161,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * Pps.
+             * The traffic scrubbing threshold in packets per second (pps)
              */
             public Builder pps(Integer pps) {
                 this.pps = pps;
@@ -177,7 +176,7 @@ public class QueryNetListResponseBody extends TeaModel {
 
     }
     public static class DjPolicy extends TeaModel {
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
         private DjPolicy(Builder builder) {
@@ -203,7 +202,7 @@ public class QueryNetListResponseBody extends TeaModel {
             private String policyName; 
 
             /**
-             * PolicyName.
+             * The name of the mitigation policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -218,7 +217,7 @@ public class QueryNetListResponseBody extends TeaModel {
 
     }
     public static class HoleTh extends TeaModel {
-        @NameInMap("ThreshMbps")
+        @com.aliyun.core.annotation.NameInMap("ThreshMbps")
         private Integer threshMbps;
 
         private HoleTh(Builder builder) {
@@ -244,7 +243,7 @@ public class QueryNetListResponseBody extends TeaModel {
             private Integer threshMbps; 
 
             /**
-             * ThreshMbps.
+             * The blackhole filtering threshold.
              */
             public Builder threshMbps(Integer threshMbps) {
                 this.threshMbps = threshMbps;
@@ -259,13 +258,13 @@ public class QueryNetListResponseBody extends TeaModel {
 
     }
     public static class DDoSDefense extends TeaModel {
-        @NameInMap("CleanTh")
+        @com.aliyun.core.annotation.NameInMap("CleanTh")
         private CleanTh cleanTh;
 
-        @NameInMap("DjPolicy")
+        @com.aliyun.core.annotation.NameInMap("DjPolicy")
         private DjPolicy djPolicy;
 
-        @NameInMap("HoleTh")
+        @com.aliyun.core.annotation.NameInMap("HoleTh")
         private HoleTh holeTh;
 
         private DDoSDefense(Builder builder) {
@@ -309,7 +308,7 @@ public class QueryNetListResponseBody extends TeaModel {
             private HoleTh holeTh; 
 
             /**
-             * CleanTh.
+             * The configuration of traffic scrubbing.
              */
             public Builder cleanTh(CleanTh cleanTh) {
                 this.cleanTh = cleanTh;
@@ -317,7 +316,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * DjPolicy.
+             * The configuration of the mitigation policy.
              */
             public Builder djPolicy(DjPolicy djPolicy) {
                 this.djPolicy = djPolicy;
@@ -325,7 +324,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * HoleTh.
+             * The configuration of blackhole filtering.
              */
             public Builder holeTh(HoleTh holeTh) {
                 this.holeTh = holeTh;
@@ -340,10 +339,10 @@ public class QueryNetListResponseBody extends TeaModel {
 
     }
     public static class Declared extends TeaModel {
-        @NameInMap("Declared")
+        @com.aliyun.core.annotation.NameInMap("Declared")
         private String declared;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private Declared(Builder builder) {
@@ -378,7 +377,11 @@ public class QueryNetListResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * Declared.
+             * Indicates whether the CIDR block is advertised. Valid values:
+             * <p>
+             * 
+             * - 0: The CIDR block is not advertised.
+             * - 1: The CIDR block is advertised.
              */
             public Builder declared(String declared) {
                 this.declared = declared;
@@ -386,7 +389,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region in which the CIDR block is advertised.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -401,46 +404,49 @@ public class QueryNetListResponseBody extends TeaModel {
 
     }
     public static class Nets extends TeaModel {
-        @NameInMap("DDoSDefense")
+        @com.aliyun.core.annotation.NameInMap("DDoSDefense")
         private DDoSDefense dDoSDefense;
 
-        @NameInMap("Declared")
+        @com.aliyun.core.annotation.NameInMap("Declared")
         private java.util.List < Declared> declared;
 
-        @NameInMap("DeclaredState")
+        @com.aliyun.core.annotation.NameInMap("DeclaredState")
         private Integer declaredState;
 
-        @NameInMap("FwdEffect")
+        @com.aliyun.core.annotation.NameInMap("FwdEffect")
         private Long fwdEffect;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModify")
+        @com.aliyun.core.annotation.NameInMap("GmtModify")
         private String gmtModify;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Net")
+        @com.aliyun.core.annotation.NameInMap("Net")
         private String net;
 
-        @NameInMap("NetExtend")
+        @com.aliyun.core.annotation.NameInMap("NetExtend")
         private String netExtend;
 
-        @NameInMap("NetMain")
+        @com.aliyun.core.annotation.NameInMap("NetMain")
         private Long netMain;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("SaleId")
+        @com.aliyun.core.annotation.NameInMap("Permit")
+        private Integer permit;
+
+        @com.aliyun.core.annotation.NameInMap("SaleId")
         private String saleId;
 
-        @NameInMap("UpstreamType")
+        @com.aliyun.core.annotation.NameInMap("UpstreamType")
         private String upstreamType;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Nets(Builder builder) {
@@ -455,6 +461,7 @@ public class QueryNetListResponseBody extends TeaModel {
             this.netExtend = builder.netExtend;
             this.netMain = builder.netMain;
             this.netType = builder.netType;
+            this.permit = builder.permit;
             this.saleId = builder.saleId;
             this.upstreamType = builder.upstreamType;
             this.userId = builder.userId;
@@ -546,6 +553,13 @@ public class QueryNetListResponseBody extends TeaModel {
         }
 
         /**
+         * @return permit
+         */
+        public Integer getPermit() {
+            return this.permit;
+        }
+
+        /**
          * @return saleId
          */
         public String getSaleId() {
@@ -578,12 +592,13 @@ public class QueryNetListResponseBody extends TeaModel {
             private String netExtend; 
             private Long netMain; 
             private String netType; 
+            private Integer permit; 
             private String saleId; 
             private String upstreamType; 
             private String userId; 
 
             /**
-             * DDoSDefense.
+             * The DDoS mitigation configuration of the CIDR block.
              */
             public Builder dDoSDefense(DDoSDefense dDoSDefense) {
                 this.dDoSDefense = dDoSDefense;
@@ -591,7 +606,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * Declared.
+             * The advertising details.
              */
             public Builder declared(java.util.List < Declared> declared) {
                 this.declared = declared;
@@ -599,7 +614,10 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * DeclaredState.
+             * The advertising status of the CIDR block. Valid values:
+             * <p>
+             * - 0: The CIDR block is not advertised.
+             * - 1: The CIDR block is advertised.
              */
             public Builder declaredState(Integer declaredState) {
                 this.declaredState = declaredState;
@@ -607,7 +625,12 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * FwdEffect.
+             * Indicates whether the forwarding configuration takes effect. Valid values:
+             * <p>
+             * 
+             * - 0: The forwarding configuration takes effect.
+             * - 1: The forwarding configuration does not take effect.
+             * - -1: The forwarding configuration is being deleted.
              */
             public Builder fwdEffect(Long fwdEffect) {
                 this.fwdEffect = fwdEffect;
@@ -615,7 +638,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -623,7 +646,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModify.
+             * The modification time.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -631,7 +654,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The scheduling mode.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -639,7 +662,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * Net.
+             * The CIDR block of the anti-DDoS diversion instance.
              */
             public Builder net(String net) {
                 this.net = net;
@@ -647,7 +670,11 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * NetExtend.
+             * Indicates whether the CIDR block needs to be extended. Valid values:
+             * <p>
+             * 
+             * - 0: The CIDR block needs to be extended.
+             * - 1: The CIDR block does not need to be extended.
              */
             public Builder netExtend(String netExtend) {
                 this.netExtend = netExtend;
@@ -655,7 +682,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * NetMain.
+             * The primary CIDR block.
              */
             public Builder netMain(Long netMain) {
                 this.netMain = netMain;
@@ -663,7 +690,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * The type of the CIDR block.
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -671,7 +698,15 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * SaleId.
+             * Permit.
+             */
+            public Builder permit(Integer permit) {
+                this.permit = permit;
+                return this;
+            }
+
+            /**
+             * The ID of the anti-DDoS diversion instance.
              */
             public Builder saleId(String saleId) {
                 this.saleId = saleId;
@@ -679,7 +714,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * UpstreamType.
+             * The reinjection type.
              */
             public Builder upstreamType(String upstreamType) {
                 this.upstreamType = upstreamType;
@@ -687,7 +722,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -702,16 +737,16 @@ public class QueryNetListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Nets")
+        @com.aliyun.core.annotation.NameInMap("Nets")
         private java.util.List < Nets> nets;
 
-        @NameInMap("Num")
+        @com.aliyun.core.annotation.NameInMap("Num")
         private Long num;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -764,7 +799,7 @@ public class QueryNetListResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Nets.
+             * The configuration of the CIDR block.
              */
             public Builder nets(java.util.List < Nets> nets) {
                 this.nets = nets;
@@ -772,7 +807,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * Num.
+             * The number of entries per page.
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -780,7 +815,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -788,7 +823,7 @@ public class QueryNetListResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

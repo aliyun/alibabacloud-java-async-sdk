@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceResponseBody</p>
  */
 public class ListInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Long code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstanceResponseBody(Builder builder) {
@@ -77,8 +76,8 @@ public class ListInstanceResponseBody extends TeaModel {
          * The status code.
          * <p>
          * 
-         * *   **200**: The request was successful.
-         * *   Other codes: The request failed.
+         * - 200: The request was successful.
+         * - Other codes: The request failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -116,40 +115,40 @@ public class ListInstanceResponseBody extends TeaModel {
     } 
 
     public static class Spec extends TeaModel {
-        @NameInMap("Coverage")
+        @com.aliyun.core.annotation.NameInMap("Coverage")
         private String coverage;
 
-        @NameInMap("DiversionType")
+        @com.aliyun.core.annotation.NameInMap("DiversionType")
         private String diversionType;
 
-        @NameInMap("Edition")
+        @com.aliyun.core.annotation.NameInMap("Edition")
         private String edition;
 
-        @NameInMap("IdcNumbers")
+        @com.aliyun.core.annotation.NameInMap("IdcNumbers")
         private String idcNumbers;
 
-        @NameInMap("InitialInstallation")
+        @com.aliyun.core.annotation.NameInMap("InitialInstallation")
         private String initialInstallation;
 
-        @NameInMap("InitialQty")
+        @com.aliyun.core.annotation.NameInMap("InitialQty")
         private String initialQty;
 
-        @NameInMap("IpSubnetNums")
+        @com.aliyun.core.annotation.NameInMap("IpSubnetNums")
         private String ipSubnetNums;
 
-        @NameInMap("MitigationAnalysis")
+        @com.aliyun.core.annotation.NameInMap("MitigationAnalysis")
         private String mitigationAnalysis;
 
-        @NameInMap("MitigationAnalysisCapacity")
+        @com.aliyun.core.annotation.NameInMap("MitigationAnalysisCapacity")
         private String mitigationAnalysisCapacity;
 
-        @NameInMap("MitigationCapacity")
+        @com.aliyun.core.annotation.NameInMap("MitigationCapacity")
         private String mitigationCapacity;
 
-        @NameInMap("MitigationNums")
+        @com.aliyun.core.annotation.NameInMap("MitigationNums")
         private String mitigationNums;
 
-        @NameInMap("NormalBandwidth")
+        @com.aliyun.core.annotation.NameInMap("NormalBandwidth")
         private String normalBandwidth;
 
         private Spec(Builder builder) {
@@ -274,7 +273,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String normalBandwidth; 
 
             /**
-             * Coverage.
+             * The region of the asset.
              */
             public Builder coverage(String coverage) {
                 this.coverage = coverage;
@@ -282,7 +281,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DiversionType.
+             * The diversion mode. Valid values: on-demand always-on
              */
             public Builder diversionType(String diversionType) {
                 this.diversionType = diversionType;
@@ -290,7 +289,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Edition.
+             * The mitigation plan.
              */
             public Builder edition(String edition) {
                 this.edition = edition;
@@ -298,7 +297,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IdcNumbers.
+             * The number of data centers. Valid values: 1 to 10.
              */
             public Builder idcNumbers(String idcNumbers) {
                 this.idcNumbers = idcNumbers;
@@ -306,7 +305,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InitialInstallation.
+             * The initial installation mode.
              */
             public Builder initialInstallation(String initialInstallation) {
                 this.initialInstallation = initialInstallation;
@@ -314,7 +313,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InitialQty.
+             * The initial installation quantity.
              */
             public Builder initialQty(String initialQty) {
                 this.initialQty = initialQty;
@@ -322,7 +321,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IpSubnetNums.
+             * The number of CIDR blocks. Value range: 1 to 10000.
              */
             public Builder ipSubnetNums(String ipSubnetNums) {
                 this.ipSubnetNums = ipSubnetNums;
@@ -330,7 +329,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MitigationAnalysis.
+             * The mitigation analysis feature.
              */
             public Builder mitigationAnalysis(String mitigationAnalysis) {
                 this.mitigationAnalysis = mitigationAnalysis;
@@ -338,7 +337,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MitigationAnalysisCapacity.
+             * The log storage capacity.
              */
             public Builder mitigationAnalysisCapacity(String mitigationAnalysisCapacity) {
                 this.mitigationAnalysisCapacity = mitigationAnalysisCapacity;
@@ -346,7 +345,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MitigationCapacity.
+             * The maximum mitigation capability.
              */
             public Builder mitigationCapacity(String mitigationCapacity) {
                 this.mitigationCapacity = mitigationCapacity;
@@ -354,7 +353,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MitigationNums.
+             * The number of mitigation sessions.
              */
             public Builder mitigationNums(String mitigationNums) {
                 this.mitigationNums = mitigationNums;
@@ -362,7 +361,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NormalBandwidth.
+             * The service traffic. Unit: Mbit/s.
              */
             public Builder normalBandwidth(String normalBandwidth) {
                 this.normalBandwidth = normalBandwidth;
@@ -377,37 +376,37 @@ public class ListInstanceResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtExpire")
+        @com.aliyun.core.annotation.NameInMap("GmtExpire")
         private String gmtExpire;
 
-        @NameInMap("GmtModify")
+        @com.aliyun.core.annotation.NameInMap("GmtModify")
         private String gmtModify;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SaleId")
+        @com.aliyun.core.annotation.NameInMap("SaleId")
         private String saleId;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private Spec spec;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Instances(Builder builder) {
@@ -523,7 +522,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * Comment.
+             * The description.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -531,7 +530,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The purchase time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -539,7 +538,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtExpire.
+             * The expiration time.
              */
             public Builder gmtExpire(String gmtExpire) {
                 this.gmtExpire = gmtExpire;
@@ -547,7 +546,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModify.
+             * The update time.
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -555,7 +554,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The alias of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -563,7 +562,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The response parameters.
+             * The configurations of the instance.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -571,7 +570,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -579,7 +578,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SaleId.
+             * The ID of the instance.
              */
             public Builder saleId(String saleId) {
                 this.saleId = saleId;
@@ -587,7 +586,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The specifications of the instance.
              */
             public Builder spec(Spec spec) {
                 this.spec = spec;
@@ -595,7 +594,13 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * - normal
+             * - expired
+             * - deleting
+             * - stopped
              */
             public Builder status(String status) {
                 this.status = status;
@@ -603,7 +608,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -618,16 +623,16 @@ public class ListInstanceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private java.util.List < Instances> instances;
 
-        @NameInMap("Num")
+        @com.aliyun.core.annotation.NameInMap("Num")
         private Long num;
 
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
@@ -680,7 +685,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * Instances.
+             * The details of the anti-DDoS diversion instance.
              */
             public Builder instances(java.util.List < Instances> instances) {
                 this.instances = instances;
@@ -688,7 +693,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Num.
+             * The number of entries per page.
              */
             public Builder num(Long num) {
                 this.num = num;
@@ -696,7 +701,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -704,7 +709,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;

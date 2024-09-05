@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ddosdiversion20230701.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigNetStatusRequest</p>
  */
 public class ConfigNetStatusRequest extends Request {
-    @Query
-    @NameInMap("Net")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Net")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String net;
 
-    @Query
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private java.util.List < String > regions;
 
-    @Query
-    @NameInMap("SaleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String saleId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
-    @Query
-    @NameInMap("SubNets")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubNets")
     private java.util.List < String > subNets;
 
     private ConfigNetStatusRequest(Builder builder) {
