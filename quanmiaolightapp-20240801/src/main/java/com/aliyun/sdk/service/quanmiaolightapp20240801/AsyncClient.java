@@ -31,6 +31,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     ResponseIterable<RunMarketingInformationWritingResponseBody> runMarketingInformationWritingWithResponseIterable(RunMarketingInformationWritingRequest request);
 
+    CompletableFuture<RunScriptContinueResponse> runScriptContinue(RunScriptContinueRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runScriptContinueWithAsyncResponseHandler(RunScriptContinueRequest request, AsyncResponseHandler<RunScriptContinueResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunScriptContinueResponseBody> runScriptContinueWithResponseIterable(RunScriptContinueRequest request);
+
+    CompletableFuture<RunScriptPlanningResponse> runScriptPlanning(RunScriptPlanningRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runScriptPlanningWithAsyncResponseHandler(RunScriptPlanningRequest request, AsyncResponseHandler<RunScriptPlanningResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunScriptPlanningResponseBody> runScriptPlanningWithResponseIterable(RunScriptPlanningRequest request);
+
     CompletableFuture<RunStyleWritingResponse> runStyleWriting(RunStyleWritingRequest request);
 
 <ReturnT> CompletableFuture<ReturnT> runStyleWritingWithAsyncResponseHandler(RunStyleWritingRequest request, AsyncResponseHandler<RunStyleWritingResponse, ReturnT> responseHandler);
