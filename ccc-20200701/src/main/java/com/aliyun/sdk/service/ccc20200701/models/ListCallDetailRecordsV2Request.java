@@ -84,6 +84,14 @@ public class ListCallDetailRecordsV2Request extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseInitiatorList")
+    private String releaseInitiatorList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseReasonList")
+    private String releaseReasonList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SatisfactionDescriptionList")
     private String satisfactionDescriptionList;
 
@@ -131,6 +139,8 @@ public class ListCallDetailRecordsV2Request extends Request {
         this.orderByField = builder.orderByField;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.releaseInitiatorList = builder.releaseInitiatorList;
+        this.releaseReasonList = builder.releaseReasonList;
         this.satisfactionDescriptionList = builder.satisfactionDescriptionList;
         this.satisfactionRateList = builder.satisfactionRateList;
         this.satisfactionSurveyChannel = builder.satisfactionSurveyChannel;
@@ -273,6 +283,20 @@ public class ListCallDetailRecordsV2Request extends Request {
     }
 
     /**
+     * @return releaseInitiatorList
+     */
+    public String getReleaseInitiatorList() {
+        return this.releaseInitiatorList;
+    }
+
+    /**
+     * @return releaseReasonList
+     */
+    public String getReleaseReasonList() {
+        return this.releaseReasonList;
+    }
+
+    /**
      * @return satisfactionDescriptionList
      */
     public String getSatisfactionDescriptionList() {
@@ -339,6 +363,8 @@ public class ListCallDetailRecordsV2Request extends Request {
         private String orderByField; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String releaseInitiatorList; 
+        private String releaseReasonList; 
         private String satisfactionDescriptionList; 
         private String satisfactionRateList; 
         private String satisfactionSurveyChannel; 
@@ -370,6 +396,8 @@ public class ListCallDetailRecordsV2Request extends Request {
             this.orderByField = request.orderByField;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.releaseInitiatorList = request.releaseInitiatorList;
+            this.releaseReasonList = request.releaseReasonList;
             this.satisfactionDescriptionList = request.satisfactionDescriptionList;
             this.satisfactionRateList = request.satisfactionRateList;
             this.satisfactionSurveyChannel = request.satisfactionSurveyChannel;
@@ -529,6 +557,24 @@ public class ListCallDetailRecordsV2Request extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ReleaseInitiatorList.
+         */
+        public Builder releaseInitiatorList(String releaseInitiatorList) {
+            this.putQueryParameter("ReleaseInitiatorList", releaseInitiatorList);
+            this.releaseInitiatorList = releaseInitiatorList;
+            return this;
+        }
+
+        /**
+         * ReleaseReasonList.
+         */
+        public Builder releaseReasonList(String releaseReasonList) {
+            this.putQueryParameter("ReleaseReasonList", releaseReasonList);
+            this.releaseReasonList = releaseReasonList;
             return this;
         }
 

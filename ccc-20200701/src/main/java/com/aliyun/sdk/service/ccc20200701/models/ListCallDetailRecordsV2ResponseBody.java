@@ -158,6 +158,9 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CallDuration")
         private String callDuration;
 
+        @com.aliyun.core.annotation.NameInMap("CallIds")
+        private String callIds;
+
         @com.aliyun.core.annotation.NameInMap("CalledNumber")
         private String calledNumber;
 
@@ -297,6 +300,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             this.agentNames = builder.agentNames;
             this.broker = builder.broker;
             this.callDuration = builder.callDuration;
+            this.callIds = builder.callIds;
             this.calledNumber = builder.calledNumber;
             this.calleeLocation = builder.calleeLocation;
             this.callerLocation = builder.callerLocation;
@@ -411,6 +415,13 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
          */
         public String getCallDuration() {
             return this.callDuration;
+        }
+
+        /**
+         * @return callIds
+         */
+        public String getCallIds() {
+            return this.callIds;
         }
 
         /**
@@ -724,6 +735,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private String agentNames; 
             private String broker; 
             private String callDuration; 
+            private String callIds; 
             private String calledNumber; 
             private String calleeLocation; 
             private String callerLocation; 
@@ -837,6 +849,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
              */
             public Builder callDuration(String callDuration) {
                 this.callDuration = callDuration;
+                return this;
+            }
+
+            /**
+             * CallIds.
+             */
+            public Builder callIds(String callIds) {
+                this.callIds = callIds;
                 return this;
             }
 
