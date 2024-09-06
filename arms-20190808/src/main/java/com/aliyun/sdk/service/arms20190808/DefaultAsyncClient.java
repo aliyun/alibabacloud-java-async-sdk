@@ -694,7 +694,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](https://help.aliyun.com/zh/oss/user-guide/upload-a-file-using-a-file-url).
+      * This operation returns a file upload URL. You can use the file upload URL to upload files. For more information, see [Use a URL to upload files](~~2579659~~).
       *
      */
     @Override
