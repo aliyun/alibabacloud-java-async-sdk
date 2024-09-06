@@ -91,6 +91,9 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
     } 
 
     public static class Users extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssignedDesktopNumber")
+        private Integer assignedDesktopNumber;
+
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
@@ -98,6 +101,7 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         private String endUser;
 
         private Users(Builder builder) {
+            this.assignedDesktopNumber = builder.assignedDesktopNumber;
             this.displayName = builder.displayName;
             this.endUser = builder.endUser;
         }
@@ -108,6 +112,13 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
 
         public static Users create() {
             return builder().build();
+        }
+
+        /**
+         * @return assignedDesktopNumber
+         */
+        public Integer getAssignedDesktopNumber() {
+            return this.assignedDesktopNumber;
         }
 
         /**
@@ -125,8 +136,17 @@ public class ListDirectoryUsersResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer assignedDesktopNumber; 
             private String displayName; 
             private String endUser; 
+
+            /**
+             * AssignedDesktopNumber.
+             */
+            public Builder assignedDesktopNumber(Integer assignedDesktopNumber) {
+                this.assignedDesktopNumber = assignedDesktopNumber;
+                return this;
+            }
 
             /**
              * The display name of the user.

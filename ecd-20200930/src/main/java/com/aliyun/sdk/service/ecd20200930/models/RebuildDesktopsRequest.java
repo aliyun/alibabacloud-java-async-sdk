@@ -111,7 +111,7 @@ public class RebuildDesktopsRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud computers. You can specify 1 to 20 IDs.
+         * The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -129,7 +129,15 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * Language.
+         * The OS language. Only system images are supported, and Linux cloud computers support only English.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   en-US: English
+         * *   zh-HK: Traditional Chinese (Hong Kong, China)
+         * *   zh-CN: Simplified Chinese
+         * *   ja-JP: Japanese
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -165,7 +173,7 @@ public class RebuildDesktopsRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~DescribeRegions~~) operation to query the regions supported by Elastic Desktop Service (EDS).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

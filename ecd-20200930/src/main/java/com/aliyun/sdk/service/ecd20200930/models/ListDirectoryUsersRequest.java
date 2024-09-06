@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDirectoryUsersRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssignedInfo")
+    private String assignedInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DirectoryId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String directoryId;
@@ -37,14 +41,20 @@ public class ListDirectoryUsersRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortType")
+    private String sortType;
+
     private ListDirectoryUsersRequest(Builder builder) {
         super(builder);
+        this.assignedInfo = builder.assignedInfo;
         this.directoryId = builder.directoryId;
         this.filter = builder.filter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.OUPath = builder.OUPath;
         this.regionId = builder.regionId;
+        this.sortType = builder.sortType;
     }
 
     public static Builder builder() {
@@ -58,6 +68,13 @@ public class ListDirectoryUsersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return assignedInfo
+     */
+    public String getAssignedInfo() {
+        return this.assignedInfo;
     }
 
     /**
@@ -102,13 +119,22 @@ public class ListDirectoryUsersRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return sortType
+     */
+    public String getSortType() {
+        return this.sortType;
+    }
+
     public static final class Builder extends Request.Builder<ListDirectoryUsersRequest, Builder> {
+        private String assignedInfo; 
         private String directoryId; 
         private String filter; 
         private Integer maxResults; 
         private String nextToken; 
         private String OUPath; 
         private String regionId; 
+        private String sortType; 
 
         private Builder() {
             super();
@@ -116,13 +142,24 @@ public class ListDirectoryUsersRequest extends Request {
 
         private Builder(ListDirectoryUsersRequest request) {
             super(request);
+            this.assignedInfo = request.assignedInfo;
             this.directoryId = request.directoryId;
             this.filter = request.filter;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.OUPath = request.OUPath;
             this.regionId = request.regionId;
+            this.sortType = request.sortType;
         } 
+
+        /**
+         * AssignedInfo.
+         */
+        public Builder assignedInfo(String assignedInfo) {
+            this.putQueryParameter("AssignedInfo", assignedInfo);
+            this.assignedInfo = assignedInfo;
+            return this;
+        }
 
         /**
          * The ID of the AD directory.
@@ -180,6 +217,15 @@ public class ListDirectoryUsersRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SortType.
+         */
+        public Builder sortType(String sortType) {
+            this.putQueryParameter("SortType", sortType);
+            this.sortType = sortType;
             return this;
         }
 
