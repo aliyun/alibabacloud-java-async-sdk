@@ -211,7 +211,13 @@ public class RenewElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: true.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -220,7 +226,10 @@ public class RenewElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * <p>
+         * 
+         * The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -247,7 +256,13 @@ public class RenewElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * Period.
+         * The renewal duration. The unit of the renewal duration is determined by the `PeriodUnit` value. Valid values:
+         * <p>
+         * 
+         * *   Valid values if you set `PeriodUnit` to `Month`: 1, 2, 3, 4, 5, 6, 7, 8, and 9.
+         * *   Valid values if you set `PeriodUnit` to `Year`: 1, 2, and 3.
+         * 
+         * Default value: 1.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -256,7 +271,13 @@ public class RenewElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the renewal duration. Valid values:
+         * <p>
+         * 
+         * *   Month
+         * *   Year
+         * 
+         * Default value: Year.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -265,7 +286,10 @@ public class RenewElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the elasticity assurance.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~2680071~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -325,7 +349,12 @@ public class RenewElasticityAssurancesRequest extends Request {
             private java.util.List < String > id; 
 
             /**
-             * Id.
+             * The IDs of elasticity assurances.
+             * <p>
+             * 
+             * **Limits**: You can renew up to 20 elasticity assurances at a time.
+             * 
+             * You can call the [DescribeElasticityAssurances](~~2679748~~) operation to query the elasticity assurances that you purchased.
              */
             public Builder id(java.util.List < String > id) {
                 this.id = id;

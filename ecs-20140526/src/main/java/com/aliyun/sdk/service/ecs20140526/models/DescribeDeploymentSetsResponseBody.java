@@ -105,7 +105,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -113,7 +113,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -121,7 +121,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the deployment set.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -129,7 +129,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of deployment sets returned.
+         * The total number of queried deployment sets.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -209,7 +209,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of ECS instances that belong to the zone in the deployment set.
+             * The number of ECS instances that reside in the zone in the deployment set.
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -472,7 +472,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             private String strategy; 
 
             /**
-             * Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains Elastic Compute Service (ECS) instances. The value contains the capacities of the deployment set in different zones.
+             * Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains ECS instances. The value contains information about the capacities of the deployment set in different zones.
              */
             public Builder capacities(Capacities capacities) {
                 this.capacities = capacities;
@@ -512,7 +512,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment strategy. The value of this response parameter is that of the `Strategy` request parameter.
+             * The deployment strategy. The return value of this parameter is the value of the `Strategy` request parameter.
              */
             public Builder deploymentStrategy(String deploymentStrategy) {
                 this.deploymentStrategy = deploymentStrategy;
@@ -555,7 +555,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the instances in the deployment set.
+             * The IDs of the Elastic Compute Service (ECS) instances in the deployment set.
              */
             public Builder instanceIds(InstanceIds instanceIds) {
                 this.instanceIds = instanceIds;

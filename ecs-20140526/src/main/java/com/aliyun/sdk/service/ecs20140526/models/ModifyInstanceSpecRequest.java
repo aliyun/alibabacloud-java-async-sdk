@@ -306,7 +306,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Specifies whether cross-cluster instance type upgrades are supported.
+         * Specifies whether cross-cluster instance type upgrades are supported. Valid values:
          * <p>
          * 
          * *   true
@@ -314,7 +314,7 @@ public class ModifyInstanceSpecRequest extends Request {
          * 
          * Default value: false.
          * 
-         * When `AllowMigrateAcrossZone` is set to true and you upgrade the instance based on the returned information, take note of the following items:
+         * When you set `AllowMigrateAcrossZone` to true and upgrade the instance based on the returned information, take note of the following items:
          * 
          * Instance that resides in the classic network:
          * 
@@ -422,6 +422,12 @@ public class ModifyInstanceSpecRequest extends Request {
 
         /**
          * >  This parameter is not publicly available.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   Online
+         * *   Offline
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);

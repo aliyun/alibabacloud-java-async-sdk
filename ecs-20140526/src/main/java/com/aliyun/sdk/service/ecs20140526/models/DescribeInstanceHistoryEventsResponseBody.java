@@ -704,7 +704,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The inactive disks that have been released and whose data must be cleared.
+             * The inactive disks that were released and whose data must be cleared.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -1009,7 +1009,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the system event was scheduled.
+             * The reason why the system event occurred.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1017,7 +1017,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * The reason code category for the system event.
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;

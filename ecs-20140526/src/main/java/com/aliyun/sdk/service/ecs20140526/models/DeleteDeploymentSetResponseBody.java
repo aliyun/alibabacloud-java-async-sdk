@@ -37,7 +37,7 @@ public class DeleteDeploymentSetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

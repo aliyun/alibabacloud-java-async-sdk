@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDeploymentSetAttributeResponseBody} extends {@link TeaModel}
+ * {@link EnableDiskEncryptionByDefaultResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyDeploymentSetAttributeResponseBody</p>
+ * <p>EnableDiskEncryptionByDefaultResponseBody</p>
  */
-public class ModifyDeploymentSetAttributeResponseBody extends TeaModel {
+public class EnableDiskEncryptionByDefaultResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ModifyDeploymentSetAttributeResponseBody(Builder builder) {
+    private EnableDiskEncryptionByDefaultResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class ModifyDeploymentSetAttributeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyDeploymentSetAttributeResponseBody create() {
+    public static EnableDiskEncryptionByDefaultResponseBody create() {
         return builder().build();
     }
 
@@ -37,15 +37,15 @@ public class ModifyDeploymentSetAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyDeploymentSetAttributeResponseBody build() {
-            return new ModifyDeploymentSetAttributeResponseBody(this);
+        public EnableDiskEncryptionByDefaultResponseBody build() {
+            return new EnableDiskEncryptionByDefaultResponseBody(this);
         } 
 
     } 

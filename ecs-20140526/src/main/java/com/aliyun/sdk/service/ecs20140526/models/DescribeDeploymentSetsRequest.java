@@ -246,7 +246,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The IDs of deployment sets. The value can be a JSON array that consists of up to 100 deployment set IDs in the format of `["ds-xxxxxxxxx", "ds-yyyyyyyyy", … "ds-zzzzzzzzz"]`. Separate multiple deployment set IDs with commas (,).
+         * The IDs of deployment sets. The value can be a JSON array that consists of deployment set IDs in the format of `["ds-xxxxxxxxx", "ds-yyyyyyyyy", ... "ds-zzzzzzzzz"]`. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).
          */
         public Builder deploymentSetIds(String deploymentSetIds) {
             this.putQueryParameter("DeploymentSetIds", deploymentSetIds);
@@ -255,7 +255,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The name of the deployment set. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain digits, letters, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder deploymentSetName(String deploymentSetName) {
             this.putQueryParameter("DeploymentSetName", deploymentSetName);
@@ -264,7 +264,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * > The parameter is deprecated.
+         * >  This parameter is deprecated.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -273,7 +273,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * > The parameter is deprecated.
+         * >  This parameter is deprecated.
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -282,7 +282,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * > The parameter is deprecated.
+         * >  This parameter is deprecated.
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -309,7 +309,7 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -323,10 +323,10 @@ public class DescribeDeploymentSetsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * Maximum value: 50.
+         * Valid values: 1 to 50.
          * 
          * Default value: 10.
          */
@@ -367,8 +367,8 @@ public class DescribeDeploymentSetsRequest extends Request {
          * The deployment strategy. Valid values:
          * <p>
          * 
-         * *   Availability: high availability strategy.
-         * *   AvailabilityGroup: high availability group strategy.
+         * *   Availability: high availability strategy
+         * *   AvailabilityGroup: high availability group strategy
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);

@@ -61,7 +61,7 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * The ID of the renewal order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -69,7 +69,7 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * PrivatePoolOptionsIdSet.
+         * The IDs of the elasticity assurances.
          */
         public Builder privatePoolOptionsIdSet(PrivatePoolOptionsIdSet privatePoolOptionsIdSet) {
             this.privatePoolOptionsIdSet = privatePoolOptionsIdSet;
@@ -77,7 +77,7 @@ public class RenewElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

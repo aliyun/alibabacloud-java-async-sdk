@@ -336,10 +336,11 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable auto-renewal for the reserved instance. Default value: false. Valid values:
+         * Specifies whether to enable auto-renewal for the reserved instance. Valid values:
          * <p>
          * 
-         * true: enables auto-renewal for the reserved instance. false: does not enable auto-renewal for the reserved instance.
+         * *   true
+         * *   false (default)
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -541,7 +542,7 @@ public class PurchaseReservedInstancesOfferingRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The time when the reserved instance takes effect. Specify the time in the [ISO 8601 standard](~~25696~~) in the `yyyy-MM-ddTHHZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

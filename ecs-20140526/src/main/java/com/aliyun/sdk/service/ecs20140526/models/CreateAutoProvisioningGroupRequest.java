@@ -934,7 +934,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String rolearn; 
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder assumeRoleFor(Long assumeRoleFor) {
                 this.assumeRoleFor = assumeRoleFor;
@@ -942,7 +942,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -950,7 +950,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * This parameter is not publicly available.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder rolearn(String rolearn) {
                 this.rolearn = rolearn;
@@ -1135,7 +1135,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String snapshotId; 
 
             /**
-             * BurstingEnabled.
+             * Specifies whether to enable the performance burst feature for data disk N. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * >  This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1146,10 +1152,10 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The category of data disk N. Valid values of N: 1 to 16. Valid values:
              * <p>
              * 
-             * *   cloud_efficiency: ultra disk
-             * *   cloud_ssd: standard SSD
-             * *   cloud_essd: ESSD
-             * *   cloud: basic disk
+             * *   cloud_efficiency: ultra disk.
+             * *   cloud_ssd: standard SSD.
+             * *   cloud_essd: ESSD.
+             * *   cloud: basic disk.
              * 
              * For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
              * 
@@ -1196,7 +1202,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, periods (.), colons (:), underscores (\_), and hyphens (-).
              * <p>
              * 
-             * By default, this parameter is left empty.
+             * This parameter is left empty by default.
              * 
              * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
@@ -1206,7 +1212,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * EncryptAlgorithm.
+             * >  This parameter is not publicly available.
              */
             public Builder encryptAlgorithm(String encryptAlgorithm) {
                 this.encryptAlgorithm = encryptAlgorithm;
@@ -1238,7 +1244,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The performance level of the ESSD to use as data disk N. The value of N in this parameter must be the same as the value of N in `LaunchConfiguration.DataDisk.N.Category`. Valid values:
+             * The performance level of the Enterprise SSD (ESSD) to use as data disk N. The value of N in this parameter must be the same as the value of N in `LaunchConfiguration.DataDisk.N.Category`. Valid values:
              * <p>
              * 
              * *   PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.
@@ -1246,7 +1252,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * *   PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.
              * *   PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.
              * 
-             * For information about ESSD performance levels, see [ESSDs](~~122389~~).
+             * For more information about ESSD performance levels, see [ESSDs](~~122389~~).
              * 
              * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
@@ -1256,7 +1262,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * ProvisionedIops.
+             * The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.
+             * <p>
+             * 
+             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
+             * 
+             * >  This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -1293,7 +1304,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The ID of the snapshot to use to create data disk N. Valid values of N: 1 to 16.
              * <p>
              * 
-             * After this parameter is specified, `LaunchConfiguration.DataDisk.N.Size` is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created on or after July 15, 2013. Otherwise, an error is returned and your request is rejected.
+             * If you specify this parameter, `LaunchConfiguration.DataDisk.N.Size` is ignored. The size of data disk N is the same as that of the snapshot specified by this parameter. Use snapshots created after July 15, 2013. Otherwise, an error is returned and your request is rejected.
              * 
              * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
              */
@@ -1384,7 +1395,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private Long provisionedIops; 
 
             /**
-             * BurstingEnabled.
+             * Specifies whether to enable the performance burst feature for the system disk. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * >  This parameter is available only if you set `LaunchConfiguration.SystemDisk.Category` to `cloud_auto`. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1392,7 +1409,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The algorithm to use to encrypt system disk N. Valid values:
+             * The algorithm to use to encrypt the system disk. Valid values:
              * <p>
              * 
              * *   aes-256
@@ -1401,6 +1418,8 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * Default value: aes-256.
              * 
              * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
+             * 
+             * >  This parameter is not publicly available.
              */
             public Builder encryptAlgorithm(String encryptAlgorithm) {
                 this.encryptAlgorithm = encryptAlgorithm;
@@ -1408,7 +1427,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt system disk N. Valid values:
+             * Specifies whether to encrypt the system disk. Valid values:
              * <p>
              * 
              * *   true
@@ -1424,7 +1443,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * The ID of the KMS key to use for system disk N.
+             * The ID of the KMS key to use for the system disk.
              * <p>
              * 
              * When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.
@@ -1435,7 +1454,12 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             }
 
             /**
-             * ProvisionedIops.
+             * The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.
+             * <p>
+             * 
+             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.
+             * 
+             * >  This parameter is available only if you set LaunchConfiguration.SystemDisk.Category to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~).
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;
@@ -1897,7 +1921,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private String userData; 
 
             /**
-             * This parameter is unavailable for public use.
+             * >  This parameter is in invitational preview and is not publicly available.
              */
             public Builder arn(java.util.List < Arn> arn) {
                 this.arn = arn;
@@ -2691,7 +2715,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              * The key of tag N to add to the auto provisioning group.
              * <p>
              * 
-             * Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
+             * Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;

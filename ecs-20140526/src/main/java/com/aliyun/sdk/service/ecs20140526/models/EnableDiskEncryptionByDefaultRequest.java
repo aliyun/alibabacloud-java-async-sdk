@@ -6,20 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteDeploymentSetRequest} extends {@link RequestModel}
+ * {@link EnableDiskEncryptionByDefaultRequest} extends {@link RequestModel}
  *
- * <p>DeleteDeploymentSetRequest</p>
+ * <p>EnableDiskEncryptionByDefaultRequest</p>
  */
-public class DeleteDeploymentSetRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("SourceRegionId")
-    private String sourceRegionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String deploymentSetId;
-
+public class EnableDiskEncryptionByDefaultRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -41,10 +32,8 @@ public class DeleteDeploymentSetRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DeleteDeploymentSetRequest(Builder builder) {
+    private EnableDiskEncryptionByDefaultRequest(Builder builder) {
         super(builder);
-        this.sourceRegionId = builder.sourceRegionId;
-        this.deploymentSetId = builder.deploymentSetId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -56,27 +45,13 @@ public class DeleteDeploymentSetRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteDeploymentSetRequest create() {
+    public static EnableDiskEncryptionByDefaultRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return sourceRegionId
-     */
-    public String getSourceRegionId() {
-        return this.sourceRegionId;
-    }
-
-    /**
-     * @return deploymentSetId
-     */
-    public String getDeploymentSetId() {
-        return this.deploymentSetId;
     }
 
     /**
@@ -114,9 +89,7 @@ public class DeleteDeploymentSetRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteDeploymentSetRequest, Builder> {
-        private String sourceRegionId; 
-        private String deploymentSetId; 
+    public static final class Builder extends Request.Builder<EnableDiskEncryptionByDefaultRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -127,34 +100,14 @@ public class DeleteDeploymentSetRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDeploymentSetRequest request) {
+        private Builder(EnableDiskEncryptionByDefaultRequest request) {
             super(request);
-            this.sourceRegionId = request.sourceRegionId;
-            this.deploymentSetId = request.deploymentSetId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
-
-        /**
-         * SourceRegionId.
-         */
-        public Builder sourceRegionId(String sourceRegionId) {
-            this.putHostParameter("SourceRegionId", sourceRegionId);
-            this.sourceRegionId = sourceRegionId;
-            return this;
-        }
-
-        /**
-         * The ID of the deployment set that you want to delete.
-         */
-        public Builder deploymentSetId(String deploymentSetId) {
-            this.putQueryParameter("DeploymentSetId", deploymentSetId);
-            this.deploymentSetId = deploymentSetId;
-            return this;
-        }
 
         /**
          * OwnerAccount.
@@ -175,7 +128,7 @@ public class DeleteDeploymentSetRequest extends Request {
         }
 
         /**
-         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -202,8 +155,8 @@ public class DeleteDeploymentSetRequest extends Request {
         }
 
         @Override
-        public DeleteDeploymentSetRequest build() {
-            return new DeleteDeploymentSetRequest(this);
+        public EnableDiskEncryptionByDefaultRequest build() {
+            return new EnableDiskEncryptionByDefaultRequest(this);
         } 
 
     } 

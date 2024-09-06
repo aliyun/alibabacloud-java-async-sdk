@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDeploymentSetAttributeResponseBody} extends {@link TeaModel}
+ * {@link ModifyDiskDefaultKMSKeyIdResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyDeploymentSetAttributeResponseBody</p>
+ * <p>ModifyDiskDefaultKMSKeyIdResponseBody</p>
  */
-public class ModifyDeploymentSetAttributeResponseBody extends TeaModel {
+public class ModifyDiskDefaultKMSKeyIdResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ModifyDeploymentSetAttributeResponseBody(Builder builder) {
+    private ModifyDiskDefaultKMSKeyIdResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class ModifyDeploymentSetAttributeResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyDeploymentSetAttributeResponseBody create() {
+    public static ModifyDiskDefaultKMSKeyIdResponseBody create() {
         return builder().build();
     }
 
@@ -37,15 +37,15 @@ public class ModifyDeploymentSetAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyDeploymentSetAttributeResponseBody build() {
-            return new ModifyDeploymentSetAttributeResponseBody(this);
+        public ModifyDiskDefaultKMSKeyIdResponseBody build() {
+            return new ModifyDiskDefaultKMSKeyIdResponseBody(this);
         } 
 
     } 
