@@ -1363,7 +1363,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the result.
              */
             public Builder description(String description) {
                 this.description = description;

@@ -21,6 +21,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeFileModerationResultResponse> describeFileModerationResult(DescribeFileModerationResultRequest request);
 
+    /**
+      * *   Billing: This operation is free of charge.
+      * *   QPS limit: You can call this operation up to 100 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     CompletableFuture<DescribeImageModerationResultResponse> describeImageModerationResult(DescribeImageModerationResultRequest request);
 
     CompletableFuture<DescribeImageResultExtResponse> describeImageResultExt(DescribeImageResultExtRequest request);
@@ -47,6 +52,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TextModerationResponse> textModeration(TextModerationRequest request);
 
+    /**
+      * Before you call this operation, make sure that you have [activated the Content Moderation 2.0 service](https://common-buy.aliyun.com/?commodityCode=lvwang_cip_public_cn) and are familiar with the [billing](https://help.aliyun.com/document_detail/2671445.html?#section-6od-32j-99n) of the Text Moderation 2.0 Plus service.
+      *
+     */
     CompletableFuture<TextModerationPlusResponse> textModerationPlus(TextModerationPlusRequest request);
 
     CompletableFuture<UrlAsyncModerationResponse> urlAsyncModeration(UrlAsyncModerationRequest request);

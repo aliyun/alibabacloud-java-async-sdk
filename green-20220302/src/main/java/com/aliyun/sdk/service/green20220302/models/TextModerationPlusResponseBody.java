@@ -73,7 +73,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * The returned HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -81,7 +81,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The moderation results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +161,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String hitLibName; 
 
             /**
-             * Answer
+             * The answer.
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -230,7 +230,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String libName; 
 
             /**
-             * Hit keywords, comma separated.
+             * The terms that are hit. Multiple terms are separated by commas (,).
              */
             public Builder keyWords(String keyWords) {
                 this.keyWords = keyWords;
@@ -238,7 +238,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * Library Name
+             * The library name.
              */
             public Builder libName(String libName) {
                 this.libName = libName;
@@ -259,6 +259,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomizedHit")
         private java.util.List < CustomizedHit> customizedHit;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
@@ -268,6 +271,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.confidence = builder.confidence;
             this.customizedHit = builder.customizedHit;
+            this.description = builder.description;
             this.label = builder.label;
             this.riskWords = builder.riskWords;
         }
@@ -295,6 +299,13 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return label
          */
         public String getLabel() {
@@ -311,11 +322,12 @@ public class TextModerationPlusResponseBody extends TeaModel {
         public static final class Builder {
             private Float confidence; 
             private java.util.List < CustomizedHit> customizedHit; 
+            private String description; 
             private String label; 
             private String riskWords; 
 
             /**
-             * Confidence score, 0 to 100, reserved to 2 decimal places.
+             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -323,7 +335,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * Custom keyword hits
+             * The custom term hit by the moderated content.
              */
             public Builder customizedHit(java.util.List < CustomizedHit> customizedHit) {
                 this.customizedHit = customizedHit;
@@ -331,7 +343,15 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The description of the label.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The label.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -339,7 +359,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * Risk words
+             * The term hit by the moderated content.
              */
             public Builder riskWords(String riskWords) {
                 this.riskWords = riskWords;
@@ -416,7 +436,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private Float score; 
 
             /**
-             * Advice
+             * The suggestion.
              */
             public Builder advice(java.util.List < Advice> advice) {
                 this.advice = advice;
@@ -424,7 +444,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * The moderation results.
+             * The results.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -440,7 +460,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The score.
              */
             public Builder score(Float score) {
                 this.score = score;

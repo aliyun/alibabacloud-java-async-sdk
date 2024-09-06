@@ -81,7 +81,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * The image moderation results.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The request ID, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +161,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places. Some labels do not have scores of confidence levels.
+             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -169,7 +169,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the result.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -278,7 +278,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * The ID of the moderated object.
+             * The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -286,7 +286,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Image frame information.
+             * The information about the captured frames.
              */
             public Builder frame(String frame) {
                 this.frame = frame;
@@ -294,7 +294,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Number of result frames
+             * The number of frames.
              */
             public Builder frameNum(Integer frameNum) {
                 this.frameNum = frameNum;

@@ -53,7 +53,7 @@ public class DescribeImageModerationResultRequest extends Request {
         } 
 
         /**
-         * The reqId field returned by the Image Async Moderation API.
+         * The ReqId field returned by the asynchronous Image Moderation 2.0 API.
          */
         public Builder reqId(String reqId) {
             this.putQueryParameter("ReqId", reqId);
