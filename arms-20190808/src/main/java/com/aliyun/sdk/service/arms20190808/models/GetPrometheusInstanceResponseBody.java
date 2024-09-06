@@ -208,6 +208,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableAuthToken")
         private String enableAuthToken;
 
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
+        private java.util.Map < String, String > extraInfo;
+
         @com.aliyun.core.annotation.NameInMap("GrafanaInstanceId")
         private String grafanaInstanceId;
 
@@ -287,6 +290,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.enableAuthFreeRead = builder.enableAuthFreeRead;
             this.enableAuthFreeWrite = builder.enableAuthFreeWrite;
             this.enableAuthToken = builder.enableAuthToken;
+            this.extraInfo = builder.extraInfo;
             this.grafanaInstanceId = builder.grafanaInstanceId;
             this.httpApiInterUrl = builder.httpApiInterUrl;
             this.httpApiIntraUrl = builder.httpApiIntraUrl;
@@ -401,6 +405,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         public String getEnableAuthToken() {
             return this.enableAuthToken;
+        }
+
+        /**
+         * @return extraInfo
+         */
+        public java.util.Map < String, String > getExtraInfo() {
+            return this.extraInfo;
         }
 
         /**
@@ -570,6 +581,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private Boolean enableAuthFreeRead; 
             private Boolean enableAuthFreeWrite; 
             private String enableAuthToken; 
+            private java.util.Map < String, String > extraInfo; 
             private String grafanaInstanceId; 
             private String httpApiInterUrl; 
             private String httpApiIntraUrl; 
@@ -692,6 +704,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder enableAuthToken(String enableAuthToken) {
                 this.enableAuthToken = enableAuthToken;
+                return this;
+            }
+
+            /**
+             * ExtraInfo.
+             */
+            public Builder extraInfo(java.util.Map < String, String > extraInfo) {
+                this.extraInfo = extraInfo;
                 return this;
             }
 

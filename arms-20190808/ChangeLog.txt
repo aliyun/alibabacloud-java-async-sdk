@@ -1,3 +1,6 @@
+2024-09-06 Version: 7.0.8
+- Generated java-async 2019-08-08 for ARMS.
+
 2024-09-06 Version: 7.0.7
 - Generated java-async 2019-08-08 for ARMS.
 
