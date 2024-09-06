@@ -24,6 +24,14 @@ public class CreateWorkflowRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("alertStrategy")
     private String alertStrategy;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taskDefinitionJsonValue")
+    private String taskDefinitionJsonValue;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("taskRelationJsonValue")
+    private String taskRelationJsonValue;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cronExpr")
     private String cronExpr;
@@ -101,6 +109,8 @@ public class CreateWorkflowRequest extends Request {
         this.projectId = builder.projectId;
         this.alertGroupId = builder.alertGroupId;
         this.alertStrategy = builder.alertStrategy;
+        this.taskDefinitionJsonValue = builder.taskDefinitionJsonValue;
+        this.taskRelationJsonValue = builder.taskRelationJsonValue;
         this.cronExpr = builder.cronExpr;
         this.description = builder.description;
         this.executionType = builder.executionType;
@@ -152,6 +162,20 @@ public class CreateWorkflowRequest extends Request {
      */
     public String getAlertStrategy() {
         return this.alertStrategy;
+    }
+
+    /**
+     * @return taskDefinitionJsonValue
+     */
+    public String getTaskDefinitionJsonValue() {
+        return this.taskDefinitionJsonValue;
+    }
+
+    /**
+     * @return taskRelationJsonValue
+     */
+    public String getTaskRelationJsonValue() {
+        return this.taskRelationJsonValue;
     }
 
     /**
@@ -277,6 +301,8 @@ public class CreateWorkflowRequest extends Request {
         private String projectId; 
         private String alertGroupId; 
         private String alertStrategy; 
+        private String taskDefinitionJsonValue; 
+        private String taskRelationJsonValue; 
         private String cronExpr; 
         private String description; 
         private String executionType; 
@@ -304,6 +330,8 @@ public class CreateWorkflowRequest extends Request {
             this.projectId = request.projectId;
             this.alertGroupId = request.alertGroupId;
             this.alertStrategy = request.alertStrategy;
+            this.taskDefinitionJsonValue = request.taskDefinitionJsonValue;
+            this.taskRelationJsonValue = request.taskRelationJsonValue;
             this.cronExpr = request.cronExpr;
             this.description = request.description;
             this.executionType = request.executionType;
@@ -347,6 +375,24 @@ public class CreateWorkflowRequest extends Request {
         public Builder alertStrategy(String alertStrategy) {
             this.putQueryParameter("alertStrategy", alertStrategy);
             this.alertStrategy = alertStrategy;
+            return this;
+        }
+
+        /**
+         * taskDefinitionJsonValue.
+         */
+        public Builder taskDefinitionJsonValue(String taskDefinitionJsonValue) {
+            this.putBodyParameter("taskDefinitionJsonValue", taskDefinitionJsonValue);
+            this.taskDefinitionJsonValue = taskDefinitionJsonValue;
+            return this;
+        }
+
+        /**
+         * taskRelationJsonValue.
+         */
+        public Builder taskRelationJsonValue(String taskRelationJsonValue) {
+            this.putBodyParameter("taskRelationJsonValue", taskRelationJsonValue);
+            this.taskRelationJsonValue = taskRelationJsonValue;
             return this;
         }
 
