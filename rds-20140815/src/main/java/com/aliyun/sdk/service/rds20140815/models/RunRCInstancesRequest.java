@@ -41,6 +41,10 @@ public class RunRCInstancesRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
@@ -120,6 +124,7 @@ public class RunRCInstancesRequest extends Request {
         this.dataDisk = builder.dataDisk;
         this.deploymentSetId = builder.deploymentSetId;
         this.description = builder.description;
+        this.dryRun = builder.dryRun;
         this.imageId = builder.imageId;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceName = builder.instanceName;
@@ -199,6 +204,13 @@ public class RunRCInstancesRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -328,6 +340,7 @@ public class RunRCInstancesRequest extends Request {
         private java.util.List < DataDisk> dataDisk; 
         private String deploymentSetId; 
         private String description; 
+        private Boolean dryRun; 
         private String imageId; 
         private String instanceChargeType; 
         private String instanceName; 
@@ -359,6 +372,7 @@ public class RunRCInstancesRequest extends Request {
             this.dataDisk = request.dataDisk;
             this.deploymentSetId = request.deploymentSetId;
             this.description = request.description;
+            this.dryRun = request.dryRun;
             this.imageId = request.imageId;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceName = request.instanceName;
@@ -439,6 +453,15 @@ public class RunRCInstancesRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

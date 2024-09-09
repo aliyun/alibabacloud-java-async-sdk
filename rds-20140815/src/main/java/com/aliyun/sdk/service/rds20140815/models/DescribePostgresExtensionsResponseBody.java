@@ -314,7 +314,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * Alibaba Cloud account ID.
+             * <p>
+             * 
+             * > Only exclusive plug-ins (plug-ins written by users) will return this parameter. Each Alibaba Cloud account only displays its own exclusive plug-ins.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -515,7 +518,10 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Uid.
+             * Alibaba Cloud account ID.
+             * <p>
+             * 
+             * > Only exclusive plug-ins (plug-ins written by users) will return this parameter. Each Alibaba Cloud account only displays its own exclusive plug-ins.
              */
             public Builder uid(String uid) {
                 this.uid = uid;

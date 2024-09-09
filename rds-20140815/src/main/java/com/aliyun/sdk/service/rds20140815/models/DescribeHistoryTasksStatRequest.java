@@ -247,7 +247,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*t*HH:mm:ss*z format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder fromStartTime(String fromStartTime) {
             this.putQueryParameter("FromStartTime", fromStartTime);
@@ -366,7 +366,7 @@ public class DescribeHistoryTasksStatRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * The end of the time range to query. Only tasks that have a start time earlier than or equal to the time specified by this parameter are queried. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
          */
         public Builder toStartTime(String toStartTime) {
             this.putQueryParameter("ToStartTime", toStartTime);

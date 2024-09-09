@@ -30,6 +30,10 @@ public class CreateAccountRequest extends Request {
     private String accountType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckPolicy")
+    private Boolean checkPolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
@@ -56,6 +60,7 @@ public class CreateAccountRequest extends Request {
         this.accountName = builder.accountName;
         this.accountPassword = builder.accountPassword;
         this.accountType = builder.accountType;
+        this.checkPolicy = builder.checkPolicy;
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -105,6 +110,13 @@ public class CreateAccountRequest extends Request {
     }
 
     /**
+     * @return checkPolicy
+     */
+    public Boolean getCheckPolicy() {
+        return this.checkPolicy;
+    }
+
+    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
@@ -144,6 +156,7 @@ public class CreateAccountRequest extends Request {
         private String accountName; 
         private String accountPassword; 
         private String accountType; 
+        private Boolean checkPolicy; 
         private String DBInstanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -160,6 +173,7 @@ public class CreateAccountRequest extends Request {
             this.accountName = request.accountName;
             this.accountPassword = request.accountPassword;
             this.accountType = request.accountType;
+            this.checkPolicy = request.checkPolicy;
             this.DBInstanceId = request.DBInstanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -239,6 +253,15 @@ public class CreateAccountRequest extends Request {
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
             this.accountType = accountType;
+            return this;
+        }
+
+        /**
+         * CheckPolicy.
+         */
+        public Builder checkPolicy(Boolean checkPolicy) {
+            this.putQueryParameter("CheckPolicy", checkPolicy);
+            this.checkPolicy = checkPolicy;
             return this;
         }
 

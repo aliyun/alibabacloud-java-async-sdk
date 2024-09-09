@@ -489,7 +489,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String recoveryModel; 
 
             /**
-             * AccountSecurityPolicy.
+             * Instance account group policy.
+             * <p>
+             * - MaximumPasswordAge: Maximum usage time
+             * - MinimumPasswordAge: Minimum usage time
              */
             public Builder accountSecurityPolicy(String accountSecurityPolicy) {
                 this.accountSecurityPolicy = accountSecurityPolicy;
@@ -2061,7 +2064,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DisasterRecoveryInfo.
+             * Disaster recovery source instance information.
              */
             public Builder disasterRecoveryInfo(String disasterRecoveryInfo) {
                 this.disasterRecoveryInfo = disasterRecoveryInfo;
@@ -2069,7 +2072,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DisasterRecoveryInstances.
+             * All disaster recovery instances of the current instance.
              */
             public Builder disasterRecoveryInstances(String disasterRecoveryInstances) {
                 this.disasterRecoveryInstances = disasterRecoveryInstances;

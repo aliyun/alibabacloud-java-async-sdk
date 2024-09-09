@@ -304,6 +304,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BypassRLS")
         private String bypassRLS;
 
+        @com.aliyun.core.annotation.NameInMap("CheckPolicy")
+        private Boolean checkPolicy;
+
         @com.aliyun.core.annotation.NameInMap("CreateDB")
         private String createDB;
 
@@ -315,6 +318,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DatabasePrivileges")
         private DatabasePrivileges databasePrivileges;
+
+        @com.aliyun.core.annotation.NameInMap("PasswordExpireTime")
+        private String passwordExpireTime;
 
         @com.aliyun.core.annotation.NameInMap("PrivExceeded")
         private String privExceeded;
@@ -331,10 +337,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             this.accountStatus = builder.accountStatus;
             this.accountType = builder.accountType;
             this.bypassRLS = builder.bypassRLS;
+            this.checkPolicy = builder.checkPolicy;
             this.createDB = builder.createDB;
             this.createRole = builder.createRole;
             this.DBInstanceId = builder.DBInstanceId;
             this.databasePrivileges = builder.databasePrivileges;
+            this.passwordExpireTime = builder.passwordExpireTime;
             this.privExceeded = builder.privExceeded;
             this.replication = builder.replication;
             this.validUntil = builder.validUntil;
@@ -384,6 +392,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * @return checkPolicy
+         */
+        public Boolean getCheckPolicy() {
+            return this.checkPolicy;
+        }
+
+        /**
          * @return createDB
          */
         public String getCreateDB() {
@@ -409,6 +424,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
          */
         public DatabasePrivileges getDatabasePrivileges() {
             return this.databasePrivileges;
+        }
+
+        /**
+         * @return passwordExpireTime
+         */
+        public String getPasswordExpireTime() {
+            return this.passwordExpireTime;
         }
 
         /**
@@ -438,10 +460,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountStatus; 
             private String accountType; 
             private String bypassRLS; 
+            private Boolean checkPolicy; 
             private String createDB; 
             private String createRole; 
             private String DBInstanceId; 
             private DatabasePrivileges databasePrivileges; 
+            private String passwordExpireTime; 
             private String privExceeded; 
             private String replication; 
             private String validUntil; 
@@ -502,6 +526,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
+             * CheckPolicy.
+             */
+            public Builder checkPolicy(Boolean checkPolicy) {
+                this.checkPolicy = checkPolicy;
+                return this;
+            }
+
+            /**
              * Indicates whether the account has the permissions to create databases. Valid values:
              * <p>
              * 
@@ -542,6 +574,14 @@ public class DescribeAccountsResponseBody extends TeaModel {
              */
             public Builder databasePrivileges(DatabasePrivileges databasePrivileges) {
                 this.databasePrivileges = databasePrivileges;
+                return this;
+            }
+
+            /**
+             * PasswordExpireTime.
+             */
+            public Builder passwordExpireTime(String passwordExpireTime) {
+                this.passwordExpireTime = passwordExpireTime;
                 return this;
             }
 

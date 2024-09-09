@@ -86,6 +86,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("IoOptimized")
     private String ioOptimized;
 
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
+    private String keyPairName;
+
     @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
 
@@ -148,6 +151,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
         this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
         this.ioOptimized = builder.ioOptimized;
+        this.keyPairName = builder.keyPairName;
         this.memory = builder.memory;
         this.operationLocks = builder.operationLocks;
         this.publicIpAddress = builder.publicIpAddress;
@@ -346,6 +350,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return keyPairName
+     */
+    public String getKeyPairName() {
+        return this.keyPairName;
+    }
+
+    /**
      * @return memory
      */
     public Integer getMemory() {
@@ -455,6 +466,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private Integer internetMaxBandwidthIn; 
         private Integer internetMaxBandwidthOut; 
         private String ioOptimized; 
+        private String keyPairName; 
         private Integer memory; 
         private OperationLocks operationLocks; 
         private PublicIpAddress publicIpAddress; 
@@ -665,6 +677,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder ioOptimized(String ioOptimized) {
             this.ioOptimized = ioOptimized;
+            return this;
+        }
+
+        /**
+         * KeyPairName.
+         */
+        public Builder keyPairName(String keyPairName) {
+            this.keyPairName = keyPairName;
             return this;
         }
 

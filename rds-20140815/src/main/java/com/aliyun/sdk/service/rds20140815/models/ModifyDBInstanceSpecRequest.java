@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDBInstanceSpecRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowMajorVersionUpgrade")
+    private Boolean allowMajorVersionUpgrade;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
     private Boolean autoUseCoupon;
 
@@ -110,11 +114,20 @@ public class ModifyDBInstanceSpecRequest extends Request {
     private Long usedTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    private String vSwitchId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneIdSlave1")
+    private String zoneIdSlave1;
+
     private ModifyDBInstanceSpecRequest(Builder builder) {
         super(builder);
+        this.allowMajorVersionUpgrade = builder.allowMajorVersionUpgrade;
         this.autoUseCoupon = builder.autoUseCoupon;
         this.burstingEnabled = builder.burstingEnabled;
         this.category = builder.category;
@@ -139,7 +152,9 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.switchTime = builder.switchTime;
         this.targetMinorVersion = builder.targetMinorVersion;
         this.usedTime = builder.usedTime;
+        this.vSwitchId = builder.vSwitchId;
         this.zoneId = builder.zoneId;
+        this.zoneIdSlave1 = builder.zoneIdSlave1;
     }
 
     public static Builder builder() {
@@ -153,6 +168,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowMajorVersionUpgrade
+     */
+    public Boolean getAllowMajorVersionUpgrade() {
+        return this.allowMajorVersionUpgrade;
     }
 
     /**
@@ -324,13 +346,28 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
         return this.zoneId;
     }
 
+    /**
+     * @return zoneIdSlave1
+     */
+    public String getZoneIdSlave1() {
+        return this.zoneIdSlave1;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBInstanceSpecRequest, Builder> {
+        private Boolean allowMajorVersionUpgrade; 
         private Boolean autoUseCoupon; 
         private Boolean burstingEnabled; 
         private String category; 
@@ -355,7 +392,9 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private String switchTime; 
         private String targetMinorVersion; 
         private Long usedTime; 
+        private String vSwitchId; 
         private String zoneId; 
+        private String zoneIdSlave1; 
 
         private Builder() {
             super();
@@ -363,6 +402,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
         private Builder(ModifyDBInstanceSpecRequest request) {
             super(request);
+            this.allowMajorVersionUpgrade = request.allowMajorVersionUpgrade;
             this.autoUseCoupon = request.autoUseCoupon;
             this.burstingEnabled = request.burstingEnabled;
             this.category = request.category;
@@ -387,8 +427,19 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.switchTime = request.switchTime;
             this.targetMinorVersion = request.targetMinorVersion;
             this.usedTime = request.usedTime;
+            this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
+            this.zoneIdSlave1 = request.zoneIdSlave1;
         } 
+
+        /**
+         * AllowMajorVersionUpgrade.
+         */
+        public Builder allowMajorVersionUpgrade(Boolean allowMajorVersionUpgrade) {
+            this.putQueryParameter("AllowMajorVersionUpgrade", allowMajorVersionUpgrade);
+            this.allowMajorVersionUpgrade = allowMajorVersionUpgrade;
+            return this;
+        }
 
         /**
          * Specifies whether to use vouchers to offset fees. Valid values:
@@ -690,6 +741,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
          * The RDS edition of the instance. Valid values:
          * <p>
          * 
@@ -703,6 +763,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
             this.zoneId = zoneId;
+            return this;
+        }
+
+        /**
+         * ZoneIdSlave1.
+         */
+        public Builder zoneIdSlave1(String zoneIdSlave1) {
+            this.putQueryParameter("ZoneIdSlave1", zoneIdSlave1);
+            this.zoneIdSlave1 = zoneIdSlave1;
             return this;
         }
 

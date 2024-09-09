@@ -584,7 +584,11 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * EncryptionKey.
+         * User-defined key ID for cloud disk encryption. Passing this parameter means turning on cloud disk encryption (it cannot be turned off after turning it on), and RoleARN needs to be passed in. You can view the key ID in the key management service console, or create a new key. For more information, see [Creating a Key](~~181610~~).
+         * <p>
+         * 
+         * > - This parameter is only applicable to RDS SQL Server instances.
+         * > - You can also not pass this parameter and only need to pass in RoleARN, which means setting the cloud disk encryption type of the instance to the RDS managed service key (Default Service CMK).
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -754,7 +758,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * RoleARN.
+         * The global resource descriptor (ARN) of the RDS cloud service account authorized by the primary account to access the KMS permission. You can view the ARN information through the [CheckCloudResourceAuthorized](https://next.api.aliyun.com/document/Rds/2014-08-15/CheckCloudResourceAuthorized) API.
+         * <p>
+         * 
+         * > This parameter is only available for RDS SQL Server instances.
          */
         public Builder roleARN(String roleARN) {
             this.putQueryParameter("RoleARN", roleARN);
