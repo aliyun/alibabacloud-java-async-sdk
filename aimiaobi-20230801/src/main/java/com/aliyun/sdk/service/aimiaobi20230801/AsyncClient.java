@@ -105,6 +105,50 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryAsyncTaskResponse> queryAsyncTask(QueryAsyncTaskRequest request);
 
+    CompletableFuture<RunAbbreviationContentResponse> runAbbreviationContent(RunAbbreviationContentRequest request);
+
+    ResponseIterable<RunAbbreviationContentResponseBody> runAbbreviationContentWithResponseIterable(RunAbbreviationContentRequest request);
+
+    CompletableFuture<RunContinueContentResponse> runContinueContent(RunContinueContentRequest request);
+
+    ResponseIterable<RunContinueContentResponseBody> runContinueContentWithResponseIterable(RunContinueContentRequest request);
+
+    CompletableFuture<RunExpandContentResponse> runExpandContent(RunExpandContentRequest request);
+
+    ResponseIterable<RunExpandContentResponseBody> runExpandContentWithResponseIterable(RunExpandContentRequest request);
+
+    CompletableFuture<RunKeywordsExtractionGenerationResponse> runKeywordsExtractionGeneration(RunKeywordsExtractionGenerationRequest request);
+
+    ResponseIterable<RunKeywordsExtractionGenerationResponseBody> runKeywordsExtractionGenerationWithResponseIterable(RunKeywordsExtractionGenerationRequest request);
+
+    CompletableFuture<RunStyleFeatureAnalysisResponse> runStyleFeatureAnalysis(RunStyleFeatureAnalysisRequest request);
+
+    ResponseIterable<RunStyleFeatureAnalysisResponseBody> runStyleFeatureAnalysisWithResponseIterable(RunStyleFeatureAnalysisRequest request);
+
+    CompletableFuture<RunSummaryGenerateResponse> runSummaryGenerate(RunSummaryGenerateRequest request);
+
+    ResponseIterable<RunSummaryGenerateResponseBody> runSummaryGenerateWithResponseIterable(RunSummaryGenerateRequest request);
+
+    CompletableFuture<RunTextPolishingResponse> runTextPolishing(RunTextPolishingRequest request);
+
+    ResponseIterable<RunTextPolishingResponseBody> runTextPolishingWithResponseIterable(RunTextPolishingRequest request);
+
+    CompletableFuture<RunTitleGenerationResponse> runTitleGeneration(RunTitleGenerationRequest request);
+
+    ResponseIterable<RunTitleGenerationResponseBody> runTitleGenerationWithResponseIterable(RunTitleGenerationRequest request);
+
+    CompletableFuture<RunTranslateGenerationResponse> runTranslateGeneration(RunTranslateGenerationRequest request);
+
+    ResponseIterable<RunTranslateGenerationResponseBody> runTranslateGenerationWithResponseIterable(RunTranslateGenerationRequest request);
+
+    CompletableFuture<RunWriteToneGenerationResponse> runWriteToneGeneration(RunWriteToneGenerationRequest request);
+
+    ResponseIterable<RunWriteToneGenerationResponseBody> runWriteToneGenerationWithResponseIterable(RunWriteToneGenerationRequest request);
+
+    CompletableFuture<RunWritingResponse> runWriting(RunWritingRequest request);
+
+    ResponseIterable<RunWritingResponseBody> runWritingWithResponseIterable(RunWritingRequest request);
+
     CompletableFuture<SaveCustomTextResponse> saveCustomText(SaveCustomTextRequest request);
 
     CompletableFuture<SaveDataSourceOrderConfigResponse> saveDataSourceOrderConfig(SaveDataSourceOrderConfigRequest request);
