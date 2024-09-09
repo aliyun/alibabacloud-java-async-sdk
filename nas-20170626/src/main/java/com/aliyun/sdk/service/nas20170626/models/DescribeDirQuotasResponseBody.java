@@ -281,7 +281,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * SizeRealInByte.
+             * The total size of files that a user has created in the directory. Unit: bytes.
              */
             public Builder sizeRealInByte(Long sizeRealInByte) {
                 this.sizeRealInByte = sizeRealInByte;
@@ -297,11 +297,11 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the user ID. Valid values: Uid, Gid, and AllUsers.
+             * The type of user. Valid values: Uid, Gid, and AllUsers.
              * <p>
              * 
-             * *   If the parameter is set to Uid or Gid, the value of the UserId parameter is returned.
-             * *   If the parameter is set to AllUsers, the value of the UserID parameter is empty.
+             * *   If Uid or Gid is returned, a value is returned for UserId.
+             * *   If AllUsers is returned, UserId is empty.
              */
             public Builder userType(String userType) {
                 this.userType = userType;

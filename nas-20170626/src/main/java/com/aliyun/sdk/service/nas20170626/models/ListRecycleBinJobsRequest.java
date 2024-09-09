@@ -155,7 +155,7 @@ public class ListRecycleBinJobsRequest extends Request {
         }
 
         /**
-         * The status of the job. Valid values:
+         * The job status. Valid values:
          * <p>
          * 
          * *   Running: The job is running.
@@ -164,7 +164,7 @@ public class ListRecycleBinJobsRequest extends Request {
          * *   Success: The job is completed.
          * *   Fail: The job failed.
          * *   Cancelled: The job is canceled.
-         * *   All: all.Default value:All.
+         * *   all (default)
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

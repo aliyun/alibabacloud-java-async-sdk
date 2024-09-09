@@ -71,6 +71,9 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
     } 
 
     public static class RecycleBinAttribute extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ArchiveSize")
+        private Long archiveSize;
+
         @com.aliyun.core.annotation.NameInMap("EnableTime")
         private String enableTime;
 
@@ -87,6 +90,7 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         private String status;
 
         private RecycleBinAttribute(Builder builder) {
+            this.archiveSize = builder.archiveSize;
             this.enableTime = builder.enableTime;
             this.reservedDays = builder.reservedDays;
             this.secondarySize = builder.secondarySize;
@@ -100,6 +104,13 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
 
         public static RecycleBinAttribute create() {
             return builder().build();
+        }
+
+        /**
+         * @return archiveSize
+         */
+        public Long getArchiveSize() {
+            return this.archiveSize;
         }
 
         /**
@@ -138,11 +149,20 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long archiveSize; 
             private String enableTime; 
             private Long reservedDays; 
             private Long secondarySize; 
             private Long size; 
             private String status; 
+
+            /**
+             * ArchiveSize.
+             */
+            public Builder archiveSize(Long archiveSize) {
+                this.archiveSize = archiveSize;
+                return this;
+            }
 
             /**
              * The time at which the recycle bin was enabled.

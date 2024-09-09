@@ -132,8 +132,10 @@ public class ListDirectoriesAndFilesRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   false (default): queries both directories and files
-         * *   true: queries only directories
+         * *   false (default): queries both directories and files.
+         * *   true: queries only directories.
+         * 
+         * >  If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.
          */
         public Builder directoryOnly(Boolean directoryOnly) {
             this.putQueryParameter("DirectoryOnly", directoryOnly);
@@ -186,10 +188,14 @@ public class ListDirectoriesAndFilesRequest extends Request {
         }
 
         /**
-         * The storage type of the files.
+         * The storage class.
          * <p>
          * 
-         * Default value: InfrequentAccess (IA).
+         * *   InfrequentAccess: the Infrequent Access (IA) storage class.
+         * *   Archive: the Archive storage class.
+         * *   All: all stored data.
+         * 
+         * >  If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

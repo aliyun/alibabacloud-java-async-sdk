@@ -579,7 +579,6 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             /**
              * The dual-stack (IPv4 and IPv6) domain name of the mount target.
              * <p>
-             * 
              * > Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.
              */
             public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
@@ -611,7 +610,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * 
              * *   Active: The mount target is available.
              * *   Inactive: The mount target is unavailable.
-             * *   Pending: The mount target is being created or modified.
+             * *   Pending: The mount target is being processed.
              * *   Deleting: The mount target is being deleted.
              * *   Hibernating: The mount target is being hibernated.
              * *   Hibernated: The mount target is hibernated.
@@ -720,7 +719,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private Boolean enableOplock; 
 
             /**
-             * EnableOplock.
+             * Specifies whether to enable the oplock feature. Valid values:
+             * <p>
+             * 
+             * *   true: enables the feature.
+             * *   false: disables the feature.
+             * 
+             * >  Only Server Message Block (SMB) file systems support this feature.
              */
             public Builder enableOplock(Boolean enableOplock) {
                 this.enableOplock = enableOplock;
@@ -829,9 +834,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * <p>
              * 
              * Valid values:
-             * 
-             * *   ssd: the storage plan for Performance NAS file systems
-             * *   hybrid: the storage plan for Capacity NAS file systems
+             * - ssd: the storage plan for Performance NAS file systems.
+             * - hybrid: the storage plan for Capacity NAS file systems.
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -1384,7 +1388,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AccessPointCount.
+             * Number of access points.
              */
             public Builder accessPointCount(String accessPointCount) {
                 this.accessPointCount = accessPointCount;
@@ -1418,10 +1422,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * <p>
              * 
              * Valid values:
-             * 
-             * *   Subscription: The subscription billing method is used.
-             * *   PayAsYouGo: The pay-as-you-go billing method is used.
-             * *   Package: A storage plan is attached to the file system.
+             * - Subscription: The subscription billing method is used.
+             * - PayAsYouGo: The pay-as-you-go billing method is used.
+             * - Package: A storage plan is attached to the file system.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -1480,11 +1483,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * <p>
              * 
              * Valid values:
-             * 
-             * *   standard: General-purpose NAS file system
-             * *   extreme: Extreme NAS file system
-             * *   cpfs: CPFS file system
-             * 
+             * - standard: General-purpose NAS file system
+             * - extreme: Extreme NAS file system
+             * - cpfs: CPFS file system
              * > CPFS file systems are available only on the China site (aliyun.com).
              */
             public Builder fileSystemType(String fileSystemType) {
@@ -1512,7 +1513,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * MeteredArchiveSize.
+             * Archive storage usage.
+             * <p>
+             * 
+             * Unit: Byte.
              */
             public Builder meteredArchiveSize(Long meteredArchiveSize) {
                 this.meteredArchiveSize = meteredArchiveSize;
@@ -1550,7 +1554,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * Options.
+             * The options.
              */
             public Builder options(Options options) {
                 this.options = options;
@@ -1591,7 +1595,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.
+             * <p>
+             * 
+             * You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups?) to view resource group IDs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1601,13 +1608,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             /**
              * The status of the file system. Valid values:
              * <p>
-             * 
-             * *   Pending: The file system is being created or modified.
-             * *   Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.
-             * *   Stopped: The file system is unavailable.
-             * *   Extending: The file system is being scaled up.
-             * *   Stopping: The file system is being stopped.
-             * *   Deleting: The file system is being deleted.
+             * - Pending: The file system is being created or modified.
+             * - Running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the Running state.
+             * - Stopped: The file system is unavailable.
+             * - Extending: The file system is being scaled up.
+             * - Stopping: The file system is being stopped.
+             * - Deleting: The file system is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1619,12 +1625,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * <p>
              * 
              * Valid values:
-             * 
-             * *   Valid values for General-purpose NAS file systems: Capacity and Performance.
-             * *   Valid values for Extreme NAS file systems: standard and advance.
-             * *   Valid values for CPFS file systems: advance\_100 (100 MB/s/TiB baseline) and advance\_200 (200 MB/s/TiB baseline).
-             * 
-             * > CPFS file systems are available only on the China site (aliyun.com).
+             * - Valid values for General-purpose NAS file systems: Capacity,Premium and Performance.
+             * - Valid values for Extreme NAS file systems: standard and advance.
+             * - Valid values for CPFS file systems: advance_100 (100 MB/s/TiB baseline) and advance_200 (200 MB/s/TiB baseline).
+             *  > CPFS file systems are available only on the China site (aliyun.com).
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -1651,7 +1655,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              * The version number of the file system.
              * <p>
              * 
-             * This parameter is available only for Extreme NAS file systems.
+             * This parameter is available only for Extreme NAS file systems and CPFS file systems.
              */
             public Builder version(String version) {
                 this.version = version;

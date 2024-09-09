@@ -383,18 +383,19 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * Specifies whether to encrypt the data in the NAS file system.
+         * Specifies whether to encrypt data in the file system.
          * <p>
          * 
-         * You can use a key that is managed by Key Management Service (KMS) to encrypt the data that is stored in a file system. When you read and write the encrypted data, the data is automatically decrypted.
+         * You can use the keys that are managed by Key Management Service (KMS) to encrypt data in a file system. When you read and write the encrypted data, the data is automatically decrypted.
          * 
          * Valid values:
          * 
-         * *   0: The data in the file system is not encrypted.
+         * *   0 (default): The data in the file system is not encrypted.
          * *   1: A NAS-managed key is used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to standard or extreme.
-         * *   2: A KMS-managed key is used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to extreme.
+         * *   2: A KMS-managed key is used to encrypt the data in the file system. This value is valid only if the FileSystemType parameter is set to standard or extreme.
          * 
-         * > You can use KMS-managed keys only in the following regions: US (Silicon Valley), US (Virginia), UK (London), Australia (Sydney), Germany (Frankfurt), India (Mumbai), and Singapore.
+         * >  *   Extreme NAS file system: All regions support KMS-managed keys.
+         * > *   General-purpose NAS file system: KMS-managed keys are supported in the following regions: China (Chengdu), China (Qingdao), China (Hohhot), China (Ulanqab), China (Heyuan), China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Shenzhen), China (Guangzhou), China (Hong Kong), Japan (Tokyo), Philippines (Manila), Thailand (Bangkok), Malaysia (Kuala Lumpur), US (Silicon Valley), Indonesia (Jakarta), UK (London), Singapore, US (Virginia), Germany (Frankfurt), Australia (Sydney), and China East 1 Finance.
          */
         public Builder encryptType(Integer encryptType) {
             this.putQueryParameter("EncryptType", encryptType);
@@ -446,7 +447,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
+         * <p>
+         * 
+         * You can log on to the [Resource Management console](https://resourcemanager.console.aliyun.com/resource-groups?) to view resource group IDs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -469,10 +473,10 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * The storage type.
+         * The storage class.
          * <p>
          * 
-         * *   If the FileSystemType parameter is set to standard, you can set the StorageType parameter to Performance or Capacity.
+         * *   If the FileSystemType parameter is set to standard, you can set the StorageType parameter to Performance, Capacity, or Premium.
          * *   If the FileSystemType parameter is set to extreme, you can set the StorageType parameter to standard or advance.
          */
         public Builder storageType(String storageType) {

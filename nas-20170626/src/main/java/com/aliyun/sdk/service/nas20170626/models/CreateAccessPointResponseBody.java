@@ -49,7 +49,7 @@ public class CreateAccessPointResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessPoint.
+         * The access point.
          */
         public Builder accessPoint(AccessPoint accessPoint) {
             this.accessPoint = accessPoint;
@@ -57,7 +57,7 @@ public class CreateAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class CreateAccessPointResponseBody extends TeaModel {
             private String accessPointId; 
 
             /**
-             * AccessPointDomain.
+             * The domain name of the access point.
              */
             public Builder accessPointDomain(String accessPointDomain) {
                 this.accessPointDomain = accessPointDomain;
@@ -117,7 +117,7 @@ public class CreateAccessPointResponseBody extends TeaModel {
             }
 
             /**
-             * AccessPointId.
+             * The ID of the access point.
              */
             public Builder accessPointId(String accessPointId) {
                 this.accessPointId = accessPointId;

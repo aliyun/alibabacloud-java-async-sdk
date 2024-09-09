@@ -78,7 +78,7 @@ public class AddTagsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The details about the tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -132,7 +132,7 @@ public class AddTagsRequest extends Request {
             private String value; 
 
             /**
-             * The key of each tag. The tag includes a TagKey and TagValue. You can add a maximum of 10 tags at a time. You must specify a TagKey. You can leave a TagValue empty.
+             * The key of each tag. A tag consists of a tag key and a tag value. You can add a maximum of 10 tags at a time. The tag key cannot be empty. The tag value can be left empty.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -140,7 +140,7 @@ public class AddTagsRequest extends Request {
             }
 
             /**
-             * The value of each tag. The tag includes a TagKey and TagValue. You can add a maximum of 10 tags at a time. You must specify a TagKey. You can leave a TagValue empty.
+             * The value of each tag. A tag consists of a tag key and a tag value. You can add a maximum of 10 tags at a time. The tag key cannot be empty. The tag value can be left empty.
              */
             public Builder value(String value) {
                 this.value = value;

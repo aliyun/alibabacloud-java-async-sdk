@@ -20,6 +20,10 @@ public class CreateDataFlowTaskRequest extends Request {
     private String conflictPolicy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateDirIfNotExist")
+    private Boolean createDirIfNotExist;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataFlowId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String dataFlowId;
@@ -36,6 +40,10 @@ public class CreateDataFlowTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstDirectory")
+    private String dstDirectory;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EntryList")
@@ -58,10 +66,12 @@ public class CreateDataFlowTaskRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.conflictPolicy = builder.conflictPolicy;
+        this.createDirIfNotExist = builder.createDirIfNotExist;
         this.dataFlowId = builder.dataFlowId;
         this.dataType = builder.dataType;
         this.directory = builder.directory;
         this.dryRun = builder.dryRun;
+        this.dstDirectory = builder.dstDirectory;
         this.entryList = builder.entryList;
         this.fileSystemId = builder.fileSystemId;
         this.srcTaskId = builder.srcTaskId;
@@ -96,6 +106,13 @@ public class CreateDataFlowTaskRequest extends Request {
     }
 
     /**
+     * @return createDirIfNotExist
+     */
+    public Boolean getCreateDirIfNotExist() {
+        return this.createDirIfNotExist;
+    }
+
+    /**
      * @return dataFlowId
      */
     public String getDataFlowId() {
@@ -121,6 +138,13 @@ public class CreateDataFlowTaskRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return dstDirectory
+     */
+    public String getDstDirectory() {
+        return this.dstDirectory;
     }
 
     /**
@@ -154,10 +178,12 @@ public class CreateDataFlowTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDataFlowTaskRequest, Builder> {
         private String clientToken; 
         private String conflictPolicy; 
+        private Boolean createDirIfNotExist; 
         private String dataFlowId; 
         private String dataType; 
         private String directory; 
         private Boolean dryRun; 
+        private String dstDirectory; 
         private String entryList; 
         private String fileSystemId; 
         private String srcTaskId; 
@@ -171,10 +197,12 @@ public class CreateDataFlowTaskRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.conflictPolicy = request.conflictPolicy;
+            this.createDirIfNotExist = request.createDirIfNotExist;
             this.dataFlowId = request.dataFlowId;
             this.dataType = request.dataType;
             this.directory = request.directory;
             this.dryRun = request.dryRun;
+            this.dstDirectory = request.dstDirectory;
             this.entryList = request.entryList;
             this.fileSystemId = request.fileSystemId;
             this.srcTaskId = request.srcTaskId;
@@ -196,11 +224,27 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * ConflictPolicy.
+         * The conflict policy for files with the same name. Valid values:
+         * <p>
+         * 
+         * *   SKIP_THE_FILE: skips files with the same name.
+         * *   KEEP_LATEST: compares the update time and keeps the latest version.
+         * *   OVERWRITE_EXISTING: forcibly overwrites the existing file.
+         * 
+         * >  This parameter does not take effect for CPFS file systems.
          */
         public Builder conflictPolicy(String conflictPolicy) {
             this.putQueryParameter("ConflictPolicy", conflictPolicy);
             this.conflictPolicy = conflictPolicy;
+            return this;
+        }
+
+        /**
+         * CreateDirIfNotExist.
+         */
+        public Builder createDirIfNotExist(Boolean createDirIfNotExist) {
+            this.putQueryParameter("CreateDirIfNotExist", createDirIfNotExist);
+            this.createDirIfNotExist = createDirIfNotExist;
             return this;
         }
 
@@ -230,16 +274,17 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * The directory in which the dataflow task is executed.
+         * The directory in which the data flow task is executed.
          * <p>
          * 
          * Limits:
          * 
-         * *   The directory must be 2 to 1,024 characters in length.
+         * *   The directory must be 1 to 1,023 characters in length.
          * *   The directory must be encoded in UTF-8.
          * *   The directory must start and end with a forward slash (/).
          * *   Only one directory can be listed at a time.
-         * *   The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.
+         * *   If the TaskAction parameter is set to Export, the directory must be a relative path within the FileSystemPath.
+         * *   If the TaskAction parameter is set to Import, the directory must be a relative path within the SourceStoragePath.
          */
         public Builder directory(String directory) {
             this.putQueryParameter("Directory", directory);
@@ -265,14 +310,26 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * The list of files that are executed by the dataflow task.
+         * DstDirectory.
+         */
+        public Builder dstDirectory(String dstDirectory) {
+            this.putQueryParameter("DstDirectory", dstDirectory);
+            this.dstDirectory = dstDirectory;
+            return this;
+        }
+
+        /**
+         * The list of files that are executed by the data flow task.
          * <p>
          * 
          * Limits:
          * 
          * *   The list must be encoded in UTF-8.
+         * *   The total length of the file list cannot exceed 64 KB.
          * *   The file list is in JSON format.
-         * *   If the source storage is Object Storage Service (OSS), the list name must comply with the naming conventions of OSS objects.
+         * *   The path of a single file must be 1 to 1,023 characters in length and must start with a forward slash (/).
+         * *   If the TaskAction parameter is set to Import, each element in the list represents an OSS object name.
+         * *   If the TaskAction parameter is set to Export, each element in the list represents a CPFS file path.
          */
         public Builder entryList(String entryList) {
             this.putQueryParameter("EntryList", entryList);
@@ -282,6 +339,12 @@ public class CreateDataFlowTaskRequest extends Request {
 
         /**
          * The ID of the file system.
+         * <p>
+         * 
+         * *   The IDs of CPFS file systems must start with `cpfs-`. Example: cpfs-125487\*\*\*\*.
+         * *   The IDs of CPFS for LINGJUN file systems must start with `bmcpfs-`. Example: bmcpfs-0015\*\*\*\*.
+         * 
+         * >  CPFS file systems are available only on the China site (aliyun.com).
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -299,7 +362,7 @@ public class CreateDataFlowTaskRequest extends Request {
         }
 
         /**
-         * The type of the dataflow task.
+         * The type of the data flow task.
          * <p>
          * 
          * Valid values:
@@ -307,7 +370,9 @@ public class CreateDataFlowTaskRequest extends Request {
          * *   Import: imports data stored in the source storage to a CPFS file system.
          * *   Export: exports specified data from a CPFS file system to the source storage.
          * *   Evict: releases the data blocks of a file in a CPFS file system. After the eviction, only the metadata of the file is retained in the CPFS file system. You can still query the file. However, the data blocks of the file are cleared and do not occupy the storage space in the CPFS file system. When you access the file data, the file is loaded from the source storage as required.
-         * *   Inventory: obtains the inventory list managed by a dataflow from the CPFS file system, providing the cache status of inventories in the dataflow.
+         * *   Inventory: obtains the inventory list managed by a data flow from the CPFS file system, providing the cache status of inventories in the data flow.
+         * 
+         * >  CPFS for LINGJUN supports only the Import and Export tasks.
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);

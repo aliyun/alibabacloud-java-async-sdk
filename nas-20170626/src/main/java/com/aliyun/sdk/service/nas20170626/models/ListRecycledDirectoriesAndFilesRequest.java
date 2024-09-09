@@ -101,7 +101,7 @@ public class ListRecycledDirectoriesAndFilesRequest extends Request {
          * The ID of the directory that you want to query.
          * <p>
          * 
-         * You can call the [ListRecycleBinJobs](~~264192~~) operation to query the value of the FileId parameter.
+         * You can call the [ListRecentlyRecycledDirectories ](~~2412173~~)operation to query the file ID.
          */
         public Builder fileId(String fileId) {
             this.putQueryParameter("FileId", fileId);

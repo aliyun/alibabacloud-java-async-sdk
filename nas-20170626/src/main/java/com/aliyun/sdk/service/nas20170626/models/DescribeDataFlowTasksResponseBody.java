@@ -90,6 +90,289 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
 
     } 
 
+    public static class ProgressStats extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ActualBytes")
+        private Long actualBytes;
+
+        @com.aliyun.core.annotation.NameInMap("ActualFiles")
+        private Long actualFiles;
+
+        @com.aliyun.core.annotation.NameInMap("AverageSpeed")
+        private Long averageSpeed;
+
+        @com.aliyun.core.annotation.NameInMap("BytesDone")
+        private Long bytesDone;
+
+        @com.aliyun.core.annotation.NameInMap("BytesTotal")
+        private Long bytesTotal;
+
+        @com.aliyun.core.annotation.NameInMap("FilesDone")
+        private Long filesDone;
+
+        @com.aliyun.core.annotation.NameInMap("FilesTotal")
+        private Long filesTotal;
+
+        @com.aliyun.core.annotation.NameInMap("RemainTime")
+        private Long remainTime;
+
+        private ProgressStats(Builder builder) {
+            this.actualBytes = builder.actualBytes;
+            this.actualFiles = builder.actualFiles;
+            this.averageSpeed = builder.averageSpeed;
+            this.bytesDone = builder.bytesDone;
+            this.bytesTotal = builder.bytesTotal;
+            this.filesDone = builder.filesDone;
+            this.filesTotal = builder.filesTotal;
+            this.remainTime = builder.remainTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProgressStats create() {
+            return builder().build();
+        }
+
+        /**
+         * @return actualBytes
+         */
+        public Long getActualBytes() {
+            return this.actualBytes;
+        }
+
+        /**
+         * @return actualFiles
+         */
+        public Long getActualFiles() {
+            return this.actualFiles;
+        }
+
+        /**
+         * @return averageSpeed
+         */
+        public Long getAverageSpeed() {
+            return this.averageSpeed;
+        }
+
+        /**
+         * @return bytesDone
+         */
+        public Long getBytesDone() {
+            return this.bytesDone;
+        }
+
+        /**
+         * @return bytesTotal
+         */
+        public Long getBytesTotal() {
+            return this.bytesTotal;
+        }
+
+        /**
+         * @return filesDone
+         */
+        public Long getFilesDone() {
+            return this.filesDone;
+        }
+
+        /**
+         * @return filesTotal
+         */
+        public Long getFilesTotal() {
+            return this.filesTotal;
+        }
+
+        /**
+         * @return remainTime
+         */
+        public Long getRemainTime() {
+            return this.remainTime;
+        }
+
+        public static final class Builder {
+            private Long actualBytes; 
+            private Long actualFiles; 
+            private Long averageSpeed; 
+            private Long bytesDone; 
+            private Long bytesTotal; 
+            private Long filesDone; 
+            private Long filesTotal; 
+            private Long remainTime; 
+
+            /**
+             * ActualBytes.
+             */
+            public Builder actualBytes(Long actualBytes) {
+                this.actualBytes = actualBytes;
+                return this;
+            }
+
+            /**
+             * ActualFiles.
+             */
+            public Builder actualFiles(Long actualFiles) {
+                this.actualFiles = actualFiles;
+                return this;
+            }
+
+            /**
+             * AverageSpeed.
+             */
+            public Builder averageSpeed(Long averageSpeed) {
+                this.averageSpeed = averageSpeed;
+                return this;
+            }
+
+            /**
+             * BytesDone.
+             */
+            public Builder bytesDone(Long bytesDone) {
+                this.bytesDone = bytesDone;
+                return this;
+            }
+
+            /**
+             * BytesTotal.
+             */
+            public Builder bytesTotal(Long bytesTotal) {
+                this.bytesTotal = bytesTotal;
+                return this;
+            }
+
+            /**
+             * FilesDone.
+             */
+            public Builder filesDone(Long filesDone) {
+                this.filesDone = filesDone;
+                return this;
+            }
+
+            /**
+             * FilesTotal.
+             */
+            public Builder filesTotal(Long filesTotal) {
+                this.filesTotal = filesTotal;
+                return this;
+            }
+
+            /**
+             * RemainTime.
+             */
+            public Builder remainTime(Long remainTime) {
+                this.remainTime = remainTime;
+                return this;
+            }
+
+            public ProgressStats build() {
+                return new ProgressStats(this);
+            } 
+
+        } 
+
+    }
+    public static class Report extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Path")
+        private String path;
+
+        private Report(Builder builder) {
+            this.name = builder.name;
+            this.path = builder.path;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Report create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String path; 
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            public Report build() {
+                return new Report(this);
+            } 
+
+        } 
+
+    }
+    public static class Reports extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Report")
+        private java.util.List < Report> report;
+
+        private Reports(Builder builder) {
+            this.report = builder.report;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Reports create() {
+            return builder().build();
+        }
+
+        /**
+         * @return report
+         */
+        public java.util.List < Report> getReport() {
+            return this.report;
+        }
+
+        public static final class Builder {
+            private java.util.List < Report> report; 
+
+            /**
+             * Report.
+             */
+            public Builder report(java.util.List < Report> report) {
+                this.report = report;
+                return this;
+            }
+
+            public Reports build() {
+                return new Reports(this);
+            } 
+
+        } 
+
+    }
     public static class Task extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConflictPolicy")
         private String conflictPolicy;
@@ -106,8 +389,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Directory")
         private String directory;
 
+        @com.aliyun.core.annotation.NameInMap("DstDirectory")
+        private String dstDirectory;
+
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+        private String errorMsg;
 
         @com.aliyun.core.annotation.NameInMap("FileSystemPath")
         private String fileSystemPath;
@@ -124,8 +413,15 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Progress")
         private Long progress;
 
+        @com.aliyun.core.annotation.NameInMap("ProgressStats")
+        private ProgressStats progressStats;
+
         @com.aliyun.core.annotation.NameInMap("ReportPath")
+        @Deprecated
         private String reportPath;
+
+        @com.aliyun.core.annotation.NameInMap("Reports")
+        private Reports reports;
 
         @com.aliyun.core.annotation.NameInMap("SourceStorage")
         private String sourceStorage;
@@ -148,13 +444,17 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             this.dataFlowId = builder.dataFlowId;
             this.dataType = builder.dataType;
             this.directory = builder.directory;
+            this.dstDirectory = builder.dstDirectory;
             this.endTime = builder.endTime;
+            this.errorMsg = builder.errorMsg;
             this.fileSystemPath = builder.fileSystemPath;
             this.filesystemId = builder.filesystemId;
             this.fsPath = builder.fsPath;
             this.originator = builder.originator;
             this.progress = builder.progress;
+            this.progressStats = builder.progressStats;
             this.reportPath = builder.reportPath;
+            this.reports = builder.reports;
             this.sourceStorage = builder.sourceStorage;
             this.startTime = builder.startTime;
             this.status = builder.status;
@@ -206,10 +506,24 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return dstDirectory
+         */
+        public String getDstDirectory() {
+            return this.dstDirectory;
+        }
+
+        /**
          * @return endTime
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return errorMsg
+         */
+        public String getErrorMsg() {
+            return this.errorMsg;
         }
 
         /**
@@ -248,10 +562,24 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return progressStats
+         */
+        public ProgressStats getProgressStats() {
+            return this.progressStats;
+        }
+
+        /**
          * @return reportPath
          */
         public String getReportPath() {
             return this.reportPath;
+        }
+
+        /**
+         * @return reports
+         */
+        public Reports getReports() {
+            return this.reports;
         }
 
         /**
@@ -295,13 +623,17 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             private String dataFlowId; 
             private String dataType; 
             private String directory; 
+            private String dstDirectory; 
             private String endTime; 
+            private String errorMsg; 
             private String fileSystemPath; 
             private String filesystemId; 
             private String fsPath; 
             private String originator; 
             private Long progress; 
+            private ProgressStats progressStats; 
             private String reportPath; 
+            private Reports reports; 
             private String sourceStorage; 
             private String startTime; 
             private String status; 
@@ -354,10 +686,26 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
+             * DstDirectory.
+             */
+            public Builder dstDirectory(String dstDirectory) {
+                this.dstDirectory = dstDirectory;
+                return this;
+            }
+
+            /**
              * The time when the task ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * ErrorMsg.
+             */
+            public Builder errorMsg(String errorMsg) {
+                this.errorMsg = errorMsg;
                 return this;
             }
 
@@ -410,6 +758,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             }
 
             /**
+             * ProgressStats.
+             */
+            public Builder progressStats(ProgressStats progressStats) {
+                this.progressStats = progressStats;
+                return this;
+            }
+
+            /**
              * null
              * <p>
              * 
@@ -422,6 +778,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
              */
             public Builder reportPath(String reportPath) {
                 this.reportPath = reportPath;
+                return this;
+            }
+
+            /**
+             * Reports.
+             */
+            public Builder reports(Reports reports) {
+                this.reports = reports;
                 return this;
             }
 

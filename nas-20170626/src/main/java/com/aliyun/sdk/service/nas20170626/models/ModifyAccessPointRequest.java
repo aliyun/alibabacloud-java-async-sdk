@@ -111,7 +111,12 @@ public class ModifyAccessPointRequest extends Request {
         } 
 
         /**
-         * AccessGroup.
+         * The name of the permission group.
+         * <p>
+         * 
+         * This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.
+         * 
+         * The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.
          */
         public Builder accessGroup(String accessGroup) {
             this.putQueryParameter("AccessGroup", accessGroup);
@@ -120,7 +125,7 @@ public class ModifyAccessPointRequest extends Request {
         }
 
         /**
-         * AccessPointId.
+         * The ID of the access point.
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -129,7 +134,7 @@ public class ModifyAccessPointRequest extends Request {
         }
 
         /**
-         * AccessPointName.
+         * The name of the access point.
          */
         public Builder accessPointName(String accessPointName) {
             this.putQueryParameter("AccessPointName", accessPointName);
@@ -138,7 +143,13 @@ public class ModifyAccessPointRequest extends Request {
         }
 
         /**
-         * EnabledRam.
+         * Specifies whether to enable the Resource Access Management (RAM) policy. Valid values:
+         * <p>
+         * 
+         * *   true: The RAM policy is enabled.
+         * *   false (default): The RAM policy is disabled.
+         * 
+         * >  After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted.
          */
         public Builder enabledRam(Boolean enabledRam) {
             this.putQueryParameter("EnabledRam", enabledRam);
@@ -147,7 +158,7 @@ public class ModifyAccessPointRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

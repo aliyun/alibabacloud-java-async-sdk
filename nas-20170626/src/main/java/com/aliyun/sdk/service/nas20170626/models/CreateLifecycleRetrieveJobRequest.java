@@ -101,7 +101,11 @@ public class CreateLifecycleRetrieveJobRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage class.
+         * <p>
+         * 
+         * *   InfrequentAccess (default): the Infrequent Access (IA) storage class.
+         * *   Archive: the Archive storage class.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

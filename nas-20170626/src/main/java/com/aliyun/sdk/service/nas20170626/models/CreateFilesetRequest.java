@@ -140,7 +140,13 @@ public class CreateFilesetRequest extends Request {
         }
 
         /**
-         * DeletionProtection.
+         * Specifies whether to enable deletion protection to allow you to release the fileset by using the console or by calling the [DeleteFileset](~~2402263~~) operation.
+         * <p>
+         * 
+         * *   true: enables release protection.
+         * *   false (default): disables release protection.
+         * 
+         * >  This parameter can protect filesets only against manual releases, but not against automatic releases.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -170,7 +176,7 @@ public class CreateFilesetRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   true: performs a dry run. The system checks the required parameters, request syntax, limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FsetId parameter.
+         * *   true: performs a dry run. The system checks the required parameters, request syntax, service limits, and available Apsara File Storage NAS (NAS) resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the FsetId parameter.
          * *   false (default): performs a dry run and sends the request. If the request passes the dry run, a fileset is created.
          */
         public Builder dryRun(Boolean dryRun) {

@@ -69,7 +69,7 @@ public class DeleteAccessPointRequest extends Request {
         } 
 
         /**
-         * AccessPointId.
+         * The ID of the access point.
          */
         public Builder accessPointId(String accessPointId) {
             this.putQueryParameter("AccessPointId", accessPointId);
@@ -78,7 +78,7 @@ public class DeleteAccessPointRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);

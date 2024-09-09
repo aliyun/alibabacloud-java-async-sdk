@@ -280,7 +280,7 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Paths.
+             * The absolute paths to multiple directories associated with the lifecycle policy.
              */
             public Builder paths(java.util.List < String > paths) {
                 this.paths = paths;

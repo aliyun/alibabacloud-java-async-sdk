@@ -157,7 +157,13 @@ public class DescribeLifecyclePoliciesRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * The storage class.
+         * <p>
+         * 
+         * *   InfrequentAccess: the Infrequent Access (IA) storage class.
+         * *   Archive: the Archive storage class.
+         * 
+         * >  If the StorageType parameter is not specified, data retrieval tasks of all types are returned.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);

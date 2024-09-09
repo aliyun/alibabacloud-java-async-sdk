@@ -44,6 +44,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * @deprecated
       * The API operation is available only for CPFS file systems.
       *
      */
@@ -62,13 +63,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Limits
-      * *   Each tag includes a TagKey and a TagValue.
-      * *   Placeholders at the start and end of each TagKey and TagValue are automatically removed. These placeholders include the spacebar ( ), tab (\\t), line break (\\n), and carriage return (\\r).
-      * *   You must specify a TagKey. You can leave a TagValue empty.
-      * *   A TagKey and TagValue are not case-sensitive.
-      * *   A TagKey can be a maximum of 64 characters in length. A TagValue can be a maximum of 128 characters in length.
-      * *   You can add a maximum of 10 tags to a file system at a time. If you add two tags with the same TagKey, the new tag added will overwrite the existing tag.
+      * @deprecated
+      * >  The tag feature has been upgraded and this document will be unpublished. For more information, see TagResources.
+      * *   Each tag consists of a tag key (TagKey) and a tag value (TagValue).
+      * *   Placeholders at the start and end of each TagKey and TagValue are automatically removed. Placeholders include the spacebar ( ), tab (\\t), line break (\\n), and carriage return (\\r).
+      * *   You must specify a tag key. You can leave a tag value empty.
+      * *   The tag key and tag value are not case-sensitive.
+      * *   A tag key can be up to 64 characters in length and a tag value can be up to 128 characters in length.
+      * *   You can add a maximum of 10 tags to a file system. If you add two tags with the same tag key, the newly added tag will overwrite the existing tag.
       * *   If you remove a tag from all linked file systems, the tag is automatically deleted.
       *
      */
@@ -282,6 +284,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   After you call the CreateAccessPoint operation, an access point is not immediately created. Therefore, after you perform the CreateAccessPoint operation successfully, call the DescribeAccessPoints or DescribeAccessPoint operation to query the status of the access point. If the status is **Active**, mount the file system. Otherwise, the file system may fail to be mounted.
+      * *   Only General-purpose Network File System (NFS) file systems support this operation.
+      * *   If you want to perform the EnabledRam operation to enable a Resource Access Management (RAM) policy, you must configure the corresponding RAM permissions. For more information, see [Manage endpoints](~~2545998~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateAccessPointResponse> createAccessPoint(CreateAccessPointRequest request) {
         try {
@@ -338,41 +346,59 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   Billing
-      *     *   If you create a dataflow, you are charged for using the dataflow throughput. For more information, see [Billing methods and billable items of CPFS](~~111858~~).
-      *     *   When you configure the AutoRefresh feature for a dataflow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see [Billing of EventBridge](~~163752~~).
-      * *   Dataflow specifications
-      *     *   The dataflow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The dataflow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a dataflow.
-      *     *   When you create a dataflow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.
-      *     *   Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the dataflow whose throughput is changed meet the requirements.
-      * *   Fileset
-      *     *   The destination for a dataflow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.
-      *     *   When you create a dataflow, the related fileset must already exist and cannot be nested with other filesets. Only one dataflow can be created in a fileset, which corresponds to one source storage.
-      *     *   A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the `no space` error message is returned when you add new files.
-      *     **
-      *     **Note** If data already exists in the fileset, after you create a dataflow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.
-      * *   Source storage
-      *     *   The source storage is an OSS bucket. SourceStorage for a dataflow must be an OSS bucket. The prefix of an OSS bucket is not supported.
-      *     *   CPFS dataflows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
-      *     *   If dataflows for multiple CPFS file systems or multiple dataflows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.
-      *     *   Dataflows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
-      *         **
-      *         **Note** Before you create a dataflow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created dataflow can access the data in the OSS bucket. When a dataflow is being used, do not delete or modify the tag. Otherwise, the dataflow for CPFS cannot access the data in the OSS bucket.
-      * *   AutoRefresh
-      *     *   After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a dataflow task to load the updated data.
-      *     *   AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first [activate EventBridge](~~182246~~).
-      *     *   The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a dataflow.
-      *     *   AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS dataflow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the dataflow status becomes `Misconfigured`. To resolve these issues, you can increase the dataflow specifications or reduce the frequency of triggering the object modification event.
-      *     *   When you add an AutoRefresh configuration to the prefix for a CPFS dataflow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS dataflow.
-      *     **
-      *     **Note** The event buses and event rules created for CPFS in the EventBridge console contain the `Create for cpfs auto refresh` description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly
-      * *   Permissions
-      *     When you create a dataflow, CPFS obtains two service-linked roles: `AliyunServiceRoleForNasOssDataflow` and `AliyunServiceRoleForNasEventNotification`. For more information, see [CPFS service-linked roles](~~185138~~).
       * *   Basic operations
-      *     *   Only CPFS V2.2.0 and later support dataflows.
-      *     *   You can create a dataflow only if the CPFS file system is in the Running state.
-      *     *   A maximum of 10 dataflows can be created for a CPFS file system.
-      *     *   It generally takes 2 to 5 minutes to create a dataflow. You can call the DescribeDataFlows operation to check whether the dataflow has been created.
+      *     *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows.
+      *     *   You can create a data flow only when a CPFS or CPFS for LINGJUN file system is in the Running state.
+      *     *   A maximum of 10 data flows can be created for a CPFS or CPFS for LINGJUN file system.
+      *     *   It generally takes 2 to 5 minutes to create a data flow. You can call the DescribeDataFlows operation to check whether the data flow has been created.
+      * *   Permissions
+      *     When you create a data flow, CPFS obtains the following two service-linked roles: `AliyunServiceRoleForNasOssDataflow` and `AliyunServiceRoleForNasEventNotification`. For more information, see [CPFS service-linked roles](~~185138~~).
+      * *   CPFS usage notes
+      *     *   Billing
+      *         *   If you create a data flow, you are charged for using the data flow throughput. For more information, see [Billing of CPFS](~~111858~~).
+      *         *   When you configure the AutoRefresh feature for a data flow, CPFS must use EventBridge to collect object modification events from the source Object Storage Service (OSS) bucket. Event fees are incurred. For more information, see [Billing of EventBridge](~~163752~~).
+      *     *   Data flow specifications
+      *         *   The data flow throughput supports the following specifications: 600 MB/s, 1,200 MB/s, and 1,500 MB/s. The data flow throughput is the maximum transmission bandwidth that can be reached when data is imported or exported for a data flow.
+      *         *   When you create a data flow, the vSwitch IP addresses used by a CPFS mount target are consumed. Make sure that the vSwitch can provide sufficient IP addresses.
+      *         *   Inventory query: If you set the DryRun parameter to true, you can check whether the resources for the data flow whose throughput is changed meet the requirements.
+      *     *   Fileset
+      *         *   The destination for a data flow is a fileset in the CPFS file system. A fileset is a new directory tree structure (a small file directory) in a CPFS file system. Each fileset independently manages an inode space.
+      *         *   When you create a data flow for a CPFS file system, the related fileset must already exist and cannot be nested with other filesets. Only one data flow can be created in a fileset, which corresponds to one source storage.
+      *         *   A fileset supports a maximum of one million files. If the number of files imported from an OSS bucket into the fileset exceeds the upper limit, the `no space` error message is returned when you add new files.
+      *      >   If data already exists in the fileset, after you create a data flow, the existing data in the fileset is cleared and replaced with the data synchronized from the OSS bucket.
+      *     *   AutoRefresh
+      *         *   After AutoRefresh is configured, if the data in the source OSS bucket is updated, the updated metadata is automatically synchronized to the CPFS file system. You can load the updated data when you access files, or run a data flow task to load the updated data.
+      *         *   AutoRefresh depends on the object modification events collected by EventBridge from the source OSS bucket. You must first [activate EventBridge](~~182246~~).
+      *         *   The AutoRefresh configuration applies only to the prefix and is specified by the RefreshPath parameter. You can configure a maximum of five AutoRefresh directories for a data flow.
+      *         *   AutoRefreshInterval refers to the interval at which CPFS checks whether data is updated in the prefix of the source OSS bucket. If data is updated, CPFS runs an AutoRefresh task. If the frequency of triggering the object modification event in the source OSS bucket exceeds the processing capability of the CPFS data flow, AutoRefresh tasks are accumulated, metadata updates are delayed, and the data flow status becomes `Misconfigured`. To resolve these issues, you can increase the data flow specifications or reduce the frequency of triggering the object modification event.
+      *         *   When you add an AutoRefresh configuration to the prefix for a CPFS data flow, an event bus is created at the user side and an event rule is created for the prefix of the source OSS bucket. When an object is modified in the prefix of the source OSS bucket, an OSS event is generated in the EventBridge console. The event is processed by the CPFS data flow.
+      *         > The event buses and event rules created for CPFS in the EventBridge console contain the `Create for cpfs auto refresh` description. The event buses and event rules cannot be modified or deleted. Otherwise, AutoRefresh cannot work properly.
+      *     *   Source storage
+      *         *   The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.
+      *         *   CPFS data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
+      *         *   If data flows for multiple CPFS file systems or multiple data flows for the same CPFS file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS file systems to one OSS bucket.
+      *         *   Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
+      *          >  Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS cannot access the data in the OSS bucket.
+      * *   CPFS for LINGJUN usage notes
+      *     *   Source storage
+      *         *   The source storage is an OSS bucket. SourceStorage for a data flow must be an OSS bucket.
+      *         *   CPFS for LINGJUN data flows support both encrypted and unencrypted access to OSS. If you select SSL-encrypted access to OSS, make sure that encryption in transit for OSS buckets supports encrypted access.
+      *         *   If data flows for multiple CPFS for LINGJUN file systems or multiple data flows for the same CPFS for LINGJUN file system are stored in the same OSS bucket, you must enable versioning for the OSS bucket to prevent data conflicts caused by data export from multiple CPFS for LINGJUN file systems to one OSS bucket.
+      *         *   Data flows are not supported for OSS buckets across regions. The OSS bucket must reside in the same region as the CPFS file system.
+      *         > Before you create a data flow, you must configure a tag (key: cpfs-dataflow, value: true) for the source OSS bucket. This way, the created data flow can access the data in the OSS bucket. When a data flow is being used, do not delete or modify the tag. Otherwise, the data flow for CPFS for LINGJUN cannot access the data in the OSS bucket.
+      *     *   Limits of data flows on file systems
+      *         *   You cannot rename a non-empty directory in a path that is associated with a data flow. Otherwise, the Permission Denied error message or an error message indicating that the directory is not empty is returned.
+      *         *   Proceed with caution when you use special characters in the names of directories and files. The following characters are supported: letters, digits, exclamation points (!), hyphens (-), underscores (\\_), periods (.), asterisks (\\*), and parentheses (()).
+      *         *   The path can be up to 1,023 characters in length.
+      *     *   Limits of data flows on import
+      *         *   After a symbolic link is imported to CPFS for LINGJUN, the symbolic link is converted into a common data file that contains no symbolic link information.
+      *         *   If an OSS bucket has multiple versions, only data of the latest version is used.
+      *         *   The name of a file or a subdirectory can be up to 255 bytes in length.
+      *     *   Limits of data flows on export
+      *         *   After a symbolic link is synchronized to OSS, the file that the symbolic link points to is not synchronized to OSS. In this case, the symbolic link is converted into a common object that contains no data.
+      *         *   Hard links can be synchronized to OSS only as common files that contain no link information.
+      *         *   After a file of the Socket, Device, or Pipe type is exported to an OSS bucket, the file is converted into a common object that contains no data.
+      *         *   The directory path can be up to 1,023 characters in length.
       *
      */
     @Override
@@ -390,11 +416,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-      * *   Dataflow tasks can be created only in CPFS V2.2.0 and later. You can view the version information on the file system details page in the console.
-      * *   You can create a dataflow task only for a dataflow that is in the Running state.
-      * *   Dataflow tasks are executed asynchronously. You can call the [DescribeDataFlowTasks](~~336914~~) operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.
-      * *   When you manually run a dataflow task, the automatic data update task for the dataflow is interrupted and enters the pending state.
+      * *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.
+      * *   You can create a data flow task only for a data flow that is in the Running state.
+      * *   Data flow tasks are executed asynchronously. You can call the [DescribeDataFlowTasks](~~336914~~) operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.
+      * *   When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.
+      * *   When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.
       *
      */
     @Override
@@ -411,6 +437,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Only General-purpose Network File System (NFS) file systems support this operation.
+      *
+     */
     @Override
     public CompletableFuture<CreateDirResponse> createDir(CreateDirRequest request) {
         try {
@@ -669,7 +699,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/zh/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
+      * *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
       * *   Only advanced Extreme NAS file systems support the snapshot feature.
       * *   You can create a maximum of 128 snapshots for a file system.
       * *   The compute node on which a file system is mounted must function as expected. Otherwise, you cannot create a snapshot for the file system.
@@ -712,6 +742,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   Only General-purpose Network File System (NFS) file systems support access points.
+      * *   After an access point is deleted, all I/O operations that are being performed on the directory accessed over the access point are interrupted immediately. Exercise caution when you perform this operation.
+      *
+     */
     @Override
     public CompletableFuture<DeleteAccessPointResponse> deleteAccessPoint(DeleteAccessPointRequest request) {
         try {
@@ -958,6 +993,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Only General-purpose Network File System (NFS) file systems support this operation.
+      *
+     */
     @Override
     public CompletableFuture<DescribeAccessPointResponse> describeAccessPoint(DescribeAccessPointRequest request) {
         try {
@@ -972,6 +1011,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Only General-purpose Network File System (NFS) file systems support this operation.
+      *
+     */
     @Override
     public CompletableFuture<DescribeAccessPointsResponse> describeAccessPoints(DescribeAccessPointsRequest request) {
         try {
@@ -1039,6 +1082,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * @deprecated
       * The API operation is available only for CPFS file systems.
       *
      */
@@ -1077,9 +1121,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
-      * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
-      * *   In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath and Description support fuzzy match.
+      * *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.
+      * *   In Filters, FsetIds, DataFlowlds, SourceStorage, ThroughputList, and Status support exact match only. FileSystemPath, Description, and SourceStoragePath support fuzzy match.
       * *   Combined query is supported.
       *
      */
@@ -1603,6 +1646,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Only General-purpose Network File System (NFS) file systems support this operation.
+      *
+     */
     @Override
     public CompletableFuture<ModifyAccessPointResponse> modifyAccessPoint(ModifyAccessPointRequest request) {
         try {
@@ -1680,6 +1727,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
+      * *   Only CPFS V2.2.0 and later support dataflows. You can view the version information on the file system details page in the console.
+      * *   You can modify the AutoRefresh configurations only for the dataflows that are in the `Running` or `Stopped` state.
+      * *   It generally takes 2 to 5 minutes to modify an AutoRefresh configuration. You can call the [DescribeDataFlows](~~336901~~) operation to query the task of modifying an AutoRefresh configuration.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDataFlowAutoRefreshResponse> modifyDataFlowAutoRefresh(ModifyDataFlowAutoRefreshRequest request) {
         try {
@@ -1728,7 +1782,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * #
+      * The API operation is available only for Cloud Parallel File Storage (CPFS) file systems.
       *
      */
     @Override
@@ -1842,6 +1896,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * @deprecated
       * The IP address of a client to remove from the blacklist.
       *
      */
@@ -1860,7 +1915,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is returned.
+      * @deprecated
+      * >  The tag feature has been upgraded and this document will be unpublished. For more information, see UntagResources.
+      * A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is still returned.
       *
      */
     @Override

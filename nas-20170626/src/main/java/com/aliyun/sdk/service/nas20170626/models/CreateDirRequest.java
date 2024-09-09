@@ -128,7 +128,7 @@ public class CreateDirRequest extends Request {
         } 
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -137,7 +137,7 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * OwnerGroupId.
+         * The ID of the owner group for the directory. Valid values: 0 to 4294967295.
          */
         public Builder ownerGroupId(Integer ownerGroupId) {
             this.putQueryParameter("OwnerGroupId", ownerGroupId);
@@ -146,7 +146,7 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * OwnerUserId.
+         * The owner ID for the directory. Valid values: 0 to 4294967295.
          */
         public Builder ownerUserId(Integer ownerUserId) {
             this.putQueryParameter("OwnerUserId", ownerUserId);
@@ -155,7 +155,7 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * Permission.
+         * The Portable Operating System Interface (POSIX) permissions applied to the root directory. The value is a valid octal number, such as 0755.
          */
         public Builder permission(String permission) {
             this.putQueryParameter("Permission", permission);
@@ -164,7 +164,11 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * Recursion.
+         * Specifies whether to create a multi-level directory. Valid values:
+         * <p>
+         * 
+         * *   true (default): If no multi-level directory exists, directories are created level by level.
+         * *   false: Only the last level of directory is created. An error message is returned because the parent directory does not exist.
          */
         public Builder recursion(Boolean recursion) {
             this.putQueryParameter("Recursion", recursion);
@@ -173,7 +177,16 @@ public class CreateDirRequest extends Request {
         }
 
         /**
-         * RootDirectory.
+         * The directory name.
+         * <p>
+         * 
+         * *   The directory must start with a forward slash (/).
+         * *   The directory can contain digits and letters.
+         * *   The directory can contain underscores (\_), hyphens (-), and periods (.).
+         * *   The directory cannot contain symbolic links, such as the current directory (.), the upper-level directory (..), and other symbolic links.
+         * 
+         * > *   If the root directory does not exist, configure the information for directory creation. The system then automatically creates the specified root directory based on your settings.
+         * > *  If the root directory exists, you do not need to configure the information for directory creation. The configurations for directory creation are ignored even if you configure the information.
          */
         public Builder rootDirectory(String rootDirectory) {
             this.putQueryParameter("RootDirectory", rootDirectory);

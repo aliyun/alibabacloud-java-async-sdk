@@ -261,7 +261,7 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code.
+             * The error code returned.
              * <p>
              * 
              * A valid value is returned only if you set the Status parameter to Fail or PartialSuccess.

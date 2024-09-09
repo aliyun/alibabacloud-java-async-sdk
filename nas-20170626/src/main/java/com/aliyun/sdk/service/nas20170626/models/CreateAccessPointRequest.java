@@ -225,7 +225,12 @@ public class CreateAccessPointRequest extends Request {
         } 
 
         /**
-         * AccessGroup.
+         * The name of the permission group.
+         * <p>
+         * 
+         * This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.
+         * 
+         * The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.
          */
         public Builder accessGroup(String accessGroup) {
             this.putQueryParameter("AccessGroup", accessGroup);
@@ -234,7 +239,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * AccessPointName.
+         * The name of the access point.
          */
         public Builder accessPointName(String accessPointName) {
             this.putQueryParameter("AccessPointName", accessPointName);
@@ -243,7 +248,13 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * EnabledRam.
+         * Specifies whether to enable the RAM policy. Valid values:
+         * <p>
+         * 
+         * *   true: The RAM policy is enabled.
+         * *   false (default): The RAM policy is disabled.
+         * 
+         * >  After the RAM policy is enabled for access points, no RAM user is allowed to use access points to mount and access data by default. To use access points to mount and access data as a RAM user, you must grant the related access permissions to the RAM user. If the RAM policy is disabled, access points can be anonymously mounted.
          */
         public Builder enabledRam(Boolean enabledRam) {
             this.putQueryParameter("EnabledRam", enabledRam);
@@ -252,7 +263,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -261,7 +272,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * OwnerGroupId.
+         * The ID of the owner group.
+         * <p>
+         * 
+         * This parameter is required if the RootDirectory directory does not exist.
          */
         public Builder ownerGroupId(Integer ownerGroupId) {
             this.putQueryParameter("OwnerGroupId", ownerGroupId);
@@ -270,7 +284,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * OwnerUserId.
+         * The owner ID.
+         * <p>
+         * 
+         * This parameter is required if the RootDirectory directory does not exist.
          */
         public Builder ownerUserId(Integer ownerUserId) {
             this.putQueryParameter("OwnerUserId", ownerUserId);
@@ -279,7 +296,10 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * Permission.
+         * The Portable Operating System Interface for UNIX (POSIX) permission. Default value: 0777.
+         * <p>
+         * 
+         * This field takes effect only if you specify the OwnerUserId and OwnerGroupId parameters.
          */
         public Builder permission(String permission) {
             this.putQueryParameter("Permission", permission);
@@ -288,7 +308,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * PosixGroupId.
+         * The ID of the POSIX user group.
          */
         public Builder posixGroupId(Integer posixGroupId) {
             this.putQueryParameter("PosixGroupId", posixGroupId);
@@ -297,7 +317,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * PosixSecondaryGroupIds.
+         * The secondary user group. Separate multiple user group IDs with commas (,).
          */
         public Builder posixSecondaryGroupIds(String posixSecondaryGroupIds) {
             this.putQueryParameter("PosixSecondaryGroupIds", posixSecondaryGroupIds);
@@ -306,7 +326,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * PosixUserId.
+         * The ID of the POSIX user.
          */
         public Builder posixUserId(Integer posixUserId) {
             this.putQueryParameter("PosixUserId", posixUserId);
@@ -315,7 +335,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * RootDirectory.
+         * The root directory of the access point. The default value is /. If the directory does not exist, you must also specify the OwnerUserId and OwnerGroupId parameters.
          */
         public Builder rootDirectory(String rootDirectory) {
             this.putQueryParameter("RootDirectory", rootDirectory);
@@ -324,7 +344,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The VPC ID.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -333,7 +353,7 @@ public class CreateAccessPointRequest extends Request {
         }
 
         /**
-         * VswId.
+         * The vSwitch ID.
          */
         public Builder vswId(String vswId) {
             this.putQueryParameter("VswId", vswId);

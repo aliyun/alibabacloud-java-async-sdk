@@ -273,7 +273,16 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemType.
+             * The type of the file system.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   standard: General-purpose Apsara File Storage NAS (NAS) file system
+             * *   extreme: Extreme NAS file system
+             * *   cpfs: Cloud Parallel File Storage (CPFS) file system
+             * 
+             * >  CPFS file systems are available only on the China site (aliyun.com).
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -289,7 +298,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

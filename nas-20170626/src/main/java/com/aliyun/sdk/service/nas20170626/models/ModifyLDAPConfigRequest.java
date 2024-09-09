@@ -98,7 +98,7 @@ public class ModifyLDAPConfigRequest extends Request {
         } 
 
         /**
-         * BindDN.
+         * The LDAP entry.
          */
         public Builder bindDN(String bindDN) {
             this.putQueryParameter("BindDN", bindDN);
@@ -107,7 +107,7 @@ public class ModifyLDAPConfigRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -116,7 +116,7 @@ public class ModifyLDAPConfigRequest extends Request {
         }
 
         /**
-         * SearchBase.
+         * The LDAP search base.
          */
         public Builder searchBase(String searchBase) {
             this.putQueryParameter("SearchBase", searchBase);
@@ -125,7 +125,7 @@ public class ModifyLDAPConfigRequest extends Request {
         }
 
         /**
-         * URI.
+         * The LDAP service address.
          */
         public Builder URI(String URI) {
             this.putQueryParameter("URI", URI);

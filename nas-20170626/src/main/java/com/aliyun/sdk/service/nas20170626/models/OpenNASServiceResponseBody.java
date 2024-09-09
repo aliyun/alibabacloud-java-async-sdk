@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OpenNASServiceResponseBody</p>
  */
 public class OpenNASServiceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
@@ -18,6 +21,7 @@ public class OpenNASServiceResponseBody extends TeaModel {
     private String requestId;
 
     private OpenNASServiceResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
@@ -28,6 +32,13 @@ public class OpenNASServiceResponseBody extends TeaModel {
 
     public static OpenNASServiceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -45,8 +56,17 @@ public class OpenNASServiceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String orderId; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * The order ID.

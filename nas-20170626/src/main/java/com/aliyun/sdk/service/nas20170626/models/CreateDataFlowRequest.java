@@ -230,7 +230,9 @@ public class CreateDataFlowRequest extends Request {
          * The automatic update interval. CPFS checks whether data is updated in the directory at the interval specified by this parameter. If data is updated, CPFS starts an automatic update task. Unit: minutes.
          * <p>
          * 
-         * Valid values: 5 to 525600. Default value: 10.
+         * Valid values: 10 to 525600. Default value: 10.
+         * 
+         * >  This parameter takes effect only for CPFS file systems.
          */
         public Builder autoRefreshInterval(Long autoRefreshInterval) {
             this.putQueryParameter("AutoRefreshInterval", autoRefreshInterval);
@@ -242,8 +244,10 @@ public class CreateDataFlowRequest extends Request {
          * The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy.
          * <p>
          * 
-         * *   None (default): Updated data in the source storage is not automatically imported into the CPFS file system. You can run a dataflow task to import the updated data from the source storage.
+         * *   None (default): Updated data in the source storage is not automatically imported into the CPFS file system. You can run a data flow task to import the updated data from the source storage.
          * *   ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.
+         * 
+         * >  This parameter takes effect only for CPFS file systems.
          */
         public Builder autoRefreshPolicy(String autoRefreshPolicy) {
             this.putQueryParameter("AutoRefreshPolicy", autoRefreshPolicy);
@@ -253,6 +257,9 @@ public class CreateDataFlowRequest extends Request {
 
         /**
          * The automatic update configurations.
+         * <p>
+         * 
+         * >  This parameter takes effect only for CPFS file systems.
          */
         public Builder autoRefreshs(java.util.List < AutoRefreshs> autoRefreshs) {
             this.putQueryParameter("AutoRefreshs", autoRefreshs);
@@ -309,6 +316,12 @@ public class CreateDataFlowRequest extends Request {
 
         /**
          * The ID of the file system.
+         * <p>
+         * 
+         * *   The IDs of CPFS file systems must start with `cpfs-`. Example: cpfs-125487\*\*\*\*.
+         * *   The IDs of CPFS for LINGJUN file systems must start with `bmcpfs-`. Example: bmcpfs-0015\*\*\*\*.
+         * 
+         * >  CPFS file systems are available only on the China site (aliyun.com).
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -317,7 +330,15 @@ public class CreateDataFlowRequest extends Request {
         }
 
         /**
-         * FileSystemPath.
+         * The directory in the CPFS for LINGJUN file system. Limits:
+         * <p>
+         * 
+         * *   The directory must start and end with a forward slash (/).
+         * *   The directory must be an existing directory in the CPFS for LINGJUN file system.
+         * *   The directory must be 1 to 1023 characters in length.
+         * *   The directory must be encoded in UTF-8.
+         * 
+         * >  This parameter is required for CPFS for LINGJUN file systems.
          */
         public Builder fileSystemPath(String fileSystemPath) {
             this.putQueryParameter("FileSystemPath", fileSystemPath);
@@ -327,6 +348,9 @@ public class CreateDataFlowRequest extends Request {
 
         /**
          * The fileset ID.
+         * <p>
+         * 
+         * >  This parameter is required for CPFS file systems.
          */
         public Builder fsetId(String fsetId) {
             this.putQueryParameter("FsetId", fsetId);
@@ -357,10 +381,9 @@ public class CreateDataFlowRequest extends Request {
          * 
          * *   path: the name of the OSS bucket. Limits:
          * 
-         *     *   The name can contain only lowercase letters, digits, and hyphens (-). The name must start and end with a lowercase letter or digit.
-         *     *   The name must be 8 to 128 characters in length.
-         *     *   The name must be encoded in UTF-8.
-         *     *   The name cannot start with `http://` or `https://`.
+         *     *   The path can contain only lowercase letters, digits, and hyphens (-). The path must start and end with a lowercase letter or digit.
+         *     *   The path can be up to 128 characters in length.
+         *     *   The path must be encoded in UTF-8.
          * 
          * >  The OSS bucket must be an existing bucket in the region.
          */
@@ -371,7 +394,15 @@ public class CreateDataFlowRequest extends Request {
         }
 
         /**
-         * SourceStoragePath.
+         * The access path in the bucket of the source storage. Limits:
+         * <p>
+         * 
+         * *   The path must start and end with a forward slash (/).
+         * *   The path is case-sensitive.
+         * *   The path must be 1 to 1023 characters in length.
+         * *   The path must be encoded in UTF-8.
+         * 
+         * >  This parameter is required for CPFS for LINGJUN file systems.
          */
         public Builder sourceStoragePath(String sourceStoragePath) {
             this.putQueryParameter("SourceStoragePath", sourceStoragePath);
@@ -380,14 +411,14 @@ public class CreateDataFlowRequest extends Request {
         }
 
         /**
-         * The maximum dataflow throughput. Unit: MB/s. Valid values:
+         * The maximum data flow throughput. Unit: MB/s. Valid values:
          * <p>
          * 
          * *   600
-         * *   1,200
-         * *   1,500
+         * *   1200
+         * *   1500
          * 
-         * >  The dataflow throughput must be less than the I/O throughput of the file system
+         * >  The data flow throughput must be less than the I/O throughput of the file system. This parameter is required for CPFS file systems.
          */
         public Builder throughput(Long throughput) {
             this.putQueryParameter("Throughput", throughput);
@@ -440,7 +471,7 @@ public class CreateDataFlowRequest extends Request {
              * *   The directory must be 2 to 1,024 characters in length.
              * *   The directory must be encoded in UTF-8.
              * *   The directory must start and end with a forward slash (/).
-             * *   The directory must be an existing directory in the CPFS file system and must be in a fileset where the dataflow is enabled.
+             * *   The directory must be an existing directory in the CPFS file system and must be in a fileset where the data flow is enabled.
              */
             public Builder refreshPath(String refreshPath) {
                 this.refreshPath = refreshPath;

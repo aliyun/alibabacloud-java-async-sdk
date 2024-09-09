@@ -191,14 +191,14 @@ public class ModifyDataFlowRequest extends Request {
         }
 
         /**
-         * The maximum transmission bandwidth for a dataflow. Unit: MB/s. Valid values:
+         * The maximum data flow throughput. Unit: MB/s. Valid values:
          * <p>
          * 
          * *   600
-         * *   1,200
-         * *   1,500
+         * *   1200
+         * *   1500
          * 
-         * >  The dataflow throughput must be less than the I/O throughput of the file system.
+         * >  The data flow throughput must be less than the I/O throughput of the file system.
          */
         public Builder throughput(Long throughput) {
             this.putQueryParameter("Throughput", throughput);

@@ -295,7 +295,15 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * HasArchiveFile.
+             * Indicates whether the directory contains files stored in the Archive storage class.
+             * <p>
+             * 
+             * This parameter is returned and valid only if the value of the Type parameter is Directory.
+             * 
+             * Valid values:
+             * 
+             * *   true: The directory contains files stored in the Archive storage class.
+             * *   false: The directory does not contain files stored in the Archive storage class.
              */
             public Builder hasArchiveFile(String hasArchiveFile) {
                 this.hasArchiveFile = hasArchiveFile;
@@ -303,15 +311,15 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the directory contains files stored in the IA storage medium.
+             * Indicates whether the directory contains files stored in the IA storage class.
              * <p>
              * 
              * This parameter is returned and valid only if the value of the Type parameter is Directory.
              * 
              * Valid values:
              * 
-             * *   true: The directory contains files stored in the IA storage medium.
-             * *   false: The directory does not contain files stored in the IA storage medium.
+             * *   true: The directory contains files stored in the IA storage class.
+             * *   false: The directory does not contain files stored in the IA storage class.
              */
             public Builder hasInfrequentAccessFile(Boolean hasInfrequentAccessFile) {
                 this.hasInfrequentAccessFile = hasInfrequentAccessFile;
@@ -382,14 +390,15 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage type of the file.
+             * The storage class.
              * <p>
              * 
              * This parameter is returned and valid only if the value of the Type parameter is File.
              * 
              * Valid values:
              * 
-             * *   InfrequentAccess: IA storage medium
+             * *   InfrequentAccess: the IA storage class.
+             * *   Archive: the Archive storage class.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

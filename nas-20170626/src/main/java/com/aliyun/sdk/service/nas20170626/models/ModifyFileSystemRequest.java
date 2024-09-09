@@ -113,7 +113,7 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * Options.
+         * The options.
          */
         public Builder options(Options options) {
             String optionsShrink = shrink(options, "Options", "json");
@@ -156,7 +156,13 @@ public class ModifyFileSystemRequest extends Request {
             private Boolean enableOplock; 
 
             /**
-             * EnableOplock.
+             * Specifies whether to enable the oplock feature. Valid values:
+             * <p>
+             * 
+             * *   true: enables the feature.
+             * *   false: disables the feature.
+             * 
+             * >  Only Server Message Block (SMB) file systems support this feature.
              */
             public Builder enableOplock(Boolean enableOplock) {
                 this.enableOplock = enableOplock;

@@ -78,7 +78,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The details about the tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -132,7 +132,7 @@ public class RemoveTagsRequest extends Request {
             private String value; 
 
             /**
-             * The key (TagKey) of Tag N. Each tag that you want to remove includes a TagKey and TagValue. You can specify 1 to 10 tags at a time. A TagKey cannot be an empty string, but a TagValue can be an empty string.
+             * The key of each tag. Each tag that you want to remove consists of a tag key and a tag value. You can specify 1 to 10 tags at a time. The tag key cannot be empty. The tag value can be left empty.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -140,7 +140,7 @@ public class RemoveTagsRequest extends Request {
             }
 
             /**
-             * The value (TagValue) of Tag N. Each tag that you want to remove includes a TagKey and TagValue. You can specify a maximum of 5 tags at a time. A TagKey cannot be an empty string, but a TagValue can be an empty string.
+             * The value of each tag. Each tag that you want to remove consists of a tag key and a tag value. You can specify a maximum of five tags at a time. The tag key cannot be empty. The tag value can be left empty.
              */
             public Builder value(String value) {
                 this.value = value;

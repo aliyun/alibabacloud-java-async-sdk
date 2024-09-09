@@ -95,7 +95,12 @@ public class DescribeAccessPointsRequest extends Request {
         } 
 
         /**
-         * AccessGroup.
+         * The name of the permission group.
+         * <p>
+         * 
+         * This parameter is required for a General-purpose Apsara File Storage NAS (NAS) file system.
+         * 
+         * The default permission group for virtual private clouds (VPCs) is named DEFAULT_VPC_GROUP_NAME.
          */
         public Builder accessGroup(String accessGroup) {
             this.putQueryParameter("AccessGroup", accessGroup);
@@ -104,7 +109,7 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * FileSystemId.
+         * The ID of the file system.
          */
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
@@ -113,7 +118,10 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of results for each query.
+         * <p>
+         * 
+         * Valid values: 10 to 100. Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -122,7 +130,7 @@ public class DescribeAccessPointsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

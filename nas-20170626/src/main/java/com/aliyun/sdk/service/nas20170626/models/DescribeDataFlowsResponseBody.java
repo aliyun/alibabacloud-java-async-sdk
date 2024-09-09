@@ -61,7 +61,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about dataflows.
+         * The details about data flows.
          */
         public Builder dataFlowInfo(DataFlowInfo dataFlowInfo) {
             this.dataFlowInfo = dataFlowInfo;
@@ -402,6 +402,9 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
 
             /**
              * The details about automatic update policies.
+             * <p>
+             * 
+             * >  Only CPFS supports this parameter.
              */
             public Builder autoRefresh(DataFlowAutoRefresh autoRefresh) {
                 this.autoRefresh = autoRefresh;
@@ -413,6 +416,8 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
              * <p>
              * 
              * Valid values: 5 to 526600. Default value: 10.
+             * 
+             * >  Only CPFS supports this parameter.
              */
             public Builder autoRefreshInterval(Long autoRefreshInterval) {
                 this.autoRefreshInterval = autoRefreshInterval;
@@ -423,8 +428,10 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
              * The automatic update policy. The updated data in the source storage is imported into the CPFS file system based on the policy. Valid values:
              * <p>
              * 
-             * *   None: Updated data in the source storage is not automatically imported to the CPFS file system. You can run a dataflow task to import the updated data from the source storage.
-             * *   ImportChanged: Updated data in the source storage is automatically imported to the CPFS file system.
+             * *   None: Updated data in the source storage is not automatically imported into the CPFS file system. You can run a data flow task to import the updated data from the source storage.
+             * *   ImportChanged: Updated data in the source storage is automatically imported into the CPFS file system.
+             * 
+             * >  Only CPFS supports this parameter.
              */
             public Builder autoRefreshPolicy(String autoRefreshPolicy) {
                 this.autoRefreshPolicy = autoRefreshPolicy;
@@ -496,6 +503,8 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
              * *   The directory must be encoded in UTF-8.
              * *   The directory must start and end with a forward slash (/).
              * *   The directory must be a fileset directory in the CPFS file system.
+             * 
+             * >  Only CPFS supports this parameter.
              */
             public Builder fileSystemPath(String fileSystemPath) {
                 this.fileSystemPath = fileSystemPath;
@@ -504,6 +513,9 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
 
             /**
              * The description of the automatic update.
+             * <p>
+             * 
+             * >  Only CPFS supports this parameter.
              */
             public Builder fsetDescription(String fsetDescription) {
                 this.fsetDescription = fsetDescription;
@@ -531,12 +543,12 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * The access path of the source storage. Format:://.
+             * The access path of the source storage. Format: `<storage type>://<path>`.
              * <p>
              * 
              * Parameters:
              * 
-             * *   storage type: Only OSS is supported.
+             * *   storage type: Only Object Storage Service (OSS) is supported.
              * 
              * *   path: the name of the OSS bucket.
              * 
@@ -553,7 +565,10 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * 源端存储内的访问路径。
+             * The access path in the bucket of the source storage.
+             * <p>
+             * 
+             * >  Only CPFS for LINGJUN supports this parameter.
              */
             public Builder sourceStoragePath(String sourceStoragePath) {
                 this.sourceStoragePath = sourceStoragePath;
