@@ -154,6 +154,67 @@ public class ListGatewayResponseBody extends TeaModel {
 
     } 
 
+    public static class EnableScaleTimePolicyList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        private String endTime;
+
+        @com.aliyun.core.annotation.NameInMap("StartTime")
+        private String startTime;
+
+        private EnableScaleTimePolicyList(Builder builder) {
+            this.endTime = builder.endTime;
+            this.startTime = builder.startTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EnableScaleTimePolicyList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endTime
+         */
+        public String getEndTime() {
+            return this.endTime;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
+        }
+
+        public static final class Builder {
+            private String endTime; 
+            private String startTime; 
+
+            /**
+             * EndTime.
+             */
+            public Builder endTime(String endTime) {
+                this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            public EnableScaleTimePolicyList build() {
+                return new EnableScaleTimePolicyList(this);
+            } 
+
+        } 
+
+    }
     public static class TimePolicyList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DesiredReplica")
         private Integer desiredReplica;
@@ -242,6 +303,12 @@ public class ListGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ElasticType")
         private String elasticType;
 
+        @com.aliyun.core.annotation.NameInMap("EnableScaleTimePolicyList")
+        private java.util.List < EnableScaleTimePolicyList> enableScaleTimePolicyList;
+
+        @com.aliyun.core.annotation.NameInMap("LoadWarningThreshold")
+        private Boolean loadWarningThreshold;
+
         @com.aliyun.core.annotation.NameInMap("MaxReplica")
         private Integer maxReplica;
 
@@ -251,6 +318,8 @@ public class ListGatewayResponseBody extends TeaModel {
         private ElasticPolicy(Builder builder) {
             this.elastic = builder.elastic;
             this.elasticType = builder.elasticType;
+            this.enableScaleTimePolicyList = builder.enableScaleTimePolicyList;
+            this.loadWarningThreshold = builder.loadWarningThreshold;
             this.maxReplica = builder.maxReplica;
             this.timePolicyList = builder.timePolicyList;
         }
@@ -278,6 +347,20 @@ public class ListGatewayResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableScaleTimePolicyList
+         */
+        public java.util.List < EnableScaleTimePolicyList> getEnableScaleTimePolicyList() {
+            return this.enableScaleTimePolicyList;
+        }
+
+        /**
+         * @return loadWarningThreshold
+         */
+        public Boolean getLoadWarningThreshold() {
+            return this.loadWarningThreshold;
+        }
+
+        /**
          * @return maxReplica
          */
         public Integer getMaxReplica() {
@@ -294,6 +377,8 @@ public class ListGatewayResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean elastic; 
             private String elasticType; 
+            private java.util.List < EnableScaleTimePolicyList> enableScaleTimePolicyList; 
+            private Boolean loadWarningThreshold; 
             private Integer maxReplica; 
             private java.util.List < TimePolicyList> timePolicyList; 
 
@@ -313,6 +398,22 @@ public class ListGatewayResponseBody extends TeaModel {
              */
             public Builder elasticType(String elasticType) {
                 this.elasticType = elasticType;
+                return this;
+            }
+
+            /**
+             * EnableScaleTimePolicyList.
+             */
+            public Builder enableScaleTimePolicyList(java.util.List < EnableScaleTimePolicyList> enableScaleTimePolicyList) {
+                this.enableScaleTimePolicyList = enableScaleTimePolicyList;
+                return this;
+            }
+
+            /**
+             * LoadWarningThreshold.
+             */
+            public Builder loadWarningThreshold(Boolean loadWarningThreshold) {
+                this.loadWarningThreshold = loadWarningThreshold;
                 return this;
             }
 

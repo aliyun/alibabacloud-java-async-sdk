@@ -83,7 +83,7 @@ public class DeletePluginConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -92,7 +92,7 @@ public class DeletePluginConfigRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -101,7 +101,7 @@ public class DeletePluginConfigRequest extends Request {
         }
 
         /**
-         * PluginConfigId.
+         * The plug-in configuration ID.
          */
         public Builder pluginConfigId(Long pluginConfigId) {
             this.putQueryParameter("PluginConfigId", pluginConfigId);

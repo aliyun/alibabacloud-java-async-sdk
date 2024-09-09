@@ -123,7 +123,7 @@ public class GatewayBlackWhiteListRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -132,7 +132,7 @@ public class GatewayBlackWhiteListRequest extends Request {
         }
 
         /**
-         * DescSort.
+         * This parameter is unavailable for public use.
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -141,7 +141,7 @@ public class GatewayBlackWhiteListRequest extends Request {
         }
 
         /**
-         * parse from filterParams
+         * The filter parameters.
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -151,7 +151,7 @@ public class GatewayBlackWhiteListRequest extends Request {
         }
 
         /**
-         * OrderItem.
+         * This parameter is unavailable for public use.
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -160,7 +160,7 @@ public class GatewayBlackWhiteListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -169,7 +169,7 @@ public class GatewayBlackWhiteListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 1.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -283,7 +283,7 @@ public class GatewayBlackWhiteListRequest extends Request {
             private String type; 
 
             /**
-             * GatewayId.
+             * The gateway ID.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -291,7 +291,7 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway. If this parameter is used together with the GatewayId parameter, the value of the GatewayId parameter is used.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -299,7 +299,7 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * IsWhite.
+             * This parameter is unavailable for public use.
              */
             public Builder isWhite(Boolean isWhite) {
                 this.isWhite = isWhite;
@@ -307,7 +307,7 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * ResourceType.
+             * This parameter is unavailable for public use.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -315,7 +315,7 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * SearchContent.
+             * The content that you want to query.
              */
             public Builder searchContent(String searchContent) {
                 this.searchContent = searchContent;
@@ -323,7 +323,12 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * SearchType.
+             * The query type. Valid values:
+             * <p>
+             * 
+             * *   ROUTE: The list is queried by route. If the value of this parameter is ROUTE, set the SearchContent parameter to the route name.
+             * *   DOMAIN: The list is queried by domain name. If the value of this parameter is DOMAIN, set the SearchContent parameter to the domain name.
+             * *   IP: The list is queried by specified IP address. If the value of this parameter is IP, set the SearchContent parameter to the IP address.
              */
             public Builder searchType(String searchType) {
                 this.searchType = searchType;
@@ -331,7 +336,7 @@ public class GatewayBlackWhiteListRequest extends Request {
             }
 
             /**
-             * Type.
+             * This parameter is unavailable for public use.
              */
             public Builder type(String type) {
                 this.type = type;

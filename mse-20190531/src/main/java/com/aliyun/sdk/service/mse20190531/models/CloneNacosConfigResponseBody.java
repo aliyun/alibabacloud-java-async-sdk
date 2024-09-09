@@ -132,7 +132,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The number of skipped operations.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -402,7 +402,7 @@ public class CloneNacosConfigResponseBody extends TeaModel {
             private Integer succCount; 
 
             /**
-             * The ID of the data.
+             * The details of the failed configurations.
              */
             public Builder failData(java.util.List < FailData> failData) {
                 this.failData = failData;

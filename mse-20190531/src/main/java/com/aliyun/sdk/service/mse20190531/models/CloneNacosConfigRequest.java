@@ -153,7 +153,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * DataIds.
+         * The configuration items that you want to clone. The value of this parameter is the combination of the values of the dataId and group parameters. Separate multiple configuration items with commas (,).
          */
         public Builder dataIds(String dataIds) {
             this.putQueryParameter("DataIds", dataIds);
@@ -162,7 +162,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * The data structure.
+         * The list of configuration IDs.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);

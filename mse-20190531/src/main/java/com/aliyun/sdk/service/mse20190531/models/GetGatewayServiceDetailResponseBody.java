@@ -715,6 +715,9 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceNameInRegistry")
         private String serviceNameInRegistry;
 
+        @com.aliyun.core.annotation.NameInMap("ServicePort")
+        private Integer servicePort;
+
         @com.aliyun.core.annotation.NameInMap("ServiceProtocol")
         private String serviceProtocol;
 
@@ -749,6 +752,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             this.ports = builder.ports;
             this.serviceFQDN = builder.serviceFQDN;
             this.serviceNameInRegistry = builder.serviceNameInRegistry;
+            this.servicePort = builder.servicePort;
             this.serviceProtocol = builder.serviceProtocol;
             this.sourceId = builder.sourceId;
             this.sourceType = builder.sourceType;
@@ -891,6 +895,13 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return servicePort
+         */
+        public Integer getServicePort() {
+            return this.servicePort;
+        }
+
+        /**
          * @return serviceProtocol
          */
         public String getServiceProtocol() {
@@ -944,6 +955,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private java.util.List < Integer > ports; 
             private String serviceFQDN; 
             private String serviceNameInRegistry; 
+            private Integer servicePort; 
             private String serviceProtocol; 
             private Long sourceId; 
             private String sourceType; 
@@ -1091,6 +1103,14 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
              */
             public Builder serviceNameInRegistry(String serviceNameInRegistry) {
                 this.serviceNameInRegistry = serviceNameInRegistry;
+                return this;
+            }
+
+            /**
+             * The service port number.
+             */
+            public Builder servicePort(Integer servicePort) {
+                this.servicePort = servicePort;
                 return this;
             }
 

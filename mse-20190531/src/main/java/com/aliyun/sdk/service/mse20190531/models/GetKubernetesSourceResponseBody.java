@@ -105,7 +105,7 @@ public class GetKubernetesSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;

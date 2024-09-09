@@ -49,7 +49,7 @@ public class CreatePluginConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PluginConfigID.
+         * The plug-in configuration ID.
          */
         public Builder pluginConfigID(Long pluginConfigID) {
             this.pluginConfigID = pluginConfigID;
@@ -57,7 +57,7 @@ public class CreatePluginConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

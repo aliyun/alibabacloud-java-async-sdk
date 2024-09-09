@@ -141,7 +141,7 @@ public class CreatePluginConfigRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -150,7 +150,7 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * Config.
+         * The plug-in configuration. The configuration content of the WebAssembly (Wasm) plug-in is in the YAML format. The configuration content of the Lua plug-in is Lua code.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -159,7 +159,12 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * ConfigLevel.
+         * The application scope of the plug-in. Valid values:
+         * <p>
+         * 
+         * *   0: global
+         * *   1: route
+         * *   2: domain name
          */
         public Builder configLevel(Integer configLevel) {
             this.putQueryParameter("ConfigLevel", configLevel);
@@ -168,7 +173,7 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Indicates whether the plug-in is enabled.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -177,7 +182,7 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -186,7 +191,7 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * The gateway plug-in ID.
          */
         public Builder pluginId(Long pluginId) {
             this.putQueryParameter("PluginId", pluginId);
@@ -195,7 +200,7 @@ public class CreatePluginConfigRequest extends Request {
         }
 
         /**
-         * ResourceIdList.
+         * The domain IDs or route IDs. They are distinguished based on ConfigLevel.
          */
         public Builder resourceIdList(java.util.List < Long > resourceIdList) {
             String resourceIdListShrink = shrink(resourceIdList, "ResourceIdList", "json");
