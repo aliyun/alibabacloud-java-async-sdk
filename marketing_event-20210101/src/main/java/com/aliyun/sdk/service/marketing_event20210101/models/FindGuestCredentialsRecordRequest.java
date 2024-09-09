@@ -19,10 +19,20 @@ public class FindGuestCredentialsRecordRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("DateTimeString")
     private String dateTimeString;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDateTime")
+    private String endDateTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDateTime")
+    private String startDateTime;
+
     private FindGuestCredentialsRecordRequest(Builder builder) {
         super(builder);
         this.activityId = builder.activityId;
         this.dateTimeString = builder.dateTimeString;
+        this.endDateTime = builder.endDateTime;
+        this.startDateTime = builder.startDateTime;
     }
 
     public static Builder builder() {
@@ -52,9 +62,25 @@ public class FindGuestCredentialsRecordRequest extends Request {
         return this.dateTimeString;
     }
 
+    /**
+     * @return endDateTime
+     */
+    public String getEndDateTime() {
+        return this.endDateTime;
+    }
+
+    /**
+     * @return startDateTime
+     */
+    public String getStartDateTime() {
+        return this.startDateTime;
+    }
+
     public static final class Builder extends Request.Builder<FindGuestCredentialsRecordRequest, Builder> {
         private String activityId; 
         private String dateTimeString; 
+        private String endDateTime; 
+        private String startDateTime; 
 
         private Builder() {
             super();
@@ -64,6 +90,8 @@ public class FindGuestCredentialsRecordRequest extends Request {
             super(request);
             this.activityId = request.activityId;
             this.dateTimeString = request.dateTimeString;
+            this.endDateTime = request.endDateTime;
+            this.startDateTime = request.startDateTime;
         } 
 
         /**
@@ -81,6 +109,24 @@ public class FindGuestCredentialsRecordRequest extends Request {
         public Builder dateTimeString(String dateTimeString) {
             this.putQueryParameter("DateTimeString", dateTimeString);
             this.dateTimeString = dateTimeString;
+            return this;
+        }
+
+        /**
+         * EndDateTime.
+         */
+        public Builder endDateTime(String endDateTime) {
+            this.putQueryParameter("EndDateTime", endDateTime);
+            this.endDateTime = endDateTime;
+            return this;
+        }
+
+        /**
+         * StartDateTime.
+         */
+        public Builder startDateTime(String startDateTime) {
+            this.putQueryParameter("StartDateTime", startDateTime);
+            this.startDateTime = startDateTime;
             return this;
         }
 
