@@ -23,6 +23,9 @@ public class GetModelFeatureResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
+    @com.aliyun.core.annotation.NameInMap("LabelPriorityLevel")
+    private Long labelPriorityLevel;
+
     @com.aliyun.core.annotation.NameInMap("LabelTableId")
     private String labelTableId;
 
@@ -58,6 +61,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
         this.features = builder.features;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
+        this.labelPriorityLevel = builder.labelPriorityLevel;
         this.labelTableId = builder.labelTableId;
         this.labelTableName = builder.labelTableName;
         this.name = builder.name;
@@ -104,6 +108,13 @@ public class GetModelFeatureResponseBody extends TeaModel {
      */
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
+    }
+
+    /**
+     * @return labelPriorityLevel
+     */
+    public Long getLabelPriorityLevel() {
+        return this.labelPriorityLevel;
     }
 
     /**
@@ -181,6 +192,7 @@ public class GetModelFeatureResponseBody extends TeaModel {
         private java.util.List < Features> features; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
+        private Long labelPriorityLevel; 
         private String labelTableId; 
         private String labelTableName; 
         private String name; 
@@ -221,6 +233,14 @@ public class GetModelFeatureResponseBody extends TeaModel {
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+
+        /**
+         * LabelPriorityLevel.
+         */
+        public Builder labelPriorityLevel(Long labelPriorityLevel) {
+            this.labelPriorityLevel = labelPriorityLevel;
             return this;
         }
 

@@ -25,6 +25,10 @@ public class CreateModelFeatureRequest extends Request {
     private java.util.List < Features> features;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelPriorityLevel")
+    private Long labelPriorityLevel;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LabelTableId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String labelTableId;
@@ -48,6 +52,7 @@ public class CreateModelFeatureRequest extends Request {
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.features = builder.features;
+        this.labelPriorityLevel = builder.labelPriorityLevel;
         this.labelTableId = builder.labelTableId;
         this.name = builder.name;
         this.projectId = builder.projectId;
@@ -89,6 +94,13 @@ public class CreateModelFeatureRequest extends Request {
     }
 
     /**
+     * @return labelPriorityLevel
+     */
+    public Long getLabelPriorityLevel() {
+        return this.labelPriorityLevel;
+    }
+
+    /**
      * @return labelTableId
      */
     public String getLabelTableId() {
@@ -120,6 +132,7 @@ public class CreateModelFeatureRequest extends Request {
         private String instanceId; 
         private String regionId; 
         private java.util.List < Features> features; 
+        private Long labelPriorityLevel; 
         private String labelTableId; 
         private String name; 
         private String projectId; 
@@ -134,6 +147,7 @@ public class CreateModelFeatureRequest extends Request {
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.features = request.features;
+            this.labelPriorityLevel = request.labelPriorityLevel;
             this.labelTableId = request.labelTableId;
             this.name = request.name;
             this.projectId = request.projectId;
@@ -164,6 +178,15 @@ public class CreateModelFeatureRequest extends Request {
         public Builder features(java.util.List < Features> features) {
             this.putBodyParameter("Features", features);
             this.features = features;
+            return this;
+        }
+
+        /**
+         * LabelPriorityLevel.
+         */
+        public Builder labelPriorityLevel(Long labelPriorityLevel) {
+            this.putBodyParameter("LabelPriorityLevel", labelPriorityLevel);
+            this.labelPriorityLevel = labelPriorityLevel;
             return this;
         }
 

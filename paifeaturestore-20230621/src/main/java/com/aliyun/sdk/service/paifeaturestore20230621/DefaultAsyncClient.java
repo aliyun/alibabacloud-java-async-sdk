@@ -40,20 +40,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<ChangeProjectFeatureEntityHotIdVersionResponse> changeProjectFeatureEntityHotIdVersion(ChangeProjectFeatureEntityHotIdVersionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ChangeProjectFeatureEntityHotIdVersion").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{InstanceId}/projects/{ProjectId}/featureentities/{FeatureEntityName}/action/changehotidversion").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeProjectFeatureEntityHotIdVersionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ChangeProjectFeatureEntityHotIdVersionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<CheckInstanceDatasourceResponse> checkInstanceDatasource(CheckInstanceDatasourceRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -460,48 +446,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<GetProjectFeatureEntityHotIdsResponse> getProjectFeatureEntityHotIds(GetProjectFeatureEntityHotIdsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetProjectFeatureEntityHotIds").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/projects/{ProjectId}/featureentities/{FeatureEntityName}/hotids/{NextSeqNumber}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetProjectFeatureEntityHotIdsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetProjectFeatureEntityHotIdsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetProjectFeatureViewResponse> getProjectFeatureView(GetProjectFeatureViewRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetProjectFeatureView").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/projects/{ProjectId}/featureviews/{FeatureViewName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetProjectFeatureViewResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetProjectFeatureViewResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<GetProjectModelFeatureResponse> getProjectModelFeature(GetProjectModelFeatureRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetProjectModelFeature").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/projects/{ProjectId}/modelfeatures/{ModelFeatureName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetProjectModelFeatureResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetProjectModelFeatureResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<GetServiceIdentityRoleResponse> getServiceIdentityRole(GetServiceIdentityRoleRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -684,34 +628,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<ListProjectFeatureViewOwnersResponse> listProjectFeatureViewOwners(ListProjectFeatureViewOwnersRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListProjectFeatureViewOwners").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/projects/{ProjectId}/featureviewowners").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListProjectFeatureViewOwnersResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListProjectFeatureViewOwnersResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<ListProjectFeatureViewTagsResponse> listProjectFeatureViewTags(ListProjectFeatureViewTagsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListProjectFeatureViewTags").setMethod(HttpMethod.GET).setPathRegex("/api/v1/instances/{InstanceId}/projects/{ProjectId}/featureviewtags").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListProjectFeatureViewTagsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ListProjectFeatureViewTagsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
     public CompletableFuture<ListProjectFeatureViewsResponse> listProjectFeatureViews(ListProjectFeatureViewsRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -874,20 +790,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<WriteFeatureViewTableResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<WriteProjectFeatureEntityHotIdsResponse> writeProjectFeatureEntityHotIds(WriteProjectFeatureEntityHotIdsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("WriteProjectFeatureEntityHotIds").setMethod(HttpMethod.POST).setPathRegex("/api/v1/instances/{InstanceId}/projects/{ProjectId}/featureentities/{FeatureEntityName}/action/writehotids").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(WriteProjectFeatureEntityHotIdsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<WriteProjectFeatureEntityHotIdsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

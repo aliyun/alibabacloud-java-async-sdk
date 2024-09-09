@@ -38,6 +38,10 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
     private Long realTimeIterateInterval;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RealTimePartitionCountValue")
+    private Long realTimePartitionCountValue;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TrainingSetConfig")
     private TrainingSetConfig trainingSetConfig;
 
@@ -49,6 +53,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         this.featureViewConfig = builder.featureViewConfig;
         this.labelInputConfig = builder.labelInputConfig;
         this.realTimeIterateInterval = builder.realTimeIterateInterval;
+        this.realTimePartitionCountValue = builder.realTimePartitionCountValue;
         this.trainingSetConfig = builder.trainingSetConfig;
     }
 
@@ -108,6 +113,13 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
     }
 
     /**
+     * @return realTimePartitionCountValue
+     */
+    public Long getRealTimePartitionCountValue() {
+        return this.realTimePartitionCountValue;
+    }
+
+    /**
      * @return trainingSetConfig
      */
     public TrainingSetConfig getTrainingSetConfig() {
@@ -121,6 +133,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         private java.util.Map < String, FeatureViewConfigValue > featureViewConfig; 
         private LabelInputConfig labelInputConfig; 
         private Long realTimeIterateInterval; 
+        private Long realTimePartitionCountValue; 
         private TrainingSetConfig trainingSetConfig; 
 
         private Builder() {
@@ -135,6 +148,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
             this.featureViewConfig = request.featureViewConfig;
             this.labelInputConfig = request.labelInputConfig;
             this.realTimeIterateInterval = request.realTimeIterateInterval;
+            this.realTimePartitionCountValue = request.realTimePartitionCountValue;
             this.trainingSetConfig = request.trainingSetConfig;
         } 
 
@@ -189,6 +203,15 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         public Builder realTimeIterateInterval(Long realTimeIterateInterval) {
             this.putBodyParameter("RealTimeIterateInterval", realTimeIterateInterval);
             this.realTimeIterateInterval = realTimeIterateInterval;
+            return this;
+        }
+
+        /**
+         * RealTimePartitionCountValue.
+         */
+        public Builder realTimePartitionCountValue(Long realTimePartitionCountValue) {
+            this.putBodyParameter("RealTimePartitionCountValue", realTimePartitionCountValue);
+            this.realTimePartitionCountValue = realTimePartitionCountValue;
             return this;
         }
 

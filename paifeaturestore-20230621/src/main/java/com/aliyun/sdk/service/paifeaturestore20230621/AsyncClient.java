@@ -19,8 +19,6 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
-    CompletableFuture<ChangeProjectFeatureEntityHotIdVersionResponse> changeProjectFeatureEntityHotIdVersion(ChangeProjectFeatureEntityHotIdVersionRequest request);
-
     CompletableFuture<CheckInstanceDatasourceResponse> checkInstanceDatasource(CheckInstanceDatasourceRequest request);
 
     CompletableFuture<CreateDatasourceResponse> createDatasource(CreateDatasourceRequest request);
@@ -79,12 +77,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetProjectFeatureEntityResponse> getProjectFeatureEntity(GetProjectFeatureEntityRequest request);
 
-    CompletableFuture<GetProjectFeatureEntityHotIdsResponse> getProjectFeatureEntityHotIds(GetProjectFeatureEntityHotIdsRequest request);
-
-    CompletableFuture<GetProjectFeatureViewResponse> getProjectFeatureView(GetProjectFeatureViewRequest request);
-
-    CompletableFuture<GetProjectModelFeatureResponse> getProjectModelFeature(GetProjectModelFeatureRequest request);
-
     CompletableFuture<GetServiceIdentityRoleResponse> getServiceIdentityRole(GetServiceIdentityRoleRequest request);
 
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
@@ -111,10 +103,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListModelFeaturesResponse> listModelFeatures(ListModelFeaturesRequest request);
 
-    CompletableFuture<ListProjectFeatureViewOwnersResponse> listProjectFeatureViewOwners(ListProjectFeatureViewOwnersRequest request);
-
-    CompletableFuture<ListProjectFeatureViewTagsResponse> listProjectFeatureViewTags(ListProjectFeatureViewTagsRequest request);
-
     CompletableFuture<ListProjectFeatureViewsResponse> listProjectFeatureViews(ListProjectFeatureViewsRequest request);
 
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);
@@ -138,7 +126,5 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
 
     CompletableFuture<WriteFeatureViewTableResponse> writeFeatureViewTable(WriteFeatureViewTableRequest request);
-
-    CompletableFuture<WriteProjectFeatureEntityHotIdsResponse> writeProjectFeatureEntityHotIds(WriteProjectFeatureEntityHotIdsRequest request);
 
 }
