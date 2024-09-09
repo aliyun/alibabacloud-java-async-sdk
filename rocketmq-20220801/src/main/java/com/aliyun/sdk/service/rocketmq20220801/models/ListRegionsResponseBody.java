@@ -121,7 +121,7 @@ public class ListRegionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +129,7 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * The returned data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -137,7 +137,7 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +145,7 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +153,7 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +161,7 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +169,7 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +177,7 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -229,7 +229,7 @@ public class ListRegionsResponseBody extends TeaModel {
             private Object tagValue; 
 
             /**
-             * tagCode.
+             * The tag code.
              */
             public Builder tagCode(String tagCode) {
                 this.tagCode = tagCode;
@@ -237,7 +237,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * tagValue.
+             * The tag value.
              */
             public Builder tagValue(Object tagValue) {
                 this.tagValue = tagValue;
@@ -350,7 +350,7 @@ public class ListRegionsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * createTime.
+             * The time when the ApsaraMQ for RocketMQ instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -358,7 +358,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -366,7 +366,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionName.
+             * The region name.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -374,7 +374,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * supportRocketmqV4.
+             * Indicates whether ApsaraMQ for RocketMQ V4 is activated.
              */
             public Builder supportRocketmqV4(Boolean supportRocketmqV4) {
                 this.supportRocketmqV4 = supportRocketmqV4;
@@ -382,7 +382,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * supportRocketmqV5.
+             * Indicates whether ApsaraMQ for RocketMQ V5 is activated.
              */
             public Builder supportRocketmqV5(Boolean supportRocketmqV5) {
                 this.supportRocketmqV5 = supportRocketmqV5;
@@ -390,7 +390,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * tags.
+             * The region tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -398,7 +398,7 @@ public class ListRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * The time when the ApsaraMQ for RocketMQ instance was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

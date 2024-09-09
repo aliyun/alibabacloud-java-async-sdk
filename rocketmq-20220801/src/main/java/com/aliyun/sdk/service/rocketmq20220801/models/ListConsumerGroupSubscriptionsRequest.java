@@ -18,6 +18,7 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
     private ListConsumerGroupSubscriptionsRequest(Builder builder) {
@@ -68,7 +69,7 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * The ID of the ApsaraMQ for RocketMQ instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +78,10 @@ public class ListConsumerGroupSubscriptionsRequest extends Request {
         }
 
         /**
-         * The consumer group ID.
+         * The ID of the consumer group whose subscriptions you want to query.
+         * <p>
+         * 
+         * If you do not configure this parameter, the subscriptions of all consumer groups on the specified instance are queried.
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);

@@ -18,6 +18,7 @@ public class ListTopicSubscriptionsRequest extends Request {
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("topicName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
 
     private ListTopicSubscriptionsRequest(Builder builder) {
@@ -68,7 +69,7 @@ public class ListTopicSubscriptionsRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The ID of the ApsaraMQ for RocketMQ instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +78,7 @@ public class ListTopicSubscriptionsRequest extends Request {
         }
 
         /**
-         * topicName.
+         * The name of the topic on the ApsaraMQ for RocketMQ instance.
          */
         public Builder topicName(String topicName) {
             this.putPathParameter("topicName", topicName);

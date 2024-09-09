@@ -121,7 +121,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * The error code returned if the call failed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +129,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * The result data that is returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -137,7 +137,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +145,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +153,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +161,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +169,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +177,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -253,7 +253,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * createTime.
+             * The time when the zone was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -261,7 +261,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * updateTime.
+             * The time when the zone was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -269,7 +269,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * The ID of the current zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -277,7 +277,7 @@ public class ListAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * zoneName.
+             * The name of the current zone.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;

@@ -69,7 +69,7 @@ public class ListConsumerConnectionsRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +78,7 @@ public class ListConsumerConnectionsRequest extends Request {
         }
 
         /**
-         * consumerGroupId.
+         * The consumer group ID.
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);

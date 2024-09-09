@@ -134,12 +134,12 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Valid values: 1 to 100000000.
          * 
-         * If the value that you specify for this parameter is less than 1, the system uses 1 as the value. If the value that you specify for this parameter is greater than 100000000, the system uses 100000000 as the value.
+         * If you set this parameter to a value smaller than 1, the system uses 1 as the value. If you set this parameter to a value greater than 100000000, the system uses 100000000 as the value.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -148,12 +148,12 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries per page.
          * <p>
          * 
-         * Valid values: 10 to 200.
+         * Value values: 10 to 200.
          * 
-         * If the value that you specify for this parameter is less than 10, the system uses 10 as the value. If the value that you specify for this parameter is greater than 200, the system uses 200 as the value.
+         * If you set this parameter to a value smaller than 10, the system uses 10 as the value. If you set this parameter to a value greater than 200, the system uses 200 as the value.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -171,7 +171,14 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * seriesCodes.
+         * The primary edition of the instance.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard: Standard Edition
+         * *   ultimate: Enterprise Platinum Edition
+         * *   professional: Professional Edition
          */
         public Builder seriesCodes(java.util.List < String > seriesCodes) {
             String seriesCodesShrink = shrink(seriesCodes, "seriesCodes", "simple");

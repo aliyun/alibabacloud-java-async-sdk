@@ -33,6 +33,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
+    CompletableFuture<CreateInstanceAccountResponse> createInstanceAccount(CreateInstanceAccountRequest request);
+
+    CompletableFuture<CreateInstanceAclResponse> createInstanceAcl(CreateInstanceAclRequest request);
+
+    CompletableFuture<CreateInstanceIpWhitelistResponse> createInstanceIpWhitelist(CreateInstanceIpWhitelistRequest request);
+
     CompletableFuture<CreateTopicResponse> createTopic(CreateTopicRequest request);
 
     /**
@@ -42,6 +48,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request);
 
+    CompletableFuture<DeleteConsumerGroupSubscriptionResponse> deleteConsumerGroupSubscription(DeleteConsumerGroupSubscriptionRequest request);
+
     /**
       * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
       * *   After an instance is deleted, the instance cannot be restored. Exercise caution when you call this operation.
@@ -49,6 +57,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
+
+    CompletableFuture<DeleteInstanceAccountResponse> deleteInstanceAccount(DeleteInstanceAccountRequest request);
+
+    CompletableFuture<DeleteInstanceAclResponse> deleteInstanceAcl(DeleteInstanceAclRequest request);
+
+    CompletableFuture<DeleteInstanceIpWhitelistResponse> deleteInstanceIpWhitelist(DeleteInstanceIpWhitelistRequest request);
 
     /**
       * If you delete the topic, the publishing and subscription relationships that are established based on the topic are cleared. Exercise caution when you call this operation.
@@ -62,13 +76,25 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetConsumerGroupResponse> getConsumerGroup(GetConsumerGroupRequest request);
 
+    CompletableFuture<GetConsumerGroupLagResponse> getConsumerGroupLag(GetConsumerGroupLagRequest request);
+
+    CompletableFuture<GetConsumerGroupSubscriptionResponse> getConsumerGroupSubscription(GetConsumerGroupSubscriptionRequest request);
+
+    CompletableFuture<GetConsumerStackResponse> getConsumerStack(GetConsumerStackRequest request);
+
     /**
       * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
       *
      */
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
+    CompletableFuture<GetInstanceAccountResponse> getInstanceAccount(GetInstanceAccountRequest request);
+
+    CompletableFuture<GetMessageDetailResponse> getMessageDetail(GetMessageDetailRequest request);
+
     CompletableFuture<GetTopicResponse> getTopic(GetTopicRequest request);
+
+    CompletableFuture<GetTraceResponse> getTrace(GetTraceRequest request);
 
     CompletableFuture<ListAvailableZonesResponse> listAvailableZones(ListAvailableZonesRequest request);
 
@@ -82,19 +108,35 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListConsumerGroupsResponse> listConsumerGroups(ListConsumerGroupsRequest request);
 
+    CompletableFuture<ListInstanceAccountResponse> listInstanceAccount(ListInstanceAccountRequest request);
+
+    CompletableFuture<ListInstanceAclResponse> listInstanceAcl(ListInstanceAclRequest request);
+
+    CompletableFuture<ListInstanceIpWhitelistResponse> listInstanceIpWhitelist(ListInstanceIpWhitelistRequest request);
+
     /**
       * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
       *
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
+    CompletableFuture<ListMessagesResponse> listMessages(ListMessagesRequest request);
+
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
+
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     CompletableFuture<ListTopicSubscriptionsResponse> listTopicSubscriptions(ListTopicSubscriptionsRequest request);
 
     CompletableFuture<ListTopicsResponse> listTopics(ListTopicsRequest request);
 
+    CompletableFuture<ListTracesResponse> listTraces(ListTracesRequest request);
+
     CompletableFuture<ResetConsumeOffsetResponse> resetConsumeOffset(ResetConsumeOffsetRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
       * > API operations provided by Alibaba Cloud are used to manage and query resources of Alibaba Cloud services. We recommend that you integrate these API operations only in management systems. Do not use these API operations in the core system of messaging services. Otherwise, system risks may occur.
@@ -108,6 +150,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request);
 
+    CompletableFuture<UpdateInstanceAccountResponse> updateInstanceAccount(UpdateInstanceAccountRequest request);
+
+    CompletableFuture<UpdateInstanceAclResponse> updateInstanceAcl(UpdateInstanceAclRequest request);
+
     CompletableFuture<UpdateTopicResponse> updateTopic(UpdateTopicRequest request);
+
+    CompletableFuture<VerifyConsumeMessageResponse> verifyConsumeMessage(VerifyConsumeMessageRequest request);
+
+    CompletableFuture<VerifySendMessageResponse> verifySendMessage(VerifySendMessageRequest request);
 
 }

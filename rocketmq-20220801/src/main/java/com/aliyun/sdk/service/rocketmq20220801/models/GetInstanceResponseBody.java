@@ -940,7 +940,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * vSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -948,7 +948,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * zoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1042,7 +1042,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * vSwitches.
+             * The vSwitches.
              */
             public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;

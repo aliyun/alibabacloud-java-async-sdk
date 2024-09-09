@@ -605,7 +605,7 @@ public class CreateInstanceRequest extends Request {
             private String vSwitchId; 
 
             /**
-             * vSwitchId.
+             * The ID of the vSwitch with which the instance is associated.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -703,7 +703,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * vSwitches.
+             * The vSwitches.
              */
             public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
                 this.vSwitches = vSwitches;

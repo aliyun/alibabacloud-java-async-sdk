@@ -121,7 +121,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +129,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * The returned data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -137,7 +137,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +145,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +153,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +161,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +169,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +177,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -289,7 +289,11 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             private String topicName; 
 
             /**
-             * consistency.
+             * Indicates whether message consumption is consistent. Valid values:
+             * <p>
+             * 
+             * *   false: Unconsumed messages exist in the consumer group.
+             * *   true: No unconsumed message exists in the consumer group.
              */
             public Builder consistency(String consistency) {
                 this.consistency = consistency;
@@ -297,7 +301,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * consumerGroupId.
+             * The consumer group ID.
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -305,7 +309,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * filterExpression.
+             * The filter expression.
              */
             public Builder filterExpression(String filterExpression) {
                 this.filterExpression = filterExpression;
@@ -313,7 +317,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * filterExpressionType.
+             * The type of the filter expression. Valid values: SQL, TAG, and UNSPECIFIED. The value SQL indicates that messages are filtered by using SQL expressions. The value TAG indicates that messages are filtered by using tags. The value UNSPECIFIED indicates that no filter expression type is specified.
              */
             public Builder filterExpressionType(String filterExpressionType) {
                 this.filterExpressionType = filterExpressionType;
@@ -321,7 +325,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * messageModel.
+             * The consumption mode. Valid values: BROADCASTING and CLUSTERING.
              */
             public Builder messageModel(String messageModel) {
                 this.messageModel = messageModel;
@@ -329,7 +333,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * subscriptionStatus.
+             * The subscription status. Valid values: ONLINE and OFFLINE.
              */
             public Builder subscriptionStatus(String subscriptionStatus) {
                 this.subscriptionStatus = subscriptionStatus;
@@ -337,7 +341,7 @@ public class ListTopicSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * topicName.
+             * The topic name.
              */
             public Builder topicName(String topicName) {
                 this.topicName = topicName;

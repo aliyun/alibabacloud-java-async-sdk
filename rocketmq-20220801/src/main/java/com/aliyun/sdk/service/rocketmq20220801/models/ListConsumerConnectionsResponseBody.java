@@ -121,7 +121,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * The returned error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -129,7 +129,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -137,7 +137,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicCode.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +145,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * dynamicMessage.
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +153,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * httpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +161,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -169,7 +169,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The ID of the request. Each request has a unique ID. You can use this ID to troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,7 +177,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -277,7 +277,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * clientId.
+             * The ID of the client.
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
@@ -285,7 +285,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * egressIp.
+             * Host IP/Public IP
              */
             public Builder egressIp(String egressIp) {
                 this.egressIp = egressIp;
@@ -293,7 +293,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * hostname.
+             * The `hostname` of the cloud-native box.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -301,7 +301,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * language.
+             * The language of the client.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -309,7 +309,10 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * messageModel.
+             * Consumption Mode
+             * <p>
+             * - BROADCASTING
+             * - CLUSTERING
              */
             public Builder messageModel(String messageModel) {
                 this.messageModel = messageModel;
@@ -317,7 +320,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * The version of the client.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -394,7 +397,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * connections.
+             * The client connection list
              */
             public Builder connections(java.util.List < Connections> connections) {
                 this.connections = connections;
@@ -402,7 +405,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * consumerGroupId.
+             * The consumer group ID.
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -410,7 +413,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -418,7 +421,7 @@ public class ListConsumerConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

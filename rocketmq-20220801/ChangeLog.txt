@@ -1,3 +1,6 @@
+2024-09-09 Version: 1.0.13
+- Generated java-async 2022-08-01 for RocketMQ.
+
 2024-07-25 Version: 1.0.12
 - Generated java-async 2022-08-01 for RocketMQ.
 

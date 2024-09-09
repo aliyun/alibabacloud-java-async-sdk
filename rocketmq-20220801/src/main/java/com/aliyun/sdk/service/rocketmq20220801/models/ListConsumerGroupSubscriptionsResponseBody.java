@@ -121,7 +121,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The returned error code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -137,7 +137,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned dynamic error code.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -145,7 +145,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned dynamic error message.
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -153,7 +153,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned HTTP status code.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -161,7 +161,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned error message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,7 +177,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -301,7 +301,11 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
             private String topicName; 
 
             /**
-             * consistency.
+             * Indicates whether message consumption is consistent. Valid values:
+             * <p>
+             * 
+             * *   false: Unconsumed messages exist in the consumer group.
+             * *   true: No unconsumed message exists in the consumer group.
              */
             public Builder consistency(Boolean consistency) {
                 this.consistency = consistency;
@@ -309,7 +313,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * The consumer group ID.
+             * The ID of the consumer group.
              */
             public Builder consumerGroupId(String consumerGroupId) {
                 this.consumerGroupId = consumerGroupId;
@@ -325,7 +329,11 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the filter expression. Valid values: SQL, TAG, and UNSPECIFIED.
+             * The type of the filter expression. Valid values:
+             * <p>
+             * 
+             * *   SQL: filters messages by using SQL expressions.
+             * *   TAG: filters messages by using tags.
              */
             public Builder filterExpressionType(String filterExpressionType) {
                 this.filterExpressionType = filterExpressionType;
@@ -333,7 +341,11 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * The consumption mode. Valid values: BROADCASTING and CLUSTERING.
+             * The consumption mode of the consumer group. Valid values:
+             * <p>
+             * 
+             * *   BROADCASTING: broadcasting consumption
+             * *   CLUSTERING: clustering consumption
              */
             public Builder messageModel(String messageModel) {
                 this.messageModel = messageModel;
@@ -341,7 +353,11 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * The subscription status. Valid values: ONLINE and OFFLINE.
+             * The subscription status. Valid values:
+             * <p>
+             * 
+             * *   ONLINE: The consumer group is online. If the consumer group contains multiple consumers, this value is returned as long as one of the consumers is online.
+             * *   OFFLINE: The consumer group is offline. If the consumer group contains multiple consumers, this value is returned only if all consumers are offline.
              */
             public Builder subscriptionStatus(String subscriptionStatus) {
                 this.subscriptionStatus = subscriptionStatus;

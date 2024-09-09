@@ -217,7 +217,13 @@ public class ListInstancesResponseBody extends TeaModel {
             private Boolean traceOn; 
 
             /**
-             * Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.
+             * Indicates whether the message trace feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.
              */
             public Builder traceOn(Boolean traceOn) {
                 this.traceOn = traceOn;
@@ -567,7 +573,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * The time when the version of the instance was updated.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -621,7 +627,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The product information of instance.
+             * The product information.
              */
             public Builder productInfo(ProductInfo productInfo) {
                 this.productInfo = productInfo;
@@ -684,7 +690,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was started.
+             * The time when the instance was created.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -824,7 +830,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The paginated data.
+             * The pagination information.
              */
             public Builder list(java.util.List < List> list) {
                 this.list = list;
