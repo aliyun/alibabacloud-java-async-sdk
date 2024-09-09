@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.intelligentcreation20240313;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.intelligentcreation20240313.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -104,6 +105,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateIllustrationTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<CreateRealisticPortraitResponse> createRealisticPortrait(CreateRealisticPortraitRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRealisticPortrait").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/images/portrait/realistic").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRealisticPortraitResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateRealisticPortraitResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -306,6 +321,44 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<QueryTextStreamResponse> queryTextStream(QueryTextStreamRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryTextStream").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/stream/queryTextStream/{textId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryTextStreamResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryTextStreamResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<QueryTextStreamResponseBody> queryTextStreamWithResponseIterable(QueryTextStreamRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("QueryTextStream").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/stream/queryTextStream/{textId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        QueryTextStreamResponseBodyIterator iterator = QueryTextStreamResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    @Override
+    public CompletableFuture<SelectImageTaskResponse> selectImageTask(SelectImageTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SelectImageTask").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/images/portrait/select/{taskId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SelectImageTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SelectImageTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<SelectResourceResponse> selectResource(SelectResourceRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -384,6 +437,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitProjectTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<TransferPortraitStyleResponse> transferPortraitStyle(TransferPortraitStyleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TransferPortraitStyle").setMethod(HttpMethod.POST).setPathRegex("/yic/yic-console/openService/v1/images/portrait/transferPortraitStyle").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransferPortraitStyleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TransferPortraitStyleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

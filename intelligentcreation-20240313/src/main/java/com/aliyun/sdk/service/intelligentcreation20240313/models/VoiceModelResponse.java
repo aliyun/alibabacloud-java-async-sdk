@@ -14,6 +14,9 @@ public class VoiceModelResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("resourceTypeDesc")
     private String resourceTypeDesc;
 
+    @com.aliyun.core.annotation.NameInMap("ttsVersion")
+    private Integer ttsVersion;
+
     @com.aliyun.core.annotation.NameInMap("useScene")
     private String useScene;
 
@@ -44,6 +47,7 @@ public class VoiceModelResponse extends Response {
     private VoiceModelResponse(BuilderImpl builder) {
         super(builder);
         this.resourceTypeDesc = builder.resourceTypeDesc;
+        this.ttsVersion = builder.ttsVersion;
         this.useScene = builder.useScene;
         this.voiceDesc = builder.voiceDesc;
         this.voiceGender = builder.voiceGender;
@@ -69,6 +73,13 @@ public class VoiceModelResponse extends Response {
      */
     public String getResourceTypeDesc() {
         return this.resourceTypeDesc;
+    }
+
+    /**
+     * @return ttsVersion
+     */
+    public Integer getTtsVersion() {
+        return this.ttsVersion;
     }
 
     /**
@@ -138,6 +149,8 @@ public class VoiceModelResponse extends Response {
 
         Builder resourceTypeDesc(String resourceTypeDesc);
 
+        Builder ttsVersion(Integer ttsVersion);
+
         Builder useScene(String useScene);
 
         Builder voiceDesc(String voiceDesc);
@@ -165,6 +178,7 @@ public class VoiceModelResponse extends Response {
             extends Response.BuilderImpl<VoiceModelResponse, Builder>
             implements Builder {
         private String resourceTypeDesc; 
+        private Integer ttsVersion; 
         private String useScene; 
         private String voiceDesc; 
         private String voiceGender; 
@@ -182,6 +196,7 @@ public class VoiceModelResponse extends Response {
         private BuilderImpl(VoiceModelResponse response) {
             super(response);
             this.resourceTypeDesc = response.resourceTypeDesc;
+            this.ttsVersion = response.ttsVersion;
             this.useScene = response.useScene;
             this.voiceDesc = response.voiceDesc;
             this.voiceGender = response.voiceGender;
@@ -199,6 +214,15 @@ public class VoiceModelResponse extends Response {
         @Override
         public Builder resourceTypeDesc(String resourceTypeDesc) {
             this.resourceTypeDesc = resourceTypeDesc;
+            return this;
+        }
+
+        /**
+         * ttsVersion.
+         */
+        @Override
+        public Builder ttsVersion(Integer ttsVersion) {
+            this.ttsVersion = ttsVersion;
             return this;
         }
 

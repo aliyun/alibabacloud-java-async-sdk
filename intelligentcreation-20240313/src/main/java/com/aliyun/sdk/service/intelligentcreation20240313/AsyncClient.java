@@ -29,6 +29,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateIllustrationTaskResponse> createIllustrationTask(CreateIllustrationTaskRequest request);
 
+    CompletableFuture<CreateRealisticPortraitResponse> createRealisticPortrait(CreateRealisticPortraitRequest request);
+
     CompletableFuture<CreateTextTaskResponse> createTextTask(CreateTextTaskRequest request);
 
     CompletableFuture<GetIllustrationResponse> getIllustration(GetIllustrationRequest request);
@@ -57,6 +59,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryAvatarResourceResponse> queryAvatarResource(QueryAvatarResourceRequest request);
 
+    CompletableFuture<QueryTextStreamResponse> queryTextStream(QueryTextStreamRequest request);
+
+    ResponseIterable<QueryTextStreamResponseBody> queryTextStreamWithResponseIterable(QueryTextStreamRequest request);
+
+    CompletableFuture<SelectImageTaskResponse> selectImageTask(SelectImageTaskRequest request);
+
     CompletableFuture<SelectResourceResponse> selectResource(SelectResourceRequest request);
 
     CompletableFuture<SendTextMsgResponse> sendTextMsg(SendTextMsgRequest request);
@@ -68,5 +76,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopProjectTaskResponse> stopProjectTask(StopProjectTaskRequest request);
 
     CompletableFuture<SubmitProjectTaskResponse> submitProjectTask(SubmitProjectTaskRequest request);
+
+    CompletableFuture<TransferPortraitStyleResponse> transferPortraitStyle(TransferPortraitStyleRequest request);
 
 }

@@ -147,10 +147,14 @@ public class SubmitProjectTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
+        @com.aliyun.core.annotation.NameInMap("volume")
+        private Integer volume;
+
         private Material(Builder builder) {
             this.format = builder.format;
             this.id = builder.id;
             this.url = builder.url;
+            this.volume = builder.volume;
         }
 
         public static Builder builder() {
@@ -182,10 +186,18 @@ public class SubmitProjectTaskRequest extends Request {
             return this.url;
         }
 
+        /**
+         * @return volume
+         */
+        public Integer getVolume() {
+            return this.volume;
+        }
+
         public static final class Builder {
             private String format; 
             private String id; 
             private String url; 
+            private Integer volume; 
 
             /**
              * format.
@@ -208,6 +220,14 @@ public class SubmitProjectTaskRequest extends Request {
              */
             public Builder url(String url) {
                 this.url = url;
+                return this;
+            }
+
+            /**
+             * volume.
+             */
+            public Builder volume(Integer volume) {
+                this.volume = volume;
                 return this;
             }
 

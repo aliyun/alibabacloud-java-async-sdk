@@ -39,6 +39,9 @@ public class TextTaskCreateCmd extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("relatedRagIds")
     private java.util.List < Long > relatedRagIds;
 
+    @com.aliyun.core.annotation.NameInMap("streamApi")
+    private Boolean streamApi;
+
     @com.aliyun.core.annotation.NameInMap("style")
     @com.aliyun.core.annotation.Validation(required = true)
     private String style;
@@ -66,6 +69,7 @@ public class TextTaskCreateCmd extends TeaModel {
         this.point = builder.point;
         this.referenceTag = builder.referenceTag;
         this.relatedRagIds = builder.relatedRagIds;
+        this.streamApi = builder.streamApi;
         this.style = builder.style;
         this.target = builder.target;
         this.textModeType = builder.textModeType;
@@ -145,6 +149,13 @@ public class TextTaskCreateCmd extends TeaModel {
     }
 
     /**
+     * @return streamApi
+     */
+    public Boolean getStreamApi() {
+        return this.streamApi;
+    }
+
+    /**
      * @return style
      */
     public String getStyle() {
@@ -189,6 +200,7 @@ public class TextTaskCreateCmd extends TeaModel {
         private String point; 
         private ReferenceTag referenceTag; 
         private java.util.List < Long > relatedRagIds; 
+        private Boolean streamApi; 
         private String style; 
         private String target; 
         private String textModeType; 
@@ -264,6 +276,14 @@ public class TextTaskCreateCmd extends TeaModel {
          */
         public Builder relatedRagIds(java.util.List < Long > relatedRagIds) {
             this.relatedRagIds = relatedRagIds;
+            return this;
+        }
+
+        /**
+         * streamApi.
+         */
+        public Builder streamApi(Boolean streamApi) {
+            this.streamApi = streamApi;
             return this;
         }
 

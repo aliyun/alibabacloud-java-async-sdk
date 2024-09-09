@@ -20,10 +20,18 @@ public class StartAvatarSessionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("sessionId")
     private String sessionId;
 
+    @com.aliyun.core.annotation.NameInMap("token")
+    private String token;
+
+    @com.aliyun.core.annotation.NameInMap("webSocketUrl")
+    private String webSocketUrl;
+
     private StartAvatarSessionResponseBody(Builder builder) {
         this.channelToken = builder.channelToken;
         this.requestId = builder.requestId;
         this.sessionId = builder.sessionId;
+        this.token = builder.token;
+        this.webSocketUrl = builder.webSocketUrl;
     }
 
     public static Builder builder() {
@@ -55,10 +63,26 @@ public class StartAvatarSessionResponseBody extends TeaModel {
         return this.sessionId;
     }
 
+    /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
+    /**
+     * @return webSocketUrl
+     */
+    public String getWebSocketUrl() {
+        return this.webSocketUrl;
+    }
+
     public static final class Builder {
         private String channelToken; 
         private String requestId; 
         private String sessionId; 
+        private String token; 
+        private String webSocketUrl; 
 
         /**
          * channelToken.
@@ -81,6 +105,22 @@ public class StartAvatarSessionResponseBody extends TeaModel {
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
+            return this;
+        }
+
+        /**
+         * token.
+         */
+        public Builder token(String token) {
+            this.token = token;
+            return this;
+        }
+
+        /**
+         * webSocketUrl.
+         */
+        public Builder webSocketUrl(String webSocketUrl) {
+            this.webSocketUrl = webSocketUrl;
             return this;
         }
 
