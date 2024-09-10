@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MigrationJob</p>
  */
 public class MigrationJob extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Detail")
+    @com.aliyun.core.annotation.NameInMap("Detail")
     private String detail;
 
-    @NameInMap("JobStatus")
+    @com.aliyun.core.annotation.NameInMap("JobStatus")
     private String jobStatus;
 
-    @NameInMap("Plan")
+    @com.aliyun.core.annotation.NameInMap("Plan")
     private Plan plan;
 
-    @NameInMap("RuleNames")
+    @com.aliyun.core.annotation.NameInMap("RuleNames")
     private java.util.List < String > ruleNames;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private java.util.List < Source> source;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private MigrationJob(Builder builder) {
@@ -192,13 +191,13 @@ public class MigrationJob extends TeaModel {
     } 
 
     public static class Channels extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Long level;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Channels(Builder builder) {
@@ -273,10 +272,10 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Contacts extends TeaModel {
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private java.util.List < Channels> channels;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Contacts(Builder builder) {
@@ -334,16 +333,16 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class LevelGroups extends TeaModel {
-        @NameInMap("Critical")
+        @com.aliyun.core.annotation.NameInMap("Critical")
         private java.util.List < String > critical;
 
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private java.util.List < String > info;
 
-        @NameInMap("Resolved")
+        @com.aliyun.core.annotation.NameInMap("Resolved")
         private java.util.List < String > resolved;
 
-        @NameInMap("Warning")
+        @com.aliyun.core.annotation.NameInMap("Warning")
         private java.util.List < String > warning;
 
         private LevelGroups(Builder builder) {
@@ -435,10 +434,10 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Escalations extends TeaModel {
-        @NameInMap("Groups")
+        @com.aliyun.core.annotation.NameInMap("Groups")
         private java.util.List < String > groups;
 
-        @NameInMap("LevelGroups")
+        @com.aliyun.core.annotation.NameInMap("LevelGroups")
         private LevelGroups levelGroups;
 
         private Escalations(Builder builder) {
@@ -496,13 +495,13 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class PlanEscalations extends TeaModel {
-        @NameInMap("Escalations")
+        @com.aliyun.core.annotation.NameInMap("Escalations")
         private java.util.List < Escalations> escalations;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private PlanEscalations(Builder builder) {
@@ -577,10 +576,10 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Groups extends TeaModel {
-        @NameInMap("Contacts")
+        @com.aliyun.core.annotation.NameInMap("Contacts")
         private java.util.List < String > contacts;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Groups(Builder builder) {
@@ -638,7 +637,7 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class EscalationSetting extends TeaModel {
-        @NameInMap("escalationUuid")
+        @com.aliyun.core.annotation.NameInMap("escalationUuid")
         private String escalationUuid;
 
         private EscalationSetting(Builder builder) {
@@ -679,7 +678,7 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class PushingSetting extends TeaModel {
-        @NameInMap("TargetUuids")
+        @com.aliyun.core.annotation.NameInMap("TargetUuids")
         private java.util.List < String > targetUuids;
 
         private PushingSetting(Builder builder) {
@@ -720,13 +719,13 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Strategies extends TeaModel {
-        @NameInMap("EscalationSetting")
+        @com.aliyun.core.annotation.NameInMap("EscalationSetting")
         private EscalationSetting escalationSetting;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PushingSetting")
+        @com.aliyun.core.annotation.NameInMap("PushingSetting")
         private PushingSetting pushingSetting;
 
         private Strategies(Builder builder) {
@@ -801,13 +800,13 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Conditions extends TeaModel {
-        @NameInMap("Field")
+        @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
-        @NameInMap("Op")
+        @com.aliyun.core.annotation.NameInMap("Op")
         private String op;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Conditions(Builder builder) {
@@ -882,13 +881,13 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Subscriptions extends TeaModel {
-        @NameInMap("Conditions")
+        @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("StrategyUuid")
+        @com.aliyun.core.annotation.NameInMap("StrategyUuid")
         private String strategyUuid;
 
         private Subscriptions(Builder builder) {
@@ -963,13 +962,13 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class HttpRequestTarget extends TeaModel {
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private HttpRequestTarget(Builder builder) {
@@ -1044,19 +1043,19 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Targets extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("HttpRequestTarget")
+        @com.aliyun.core.annotation.NameInMap("HttpRequestTarget")
         private HttpRequestTarget httpRequestTarget;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private Targets(Builder builder) {
@@ -1165,25 +1164,25 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Plan extends TeaModel {
-        @NameInMap("Contacts")
+        @com.aliyun.core.annotation.NameInMap("Contacts")
         private java.util.List < Contacts> contacts;
 
-        @NameInMap("Escalations")
+        @com.aliyun.core.annotation.NameInMap("Escalations")
         private java.util.List < PlanEscalations> escalations;
 
-        @NameInMap("Groups")
+        @com.aliyun.core.annotation.NameInMap("Groups")
         private java.util.List < Groups> groups;
 
-        @NameInMap("RuleNames")
+        @com.aliyun.core.annotation.NameInMap("RuleNames")
         private java.util.List < String > ruleNames;
 
-        @NameInMap("Strategies")
+        @com.aliyun.core.annotation.NameInMap("Strategies")
         private java.util.List < Strategies> strategies;
 
-        @NameInMap("Subscriptions")
+        @com.aliyun.core.annotation.NameInMap("Subscriptions")
         private java.util.List < Subscriptions> subscriptions;
 
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private java.util.List < Targets> targets;
 
         private Plan(Builder builder) {
@@ -1326,10 +1325,10 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class KeywordFilter extends TeaModel {
-        @NameInMap("Keywords")
+        @com.aliyun.core.annotation.NameInMap("Keywords")
         private java.util.List < String > keywords;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
         private KeywordFilter(Builder builder) {
@@ -1387,13 +1386,13 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class PrimaryFilters extends TeaModel {
-        @NameInMap("Field")
+        @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
-        @NameInMap("OpType")
+        @com.aliyun.core.annotation.NameInMap("OpType")
         private String opType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private PrimaryFilters(Builder builder) {
@@ -1468,13 +1467,13 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Rule extends TeaModel {
-        @NameInMap("KeywordFilter")
+        @com.aliyun.core.annotation.NameInMap("KeywordFilter")
         private KeywordFilter keywordFilter;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PrimaryFilters")
+        @com.aliyun.core.annotation.NameInMap("PrimaryFilters")
         private java.util.List < PrimaryFilters> primaryFilters;
 
         private Rule(Builder builder) {
@@ -1549,22 +1548,22 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourcePath")
+        @com.aliyun.core.annotation.NameInMap("ResourcePath")
         private String resourcePath;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Content(Builder builder) {
@@ -1690,10 +1689,10 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class SourceTargets extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private SourceTargets(Builder builder) {
@@ -1751,10 +1750,10 @@ public class MigrationJob extends TeaModel {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private Rule rule;
 
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private java.util.List < SourceTargets> targets;
 
         private Source(Builder builder) {

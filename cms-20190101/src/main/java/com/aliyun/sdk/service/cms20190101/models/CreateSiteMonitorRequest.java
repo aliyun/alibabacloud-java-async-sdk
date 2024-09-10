@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSiteMonitorRequest</p>
  */
 public class CreateSiteMonitorRequest extends Request {
-    @Query
-    @NameInMap("Address")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String address;
 
-    @Query
-    @NameInMap("AlertIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertIds")
     private String alertIds;
 
-    @Query
-    @NameInMap("CustomSchedule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomSchedule")
     private String customSchedule;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("IspCities")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspCities")
     private String ispCities;
 
-    @Query
-    @NameInMap("OptionsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OptionsJson")
     private String optionsJson;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcConfig")
+    private String vpcConfig;
 
     private CreateSiteMonitorRequest(Builder builder) {
         super(builder);
@@ -57,6 +60,7 @@ public class CreateSiteMonitorRequest extends Request {
         this.optionsJson = builder.optionsJson;
         this.taskName = builder.taskName;
         this.taskType = builder.taskType;
+        this.vpcConfig = builder.vpcConfig;
     }
 
     public static Builder builder() {
@@ -128,6 +132,13 @@ public class CreateSiteMonitorRequest extends Request {
         return this.taskType;
     }
 
+    /**
+     * @return vpcConfig
+     */
+    public String getVpcConfig() {
+        return this.vpcConfig;
+    }
+
     public static final class Builder extends Request.Builder<CreateSiteMonitorRequest, Builder> {
         private String address; 
         private String alertIds; 
@@ -137,6 +148,7 @@ public class CreateSiteMonitorRequest extends Request {
         private String optionsJson; 
         private String taskName; 
         private String taskType; 
+        private String vpcConfig; 
 
         private Builder() {
             super();
@@ -152,6 +164,7 @@ public class CreateSiteMonitorRequest extends Request {
             this.optionsJson = request.optionsJson;
             this.taskName = request.taskName;
             this.taskType = request.taskType;
+            this.vpcConfig = request.vpcConfig;
         } 
 
         /**
@@ -242,6 +255,15 @@ public class CreateSiteMonitorRequest extends Request {
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);
             this.taskType = taskType;
+            return this;
+        }
+
+        /**
+         * VpcConfig.
+         */
+        public Builder vpcConfig(String vpcConfig) {
+            this.putQueryParameter("VpcConfig", vpcConfig);
+            this.vpcConfig = vpcConfig;
             return this;
         }
 

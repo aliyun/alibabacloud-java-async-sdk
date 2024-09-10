@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorGroupCategoriesResponseBody</p>
  */
 public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MonitorGroupCategories")
+    @com.aliyun.core.annotation.NameInMap("MonitorGroupCategories")
     private MonitorGroupCategories monitorGroupCategories;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMonitorGroupCategoriesResponseBody(Builder builder) {
@@ -139,10 +138,10 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
     } 
 
     public static class CategoryItem extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private CategoryItem(Builder builder) {
@@ -177,10 +176,10 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The abbreviation of the Alibaba Cloud service name.
+             * The abbreviation of the cloud service name.
              * <p>
              * 
-             * To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.
+             * >  For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](~~114916~~) operation.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -203,7 +202,7 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
 
     }
     public static class MonitorGroupCategory extends TeaModel {
-        @NameInMap("CategoryItem")
+        @com.aliyun.core.annotation.NameInMap("CategoryItem")
         private java.util.List < CategoryItem> categoryItem;
 
         private MonitorGroupCategory(Builder builder) {
@@ -244,10 +243,10 @@ public class DescribeMonitorGroupCategoriesResponseBody extends TeaModel {
 
     }
     public static class MonitorGroupCategories extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("MonitorGroupCategory")
+        @com.aliyun.core.annotation.NameInMap("MonitorGroupCategory")
         private MonitorGroupCategory monitorGroupCategory;
 
         private MonitorGroupCategories(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMonitorGroupInstancesRequest</p>
  */
 public class CreateMonitorGroupInstancesRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Instances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Instances> instances;
 
     private CreateMonitorGroupInstancesRequest(Builder builder) {
@@ -95,20 +94,20 @@ public class CreateMonitorGroupInstancesRequest extends Request {
     } 
 
     public static class Instances extends TeaModel {
-        @NameInMap("Category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("InstanceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceId;
 
-        @NameInMap("InstanceName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String instanceName;
 
-        @NameInMap("RegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String regionId;
 
         private Instances(Builder builder) {

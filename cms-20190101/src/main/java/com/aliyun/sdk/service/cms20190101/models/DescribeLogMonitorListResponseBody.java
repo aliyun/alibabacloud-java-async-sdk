@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogMonitorListResponseBody</p>
  */
 public class DescribeLogMonitorListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogMonitorList")
+    @com.aliyun.core.annotation.NameInMap("LogMonitorList")
     private java.util.List < LogMonitorList> logMonitorList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeLogMonitorListResponseBody(Builder builder) {
@@ -199,13 +198,13 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
     } 
 
     public static class ValueFilter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ValueFilter(Builder builder) {
@@ -288,31 +287,31 @@ public class DescribeLogMonitorListResponseBody extends TeaModel {
 
     }
     public static class LogMonitorList extends TeaModel {
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("LogId")
+        @com.aliyun.core.annotation.NameInMap("LogId")
         private Long logId;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("SlsLogstore")
+        @com.aliyun.core.annotation.NameInMap("SlsLogstore")
         private String slsLogstore;
 
-        @NameInMap("SlsProject")
+        @com.aliyun.core.annotation.NameInMap("SlsProject")
         private String slsProject;
 
-        @NameInMap("SlsRegionId")
+        @com.aliyun.core.annotation.NameInMap("SlsRegionId")
         private String slsRegionId;
 
-        @NameInMap("ValueFilter")
+        @com.aliyun.core.annotation.NameInMap("ValueFilter")
         private java.util.List < ValueFilter> valueFilter;
 
-        @NameInMap("ValueFilterRelation")
+        @com.aliyun.core.annotation.NameInMap("ValueFilterRelation")
         private String valueFilterRelation;
 
         private LogMonitorList(Builder builder) {

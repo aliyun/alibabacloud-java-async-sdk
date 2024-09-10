@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorGroupInstanceAttributeRequest</p>
  */
 public class DescribeMonitorGroupInstanceAttributeRequest extends Request {
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Boolean total;
 
     private DescribeMonitorGroupInstanceAttributeRequest(Builder builder) {
@@ -139,10 +138,10 @@ public class DescribeMonitorGroupInstanceAttributeRequest extends Request {
         } 
 
         /**
-         * The abbreviation of the Alibaba Cloud service name.
+         * The abbreviation of the cloud service name.
          * <p>
          * 
-         * To obtain the abbreviation of an Alibaba Cloud service name, call the [DescribeProjectMeta](~~114916~~) operation. The `metricCategory` tag in the `Labels` response parameter indicates the abbreviation of the Alibaba Cloud service name.
+         * For more information about how to obtain the abbreviation of a cloud service name, see `metricCategory` in the response parameter `Labels` of the [DescribeProjectMeta](~~114916~~) operation.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -160,7 +159,7 @@ public class DescribeMonitorGroupInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the resource. Separate multiple resource IDs with commas (,). You can query the details about a maximum of 20 resources in each request.
+         * The resource ID. Separate multiple resource IDs with commas (,). You can query the details about a maximum of 20 resources at a time.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -178,7 +177,7 @@ public class DescribeMonitorGroupInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Valid values: 1 to 1000000000.
@@ -192,7 +191,7 @@ public class DescribeMonitorGroupInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Valid values: 1 to 1000000000.
@@ -209,7 +208,7 @@ public class DescribeMonitorGroupInstanceAttributeRequest extends Request {
          * Specifies whether to return the total number of resources in the specified application group. Valid values:
          * <p>
          * 
-         * *   true (default value)
+         * *   true (default)
          * *   false
          */
         public Builder total(Boolean total) {

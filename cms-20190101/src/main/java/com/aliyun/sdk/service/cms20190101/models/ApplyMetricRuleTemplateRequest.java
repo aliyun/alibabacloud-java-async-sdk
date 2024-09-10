@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyMetricRuleTemplateRequest</p>
  */
 public class ApplyMetricRuleTemplateRequest extends Request {
-    @Query
-    @NameInMap("AppendMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppendMode")
     private String appendMode;
 
-    @Query
-    @NameInMap("ApplyMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyMode")
     private String applyMode;
 
-    @Query
-    @NameInMap("EnableEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableEndTime")
     private Long enableEndTime;
 
-    @Query
-    @NameInMap("EnableStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableStartTime")
     private Long enableStartTime;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("NotifyLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyLevel")
     private Long notifyLevel;
 
-    @Query
-    @NameInMap("SilenceTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SilenceTime")
     private Long silenceTime;
 
-    @Query
-    @NameInMap("TemplateIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateIds;
 
-    @Query
-    @NameInMap("Webhook")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Webhook")
     private String webhook;
 
     private ApplyMetricRuleTemplateRequest(Builder builder) {
@@ -168,7 +167,11 @@ public class ApplyMetricRuleTemplateRequest extends Request {
         } 
 
         /**
-         * AppendMode.
+         * The template application policy. Valid values:
+         * <p>
+         * 
+         * *   all (default): deletes all the rules that are created by using the alert template from the selected application group, and then creates alert rules based on the template.
+         * *   append: deletes the rules that are created by using the alert template from the selected application group, and then creates alert rules based on the existing template.
          */
         public Builder appendMode(String appendMode) {
             this.putQueryParameter("AppendMode", appendMode);

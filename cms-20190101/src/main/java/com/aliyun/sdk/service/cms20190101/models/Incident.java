@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Incident</p>
  */
 public class Incident extends TeaModel {
-    @NameInMap("ActionTime")
+    @com.aliyun.core.annotation.NameInMap("ActionTime")
     private Long actionTime;
 
-    @NameInMap("AlertCount")
+    @com.aliyun.core.annotation.NameInMap("AlertCount")
     private Long alertCount;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("GroupingData")
+    @com.aliyun.core.annotation.NameInMap("GroupingData")
     private java.util.Map < String, ? > groupingData;
 
-    @NameInMap("GroupingId")
+    @com.aliyun.core.annotation.NameInMap("GroupingId")
     private String groupingId;
 
-    @NameInMap("GroupingKey")
+    @com.aliyun.core.annotation.NameInMap("GroupingKey")
     private String groupingKey;
 
-    @NameInMap("IncidentId")
+    @com.aliyun.core.annotation.NameInMap("IncidentId")
     private String incidentId;
 
-    @NameInMap("IncidentStatus")
+    @com.aliyun.core.annotation.NameInMap("IncidentStatus")
     private String incidentStatus;
 
-    @NameInMap("Severity")
+    @com.aliyun.core.annotation.NameInMap("Severity")
     private String severity;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("StrategyUuid")
+    @com.aliyun.core.annotation.NameInMap("StrategyUuid")
     private String strategyUuid;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private Incident(Builder builder) {

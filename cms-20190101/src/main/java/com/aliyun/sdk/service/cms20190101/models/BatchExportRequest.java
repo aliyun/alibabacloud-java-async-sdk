@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchExportRequest</p>
  */
 public class BatchExportRequest extends Request {
-    @Body
-    @NameInMap("Cursor")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cursor")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cursor;
 
-    @Body
-    @NameInMap("Length")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Length")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer length;
 
-    @Body
-    @NameInMap("Measurements")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Measurements")
     private java.util.List < String > measurements;
 
-    @Body
-    @NameInMap("Metric")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metric")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metric;
 
-    @Body
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     private BatchExportRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomEventAttributeRequest</p>
  */
 public class DescribeCustomEventAttributeRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("EventId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventId")
     private String eventId;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SearchKeywords")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKeywords")
     private String searchKeywords;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeCustomEventAttributeRequest(Builder builder) {

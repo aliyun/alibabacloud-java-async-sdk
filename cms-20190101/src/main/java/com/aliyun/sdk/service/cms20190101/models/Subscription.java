@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Subscription</p>
  */
 public class Subscription extends TeaModel {
-    @NameInMap("Conditions")
+    @com.aliyun.core.annotation.NameInMap("Conditions")
     private java.util.List < Conditions> conditions;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @NameInMap("Relation")
+    @com.aliyun.core.annotation.NameInMap("Relation")
     private String relation;
 
-    @NameInMap("StrategyUuid")
+    @com.aliyun.core.annotation.NameInMap("StrategyUuid")
     private String strategyUuid;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private Subscription(Builder builder) {
@@ -233,13 +232,13 @@ public class Subscription extends TeaModel {
     } 
 
     public static class Conditions extends TeaModel {
-        @NameInMap("Field")
+        @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Conditions(Builder builder) {

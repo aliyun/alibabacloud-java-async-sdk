@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHybridMonitorSLSGroupResponseBody</p>
  */
 public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("List")
+    @com.aliyun.core.annotation.NameInMap("List")
     private java.util.List < List> list;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeHybridMonitorSLSGroupResponseBody(Builder builder) {
@@ -199,16 +198,16 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
     } 
 
     public static class SLSGroupConfig extends TeaModel {
-        @NameInMap("SLSLogstore")
+        @com.aliyun.core.annotation.NameInMap("SLSLogstore")
         private String SLSLogstore;
 
-        @NameInMap("SLSProject")
+        @com.aliyun.core.annotation.NameInMap("SLSProject")
         private String SLSProject;
 
-        @NameInMap("SLSRegion")
+        @com.aliyun.core.annotation.NameInMap("SLSRegion")
         private String SLSRegion;
 
-        @NameInMap("SLSUserId")
+        @com.aliyun.core.annotation.NameInMap("SLSUserId")
         private String SLSUserId;
 
         private SLSGroupConfig(Builder builder) {
@@ -303,19 +302,19 @@ public class DescribeHybridMonitorSLSGroupResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("SLSGroupConfig")
+        @com.aliyun.core.annotation.NameInMap("SLSGroupConfig")
         private java.util.List < SLSGroupConfig> SLSGroupConfig;
 
-        @NameInMap("SLSGroupDescription")
+        @com.aliyun.core.annotation.NameInMap("SLSGroupDescription")
         private String SLSGroupDescription;
 
-        @NameInMap("SLSGroupName")
+        @com.aliyun.core.annotation.NameInMap("SLSGroupName")
         private String SLSGroupName;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private List(Builder builder) {

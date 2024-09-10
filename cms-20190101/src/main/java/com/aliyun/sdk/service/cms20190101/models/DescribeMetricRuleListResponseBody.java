@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricRuleListResponseBody</p>
  */
 public class DescribeMetricRuleListResponseBody extends TeaModel {
-    @NameInMap("Alarms")
+    @com.aliyun.core.annotation.NameInMap("Alarms")
     private Alarms alarms;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private String total;
 
     private DescribeMetricRuleListResponseBody(Builder builder) {
@@ -159,19 +158,19 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
     } 
 
     public static class ExpressionList extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
         private ExpressionList(Builder builder) {
@@ -304,7 +303,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class CompositeExpressionExpressionList extends TeaModel {
-        @NameInMap("ExpressionList")
+        @com.aliyun.core.annotation.NameInMap("ExpressionList")
         private java.util.List < ExpressionList> expressionList;
 
         private CompositeExpressionExpressionList(Builder builder) {
@@ -345,19 +344,19 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class CompositeExpression extends TeaModel {
-        @NameInMap("ExpressionList")
+        @com.aliyun.core.annotation.NameInMap("ExpressionList")
         private CompositeExpressionExpressionList expressionList;
 
-        @NameInMap("ExpressionListJoin")
+        @com.aliyun.core.annotation.NameInMap("ExpressionListJoin")
         private String expressionListJoin;
 
-        @NameInMap("ExpressionRaw")
+        @com.aliyun.core.annotation.NameInMap("ExpressionRaw")
         private String expressionRaw;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private CompositeExpression(Builder builder) {
@@ -480,19 +479,19 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class Critical extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("PreCondition")
+        @com.aliyun.core.annotation.NameInMap("PreCondition")
         private String preCondition;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Critical(Builder builder) {
@@ -619,19 +618,19 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class Info extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("PreCondition")
+        @com.aliyun.core.annotation.NameInMap("PreCondition")
         private String preCondition;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Info(Builder builder) {
@@ -758,19 +757,19 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class Warn extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("PreCondition")
+        @com.aliyun.core.annotation.NameInMap("PreCondition")
         private String preCondition;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Warn(Builder builder) {
@@ -897,13 +896,13 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class Escalations extends TeaModel {
-        @NameInMap("Critical")
+        @com.aliyun.core.annotation.NameInMap("Critical")
         private Critical critical;
 
-        @NameInMap("Info")
+        @com.aliyun.core.annotation.NameInMap("Info")
         private Info info;
 
-        @NameInMap("Warn")
+        @com.aliyun.core.annotation.NameInMap("Warn")
         private Warn warn;
 
         private Escalations(Builder builder) {
@@ -978,10 +977,10 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -1039,7 +1038,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class AlarmLabels extends TeaModel {
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
         private AlarmLabels(Builder builder) {
@@ -1080,10 +1079,10 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class Annotations extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Annotations(Builder builder) {
@@ -1141,7 +1140,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class PrometheusAnnotations extends TeaModel {
-        @NameInMap("Annotations")
+        @com.aliyun.core.annotation.NameInMap("Annotations")
         private java.util.List < Annotations> annotations;
 
         private PrometheusAnnotations(Builder builder) {
@@ -1182,16 +1181,16 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class Prometheus extends TeaModel {
-        @NameInMap("Annotations")
+        @com.aliyun.core.annotation.NameInMap("Annotations")
         private PrometheusAnnotations annotations;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("PromQL")
+        @com.aliyun.core.annotation.NameInMap("PromQL")
         private String promQL;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Long times;
 
         private Prometheus(Builder builder) {
@@ -1294,73 +1293,73 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class Alarm extends TeaModel {
-        @NameInMap("AlertState")
+        @com.aliyun.core.annotation.NameInMap("AlertState")
         private String alertState;
 
-        @NameInMap("CompositeExpression")
+        @com.aliyun.core.annotation.NameInMap("CompositeExpression")
         private CompositeExpression compositeExpression;
 
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private String contactGroups;
 
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private String dimensions;
 
-        @NameInMap("EffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("EffectiveInterval")
         private String effectiveInterval;
 
-        @NameInMap("EnableState")
+        @com.aliyun.core.annotation.NameInMap("EnableState")
         private Boolean enableState;
 
-        @NameInMap("Escalations")
+        @com.aliyun.core.annotation.NameInMap("Escalations")
         private Escalations escalations;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private AlarmLabels labels;
 
-        @NameInMap("MailSubject")
+        @com.aliyun.core.annotation.NameInMap("MailSubject")
         private String mailSubject;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NoDataPolicy")
+        @com.aliyun.core.annotation.NameInMap("NoDataPolicy")
         private String noDataPolicy;
 
-        @NameInMap("NoEffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("NoEffectiveInterval")
         private String noEffectiveInterval;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("Prometheus")
+        @com.aliyun.core.annotation.NameInMap("Prometheus")
         private Prometheus prometheus;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private String resources;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Integer silenceTime;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private Alarm(Builder builder) {
@@ -1801,7 +1800,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
 
     }
     public static class Alarms extends TeaModel {
-        @NameInMap("Alarm")
+        @com.aliyun.core.annotation.NameInMap("Alarm")
         private java.util.List < Alarm> alarm;
 
         private Alarms(Builder builder) {

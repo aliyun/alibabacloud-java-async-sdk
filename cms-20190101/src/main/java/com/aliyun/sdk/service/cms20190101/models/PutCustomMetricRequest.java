@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutCustomMetricRequest</p>
  */
 public class PutCustomMetricRequest extends Request {
-    @Query
-    @NameInMap("MetricList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < MetricList> metricList;
 
     private PutCustomMetricRequest(Builder builder) {
@@ -71,30 +70,30 @@ public class PutCustomMetricRequest extends Request {
     } 
 
     public static class MetricList extends TeaModel {
-        @NameInMap("Dimensions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String dimensions;
 
-        @NameInMap("GroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String groupId;
 
-        @NameInMap("MetricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Values")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Values")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String values;
 
         private MetricList(Builder builder) {

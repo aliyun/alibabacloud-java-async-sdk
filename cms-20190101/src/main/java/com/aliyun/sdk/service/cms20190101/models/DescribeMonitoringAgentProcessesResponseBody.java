@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitoringAgentProcessesResponseBody</p>
  */
 public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NodeProcesses")
+    @com.aliyun.core.annotation.NameInMap("NodeProcesses")
     private NodeProcesses nodeProcesses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMonitoringAgentProcessesResponseBody(Builder builder) {
@@ -139,22 +138,22 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
     } 
 
     public static class NodeProcess extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("ProcessId")
+        @com.aliyun.core.annotation.NameInMap("ProcessId")
         private Long processId;
 
-        @NameInMap("ProcessName")
+        @com.aliyun.core.annotation.NameInMap("ProcessName")
         private String processName;
 
-        @NameInMap("ProcessUser")
+        @com.aliyun.core.annotation.NameInMap("ProcessUser")
         private String processUser;
 
         private NodeProcess(Builder builder) {
@@ -283,7 +282,7 @@ public class DescribeMonitoringAgentProcessesResponseBody extends TeaModel {
 
     }
     public static class NodeProcesses extends TeaModel {
-        @NameInMap("NodeProcess")
+        @com.aliyun.core.annotation.NameInMap("NodeProcess")
         private java.util.List < NodeProcess> nodeProcess;
 
         private NodeProcesses(Builder builder) {

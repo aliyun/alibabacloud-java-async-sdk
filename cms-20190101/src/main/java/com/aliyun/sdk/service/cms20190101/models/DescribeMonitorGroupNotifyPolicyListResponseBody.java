@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorGroupNotifyPolicyListResponseBody</p>
  */
 public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NotifyPolicyList")
+    @com.aliyun.core.annotation.NameInMap("NotifyPolicyList")
     private NotifyPolicyList notifyPolicyList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeMonitorGroupNotifyPolicyListResponseBody(Builder builder) {
@@ -159,19 +158,19 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
     } 
 
     public static class NotifyPolicy extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private NotifyPolicy(Builder builder) {
@@ -286,7 +285,7 @@ public class DescribeMonitorGroupNotifyPolicyListResponseBody extends TeaModel {
 
     }
     public static class NotifyPolicyList extends TeaModel {
-        @NameInMap("NotifyPolicy")
+        @com.aliyun.core.annotation.NameInMap("NotifyPolicy")
         private java.util.List < NotifyPolicy> notifyPolicy;
 
         private NotifyPolicyList(Builder builder) {

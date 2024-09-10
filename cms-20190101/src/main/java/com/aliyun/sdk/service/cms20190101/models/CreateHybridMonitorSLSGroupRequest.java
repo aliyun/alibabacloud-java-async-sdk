@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHybridMonitorSLSGroupRequest</p>
  */
 public class CreateHybridMonitorSLSGroupRequest extends Request {
-    @Query
-    @NameInMap("SLSGroupConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SLSGroupConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SLSGroupConfig> SLSGroupConfig;
 
-    @Query
-    @NameInMap("SLSGroupDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SLSGroupDescription")
     private String SLSGroupDescription;
 
-    @Query
-    @NameInMap("SLSGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SLSGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SLSGroupName;
 
     private CreateHybridMonitorSLSGroupRequest(Builder builder) {
@@ -124,19 +123,19 @@ public class CreateHybridMonitorSLSGroupRequest extends Request {
     } 
 
     public static class SLSGroupConfig extends TeaModel {
-        @NameInMap("SLSLogstore")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SLSLogstore")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String SLSLogstore;
 
-        @NameInMap("SLSProject")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SLSProject")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String SLSProject;
 
-        @NameInMap("SLSRegion")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SLSRegion")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String SLSRegion;
 
-        @NameInMap("SLSUserId")
+        @com.aliyun.core.annotation.NameInMap("SLSUserId")
         private String SLSUserId;
 
         private SLSGroupConfig(Builder builder) {

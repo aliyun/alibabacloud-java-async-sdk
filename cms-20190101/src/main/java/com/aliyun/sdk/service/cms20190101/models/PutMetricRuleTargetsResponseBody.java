@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutMetricRuleTargetsResponseBody</p>
  */
 public class PutMetricRuleTargetsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FailData")
+    @com.aliyun.core.annotation.NameInMap("FailData")
     private FailData failData;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PutMetricRuleTargetsResponseBody(Builder builder) {
@@ -97,7 +96,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of resources that failed to be created or modified.
+         * The failed data.
          */
         public Builder failData(FailData failData) {
             this.failData = failData;
@@ -139,13 +138,13 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
     } 
 
     public static class Target extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private Target(Builder builder) {
@@ -189,18 +188,16 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * The ARN of the resource.
+             * The ARN of the resource. Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. MNS, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. The following part describes the ARN of MNS and the parameters in the ARN:
              * <p>
              * 
-             * Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
-             * 
-             * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
+             * *   {Service name abbreviation}: mns.
              * 
              * *   {userId}: the ID of the Alibaba Cloud account.
              * 
              * *   {regionId}: the region ID of the message queue or topic.
              * 
-             * *   {Resource type}: the type of the resource that triggers the alert. Valid values:
+             * *   {Resource type}: the type of the resource for which alerts are triggered. Valid values:
              * 
              *     *   **queues**
              *     *   **topics**
@@ -244,7 +241,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
 
     }
     public static class Targets extends TeaModel {
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private java.util.List < Target> target;
 
         private Targets(Builder builder) {
@@ -285,7 +282,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
 
     }
     public static class FailData extends TeaModel {
-        @NameInMap("Targets")
+        @com.aliyun.core.annotation.NameInMap("Targets")
         private Targets targets;
 
         private FailData(Builder builder) {
@@ -311,7 +308,7 @@ public class PutMetricRuleTargetsResponseBody extends TeaModel {
             private Targets targets; 
 
             /**
-             * The information about the resource for which alerts are triggered.
+             * The information about the resources for which alerts are triggered.
              */
             public Builder targets(Targets targets) {
                 this.targets = targets;

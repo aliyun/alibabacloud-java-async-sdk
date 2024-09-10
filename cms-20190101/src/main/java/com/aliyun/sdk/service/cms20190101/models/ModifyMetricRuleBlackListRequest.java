@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyMetricRuleBlackListRequest</p>
  */
 public class ModifyMetricRuleBlackListRequest extends Request {
-    @Query
-    @NameInMap("Category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("EnableEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableEndTime")
     private String enableEndTime;
 
-    @Query
-    @NameInMap("EnableStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableStartTime")
     private String enableStartTime;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Instances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instances;
 
-    @Query
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.List < Metrics> metrics;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("ScopeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
     private String scopeType;
 
-    @Query
-    @NameInMap("ScopeValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeValue")
     private String scopeValue;
 
     private ModifyMetricRuleBlackListRequest(Builder builder) {
@@ -199,7 +198,7 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         } 
 
         /**
-         * The category of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
+         * The category of the cloud service. For example, ApsaraDB for Redis supports the standard architecture, the cluster architecture, and the read/write splitting architecture. In this case, the valid values of this parameter for ApsaraDB for Redis include `kvstore_standard`, `kvstore_sharding`, and `kvstore_splitrw`.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -295,7 +294,7 @@ public class ModifyMetricRuleBlackListRequest extends Request {
          * The namespace of the cloud service.
          * <p>
          * 
-         * For more information about the namespaces of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -317,10 +316,10 @@ public class ModifyMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The IDs of the application groups. Specify a JSON array.
+         * The IDs of the application groups.
          * <p>
          * 
-         * > This parameter must be specified when `ScopeType` is set to `GROUP`.
+         * >  This parameter is required only when `ScopeType` is set to `GROUP`.
          */
         public Builder scopeValue(String scopeValue) {
             this.putQueryParameter("ScopeValue", scopeValue);
@@ -336,11 +335,11 @@ public class ModifyMetricRuleBlackListRequest extends Request {
     } 
 
     public static class Metrics extends TeaModel {
-        @NameInMap("MetricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
         private Metrics(Builder builder) {

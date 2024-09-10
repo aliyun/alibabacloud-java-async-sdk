@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHybridMonitorNamespaceListRequest</p>
  */
 public class DescribeHybridMonitorNamespaceListRequest extends Request {
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ShowTaskStatistic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowTaskStatistic")
     private Boolean showTaskStatistic;
 
     private DescribeHybridMonitorNamespaceListRequest(Builder builder) {

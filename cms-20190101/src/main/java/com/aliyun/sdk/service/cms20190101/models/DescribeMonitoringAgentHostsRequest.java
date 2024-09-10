@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitoringAgentHostsRequest</p>
  */
 public class DescribeMonitoringAgentHostsRequest extends Request {
-    @Query
-    @NameInMap("AliyunHost")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunHost")
     private Boolean aliyunHost;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
-    @Query
-    @NameInMap("InstanceRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceRegionId")
     private String instanceRegionId;
 
-    @Query
-    @NameInMap("KeyWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWord")
     private String keyWord;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SerialNumbers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SerialNumbers")
     private String serialNumbers;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("SysomStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SysomStatus")
     private String sysomStatus;
 
     private DescribeMonitoringAgentHostsRequest(Builder builder) {

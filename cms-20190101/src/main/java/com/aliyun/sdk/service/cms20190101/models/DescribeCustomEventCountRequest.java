@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomEventCountRequest</p>
  */
 public class DescribeCustomEventCountRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("EventId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventId")
     private String eventId;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("SearchKeywords")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKeywords")
     private String searchKeywords;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeCustomEventCountRequest(Builder builder) {

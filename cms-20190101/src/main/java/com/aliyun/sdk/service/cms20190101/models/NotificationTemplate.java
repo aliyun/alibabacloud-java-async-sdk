@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NotificationTemplate</p>
  */
 public class NotificationTemplate extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EnContent")
+    @com.aliyun.core.annotation.NameInMap("EnContent")
     private String enContent;
 
-    @NameInMap("EnItemContent")
+    @com.aliyun.core.annotation.NameInMap("EnItemContent")
     private String enItemContent;
 
-    @NameInMap("EnTitle")
+    @com.aliyun.core.annotation.NameInMap("EnTitle")
     private String enTitle;
 
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
-    @NameInMap("WraperType")
+    @com.aliyun.core.annotation.NameInMap("WraperType")
     private String wraperType;
 
-    @NameInMap("ZhContent")
+    @com.aliyun.core.annotation.NameInMap("ZhContent")
     private String zhContent;
 
-    @NameInMap("ZhItemContent")
+    @com.aliyun.core.annotation.NameInMap("ZhItemContent")
     private String zhItemContent;
 
-    @NameInMap("ZhTitle")
+    @com.aliyun.core.annotation.NameInMap("ZhTitle")
     private String zhTitle;
 
     private NotificationTemplate(Builder builder) {

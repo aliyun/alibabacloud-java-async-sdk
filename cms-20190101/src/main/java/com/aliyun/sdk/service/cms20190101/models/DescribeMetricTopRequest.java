@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricTopRequest</p>
  */
 public class DescribeMetricTopRequest extends Request {
-    @Query
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private String dimensions;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Express")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Express")
     private String express;
 
-    @Query
-    @NameInMap("Length")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Length")
     private String length;
 
-    @Query
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("OrderDesc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderDesc")
     private String orderDesc;
 
-    @Query
-    @NameInMap("Orderby")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Orderby")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderby;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeMetricTopRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutHybridMonitorMetricDataRequest</p>
  */
 public class PutHybridMonitorMetricDataRequest extends Request {
-    @Query
-    @NameInMap("MetricList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < MetricList> metricList;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     private PutHybridMonitorMetricDataRequest(Builder builder) {
@@ -101,10 +100,10 @@ public class PutHybridMonitorMetricDataRequest extends Request {
     } 
 
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -144,7 +143,7 @@ public class PutHybridMonitorMetricDataRequest extends Request {
              * 
              * Valid values of N: 1 to 100.
              * 
-             * The key can contain letters, digits, and underscores (*). The key must start with a letter or an underscore (*).
+             * The key can contain letters, digits, and underscores (\_). The key must start with a letter or an underscore (\_).
              * 
              * >  You must specify both the Key and Value parameters.
              */
@@ -174,18 +173,18 @@ public class PutHybridMonitorMetricDataRequest extends Request {
 
     }
     public static class MetricList extends TeaModel {
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("Name")
-        @Validation(required = true, maxLength = 128, minLength = 1)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
         private String name;
 
-        @NameInMap("TS")
+        @com.aliyun.core.annotation.NameInMap("TS")
         private Long ts;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private MetricList(Builder builder) {
@@ -262,12 +261,12 @@ public class PutHybridMonitorMetricDataRequest extends Request {
             }
 
             /**
-             * The timestamp when the monitoring data is imported.
+             * The time when the monitoring data is imported. The value is a timestamp.
              * <p>
              * 
              * Valid values of N: 1 to 100.
              * 
-             * Unit: milliseconds. By default, the current timestamp is used.
+             * Unit: milliseconds. By default, the current time is used.
              */
             public Builder ts(Long ts) {
                 this.ts = ts;

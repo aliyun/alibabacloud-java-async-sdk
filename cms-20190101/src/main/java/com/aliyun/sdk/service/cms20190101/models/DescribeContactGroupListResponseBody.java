@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeContactGroupListResponseBody</p>
  */
 public class DescribeContactGroupListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ContactGroupList")
+    @com.aliyun.core.annotation.NameInMap("ContactGroupList")
     private ContactGroupList contactGroupList;
 
-    @NameInMap("ContactGroups")
+    @com.aliyun.core.annotation.NameInMap("ContactGroups")
     private ContactGroups contactGroups;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeContactGroupListResponseBody(Builder builder) {
@@ -179,7 +178,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
     } 
 
     public static class Contacts extends TeaModel {
-        @NameInMap("Contact")
+        @com.aliyun.core.annotation.NameInMap("Contact")
         private java.util.List < String > contact;
 
         private Contacts(Builder builder) {
@@ -220,25 +219,25 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
 
     }
     public static class ContactGroup extends TeaModel {
-        @NameInMap("Contacts")
+        @com.aliyun.core.annotation.NameInMap("Contacts")
         private Contacts contacts;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Describe")
+        @com.aliyun.core.annotation.NameInMap("Describe")
         private String describe;
 
-        @NameInMap("EnableSubscribed")
+        @com.aliyun.core.annotation.NameInMap("EnableSubscribed")
         private Boolean enableSubscribed;
 
-        @NameInMap("EnabledWeeklyReport")
+        @com.aliyun.core.annotation.NameInMap("EnabledWeeklyReport")
         private Boolean enabledWeeklyReport;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private ContactGroup(Builder builder) {
@@ -391,7 +390,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
 
     }
     public static class ContactGroupList extends TeaModel {
-        @NameInMap("ContactGroup")
+        @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < ContactGroup> contactGroup;
 
         private ContactGroupList(Builder builder) {
@@ -432,7 +431,7 @@ public class DescribeContactGroupListResponseBody extends TeaModel {
 
     }
     public static class ContactGroups extends TeaModel {
-        @NameInMap("ContactGroup")
+        @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < String > contactGroup;
 
         private ContactGroups(Builder builder) {

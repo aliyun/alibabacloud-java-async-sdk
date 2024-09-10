@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorGroupsResponseBody</p>
  */
 public class DescribeMonitorGroupsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private Resources resources;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeMonitorGroupsResponseBody(Builder builder) {
@@ -199,7 +198,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
     } 
 
     public static class ContactGroup extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ContactGroup(Builder builder) {
@@ -240,7 +239,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
 
     }
     public static class ContactGroups extends TeaModel {
-        @NameInMap("ContactGroup")
+        @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < ContactGroup> contactGroup;
 
         private ContactGroups(Builder builder) {
@@ -281,10 +280,10 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -342,7 +341,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -383,7 +382,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
 
     }
     public static class TemplateIds extends TeaModel {
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private java.util.List < String > templateId;
 
         private TemplateIds(Builder builder) {
@@ -424,46 +423,46 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("BindUrl")
+        @com.aliyun.core.annotation.NameInMap("BindUrl")
         private String bindUrl;
 
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private ContactGroups contactGroups;
 
-        @NameInMap("DynamicTagRuleId")
+        @com.aliyun.core.annotation.NameInMap("DynamicTagRuleId")
         private String dynamicTagRuleId;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("GroupFounderTagKey")
+        @com.aliyun.core.annotation.NameInMap("GroupFounderTagKey")
         private String groupFounderTagKey;
 
-        @NameInMap("GroupFounderTagValue")
+        @com.aliyun.core.annotation.NameInMap("GroupFounderTagValue")
         private String groupFounderTagValue;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServiceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceId")
         private String serviceId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("TemplateIds")
+        @com.aliyun.core.annotation.NameInMap("TemplateIds")
         private TemplateIds templateIds;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Resource(Builder builder) {
@@ -730,7 +729,7 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < Resource> resource;
 
         private Resources(Builder builder) {

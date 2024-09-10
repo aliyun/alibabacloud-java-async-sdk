@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CursorRequest</p>
  */
 public class CursorRequest extends Request {
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Body
-    @NameInMap("Matchers")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Matchers")
     private java.util.List < Matcher > matchers;
 
-    @Body
-    @NameInMap("Metric")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metric")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metric;
 
-    @Body
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Body
-    @NameInMap("Period")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer period;
 
-    @Body
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private CursorRequest(Builder builder) {

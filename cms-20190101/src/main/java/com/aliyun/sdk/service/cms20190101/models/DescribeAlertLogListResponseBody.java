@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertLogListResponseBody</p>
  */
 public class DescribeAlertLogListResponseBody extends TeaModel {
-    @NameInMap("AlertLogList")
+    @com.aliyun.core.annotation.NameInMap("AlertLogList")
     private java.util.List < AlertLogList> alertLogList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAlertLogListResponseBody(Builder builder) {
@@ -179,10 +178,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
     } 
 
     public static class Dimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Dimensions(Builder builder) {
@@ -240,13 +239,13 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     }
     public static class Escalation extends TeaModel {
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Escalation(Builder builder) {
@@ -328,10 +327,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     }
     public static class ExtendedInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ExtendedInfo(Builder builder) {
@@ -389,19 +388,19 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     }
     public static class ResultList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
-        @NameInMap("notifyTargetList")
+        @com.aliyun.core.annotation.NameInMap("notifyTargetList")
         private java.util.List < String > notifyTargetList;
 
         private ResultList(Builder builder) {
@@ -518,10 +517,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     }
     public static class ChannelResultList extends TeaModel {
-        @NameInMap("Channel")
+        @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
 
-        @NameInMap("ResultList")
+        @com.aliyun.core.annotation.NameInMap("ResultList")
         private java.util.List < ResultList> resultList;
 
         private ChannelResultList(Builder builder) {
@@ -588,10 +587,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     }
     public static class SendDetail extends TeaModel {
-        @NameInMap("ChannelResultList")
+        @com.aliyun.core.annotation.NameInMap("ChannelResultList")
         private java.util.List < ChannelResultList> channelResultList;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
 
         private SendDetail(Builder builder) {
@@ -653,10 +652,10 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     }
     public static class SendResultList extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
 
         private SendResultList(Builder builder) {
@@ -722,13 +721,13 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     }
     public static class WebhookList extends TeaModel {
-        @NameInMap("code")
+        @com.aliyun.core.annotation.NameInMap("code")
         private String code;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private WebhookList(Builder builder) {
@@ -803,100 +802,100 @@ public class DescribeAlertLogListResponseBody extends TeaModel {
 
     }
     public static class AlertLogList extends TeaModel {
-        @NameInMap("AlertTime")
+        @com.aliyun.core.annotation.NameInMap("AlertTime")
         private String alertTime;
 
-        @NameInMap("BlackListDetail")
+        @com.aliyun.core.annotation.NameInMap("BlackListDetail")
         private String blackListDetail;
 
-        @NameInMap("BlackListName")
+        @com.aliyun.core.annotation.NameInMap("BlackListName")
         private String blackListName;
 
-        @NameInMap("BlackListUUID")
+        @com.aliyun.core.annotation.NameInMap("BlackListUUID")
         private String blackListUUID;
 
-        @NameInMap("ContactALIIWWList")
+        @com.aliyun.core.annotation.NameInMap("ContactALIIWWList")
         private java.util.List < String > contactALIIWWList;
 
-        @NameInMap("ContactDingList")
+        @com.aliyun.core.annotation.NameInMap("ContactDingList")
         private java.util.List < String > contactDingList;
 
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private java.util.List < String > contactGroups;
 
-        @NameInMap("ContactMailList")
+        @com.aliyun.core.annotation.NameInMap("ContactMailList")
         private java.util.List < String > contactMailList;
 
-        @NameInMap("ContactOnCallList")
+        @com.aliyun.core.annotation.NameInMap("ContactOnCallList")
         private java.util.List < String > contactOnCallList;
 
-        @NameInMap("ContactSMSList")
+        @com.aliyun.core.annotation.NameInMap("ContactSMSList")
         private java.util.List < String > contactSMSList;
 
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private java.util.List < Dimensions> dimensions;
 
-        @NameInMap("DingdingWebhookList")
+        @com.aliyun.core.annotation.NameInMap("DingdingWebhookList")
         private java.util.List < String > dingdingWebhookList;
 
-        @NameInMap("Escalation")
+        @com.aliyun.core.annotation.NameInMap("Escalation")
         private Escalation escalation;
 
-        @NameInMap("EventName")
+        @com.aliyun.core.annotation.NameInMap("EventName")
         private String eventName;
 
-        @NameInMap("ExtendedInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtendedInfo")
         private java.util.List < ExtendedInfo> extendedInfo;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("LevelChange")
+        @com.aliyun.core.annotation.NameInMap("LevelChange")
         private String levelChange;
 
-        @NameInMap("LogId")
+        @com.aliyun.core.annotation.NameInMap("LogId")
         private String logId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("SendDetail")
+        @com.aliyun.core.annotation.NameInMap("SendDetail")
         private SendDetail sendDetail;
 
-        @NameInMap("SendResultList")
+        @com.aliyun.core.annotation.NameInMap("SendResultList")
         private java.util.List < SendResultList> sendResultList;
 
-        @NameInMap("SendStatus")
+        @com.aliyun.core.annotation.NameInMap("SendStatus")
         private String sendStatus;
 
-        @NameInMap("WebhookList")
+        @com.aliyun.core.annotation.NameInMap("WebhookList")
         private java.util.List < WebhookList> webhookList;
 
         private AlertLogList(Builder builder) {

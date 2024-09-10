@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertHistoryListRequest</p>
  */
 public class DescribeAlertHistoryListRequest extends Request {
-    @Query
-    @NameInMap("Ascending")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ascending")
     private Boolean ascending;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeAlertHistoryListRequest(Builder builder) {

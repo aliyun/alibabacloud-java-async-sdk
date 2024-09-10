@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyGroupMonitoringAgentProcessRequest</p>
  */
 public class ModifyGroupMonitoringAgentProcessRequest extends Request {
-    @Query
-    @NameInMap("AlertConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AlertConfig> alertConfig;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("MatchExpressFilterRelation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchExpressFilterRelation")
     private String matchExpressFilterRelation;
 
     private ModifyGroupMonitoringAgentProcessRequest(Builder builder) {
@@ -147,16 +146,16 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
     } 
 
     public static class TargetList extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JsonParams")
+        @com.aliyun.core.annotation.NameInMap("JsonParams")
         private String jsonParams;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private TargetList(Builder builder) {
@@ -271,38 +270,38 @@ public class ModifyGroupMonitoringAgentProcessRequest extends Request {
 
     }
     public static class AlertConfig extends TeaModel {
-        @NameInMap("ComparisonOperator")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String comparisonOperator;
 
-        @NameInMap("EffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("EffectiveInterval")
         private String effectiveInterval;
 
-        @NameInMap("EscalationsLevel")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EscalationsLevel")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String escalationsLevel;
 
-        @NameInMap("NoEffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("NoEffectiveInterval")
         private String noEffectiveInterval;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private String silenceTime;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("TargetList")
+        @com.aliyun.core.annotation.NameInMap("TargetList")
         private java.util.List < TargetList> targetList;
 
-        @NameInMap("Threshold")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String threshold;
 
-        @NameInMap("Times")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Times")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String times;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private AlertConfig(Builder builder) {

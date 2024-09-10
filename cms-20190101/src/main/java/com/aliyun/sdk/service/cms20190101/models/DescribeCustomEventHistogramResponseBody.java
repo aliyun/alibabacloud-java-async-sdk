@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomEventHistogramResponseBody</p>
  */
 public class DescribeCustomEventHistogramResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EventHistograms")
+    @com.aliyun.core.annotation.NameInMap("EventHistograms")
     private EventHistograms eventHistograms;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeCustomEventHistogramResponseBody(Builder builder) {
@@ -135,13 +134,13 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
     } 
 
     public static class EventHistogram extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private EventHistogram(Builder builder) {
@@ -222,7 +221,7 @@ public class DescribeCustomEventHistogramResponseBody extends TeaModel {
 
     }
     public static class EventHistograms extends TeaModel {
-        @NameInMap("EventHistogram")
+        @com.aliyun.core.annotation.NameInMap("EventHistogram")
         private java.util.List < EventHistogram> eventHistogram;
 
         private EventHistograms(Builder builder) {

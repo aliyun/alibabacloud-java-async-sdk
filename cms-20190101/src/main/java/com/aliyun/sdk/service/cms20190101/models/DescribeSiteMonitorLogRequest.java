@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSiteMonitorLogRequest</p>
  */
 public class DescribeSiteMonitorLogRequest extends Request {
-    @Query
-    @NameInMap("Browser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Browser")
     private String browser;
 
-    @Query
-    @NameInMap("BrowserInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BrowserInfo")
     private String browserInfo;
 
-    @Query
-    @NameInMap("City")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
-    @Query
-    @NameInMap("Device")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Device")
     private String device;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @Query
-    @NameInMap("Isp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Isp")
     private String isp;
 
-    @Query
-    @NameInMap("Length")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Length")
     private Integer length;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("TaskIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskIds;
 
     private DescribeSiteMonitorLogRequest(Builder builder) {

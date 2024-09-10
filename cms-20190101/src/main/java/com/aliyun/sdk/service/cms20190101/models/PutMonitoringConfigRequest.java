@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutMonitoringConfigRequest</p>
  */
 public class PutMonitoringConfigRequest extends Request {
-    @Query
-    @NameInMap("AutoInstall")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoInstall")
     private Boolean autoInstall;
 
-    @Query
-    @NameInMap("EnableInstallAgentNewECS")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableInstallAgentNewECS")
     private Boolean enableInstallAgentNewECS;
 
     private PutMonitoringConfigRequest(Builder builder) {

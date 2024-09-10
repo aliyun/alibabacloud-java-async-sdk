@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeContactListResponseBody</p>
  */
 public class DescribeContactListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Contacts")
+    @com.aliyun.core.annotation.NameInMap("Contacts")
     private Contacts contacts;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeContactListResponseBody(Builder builder) {
@@ -159,16 +158,16 @@ public class DescribeContactListResponseBody extends TeaModel {
     } 
 
     public static class Channels extends TeaModel {
-        @NameInMap("AliIM")
+        @com.aliyun.core.annotation.NameInMap("AliIM")
         private String aliIM;
 
-        @NameInMap("DingWebHook")
+        @com.aliyun.core.annotation.NameInMap("DingWebHook")
         private String dingWebHook;
 
-        @NameInMap("Mail")
+        @com.aliyun.core.annotation.NameInMap("Mail")
         private String mail;
 
-        @NameInMap("SMS")
+        @com.aliyun.core.annotation.NameInMap("SMS")
         private String SMS;
 
         private Channels(Builder builder) {
@@ -260,16 +259,16 @@ public class DescribeContactListResponseBody extends TeaModel {
 
     }
     public static class ChannelsState extends TeaModel {
-        @NameInMap("AliIM")
+        @com.aliyun.core.annotation.NameInMap("AliIM")
         private String aliIM;
 
-        @NameInMap("DingWebHook")
+        @com.aliyun.core.annotation.NameInMap("DingWebHook")
         private String dingWebHook;
 
-        @NameInMap("Mail")
+        @com.aliyun.core.annotation.NameInMap("Mail")
         private String mail;
 
-        @NameInMap("SMS")
+        @com.aliyun.core.annotation.NameInMap("SMS")
         private String SMS;
 
         private ChannelsState(Builder builder) {
@@ -379,7 +378,7 @@ public class DescribeContactListResponseBody extends TeaModel {
 
     }
     public static class ContactGroups extends TeaModel {
-        @NameInMap("ContactGroup")
+        @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < String > contactGroup;
 
         private ContactGroups(Builder builder) {
@@ -420,28 +419,28 @@ public class DescribeContactListResponseBody extends TeaModel {
 
     }
     public static class Contact extends TeaModel {
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private Channels channels;
 
-        @NameInMap("ChannelsState")
+        @com.aliyun.core.annotation.NameInMap("ChannelsState")
         private ChannelsState channelsState;
 
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private ContactGroups contactGroups;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Contact(Builder builder) {
@@ -614,7 +613,7 @@ public class DescribeContactListResponseBody extends TeaModel {
 
     }
     public static class Contacts extends TeaModel {
-        @NameInMap("Contact")
+        @com.aliyun.core.annotation.NameInMap("Contact")
         private java.util.List < Contact> contact;
 
         private Contacts(Builder builder) {

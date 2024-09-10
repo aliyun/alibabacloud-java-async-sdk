@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteEventRuleTargetsResponseBody</p>
  */
 public class DeleteEventRuleTargetsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteEventRuleTargetsResponseBody(Builder builder) {
@@ -74,10 +73,10 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * The response code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +92,7 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID. You can use the request ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -101,7 +100,11 @@ public class DeleteEventRuleTargetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder success(Boolean success) {
             this.success = success;

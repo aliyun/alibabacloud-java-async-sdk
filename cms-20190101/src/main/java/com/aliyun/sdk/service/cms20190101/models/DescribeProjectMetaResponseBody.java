@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProjectMetaResponseBody</p>
  */
 public class DescribeProjectMetaResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private Resources resources;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private String total;
 
     private DescribeProjectMetaResponseBody(Builder builder) {
@@ -195,13 +194,13 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
     } 
 
     public static class Resource extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
         private Resource(Builder builder) {
@@ -259,9 +258,9 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
              * Tags are returned in the following format: `[{"name":"Tag key","value":"Tag value"}, {"name":"Tag key","value":"Tag value"}]`. The following tags are commonly used:
              * 
              * *   alertUnit: the unit of the metric value in alerts. If the unit is small, the original metric value may be too large. In this case, you can use the `alertUnit` tag to specify an appropriate unit. This tag is used in CloudMonitor.
-             * *   minAlertPeriod: the minimum time interval to report a new alert. The interval is usually set to 1 minute.
-             * *   metricCategory: the service specification. Example: kvstore_sharding. An Alibaba Cloud service may have different specifications that are defined in the same namespace. You can use this parameter to distinguish between service specifications.
-             * *   is_alarm: specifies whether an alert rule can be set. We recommend that you do not use the special tags in the CloudMonitor console.
+             * *   minAlertPeriod: the minimum time interval to report a new alert. The interval at which monitoring data is reported. The value is usually 1 minute.
+             * *   metricCategory: the service specification. Example: kvstore_sharding. Some Alibaba Cloud services have multiple specifications that are defined in the same namespace. This parameter is used to identify the specifications.
+             * *   is_alarm: indicates whether an alert rule can be configured. We recommend that you do not use the special tags in the CloudMonitor console.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -284,7 +283,7 @@ public class DescribeProjectMetaResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < Resource> resource;
 
         private Resources(Builder builder) {

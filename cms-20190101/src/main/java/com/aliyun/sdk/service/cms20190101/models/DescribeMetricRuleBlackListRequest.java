@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricRuleBlackListRequest</p>
  */
 public class DescribeMetricRuleBlackListRequest extends Request {
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("Ids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
     private java.util.List < String > ids;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
-    @Query
-    @NameInMap("IsEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsEnable")
     private Boolean isEnable;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private Integer order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ScopeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
     private String scopeType;
 
     private DescribeMetricRuleBlackListRequest(Builder builder) {

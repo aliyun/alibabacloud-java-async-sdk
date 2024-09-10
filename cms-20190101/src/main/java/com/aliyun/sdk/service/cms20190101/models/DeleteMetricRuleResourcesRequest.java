@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMetricRuleResourcesRequest</p>
  */
 public class DeleteMetricRuleResourcesRequest extends Request {
-    @Query
-    @NameInMap("Resources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resources;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
     private DeleteMetricRuleResourcesRequest(Builder builder) {

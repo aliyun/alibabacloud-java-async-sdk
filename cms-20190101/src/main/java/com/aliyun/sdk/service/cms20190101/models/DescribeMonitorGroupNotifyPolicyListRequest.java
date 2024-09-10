@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorGroupNotifyPolicyListRequest</p>
  */
 public class DescribeMonitorGroupNotifyPolicyListRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("PolicyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyType;
 
     private DescribeMonitorGroupNotifyPolicyListRequest(Builder builder) {

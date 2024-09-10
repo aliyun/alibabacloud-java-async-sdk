@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExporterOutputListResponseBody</p>
  */
 public class DescribeExporterOutputListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Datapoints")
+    @com.aliyun.core.annotation.NameInMap("Datapoints")
     private Datapoints datapoints;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeExporterOutputListResponseBody(Builder builder) {
@@ -179,16 +178,16 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
     } 
 
     public static class ConfigJson extends TeaModel {
-        @NameInMap("ak")
+        @com.aliyun.core.annotation.NameInMap("ak")
         private String ak;
 
-        @NameInMap("endpoint")
+        @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
-        @NameInMap("logstore")
+        @com.aliyun.core.annotation.NameInMap("logstore")
         private String logstore;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
         private ConfigJson(Builder builder) {
@@ -280,16 +279,16 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
 
     }
     public static class Datapoint extends TeaModel {
-        @NameInMap("ConfigJson")
+        @com.aliyun.core.annotation.NameInMap("ConfigJson")
         private ConfigJson configJson;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DestName")
+        @com.aliyun.core.annotation.NameInMap("DestName")
         private String destName;
 
-        @NameInMap("DestType")
+        @com.aliyun.core.annotation.NameInMap("DestType")
         private String destType;
 
         private Datapoint(Builder builder) {
@@ -384,7 +383,7 @@ public class DescribeExporterOutputListResponseBody extends TeaModel {
 
     }
     public static class Datapoints extends TeaModel {
-        @NameInMap("Datapoint")
+        @com.aliyun.core.annotation.NameInMap("Datapoint")
         private java.util.List < Datapoint> datapoint;
 
         private Datapoints(Builder builder) {

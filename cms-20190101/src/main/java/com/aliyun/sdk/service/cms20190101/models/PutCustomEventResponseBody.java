@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutCustomEventResponseBody</p>
  */
 public class PutCustomEventResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PutCustomEventResponseBody(Builder builder) {
@@ -62,10 +61,10 @@ public class PutCustomEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code.
+         * The responses code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -81,7 +80,7 @@ public class PutCustomEventResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

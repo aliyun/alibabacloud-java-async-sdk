@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySiteMonitorRequest</p>
  */
 public class ModifySiteMonitorRequest extends Request {
-    @Query
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @Query
-    @NameInMap("AlertIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertIds")
     private String alertIds;
 
-    @Query
-    @NameInMap("CustomSchedule")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomSchedule")
     private String customSchedule;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("IntervalUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalUnit")
     private String intervalUnit;
 
-    @Query
-    @NameInMap("IspCities")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspCities")
     private String ispCities;
 
-    @Query
-    @NameInMap("OptionsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OptionsJson")
     private String optionsJson;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
     private ModifySiteMonitorRequest(Builder builder) {

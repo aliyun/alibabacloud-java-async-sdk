@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutResourceMetricRulesRequest</p>
  */
 public class PutResourceMetricRulesRequest extends Request {
-    @Query
-    @NameInMap("Rules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Rules> rules;
 
     private PutResourceMetricRulesRequest(Builder builder) {
@@ -74,22 +73,22 @@ public class PutResourceMetricRulesRequest extends Request {
     } 
 
     public static class Critical extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("PreCondition")
+        @com.aliyun.core.annotation.NameInMap("PreCondition")
         private String preCondition;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Critical(Builder builder) {
@@ -215,22 +214,22 @@ public class PutResourceMetricRulesRequest extends Request {
 
     }
     public static class Info extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("PreCondition")
+        @com.aliyun.core.annotation.NameInMap("PreCondition")
         private String preCondition;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Info(Builder builder) {
@@ -356,22 +355,22 @@ public class PutResourceMetricRulesRequest extends Request {
 
     }
     public static class Warn extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("PreCondition")
+        @com.aliyun.core.annotation.NameInMap("PreCondition")
         private String preCondition;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Warn(Builder builder) {
@@ -497,16 +496,16 @@ public class PutResourceMetricRulesRequest extends Request {
 
     }
     public static class Escalations extends TeaModel {
-        @NameInMap("Critical")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Critical")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Critical critical;
 
-        @NameInMap("Info")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Info")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Info info;
 
-        @NameInMap("Warn")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Warn")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Warn warn;
 
         private Escalations(Builder builder) {
@@ -581,10 +580,10 @@ public class PutResourceMetricRulesRequest extends Request {
 
     }
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -645,58 +644,58 @@ public class PutResourceMetricRulesRequest extends Request {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Escalations")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Escalations")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Escalations escalations;
 
-        @NameInMap("ContactGroups")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String contactGroups;
 
-        @NameInMap("EffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("EffectiveInterval")
         private String effectiveInterval;
 
-        @NameInMap("EmailSubject")
+        @com.aliyun.core.annotation.NameInMap("EmailSubject")
         private String emailSubject;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private String interval;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Namespace")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
-        @NameInMap("NoDataPolicy")
+        @com.aliyun.core.annotation.NameInMap("NoDataPolicy")
         private String noDataPolicy;
 
-        @NameInMap("NoEffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("NoEffectiveInterval")
         private String noEffectiveInterval;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("Resources")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Resources")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resources;
 
-        @NameInMap("RuleId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleId;
 
-        @NameInMap("RuleName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleName;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Integer silenceTime;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private Rules(Builder builder) {

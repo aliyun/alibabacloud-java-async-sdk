@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,62 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutLogMonitorRequest</p>
  */
 public class PutLogMonitorRequest extends Request {
-    @Query
-    @NameInMap("Aggregates")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Aggregates")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Aggregates> aggregates;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Groupbys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Groupbys")
     private java.util.List < Groupbys> groupbys;
 
-    @Query
-    @NameInMap("LogId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogId")
     private String logId;
 
-    @Query
-    @NameInMap("MetricExpress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricExpress")
     private String metricExpress;
 
-    @Query
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @Query
-    @NameInMap("SlsLogstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsLogstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slsLogstore;
 
-    @Query
-    @NameInMap("SlsProject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsProject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slsProject;
 
-    @Query
-    @NameInMap("SlsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String slsRegionId;
 
-    @Query
-    @NameInMap("Tumblingwindows")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tumblingwindows")
     private String tumblingwindows;
 
-    @Query
-    @NameInMap("Unit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Unit")
     private String unit;
 
-    @Query
-    @NameInMap("ValueFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValueFilter")
     private java.util.List < ValueFilter> valueFilter;
 
-    @Query
-    @NameInMap("ValueFilterRelation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValueFilterRelation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String valueFilterRelation;
 
     private PutLogMonitorRequest(Builder builder) {
@@ -246,7 +245,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * Groupbys.
+         * The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.
          */
         public Builder groupbys(java.util.List < Groupbys> groupbys) {
             this.putQueryParameter("Groupbys", groupbys);
@@ -267,7 +266,7 @@ public class PutLogMonitorRequest extends Request {
          * The extended field. The extended field allows you to perform basic operations on the aggregation results.
          * <p>
          * 
-         * For example, if you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.
+         * For example, you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.
          * 
          * JSON format: {"extend":{"errorPercent":"5XXNumber/TotalNumber\*100"}}. Description:
          * 
@@ -282,7 +281,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The name of the metric. For more information about the metrics for cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * The metric name. For more information about the metrics for cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -291,7 +290,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The name of the Log Service Logstore.
+         * The name of the Simple Log Service Logstore.
          */
         public Builder slsLogstore(String slsLogstore) {
             this.putQueryParameter("SlsLogstore", slsLogstore);
@@ -300,7 +299,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The name of the Log Service project.
+         * The name of the Simple Log Service project.
          */
         public Builder slsProject(String slsProject) {
             this.putQueryParameter("SlsProject", slsProject);
@@ -309,7 +308,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * The region in which the Log Service project resides.
+         * The region in which the Simple Log Service project resides.
          */
         public Builder slsRegionId(String slsRegionId) {
             this.putQueryParameter("SlsRegionId", slsRegionId);
@@ -336,7 +335,7 @@ public class PutLogMonitorRequest extends Request {
         }
 
         /**
-         * ValueFilter.
+         * The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements. If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.
          */
         public Builder valueFilter(java.util.List < ValueFilter> valueFilter) {
             this.putQueryParameter("ValueFilter", valueFilter);
@@ -367,16 +366,16 @@ public class PutLogMonitorRequest extends Request {
     } 
 
     public static class Aggregates extends TeaModel {
-        @NameInMap("Alias")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Alias")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String alias;
 
-        @NameInMap("FieldName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fieldName;
 
-        @NameInMap("Function")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Function")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String function;
 
         private Aggregates(Builder builder) {
@@ -436,17 +435,17 @@ public class PutLogMonitorRequest extends Request {
             }
 
             /**
-             * The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values of N: 1 to 10. Valid values:
+             * The function that is used to aggregate log data within a statistical period. Valid values of N: 1 to 10. Valid values:
              * <p>
              * 
              * *   count: counts the number.
              * *   sum: calculates the total value.
              * *   avg: calculates the average value.
-             * *   max: selects the maximum value.
-             * *   min: selects the minimum value.
-             * *   countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.
-             * *   sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.
-             * *   distinct: counts the number of logs where the specified field appears within the aggregation period.
+             * *   max: calculates the maximum value.
+             * *   min: calculates the minimum value.
+             * *   countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.
+             * *   sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.
+             * *   distinct: calculates the number of unique values of the specified field within a statistical period.
              */
             public Builder function(String function) {
                 this.function = function;
@@ -461,10 +460,10 @@ public class PutLogMonitorRequest extends Request {
 
     }
     public static class Groupbys extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
         private Groupbys(Builder builder) {
@@ -522,13 +521,13 @@ public class PutLogMonitorRequest extends Request {
 
     }
     public static class ValueFilter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ValueFilter(Builder builder) {
@@ -585,10 +584,10 @@ public class PutLogMonitorRequest extends Request {
              * 
              * *   `contain`: contains
              * *   `notContain`: does not contain
-             * *   `>`: be greater than
-             * *   `<`: be less than
-             * *   `>=`: be greater than or equal to
-             * *   `<=`: be less than or equal to
+             * *   `>`: greater than
+             * *   `<`: less than
+             * *   `>=`: greater than or equal to
+             * *   `<=`: less than or equal to
              */
             public Builder operator(String operator) {
                 this.operator = operator;

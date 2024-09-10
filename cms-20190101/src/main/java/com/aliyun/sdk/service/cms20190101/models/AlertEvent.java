@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AlertEvent</p>
  */
 public class AlertEvent extends TeaModel {
-    @NameInMap("AlertName")
+    @com.aliyun.core.annotation.NameInMap("AlertName")
     private String alertName;
 
-    @NameInMap("AlertStatus")
+    @com.aliyun.core.annotation.NameInMap("AlertStatus")
     private String alertStatus;
 
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private String arn;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("CustomLabels")
+    @com.aliyun.core.annotation.NameInMap("CustomLabels")
     private java.util.Map < String, ? > customLabels;
 
-    @NameInMap("DeDupId")
+    @com.aliyun.core.annotation.NameInMap("DeDupId")
     private String deDupId;
 
-    @NameInMap("Details")
+    @com.aliyun.core.annotation.NameInMap("Details")
     private String details;
 
-    @NameInMap("EventName")
+    @com.aliyun.core.annotation.NameInMap("EventName")
     private String eventName;
 
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @NameInMap("Expression")
+    @com.aliyun.core.annotation.NameInMap("Expression")
     private String expression;
 
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.List < Metrics> metrics;
 
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @NameInMap("ResourceInfo")
+    @com.aliyun.core.annotation.NameInMap("ResourceInfo")
     private java.util.Map < String, ? > resourceInfo;
 
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @NameInMap("Severity")
+    @com.aliyun.core.annotation.NameInMap("Severity")
     private String severity;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("Summary")
+    @com.aliyun.core.annotation.NameInMap("Summary")
     private String summary;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Long timestamp;
 
-    @NameInMap("TraceId")
+    @com.aliyun.core.annotation.NameInMap("TraceId")
     private String traceId;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private AlertEvent(Builder builder) {
@@ -432,31 +431,31 @@ public class AlertEvent extends TeaModel {
     } 
 
     public static class Metrics extends TeaModel {
-        @NameInMap("CurValue")
+        @com.aliyun.core.annotation.NameInMap("CurValue")
         private String curValue;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("MetricNameEn")
+        @com.aliyun.core.annotation.NameInMap("MetricNameEn")
         private String metricNameEn;
 
-        @NameInMap("MetricNameZh")
+        @com.aliyun.core.annotation.NameInMap("MetricNameZh")
         private String metricNameZh;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("UnitFactor")
+        @com.aliyun.core.annotation.NameInMap("UnitFactor")
         private Float unitFactor;
 
         private Metrics(Builder builder) {

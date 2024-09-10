@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Dimension</p>
  */
 public class Dimension extends TeaModel {
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private Dimension(Builder builder) {

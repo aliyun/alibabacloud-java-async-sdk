@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,60 +11,60 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorGroupsRequest</p>
  */
 public class DescribeMonitorGroupsRequest extends Request {
-    @Query
-    @NameInMap("DynamicTagRuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DynamicTagRuleId")
     private String dynamicTagRuleId;
 
-    @Query
-    @NameInMap("GroupFounderTagKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupFounderTagKey")
     private String groupFounderTagKey;
 
-    @Query
-    @NameInMap("GroupFounderTagValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupFounderTagValue")
     private String groupFounderTagValue;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("IncludeTemplateHistory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeTemplateHistory")
     private Boolean includeTemplateHistory;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SelectContactGroups")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectContactGroups")
     private Boolean selectContactGroups;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("Types")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Types")
     private String types;
 
     private DescribeMonitorGroupsRequest(Builder builder) {
@@ -396,10 +395,10 @@ public class DescribeMonitorGroupsRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

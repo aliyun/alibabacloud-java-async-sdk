@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHybridMonitorTaskListResponseBody</p>
  */
 public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TaskList")
+    @com.aliyun.core.annotation.NameInMap("TaskList")
     private java.util.List < TaskList> taskList;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeHybridMonitorTaskListResponseBody(Builder builder) {
@@ -203,10 +202,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
     } 
 
     public static class AttachLabels extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private AttachLabels(Builder builder) {
@@ -264,13 +263,13 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     }
     public static class MatchExpress extends TeaModel {
-        @NameInMap("Function")
+        @com.aliyun.core.annotation.NameInMap("Function")
         private String function;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MatchExpress(Builder builder) {
@@ -353,10 +352,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     }
     public static class Express extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Express")
+        @com.aliyun.core.annotation.NameInMap("Express")
         private String express;
 
         private Express(Builder builder) {
@@ -414,13 +413,13 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     }
     public static class Filters extends TeaModel {
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("SLSKeyName")
+        @com.aliyun.core.annotation.NameInMap("SLSKeyName")
         private String SLSKeyName;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {
@@ -505,10 +504,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     }
     public static class Filter extends TeaModel {
-        @NameInMap("Filters")
+        @com.aliyun.core.annotation.NameInMap("Filters")
         private java.util.List < Filters> filters;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
         private Filter(Builder builder) {
@@ -570,10 +569,10 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     }
     public static class GroupBy extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("SLSKeyName")
+        @com.aliyun.core.annotation.NameInMap("SLSKeyName")
         private String SLSKeyName;
 
         private GroupBy(Builder builder) {
@@ -631,19 +630,19 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     }
     public static class Statistics extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Function")
+        @com.aliyun.core.annotation.NameInMap("Function")
         private String function;
 
-        @NameInMap("Parameter1")
+        @com.aliyun.core.annotation.NameInMap("Parameter1")
         private String parameter1;
 
-        @NameInMap("Parameter2")
+        @com.aliyun.core.annotation.NameInMap("Parameter2")
         private String parameter2;
 
-        @NameInMap("SLSKeyName")
+        @com.aliyun.core.annotation.NameInMap("SLSKeyName")
         private String SLSKeyName;
 
         private Statistics(Builder builder) {
@@ -772,16 +771,16 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     }
     public static class SLSProcessConfig extends TeaModel {
-        @NameInMap("Express")
+        @com.aliyun.core.annotation.NameInMap("Express")
         private java.util.List < Express> express;
 
-        @NameInMap("Filter")
+        @com.aliyun.core.annotation.NameInMap("Filter")
         private Filter filter;
 
-        @NameInMap("GroupBy")
+        @com.aliyun.core.annotation.NameInMap("GroupBy")
         private java.util.List < GroupBy> groupBy;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private java.util.List < Statistics> statistics;
 
         private SLSProcessConfig(Builder builder) {
@@ -873,85 +872,85 @@ public class DescribeHybridMonitorTaskListResponseBody extends TeaModel {
 
     }
     public static class TaskList extends TeaModel {
-        @NameInMap("AttachLabels")
+        @com.aliyun.core.annotation.NameInMap("AttachLabels")
         private java.util.List < AttachLabels> attachLabels;
 
-        @NameInMap("CollectInterval")
+        @com.aliyun.core.annotation.NameInMap("CollectInterval")
         private Integer collectInterval;
 
-        @NameInMap("CollectTargetEndpoint")
+        @com.aliyun.core.annotation.NameInMap("CollectTargetEndpoint")
         private String collectTargetEndpoint;
 
-        @NameInMap("CollectTargetPath")
+        @com.aliyun.core.annotation.NameInMap("CollectTargetPath")
         private String collectTargetPath;
 
-        @NameInMap("CollectTargetType")
+        @com.aliyun.core.annotation.NameInMap("CollectTargetType")
         private String collectTargetType;
 
-        @NameInMap("CollectTimout")
+        @com.aliyun.core.annotation.NameInMap("CollectTimout")
         private Integer collectTimout;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExtraInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private String extraInfo;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private java.util.List < String > instances;
 
-        @NameInMap("LogFilePath")
+        @com.aliyun.core.annotation.NameInMap("LogFilePath")
         private String logFilePath;
 
-        @NameInMap("LogProcess")
+        @com.aliyun.core.annotation.NameInMap("LogProcess")
         private String logProcess;
 
-        @NameInMap("LogSample")
+        @com.aliyun.core.annotation.NameInMap("LogSample")
         private String logSample;
 
-        @NameInMap("LogSplit")
+        @com.aliyun.core.annotation.NameInMap("LogSplit")
         private String logSplit;
 
-        @NameInMap("MatchExpress")
+        @com.aliyun.core.annotation.NameInMap("MatchExpress")
         private java.util.List < MatchExpress> matchExpress;
 
-        @NameInMap("MatchExpressRelation")
+        @com.aliyun.core.annotation.NameInMap("MatchExpressRelation")
         private String matchExpressRelation;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("SLSProcess")
+        @com.aliyun.core.annotation.NameInMap("SLSProcess")
         private String SLSProcess;
 
-        @NameInMap("SLSProcessConfig")
+        @com.aliyun.core.annotation.NameInMap("SLSProcessConfig")
         private SLSProcessConfig SLSProcessConfig;
 
-        @NameInMap("TargetUserId")
+        @com.aliyun.core.annotation.NameInMap("TargetUserId")
         private String targetUserId;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("UploadRegion")
+        @com.aliyun.core.annotation.NameInMap("UploadRegion")
         private String uploadRegion;
 
-        @NameInMap("YARMConfig")
+        @com.aliyun.core.annotation.NameInMap("YARMConfig")
         private String YARMConfig;
 
         private TaskList(Builder builder) {

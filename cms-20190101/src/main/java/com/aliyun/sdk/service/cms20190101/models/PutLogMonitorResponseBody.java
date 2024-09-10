@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutLogMonitorResponseBody</p>
  */
 public class PutLogMonitorResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogId")
+    @com.aliyun.core.annotation.NameInMap("LogId")
     private String logId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PutLogMonitorResponseBody(Builder builder) {
@@ -89,7 +88,7 @@ public class PutLogMonitorResponseBody extends TeaModel {
          * The HTTP status code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -108,8 +107,8 @@ public class PutLogMonitorResponseBody extends TeaModel {
          * The returned message.
          * <p>
          * 
-         * *   If the call is successful, the value `successful` is returned.
-         * *   If the call fails, an error message is returned. Example: `alias of aggreate must be set value.`
+         * *   If the request was successful, `successful` is returned.
+         * *   If the request failed, an error message is returned. Example: `alias of aggreate must be set value.`
          */
         public Builder message(String message) {
             this.message = message;
@@ -117,7 +116,7 @@ public class PutLogMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,11 +124,11 @@ public class PutLogMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

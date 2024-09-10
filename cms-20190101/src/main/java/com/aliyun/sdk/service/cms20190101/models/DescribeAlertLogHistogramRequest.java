@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,76 +11,76 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertLogHistogramRequest</p>
  */
 public class DescribeAlertLogHistogramRequest extends Request {
-    @Query
-    @NameInMap("ContactGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroup")
     private String contactGroup;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("GroupBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupBy")
     private String groupBy;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("LastMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LastMin")
     private String lastMin;
 
-    @Query
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("SearchKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
-    @Query
-    @NameInMap("SendStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendStatus")
     private String sendStatus;
 
-    @Query
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private DescribeAlertLogHistogramRequest(Builder builder) {

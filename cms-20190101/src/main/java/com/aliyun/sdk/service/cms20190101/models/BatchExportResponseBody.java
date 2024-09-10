@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchExportResponseBody</p>
  */
 public class BatchExportResponseBody extends TeaModel {
-    @NameInMap("Anchor")
+    @com.aliyun.core.annotation.NameInMap("Anchor")
     private Long anchor;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Cursor")
+    @com.aliyun.core.annotation.NameInMap("Cursor")
     private String cursor;
 
-    @NameInMap("DataResults")
+    @com.aliyun.core.annotation.NameInMap("DataResults")
     private java.util.List < MetricStat > dataResults;
 
-    @NameInMap("HasNext")
+    @com.aliyun.core.annotation.NameInMap("HasNext")
     private Boolean hasNext;
 
-    @NameInMap("Length")
+    @com.aliyun.core.annotation.NameInMap("Length")
     private Integer length;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private BatchExportResponseBody(Builder builder) {

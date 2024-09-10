@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMetricRuleResourcesRequest</p>
  */
 public class CreateMetricRuleResourcesRequest extends Request {
-    @Query
-    @NameInMap("Overwrite")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Overwrite")
     private String overwrite;
 
-    @Query
-    @NameInMap("Resources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resources;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
     private CreateMetricRuleResourcesRequest(Builder builder) {

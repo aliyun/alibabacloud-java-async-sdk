@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertingMetricRuleResourcesRequest</p>
  */
 public class DescribeAlertingMetricRuleResourcesRequest extends Request {
-    @Query
-    @NameInMap("AlertBeforeTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertBeforeTime")
     private String alertBeforeTime;
 
-    @Query
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private String dimensions;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
     private DescribeAlertingMetricRuleResourcesRequest(Builder builder) {

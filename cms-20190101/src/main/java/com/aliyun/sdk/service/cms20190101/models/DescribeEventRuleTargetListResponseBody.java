@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventRuleTargetListResponseBody</p>
  */
 public class DescribeEventRuleTargetListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ContactParameters")
+    @com.aliyun.core.annotation.NameInMap("ContactParameters")
     private ContactParameters contactParameters;
 
-    @NameInMap("FcParameters")
+    @com.aliyun.core.annotation.NameInMap("FcParameters")
     private FcParameters fcParameters;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MnsParameters")
+    @com.aliyun.core.annotation.NameInMap("MnsParameters")
     private MnsParameters mnsParameters;
 
-    @NameInMap("OpenApiParameters")
+    @com.aliyun.core.annotation.NameInMap("OpenApiParameters")
     private OpenApiParameters openApiParameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlsParameters")
+    @com.aliyun.core.annotation.NameInMap("SlsParameters")
     private SlsParameters slsParameters;
 
-    @NameInMap("WebhookParameters")
+    @com.aliyun.core.annotation.NameInMap("WebhookParameters")
     private WebhookParameters webhookParameters;
 
     private DescribeEventRuleTargetListResponseBody(Builder builder) {
@@ -215,13 +214,13 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
     } 
 
     public static class ContactParameter extends TeaModel {
-        @NameInMap("ContactGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupName")
         private String contactGroupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private ContactParameter(Builder builder) {
@@ -299,7 +298,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class ContactParameters extends TeaModel {
-        @NameInMap("ContactParameter")
+        @com.aliyun.core.annotation.NameInMap("ContactParameter")
         private java.util.List < ContactParameter> contactParameter;
 
         private ContactParameters(Builder builder) {
@@ -340,19 +339,19 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class FCParameter extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private FCParameter(Builder builder) {
@@ -470,7 +469,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class FcParameters extends TeaModel {
-        @NameInMap("FCParameter")
+        @com.aliyun.core.annotation.NameInMap("FCParameter")
         private java.util.List < FCParameter> FCParameter;
 
         private FcParameters(Builder builder) {
@@ -511,19 +510,19 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class MnsParameter extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Queue")
+        @com.aliyun.core.annotation.NameInMap("Queue")
         private String queue;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private MnsParameter(Builder builder) {
@@ -641,7 +640,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class MnsParameters extends TeaModel {
-        @NameInMap("MnsParameter")
+        @com.aliyun.core.annotation.NameInMap("MnsParameter")
         private java.util.List < MnsParameter> mnsParameter;
 
         private MnsParameters(Builder builder) {
@@ -682,25 +681,25 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class OpenApiParametersOpenApiParameters extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private OpenApiParametersOpenApiParameters(Builder builder) {
@@ -859,7 +858,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class OpenApiParameters extends TeaModel {
-        @NameInMap("OpenApiParameters")
+        @com.aliyun.core.annotation.NameInMap("OpenApiParameters")
         private java.util.List < OpenApiParametersOpenApiParameters> openApiParameters;
 
         private OpenApiParameters(Builder builder) {
@@ -900,19 +899,19 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class SlsParameter extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private SlsParameter(Builder builder) {
@@ -1030,7 +1029,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class SlsParameters extends TeaModel {
-        @NameInMap("SlsParameter")
+        @com.aliyun.core.annotation.NameInMap("SlsParameter")
         private java.util.List < SlsParameter> slsParameter;
 
         private SlsParameters(Builder builder) {
@@ -1071,16 +1070,16 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class WebhookParameter extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private WebhookParameter(Builder builder) {
@@ -1172,7 +1171,7 @@ public class DescribeEventRuleTargetListResponseBody extends TeaModel {
 
     }
     public static class WebhookParameters extends TeaModel {
-        @NameInMap("WebhookParameter")
+        @com.aliyun.core.annotation.NameInMap("WebhookParameter")
         private java.util.List < WebhookParameter> webhookParameter;
 
         private WebhookParameters(Builder builder) {

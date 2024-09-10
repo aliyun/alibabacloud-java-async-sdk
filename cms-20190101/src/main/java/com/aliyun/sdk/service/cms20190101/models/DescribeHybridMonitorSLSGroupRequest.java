@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHybridMonitorSLSGroupRequest</p>
  */
 public class DescribeHybridMonitorSLSGroupRequest extends Request {
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("SLSGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SLSGroupName")
     private String SLSGroupName;
 
     private DescribeHybridMonitorSLSGroupRequest(Builder builder) {

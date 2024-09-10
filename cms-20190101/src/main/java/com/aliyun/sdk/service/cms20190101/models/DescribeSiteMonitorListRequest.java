@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSiteMonitorListRequest</p>
  */
 public class DescribeSiteMonitorListRequest extends Request {
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("TaskState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskState")
     private String taskState;
 
-    @Query
-    @NameInMap("TaskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
     private String taskType;
 
     private DescribeSiteMonitorListRequest(Builder builder) {

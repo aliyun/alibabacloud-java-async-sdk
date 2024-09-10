@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutEventRuleTargetsResponseBody</p>
  */
 public class PutEventRuleTargetsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FailedContactParameters")
+    @com.aliyun.core.annotation.NameInMap("FailedContactParameters")
     private FailedContactParameters failedContactParameters;
 
-    @NameInMap("FailedFcParameters")
+    @com.aliyun.core.annotation.NameInMap("FailedFcParameters")
     private FailedFcParameters failedFcParameters;
 
-    @NameInMap("FailedMnsParameters")
+    @com.aliyun.core.annotation.NameInMap("FailedMnsParameters")
     private FailedMnsParameters failedMnsParameters;
 
-    @NameInMap("FailedParameterCount")
+    @com.aliyun.core.annotation.NameInMap("FailedParameterCount")
     private String failedParameterCount;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PutEventRuleTargetsResponseBody(Builder builder) {
@@ -195,13 +194,13 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
     } 
 
     public static class ContactParameter extends TeaModel {
-        @NameInMap("ContactGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupName")
         private String contactGroupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private ContactParameter(Builder builder) {
@@ -279,7 +278,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
     }
     public static class FailedContactParameters extends TeaModel {
-        @NameInMap("ContactParameter")
+        @com.aliyun.core.annotation.NameInMap("ContactParameter")
         private java.util.List < ContactParameter> contactParameter;
 
         private FailedContactParameters(Builder builder) {
@@ -320,16 +319,16 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
     }
     public static class FcParameter extends TeaModel {
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private FcParameter(Builder builder) {
@@ -421,7 +420,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
     }
     public static class FailedFcParameters extends TeaModel {
-        @NameInMap("FcParameter")
+        @com.aliyun.core.annotation.NameInMap("FcParameter")
         private java.util.List < FcParameter> fcParameter;
 
         private FailedFcParameters(Builder builder) {
@@ -462,13 +461,13 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
     }
     public static class MnsParameter extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("Queue")
+        @com.aliyun.core.annotation.NameInMap("Queue")
         private String queue;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private MnsParameter(Builder builder) {
@@ -543,7 +542,7 @@ public class PutEventRuleTargetsResponseBody extends TeaModel {
 
     }
     public static class FailedMnsParameters extends TeaModel {
-        @NameInMap("MnsParameter")
+        @com.aliyun.core.annotation.NameInMap("MnsParameter")
         private java.util.List < MnsParameter> mnsParameter;
 
         private FailedMnsParameters(Builder builder) {

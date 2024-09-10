@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricRuleTargetsResponseBody</p>
  */
 public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Targets")
+    @com.aliyun.core.annotation.NameInMap("Targets")
     private Targets targets;
 
     private DescribeMetricRuleTargetsResponseBody(Builder builder) {
@@ -139,16 +138,16 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
     } 
 
     public static class Target extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JsonParams")
+        @com.aliyun.core.annotation.NameInMap("JsonParams")
         private String jsonParams;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private Target(Builder builder) {
@@ -251,7 +250,7 @@ public class DescribeMetricRuleTargetsResponseBody extends TeaModel {
 
     }
     public static class Targets extends TeaModel {
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private java.util.List < Target> target;
 
         private Targets(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutMonitorGroupDynamicRuleRequest</p>
  */
 public class PutMonitorGroupDynamicRuleRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("GroupRules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupRules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < GroupRules> groupRules;
 
-    @Query
-    @NameInMap("IsAsync")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAsync")
     private Boolean isAsync;
 
     private PutMonitorGroupDynamicRuleRequest(Builder builder) {
@@ -122,16 +121,16 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
     } 
 
     public static class Filters extends TeaModel {
-        @NameInMap("Function")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Function")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String function;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private Filters(Builder builder) {
@@ -215,16 +214,16 @@ public class PutMonitorGroupDynamicRuleRequest extends Request {
 
     }
     public static class GroupRules extends TeaModel {
-        @NameInMap("Category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("FilterRelation")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FilterRelation")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String filterRelation;
 
-        @NameInMap("Filters")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Filters")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < Filters> filters;
 
         private GroupRules(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AlertStrategyRelation</p>
  */
 public class AlertStrategyRelation extends TeaModel {
-    @NameInMap("AlertName")
+    @com.aliyun.core.annotation.NameInMap("AlertName")
     private String alertName;
 
-    @NameInMap("StrategyUuid")
+    @com.aliyun.core.annotation.NameInMap("StrategyUuid")
     private String strategyUuid;
 
     private AlertStrategyRelation(Builder builder) {

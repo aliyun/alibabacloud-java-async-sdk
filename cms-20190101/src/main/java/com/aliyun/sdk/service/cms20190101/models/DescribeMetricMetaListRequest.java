@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricMetaListRequest</p>
  */
 public class DescribeMetricMetaListRequest extends Request {
-    @Query
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeMetricMetaListRequest(Builder builder) {
@@ -113,13 +112,13 @@ public class DescribeMetricMetaListRequest extends Request {
          * The tags for filtering metrics. Specify a JSON string.
          * <p>
          * 
-         * Format:`[{"name":"tag name","value":"tag value"},{"name":"tag name","value":"tag value"}]`. The following tags are available:
+         * Format: ` [{"name":"tag key","value":"tag value"},{"name":"tag key","value":"tag value"}]  `. The following tags are available:
          * 
          * *   metricCategory: the category of the metric.
          * *   alertEnable: specifies whether to report alerts for the metric.
-         * *   alertUnit: the suggested unit of the metric value in alerts.
+         * *   alertUnit: the unit of the metric in the alerts.
          * *   unitFactor: the factor for metric unit conversion.
-         * *   minAlertPeriod: the minimum time interval to report a new alert.
+         * *   minAlertPeriod: the minimum interval at which the alert is reported.
          * *   productCategory: the category of the service.
          */
         public Builder labels(String labels) {
@@ -129,7 +128,7 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+         * The metric name. For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -138,10 +137,10 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The namespace of the service.
+         * The namespace of the cloud service.
          * <p>
          * 
-         * For more information, see [Appendix 1: Metrics](~~163515~~).
+         * For more information about the namespaces of cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -150,7 +149,7 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The page to return. Default value: 1
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -159,7 +158,7 @@ public class DescribeMetricMetaListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 30.
+         * The number of entries per page. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

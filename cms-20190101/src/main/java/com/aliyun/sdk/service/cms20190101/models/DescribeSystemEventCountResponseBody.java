@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSystemEventCountResponseBody</p>
  */
 public class DescribeSystemEventCountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("SystemEventCounts")
+    @com.aliyun.core.annotation.NameInMap("SystemEventCounts")
     private SystemEventCounts systemEventCounts;
 
     private DescribeSystemEventCountResponseBody(Builder builder) {
@@ -142,37 +141,37 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
     } 
 
     public static class SystemEventCount extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Num")
+        @com.aliyun.core.annotation.NameInMap("Num")
         private Long num;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
         private SystemEventCount(Builder builder) {
@@ -388,7 +387,7 @@ public class DescribeSystemEventCountResponseBody extends TeaModel {
 
     }
     public static class SystemEventCounts extends TeaModel {
-        @NameInMap("SystemEventCount")
+        @com.aliyun.core.annotation.NameInMap("SystemEventCount")
         private java.util.List < SystemEventCount> systemEventCount;
 
         private SystemEventCounts(Builder builder) {

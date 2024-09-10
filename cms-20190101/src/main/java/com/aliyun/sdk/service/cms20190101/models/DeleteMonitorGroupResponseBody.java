@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMonitorGroupResponseBody</p>
  */
 public class DeleteMonitorGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private Group group;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteMonitorGroupResponseBody(Builder builder) {
@@ -135,7 +134,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
     } 
 
     public static class ContactGroup extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ContactGroup(Builder builder) {
@@ -176,7 +175,7 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
 
     }
     public static class ContactGroups extends TeaModel {
-        @NameInMap("ContactGroup")
+        @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < ContactGroup> contactGroup;
 
         private ContactGroups(Builder builder) {
@@ -217,10 +216,10 @@ public class DeleteMonitorGroupResponseBody extends TeaModel {
 
     }
     public static class Group extends TeaModel {
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private ContactGroups contactGroups;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private Group(Builder builder) {

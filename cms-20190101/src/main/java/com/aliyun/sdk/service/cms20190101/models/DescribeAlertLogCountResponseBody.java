@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertLogCountResponseBody</p>
  */
 public class DescribeAlertLogCountResponseBody extends TeaModel {
-    @NameInMap("AlertLogCount")
+    @com.aliyun.core.annotation.NameInMap("AlertLogCount")
     private java.util.List < AlertLogCount> alertLogCount;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAlertLogCountResponseBody(Builder builder) {
@@ -139,10 +138,10 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     } 
 
     public static class Logs extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Logs(Builder builder) {
@@ -200,10 +199,10 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
 
     }
     public static class AlertLogCount extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Logs")
+        @com.aliyun.core.annotation.NameInMap("Logs")
         private java.util.List < Logs> logs;
 
         private AlertLogCount(Builder builder) {

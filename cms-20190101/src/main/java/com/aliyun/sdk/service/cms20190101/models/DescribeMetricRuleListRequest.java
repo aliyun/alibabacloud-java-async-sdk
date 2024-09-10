@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricRuleListRequest</p>
  */
 public class DescribeMetricRuleListRequest extends Request {
-    @Query
-    @NameInMap("AlertState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertState")
     private String alertState;
 
-    @Query
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private String dimensions;
 
-    @Query
-    @NameInMap("EnableState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableState")
     private Boolean enableState;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Integer page;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RuleIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleIds")
     private String ruleIds;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
     private DescribeMetricRuleListRequest(Builder builder) {

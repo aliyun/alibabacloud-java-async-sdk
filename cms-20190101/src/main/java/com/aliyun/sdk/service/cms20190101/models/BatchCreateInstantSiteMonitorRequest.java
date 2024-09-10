@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchCreateInstantSiteMonitorRequest</p>
  */
 public class BatchCreateInstantSiteMonitorRequest extends Request {
-    @Query
-    @NameInMap("TaskList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < TaskList> taskList;
 
     private BatchCreateInstantSiteMonitorRequest(Builder builder) {
@@ -74,19 +73,19 @@ public class BatchCreateInstantSiteMonitorRequest extends Request {
     } 
 
     public static class TaskList extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("IspCities")
+        @com.aliyun.core.annotation.NameInMap("IspCities")
         private String ispCities;
 
-        @NameInMap("OptionsJson")
+        @com.aliyun.core.annotation.NameInMap("OptionsJson")
         private String optionsJson;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private TaskList(Builder builder) {

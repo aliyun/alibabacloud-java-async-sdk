@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendDryRunSystemEventRequest</p>
  */
 public class SendDryRunSystemEventRequest extends Request {
-    @Query
-    @NameInMap("EventContent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventContent")
     private String eventContent;
 
-    @Query
-    @NameInMap("EventName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eventName;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Product")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String product;
 
     private SendDryRunSystemEventRequest(Builder builder) {

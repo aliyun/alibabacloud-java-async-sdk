@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitoringAgentStatusesRequest</p>
  */
 public class DescribeMonitoringAgentStatusesRequest extends Request {
-    @Query
-    @NameInMap("HostAvailabilityTaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostAvailabilityTaskId")
     private String hostAvailabilityTaskId;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private String instanceIds;
 
     private DescribeMonitoringAgentStatusesRequest(Builder builder) {

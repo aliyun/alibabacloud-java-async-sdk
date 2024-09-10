@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSystemEventCountRequest</p>
  */
 public class DescribeSystemEventCountRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @Query
-    @NameInMap("SearchKeywords")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchKeywords")
     private String searchKeywords;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeSystemEventCountRequest(Builder builder) {

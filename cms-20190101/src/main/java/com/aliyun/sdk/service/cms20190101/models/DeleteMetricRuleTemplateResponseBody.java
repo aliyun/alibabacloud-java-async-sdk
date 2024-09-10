@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMetricRuleTemplateResponseBody</p>
  */
 public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private Resource resource;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteMetricRuleTemplateResponseBody(Builder builder) {
@@ -135,7 +134,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
     } 
 
     public static class Resource extends TeaModel {
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
         private Resource(Builder builder) {

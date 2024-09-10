@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutExporterRuleRequest</p>
  */
 public class PutExporterRuleRequest extends Request {
-    @Query
-    @NameInMap("Describe")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Describe")
     private String describe;
 
-    @Query
-    @NameInMap("DstNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DstNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > dstNames;
 
-    @Query
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("TargetWindows")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetWindows")
     private String targetWindows;
 
     private PutExporterRuleRequest(Builder builder) {

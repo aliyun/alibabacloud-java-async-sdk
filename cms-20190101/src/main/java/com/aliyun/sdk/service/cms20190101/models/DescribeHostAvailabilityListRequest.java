@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHostAvailabilityListRequest</p>
  */
 public class DescribeHostAvailabilityListRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @Query
-    @NameInMap("Ids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
     private String ids;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("TaskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
     private String taskName;
 
     private DescribeHostAvailabilityListRequest(Builder builder) {
@@ -166,7 +165,7 @@ public class DescribeHostAvailabilityListRequest extends Request {
          * The number of entries per page.
          * <p>
          * 
-         * Minimum value: 1. Default value: 10.
+         * Minimum value: 1. Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

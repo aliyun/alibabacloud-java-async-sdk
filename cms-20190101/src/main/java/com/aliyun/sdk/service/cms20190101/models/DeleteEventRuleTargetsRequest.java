@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteEventRuleTargetsRequest</p>
  */
 public class DeleteEventRuleTargetsRequest extends Request {
-    @Query
-    @NameInMap("Ids")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ids")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > ids;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
     private DeleteEventRuleTargetsRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class DeleteEventRuleTargetsRequest extends Request {
         } 
 
         /**
-         * Ids.
+         * The IDs of event-triggered alert rules.
          */
         public Builder ids(java.util.List < String > ids) {
             this.putQueryParameter("Ids", ids);
@@ -80,6 +79,9 @@ public class DeleteEventRuleTargetsRequest extends Request {
 
         /**
          * The name of the event-triggered alert rule.
+         * <p>
+         * 
+         * For information about how to obtain the name of an event-triggered alert rule, see [DescribeEventRuleList](~~114996~~).
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);

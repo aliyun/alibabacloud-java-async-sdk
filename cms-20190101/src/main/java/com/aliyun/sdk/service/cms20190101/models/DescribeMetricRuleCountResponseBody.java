@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricRuleCountResponseBody</p>
  */
 public class DescribeMetricRuleCountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MetricRuleCount")
+    @com.aliyun.core.annotation.NameInMap("MetricRuleCount")
     private MetricRuleCount metricRuleCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMetricRuleCountResponseBody(Builder builder) {
@@ -139,19 +138,19 @@ public class DescribeMetricRuleCountResponseBody extends TeaModel {
     } 
 
     public static class MetricRuleCount extends TeaModel {
-        @NameInMap("Alarm")
+        @com.aliyun.core.annotation.NameInMap("Alarm")
         private Integer alarm;
 
-        @NameInMap("Disable")
+        @com.aliyun.core.annotation.NameInMap("Disable")
         private Integer disable;
 
-        @NameInMap("Nodata")
+        @com.aliyun.core.annotation.NameInMap("Nodata")
         private Integer nodata;
 
-        @NameInMap("Ok")
+        @com.aliyun.core.annotation.NameInMap("Ok")
         private Integer ok;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private MetricRuleCount(Builder builder) {

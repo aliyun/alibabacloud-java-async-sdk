@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutEventRuleTargetsRequest</p>
  */
 public class PutEventRuleTargetsRequest extends Request {
-    @Query
-    @NameInMap("ContactParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactParameters")
     private java.util.List < ContactParameters> contactParameters;
 
-    @Query
-    @NameInMap("FcParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FcParameters")
     private java.util.List < FcParameters> fcParameters;
 
-    @Query
-    @NameInMap("MnsParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MnsParameters")
     private java.util.List < MnsParameters> mnsParameters;
 
-    @Query
-    @NameInMap("OpenApiParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OpenApiParameters")
     private java.util.List < OpenApiParameters> openApiParameters;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @Query
-    @NameInMap("SlsParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlsParameters")
     private java.util.List < SlsParameters> slsParameters;
 
-    @Query
-    @NameInMap("WebhookParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WebhookParameters")
     private java.util.List < WebhookParameters> webhookParameters;
 
     private PutEventRuleTargetsRequest(Builder builder) {
@@ -209,13 +208,13 @@ public class PutEventRuleTargetsRequest extends Request {
     } 
 
     public static class ContactParameters extends TeaModel {
-        @NameInMap("ContactGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupName")
         private String contactGroupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private ContactParameters(Builder builder) {
@@ -293,16 +292,16 @@ public class PutEventRuleTargetsRequest extends Request {
 
     }
     public static class FcParameters extends TeaModel {
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private FcParameters(Builder builder) {
@@ -394,16 +393,16 @@ public class PutEventRuleTargetsRequest extends Request {
 
     }
     public static class MnsParameters extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Queue")
+        @com.aliyun.core.annotation.NameInMap("Queue")
         private String queue;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private MnsParameters(Builder builder) {
@@ -495,28 +494,28 @@ public class PutEventRuleTargetsRequest extends Request {
 
     }
     public static class OpenApiParameters extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JsonParams")
+        @com.aliyun.core.annotation.NameInMap("JsonParams")
         private String jsonParams;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private OpenApiParameters(Builder builder) {
@@ -683,16 +682,16 @@ public class PutEventRuleTargetsRequest extends Request {
 
     }
     public static class SlsParameters extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private SlsParameters(Builder builder) {
@@ -784,16 +783,16 @@ public class PutEventRuleTargetsRequest extends Request {
 
     }
     public static class WebhookParameters extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private WebhookParameters(Builder builder) {

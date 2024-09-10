@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHostAvailabilityListResponseBody</p>
  */
 public class DescribeHostAvailabilityListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskList")
+    @com.aliyun.core.annotation.NameInMap("TaskList")
     private TaskList taskList;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeHostAvailabilityListResponseBody(Builder builder) {
@@ -109,7 +108,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -159,19 +158,19 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
     } 
 
     public static class EscalationList extends TeaModel {
-        @NameInMap("Aggregate")
+        @com.aliyun.core.annotation.NameInMap("Aggregate")
         private String aggregate;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private String times;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private EscalationList(Builder builder) {
@@ -301,7 +300,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     }
     public static class AlertConfigEscalationList extends TeaModel {
-        @NameInMap("escalationList")
+        @com.aliyun.core.annotation.NameInMap("escalationList")
         private java.util.List < EscalationList> escalationList;
 
         private AlertConfigEscalationList(Builder builder) {
@@ -342,16 +341,16 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     }
     public static class Target extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JsonParams")
+        @com.aliyun.core.annotation.NameInMap("JsonParams")
         private String jsonParams;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private Target(Builder builder) {
@@ -404,7 +403,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             private String level; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the resource.
+             * The Alibaba Cloud Resource Name (ARN) of the function.
              * <p>
              * 
              * Format: `arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}`. Fields:
@@ -413,7 +412,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
              * *   Region: the region ID
              * *   Account: the ID of the Alibaba Cloud account
              * *   ResourceType: the resource type
-             * *   ResourceId: the resource ID
+             * *   ResourceId: the resource ID.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -421,7 +420,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * The ID of the resource that triggers the alert.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -457,7 +456,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     }
     public static class TargetList extends TeaModel {
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private java.util.List < Target> target;
 
         private TargetList(Builder builder) {
@@ -498,25 +497,25 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     }
     public static class AlertConfig extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Integer endTime;
 
-        @NameInMap("EscalationList")
+        @com.aliyun.core.annotation.NameInMap("EscalationList")
         private AlertConfigEscalationList escalationList;
 
-        @NameInMap("NotifyType")
+        @com.aliyun.core.annotation.NameInMap("NotifyType")
         private Integer notifyType;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Integer silenceTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Integer startTime;
 
-        @NameInMap("TargetList")
+        @com.aliyun.core.annotation.NameInMap("TargetList")
         private TargetList targetList;
 
-        @NameInMap("WebHook")
+        @com.aliyun.core.annotation.NameInMap("WebHook")
         private String webHook;
 
         private AlertConfig(Builder builder) {
@@ -620,7 +619,9 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
              * The alert notification methods. Valid values:
              * <p>
              * 
-             * 0: Alert notifications are sent by using emails and DingTalk chatbots.
+             * *   2: Alert notifications are sent by using emails and DingTalk chatbots.
+             * *   1: Alert notifications are sent by using emails and DingTalk chatbots.
+             * *   0: Alert notifications are sent by using emails and DingTalk chatbots.
              */
             public Builder notifyType(Integer notifyType) {
                 this.notifyType = notifyType;
@@ -675,7 +676,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < String > instance;
 
         private Instances(Builder builder) {
@@ -716,28 +717,28 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     }
     public static class TaskOption extends TeaModel {
-        @NameInMap("HttpKeyword")
+        @com.aliyun.core.annotation.NameInMap("HttpKeyword")
         private String httpKeyword;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("HttpNegative")
+        @com.aliyun.core.annotation.NameInMap("HttpNegative")
         private Boolean httpNegative;
 
-        @NameInMap("HttpPostContent")
+        @com.aliyun.core.annotation.NameInMap("HttpPostContent")
         private String httpPostContent;
 
-        @NameInMap("HttpResponseCharset")
+        @com.aliyun.core.annotation.NameInMap("HttpResponseCharset")
         private String httpResponseCharset;
 
-        @NameInMap("HttpURI")
+        @com.aliyun.core.annotation.NameInMap("HttpURI")
         private String httpURI;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("TelnetOrPingHost")
+        @com.aliyun.core.annotation.NameInMap("TelnetOrPingHost")
         private String telnetOrPingHost;
 
         private TaskOption(Builder builder) {
@@ -906,34 +907,34 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     }
     public static class NodeTaskConfig extends TeaModel {
-        @NameInMap("AlertConfig")
+        @com.aliyun.core.annotation.NameInMap("AlertConfig")
         private AlertConfig alertConfig;
 
-        @NameInMap("Disabled")
+        @com.aliyun.core.annotation.NameInMap("Disabled")
         private Boolean disabled;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private Instances instances;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskOption")
+        @com.aliyun.core.annotation.NameInMap("TaskOption")
         private TaskOption taskOption;
 
-        @NameInMap("TaskScope")
+        @com.aliyun.core.annotation.NameInMap("TaskScope")
         private String taskScope;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
         private NodeTaskConfig(Builder builder) {
@@ -1140,7 +1141,7 @@ public class DescribeHostAvailabilityListResponseBody extends TeaModel {
 
     }
     public static class TaskList extends TeaModel {
-        @NameInMap("NodeTaskConfig")
+        @com.aliyun.core.annotation.NameInMap("NodeTaskConfig")
         private java.util.List < NodeTaskConfig> nodeTaskConfig;
 
         private TaskList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAlertHistoryListResponseBody</p>
  */
 public class DescribeAlertHistoryListResponseBody extends TeaModel {
-    @NameInMap("AlarmHistoryList")
+    @com.aliyun.core.annotation.NameInMap("AlarmHistoryList")
     private AlarmHistoryList alarmHistoryList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private String total;
 
     private DescribeAlertHistoryListResponseBody(Builder builder) {
@@ -159,7 +158,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
     } 
 
     public static class ContactALIIMs extends TeaModel {
-        @NameInMap("ContactALIIM")
+        @com.aliyun.core.annotation.NameInMap("ContactALIIM")
         private java.util.List < String > contactALIIM;
 
         private ContactALIIMs(Builder builder) {
@@ -200,7 +199,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
     }
     public static class ContactGroups extends TeaModel {
-        @NameInMap("ContactGroup")
+        @com.aliyun.core.annotation.NameInMap("ContactGroup")
         private java.util.List < String > contactGroup;
 
         private ContactGroups(Builder builder) {
@@ -241,7 +240,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
     }
     public static class ContactMails extends TeaModel {
-        @NameInMap("ContactMail")
+        @com.aliyun.core.annotation.NameInMap("ContactMail")
         private java.util.List < String > contactMail;
 
         private ContactMails(Builder builder) {
@@ -282,7 +281,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
     }
     public static class ContactSmses extends TeaModel {
-        @NameInMap("ContactSms")
+        @com.aliyun.core.annotation.NameInMap("ContactSms")
         private java.util.List < String > contactSms;
 
         private ContactSmses(Builder builder) {
@@ -323,7 +322,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
     }
     public static class Contacts extends TeaModel {
-        @NameInMap("Contact")
+        @com.aliyun.core.annotation.NameInMap("Contact")
         private java.util.List < String > contact;
 
         private Contacts(Builder builder) {
@@ -364,67 +363,67 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
     }
     public static class AlarmHistory extends TeaModel {
-        @NameInMap("AlertTime")
+        @com.aliyun.core.annotation.NameInMap("AlertTime")
         private Long alertTime;
 
-        @NameInMap("ContactALIIMs")
+        @com.aliyun.core.annotation.NameInMap("ContactALIIMs")
         private ContactALIIMs contactALIIMs;
 
-        @NameInMap("ContactGroups")
+        @com.aliyun.core.annotation.NameInMap("ContactGroups")
         private ContactGroups contactGroups;
 
-        @NameInMap("ContactMails")
+        @com.aliyun.core.annotation.NameInMap("ContactMails")
         private ContactMails contactMails;
 
-        @NameInMap("ContactSmses")
+        @com.aliyun.core.annotation.NameInMap("ContactSmses")
         private ContactSmses contactSmses;
 
-        @NameInMap("Contacts")
+        @com.aliyun.core.annotation.NameInMap("Contacts")
         private Contacts contacts;
 
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private String dimensions;
 
-        @NameInMap("EvaluationCount")
+        @com.aliyun.core.annotation.NameInMap("EvaluationCount")
         private Integer evaluationCount;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("Webhooks")
+        @com.aliyun.core.annotation.NameInMap("Webhooks")
         private String webhooks;
 
         private AlarmHistory(Builder builder) {
@@ -824,7 +823,7 @@ public class DescribeAlertHistoryListResponseBody extends TeaModel {
 
     }
     public static class AlarmHistoryList extends TeaModel {
-        @NameInMap("AlarmHistory")
+        @com.aliyun.core.annotation.NameInMap("AlarmHistory")
         private java.util.List < AlarmHistory> alarmHistory;
 
         private AlarmHistoryList(Builder builder) {

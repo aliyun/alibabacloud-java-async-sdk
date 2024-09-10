@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstallMonitoringAgentRequest</p>
  */
 public class InstallMonitoringAgentRequest extends Request {
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("InstallCommand")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstallCommand")
     private String installCommand;
 
-    @Query
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
     private InstallMonitoringAgentRequest(Builder builder) {

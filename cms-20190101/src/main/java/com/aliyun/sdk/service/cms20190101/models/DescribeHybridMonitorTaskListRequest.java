@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHybridMonitorTaskListRequest</p>
  */
 public class DescribeHybridMonitorTaskListRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("IncludeAliyunTask")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeAliyunTask")
     private Boolean includeAliyunTask;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("TargetUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetUserId")
     private Long targetUserId;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Query
-    @NameInMap("TaskType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
     private String taskType;
 
     private DescribeHybridMonitorTaskListRequest(Builder builder) {

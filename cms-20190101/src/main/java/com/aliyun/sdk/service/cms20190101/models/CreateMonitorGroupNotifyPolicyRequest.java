@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMonitorGroupNotifyPolicyRequest</p>
  */
 public class CreateMonitorGroupNotifyPolicyRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("PolicyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyType;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private CreateMonitorGroupNotifyPolicyRequest(Builder builder) {

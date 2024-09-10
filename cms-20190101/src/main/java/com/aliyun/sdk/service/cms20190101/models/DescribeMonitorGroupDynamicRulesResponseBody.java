@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorGroupDynamicRulesResponseBody</p>
  */
 public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private Resource resource;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMonitorGroupDynamicRulesResponseBody(Builder builder) {
@@ -139,13 +138,13 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
     } 
 
     public static class Filter extends TeaModel {
-        @NameInMap("Function")
+        @com.aliyun.core.annotation.NameInMap("Function")
         private String function;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filter(Builder builder) {
@@ -225,7 +224,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
 
     }
     public static class Filters extends TeaModel {
-        @NameInMap("Filter")
+        @com.aliyun.core.annotation.NameInMap("Filter")
         private java.util.List < Filter> filter;
 
         private Filters(Builder builder) {
@@ -266,13 +265,13 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
 
     }
     public static class ResourceResource extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("FilterRelation")
+        @com.aliyun.core.annotation.NameInMap("FilterRelation")
         private String filterRelation;
 
-        @NameInMap("Filters")
+        @com.aliyun.core.annotation.NameInMap("Filters")
         private Filters filters;
 
         private ResourceResource(Builder builder) {
@@ -356,7 +355,7 @@ public class DescribeMonitorGroupDynamicRulesResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < ResourceResource> resource;
 
         private Resource(Builder builder) {

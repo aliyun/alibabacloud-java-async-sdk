@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGroupMetricRulesResponseBody</p>
  */
 public class CreateGroupMetricRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private Resources resources;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateGroupMetricRulesResponseBody(Builder builder) {
@@ -139,19 +138,19 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
     } 
 
     public static class AlertResult extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Integer code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private AlertResult(Builder builder) {
@@ -267,7 +266,7 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("AlertResult")
+        @com.aliyun.core.annotation.NameInMap("AlertResult")
         private java.util.List < AlertResult> alertResult;
 
         private Resources(Builder builder) {

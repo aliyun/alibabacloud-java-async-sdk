@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMetricRuleBlackListRequest</p>
  */
 public class CreateMetricRuleBlackListRequest extends Request {
-    @Query
-    @NameInMap("Category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("EnableEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableEndTime")
     private String enableEndTime;
 
-    @Query
-    @NameInMap("EnableStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableStartTime")
     private String enableStartTime;
 
-    @Query
-    @NameInMap("Instances")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instances")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instances;
 
-    @Query
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.List < Metrics> metrics;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("ScopeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeType")
     private String scopeType;
 
-    @Query
-    @NameInMap("ScopeValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeValue")
     private String scopeValue;
 
     private CreateMetricRuleBlackListRequest(Builder builder) {
@@ -234,7 +233,7 @@ public class CreateMetricRuleBlackListRequest extends Request {
         }
 
         /**
-         * The IDs of instances that belong to the specified cloud service.
+         * The IDs of the instances that belong to the specified cloud service.
          */
         public Builder instances(java.util.List < String > instances) {
             this.putQueryParameter("Instances", instances);
@@ -280,8 +279,8 @@ public class CreateMetricRuleBlackListRequest extends Request {
          * The effective scope of the blacklist policy. Valid values:
          * <p>
          * 
-         * *   USER: The blacklist policy takes effect only for the current Alibaba Cloud account.
-         * *   GROUP (default): The blacklist policy takes effect only for the specified application group. For more information about how to obtain the ID of an application group, see [DescribeMonitorGroups](~~115032~~).
+         * *   USER (default): The blacklist policy takes effect only for the current Alibaba Cloud account.
+         * *   GROUP: The blacklist policy takes effect only for the specified application group. For information about how to query the IDs of application groups, see [DescribeMonitorGroups](~~115032~~).
          */
         public Builder scopeType(String scopeType) {
             this.putQueryParameter("ScopeType", scopeType);
@@ -309,11 +308,11 @@ public class CreateMetricRuleBlackListRequest extends Request {
     } 
 
     public static class Metrics extends TeaModel {
-        @NameInMap("MetricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
         private Metrics(Builder builder) {

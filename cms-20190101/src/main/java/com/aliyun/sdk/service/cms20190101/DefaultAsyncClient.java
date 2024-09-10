@@ -94,24 +94,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * @deprecated
-      *
-     */
-    @Override
-    public CompletableFuture<BatchCreateIntantSiteMonitorResponse> batchCreateIntantSiteMonitor(BatchCreateIntantSiteMonitorRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchCreateIntantSiteMonitor").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchCreateIntantSiteMonitorResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<BatchCreateIntantSiteMonitorResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
       * ### [](#)Prerequisites
       * The `Cursor` information is returned by calling the [Cursor](~~2330730~~) operation.
       * ### [](#)Description
@@ -127,48 +109,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<BatchExportResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<CreateCmsCallNumOrderResponse> createCmsCallNumOrder(CreateCmsCallNumOrderRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCmsCallNumOrder").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCmsCallNumOrderResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateCmsCallNumOrderResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<CreateCmsOrderResponse> createCmsOrder(CreateCmsOrderRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCmsOrder").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCmsOrderResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateCmsOrderResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<CreateCmsSmspackageOrderResponse> createCmsSmspackageOrder(CreateCmsSmspackageOrderRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateCmsSmspackageOrder").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateCmsSmspackageOrderResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateCmsSmspackageOrderResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -389,7 +329,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * In this example, the application group named `ECS_Group` is created.
+      * In this example, an application group named `ECS_Group` is created.
       *
      */
     @Override
@@ -1222,8 +1162,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Prerequisites
+      * # [](#)Prerequisites
       * Hybrid Cloud Monitoring is activated. For more information, see [Activate Hybrid Cloud Monitoring](~~250773~~).
+      * # [](#)Limits
+      * The size of monitoring data that is returned in each call cannot exceed 1.5 MB. If the returned data reaches the upper limit, the query fails. You must reset the query conditions.
+      * # [](#)Description
+      * This topic provides an example to show how to query the monitoring data of the `AliyunEcs_cpu_total` metric in the `default-aliyun` namespace from `1653804865` (14:14:25 on May 29, 2022) to `1653805225` (14:20:25 on May 29, 2022).
       *
      */
     @Override
@@ -1323,9 +1267,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Limits
-      * Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota. 
-      * >  Different from [DescribeMetricList](~~51936~~), the DescribeMetricData operation provides statistical features. You can set the `Dimension` parameter to {"instanceId": "i-abcdefgh12****"} to aggregate all data of your Alibaba Cloud account. This topic provides an example to show how to query the monitoring data of the `cpu_idle` metric for Elastic Compute Service (ECS). The namespace of ECS is `acs_ecs_dashboard`.
+      * ### [](#)Limits
+      * Each API operation can be called up to 10 times per second. An Alibaba Cloud account and the RAM users within the account share the quota.
+      * ### [](#)Description
+      * >  Different from [DescribeMetricList](~~51936~~), the DescribeMetricData operation provides statistical features. You can set the Dimension parameter to `{"instanceId": "i-abcdefgh12****"}` to aggregate all data of your Alibaba Cloud account.
+      * This topic provides an example to show how to query the monitoring data of the `cpu_idle` metric for Elastic Compute Service (ECS). The namespace of ECS is `acs_ecs_dashboard`.
       *
      */
     @Override
@@ -1390,7 +1336,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is usually used with DescribeMetricList and DescribeMetricLast. For more information, see [DescribeMetricList](~~51936~~) and [DescribeMetricLast](~~51939~~).
+      * This operation is used together with DescribeMetricList and DescribeMetricLast. For more information, see [DescribeMetricList](~~51936~~) and [DescribeMetricLast](~~51939~~).
       *
      */
     @Override
@@ -2606,10 +2552,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * # [](#)Limits
-      * This operation supports only Message Service (MNS) resources.
-      * # [](#)Usage notes
-      * This topic provides an example on how to associate a resource with an alert rule whose ID is `ae06917_75a8c43178ab66****`. In this example, the Alibaba Cloud Resource Name (ARN) of the resource is `acs:mns:cn-hangzhou:120886317861****:/queues/test/message` for an alert rule and the ID of the resource for which alerts are triggered is `1`. The response indicates that the resource is associated with the specified alert rule.
+      * # [](#)
+      * This topic provides an example on how to associate an alert rule with a resource. In this example, the alert rule is `ae06917_75a8c43178ab66****`, the resource is `acs:mns:cn-hangzhou:120886317861****:/queues/test/message`, and the ID of the resource for which alerts are triggered is `1`. The response indicates that the resource is associated with the specified alert rule.
       *
      */
     @Override
@@ -2655,7 +2599,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example to show how to create a threshold-triggered alert rule for the `cpu_total` metric of an Elastic Compute Service (ECS) instance whose ID is `i-uf6j91r34rnwawoo****`. The namespace of ECS is `acs_ecs_dashboard`. The alert contact group of the alert rule is `ECS_Group`. The name of the alert rule is `test123`. The ID of the alert rule is `a151cd6023eacee2f0978e03863cc1697c89508****`. The statistical method for Critical-level alerts is `Average`. The comparison operator for Critical-level alerts is `GreaterThanOrEqualToThreshold`. The threshold for Critical-level alerts is `90`. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is `3`.
+      * This topic provides an example on how to create a threshold-triggered alert rule for the `cpu_total` metric of an Elastic Compute Service (ECS) instance whose ID is `i-uf6j91r34rnwawoo****`. The namespace of ECS metrics is `acs_ecs_dashboard`. The alert contact group of the alert rule is `ECS_Group`. The name of the alert rule is `test123`. The ID of the alert rule is `a151cd6023eacee2f0978e03863cc1697c89508****`. The statistical method for Critical-level alerts is `Average`. The comparison operator for Critical-level alerts is `GreaterThanOrEqualToThreshold`. The threshold for Critical-level alerts is `90`. The consecutive number of times for which the metric value meets the trigger condition before a Critical-level alert is triggered is `3`.
       *
      */
     @Override

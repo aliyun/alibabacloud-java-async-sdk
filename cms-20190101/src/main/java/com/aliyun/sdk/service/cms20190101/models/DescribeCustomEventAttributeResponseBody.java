@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomEventAttributeResponseBody</p>
  */
 public class DescribeCustomEventAttributeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CustomEvents")
+    @com.aliyun.core.annotation.NameInMap("CustomEvents")
     private CustomEvents customEvents;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeCustomEventAttributeResponseBody(Builder builder) {
@@ -139,19 +138,19 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
     } 
 
     public static class CustomEvent extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private CustomEvent(Builder builder) {
@@ -263,7 +262,7 @@ public class DescribeCustomEventAttributeResponseBody extends TeaModel {
 
     }
     public static class CustomEvents extends TeaModel {
-        @NameInMap("CustomEvent")
+        @com.aliyun.core.annotation.NameInMap("CustomEvent")
         private java.util.List < CustomEvent> customEvent;
 
         private CustomEvents(Builder builder) {

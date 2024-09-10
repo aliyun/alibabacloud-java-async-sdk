@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MetricStat</p>
  */
 public class MetricStat extends TeaModel {
-    @NameInMap("Associated")
+    @com.aliyun.core.annotation.NameInMap("Associated")
     private java.util.Map < String, String > associated;
 
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private java.util.List < Dimension > dimensions;
 
-    @NameInMap("LogTime")
+    @com.aliyun.core.annotation.NameInMap("LogTime")
     private Long logTime;
 
-    @NameInMap("Measurements")
+    @com.aliyun.core.annotation.NameInMap("Measurements")
     private java.util.Map < String, ? > measurements;
 
-    @NameInMap("Metric")
+    @com.aliyun.core.annotation.NameInMap("Metric")
     private String metric;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @NameInMap("Timestamp")
+    @com.aliyun.core.annotation.NameInMap("Timestamp")
     private Long timestamp;
 
     private MetricStat(Builder builder) {

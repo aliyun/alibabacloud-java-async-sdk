@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteExporterRuleRequest</p>
  */
 public class DeleteExporterRuleRequest extends Request {
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
     private DeleteExporterRuleRequest(Builder builder) {

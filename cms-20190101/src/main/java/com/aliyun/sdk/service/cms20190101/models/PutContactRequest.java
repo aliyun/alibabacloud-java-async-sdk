@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutContactRequest</p>
  */
 public class PutContactRequest extends Request {
-    @Query
-    @NameInMap("Channels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Channels")
     private Channels channels;
 
-    @Query
-    @NameInMap("ContactName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactName;
 
-    @Query
-    @NameInMap("Describe")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Describe")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String describe;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private PutContactRequest(Builder builder) {
@@ -147,16 +146,16 @@ public class PutContactRequest extends Request {
     } 
 
     public static class Channels extends TeaModel {
-        @NameInMap("AliIM")
+        @com.aliyun.core.annotation.NameInMap("AliIM")
         private String aliIM;
 
-        @NameInMap("DingWebHook")
+        @com.aliyun.core.annotation.NameInMap("DingWebHook")
         private String dingWebHook;
 
-        @NameInMap("Mail")
+        @com.aliyun.core.annotation.NameInMap("Mail")
         private String mail;
 
-        @NameInMap("SMS")
+        @com.aliyun.core.annotation.NameInMap("SMS")
         private String SMS;
 
         private Channels(Builder builder) {

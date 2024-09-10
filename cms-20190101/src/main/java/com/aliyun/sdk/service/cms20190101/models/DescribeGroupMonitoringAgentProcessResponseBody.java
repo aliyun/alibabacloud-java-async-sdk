@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGroupMonitoringAgentProcessResponseBody</p>
  */
 public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("Processes")
+    @com.aliyun.core.annotation.NameInMap("Processes")
     private Processes processes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private String total;
 
     private DescribeGroupMonitoringAgentProcessResponseBody(Builder builder) {
@@ -195,16 +194,16 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
     } 
 
     public static class Target extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JsonParmas")
+        @com.aliyun.core.annotation.NameInMap("JsonParmas")
         private String jsonParmas;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private Target(Builder builder) {
@@ -302,7 +301,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     }
     public static class TargetList extends TeaModel {
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private java.util.List < Target> target;
 
         private TargetList(Builder builder) {
@@ -343,34 +342,34 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     }
     public static class AlertConfig extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("EffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("EffectiveInterval")
         private String effectiveInterval;
 
-        @NameInMap("EscalationsLevel")
+        @com.aliyun.core.annotation.NameInMap("EscalationsLevel")
         private String escalationsLevel;
 
-        @NameInMap("NoEffectiveInterval")
+        @com.aliyun.core.annotation.NameInMap("NoEffectiveInterval")
         private String noEffectiveInterval;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private String silenceTime;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("TargetList")
+        @com.aliyun.core.annotation.NameInMap("TargetList")
         private TargetList targetList;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private String times;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private AlertConfig(Builder builder) {
@@ -588,7 +587,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     }
     public static class ProcessAlertConfig extends TeaModel {
-        @NameInMap("AlertConfig")
+        @com.aliyun.core.annotation.NameInMap("AlertConfig")
         private java.util.List < AlertConfig> alertConfig;
 
         private ProcessAlertConfig(Builder builder) {
@@ -629,13 +628,13 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     }
     public static class MatchExpress extends TeaModel {
-        @NameInMap("Function")
+        @com.aliyun.core.annotation.NameInMap("Function")
         private String function;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MatchExpress(Builder builder) {
@@ -723,7 +722,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     }
     public static class ProcessMatchExpress extends TeaModel {
-        @NameInMap("MatchExpress")
+        @com.aliyun.core.annotation.NameInMap("MatchExpress")
         private java.util.List < MatchExpress> matchExpress;
 
         private ProcessMatchExpress(Builder builder) {
@@ -764,22 +763,22 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     }
     public static class Process extends TeaModel {
-        @NameInMap("AlertConfig")
+        @com.aliyun.core.annotation.NameInMap("AlertConfig")
         private ProcessAlertConfig alertConfig;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MatchExpress")
+        @com.aliyun.core.annotation.NameInMap("MatchExpress")
         private ProcessMatchExpress matchExpress;
 
-        @NameInMap("MatchExpressFilterRelation")
+        @com.aliyun.core.annotation.NameInMap("MatchExpressFilterRelation")
         private String matchExpressFilterRelation;
 
-        @NameInMap("ProcessName")
+        @com.aliyun.core.annotation.NameInMap("ProcessName")
         private String processName;
 
         private Process(Builder builder) {
@@ -913,7 +912,7 @@ public class DescribeGroupMonitoringAgentProcessResponseBody extends TeaModel {
 
     }
     public static class Processes extends TeaModel {
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private java.util.List < Process> process;
 
         private Processes(Builder builder) {

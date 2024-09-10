@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDynamicTagRuleListResponseBody</p>
  */
 public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TagGroupList")
+    @com.aliyun.core.annotation.NameInMap("TagGroupList")
     private TagGroupList tagGroupList;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeDynamicTagRuleListResponseBody(Builder builder) {
@@ -199,7 +198,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
     } 
 
     public static class ContactGroupList extends TeaModel {
-        @NameInMap("ContactGroupList")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupList")
         private java.util.List < String > contactGroupList;
 
         private ContactGroupList(Builder builder) {
@@ -240,13 +239,13 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
 
     }
     public static class MatchExpress extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
-        @NameInMap("TagValueMatchFunction")
+        @com.aliyun.core.annotation.NameInMap("TagValueMatchFunction")
         private String tagValueMatchFunction;
 
         private MatchExpress(Builder builder) {
@@ -332,7 +331,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
 
     }
     public static class TagGroupMatchExpress extends TeaModel {
-        @NameInMap("MatchExpress")
+        @com.aliyun.core.annotation.NameInMap("MatchExpress")
         private java.util.List < MatchExpress> matchExpress;
 
         private TagGroupMatchExpress(Builder builder) {
@@ -373,7 +372,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
 
     }
     public static class TagValueBlacklist extends TeaModel {
-        @NameInMap("TagValueBlacklist")
+        @com.aliyun.core.annotation.NameInMap("TagValueBlacklist")
         private java.util.List < String > tagValueBlacklist;
 
         private TagValueBlacklist(Builder builder) {
@@ -414,7 +413,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
 
     }
     public static class TemplateIdList extends TeaModel {
-        @NameInMap("TemplateIdList")
+        @com.aliyun.core.annotation.NameInMap("TemplateIdList")
         private java.util.List < String > templateIdList;
 
         private TemplateIdList(Builder builder) {
@@ -455,31 +454,31 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
 
     }
     public static class TagGroup extends TeaModel {
-        @NameInMap("ContactGroupList")
+        @com.aliyun.core.annotation.NameInMap("ContactGroupList")
         private ContactGroupList contactGroupList;
 
-        @NameInMap("DynamicTagRuleId")
+        @com.aliyun.core.annotation.NameInMap("DynamicTagRuleId")
         private String dynamicTagRuleId;
 
-        @NameInMap("MatchExpress")
+        @com.aliyun.core.annotation.NameInMap("MatchExpress")
         private TagGroupMatchExpress matchExpress;
 
-        @NameInMap("MatchExpressFilterRelation")
+        @com.aliyun.core.annotation.NameInMap("MatchExpressFilterRelation")
         private String matchExpressFilterRelation;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValueBlacklist")
+        @com.aliyun.core.annotation.NameInMap("TagValueBlacklist")
         private TagValueBlacklist tagValueBlacklist;
 
-        @NameInMap("TemplateIdList")
+        @com.aliyun.core.annotation.NameInMap("TemplateIdList")
         private TemplateIdList templateIdList;
 
         private TagGroup(Builder builder) {
@@ -666,7 +665,7 @@ public class DescribeDynamicTagRuleListResponseBody extends TeaModel {
 
     }
     public static class TagGroupList extends TeaModel {
-        @NameInMap("TagGroup")
+        @com.aliyun.core.annotation.NameInMap("TagGroup")
         private java.util.List < TagGroup> tagGroup;
 
         private TagGroupList(Builder builder) {

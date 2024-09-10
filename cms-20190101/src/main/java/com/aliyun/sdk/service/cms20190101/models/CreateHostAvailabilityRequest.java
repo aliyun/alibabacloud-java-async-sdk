@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHostAvailabilityRequest</p>
  */
 public class CreateHostAvailabilityRequest extends Request {
-    @Query
-    @NameInMap("AlertConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertConfig")
     private AlertConfig alertConfig;
 
-    @Query
-    @NameInMap("TaskOption")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskOption")
     private TaskOption taskOption;
 
-    @Query
-    @NameInMap("AlertConfigEscalationList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertConfigEscalationList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AlertConfigEscalationList> alertConfigEscalationList;
 
-    @Query
-    @NameInMap("AlertConfigTargetList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertConfigTargetList")
     private java.util.List < AlertConfigTargetList> alertConfigTargetList;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long groupId;
 
-    @Query
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private java.util.List < String > instanceList;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("TaskScope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskScope")
     private String taskScope;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
     private CreateHostAvailabilityRequest(Builder builder) {
@@ -270,20 +269,20 @@ public class CreateHostAvailabilityRequest extends Request {
     } 
 
     public static class AlertConfig extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Integer endTime;
 
-        @NameInMap("NotifyType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NotifyType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer notifyType;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Integer silenceTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Integer startTime;
 
-        @NameInMap("WebHook")
+        @com.aliyun.core.annotation.NameInMap("WebHook")
         private String webHook;
 
         private AlertConfig(Builder builder) {
@@ -405,31 +404,31 @@ public class CreateHostAvailabilityRequest extends Request {
 
     }
     public static class TaskOption extends TeaModel {
-        @NameInMap("HttpHeader")
+        @com.aliyun.core.annotation.NameInMap("HttpHeader")
         private String httpHeader;
 
-        @NameInMap("HttpMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpMethod")
         private String httpMethod;
 
-        @NameInMap("HttpNegative")
+        @com.aliyun.core.annotation.NameInMap("HttpNegative")
         private Boolean httpNegative;
 
-        @NameInMap("HttpPostContent")
+        @com.aliyun.core.annotation.NameInMap("HttpPostContent")
         private String httpPostContent;
 
-        @NameInMap("HttpResponseCharset")
+        @com.aliyun.core.annotation.NameInMap("HttpResponseCharset")
         private String httpResponseCharset;
 
-        @NameInMap("HttpResponseMatchContent")
+        @com.aliyun.core.annotation.NameInMap("HttpResponseMatchContent")
         private String httpResponseMatchContent;
 
-        @NameInMap("HttpURI")
+        @com.aliyun.core.annotation.NameInMap("HttpURI")
         private String httpURI;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("TelnetOrPingHost")
+        @com.aliyun.core.annotation.NameInMap("TelnetOrPingHost")
         private String telnetOrPingHost;
 
         private TaskOption(Builder builder) {
@@ -632,20 +631,20 @@ public class CreateHostAvailabilityRequest extends Request {
 
     }
     public static class AlertConfigEscalationList extends TeaModel {
-        @NameInMap("Aggregate")
+        @com.aliyun.core.annotation.NameInMap("Aggregate")
         private String aggregate;
 
-        @NameInMap("MetricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private AlertConfigEscalationList(Builder builder) {
@@ -777,16 +776,16 @@ public class CreateHostAvailabilityRequest extends Request {
 
     }
     public static class AlertConfigTargetList extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("JsonParams")
+        @com.aliyun.core.annotation.NameInMap("JsonParams")
         private String jsonParams;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private AlertConfigTargetList(Builder builder) {

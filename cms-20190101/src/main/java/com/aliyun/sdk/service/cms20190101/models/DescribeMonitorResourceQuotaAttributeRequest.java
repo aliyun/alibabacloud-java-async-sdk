@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorResourceQuotaAttributeRequest</p>
  */
 public class DescribeMonitorResourceQuotaAttributeRequest extends Request {
-    @Query
-    @NameInMap("ShowUsed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShowUsed")
     private Boolean showUsed;
 
     private DescribeMonitorResourceQuotaAttributeRequest(Builder builder) {

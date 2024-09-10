@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricDataRequest</p>
  */
 public class DescribeMetricDataRequest extends Request {
-    @Query
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private String dimensions;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Express")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Express")
     private String express;
 
-    @Query
-    @NameInMap("Length")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Length")
     private String length;
 
-    @Query
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeMetricDataRequest(Builder builder) {
@@ -154,7 +153,7 @@ public class DescribeMetricDataRequest extends Request {
         } 
 
         /**
-         * The dimensions that specify the resources whose monitoring data you want to query.
+         * The dimensions based on which the resources are queried.
          * <p>
          * 
          * Set the value to a collection of key-value pairs. A typical key-value pair is `instanceId:i-2ze2d6j5uhg20x47****`.
@@ -168,7 +167,7 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * The end of the time range to query monitoring data.
          * <p>
          * 
          * *   If the `StartTime` and `EndTime` parameters are not specified, the monitoring data of the last statistical period is queried.``
@@ -176,13 +175,13 @@ public class DescribeMetricDataRequest extends Request {
          * *   If the `StartTime` and `EndTime` parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.```` The following examples demonstrate how to determine the period in which monitoring data is queried:
          * 
          *     *   If you set the `Period` parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.
-         *     *   If you set the `Period` parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.
-         *     *   If you set the `Period` parameter to 3600, the specified time range must be less than or equal to two days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.
+         *     *   If you set the `Period` to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.
+         *     *   If you set the `Period` parameter to 3600, the specified time range must be less than or equal to 2 days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.
          * 
          * The following formats are supported:
          * 
-         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970
-         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
+         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.
+         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.
          * 
          * >  We recommend that you use UNIX timestamps to prevent time zone-related issues.
          */
@@ -205,7 +204,7 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Default value: 1000.
@@ -222,7 +221,7 @@ public class DescribeMetricDataRequest extends Request {
          * The metric that is used to monitor the cloud service.
          * <p>
          * 
-         * For more information about the metrics of different cloud services, see [Appendix 1: Metrics](~~163515~~).
+         * For more information about the metrics of cloud services, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -250,8 +249,11 @@ public class DescribeMetricDataRequest extends Request {
          * 
          * Unit: seconds.
          * 
-         * > - If this parameter is not specified, monitoring data is queried based on the period in which metric values are reported.
-         * > - For more information about the statistical period of a metric that is specified by the `MetricName` parameter, see [Appendix 1: Metrics](~~163515~~).
+         * > 
+         * 
+         * *   If this parameter is not specified, monitoring data is queried based on the period in which metric values are reported.
+         * 
+         * *   For more information about the statistical period of a metric that is specified by the `MetricName` parameter, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -260,7 +262,7 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query.
+         * The start of the time range to query monitoring data.
          * <p>
          * 
          * *   If the `StartTime` and `EndTime` parameters are not specified, the monitoring data of the last statistical period is queried.``
@@ -268,16 +270,18 @@ public class DescribeMetricDataRequest extends Request {
          * *   If the `StartTime` and `EndTime` parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.```` The following examples demonstrate how to determine the period in which monitoring data is queried:
          * 
          *     *   If you set the `Period` parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.
-         *     *   If you set the `Period` parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.
-         *     *   If you set the `Period` parameter to 3600, the specified time range must be less than or equal to two days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.
+         *     *   If you set the `Period` to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.
+         *     *   If you set the `Period` parameter to 3600, the specified time range must be less than or equal to 2 days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.
          * 
          * The following formats are supported:
          * 
-         * *   UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
-         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format
+         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.
+         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.
          * 
          * > 
-         * *   You must set the `StartTime` parameter to a point in time that is later than 00:00:00 Thursday, January 1, 1970. Otherwise, this parameter is invalid.
+         * 
+         * *   You must set the `StartTime` parameter to a point in time that is later than 00:00:00 UTC on Thursday, January 1, 1970. Otherwise, this parameter is invalid.
+         * 
          * *   We recommend that you use UNIX timestamps to prevent time zone-related issues.
          */
         public Builder startTime(String startTime) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMonitorGroupNotifyPolicyRequest</p>
  */
 public class DeleteMonitorGroupNotifyPolicyRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("PolicyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyType;
 
     private DeleteMonitorGroupNotifyPolicyRequest(Builder builder) {

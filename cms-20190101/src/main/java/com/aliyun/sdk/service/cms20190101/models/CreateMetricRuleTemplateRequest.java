@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMetricRuleTemplateRequest</p>
  */
 public class CreateMetricRuleTemplateRequest extends Request {
-    @Query
-    @NameInMap("AlertTemplates")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertTemplates")
     private java.util.List < AlertTemplates> alertTemplates;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
     private CreateMetricRuleTemplateRequest(Builder builder) {
@@ -117,19 +116,19 @@ public class CreateMetricRuleTemplateRequest extends Request {
     } 
 
     public static class Critical extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Critical(Builder builder) {
@@ -238,19 +237,19 @@ public class CreateMetricRuleTemplateRequest extends Request {
 
     }
     public static class Info extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Info(Builder builder) {
@@ -359,19 +358,19 @@ public class CreateMetricRuleTemplateRequest extends Request {
 
     }
     public static class Warn extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("N")
+        @com.aliyun.core.annotation.NameInMap("N")
         private Integer n;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private Integer times;
 
         private Warn(Builder builder) {
@@ -480,16 +479,16 @@ public class CreateMetricRuleTemplateRequest extends Request {
 
     }
     public static class Escalations extends TeaModel {
-        @NameInMap("Critical")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Critical")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Critical critical;
 
-        @NameInMap("Info")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Info")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Info info;
 
-        @NameInMap("Warn")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Warn")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Warn warn;
 
         private Escalations(Builder builder) {
@@ -564,33 +563,33 @@ public class CreateMetricRuleTemplateRequest extends Request {
 
     }
     public static class AlertTemplates extends TeaModel {
-        @NameInMap("Escalations")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Escalations")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Escalations escalations;
 
-        @NameInMap("Category")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Category")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String category;
 
-        @NameInMap("MetricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("Namespace")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String namespace;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("RuleName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleName;
 
-        @NameInMap("Selector")
+        @com.aliyun.core.annotation.NameInMap("Selector")
         private String selector;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private AlertTemplates(Builder builder) {

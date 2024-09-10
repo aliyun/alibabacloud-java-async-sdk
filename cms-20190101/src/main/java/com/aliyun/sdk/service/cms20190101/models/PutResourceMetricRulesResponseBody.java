@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutResourceMetricRulesResponseBody</p>
  */
 public class PutResourceMetricRulesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("FailedListResult")
+    @com.aliyun.core.annotation.NameInMap("FailedListResult")
     private FailedListResult failedListResult;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private PutResourceMetricRulesResponseBody(Builder builder) {
@@ -139,13 +138,13 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Result(Builder builder) {
@@ -224,10 +223,10 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
     }
     public static class Target extends TeaModel {
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
         private Target(Builder builder) {
@@ -285,7 +284,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
 
     }
     public static class FailedListResult extends TeaModel {
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private java.util.List < Target> target;
 
         private FailedListResult(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorResourceQuotaAttributeResponseBody</p>
  */
 public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceQuota")
+    @com.aliyun.core.annotation.NameInMap("ResourceQuota")
     private ResourceQuota resourceQuota;
 
     private DescribeMonitorResourceQuotaAttributeResponseBody(Builder builder) {
@@ -115,13 +114,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
     } 
 
     public static class Api extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private Api(Builder builder) {
@@ -196,13 +195,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class CustomMonitor extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private CustomMonitor(Builder builder) {
@@ -277,10 +276,10 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class EnterpriseQuota extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("SuitInfo")
+        @com.aliyun.core.annotation.NameInMap("SuitInfo")
         private String suitInfo;
 
         private EnterpriseQuota(Builder builder) {
@@ -338,13 +337,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class EventMonitor extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private EventMonitor(Builder builder) {
@@ -419,13 +418,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class LogMonitor extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private LogMonitor(Builder builder) {
@@ -500,13 +499,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class Phone extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private Phone(Builder builder) {
@@ -581,13 +580,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class SMS extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private SMS(Builder builder) {
@@ -662,13 +661,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class SiteMonitorBrowser extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private SiteMonitorBrowser(Builder builder) {
@@ -743,13 +742,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class SiteMonitorEcsProbe extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private SiteMonitorEcsProbe(Builder builder) {
@@ -830,13 +829,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class SiteMonitorMobile extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private SiteMonitorMobile(Builder builder) {
@@ -911,13 +910,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class SiteMonitorOperatorProbe extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private SiteMonitorOperatorProbe(Builder builder) {
@@ -992,13 +991,13 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class SiteMonitorTask extends TeaModel {
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private Integer quotaLimit;
 
-        @NameInMap("QuotaPackage")
+        @com.aliyun.core.annotation.NameInMap("QuotaPackage")
         private Integer quotaPackage;
 
-        @NameInMap("QuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsed")
         private Integer quotaUsed;
 
         private SiteMonitorTask(Builder builder) {
@@ -1073,49 +1072,49 @@ public class DescribeMonitorResourceQuotaAttributeResponseBody extends TeaModel 
 
     }
     public static class ResourceQuota extends TeaModel {
-        @NameInMap("Api")
+        @com.aliyun.core.annotation.NameInMap("Api")
         private Api api;
 
-        @NameInMap("CustomMonitor")
+        @com.aliyun.core.annotation.NameInMap("CustomMonitor")
         private CustomMonitor customMonitor;
 
-        @NameInMap("EnterpriseQuota")
+        @com.aliyun.core.annotation.NameInMap("EnterpriseQuota")
         private EnterpriseQuota enterpriseQuota;
 
-        @NameInMap("EventMonitor")
+        @com.aliyun.core.annotation.NameInMap("EventMonitor")
         private EventMonitor eventMonitor;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LogMonitor")
+        @com.aliyun.core.annotation.NameInMap("LogMonitor")
         private LogMonitor logMonitor;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private Phone phone;
 
-        @NameInMap("SMS")
+        @com.aliyun.core.annotation.NameInMap("SMS")
         private SMS SMS;
 
-        @NameInMap("SiteMonitorBrowser")
+        @com.aliyun.core.annotation.NameInMap("SiteMonitorBrowser")
         private SiteMonitorBrowser siteMonitorBrowser;
 
-        @NameInMap("SiteMonitorEcsProbe")
+        @com.aliyun.core.annotation.NameInMap("SiteMonitorEcsProbe")
         private SiteMonitorEcsProbe siteMonitorEcsProbe;
 
-        @NameInMap("SiteMonitorMobile")
+        @com.aliyun.core.annotation.NameInMap("SiteMonitorMobile")
         private SiteMonitorMobile siteMonitorMobile;
 
-        @NameInMap("SiteMonitorOperatorProbe")
+        @com.aliyun.core.annotation.NameInMap("SiteMonitorOperatorProbe")
         private SiteMonitorOperatorProbe siteMonitorOperatorProbe;
 
-        @NameInMap("SiteMonitorTask")
+        @com.aliyun.core.annotation.NameInMap("SiteMonitorTask")
         private SiteMonitorTask siteMonitorTask;
 
-        @NameInMap("SuitInfo")
+        @com.aliyun.core.annotation.NameInMap("SuitInfo")
         private String suitInfo;
 
         private ResourceQuota(Builder builder) {

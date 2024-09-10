@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitorGroupInstancesResponseBody</p>
  */
 public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private Resources resources;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeMonitorGroupInstancesResponseBody(Builder builder) {
@@ -122,10 +121,10 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * The HTTP status code.
+         * The responses code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -141,7 +140,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -149,7 +148,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -157,7 +156,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +172,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -181,7 +180,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -195,19 +194,19 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
     } 
 
     public static class Resource extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Resource(Builder builder) {
@@ -277,7 +276,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -285,7 +284,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -293,7 +292,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -316,7 +315,7 @@ public class DescribeMonitorGroupInstancesResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < Resource> resource;
 
         private Resources(Builder builder) {

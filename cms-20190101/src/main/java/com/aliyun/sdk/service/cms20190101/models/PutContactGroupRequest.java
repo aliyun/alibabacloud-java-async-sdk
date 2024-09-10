@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutContactGroupRequest</p>
  */
 public class PutContactGroupRequest extends Request {
-    @Query
-    @NameInMap("ContactGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactGroupName;
 
-    @Query
-    @NameInMap("ContactNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactNames")
     private java.util.List < String > contactNames;
 
-    @Query
-    @NameInMap("Describe")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Describe")
     private String describe;
 
-    @Query
-    @NameInMap("EnableSubscribed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSubscribed")
     private Boolean enableSubscribed;
 
     private PutContactGroupRequest(Builder builder) {

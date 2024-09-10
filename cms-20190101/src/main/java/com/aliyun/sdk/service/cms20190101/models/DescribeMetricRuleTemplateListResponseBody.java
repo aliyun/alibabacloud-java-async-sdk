@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricRuleTemplateListResponseBody</p>
  */
 public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private Templates templates;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeMetricRuleTemplateListResponseBody(Builder builder) {
@@ -159,13 +158,13 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
     } 
 
     public static class ApplyHistory extends TeaModel {
-        @NameInMap("ApplyTime")
+        @com.aliyun.core.annotation.NameInMap("ApplyTime")
         private Long applyTime;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private ApplyHistory(Builder builder) {
@@ -243,7 +242,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
 
     }
     public static class ApplyHistories extends TeaModel {
-        @NameInMap("ApplyHistory")
+        @com.aliyun.core.annotation.NameInMap("ApplyHistory")
         private java.util.List < ApplyHistory> applyHistory;
 
         private ApplyHistories(Builder builder) {
@@ -284,25 +283,25 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
 
     }
     public static class Template extends TeaModel {
-        @NameInMap("ApplyHistories")
+        @com.aliyun.core.annotation.NameInMap("ApplyHistories")
         private ApplyHistories applyHistories;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RestVersion")
+        @com.aliyun.core.annotation.NameInMap("RestVersion")
         private Long restVersion;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private Template(Builder builder) {
@@ -454,7 +453,7 @@ public class DescribeMetricRuleTemplateListResponseBody extends TeaModel {
 
     }
     public static class Templates extends TeaModel {
-        @NameInMap("Template")
+        @com.aliyun.core.annotation.NameInMap("Template")
         private java.util.List < Template> template;
 
         private Templates(Builder builder) {

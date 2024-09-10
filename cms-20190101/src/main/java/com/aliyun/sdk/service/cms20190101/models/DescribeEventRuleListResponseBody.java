@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventRuleListResponseBody</p>
  */
 public class DescribeEventRuleListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EventRules")
+    @com.aliyun.core.annotation.NameInMap("EventRules")
     private EventRules eventRules;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeEventRuleListResponseBody(Builder builder) {
@@ -159,7 +158,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     } 
 
     public static class EventTypeList extends TeaModel {
-        @NameInMap("EventTypeList")
+        @com.aliyun.core.annotation.NameInMap("EventTypeList")
         private java.util.List < String > eventTypeList;
 
         private EventTypeList(Builder builder) {
@@ -200,7 +199,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     }
     public static class Keywords extends TeaModel {
-        @NameInMap("Keywords")
+        @com.aliyun.core.annotation.NameInMap("Keywords")
         private java.util.List < String > keywords;
 
         private Keywords(Builder builder) {
@@ -241,10 +240,10 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     }
     public static class KeywordFilter extends TeaModel {
-        @NameInMap("Keywords")
+        @com.aliyun.core.annotation.NameInMap("Keywords")
         private Keywords keywords;
 
-        @NameInMap("Relation")
+        @com.aliyun.core.annotation.NameInMap("Relation")
         private String relation;
 
         private KeywordFilter(Builder builder) {
@@ -306,7 +305,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     }
     public static class LevelList extends TeaModel {
-        @NameInMap("LevelList")
+        @com.aliyun.core.annotation.NameInMap("LevelList")
         private java.util.List < String > levelList;
 
         private LevelList(Builder builder) {
@@ -347,7 +346,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     }
     public static class NameList extends TeaModel {
-        @NameInMap("NameList")
+        @com.aliyun.core.annotation.NameInMap("NameList")
         private java.util.List < String > nameList;
 
         private NameList(Builder builder) {
@@ -388,25 +387,25 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     }
     public static class EventPattern extends TeaModel {
-        @NameInMap("CustomFilters")
+        @com.aliyun.core.annotation.NameInMap("CustomFilters")
         private String customFilters;
 
-        @NameInMap("EventTypeList")
+        @com.aliyun.core.annotation.NameInMap("EventTypeList")
         private EventTypeList eventTypeList;
 
-        @NameInMap("KeywordFilter")
+        @com.aliyun.core.annotation.NameInMap("KeywordFilter")
         private KeywordFilter keywordFilter;
 
-        @NameInMap("LevelList")
+        @com.aliyun.core.annotation.NameInMap("LevelList")
         private LevelList levelList;
 
-        @NameInMap("NameList")
+        @com.aliyun.core.annotation.NameInMap("NameList")
         private NameList nameList;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("SQLFilter")
+        @com.aliyun.core.annotation.NameInMap("SQLFilter")
         private String SQLFilter;
 
         private EventPattern(Builder builder) {
@@ -549,7 +548,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     }
     public static class EventRuleEventPattern extends TeaModel {
-        @NameInMap("EventPattern")
+        @com.aliyun.core.annotation.NameInMap("EventPattern")
         private java.util.List < EventPattern> eventPattern;
 
         private EventRuleEventPattern(Builder builder) {
@@ -590,25 +589,25 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     }
     public static class EventRule extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EventPattern")
+        @com.aliyun.core.annotation.NameInMap("EventPattern")
         private EventRuleEventPattern eventPattern;
 
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SilenceTime")
+        @com.aliyun.core.annotation.NameInMap("SilenceTime")
         private Long silenceTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private EventRule(Builder builder) {
@@ -759,7 +758,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
 
     }
     public static class EventRules extends TeaModel {
-        @NameInMap("EventRule")
+        @com.aliyun.core.annotation.NameInMap("EventRule")
         private java.util.List < EventRule> eventRule;
 
         private EventRules(Builder builder) {

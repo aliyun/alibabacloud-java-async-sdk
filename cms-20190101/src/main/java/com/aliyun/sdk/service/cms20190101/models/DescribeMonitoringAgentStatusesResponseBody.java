@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitoringAgentStatusesResponseBody</p>
  */
 public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NodeStatusList")
+    @com.aliyun.core.annotation.NameInMap("NodeStatusList")
     private NodeStatusList nodeStatusList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeMonitoringAgentStatusesResponseBody(Builder builder) {
@@ -105,7 +104,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * The status information.
+         * The host status information.
          */
         public Builder nodeStatusList(NodeStatusList nodeStatusList) {
             this.nodeStatusList = nodeStatusList;
@@ -139,31 +138,31 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
     } 
 
     public static class NodeStatus extends TeaModel {
-        @NameInMap("AgentInstallErrorCode")
+        @com.aliyun.core.annotation.NameInMap("AgentInstallErrorCode")
         private String agentInstallErrorCode;
 
-        @NameInMap("AutoInstall")
+        @com.aliyun.core.annotation.NameInMap("AutoInstall")
         private Boolean autoInstall;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OsMonitorConfig")
+        @com.aliyun.core.annotation.NameInMap("OsMonitorConfig")
         private String osMonitorConfig;
 
-        @NameInMap("OsMonitorErrorCode")
+        @com.aliyun.core.annotation.NameInMap("OsMonitorErrorCode")
         private String osMonitorErrorCode;
 
-        @NameInMap("OsMonitorErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("OsMonitorErrorDetail")
         private String osMonitorErrorDetail;
 
-        @NameInMap("OsMonitorStatus")
+        @com.aliyun.core.annotation.NameInMap("OsMonitorStatus")
         private String osMonitorStatus;
 
-        @NameInMap("OsMonitorVersion")
+        @com.aliyun.core.annotation.NameInMap("OsMonitorVersion")
         private String osMonitorVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private NodeStatus(Builder builder) {
@@ -261,7 +260,15 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AgentInstallErrorCode.
+             * The error code returned when the CloudMonitor agent is installed. Valid values:
+             * <p>
+             * 
+             * *   Common.Timeout: The installation timed out.
+             * *   Common.SLR: The service-linked role for CloudMonitor is unauthorized.
+             * *   Common.OS: The operating system is not supported.
+             * *   Assist.Invalid: Cloud Assistant is not running.
+             * *   Assist.Invoke: An error occurred when the installation program is started.
+             * *   Assist.Execute: An error occurred when the installation program is running.
              */
             public Builder agentInstallErrorCode(String agentInstallErrorCode) {
                 this.agentInstallErrorCode = agentInstallErrorCode;
@@ -289,12 +296,11 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * SysOM插件的配置信息`sysak`是否开启监控。取值：
+             * Indicates whether the SysAK monitoring feature is enabled.`` Valid values:
              * <p>
              * 
-             * - true：`sysak`开启监控。
-             * 
-             * - false：`sysak`未开启监控。
+             * *   `true`: The SysAK monitoring feature is enabled.
+             * *   `false`: the SysAK monitoring feature is disabled.
              */
             public Builder osMonitorConfig(String osMonitorConfig) {
                 this.osMonitorConfig = osMonitorConfig;
@@ -347,7 +353,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
             }
 
             /**
-             * SysOM监控的插件版本。
+             * The SysOM version.
              */
             public Builder osMonitorVersion(String osMonitorVersion) {
                 this.osMonitorVersion = osMonitorVersion;
@@ -378,7 +384,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
 
     }
     public static class NodeStatusList extends TeaModel {
-        @NameInMap("NodeStatus")
+        @com.aliyun.core.annotation.NameInMap("NodeStatus")
         private java.util.List < NodeStatus> nodeStatus;
 
         private NodeStatusList(Builder builder) {

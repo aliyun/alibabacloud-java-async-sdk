@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricDataResponseBody</p>
  */
 public class DescribeMetricDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Datapoints")
+    @com.aliyun.core.annotation.NameInMap("Datapoints")
     private String datapoints;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMetricDataResponseBody(Builder builder) {
@@ -89,7 +88,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
          * The HTTP status code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -100,7 +99,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
          * The monitoring data. The value includes the following fields:
          * <p>
          * 
-         * *   `timestamp`: the timestamp when the alert was triggered.
+         * *   `timestamp`: the time when the alert was triggered.
          * *   `userId`: the ID of the user for which the alert was triggered.
          * *   `instanceId`: the ID of the instance for which the alert was triggered.
          * *   `Minimum`, `Average`, and `Maximum`: the aggregation methods.
@@ -111,7 +110,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -132,7 +131,7 @@ public class DescribeMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

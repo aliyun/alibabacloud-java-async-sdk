@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSiteMonitorDataRequest</p>
  */
 public class DescribeSiteMonitorDataRequest extends Request {
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Length")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Length")
     private Integer length;
 
-    @Query
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeSiteMonitorDataRequest(Builder builder) {

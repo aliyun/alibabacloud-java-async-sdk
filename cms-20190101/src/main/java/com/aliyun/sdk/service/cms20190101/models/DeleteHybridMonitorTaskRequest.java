@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteHybridMonitorTaskRequest</p>
  */
 public class DeleteHybridMonitorTaskRequest extends Request {
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("TargetUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetUserId")
     private String targetUserId;
 
-    @Query
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
     private DeleteHybridMonitorTaskRequest(Builder builder) {

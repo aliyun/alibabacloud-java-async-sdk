@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHybridMonitorDataListRequest</p>
  */
 public class DescribeHybridMonitorDataListRequest extends Request {
-    @Query
-    @NameInMap("End")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("End")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long end;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("PromSQL")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromSQL")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String promSQL;
 
-    @Query
-    @NameInMap("Start")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Start")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long start;
 
     private DescribeHybridMonitorDataListRequest(Builder builder) {
@@ -114,7 +113,7 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         } 
 
         /**
-         * The timestamp that specifies the end of the time range to query.
+         * The end of the time range to query.
          * <p>
          * 
          * Unit: seconds.
@@ -129,7 +128,7 @@ public class DescribeHybridMonitorDataListRequest extends Request {
          * The name of the namespace.
          * <p>
          * 
-         * For information about how to obtain the name of a namespace, see [DescribeHybridMonitorNamespaceList](~~428880~~).
+         * For more information about how to query the names of namespaces, see [DescribeHybridMonitorNamespaceList](~~428880~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -138,7 +137,7 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The interval at which monitoring data is collected.
+         * The statistical period of the monitoring data.
          * <p>
          * 
          * Unit: seconds.
@@ -150,7 +149,7 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The name of the metric.
+         * The metric name.
          * <p>
          * 
          * >  PromQL statements are supported.
@@ -162,7 +161,7 @@ public class DescribeHybridMonitorDataListRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the beginning of the time range to query.
+         * The start of the time range to query.
          * <p>
          * 
          * Unit: seconds.

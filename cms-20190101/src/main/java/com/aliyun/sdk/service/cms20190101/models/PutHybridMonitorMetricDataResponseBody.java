@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutHybridMonitorMetricDataResponseBody</p>
  */
 public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("ErrorDetail")
+    @com.aliyun.core.annotation.NameInMap("ErrorDetail")
     private java.util.List < ErrorDetail> errorDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PutHybridMonitorMetricDataResponseBody(Builder builder) {
@@ -98,10 +97,10 @@ public class PutHybridMonitorMetricDataResponseBody extends TeaModel {
     } 
 
     public static class ErrorDetail extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
         private ErrorDetail(Builder builder) {

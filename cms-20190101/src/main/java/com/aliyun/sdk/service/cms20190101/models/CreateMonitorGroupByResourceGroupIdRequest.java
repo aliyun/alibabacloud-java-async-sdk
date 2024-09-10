@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMonitorGroupByResourceGroupIdRequest</p>
  */
 public class CreateMonitorGroupByResourceGroupIdRequest extends Request {
-    @Query
-    @NameInMap("ContactGroupList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroupList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > contactGroupList;
 
-    @Query
-    @NameInMap("EnableInstallAgent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableInstallAgent")
     private Boolean enableInstallAgent;
 
-    @Query
-    @NameInMap("EnableSubscribeEvent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSubscribeEvent")
     private Boolean enableSubscribeEvent;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceGroupName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceGroupName;
 
     private CreateMonitorGroupByResourceGroupIdRequest(Builder builder) {

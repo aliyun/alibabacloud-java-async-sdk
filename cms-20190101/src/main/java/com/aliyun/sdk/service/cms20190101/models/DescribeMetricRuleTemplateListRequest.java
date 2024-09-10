@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMetricRuleTemplateListRequest</p>
  */
 public class DescribeMetricRuleTemplateListRequest extends Request {
-    @Query
-    @NameInMap("History")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("History")
     private Boolean history;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private Boolean order;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private Long templateId;
 
     private DescribeMetricRuleTemplateListRequest(Builder builder) {

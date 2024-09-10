@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHybridMonitorDataListResponseBody</p>
  */
 public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TimeSeries")
+    @com.aliyun.core.annotation.NameInMap("TimeSeries")
     private java.util.List < TimeSeries> timeSeries;
 
     private DescribeHybridMonitorDataListResponseBody(Builder builder) {
@@ -86,10 +85,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         private java.util.List < TimeSeries> timeSeries; 
 
         /**
-         * The HTTP status code.
+         * The response code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -97,7 +96,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -105,7 +104,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,11 +112,11 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -139,10 +138,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
     } 
 
     public static class Labels extends TeaModel {
-        @NameInMap("K")
+        @com.aliyun.core.annotation.NameInMap("K")
         private String k;
 
-        @NameInMap("V")
+        @com.aliyun.core.annotation.NameInMap("V")
         private String v;
 
         private Labels(Builder builder) {
@@ -200,10 +199,10 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
 
     }
     public static class Values extends TeaModel {
-        @NameInMap("Ts")
+        @com.aliyun.core.annotation.NameInMap("Ts")
         private String ts;
 
-        @NameInMap("V")
+        @com.aliyun.core.annotation.NameInMap("V")
         private String v;
 
         private Values(Builder builder) {
@@ -264,13 +263,13 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
 
     }
     public static class TimeSeries extends TeaModel {
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < Values> values;
 
         private TimeSeries(Builder builder) {
@@ -322,7 +321,7 @@ public class DescribeHybridMonitorDataListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * The metric name.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;

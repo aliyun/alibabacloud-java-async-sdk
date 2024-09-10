@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutExporterOutputRequest</p>
  */
 public class PutExporterOutputRequest extends Request {
-    @Query
-    @NameInMap("ConfigJson")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigJson")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configJson;
 
-    @Query
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @Query
-    @NameInMap("DestName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destName;
 
-    @Query
-    @NameInMap("DestType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestType")
     private String destType;
 
     private PutExporterOutputRequest(Builder builder) {

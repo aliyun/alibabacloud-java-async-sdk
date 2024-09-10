@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDynamicTagRuleListRequest</p>
  */
 public class DescribeDynamicTagRuleListRequest extends Request {
-    @Query
-    @NameInMap("DynamicTagRuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DynamicTagRuleId")
     private String dynamicTagRuleId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("TagKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKey")
     private String tagKey;
 
-    @Query
-    @NameInMap("TagRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagRegionId")
     private String tagRegionId;
 
-    @Query
-    @NameInMap("TagValue")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagValue")
     private String tagValue;
 
     private DescribeDynamicTagRuleListRequest(Builder builder) {

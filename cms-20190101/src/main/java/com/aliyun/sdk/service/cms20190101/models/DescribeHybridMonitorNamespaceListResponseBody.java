@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHybridMonitorNamespaceListResponseBody</p>
  */
 public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DescribeHybridMonitorNamespace")
+    @com.aliyun.core.annotation.NameInMap("DescribeHybridMonitorNamespace")
     private java.util.List < DescribeHybridMonitorNamespace> describeHybridMonitorNamespace;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeHybridMonitorNamespaceListResponseBody(Builder builder) {
@@ -196,10 +195,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
     } 
 
     public static class MetricList extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < String > list;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Long period;
 
         private MetricList(Builder builder) {
@@ -260,10 +259,10 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
     }
     public static class NamespaceList extends TeaModel {
-        @NameInMap("MetricList")
+        @com.aliyun.core.annotation.NameInMap("MetricList")
         private java.util.List < MetricList> metricList;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
         private NamespaceList(Builder builder) {
@@ -321,13 +320,13 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
     }
     public static class AliyunProductMetricList extends TeaModel {
-        @NameInMap("NamespaceList")
+        @com.aliyun.core.annotation.NameInMap("NamespaceList")
         private java.util.List < NamespaceList> namespaceList;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("YAMLConfig")
+        @com.aliyun.core.annotation.NameInMap("YAMLConfig")
         private String YAMLConfig;
 
         private AliyunProductMetricList(Builder builder) {
@@ -407,13 +406,13 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
     }
     public static class Detail extends TeaModel {
-        @NameInMap("NamespaceRegion")
+        @com.aliyun.core.annotation.NameInMap("NamespaceRegion")
         private String namespaceRegion;
 
-        @NameInMap("SLSProject")
+        @com.aliyun.core.annotation.NameInMap("SLSProject")
         private String SLSProject;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
         private Detail(Builder builder) {
@@ -502,34 +501,34 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
 
     }
     public static class DescribeHybridMonitorNamespace extends TeaModel {
-        @NameInMap("AliyunProductMetricList")
+        @com.aliyun.core.annotation.NameInMap("AliyunProductMetricList")
         private java.util.List < AliyunProductMetricList> aliyunProductMetricList;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private Detail detail;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsDelete")
+        @com.aliyun.core.annotation.NameInMap("IsDelete")
         private Integer isDelete;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("NamespaceType")
+        @com.aliyun.core.annotation.NameInMap("NamespaceType")
         private String namespaceType;
 
-        @NameInMap("NotAliyunTaskNumber")
+        @com.aliyun.core.annotation.NameInMap("NotAliyunTaskNumber")
         private Long notAliyunTaskNumber;
 
         private DescribeHybridMonitorNamespace(Builder builder) {

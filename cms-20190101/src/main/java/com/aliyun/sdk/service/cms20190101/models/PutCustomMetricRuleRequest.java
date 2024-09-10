@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,77 +11,77 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutCustomMetricRuleRequest</p>
  */
 public class PutCustomMetricRuleRequest extends Request {
-    @Query
-    @NameInMap("ComparisonOperator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comparisonOperator;
 
-    @Query
-    @NameInMap("ContactGroups")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactGroups;
 
-    @Query
-    @NameInMap("EffectiveInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveInterval")
     private String effectiveInterval;
 
-    @Query
-    @NameInMap("EmailSubject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmailSubject")
     private String emailSubject;
 
-    @Query
-    @NameInMap("EvaluationCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EvaluationCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer evaluationCount;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Level")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String level;
 
-    @Query
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("Resources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resources;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @Query
-    @NameInMap("SilenceTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SilenceTime")
     private Integer silenceTime;
 
-    @Query
-    @NameInMap("Statistics")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Statistics")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String statistics;
 
-    @Query
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String threshold;
 
-    @Query
-    @NameInMap("Webhook")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Webhook")
     private String webhook;
 
     private PutCustomMetricRuleRequest(Builder builder) {

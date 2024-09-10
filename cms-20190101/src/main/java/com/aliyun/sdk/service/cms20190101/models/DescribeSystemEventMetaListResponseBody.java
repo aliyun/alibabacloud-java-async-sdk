@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSystemEventMetaListResponseBody</p>
  */
 public class DescribeSystemEventMetaListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSystemEventMetaListResponseBody(Builder builder) {
@@ -139,28 +138,28 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     } 
 
     public static class Resource extends TeaModel {
-        @NameInMap("EventType")
+        @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NameDesc")
+        @com.aliyun.core.annotation.NameInMap("NameDesc")
         private String nameDesc;
 
-        @NameInMap("NameDesc.En")
+        @com.aliyun.core.annotation.NameInMap("NameDesc.En")
         private String nameDesc_en;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusDesc")
+        @com.aliyun.core.annotation.NameInMap("StatusDesc")
         private String statusDesc;
 
         private Resource(Builder builder) {
@@ -330,7 +329,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private java.util.List < Resource> resource;
 
         private Data(Builder builder) {

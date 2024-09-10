@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogMonitorAttributeResponseBody</p>
  */
 public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("LogMonitor")
+    @com.aliyun.core.annotation.NameInMap("LogMonitor")
     private LogMonitor logMonitor;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeLogMonitorAttributeResponseBody(Builder builder) {
@@ -139,19 +138,19 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
     } 
 
     public static class Aggregates extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
-        @NameInMap("Function")
+        @com.aliyun.core.annotation.NameInMap("Function")
         private String function;
 
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private String max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private String min;
 
         private Aggregates(Builder builder) {
@@ -270,13 +269,13 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class ValueFilter extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Operator")
+        @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ValueFilter(Builder builder) {
@@ -359,43 +358,43 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class LogMonitor extends TeaModel {
-        @NameInMap("Aggregates")
+        @com.aliyun.core.annotation.NameInMap("Aggregates")
         private java.util.List < Aggregates> aggregates;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
 
-        @NameInMap("Groupbys")
+        @com.aliyun.core.annotation.NameInMap("Groupbys")
         private java.util.List < String > groupbys;
 
-        @NameInMap("LogId")
+        @com.aliyun.core.annotation.NameInMap("LogId")
         private Long logId;
 
-        @NameInMap("MetricExpress")
+        @com.aliyun.core.annotation.NameInMap("MetricExpress")
         private String metricExpress;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("SlsLogstore")
+        @com.aliyun.core.annotation.NameInMap("SlsLogstore")
         private String slsLogstore;
 
-        @NameInMap("SlsProject")
+        @com.aliyun.core.annotation.NameInMap("SlsProject")
         private String slsProject;
 
-        @NameInMap("SlsRegionId")
+        @com.aliyun.core.annotation.NameInMap("SlsRegionId")
         private String slsRegionId;
 
-        @NameInMap("Tumblingwindows")
+        @com.aliyun.core.annotation.NameInMap("Tumblingwindows")
         private java.util.List < String > tumblingwindows;
 
-        @NameInMap("ValueFilter")
+        @com.aliyun.core.annotation.NameInMap("ValueFilter")
         private java.util.List < ValueFilter> valueFilter;
 
-        @NameInMap("ValueFilterRelation")
+        @com.aliyun.core.annotation.NameInMap("ValueFilterRelation")
         private String valueFilterRelation;
 
         private LogMonitor(Builder builder) {

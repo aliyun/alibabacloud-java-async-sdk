@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSiteMonitorListResponseBody</p>
  */
 public class DescribeSiteMonitorListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SiteMonitors")
+    @com.aliyun.core.annotation.NameInMap("SiteMonitors")
     private SiteMonitors siteMonitors;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSiteMonitorListResponseBody(Builder builder) {
@@ -199,16 +198,16 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
     } 
 
     public static class Assertions extends TeaModel {
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("property")
+        @com.aliyun.core.annotation.NameInMap("property")
         private String property;
 
-        @NameInMap("target")
+        @com.aliyun.core.annotation.NameInMap("target")
         private String target;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Assertions(Builder builder) {
@@ -322,7 +321,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
     }
     public static class OptionsJsonAssertions extends TeaModel {
-        @NameInMap("assertions")
+        @com.aliyun.core.annotation.NameInMap("assertions")
         private java.util.List < Assertions> assertions;
 
         private OptionsJsonAssertions(Builder builder) {
@@ -363,94 +362,94 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
     }
     public static class OptionsJson extends TeaModel {
-        @NameInMap("acceptable_response_code")
+        @com.aliyun.core.annotation.NameInMap("acceptable_response_code")
         private String acceptableResponseCode;
 
-        @NameInMap("assertions")
+        @com.aliyun.core.annotation.NameInMap("assertions")
         private OptionsJsonAssertions assertions;
 
-        @NameInMap("attempts")
+        @com.aliyun.core.annotation.NameInMap("attempts")
         private Long attempts;
 
-        @NameInMap("authentication")
+        @com.aliyun.core.annotation.NameInMap("authentication")
         private Integer authentication;
 
-        @NameInMap("cert_verify")
+        @com.aliyun.core.annotation.NameInMap("cert_verify")
         private Boolean certVerify;
 
-        @NameInMap("cookie")
+        @com.aliyun.core.annotation.NameInMap("cookie")
         private String cookie;
 
-        @NameInMap("diagnosis_mtr")
+        @com.aliyun.core.annotation.NameInMap("diagnosis_mtr")
         private Boolean diagnosisMtr;
 
-        @NameInMap("diagnosis_ping")
+        @com.aliyun.core.annotation.NameInMap("diagnosis_ping")
         private Boolean diagnosisPing;
 
-        @NameInMap("dns_match_rule")
+        @com.aliyun.core.annotation.NameInMap("dns_match_rule")
         private String dnsMatchRule;
 
-        @NameInMap("dns_server")
+        @com.aliyun.core.annotation.NameInMap("dns_server")
         private String dnsServer;
 
-        @NameInMap("dns_type")
+        @com.aliyun.core.annotation.NameInMap("dns_type")
         private String dnsType;
 
-        @NameInMap("enable_operator_dns")
+        @com.aliyun.core.annotation.NameInMap("enable_operator_dns")
         private Boolean enableOperatorDns;
 
-        @NameInMap("failure_rate")
+        @com.aliyun.core.annotation.NameInMap("failure_rate")
         private Float failureRate;
 
-        @NameInMap("header")
+        @com.aliyun.core.annotation.NameInMap("header")
         private String header;
 
-        @NameInMap("http_method")
+        @com.aliyun.core.annotation.NameInMap("http_method")
         private String httpMethod;
 
-        @NameInMap("isBase64Encode")
+        @com.aliyun.core.annotation.NameInMap("isBase64Encode")
         private String isBase64Encode;
 
-        @NameInMap("match_rule")
+        @com.aliyun.core.annotation.NameInMap("match_rule")
         private Integer matchRule;
 
-        @NameInMap("password")
+        @com.aliyun.core.annotation.NameInMap("password")
         private String password;
 
-        @NameInMap("ping_num")
+        @com.aliyun.core.annotation.NameInMap("ping_num")
         private Integer pingNum;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
-        @NameInMap("protocol")
+        @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
-        @NameInMap("proxy_protocol")
+        @com.aliyun.core.annotation.NameInMap("proxy_protocol")
         private Boolean proxyProtocol;
 
-        @NameInMap("request_content")
+        @com.aliyun.core.annotation.NameInMap("request_content")
         private String requestContent;
 
-        @NameInMap("request_format")
+        @com.aliyun.core.annotation.NameInMap("request_format")
         private String requestFormat;
 
-        @NameInMap("response_content")
+        @com.aliyun.core.annotation.NameInMap("response_content")
         private String responseContent;
 
-        @NameInMap("response_format")
+        @com.aliyun.core.annotation.NameInMap("response_format")
         private String responseFormat;
 
-        @NameInMap("retry_delay")
+        @com.aliyun.core.annotation.NameInMap("retry_delay")
         private Integer retryDelay;
 
-        @NameInMap("time_out")
+        @com.aliyun.core.annotation.NameInMap("time_out")
         private Long timeOut;
 
-        @NameInMap("unfollow_redirect")
+        @com.aliyun.core.annotation.NameInMap("unfollow_redirect")
         private Boolean unfollowRedirect;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private OptionsJson(Builder builder) {
@@ -1062,34 +1061,34 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
     }
     public static class SiteMonitor extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("AgentGroup")
+        @com.aliyun.core.annotation.NameInMap("AgentGroup")
         private String agentGroup;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private String interval;
 
-        @NameInMap("OptionsJson")
+        @com.aliyun.core.annotation.NameInMap("OptionsJson")
         private OptionsJson optionsJson;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private SiteMonitor(Builder builder) {
@@ -1291,7 +1290,7 @@ public class DescribeSiteMonitorListResponseBody extends TeaModel {
 
     }
     public static class SiteMonitors extends TeaModel {
-        @NameInMap("SiteMonitor")
+        @com.aliyun.core.annotation.NameInMap("SiteMonitor")
         private java.util.List < SiteMonitor> siteMonitor;
 
         private SiteMonitors(Builder builder) {

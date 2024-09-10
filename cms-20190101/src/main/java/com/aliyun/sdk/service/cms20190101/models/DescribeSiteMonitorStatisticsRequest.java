@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSiteMonitorStatisticsRequest</p>
  */
 public class DescribeSiteMonitorStatisticsRequest extends Request {
-    @Query
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("TaskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskId;
 
-    @Query
-    @NameInMap("TimeRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeRange")
     private String timeRange;
 
     private DescribeSiteMonitorStatisticsRequest(Builder builder) {

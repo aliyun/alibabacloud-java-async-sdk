@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSiteMonitorISPCityListRequest</p>
  */
 public class DescribeSiteMonitorISPCityListRequest extends Request {
-    @Query
-    @NameInMap("City")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
-    @Query
-    @NameInMap("IPV4")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IPV4")
     private Boolean IPV4;
 
-    @Query
-    @NameInMap("IPV6")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IPV6")
     private Boolean IPV6;
 
-    @Query
-    @NameInMap("Isp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Isp")
     private String isp;
 
-    @Query
-    @NameInMap("ViewAll")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ViewAll")
     private Boolean viewAll;
 
     private DescribeSiteMonitorISPCityListRequest(Builder builder) {

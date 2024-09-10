@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMonitoringAgentHostsResponseBody</p>
  */
 public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Hosts")
+    @com.aliyun.core.annotation.NameInMap("Hosts")
     private Hosts hosts;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PageTotal")
+    @com.aliyun.core.annotation.NameInMap("PageTotal")
     private Integer pageTotal;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeMonitoringAgentHostsResponseBody(Builder builder) {
@@ -219,46 +218,46 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
     } 
 
     public static class HostsHost extends TeaModel {
-        @NameInMap("AgentVersion")
+        @com.aliyun.core.annotation.NameInMap("AgentVersion")
         private String agentVersion;
 
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("EipAddress")
+        @com.aliyun.core.annotation.NameInMap("EipAddress")
         private String eipAddress;
 
-        @NameInMap("EipId")
+        @com.aliyun.core.annotation.NameInMap("EipId")
         private String eipId;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("IpGroup")
+        @com.aliyun.core.annotation.NameInMap("IpGroup")
         private String ipGroup;
 
-        @NameInMap("NatIp")
+        @com.aliyun.core.annotation.NameInMap("NatIp")
         private String natIp;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("OperatingSystem")
+        @com.aliyun.core.annotation.NameInMap("OperatingSystem")
         private String operatingSystem;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("isAliyunHost")
+        @com.aliyun.core.annotation.NameInMap("isAliyunHost")
         private Boolean isAliyunHost;
 
         private HostsHost(Builder builder) {
@@ -530,7 +529,7 @@ public class DescribeMonitoringAgentHostsResponseBody extends TeaModel {
 
     }
     public static class Hosts extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private java.util.List < HostsHost> host;
 
         private Hosts(Builder builder) {

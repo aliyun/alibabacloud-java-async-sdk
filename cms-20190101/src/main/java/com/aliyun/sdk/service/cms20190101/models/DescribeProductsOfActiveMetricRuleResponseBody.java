@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProductsOfActiveMetricRuleResponseBody</p>
  */
 public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
-    @NameInMap("AllProductInitMetricRuleList")
+    @com.aliyun.core.annotation.NameInMap("AllProductInitMetricRuleList")
     private AllProductInitMetricRuleList allProductInitMetricRuleList;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Datapoints")
+    @com.aliyun.core.annotation.NameInMap("Datapoints")
     private String datapoints;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeProductsOfActiveMetricRuleResponseBody(Builder builder) {
@@ -172,28 +171,28 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     } 
 
     public static class AlertInitConfig extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("EvaluationCount")
+        @com.aliyun.core.annotation.NameInMap("EvaluationCount")
         private String evaluationCount;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
         private AlertInitConfig(Builder builder) {
@@ -405,7 +404,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
 
     }
     public static class AlertInitConfigList extends TeaModel {
-        @NameInMap("AlertInitConfig")
+        @com.aliyun.core.annotation.NameInMap("AlertInitConfig")
         private java.util.List < AlertInitConfig> alertInitConfig;
 
         private AlertInitConfigList(Builder builder) {
@@ -446,10 +445,10 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
 
     }
     public static class AllProductInitMetricRule extends TeaModel {
-        @NameInMap("AlertInitConfigList")
+        @com.aliyun.core.annotation.NameInMap("AlertInitConfigList")
         private AlertInitConfigList alertInitConfigList;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
         private AllProductInitMetricRule(Builder builder) {
@@ -507,7 +506,7 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
 
     }
     public static class AllProductInitMetricRuleList extends TeaModel {
-        @NameInMap("AllProductInitMetricRule")
+        @com.aliyun.core.annotation.NameInMap("AllProductInitMetricRule")
         private java.util.List < AllProductInitMetricRule> allProductInitMetricRule;
 
         private AllProductInitMetricRuleList(Builder builder) {

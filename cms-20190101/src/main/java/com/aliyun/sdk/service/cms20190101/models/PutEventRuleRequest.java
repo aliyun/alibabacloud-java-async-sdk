@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutEventRuleRequest</p>
  */
 public class PutEventRuleRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EventPattern")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventPattern")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < EventPattern> eventPattern;
 
-    @Query
-    @NameInMap("EventType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EventType")
     private String eventType;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @Query
-    @NameInMap("SilenceTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SilenceTime")
     private Long silenceTime;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private PutEventRuleRequest(Builder builder) {
@@ -218,26 +217,26 @@ public class PutEventRuleRequest extends Request {
     } 
 
     public static class EventPattern extends TeaModel {
-        @NameInMap("CustomFilters")
+        @com.aliyun.core.annotation.NameInMap("CustomFilters")
         private String customFilters;
 
-        @NameInMap("EventTypeList")
+        @com.aliyun.core.annotation.NameInMap("EventTypeList")
         private java.util.List < String > eventTypeList;
 
-        @NameInMap("LevelList")
+        @com.aliyun.core.annotation.NameInMap("LevelList")
         private java.util.List < String > levelList;
 
-        @NameInMap("NameList")
+        @com.aliyun.core.annotation.NameInMap("NameList")
         private java.util.List < String > nameList;
 
-        @NameInMap("Product")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Product")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String product;
 
-        @NameInMap("SQLFilter")
+        @com.aliyun.core.annotation.NameInMap("SQLFilter")
         private String SQLFilter;
 
-        @NameInMap("StatusList")
+        @com.aliyun.core.annotation.NameInMap("StatusList")
         private java.util.List < String > statusList;
 
         private EventPattern(Builder builder) {

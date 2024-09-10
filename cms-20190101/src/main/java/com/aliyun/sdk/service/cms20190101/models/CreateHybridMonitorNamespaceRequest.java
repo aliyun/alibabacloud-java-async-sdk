@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateHybridMonitorNamespaceRequest</p>
  */
 public class CreateHybridMonitorNamespaceRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("NamespaceRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceRegion")
     private String namespaceRegion;
 
-    @Query
-    @NameInMap("NamespaceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceType")
     private String namespaceType;
 
-    @Query
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
     private CreateHybridMonitorNamespaceRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSiteMonitorResponseBody</p>
  */
 public class CreateSiteMonitorResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CreateResultList")
+    @com.aliyun.core.annotation.NameInMap("CreateResultList")
     private CreateResultList createResultList;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private CreateSiteMonitorResponseBody(Builder builder) {
@@ -162,10 +161,10 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
     } 
 
     public static class CreateResultListCreateResultList extends TeaModel {
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
         private CreateResultListCreateResultList(Builder builder) {
@@ -223,7 +222,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
 
     }
     public static class CreateResultList extends TeaModel {
-        @NameInMap("CreateResultList")
+        @com.aliyun.core.annotation.NameInMap("CreateResultList")
         private java.util.List < CreateResultListCreateResultList> createResultList;
 
         private CreateResultList(Builder builder) {
@@ -267,19 +266,19 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
 
     }
     public static class Contact extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private String success;
 
         private Contact(Builder builder) {
@@ -395,7 +394,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
 
     }
     public static class AttachAlertResult extends TeaModel {
-        @NameInMap("Contact")
+        @com.aliyun.core.annotation.NameInMap("Contact")
         private java.util.List < Contact> contact;
 
         private AttachAlertResult(Builder builder) {
@@ -436,7 +435,7 @@ public class CreateSiteMonitorResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AttachAlertResult")
+        @com.aliyun.core.annotation.NameInMap("AttachAlertResult")
         private AttachAlertResult attachAlertResult;
 
         private Data(Builder builder) {

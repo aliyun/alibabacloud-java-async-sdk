@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSiteMonitorISPCityListResponseBody</p>
  */
 public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("IspCityList")
+    @com.aliyun.core.annotation.NameInMap("IspCityList")
     private IspCityList ispCityList;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeSiteMonitorISPCityListResponseBody(Builder builder) {
@@ -139,7 +138,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
     } 
 
     public static class IPPool extends TeaModel {
-        @NameInMap("IPPool")
+        @com.aliyun.core.annotation.NameInMap("IPPool")
         private java.util.List < String > IPPool;
 
         private IPPool(Builder builder) {
@@ -180,55 +179,55 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
 
     }
     public static class IspCity extends TeaModel {
-        @NameInMap("Area.en")
+        @com.aliyun.core.annotation.NameInMap("Area.en")
         private String area_en;
 
-        @NameInMap("Area.zh_CN")
+        @com.aliyun.core.annotation.NameInMap("Area.zh_CN")
         private String area_zh_cN;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("CityName.en")
+        @com.aliyun.core.annotation.NameInMap("CityName.en")
         private String cityName_en;
 
-        @NameInMap("CityName.zh_CN")
+        @com.aliyun.core.annotation.NameInMap("CityName.zh_CN")
         private String cityName_zh_cN;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("Country.en")
+        @com.aliyun.core.annotation.NameInMap("Country.en")
         private String country_en;
 
-        @NameInMap("Country.zh_CN")
+        @com.aliyun.core.annotation.NameInMap("Country.zh_CN")
         private String country_zh_cN;
 
-        @NameInMap("IPPool")
+        @com.aliyun.core.annotation.NameInMap("IPPool")
         private IPPool IPPool;
 
-        @NameInMap("IPV4ProbeCount")
+        @com.aliyun.core.annotation.NameInMap("IPV4ProbeCount")
         private String IPV4ProbeCount;
 
-        @NameInMap("IPV6ProbeCount")
+        @com.aliyun.core.annotation.NameInMap("IPV6ProbeCount")
         private String IPV6ProbeCount;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("IspName.en")
+        @com.aliyun.core.annotation.NameInMap("IspName.en")
         private String ispName_en;
 
-        @NameInMap("IspName.zh_CN")
+        @com.aliyun.core.annotation.NameInMap("IspName.zh_CN")
         private String ispName_zh_cN;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Region.en")
+        @com.aliyun.core.annotation.NameInMap("Region.en")
         private String region_en;
 
-        @NameInMap("Region.zh_CN")
+        @com.aliyun.core.annotation.NameInMap("Region.zh_CN")
         private String region_zh_cN;
 
         private IspCity(Builder builder) {
@@ -544,7 +543,7 @@ public class DescribeSiteMonitorISPCityListResponseBody extends TeaModel {
 
     }
     public static class IspCityList extends TeaModel {
-        @NameInMap("IspCity")
+        @com.aliyun.core.annotation.NameInMap("IspCity")
         private java.util.List < IspCity> ispCity;
 
         private IspCityList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutMetricRuleTargetsRequest</p>
  */
 public class PutMetricRuleTargetsRequest extends Request {
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("Targets")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Targets")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Targets> targets;
 
     private PutMetricRuleTargetsRequest(Builder builder) {
@@ -82,7 +81,7 @@ public class PutMetricRuleTargetsRequest extends Request {
         }
 
         /**
-         * None.
+         * N/A.
          */
         public Builder targets(java.util.List < Targets> targets) {
             this.putQueryParameter("Targets", targets);
@@ -98,18 +97,18 @@ public class PutMetricRuleTargetsRequest extends Request {
     } 
 
     public static class Targets extends TeaModel {
-        @NameInMap("Arn")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Arn")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arn;
 
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
-        @NameInMap("JsonParams")
+        @com.aliyun.core.annotation.NameInMap("JsonParams")
         private String jsonParams;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private Targets(Builder builder) {
@@ -162,20 +161,18 @@ public class PutMetricRuleTargetsRequest extends Request {
             private String level; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the resource.
+             * The Alibaba Cloud Resource Name (ARN) of the resource. Message Service (MNS), Auto Scaling, Simple Log Service, and Function Compute are supported.
              * <p>
              * 
-             * For information about how to obtain the ARN of a resource, see [DescribeMetricRuleTargets](~~121592~~).
+             * The following part describes the ARN of MNS and the parameters provided by the ARN:
              * 
-             * Format: `acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message`. Example: `acs:mns:cn-hangzhou:120886317861****:/queues/test123/message`. Fields:
-             * 
-             * *   {Service name abbreviation}: the abbreviation of the service name. Valid value: mns.
-             * 
-             * *   {userId}: the ID of the Alibaba Cloud account.
+             * `acs:mns:{regionId}:{userId}:/{Resource type}/{Resource name}/message`.
              * 
              * *   {regionId}: the region ID of the message queue or topic.
              * 
-             * *   {Resource type}: the type of the resource that triggers the alert. Valid values:
+             * *   {userId}: the ID of the Alibaba Cloud account that owns the resource.
+             * 
+             * *   {Resource type}: the type of the resource for which alerts are triggered. Valid values:
              * 
              *     *   **queues**
              *     *   **topics**
@@ -184,6 +181,18 @@ public class PutMetricRuleTargetsRequest extends Request {
              * 
              *     *   If the resource type is **queues**, the resource name is the queue name.
              *     *   If the resource type is **topics**, the resource name is the topic name.
+             * 
+             * ARN of Auto Scaling:
+             * 
+             * acs:ess:{regionId}:{userId}:scalingGroupId/{Scaling group ID}:scalingRuleId/{Scaling rule ID}
+             * 
+             * ARN of Simple Log Service:
+             * 
+             * acs:log:{regionId}:{userId}:project/{Project name}/logstore/{Logstore name}
+             * 
+             * ARN of Function Compute:
+             * 
+             * acs:fc:{regionId}:{userId}:services/{Service name}/functions/{Function name}
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -194,7 +203,7 @@ public class PutMetricRuleTargetsRequest extends Request {
              * The ID of the resource for which alerts are triggered.
              * <p>
              * 
-             * For information about how to obtain the ID of a resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).
+             * For more information about how to obtain the ID of the resource for which alerts are triggered, see [DescribeMetricRuleTargets](~~121592~~).
              */
             public Builder id(String id) {
                 this.id = id;
@@ -202,7 +211,7 @@ public class PutMetricRuleTargetsRequest extends Request {
             }
 
             /**
-             * The parameters of the alert callback. Specify the parameters in the JSON format.
+             * The JSON-formatted parameters of the alert callback.
              */
             public Builder jsonParams(String jsonParams) {
                 this.jsonParams = jsonParams;

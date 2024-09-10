@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventRuleListRequest</p>
  */
 public class DescribeEventRuleListRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("IsEnable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsEnable")
     private Boolean isEnable;
 
-    @Query
-    @NameInMap("NamePrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamePrefix")
     private String namePrefix;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
     private DescribeEventRuleListRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDynamicTagGroupRequest</p>
  */
 public class CreateDynamicTagGroupRequest extends Request {
-    @Query
-    @NameInMap("ContactGroupList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroupList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > contactGroupList;
 
-    @Query
-    @NameInMap("EnableInstallAgent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableInstallAgent")
     private Boolean enableInstallAgent;
 
-    @Query
-    @NameInMap("EnableSubscribeEvent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableSubscribeEvent")
     private Boolean enableSubscribeEvent;
 
-    @Query
-    @NameInMap("MatchExpress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchExpress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < MatchExpress> matchExpress;
 
-    @Query
-    @NameInMap("MatchExpressFilterRelation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MatchExpressFilterRelation")
     private String matchExpressFilterRelation;
 
-    @Query
-    @NameInMap("TagKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tagKey;
 
-    @Query
-    @NameInMap("TagRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagRegionId")
     private String tagRegionId;
 
-    @Query
-    @NameInMap("TemplateIdList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateIdList")
     private java.util.List < String > templateIdList;
 
     private CreateDynamicTagGroupRequest(Builder builder) {
@@ -249,13 +248,13 @@ public class CreateDynamicTagGroupRequest extends Request {
     } 
 
     public static class MatchExpress extends TeaModel {
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
-        @NameInMap("TagValueMatchFunction")
+        @com.aliyun.core.annotation.NameInMap("TagValueMatchFunction")
         private String tagValueMatchFunction;
 
         private MatchExpress(Builder builder) {

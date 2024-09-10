@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cms20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSiteMonitorAttributeResponseBody</p>
  */
 public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("MetricRules")
+    @com.aliyun.core.annotation.NameInMap("MetricRules")
     private MetricRules metricRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SiteMonitors")
+    @com.aliyun.core.annotation.NameInMap("SiteMonitors")
     private SiteMonitors siteMonitors;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSiteMonitorAttributeResponseBody(Builder builder) {
@@ -159,52 +158,52 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     } 
 
     public static class MetricRule extends TeaModel {
-        @NameInMap("ActionEnable")
+        @com.aliyun.core.annotation.NameInMap("ActionEnable")
         private String actionEnable;
 
-        @NameInMap("AlarmActions")
+        @com.aliyun.core.annotation.NameInMap("AlarmActions")
         private String alarmActions;
 
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private String dimensions;
 
-        @NameInMap("EvaluationCount")
+        @com.aliyun.core.annotation.NameInMap("EvaluationCount")
         private String evaluationCount;
 
-        @NameInMap("Expression")
+        @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("OkActions")
+        @com.aliyun.core.annotation.NameInMap("OkActions")
         private String okActions;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("StateValue")
+        @com.aliyun.core.annotation.NameInMap("StateValue")
         private String stateValue;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
         private MetricRule(Builder builder) {
@@ -540,7 +539,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class MetricRules extends TeaModel {
-        @NameInMap("MetricRule")
+        @com.aliyun.core.annotation.NameInMap("MetricRule")
         private java.util.List < MetricRule> metricRule;
 
         private MetricRules(Builder builder) {
@@ -581,7 +580,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class Days extends TeaModel {
-        @NameInMap("days")
+        @com.aliyun.core.annotation.NameInMap("days")
         private java.util.List < Integer > days;
 
         private Days(Builder builder) {
@@ -622,16 +621,16 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class CustomSchedule extends TeaModel {
-        @NameInMap("days")
+        @com.aliyun.core.annotation.NameInMap("days")
         private Days days;
 
-        @NameInMap("end_hour")
+        @com.aliyun.core.annotation.NameInMap("end_hour")
         private Integer endHour;
 
-        @NameInMap("start_hour")
+        @com.aliyun.core.annotation.NameInMap("start_hour")
         private Integer startHour;
 
-        @NameInMap("time_zone")
+        @com.aliyun.core.annotation.NameInMap("time_zone")
         private String timeZone;
 
         private CustomSchedule(Builder builder) {
@@ -723,16 +722,16 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class IspCity extends TeaModel {
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
         private IspCity(Builder builder) {
@@ -824,7 +823,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class IspCities extends TeaModel {
-        @NameInMap("IspCity")
+        @com.aliyun.core.annotation.NameInMap("IspCity")
         private java.util.List < IspCity> ispCity;
 
         private IspCities(Builder builder) {
@@ -865,16 +864,16 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class Assertions extends TeaModel {
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("property")
+        @com.aliyun.core.annotation.NameInMap("property")
         private String property;
 
-        @NameInMap("target")
+        @com.aliyun.core.annotation.NameInMap("target")
         private String target;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Assertions(Builder builder) {
@@ -966,7 +965,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class OptionJsonAssertions extends TeaModel {
-        @NameInMap("assertions")
+        @com.aliyun.core.annotation.NameInMap("assertions")
         private java.util.List < Assertions> assertions;
 
         private OptionJsonAssertions(Builder builder) {
@@ -1007,7 +1006,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class BlockedUrlList extends TeaModel {
-        @NameInMap("blocked_url_list")
+        @com.aliyun.core.annotation.NameInMap("blocked_url_list")
         private java.util.List < String > blockedUrlList;
 
         private BlockedUrlList(Builder builder) {
@@ -1048,7 +1047,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class BrowserHeaders extends TeaModel {
-        @NameInMap("browser_headers")
+        @com.aliyun.core.annotation.NameInMap("browser_headers")
         private java.util.List < java.util.Map<String, ?>> browserHeaders;
 
         private BrowserHeaders(Builder builder) {
@@ -1089,7 +1088,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class BrowserHosts extends TeaModel {
-        @NameInMap("browser_hosts")
+        @com.aliyun.core.annotation.NameInMap("browser_hosts")
         private java.util.List < String > browserHosts;
 
         private BrowserHosts(Builder builder) {
@@ -1130,10 +1129,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class BrowserInfo extends TeaModel {
-        @NameInMap("browser")
+        @com.aliyun.core.annotation.NameInMap("browser")
         private String browser;
 
-        @NameInMap("device")
+        @com.aliyun.core.annotation.NameInMap("device")
         private String device;
 
         private BrowserInfo(Builder builder) {
@@ -1191,7 +1190,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class OptionJsonBrowserInfo extends TeaModel {
-        @NameInMap("browser_info")
+        @com.aliyun.core.annotation.NameInMap("browser_info")
         private java.util.List < BrowserInfo> browserInfo;
 
         private OptionJsonBrowserInfo(Builder builder) {
@@ -1232,7 +1231,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class ExpectExistString extends TeaModel {
-        @NameInMap("expect_exist_string")
+        @com.aliyun.core.annotation.NameInMap("expect_exist_string")
         private java.util.List < String > expectExistString;
 
         private ExpectExistString(Builder builder) {
@@ -1273,7 +1272,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class ExpectNonExistString extends TeaModel {
-        @NameInMap("expect_non_exist_string")
+        @com.aliyun.core.annotation.NameInMap("expect_non_exist_string")
         private java.util.List < String > expectNonExistString;
 
         private ExpectNonExistString(Builder builder) {
@@ -1313,8 +1312,49 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    public static class QuicTarget extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("quic_target")
+        private java.util.List < String > quicTarget;
+
+        private QuicTarget(Builder builder) {
+            this.quicTarget = builder.quicTarget;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QuicTarget create() {
+            return builder().build();
+        }
+
+        /**
+         * @return quicTarget
+         */
+        public java.util.List < String > getQuicTarget() {
+            return this.quicTarget;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > quicTarget; 
+
+            /**
+             * quic_target.
+             */
+            public Builder quicTarget(java.util.List < String > quicTarget) {
+                this.quicTarget = quicTarget;
+                return this;
+            }
+
+            public QuicTarget build() {
+                return new QuicTarget(this);
+            } 
+
+        } 
+
+    }
     public static class TrafficHijackElementBlacklist extends TeaModel {
-        @NameInMap("traffic_hijack_element_blacklist")
+        @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_blacklist")
         private java.util.List < String > trafficHijackElementBlacklist;
 
         private TrafficHijackElementBlacklist(Builder builder) {
@@ -1355,7 +1395,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class TrafficHijackElementWhitelist extends TeaModel {
-        @NameInMap("traffic_hijack_element_whitelist")
+        @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_whitelist")
         private java.util.List < String > trafficHijackElementWhitelist;
 
         private TrafficHijackElementWhitelist(Builder builder) {
@@ -1396,133 +1436,145 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class OptionJson extends TeaModel {
-        @NameInMap("assertions")
+        @com.aliyun.core.annotation.NameInMap("assertions")
         private OptionJsonAssertions assertions;
 
-        @NameInMap("attempts")
+        @com.aliyun.core.annotation.NameInMap("attempts")
         private Long attempts;
 
-        @NameInMap("authentication")
+        @com.aliyun.core.annotation.NameInMap("authentication")
         private Integer authentication;
 
-        @NameInMap("blocked_url_list")
+        @com.aliyun.core.annotation.NameInMap("blocked_url_list")
         private BlockedUrlList blockedUrlList;
 
-        @NameInMap("browser_headers")
+        @com.aliyun.core.annotation.NameInMap("browser_headers")
         private BrowserHeaders browserHeaders;
 
-        @NameInMap("browser_hosts")
+        @com.aliyun.core.annotation.NameInMap("browser_hosts")
         private BrowserHosts browserHosts;
 
-        @NameInMap("browser_info")
+        @com.aliyun.core.annotation.NameInMap("browser_info")
         private OptionJsonBrowserInfo browserInfo;
 
-        @NameInMap("browser_insecure")
+        @com.aliyun.core.annotation.NameInMap("browser_insecure")
         private Boolean browserInsecure;
 
-        @NameInMap("browser_task_version")
+        @com.aliyun.core.annotation.NameInMap("browser_task_version")
         private String browserTaskVersion;
 
-        @NameInMap("cookie")
+        @com.aliyun.core.annotation.NameInMap("cookie")
         private String cookie;
 
-        @NameInMap("diagnosis_mtr")
+        @com.aliyun.core.annotation.NameInMap("diagnosis_mtr")
         private Boolean diagnosisMtr;
 
-        @NameInMap("diagnosis_ping")
+        @com.aliyun.core.annotation.NameInMap("diagnosis_ping")
         private Boolean diagnosisPing;
 
-        @NameInMap("dns_hijack_whitelist")
+        @com.aliyun.core.annotation.NameInMap("dns_hijack_whitelist")
         private String dnsHijackWhitelist;
 
-        @NameInMap("dns_match_rule")
+        @com.aliyun.core.annotation.NameInMap("dns_match_rule")
         private String dnsMatchRule;
 
-        @NameInMap("dns_server")
+        @com.aliyun.core.annotation.NameInMap("dns_server")
         private String dnsServer;
 
-        @NameInMap("dns_type")
+        @com.aliyun.core.annotation.NameInMap("dns_type")
         private String dnsType;
 
-        @NameInMap("expect_exist_string")
+        @com.aliyun.core.annotation.NameInMap("empty_message")
+        private Boolean emptyMessage;
+
+        @com.aliyun.core.annotation.NameInMap("expect_exist_string")
         private ExpectExistString expectExistString;
 
-        @NameInMap("expect_non_exist_string")
+        @com.aliyun.core.annotation.NameInMap("expect_non_exist_string")
         private ExpectNonExistString expectNonExistString;
 
-        @NameInMap("expect_value")
+        @com.aliyun.core.annotation.NameInMap("expect_value")
         private String expectValue;
 
-        @NameInMap("failure_rate")
+        @com.aliyun.core.annotation.NameInMap("failure_rate")
         private Float failureRate;
 
-        @NameInMap("header")
+        @com.aliyun.core.annotation.NameInMap("header")
         private String header;
 
-        @NameInMap("http_method")
+        @com.aliyun.core.annotation.NameInMap("http_method")
         private String httpMethod;
 
-        @NameInMap("isBase64Encode")
+        @com.aliyun.core.annotation.NameInMap("ip_network")
+        private String ipNetwork;
+
+        @com.aliyun.core.annotation.NameInMap("isBase64Encode")
         private String isBase64Encode;
 
-        @NameInMap("match_rule")
+        @com.aliyun.core.annotation.NameInMap("match_rule")
         private Integer matchRule;
 
-        @NameInMap("min_tls_version")
+        @com.aliyun.core.annotation.NameInMap("min_tls_version")
         private String minTlsVersion;
 
-        @NameInMap("password")
+        @com.aliyun.core.annotation.NameInMap("password")
         private String password;
 
-        @NameInMap("ping_num")
+        @com.aliyun.core.annotation.NameInMap("ping_num")
         private Integer pingNum;
 
-        @NameInMap("ping_port")
+        @com.aliyun.core.annotation.NameInMap("ping_port")
         private Integer pingPort;
 
-        @NameInMap("ping_type")
+        @com.aliyun.core.annotation.NameInMap("ping_type")
         private String pingType;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
-        @NameInMap("protocol")
+        @com.aliyun.core.annotation.NameInMap("protocol")
         private String protocol;
 
-        @NameInMap("request_content")
+        @com.aliyun.core.annotation.NameInMap("quic_enabled")
+        private Boolean quicEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("quic_target")
+        private QuicTarget quicTarget;
+
+        @com.aliyun.core.annotation.NameInMap("request_content")
         private String requestContent;
 
-        @NameInMap("request_format")
+        @com.aliyun.core.annotation.NameInMap("request_format")
         private String requestFormat;
 
-        @NameInMap("response_content")
+        @com.aliyun.core.annotation.NameInMap("response_content")
         private String responseContent;
 
-        @NameInMap("response_format")
+        @com.aliyun.core.annotation.NameInMap("response_format")
         private String responseFormat;
 
-        @NameInMap("retry_delay")
+        @com.aliyun.core.annotation.NameInMap("retry_delay")
         private Integer retryDelay;
 
-        @NameInMap("strict_mode")
+        @com.aliyun.core.annotation.NameInMap("strict_mode")
         private Boolean strictMode;
 
-        @NameInMap("time_out")
+        @com.aliyun.core.annotation.NameInMap("time_out")
         private Long timeOut;
 
-        @NameInMap("traffic_hijack_element_blacklist")
+        @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_blacklist")
         private TrafficHijackElementBlacklist trafficHijackElementBlacklist;
 
-        @NameInMap("traffic_hijack_element_count")
+        @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_count")
         private Integer trafficHijackElementCount;
 
-        @NameInMap("traffic_hijack_element_whitelist")
+        @com.aliyun.core.annotation.NameInMap("traffic_hijack_element_whitelist")
         private TrafficHijackElementWhitelist trafficHijackElementWhitelist;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
-        @NameInMap("waitTime_after_completion")
+        @com.aliyun.core.annotation.NameInMap("waitTime_after_completion")
         private Integer waitTimeAfterCompletion;
 
         private OptionJson(Builder builder) {
@@ -1542,12 +1594,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.dnsMatchRule = builder.dnsMatchRule;
             this.dnsServer = builder.dnsServer;
             this.dnsType = builder.dnsType;
+            this.emptyMessage = builder.emptyMessage;
             this.expectExistString = builder.expectExistString;
             this.expectNonExistString = builder.expectNonExistString;
             this.expectValue = builder.expectValue;
             this.failureRate = builder.failureRate;
             this.header = builder.header;
             this.httpMethod = builder.httpMethod;
+            this.ipNetwork = builder.ipNetwork;
             this.isBase64Encode = builder.isBase64Encode;
             this.matchRule = builder.matchRule;
             this.minTlsVersion = builder.minTlsVersion;
@@ -1557,6 +1611,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.pingType = builder.pingType;
             this.port = builder.port;
             this.protocol = builder.protocol;
+            this.quicEnabled = builder.quicEnabled;
+            this.quicTarget = builder.quicTarget;
             this.requestContent = builder.requestContent;
             this.requestFormat = builder.requestFormat;
             this.responseContent = builder.responseContent;
@@ -1692,6 +1748,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return emptyMessage
+         */
+        public Boolean getEmptyMessage() {
+            return this.emptyMessage;
+        }
+
+        /**
          * @return expectExistString
          */
         public ExpectExistString getExpectExistString() {
@@ -1731,6 +1794,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public String getHttpMethod() {
             return this.httpMethod;
+        }
+
+        /**
+         * @return ipNetwork
+         */
+        public String getIpNetwork() {
+            return this.ipNetwork;
         }
 
         /**
@@ -1794,6 +1864,20 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public String getProtocol() {
             return this.protocol;
+        }
+
+        /**
+         * @return quicEnabled
+         */
+        public Boolean getQuicEnabled() {
+            return this.quicEnabled;
+        }
+
+        /**
+         * @return quicTarget
+         */
+        public QuicTarget getQuicTarget() {
+            return this.quicTarget;
         }
 
         /**
@@ -1897,12 +1981,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String dnsMatchRule; 
             private String dnsServer; 
             private String dnsType; 
+            private Boolean emptyMessage; 
             private ExpectExistString expectExistString; 
             private ExpectNonExistString expectNonExistString; 
             private String expectValue; 
             private Float failureRate; 
             private String header; 
             private String httpMethod; 
+            private String ipNetwork; 
             private String isBase64Encode; 
             private Integer matchRule; 
             private String minTlsVersion; 
@@ -1912,6 +1998,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String pingType; 
             private Integer port; 
             private String protocol; 
+            private Boolean quicEnabled; 
+            private QuicTarget quicTarget; 
             private String requestContent; 
             private String requestFormat; 
             private String responseContent; 
@@ -2074,6 +2162,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * empty_message.
+             */
+            public Builder emptyMessage(Boolean emptyMessage) {
+                this.emptyMessage = emptyMessage;
+                return this;
+            }
+
+            /**
              * expect_exist_string.
              */
             public Builder expectExistString(ExpectExistString expectExistString) {
@@ -2129,6 +2225,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder httpMethod(String httpMethod) {
                 this.httpMethod = httpMethod;
+                return this;
+            }
+
+            /**
+             * ip_network.
+             */
+            public Builder ipNetwork(String ipNetwork) {
+                this.ipNetwork = ipNetwork;
                 return this;
             }
 
@@ -2205,6 +2309,22 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * quic_enabled.
+             */
+            public Builder quicEnabled(Boolean quicEnabled) {
+                this.quicEnabled = quicEnabled;
+                return this;
+            }
+
+            /**
+             * quic_target.
+             */
+            public Builder quicTarget(QuicTarget quicTarget) {
+                this.quicTarget = quicTarget;
                 return this;
             }
 
@@ -2319,36 +2439,120 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    public static class VpcConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
+        private String vswitchId;
+
+        private VpcConfig(Builder builder) {
+            this.securityGroupId = builder.securityGroupId;
+            this.vpcId = builder.vpcId;
+            this.vswitchId = builder.vswitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
+        public static final class Builder {
+            private String securityGroupId; 
+            private String vpcId; 
+            private String vswitchId; 
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * VswitchId.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
+                return this;
+            }
+
+            public VpcConfig build() {
+                return new VpcConfig(this);
+            } 
+
+        } 
+
+    }
     public static class SiteMonitors extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("AgentGroup")
+        @com.aliyun.core.annotation.NameInMap("AgentGroup")
         private String agentGroup;
 
-        @NameInMap("CustomSchedule")
+        @com.aliyun.core.annotation.NameInMap("CustomSchedule")
         private CustomSchedule customSchedule;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private String interval;
 
-        @NameInMap("IspCities")
+        @com.aliyun.core.annotation.NameInMap("IspCities")
         private IspCities ispCities;
 
-        @NameInMap("OptionJson")
+        @com.aliyun.core.annotation.NameInMap("OptionJson")
         private OptionJson optionJson;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskState")
+        @com.aliyun.core.annotation.NameInMap("TaskState")
         private String taskState;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
+
+        @com.aliyun.core.annotation.NameInMap("VpcConfig")
+        private VpcConfig vpcConfig;
 
         private SiteMonitors(Builder builder) {
             this.address = builder.address;
@@ -2361,6 +2565,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.taskName = builder.taskName;
             this.taskState = builder.taskState;
             this.taskType = builder.taskType;
+            this.vpcConfig = builder.vpcConfig;
         }
 
         public static Builder builder() {
@@ -2441,6 +2646,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.taskType;
         }
 
+        /**
+         * @return vpcConfig
+         */
+        public VpcConfig getVpcConfig() {
+            return this.vpcConfig;
+        }
+
         public static final class Builder {
             private String address; 
             private String agentGroup; 
@@ -2452,6 +2664,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String taskName; 
             private String taskState; 
             private String taskType; 
+            private VpcConfig vpcConfig; 
 
             /**
              * The URL that is monitored by the site monitoring task.
@@ -2534,6 +2747,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
+                return this;
+            }
+
+            /**
+             * VpcConfig.
+             */
+            public Builder vpcConfig(VpcConfig vpcConfig) {
+                this.vpcConfig = vpcConfig;
                 return this;
             }
 
