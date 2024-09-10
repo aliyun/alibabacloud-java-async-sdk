@@ -69,7 +69,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the anti-ransomware policies returned.
+         * The details of the anti-ransomware policy.
          */
         public Builder policies(java.util.List < Policies> policies) {
             this.policies = policies;
@@ -486,7 +486,7 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * LastStatusSyncTime.
+             * The time when the anti-ransomware policy was last updated. Unit: milliseconds.
              */
             public Builder lastStatusSyncTime(Long lastStatusSyncTime) {
                 this.lastStatusSyncTime = lastStatusSyncTime;
@@ -514,11 +514,11 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
              * 
              * *   **Source**: the directory that is protected. If the value of this field is \[], all directories are protected.
              * 
-             * *   **ExcludeSystemPath**: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is **true**, the directory is excluded. If this field is left empty, no directories are excluded.
+             * *   **ExcludeSystemPath**: indicates whether a specified directory is excluded from the anti-ransomware policy. If the value of this field is **true**, a directory is excluded. If this field is left empty, no directories are excluded.
              * 
-             * *   **Exclude**: the directory that is excluded from the anti-ransomware policy. If no directory is specified, the value of this field is \[].
+             * *   **Exclude**: the directory that is excluded from the anti-ransomware policy. If the value of this field is \[], no directories are excluded.
              * 
-             * *   **Schedule**: the start time and interval of a data backup task. A start time that begins during off-peak hours but does not start on the hour is recommended. Examples:
+             * *   **Schedule**: the start time and interval of a data backup task. We recommend that you specify a start time that begins during off-peak hours but does not start on the hour. Examples:
              * 
              *     *   If the value of this field is I|1583216092|P21D, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of three weeks.
              *     *   If the value of this field is I|1583216092|PT24H, the data backup task starts from 2020-03-03 14:14:52, and the task is run at an interval of 24 hours.
@@ -529,8 +529,8 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
              * 
              * *   **UseVss**: indicates whether the VSS feature is enabled. The feature is available only for Windows servers. Valid values:
              * 
-             *     *   **true**: yes
-             *     *   **false**: no
+             *     *   **true**
+             *     *   **false**
              * 
              * >  The VSS feature is available only if you create the anti-ransomware policy for Windows servers. After you enable the feature, the number of backup failures due to running processes is significantly reduced. We recommend that you enable the VSS feature. After you enable the feature, the data of disks that are in the exFAT and FAT32 formats cannot be backed up.
              */
@@ -560,7 +560,12 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PreStatus.
+             * The previous status of the anti-ransomware policy. Valid values:
+             * <p>
+             * 
+             * *   **enabled**: The anti-ransomware policy is manually enabled.
+             * *   **disabled**: The anti-ransomware policy is manually disabled. After an anti-ransomware policy is disabled, the data backup task that is running based on the policy stops.
+             * *   **closed**: The anti-ransomware policy automatically stops because the anti-ransomware capacity is insufficient.
              */
             public Builder preStatus(String preStatus) {
                 this.preStatus = preStatus;

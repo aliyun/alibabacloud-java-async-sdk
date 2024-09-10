@@ -54,6 +54,10 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
     private String remark;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanRange")
+    private java.util.List < String > scanRange;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
@@ -69,6 +73,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         this.maliciousType = builder.maliciousType;
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
+        this.scanRange = builder.scanRange;
         this.uuid = builder.uuid;
     }
 
@@ -156,6 +161,13 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
     }
 
     /**
+     * @return scanRange
+     */
+    public java.util.List < String > getScanRange() {
+        return this.scanRange;
+    }
+
+    /**
      * @return uuid
      */
     public String getUuid() {
@@ -173,6 +185,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         private String maliciousType; 
         private String pageSize; 
         private String remark; 
+        private java.util.List < String > scanRange; 
         private String uuid; 
 
         private Builder() {
@@ -191,6 +204,7 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
             this.maliciousType = request.maliciousType;
             this.pageSize = request.pageSize;
             this.remark = request.remark;
+            this.scanRange = request.scanRange;
             this.uuid = request.uuid;
         } 
 
@@ -310,6 +324,15 @@ public class ListAgentlessMaliciousFilesRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * The source of the malicious file.
+         */
+        public Builder scanRange(java.util.List < String > scanRange) {
+            this.putQueryParameter("ScanRange", scanRange);
+            this.scanRange = scanRange;
             return this;
         }
 

@@ -23,11 +23,26 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
+    private java.util.List < InstanceList> instanceList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleType")
+    private String ruleType;
+
     private AddCheckInstanceResultWhiteListRequest(Builder builder) {
         super(builder);
         this.checkGroupId = builder.checkGroupId;
         this.checkId = builder.checkId;
         this.instanceIds = builder.instanceIds;
+        this.instanceList = builder.instanceList;
+        this.remark = builder.remark;
+        this.ruleType = builder.ruleType;
     }
 
     public static Builder builder() {
@@ -64,10 +79,34 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
         return this.instanceIds;
     }
 
+    /**
+     * @return instanceList
+     */
+    public java.util.List < InstanceList> getInstanceList() {
+        return this.instanceList;
+    }
+
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
+    /**
+     * @return ruleType
+     */
+    public String getRuleType() {
+        return this.ruleType;
+    }
+
     public static final class Builder extends Request.Builder<AddCheckInstanceResultWhiteListRequest, Builder> {
         private String checkGroupId; 
         private Long checkId; 
         private java.util.List < String > instanceIds; 
+        private java.util.List < InstanceList> instanceList; 
+        private String remark; 
+        private String ruleType; 
 
         private Builder() {
             super();
@@ -78,6 +117,9 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
             this.checkGroupId = request.checkGroupId;
             this.checkId = request.checkId;
             this.instanceIds = request.instanceIds;
+            this.instanceList = request.instanceList;
+            this.remark = request.remark;
+            this.ruleType = request.ruleType;
         } 
 
         /**
@@ -107,6 +149,33 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
             return this;
         }
 
+        /**
+         * InstanceList.
+         */
+        public Builder instanceList(java.util.List < InstanceList> instanceList) {
+            this.putQueryParameter("InstanceList", instanceList);
+            this.instanceList = instanceList;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
+            return this;
+        }
+
+        /**
+         * RuleType.
+         */
+        public Builder ruleType(String ruleType) {
+            this.putQueryParameter("RuleType", ruleType);
+            this.ruleType = ruleType;
+            return this;
+        }
+
         @Override
         public AddCheckInstanceResultWhiteListRequest build() {
             return new AddCheckInstanceResultWhiteListRequest(this);
@@ -114,4 +183,65 @@ public class AddCheckInstanceResultWhiteListRequest extends Request {
 
     } 
 
+    public static class InstanceList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        private InstanceList(Builder builder) {
+            this.instanceId = builder.instanceId;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String instanceId; 
+            private String regionId; 
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public InstanceList build() {
+                return new InstanceList(this);
+            } 
+
+        } 
+
+    }
 }

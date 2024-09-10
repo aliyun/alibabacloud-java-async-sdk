@@ -59,7 +59,7 @@ public class DescribeSuspiciousUUIDConfigRequest extends Request {
          * 
          * *   **auto_breaking**: virus defense
          * *   **ransomware_breaking**: ransomware capture
-         * *   **webshell\_cloud_breaking**: webshell defense
+         * *   **webshell_cloud_breaking**: webshell defense
          * *   **alinet**: malicious behavior defense
          * *   **alisecguard**: client protection
          */

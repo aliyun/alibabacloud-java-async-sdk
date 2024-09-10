@@ -61,7 +61,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about the image.
+         * The information about the images.
          */
         public Builder imageInstanceList(java.util.List < ImageInstanceList> imageInstanceList) {
             this.imageInstanceList = imageInstanceList;
@@ -127,6 +127,9 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("LastScanTime")
+        private Long lastScanTime;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -172,9 +175,6 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VulStatus")
         private String vulStatus;
 
-        @com.aliyun.core.annotation.NameInMap("lastScanTime")
-        private Long lastScanTime;
-
         private ImageInstanceList(Builder builder) {
             this.alarmCount = builder.alarmCount;
             this.alarmStatus = builder.alarmStatus;
@@ -188,6 +188,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             this.imageSize = builder.imageSize;
             this.imageUpdate = builder.imageUpdate;
             this.instanceId = builder.instanceId;
+            this.lastScanTime = builder.lastScanTime;
             this.regionId = builder.regionId;
             this.registryType = builder.registryType;
             this.repoId = builder.repoId;
@@ -203,7 +204,6 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             this.uuid = builder.uuid;
             this.vulCount = builder.vulCount;
             this.vulStatus = builder.vulStatus;
-            this.lastScanTime = builder.lastScanTime;
         }
 
         public static Builder builder() {
@@ -296,6 +296,13 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return lastScanTime
+         */
+        public Long getLastScanTime() {
+            return this.lastScanTime;
         }
 
         /**
@@ -403,13 +410,6 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             return this.vulStatus;
         }
 
-        /**
-         * @return lastScanTime
-         */
-        public Long getLastScanTime() {
-            return this.lastScanTime;
-        }
-
         public static final class Builder {
             private Integer alarmCount; 
             private String alarmStatus; 
@@ -423,6 +423,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             private String imageSize; 
             private String imageUpdate; 
             private String instanceId; 
+            private Long lastScanTime; 
             private String regionId; 
             private String registryType; 
             private String repoId; 
@@ -438,7 +439,6 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             private String uuid; 
             private Integer vulCount; 
             private String vulStatus; 
-            private Long lastScanTime; 
 
             /**
              * The number of alerts that are generated for the image.
@@ -497,7 +497,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the baseline risks exist. Valid values:
+             * Indicates whether baseline risks exist. Valid values:
              * <p>
              * 
              * *   **NO**
@@ -517,7 +517,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The image ID.
+             * The ID of the image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -541,7 +541,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The instance ID of the image.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -549,7 +549,15 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the image resides.
+             * The timestamp when the last scan was performed. Unit: milliseconds.
+             */
+            public Builder lastScanTime(Long lastScanTime) {
+                this.lastScanTime = lastScanTime;
+                return this;
+            }
+
+            /**
+             * The region ID of the image.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -649,8 +657,8 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
              * *   **START_RUN**: The image analysis task is started.
              * *   **DOWNLOAD**: The image scan result is downloaded.
              * *   **PRE_ANALYZER**: The image pre-analysis is started.
-             * *   **WEB_SHELL_ANALYZER**: The WebShell analysis is complete.
-             * *   **CVE_ANALYZER**: The Common Vulnerabilities and Exposures (CVE) analysis is complete.
+             * *   **WEB_SHELL_ANALYZER**: The WebShell analysis of the image is complete.
+             * *   **CVE_ANALYZER**: The Common Vulnerabilities and Exposures (CVE) analysis of the image is complete.
              * *   **BIN_ANALYZER**: The binary analysis of the image is complete.
              * *   **OTHER_ANALYZER**: The extended analysis of the image is complete.
              * *   **SUCCESS**: The image scan task is complete.
@@ -664,7 +672,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the image. Valid value:
+             * The status of the image. Valid values:
              * <p>
              * 
              * *   **NORMAL**
@@ -707,14 +715,6 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;
-                return this;
-            }
-
-            /**
-             * lastScanTime.
-             */
-            public Builder lastScanTime(Long lastScanTime) {
-                this.lastScanTime = lastScanTime;
                 return this;
             }
 

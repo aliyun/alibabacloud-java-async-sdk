@@ -20,6 +20,10 @@ public class DescribeCloudCenterInstancesRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Flags")
+    private String flags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Importance")
     private Integer importance;
 
@@ -64,6 +68,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         super(builder);
         this.criteria = builder.criteria;
         this.currentPage = builder.currentPage;
+        this.flags = builder.flags;
         this.importance = builder.importance;
         this.lang = builder.lang;
         this.logicalExp = builder.logicalExp;
@@ -101,6 +106,13 @@ public class DescribeCloudCenterInstancesRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return flags
+     */
+    public String getFlags() {
+        return this.flags;
     }
 
     /**
@@ -176,6 +188,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeCloudCenterInstancesRequest, Builder> {
         private String criteria; 
         private Integer currentPage; 
+        private String flags; 
         private Integer importance; 
         private String lang; 
         private String logicalExp; 
@@ -195,6 +208,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
             super(request);
             this.criteria = request.criteria;
             this.currentPage = request.currentPage;
+            this.flags = request.flags;
             this.importance = request.importance;
             this.lang = request.lang;
             this.logicalExp = request.logicalExp;
@@ -225,6 +239,15 @@ public class DescribeCloudCenterInstancesRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Flags.
+         */
+        public Builder flags(String flags) {
+            this.putQueryParameter("Flags", flags);
+            this.flags = flags;
             return this;
         }
 

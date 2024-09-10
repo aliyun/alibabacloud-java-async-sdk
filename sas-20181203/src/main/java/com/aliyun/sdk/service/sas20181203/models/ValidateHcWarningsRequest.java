@@ -20,14 +20,18 @@ public class ValidateHcWarningsRequest extends Request {
     private String riskIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuids")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String uuids;
 
     private ValidateHcWarningsRequest(Builder builder) {
         super(builder);
         this.checkIds = builder.checkIds;
         this.riskIds = builder.riskIds;
+        this.status = builder.status;
         this.uuids = builder.uuids;
     }
 
@@ -59,6 +63,13 @@ public class ValidateHcWarningsRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return uuids
      */
     public String getUuids() {
@@ -68,6 +79,7 @@ public class ValidateHcWarningsRequest extends Request {
     public static final class Builder extends Request.Builder<ValidateHcWarningsRequest, Builder> {
         private String checkIds; 
         private String riskIds; 
+        private Integer status; 
         private String uuids; 
 
         private Builder() {
@@ -78,14 +90,14 @@ public class ValidateHcWarningsRequest extends Request {
             super(request);
             this.checkIds = request.checkIds;
             this.riskIds = request.riskIds;
+            this.status = request.status;
             this.uuids = request.uuids;
         } 
 
         /**
-         * The IDs of the check items. Separate multiple IDs with commas (,).
+         * The IDs of check items that you want to verify. Separate multiple IDs with commas (,).
          * <p>
-         * 
-         * > You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
+         * > You can use [DescribeCheckWarningSummary](~~116179~~) to get IDs of check items.
          */
         public Builder checkIds(String checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
@@ -94,10 +106,7 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
-         * The list of IDs of the risk items that you want to verify. Separate multiple IDs with commas (,).
-         * <p>
-         * 
-         * > You can call the [DescribeCheckWarnings](~~DescribeCheckWarnings~~) operation to query the IDs of risk items.
+         * The IDs of risk items that you want to verify. Separate multiple IDs with commas (,).
          */
         public Builder riskIds(String riskIds) {
             this.putQueryParameter("RiskIds", riskIds);
@@ -106,10 +115,24 @@ public class ValidateHcWarningsRequest extends Request {
         }
 
         /**
+         * The status of the check item that you want to verify.
+         * <p>
+         * 
+         * *   1: failed
+         * *   3: passed
+         * *   5: expired
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
          * The UUIDs of the servers on which you want to verify the risk items. Separate multiple UUIDs with commas (,).
          * <p>
          * 
-         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

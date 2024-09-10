@@ -86,6 +86,9 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
         @com.aliyun.core.annotation.NameInMap("ProcPaths")
         private java.util.List < String > procPaths;
 
@@ -104,6 +107,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             this.fileOps = builder.fileOps;
             this.filePaths = builder.filePaths;
             this.id = builder.id;
+            this.platform = builder.platform;
             this.procPaths = builder.procPaths;
             this.ruleName = builder.ruleName;
             this.status = builder.status;
@@ -154,6 +158,13 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return procPaths
          */
         public java.util.List < String > getProcPaths() {
@@ -187,6 +198,7 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
             private java.util.List < String > fileOps; 
             private java.util.List < String > filePaths; 
             private Long id; 
+            private String platform; 
             private java.util.List < String > procPaths; 
             private String ruleName; 
             private Integer status; 
@@ -239,6 +251,18 @@ public class GetFileProtectRuleResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * The type of the operating system. Valid values:
+             * <p>
+             * 
+             * *   **windows**: Windows
+             * *   **linux**: Linux
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 

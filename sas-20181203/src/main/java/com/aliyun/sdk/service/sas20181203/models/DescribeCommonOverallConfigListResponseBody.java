@@ -49,7 +49,7 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the configurations of features.
+         * The information about the configuration items.
          */
         public Builder overallList(java.util.List < OverallList> overallList) {
             this.overallList = overallList;
@@ -133,7 +133,7 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AuthVersionList.
+             * The editions of Security Center.
              */
             public Builder authVersionList(java.util.List < String > authVersionList) {
                 this.authVersionList = authVersionList;

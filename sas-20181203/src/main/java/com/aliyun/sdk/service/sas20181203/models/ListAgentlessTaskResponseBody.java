@@ -94,6 +94,9 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
@@ -144,6 +147,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
 
         private List(Builder builder) {
             this.endTime = builder.endTime;
+            this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
@@ -175,6 +179,13 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
          */
         public Long getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
@@ -291,6 +302,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long endTime; 
+            private String instanceId; 
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
@@ -313,6 +325,14 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * The instance ID of the asset.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
@@ -341,7 +361,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The volume of detection data, in MB.
+             * The amount of data detected. Unit: MB.
              */
             public Builder measureSpace(Long measureSpace) {
                 this.measureSpace = measureSpace;
@@ -357,7 +377,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The execution progress of the inspection items.
+             * The execution progress of the check items.
              */
             public Builder progressByProject(String progressByProject) {
                 this.progressByProject = progressByProject;
@@ -365,7 +385,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The download link for the report.
+             * The download URL of the report.
              */
             public Builder reportDownloadUrl(String reportDownloadUrl) {
                 this.reportDownloadUrl = reportDownloadUrl;
@@ -373,14 +393,14 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the report. Possible values:
+             * The status of the report. Valid values:
              * <p>
              * 
-             * *   **PREPARED**: In preparation.
-             * *   **RUNNING**: In progress.
-             * *   **SUCCESS**: Successful.
-             * *   **TIMEOUT**: Timeout.
-             * *   **FAILED**: Failed.
+             * *   **PREPARED**: preparing
+             * *   **RUNNING**: running
+             * *   **SUCCESS**: succeeded
+             * *   **TIMEOUT**: timed out
+             * *   **FAILED**: failed
              */
             public Builder reportStatus(String reportStatus) {
                 this.reportStatus = reportStatus;

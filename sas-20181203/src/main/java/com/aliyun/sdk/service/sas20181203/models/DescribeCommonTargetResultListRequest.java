@@ -84,6 +84,8 @@ public class DescribeCommonTargetResultListRequest extends Request {
          * *   **aliscriptengine**: in-depth detection engine
          * *   **alidetect**: installation scope of local file detection
          * *   **alidetect-scan-enable**: detection scope of local file detection
+         * 
+         * >  You can call the [ListClientUserDefineRules](~~ListClientUserDefineRules~~) and [ListSystemClientRules](~~ListSystemClientRules~~) operations to obtain more types of custom and system configuration items.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

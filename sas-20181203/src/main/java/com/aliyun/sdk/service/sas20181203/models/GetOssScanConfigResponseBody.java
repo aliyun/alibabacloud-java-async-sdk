@@ -89,6 +89,9 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DecompressMaxLayer")
         private Integer decompressMaxLayer;
 
+        @com.aliyun.core.annotation.NameInMap("DecryptionList")
+        private java.util.List < String > decryptionList;
+
         @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
@@ -103,6 +106,9 @@ public class GetOssScanConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("KeySuffixList")
         private java.util.List < String > keySuffixList;
+
+        @com.aliyun.core.annotation.NameInMap("LastModifiedStartTime")
+        private Long lastModifiedStartTime;
 
         @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
         private Long lastUpdateTime;
@@ -123,11 +129,13 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             this.bucketNameList = builder.bucketNameList;
             this.decompressMaxFileCount = builder.decompressMaxFileCount;
             this.decompressMaxLayer = builder.decompressMaxLayer;
+            this.decryptionList = builder.decryptionList;
             this.enable = builder.enable;
             this.endTime = builder.endTime;
             this.id = builder.id;
             this.keyPrefixList = builder.keyPrefixList;
             this.keySuffixList = builder.keySuffixList;
+            this.lastModifiedStartTime = builder.lastModifiedStartTime;
             this.lastUpdateTime = builder.lastUpdateTime;
             this.name = builder.name;
             this.scanDayList = builder.scanDayList;
@@ -185,6 +193,13 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return decryptionList
+         */
+        public java.util.List < String > getDecryptionList() {
+            return this.decryptionList;
+        }
+
+        /**
          * @return enable
          */
         public Integer getEnable() {
@@ -217,6 +232,13 @@ public class GetOssScanConfigResponseBody extends TeaModel {
          */
         public java.util.List < String > getKeySuffixList() {
             return this.keySuffixList;
+        }
+
+        /**
+         * @return lastModifiedStartTime
+         */
+        public Long getLastModifiedStartTime() {
+            return this.lastModifiedStartTime;
         }
 
         /**
@@ -254,11 +276,13 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             private java.util.List < String > bucketNameList; 
             private Integer decompressMaxFileCount; 
             private Integer decompressMaxLayer; 
+            private java.util.List < String > decryptionList; 
             private Integer enable; 
             private String endTime; 
             private String id; 
             private java.util.List < String > keyPrefixList; 
             private java.util.List < String > keySuffixList; 
+            private Long lastModifiedStartTime; 
             private Long lastUpdateTime; 
             private String name; 
             private java.util.List < Integer > scanDayList; 
@@ -313,6 +337,14 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
+             * DecryptionList.
+             */
+            public Builder decryptionList(java.util.List < String > decryptionList) {
+                this.decryptionList = decryptionList;
+                return this;
+            }
+
+            /**
              * Indicates whether the check policy is enabled. Valid values:
              * <p>
              * 
@@ -353,6 +385,14 @@ public class GetOssScanConfigResponseBody extends TeaModel {
              */
             public Builder keySuffixList(java.util.List < String > keySuffixList) {
                 this.keySuffixList = keySuffixList;
+                return this;
+            }
+
+            /**
+             * LastModifiedStartTime.
+             */
+            public Builder lastModifiedStartTime(Long lastModifiedStartTime) {
+                this.lastModifiedStartTime = lastModifiedStartTime;
                 return this;
             }
 

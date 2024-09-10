@@ -32,6 +32,10 @@ public class DescribeEventLevelCountRequest extends Request {
     private String from;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiAccountActionType")
+    private Integer multiAccountActionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
@@ -42,6 +46,7 @@ public class DescribeEventLevelCountRequest extends Request {
         this.containerFieldValue = builder.containerFieldValue;
         this.containerIds = builder.containerIds;
         this.from = builder.from;
+        this.multiAccountActionType = builder.multiAccountActionType;
         this.targetType = builder.targetType;
     }
 
@@ -94,6 +99,13 @@ public class DescribeEventLevelCountRequest extends Request {
     }
 
     /**
+     * @return multiAccountActionType
+     */
+    public Integer getMultiAccountActionType() {
+        return this.multiAccountActionType;
+    }
+
+    /**
      * @return targetType
      */
     public String getTargetType() {
@@ -106,6 +118,7 @@ public class DescribeEventLevelCountRequest extends Request {
         private String containerFieldValue; 
         private String containerIds; 
         private String from; 
+        private Integer multiAccountActionType; 
         private String targetType; 
 
         private Builder() {
@@ -119,6 +132,7 @@ public class DescribeEventLevelCountRequest extends Request {
             this.containerFieldValue = request.containerFieldValue;
             this.containerIds = request.containerIds;
             this.from = request.from;
+            this.multiAccountActionType = request.multiAccountActionType;
             this.targetType = request.targetType;
         } 
 
@@ -181,6 +195,15 @@ public class DescribeEventLevelCountRequest extends Request {
         public Builder from(String from) {
             this.putQueryParameter("From", from);
             this.from = from;
+            return this;
+        }
+
+        /**
+         * MultiAccountActionType.
+         */
+        public Builder multiAccountActionType(Integer multiAccountActionType) {
+            this.putQueryParameter("MultiAccountActionType", multiAccountActionType);
+            this.multiAccountActionType = multiAccountActionType;
             return this;
         }
 

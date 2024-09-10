@@ -60,6 +60,10 @@ public class ChangeCheckConfigRequest extends Request {
     private Integer startTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemConfig")
+    private Boolean systemConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Vendors")
     private java.util.List < String > vendors;
 
@@ -77,6 +81,7 @@ public class ChangeCheckConfigRequest extends Request {
         this.removedCheck = builder.removedCheck;
         this.standardIds = builder.standardIds;
         this.startTime = builder.startTime;
+        this.systemConfig = builder.systemConfig;
         this.vendors = builder.vendors;
     }
 
@@ -178,6 +183,13 @@ public class ChangeCheckConfigRequest extends Request {
     }
 
     /**
+     * @return systemConfig
+     */
+    public Boolean getSystemConfig() {
+        return this.systemConfig;
+    }
+
+    /**
      * @return vendors
      */
     public java.util.List < String > getVendors() {
@@ -197,6 +209,7 @@ public class ChangeCheckConfigRequest extends Request {
         private java.util.List < RemovedCheck> removedCheck; 
         private java.util.List < Long > standardIds; 
         private Integer startTime; 
+        private Boolean systemConfig; 
         private java.util.List < String > vendors; 
 
         private Builder() {
@@ -217,6 +230,7 @@ public class ChangeCheckConfigRequest extends Request {
             this.removedCheck = request.removedCheck;
             this.standardIds = request.standardIds;
             this.startTime = request.startTime;
+            this.systemConfig = request.systemConfig;
             this.vendors = request.vendors;
         } 
 
@@ -357,6 +371,15 @@ public class ChangeCheckConfigRequest extends Request {
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * SystemConfig.
+         */
+        public Builder systemConfig(Boolean systemConfig) {
+            this.putQueryParameter("SystemConfig", systemConfig);
+            this.systemConfig = systemConfig;
             return this;
         }
 

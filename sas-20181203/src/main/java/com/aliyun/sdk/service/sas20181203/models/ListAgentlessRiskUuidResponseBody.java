@@ -94,6 +94,9 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineCount")
         private Integer baselineCount;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
         @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
@@ -123,6 +126,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
 
         private List(Builder builder) {
             this.baselineCount = builder.baselineCount;
+            this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
@@ -147,6 +151,13 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
          */
         public Integer getBaselineCount() {
             return this.baselineCount;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
@@ -214,6 +225,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer baselineCount; 
+            private String instanceId; 
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
@@ -229,6 +241,14 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
              */
             public Builder baselineCount(Integer baselineCount) {
                 this.baselineCount = baselineCount;
+                return this;
+            }
+
+            /**
+             * The instance ID of the asset.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 

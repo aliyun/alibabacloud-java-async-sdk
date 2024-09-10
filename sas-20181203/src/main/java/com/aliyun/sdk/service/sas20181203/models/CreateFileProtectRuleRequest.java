@@ -26,6 +26,10 @@ public class CreateFileProtectRuleRequest extends Request {
     private java.util.List < String > filePaths;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    private String platform;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProcPaths")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > procPaths;
@@ -53,6 +57,7 @@ public class CreateFileProtectRuleRequest extends Request {
         this.alertLevel = builder.alertLevel;
         this.fileOps = builder.fileOps;
         this.filePaths = builder.filePaths;
+        this.platform = builder.platform;
         this.procPaths = builder.procPaths;
         this.ruleAction = builder.ruleAction;
         this.ruleName = builder.ruleName;
@@ -95,6 +100,13 @@ public class CreateFileProtectRuleRequest extends Request {
     }
 
     /**
+     * @return platform
+     */
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    /**
      * @return procPaths
      */
     public java.util.List < String > getProcPaths() {
@@ -133,6 +145,7 @@ public class CreateFileProtectRuleRequest extends Request {
         private Integer alertLevel; 
         private java.util.List < String > fileOps; 
         private java.util.List < String > filePaths; 
+        private String platform; 
         private java.util.List < String > procPaths; 
         private String ruleAction; 
         private String ruleName; 
@@ -148,6 +161,7 @@ public class CreateFileProtectRuleRequest extends Request {
             this.alertLevel = request.alertLevel;
             this.fileOps = request.fileOps;
             this.filePaths = request.filePaths;
+            this.platform = request.platform;
             this.procPaths = request.procPaths;
             this.ruleAction = request.ruleAction;
             this.ruleName = request.ruleName;
@@ -185,6 +199,19 @@ public class CreateFileProtectRuleRequest extends Request {
         public Builder filePaths(java.util.List < String > filePaths) {
             this.putQueryParameter("FilePaths", filePaths);
             this.filePaths = filePaths;
+            return this;
+        }
+
+        /**
+         * The type of the operating system. Valid values:
+         * <p>
+         * 
+         * *   **windows**: Windows
+         * *   **linux**: Linux
+         */
+        public Builder platform(String platform) {
+            this.putQueryParameter("Platform", platform);
+            this.platform = platform;
             return this;
         }
 

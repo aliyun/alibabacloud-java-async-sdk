@@ -80,10 +80,14 @@ public class ListCheckStandardResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
+        @com.aliyun.core.annotation.NameInMap("ShowPriorityLevel")
+        private Integer showPriorityLevel;
+
         private Requirements(Builder builder) {
             this.id = builder.id;
             this.riskCheckCount = builder.riskCheckCount;
             this.showName = builder.showName;
+            this.showPriorityLevel = builder.showPriorityLevel;
         }
 
         public static Builder builder() {
@@ -115,10 +119,18 @@ public class ListCheckStandardResponseBody extends TeaModel {
             return this.showName;
         }
 
+        /**
+         * @return showPriorityLevel
+         */
+        public Integer getShowPriorityLevel() {
+            return this.showPriorityLevel;
+        }
+
         public static final class Builder {
             private Long id; 
             private Long riskCheckCount; 
             private String showName; 
+            private Integer showPriorityLevel; 
 
             /**
              * The ID of the search condition.
@@ -144,6 +156,14 @@ public class ListCheckStandardResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * The priority field indicates the level of prominence.
+             */
+            public Builder showPriorityLevel(Integer showPriorityLevel) {
+                this.showPriorityLevel = showPriorityLevel;
+                return this;
+            }
+
             public Requirements build() {
                 return new Requirements(this);
             } 
@@ -161,6 +181,9 @@ public class ListCheckStandardResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ShowName")
         private String showName;
 
+        @com.aliyun.core.annotation.NameInMap("ShowPriorityLevel")
+        private Integer showPriorityLevel;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -168,6 +191,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
             this.id = builder.id;
             this.requirements = builder.requirements;
             this.showName = builder.showName;
+            this.showPriorityLevel = builder.showPriorityLevel;
             this.type = builder.type;
         }
 
@@ -201,6 +225,13 @@ public class ListCheckStandardResponseBody extends TeaModel {
         }
 
         /**
+         * @return showPriorityLevel
+         */
+        public Integer getShowPriorityLevel() {
+            return this.showPriorityLevel;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -211,6 +242,7 @@ public class ListCheckStandardResponseBody extends TeaModel {
             private Long id; 
             private java.util.List < Requirements> requirements; 
             private String showName; 
+            private Integer showPriorityLevel; 
             private String type; 
 
             /**
@@ -234,6 +266,14 @@ public class ListCheckStandardResponseBody extends TeaModel {
              */
             public Builder showName(String showName) {
                 this.showName = showName;
+                return this;
+            }
+
+            /**
+             * The priority field indicates the level of prominence.
+             */
+            public Builder showPriorityLevel(Integer showPriorityLevel) {
+                this.showPriorityLevel = showPriorityLevel;
                 return this;
             }
 

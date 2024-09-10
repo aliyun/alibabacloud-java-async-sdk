@@ -64,6 +64,10 @@ public class DescribeSuspEventsRequest extends Request {
     private String levels;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiAccountActionType")
+    private Integer multiAccountActionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -106,6 +110,10 @@ public class DescribeSuspEventsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceAliUids")
+    private java.util.List < Long > sourceAliUids;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceIp")
@@ -158,6 +166,7 @@ public class DescribeSuspEventsRequest extends Request {
         this.id = builder.id;
         this.lang = builder.lang;
         this.levels = builder.levels;
+        this.multiAccountActionType = builder.multiAccountActionType;
         this.name = builder.name;
         this.operateErrorCodeList = builder.operateErrorCodeList;
         this.operateTimeEnd = builder.operateTimeEnd;
@@ -169,6 +178,7 @@ public class DescribeSuspEventsRequest extends Request {
         this.sortColumn = builder.sortColumn;
         this.sortType = builder.sortType;
         this.source = builder.source;
+        this.sourceAliUids = builder.sourceAliUids;
         this.sourceIp = builder.sourceIp;
         this.status = builder.status;
         this.strictMode = builder.strictMode;
@@ -285,6 +295,13 @@ public class DescribeSuspEventsRequest extends Request {
     }
 
     /**
+     * @return multiAccountActionType
+     */
+    public Integer getMultiAccountActionType() {
+        return this.multiAccountActionType;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -359,6 +376,13 @@ public class DescribeSuspEventsRequest extends Request {
      */
     public String getSource() {
         return this.source;
+    }
+
+    /**
+     * @return sourceAliUids
+     */
+    public java.util.List < Long > getSourceAliUids() {
+        return this.sourceAliUids;
     }
 
     /**
@@ -438,6 +462,7 @@ public class DescribeSuspEventsRequest extends Request {
         private Long id; 
         private String lang; 
         private String levels; 
+        private Integer multiAccountActionType; 
         private String name; 
         private java.util.List < String > operateErrorCodeList; 
         private String operateTimeEnd; 
@@ -449,6 +474,7 @@ public class DescribeSuspEventsRequest extends Request {
         private String sortColumn; 
         private String sortType; 
         private String source; 
+        private java.util.List < Long > sourceAliUids; 
         private String sourceIp; 
         private String status; 
         private String strictMode; 
@@ -478,6 +504,7 @@ public class DescribeSuspEventsRequest extends Request {
             this.id = request.id;
             this.lang = request.lang;
             this.levels = request.levels;
+            this.multiAccountActionType = request.multiAccountActionType;
             this.name = request.name;
             this.operateErrorCodeList = request.operateErrorCodeList;
             this.operateTimeEnd = request.operateTimeEnd;
@@ -489,6 +516,7 @@ public class DescribeSuspEventsRequest extends Request {
             this.sortColumn = request.sortColumn;
             this.sortType = request.sortType;
             this.source = request.source;
+            this.sourceAliUids = request.sourceAliUids;
             this.sourceIp = request.sourceIp;
             this.status = request.status;
             this.strictMode = request.strictMode;
@@ -648,6 +676,15 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
+         * MultiAccountActionType.
+         */
+        public Builder multiAccountActionType(Integer multiAccountActionType) {
+            this.putQueryParameter("MultiAccountActionType", multiAccountActionType);
+            this.multiAccountActionType = multiAccountActionType;
+            return this;
+        }
+
+        /**
          * The name of the asset that is affected by the alert event.
          */
         public Builder name(String name) {
@@ -790,6 +827,16 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
+         * SourceAliUids.
+         */
+        public Builder sourceAliUids(java.util.List < Long > sourceAliUids) {
+            String sourceAliUidsShrink = shrink(sourceAliUids, "SourceAliUids", "simple");
+            this.putQueryParameter("SourceAliUids", sourceAliUidsShrink);
+            this.sourceAliUids = sourceAliUids;
+            return this;
+        }
+
+        /**
          * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
@@ -821,10 +868,11 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * Whether it is strictly a mode flag.
+         * Specifies whether to enable the strict alerting mode.
          * <p>
-         * - N: No
-         * - Y: Yes
+         * 
+         * *   N: no
+         * *   Y: Yes
          */
         public Builder strictMode(String strictMode) {
             this.putQueryParameter("StrictMode", strictMode);

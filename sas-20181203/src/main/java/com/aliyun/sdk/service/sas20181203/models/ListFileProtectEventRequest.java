@@ -240,7 +240,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The end of the time range to query.
+         * The end timestamp of the query.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -267,7 +267,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The public IP address of the asset that you want to query.
+         * The public IP address of the server.
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -276,7 +276,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The private IP address of the asset that you want to query.
+         * The private IP address of the server.
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -319,7 +319,7 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The start of the time range to query.
+         * The start timestamp of the query.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -334,6 +334,7 @@ public class ListFileProtectEventRequest extends Request {
          * *   0: unhandled
          * *   1: handled
          * *   2: added to the whitelist
+         * *   3: ignored
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -342,10 +343,10 @@ public class ListFileProtectEventRequest extends Request {
         }
 
         /**
-         * The server UUID.
+         * The UUID of the server.
          * <p>
          * 
-         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the server UUID.
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

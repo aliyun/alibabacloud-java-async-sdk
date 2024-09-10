@@ -539,7 +539,6 @@ public class DescribeAffectedMaliciousFileImagesRequest extends Request {
          * *   **us-west-1**: US (Silicon Valley)
          * *   **eu-central-1**: Germany (Frankfurt)
          * *   **eu-west-1**: UK (London)
-         * *   **ap-south-1**: India (Mumbai)
          */
         public Builder repoRegionId(String repoRegionId) {
             this.putQueryParameter("RepoRegionId", repoRegionId);

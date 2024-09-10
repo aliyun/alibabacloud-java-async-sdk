@@ -20,6 +20,10 @@ public class RemoveCheckResultWhiteListRequest extends Request {
     private java.util.List < Long > checkIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    private Long ruleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -27,6 +31,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         super(builder);
         this.checkGroupId = builder.checkGroupId;
         this.checkIds = builder.checkIds;
+        this.ruleId = builder.ruleId;
         this.type = builder.type;
     }
 
@@ -58,6 +63,13 @@ public class RemoveCheckResultWhiteListRequest extends Request {
     }
 
     /**
+     * @return ruleId
+     */
+    public Long getRuleId() {
+        return this.ruleId;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -67,6 +79,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
     public static final class Builder extends Request.Builder<RemoveCheckResultWhiteListRequest, Builder> {
         private String checkGroupId; 
         private java.util.List < Long > checkIds; 
+        private Long ruleId; 
         private String type; 
 
         private Builder() {
@@ -77,6 +90,7 @@ public class RemoveCheckResultWhiteListRequest extends Request {
             super(request);
             this.checkGroupId = request.checkGroupId;
             this.checkIds = request.checkIds;
+            this.ruleId = request.ruleId;
             this.type = request.type;
         } 
 
@@ -95,6 +109,15 @@ public class RemoveCheckResultWhiteListRequest extends Request {
         public Builder checkIds(java.util.List < Long > checkIds) {
             this.putQueryParameter("CheckIds", checkIds);
             this.checkIds = checkIds;
+            return this;
+        }
+
+        /**
+         * RuleId.
+         */
+        public Builder ruleId(Long ruleId) {
+            this.putQueryParameter("RuleId", ruleId);
+            this.ruleId = ruleId;
             return this;
         }
 

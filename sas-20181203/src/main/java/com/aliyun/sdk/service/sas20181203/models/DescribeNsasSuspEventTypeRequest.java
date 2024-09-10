@@ -28,6 +28,10 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
     private String lang;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiAccountActionType")
+    private Integer multiAccountActionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -49,6 +53,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         this.containerFieldValue = builder.containerFieldValue;
         this.from = builder.from;
         this.lang = builder.lang;
+        this.multiAccountActionType = builder.multiAccountActionType;
         this.name = builder.name;
         this.remark = builder.remark;
         this.sourceIp = builder.sourceIp;
@@ -97,6 +102,13 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
     }
 
     /**
+     * @return multiAccountActionType
+     */
+    public Integer getMultiAccountActionType() {
+        return this.multiAccountActionType;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -129,6 +141,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         private String containerFieldValue; 
         private String from; 
         private String lang; 
+        private Integer multiAccountActionType; 
         private String name; 
         private String remark; 
         private String sourceIp; 
@@ -144,6 +157,7 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
             this.containerFieldValue = request.containerFieldValue;
             this.from = request.from;
             this.lang = request.lang;
+            this.multiAccountActionType = request.multiAccountActionType;
             this.name = request.name;
             this.remark = request.remark;
             this.sourceIp = request.sourceIp;
@@ -190,6 +204,15 @@ public class DescribeNsasSuspEventTypeRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * MultiAccountActionType.
+         */
+        public Builder multiAccountActionType(Integer multiAccountActionType) {
+            this.putQueryParameter("MultiAccountActionType", multiAccountActionType);
+            this.multiAccountActionType = multiAccountActionType;
             return this;
         }
 

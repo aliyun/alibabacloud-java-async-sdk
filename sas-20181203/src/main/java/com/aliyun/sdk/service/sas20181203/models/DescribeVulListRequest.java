@@ -486,6 +486,9 @@ public class DescribeVulListRequest extends Request {
 
         /**
          * The UUIDs of the servers on which you want to query the vulnerabilities. Separate multiple UUIDs with commas (,).
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to obtain the UUIDs.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

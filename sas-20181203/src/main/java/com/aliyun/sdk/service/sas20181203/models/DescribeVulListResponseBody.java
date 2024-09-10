@@ -985,6 +985,9 @@ public class DescribeVulListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RaspStatus")
         private Integer raspStatus;
 
+        @com.aliyun.core.annotation.NameInMap("RealRisk")
+        private Boolean realRisk;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -1038,6 +1041,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             this.primaryId = builder.primaryId;
             this.raspDefend = builder.raspDefend;
             this.raspStatus = builder.raspStatus;
+            this.realRisk = builder.realRisk;
             this.regionId = builder.regionId;
             this.related = builder.related;
             this.repairTs = builder.repairTs;
@@ -1233,6 +1237,13 @@ public class DescribeVulListResponseBody extends TeaModel {
         }
 
         /**
+         * @return realRisk
+         */
+        public Boolean getRealRisk() {
+            return this.realRisk;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -1321,6 +1332,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             private Long primaryId; 
             private Integer raspDefend; 
             private Integer raspStatus; 
+            private Boolean realRisk; 
             private String regionId; 
             private String related; 
             private Long repairTs; 
@@ -1563,6 +1575,18 @@ public class DescribeVulListResponseBody extends TeaModel {
              */
             public Builder raspStatus(Integer raspStatus) {
                 this.raspStatus = raspStatus;
+                return this;
+            }
+
+            /**
+             * Indicates whether the vulnerability is easily exploited. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             */
+            public Builder realRisk(Boolean realRisk) {
+                this.realRisk = realRisk;
                 return this;
             }
 

@@ -579,7 +579,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
              * The name of the sensitive files.
              * <p>
              * 
-             * >  You can call the [GetSensitiveDefineRuleConfig](~~4576877~~) operation to query the ID of the malicious sample.
+             * >  You can call the [GetSensitiveDefineRuleConfig](~~GetSensitiveDefineRuleConfig~~) operation to query the ID of the malicious sample.
              */
             public Builder name(String name) {
                 this.name = name;

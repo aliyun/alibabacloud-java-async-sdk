@@ -1,0 +1,125 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.sas20181203.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeClusterHostSecuritySummaryResponse} extends {@link TeaModel}
+ *
+ * <p>DescribeClusterHostSecuritySummaryResponse</p>
+ */
+public class DescribeClusterHostSecuritySummaryResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map < String, String > headers;
+
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
+    private DescribeClusterHostSecuritySummaryResponseBody body;
+
+    private DescribeClusterHostSecuritySummaryResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static DescribeClusterHostSecuritySummaryResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public DescribeClusterHostSecuritySummaryResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<DescribeClusterHostSecuritySummaryResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(DescribeClusterHostSecuritySummaryResponseBody body);
+
+        @Override
+        DescribeClusterHostSecuritySummaryResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<DescribeClusterHostSecuritySummaryResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
+        private DescribeClusterHostSecuritySummaryResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(DescribeClusterHostSecuritySummaryResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(DescribeClusterHostSecuritySummaryResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public DescribeClusterHostSecuritySummaryResponse build() {
+            return new DescribeClusterHostSecuritySummaryResponse(this);
+        } 
+
+    } 
+
+}

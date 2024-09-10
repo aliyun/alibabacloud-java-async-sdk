@@ -108,7 +108,7 @@ public class ExportRecordRequest extends Request {
         }
 
         /**
-         * The type of the check result list to export. Valid values:
+         * The type of the check result list that you want to export. Valid values:
          * <p>
          * 
          * *   **assetInstance**: the list of servers displayed on the Host page
@@ -130,6 +130,7 @@ public class ExportRecordRequest extends Request {
          * *   **baselineCspm**: the list of check results for configuration assessment
          * *   **attack**: the list of alert events for attack analysis
          * *   **accessKey**: the list of alerts that are generated for AccessKey pair leaks
+         * *   **exportObjectScanEvents**: the list of alerts generated for malicious files
          */
         public Builder exportType(String exportType) {
             this.putQueryParameter("ExportType", exportType);

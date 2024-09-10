@@ -650,6 +650,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
          * 
          * *   **false**: no
          * *   **true**: yes
+         * ><notice>This parameter is deprecated. You can ignore it.></notice>
          */
         public Builder isOverBalance(Boolean isOverBalance) {
             this.isOverBalance = isOverBalance;

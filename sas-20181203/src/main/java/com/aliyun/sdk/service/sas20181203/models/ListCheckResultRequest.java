@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListCheckResultRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckIds")
+    private java.util.List < Long > checkIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CheckKey")
     private String checkKey;
 
@@ -74,6 +78,7 @@ public class ListCheckResultRequest extends Request {
 
     private ListCheckResultRequest(Builder builder) {
         super(builder);
+        this.checkIds = builder.checkIds;
         this.checkKey = builder.checkKey;
         this.currentPage = builder.currentPage;
         this.customParam = builder.customParam;
@@ -102,6 +107,13 @@ public class ListCheckResultRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return checkIds
+     */
+    public java.util.List < Long > getCheckIds() {
+        return this.checkIds;
     }
 
     /**
@@ -210,6 +222,7 @@ public class ListCheckResultRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListCheckResultRequest, Builder> {
+        private java.util.List < Long > checkIds; 
         private String checkKey; 
         private Integer currentPage; 
         private Boolean customParam; 
@@ -232,6 +245,7 @@ public class ListCheckResultRequest extends Request {
 
         private Builder(ListCheckResultRequest request) {
             super(request);
+            this.checkIds = request.checkIds;
             this.checkKey = request.checkKey;
             this.currentPage = request.currentPage;
             this.customParam = request.customParam;
@@ -248,6 +262,15 @@ public class ListCheckResultRequest extends Request {
             this.types = request.types;
             this.vendors = request.vendors;
         } 
+
+        /**
+         * CheckIds.
+         */
+        public Builder checkIds(java.util.List < Long > checkIds) {
+            this.putQueryParameter("CheckIds", checkIds);
+            this.checkIds = checkIds;
+            return this;
+        }
 
         /**
          * The key that you want to use to search for check items in fuzzy match mode.

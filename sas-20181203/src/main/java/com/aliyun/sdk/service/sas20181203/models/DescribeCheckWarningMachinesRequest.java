@@ -16,8 +16,28 @@ public class DescribeCheckWarningMachinesRequest extends Request {
     private Long checkId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    private Integer currentPage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilterUuid")
+    private String filterUuid;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    private String remark;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
@@ -34,7 +54,12 @@ public class DescribeCheckWarningMachinesRequest extends Request {
     private DescribeCheckWarningMachinesRequest(Builder builder) {
         super(builder);
         this.checkId = builder.checkId;
+        this.currentPage = builder.currentPage;
+        this.filterUuid = builder.filterUuid;
+        this.instanceId = builder.instanceId;
         this.lang = builder.lang;
+        this.pageSize = builder.pageSize;
+        this.remark = builder.remark;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.riskId = builder.riskId;
         this.status = builder.status;
@@ -61,10 +86,45 @@ public class DescribeCheckWarningMachinesRequest extends Request {
     }
 
     /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
+     * @return filterUuid
+     */
+    public String getFilterUuid() {
+        return this.filterUuid;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return lang
      */
     public String getLang() {
         return this.lang;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
     }
 
     /**
@@ -90,7 +150,12 @@ public class DescribeCheckWarningMachinesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCheckWarningMachinesRequest, Builder> {
         private Long checkId; 
+        private Integer currentPage; 
+        private String filterUuid; 
+        private String instanceId; 
         private String lang; 
+        private Integer pageSize; 
+        private String remark; 
         private Long resourceDirectoryAccountId; 
         private Long riskId; 
         private Integer status; 
@@ -102,7 +167,12 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         private Builder(DescribeCheckWarningMachinesRequest request) {
             super(request);
             this.checkId = request.checkId;
+            this.currentPage = request.currentPage;
+            this.filterUuid = request.filterUuid;
+            this.instanceId = request.instanceId;
             this.lang = request.lang;
+            this.pageSize = request.pageSize;
+            this.remark = request.remark;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.riskId = request.riskId;
             this.status = request.status;
@@ -121,6 +191,33 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         }
 
         /**
+         * The number of the page to return. Default value: **1**.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.putQueryParameter("CurrentPage", currentPage);
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * The instance ID of the asset that you don\"t want to query.
+         */
+        public Builder filterUuid(String filterUuid) {
+            this.putQueryParameter("FilterUuid", filterUuid);
+            this.filterUuid = filterUuid;
+            return this;
+        }
+
+        /**
+         * The instance ID of the asset.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
          * The language of the content within the request and response. Default value: **zh**. Valid values:
          * <p>
          * 
@@ -130,6 +227,24 @@ public class DescribeCheckWarningMachinesRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The information about the server that you want to query. The value can be the name or the public IP address of the server.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

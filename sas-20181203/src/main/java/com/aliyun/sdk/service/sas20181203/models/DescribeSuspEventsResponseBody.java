@@ -129,7 +129,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the alert event.
+         * The information about the alert events.
          */
         public Builder suspEvents(java.util.List < SuspEvents> suspEvents) {
             this.suspEvents = suspEvents;
@@ -371,7 +371,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String tacticId; 
 
             /**
-             * The ATT\&CK tactic name.
+             * The tactic name of ATT\&CK.
              */
             public Builder tacticDisplayName(String tacticDisplayName) {
                 this.tacticDisplayName = tacticDisplayName;
@@ -379,7 +379,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ATT\&CK stage information.
+             * The stage information about ATT\&CK.
              */
             public Builder tacticId(String tacticId) {
                 this.tacticId = tacticId;
@@ -541,6 +541,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityEventIds")
         private String securityEventIds;
 
+        @com.aliyun.core.annotation.NameInMap("SourceAliUid")
+        private Long sourceAliUid;
+
         @com.aliyun.core.annotation.NameInMap("Stages")
         private String stages;
 
@@ -606,6 +609,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             this.operateTime = builder.operateTime;
             this.saleVersion = builder.saleVersion;
             this.securityEventIds = builder.securityEventIds;
+            this.sourceAliUid = builder.sourceAliUid;
             this.stages = builder.stages;
             this.tacticItems = builder.tacticItems;
             this.uniqueInfo = builder.uniqueInfo;
@@ -965,6 +969,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceAliUid
+         */
+        public Long getSourceAliUid() {
+            return this.sourceAliUid;
+        }
+
+        /**
          * @return stages
          */
         public String getStages() {
@@ -1049,6 +1060,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private Long operateTime; 
             private String saleVersion; 
             private String securityEventIds; 
+            private Long sourceAliUid; 
             private String stages; 
             private java.util.List < TacticItems> tacticItems; 
             private String uniqueInfo; 
@@ -1164,7 +1176,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image to which the container belongs.
+             * The ID of the container image.
              */
             public Builder containerImageId(String containerImageId) {
                 this.containerImageId = containerImageId;
@@ -1172,7 +1184,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the image to which the container belongs.
+             * The name of the container image.
              */
             public Builder containerImageName(String containerImageName) {
                 this.containerImageName = containerImageName;
@@ -1277,7 +1289,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the affected asset.
+             * The instance ID of the affected asset.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1293,7 +1305,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address that is associated with instance.
+             * The public IP address of the associated instance.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -1410,7 +1422,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * MarkList.
+             * The labels of alarm event.
              */
             public Builder markList(java.util.List < String > markList) {
                 this.markList = markList;
@@ -1490,6 +1502,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              */
             public Builder securityEventIds(String securityEventIds) {
                 this.securityEventIds = securityEventIds;
+                return this;
+            }
+
+            /**
+             * SourceAliUid.
+             */
+            public Builder sourceAliUid(Long sourceAliUid) {
+                this.sourceAliUid = sourceAliUid;
                 return this;
             }
 

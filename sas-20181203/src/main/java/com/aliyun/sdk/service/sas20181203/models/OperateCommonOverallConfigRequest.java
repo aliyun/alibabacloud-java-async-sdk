@@ -113,8 +113,8 @@ public class OperateCommonOverallConfigRequest extends Request {
          * Specifies whether to configure assets for the feature. Default value: **false**. Valid values:
          * <p>
          * 
-         * *   **true**: yes
-         * *   **false**: no
+         * *   **true**
+         * *   **false**
          * 
          * >  This parameter takes effect only when you set **Config** to **on**.
          */

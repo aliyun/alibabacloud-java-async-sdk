@@ -16,6 +16,14 @@ public class ListAgentlessRiskUuidRequest extends Request {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    private String instanceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InternetIp")
     private String internetIp;
 
@@ -39,15 +47,22 @@ public class ListAgentlessRiskUuidRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TargetName")
     private String targetName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
+    private Integer targetType;
+
     private ListAgentlessRiskUuidRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.instanceId = builder.instanceId;
+        this.instanceName = builder.instanceName;
         this.internetIp = builder.internetIp;
         this.intranetIp = builder.intranetIp;
         this.machineName = builder.machineName;
         this.pageSize = builder.pageSize;
         this.risk = builder.risk;
         this.targetName = builder.targetName;
+        this.targetType = builder.targetType;
     }
 
     public static Builder builder() {
@@ -68,6 +83,20 @@ public class ListAgentlessRiskUuidRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     /**
@@ -112,14 +141,24 @@ public class ListAgentlessRiskUuidRequest extends Request {
         return this.targetName;
     }
 
+    /**
+     * @return targetType
+     */
+    public Integer getTargetType() {
+        return this.targetType;
+    }
+
     public static final class Builder extends Request.Builder<ListAgentlessRiskUuidRequest, Builder> {
         private Integer currentPage; 
+        private String instanceId; 
+        private String instanceName; 
         private String internetIp; 
         private String intranetIp; 
         private String machineName; 
         private Integer pageSize; 
         private Boolean risk; 
         private String targetName; 
+        private Integer targetType; 
 
         private Builder() {
             super();
@@ -128,12 +167,15 @@ public class ListAgentlessRiskUuidRequest extends Request {
         private Builder(ListAgentlessRiskUuidRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.instanceId = request.instanceId;
+            this.instanceName = request.instanceName;
             this.internetIp = request.internetIp;
             this.intranetIp = request.intranetIp;
             this.machineName = request.machineName;
             this.pageSize = request.pageSize;
             this.risk = request.risk;
             this.targetName = request.targetName;
+            this.targetType = request.targetType;
         } 
 
         /**
@@ -142,6 +184,24 @@ public class ListAgentlessRiskUuidRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * The instance ID of the asset.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The instance name of the asset.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 
@@ -200,6 +260,21 @@ public class ListAgentlessRiskUuidRequest extends Request {
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
             this.targetName = targetName;
+            return this;
+        }
+
+        /**
+         * Specifies the type of the object being inspected. Valid values:
+         * <p>
+         * 
+         * *   **1**: Host Snapshot.
+         * *   **2**: Host Image.
+         * *   **3**: User Snapshot.
+         * *   **4**: User Image.
+         */
+        public Builder targetType(Integer targetType) {
+            this.putQueryParameter("TargetType", targetType);
+            this.targetType = targetType;
             return this;
         }
 

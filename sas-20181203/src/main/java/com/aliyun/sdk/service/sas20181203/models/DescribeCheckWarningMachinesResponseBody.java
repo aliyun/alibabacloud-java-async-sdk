@@ -14,15 +14,23 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    private Integer currentPage;
+
     @com.aliyun.core.annotation.NameInMap("Machines")
     private java.util.List < Machines> machines;
+
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCheckWarningMachinesResponseBody(Builder builder) {
         this.count = builder.count;
+        this.currentPage = builder.currentPage;
         this.machines = builder.machines;
+        this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
     }
 
@@ -42,10 +50,24 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
     }
 
     /**
+     * @return currentPage
+     */
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    /**
      * @return machines
      */
     public java.util.List < Machines> getMachines() {
         return this.machines;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -57,7 +79,9 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer count; 
+        private Integer currentPage; 
         private java.util.List < Machines> machines; 
+        private Integer pageSize; 
         private String requestId; 
 
         /**
@@ -69,10 +93,26 @@ public class DescribeCheckWarningMachinesResponseBody extends TeaModel {
         }
 
         /**
+         * The number of the page to return. Default value: **1**.
+         */
+        public Builder currentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
          * The servers on which the same risk item is detected.
          */
         public Builder machines(java.util.List < Machines> machines) {
             this.machines = machines;
+            return this;
+        }
+
+        /**
+         * The number of entries returned per page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
             return this;
         }
 

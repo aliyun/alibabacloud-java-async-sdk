@@ -28,6 +28,10 @@ public class CreateOssScanConfigRequest extends Request {
     private Integer decompressMaxLayer;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DecryptionList")
+    private java.util.List < String > decryptionList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Enable")
     private Integer enable;
 
@@ -42,6 +46,10 @@ public class CreateOssScanConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeySuffixList")
     private java.util.List < String > keySuffixList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LastModifiedStartTime")
+    private Long lastModifiedStartTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -61,10 +69,12 @@ public class CreateOssScanConfigRequest extends Request {
         this.bucketNameList = builder.bucketNameList;
         this.decompressMaxFileCount = builder.decompressMaxFileCount;
         this.decompressMaxLayer = builder.decompressMaxLayer;
+        this.decryptionList = builder.decryptionList;
         this.enable = builder.enable;
         this.endTime = builder.endTime;
         this.keyPrefixList = builder.keyPrefixList;
         this.keySuffixList = builder.keySuffixList;
+        this.lastModifiedStartTime = builder.lastModifiedStartTime;
         this.name = builder.name;
         this.scanDayList = builder.scanDayList;
         this.startTime = builder.startTime;
@@ -112,6 +122,13 @@ public class CreateOssScanConfigRequest extends Request {
     }
 
     /**
+     * @return decryptionList
+     */
+    public java.util.List < String > getDecryptionList() {
+        return this.decryptionList;
+    }
+
+    /**
      * @return enable
      */
     public Integer getEnable() {
@@ -140,6 +157,13 @@ public class CreateOssScanConfigRequest extends Request {
     }
 
     /**
+     * @return lastModifiedStartTime
+     */
+    public Long getLastModifiedStartTime() {
+        return this.lastModifiedStartTime;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -165,10 +189,12 @@ public class CreateOssScanConfigRequest extends Request {
         private java.util.List < String > bucketNameList; 
         private Integer decompressMaxFileCount; 
         private Integer decompressMaxLayer; 
+        private java.util.List < String > decryptionList; 
         private Integer enable; 
         private String endTime; 
         private java.util.List < String > keyPrefixList; 
         private java.util.List < String > keySuffixList; 
+        private Long lastModifiedStartTime; 
         private String name; 
         private java.util.List < Integer > scanDayList; 
         private String startTime; 
@@ -183,10 +209,12 @@ public class CreateOssScanConfigRequest extends Request {
             this.bucketNameList = request.bucketNameList;
             this.decompressMaxFileCount = request.decompressMaxFileCount;
             this.decompressMaxLayer = request.decompressMaxLayer;
+            this.decryptionList = request.decryptionList;
             this.enable = request.enable;
             this.endTime = request.endTime;
             this.keyPrefixList = request.keyPrefixList;
             this.keySuffixList = request.keySuffixList;
+            this.lastModifiedStartTime = request.lastModifiedStartTime;
             this.name = request.name;
             this.scanDayList = request.scanDayList;
             this.startTime = request.startTime;
@@ -229,6 +257,15 @@ public class CreateOssScanConfigRequest extends Request {
         }
 
         /**
+         * DecryptionList.
+         */
+        public Builder decryptionList(java.util.List < String > decryptionList) {
+            this.putQueryParameter("DecryptionList", decryptionList);
+            this.decryptionList = decryptionList;
+            return this;
+        }
+
+        /**
          * Specifies whether to enable the policy. Valid values:
          * <p>
          * 
@@ -265,6 +302,15 @@ public class CreateOssScanConfigRequest extends Request {
         public Builder keySuffixList(java.util.List < String > keySuffixList) {
             this.putQueryParameter("KeySuffixList", keySuffixList);
             this.keySuffixList = keySuffixList;
+            return this;
+        }
+
+        /**
+         * LastModifiedStartTime.
+         */
+        public Builder lastModifiedStartTime(Long lastModifiedStartTime) {
+            this.putQueryParameter("LastModifiedStartTime", lastModifiedStartTime);
+            this.lastModifiedStartTime = lastModifiedStartTime;
             return this;
         }
 

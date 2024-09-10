@@ -82,7 +82,7 @@ public class CreateHybridProxyClusterRequest extends Request {
         } 
 
         /**
-         * ClusterName.
+         * The name of the cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -91,7 +91,9 @@ public class CreateHybridProxyClusterRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The endpoint of the cluster.
+         * <p>
+         * >  You can specify an IP address or a domain name
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -100,7 +102,7 @@ public class CreateHybridProxyClusterRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The description of the cluster.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

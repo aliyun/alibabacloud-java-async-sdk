@@ -61,7 +61,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about the assets.
+         * The information about the assets.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -249,7 +249,10 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCoreCount.
+             * The number of cores of assets in the specified asset type.
+             * <p>
+             * 
+             * >  If the **MachineTypes** request parameter is not specified, the value of the InstanceCoreCount parameter indicates the total number of cores of assets within your account.
              */
             public Builder instanceCoreCount(Long instanceCoreCount) {
                 this.instanceCoreCount = instanceCoreCount;

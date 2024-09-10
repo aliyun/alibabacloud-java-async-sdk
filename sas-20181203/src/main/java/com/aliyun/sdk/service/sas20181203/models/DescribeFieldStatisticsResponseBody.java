@@ -119,6 +119,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NoRiskInstanceCount")
         private Integer noRiskInstanceCount;
 
+        @com.aliyun.core.annotation.NameInMap("NotBindMachineInstanceCount")
+        private Integer notBindMachineInstanceCount;
+
         @com.aliyun.core.annotation.NameInMap("NotRunningStatusCoreCount")
         private Long notRunningStatusCoreCount;
 
@@ -181,6 +184,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.newInstanceCoreCount = builder.newInstanceCoreCount;
             this.newInstanceCount = builder.newInstanceCount;
             this.noRiskInstanceCount = builder.noRiskInstanceCount;
+            this.notBindMachineInstanceCount = builder.notBindMachineInstanceCount;
             this.notRunningStatusCoreCount = builder.notRunningStatusCoreCount;
             this.notRunningStatusCount = builder.notRunningStatusCount;
             this.offlineInstanceCount = builder.offlineInstanceCount;
@@ -319,6 +323,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return notBindMachineInstanceCount
+         */
+        public Integer getNotBindMachineInstanceCount() {
+            return this.notBindMachineInstanceCount;
+        }
+
+        /**
          * @return notRunningStatusCoreCount
          */
         public Long getNotRunningStatusCoreCount() {
@@ -440,6 +451,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Long newInstanceCoreCount; 
             private Integer newInstanceCount; 
             private Integer noRiskInstanceCount; 
+            private Integer notBindMachineInstanceCount; 
             private Long notRunningStatusCoreCount; 
             private Integer notRunningStatusCount; 
             private Integer offlineInstanceCount; 
@@ -481,7 +493,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * ExposedInstanceCoreCount.
+             * The number of cores of exposed assets.
              */
             public Builder exposedInstanceCoreCount(Long exposedInstanceCoreCount) {
                 this.exposedInstanceCoreCount = exposedInstanceCoreCount;
@@ -537,7 +549,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCoreCount.
+             * The number of cores of assets in the specified asset type. If the asset type is not specified, the value of this parameter indicates the total number of cores of servers and Alibaba Cloud services within your account.
              */
             public Builder instanceCoreCount(Long instanceCoreCount) {
                 this.instanceCoreCount = instanceCoreCount;
@@ -561,7 +573,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NewInstanceCoreCount.
+             * The number of cores of new servers.
              */
             public Builder newInstanceCoreCount(Long newInstanceCoreCount) {
                 this.newInstanceCoreCount = newInstanceCoreCount;
@@ -585,7 +597,15 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * NotRunningStatusCoreCount.
+             * NotBindMachineInstanceCount.
+             */
+            public Builder notBindMachineInstanceCount(Integer notBindMachineInstanceCount) {
+                this.notBindMachineInstanceCount = notBindMachineInstanceCount;
+                return this;
+            }
+
+            /**
+             * The number of cores of servers that are not started.
              */
             public Builder notRunningStatusCoreCount(Long notRunningStatusCoreCount) {
                 this.notRunningStatusCoreCount = notRunningStatusCoreCount;
@@ -633,7 +653,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RiskInstanceCoreCount.
+             * The number of cores of vulnerable assets.
              */
             public Builder riskInstanceCoreCount(Long riskInstanceCoreCount) {
                 this.riskInstanceCoreCount = riskInstanceCoreCount;
@@ -681,7 +701,7 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * UnprotectedInstanceCoreCount.
+             * The number of cores of unprotected assets.
              */
             public Builder unprotectedInstanceCoreCount(Long unprotectedInstanceCoreCount) {
                 this.unprotectedInstanceCoreCount = unprotectedInstanceCoreCount;

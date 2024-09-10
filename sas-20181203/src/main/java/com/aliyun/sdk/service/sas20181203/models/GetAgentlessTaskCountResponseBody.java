@@ -35,6 +35,9 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ScanMachine")
     private Integer scanMachine;
 
+    @com.aliyun.core.annotation.NameInMap("SensitiveFileCount")
+    private Integer sensitiveFileCount;
+
     @com.aliyun.core.annotation.NameInMap("SysVulCount")
     private String sysVulCount;
 
@@ -50,6 +53,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         this.riskMachine = builder.riskMachine;
         this.scaVulCount = builder.scaVulCount;
         this.scanMachine = builder.scanMachine;
+        this.sensitiveFileCount = builder.sensitiveFileCount;
         this.sysVulCount = builder.sysVulCount;
         this.vulnerability = builder.vulnerability;
     }
@@ -119,6 +123,13 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
     }
 
     /**
+     * @return sensitiveFileCount
+     */
+    public Integer getSensitiveFileCount() {
+        return this.sensitiveFileCount;
+    }
+
+    /**
      * @return sysVulCount
      */
     public String getSysVulCount() {
@@ -141,6 +152,7 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
         private Integer riskMachine; 
         private Integer scaVulCount; 
         private Integer scanMachine; 
+        private Integer sensitiveFileCount; 
         private String sysVulCount; 
         private Integer vulnerability; 
 
@@ -205,6 +217,14 @@ public class GetAgentlessTaskCountResponseBody extends TeaModel {
          */
         public Builder scanMachine(Integer scanMachine) {
             this.scanMachine = scanMachine;
+            return this;
+        }
+
+        /**
+         * The total number of sensitive files.
+         */
+        public Builder sensitiveFileCount(Integer sensitiveFileCount) {
+            this.sensitiveFileCount = sensitiveFileCount;
             return this;
         }
 

@@ -121,6 +121,9 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
 
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
         @com.aliyun.core.annotation.NameInMap("ProcPath")
         private String procPath;
 
@@ -153,6 +156,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             this.intranetIp = builder.intranetIp;
             this.latestTime = builder.latestTime;
             this.operation = builder.operation;
+            this.platform = builder.platform;
             this.procPath = builder.procPath;
             this.procPermission = builder.procPermission;
             this.processId = builder.processId;
@@ -241,6 +245,13 @@ public class ListFileProtectEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return procPath
          */
         public String getProcPath() {
@@ -300,6 +311,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             private String intranetIp; 
             private Long latestTime; 
             private String operation; 
+            private String platform; 
             private String procPath; 
             private String procPermission; 
             private String processId; 
@@ -312,8 +324,8 @@ public class ListFileProtectEventResponseBody extends TeaModel {
              * The severity of the alert. Valid values:
              * <p>
              * 
-             * *   0: does not generate alerts
-             * *   1: sends notifications
+             * *   0: no alerts
+             * *   1: reminder
              * *   2: suspicious
              * *   3: high-risk
              */
@@ -331,7 +343,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The path to the file.
+             * The path to the file that is managed by the process.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -355,7 +367,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The instance name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -371,7 +383,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP address of the asset.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -395,6 +407,18 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
+             * The type of the operating system. Valid values:
+             * <p>
+             * 
+             * *   **windows**: Windows
+             * *   **linux**: Linux
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
+                return this;
+            }
+
+            /**
              * The path to the process.
              */
             public Builder procPath(String procPath) {
@@ -411,7 +435,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The process ID (PID) of the event process.
+             * The ID of the process.
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -419,7 +443,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * The description.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -441,6 +465,7 @@ public class ListFileProtectEventResponseBody extends TeaModel {
              * *   0: unhandled
              * *   1: handled
              * *   2: added to the whitelist
+             * *   3: ignored
              */
             public Builder status(Integer status) {
                 this.status = status;

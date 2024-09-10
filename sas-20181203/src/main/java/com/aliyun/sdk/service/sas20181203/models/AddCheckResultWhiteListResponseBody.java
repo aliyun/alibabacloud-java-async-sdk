@@ -17,9 +17,13 @@ public class AddCheckResultWhiteListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("RuleIds")
+    private java.util.List < Long > ruleIds;
+
     private AddCheckResultWhiteListResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
+        this.ruleIds = builder.ruleIds;
     }
 
     public static Builder builder() {
@@ -44,9 +48,17 @@ public class AddCheckResultWhiteListResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return ruleIds
+     */
+    public java.util.List < Long > getRuleIds() {
+        return this.ruleIds;
+    }
+
     public static final class Builder {
         private java.util.Map < String, ? > data; 
         private String requestId; 
+        private java.util.List < Long > ruleIds; 
 
         /**
          * The data returned.
@@ -61,6 +73,14 @@ public class AddCheckResultWhiteListResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RuleIds.
+         */
+        public Builder ruleIds(java.util.List < Long > ruleIds) {
+            this.ruleIds = ruleIds;
             return this;
         }
 

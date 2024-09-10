@@ -21,15 +21,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddAssetSelectionCriteriaResponse> addAssetSelectionCriteria(AddAssetSelectionCriteriaRequest request);
 
+    CompletableFuture<AddBaselineCheckWhiteRecordResponse> addBaselineCheckWhiteRecord(AddBaselineCheckWhiteRecordRequest request);
+
     CompletableFuture<AddCheckInstanceResultWhiteListResponse> addCheckInstanceResultWhiteList(AddCheckInstanceResultWhiteListRequest request);
 
     CompletableFuture<AddCheckResultWhiteListResponse> addCheckResultWhiteList(AddCheckResultWhiteListRequest request);
 
     CompletableFuture<AddClientUserDefineRuleResponse> addClientUserDefineRule(AddClientUserDefineRuleRequest request);
 
+    CompletableFuture<AddCloudVendorAccountAKResponse> addCloudVendorAccountAK(AddCloudVendorAccountAKRequest request);
+
     CompletableFuture<AddContainerDefenseRuleResponse> addContainerDefenseRule(AddContainerDefenseRuleRequest request);
 
     CompletableFuture<AddContainerPluginRuleResponse> addContainerPluginRule(AddContainerPluginRuleRequest request);
+
+    /**
+      * Security Center allows you to create an IDC probe only on servers on which the Security Center agent is installed.
+      *
+     */
+    CompletableFuture<AddIdcProbeResponse> addIdcProbe(AddIdcProbeRequest request);
 
     CompletableFuture<AddImageEventOperationResponse> addImageEventOperation(AddImageEventOperationRequest request);
 
@@ -77,13 +87,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeUserLangResponse> changeUserLang(ChangeUserLangRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CheckQuaraFileIdResponse> checkQuaraFileId(CheckQuaraFileIdRequest request);
 
     CompletableFuture<CheckSecurityEventIdResponse> checkSecurityEventId(CheckSecurityEventIdRequest request);
 
+    CompletableFuture<CheckStsTokenAuthResponse> checkStsTokenAuth(CheckStsTokenAuthRequest request);
+
+    CompletableFuture<CheckTrialFixCountResponse> checkTrialFixCount(CheckTrialFixCountRequest request);
+
     CompletableFuture<CheckUserHasEcsResponse> checkUserHasEcs(CheckUserHasEcsRequest request);
 
     CompletableFuture<ConfirmVirusEventsResponse> confirmVirusEvents(ConfirmVirusEventsRequest request);
+
+    CompletableFuture<CopyCustomizeReportConfigResponse> copyCustomizeReportConfig(CopyCustomizeReportConfigRequest request);
 
     CompletableFuture<CreateAgentlessScanTaskResponse> createAgentlessScanTask(CreateAgentlessScanTaskRequest request);
 
@@ -91,7 +111,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateAssetSelectionConfigResponse> createAssetSelectionConfig(CreateAssetSelectionConfigRequest request);
 
+    CompletableFuture<CreateAttestorResponse> createAttestor(CreateAttestorRequest request);
+
     CompletableFuture<CreateBackupPolicyResponse> createBackupPolicy(CreateBackupPolicyRequest request);
+
+    CompletableFuture<CreateBinarySecurityPolicyResponse> createBinarySecurityPolicy(CreateBinarySecurityPolicyRequest request);
 
     CompletableFuture<CreateContainerScanTaskResponse> createContainerScanTask(CreateContainerScanTaskRequest request);
 
@@ -99,7 +123,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateCustomBlockRecordResponse> createCustomBlockRecord(CreateCustomBlockRecordRequest request);
 
+    CompletableFuture<CreateCustomizedDictResponse> createCustomizedDict(CreateCustomizedDictRequest request);
+
     CompletableFuture<CreateCycleTaskResponse> createCycleTask(CreateCycleTaskRequest request);
+
+    CompletableFuture<CreateDynamicDictResponse> createDynamicDict(CreateDynamicDictRequest request);
 
     /**
       * You can call this operation to push a file to the cloud for detection. Before you call this operation, make sure that the file is uploaded. You can call the CreateFileDetectUploadUrl operation to upload the file.
@@ -138,9 +166,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateJenkinsImageRegistryResponse> createJenkinsImageRegistry(CreateJenkinsImageRegistryRequest request);
 
+    CompletableFuture<CreateJenkinsImageScanTaskResponse> createJenkinsImageScanTask(CreateJenkinsImageScanTaskRequest request);
+
     CompletableFuture<CreateMaliciousFileWhitelistConfigResponse> createMaliciousFileWhitelistConfig(CreateMaliciousFileWhitelistConfigRequest request);
 
     CompletableFuture<CreateMaliciousNoteResponse> createMaliciousNote(CreateMaliciousNoteRequest request);
+
+    CompletableFuture<CreateMonitorAccountResponse> createMonitorAccount(CreateMonitorAccountRequest request);
 
     CompletableFuture<CreateOpaClusterPluginResponse> createOpaClusterPlugin(CreateOpaClusterPluginRequest request);
 
@@ -152,13 +184,19 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateOrUpdateAssetGroupResponse> createOrUpdateAssetGroup(CreateOrUpdateAssetGroupRequest request);
 
+    CompletableFuture<CreateOrUpdateAutoTagRuleResponse> createOrUpdateAutoTagRule(CreateOrUpdateAutoTagRuleRequest request);
+
     CompletableFuture<CreateOrUpdateDingTalkResponse> createOrUpdateDingTalk(CreateOrUpdateDingTalkRequest request);
 
     CompletableFuture<CreateOssBucketScanTaskResponse> createOssBucketScanTask(CreateOssBucketScanTaskRequest request);
 
     CompletableFuture<CreateOssScanConfigResponse> createOssScanConfig(CreateOssScanConfigRequest request);
 
+    CompletableFuture<CreateRdDefaultSyncListResponse> createRdDefaultSyncList(CreateRdDefaultSyncListRequest request);
+
     CompletableFuture<CreateRestoreJobResponse> createRestoreJob(CreateRestoreJobRequest request);
+
+    CompletableFuture<CreateSasTrialResponse> createSasTrial(CreateSasTrialRequest request);
 
     /**
       * For more information about service-linked roles, see [Service-linked roles](~~160674~~).
@@ -170,11 +208,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSimilarSecurityEventsQueryTaskResponse> createSimilarSecurityEventsQueryTask(CreateSimilarSecurityEventsQueryTaskRequest request);
 
+    /**
+      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
+      *
+     */
+    CompletableFuture<CreateSoarStrategyTaskResponse> createSoarStrategyTask(CreateSoarStrategyTaskRequest request);
+
     CompletableFuture<CreateSuspEventNoteResponse> createSuspEventNote(CreateSuspEventNoteRequest request);
 
     CompletableFuture<CreateUniBackupPolicyResponse> createUniBackupPolicy(CreateUniBackupPolicyRequest request);
 
     CompletableFuture<CreateUniRestorePlanResponse> createUniRestorePlan(CreateUniRestorePlanRequest request);
+
+    CompletableFuture<CreateUserSettingResponse> createUserSetting(CreateUserSettingRequest request);
 
     CompletableFuture<CreateVirusScanOnceTaskResponse> createVirusScanOnceTask(CreateVirusScanOnceTaskRequest request);
 
@@ -182,13 +228,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteAntiBruteForceRuleResponse> deleteAntiBruteForceRule(DeleteAntiBruteForceRuleRequest request);
 
+    CompletableFuture<DeleteAttestorResponse> deleteAttestor(DeleteAttestorRequest request);
+
+    CompletableFuture<DeleteAutoTagRulesResponse> deleteAutoTagRules(DeleteAutoTagRulesRequest request);
+
     CompletableFuture<DeleteBackupPolicyResponse> deleteBackupPolicy(DeleteBackupPolicyRequest request);
 
     CompletableFuture<DeleteBackupPolicyMachineResponse> deleteBackupPolicyMachine(DeleteBackupPolicyMachineRequest request);
 
+    CompletableFuture<DeleteBackupSnapshotResponse> deleteBackupSnapshot(DeleteBackupSnapshotRequest request);
+
+    CompletableFuture<DeleteBaselineCheckWhiteRecordResponse> deleteBaselineCheckWhiteRecord(DeleteBaselineCheckWhiteRecordRequest request);
+
     CompletableFuture<DeleteBinarySecurityPolicyResponse> deleteBinarySecurityPolicy(DeleteBinarySecurityPolicyRequest request);
 
     CompletableFuture<DeleteClientUserDefineRuleResponse> deleteClientUserDefineRule(DeleteClientUserDefineRuleRequest request);
+
+    CompletableFuture<DeleteCloudVendorAccountAKResponse> deleteCloudVendorAccountAK(DeleteCloudVendorAccountAKRequest request);
 
     CompletableFuture<DeleteContainerDefenseRuleResponse> deleteContainerDefenseRule(DeleteContainerDefenseRuleRequest request);
 
@@ -196,7 +252,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteCustomBlockRecordResponse> deleteCustomBlockRecord(DeleteCustomBlockRecordRequest request);
 
+    CompletableFuture<DeleteCustomizeReportResponse> deleteCustomizeReport(DeleteCustomizeReportRequest request);
+
+    CompletableFuture<DeleteCustomizedDictResponse> deleteCustomizedDict(DeleteCustomizedDictRequest request);
+
     CompletableFuture<DeleteCycleTaskResponse> deleteCycleTask(DeleteCycleTaskRequest request);
+
+    CompletableFuture<DeleteDingTalkResponse> deleteDingTalk(DeleteDingTalkRequest request);
 
     CompletableFuture<DeleteFileProtectRuleResponse> deleteFileProtectRule(DeleteFileProtectRuleRequest request);
 
@@ -216,6 +278,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteHoneypotProbeBindResponse> deleteHoneypotProbeBind(DeleteHoneypotProbeBindRequest request);
 
+    CompletableFuture<DeleteHybridProxyResponse> deleteHybridProxy(DeleteHybridProxyRequest request);
+
+    CompletableFuture<DeleteHybridProxyClusterResponse> deleteHybridProxyCluster(DeleteHybridProxyClusterRequest request);
+
+    CompletableFuture<DeleteIdcProbeResponse> deleteIdcProbe(DeleteIdcProbeRequest request);
+
     CompletableFuture<DeleteImageEventOperationResponse> deleteImageEventOperation(DeleteImageEventOperationRequest request);
 
     CompletableFuture<DeleteImageVulWhitelistResponse> deleteImageVulWhitelist(DeleteImageVulWhitelistRequest request);
@@ -234,6 +302,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteMaliciousNoteResponse> deleteMaliciousNote(DeleteMaliciousNoteRequest request);
 
+    /**
+      * You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.
+      *
+     */
+    CompletableFuture<DeleteMonitorAccountResponse> deleteMonitorAccount(DeleteMonitorAccountRequest request);
+
     CompletableFuture<DeleteOpaStrategyNewResponse> deleteOpaStrategyNew(DeleteOpaStrategyNewRequest request);
 
     CompletableFuture<DeleteOssScanConfigResponse> deleteOssScanConfig(DeleteOssScanConfigRequest request);
@@ -242,9 +316,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteSasContainerWebDefenseRuleResponse> deleteSasContainerWebDefenseRule(DeleteSasContainerWebDefenseRuleRequest request);
 
+    CompletableFuture<DeleteSearchConditionResponse> deleteSearchCondition(DeleteSearchConditionRequest request);
+
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DeleteSecurityEventMarkMissListResponse> deleteSecurityEventMarkMissList(DeleteSecurityEventMarkMissListRequest request);
 
     CompletableFuture<DeleteServiceTrailResponse> deleteServiceTrail(DeleteServiceTrailRequest request);
+
+    /**
+      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
+      *
+     */
+    CompletableFuture<DeleteSoarStrategyTaskResponse> deleteSoarStrategyTask(DeleteSoarStrategyTaskRequest request);
 
     CompletableFuture<DeleteStrategyResponse> deleteStrategy(DeleteStrategyRequest request);
 
@@ -274,6 +360,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAgentInstallStatusResponse> describeAgentInstallStatus(DescribeAgentInstallStatusRequest request);
 
+    /**
+      * You can call this operation only when the agentless detection feature is purchased by using the pay-as-you-go billing method within your Alibaba Cloud account.
+      *
+     */
+    CompletableFuture<DescribeAgentlessSensitiveFileByKeyResponse> describeAgentlessSensitiveFileByKey(DescribeAgentlessSensitiveFileByKeyRequest request);
+
     CompletableFuture<DescribeAlarmEventDetailResponse> describeAlarmEventDetail(DescribeAlarmEventDetailRequest request);
 
     CompletableFuture<DescribeAlarmEventStackInfoResponse> describeAlarmEventStackInfo(DescribeAlarmEventStackInfoRequest request);
@@ -284,21 +376,31 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAllImageBaselineResponse> describeAllImageBaseline(DescribeAllImageBaselineRequest request);
 
+    CompletableFuture<DescribeAllRegionsStatisticsResponse> describeAllRegionsStatistics(DescribeAllRegionsStatisticsRequest request);
+
     CompletableFuture<DescribeAntiBruteForceRulesResponse> describeAntiBruteForceRules(DescribeAntiBruteForceRulesRequest request);
 
     CompletableFuture<DescribeAppVulScanCycleResponse> describeAppVulScanCycle(DescribeAppVulScanCycleRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DescribeAssetDetailByUuidResponse> describeAssetDetailByUuid(DescribeAssetDetailByUuidRequest request);
 
     CompletableFuture<DescribeAssetDetailByUuidsResponse> describeAssetDetailByUuids(DescribeAssetDetailByUuidsRequest request);
 
     CompletableFuture<DescribeAssetSummaryResponse> describeAssetSummary(DescribeAssetSummaryRequest request);
 
+    CompletableFuture<DescribeAssetsScaProcessNumResponse> describeAssetsScaProcessNum(DescribeAssetsScaProcessNumRequest request);
+
     CompletableFuture<DescribeAssetsSecurityEventSummaryResponse> describeAssetsSecurityEventSummary(DescribeAssetsSecurityEventSummaryRequest request);
 
     CompletableFuture<DescribeAttachRecordsResponse> describeAttachRecords(DescribeAttachRecordsRequest request);
 
     CompletableFuture<DescribeAttackAnalysisDataResponse> describeAttackAnalysisData(DescribeAttackAnalysisDataRequest request);
+
+    CompletableFuture<DescribeAttestorsResponse> describeAttestors(DescribeAttestorsRequest request);
 
     CompletableFuture<DescribeAutoDelConfigResponse> describeAutoDelConfig(DescribeAutoDelConfigRequest request);
 
@@ -324,15 +426,27 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeBackupRestoreCountResponse> describeBackupRestoreCount(DescribeBackupRestoreCountRequest request);
 
+    CompletableFuture<DescribeBinarySecurityPoliciesResponse> describeBinarySecurityPolicies(DescribeBinarySecurityPoliciesRequest request);
+
     CompletableFuture<DescribeBruteForceRecordsResponse> describeBruteForceRecords(DescribeBruteForceRecordsRequest request);
 
     CompletableFuture<DescribeBruteForceSummaryResponse> describeBruteForceSummary(DescribeBruteForceSummaryRequest request);
 
     CompletableFuture<DescribeCanFixVulListResponse> describeCanFixVulList(DescribeCanFixVulListRequest request);
 
+    CompletableFuture<DescribeCanTrySasResponse> describeCanTrySas(DescribeCanTrySasRequest request);
+
+    CompletableFuture<DescribeChartDataResponse> describeChartData(DescribeChartDataRequest request);
+
+    CompletableFuture<DescribeChartListResponse> describeChartList(DescribeChartListRequest request);
+
     CompletableFuture<DescribeCheckEcsWarningsResponse> describeCheckEcsWarnings(DescribeCheckEcsWarningsRequest request);
 
     CompletableFuture<DescribeCheckFixDetailsResponse> describeCheckFixDetails(DescribeCheckFixDetailsRequest request);
+
+    CompletableFuture<DescribeCheckResultResponse> describeCheckResult(DescribeCheckResultRequest request);
+
+    CompletableFuture<DescribeCheckWarningCountResponse> describeCheckWarningCount(DescribeCheckWarningCountRequest request);
 
     CompletableFuture<DescribeCheckWarningDetailResponse> describeCheckWarningDetail(DescribeCheckWarningDetailRequest request);
 
@@ -346,6 +460,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeClientConfStrategyResponse> describeClientConfStrategy(DescribeClientConfStrategyRequest request);
 
+    CompletableFuture<DescribeClientProblemTypeResponse> describeClientProblemType(DescribeClientProblemTypeRequest request);
+
     /**
       * You can search for an asset by using search conditions, such as the instance ID, instance name, virtual private cloud (VPC) ID, region, and public IP address. You can also configure a logical relationship between multiple search conditions to search for the assets that meet the search conditions.
       *
@@ -358,7 +474,13 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeCloudProductFieldStatisticsResponse> describeCloudProductFieldStatistics(DescribeCloudProductFieldStatisticsRequest request);
 
+    CompletableFuture<DescribeCloudVendorAccountAKListResponse> describeCloudVendorAccountAKList(DescribeCloudVendorAccountAKListRequest request);
+
     CompletableFuture<DescribeClusterBasicInfoResponse> describeClusterBasicInfo(DescribeClusterBasicInfoRequest request);
+
+    CompletableFuture<DescribeClusterHostSecuritySummaryResponse> describeClusterHostSecuritySummary(DescribeClusterHostSecuritySummaryRequest request);
+
+    CompletableFuture<DescribeClusterImageSecuritySummaryResponse> describeClusterImageSecuritySummary(DescribeClusterImageSecuritySummaryRequest request);
 
     CompletableFuture<DescribeClusterInfoListResponse> describeClusterInfoList(DescribeClusterInfoListRequest request);
 
@@ -380,9 +502,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeContainerCriteriaResponse> describeContainerCriteria(DescribeContainerCriteriaRequest request);
 
+    CompletableFuture<DescribeContainerFieldStatisticsResponse> describeContainerFieldStatistics(DescribeContainerFieldStatisticsRequest request);
+
+    CompletableFuture<DescribeContainerGroupedFieldDetailResponse> describeContainerGroupedFieldDetail(DescribeContainerGroupedFieldDetailRequest request);
+
     CompletableFuture<DescribeContainerInstancesResponse> describeContainerInstances(DescribeContainerInstancesRequest request);
 
     CompletableFuture<DescribeContainerScanConfigResponse> describeContainerScanConfig(DescribeContainerScanConfigRequest request);
+
+    CompletableFuture<DescribeContainerServiceK8sClusterKritisStatusResponse> describeContainerServiceK8sClusterKritisStatus(DescribeContainerServiceK8sClusterKritisStatusRequest request);
+
+    CompletableFuture<DescribeContainerServiceK8sClusterNamespacesResponse> describeContainerServiceK8sClusterNamespaces(DescribeContainerServiceK8sClusterNamespacesRequest request);
+
+    CompletableFuture<DescribeContainerServiceK8sClustersResponse> describeContainerServiceK8sClusters(DescribeContainerServiceK8sClustersRequest request);
 
     /**
       * Only users who created a Container Registry Enterprise Edition instance can call this operation.
@@ -402,7 +534,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeCustomBlockRecordsResponse> describeCustomBlockRecords(DescribeCustomBlockRecordsRequest request);
 
+    CompletableFuture<DescribeCustomizeReportConfigDetailResponse> describeCustomizeReportConfigDetail(DescribeCustomizeReportConfigDetailRequest request);
+
+    CompletableFuture<DescribeCustomizeReportListResponse> describeCustomizeReportList(DescribeCustomizeReportListRequest request);
+
+    CompletableFuture<DescribeCustomizedDictUploadInfoResponse> describeCustomizedDictUploadInfo(DescribeCustomizedDictUploadInfoRequest request);
+
+    CompletableFuture<DescribeCustomizedStrategyTargetsResponse> describeCustomizedStrategyTargets(DescribeCustomizedStrategyTargetsRequest request);
+
     CompletableFuture<DescribeCycleTaskListResponse> describeCycleTaskList(DescribeCycleTaskListRequest request);
+
+    CompletableFuture<DescribeDataSourceResponse> describeDataSource(DescribeDataSourceRequest request);
+
+    CompletableFuture<DescribeDefaultKeyInfoResponse> describeDefaultKeyInfo(DescribeDefaultKeyInfoRequest request);
 
     CompletableFuture<DescribeDefaultProxyInstallVersionResponse> describeDefaultProxyInstallVersion(DescribeDefaultProxyInstallVersionRequest request);
 
@@ -413,6 +557,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDomainDetailResponse> describeDomainDetail(DescribeDomainDetailRequest request);
 
     CompletableFuture<DescribeDomainListResponse> describeDomainList(DescribeDomainListRequest request);
+
+    CompletableFuture<DescribeDomainSecureAlarmListResponse> describeDomainSecureAlarmList(DescribeDomainSecureAlarmListRequest request);
+
+    CompletableFuture<DescribeDomainSecureRiskListResponse> describeDomainSecureRiskList(DescribeDomainSecureRiskListRequest request);
+
+    CompletableFuture<DescribeDomainSecureScoreResponse> describeDomainSecureScore(DescribeDomainSecureScoreRequest request);
+
+    CompletableFuture<DescribeDomainSecureStatisticsResponse> describeDomainSecureStatistics(DescribeDomainSecureStatisticsRequest request);
+
+    CompletableFuture<DescribeDomainSecureVulListResponse> describeDomainSecureVulList(DescribeDomainSecureVulListRequest request);
+
+    CompletableFuture<DescribeDynamicDictResponse> describeDynamicDict(DescribeDynamicDictRequest request);
+
+    CompletableFuture<DescribeDynamicDictUploadInfoResponse> describeDynamicDictUploadInfo(DescribeDynamicDictUploadInfoRequest request);
 
     CompletableFuture<DescribeEmgUserAgreementResponse> describeEmgUserAgreement(DescribeEmgUserAgreementRequest request);
 
@@ -462,6 +620,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeHoneyPotSuspStatisticsResponse> describeHoneyPotSuspStatistics(DescribeHoneyPotSuspStatisticsRequest request);
 
+    CompletableFuture<DescribeIdcAssetCriteriaResponse> describeIdcAssetCriteria(DescribeIdcAssetCriteriaRequest request);
+
+    CompletableFuture<DescribeIdcProbeScanResultListResponse> describeIdcProbeScanResultList(DescribeIdcProbeScanResultListRequest request);
+
     CompletableFuture<DescribeImageResponse> describeImage(DescribeImageRequest request);
 
     CompletableFuture<DescribeImageBaselineCheckResultResponse> describeImageBaselineCheckResult(DescribeImageBaselineCheckResultRequest request);
@@ -473,6 +635,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeImageBaselineItemListResponse> describeImageBaselineItemList(DescribeImageBaselineItemListRequest request);
 
     CompletableFuture<DescribeImageBaselineStrategyResponse> describeImageBaselineStrategy(DescribeImageBaselineStrategyRequest request);
+
+    CompletableFuture<DescribeImageBuildRiskByKeyResponse> describeImageBuildRiskByKey(DescribeImageBuildRiskByKeyRequest request);
+
+    CompletableFuture<DescribeImageBuildRiskListResponse> describeImageBuildRiskList(DescribeImageBuildRiskListRequest request);
 
     CompletableFuture<DescribeImageCriteriaResponse> describeImageCriteria(DescribeImageCriteriaRequest request);
 
@@ -491,6 +657,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeImageInstancesResponse> describeImageInstances(DescribeImageInstancesRequest request);
 
     CompletableFuture<DescribeImageLatestScanTaskResponse> describeImageLatestScanTask(DescribeImageLatestScanTaskRequest request);
+
+    CompletableFuture<DescribeImageListByBuildRiskResponse> describeImageListByBuildRisk(DescribeImageListByBuildRiskRequest request);
 
     CompletableFuture<DescribeImageListBySensitiveFileResponse> describeImageListBySensitiveFile(DescribeImageListBySensitiveFileRequest request);
 
@@ -543,7 +711,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeInstanceStatisticsResponse> describeInstanceStatistics(DescribeInstanceStatisticsRequest request);
 
-    CompletableFuture<DescribeIpTagsResponse> describeIpTags(DescribeIpTagsRequest request);
+    CompletableFuture<DescribeInstanceVulStatisticsResponse> describeInstanceVulStatistics(DescribeInstanceVulStatisticsRequest request);
 
     CompletableFuture<DescribeLatestScanTaskResponse> describeLatestScanTask(DescribeLatestScanTaskRequest request);
 
@@ -564,6 +732,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeModuleConfigResponse> describeModuleConfig(DescribeModuleConfigRequest request);
 
     CompletableFuture<DescribeMonitorAccountsResponse> describeMonitorAccounts(DescribeMonitorAccountsRequest request);
+
+    CompletableFuture<DescribeNeedAsyncQueryResponse> describeNeedAsyncQuery(DescribeNeedAsyncQueryRequest request);
 
     CompletableFuture<DescribeNoticeConfigResponse> describeNoticeConfig(DescribeNoticeConfigRequest request);
 
@@ -593,6 +763,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribePropertyScaItemResponse> describePropertyScaItem(DescribePropertyScaItemRequest request);
 
+    CompletableFuture<DescribePropertyScaProcessDetailResponse> describePropertyScaProcessDetail(DescribePropertyScaProcessDetailRequest request);
+
     CompletableFuture<DescribePropertyScheduleConfigResponse> describePropertyScheduleConfig(DescribePropertyScheduleConfigRequest request);
 
     CompletableFuture<DescribePropertySoftwareDetailResponse> describePropertySoftwareDetail(DescribePropertySoftwareDetailRequest request);
@@ -601,13 +773,27 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribePropertyTypeScaItemResponse> describePropertyTypeScaItem(DescribePropertyTypeScaItemRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DescribePropertyUsageNewestResponse> describePropertyUsageNewest(DescribePropertyUsageNewestRequest request);
+
+    /**
+      * Only users who purchase the Enterprise or Ultimate edition of Security Center can call this operation.
+      *
+     */
+    CompletableFuture<DescribePropertyUsageTopResponse> describePropertyUsageTop(DescribePropertyUsageTopRequest request);
 
     CompletableFuture<DescribePropertyUserDetailResponse> describePropertyUserDetail(DescribePropertyUserDetailRequest request);
 
     CompletableFuture<DescribePropertyUserItemResponse> describePropertyUserItem(DescribePropertyUserItemRequest request);
 
     CompletableFuture<DescribeQuaraFileDownloadInfoResponse> describeQuaraFileDownloadInfo(DescribeQuaraFileDownloadInfoRequest request);
+
+    CompletableFuture<DescribeReportExportResponse> describeReportExport(DescribeReportExportRequest request);
+
+    CompletableFuture<DescribeReportRecipientStatusResponse> describeReportRecipientStatus(DescribeReportRecipientStatusRequest request);
 
     /**
       * If the data on your servers is encrypted by ransomware, you can create a restoration task to restore the data on your servers by using backup data in Security Center.
@@ -663,6 +849,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeScanTaskStatisticsResponse> describeScanTaskStatistics(DescribeScanTaskStatisticsRequest request);
 
+    CompletableFuture<DescribeScreenScoreThreadResponse> describeScreenScoreThread(DescribeScreenScoreThreadRequest request);
+
     CompletableFuture<DescribeSearchConditionResponse> describeSearchCondition(DescribeSearchConditionRequest request);
 
     CompletableFuture<DescribeSecureSuggestionResponse> describeSecureSuggestion(DescribeSecureSuggestionRequest request);
@@ -690,6 +878,36 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request);
 
+    /**
+      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
+      *
+     */
+    CompletableFuture<DescribeSoarStrategiesResponse> describeSoarStrategies(DescribeSoarStrategiesRequest request);
+
+    /**
+      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
+      *
+     */
+    CompletableFuture<DescribeSoarStrategyParamResponse> describeSoarStrategyParam(DescribeSoarStrategyParamRequest request);
+
+    /**
+      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
+      *
+     */
+    CompletableFuture<DescribeSoarStrategyTaskDetailResponse> describeSoarStrategyTaskDetail(DescribeSoarStrategyTaskDetailRequest request);
+
+    /**
+      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
+      *
+     */
+    CompletableFuture<DescribeSoarStrategyTasksResponse> describeSoarStrategyTasks(DescribeSoarStrategyTasksRequest request);
+
+    /**
+      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
+      *
+     */
+    CompletableFuture<DescribeSoarSubscribedStrategyResponse> describeSoarSubscribedStrategy(DescribeSoarSubscribedStrategyRequest request);
+
     CompletableFuture<DescribeStrategyResponse> describeStrategy(DescribeStrategyRequest request);
 
     CompletableFuture<DescribeStrategyDetailResponse> describeStrategyDetail(DescribeStrategyDetailRequest request);
@@ -699,6 +917,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeStrategyTargetResponse> describeStrategyTarget(DescribeStrategyTargetRequest request);
 
     CompletableFuture<DescribeSummaryInfoResponse> describeSummaryInfo(DescribeSummaryInfoRequest request);
+
+    CompletableFuture<DescribeSupervisonInfoResponse> describeSupervisonInfo(DescribeSupervisonInfoRequest request);
 
     CompletableFuture<DescribeSupportRegionResponse> describeSupportRegion(DescribeSupportRegionRequest request);
 
@@ -716,6 +936,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSuspiciousUUIDConfigResponse> describeSuspiciousUUIDConfig(DescribeSuspiciousUUIDConfigRequest request);
 
+    CompletableFuture<DescribeSyncAssetTaskListResponse> describeSyncAssetTaskList(DescribeSyncAssetTaskListRequest request);
+
+    CompletableFuture<DescribeSyncAssetTaskLogDetailResponse> describeSyncAssetTaskLogDetail(DescribeSyncAssetTaskLogDetailRequest request);
+
     CompletableFuture<DescribeTargetResponse> describeTarget(DescribeTargetRequest request);
 
     CompletableFuture<DescribeTaskErrorLogResponse> describeTaskErrorLog(DescribeTaskErrorLogRequest request);
@@ -732,6 +956,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeUniBackupPolicyDetailResponse> describeUniBackupPolicyDetail(DescribeUniBackupPolicyDetailRequest request);
 
+    CompletableFuture<DescribeUniBackupStatisticsResponse> describeUniBackupStatistics(DescribeUniBackupStatisticsRequest request);
+
     CompletableFuture<DescribeUniRecoverableListResponse> describeUniRecoverableList(DescribeUniRecoverableListRequest request);
 
     CompletableFuture<DescribeUniSupportRegionResponse> describeUniSupportRegion(DescribeUniSupportRegionRequest request);
@@ -742,11 +968,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeUserLayoutAuthorizationResponse> describeUserLayoutAuthorization(DescribeUserLayoutAuthorizationRequest request);
 
+    CompletableFuture<DescribeUserSettingResponse> describeUserSetting(DescribeUserSettingRequest request);
+
     CompletableFuture<DescribeUuidsByVulNamesResponse> describeUuidsByVulNames(DescribeUuidsByVulNamesRequest request);
 
     CompletableFuture<DescribeVendorListResponse> describeVendorList(DescribeVendorListRequest request);
 
     CompletableFuture<DescribeVersionConfigResponse> describeVersionConfig(DescribeVersionConfigRequest request);
+
+    CompletableFuture<DescribeVolDingdingMessageResponse> describeVolDingdingMessage(DescribeVolDingdingMessageRequest request);
 
     CompletableFuture<DescribeVpcHoneyPotCriteriaResponse> describeVpcHoneyPotCriteria(DescribeVpcHoneyPotCriteriaRequest request);
 
@@ -816,6 +1046,50 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeWebPathResponse> describeWebPath(DescribeWebPathRequest request);
 
+    /**
+      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
+      *
+     */
+    CompletableFuture<DescribeWhiteListAssetResponse> describeWhiteListAsset(DescribeWhiteListAssetRequest request);
+
+    /**
+      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
+      *
+     */
+    CompletableFuture<DescribeWhiteListAuthorizeResponse> describeWhiteListAuthorize(DescribeWhiteListAuthorizeRequest request);
+
+    /**
+      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in-use, you can call this operation.
+      *
+     */
+    CompletableFuture<DescribeWhiteListEffectiveAssetsResponse> describeWhiteListEffectiveAssets(DescribeWhiteListEffectiveAssetsRequest request);
+
+    /**
+      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
+      *
+     */
+    CompletableFuture<DescribeWhiteListProcessResponse> describeWhiteListProcess(DescribeWhiteListProcessRequest request);
+
+    /**
+      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
+      *
+     */
+    CompletableFuture<DescribeWhiteListStrategyListResponse> describeWhiteListStrategyList(DescribeWhiteListStrategyListRequest request);
+
+    /**
+      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
+      *
+     */
+    CompletableFuture<DescribeWhiteListStrategyStatisticsResponse> describeWhiteListStrategyStatistics(DescribeWhiteListStrategyStatisticsRequest request);
+
+    /**
+      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in-use, you can call this operation.
+      *
+     */
+    CompletableFuture<DescribeWhiteListStrategyUuidCountResponse> describeWhiteListStrategyUuidCount(DescribeWhiteListStrategyUuidCountRequest request);
+
+    CompletableFuture<DingTalkOnlineTestResponse> dingTalkOnlineTest(DingTalkOnlineTestRequest request);
+
     CompletableFuture<DisableBruteForceRecordResponse> disableBruteForceRecord(DisableBruteForceRecordRequest request);
 
     CompletableFuture<DisableCustomBlockRecordResponse> disableCustomBlockRecord(DisableCustomBlockRecordRequest request);
@@ -826,7 +1100,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EnableCustomInstanceBlockRecordResponse> enableCustomInstanceBlockRecord(EnableCustomInstanceBlockRecordRequest request);
 
+    /**
+      * You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.
+      *
+     */
+    CompletableFuture<EnableServiceAccessResourceDirectoryResponse> enableServiceAccessResourceDirectory(EnableServiceAccessResourceDirectoryRequest request);
+
     CompletableFuture<ExecStrategyResponse> execStrategy(ExecStrategyRequest request);
+
+    CompletableFuture<ExportCustomizeReportResponse> exportCustomizeReport(ExportCustomizeReportRequest request);
 
     /**
       * You can call the operation to export the following check result lists:
@@ -853,11 +1135,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FindContainerNetworkConnectResponse> findContainerNetworkConnect(FindContainerNetworkConnectRequest request);
 
+    CompletableFuture<FinishGuidTaskResponse> finishGuidTask(FinishGuidTaskRequest request);
+
     CompletableFuture<FixCheckWarningsResponse> fixCheckWarnings(FixCheckWarningsRequest request);
+
+    CompletableFuture<GenerateDynamicDictResponse> generateDynamicDict(GenerateDynamicDictRequest request);
 
     CompletableFuture<GenerateK8sAccessInfoResponse> generateK8sAccessInfo(GenerateK8sAccessInfoRequest request);
 
     CompletableFuture<GenerateOnceTaskResponse> generateOnceTask(GenerateOnceTaskRequest request);
+
+    CompletableFuture<GetAccountLabelResponse> getAccountLabel(GetAccountLabelRequest request);
+
+    /**
+      * Only the Ultimate edition of Security Center supports this operation.
+      *
+     */
+    CompletableFuture<GetAegisContainerPluginRuleResponse> getAegisContainerPluginRule(GetAegisContainerPluginRuleRequest request);
 
     CompletableFuture<GetAegisContainerPluginRuleCriteriaResponse> getAegisContainerPluginRuleCriteria(GetAegisContainerPluginRuleCriteriaRequest request);
 
@@ -875,9 +1169,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAssetsPropertyItemResponse> getAssetsPropertyItem(GetAssetsPropertyItemRequest request);
 
+    CompletableFuture<GetAttackTypeListResponse> getAttackTypeList(GetAttackTypeListRequest request);
+
+    CompletableFuture<GetAuthSummaryResponse> getAuthSummary(GetAuthSummaryRequest request);
+
     CompletableFuture<GetAuthVersionStatisticResponse> getAuthVersionStatistic(GetAuthVersionStatisticRequest request);
 
+    CompletableFuture<GetBackupAutoConfigStatusResponse> getBackupAutoConfigStatus(GetBackupAutoConfigStatusRequest request);
+
     CompletableFuture<GetBackupStorageCountResponse> getBackupStorageCount(GetBackupStorageCountRequest request);
+
+    CompletableFuture<GetCanTrySasResponse> getCanTrySas(GetCanTrySasRequest request);
 
     CompletableFuture<GetCheckConfigResponse> getCheckConfig(GetCheckConfigRequest request);
 
@@ -888,6 +1190,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCheckRiskStatisticsResponse> getCheckRiskStatistics(GetCheckRiskStatisticsRequest request);
 
     CompletableFuture<GetCheckSaleResponse> getCheckSale(GetCheckSaleRequest request);
+
+    /**
+      * You must purchase the configuration assessment feature before you can use the feature.
+      *
+     */
+    CompletableFuture<GetCheckStructureResponse> getCheckStructure(GetCheckStructureRequest request);
 
     CompletableFuture<GetCheckSummaryResponse> getCheckSummary(GetCheckSummaryRequest request);
 
@@ -918,6 +1226,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCommonSwitchConfigResponse> getCommonSwitchConfig(GetCommonSwitchConfigRequest request);
 
     CompletableFuture<GetContainerDefenseRuleDetailResponse> getContainerDefenseRuleDetail(GetContainerDefenseRuleDetailRequest request);
+
+    CompletableFuture<GetDataTrendResponse> getDataTrend(GetDataTrendRequest request);
+
+    CompletableFuture<GetDefenceCountResponse> getDefenceCount(GetDefenceCountRequest request);
 
     CompletableFuture<GetFileDetectApiInvokeInfoResponse> getFileDetectApiInvokeInfo(GetFileDetectApiInvokeInfoRequest request);
 
@@ -967,11 +1279,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetLastOnceTaskInfoResponse> getLastOnceTaskInfo(GetLastOnceTaskInfoRequest request);
 
+    CompletableFuture<GetLocalDefaultRegionResponse> getLocalDefaultRegion(GetLocalDefaultRegionRequest request);
+
     CompletableFuture<GetLogMetaResponse> getLogMeta(GetLogMetaRequest request);
 
     CompletableFuture<GetMaliciousFileWhitelistConfigResponse> getMaliciousFileWhitelistConfig(GetMaliciousFileWhitelistConfigRequest request);
 
     CompletableFuture<GetModuleConfigResponse> getModuleConfig(GetModuleConfigRequest request);
+
+    CompletableFuture<GetModuleConfigStatusResponse> getModuleConfigStatus(GetModuleConfigStatusRequest request);
 
     CompletableFuture<GetModuleTrialAuthInfoResponse> getModuleTrialAuthInfo(GetModuleTrialAuthInfoRequest request);
 
@@ -999,6 +1315,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetPropertyScheduleConfigResponse> getPropertyScheduleConfig(GetPropertyScheduleConfigRequest request);
 
+    CompletableFuture<GetRdTreeResponse> getRdTree(GetRdTreeRequest request);
+
     CompletableFuture<GetRulesCountResponse> getRulesCount(GetRulesCountRequest request);
 
     CompletableFuture<GetSasContainerWebDefenseRuleApplicationResponse> getSasContainerWebDefenseRuleApplication(GetSasContainerWebDefenseRuleApplicationRequest request);
@@ -1012,6 +1330,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetServiceTrailResponse> getServiceTrail(GetServiceTrailRequest request);
 
     CompletableFuture<GetStrategyTemplateDetailResponse> getStrategyTemplateDetail(GetStrategyTemplateDetailRequest request);
+
+    CompletableFuture<GetSupportedModulesResponse> getSupportedModules(GetSupportedModulesRequest request);
 
     CompletableFuture<GetSuspiciousStatisticsResponse> getSuspiciousStatistics(GetSuspiciousStatisticsRequest request);
 
@@ -1035,6 +1355,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<IgnoreHcCheckWarningsResponse> ignoreHcCheckWarnings(IgnoreHcCheckWarningsRequest request);
 
+    CompletableFuture<IgnoreIdcProbeScanResultResponse> ignoreIdcProbeScanResult(IgnoreIdcProbeScanResultRequest request);
+
     CompletableFuture<InstallBackupClientResponse> installBackupClient(InstallBackupClientRequest request);
 
     /**
@@ -1052,6 +1374,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallUniBackupAgentResponse> installUniBackupAgent(InstallUniBackupAgentRequest request);
 
     CompletableFuture<JoinWebLockProcessWhiteListResponse> joinWebLockProcessWhiteList(JoinWebLockProcessWhiteListRequest request);
+
+    /**
+      * You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.
+      *
+     */
+    CompletableFuture<ListAccountsInResourceDirectoryResponse> listAccountsInResourceDirectory(ListAccountsInResourceDirectoryRequest request);
 
     CompletableFuture<ListAegisContainerPluginRuleResponse> listAegisContainerPluginRule(ListAegisContainerPluginRuleRequest request);
 
@@ -1073,9 +1401,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAssetSelectionTargetResponse> listAssetSelectionTarget(ListAssetSelectionTargetRequest request);
 
+    CompletableFuture<ListAutoTagRulesResponse> listAutoTagRules(ListAutoTagRulesRequest request);
+
     CompletableFuture<ListAvailableHoneypotResponse> listAvailableHoneypot(ListAvailableHoneypotRequest request);
 
     CompletableFuture<ListBackupRecordResponse> listBackupRecord(ListBackupRecordRequest request);
+
+    CompletableFuture<ListBaselineCheckWhiteRecordResponse> listBaselineCheckWhiteRecord(ListBaselineCheckWhiteRecordRequest request);
 
     CompletableFuture<ListCheckInstanceResultResponse> listCheckInstanceResult(ListCheckInstanceResultRequest request);
 
@@ -1167,6 +1499,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListK8sAccessInfoResponse> listK8sAccessInfo(ListK8sAccessInfoRequest request);
 
+    CompletableFuture<ListLogShipperRegionsResponse> listLogShipperRegions(ListLogShipperRegionsRequest request);
+
     CompletableFuture<ListMaliciousFileWhitelistConfigsResponse> listMaliciousFileWhitelistConfigs(ListMaliciousFileWhitelistConfigsRequest request);
 
     CompletableFuture<ListObjectScanEventResponse> listObjectScanEvent(ListObjectScanEventRequest request);
@@ -1188,6 +1522,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPrivateRegistryTypeResponse> listPrivateRegistryType(ListPrivateRegistryTypeRequest request);
 
     CompletableFuture<ListQueryRaspAppInfoResponse> listQueryRaspAppInfo(ListQueryRaspAppInfoRequest request);
+
+    /**
+      * You must use the management account of your resource directory or a delegated administrator account of Security Center to call this operation.
+      *
+     */
+    CompletableFuture<ListRdDefaultSyncListResponse> listRdDefaultSyncList(ListRdDefaultSyncListRequest request);
 
     CompletableFuture<ListRuleTargetAllResponse> listRuleTargetAll(ListRuleTargetAllRequest request);
 
@@ -1253,6 +1593,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyClientUserDefineRuleResponse> modifyClientUserDefineRule(ModifyClientUserDefineRuleRequest request);
 
+    CompletableFuture<ModifyCloudVendorAccountAKResponse> modifyCloudVendorAccountAK(ModifyCloudVendorAccountAKRequest request);
+
     CompletableFuture<ModifyClusterCnnfStatusUserConfirmResponse> modifyClusterCnnfStatusUserConfirm(ModifyClusterCnnfStatusUserConfirmRequest request);
 
     CompletableFuture<ModifyConcernNecessityResponse> modifyConcernNecessity(ModifyConcernNecessityRequest request);
@@ -1271,9 +1613,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyCycleTaskResponse> modifyCycleTask(ModifyCycleTaskRequest request);
 
+    /**
+      * You can call this operation only if you use Security Center Enterprise.
+      *
+     */
+    CompletableFuture<ModifyDingTalkStatusResponse> modifyDingTalkStatus(ModifyDingTalkStatusRequest request);
+
     CompletableFuture<ModifyEmgVulSubmitResponse> modifyEmgVulSubmit(ModifyEmgVulSubmitRequest request);
 
     CompletableFuture<ModifyGroupPropertyResponse> modifyGroupProperty(ModifyGroupPropertyRequest request);
+
+    CompletableFuture<ModifyIdcProbeResponse> modifyIdcProbe(ModifyIdcProbeRequest request);
 
     CompletableFuture<ModifyImageFixCycleConfigResponse> modifyImageFixCycleConfig(ModifyImageFixCycleConfigRequest request);
 
@@ -1303,31 +1653,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyOperateVulResponse> modifyOperateVul(ModifyOperateVulRequest request);
 
+    CompletableFuture<ModifyPostPayModuleSwitchResponse> modifyPostPayModuleSwitch(ModifyPostPayModuleSwitchRequest request);
+
+    /**
+      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
+      *
+     */
+    CompletableFuture<ModifyProcessWhiteListResponse> modifyProcessWhiteList(ModifyProcessWhiteListRequest request);
+
     CompletableFuture<ModifyPropertyScheduleConfigResponse> modifyPropertyScheduleConfig(ModifyPropertyScheduleConfigRequest request);
 
     CompletableFuture<ModifyPushAllTaskResponse> modifyPushAllTask(ModifyPushAllTaskRequest request);
 
     CompletableFuture<ModifyRefreshProcessInfoResponse> modifyRefreshProcessInfo(ModifyRefreshProcessInfoRequest request);
 
-    /**
-      * @deprecated
-      * This operation is phased out. You can use the following operations:
-      * \\-To **ignore a check item**, use the AddCheckResultWhiteList operation.
-      * \\-To **cancel ignoring a check item**, use the RemoveCheckResultWhiteList operation.
-      *
-     */
-    CompletableFuture<ModifyRiskCheckStatusResponse> modifyRiskCheckStatus(ModifyRiskCheckStatusRequest request);
-
-    /**
-      * @deprecated
-      * This operation is phased out. You can use the following operations:
-      * \\-To **ignore a risk item**, use the AddCheckInstanceResultWhiteList operation.
-      * \\-To **cancel ignoring a risk item**, use the RemoveCheckInstanceResultWhiteList operation.
-      *
-     */
-    CompletableFuture<ModifyRiskSingleResultStatusResponse> modifyRiskSingleResultStatus(ModifyRiskSingleResultStatusRequest request);
-
     CompletableFuture<ModifySasContainerWebDefenseRuleResponse> modifySasContainerWebDefenseRule(ModifySasContainerWebDefenseRuleRequest request);
+
+    CompletableFuture<ModifySearchConditionResponse> modifySearchCondition(ModifySearchConditionRequest request);
 
     /**
       * @deprecated
@@ -1337,6 +1679,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySecurityCheckScheduleConfigResponse> modifySecurityCheckScheduleConfig(ModifySecurityCheckScheduleConfigRequest request);
 
     CompletableFuture<ModifySecurityEventMarkMissIndividuallyResponse> modifySecurityEventMarkMissIndividually(ModifySecurityEventMarkMissIndividuallyRequest request);
+
+    /**
+      * Only the Enterprise and Ultimate editions of Security Center support this API operation.
+      *
+     */
+    CompletableFuture<ModifySoarStrategySubscribeResponse> modifySoarStrategySubscribe(ModifySoarStrategySubscribeRequest request);
 
     CompletableFuture<ModifyStartVulScanResponse> modifyStartVulScan(ModifyStartVulScanRequest request);
 
@@ -1348,6 +1696,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyUniBackupPolicyResponse> modifyUniBackupPolicy(ModifyUniBackupPolicyRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ModifyVpcHoneyPotResponse> modifyVpcHoneyPot(ModifyVpcHoneyPotRequest request);
 
     CompletableFuture<ModifyVulConfigResponse> modifyVulConfig(ModifyVulConfigRequest request);
@@ -1368,6 +1720,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyWebLockProcessStatusResponse> modifyWebLockProcessStatus(ModifyWebLockProcessStatusRequest request);
 
+    /**
+      * If an exception occurs when you enable or disable the web tamper proofing feature for a server, you can call this operation to refresh the status of the web tamper proofing feature.
+      *
+     */
+    CompletableFuture<ModifyWebLockRefreshResponse> modifyWebLockRefresh(ModifyWebLockRefreshRequest request);
+
     CompletableFuture<ModifyWebLockStartResponse> modifyWebLockStart(ModifyWebLockStartRequest request);
 
     CompletableFuture<ModifyWebLockStatusResponse> modifyWebLockStatus(ModifyWebLockStatusRequest request);
@@ -1377,6 +1735,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyWebLockUpdateConfigResponse> modifyWebLockUpdateConfig(ModifyWebLockUpdateConfigRequest request);
 
     CompletableFuture<ModifyWebPathResponse> modifyWebPath(ModifyWebPathRequest request);
+
+    CompletableFuture<OpenBackupAutoConfigResponse> openBackupAutoConfig(OpenBackupAutoConfigRequest request);
 
     CompletableFuture<OpenPartialBuyResponse> openPartialBuy(OpenPartialBuyRequest request);
 
@@ -1410,6 +1770,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OperationCancelIgnoreSuspEventResponse> operationCancelIgnoreSuspEvent(OperationCancelIgnoreSuspEventRequest request);
 
+    CompletableFuture<OperationCustomizeReportChartResponse> operationCustomizeReportChart(OperationCustomizeReportChartRequest request);
+
     CompletableFuture<OperationSuspEventsResponse> operationSuspEvents(OperationSuspEventsRequest request);
 
     CompletableFuture<PageImageRegistryResponse> pageImageRegistry(PageImageRegistryRequest request);
@@ -1426,6 +1788,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PublicSyncAndCreateImageScanTaskResponse> publicSyncAndCreateImageScanTask(PublicSyncAndCreateImageScanTaskRequest request);
 
+    CompletableFuture<QueryAssetDetailByUUIDResponse> queryAssetDetailByUUID(QueryAssetDetailByUUIDRequest request);
+
     CompletableFuture<QueryAttackCountResponse> queryAttackCount(QueryAttackCountRequest request);
 
     CompletableFuture<QueryDiscoverDatabaseResponse> queryDiscoverDatabase(QueryDiscoverDatabaseRequest request);
@@ -1439,6 +1803,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryGroupIdByGroupNameResponse> queryGroupIdByGroupName(QueryGroupIdByGroupNameRequest request);
 
     CompletableFuture<QueryGroupedSecurityEventMarkMissListResponse> queryGroupedSecurityEventMarkMissList(QueryGroupedSecurityEventMarkMissListRequest request);
+
+    CompletableFuture<QueryGuidTaskListResponse> queryGuidTaskList(QueryGuidTaskListRequest request);
 
     CompletableFuture<QueryIncidentIconListResponse> queryIncidentIconList(QueryIncidentIconListRequest request);
 
@@ -1458,11 +1824,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RebootMachineResponse> rebootMachine(RebootMachineRequest request);
 
+    CompletableFuture<ReceiveFunctionTrialRewardByAliUidResponse> receiveFunctionTrialRewardByAliUid(ReceiveFunctionTrialRewardByAliUidRequest request);
+
     CompletableFuture<RefreshAssetsResponse> refreshAssets(RefreshAssetsRequest request);
 
     CompletableFuture<RefreshContainerAssetsResponse> refreshContainerAssets(RefreshContainerAssetsRequest request);
 
     CompletableFuture<RefreshOssBucketScanInfoResponse> refreshOssBucketScanInfo(RefreshOssBucketScanInfoRequest request);
+
+    CompletableFuture<RefreshRegistryTokenResponse> refreshRegistryToken(RefreshRegistryTokenRequest request);
 
     CompletableFuture<ReleaseSasInstanceResponse> releaseSasInstance(ReleaseSasInstanceRequest request);
 
@@ -1472,6 +1842,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ResetHoneypotResponse> resetHoneypot(ResetHoneypotRequest request);
 
+    CompletableFuture<ResetLogShipperResponse> resetLogShipper(ResetLogShipperRequest request);
+
     CompletableFuture<RetryAgentlessTaskResponse> retryAgentlessTask(RetryAgentlessTaskRequest request);
 
     CompletableFuture<RetryInstallProbeResponse> retryInstallProbe(RetryInstallProbeRequest request);
@@ -1480,9 +1852,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SasInstallCodeResponse> sasInstallCode(SasInstallCodeRequest request);
 
+    CompletableFuture<SaveCustomizeReportConfigResponse> saveCustomizeReportConfig(SaveCustomizeReportConfigRequest request);
+
     CompletableFuture<SaveImageBaselineStrategyResponse> saveImageBaselineStrategy(SaveImageBaselineStrategyRequest request);
 
     CompletableFuture<SaveSuspEventUserSettingResponse> saveSuspEventUserSetting(SaveSuspEventUserSettingRequest request);
+
+    /**
+      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or enabled the feature, you can call this operation.
+      *
+     */
+    CompletableFuture<SaveWhiteListStrategyResponse> saveWhiteListStrategy(SaveWhiteListStrategyRequest request);
+
+    CompletableFuture<SaveWhiteListStrategyAssetsResponse> saveWhiteListStrategyAssets(SaveWhiteListStrategyAssetsRequest request);
+
+    CompletableFuture<SendCustomizeReportResponse> sendCustomizeReport(SendCustomizeReportRequest request);
 
     CompletableFuture<SetClusterInterceptionConfigResponse> setClusterInterceptionConfig(SetClusterInterceptionConfigRequest request);
 
@@ -1491,6 +1875,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetRegistryScanDayNumResponse> setRegistryScanDayNum(SetRegistryScanDayNumRequest request);
 
     CompletableFuture<SetSensitiveDefineRuleConfigResponse> setSensitiveDefineRuleConfig(SetSensitiveDefineRuleConfigRequest request);
+
+    CompletableFuture<SetSyncRefreshRegionResponse> setSyncRefreshRegion(SetSyncRefreshRegionRequest request);
 
     /**
       * @deprecated
@@ -1502,6 +1888,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StartHoneypotResponse> startHoneypot(StartHoneypotRequest request);
 
+    CompletableFuture<StartIdcProbeScanResponse> startIdcProbeScan(StartIdcProbeScanRequest request);
+
     CompletableFuture<StartPreCheckDatabaseResponse> startPreCheckDatabase(StartPreCheckDatabaseRequest request);
 
     CompletableFuture<StartVirusScanTaskResponse> startVirusScanTask(StartVirusScanTaskRequest request);
@@ -1509,6 +1897,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopHoneypotResponse> stopHoneypot(StopHoneypotRequest request);
 
     CompletableFuture<SubmitCheckResponse> submitCheck(SubmitCheckRequest request);
+
+    CompletableFuture<SubmitOperationTaskResponse> submitOperationTask(SubmitOperationTaskRequest request);
+
+    CompletableFuture<TriggerCheckResponse> triggerCheck(TriggerCheckRequest request);
 
     CompletableFuture<UnMarkMonitorAccountsResponse> unMarkMonitorAccounts(UnMarkMonitorAccountsRequest request);
 
@@ -1530,9 +1922,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateAlarmEventResponse> updateAlarmEvent(UpdateAlarmEventRequest request);
 
+    CompletableFuture<UpdateBaselineCheckWhiteRecordResponse> updateBaselineCheckWhiteRecord(UpdateBaselineCheckWhiteRecordRequest request);
+
     CompletableFuture<UpdateClientAlertModeResponse> updateClientAlertMode(UpdateClientAlertModeRequest request);
 
     CompletableFuture<UpdateCommonSwitchConfigResponse> updateCommonSwitchConfig(UpdateCommonSwitchConfigRequest request);
+
+    CompletableFuture<UpdateCustomizeReportStatusResponse> updateCustomizeReportStatus(UpdateCustomizeReportStatusRequest request);
 
     CompletableFuture<UpdateFileProtectEventStatusResponse> updateFileProtectEventStatus(UpdateFileProtectEventStatusRequest request);
 
@@ -1566,9 +1962,29 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateOssScanConfigResponse> updateOssScanConfig(UpdateOssScanConfigRequest request);
 
+    CompletableFuture<UpdatePublishAutoUpgradeResponse> updatePublishAutoUpgrade(UpdatePublishAutoUpgradeRequest request);
+
+    CompletableFuture<UpdatePublishBatchResponse> updatePublishBatch(UpdatePublishBatchRequest request);
+
+    CompletableFuture<UpdatePublishCronResponse> updatePublishCron(UpdatePublishCronRequest request);
+
+    CompletableFuture<UpdatePublishGraySwitchResponse> updatePublishGraySwitch(UpdatePublishGraySwitchRequest request);
+
     CompletableFuture<UpdateSelectionKeyByTypeResponse> updateSelectionKeyByType(UpdateSelectionKeyByTypeRequest request);
 
+    CompletableFuture<UpdateTargetListByBatchResponse> updateTargetListByBatch(UpdateTargetListByBatchRequest request);
+
+    /**
+      * The application whitelist feature is in public preview. You cannot apply for a trial of the feature. If you applied for a trial of the feature or the feature is in use, you can call this operation.
+      *
+     */
+    CompletableFuture<UpdateWhiteListStrategyStatusResponse> updateWhiteListStrategyStatus(UpdateWhiteListStrategyStatusRequest request);
+
     CompletableFuture<UpgradeBackupPolicyVersionResponse> upgradeBackupPolicyVersion(UpgradeBackupPolicyVersionRequest request);
+
+    CompletableFuture<UpgradeHoneypotNodeResponse> upgradeHoneypotNode(UpgradeHoneypotNodeRequest request);
+
+    CompletableFuture<UpgradeVersionByUuidsResponse> upgradeVersionByUuids(UpgradeVersionByUuidsRequest request);
 
     CompletableFuture<UploadedHoneyPotFileResponse> uploadedHoneyPotFile(UploadedHoneyPotFileRequest request);
 

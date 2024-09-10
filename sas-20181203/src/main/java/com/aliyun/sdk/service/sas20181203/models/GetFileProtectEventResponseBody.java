@@ -107,6 +107,9 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Operation")
         private String operation;
 
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
         @com.aliyun.core.annotation.NameInMap("ProcPath")
         private String procPath;
 
@@ -138,6 +141,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             this.intranetIp = builder.intranetIp;
             this.latestTime = builder.latestTime;
             this.operation = builder.operation;
+            this.platform = builder.platform;
             this.procPath = builder.procPath;
             this.processId = builder.processId;
             this.remark = builder.remark;
@@ -239,6 +243,13 @@ public class GetFileProtectEventResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return procPath
          */
         public String getProcPath() {
@@ -293,6 +304,7 @@ public class GetFileProtectEventResponseBody extends TeaModel {
             private String intranetIp; 
             private Long latestTime; 
             private String operation; 
+            private String platform; 
             private String procPath; 
             private String processId; 
             private String remark; 
@@ -399,6 +411,18 @@ public class GetFileProtectEventResponseBody extends TeaModel {
              */
             public Builder operation(String operation) {
                 this.operation = operation;
+                return this;
+            }
+
+            /**
+             * The type of the operating system. Valid values:
+             * <p>
+             * 
+             * *   **windows**: Windows
+             * *   **linux**: Linux
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 

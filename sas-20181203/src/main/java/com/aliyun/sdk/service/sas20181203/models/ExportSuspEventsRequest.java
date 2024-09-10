@@ -445,10 +445,7 @@ public class ExportSuspEventsRequest extends Request {
         }
 
         /**
-         * The ID of the new server group to which the servers belong.
-         * <p>
-         * 
-         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of server groups.
+         * The ID of the asset group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);

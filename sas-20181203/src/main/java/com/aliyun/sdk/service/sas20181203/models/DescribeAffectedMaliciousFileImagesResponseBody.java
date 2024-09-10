@@ -541,7 +541,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of alert event.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -724,6 +724,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
              * <p>
              * 
              * *   **ECS_IMAGE**
+             * *   **ECS_SNAPSHOT**
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

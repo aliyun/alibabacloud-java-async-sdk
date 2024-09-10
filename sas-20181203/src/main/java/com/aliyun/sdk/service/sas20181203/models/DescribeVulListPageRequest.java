@@ -150,7 +150,12 @@ public class DescribeVulListPageRequest extends Request {
         }
 
         /**
-         * RaspDefend.
+         * Indicates whether the application protection feature is supported. Valid values:
+         * <p>
+         * 
+         * - **0**: no.
+         * 
+         * - **1**: yes.
          */
         public Builder raspDefend(Integer raspDefend) {
             this.putQueryParameter("RaspDefend", raspDefend);
@@ -168,7 +173,12 @@ public class DescribeVulListPageRequest extends Request {
         }
 
         /**
-         * VulType.
+         * The type of the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   **cve**: Linux software vulnerability.
+         * *   **sys**: Windows system vulnerability.
+         * *   **app**: Application vulnerability that is detected by using web scanner.
          */
         public Builder vulType(String vulType) {
             this.putQueryParameter("VulType", vulType);

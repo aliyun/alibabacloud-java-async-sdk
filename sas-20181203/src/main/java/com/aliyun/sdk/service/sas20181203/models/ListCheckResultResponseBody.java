@@ -232,6 +232,15 @@ public class ListCheckResultResponseBody extends TeaModel {
 
     }
     public static class Checks extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssetSubType")
+        private Integer assetSubType;
+
+        @com.aliyun.core.annotation.NameInMap("AssetType")
+        private Integer assetType;
+
+        @com.aliyun.core.annotation.NameInMap("AssetVendor")
+        private Integer assetVendor;
+
         @com.aliyun.core.annotation.NameInMap("CheckId")
         private Long checkId;
 
@@ -275,6 +284,9 @@ public class ListCheckResultResponseBody extends TeaModel {
         private String vendorShowName;
 
         private Checks(Builder builder) {
+            this.assetSubType = builder.assetSubType;
+            this.assetType = builder.assetType;
+            this.assetVendor = builder.assetVendor;
             this.checkId = builder.checkId;
             this.checkPolicies = builder.checkPolicies;
             this.checkSaleType = builder.checkSaleType;
@@ -297,6 +309,27 @@ public class ListCheckResultResponseBody extends TeaModel {
 
         public static Checks create() {
             return builder().build();
+        }
+
+        /**
+         * @return assetSubType
+         */
+        public Integer getAssetSubType() {
+            return this.assetSubType;
+        }
+
+        /**
+         * @return assetType
+         */
+        public Integer getAssetType() {
+            return this.assetType;
+        }
+
+        /**
+         * @return assetVendor
+         */
+        public Integer getAssetVendor() {
+            return this.assetVendor;
         }
 
         /**
@@ -398,6 +431,9 @@ public class ListCheckResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer assetSubType; 
+            private Integer assetType; 
+            private Integer assetVendor; 
             private Long checkId; 
             private java.util.List < CheckPolicies> checkPolicies; 
             private Integer checkSaleType; 
@@ -412,6 +448,30 @@ public class ListCheckResultResponseBody extends TeaModel {
             private Boolean trialPermission; 
             private String vendor; 
             private String vendorShowName; 
+
+            /**
+             * AssetSubType.
+             */
+            public Builder assetSubType(Integer assetSubType) {
+                this.assetSubType = assetSubType;
+                return this;
+            }
+
+            /**
+             * AssetType.
+             */
+            public Builder assetType(Integer assetType) {
+                this.assetType = assetType;
+                return this;
+            }
+
+            /**
+             * AssetVendor.
+             */
+            public Builder assetVendor(Integer assetVendor) {
+                this.assetVendor = assetVendor;
+                return this;
+            }
 
             /**
              * The ID of the check item.

@@ -171,6 +171,67 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
         } 
 
     }
+    public static class Policies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PolicyKey")
+        private String policyKey;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
+        private String policyName;
+
+        private Policies(Builder builder) {
+            this.policyKey = builder.policyKey;
+            this.policyName = builder.policyName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Policies create() {
+            return builder().build();
+        }
+
+        /**
+         * @return policyKey
+         */
+        public String getPolicyKey() {
+            return this.policyKey;
+        }
+
+        /**
+         * @return policyName
+         */
+        public String getPolicyName() {
+            return this.policyName;
+        }
+
+        public static final class Builder {
+            private String policyKey; 
+            private String policyName; 
+
+            /**
+             * The policy key.
+             */
+            public Builder policyKey(String policyKey) {
+                this.policyKey = policyKey;
+                return this;
+            }
+
+            /**
+             * The name of the policy.
+             */
+            public Builder policyName(String policyName) {
+                this.policyName = policyName;
+                return this;
+            }
+
+            public Policies build() {
+                return new Policies(this);
+            } 
+
+        } 
+
+    }
     public static class RuleList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
@@ -180,6 +241,9 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Mode")
         private Integer mode;
+
+        @com.aliyun.core.annotation.NameInMap("Policies")
+        private java.util.List < Policies> policies;
 
         @com.aliyun.core.annotation.NameInMap("RuleDescription")
         private String ruleDescription;
@@ -209,6 +273,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.mode = builder.mode;
+            this.policies = builder.policies;
             this.ruleDescription = builder.ruleDescription;
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
@@ -246,6 +311,13 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
          */
         public Integer getMode() {
             return this.mode;
+        }
+
+        /**
+         * @return policies
+         */
+        public java.util.List < Policies> getPolicies() {
+            return this.policies;
         }
 
         /**
@@ -308,6 +380,7 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
             private Long gmtCreate; 
             private Long gmtModified; 
             private Integer mode; 
+            private java.util.List < Policies> policies; 
             private String ruleDescription; 
             private Long ruleId; 
             private String ruleName; 
@@ -342,6 +415,14 @@ public class ListAegisContainerPluginRuleResponseBody extends TeaModel {
              */
             public Builder mode(Integer mode) {
                 this.mode = mode;
+                return this;
+            }
+
+            /**
+             * An array that consists of policies.
+             */
+            public Builder policies(java.util.List < Policies> policies) {
+                this.policies = policies;
                 return this;
             }
 

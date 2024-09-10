@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAgentlessScanTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssetSelectionType")
+    private String assetSelectionType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoDeleteDays")
     private Integer autoDeleteDays;
 
@@ -25,15 +29,16 @@ public class CreateAgentlessScanTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer targetType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UuidList")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > uuidList;
 
     private CreateAgentlessScanTaskRequest(Builder builder) {
         super(builder);
+        this.assetSelectionType = builder.assetSelectionType;
         this.autoDeleteDays = builder.autoDeleteDays;
         this.releaseAfterScan = builder.releaseAfterScan;
         this.scanDataDisk = builder.scanDataDisk;
@@ -52,6 +57,13 @@ public class CreateAgentlessScanTaskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return assetSelectionType
+     */
+    public String getAssetSelectionType() {
+        return this.assetSelectionType;
     }
 
     /**
@@ -90,6 +102,7 @@ public class CreateAgentlessScanTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAgentlessScanTaskRequest, Builder> {
+        private String assetSelectionType; 
         private Integer autoDeleteDays; 
         private Boolean releaseAfterScan; 
         private Boolean scanDataDisk; 
@@ -102,12 +115,22 @@ public class CreateAgentlessScanTaskRequest extends Request {
 
         private Builder(CreateAgentlessScanTaskRequest request) {
             super(request);
+            this.assetSelectionType = request.assetSelectionType;
             this.autoDeleteDays = request.autoDeleteDays;
             this.releaseAfterScan = request.releaseAfterScan;
             this.scanDataDisk = request.scanDataDisk;
             this.targetType = request.targetType;
             this.uuidList = request.uuidList;
         } 
+
+        /**
+         * Identification of asset selection.
+         */
+        public Builder assetSelectionType(String assetSelectionType) {
+            this.putQueryParameter("AssetSelectionType", assetSelectionType);
+            this.assetSelectionType = assetSelectionType;
+            return this;
+        }
 
         /**
          * The retention period of images. Unit: days.

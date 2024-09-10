@@ -30,7 +30,6 @@ public class FixCheckWarningsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Uuids")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String uuids;
 
     private FixCheckWarningsRequest(Builder builder) {

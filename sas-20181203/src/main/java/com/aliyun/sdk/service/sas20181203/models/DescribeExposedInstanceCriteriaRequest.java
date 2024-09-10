@@ -67,10 +67,10 @@ public class DescribeExposedInstanceCriteriaRequest extends Request {
         } 
 
         /**
-         * The Alibaba Cloud account ID of the member in the resource directory.
+         * The ID of the member in the resource directory.
          * <p>
          * 
-         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the account ID.
          */
         public Builder resourceDirectoryAccountId(String resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -80,6 +80,9 @@ public class DescribeExposedInstanceCriteriaRequest extends Request {
 
         /**
          * The value of the search condition. Fuzzy match is supported.
+         * <p>
+         * 
+         * >  You can specify the name, ID, public IP address, private IP address, component, port, or IP address of an exposed asset.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

@@ -118,8 +118,17 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlarmStatus")
         private String alarmStatus;
 
+        @com.aliyun.core.annotation.NameInMap("AppId")
+        private String appId;
+
+        @com.aliyun.core.annotation.NameInMap("AppName")
+        private String appName;
+
         @com.aliyun.core.annotation.NameInMap("AssetType")
         private String assetType;
+
+        @com.aliyun.core.annotation.NameInMap("AssetTypeName")
+        private String assetTypeName;
 
         @com.aliyun.core.annotation.NameInMap("AuthModifyTime")
         private Long authModifyTime;
@@ -156,6 +165,9 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Flag")
         private Integer flag;
+
+        @com.aliyun.core.annotation.NameInMap("FlagName")
+        private String flagName;
 
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private Long groupId;
@@ -258,7 +270,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
         private Instances(Builder builder) {
             this.alarmStatus = builder.alarmStatus;
+            this.appId = builder.appId;
+            this.appName = builder.appName;
             this.assetType = builder.assetType;
+            this.assetTypeName = builder.assetTypeName;
             this.authModifyTime = builder.authModifyTime;
             this.authVersion = builder.authVersion;
             this.authVersionName = builder.authVersionName;
@@ -271,6 +286,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             this.createdTime = builder.createdTime;
             this.exposedStatus = builder.exposedStatus;
             this.flag = builder.flag;
+            this.flagName = builder.flagName;
             this.groupId = builder.groupId;
             this.groupTrace = builder.groupTrace;
             this.hcStatus = builder.hcStatus;
@@ -322,10 +338,31 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
+        }
+
+        /**
+         * @return appName
+         */
+        public String getAppName() {
+            return this.appName;
+        }
+
+        /**
          * @return assetType
          */
         public String getAssetType() {
             return this.assetType;
+        }
+
+        /**
+         * @return assetTypeName
+         */
+        public String getAssetTypeName() {
+            return this.assetTypeName;
         }
 
         /**
@@ -410,6 +447,13 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
          */
         public Integer getFlag() {
             return this.flag;
+        }
+
+        /**
+         * @return flagName
+         */
+        public String getFlagName() {
+            return this.flagName;
         }
 
         /**
@@ -645,7 +689,10 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alarmStatus; 
+            private String appId; 
+            private String appName; 
             private String assetType; 
+            private String assetTypeName; 
             private Long authModifyTime; 
             private Integer authVersion; 
             private String authVersionName; 
@@ -658,6 +705,7 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             private Long createdTime; 
             private Integer exposedStatus; 
             private Integer flag; 
+            private String flagName; 
             private Long groupId; 
             private String groupTrace; 
             private String hcStatus; 
@@ -705,6 +753,22 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * AppId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
+
+            /**
+             * AppName.
+             */
+            public Builder appName(String appName) {
+                this.appName = appName;
+                return this;
+            }
+
+            /**
              * The type of the asset. Valid values:
              * <p>
              * 
@@ -719,6 +783,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
+                return this;
+            }
+
+            /**
+             * AssetTypeName.
+             */
+            public Builder assetTypeName(String assetTypeName) {
+                this.assetTypeName = assetTypeName;
                 return this;
             }
 
@@ -848,6 +920,14 @@ public class DescribeCloudCenterInstancesResponseBody extends TeaModel {
              */
             public Builder flag(Integer flag) {
                 this.flag = flag;
+                return this;
+            }
+
+            /**
+             * FlagName.
+             */
+            public Builder flagName(String flagName) {
+                this.flagName = flagName;
                 return this;
             }
 

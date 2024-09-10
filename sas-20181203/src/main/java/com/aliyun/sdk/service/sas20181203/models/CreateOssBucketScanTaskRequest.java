@@ -29,6 +29,10 @@ public class CreateOssBucketScanTaskRequest extends Request {
     private Integer decompressMaxLayer;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DecryptionList")
+    private java.util.List < String > decryptionList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExcludeKeySuffixList")
     private java.util.List < String > excludeKeySuffixList;
 
@@ -41,6 +45,10 @@ public class CreateOssBucketScanTaskRequest extends Request {
     private java.util.List < String > keySuffixList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LastModifiedStartTime")
+    private Long lastModifiedStartTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScanMode")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer scanMode;
@@ -51,9 +59,11 @@ public class CreateOssBucketScanTaskRequest extends Request {
         this.bucketNameList = builder.bucketNameList;
         this.decompressMaxFileCount = builder.decompressMaxFileCount;
         this.decompressMaxLayer = builder.decompressMaxLayer;
+        this.decryptionList = builder.decryptionList;
         this.excludeKeySuffixList = builder.excludeKeySuffixList;
         this.keyPrefixList = builder.keyPrefixList;
         this.keySuffixList = builder.keySuffixList;
+        this.lastModifiedStartTime = builder.lastModifiedStartTime;
         this.scanMode = builder.scanMode;
     }
 
@@ -99,6 +109,13 @@ public class CreateOssBucketScanTaskRequest extends Request {
     }
 
     /**
+     * @return decryptionList
+     */
+    public java.util.List < String > getDecryptionList() {
+        return this.decryptionList;
+    }
+
+    /**
      * @return excludeKeySuffixList
      */
     public java.util.List < String > getExcludeKeySuffixList() {
@@ -120,6 +137,13 @@ public class CreateOssBucketScanTaskRequest extends Request {
     }
 
     /**
+     * @return lastModifiedStartTime
+     */
+    public Long getLastModifiedStartTime() {
+        return this.lastModifiedStartTime;
+    }
+
+    /**
      * @return scanMode
      */
     public Integer getScanMode() {
@@ -131,9 +155,11 @@ public class CreateOssBucketScanTaskRequest extends Request {
         private java.util.List < String > bucketNameList; 
         private Integer decompressMaxFileCount; 
         private Integer decompressMaxLayer; 
+        private java.util.List < String > decryptionList; 
         private java.util.List < String > excludeKeySuffixList; 
         private java.util.List < String > keyPrefixList; 
         private java.util.List < String > keySuffixList; 
+        private Long lastModifiedStartTime; 
         private Integer scanMode; 
 
         private Builder() {
@@ -146,9 +172,11 @@ public class CreateOssBucketScanTaskRequest extends Request {
             this.bucketNameList = request.bucketNameList;
             this.decompressMaxFileCount = request.decompressMaxFileCount;
             this.decompressMaxLayer = request.decompressMaxLayer;
+            this.decryptionList = request.decryptionList;
             this.excludeKeySuffixList = request.excludeKeySuffixList;
             this.keyPrefixList = request.keyPrefixList;
             this.keySuffixList = request.keySuffixList;
+            this.lastModifiedStartTime = request.lastModifiedStartTime;
             this.scanMode = request.scanMode;
         } 
 
@@ -189,6 +217,15 @@ public class CreateOssBucketScanTaskRequest extends Request {
         }
 
         /**
+         * DecryptionList.
+         */
+        public Builder decryptionList(java.util.List < String > decryptionList) {
+            this.putQueryParameter("DecryptionList", decryptionList);
+            this.decryptionList = decryptionList;
+            return this;
+        }
+
+        /**
          * The suffixes of the objects that you do not want to check.
          */
         public Builder excludeKeySuffixList(java.util.List < String > excludeKeySuffixList) {
@@ -212,6 +249,15 @@ public class CreateOssBucketScanTaskRequest extends Request {
         public Builder keySuffixList(java.util.List < String > keySuffixList) {
             this.putQueryParameter("KeySuffixList", keySuffixList);
             this.keySuffixList = keySuffixList;
+            return this;
+        }
+
+        /**
+         * LastModifiedStartTime.
+         */
+        public Builder lastModifiedStartTime(Long lastModifiedStartTime) {
+            this.putQueryParameter("LastModifiedStartTime", lastModifiedStartTime);
+            this.lastModifiedStartTime = lastModifiedStartTime;
             return this;
         }
 

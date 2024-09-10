@@ -115,6 +115,9 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
+        @com.aliyun.core.annotation.NameInMap("Platform")
+        private String platform;
+
         @com.aliyun.core.annotation.NameInMap("SupportFile")
         private Boolean supportFile;
 
@@ -130,6 +133,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
             this.online = builder.online;
+            this.platform = builder.platform;
             this.supportFile = builder.supportFile;
             this.uuid = builder.uuid;
         }
@@ -199,6 +203,13 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return platform
+         */
+        public String getPlatform() {
+            return this.platform;
+        }
+
+        /**
          * @return supportFile
          */
         public Boolean getSupportFile() {
@@ -221,6 +232,7 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
             private String internetIp; 
             private String intranetIp; 
             private Boolean online; 
+            private String platform; 
             private Boolean supportFile; 
             private String uuid; 
 
@@ -293,6 +305,18 @@ public class ListFileProtectPluginStatusResponseBody extends TeaModel {
              */
             public Builder online(Boolean online) {
                 this.online = online;
+                return this;
+            }
+
+            /**
+             * The type of the operating system. Valid values:
+             * <p>
+             * 
+             * *   **windows**: Windows
+             * *   **linux**: Linux
+             */
+            public Builder platform(String platform) {
+                this.platform = platform;
                 return this;
             }
 

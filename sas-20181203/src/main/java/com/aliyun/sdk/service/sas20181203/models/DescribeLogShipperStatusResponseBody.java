@@ -77,6 +77,9 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuyStatus")
         private String buyStatus;
 
+        @com.aliyun.core.annotation.NameInMap("EtlMetaVersion")
+        private String etlMetaVersion;
+
         @com.aliyun.core.annotation.NameInMap("OpenStatus")
         private String openStatus;
 
@@ -95,6 +98,7 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
         private LogShipperStatus(Builder builder) {
             this.authStatus = builder.authStatus;
             this.buyStatus = builder.buyStatus;
+            this.etlMetaVersion = builder.etlMetaVersion;
             this.openStatus = builder.openStatus;
             this.postPaidOpenStatus = builder.postPaidOpenStatus;
             this.postPaidSupportStatus = builder.postPaidSupportStatus;
@@ -122,6 +126,13 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
          */
         public String getBuyStatus() {
             return this.buyStatus;
+        }
+
+        /**
+         * @return etlMetaVersion
+         */
+        public String getEtlMetaVersion() {
+            return this.etlMetaVersion;
         }
 
         /**
@@ -162,6 +173,7 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String authStatus; 
             private String buyStatus; 
+            private String etlMetaVersion; 
             private String openStatus; 
             private String postPaidOpenStatus; 
             private String postPaidSupportStatus; 
@@ -189,6 +201,17 @@ public class DescribeLogShipperStatusResponseBody extends TeaModel {
              */
             public Builder buyStatus(String buyStatus) {
                 this.buyStatus = buyStatus;
+                return this;
+            }
+
+            /**
+             * The version of the log analysis field. Valid values:
+             * <p>
+             * - SAS_V1
+             * - SAS_V2
+             */
+            public Builder etlMetaVersion(String etlMetaVersion) {
+                this.etlMetaVersion = etlMetaVersion;
                 return this;
             }
 

@@ -411,10 +411,8 @@ public class ListSystemClientRulesResponseBody extends TeaModel {
              * The type of the system defense rule. Valid values:
              * <p>
              * 
-             * *   **1**: alihips
-             * *   **2**: alinet
-             * *   **3**: alidetect
-             * *   **4**: alisecguard
+             * *   **1**: alihips, process-specific defense
+             * *   **2**: alinet, network-specific defense
              */
             public Builder ruleType(Integer ruleType) {
                 this.ruleType = ruleType;

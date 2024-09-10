@@ -442,7 +442,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             private Integer unprocessedNum; 
 
             /**
-             * Advice.
+             * The suggestion.
              */
             public Builder advice(String advice) {
                 this.advice = advice;
@@ -474,7 +474,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the sensitive file.
              */
             public Builder description(String description) {
                 this.description = description;

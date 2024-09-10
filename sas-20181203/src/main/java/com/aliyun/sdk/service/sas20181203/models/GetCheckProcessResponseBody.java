@@ -17,12 +17,20 @@ public class GetCheckProcessResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
+    private String statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetCheckProcessResponseBody(Builder builder) {
         this.finishCount = builder.finishCount;
         this.requestId = builder.requestId;
+        this.statusCode = builder.statusCode;
+        this.taskId = builder.taskId;
         this.totalCount = builder.totalCount;
     }
 
@@ -49,6 +57,20 @@ public class GetCheckProcessResponseBody extends TeaModel {
     }
 
     /**
+     * @return statusCode
+     */
+    public String getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
+    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
@@ -58,6 +80,8 @@ public class GetCheckProcessResponseBody extends TeaModel {
     public static final class Builder {
         private Integer finishCount; 
         private String requestId; 
+        private String statusCode; 
+        private String taskId; 
         private Integer totalCount; 
 
         /**
@@ -73,6 +97,22 @@ public class GetCheckProcessResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * StatusCode.
+         */
+        public Builder statusCode(String statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
 

@@ -25,6 +25,10 @@ public class ListFileProtectRuleRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    private String platform;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleAction")
     private String ruleAction;
 
@@ -37,6 +41,7 @@ public class ListFileProtectRuleRequest extends Request {
         this.alertLevel = builder.alertLevel;
         this.currentPage = builder.currentPage;
         this.pageSize = builder.pageSize;
+        this.platform = builder.platform;
         this.ruleAction = builder.ruleAction;
         this.ruleName = builder.ruleName;
     }
@@ -76,6 +81,13 @@ public class ListFileProtectRuleRequest extends Request {
     }
 
     /**
+     * @return platform
+     */
+    public String getPlatform() {
+        return this.platform;
+    }
+
+    /**
      * @return ruleAction
      */
     public String getRuleAction() {
@@ -93,6 +105,7 @@ public class ListFileProtectRuleRequest extends Request {
         private Integer alertLevel; 
         private Integer currentPage; 
         private Integer pageSize; 
+        private String platform; 
         private String ruleAction; 
         private String ruleName; 
 
@@ -105,6 +118,7 @@ public class ListFileProtectRuleRequest extends Request {
             this.alertLevel = request.alertLevel;
             this.currentPage = request.currentPage;
             this.pageSize = request.pageSize;
+            this.platform = request.platform;
             this.ruleAction = request.ruleAction;
             this.ruleName = request.ruleName;
         } 
@@ -139,6 +153,15 @@ public class ListFileProtectRuleRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Platform.
+         */
+        public Builder platform(String platform) {
+            this.putQueryParameter("Platform", platform);
+            this.platform = platform;
             return this;
         }
 
