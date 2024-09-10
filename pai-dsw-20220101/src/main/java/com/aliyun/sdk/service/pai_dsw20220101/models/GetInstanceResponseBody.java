@@ -29,6 +29,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("CredentialConfig")
+    private CredentialConfig credentialConfig;
+
     @com.aliyun.core.annotation.NameInMap("Datasets")
     private java.util.List < Datasets> datasets;
 
@@ -156,6 +159,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.affinity = builder.affinity;
         this.cloudDisks = builder.cloudDisks;
         this.code = builder.code;
+        this.credentialConfig = builder.credentialConfig;
         this.datasets = builder.datasets;
         this.driver = builder.driver;
         this.ecsSpec = builder.ecsSpec;
@@ -246,6 +250,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return credentialConfig
+     */
+    public CredentialConfig getCredentialConfig() {
+        return this.credentialConfig;
     }
 
     /**
@@ -535,6 +546,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private Affinity affinity; 
         private java.util.List < CloudDisks> cloudDisks; 
         private String code; 
+        private CredentialConfig credentialConfig; 
         private java.util.List < Datasets> datasets; 
         private String driver; 
         private String ecsSpec; 
@@ -621,6 +633,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * CredentialConfig.
+         */
+        public Builder credentialConfig(CredentialConfig credentialConfig) {
+            this.credentialConfig = credentialConfig;
             return this;
         }
 

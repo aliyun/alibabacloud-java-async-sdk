@@ -1457,6 +1457,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudDisks")
         private java.util.List < CloudDisks> cloudDisks;
 
+        @com.aliyun.core.annotation.NameInMap("CredentialConfig")
+        private CredentialConfig credentialConfig;
+
         @com.aliyun.core.annotation.NameInMap("Datasets")
         private java.util.List < Datasets> datasets;
 
@@ -1568,6 +1571,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.accumulatedRunningTimeInMs = builder.accumulatedRunningTimeInMs;
             this.affinity = builder.affinity;
             this.cloudDisks = builder.cloudDisks;
+            this.credentialConfig = builder.credentialConfig;
             this.datasets = builder.datasets;
             this.driver = builder.driver;
             this.ecsSpec = builder.ecsSpec;
@@ -1646,6 +1650,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public java.util.List < CloudDisks> getCloudDisks() {
             return this.cloudDisks;
+        }
+
+        /**
+         * @return credentialConfig
+         */
+        public CredentialConfig getCredentialConfig() {
+            return this.credentialConfig;
         }
 
         /**
@@ -1899,6 +1910,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Long accumulatedRunningTimeInMs; 
             private Affinity affinity; 
             private java.util.List < CloudDisks> cloudDisks; 
+            private CredentialConfig credentialConfig; 
             private java.util.List < Datasets> datasets; 
             private String driver; 
             private String ecsSpec; 
@@ -1972,6 +1984,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder cloudDisks(java.util.List < CloudDisks> cloudDisks) {
                 this.cloudDisks = cloudDisks;
+                return this;
+            }
+
+            /**
+             * CredentialConfig.
+             */
+            public Builder credentialConfig(CredentialConfig credentialConfig) {
+                this.credentialConfig = credentialConfig;
                 return this;
             }
 
