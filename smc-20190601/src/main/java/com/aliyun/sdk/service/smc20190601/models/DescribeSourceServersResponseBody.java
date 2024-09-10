@@ -109,7 +109,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the migration source.
+         * The information about migration sources.
          */
         public Builder sourceServers(SourceServers sourceServers) {
             this.sourceServers = sourceServers;
@@ -1082,8 +1082,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
              * The status information of the migration source. This parameter is returned if the migration source is in the Unavailable state. The value of this parameter consists of key-value pairs in the JSON format. Sample keys:
              * <p>
              * 
-             *     error_code: The error code.
-             *     error_msg: The error message.
+             *     error_code: the error code.error_msg: the error message.
              */
             public Builder statusInfo(String statusInfo) {
                 this.statusInfo = statusInfo;

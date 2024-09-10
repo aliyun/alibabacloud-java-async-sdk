@@ -227,7 +227,7 @@ public class DescribeSourceServersRequest extends Request {
          * The page number. Pages start from page 1.
          * <p>
          * 
-         * Default value: 1.
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -236,10 +236,10 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 50.
+         * The number of entries per page. Valid values: 1 to 50.
          * <p>
          * 
-         * Default value: 10.
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +248,7 @@ public class DescribeSourceServersRequest extends Request {
         }
 
         /**
-         * RelatedJobType.
+         * The types of migration jobs that are associated with migration sources.
          */
         public Builder relatedJobType(java.util.List < String > relatedJobType) {
             this.putQueryParameter("RelatedJobType", relatedJobType);

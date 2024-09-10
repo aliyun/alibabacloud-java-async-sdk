@@ -570,9 +570,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
          * <p>
          * 
          * *   0: Data is transmitted over the Internet. Make sure that the source server can access the Internet.
-         * *   2: Data is transmitted over a VPC. If you specify this value, you must specify the VSwitchId parameter. You do not need to specify the VpcId parameter because the value of the VpcId parameter can be retrieved based on the value of the VSwitchId parameter.
-         * 
-         * Default value: 0
+         * *   2: Data is transmitted over a virtual private cloud (VPC). If you set this parameter to 2, you must specify the VSwitchId parameter. You can leave the VpcId parameter empty, the VPC ID can be queried by calling an operation.
          */
         public Builder netMode(Integer netMode) {
             this.putQueryParameter("NetMode", netMode);
@@ -590,16 +588,16 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         }
 
         /**
-         * The parameters of the replication driver. The parameters must be specified as key-value pairs in the JSON format. The keys are fixed for each type of replication driver. The JSON string can be up to 2,048 characters in length.
+         * The parameters of the replication driver. The parameters are fixed key-value pairs of the JSON format. The value can be up to 2,048 characters in length.
          * <p>
          * 
-         * A replication driver is a tool that is used to migrate a source server to an intermediate instance. The parameters vary based on the replication driver type. If you use a Server Migration Tool (SMT) driver, you can specify the following parameters:
+         * A replication driver is a tool that is used to replicate the data of a source server to an intermediate instance. The parameters vary based on the replication driver type. If you use a Server Migration Tool (SMT) driver, you can set the following parameters:
          * 
          * *   bandwidth_limit: the maximum bandwidth for data transmission.
          * *   compress_level: the compression ratio of data to be transmitted.
-         * *   checksum: specifies whether to enable checksum verification.
+         * *   checksum: specifies whether to enable checksum verification
          * 
-         * For more information about replication drivers, see the response parameter `SourceServers.ReplicationDriver` of the [DescribeSourceServers](~~121818~~) operation.
+         * For more information about the replication driver, see the response parameter `SourceServers.ReplicationDriver` of the [DescribeSourceServers](~~2402126~~) operation.
          */
         public Builder replicationParameters(String replicationParameters) {
             this.putQueryParameter("ReplicationParameters", replicationParameters);
@@ -672,10 +670,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch in the specified VPC.
-         * <p>
-         * 
-         * You must set this parameter if you use a VPC to migrate data.
+         * The ID of the vSwitch in the VPC.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -701,7 +696,7 @@ public class ModifyReplicationJobAttributeRequest extends Request {
         }
 
         /**
-         * The ID of a VPC for which you have configured an Express Connect circuit or a VPN gateway.
+         * The ID of the VPC for which an Express Connect circuit or VPN gateway is configured.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

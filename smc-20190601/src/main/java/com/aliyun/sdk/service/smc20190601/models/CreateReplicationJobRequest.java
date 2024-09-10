@@ -610,10 +610,10 @@ public class CreateReplicationJobRequest extends Request {
          * The type of the intermediate instance.
          * <p>
          * 
-         * You can call the [DescribeInstanceTypes](~~25620~~) operation to query the ECS instance types.
+         * You can call the [DescribeInstanceTypes](~~25620~~) operation to obtain the ECS instance types.
          * 
-         * *   If you specify this parameter, SMC creates an intermediate instance of the specified instance type. If the specified instance type is unavailable, the migration job fails to be created.
-         * *   If you do not specify this parameter, SMC selects an available instance type in a specific order to create an intermediate instance. For more information, see the "How does SMC create an intermediate instance?" section of the SMC FAQ topic.
+         * *   If you specify this parameter, SMC creates an intermediate instance of the specified instance type. If the specified instance type is unavailable, you cannot create the migration job.
+         * *   If you do not specify this parameter, SMC selects an available instance type in a specific order to create an intermediate instance. For more information, see [SMC FAQ](~~121707~~).
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);

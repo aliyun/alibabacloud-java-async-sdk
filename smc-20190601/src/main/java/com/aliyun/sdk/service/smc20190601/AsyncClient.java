@@ -25,6 +25,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateAccessTokenResponse> createAccessToken(CreateAccessTokenRequest request);
 
+    CompletableFuture<CreateCrossZoneMigrationJobResponse> createCrossZoneMigrationJob(CreateCrossZoneMigrationJobRequest request);
+
     /**
       * ## Usage notes
       * *   You can create migration jobs only for source servers that are in the Available state.
@@ -136,7 +138,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
-      * You can call this operation to remove tags that are added to one or more SMC resources and deletes the tags if the tags are no longer used.
+      * You can call this operation to remove tags that are added to one or more SMC resources and delete the tags if the tags are no longer used.
       *
      */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
