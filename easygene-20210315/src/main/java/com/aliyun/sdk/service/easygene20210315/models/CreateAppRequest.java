@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,72 +11,72 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAppRequest</p>
  */
 public class CreateAppRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("Configs")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Configs")
     private java.util.List < Configs> configs;
 
-    @Body
-    @NameInMap("Definition")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Definition")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String definition;
 
-    @Body
-    @NameInMap("Dependencies")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Dependencies")
     private java.util.List < Dependencies> dependencies;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Documentation")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Documentation")
     private String documentation;
 
-    @Query
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("LanguageVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LanguageVersion")
     private String languageVersion;
 
-    @Query
-    @NameInMap("Path")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Path")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String path;
 
-    @Query
-    @NameInMap("RevisionComment")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevisionComment")
     private String revisionComment;
 
-    @Query
-    @NameInMap("RevisionTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevisionTag")
     private String revisionTag;
 
-    @Query
-    @NameInMap("Workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private CreateAppRequest(Builder builder) {
@@ -421,10 +420,10 @@ public class CreateAppRequest extends Request {
     } 
 
     public static class Configs extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private Configs(Builder builder) {
@@ -482,10 +481,10 @@ public class CreateAppRequest extends Request {
 
     }
     public static class Dependencies extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private Dependencies(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTemplatesResponseBody</p>
  */
 public class ListTemplatesResponseBody extends TeaModel {
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private java.util.List < Templates> templates;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTemplatesResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class ListTemplatesResponseBody extends TeaModel {
     } 
 
     public static class InputsExpression extends TeaModel {
-        @NameInMap("Help")
+        @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
-        @NameInMap("StepOrder")
+        @com.aliyun.core.annotation.NameInMap("StepOrder")
         private Long stepOrder;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("VariableName")
+        @com.aliyun.core.annotation.NameInMap("VariableName")
         private String variableName;
 
-        @NameInMap("VariableType")
+        @com.aliyun.core.annotation.NameInMap("VariableType")
         private String variableType;
 
-        @NameInMap("VariableValue")
+        @com.aliyun.core.annotation.NameInMap("VariableValue")
         private String variableValue;
 
         private InputsExpression(Builder builder) {
@@ -313,25 +312,25 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     }
     public static class OutputsExpression extends TeaModel {
-        @NameInMap("Help")
+        @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
-        @NameInMap("StepOrder")
+        @com.aliyun.core.annotation.NameInMap("StepOrder")
         private Long stepOrder;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("VariableName")
+        @com.aliyun.core.annotation.NameInMap("VariableName")
         private String variableName;
 
-        @NameInMap("VariableType")
+        @com.aliyun.core.annotation.NameInMap("VariableType")
         private String variableType;
 
-        @NameInMap("VariableValue")
+        @com.aliyun.core.annotation.NameInMap("VariableValue")
         private String variableValue;
 
         private OutputsExpression(Builder builder) {
@@ -474,40 +473,40 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     }
     public static class Templates extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppRevision")
+        @com.aliyun.core.annotation.NameInMap("AppRevision")
         private String appRevision;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InputsExpression")
+        @com.aliyun.core.annotation.NameInMap("InputsExpression")
         private java.util.List < InputsExpression> inputsExpression;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.Map < String, String > labels;
 
-        @NameInMap("LastModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
         private String lastModifiedTime;
 
-        @NameInMap("OutputsExpression")
+        @com.aliyun.core.annotation.NameInMap("OutputsExpression")
         private java.util.List < OutputsExpression> outputsExpression;
 
-        @NameInMap("RevisionTag")
+        @com.aliyun.core.annotation.NameInMap("RevisionTag")
         private String revisionTag;
 
-        @NameInMap("RootEntity")
+        @com.aliyun.core.annotation.NameInMap("RootEntity")
         private String rootEntity;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("Workspace")
+        @com.aliyun.core.annotation.NameInMap("Workspace")
         private String workspace;
 
         private Templates(Builder builder) {

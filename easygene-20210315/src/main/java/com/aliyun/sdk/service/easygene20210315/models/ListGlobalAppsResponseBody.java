@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGlobalAppsResponseBody</p>
  */
 public class ListGlobalAppsResponseBody extends TeaModel {
-    @NameInMap("GlobalApps")
+    @com.aliyun.core.annotation.NameInMap("GlobalApps")
     private java.util.List < GlobalApps> globalApps;
 
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListGlobalAppsResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class ListGlobalAppsResponseBody extends TeaModel {
     } 
 
     public static class GlobalApps extends TeaModel {
-        @NameInMap("AppDefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("AppDefaultVersion")
         private String appDefaultVersion;
 
-        @NameInMap("AppDescription")
+        @com.aliyun.core.annotation.NameInMap("AppDescription")
         private String appDescription;
 
-        @NameInMap("AppFee")
+        @com.aliyun.core.annotation.NameInMap("AppFee")
         private String appFee;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppScope")
+        @com.aliyun.core.annotation.NameInMap("AppScope")
         private String appScope;
 
-        @NameInMap("Categories")
+        @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;
 
-        @NameInMap("LastModified")
+        @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
-        @NameInMap("Locations")
+        @com.aliyun.core.annotation.NameInMap("Locations")
         private java.util.List < String > locations;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("Pinned")
+        @com.aliyun.core.annotation.NameInMap("Pinned")
         private Boolean pinned;
 
-        @NameInMap("Toolkit")
+        @com.aliyun.core.annotation.NameInMap("Toolkit")
         private String toolkit;
 
         private GlobalApps(Builder builder) {

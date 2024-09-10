@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWorkspaceResponseBody</p>
  */
 public class GetWorkspaceResponseBody extends TeaModel {
-    @NameInMap("BucketName")
+    @com.aliyun.core.annotation.NameInMap("BucketName")
     private String bucketName;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("JobLifecycle")
+    @com.aliyun.core.annotation.NameInMap("JobLifecycle")
     private Integer jobLifecycle;
 
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.Map < String, String > labels;
 
-    @NameInMap("LastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Storage")
+    @com.aliyun.core.annotation.NameInMap("Storage")
     private String storage;
 
-    @NameInMap("Workspace")
+    @com.aliyun.core.annotation.NameInMap("Workspace")
     private String workspace;
 
     private GetWorkspaceResponseBody(Builder builder) {

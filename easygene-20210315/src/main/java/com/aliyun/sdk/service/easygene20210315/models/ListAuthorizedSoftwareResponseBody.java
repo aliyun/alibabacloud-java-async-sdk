@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAuthorizedSoftwareResponseBody</p>
  */
 public class ListAuthorizedSoftwareResponseBody extends TeaModel {
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Softwares")
+    @com.aliyun.core.annotation.NameInMap("Softwares")
     private java.util.List < Softwares> softwares;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAuthorizedSoftwareResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class ListAuthorizedSoftwareResponseBody extends TeaModel {
     } 
 
     public static class Softwares extends TeaModel {
-        @NameInMap("HelpLink")
+        @com.aliyun.core.annotation.NameInMap("HelpLink")
         private String helpLink;
 
-        @NameInMap("LastModified")
+        @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
-        @NameInMap("Locations")
+        @com.aliyun.core.annotation.NameInMap("Locations")
         private java.util.List < String > locations;
 
-        @NameInMap("Promotion")
+        @com.aliyun.core.annotation.NameInMap("Promotion")
         private String promotion;
 
-        @NameInMap("SoftwareDefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("SoftwareDefaultVersion")
         private String softwareDefaultVersion;
 
-        @NameInMap("SoftwareDescription")
+        @com.aliyun.core.annotation.NameInMap("SoftwareDescription")
         private String softwareDescription;
 
-        @NameInMap("SoftwareIcon")
+        @com.aliyun.core.annotation.NameInMap("SoftwareIcon")
         private String softwareIcon;
 
-        @NameInMap("SoftwareLicenseFee")
+        @com.aliyun.core.annotation.NameInMap("SoftwareLicenseFee")
         private Float softwareLicenseFee;
 
-        @NameInMap("SoftwareLongName")
+        @com.aliyun.core.annotation.NameInMap("SoftwareLongName")
         private String softwareLongName;
 
-        @NameInMap("SoftwareName")
+        @com.aliyun.core.annotation.NameInMap("SoftwareName")
         private String softwareName;
 
-        @NameInMap("SoftwareVersions")
+        @com.aliyun.core.annotation.NameInMap("SoftwareVersions")
         private java.util.List < String > softwareVersions;
 
         private Softwares(Builder builder) {

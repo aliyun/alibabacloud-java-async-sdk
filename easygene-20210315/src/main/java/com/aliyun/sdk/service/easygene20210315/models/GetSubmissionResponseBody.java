@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSubmissionResponseBody</p>
  */
 public class GetSubmissionResponseBody extends TeaModel {
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Submission")
+    @com.aliyun.core.annotation.NameInMap("Submission")
     private Submission submission;
 
     private GetSubmissionResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class GetSubmissionResponseBody extends TeaModel {
     } 
 
     public static class RunStats extends TeaModel {
-        @NameInMap("Aborted")
+        @com.aliyun.core.annotation.NameInMap("Aborted")
         private Long aborted;
 
-        @NameInMap("Aborting")
+        @com.aliyun.core.annotation.NameInMap("Aborting")
         private Long aborting;
 
-        @NameInMap("Failed")
+        @com.aliyun.core.annotation.NameInMap("Failed")
         private Long failed;
 
-        @NameInMap("Pending")
+        @com.aliyun.core.annotation.NameInMap("Pending")
         private Long pending;
 
-        @NameInMap("Running")
+        @com.aliyun.core.annotation.NameInMap("Running")
         private Long running;
 
-        @NameInMap("Submitted")
+        @com.aliyun.core.annotation.NameInMap("Submitted")
         private Long submitted;
 
-        @NameInMap("Succeeded")
+        @com.aliyun.core.annotation.NameInMap("Succeeded")
         private Long succeeded;
 
         private RunStats(Builder builder) {
@@ -253,28 +252,28 @@ public class GetSubmissionResponseBody extends TeaModel {
 
     }
     public static class Submission extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("RunStats")
+        @com.aliyun.core.annotation.NameInMap("RunStats")
         private RunStats runStats;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubmissionId")
+        @com.aliyun.core.annotation.NameInMap("SubmissionId")
         private String submissionId;
 
-        @NameInMap("Workspace")
+        @com.aliyun.core.annotation.NameInMap("Workspace")
         private String workspace;
 
         private Submission(Builder builder) {

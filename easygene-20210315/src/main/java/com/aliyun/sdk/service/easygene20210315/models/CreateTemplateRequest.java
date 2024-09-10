@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTemplateRequest</p>
  */
 public class CreateTemplateRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("AppRevision")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppRevision")
     private String appRevision;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("InputsExpression")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputsExpression")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < InputsExpression> inputsExpression;
 
-    @Query
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Body
-    @NameInMap("OutputsExpression")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutputsExpression")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < OutputsExpression> outputsExpression;
 
-    @Query
-    @NameInMap("RevisionTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevisionTag")
     private String revisionTag;
 
-    @Query
-    @NameInMap("RootEntity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootEntity")
     private String rootEntity;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
-    @Query
-    @NameInMap("Workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private CreateTemplateRequest(Builder builder) {
@@ -330,30 +329,30 @@ public class CreateTemplateRequest extends Request {
     } 
 
     public static class InputsExpression extends TeaModel {
-        @NameInMap("Help")
+        @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
 
-        @NameInMap("Required")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Required")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean required;
 
-        @NameInMap("StepOrder")
+        @com.aliyun.core.annotation.NameInMap("StepOrder")
         private Integer stepOrder;
 
-        @NameInMap("TaskName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TaskName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String taskName;
 
-        @NameInMap("VariableName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VariableName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String variableName;
 
-        @NameInMap("VariableType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VariableType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String variableType;
 
-        @NameInMap("VariableValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VariableValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String variableValue;
 
         private InputsExpression(Builder builder) {
@@ -496,30 +495,30 @@ public class CreateTemplateRequest extends Request {
 
     }
     public static class OutputsExpression extends TeaModel {
-        @NameInMap("Help")
+        @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
 
-        @NameInMap("Required")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Required")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean required;
 
-        @NameInMap("StepOrder")
+        @com.aliyun.core.annotation.NameInMap("StepOrder")
         private Integer stepOrder;
 
-        @NameInMap("TaskName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TaskName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String taskName;
 
-        @NameInMap("VariableName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VariableName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String variableName;
 
-        @NameInMap("VariableType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VariableType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String variableType;
 
-        @NameInMap("VariableValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VariableValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String variableValue;
 
         private OutputsExpression(Builder builder) {

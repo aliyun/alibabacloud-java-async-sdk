@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPublicDatasetResponseBody</p>
  */
 public class GetPublicDatasetResponseBody extends TeaModel {
-    @NameInMap("About")
+    @com.aliyun.core.annotation.NameInMap("About")
     private String about;
 
-    @NameInMap("AccessRequirements")
+    @com.aliyun.core.annotation.NameInMap("AccessRequirements")
     private String accessRequirements;
 
-    @NameInMap("Copyright")
+    @com.aliyun.core.annotation.NameInMap("Copyright")
     private String copyright;
 
-    @NameInMap("DatasetDescription")
+    @com.aliyun.core.annotation.NameInMap("DatasetDescription")
     private String datasetDescription;
 
-    @NameInMap("DatasetName")
+    @com.aliyun.core.annotation.NameInMap("DatasetName")
     private String datasetName;
 
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("LastModified")
+    @com.aliyun.core.annotation.NameInMap("LastModified")
     private String lastModified;
 
-    @NameInMap("Locations")
+    @com.aliyun.core.annotation.NameInMap("Locations")
     private java.util.List < String > locations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < String > tags;
 
-    @NameInMap("UpdateFrequency")
+    @com.aliyun.core.annotation.NameInMap("UpdateFrequency")
     private String updateFrequency;
 
     private GetPublicDatasetResponseBody(Builder builder) {

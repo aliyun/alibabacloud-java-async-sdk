@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListContainerImagesResponseBody</p>
  */
 public class ListContainerImagesResponseBody extends TeaModel {
-    @NameInMap("ContainerImages")
+    @com.aliyun.core.annotation.NameInMap("ContainerImages")
     private java.util.List < ContainerImages> containerImages;
 
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListContainerImagesResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class ListContainerImagesResponseBody extends TeaModel {
     } 
 
     public static class ContainerImages extends TeaModel {
-        @NameInMap("ContainerImageDescription")
+        @com.aliyun.core.annotation.NameInMap("ContainerImageDescription")
         private String containerImageDescription;
 
-        @NameInMap("ContainerImageName")
+        @com.aliyun.core.annotation.NameInMap("ContainerImageName")
         private String containerImageName;
 
-        @NameInMap("ContainerImageNamespace")
+        @com.aliyun.core.annotation.NameInMap("ContainerImageNamespace")
         private String containerImageNamespace;
 
-        @NameInMap("ContainerImageVersions")
+        @com.aliyun.core.annotation.NameInMap("ContainerImageVersions")
         private java.util.List < String > containerImageVersions;
 
-        @NameInMap("ContainerRegistry")
+        @com.aliyun.core.annotation.NameInMap("ContainerRegistry")
         private String containerRegistry;
 
-        @NameInMap("LastModified")
+        @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
         private ContainerImages(Builder builder) {

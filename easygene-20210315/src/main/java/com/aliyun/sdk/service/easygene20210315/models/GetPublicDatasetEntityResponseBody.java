@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPublicDatasetEntityResponseBody</p>
  */
 public class GetPublicDatasetEntityResponseBody extends TeaModel {
-    @NameInMap("Attributes")
+    @com.aliyun.core.annotation.NameInMap("Attributes")
     private java.util.List < String > attributes;
 
-    @NameInMap("DatasetName")
+    @com.aliyun.core.annotation.NameInMap("DatasetName")
     private String datasetName;
 
-    @NameInMap("EntityType")
+    @com.aliyun.core.annotation.NameInMap("EntityType")
     private String entityType;
 
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetPublicDatasetEntityResponseBody(Builder builder) {

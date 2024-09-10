@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSubmissionRequest</p>
  */
 public class CreateSubmissionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DefaultRuntime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultRuntime")
     private String defaultRuntime;
 
-    @Query
-    @NameInMap("EntityNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityNames")
     private java.util.List < String > entityNames;
 
-    @Query
-    @NameInMap("EntityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String entityType;
 
-    @Query
-    @NameInMap("ExecuteDirectory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteDirectory")
     private String executeDirectory;
 
-    @Query
-    @NameInMap("ExecuteOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteOptions")
     private String executeOptions;
 
-    @Query
-    @NameInMap("Inputs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Inputs")
     private String inputs;
 
-    @Query
-    @NameInMap("OutputFolder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputFolder")
     private String outputFolder;
 
-    @Query
-    @NameInMap("Outputs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Outputs")
     private String outputs;
 
-    @Query
-    @NameInMap("Revision")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Revision")
+    @com.aliyun.core.annotation.Validation()
     private String revision;
 
-    @Query
-    @NameInMap("RevisionTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevisionTag")
     private String revisionTag;
 
-    @Query
-    @NameInMap("Workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private CreateSubmissionRequest(Builder builder) {

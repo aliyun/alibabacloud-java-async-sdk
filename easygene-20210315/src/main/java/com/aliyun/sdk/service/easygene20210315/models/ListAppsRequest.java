@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAppsRequest</p>
  */
 public class ListAppsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @Query
-    @NameInMap("IsReversed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsReversed")
     private Boolean isReversed;
 
-    @Query
-    @NameInMap("LabelSelector")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelSelector")
     private String labelSelector;
 
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("Search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Search")
     private String search;
 
-    @Query
-    @NameInMap("Workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private ListAppsRequest(Builder builder) {

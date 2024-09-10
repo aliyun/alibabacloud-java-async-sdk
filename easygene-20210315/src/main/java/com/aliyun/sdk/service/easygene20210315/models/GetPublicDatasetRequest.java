@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPublicDatasetRequest</p>
  */
 public class GetPublicDatasetRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Attributes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Attributes")
     private java.util.List < String > attributes;
 
-    @Query
-    @NameInMap("DatasetName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DatasetName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String datasetName;
 
     private GetPublicDatasetRequest(Builder builder) {

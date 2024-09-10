@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTemplatesRequest</p>
  */
 public class ListTemplatesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("IsReversed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsReversed")
     private Boolean isReversed;
 
-    @Query
-    @NameInMap("LabelSelector")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelSelector")
     private String labelSelector;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("Search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Search")
     private String search;
 
-    @Query
-    @NameInMap("Workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private ListTemplatesRequest(Builder builder) {

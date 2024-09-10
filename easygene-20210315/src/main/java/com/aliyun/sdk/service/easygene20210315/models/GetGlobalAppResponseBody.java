@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetGlobalAppResponseBody</p>
  */
 public class GetGlobalAppResponseBody extends TeaModel {
-    @NameInMap("AppDefaultVersion")
+    @com.aliyun.core.annotation.NameInMap("AppDefaultVersion")
     private String appDefaultVersion;
 
-    @NameInMap("AppDescription")
+    @com.aliyun.core.annotation.NameInMap("AppDescription")
     private String appDescription;
 
-    @NameInMap("AppDescriptorFiles")
+    @com.aliyun.core.annotation.NameInMap("AppDescriptorFiles")
     private java.util.List < AppDescriptorFiles> appDescriptorFiles;
 
-    @NameInMap("AppDescriptorType")
+    @com.aliyun.core.annotation.NameInMap("AppDescriptorType")
     private String appDescriptorType;
 
-    @NameInMap("AppFee")
+    @com.aliyun.core.annotation.NameInMap("AppFee")
     private String appFee;
 
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @NameInMap("AppScope")
+    @com.aliyun.core.annotation.NameInMap("AppScope")
     private String appScope;
 
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @NameInMap("AppVersion")
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
-    @NameInMap("AppVersions")
+    @com.aliyun.core.annotation.NameInMap("AppVersions")
     private java.util.List < AppVersions> appVersions;
 
-    @NameInMap("Categories")
+    @com.aliyun.core.annotation.NameInMap("Categories")
     private java.util.List < String > categories;
 
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @NameInMap("Contact")
+    @com.aliyun.core.annotation.NameInMap("Contact")
     private String contact;
 
-    @NameInMap("DAG")
+    @com.aliyun.core.annotation.NameInMap("DAG")
     private String DAG;
 
-    @NameInMap("Document")
+    @com.aliyun.core.annotation.NameInMap("Document")
     private String document;
 
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("LastModified")
+    @com.aliyun.core.annotation.NameInMap("LastModified")
     private String lastModified;
 
-    @NameInMap("Links")
+    @com.aliyun.core.annotation.NameInMap("Links")
     private java.util.List < String > links;
 
-    @NameInMap("Locations")
+    @com.aliyun.core.annotation.NameInMap("Locations")
     private java.util.List < String > locations;
 
-    @NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
     private String namespaceName;
 
-    @NameInMap("Pinned")
+    @com.aliyun.core.annotation.NameInMap("Pinned")
     private Boolean pinned;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Toolkit")
+    @com.aliyun.core.annotation.NameInMap("Toolkit")
     private String toolkit;
 
     private GetGlobalAppResponseBody(Builder builder) {
@@ -492,19 +491,19 @@ public class GetGlobalAppResponseBody extends TeaModel {
     } 
 
     public static class AppDescriptorFiles extends TeaModel {
-        @NameInMap("Checksum")
+        @com.aliyun.core.annotation.NameInMap("Checksum")
         private String checksum;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private AppDescriptorFiles(Builder builder) {
@@ -613,13 +612,13 @@ public class GetGlobalAppResponseBody extends TeaModel {
 
     }
     public static class AppVersions extends TeaModel {
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("LastModified")
+        @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
         private AppVersions(Builder builder) {

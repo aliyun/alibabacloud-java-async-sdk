@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserActiveRunsResponseBody</p>
  */
 public class ListUserActiveRunsResponseBody extends TeaModel {
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Runs")
+    @com.aliyun.core.annotation.NameInMap("Runs")
     private java.util.List < Runs> runs;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListUserActiveRunsResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
     } 
 
     public static class ExecuteOptions extends TeaModel {
-        @NameInMap("CallCaching")
+        @com.aliyun.core.annotation.NameInMap("CallCaching")
         private Boolean callCaching;
 
-        @NameInMap("DeleteIntermediateResults")
+        @com.aliyun.core.annotation.NameInMap("DeleteIntermediateResults")
         private Boolean deleteIntermediateResults;
 
-        @NameInMap("FailureMode")
+        @com.aliyun.core.annotation.NameInMap("FailureMode")
         private String failureMode;
 
-        @NameInMap("UseRelativeOutputPaths")
+        @com.aliyun.core.annotation.NameInMap("UseRelativeOutputPaths")
         private Boolean useRelativeOutputPaths;
 
         private ExecuteOptions(Builder builder) {
@@ -253,61 +252,61 @@ public class ListUserActiveRunsResponseBody extends TeaModel {
 
     }
     public static class Runs extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppRevision")
+        @com.aliyun.core.annotation.NameInMap("AppRevision")
         private String appRevision;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DefaultRuntime")
+        @com.aliyun.core.annotation.NameInMap("DefaultRuntime")
         private String defaultRuntime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EntityName")
+        @com.aliyun.core.annotation.NameInMap("EntityName")
         private String entityName;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("ExecuteDirectory")
+        @com.aliyun.core.annotation.NameInMap("ExecuteDirectory")
         private String executeDirectory;
 
-        @NameInMap("ExecuteOptions")
+        @com.aliyun.core.annotation.NameInMap("ExecuteOptions")
         private ExecuteOptions executeOptions;
 
-        @NameInMap("Inputs")
+        @com.aliyun.core.annotation.NameInMap("Inputs")
         private String inputs;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.Map < String, String > labels;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RunId")
+        @com.aliyun.core.annotation.NameInMap("RunId")
         private String runId;
 
-        @NameInMap("RunName")
+        @com.aliyun.core.annotation.NameInMap("RunName")
         private String runName;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubmissionId")
+        @com.aliyun.core.annotation.NameInMap("SubmissionId")
         private String submissionId;
 
-        @NameInMap("Workspace")
+        @com.aliyun.core.annotation.NameInMap("Workspace")
         private String workspace;
 
         private Runs(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,90 +11,94 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRunResponseBody</p>
  */
 public class GetRunResponseBody extends TeaModel {
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @NameInMap("AppRevision")
+    @com.aliyun.core.annotation.NameInMap("AppRevision")
     private String appRevision;
 
-    @NameInMap("Calls")
+    @com.aliyun.core.annotation.NameInMap("BillingInstanceIds")
+    private java.util.List < String > billingInstanceIds;
+
+    @com.aliyun.core.annotation.NameInMap("Calls")
     private String calls;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DefaultRuntime")
+    @com.aliyun.core.annotation.NameInMap("DefaultRuntime")
     private String defaultRuntime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("EntityName")
+    @com.aliyun.core.annotation.NameInMap("EntityName")
     private String entityName;
 
-    @NameInMap("EntityType")
+    @com.aliyun.core.annotation.NameInMap("EntityType")
     private String entityType;
 
-    @NameInMap("ExecuteDirectory")
+    @com.aliyun.core.annotation.NameInMap("ExecuteDirectory")
     private String executeDirectory;
 
-    @NameInMap("ExecuteOptions")
+    @com.aliyun.core.annotation.NameInMap("ExecuteOptions")
     private ExecuteOptions executeOptions;
 
-    @NameInMap("Failures")
+    @com.aliyun.core.annotation.NameInMap("Failures")
     private String failures;
 
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("Inputs")
+    @com.aliyun.core.annotation.NameInMap("Inputs")
     private String inputs;
 
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.Map < String, String > labels;
 
-    @NameInMap("OutputFolder")
+    @com.aliyun.core.annotation.NameInMap("OutputFolder")
     private String outputFolder;
 
-    @NameInMap("Outputs")
+    @com.aliyun.core.annotation.NameInMap("Outputs")
     private String outputs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunId")
+    @com.aliyun.core.annotation.NameInMap("RunId")
     private String runId;
 
-    @NameInMap("RunName")
+    @com.aliyun.core.annotation.NameInMap("RunName")
     private String runName;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SubmissionId")
+    @com.aliyun.core.annotation.NameInMap("SubmissionId")
     private String submissionId;
 
-    @NameInMap("Timing")
+    @com.aliyun.core.annotation.NameInMap("Timing")
     private String timing;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
-    @NameInMap("Workspace")
+    @com.aliyun.core.annotation.NameInMap("Workspace")
     private String workspace;
 
     private GetRunResponseBody(Builder builder) {
         this.appName = builder.appName;
         this.appRevision = builder.appRevision;
+        this.billingInstanceIds = builder.billingInstanceIds;
         this.calls = builder.calls;
         this.createTime = builder.createTime;
         this.defaultRuntime = builder.defaultRuntime;
@@ -143,6 +146,13 @@ public class GetRunResponseBody extends TeaModel {
      */
     public String getAppRevision() {
         return this.appRevision;
+    }
+
+    /**
+     * @return billingInstanceIds
+     */
+    public java.util.List < String > getBillingInstanceIds() {
+        return this.billingInstanceIds;
     }
 
     /**
@@ -323,6 +333,7 @@ public class GetRunResponseBody extends TeaModel {
     public static final class Builder {
         private String appName; 
         private String appRevision; 
+        private java.util.List < String > billingInstanceIds; 
         private String calls; 
         private String createTime; 
         private String defaultRuntime; 
@@ -362,6 +373,14 @@ public class GetRunResponseBody extends TeaModel {
          */
         public Builder appRevision(String appRevision) {
             this.appRevision = appRevision;
+            return this;
+        }
+
+        /**
+         * BillingInstanceIds.
+         */
+        public Builder billingInstanceIds(java.util.List < String > billingInstanceIds) {
+            this.billingInstanceIds = billingInstanceIds;
             return this;
         }
 
@@ -572,20 +591,24 @@ public class GetRunResponseBody extends TeaModel {
     } 
 
     public static class ExecuteOptions extends TeaModel {
-        @NameInMap("CallCaching")
+        @com.aliyun.core.annotation.NameInMap("CallCaching")
         private Boolean callCaching;
 
-        @NameInMap("DeleteIntermediateResults")
+        @com.aliyun.core.annotation.NameInMap("DataLoader")
+        private String dataLoader;
+
+        @com.aliyun.core.annotation.NameInMap("DeleteIntermediateResults")
         private Boolean deleteIntermediateResults;
 
-        @NameInMap("FailureMode")
+        @com.aliyun.core.annotation.NameInMap("FailureMode")
         private String failureMode;
 
-        @NameInMap("UseRelativeOutputPaths")
+        @com.aliyun.core.annotation.NameInMap("UseRelativeOutputPaths")
         private Boolean useRelativeOutputPaths;
 
         private ExecuteOptions(Builder builder) {
             this.callCaching = builder.callCaching;
+            this.dataLoader = builder.dataLoader;
             this.deleteIntermediateResults = builder.deleteIntermediateResults;
             this.failureMode = builder.failureMode;
             this.useRelativeOutputPaths = builder.useRelativeOutputPaths;
@@ -604,6 +627,13 @@ public class GetRunResponseBody extends TeaModel {
          */
         public Boolean getCallCaching() {
             return this.callCaching;
+        }
+
+        /**
+         * @return dataLoader
+         */
+        public String getDataLoader() {
+            return this.dataLoader;
         }
 
         /**
@@ -629,6 +659,7 @@ public class GetRunResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean callCaching; 
+            private String dataLoader; 
             private Boolean deleteIntermediateResults; 
             private String failureMode; 
             private Boolean useRelativeOutputPaths; 
@@ -638,6 +669,14 @@ public class GetRunResponseBody extends TeaModel {
              */
             public Builder callCaching(Boolean callCaching) {
                 this.callCaching = callCaching;
+                return this;
+            }
+
+            /**
+             * DataLoader.
+             */
+            public Builder dataLoader(String dataLoader) {
+                this.dataLoader = dataLoader;
                 return this;
             }
 

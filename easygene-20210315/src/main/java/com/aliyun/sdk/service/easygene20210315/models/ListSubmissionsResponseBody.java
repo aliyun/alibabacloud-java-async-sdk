@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSubmissionsResponseBody</p>
  */
 public class ListSubmissionsResponseBody extends TeaModel {
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Submissions")
+    @com.aliyun.core.annotation.NameInMap("Submissions")
     private java.util.List < Submissions> submissions;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSubmissionsResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class ListSubmissionsResponseBody extends TeaModel {
     } 
 
     public static class RunStats extends TeaModel {
-        @NameInMap("Aborted")
+        @com.aliyun.core.annotation.NameInMap("Aborted")
         private Long aborted;
 
-        @NameInMap("Aborting")
+        @com.aliyun.core.annotation.NameInMap("Aborting")
         private Long aborting;
 
-        @NameInMap("Failed")
+        @com.aliyun.core.annotation.NameInMap("Failed")
         private Long failed;
 
-        @NameInMap("Pending")
+        @com.aliyun.core.annotation.NameInMap("Pending")
         private Long pending;
 
-        @NameInMap("Running")
+        @com.aliyun.core.annotation.NameInMap("Running")
         private Long running;
 
-        @NameInMap("Submitted")
+        @com.aliyun.core.annotation.NameInMap("Submitted")
         private Long submitted;
 
-        @NameInMap("Succeeded")
+        @com.aliyun.core.annotation.NameInMap("Succeeded")
         private Long succeeded;
 
         private RunStats(Builder builder) {
@@ -313,28 +312,28 @@ public class ListSubmissionsResponseBody extends TeaModel {
 
     }
     public static class Submissions extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("RunStats")
+        @com.aliyun.core.annotation.NameInMap("RunStats")
         private RunStats runStats;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubmissionId")
+        @com.aliyun.core.annotation.NameInMap("SubmissionId")
         private String submissionId;
 
-        @NameInMap("Workspace")
+        @com.aliyun.core.annotation.NameInMap("Workspace")
         private String workspace;
 
         private Submissions(Builder builder) {

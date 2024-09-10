@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAppResponseBody</p>
  */
 public class GetAppResponseBody extends TeaModel {
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @NameInMap("AppType")
+    @com.aliyun.core.annotation.NameInMap("AppType")
     private String appType;
 
-    @NameInMap("Configs")
+    @com.aliyun.core.annotation.NameInMap("Configs")
     private java.util.List < Configs> configs;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Definition")
+    @com.aliyun.core.annotation.NameInMap("Definition")
     private String definition;
 
-    @NameInMap("Dependencies")
+    @com.aliyun.core.annotation.NameInMap("Dependencies")
     private java.util.List < Dependencies> dependencies;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Documentation")
+    @com.aliyun.core.annotation.NameInMap("Documentation")
     private String documentation;
 
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("Inputs")
+    @com.aliyun.core.annotation.NameInMap("Inputs")
     private java.util.List < Inputs> inputs;
 
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.Map < String, String > labels;
 
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @NameInMap("LanguageVersion")
+    @com.aliyun.core.annotation.NameInMap("LanguageVersion")
     private String languageVersion;
 
-    @NameInMap("LastModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
     private String lastModifiedTime;
 
-    @NameInMap("Outputs")
+    @com.aliyun.core.annotation.NameInMap("Outputs")
     private java.util.List < Outputs> outputs;
 
-    @NameInMap("Path")
+    @com.aliyun.core.annotation.NameInMap("Path")
     private String path;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Revision")
+    @com.aliyun.core.annotation.NameInMap("Revision")
     private String revision;
 
-    @NameInMap("RevisionComment")
+    @com.aliyun.core.annotation.NameInMap("RevisionComment")
     private String revisionComment;
 
-    @NameInMap("RevisionTag")
+    @com.aliyun.core.annotation.NameInMap("RevisionTag")
     private String revisionTag;
 
-    @NameInMap("Revisions")
+    @com.aliyun.core.annotation.NameInMap("Revisions")
     private java.util.List < Revisions> revisions;
 
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @NameInMap("Source")
+    @com.aliyun.core.annotation.NameInMap("Source")
     private String source;
 
-    @NameInMap("URL")
+    @com.aliyun.core.annotation.NameInMap("URL")
     private String URL;
 
-    @NameInMap("WorkflowName")
+    @com.aliyun.core.annotation.NameInMap("WorkflowName")
     private String workflowName;
 
-    @NameInMap("Workspace")
+    @com.aliyun.core.annotation.NameInMap("Workspace")
     private String workspace;
 
     private GetAppResponseBody(Builder builder) {
@@ -552,10 +551,10 @@ public class GetAppResponseBody extends TeaModel {
     } 
 
     public static class Configs extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private Configs(Builder builder) {
@@ -613,10 +612,10 @@ public class GetAppResponseBody extends TeaModel {
 
     }
     public static class Dependencies extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private Dependencies(Builder builder) {
@@ -674,25 +673,25 @@ public class GetAppResponseBody extends TeaModel {
 
     }
     public static class Inputs extends TeaModel {
-        @NameInMap("Help")
+        @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
-        @NameInMap("StepOrder")
+        @com.aliyun.core.annotation.NameInMap("StepOrder")
         private Long stepOrder;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("VariableName")
+        @com.aliyun.core.annotation.NameInMap("VariableName")
         private String variableName;
 
-        @NameInMap("VariableType")
+        @com.aliyun.core.annotation.NameInMap("VariableType")
         private String variableType;
 
-        @NameInMap("VariableValue")
+        @com.aliyun.core.annotation.NameInMap("VariableValue")
         private String variableValue;
 
         private Inputs(Builder builder) {
@@ -835,25 +834,25 @@ public class GetAppResponseBody extends TeaModel {
 
     }
     public static class Outputs extends TeaModel {
-        @NameInMap("Help")
+        @com.aliyun.core.annotation.NameInMap("Help")
         private String help;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
-        @NameInMap("StepOrder")
+        @com.aliyun.core.annotation.NameInMap("StepOrder")
         private Long stepOrder;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("VariableName")
+        @com.aliyun.core.annotation.NameInMap("VariableName")
         private String variableName;
 
-        @NameInMap("VariableType")
+        @com.aliyun.core.annotation.NameInMap("VariableType")
         private String variableType;
 
-        @NameInMap("VariableValue")
+        @com.aliyun.core.annotation.NameInMap("VariableValue")
         private String variableValue;
 
         private Outputs(Builder builder) {
@@ -996,16 +995,16 @@ public class GetAppResponseBody extends TeaModel {
 
     }
     public static class Revisions extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Revision")
+        @com.aliyun.core.annotation.NameInMap("Revision")
         private String revision;
 
-        @NameInMap("RevisionComment")
+        @com.aliyun.core.annotation.NameInMap("RevisionComment")
         private String revisionComment;
 
-        @NameInMap("RevisionTag")
+        @com.aliyun.core.annotation.NameInMap("RevisionTag")
         private String revisionTag;
 
         private Revisions(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPublicDatasetEntityItemsResponseBody</p>
  */
 public class ListPublicDatasetEntityItemsResponseBody extends TeaModel {
-    @NameInMap("DatasetName")
+    @com.aliyun.core.annotation.NameInMap("DatasetName")
     private String datasetName;
 
-    @NameInMap("EntityItems")
+    @com.aliyun.core.annotation.NameInMap("EntityItems")
     private java.util.List < EntityItems> entityItems;
 
-    @NameInMap("HostId")
+    @com.aliyun.core.annotation.NameInMap("HostId")
     private String hostId;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListPublicDatasetEntityItemsResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class ListPublicDatasetEntityItemsResponseBody extends TeaModel {
     } 
 
     public static class EntityItems extends TeaModel {
-        @NameInMap("EntityData")
+        @com.aliyun.core.annotation.NameInMap("EntityData")
         private java.util.Map < String, String > entityData;
 
-        @NameInMap("EntityName")
+        @com.aliyun.core.annotation.NameInMap("EntityName")
         private String entityName;
 
         private EntityItems(Builder builder) {

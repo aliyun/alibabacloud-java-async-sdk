@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TagAppResponseBody</p>
  */
 public class TagAppResponseBody extends TeaModel {
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @NameInMap("AppRevision")
+    @com.aliyun.core.annotation.NameInMap("AppRevision")
     private String appRevision;
 
-    @NameInMap("FormerRevision")
+    @com.aliyun.core.annotation.NameInMap("FormerRevision")
     private String formerRevision;
 
-    @NameInMap("FormerTag")
+    @com.aliyun.core.annotation.NameInMap("FormerTag")
     private String formerTag;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RevisionTag")
+    @com.aliyun.core.annotation.NameInMap("RevisionTag")
     private String revisionTag;
 
-    @NameInMap("Workspace")
+    @com.aliyun.core.annotation.NameInMap("Workspace")
     private String workspace;
 
     private TagAppResponseBody(Builder builder) {

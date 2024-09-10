@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,68 +11,68 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRunRequest</p>
  */
 public class CreateRunRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("AppRevision")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppRevision")
+    @com.aliyun.core.annotation.Validation()
     private String appRevision;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DefaultRuntime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultRuntime")
     private String defaultRuntime;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ExecuteDirectory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteDirectory")
     private String executeDirectory;
 
-    @Query
-    @NameInMap("ExecuteOptions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteOptions")
     private ExecuteOptions executeOptions;
 
-    @Query
-    @NameInMap("Inputs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Inputs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputs;
 
-    @Query
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
-    @Query
-    @NameInMap("OutputFolder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputFolder")
     private String outputFolder;
 
-    @Query
-    @NameInMap("RevisionTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevisionTag")
     private String revisionTag;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @Query
-    @NameInMap("RunName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunName")
     private String runName;
 
-    @Query
-    @NameInMap("Workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private CreateRunRequest(Builder builder) {
@@ -397,20 +396,24 @@ public class CreateRunRequest extends Request {
     } 
 
     public static class ExecuteOptions extends TeaModel {
-        @NameInMap("CallCaching")
+        @com.aliyun.core.annotation.NameInMap("CallCaching")
         private Boolean callCaching;
 
-        @NameInMap("DeleteIntermediateResults")
+        @com.aliyun.core.annotation.NameInMap("DataLoader")
+        private String dataLoader;
+
+        @com.aliyun.core.annotation.NameInMap("DeleteIntermediateResults")
         private Boolean deleteIntermediateResults;
 
-        @NameInMap("FailureMode")
+        @com.aliyun.core.annotation.NameInMap("FailureMode")
         private String failureMode;
 
-        @NameInMap("UseRelativeOutputPaths")
+        @com.aliyun.core.annotation.NameInMap("UseRelativeOutputPaths")
         private Boolean useRelativeOutputPaths;
 
         private ExecuteOptions(Builder builder) {
             this.callCaching = builder.callCaching;
+            this.dataLoader = builder.dataLoader;
             this.deleteIntermediateResults = builder.deleteIntermediateResults;
             this.failureMode = builder.failureMode;
             this.useRelativeOutputPaths = builder.useRelativeOutputPaths;
@@ -429,6 +432,13 @@ public class CreateRunRequest extends Request {
          */
         public Boolean getCallCaching() {
             return this.callCaching;
+        }
+
+        /**
+         * @return dataLoader
+         */
+        public String getDataLoader() {
+            return this.dataLoader;
         }
 
         /**
@@ -454,6 +464,7 @@ public class CreateRunRequest extends Request {
 
         public static final class Builder {
             private Boolean callCaching; 
+            private String dataLoader; 
             private Boolean deleteIntermediateResults; 
             private String failureMode; 
             private Boolean useRelativeOutputPaths; 
@@ -463,6 +474,14 @@ public class CreateRunRequest extends Request {
              */
             public Builder callCaching(Boolean callCaching) {
                 this.callCaching = callCaching;
+                return this;
+            }
+
+            /**
+             * DataLoader.
+             */
+            public Builder dataLoader(String dataLoader) {
+                this.dataLoader = dataLoader;
                 return this;
             }
 

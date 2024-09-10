@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetGlobalAppRequest</p>
  */
 public class GetGlobalAppRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("AppVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
-    @Query
-    @NameInMap("Attributes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Attributes")
     private java.util.List < String > attributes;
 
-    @Query
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @Query
-    @NameInMap("NamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceName;
 
     private GetGlobalAppRequest(Builder builder) {

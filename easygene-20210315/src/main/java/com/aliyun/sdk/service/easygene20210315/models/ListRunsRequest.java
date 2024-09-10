@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.easygene20210315.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRunsRequest</p>
  */
 public class ListRunsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("AppRevision")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppRevision")
     private String appRevision;
 
-    @Query
-    @NameInMap("EntityName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityName")
     private String entityName;
 
-    @Query
-    @NameInMap("EntityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityType")
     private String entityType;
 
-    @Query
-    @NameInMap("GetTotal")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GetTotal")
     private Boolean getTotal;
 
-    @Query
-    @NameInMap("IsReversed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsReversed")
     private Boolean isReversed;
 
-    @Query
-    @NameInMap("LabelSelector")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelSelector")
     private String labelSelector;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 2147483647, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("Search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Search")
     private String search;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("SubmissionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubmissionId")
     private String submissionId;
 
-    @Query
-    @NameInMap("Workspace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Workspace")
     private String workspace;
 
     private ListRunsRequest(Builder builder) {
