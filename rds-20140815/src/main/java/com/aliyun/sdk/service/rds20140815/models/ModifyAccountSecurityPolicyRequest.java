@@ -6,26 +6,32 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CopyDatabaseRequest} extends {@link RequestModel}
+ * {@link ModifyAccountSecurityPolicyRequest} extends {@link RequestModel}
  *
- * <p>CopyDatabaseRequest</p>
+ * <p>ModifyAccountSecurityPolicyRequest</p>
  */
-public class CopyDatabaseRequest extends Request {
+public class ModifyAccountSecurityPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
-    private String DBInstanceName;
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DstDBName")
-    private String dstDBName;
+    @com.aliyun.core.annotation.NameInMap("DBInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String DBInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupPolicy")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String groupPolicy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
+    private String ownerAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ReserveAccount")
-    private Integer reserveAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -39,27 +45,23 @@ public class CopyDatabaseRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SrcDBName")
-    private String srcDBName;
-
-    private CopyDatabaseRequest(Builder builder) {
+    private ModifyAccountSecurityPolicyRequest(Builder builder) {
         super(builder);
-        this.DBInstanceName = builder.DBInstanceName;
-        this.dstDBName = builder.dstDBName;
+        this.clientToken = builder.clientToken;
+        this.DBInstanceId = builder.DBInstanceId;
+        this.groupPolicy = builder.groupPolicy;
+        this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.reserveAccount = builder.reserveAccount;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.srcDBName = builder.srcDBName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CopyDatabaseRequest create() {
+    public static ModifyAccountSecurityPolicyRequest create() {
         return builder().build();
     }
 
@@ -69,17 +71,31 @@ public class CopyDatabaseRequest extends Request {
     }
 
     /**
-     * @return DBInstanceName
+     * @return clientToken
      */
-    public String getDBInstanceName() {
-        return this.DBInstanceName;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
-     * @return dstDBName
+     * @return DBInstanceId
      */
-    public String getDstDBName() {
-        return this.dstDBName;
+    public String getDBInstanceId() {
+        return this.DBInstanceId;
+    }
+
+    /**
+     * @return groupPolicy
+     */
+    public String getGroupPolicy() {
+        return this.groupPolicy;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
     }
 
     /**
@@ -87,13 +103,6 @@ public class CopyDatabaseRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return reserveAccount
-     */
-    public Integer getReserveAccount() {
-        return this.reserveAccount;
     }
 
     /**
@@ -117,54 +126,65 @@ public class CopyDatabaseRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return srcDBName
-     */
-    public String getSrcDBName() {
-        return this.srcDBName;
-    }
-
-    public static final class Builder extends Request.Builder<CopyDatabaseRequest, Builder> {
-        private String DBInstanceName; 
-        private String dstDBName; 
+    public static final class Builder extends Request.Builder<ModifyAccountSecurityPolicyRequest, Builder> {
+        private String clientToken; 
+        private String DBInstanceId; 
+        private String groupPolicy; 
+        private String ownerAccount; 
         private Long ownerId; 
-        private Integer reserveAccount; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String srcDBName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CopyDatabaseRequest request) {
+        private Builder(ModifyAccountSecurityPolicyRequest request) {
             super(request);
-            this.DBInstanceName = request.DBInstanceName;
-            this.dstDBName = request.dstDBName;
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.groupPolicy = request.groupPolicy;
+            this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.reserveAccount = request.reserveAccount;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.srcDBName = request.srcDBName;
         } 
 
         /**
-         * The instance name.
+         * ClientToken.
          */
-        public Builder DBInstanceName(String DBInstanceName) {
-            this.putQueryParameter("DBInstanceName", DBInstanceName);
-            this.DBInstanceName = DBInstanceName;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
         /**
-         * Destination database name.
+         * DBInstanceId.
          */
-        public Builder dstDBName(String dstDBName) {
-            this.putQueryParameter("DstDBName", dstDBName);
-            this.dstDBName = dstDBName;
+        public Builder DBInstanceId(String DBInstanceId) {
+            this.putQueryParameter("DBInstanceId", DBInstanceId);
+            this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * GroupPolicy.
+         */
+        public Builder groupPolicy(String groupPolicy) {
+            this.putQueryParameter("GroupPolicy", groupPolicy);
+            this.groupPolicy = groupPolicy;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
             return this;
         }
 
@@ -178,16 +198,7 @@ public class CopyDatabaseRequest extends Request {
         }
 
         /**
-         * Reserve account.
-         */
-        public Builder reserveAccount(Integer reserveAccount) {
-            this.putQueryParameter("ReserveAccount", reserveAccount);
-            this.reserveAccount = reserveAccount;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group.
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -213,18 +224,9 @@ public class CopyDatabaseRequest extends Request {
             return this;
         }
 
-        /**
-         * Source database name.
-         */
-        public Builder srcDBName(String srcDBName) {
-            this.putQueryParameter("SrcDBName", srcDBName);
-            this.srcDBName = srcDBName;
-            return this;
-        }
-
         @Override
-        public CopyDatabaseRequest build() {
-            return new CopyDatabaseRequest(this);
+        public ModifyAccountSecurityPolicyRequest build() {
+            return new ModifyAccountSecurityPolicyRequest(this);
         } 
 
     } 

@@ -111,7 +111,7 @@ public class ModifyEventInfoRequest extends Request {
         } 
 
         /**
-         * The action parameter. Set this value in the JSON string format.
+         * The action-related parameters. You can add action-related parameters based on your business requirements. The parameter value varies with the value of the TaskAction parameter.
          */
         public Builder actionParams(String actionParams) {
             this.putQueryParameter("ActionParams", actionParams);
@@ -120,7 +120,13 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * The event handling action. Set this value to archive or undo.
+         * The event handling action. Valid values:
+         * <p>
+         * 
+         * *   **archive**
+         * *   **undo**
+         * 
+         * >  This parameter is required.
          */
         public Builder eventAction(String eventAction) {
             this.putQueryParameter("EventAction", eventAction);
@@ -129,7 +135,7 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * The event ID. Separate multiple event IDs with commas (,). You can configure up to 20 event IDs.
+         * The event ID. You can call the DescribeEvents operation to obtain the IDs of the events. Separate multiple event IDs with commas (,). You can specify up to 20 event IDs.
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -138,7 +144,7 @@ public class ModifyEventInfoRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

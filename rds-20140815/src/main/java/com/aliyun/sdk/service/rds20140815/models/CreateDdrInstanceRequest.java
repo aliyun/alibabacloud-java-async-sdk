@@ -584,11 +584,16 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * User-defined key ID for cloud disk encryption. Passing this parameter means turning on cloud disk encryption (it cannot be turned off after turning it on), and RoleARN needs to be passed in. You can view the key ID in the key management service console, or create a new key. For more information, see [Creating a Key](~~181610~~).
+         * The ID of the customer master key (CMK) for cloud disk encryption. If this parameter is specified, cloud disk encryption is enabled and you must also specify the **RoleARN** parameter. Cloud disk encryption cannot be disabled after it is enabled. You can obtain the ID of the key in the KMS console or create a key. For more information, see [Create a key](~~181610~~).
          * <p>
          * 
-         * > - This parameter is only applicable to RDS SQL Server instances.
-         * > - You can also not pass this parameter and only need to pass in RoleARN, which means setting the cloud disk encryption type of the instance to the RDS managed service key (Default Service CMK).
+         * **
+         * 
+         * **Notes**
+         * 
+         * *   This parameter is applicable only to ApsaraDB RDS for SQL Server instances.
+         * 
+         * *   You can leave this parameter empty. If you do not specify this parameter, you only need to specify the **RoleARN** to use the service key that is managed by ApsaraDB RDS to encrypt cloud disks.
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -758,10 +763,10 @@ public class CreateDdrInstanceRequest extends Request {
         }
 
         /**
-         * The global resource descriptor (ARN) of the RDS cloud service account authorized by the primary account to access the KMS permission. You can view the ARN information through the [CheckCloudResourceAuthorized](https://next.api.aliyun.com/document/Rds/2014-08-15/CheckCloudResourceAuthorized) API.
+         * The Alibaba Cloud Resource Name (ARN) that is provided by your Alibaba Cloud account for Resource Access Management (RAM) users. RAM users can use the ARN to connect to ApsaraDB RDS to Key Management Service (KMS). You can call the [CheckCloudResourceAuthorized](~~2628797~~) operation to query the ARN.
          * <p>
          * 
-         * > This parameter is only available for RDS SQL Server instances.
+         * >  This parameter is applicable only to ApsaraDB RDS for SQL Server instances.
          */
         public Builder roleARN(String roleARN) {
             this.putQueryParameter("RoleARN", roleARN);

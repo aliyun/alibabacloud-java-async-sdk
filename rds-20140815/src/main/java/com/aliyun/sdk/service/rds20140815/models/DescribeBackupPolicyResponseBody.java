@@ -678,10 +678,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Whether to support 5-minute log backup of SQL Server.
+         * Indicates whether log backups for SQL Server are performed verery five minutes.
          * <p>
-         * - 0 : Not Support
-         * - 1 : Support
+         * 
+         * *   0: No
+         * *   1: Yes
          */
         public Builder supportsHighFrequencyBackup(Long supportsHighFrequencyBackup) {
             this.supportsHighFrequencyBackup = supportsHighFrequencyBackup;

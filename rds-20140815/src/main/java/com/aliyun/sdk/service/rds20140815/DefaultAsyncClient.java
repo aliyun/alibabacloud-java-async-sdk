@@ -4082,14 +4082,16 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * ### [](#)Supported database engines
       * *   MySQL
-      * > This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
+      *     **
+      *     **Note** This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
       * *   SQL Server
-      * > This operation is supported only for RDS instances that run SQL Server 2008 R2.
+      *     **
+      *     **Note** This operation is supported only for RDS instances that run SQL Server 2008 R2.
       * *   MariaDB
-      * ### [](#)Precautions
+      * ### [](#)Prerequisites
       * *   Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.
       * *   If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.
-      * *   Starting from December 13, 2023, the optimized template algorithm is used for slow queries. As a result, different **SQLHash** values are generated for the same SQLText before and after optimization. For more information, see [\\[Notice\\] Optimization of the template algorithm for slow queries](~~2637024~~).
+      * *   Starting from September 01, 2024, the template algorithm for slow queries is optimized. When you call the operation, you must change the value of the **SQLHASH** parameter. For more information, see [\\[Notice\\] Optimization of the template algorithm for slow queries](~~2845725~~).
       *
      */
     @Override
@@ -4665,6 +4667,20 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<ModifyAccountCheckPolicyResponse> modifyAccountCheckPolicy(ModifyAccountCheckPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAccountCheckPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAccountCheckPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAccountCheckPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * ### [](#)Supported database engines
       * *   RDS MySQL
@@ -4696,6 +4712,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyAccountMaskingPrivilegeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ModifyAccountSecurityPolicyResponse> modifyAccountSecurityPolicy(ModifyAccountSecurityPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyAccountSecurityPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyAccountSecurityPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyAccountSecurityPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -6351,12 +6381,12 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  Before restoration, you can call the [CheckCreateDdrDBInstance](~~121721~~) operation to check whether a cross-region backup set can be used for cross-region restoration.
-      * ### [](#)Supported database engine
+      * >  Before restoration, you can call the CheckCreateDdrDBInstance operation to check whether a cross-region backup set can be used for cross-region restoration.
+      * ### [](#)Supported database engines
       * MySQL
       * ### [](#)References
-      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
-      * *   [Back up an ApsaraDB RDS for MySQL instance across regions](~~120824~~)
+      * >  Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Use the cross-region backup feature for an ApsaraDB RDS for MySQL instance](~~120824~~)
       * *   [Restore the data of an ApsaraDB RDS for MySQL instance across regions](~~120875~~)
       *
      */

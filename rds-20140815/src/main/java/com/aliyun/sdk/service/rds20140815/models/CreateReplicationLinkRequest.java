@@ -260,7 +260,7 @@ public class CreateReplicationLinkRequest extends Request {
          * The name of the source instance.
          * <p>
          * 
-         * >  You must specify this parameter if **SourceCategory** is set to **aliyunRDS**.
+         * >  This parameter is required when you set the **SourceCategory** parameter to **aliyunRDS**.
          */
         public Builder sourceInstanceName(String sourceInstanceName) {
             this.putQueryParameter("SourceInstanceName", sourceInstanceName);
@@ -269,10 +269,10 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The ID of the region where the source instance is located.
+         * The region ID of the source instance.
          * <p>
          * 
-         * >  You must specify this parameter if **SourceCategory** is set to **aliyunRDS**.
+         * >  This parameter is required when you set the **SourceCategory** parameter to **aliyunRDS**.
          */
         public Builder sourceInstanceRegionId(String sourceInstanceRegionId) {
             this.putQueryParameter("SourceInstanceRegionId", sourceInstanceRegionId);
@@ -281,7 +281,7 @@ public class CreateReplicationLinkRequest extends Request {
         }
 
         /**
-         * The port number of the source instance.
+         * The port of the source instance.
          */
         public Builder sourcePort(Long sourcePort) {
             this.putQueryParameter("SourcePort", sourcePort);

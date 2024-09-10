@@ -97,7 +97,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details about the account.
+         * The details of the account.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
