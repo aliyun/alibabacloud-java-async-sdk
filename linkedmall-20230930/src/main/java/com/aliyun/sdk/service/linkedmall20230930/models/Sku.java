@@ -59,6 +59,9 @@ public class Sku extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("skuStatus")
     private String skuStatus;
 
+    @com.aliyun.core.annotation.NameInMap("suggestedRetailPrice")
+    private Long suggestedRetailPrice;
+
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
 
@@ -79,6 +82,7 @@ public class Sku extends TeaModel {
         this.skuSpecs = builder.skuSpecs;
         this.skuSpecsCode = builder.skuSpecsCode;
         this.skuStatus = builder.skuStatus;
+        this.suggestedRetailPrice = builder.suggestedRetailPrice;
         this.title = builder.title;
     }
 
@@ -203,6 +207,13 @@ public class Sku extends TeaModel {
     }
 
     /**
+     * @return suggestedRetailPrice
+     */
+    public Long getSuggestedRetailPrice() {
+        return this.suggestedRetailPrice;
+    }
+
+    /**
      * @return title
      */
     public String getTitle() {
@@ -226,6 +237,7 @@ public class Sku extends TeaModel {
         private java.util.List < SkuSpec > skuSpecs; 
         private String skuSpecsCode; 
         private String skuStatus; 
+        private Long suggestedRetailPrice; 
         private String title; 
 
         /**
@@ -353,6 +365,14 @@ public class Sku extends TeaModel {
          */
         public Builder skuStatus(String skuStatus) {
             this.skuStatus = skuStatus;
+            return this;
+        }
+
+        /**
+         * suggestedRetailPrice.
+         */
+        public Builder suggestedRetailPrice(Long suggestedRetailPrice) {
+            this.suggestedRetailPrice = suggestedRetailPrice;
             return this;
         }
 
