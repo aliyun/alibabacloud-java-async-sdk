@@ -1696,8 +1696,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("kibanaPort")
         private Integer kibanaPort;
 
+        @com.aliyun.core.annotation.NameInMap("kibanaPrivateDomain")
+        private String kibanaPrivateDomain;
+
         @com.aliyun.core.annotation.NameInMap("kibanaPrivateIPWhitelist")
         private java.util.List < String > kibanaPrivateIPWhitelist;
+
+        @com.aliyun.core.annotation.NameInMap("kibanaPrivatePort")
+        private String kibanaPrivatePort;
 
         @com.aliyun.core.annotation.NameInMap("masterConfiguration")
         private MasterConfiguration masterConfiguration;
@@ -1799,7 +1805,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.kibanaDomain = builder.kibanaDomain;
             this.kibanaIPWhitelist = builder.kibanaIPWhitelist;
             this.kibanaPort = builder.kibanaPort;
+            this.kibanaPrivateDomain = builder.kibanaPrivateDomain;
             this.kibanaPrivateIPWhitelist = builder.kibanaPrivateIPWhitelist;
+            this.kibanaPrivatePort = builder.kibanaPrivatePort;
             this.masterConfiguration = builder.masterConfiguration;
             this.networkConfig = builder.networkConfig;
             this.nodeAmount = builder.nodeAmount;
@@ -2044,10 +2052,24 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return kibanaPrivateDomain
+         */
+        public String getKibanaPrivateDomain() {
+            return this.kibanaPrivateDomain;
+        }
+
+        /**
          * @return kibanaPrivateIPWhitelist
          */
         public java.util.List < String > getKibanaPrivateIPWhitelist() {
             return this.kibanaPrivateIPWhitelist;
+        }
+
+        /**
+         * @return kibanaPrivatePort
+         */
+        public String getKibanaPrivatePort() {
+            return this.kibanaPrivatePort;
         }
 
         /**
@@ -2242,7 +2264,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String kibanaDomain; 
             private java.util.List < String > kibanaIPWhitelist; 
             private Integer kibanaPort; 
+            private String kibanaPrivateDomain; 
             private java.util.List < String > kibanaPrivateIPWhitelist; 
+            private String kibanaPrivatePort; 
             private MasterConfiguration masterConfiguration; 
             private NetworkConfig networkConfig; 
             private Integer nodeAmount; 
@@ -2508,10 +2532,26 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * kibanaPrivateDomain.
+             */
+            public Builder kibanaPrivateDomain(String kibanaPrivateDomain) {
+                this.kibanaPrivateDomain = kibanaPrivateDomain;
+                return this;
+            }
+
+            /**
              * kibanaPrivateIPWhitelist.
              */
             public Builder kibanaPrivateIPWhitelist(java.util.List < String > kibanaPrivateIPWhitelist) {
                 this.kibanaPrivateIPWhitelist = kibanaPrivateIPWhitelist;
+                return this;
+            }
+
+            /**
+             * kibanaPrivatePort.
+             */
+            public Builder kibanaPrivatePort(String kibanaPrivatePort) {
+                this.kibanaPrivatePort = kibanaPrivatePort;
                 return this;
             }
 
