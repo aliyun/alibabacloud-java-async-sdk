@@ -168,6 +168,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
+        @com.aliyun.core.annotation.NameInMap("LanguageHints")
+        private java.util.List < String > languageHints;
+
         @com.aliyun.core.annotation.NameInMap("MultipleStreamsEnabled")
         private Boolean multipleStreamsEnabled;
 
@@ -193,6 +196,7 @@ public class CreateTaskRequest extends Request {
         private Input(Builder builder) {
             this.fileUrl = builder.fileUrl;
             this.format = builder.format;
+            this.languageHints = builder.languageHints;
             this.multipleStreamsEnabled = builder.multipleStreamsEnabled;
             this.outputPath = builder.outputPath;
             this.progressiveCallbacksEnabled = builder.progressiveCallbacksEnabled;
@@ -222,6 +226,13 @@ public class CreateTaskRequest extends Request {
          */
         public String getFormat() {
             return this.format;
+        }
+
+        /**
+         * @return languageHints
+         */
+        public java.util.List < String > getLanguageHints() {
+            return this.languageHints;
         }
 
         /**
@@ -276,6 +287,7 @@ public class CreateTaskRequest extends Request {
         public static final class Builder {
             private String fileUrl; 
             private String format; 
+            private java.util.List < String > languageHints; 
             private Boolean multipleStreamsEnabled; 
             private String outputPath; 
             private Boolean progressiveCallbacksEnabled; 
@@ -297,6 +309,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder format(String format) {
                 this.format = format;
+                return this;
+            }
+
+            /**
+             * LanguageHints.
+             */
+            public Builder languageHints(java.util.List < String > languageHints) {
+                this.languageHints = languageHints;
                 return this;
             }
 
