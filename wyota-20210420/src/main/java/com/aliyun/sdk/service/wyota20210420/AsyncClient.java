@@ -41,6 +41,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BindAccountLessLoginUserResponse> bindAccountLessLoginUser(BindAccountLessLoginUserRequest request);
 
+    CompletableFuture<BindPasswordFreeLoginUserResponse> bindPasswordFreeLoginUser(BindPasswordFreeLoginUserRequest request);
+
     CompletableFuture<CheckUuidValidResponse> checkUuidValid(CheckUuidValidRequest request);
 
     CompletableFuture<CreateAppOtaTaskResponse> createAppOtaTask(CreateAppOtaTaskRequest request);
