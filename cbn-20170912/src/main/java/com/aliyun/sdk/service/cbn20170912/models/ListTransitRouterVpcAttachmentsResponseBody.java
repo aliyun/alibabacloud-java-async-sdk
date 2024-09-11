@@ -313,6 +313,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TransitRouterId")
         private String transitRouterId;
 
+        @com.aliyun.core.annotation.NameInMap("TransitRouterVPCAttachmentOptions")
+        private java.util.Map < String, String > transitRouterVPCAttachmentOptions;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -338,6 +341,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
             this.transitRouterAttachmentName = builder.transitRouterAttachmentName;
             this.transitRouterId = builder.transitRouterId;
+            this.transitRouterVPCAttachmentOptions = builder.transitRouterVPCAttachmentOptions;
             this.vpcId = builder.vpcId;
             this.vpcOwnerId = builder.vpcOwnerId;
             this.vpcRegionId = builder.vpcRegionId;
@@ -437,6 +441,13 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return transitRouterVPCAttachmentOptions
+         */
+        public java.util.Map < String, String > getTransitRouterVPCAttachmentOptions() {
+            return this.transitRouterVPCAttachmentOptions;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -477,6 +488,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             private String transitRouterAttachmentId; 
             private String transitRouterAttachmentName; 
             private String transitRouterId; 
+            private java.util.Map < String, String > transitRouterVPCAttachmentOptions; 
             private String vpcId; 
             private Long vpcOwnerId; 
             private String vpcRegionId; 
@@ -597,6 +609,14 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
              */
             public Builder transitRouterId(String transitRouterId) {
                 this.transitRouterId = transitRouterId;
+                return this;
+            }
+
+            /**
+             * TransitRouterVPCAttachmentOptions.
+             */
+            public Builder transitRouterVPCAttachmentOptions(java.util.Map < String, String > transitRouterVPCAttachmentOptions) {
+                this.transitRouterVPCAttachmentOptions = transitRouterVPCAttachmentOptions;
                 return this;
             }
 

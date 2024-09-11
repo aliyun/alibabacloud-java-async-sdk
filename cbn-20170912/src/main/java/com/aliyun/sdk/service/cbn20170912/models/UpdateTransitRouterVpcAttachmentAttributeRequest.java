@@ -52,6 +52,10 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentName")
     private String transitRouterAttachmentName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterVPCAttachmentOptions")
+    private java.util.Map < String, String > transitRouterVPCAttachmentOptions;
+
     private UpdateTransitRouterVpcAttachmentAttributeRequest(Builder builder) {
         super(builder);
         this.autoPublishRouteEnabled = builder.autoPublishRouteEnabled;
@@ -64,6 +68,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         this.transitRouterAttachmentDescription = builder.transitRouterAttachmentDescription;
         this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
         this.transitRouterAttachmentName = builder.transitRouterAttachmentName;
+        this.transitRouterVPCAttachmentOptions = builder.transitRouterVPCAttachmentOptions;
     }
 
     public static Builder builder() {
@@ -149,6 +154,13 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         return this.transitRouterAttachmentName;
     }
 
+    /**
+     * @return transitRouterVPCAttachmentOptions
+     */
+    public java.util.Map < String, String > getTransitRouterVPCAttachmentOptions() {
+        return this.transitRouterVPCAttachmentOptions;
+    }
+
     public static final class Builder extends Request.Builder<UpdateTransitRouterVpcAttachmentAttributeRequest, Builder> {
         private Boolean autoPublishRouteEnabled; 
         private String clientToken; 
@@ -160,6 +172,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         private String transitRouterAttachmentDescription; 
         private String transitRouterAttachmentId; 
         private String transitRouterAttachmentName; 
+        private java.util.Map < String, String > transitRouterVPCAttachmentOptions; 
 
         private Builder() {
             super();
@@ -177,6 +190,7 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
             this.transitRouterAttachmentDescription = request.transitRouterAttachmentDescription;
             this.transitRouterAttachmentId = request.transitRouterAttachmentId;
             this.transitRouterAttachmentName = request.transitRouterAttachmentName;
+            this.transitRouterVPCAttachmentOptions = request.transitRouterVPCAttachmentOptions;
         } 
 
         /**
@@ -285,6 +299,16 @@ public class UpdateTransitRouterVpcAttachmentAttributeRequest extends Request {
         public Builder transitRouterAttachmentName(String transitRouterAttachmentName) {
             this.putQueryParameter("TransitRouterAttachmentName", transitRouterAttachmentName);
             this.transitRouterAttachmentName = transitRouterAttachmentName;
+            return this;
+        }
+
+        /**
+         * TransitRouterVPCAttachmentOptions.
+         */
+        public Builder transitRouterVPCAttachmentOptions(java.util.Map < String, String > transitRouterVPCAttachmentOptions) {
+            String transitRouterVPCAttachmentOptionsShrink = shrink(transitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
+            this.putQueryParameter("TransitRouterVPCAttachmentOptions", transitRouterVPCAttachmentOptionsShrink);
+            this.transitRouterVPCAttachmentOptions = transitRouterVPCAttachmentOptions;
             return this;
         }
 

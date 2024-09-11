@@ -68,6 +68,10 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     private String transitRouterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransitRouterVPCAttachmentOptions")
+    private java.util.Map < String, String > transitRouterVPCAttachmentOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
@@ -97,6 +101,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         this.transitRouterAttachmentDescription = builder.transitRouterAttachmentDescription;
         this.transitRouterAttachmentName = builder.transitRouterAttachmentName;
         this.transitRouterId = builder.transitRouterId;
+        this.transitRouterVPCAttachmentOptions = builder.transitRouterVPCAttachmentOptions;
         this.vpcId = builder.vpcId;
         this.vpcOwnerId = builder.vpcOwnerId;
         this.zoneMappings = builder.zoneMappings;
@@ -214,6 +219,13 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
     }
 
     /**
+     * @return transitRouterVPCAttachmentOptions
+     */
+    public java.util.Map < String, String > getTransitRouterVPCAttachmentOptions() {
+        return this.transitRouterVPCAttachmentOptions;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -249,6 +261,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         private String transitRouterAttachmentDescription; 
         private String transitRouterAttachmentName; 
         private String transitRouterId; 
+        private java.util.Map < String, String > transitRouterVPCAttachmentOptions; 
         private String vpcId; 
         private Long vpcOwnerId; 
         private java.util.List < ZoneMappings> zoneMappings; 
@@ -273,6 +286,7 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
             this.transitRouterAttachmentDescription = request.transitRouterAttachmentDescription;
             this.transitRouterAttachmentName = request.transitRouterAttachmentName;
             this.transitRouterId = request.transitRouterId;
+            this.transitRouterVPCAttachmentOptions = request.transitRouterVPCAttachmentOptions;
             this.vpcId = request.vpcId;
             this.vpcOwnerId = request.vpcOwnerId;
             this.zoneMappings = request.zoneMappings;
@@ -426,6 +440,16 @@ public class CreateTransitRouterVpcAttachmentRequest extends Request {
         public Builder transitRouterId(String transitRouterId) {
             this.putQueryParameter("TransitRouterId", transitRouterId);
             this.transitRouterId = transitRouterId;
+            return this;
+        }
+
+        /**
+         * TransitRouterVPCAttachmentOptions.
+         */
+        public Builder transitRouterVPCAttachmentOptions(java.util.Map < String, String > transitRouterVPCAttachmentOptions) {
+            String transitRouterVPCAttachmentOptionsShrink = shrink(transitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
+            this.putQueryParameter("TransitRouterVPCAttachmentOptions", transitRouterVPCAttachmentOptionsShrink);
+            this.transitRouterVPCAttachmentOptions = transitRouterVPCAttachmentOptions;
             return this;
         }
 

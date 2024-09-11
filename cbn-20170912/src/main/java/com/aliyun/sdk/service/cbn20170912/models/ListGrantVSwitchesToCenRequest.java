@@ -17,6 +17,10 @@ public class ListGrantVSwitchesToCenRequest extends Request {
     private String cenId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnabledIpv6")
+    private Boolean enabledIpv6;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -59,6 +63,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
     private ListGrantVSwitchesToCenRequest(Builder builder) {
         super(builder);
         this.cenId = builder.cenId;
+        this.enabledIpv6 = builder.enabledIpv6;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -88,6 +93,13 @@ public class ListGrantVSwitchesToCenRequest extends Request {
      */
     public String getCenId() {
         return this.cenId;
+    }
+
+    /**
+     * @return enabledIpv6
+     */
+    public Boolean getEnabledIpv6() {
+        return this.enabledIpv6;
     }
 
     /**
@@ -155,6 +167,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListGrantVSwitchesToCenRequest, Builder> {
         private String cenId; 
+        private Boolean enabledIpv6; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -172,6 +185,7 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         private Builder(ListGrantVSwitchesToCenRequest request) {
             super(request);
             this.cenId = request.cenId;
+            this.enabledIpv6 = request.enabledIpv6;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -189,6 +203,15 @@ public class ListGrantVSwitchesToCenRequest extends Request {
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
             this.cenId = cenId;
+            return this;
+        }
+
+        /**
+         * EnabledIpv6.
+         */
+        public Builder enabledIpv6(Boolean enabledIpv6) {
+            this.putQueryParameter("EnabledIpv6", enabledIpv6);
+            this.enabledIpv6 = enabledIpv6;
             return this;
         }
 

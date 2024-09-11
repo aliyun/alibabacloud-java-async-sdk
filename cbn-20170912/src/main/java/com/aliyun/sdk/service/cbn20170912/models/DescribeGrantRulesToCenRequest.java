@@ -25,6 +25,10 @@ public class DescribeGrantRulesToCenRequest extends Request {
     private Long childInstanceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnabledIpv6")
+    private Boolean enabledIpv6;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100)
     private Long maxResults;
@@ -63,6 +67,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         this.cenId = builder.cenId;
         this.childInstanceId = builder.childInstanceId;
         this.childInstanceOwnerId = builder.childInstanceOwnerId;
+        this.enabledIpv6 = builder.enabledIpv6;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
@@ -105,6 +110,13 @@ public class DescribeGrantRulesToCenRequest extends Request {
      */
     public Long getChildInstanceOwnerId() {
         return this.childInstanceOwnerId;
+    }
+
+    /**
+     * @return enabledIpv6
+     */
+    public Boolean getEnabledIpv6() {
+        return this.enabledIpv6;
     }
 
     /**
@@ -167,6 +179,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         private String cenId; 
         private String childInstanceId; 
         private Long childInstanceOwnerId; 
+        private Boolean enabledIpv6; 
         private Long maxResults; 
         private String nextToken; 
         private String ownerAccount; 
@@ -185,6 +198,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
             this.cenId = request.cenId;
             this.childInstanceId = request.childInstanceId;
             this.childInstanceOwnerId = request.childInstanceOwnerId;
+            this.enabledIpv6 = request.enabledIpv6;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
@@ -219,6 +233,15 @@ public class DescribeGrantRulesToCenRequest extends Request {
         public Builder childInstanceOwnerId(Long childInstanceOwnerId) {
             this.putQueryParameter("ChildInstanceOwnerId", childInstanceOwnerId);
             this.childInstanceOwnerId = childInstanceOwnerId;
+            return this;
+        }
+
+        /**
+         * EnabledIpv6.
+         */
+        public Builder enabledIpv6(Boolean enabledIpv6) {
+            this.putQueryParameter("EnabledIpv6", enabledIpv6);
+            this.enabledIpv6 = enabledIpv6;
             return this;
         }
 

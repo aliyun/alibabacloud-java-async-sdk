@@ -243,6 +243,9 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
     } 
 
     public static class TrafficMatchRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AddressFamily")
+        private String addressFamily;
+
         @com.aliyun.core.annotation.NameInMap("DstCidr")
         private String dstCidr;
 
@@ -268,6 +271,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         private String trafficMatchRuleName;
 
         private TrafficMatchRules(Builder builder) {
+            this.addressFamily = builder.addressFamily;
             this.dstCidr = builder.dstCidr;
             this.dstPortRange = builder.dstPortRange;
             this.matchDscp = builder.matchDscp;
@@ -284,6 +288,13 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
 
         public static TrafficMatchRules create() {
             return builder().build();
+        }
+
+        /**
+         * @return addressFamily
+         */
+        public String getAddressFamily() {
+            return this.addressFamily;
         }
 
         /**
@@ -343,6 +354,7 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
         }
 
         public static final class Builder {
+            private String addressFamily; 
             private String dstCidr; 
             private java.util.List < Integer > dstPortRange; 
             private Integer matchDscp; 
@@ -351,6 +363,14 @@ public class AddTrafficMatchRuleToTrafficMarkingPolicyRequest extends Request {
             private java.util.List < Integer > srcPortRange; 
             private String trafficMatchRuleDescription; 
             private String trafficMatchRuleName; 
+
+            /**
+             * AddressFamily.
+             */
+            public Builder addressFamily(String addressFamily) {
+                this.addressFamily = addressFamily;
+                return this;
+            }
 
             /**
              * The destination CIDR block that is used to match packets.
