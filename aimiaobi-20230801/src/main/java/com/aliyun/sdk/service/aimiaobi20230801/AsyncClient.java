@@ -29,6 +29,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteCustomTextResponse> deleteCustomText(DeleteCustomTextRequest request);
 
+    CompletableFuture<DeleteCustomTopicByTopicResponse> deleteCustomTopicByTopic(DeleteCustomTopicByTopicRequest request);
+
+    CompletableFuture<DeleteCustomTopicViewPointByIdResponse> deleteCustomTopicViewPointById(DeleteCustomTopicViewPointByIdRequest request);
+
     CompletableFuture<DeleteGeneratedContentResponse> deleteGeneratedContent(DeleteGeneratedContentRequest request);
 
     CompletableFuture<DeleteInterveneRuleResponse> deleteInterveneRule(DeleteInterveneRuleRequest request);
@@ -38,6 +42,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DocumentExtractionResponse> documentExtraction(DocumentExtractionRequest request);
 
     CompletableFuture<ExportGeneratedContentResponse> exportGeneratedContent(ExportGeneratedContentRequest request);
+
+    CompletableFuture<ExportHotTopicPlanningProposalsResponse> exportHotTopicPlanningProposals(ExportHotTopicPlanningProposalsRequest request);
 
     CompletableFuture<ExportIntervenesResponse> exportIntervenes(ExportIntervenesRequest request);
 
@@ -55,7 +61,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCustomTextResponse> getCustomText(GetCustomTextRequest request);
 
+    CompletableFuture<GetCustomTopicSelectionPerspectiveAnalysisTaskResponse> getCustomTopicSelectionPerspectiveAnalysisTask(GetCustomTopicSelectionPerspectiveAnalysisTaskRequest request);
+
     CompletableFuture<GetDataSourceOrderConfigResponse> getDataSourceOrderConfig(GetDataSourceOrderConfigRequest request);
+
+    CompletableFuture<GetDocClusterTaskResponse> getDocClusterTask(GetDocClusterTaskRequest request);
 
     CompletableFuture<GetGeneratedContentResponse> getGeneratedContent(GetGeneratedContentRequest request);
 
@@ -71,6 +81,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetPropertiesResponse> getProperties(GetPropertiesRequest request);
 
+    CompletableFuture<GetTopicByIdResponse> getTopicById(GetTopicByIdRequest request);
+
+    CompletableFuture<GetTopicSelectionPerspectiveAnalysisTaskResponse> getTopicSelectionPerspectiveAnalysisTask(GetTopicSelectionPerspectiveAnalysisTaskRequest request);
+
     CompletableFuture<ImportInterveneFileResponse> importInterveneFile(ImportInterveneFileRequest request);
 
     CompletableFuture<ImportInterveneFileAsyncResponse> importInterveneFileAsync(ImportInterveneFileAsyncRequest request);
@@ -85,11 +99,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListCustomTextResponse> listCustomText(ListCustomTextRequest request);
 
+    CompletableFuture<ListCustomViewPointsResponse> listCustomViewPoints(ListCustomViewPointsRequest request);
+
     CompletableFuture<ListDialoguesResponse> listDialogues(ListDialoguesRequest request);
+
+    CompletableFuture<ListFreshViewPointsResponse> listFreshViewPoints(ListFreshViewPointsRequest request);
 
     CompletableFuture<ListGeneratedContentsResponse> listGeneratedContents(ListGeneratedContentsRequest request);
 
     CompletableFuture<ListHotNewsWithTypeResponse> listHotNewsWithType(ListHotNewsWithTypeRequest request);
+
+    CompletableFuture<ListHotSourcesResponse> listHotSources(ListHotSourcesRequest request);
+
+    CompletableFuture<ListHotTopicsResponse> listHotTopics(ListHotTopicsRequest request);
+
+    CompletableFuture<ListHotViewPointsResponse> listHotViewPoints(ListHotViewPointsRequest request);
 
     CompletableFuture<ListInterveneCntResponse> listInterveneCnt(ListInterveneCntRequest request);
 
@@ -101,7 +125,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListMaterialDocumentsResponse> listMaterialDocuments(ListMaterialDocumentsRequest request);
 
+    CompletableFuture<ListPlanningProposalResponse> listPlanningProposal(ListPlanningProposalRequest request);
+
+    CompletableFuture<ListTimedViewAttitudeResponse> listTimedViewAttitude(ListTimedViewAttitudeRequest request);
+
+    CompletableFuture<ListTopicRecommendEventListResponse> listTopicRecommendEventList(ListTopicRecommendEventListRequest request);
+
+    CompletableFuture<ListTopicViewPointRecommendEventListResponse> listTopicViewPointRecommendEventList(ListTopicViewPointRecommendEventListRequest request);
+
     CompletableFuture<ListVersionsResponse> listVersions(ListVersionsRequest request);
+
+    CompletableFuture<ListWebReviewPointsResponse> listWebReviewPoints(ListWebReviewPointsRequest request);
 
     CompletableFuture<QueryAsyncTaskResponse> queryAsyncTask(QueryAsyncTaskRequest request);
 
@@ -113,6 +147,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     ResponseIterable<RunContinueContentResponseBody> runContinueContentWithResponseIterable(RunContinueContentRequest request);
 
+    CompletableFuture<RunCustomHotTopicAnalysisResponse> runCustomHotTopicAnalysis(RunCustomHotTopicAnalysisRequest request);
+
+    ResponseIterable<RunCustomHotTopicAnalysisResponseBody> runCustomHotTopicAnalysisWithResponseIterable(RunCustomHotTopicAnalysisRequest request);
+
+    CompletableFuture<RunCustomHotTopicViewPointAnalysisResponse> runCustomHotTopicViewPointAnalysis(RunCustomHotTopicViewPointAnalysisRequest request);
+
+    ResponseIterable<RunCustomHotTopicViewPointAnalysisResponseBody> runCustomHotTopicViewPointAnalysisWithResponseIterable(RunCustomHotTopicViewPointAnalysisRequest request);
+
     CompletableFuture<RunExpandContentResponse> runExpandContent(RunExpandContentRequest request);
 
     ResponseIterable<RunExpandContentResponseBody> runExpandContentWithResponseIterable(RunExpandContentRequest request);
@@ -120,6 +162,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RunKeywordsExtractionGenerationResponse> runKeywordsExtractionGeneration(RunKeywordsExtractionGenerationRequest request);
 
     ResponseIterable<RunKeywordsExtractionGenerationResponseBody> runKeywordsExtractionGenerationWithResponseIterable(RunKeywordsExtractionGenerationRequest request);
+
+    CompletableFuture<RunStepByStepWritingResponse> runStepByStepWriting(RunStepByStepWritingRequest request);
+
+    ResponseIterable<RunStepByStepWritingResponseBody> runStepByStepWritingWithResponseIterable(RunStepByStepWritingRequest request);
 
     CompletableFuture<RunStyleFeatureAnalysisResponse> runStyleFeatureAnalysis(RunStyleFeatureAnalysisRequest request);
 
@@ -158,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchNewsResponse> searchNews(SearchNewsRequest request);
 
     CompletableFuture<SubmitAsyncTaskResponse> submitAsyncTask(SubmitAsyncTaskRequest request);
+
+    CompletableFuture<SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse> submitCustomTopicSelectionPerspectiveAnalysisTask(SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest request);
+
+    CompletableFuture<SubmitDocClusterTaskResponse> submitDocClusterTask(SubmitDocClusterTaskRequest request);
+
+    CompletableFuture<SubmitTopicSelectionPerspectiveAnalysisTaskResponse> submitTopicSelectionPerspectiveAnalysisTask(SubmitTopicSelectionPerspectiveAnalysisTaskRequest request);
 
     CompletableFuture<UpdateCustomTextResponse> updateCustomText(UpdateCustomTextRequest request);
 
