@@ -143,6 +143,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UnbindDeviceSeatsResponse> unbindDeviceSeats(UnbindDeviceSeatsRequest request);
 
+    CompletableFuture<UnbindPasswordFreeLoginUserResponse> unbindPasswordFreeLoginUser(UnbindPasswordFreeLoginUserRequest request);
+
     CompletableFuture<UpdateAliasResponse> updateAlias(UpdateAliasRequest request);
 
     CompletableFuture<UpdateDeviceBindedEndUserResponse> updateDeviceBindedEndUser(UpdateDeviceBindedEndUserRequest request);
