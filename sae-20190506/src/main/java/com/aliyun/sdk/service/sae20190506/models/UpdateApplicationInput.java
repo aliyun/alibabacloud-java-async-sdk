@@ -104,11 +104,17 @@ public class UpdateApplicationInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("memorySize")
     private Integer memorySize;
 
+    @com.aliyun.core.annotation.NameInMap("namespaceID")
+    private String namespaceID;
+
     @com.aliyun.core.annotation.NameInMap("nasConfig")
     private NASConfig nasConfig;
 
     @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
+
+    @com.aliyun.core.annotation.NameInMap("programmingLanguage")
+    private String programmingLanguage;
 
     @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
@@ -161,8 +167,10 @@ public class UpdateApplicationInput extends TeaModel {
         this.livenessProbe = builder.livenessProbe;
         this.logConfig = builder.logConfig;
         this.memorySize = builder.memorySize;
+        this.namespaceID = builder.namespaceID;
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
+        this.programmingLanguage = builder.programmingLanguage;
         this.runtime = builder.runtime;
         this.scaleConfig = builder.scaleConfig;
         this.slsConfig = builder.slsConfig;
@@ -384,6 +392,13 @@ public class UpdateApplicationInput extends TeaModel {
     }
 
     /**
+     * @return namespaceID
+     */
+    public String getNamespaceID() {
+        return this.namespaceID;
+    }
+
+    /**
      * @return nasConfig
      */
     public NASConfig getNasConfig() {
@@ -395,6 +410,13 @@ public class UpdateApplicationInput extends TeaModel {
      */
     public OSSMountConfig getOssMountConfig() {
         return this.ossMountConfig;
+    }
+
+    /**
+     * @return programmingLanguage
+     */
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
     }
 
     /**
@@ -476,8 +498,10 @@ public class UpdateApplicationInput extends TeaModel {
         private Probe livenessProbe; 
         private LogConfig logConfig; 
         private Integer memorySize; 
+        private String namespaceID; 
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
+        private String programmingLanguage; 
         private String runtime; 
         private ScaleConfig scaleConfig; 
         private SLSConfig slsConfig; 
@@ -719,6 +743,14 @@ public class UpdateApplicationInput extends TeaModel {
         }
 
         /**
+         * namespaceID.
+         */
+        public Builder namespaceID(String namespaceID) {
+            this.namespaceID = namespaceID;
+            return this;
+        }
+
+        /**
          * nasConfig.
          */
         public Builder nasConfig(NASConfig nasConfig) {
@@ -731,6 +763,14 @@ public class UpdateApplicationInput extends TeaModel {
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
             this.ossMountConfig = ossMountConfig;
+            return this;
+        }
+
+        /**
+         * programmingLanguage.
+         */
+        public Builder programmingLanguage(String programmingLanguage) {
+            this.programmingLanguage = programmingLanguage;
             return this;
         }
 

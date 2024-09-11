@@ -29,6 +29,10 @@ public class CreateIngressRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+    private Integer idleTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ListenerPort")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer listenerPort;
@@ -70,6 +74,7 @@ public class CreateIngressRequest extends Request {
         this.certIds = builder.certIds;
         this.defaultRule = builder.defaultRule;
         this.description = builder.description;
+        this.idleTimeout = builder.idleTimeout;
         this.listenerPort = builder.listenerPort;
         this.listenerProtocol = builder.listenerProtocol;
         this.loadBalanceType = builder.loadBalanceType;
@@ -119,6 +124,13 @@ public class CreateIngressRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return idleTimeout
+     */
+    public Integer getIdleTimeout() {
+        return this.idleTimeout;
     }
 
     /**
@@ -182,6 +194,7 @@ public class CreateIngressRequest extends Request {
         private String certIds; 
         private String defaultRule; 
         private String description; 
+        private Integer idleTimeout; 
         private Integer listenerPort; 
         private String listenerProtocol; 
         private String loadBalanceType; 
@@ -201,6 +214,7 @@ public class CreateIngressRequest extends Request {
             this.certIds = request.certIds;
             this.defaultRule = request.defaultRule;
             this.description = request.description;
+            this.idleTimeout = request.idleTimeout;
             this.listenerPort = request.listenerPort;
             this.listenerProtocol = request.listenerProtocol;
             this.loadBalanceType = request.loadBalanceType;
@@ -244,6 +258,15 @@ public class CreateIngressRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * IdleTimeout.
+         */
+        public Builder idleTimeout(Integer idleTimeout) {
+            this.putQueryParameter("IdleTimeout", idleTimeout);
+            this.idleTimeout = idleTimeout;
             return this;
         }
 

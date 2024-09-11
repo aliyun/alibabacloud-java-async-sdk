@@ -137,6 +137,9 @@ public class Application extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
+    @com.aliyun.core.annotation.NameInMap("programmingLanguage")
+    private String programmingLanguage;
+
     @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
@@ -210,6 +213,7 @@ public class Application extends TeaModel {
         this.namespaceName = builder.namespaceName;
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
+        this.programmingLanguage = builder.programmingLanguage;
         this.runtime = builder.runtime;
         this.scaleConfig = builder.scaleConfig;
         this.slsConfig = builder.slsConfig;
@@ -525,6 +529,13 @@ public class Application extends TeaModel {
     }
 
     /**
+     * @return programmingLanguage
+     */
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
+    }
+
+    /**
      * @return runtime
      */
     public String getRuntime() {
@@ -637,6 +648,7 @@ public class Application extends TeaModel {
         private String namespaceName; 
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
+        private String programmingLanguage; 
         private String runtime; 
         private ScaleConfig scaleConfig; 
         private SLSConfig slsConfig; 
@@ -981,6 +993,14 @@ public class Application extends TeaModel {
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
             this.ossMountConfig = ossMountConfig;
+            return this;
+        }
+
+        /**
+         * programmingLanguage.
+         */
+        public Builder programmingLanguage(String programmingLanguage) {
+            this.programmingLanguage = programmingLanguage;
             return this;
         }
 

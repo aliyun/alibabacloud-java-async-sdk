@@ -460,6 +460,9 @@ public class DescribeIngressResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+        private Integer idleTimeout;
+
         @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
@@ -496,6 +499,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             this.defaultRule = builder.defaultRule;
             this.description = builder.description;
             this.id = builder.id;
+            this.idleTimeout = builder.idleTimeout;
             this.listenerPort = builder.listenerPort;
             this.listenerProtocol = builder.listenerProtocol;
             this.loadBalanceType = builder.loadBalanceType;
@@ -549,6 +553,13 @@ public class DescribeIngressResponseBody extends TeaModel {
          */
         public Long getId() {
             return this.id;
+        }
+
+        /**
+         * @return idleTimeout
+         */
+        public Integer getIdleTimeout() {
+            return this.idleTimeout;
         }
 
         /**
@@ -627,6 +638,7 @@ public class DescribeIngressResponseBody extends TeaModel {
             private DefaultRule defaultRule; 
             private String description; 
             private Long id; 
+            private Integer idleTimeout; 
             private Integer listenerPort; 
             private String listenerProtocol; 
             private String loadBalanceType; 
@@ -681,6 +693,14 @@ public class DescribeIngressResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * IdleTimeout.
+             */
+            public Builder idleTimeout(Integer idleTimeout) {
+                this.idleTimeout = idleTimeout;
                 return this;
             }
 

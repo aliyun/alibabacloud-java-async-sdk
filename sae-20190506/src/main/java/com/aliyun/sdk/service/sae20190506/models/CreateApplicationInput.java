@@ -48,6 +48,9 @@ public class CreateApplicationInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("diskSize")
     private Integer diskSize;
 
+    @com.aliyun.core.annotation.NameInMap("enableAppMetric")
+    private Boolean enableAppMetric;
+
     @com.aliyun.core.annotation.NameInMap("environmentVariables")
     private java.util.Map < String, String > environmentVariables;
 
@@ -110,6 +113,9 @@ public class CreateApplicationInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
+    @com.aliyun.core.annotation.NameInMap("programmingLanguage")
+    private String programmingLanguage;
+
     @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
@@ -144,6 +150,7 @@ public class CreateApplicationInput extends TeaModel {
         this.customRuntimeConfig = builder.customRuntimeConfig;
         this.description = builder.description;
         this.diskSize = builder.diskSize;
+        this.enableAppMetric = builder.enableAppMetric;
         this.environmentVariables = builder.environmentVariables;
         this.gpuMemorySize = builder.gpuMemorySize;
         this.handler = builder.handler;
@@ -163,6 +170,7 @@ public class CreateApplicationInput extends TeaModel {
         this.namespaceID = builder.namespaceID;
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
+        this.programmingLanguage = builder.programmingLanguage;
         this.runtime = builder.runtime;
         this.scaleConfig = builder.scaleConfig;
         this.slsConfig = builder.slsConfig;
@@ -262,6 +270,13 @@ public class CreateApplicationInput extends TeaModel {
      */
     public Integer getDiskSize() {
         return this.diskSize;
+    }
+
+    /**
+     * @return enableAppMetric
+     */
+    public Boolean getEnableAppMetric() {
+        return this.enableAppMetric;
     }
 
     /**
@@ -398,6 +413,13 @@ public class CreateApplicationInput extends TeaModel {
     }
 
     /**
+     * @return programmingLanguage
+     */
+    public String getProgrammingLanguage() {
+        return this.programmingLanguage;
+    }
+
+    /**
      * @return runtime
      */
     public String getRuntime() {
@@ -459,6 +481,7 @@ public class CreateApplicationInput extends TeaModel {
         private CustomRuntimeConfig customRuntimeConfig; 
         private String description; 
         private Integer diskSize; 
+        private Boolean enableAppMetric; 
         private java.util.Map < String, String > environmentVariables; 
         private Integer gpuMemorySize; 
         private String handler; 
@@ -478,6 +501,7 @@ public class CreateApplicationInput extends TeaModel {
         private String namespaceID; 
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
+        private String programmingLanguage; 
         private String runtime; 
         private ScaleConfig scaleConfig; 
         private SLSConfig slsConfig; 
@@ -579,6 +603,14 @@ public class CreateApplicationInput extends TeaModel {
          */
         public Builder diskSize(Integer diskSize) {
             this.diskSize = diskSize;
+            return this;
+        }
+
+        /**
+         * enableAppMetric.
+         */
+        public Builder enableAppMetric(Boolean enableAppMetric) {
+            this.enableAppMetric = enableAppMetric;
             return this;
         }
 
@@ -731,6 +763,14 @@ public class CreateApplicationInput extends TeaModel {
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
             this.ossMountConfig = ossMountConfig;
+            return this;
+        }
+
+        /**
+         * programmingLanguage.
+         */
+        public Builder programmingLanguage(String programmingLanguage) {
+            this.programmingLanguage = programmingLanguage;
             return this;
         }
 
