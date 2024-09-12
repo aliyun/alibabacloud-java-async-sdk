@@ -417,6 +417,9 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
+        @com.aliyun.core.annotation.NameInMap("MaxIdleAppInstanceAmount")
+        private Integer maxIdleAppInstanceAmount;
+
         @com.aliyun.core.annotation.NameInMap("MaxScalingAmount")
         private Integer maxScalingAmount;
 
@@ -470,6 +473,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
         private NodePool(Builder builder) {
             this.amount = builder.amount;
+            this.maxIdleAppInstanceAmount = builder.maxIdleAppInstanceAmount;
             this.maxScalingAmount = builder.maxScalingAmount;
             this.nodeAmount = builder.nodeAmount;
             this.nodeCapacity = builder.nodeCapacity;
@@ -502,6 +506,13 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
          */
         public Integer getAmount() {
             return this.amount;
+        }
+
+        /**
+         * @return maxIdleAppInstanceAmount
+         */
+        public Integer getMaxIdleAppInstanceAmount() {
+            return this.maxIdleAppInstanceAmount;
         }
 
         /**
@@ -625,6 +636,7 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer amount; 
+            private Integer maxIdleAppInstanceAmount; 
             private Integer maxScalingAmount; 
             private Integer nodeAmount; 
             private Integer nodeCapacity; 
@@ -648,6 +660,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
+                return this;
+            }
+
+            /**
+             * MaxIdleAppInstanceAmount.
+             */
+            public Builder maxIdleAppInstanceAmount(Integer maxIdleAppInstanceAmount) {
+                this.maxIdleAppInstanceAmount = maxIdleAppInstanceAmount;
                 return this;
             }
 

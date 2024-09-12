@@ -331,6 +331,9 @@ public class ModifyNodePoolAttributeRequest extends Request {
 
     }
     public static class NodePoolStrategy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxIdleAppInstanceAmount")
+        private Integer maxIdleAppInstanceAmount;
+
         @com.aliyun.core.annotation.NameInMap("MaxScalingAmount")
         private Integer maxScalingAmount;
 
@@ -362,6 +365,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
         private Boolean warmUp;
 
         private NodePoolStrategy(Builder builder) {
+            this.maxIdleAppInstanceAmount = builder.maxIdleAppInstanceAmount;
             this.maxScalingAmount = builder.maxScalingAmount;
             this.nodeAmount = builder.nodeAmount;
             this.recurrenceSchedules = builder.recurrenceSchedules;
@@ -380,6 +384,13 @@ public class ModifyNodePoolAttributeRequest extends Request {
 
         public static NodePoolStrategy create() {
             return builder().build();
+        }
+
+        /**
+         * @return maxIdleAppInstanceAmount
+         */
+        public Integer getMaxIdleAppInstanceAmount() {
+            return this.maxIdleAppInstanceAmount;
         }
 
         /**
@@ -453,6 +464,7 @@ public class ModifyNodePoolAttributeRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer maxIdleAppInstanceAmount; 
             private Integer maxScalingAmount; 
             private Integer nodeAmount; 
             private java.util.List < RecurrenceSchedules> recurrenceSchedules; 
@@ -463,6 +475,14 @@ public class ModifyNodePoolAttributeRequest extends Request {
             private String strategyEnableDate; 
             private String strategyType; 
             private Boolean warmUp; 
+
+            /**
+             * MaxIdleAppInstanceAmount.
+             */
+            public Builder maxIdleAppInstanceAmount(Integer maxIdleAppInstanceAmount) {
+                this.maxIdleAppInstanceAmount = maxIdleAppInstanceAmount;
+                return this;
+            }
 
             /**
              * MaxScalingAmount.

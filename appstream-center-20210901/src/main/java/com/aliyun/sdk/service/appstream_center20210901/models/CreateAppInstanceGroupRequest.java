@@ -954,6 +954,9 @@ public class CreateAppInstanceGroupRequest extends Request {
 
     }
     public static class NodePool extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxIdleAppInstanceAmount")
+        private Integer maxIdleAppInstanceAmount;
+
         @com.aliyun.core.annotation.NameInMap("MaxScalingAmount")
         private Integer maxScalingAmount;
 
@@ -991,6 +994,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         private Boolean warmUp;
 
         private NodePool(Builder builder) {
+            this.maxIdleAppInstanceAmount = builder.maxIdleAppInstanceAmount;
             this.maxScalingAmount = builder.maxScalingAmount;
             this.nodeAmount = builder.nodeAmount;
             this.nodeCapacity = builder.nodeCapacity;
@@ -1011,6 +1015,13 @@ public class CreateAppInstanceGroupRequest extends Request {
 
         public static NodePool create() {
             return builder().build();
+        }
+
+        /**
+         * @return maxIdleAppInstanceAmount
+         */
+        public Integer getMaxIdleAppInstanceAmount() {
+            return this.maxIdleAppInstanceAmount;
         }
 
         /**
@@ -1098,6 +1109,7 @@ public class CreateAppInstanceGroupRequest extends Request {
         }
 
         public static final class Builder {
+            private Integer maxIdleAppInstanceAmount; 
             private Integer maxScalingAmount; 
             private Integer nodeAmount; 
             private Integer nodeCapacity; 
@@ -1110,6 +1122,14 @@ public class CreateAppInstanceGroupRequest extends Request {
             private String strategyEnableDate; 
             private String strategyType; 
             private Boolean warmUp; 
+
+            /**
+             * MaxIdleAppInstanceAmount.
+             */
+            public Builder maxIdleAppInstanceAmount(Integer maxIdleAppInstanceAmount) {
+                this.maxIdleAppInstanceAmount = maxIdleAppInstanceAmount;
+                return this;
+            }
 
             /**
              * MaxScalingAmount.
