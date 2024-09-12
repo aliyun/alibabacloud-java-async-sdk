@@ -22,6 +22,10 @@ public class GetQueryAnalysisRequest extends Request {
     private String serviceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("functions")
+    private java.util.List < Functions> functions;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("history")
     private java.util.List < History> history;
 
@@ -34,6 +38,7 @@ public class GetQueryAnalysisRequest extends Request {
         super(builder);
         this.workspaceName = builder.workspaceName;
         this.serviceId = builder.serviceId;
+        this.functions = builder.functions;
         this.history = builder.history;
         this.query = builder.query;
     }
@@ -66,6 +71,13 @@ public class GetQueryAnalysisRequest extends Request {
     }
 
     /**
+     * @return functions
+     */
+    public java.util.List < Functions> getFunctions() {
+        return this.functions;
+    }
+
+    /**
      * @return history
      */
     public java.util.List < History> getHistory() {
@@ -82,6 +94,7 @@ public class GetQueryAnalysisRequest extends Request {
     public static final class Builder extends Request.Builder<GetQueryAnalysisRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
+        private java.util.List < Functions> functions; 
         private java.util.List < History> history; 
         private String query; 
 
@@ -93,6 +106,7 @@ public class GetQueryAnalysisRequest extends Request {
             super(request);
             this.workspaceName = request.workspaceName;
             this.serviceId = request.serviceId;
+            this.functions = request.functions;
             this.history = request.history;
             this.query = request.query;
         } 
@@ -112,6 +126,15 @@ public class GetQueryAnalysisRequest extends Request {
         public Builder serviceId(String serviceId) {
             this.putPathParameter("service_id", serviceId);
             this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
+         * functions.
+         */
+        public Builder functions(java.util.List < Functions> functions) {
+            this.putBodyParameter("functions", functions);
+            this.functions = functions;
             return this;
         }
 
@@ -140,6 +163,67 @@ public class GetQueryAnalysisRequest extends Request {
 
     } 
 
+    public static class Functions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("parameters")
+        private java.util.Map < String, ? > parameters;
+
+        private Functions(Builder builder) {
+            this.name = builder.name;
+            this.parameters = builder.parameters;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Functions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return parameters
+         */
+        public java.util.Map < String, ? > getParameters() {
+            return this.parameters;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private java.util.Map < String, ? > parameters; 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * parameters.
+             */
+            public Builder parameters(java.util.Map < String, ? > parameters) {
+                this.parameters = parameters;
+                return this;
+            }
+
+            public Functions build() {
+                return new Functions(this);
+            } 
+
+        } 
+
+    }
     public static class History extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;

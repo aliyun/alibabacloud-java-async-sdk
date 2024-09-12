@@ -120,10 +120,14 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("query")
         private String query;
 
+        @com.aliyun.core.annotation.NameInMap("sql")
+        private java.util.Map < String, ? > sql;
+
         private Result(Builder builder) {
             this.intent = builder.intent;
             this.queries = builder.queries;
             this.query = builder.query;
+            this.sql = builder.sql;
         }
 
         public static Builder builder() {
@@ -155,10 +159,18 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
             return this.query;
         }
 
+        /**
+         * @return sql
+         */
+        public java.util.Map < String, ? > getSql() {
+            return this.sql;
+        }
+
         public static final class Builder {
             private String intent; 
             private java.util.List < String > queries; 
             private String query; 
+            private java.util.Map < String, ? > sql; 
 
             /**
              * intent.
@@ -181,6 +193,14 @@ public class GetQueryAnalysisResponseBody extends TeaModel {
              */
             public Builder query(String query) {
                 this.query = query;
+                return this;
+            }
+
+            /**
+             * sql.
+             */
+            public Builder sql(java.util.Map < String, ? > sql) {
+                this.sql = sql;
                 return this;
             }
 

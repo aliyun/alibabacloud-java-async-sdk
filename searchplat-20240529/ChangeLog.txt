@@ -1,3 +1,6 @@
+2024-09-12 Version: 1.1.1
+- Generated java-async 2024-05-29 for Searchplat.
+
 2024-07-09 Version: 1.0.1
 - Generated java-async 2024-05-29 for Searchplat.
 
