@@ -18,7 +18,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyName")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64, minLength = 2)
     private String policyName;
 
     @com.aliyun.core.annotation.Query
