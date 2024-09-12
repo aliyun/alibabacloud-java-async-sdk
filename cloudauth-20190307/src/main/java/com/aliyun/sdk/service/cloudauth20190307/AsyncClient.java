@@ -71,6 +71,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyDeviceInfoResponse> modifyDeviceInfo(ModifyDeviceInfoRequest request);
 
+    CompletableFuture<Vehicle5ItemQueryResponse> vehicle5ItemQuery(Vehicle5ItemQueryRequest request);
+
+    CompletableFuture<VehicleInsureQueryResponse> vehicleInsureQuery(VehicleInsureQueryRequest request);
+
+    CompletableFuture<VehicleMetaVerifyResponse> vehicleMetaVerify(VehicleMetaVerifyRequest request);
+
+    CompletableFuture<VehicleMetaVerifyV2Response> vehicleMetaVerifyV2(VehicleMetaVerifyV2Request request);
+
+    CompletableFuture<VehicleQueryResponse> vehicleQuery(VehicleQueryRequest request);
+
     CompletableFuture<VerifyMaterialResponse> verifyMaterial(VerifyMaterialRequest request);
 
 }
