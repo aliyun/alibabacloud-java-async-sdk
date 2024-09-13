@@ -137,7 +137,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the scheduled instance.
+         * The ID of the scheduled instance.
          */
         public Builder instanceIp(String instanceIp) {
             this.instanceIp = instanceIp;

@@ -93,7 +93,7 @@ public class ModifyFileSystemRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the edge node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

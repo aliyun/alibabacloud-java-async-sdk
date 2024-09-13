@@ -49,7 +49,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data object.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * DestinationRegionId.
+             * The ID of the destination node.
              */
             public Builder destinationRegionId(String destinationRegionId) {
                 this.destinationRegionId = destinationRegionId;
@@ -117,7 +117,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message that is returned.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -182,7 +182,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             private Long successCount; 
 
             /**
-             * FailedCount.
+             * The number of failed tasks.
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -190,7 +190,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * FailedItems.
+             * Details about failed tasks.
              */
             public Builder failedItems(java.util.List < FailedItems> failedItems) {
                 this.failedItems = failedItems;
@@ -198,7 +198,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * The number of successful tasks.
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -263,7 +263,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Message.
+             * The response message. Success is returned for a successful request.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -271,7 +271,7 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The execution result of the synchronization request.
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -279,7 +279,11 @@ public class UnloadRegionSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether all tasks are successful. Valid values:
+             * <p>
+             * 
+             * *   true: All tasks are successful.
+             * *   false: Failed tasks exist.
              */
             public Builder success(Boolean success) {
                 this.success = success;

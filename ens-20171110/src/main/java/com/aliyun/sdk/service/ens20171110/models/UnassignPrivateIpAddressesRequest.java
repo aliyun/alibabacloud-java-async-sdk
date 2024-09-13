@@ -78,7 +78,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The secondary private IP addresses that you want to unassign.
+         * The secondary private IP addresses to unassign.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

@@ -20,6 +20,10 @@ public class DescribeNetworkInterfacesRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6Address")
+    private java.util.List < String > ipv6Address;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
@@ -65,6 +69,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
         super(builder);
         this.ensRegionId = builder.ensRegionId;
         this.instanceId = builder.instanceId;
+        this.ipv6Address = builder.ipv6Address;
         this.networkId = builder.networkId;
         this.networkInterfaceId = builder.networkInterfaceId;
         this.networkInterfaceName = builder.networkInterfaceName;
@@ -102,6 +107,13 @@ public class DescribeNetworkInterfacesRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return ipv6Address
+     */
+    public java.util.List < String > getIpv6Address() {
+        return this.ipv6Address;
     }
 
     /**
@@ -177,6 +189,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeNetworkInterfacesRequest, Builder> {
         private String ensRegionId; 
         private String instanceId; 
+        private java.util.List < String > ipv6Address; 
         private String networkId; 
         private String networkInterfaceId; 
         private String networkInterfaceName; 
@@ -196,6 +209,7 @@ public class DescribeNetworkInterfacesRequest extends Request {
             super(request);
             this.ensRegionId = request.ensRegionId;
             this.instanceId = request.instanceId;
+            this.ipv6Address = request.ipv6Address;
             this.networkId = request.networkId;
             this.networkInterfaceId = request.networkInterfaceId;
             this.networkInterfaceName = request.networkInterfaceName;
@@ -223,6 +237,16 @@ public class DescribeNetworkInterfacesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Ipv6Address.
+         */
+        public Builder ipv6Address(java.util.List < String > ipv6Address) {
+            String ipv6AddressShrink = shrink(ipv6Address, "Ipv6Address", "simple");
+            this.putQueryParameter("Ipv6Address", ipv6AddressShrink);
+            this.ipv6Address = ipv6Address;
             return this;
         }
 

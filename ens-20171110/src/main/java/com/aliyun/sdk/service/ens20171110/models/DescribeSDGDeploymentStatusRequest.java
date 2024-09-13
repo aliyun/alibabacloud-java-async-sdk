@@ -12,23 +12,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeSDGDeploymentStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentType")
+    private String deploymentType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List < String > instanceIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private String pageNumber;
+    private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    private String pageSize;
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionIds")
+    private java.util.List < String > regionIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SDGId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String SDGId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
     private DescribeSDGDeploymentStatusRequest(Builder builder) {
         super(builder);
+        this.deploymentType = builder.deploymentType;
+        this.instanceIds = builder.instanceIds;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionIds = builder.regionIds;
         this.SDGId = builder.SDGId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -45,17 +66,38 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
     }
 
     /**
+     * @return deploymentType
+     */
+    public String getDeploymentType() {
+        return this.deploymentType;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return regionIds
+     */
+    public java.util.List < String > getRegionIds() {
+        return this.regionIds;
     }
 
     /**
@@ -65,10 +107,21 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         return this.SDGId;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSDGDeploymentStatusRequest, Builder> {
-        private String pageNumber; 
-        private String pageSize; 
+        private String deploymentType; 
+        private java.util.List < String > instanceIds; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private java.util.List < String > regionIds; 
         private String SDGId; 
+        private String status; 
 
         private Builder() {
             super();
@@ -76,26 +129,59 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
 
         private Builder(DescribeSDGDeploymentStatusRequest request) {
             super(request);
+            this.deploymentType = request.deploymentType;
+            this.instanceIds = request.instanceIds;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionIds = request.regionIds;
             this.SDGId = request.SDGId;
+            this.status = request.status;
         } 
+
+        /**
+         * DeploymentType.
+         */
+        public Builder deploymentType(String deploymentType) {
+            this.putQueryParameter("DeploymentType", deploymentType);
+            this.deploymentType = deploymentType;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
+            this.putQueryParameter("InstanceIds", instanceIdsShrink);
+            this.instanceIds = instanceIds;
+            return this;
+        }
 
         /**
          * The number of the page to return. Pages start from page **1**. Default value: **1**.
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionIds.
+         */
+        public Builder regionIds(java.util.List < String > regionIds) {
+            String regionIdsShrink = shrink(regionIds, "RegionIds", "json");
+            this.putQueryParameter("RegionIds", regionIdsShrink);
+            this.regionIds = regionIds;
             return this;
         }
 
@@ -105,6 +191,15 @@ public class DescribeSDGDeploymentStatusRequest extends Request {
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);
             this.SDGId = SDGId;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 

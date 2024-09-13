@@ -85,7 +85,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +93,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +101,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * SDGs.
+         * The information about the SDGs.
          */
         public Builder SDGs(java.util.List < SDGs> SDGs) {
             this.SDGs = SDGs;
@@ -117,7 +117,7 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -193,7 +193,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreationTime.
+             * The time when the SDG was created on the node.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -201,7 +201,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the node.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -209,7 +209,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotId.
+             * The ID of the snapshot.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -217,7 +217,14 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the SDG on the node. Valid values:
+             * <p>
+             * 
+             * *   **sdg_making**
+             * *   **sdg_saving**
+             * *   **sdg_copying**
+             * *   **failed**
+             * *   **success**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -306,7 +313,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreationTime.
+             * The time when the SDG was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -314,7 +321,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -322,7 +329,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * RedundantNum.
+             * The number of redundant replicas to quickly respond to shared mounts.
              */
             public Builder redundantNum(Integer redundantNum) {
                 this.redundantNum = redundantNum;
@@ -330,7 +337,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the node.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -338,7 +345,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the status was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -499,7 +506,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AvaliableRegionIds.
+             * SDGs that have snapshots.
              */
             public Builder avaliableRegionIds(java.util.List < AvaliableRegionIds> avaliableRegionIds) {
                 this.avaliableRegionIds = avaliableRegionIds;
@@ -507,7 +514,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * CreationInstanceId.
+             * The ID of the instance on which the SDG is created.
              */
             public Builder creationInstanceId(String creationInstanceId) {
                 this.creationInstanceId = creationInstanceId;
@@ -515,7 +522,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * CreationRegionId.
+             * The ID of the node on which the SDG is created.
              */
             public Builder creationRegionId(String creationRegionId) {
                 this.creationRegionId = creationRegionId;
@@ -523,7 +530,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the first SDG in the node was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -531,7 +538,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the SDG.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -539,7 +546,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * ParentSDGId.
+             * The ID of the source SDG from which you want to create an SDG. The value of this parameter is the value of the **FromSDGId** parameter that you need to specify when you call the [CreateSDG](~~608128~~) operation.
              */
             public Builder parentSDGId(String parentSDGId) {
                 this.parentSDGId = parentSDGId;
@@ -547,7 +554,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * PreloadInfos.
+             * The preload information.
              */
             public Builder preloadInfos(java.util.List < PreloadInfos> preloadInfos) {
                 this.preloadInfos = preloadInfos;
@@ -555,7 +562,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * SDGId.
+             * The ID of the SDG.
              */
             public Builder SDGId(String SDGId) {
                 this.SDGId = SDGId;
@@ -563,7 +570,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the SDG. Unit: GB.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -571,7 +578,13 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the SDG creation. Valid values:
+             * <p>
+             * 
+             * *   **sdg_making**
+             * *   **sdg_saving**
+             * *   **failed**
+             * *   **success**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -579,7 +592,7 @@ public class DescribeSDGResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the SDG was last updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -99,7 +99,7 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         } 
 
         /**
-         * The ID of the datadisk.
+         * The size of the data disk. Unit: GB.
          */
         public Builder dataDiskSize(Integer dataDiskSize) {
             this.putQueryParameter("DataDiskSize", dataDiskSize);
@@ -117,7 +117,7 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * The size of the system disk. Unit: GB.
+         * The specification of the instance.
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -126,7 +126,7 @@ public class DescribePrePaidInstanceStockRequest extends Request {
         }
 
         /**
-         * The ID of the systemdisk
+         * The size of the system disk. Unit: GB.
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.putQueryParameter("SystemDiskSize", systemDiskSize);

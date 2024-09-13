@@ -67,10 +67,7 @@ public class DescribeSDGsRequest extends Request {
         } 
 
         /**
-         * The IDs of instances that you want to query. By default, all instances are queried.
-         * <p>
-         * 
-         * >  If you specify the **SDGIds** and **InstanceIds** parameters at the same time, the query result is the intersection of the two conditions.
+         * The AIC instance ID to be queried.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");

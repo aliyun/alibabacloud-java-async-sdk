@@ -83,16 +83,7 @@ public class StartLoadBalancerListenerRequest extends Request {
         } 
 
         /**
-         * The frontend port that is used by the Edge Load Balance (ELB) instance. Valid values: **1** to **65535**.
-         * <p>
-         * 
-         * > 
-         * 
-         * *   You cannot specify port 250, 4789, or 4790 for UDP listeners. The preceding ports are system reserved ports.
-         * 
-         * *   We recommend that you use port 80 for HTTP.
-         * 
-         * *   We recommend that you use port 443 for HTTPS.
+         * The listener port to be enabled. Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);

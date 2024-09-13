@@ -290,7 +290,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         } 
 
         /**
-         * The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The port used by the backend ELB server of the ELB instance. Valid values: **1** to **65535**.
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.putQueryParameter("BackendServerPort", backendServerPort);
@@ -299,7 +299,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * The description of the listener. The description must be **1** to **80** characters in length.
+         * The name of the listener. The value must be **1** to **80** characters in length.
          * <p>
          * 
          * >  The value cannot start with `http://` or `https://`.
@@ -342,14 +342,14 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
          * <p>
          * 
          * *   Default value: 5.
          * *   Valid values: **1** to **300**.
          * *   Unit: seconds.
          * 
-         * >  If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.
+         * >  If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter is ignored and the period of time specified by the HealthCheckInterval parameter is used as the timeout period.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.putQueryParameter("HealthCheckConnectTimeout", healthCheckConnectTimeout);
@@ -425,7 +425,7 @@ public class CreateLoadBalancerTCPListenerRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);

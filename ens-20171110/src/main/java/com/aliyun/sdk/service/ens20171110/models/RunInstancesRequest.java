@@ -137,6 +137,10 @@ public class RunInstancesRequest extends Request {
     private String securityId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotDuration")
+    private Integer spotDuration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
@@ -192,6 +196,7 @@ public class RunInstancesRequest extends Request {
         this.schedulingPriceStrategy = builder.schedulingPriceStrategy;
         this.schedulingStrategy = builder.schedulingStrategy;
         this.securityId = builder.securityId;
+        this.spotDuration = builder.spotDuration;
         this.spotStrategy = builder.spotStrategy;
         this.systemDisk = builder.systemDisk;
         this.tag = builder.tag;
@@ -424,6 +429,13 @@ public class RunInstancesRequest extends Request {
     }
 
     /**
+     * @return spotDuration
+     */
+    public Integer getSpotDuration() {
+        return this.spotDuration;
+    }
+
+    /**
      * @return spotStrategy
      */
     public String getSpotStrategy() {
@@ -496,6 +508,7 @@ public class RunInstancesRequest extends Request {
         private String schedulingPriceStrategy; 
         private String schedulingStrategy; 
         private String securityId; 
+        private Integer spotDuration; 
         private String spotStrategy; 
         private SystemDisk systemDisk; 
         private java.util.List < Tag> tag; 
@@ -539,6 +552,7 @@ public class RunInstancesRequest extends Request {
             this.schedulingPriceStrategy = request.schedulingPriceStrategy;
             this.schedulingStrategy = request.schedulingStrategy;
             this.securityId = request.securityId;
+            this.spotDuration = request.spotDuration;
             this.spotStrategy = request.spotStrategy;
             this.systemDisk = request.systemDisk;
             this.tag = request.tag;
@@ -573,8 +587,8 @@ public class RunInstancesRequest extends Request {
          * Specifies whether to enable auto-renewal. Valid values:
          * <p>
          * 
-         * *   **true**
-         * *   **false** (default)
+         * *   **true**.
+         * *   **false** (default).
          * 
          * >  This parameter is not available when InstanceChargeType is set to PostPaid.
          */
@@ -597,8 +611,8 @@ public class RunInstancesRequest extends Request {
          * The billing cycle of computing resources of the instance. Only pay-as-you-go instances are supported. Valid values:
          * <p>
          * 
-         * *   **Day**
-         * *   **Month**
+         * *   **Day**.
+         * *   **Month**.
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -619,7 +633,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The specifications of the data disk.
+         * The specifications of data disks.
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             String dataDiskShrink = shrink(dataDisk, "DataDisk", "json");
@@ -733,9 +747,9 @@ public class RunInstancesRequest extends Request {
          * The type of the IP address. Valid values:
          * <p>
          * 
-         * *   **ipv4** (default)
-         * *   **ipv6**
-         * *   **ipv4Andipv6**
+         * *   **ipv4** (default).
+         * *   **ipv6**.
+         * *   **ipv4Andipv6**.
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -820,11 +834,11 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. Valid values:
+         * The unit of the subscription period. Valid values:
          * <p>
          * 
-         * *   **Month** (default)
-         * *   **Day**
+         * *   **Month** (default).
+         * *   **Day**.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -902,6 +916,15 @@ public class RunInstancesRequest extends Request {
         public Builder securityId(String securityId) {
             this.putQueryParameter("SecurityId", securityId);
             this.securityId = securityId;
+            return this;
+        }
+
+        /**
+         * SpotDuration.
+         */
+        public Builder spotDuration(Integer spotDuration) {
+            this.putQueryParameter("SpotDuration", spotDuration);
+            this.spotDuration = spotDuration;
             return this;
         }
 
@@ -1053,11 +1076,11 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt the disk. Valid values:
+             * Indicates whether the cloud disk is encrypted. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false (default)
+             * *   true.
+             * *   false (default).
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -1068,8 +1091,8 @@ public class RunInstancesRequest extends Request {
              * The ID of the Key Management Service (KMS) key that is used for the disk. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false (default)
+             * *   true.
+             * *   false (default).
              * 
              * >  If you set the Encrypted parameter to true, the default service key is used when the KMSKeyId parameter is empty.
              */

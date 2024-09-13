@@ -289,7 +289,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the listener. The description must be **1** to **80** characters in length.
+         * The name of the listener. The value must be **1** to **80** characters in length.
          * <p>
          * 
          * >  The value cannot start with `http://` or `https://`.
@@ -367,7 +367,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The HTTP request method for health checks. Examples:
+         * The HTTP request method for health checks. Valid values:
          * <p>
          * 
          * *   **head**
@@ -389,8 +389,11 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
          * *   Valid values: **1** to **300**.
          * *   Unit: seconds.
          * 
-         * > *   This parameter takes effect only if you set HealthCheck to on.
-         * >*   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+         * > 
+         * 
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
+         * 
+         * *   If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.putQueryParameter("HealthCheckTimeout", healthCheckTimeout);
@@ -399,11 +402,14 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The Uniform Resource Identifier (URI) that is used for health checks. The URI must be **1** to **80** characters in length.
+         * The URI used for health checks. The URI must be **1** to **80** characters in length.
          * <p>
          * 
-         * > *   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
-         * >*   This parameter takes effect only if you set HealthCheck to on.
+         * > 
+         * 
+         * *   A URL must start with a forward slash (`/`) but cannot contain only forward slashes (`/`).
+         * 
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.putQueryParameter("HealthCheckURI", healthCheckURI);
@@ -436,7 +442,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The listener port whose attributes are to be modified. Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -466,7 +472,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The scheduling algorithm. Examples:
+         * The scheduling algorithm. Valid values:
          * <p>
          * 
          * *   **wrr**: Backend servers with higher weights receive more requests than those with lower weights.
@@ -498,8 +504,8 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
          * Specifies whether to use the X-Forwarded-For header to obtain the real IP address of the client. Valid values:
          * <p>
          * 
-         * *   **on**
-         * *   **off** (default)
+         * *   **on** (default)
+         * *   **off**
          */
         public Builder xForwardedFor(String xForwardedFor) {
             this.putQueryParameter("XForwardedFor", xForwardedFor);

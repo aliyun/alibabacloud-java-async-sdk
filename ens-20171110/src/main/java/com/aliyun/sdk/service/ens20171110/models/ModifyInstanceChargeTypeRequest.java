@@ -156,7 +156,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
          * Specifies whether to enable auto-renewal when you change the billing method from pay-as-you-go to subscription. Valid values:
          * <p>
          * 
-         * true
+         * true: enables auto-renewal for the instance.
          * 
          * false
          */
@@ -219,18 +219,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Examples:
+         * The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:
          * <p>
          * 
          * Month
          * 
          * Day
-         * 
-         * Valid values:
-         * 
-         * *   Year
-         * *   Month
-         * *   Day
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);

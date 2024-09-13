@@ -229,7 +229,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         private String vSwitchId; 
 
         /**
-         * The IP address that the ELB instance uses to provide services.
+         * The IP address that the Edge Load Balancer (ELB) instance uses to provide services.
          */
         public Builder address(String address) {
             this.address = address;
@@ -245,7 +245,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The backend servers.
+         * The list of backend servers.
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
             this.backendServers = backendServers;
@@ -253,7 +253,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum bandwidth of the elastic IP address (EIP). Default value: 5. Valid values: **5** to **10000**. Unit: Mbit/s.
+         * The peak bandwidth of the ELB. The default value is -1, which indicates that the bandwidth is unlimited.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -477,7 +477,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the backend server.
+             * The type of backend server.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -606,7 +606,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The listener protocol.
+             * The listener protocol of the instance.
              */
             public Builder listenerProtocol(String listenerProtocol) {
                 this.listenerProtocol = listenerProtocol;

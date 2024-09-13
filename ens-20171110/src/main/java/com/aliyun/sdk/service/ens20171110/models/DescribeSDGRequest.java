@@ -82,7 +82,7 @@ public class DescribeSDGRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -91,7 +91,10 @@ public class DescribeSDGRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -100,7 +103,7 @@ public class DescribeSDGRequest extends Request {
         }
 
         /**
-         * SDGIds.
+         * The IDs of SDGs that you want to query. By default, all SDGs are queried.
          */
         public Builder SDGIds(java.util.List < String > SDGIds) {
             String SDGIdsShrink = shrink(SDGIds, "SDGIds", "json");

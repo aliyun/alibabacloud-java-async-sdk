@@ -118,7 +118,7 @@ public class CreateSnapshotRequest extends Request {
         }
 
         /**
-         * The ID of the edge node.
+         * The ID of the ENS node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

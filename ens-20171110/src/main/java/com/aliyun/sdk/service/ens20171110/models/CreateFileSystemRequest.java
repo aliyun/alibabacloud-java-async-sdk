@@ -201,7 +201,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The ID of the node.
+             * The ID of the edge node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -209,7 +209,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The name of the file system.
+             * The name of the file system. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
              */
             public Builder fileSystemName(String fileSystemName) {
                 this.fileSystemName = fileSystemName;
@@ -217,7 +217,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The name of the mount target.
+             * The name of the mount target. The name must be 1 to 80 characters in length and can contain letters, digits, hyphens (-), and underscores (\_).
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -233,7 +233,7 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The type of the order.
+             * The type of the order. Set the value to BUY.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -249,7 +249,11 @@ public class CreateFileSystemRequest extends Request {
             }
 
             /**
-             * The type of the storage. Set the value to capacity.
+             * The storage type. Valid values:
+             * <p>
+             * 
+             * *   Capacity.
+             * *   Performance.
              */
             public Builder storgeType(String storgeType) {
                 this.storgeType = storgeType;

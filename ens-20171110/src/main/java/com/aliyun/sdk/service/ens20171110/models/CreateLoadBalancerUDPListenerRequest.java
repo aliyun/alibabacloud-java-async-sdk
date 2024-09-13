@@ -26,6 +26,11 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
     private String eipTransmit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EstablishedTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 900, minimum = 10)
+    private Integer establishedTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
     @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer healthCheckConnectPort;
@@ -79,6 +84,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         this.backendServerPort = builder.backendServerPort;
         this.description = builder.description;
         this.eipTransmit = builder.eipTransmit;
+        this.establishedTimeout = builder.establishedTimeout;
         this.healthCheckConnectPort = builder.healthCheckConnectPort;
         this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
         this.healthCheckExp = builder.healthCheckExp;
@@ -123,6 +129,13 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
      */
     public String getEipTransmit() {
         return this.eipTransmit;
+    }
+
+    /**
+     * @return establishedTimeout
+     */
+    public Integer getEstablishedTimeout() {
+        return this.establishedTimeout;
     }
 
     /**
@@ -199,6 +212,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         private Integer backendServerPort; 
         private String description; 
         private String eipTransmit; 
+        private Integer establishedTimeout; 
         private Integer healthCheckConnectPort; 
         private Integer healthCheckConnectTimeout; 
         private String healthCheckExp; 
@@ -219,6 +233,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
             this.backendServerPort = request.backendServerPort;
             this.description = request.description;
             this.eipTransmit = request.eipTransmit;
+            this.establishedTimeout = request.establishedTimeout;
             this.healthCheckConnectPort = request.healthCheckConnectPort;
             this.healthCheckConnectTimeout = request.healthCheckConnectTimeout;
             this.healthCheckExp = request.healthCheckExp;
@@ -232,7 +247,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         } 
 
         /**
-         * The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The port used by the backend ELB server of the ELB instance. Valid values: **1** to **65535**.
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.putQueryParameter("BackendServerPort", backendServerPort);
@@ -241,7 +256,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The description of the listener. The description must be **1** to **80** characters in length.
+         * The name of the listener. The value must be **1** to **80** characters in length.
          * <p>
          * 
          * >  The value cannot start with `http://` or `https://`.
@@ -253,7 +268,7 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable elastic IP address (EIP) pass-through. Valid values:
+         * Specifies whether to enable Elastic IP address (EIP) pass-through. Valid values:
          * <p>
          * 
          * *   **on**
@@ -262,6 +277,15 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         public Builder eipTransmit(String eipTransmit) {
             this.putQueryParameter("EipTransmit", eipTransmit);
             this.eipTransmit = eipTransmit;
+            return this;
+        }
+
+        /**
+         * EstablishedTimeout.
+         */
+        public Builder establishedTimeout(Integer establishedTimeout) {
+            this.putQueryParameter("EstablishedTimeout", establishedTimeout);
+            this.establishedTimeout = establishedTimeout;
             return this;
         }
 
@@ -275,14 +299,14 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
          * <p>
          * 
          * *   Default value: 5.
          * *   Valid values: **1** to **300**.
          * *   Unit: seconds.
          * 
-         * >  If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.
+         * >  If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.putQueryParameter("HealthCheckConnectTimeout", healthCheckConnectTimeout);
@@ -327,7 +351,10 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: **1** to **65535**.
+         * <p>
+         * 
+         * >  You cannot specify ports 250, 4789, or 4790 for UDP listeners. They are system reserved ports.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);
@@ -345,15 +372,15 @@ public class CreateLoadBalancerUDPListenerRequest extends Request {
         }
 
         /**
-         * The routing algorithm. Valid values:
+         * The scheduling algorithm. Valid values:
          * <p>
          * 
-         * *   **wrr** (default): Backend servers with higher weights receive more requests than backend servers with lower weights.
+         * *   **wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights. This is the default value.
          * *   **wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If two backend servers have the same weight, the backend server that has fewer connections receives more requests.
          * *   **rr**: Requests are distributed to backend servers in sequence.
-         * *   **sch**: consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.
-         * *   **qch**: consistent hashing that is based on QUIC connection IDs. Requests that contain the same QUIC connection ID are distributed to the same backend server.
-         * *   **iqch**: consistent hashing that is based on specific three bytes of the iQUIC CIDs. Requests whose second to fourth bytes are the same are distributed to the same backend server.
+         * *   **sch**: Consistent hashing that is based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.
+         * *   **qch**: Consistent hashing based on Quick UDP Internet Connection (QUIC) IDs. Requests that contain the same QUIC ID are scheduled to the same backend server.
+         * *   **iqch**: Consistent hashing based on three specific bytes of iQUIC CID. Requests with the same second, third, and forth bytes are scheduled to the same backend server.
          */
         public Builder scheduler(String scheduler) {
             this.putQueryParameter("Scheduler", scheduler);

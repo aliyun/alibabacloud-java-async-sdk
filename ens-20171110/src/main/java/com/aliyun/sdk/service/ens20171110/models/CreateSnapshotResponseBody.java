@@ -77,7 +77,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the snapshot.
+         * The IDs of the snapshots.
          */
         public Builder snapShotId(java.util.List < String > snapShotId) {
             this.snapShotId = snapShotId;

@@ -78,7 +78,7 @@ public class AddSnatIpForSnatEntryRequest extends Request {
         }
 
         /**
-         * The EIP that you want to add to the SNAT entry.
+         * The EIP specified in the SNAT entry.
          */
         public Builder snatIp(String snatIp) {
             this.putQueryParameter("SnatIp", snatIp);

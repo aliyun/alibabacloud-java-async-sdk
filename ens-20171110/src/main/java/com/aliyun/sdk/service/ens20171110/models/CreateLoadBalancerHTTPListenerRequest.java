@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateLoadBalancerHTTPListenerRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendServerPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
+    private Integer backendServerPort;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     @com.aliyun.core.annotation.Validation(maxLength = 80, minLength = 1)
     private String description;
@@ -103,6 +108,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
 
     private CreateLoadBalancerHTTPListenerRequest(Builder builder) {
         super(builder);
+        this.backendServerPort = builder.backendServerPort;
         this.description = builder.description;
         this.forwardPort = builder.forwardPort;
         this.healthCheck = builder.healthCheck;
@@ -135,6 +141,13 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return backendServerPort
+     */
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
     /**
@@ -271,6 +284,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLoadBalancerHTTPListenerRequest, Builder> {
+        private Integer backendServerPort; 
         private String description; 
         private Integer forwardPort; 
         private String healthCheck; 
@@ -297,6 +311,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
 
         private Builder(CreateLoadBalancerHTTPListenerRequest request) {
             super(request);
+            this.backendServerPort = request.backendServerPort;
             this.description = request.description;
             this.forwardPort = request.forwardPort;
             this.healthCheck = request.healthCheck;
@@ -319,7 +334,16 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         } 
 
         /**
-         * The description of the listener. The description must be **1** to **80** characters in length.
+         * 负载均衡实例后端服务器使用的端口，取值：**1**~**65535**。
+         */
+        public Builder backendServerPort(Integer backendServerPort) {
+            this.putQueryParameter("BackendServerPort", backendServerPort);
+            this.backendServerPort = backendServerPort;
+            return this;
+        }
+
+        /**
+         * The name of the listener. The value must be **1** to **80** characters in length.
          * <p>
          * 
          * >  The value cannot start with `http://` or `https://`.
@@ -421,7 +445,7 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
          * <p>
          * 
          * *   Default value: 5.
@@ -430,9 +454,9 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
          * 
          * > 
          * 
-         * *   This parameter takes effect only if you set HealthCheck to on.
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
          * 
-         * *   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+         * *   If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.putQueryParameter("HealthCheckTimeout", healthCheckTimeout);
@@ -441,14 +465,14 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * The Uniform Resource Identifier (URI) that you want to use for health checks. The URI must be **1** to **80** characters in length.
+         * The URI used for health checks. The URI must be **1** to **80** characters in length.
          * <p>
          * 
          * > 
          * 
-         * *   The URL must start with `/` and contain characters other than `/`.
+         * *   A URL must start with a forward slash (`/`) but cannot contain only forward slashes (`/`).
          * 
-         * *   This parameter takes effect only if you set HealthCheck to on.
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.putQueryParameter("HealthCheckURI", healthCheckURI);
@@ -494,7 +518,10 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The listener port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: **1** to **65535**.
+         * <p>
+         * 
+         * >  We recommend that you use port 80 for HTTP.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);

@@ -98,7 +98,7 @@ public class PreloadRegionSDGRequest extends Request {
         } 
 
         /**
-         * DestinationRegionIds.
+         * The IDs of the destination nodes.
          */
         public Builder destinationRegionIds(java.util.List < String > destinationRegionIds) {
             String destinationRegionIdsShrink = shrink(destinationRegionIds, "DestinationRegionIds", "json");
@@ -108,7 +108,7 @@ public class PreloadRegionSDGRequest extends Request {
         }
 
         /**
-         * Namespaces.
+         * The namespaces.
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             String namespacesShrink = shrink(namespaces, "Namespaces", "json");
@@ -118,7 +118,7 @@ public class PreloadRegionSDGRequest extends Request {
         }
 
         /**
-         * RedundantNum.
+         * The number of redundant replicas to support rapid deployment.
          */
         public Builder redundantNum(Integer redundantNum) {
             this.putQueryParameter("RedundantNum", redundantNum);
@@ -127,7 +127,7 @@ public class PreloadRegionSDGRequest extends Request {
         }
 
         /**
-         * SDGId.
+         * The ID of the SDG for which data is preloaded.
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);

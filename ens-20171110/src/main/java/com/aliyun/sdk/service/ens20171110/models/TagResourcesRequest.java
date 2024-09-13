@@ -84,7 +84,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * ResourceId.
+         * The IDs of the resources. You can add up to 50 resource IDs in a call.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -93,7 +93,12 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of resource to query.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   instance
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -102,7 +107,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag that is bound to the instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -158,7 +163,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N that is added to the resource. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -166,7 +171,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N that is added to the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

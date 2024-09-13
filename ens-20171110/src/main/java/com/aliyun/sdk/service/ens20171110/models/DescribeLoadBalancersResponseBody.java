@@ -85,7 +85,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned ELB instances.
+         * An array of ELB instances.
          */
         public Builder loadBalancers(LoadBalancers loadBalancers) {
             this.loadBalancers = loadBalancers;
@@ -117,7 +117,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -273,7 +273,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the IP address. Valid values: ipv4 and ipv6.
+             * The IP version. Valid values: ipv4 and ipv6.
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -313,10 +313,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ELB instance. Valid values:
+             * The status of the listener for the ELB instance. Valid values:
              * <p>
              * 
-             * *   **Active** (default): The listener for the instance can forward the received traffic based on the rule.
+             * *   **Active**: The listener for the instance can forward the received traffic based on forwarding rules.
              * *   **InActive**: The listener for the instance does not forward the received traffic.
              */
             public Builder loadBalancerStatus(String loadBalancerStatus) {

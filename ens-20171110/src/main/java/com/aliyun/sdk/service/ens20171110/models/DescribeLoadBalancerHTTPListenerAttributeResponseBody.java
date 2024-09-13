@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancerHTTPListenerAttributeResponseBody</p>
  */
 public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BackendServerPort")
+    private Integer backendServerPort;
+
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
@@ -78,6 +81,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     private String xForwardedFor;
 
     private DescribeLoadBalancerHTTPListenerAttributeResponseBody(Builder builder) {
+        this.backendServerPort = builder.backendServerPort;
         this.bandwidth = builder.bandwidth;
         this.description = builder.description;
         this.forwardPort = builder.forwardPort;
@@ -108,6 +112,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
 
     public static DescribeLoadBalancerHTTPListenerAttributeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return backendServerPort
+     */
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
     /**
@@ -265,6 +276,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     }
 
     public static final class Builder {
+        private Integer backendServerPort; 
         private Integer bandwidth; 
         private String description; 
         private Integer forwardPort; 
@@ -289,12 +301,15 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         private String xForwardedFor; 
 
         /**
-         * The maximum bandwidth of the EIP.
-         * <p>
-         * 
-         * *   Default value: 5.
-         * *   Valid values: **5** to **10000**.
-         * *   Unit: Mbit/s.
+         * The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         */
+        public Builder backendServerPort(Integer backendServerPort) {
+            this.backendServerPort = backendServerPort;
+            return this;
+        }
+
+        /**
+         * The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -396,15 +411,18 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The timeout period of a health check. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
          * <p>
          * 
          * *   Default value: 5.
          * *   Valid values: **1** to **300**.
          * *   Unit: seconds.
          * 
-         * >*   This parameter is returned only if you set HealthCheck to on.
-         * >*   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+         * > 
+         * 
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
+         * 
+         * *   If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.healthCheckTimeout = healthCheckTimeout;
@@ -412,11 +430,14 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The Uniform Resource Identifier (URI) that is used for health checks. The URI must be **1** to **80** characters in length.
+         * The URI used for health checks. The URI must be **1** to **80** characters in length.
          * <p>
          * 
-         * >*   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
-         * >*   This parameter is returned only if you set HealthCheck to on.
+         * > 
+         * 
+         * *   A URL must start with a forward slash (`/`) but cannot contain only forward slashes (`/`).
+         * 
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.healthCheckURI = healthCheckURI;
@@ -458,7 +479,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The listener port.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;
@@ -535,11 +556,11 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         }
 
         /**
-         * Specifies whether to use the X-Forwarded-For header to obtain the real IP address of the client. Valid values:
+         * Indicates whether the X-Forwarded-For header is used to obtain the real IP address of the client. Valid values:
          * <p>
          * 
-         * *   **on**
-         * *   **off** (default)
+         * *   **on** (default)
+         * *   **off**
          */
         public Builder xForwardedFor(String xForwardedFor) {
             this.xForwardedFor = xForwardedFor;

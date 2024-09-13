@@ -21,6 +21,11 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
     private String eipTransmit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EstablishedTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 900, minimum = 10)
+    private Integer establishedTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
     @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer healthCheckConnectPort;
@@ -73,6 +78,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         super(builder);
         this.description = builder.description;
         this.eipTransmit = builder.eipTransmit;
+        this.establishedTimeout = builder.establishedTimeout;
         this.healthCheckConnectPort = builder.healthCheckConnectPort;
         this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
         this.healthCheckExp = builder.healthCheckExp;
@@ -110,6 +116,13 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
      */
     public String getEipTransmit() {
         return this.eipTransmit;
+    }
+
+    /**
+     * @return establishedTimeout
+     */
+    public Integer getEstablishedTimeout() {
+        return this.establishedTimeout;
     }
 
     /**
@@ -185,6 +198,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
     public static final class Builder extends Request.Builder<SetLoadBalancerUDPListenerAttributeRequest, Builder> {
         private String description; 
         private String eipTransmit; 
+        private Integer establishedTimeout; 
         private Integer healthCheckConnectPort; 
         private Integer healthCheckConnectTimeout; 
         private String healthCheckExp; 
@@ -204,6 +218,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
             super(request);
             this.description = request.description;
             this.eipTransmit = request.eipTransmit;
+            this.establishedTimeout = request.establishedTimeout;
             this.healthCheckConnectPort = request.healthCheckConnectPort;
             this.healthCheckConnectTimeout = request.healthCheckConnectTimeout;
             this.healthCheckExp = request.healthCheckExp;
@@ -217,7 +232,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the listener. The description must be **1** to **80** characters in length.
+         * The name of the listener. The valuemust be **1** to **80** characters in length.
          * <p>
          * 
          * >  The value cannot start with `http://` or `https://`.
@@ -242,6 +257,15 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
+         * The timeout period of a connection. Valid values: **10** to **900**. Default value: **900**. Unit: seconds.
+         */
+        public Builder establishedTimeout(Integer establishedTimeout) {
+            this.putQueryParameter("EstablishedTimeout", establishedTimeout);
+            this.establishedTimeout = establishedTimeout;
+            return this;
+        }
+
+        /**
          * The port that is used for health checks. Valid values: **1** to **65535**. If you leave this parameter empty, the port specified for BackendServerPort is used for health checks.
          */
         public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
@@ -251,14 +275,14 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * The timeout period of a health check response. If the backend ENS does not respond within the specified time, the health check fails.
          * <p>
          * 
          * *   Default value: 5.
          * *   Valid values: **1** to **300**.
          * *   Unit: seconds.
          * 
-         * >  If the value that you specified for HealthCheckConnectTimeout is smaller than the value of HealthCheckInterval, HealthCheckConnectTimeout becomes invalid and the timeout period that you specified for HealthCheckInterval is used.
+         * >  If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.putQueryParameter("HealthCheckConnectTimeout", healthCheckConnectTimeout);
@@ -303,7 +327,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The listener port whose attributes are to be modified. Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);

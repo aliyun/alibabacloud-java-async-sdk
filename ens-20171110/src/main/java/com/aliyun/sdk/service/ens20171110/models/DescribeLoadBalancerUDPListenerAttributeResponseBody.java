@@ -23,6 +23,9 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     @com.aliyun.core.annotation.NameInMap("EipTransmit")
     private String eipTransmit;
 
+    @com.aliyun.core.annotation.NameInMap("EstablishedTimeout")
+    private Integer establishedTimeout;
+
     @com.aliyun.core.annotation.NameInMap("HealthCheck")
     private String healthCheck;
 
@@ -64,6 +67,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         this.bandwidth = builder.bandwidth;
         this.description = builder.description;
         this.eipTransmit = builder.eipTransmit;
+        this.establishedTimeout = builder.establishedTimeout;
         this.healthCheck = builder.healthCheck;
         this.healthCheckConnectPort = builder.healthCheckConnectPort;
         this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
@@ -112,6 +116,13 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
      */
     public String getEipTransmit() {
         return this.eipTransmit;
+    }
+
+    /**
+     * @return establishedTimeout
+     */
+    public Integer getEstablishedTimeout() {
+        return this.establishedTimeout;
     }
 
     /**
@@ -203,6 +214,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         private Integer bandwidth; 
         private String description; 
         private String eipTransmit; 
+        private Integer establishedTimeout; 
         private String healthCheck; 
         private Integer healthCheckConnectPort; 
         private Integer healthCheckConnectTimeout; 
@@ -217,7 +229,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         private Integer unhealthyThreshold; 
 
         /**
-         * The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The port used by the backend ELB server of the ELB instance. Valid values: **1** to **65535**.
          */
         public Builder backendServerPort(Integer backendServerPort) {
             this.backendServerPort = backendServerPort;
@@ -225,12 +237,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The maximum bandwidth of the elastic IP address (EIP).
-         * <p>
-         * 
-         * *   Default value: 5.
-         * *   Valid values: **5** to **10000**.
-         * *   Unit: Mbit/s.
+         * The peak bandwidth of the Edge Load Balancer (ELB) instance. The default value is -1, which indicates that the bandwidth is not limited.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -238,7 +245,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The description of the listener.
+         * The name of the listener.
          */
         public Builder description(String description) {
             this.description = description;
@@ -254,6 +261,14 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
          */
         public Builder eipTransmit(String eipTransmit) {
             this.eipTransmit = eipTransmit;
+            return this;
+        }
+
+        /**
+         * The timeout period of a connection. Valid values: **10** to **900**. Unit: seconds.
+         */
+        public Builder establishedTimeout(Integer establishedTimeout) {
+            this.establishedTimeout = establishedTimeout;
             return this;
         }
 
@@ -278,7 +293,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
          * <p>
          * 
          * *   Default value: 5.
@@ -287,9 +302,9 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
          * 
          * > 
          * 
-         * *   This parameter takes effect only if you set HealthCheck to on.
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
          * 
-         * *   If the value of the HealthCheckConnectTimeout parameter is smaller than that of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckConnectTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+         * *   If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.
          */
         public Builder healthCheckConnectTimeout(Integer healthCheckConnectTimeout) {
             this.healthCheckConnectTimeout = healthCheckConnectTimeout;
@@ -335,7 +350,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
         }
 
         /**
-         * The frontend port that is used by the ELB instance.
+         * The listener port.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.listenerPort = listenerPort;

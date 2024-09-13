@@ -45,6 +45,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AssociateEnsEipAddressResponse> associateEnsEipAddress(AssociateEnsEipAddressRequest request);
 
+    CompletableFuture<AssociateHaVipResponse> associateHaVip(AssociateHaVipRequest request);
+
     CompletableFuture<AttachDiskResponse> attachDisk(AttachDiskRequest request);
 
     /**
@@ -171,8 +173,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNetworkAclEntryResponse> createNetworkAclEntry(CreateNetworkAclEntryRequest request);
 
     /**
-      * ## [](#)
-      * After you create an SDG, you must call the [SaveSDG](~~608126~~) operation to save the SDG. Otherwise, the SDG is unavailable.
+      * A SDG can be regarded as a data partition image of a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be deployed in data partitions of other virtual devices to achieve rapid data distribution and application. The procedure for calling SDG-related API operations:
+      * *   Call the [CreateSDG](~~CreateSDG~~) operation to create an SDG, which is bound to AIC Instance A (InstanceId). After you create the SDG, a blank cloud disk (also known as an original cloud disk) is attached to Device A (InstanceId).
+      * *   Install applications on and deliver files to AIC Instance A (InstanceId).
+      * *   Call the [SaveSDG](~~SaveSDG~~) operation to save the data disk of AIC instance A as SDG A.
+      * *   Call the [DeploySDG](~~DeploySDG~~) operation to deploy SDG A to AIC Instance B. This operattion is executed asynchronously. You can call the [DescribeARMServerInstances](~~DescribeARMServerInstances~~) operation to query the status of AIC Instance B. If the status of AIC Instance B changes to success, AIC insance B is available, and AIC Instances A and B have the same applications running.
       *
      */
     CompletableFuture<CreateSDGResponse> createSDG(CreateSDGRequest request);
@@ -184,6 +189,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSnatEntryResponse> createSnatEntry(CreateSnatEntryRequest request);
 
     CompletableFuture<CreateStorageGatewayResponse> createStorageGateway(CreateStorageGatewayRequest request);
+
+    CompletableFuture<CreateStorageVolumeResponse> createStorageVolume(CreateStorageVolumeRequest request);
 
     CompletableFuture<CreateVSwitchResponse> createVSwitch(CreateVSwitchRequest request);
 
@@ -255,7 +262,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteObjectResponse> deleteObject(DeleteObjectRequest request);
 
     /**
-      * ## [](#)
       * If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.
       *
      */
@@ -275,6 +281,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteStorageGatewayResponse> deleteStorageGateway(DeleteStorageGatewayRequest request);
 
+    CompletableFuture<DeleteStorageVolumeResponse> deleteStorageVolume(DeleteStorageVolumeRequest request);
+
     /**
       * Before you delete a vSwitch, make sure that no instances exist in the vSwitch.
       *
@@ -290,8 +298,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeARMServerInstancesResponse> describeARMServerInstances(DescribeARMServerInstancesRequest request);
 
     CompletableFuture<DescribeApplicationResponse> describeApplication(DescribeApplicationRequest request);
-
-    CompletableFuture<DescribeApplicationResourceSummaryResponse> describeApplicationResourceSummary(DescribeApplicationResourceSummaryRequest request);
 
     CompletableFuture<DescribeAvailableResourceResponse> describeAvailableResource(DescribeAvailableResourceRequest request);
 
@@ -316,8 +322,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDeviceServiceResponse> describeDeviceService(DescribeDeviceServiceRequest request);
 
     CompletableFuture<DescribeDisksResponse> describeDisks(DescribeDisksRequest request);
-
-    CompletableFuture<DescribeEipAddressesResponse> describeEipAddresses(DescribeEipAddressesRequest request);
 
     CompletableFuture<DescribeElbAvailableResourceInfoResponse> describeElbAvailableResourceInfo(DescribeElbAvailableResourceInfoRequest request);
 
@@ -381,6 +385,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeForwardTableEntriesResponse> describeForwardTableEntries(DescribeForwardTableEntriesRequest request);
 
+    CompletableFuture<DescribeHaVipsResponse> describeHaVips(DescribeHaVipsRequest request);
+
     CompletableFuture<DescribeImageInfosResponse> describeImageInfos(DescribeImageInfosRequest request);
 
     CompletableFuture<DescribeImageSharePermissionResponse> describeImageSharePermission(DescribeImageSharePermissionRequest request);
@@ -408,9 +414,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeKeyPairsResponse> describeKeyPairs(DescribeKeyPairsRequest request);
 
     /**
-      * > 
-      * *   You can call this operation up to 100 times per second per account.
-      * *   You can call this operation up to 10 times per second per user.
+      * *   You can call this operation up to 100 times per second.
+      * *   You can call this operation up to 10 times per second per account.
       *
      */
     CompletableFuture<DescribeLoadBalancerAttributeResponse> describeLoadBalancerAttribute(DescribeLoadBalancerAttributeRequest request);
@@ -510,6 +515,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSnatTableEntriesResponse> describeSnatTableEntries(DescribeSnatTableEntriesRequest request);
 
+    CompletableFuture<DescribeStorageGatewayResponse> describeStorageGateway(DescribeStorageGatewayRequest request);
+
+    CompletableFuture<DescribeStorageVolumeResponse> describeStorageVolume(DescribeStorageVolumeRequest request);
+
     CompletableFuture<DescribeUserBandWidthDataResponse> describeUserBandWidthData(DescribeUserBandWidthDataRequest request);
 
     CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
@@ -579,6 +588,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyForwardEntryResponse> modifyForwardEntry(ModifyForwardEntryRequest request);
 
+    CompletableFuture<ModifyHaVipAttributeResponse> modifyHaVipAttribute(ModifyHaVipAttributeRequest request);
+
     CompletableFuture<ModifyImageAttributeResponse> modifyImageAttribute(ModifyImageAttributeRequest request);
 
     CompletableFuture<ModifyImageSharePermissionResponse> modifyImageSharePermission(ModifyImageSharePermissionRequest request);
@@ -633,6 +644,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyVSwitchAttributeResponse> modifyVSwitchAttribute(ModifyVSwitchAttributeRequest request);
 
     CompletableFuture<PreloadRegionSDGResponse> preloadRegionSDG(PreloadRegionSDGRequest request);
+
+    CompletableFuture<PrepareUploadResponse> prepareUpload(PrepareUploadRequest request);
 
     CompletableFuture<PushApplicationDataResponse> pushApplicationData(PushApplicationDataRequest request);
 
@@ -782,9 +795,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetLoadBalancerTCPListenerAttributeResponse> setLoadBalancerTCPListenerAttribute(SetLoadBalancerTCPListenerAttributeRequest request);
 
     /**
-      * > 
-      * *   You can call this operation up to 100 times per second per account.
-      * *   You can call this operation up to 10 times per second per user.
+      * *   You can call this operation up to 100 times per second.
+      * *   You can call this operation up to 10 times per second per account.
       *
      */
     CompletableFuture<SetLoadBalancerUDPListenerAttributeResponse> setLoadBalancerUDPListenerAttribute(SetLoadBalancerUDPListenerAttributeRequest request);
@@ -831,11 +843,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopSnatIpForSnatEntryResponse> stopSnatIpForSnatEntry(StopSnatIpForSnatEntryRequest request);
 
+    /**
+      * Before you add tags to a resource, Alibaba Cloud checks the number of existing tags on the resource. If the number exceeds the upper limit, an error message is returned. Only instance resources, such as virtual machines and bare machines, are supported.
+      *
+     */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     CompletableFuture<UnAssociateEnsEipAddressResponse> unAssociateEnsEipAddress(UnAssociateEnsEipAddressRequest request);
 
     CompletableFuture<UnassignPrivateIpAddressesResponse> unassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest request);
+
+    CompletableFuture<UnassociateHaVipResponse> unassociateHaVip(UnassociateHaVipRequest request);
 
     CompletableFuture<UnassociateNetworkAclResponse> unassociateNetworkAcl(UnassociateNetworkAclRequest request);
 

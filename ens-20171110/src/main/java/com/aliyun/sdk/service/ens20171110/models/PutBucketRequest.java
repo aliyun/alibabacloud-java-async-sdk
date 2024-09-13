@@ -124,7 +124,7 @@ public class PutBucketRequest extends Request {
         } 
 
         /**
-         * The access control list (ACL) of the bucket.
+         * The access control list (ACL) of the bucket. Valid values:
          * <p>
          * 
          * *   **private** (default)
@@ -156,12 +156,11 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * Scheduling Scope, this parameter is only effective for globally scheduled Buckets.
+         * The scheduling scope. This parameter takes effect only when the value of the LogicalBucketType parameter is standard. Valid values:
          * <p>
          * 
-         * - domestic
-         * 
-         * - oversea
+         * *   **domestic**: Chinese mainland.
+         * *   **oversea**: outside the Chinese mainland.
          */
         public Builder dispatchScope(String dispatchScope) {
             this.putBodyParameter("DispatchScope", dispatchScope);
@@ -170,7 +169,7 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * The ID of the region where the node is located. If this parameter is not specified, the node is the global default node.
+         * The region ID of the node. This parameter is required if the value of the LogicalBucketType parameter is sink.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putBodyParameter("EnsRegionId", ensRegionId);
@@ -179,7 +178,11 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * Single-node storage. Set the value to sink.
+         * The type of the bucket. Valid values:
+         * <p>
+         * 
+         * *   **sink**: single-node bucket.
+         * *   **standard**: bucket for global scheduling.
          */
         public Builder logicalBucketType(String logicalBucketType) {
             this.putBodyParameter("LogicalBucketType", logicalBucketType);

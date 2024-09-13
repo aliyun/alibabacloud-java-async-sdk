@@ -49,7 +49,7 @@ public class DeleteSDGResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data object.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -97,7 +97,7 @@ public class DeleteSDGResponseBody extends TeaModel {
             private String sdgId; 
 
             /**
-             * SdgId.
+             * The ID of the shared data group (SDG).
              */
             public Builder sdgId(String sdgId) {
                 this.sdgId = sdgId;
@@ -150,7 +150,7 @@ public class DeleteSDGResponseBody extends TeaModel {
             private Item item; 
 
             /**
-             * ErrMessage.
+             * The error message.
              */
             public Builder errMessage(String errMessage) {
                 this.errMessage = errMessage;
@@ -158,7 +158,7 @@ public class DeleteSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Item.
+             * Description
              */
             public Builder item(Item item) {
                 this.item = item;
@@ -223,7 +223,7 @@ public class DeleteSDGResponseBody extends TeaModel {
             private Long successCount; 
 
             /**
-             * FailedCount.
+             * The number of failed tasks.
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -231,7 +231,7 @@ public class DeleteSDGResponseBody extends TeaModel {
             }
 
             /**
-             * FailedItems.
+             * Details about the failed tasks.
              */
             public Builder failedItems(java.util.List < FailedItems> failedItems) {
                 this.failedItems = failedItems;
@@ -239,7 +239,7 @@ public class DeleteSDGResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * The number of successful tasks.
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -304,7 +304,7 @@ public class DeleteSDGResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Message.
+             * The response message. Success is returned for a successful request.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -312,7 +312,7 @@ public class DeleteSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The execution result of the synchronization request.
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -320,7 +320,11 @@ public class DeleteSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether all tasks are successful. Valid values:
+             * <p>
+             * 
+             * *   true: All tasks are successful.
+             * *   false: Failed tasks exist.
              */
             public Builder success(Boolean success) {
                 this.success = success;

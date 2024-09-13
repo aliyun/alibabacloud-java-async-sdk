@@ -478,7 +478,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The tags that are added to the resource.
+         * The tags that are added to the resource. This operation does not return tag information. You can call this operation in combination with the tag-related operations.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -542,7 +542,7 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. Valid values: 1 to 20.
+             * The key of the tag that are to add to the instance. Valid values: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -550,7 +550,7 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The tag value. Valid values: 1 to 20.
+             * The tag value of the instance. Valid values: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

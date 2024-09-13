@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeApplicationResourceSummaryResponse} extends {@link TeaModel}
+ * {@link CreateStorageVolumeResponse} extends {@link TeaModel}
  *
- * <p>DescribeApplicationResourceSummaryResponse</p>
+ * <p>CreateStorageVolumeResponse</p>
  */
-public class DescribeApplicationResourceSummaryResponse extends Response {
+public class CreateStorageVolumeResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DescribeApplicationResourceSummaryResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeApplicationResourceSummaryResponseBody body;
+    private CreateStorageVolumeResponseBody body;
 
-    private DescribeApplicationResourceSummaryResponse(BuilderImpl builder) {
+    private CreateStorageVolumeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeApplicationResourceSummaryResponse create() {
+    public static CreateStorageVolumeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DescribeApplicationResourceSummaryResponse extends Response {
     /**
      * @return body
      */
-    public DescribeApplicationResourceSummaryResponseBody getBody() {
+    public CreateStorageVolumeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeApplicationResourceSummaryResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateStorageVolumeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeApplicationResourceSummaryResponseBody body);
+        Builder body(CreateStorageVolumeResponseBody body);
 
         @Override
-        DescribeApplicationResourceSummaryResponse build();
+        CreateStorageVolumeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeApplicationResourceSummaryResponse, Builder>
+            extends Response.BuilderImpl<CreateStorageVolumeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeApplicationResourceSummaryResponseBody body; 
+        private CreateStorageVolumeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeApplicationResourceSummaryResponse response) {
+        private BuilderImpl(CreateStorageVolumeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DescribeApplicationResourceSummaryResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeApplicationResourceSummaryResponseBody body) {
+        public Builder body(CreateStorageVolumeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeApplicationResourceSummaryResponse build() {
-            return new DescribeApplicationResourceSummaryResponse(this);
+        public CreateStorageVolumeResponse build() {
+            return new CreateStorageVolumeResponse(this);
         } 
 
     } 

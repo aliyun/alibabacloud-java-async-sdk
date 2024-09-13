@@ -681,7 +681,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             private Integer systemDiskMinSize; 
 
             /**
-             * BandwidthTypes.
+             * Bandwidth billing method.
              */
             public Builder bandwidthTypes(BandwidthTypes bandwidthTypes) {
                 this.bandwidthTypes = bandwidthTypes;
@@ -705,7 +705,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnsRegionIds.
+             * node ID
              */
             public Builder ensRegionIds(EnsRegionIds ensRegionIds) {
                 this.ensRegionIds = ensRegionIds;
@@ -729,7 +729,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Internet service provider (ISP).
+             * Operator
              */
             public Builder isp(Isp isp) {
                 this.isp = isp;

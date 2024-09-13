@@ -54,7 +54,7 @@ public class DeleteSDGRequest extends Request {
         } 
 
         /**
-         * IDs of SDGs that you want to delete. You can delete a maximum of 10 SDGs at a time.
+         * The IDs of the SDGs that you want to delete.
          */
         public Builder SDGId(java.util.List < String > SDGId) {
             String SDGIdShrink = shrink(SDGId, "SDGId", "json");

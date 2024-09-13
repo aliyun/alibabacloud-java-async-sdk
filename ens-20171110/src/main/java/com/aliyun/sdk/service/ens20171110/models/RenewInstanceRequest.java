@@ -79,20 +79,6 @@ public class RenewInstanceRequest extends Request {
 
         /**
          * The renewal duration of the subscription instance.
-         * <p>
-         * 
-         * Valid values:
-         * 
-         * *   1
-         * *   2
-         * *   3
-         * *   4
-         * *   5
-         * *   6
-         * *   7
-         * *   8
-         * *   9
-         * *   12
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

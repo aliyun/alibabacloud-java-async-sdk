@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancerHTTPSListenerAttributeResponseBody</p>
  */
 public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BackendServerPort")
+    private Integer backendServerPort;
+
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
@@ -75,6 +78,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     private Integer unhealthyThreshold;
 
     private DescribeLoadBalancerHTTPSListenerAttributeResponseBody(Builder builder) {
+        this.backendServerPort = builder.backendServerPort;
         this.bandwidth = builder.bandwidth;
         this.description = builder.description;
         this.forwardPort = builder.forwardPort;
@@ -104,6 +108,13 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
     public static DescribeLoadBalancerHTTPSListenerAttributeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return backendServerPort
+     */
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
     /**
@@ -254,6 +265,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     }
 
     public static final class Builder {
+        private Integer backendServerPort; 
         private Integer bandwidth; 
         private String description; 
         private Integer forwardPort; 
@@ -277,12 +289,15 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         private Integer unhealthyThreshold; 
 
         /**
-         * The maximum bandwidth of the EIP.
-         * <p>
-         * 
-         * *   Default value: 5.
-         * *   Valid values: **5** to **10000**.
-         * *   Unit: Mbit/s.
+         * The backend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         */
+        public Builder backendServerPort(Integer backendServerPort) {
+            this.backendServerPort = backendServerPort;
+            return this;
+        }
+
+        /**
+         * The peak bandwidth of the Edge Load Balancer (ELB). The default value is -1, which indicates that the bandwidth is not limited.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -381,7 +396,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
         }
 
         /**
-         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails the health check.
          * <p>
          * 
          * *   Default value: 5.
@@ -390,9 +405,9 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
          * 
          * > 
          * 
-         * *   This parameter is returned only if the HealthCheck parameter is set to on.
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
          * 
-         * *   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+         * *   If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.healthCheckTimeout = healthCheckTimeout;

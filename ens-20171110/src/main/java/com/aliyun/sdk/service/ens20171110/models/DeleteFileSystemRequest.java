@@ -69,7 +69,7 @@ public class DeleteFileSystemRequest extends Request {
         } 
 
         /**
-         * The ID of the node.
+         * The ID of the edge node.
          */
         public Builder ensRegionId(String ensRegionId) {
             this.putQueryParameter("EnsRegionId", ensRegionId);

@@ -81,7 +81,7 @@ public class CopySnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * Success status code.
+         * The success status code.
          * <p>
          * 
          * *   **PartSuccess**: partially succeeded.
@@ -161,7 +161,7 @@ public class CopySnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * An array of instance IDs.
+             * The IDs of the instances.
              */
             public Builder instanceId(java.util.List < String > instanceId) {
                 this.instanceId = instanceId;

@@ -54,7 +54,7 @@ public class RemoveInstanceSDGRequest extends Request {
         } 
 
         /**
-         * InstanceIds.
+         * The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");

@@ -289,7 +289,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the listener. The description must be **1** to **80** characters in length.
+         * The name of the listener. The value must be **1** to **80** characters in length.
          * <p>
          * 
          * >  The value cannot start with `http://` or `https://`.
@@ -382,7 +382,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         }
 
         /**
-         * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the server fails to pass the health check.
+         * The timeout period of a health check response. If the backend ENS does not respond within the specified time, the health check fails.
          * <p>
          * 
          * *   Default value: 5.
@@ -391,9 +391,9 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
          * 
          * > 
          * 
-         * *   This parameter takes effect only if you set HealthCheck to on.
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
          * 
-         * *   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+         * *   If the value of the HealthCheckTimeout property is smaller than the value of the HealthCheckInterval property, the timeout period specified by the HealthCheckTimeout property becomes invalid and the value of the HealthCheckInterval property is used as the timeout period.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.putQueryParameter("HealthCheckTimeout", healthCheckTimeout);
@@ -402,14 +402,14 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         }
 
         /**
-         * The Uniform Resource Identifier (URI) that you want to use for health checks. The URI must be **1** to **80** characters in length.
+         * The URI used for health checks. The URI must be **1** to **80** characters in length.
          * <p>
          * 
          * > 
          * 
-         * *   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
+         * *   A URL must start with a forward slash (`/`) but cannot contain only forward slashes (`/`).
          * 
-         * *   This parameter takes effect only if you set HealthCheck to on.
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.putQueryParameter("HealthCheckURI", healthCheckURI);
@@ -442,7 +442,7 @@ public class SetLoadBalancerHTTPSListenerAttributeRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The listener port whose attributes are to be modified. Valid values: **1** to **65535**.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);

@@ -130,6 +130,88 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     } 
 
+    public static class Ipv6Set extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
+        private String ipv6Address;
+
+        private Ipv6Set(Builder builder) {
+            this.ipv6Address = builder.ipv6Address;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6Set create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6Address
+         */
+        public String getIpv6Address() {
+            return this.ipv6Address;
+        }
+
+        public static final class Builder {
+            private String ipv6Address; 
+
+            /**
+             * Ipv6Address.
+             */
+            public Builder ipv6Address(String ipv6Address) {
+                this.ipv6Address = ipv6Address;
+                return this;
+            }
+
+            public Ipv6Set build() {
+                return new Ipv6Set(this);
+            } 
+
+        } 
+
+    }
+    public static class Ipv6Sets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ipv6Set")
+        private java.util.List < Ipv6Set> ipv6Set;
+
+        private Ipv6Sets(Builder builder) {
+            this.ipv6Set = builder.ipv6Set;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ipv6Sets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ipv6Set
+         */
+        public java.util.List < Ipv6Set> getIpv6Set() {
+            return this.ipv6Set;
+        }
+
+        public static final class Builder {
+            private java.util.List < Ipv6Set> ipv6Set; 
+
+            /**
+             * Ipv6Set.
+             */
+            public Builder ipv6Set(java.util.List < Ipv6Set> ipv6Set) {
+                this.ipv6Set = ipv6Set;
+                return this;
+            }
+
+            public Ipv6Sets build() {
+                return new Ipv6Sets(this);
+            } 
+
+        } 
+
+    }
     public static class PrivateIpSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Primary")
         private Boolean primary;
@@ -290,6 +372,9 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
+        @com.aliyun.core.annotation.NameInMap("Ipv6Sets")
+        private Ipv6Sets ipv6Sets;
+
         @com.aliyun.core.annotation.NameInMap("MacAddress")
         private String macAddress;
 
@@ -328,6 +413,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             this.description = builder.description;
             this.ensRegionId = builder.ensRegionId;
             this.instanceId = builder.instanceId;
+            this.ipv6Sets = builder.ipv6Sets;
             this.macAddress = builder.macAddress;
             this.networkId = builder.networkId;
             this.networkInterfaceId = builder.networkInterfaceId;
@@ -375,6 +461,13 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return ipv6Sets
+         */
+        public Ipv6Sets getIpv6Sets() {
+            return this.ipv6Sets;
         }
 
         /**
@@ -459,6 +552,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String description; 
             private String ensRegionId; 
             private String instanceId; 
+            private Ipv6Sets ipv6Sets; 
             private String macAddress; 
             private String networkId; 
             private String networkInterfaceId; 
@@ -500,6 +594,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Ipv6Sets.
+             */
+            public Builder ipv6Sets(Ipv6Sets ipv6Sets) {
+                this.ipv6Sets = ipv6Sets;
                 return this;
             }
 

@@ -97,7 +97,7 @@ public class CopySnapshotRequest extends Request {
         } 
 
         /**
-         * The destination nodes.
+         * The IDs of destination nodes.
          */
         public Builder destinationRegionIds(java.util.List < String > destinationRegionIds) {
             String destinationRegionIdsShrink = shrink(destinationRegionIds, "DestinationRegionIds", "json");

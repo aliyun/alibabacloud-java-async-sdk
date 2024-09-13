@@ -112,6 +112,9 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageSize")
         private String imageSize;
 
+        @com.aliyun.core.annotation.NameInMap("ImageStorageSize")
+        private String imageStorageSize;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -135,6 +138,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             this.imageName = builder.imageName;
             this.imageOwnerAlias = builder.imageOwnerAlias;
             this.imageSize = builder.imageSize;
+            this.imageStorageSize = builder.imageStorageSize;
             this.instanceId = builder.instanceId;
             this.osVersion = builder.osVersion;
             this.platform = builder.platform;
@@ -200,6 +204,13 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageStorageSize
+         */
+        public String getImageStorageSize() {
+            return this.imageStorageSize;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -242,6 +253,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             private String imageName; 
             private String imageOwnerAlias; 
             private String imageSize; 
+            private String imageStorageSize; 
             private String instanceId; 
             private String osVersion; 
             private String platform; 
@@ -296,8 +308,8 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
              * The source of the image. Valid values:
              * <p>
              * 
-             * *   **system**: public images
-             * *   **self**: your custom images
+             * *   **others**: a custom image that is shared by other Alibaba Cloud accounts.
+             * *   **self**: your own custom image.
              */
             public Builder imageOwnerAlias(String imageOwnerAlias) {
                 this.imageOwnerAlias = imageOwnerAlias;
@@ -313,7 +325,15 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * ImageStorageSize.
+             */
+            public Builder imageStorageSize(String imageStorageSize) {
+                this.imageStorageSize = imageStorageSize;
+                return this;
+            }
+
+            /**
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -345,7 +365,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot.
+             * The snapshot ID.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;

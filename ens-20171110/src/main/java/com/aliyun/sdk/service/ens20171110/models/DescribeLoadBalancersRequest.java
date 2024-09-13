@@ -217,10 +217,10 @@ public class DescribeLoadBalancersRequest extends Request {
         }
 
         /**
-         * The status of the ELB instance. Valid values:
+         * The status of the listener for the ELB instance. Valid values:
          * <p>
          * 
-         * *   **Active** (default): The listener for the instance can forward the received traffic based on the rule.
+         * *   **Active**: The listener for the instance can forward the received traffic based on forwarding rules.
          * *   **InActive**: The listener for the instance does not forward the received traffic.
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {

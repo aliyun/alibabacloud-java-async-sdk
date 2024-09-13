@@ -116,6 +116,7 @@ public class CreateSDGRequest extends Request {
          * *   The first time you create an SDG, the **FromSDGId** parameter is empty.
          * 
          * *   If the value of the **FromSDGId** parameter is invalid or does not correspond to an original disk, an error is reported.
+         * 
          * *   If the value of the **FromSDGId** parameter is not empty, you have created an SDG, and the operation is performed on the existing SDG.
          */
         public Builder fromSDGId(String fromSDGId) {
@@ -125,7 +126,7 @@ public class CreateSDGRequest extends Request {
         }
 
         /**
-         * The ID of the device.
+         * The ID of the AIC instance. You can call the [DescribeARMServerInstances](~~DescribeARMServerInstances~~) operation to query the ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -143,10 +144,7 @@ public class CreateSDGRequest extends Request {
          * 
          * *   The first time that you create an SDG, the **Size** parameter is required.
          * 
-         * *   When the amount of data increases, you can pass a new **Size** parameter for resizing.
-         * 
-         *     *   If the value of the **Size** parameter is not empty and is greater than the value of the **Size** parameter of the original SDG, the original disk corresponding to the SDG is scaled out to the size that is specified by the current **Size** parameter.
-         *     *   If the value of the **Size** parameter is not empty, or the value of the **Size** parameter is smaller than the value of the **Size** parameter of the original SDG, no operation is performed.
+         * *   When the amount of data increases, you can pass a new **Size** parameter for resizing. If the value of the new **Size** parameter is greater than the value of the old **Size** parameter, the disk size of the SDG is increased to the size that is specified by the new **Size** parameter. If the value of the new **Size** parameter is empty or smaller than that of the old **Size** parameter, no operation is performed.
          */
         public Builder size(String size) {
             this.putQueryParameter("Size", size);

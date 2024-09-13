@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateLoadBalancerHTTPSListenerRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendServerPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
+    private Integer backendServerPort;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Cookie")
     private String cookie;
 
@@ -117,6 +122,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends Request {
 
     private CreateLoadBalancerHTTPSListenerRequest(Builder builder) {
         super(builder);
+        this.backendServerPort = builder.backendServerPort;
         this.cookie = builder.cookie;
         this.cookieTimeout = builder.cookieTimeout;
         this.description = builder.description;
@@ -152,6 +158,13 @@ public class CreateLoadBalancerHTTPSListenerRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return backendServerPort
+     */
+    public Integer getBackendServerPort() {
+        return this.backendServerPort;
     }
 
     /**
@@ -309,6 +322,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLoadBalancerHTTPSListenerRequest, Builder> {
+        private Integer backendServerPort; 
         private String cookie; 
         private Integer cookieTimeout; 
         private String description; 
@@ -338,6 +352,7 @@ public class CreateLoadBalancerHTTPSListenerRequest extends Request {
 
         private Builder(CreateLoadBalancerHTTPSListenerRequest request) {
             super(request);
+            this.backendServerPort = request.backendServerPort;
             this.cookie = request.cookie;
             this.cookieTimeout = request.cookieTimeout;
             this.description = request.description;
@@ -361,6 +376,15 @@ public class CreateLoadBalancerHTTPSListenerRequest extends Request {
             this.stickySessionType = request.stickySessionType;
             this.unhealthyThreshold = request.unhealthyThreshold;
         } 
+
+        /**
+         * The listening port that is used by the backend instances. Valid values: 1 to 65535.
+         */
+        public Builder backendServerPort(Integer backendServerPort) {
+            this.putQueryParameter("BackendServerPort", backendServerPort);
+            this.backendServerPort = backendServerPort;
+            return this;
+        }
 
         /**
          * The cookie that is configured on the server. The cookie must be **1** to **200** characters in length and contain only ASCII characters and digits.
@@ -498,9 +522,9 @@ public class CreateLoadBalancerHTTPSListenerRequest extends Request {
          * 
          * > 
          * 
-         * *   This parameter takes effect only if you set HealthCheck to on.
+         * *   This parameter takes effect only if the HealthCheck parameter is set to on.
          * 
-         * *   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+         * *   If the value of HealthCheckTimeout is smaller than the value of HealthCheckInterval, the timeout period specified by HealthCheckTimeout becomes invalid, and the value of HealthCheckInterval is used as the timeout period.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.putQueryParameter("HealthCheckTimeout", healthCheckTimeout);
@@ -509,12 +533,10 @@ public class CreateLoadBalancerHTTPSListenerRequest extends Request {
         }
 
         /**
-         * The Uniform Resource Identifier (URI) that you want to use for health checks. The URI must be **1** to **80** characters in length.
+         * The URI used for health checks. The URI must be **1** to **80** characters in length.
          * <p>
          * 
-         * > 
-         * 
-         * *   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
+         * >  A URL must start with a forward slash (`/`) but cannot contain only forward slashes (`/`).
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.putQueryParameter("HealthCheckURI", healthCheckURI);
@@ -560,7 +582,10 @@ public class CreateLoadBalancerHTTPSListenerRequest extends Request {
         }
 
         /**
-         * The frontend port that is used by the ELB instance. Valid values: **1** to **65535**.
+         * The listening port that is used by Edge Load Balancer (ELB) to receive requests and forward the requests to backend servers. Valid values: **1** to **65535**.
+         * <p>
+         * 
+         * >  We recommend that you use port 443 for HTTPS.
          */
         public Builder listenerPort(Integer listenerPort) {
             this.putQueryParameter("ListenerPort", listenerPort);

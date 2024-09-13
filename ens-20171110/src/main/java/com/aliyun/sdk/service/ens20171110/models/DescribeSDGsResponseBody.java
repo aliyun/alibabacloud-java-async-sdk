@@ -141,7 +141,7 @@ public class DescribeSDGsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The ID of the edge node.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

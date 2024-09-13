@@ -96,7 +96,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * The token of the first page to query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -105,7 +105,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The IDs of resources. Valid values of N: 1 to 50.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -114,7 +114,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   instance
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -123,7 +126,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -177,7 +180,12 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the instance. Valid values of N: **1** to **20**.
+             * <p>
+             * 
+             * *   The key cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
+             * *   The key must be up to 64 characters in length.
+             * *   The tag key cannot be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -185,7 +193,12 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of a tag that is attached to the topics you want to query. This parameter is not required. If you configure this parameter, you must also configure the **Key** parameter.**** If you include the Key and Value parameters in a request, this operation queries only the topics that use the specified tags. If you do not include these parameters in a request, this operation queries all topics that you can access.
+             * <p>
+             * 
+             * *   Valid values of N: 1 to 20.
+             * *   The value of this parameter can be an empty string.
+             * *   The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.
              */
             public Builder value(String value) {
                 this.value = value;

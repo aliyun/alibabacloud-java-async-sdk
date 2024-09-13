@@ -205,7 +205,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The ID of the instance
+             * The ID of the AIC instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -218,33 +218,8 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
              * 
              * Valid values:
              * 
-             * *   overlay
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     read/write splitting
-             * 
-             *     <!-- -->
-             * 
-             *     .
-             * 
-             * *   common
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     common deployment
-             * 
-             *     <!-- -->
-             * 
-             *     .
+             * *   overlay: read/write splitting.
+             * *   common: common deployment.
              */
             public Builder mountType(String mountType) {
                 this.mountType = mountType;
@@ -252,7 +227,7 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The ID of the edge node.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -260,34 +235,14 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment status of the SDG.
+             * the deployment status of the shared data group SDG.
              * <p>
              * 
              * Valid values:
              * 
              * *   sdg_deploying
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   success
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   failed
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
              */
             public Builder status(String status) {
                 this.status = status;

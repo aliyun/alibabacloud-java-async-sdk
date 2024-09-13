@@ -14,8 +14,12 @@ public class PutBucketLifecycleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    private String ruleId;
+
     private PutBucketLifecycleResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.ruleId = builder.ruleId;
     }
 
     public static Builder builder() {
@@ -33,14 +37,30 @@ public class PutBucketLifecycleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return ruleId
+     */
+    public String getRuleId() {
+        return this.ruleId;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private String ruleId; 
 
         /**
          * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RuleId.
+         */
+        public Builder ruleId(String ruleId) {
+            this.ruleId = ruleId;
             return this;
         }
 

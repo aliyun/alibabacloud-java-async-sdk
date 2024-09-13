@@ -83,7 +83,10 @@ public class DeployInstanceSDGRequest extends Request {
         } 
 
         /**
-         * DeploymentType.
+         * The deployment type of the SDG. Valid values:
+         * <p>
+         * 
+         * *   shared: shared read/write splitting deployment. The content of the SDG is read-only, and data updates are written to the local storage of the instance.
          */
         public Builder deploymentType(String deploymentType) {
             this.putQueryParameter("DeploymentType", deploymentType);
@@ -92,7 +95,7 @@ public class DeployInstanceSDGRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -102,7 +105,7 @@ public class DeployInstanceSDGRequest extends Request {
         }
 
         /**
-         * SDGId.
+         * The ID of the SDG.
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);

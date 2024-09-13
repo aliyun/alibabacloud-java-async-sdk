@@ -101,7 +101,7 @@ public class DescribeServcieScheduleRequest extends Request {
         }
 
         /**
-         * The UUID of the device.
+         * The unique ID of the device.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

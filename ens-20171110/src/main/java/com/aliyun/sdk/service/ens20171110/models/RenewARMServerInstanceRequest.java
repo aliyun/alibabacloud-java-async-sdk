@@ -98,7 +98,11 @@ public class RenewARMServerInstanceRequest extends Request {
         } 
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal for the subscription. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false (default)
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);

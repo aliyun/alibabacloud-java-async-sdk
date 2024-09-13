@@ -163,6 +163,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
+        @com.aliyun.core.annotation.NameInMap("EncryptKeyId")
+        private String encryptKeyId;
+
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
+        private Boolean encrypted;
+
         @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
@@ -186,6 +192,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.diskId = builder.diskId;
             this.diskName = builder.diskName;
             this.diskSize = builder.diskSize;
+            this.encryptKeyId = builder.encryptKeyId;
+            this.encrypted = builder.encrypted;
             this.size = builder.size;
             this.deviceType = builder.deviceType;
             this.diskType = builder.diskType;
@@ -228,6 +236,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public Integer getDiskSize() {
             return this.diskSize;
+        }
+
+        /**
+         * @return encryptKeyId
+         */
+        public String getEncryptKeyId() {
+            return this.encryptKeyId;
+        }
+
+        /**
+         * @return encrypted
+         */
+        public Boolean getEncrypted() {
+            return this.encrypted;
         }
 
         /**
@@ -277,6 +299,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String diskId; 
             private String diskName; 
             private Integer diskSize; 
+            private String encryptKeyId; 
+            private Boolean encrypted; 
             private Integer size; 
             private String deviceType; 
             private String diskType; 
@@ -318,6 +342,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
+                return this;
+            }
+
+            /**
+             * EncryptKeyId.
+             */
+            public Builder encryptKeyId(String encryptKeyId) {
+                this.encryptKeyId = encryptKeyId;
+                return this;
+            }
+
+            /**
+             * Encrypted.
+             */
+            public Builder encrypted(Boolean encrypted) {
+                this.encrypted = encrypted;
                 return this;
             }
 
@@ -1280,6 +1320,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
         private Integer internetMaxBandwidthOut;
 
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
+        private String keyPairName;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
@@ -1333,6 +1376,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.internetMaxBandwidthIn = builder.internetMaxBandwidthIn;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
+            this.keyPairName = builder.keyPairName;
             this.memory = builder.memory;
             this.networkAttributes = builder.networkAttributes;
             this.OSName = builder.OSName;
@@ -1468,6 +1512,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return keyPairName
+         */
+        public String getKeyPairName() {
+            return this.keyPairName;
+        }
+
+        /**
          * @return memory
          */
         public Integer getMemory() {
@@ -1568,6 +1619,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String instanceTypeFamily; 
             private Integer internetMaxBandwidthIn; 
             private Integer internetMaxBandwidthOut; 
+            private String keyPairName; 
             private Integer memory; 
             private NetworkAttributes networkAttributes; 
             private String OSName; 
@@ -1730,6 +1782,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * KeyPairName.
+             */
+            public Builder keyPairName(String keyPairName) {
+                this.keyPairName = keyPairName;
+                return this;
+            }
+
+            /**
              * The memory size. Unit: MB.
              */
             public Builder memory(Integer memory) {
@@ -1786,7 +1846,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the instance type.
+             * The instance type.
              */
             public Builder specName(String specName) {
                 this.specName = specName;

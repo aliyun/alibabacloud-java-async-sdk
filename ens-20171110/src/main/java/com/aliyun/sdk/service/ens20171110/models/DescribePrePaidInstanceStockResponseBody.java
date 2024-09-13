@@ -141,7 +141,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * The number of vCPUs.
+         * The number of CPU cores.
          */
         public Builder cores(Integer cores) {
             this.cores = cores;
@@ -165,7 +165,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * The instance type.
+         * The specification of the instance.
          */
         public Builder instanceSpec(String instanceSpec) {
             this.instanceSpec = instanceSpec;
@@ -181,7 +181,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +189,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * The reasons for resource scarcity
+         * The reason why resources are insufficient.
          */
         public Builder resourceGap(String resourceGap) {
             this.resourceGap = resourceGap;
@@ -197,7 +197,7 @@ public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
         }
 
         /**
-         * The size of the system disk. Unit: GB.
+         * The size of the system disk.
          */
         public Builder systemDiskSize(Integer systemDiskSize) {
             this.systemDiskSize = systemDiskSize;

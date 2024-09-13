@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeEipAddressesResponse} extends {@link TeaModel}
+ * {@link DeleteStorageVolumeResponse} extends {@link TeaModel}
  *
- * <p>DescribeEipAddressesResponse</p>
+ * <p>DeleteStorageVolumeResponse</p>
  */
-public class DescribeEipAddressesResponse extends Response {
+public class DeleteStorageVolumeResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DescribeEipAddressesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeEipAddressesResponseBody body;
+    private DeleteStorageVolumeResponseBody body;
 
-    private DescribeEipAddressesResponse(BuilderImpl builder) {
+    private DeleteStorageVolumeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeEipAddressesResponse create() {
+    public static DeleteStorageVolumeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DescribeEipAddressesResponse extends Response {
     /**
      * @return body
      */
-    public DescribeEipAddressesResponseBody getBody() {
+    public DeleteStorageVolumeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeEipAddressesResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteStorageVolumeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeEipAddressesResponseBody body);
+        Builder body(DeleteStorageVolumeResponseBody body);
 
         @Override
-        DescribeEipAddressesResponse build();
+        DeleteStorageVolumeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeEipAddressesResponse, Builder>
+            extends Response.BuilderImpl<DeleteStorageVolumeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeEipAddressesResponseBody body; 
+        private DeleteStorageVolumeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeEipAddressesResponse response) {
+        private BuilderImpl(DeleteStorageVolumeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DescribeEipAddressesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeEipAddressesResponseBody body) {
+        public Builder body(DeleteStorageVolumeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeEipAddressesResponse build() {
-            return new DescribeEipAddressesResponse(this);
+        public DeleteStorageVolumeResponse build() {
+            return new DeleteStorageVolumeResponse(this);
         } 
 
     } 
