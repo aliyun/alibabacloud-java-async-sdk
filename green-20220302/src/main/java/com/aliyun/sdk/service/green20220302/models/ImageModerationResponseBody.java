@@ -191,6 +191,250 @@ public class ImageModerationResponseBody extends TeaModel {
         } 
 
     }
+    public static class Bang extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Bang(Builder builder) {
+            this.confidence = builder.confidence;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Bang create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private String value; 
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Bang build() {
+                return new Bang(this);
+            } 
+
+        } 
+
+    }
+    public static class Gender extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Gender(Builder builder) {
+            this.confidence = builder.confidence;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Gender create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private String value; 
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Gender build() {
+                return new Gender(this);
+            } 
+
+        } 
+
+    }
+    public static class Hairstyle extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Hairstyle(Builder builder) {
+            this.confidence = builder.confidence;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Hairstyle create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private String value; 
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Hairstyle build() {
+                return new Hairstyle(this);
+            } 
+
+        } 
+
+    }
+    public static class Hat extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Hat(Builder builder) {
+            this.confidence = builder.confidence;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Hat create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private String value; 
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Hat build() {
+                return new Hat(this);
+            } 
+
+        } 
+
+    }
     public static class Location extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("H")
         private Integer h;
@@ -216,6 +460,591 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         public static Location create() {
+            return builder().build();
+        }
+
+        /**
+         * @return h
+         */
+        public Integer getH() {
+            return this.h;
+        }
+
+        /**
+         * @return w
+         */
+        public Integer getW() {
+            return this.w;
+        }
+
+        /**
+         * @return x
+         */
+        public Integer getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Integer getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Integer h; 
+            private Integer w; 
+            private Integer x; 
+            private Integer y; 
+
+            /**
+             * H.
+             */
+            public Builder h(Integer h) {
+                this.h = h;
+                return this;
+            }
+
+            /**
+             * W.
+             */
+            public Builder w(Integer w) {
+                this.w = w;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Integer x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Integer y) {
+                this.y = y;
+                return this;
+            }
+
+            public Location build() {
+                return new Location(this);
+            } 
+
+        } 
+
+    }
+    public static class Mask extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Mask(Builder builder) {
+            this.confidence = builder.confidence;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Mask create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private String value; 
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Mask build() {
+                return new Mask(this);
+            } 
+
+        } 
+
+    }
+    public static class Mustache extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Mustache(Builder builder) {
+            this.confidence = builder.confidence;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Mustache create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private String value; 
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Mustache build() {
+                return new Mustache(this);
+            } 
+
+        } 
+
+    }
+    public static class Quality extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Blur")
+        private Float blur;
+
+        @com.aliyun.core.annotation.NameInMap("Integrity")
+        private Float integrity;
+
+        @com.aliyun.core.annotation.NameInMap("Pitch")
+        private Float pitch;
+
+        @com.aliyun.core.annotation.NameInMap("Roll")
+        private Float roll;
+
+        @com.aliyun.core.annotation.NameInMap("Yaw")
+        private Float yaw;
+
+        private Quality(Builder builder) {
+            this.blur = builder.blur;
+            this.integrity = builder.integrity;
+            this.pitch = builder.pitch;
+            this.roll = builder.roll;
+            this.yaw = builder.yaw;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Quality create() {
+            return builder().build();
+        }
+
+        /**
+         * @return blur
+         */
+        public Float getBlur() {
+            return this.blur;
+        }
+
+        /**
+         * @return integrity
+         */
+        public Float getIntegrity() {
+            return this.integrity;
+        }
+
+        /**
+         * @return pitch
+         */
+        public Float getPitch() {
+            return this.pitch;
+        }
+
+        /**
+         * @return roll
+         */
+        public Float getRoll() {
+            return this.roll;
+        }
+
+        /**
+         * @return yaw
+         */
+        public Float getYaw() {
+            return this.yaw;
+        }
+
+        public static final class Builder {
+            private Float blur; 
+            private Float integrity; 
+            private Float pitch; 
+            private Float roll; 
+            private Float yaw; 
+
+            /**
+             * Blur.
+             */
+            public Builder blur(Float blur) {
+                this.blur = blur;
+                return this;
+            }
+
+            /**
+             * Integrity.
+             */
+            public Builder integrity(Float integrity) {
+                this.integrity = integrity;
+                return this;
+            }
+
+            /**
+             * Pitch.
+             */
+            public Builder pitch(Float pitch) {
+                this.pitch = pitch;
+                return this;
+            }
+
+            /**
+             * Roll.
+             */
+            public Builder roll(Float roll) {
+                this.roll = roll;
+                return this;
+            }
+
+            /**
+             * Yaw.
+             */
+            public Builder yaw(Float yaw) {
+                this.yaw = yaw;
+                return this;
+            }
+
+            public Quality build() {
+                return new Quality(this);
+            } 
+
+        } 
+
+    }
+    public static class FaceData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Age")
+        private Integer age;
+
+        @com.aliyun.core.annotation.NameInMap("Bang")
+        private Bang bang;
+
+        @com.aliyun.core.annotation.NameInMap("Gender")
+        private Gender gender;
+
+        @com.aliyun.core.annotation.NameInMap("Glasses")
+        private String glasses;
+
+        @com.aliyun.core.annotation.NameInMap("Hairstyle")
+        private Hairstyle hairstyle;
+
+        @com.aliyun.core.annotation.NameInMap("Hat")
+        private Hat hat;
+
+        @com.aliyun.core.annotation.NameInMap("Location")
+        private Location location;
+
+        @com.aliyun.core.annotation.NameInMap("Mask")
+        private Mask mask;
+
+        @com.aliyun.core.annotation.NameInMap("Mustache")
+        private Mustache mustache;
+
+        @com.aliyun.core.annotation.NameInMap("Quality")
+        private Quality quality;
+
+        @com.aliyun.core.annotation.NameInMap("Smile")
+        private Float smile;
+
+        private FaceData(Builder builder) {
+            this.age = builder.age;
+            this.bang = builder.bang;
+            this.gender = builder.gender;
+            this.glasses = builder.glasses;
+            this.hairstyle = builder.hairstyle;
+            this.hat = builder.hat;
+            this.location = builder.location;
+            this.mask = builder.mask;
+            this.mustache = builder.mustache;
+            this.quality = builder.quality;
+            this.smile = builder.smile;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FaceData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return age
+         */
+        public Integer getAge() {
+            return this.age;
+        }
+
+        /**
+         * @return bang
+         */
+        public Bang getBang() {
+            return this.bang;
+        }
+
+        /**
+         * @return gender
+         */
+        public Gender getGender() {
+            return this.gender;
+        }
+
+        /**
+         * @return glasses
+         */
+        public String getGlasses() {
+            return this.glasses;
+        }
+
+        /**
+         * @return hairstyle
+         */
+        public Hairstyle getHairstyle() {
+            return this.hairstyle;
+        }
+
+        /**
+         * @return hat
+         */
+        public Hat getHat() {
+            return this.hat;
+        }
+
+        /**
+         * @return location
+         */
+        public Location getLocation() {
+            return this.location;
+        }
+
+        /**
+         * @return mask
+         */
+        public Mask getMask() {
+            return this.mask;
+        }
+
+        /**
+         * @return mustache
+         */
+        public Mustache getMustache() {
+            return this.mustache;
+        }
+
+        /**
+         * @return quality
+         */
+        public Quality getQuality() {
+            return this.quality;
+        }
+
+        /**
+         * @return smile
+         */
+        public Float getSmile() {
+            return this.smile;
+        }
+
+        public static final class Builder {
+            private Integer age; 
+            private Bang bang; 
+            private Gender gender; 
+            private String glasses; 
+            private Hairstyle hairstyle; 
+            private Hat hat; 
+            private Location location; 
+            private Mask mask; 
+            private Mustache mustache; 
+            private Quality quality; 
+            private Float smile; 
+
+            /**
+             * Age.
+             */
+            public Builder age(Integer age) {
+                this.age = age;
+                return this;
+            }
+
+            /**
+             * Bang.
+             */
+            public Builder bang(Bang bang) {
+                this.bang = bang;
+                return this;
+            }
+
+            /**
+             * Gender.
+             */
+            public Builder gender(Gender gender) {
+                this.gender = gender;
+                return this;
+            }
+
+            /**
+             * Glasses.
+             */
+            public Builder glasses(String glasses) {
+                this.glasses = glasses;
+                return this;
+            }
+
+            /**
+             * Hairstyle.
+             */
+            public Builder hairstyle(Hairstyle hairstyle) {
+                this.hairstyle = hairstyle;
+                return this;
+            }
+
+            /**
+             * Hat.
+             */
+            public Builder hat(Hat hat) {
+                this.hat = hat;
+                return this;
+            }
+
+            /**
+             * Location.
+             */
+            public Builder location(Location location) {
+                this.location = location;
+                return this;
+            }
+
+            /**
+             * Mask.
+             */
+            public Builder mask(Mask mask) {
+                this.mask = mask;
+                return this;
+            }
+
+            /**
+             * Mustache.
+             */
+            public Builder mustache(Mustache mustache) {
+                this.mustache = mustache;
+                return this;
+            }
+
+            /**
+             * Quality.
+             */
+            public Builder quality(Quality quality) {
+                this.quality = quality;
+                return this;
+            }
+
+            /**
+             * Smile.
+             */
+            public Builder smile(Float smile) {
+                this.smile = smile;
+                return this;
+            }
+
+            public FaceData build() {
+                return new FaceData(this);
+            } 
+
+        } 
+
+    }
+    public static class LogoDataLocation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("H")
+        private Integer h;
+
+        @com.aliyun.core.annotation.NameInMap("W")
+        private Integer w;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Integer x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Integer y;
+
+        private LogoDataLocation(Builder builder) {
+            this.h = builder.h;
+            this.w = builder.w;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LogoDataLocation create() {
             return builder().build();
         }
 
@@ -285,8 +1114,8 @@ public class ImageModerationResponseBody extends TeaModel {
                 return this;
             }
 
-            public Location build() {
-                return new Location(this);
+            public LogoDataLocation build() {
+                return new LogoDataLocation(this);
             } 
 
         } 
@@ -375,7 +1204,7 @@ public class ImageModerationResponseBody extends TeaModel {
     }
     public static class LogoData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Location")
-        private Location location;
+        private LogoDataLocation location;
 
         @com.aliyun.core.annotation.NameInMap("Logo")
         private java.util.List < Logo> logo;
@@ -396,7 +1225,7 @@ public class ImageModerationResponseBody extends TeaModel {
         /**
          * @return location
          */
-        public Location getLocation() {
+        public LogoDataLocation getLocation() {
             return this.location;
         }
 
@@ -408,13 +1237,13 @@ public class ImageModerationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Location location; 
+            private LogoDataLocation location; 
             private java.util.List < Logo> logo; 
 
             /**
              * Location information.
              */
-            public Builder location(Location location) {
+            public Builder location(LogoDataLocation location) {
                 this.location = location;
                 return this;
             }
@@ -1167,6 +1996,9 @@ public class ImageModerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomImage")
         private java.util.List < CustomImage> customImage;
 
+        @com.aliyun.core.annotation.NameInMap("FaceData")
+        private java.util.List < FaceData> faceData;
+
         @com.aliyun.core.annotation.NameInMap("LogoData")
         private java.util.List < LogoData> logoData;
 
@@ -1184,6 +2016,7 @@ public class ImageModerationResponseBody extends TeaModel {
 
         private Ext(Builder builder) {
             this.customImage = builder.customImage;
+            this.faceData = builder.faceData;
             this.logoData = builder.logoData;
             this.ocrResult = builder.ocrResult;
             this.publicFigure = builder.publicFigure;
@@ -1204,6 +2037,13 @@ public class ImageModerationResponseBody extends TeaModel {
          */
         public java.util.List < CustomImage> getCustomImage() {
             return this.customImage;
+        }
+
+        /**
+         * @return faceData
+         */
+        public java.util.List < FaceData> getFaceData() {
+            return this.faceData;
         }
 
         /**
@@ -1243,6 +2083,7 @@ public class ImageModerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < CustomImage> customImage; 
+            private java.util.List < FaceData> faceData; 
             private java.util.List < LogoData> logoData; 
             private java.util.List < OcrResult> ocrResult; 
             private java.util.List < PublicFigure> publicFigure; 
@@ -1254,6 +2095,14 @@ public class ImageModerationResponseBody extends TeaModel {
              */
             public Builder customImage(java.util.List < CustomImage> customImage) {
                 this.customImage = customImage;
+                return this;
+            }
+
+            /**
+             * FaceData.
+             */
+            public Builder faceData(java.util.List < FaceData> faceData) {
+                this.faceData = faceData;
                 return this;
             }
 
