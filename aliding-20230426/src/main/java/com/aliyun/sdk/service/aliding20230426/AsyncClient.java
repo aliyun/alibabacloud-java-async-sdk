@@ -25,6 +25,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddMeetingRoomsResponse> addMeetingRooms(AddMeetingRoomsRequest request);
 
+    CompletableFuture<AddRecordPermissionResponse> addRecordPermission(AddRecordPermissionRequest request);
+
     CompletableFuture<AddScenegroupMemberResponse> addScenegroupMember(AddScenegroupMemberRequest request);
 
     CompletableFuture<AddWorkspaceResponse> addWorkspace(AddWorkspaceRequest request);
@@ -229,6 +231,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetUserIdResponse> getUserId(GetUserIdRequest request);
 
+    CompletableFuture<GetUserIdByOrgIdAndStaffIdResponse> getUserIdByOrgIdAndStaffId(GetUserIdByOrgIdAndStaffIdRequest request);
+
     CompletableFuture<GetUserLatestPlanResponse> getUserLatestPlan(GetUserLatestPlanRequest request);
 
     CompletableFuture<GetWorkspaceResponse> getWorkspace(GetWorkspaceRequest request);
@@ -269,6 +273,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTeamsResponse> listTeams(ListTeamsRequest request);
 
+    CompletableFuture<ListTemplateResponse> listTemplate(ListTemplateRequest request);
+
     CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
 
     CompletableFuture<PatchEventResponse> patchEvent(PatchEventRequest request);
@@ -308,6 +314,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryOrgHonorsResponse> queryOrgHonors(QueryOrgHonorsRequest request);
 
     CompletableFuture<QueryOrgTodoTasksResponse> queryOrgTodoTasks(QueryOrgTodoTasksRequest request);
+
+    CompletableFuture<QueryRecordMinutesUrlResponse> queryRecordMinutesUrl(QueryRecordMinutesUrlRequest request);
 
     CompletableFuture<QueryReportDetailResponse> queryReportDetail(QueryReportDetailRequest request);
 
