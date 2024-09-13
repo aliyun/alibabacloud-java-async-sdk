@@ -283,6 +283,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ReleaseWorkerInstanceResponse> releaseWorkerInstance(ReleaseWorkerInstanceRequest request);
 
+    CompletableFuture<RemoveStandbyInstanceResponse> removeStandbyInstance(RemoveStandbyInstanceRequest request);
+
     CompletableFuture<ResumeProjectResponse> resumeProject(ResumeProjectRequest request);
 
     CompletableFuture<RetryProjectModifyRecordsResponse> retryProjectModifyRecords(RetryProjectModifyRecordsRequest request);
