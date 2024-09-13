@@ -55,6 +55,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BindSentinelBlockFallbackDefinitionResponse> bindSentinelBlockFallbackDefinition(BindSentinelBlockFallbackDefinitionRequest request);
 
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
     /**
       * mse-200-105
       *

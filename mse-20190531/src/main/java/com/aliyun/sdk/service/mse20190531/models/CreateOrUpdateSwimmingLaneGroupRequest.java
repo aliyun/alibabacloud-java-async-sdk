@@ -73,6 +73,10 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwimVersion")
+    private Integer swimVersion;
+
     private CreateOrUpdateSwimmingLaneGroupRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
@@ -90,6 +94,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         this.region = builder.region;
         this.routeIds = builder.routeIds;
         this.status = builder.status;
+        this.swimVersion = builder.swimVersion;
     }
 
     public static Builder builder() {
@@ -210,6 +215,13 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return swimVersion
+     */
+    public Integer getSwimVersion() {
+        return this.swimVersion;
+    }
+
     public static final class Builder extends Request.Builder<CreateOrUpdateSwimmingLaneGroupRequest, Builder> {
         private String acceptLanguage; 
         private String appIds; 
@@ -226,6 +238,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         private String region; 
         private java.util.List < Long > routeIds; 
         private Integer status; 
+        private Integer swimVersion; 
 
         private Builder() {
             super();
@@ -248,6 +261,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             this.region = request.region;
             this.routeIds = request.routeIds;
             this.status = request.status;
+            this.swimVersion = request.swimVersion;
         } 
 
         /**
@@ -388,6 +402,15 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * SwimVersion.
+         */
+        public Builder swimVersion(Integer swimVersion) {
+            this.putQueryParameter("SwimVersion", swimVersion);
+            this.swimVersion = swimVersion;
             return this;
         }
 

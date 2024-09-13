@@ -463,6 +463,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("NameList")
+        private java.util.List < String > nameList;
+
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
@@ -472,6 +475,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         private Conditions(Builder builder) {
             this.cond = builder.cond;
             this.name = builder.name;
+            this.nameList = builder.nameList;
             this.type = builder.type;
             this.value = builder.value;
         }
@@ -499,6 +503,13 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
+         * @return nameList
+         */
+        public java.util.List < String > getNameList() {
+            return this.nameList;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -515,6 +526,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         public static final class Builder {
             private String cond; 
             private String name; 
+            private java.util.List < String > nameList; 
             private String type; 
             private String value; 
 
@@ -531,6 +543,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * NameList.
+             */
+            public Builder nameList(java.util.List < String > nameList) {
+                this.nameList = nameList;
                 return this;
             }
 

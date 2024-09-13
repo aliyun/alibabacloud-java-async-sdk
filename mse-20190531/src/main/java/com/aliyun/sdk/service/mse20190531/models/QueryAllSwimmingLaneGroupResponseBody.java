@@ -232,6 +232,9 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
+        @com.aliyun.core.annotation.NameInMap("SwimVersion")
+        private Integer swimVersion;
+
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
@@ -247,6 +250,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             this.paths = builder.paths;
             this.recordCanaryDetail = builder.recordCanaryDetail;
             this.region = builder.region;
+            this.swimVersion = builder.swimVersion;
             this.userId = builder.userId;
         }
 
@@ -336,6 +340,13 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return swimVersion
+         */
+        public Integer getSwimVersion() {
+            return this.swimVersion;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -354,6 +365,7 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
             private String paths; 
             private Boolean recordCanaryDetail; 
             private String region; 
+            private Integer swimVersion; 
             private String userId; 
 
             /**
@@ -441,6 +453,14 @@ public class QueryAllSwimmingLaneGroupResponseBody extends TeaModel {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * SwimVersion.
+             */
+            public Builder swimVersion(Integer swimVersion) {
+                this.swimVersion = swimVersion;
                 return this;
             }
 

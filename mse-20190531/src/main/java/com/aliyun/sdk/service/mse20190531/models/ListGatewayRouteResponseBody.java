@@ -1567,6 +1567,9 @@ public class ListGatewayRouteResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainNameList")
         private java.util.List < String > domainNameList;
 
+        @com.aliyun.core.annotation.NameInMap("DynamicRoute")
+        private Boolean dynamicRoute;
+
         @com.aliyun.core.annotation.NameInMap("EnableWaf")
         private String enableWaf;
 
@@ -1628,6 +1631,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             this.domainIdList = builder.domainIdList;
             this.domainName = builder.domainName;
             this.domainNameList = builder.domainNameList;
+            this.dynamicRoute = builder.dynamicRoute;
             this.enableWaf = builder.enableWaf;
             this.fallback = builder.fallback;
             this.fallbackServices = builder.fallbackServices;
@@ -1716,6 +1720,13 @@ public class ListGatewayRouteResponseBody extends TeaModel {
          */
         public java.util.List < String > getDomainNameList() {
             return this.domainNameList;
+        }
+
+        /**
+         * @return dynamicRoute
+         */
+        public Boolean getDynamicRoute() {
+            return this.dynamicRoute;
         }
 
         /**
@@ -1847,6 +1858,7 @@ public class ListGatewayRouteResponseBody extends TeaModel {
             private java.util.List < Long > domainIdList; 
             private String domainName; 
             private java.util.List < String > domainNameList; 
+            private Boolean dynamicRoute; 
             private String enableWaf; 
             private Boolean fallback; 
             private java.util.List < FallbackServices> fallbackServices; 
@@ -1934,6 +1946,14 @@ public class ListGatewayRouteResponseBody extends TeaModel {
              */
             public Builder domainNameList(java.util.List < String > domainNameList) {
                 this.domainNameList = domainNameList;
+                return this;
+            }
+
+            /**
+             * DynamicRoute.
+             */
+            public Builder dynamicRoute(Boolean dynamicRoute) {
+                this.dynamicRoute = dynamicRoute;
                 return this;
             }
 

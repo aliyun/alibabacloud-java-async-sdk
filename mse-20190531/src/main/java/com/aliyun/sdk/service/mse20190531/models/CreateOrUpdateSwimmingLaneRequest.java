@@ -852,6 +852,9 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("CanaryModel")
         private Integer canaryModel;
 
+        @com.aliyun.core.annotation.NameInMap("Condition")
+        private String condition;
+
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
 
@@ -875,6 +878,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
         private GatewaySwimmingLaneRouteJson(Builder builder) {
             this.canaryModel = builder.canaryModel;
+            this.condition = builder.condition;
             this.conditions = builder.conditions;
             this.gatewayId = builder.gatewayId;
             this.gatewayUniqueId = builder.gatewayUniqueId;
@@ -897,6 +901,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
          */
         public Integer getCanaryModel() {
             return this.canaryModel;
+        }
+
+        /**
+         * @return condition
+         */
+        public String getCondition() {
+            return this.condition;
         }
 
         /**
@@ -950,6 +961,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
 
         public static final class Builder {
             private Integer canaryModel; 
+            private String condition; 
             private java.util.List < Conditions> conditions; 
             private Long gatewayId; 
             private String gatewayUniqueId; 
@@ -963,6 +975,14 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
              */
             public Builder canaryModel(Integer canaryModel) {
                 this.canaryModel = canaryModel;
+                return this;
+            }
+
+            /**
+             * Condition.
+             */
+            public Builder condition(String condition) {
+                this.condition = condition;
                 return this;
             }
 
