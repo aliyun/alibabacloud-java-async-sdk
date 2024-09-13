@@ -1486,12 +1486,97 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
         } 
 
     }
+    public static class PayloadUsage extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("inputTokens")
+        private Long inputTokens;
+
+        @com.aliyun.core.annotation.NameInMap("outputTokens")
+        private Long outputTokens;
+
+        @com.aliyun.core.annotation.NameInMap("totalTokens")
+        private Long totalTokens;
+
+        private PayloadUsage(Builder builder) {
+            this.inputTokens = builder.inputTokens;
+            this.outputTokens = builder.outputTokens;
+            this.totalTokens = builder.totalTokens;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PayloadUsage create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inputTokens
+         */
+        public Long getInputTokens() {
+            return this.inputTokens;
+        }
+
+        /**
+         * @return outputTokens
+         */
+        public Long getOutputTokens() {
+            return this.outputTokens;
+        }
+
+        /**
+         * @return totalTokens
+         */
+        public Long getTotalTokens() {
+            return this.totalTokens;
+        }
+
+        public static final class Builder {
+            private Long inputTokens; 
+            private Long outputTokens; 
+            private Long totalTokens; 
+
+            /**
+             * inputTokens.
+             */
+            public Builder inputTokens(Long inputTokens) {
+                this.inputTokens = inputTokens;
+                return this;
+            }
+
+            /**
+             * outputTokens.
+             */
+            public Builder outputTokens(Long outputTokens) {
+                this.outputTokens = outputTokens;
+                return this;
+            }
+
+            /**
+             * totalTokens.
+             */
+            public Builder totalTokens(Long totalTokens) {
+                this.totalTokens = totalTokens;
+                return this;
+            }
+
+            public PayloadUsage build() {
+                return new PayloadUsage(this);
+            } 
+
+        } 
+
+    }
     public static class Payload extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("output")
         private Output output;
 
+        @com.aliyun.core.annotation.NameInMap("usage")
+        private PayloadUsage usage;
+
         private Payload(Builder builder) {
             this.output = builder.output;
+            this.usage = builder.usage;
         }
 
         public static Builder builder() {
@@ -1509,14 +1594,30 @@ public class RunVideoAnalysisResponseBody extends TeaModel {
             return this.output;
         }
 
+        /**
+         * @return usage
+         */
+        public PayloadUsage getUsage() {
+            return this.usage;
+        }
+
         public static final class Builder {
             private Output output; 
+            private PayloadUsage usage; 
 
             /**
              * output.
              */
             public Builder output(Output output) {
                 this.output = output;
+                return this;
+            }
+
+            /**
+             * usage.
+             */
+            public Builder usage(PayloadUsage usage) {
+                this.usage = usage;
                 return this;
             }
 
