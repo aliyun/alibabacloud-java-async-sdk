@@ -12,21 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateTaskOrderRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CustomerRealName")
-    private String customerRealName;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CustomerUserId")
-    private String customerUserId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ImportantDescription")
-    private String importantDescription;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IsImportant")
+    @com.aliyun.core.annotation.NameInMap("CreateUserId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String isImportant;
+    private String createUserId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsUrgent")
+    private Boolean isUrgent;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OpenGroupId")
@@ -34,29 +26,27 @@ public class CreateTaskOrderRequest extends Request {
     private String openGroupId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ProductType")
+    @com.aliyun.core.annotation.NameInMap("Overview")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String productType;
+    private String overview;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ProductTypeName")
-    private String productTypeName;
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String productCode;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TaskTitle")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String taskTitle;
+    @com.aliyun.core.annotation.NameInMap("UrgentDescription")
+    private String urgentDescription;
 
     private CreateTaskOrderRequest(Builder builder) {
         super(builder);
-        this.customerRealName = builder.customerRealName;
-        this.customerUserId = builder.customerUserId;
-        this.importantDescription = builder.importantDescription;
-        this.isImportant = builder.isImportant;
+        this.createUserId = builder.createUserId;
+        this.isUrgent = builder.isUrgent;
         this.openGroupId = builder.openGroupId;
-        this.productType = builder.productType;
-        this.productTypeName = builder.productTypeName;
-        this.taskTitle = builder.taskTitle;
+        this.overview = builder.overview;
+        this.productCode = builder.productCode;
+        this.urgentDescription = builder.urgentDescription;
     }
 
     public static Builder builder() {
@@ -73,31 +63,17 @@ public class CreateTaskOrderRequest extends Request {
     }
 
     /**
-     * @return customerRealName
+     * @return createUserId
      */
-    public String getCustomerRealName() {
-        return this.customerRealName;
+    public String getCreateUserId() {
+        return this.createUserId;
     }
 
     /**
-     * @return customerUserId
+     * @return isUrgent
      */
-    public String getCustomerUserId() {
-        return this.customerUserId;
-    }
-
-    /**
-     * @return importantDescription
-     */
-    public String getImportantDescription() {
-        return this.importantDescription;
-    }
-
-    /**
-     * @return isImportant
-     */
-    public String getIsImportant() {
-        return this.isImportant;
+    public Boolean getIsUrgent() {
+        return this.isUrgent;
     }
 
     /**
@@ -108,35 +84,33 @@ public class CreateTaskOrderRequest extends Request {
     }
 
     /**
-     * @return productType
+     * @return overview
      */
-    public String getProductType() {
-        return this.productType;
+    public String getOverview() {
+        return this.overview;
     }
 
     /**
-     * @return productTypeName
+     * @return productCode
      */
-    public String getProductTypeName() {
-        return this.productTypeName;
+    public String getProductCode() {
+        return this.productCode;
     }
 
     /**
-     * @return taskTitle
+     * @return urgentDescription
      */
-    public String getTaskTitle() {
-        return this.taskTitle;
+    public String getUrgentDescription() {
+        return this.urgentDescription;
     }
 
     public static final class Builder extends Request.Builder<CreateTaskOrderRequest, Builder> {
-        private String customerRealName; 
-        private String customerUserId; 
-        private String importantDescription; 
-        private String isImportant; 
+        private String createUserId; 
+        private Boolean isUrgent; 
         private String openGroupId; 
-        private String productType; 
-        private String productTypeName; 
-        private String taskTitle; 
+        private String overview; 
+        private String productCode; 
+        private String urgentDescription; 
 
         private Builder() {
             super();
@@ -144,49 +118,29 @@ public class CreateTaskOrderRequest extends Request {
 
         private Builder(CreateTaskOrderRequest request) {
             super(request);
-            this.customerRealName = request.customerRealName;
-            this.customerUserId = request.customerUserId;
-            this.importantDescription = request.importantDescription;
-            this.isImportant = request.isImportant;
+            this.createUserId = request.createUserId;
+            this.isUrgent = request.isUrgent;
             this.openGroupId = request.openGroupId;
-            this.productType = request.productType;
-            this.productTypeName = request.productTypeName;
-            this.taskTitle = request.taskTitle;
+            this.overview = request.overview;
+            this.productCode = request.productCode;
+            this.urgentDescription = request.urgentDescription;
         } 
 
         /**
-         * CustomerRealName.
+         * CreateUserId.
          */
-        public Builder customerRealName(String customerRealName) {
-            this.putQueryParameter("CustomerRealName", customerRealName);
-            this.customerRealName = customerRealName;
+        public Builder createUserId(String createUserId) {
+            this.putQueryParameter("CreateUserId", createUserId);
+            this.createUserId = createUserId;
             return this;
         }
 
         /**
-         * CustomerUserId.
+         * IsUrgent.
          */
-        public Builder customerUserId(String customerUserId) {
-            this.putQueryParameter("CustomerUserId", customerUserId);
-            this.customerUserId = customerUserId;
-            return this;
-        }
-
-        /**
-         * ImportantDescription.
-         */
-        public Builder importantDescription(String importantDescription) {
-            this.putQueryParameter("ImportantDescription", importantDescription);
-            this.importantDescription = importantDescription;
-            return this;
-        }
-
-        /**
-         * IsImportant.
-         */
-        public Builder isImportant(String isImportant) {
-            this.putQueryParameter("IsImportant", isImportant);
-            this.isImportant = isImportant;
+        public Builder isUrgent(Boolean isUrgent) {
+            this.putQueryParameter("IsUrgent", isUrgent);
+            this.isUrgent = isUrgent;
             return this;
         }
 
@@ -200,29 +154,29 @@ public class CreateTaskOrderRequest extends Request {
         }
 
         /**
-         * productType
+         * Overview.
          */
-        public Builder productType(String productType) {
-            this.putQueryParameter("ProductType", productType);
-            this.productType = productType;
+        public Builder overview(String overview) {
+            this.putQueryParameter("Overview", overview);
+            this.overview = overview;
             return this;
         }
 
         /**
-         * ProductTypeName.
+         * ProductCode.
          */
-        public Builder productTypeName(String productTypeName) {
-            this.putQueryParameter("ProductTypeName", productTypeName);
-            this.productTypeName = productTypeName;
+        public Builder productCode(String productCode) {
+            this.putQueryParameter("ProductCode", productCode);
+            this.productCode = productCode;
             return this;
         }
 
         /**
-         * taskTitle
+         * UrgentDescription.
          */
-        public Builder taskTitle(String taskTitle) {
-            this.putQueryParameter("TaskTitle", taskTitle);
-            this.taskTitle = taskTitle;
+        public Builder urgentDescription(String urgentDescription) {
+            this.putQueryParameter("UrgentDescription", urgentDescription);
+            this.urgentDescription = urgentDescription;
             return this;
         }
 

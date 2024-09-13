@@ -12,18 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDdTaskOrderRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CallerParentId")
-    private Long callerParentId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CallerType")
-    private String callerType;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CallerUid")
-    private Long callerUid;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CreateRealName")
     private String createRealName;
 
@@ -32,24 +20,21 @@ public class ListDdTaskOrderRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsUrgent")
+    private Boolean isUrgent;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OpenGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String openGroupId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("OrderId")
-    private String orderId;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
-    private String pageNo;
+    private Long pageNo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    private String pageSize;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RequestId")
-    private String requestId;
+    private Long pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -61,16 +46,12 @@ public class ListDdTaskOrderRequest extends Request {
 
     private ListDdTaskOrderRequest(Builder builder) {
         super(builder);
-        this.callerParentId = builder.callerParentId;
-        this.callerType = builder.callerType;
-        this.callerUid = builder.callerUid;
         this.createRealName = builder.createRealName;
         this.endTime = builder.endTime;
+        this.isUrgent = builder.isUrgent;
         this.openGroupId = builder.openGroupId;
-        this.orderId = builder.orderId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
-        this.requestId = builder.requestId;
         this.startTime = builder.startTime;
         this.taskStatus = builder.taskStatus;
     }
@@ -89,27 +70,6 @@ public class ListDdTaskOrderRequest extends Request {
     }
 
     /**
-     * @return callerParentId
-     */
-    public Long getCallerParentId() {
-        return this.callerParentId;
-    }
-
-    /**
-     * @return callerType
-     */
-    public String getCallerType() {
-        return this.callerType;
-    }
-
-    /**
-     * @return callerUid
-     */
-    public Long getCallerUid() {
-        return this.callerUid;
-    }
-
-    /**
      * @return createRealName
      */
     public String getCreateRealName() {
@@ -124,6 +84,13 @@ public class ListDdTaskOrderRequest extends Request {
     }
 
     /**
+     * @return isUrgent
+     */
+    public Boolean getIsUrgent() {
+        return this.isUrgent;
+    }
+
+    /**
      * @return openGroupId
      */
     public String getOpenGroupId() {
@@ -131,31 +98,17 @@ public class ListDdTaskOrderRequest extends Request {
     }
 
     /**
-     * @return orderId
-     */
-    public String getOrderId() {
-        return this.orderId;
-    }
-
-    /**
      * @return pageNo
      */
-    public String getPageNo() {
+    public Long getPageNo() {
         return this.pageNo;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Long getPageSize() {
         return this.pageSize;
-    }
-
-    /**
-     * @return requestId
-     */
-    public String getRequestId() {
-        return this.requestId;
     }
 
     /**
@@ -173,16 +126,12 @@ public class ListDdTaskOrderRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListDdTaskOrderRequest, Builder> {
-        private Long callerParentId; 
-        private String callerType; 
-        private Long callerUid; 
         private String createRealName; 
         private String endTime; 
+        private Boolean isUrgent; 
         private String openGroupId; 
-        private String orderId; 
-        private String pageNo; 
-        private String pageSize; 
-        private String requestId; 
+        private Long pageNo; 
+        private Long pageSize; 
         private String startTime; 
         private String taskStatus; 
 
@@ -192,46 +141,15 @@ public class ListDdTaskOrderRequest extends Request {
 
         private Builder(ListDdTaskOrderRequest request) {
             super(request);
-            this.callerParentId = request.callerParentId;
-            this.callerType = request.callerType;
-            this.callerUid = request.callerUid;
             this.createRealName = request.createRealName;
             this.endTime = request.endTime;
+            this.isUrgent = request.isUrgent;
             this.openGroupId = request.openGroupId;
-            this.orderId = request.orderId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
-            this.requestId = request.requestId;
             this.startTime = request.startTime;
             this.taskStatus = request.taskStatus;
         } 
-
-        /**
-         * callerParentId
-         */
-        public Builder callerParentId(Long callerParentId) {
-            this.putQueryParameter("CallerParentId", callerParentId);
-            this.callerParentId = callerParentId;
-            return this;
-        }
-
-        /**
-         * callerType
-         */
-        public Builder callerType(String callerType) {
-            this.putQueryParameter("CallerType", callerType);
-            this.callerType = callerType;
-            return this;
-        }
-
-        /**
-         * callerUid
-         */
-        public Builder callerUid(Long callerUid) {
-            this.putQueryParameter("CallerUid", callerUid);
-            this.callerUid = callerUid;
-            return this;
-        }
 
         /**
          * createRealName
@@ -252,6 +170,15 @@ public class ListDdTaskOrderRequest extends Request {
         }
 
         /**
+         * IsUrgent.
+         */
+        public Builder isUrgent(Boolean isUrgent) {
+            this.putQueryParameter("IsUrgent", isUrgent);
+            this.isUrgent = isUrgent;
+            return this;
+        }
+
+        /**
          * openGroupId
          */
         public Builder openGroupId(String openGroupId) {
@@ -261,18 +188,9 @@ public class ListDdTaskOrderRequest extends Request {
         }
 
         /**
-         * orderId
-         */
-        public Builder orderId(String orderId) {
-            this.putQueryParameter("OrderId", orderId);
-            this.orderId = orderId;
-            return this;
-        }
-
-        /**
          * pageNo
          */
-        public Builder pageNo(String pageNo) {
+        public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
             this.pageNo = pageNo;
             return this;
@@ -281,18 +199,9 @@ public class ListDdTaskOrderRequest extends Request {
         /**
          * pageSize
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * requestId
-         */
-        public Builder requestId(String requestId) {
-            this.putQueryParameter("RequestId", requestId);
-            this.requestId = requestId;
             return this;
         }
 

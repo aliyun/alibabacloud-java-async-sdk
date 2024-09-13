@@ -15,7 +15,7 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < EnterpriseDingtalkGroupMember > data;
+    private java.util.List < Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -52,7 +52,7 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
     /**
      * @return data
      */
-    public java.util.List < EnterpriseDingtalkGroupMember > getData() {
+    public java.util.List < Data> getData() {
         return this.data;
     }
 
@@ -79,7 +79,7 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
 
     public static final class Builder {
         private String code; 
-        private java.util.List < EnterpriseDingtalkGroupMember > data; 
+        private java.util.List < Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -95,7 +95,7 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
         /**
          * Data.
          */
-        public Builder data(java.util.List < EnterpriseDingtalkGroupMember > data) {
+        public Builder data(java.util.List < Data> data) {
             this.data = data;
             return this;
         }
@@ -130,4 +130,85 @@ public class ListEnterpriseDingtalkGroupCustomerMembersResponseBody extends TeaM
 
     } 
 
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsAdmin")
+        private Boolean isAdmin;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        private String userId;
+
+        private Data(Builder builder) {
+            this.isAdmin = builder.isAdmin;
+            this.name = builder.name;
+            this.userId = builder.userId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isAdmin
+         */
+        public Boolean getIsAdmin() {
+            return this.isAdmin;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return userId
+         */
+        public String getUserId() {
+            return this.userId;
+        }
+
+        public static final class Builder {
+            private Boolean isAdmin; 
+            private String name; 
+            private String userId; 
+
+            /**
+             * IsAdmin.
+             */
+            public Builder isAdmin(Boolean isAdmin) {
+                this.isAdmin = isAdmin;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * UserId.
+             */
+            public Builder userId(String userId) {
+                this.userId = userId;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

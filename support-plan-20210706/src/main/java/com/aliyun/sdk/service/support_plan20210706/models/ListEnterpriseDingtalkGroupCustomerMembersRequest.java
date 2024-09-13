@@ -11,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEnterpriseDingtalkGroupCustomerMembersRequest</p>
  */
 public class ListEnterpriseDingtalkGroupCustomerMembersRequest extends Request {
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OpenGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String openGroupId;
@@ -57,7 +57,7 @@ public class ListEnterpriseDingtalkGroupCustomerMembersRequest extends Request {
          * OpenGroupId.
          */
         public Builder openGroupId(String openGroupId) {
-            this.putBodyParameter("OpenGroupId", openGroupId);
+            this.putQueryParameter("OpenGroupId", openGroupId);
             this.openGroupId = openGroupId;
             return this;
         }
