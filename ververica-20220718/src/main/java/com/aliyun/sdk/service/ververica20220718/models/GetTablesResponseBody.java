@@ -97,7 +97,7 @@ public class GetTablesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * data.
+         * If the value of success was true, the list and details of tables that meet the condition were returned. If the value of success was false, a null value was returned.
          */
         public Builder data(java.util.List < Table > data) {
             this.data = data;

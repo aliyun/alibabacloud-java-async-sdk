@@ -6,13 +6,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetFolderResponseBody} extends {@link TeaModel}
+ * {@link UpdateDeploymentTargetResponseBody} extends {@link TeaModel}
  *
- * <p>GetFolderResponseBody</p>
+ * <p>UpdateDeploymentTargetResponseBody</p>
  */
-public class GetFolderResponseBody extends TeaModel {
+public class UpdateDeploymentTargetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("data")
-    private Folder data;
+    private DeploymentTarget data;
 
     @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
@@ -29,7 +29,7 @@ public class GetFolderResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private GetFolderResponseBody(Builder builder) {
+    private UpdateDeploymentTargetResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -42,14 +42,14 @@ public class GetFolderResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetFolderResponseBody create() {
+    public static UpdateDeploymentTargetResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return data
      */
-    public Folder getData() {
+    public DeploymentTarget getData() {
         return this.data;
     }
 
@@ -89,7 +89,7 @@ public class GetFolderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Folder data; 
+        private DeploymentTarget data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpCode; 
@@ -97,9 +97,9 @@ public class GetFolderResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data structure of the folder.
+         * data.
          */
-        public Builder data(Folder data) {
+        public Builder data(DeploymentTarget data) {
             this.data = data;
             return this;
         }
@@ -144,8 +144,8 @@ public class GetFolderResponseBody extends TeaModel {
             return this;
         }
 
-        public GetFolderResponseBody build() {
-            return new GetFolderResponseBody(this);
+        public UpdateDeploymentTargetResponseBody build() {
+            return new UpdateDeploymentTargetResponseBody(this);
         } 
 
     } 

@@ -6,30 +6,30 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RegisterCustomConnectorRequest} extends {@link RequestModel}
+ * {@link StopSessionClusterRequest} extends {@link RequestModel}
  *
- * <p>RegisterCustomConnectorRequest</p>
+ * <p>StopSessionClusterRequest</p>
  */
-public class RegisterCustomConnectorRequest extends Request {
+public class StopSessionClusterRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("namespace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("jarUrl")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("sessionClusterName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String jarUrl;
+    private String sessionClusterName;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("workspace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
-    private RegisterCustomConnectorRequest(Builder builder) {
+    private StopSessionClusterRequest(Builder builder) {
         super(builder);
         this.namespace = builder.namespace;
-        this.jarUrl = builder.jarUrl;
+        this.sessionClusterName = builder.sessionClusterName;
         this.workspace = builder.workspace;
     }
 
@@ -37,7 +37,7 @@ public class RegisterCustomConnectorRequest extends Request {
         return new Builder();
     }
 
-    public static RegisterCustomConnectorRequest create() {
+    public static StopSessionClusterRequest create() {
         return builder().build();
     }
 
@@ -54,10 +54,10 @@ public class RegisterCustomConnectorRequest extends Request {
     }
 
     /**
-     * @return jarUrl
+     * @return sessionClusterName
      */
-    public String getJarUrl() {
-        return this.jarUrl;
+    public String getSessionClusterName() {
+        return this.sessionClusterName;
     }
 
     /**
@@ -67,24 +67,24 @@ public class RegisterCustomConnectorRequest extends Request {
         return this.workspace;
     }
 
-    public static final class Builder extends Request.Builder<RegisterCustomConnectorRequest, Builder> {
+    public static final class Builder extends Request.Builder<StopSessionClusterRequest, Builder> {
         private String namespace; 
-        private String jarUrl; 
+        private String sessionClusterName; 
         private String workspace; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RegisterCustomConnectorRequest request) {
+        private Builder(StopSessionClusterRequest request) {
             super(request);
             this.namespace = request.namespace;
-            this.jarUrl = request.jarUrl;
+            this.sessionClusterName = request.sessionClusterName;
             this.workspace = request.workspace;
         } 
 
         /**
-         * The name of the namespace.
+         * namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,16 +93,16 @@ public class RegisterCustomConnectorRequest extends Request {
         }
 
         /**
-         * The URL in which the JAR package of the custom connector is stored. The platform must be able to access this address.
+         * sessionClusterName.
          */
-        public Builder jarUrl(String jarUrl) {
-            this.putQueryParameter("jarUrl", jarUrl);
-            this.jarUrl = jarUrl;
+        public Builder sessionClusterName(String sessionClusterName) {
+            this.putPathParameter("sessionClusterName", sessionClusterName);
+            this.sessionClusterName = sessionClusterName;
             return this;
         }
 
         /**
-         * The workspace ID.
+         * workspace.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);
@@ -111,8 +111,8 @@ public class RegisterCustomConnectorRequest extends Request {
         }
 
         @Override
-        public RegisterCustomConnectorRequest build() {
-            return new RegisterCustomConnectorRequest(this);
+        public StopSessionClusterRequest build() {
+            return new StopSessionClusterRequest(this);
         } 
 
     } 

@@ -17,9 +17,13 @@ public class DeploymentTarget extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
+    @com.aliyun.core.annotation.NameInMap("quota")
+    private ResourceQuota quota;
+
     private DeploymentTarget(Builder builder) {
         this.name = builder.name;
         this.namespace = builder.namespace;
+        this.quota = builder.quota;
     }
 
     public static Builder builder() {
@@ -44,9 +48,17 @@ public class DeploymentTarget extends TeaModel {
         return this.namespace;
     }
 
+    /**
+     * @return quota
+     */
+    public ResourceQuota getQuota() {
+        return this.quota;
+    }
+
     public static final class Builder {
         private String name; 
         private String namespace; 
+        private ResourceQuota quota; 
 
         /**
          * name.
@@ -61,6 +73,14 @@ public class DeploymentTarget extends TeaModel {
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * quota.
+         */
+        public Builder quota(ResourceQuota quota) {
+            this.quota = quota;
             return this;
         }
 

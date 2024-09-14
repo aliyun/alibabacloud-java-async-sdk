@@ -15,7 +15,7 @@ public class Schema extends TeaModel {
     private java.util.List < TableColumn > columns;
 
     @com.aliyun.core.annotation.NameInMap("primaryKey")
-    private java.util.List < PrimaryKey > primaryKey;
+    private PrimaryKey primaryKey;
 
     @com.aliyun.core.annotation.NameInMap("watermarkSpecs")
     private java.util.List < WatermarkSpec > watermarkSpecs;
@@ -44,7 +44,7 @@ public class Schema extends TeaModel {
     /**
      * @return primaryKey
      */
-    public java.util.List < PrimaryKey > getPrimaryKey() {
+    public PrimaryKey getPrimaryKey() {
         return this.primaryKey;
     }
 
@@ -57,7 +57,7 @@ public class Schema extends TeaModel {
 
     public static final class Builder {
         private java.util.List < TableColumn > columns; 
-        private java.util.List < PrimaryKey > primaryKey; 
+        private PrimaryKey primaryKey; 
         private java.util.List < WatermarkSpec > watermarkSpecs; 
 
         /**
@@ -71,7 +71,7 @@ public class Schema extends TeaModel {
         /**
          * primaryKey.
          */
-        public Builder primaryKey(java.util.List < PrimaryKey > primaryKey) {
+        public Builder primaryKey(PrimaryKey primaryKey) {
             this.primaryKey = primaryKey;
             return this;
         }

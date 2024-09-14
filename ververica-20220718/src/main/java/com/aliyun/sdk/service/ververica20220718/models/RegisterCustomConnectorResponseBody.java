@@ -97,7 +97,7 @@ public class RegisterCustomConnectorResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * If the value of success was true, a list of deployments in which custom connectors were registered was returned. If the value of success was false, a null value was returned.
+         * If the value of success was true, a list of deployments in which custom connectors were deleted was returned. If the value of success was false, a null value was returned.
          */
         public Builder data(java.util.List < Connector > data) {
             this.data = data;

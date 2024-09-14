@@ -14,6 +14,9 @@ public class JobStartParameters extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("deploymentId")
     private String deploymentId;
 
+    @com.aliyun.core.annotation.NameInMap("jobId")
+    private String jobId;
+
     @com.aliyun.core.annotation.NameInMap("localVariables")
     private java.util.List < LocalVariable > localVariables;
 
@@ -25,6 +28,7 @@ public class JobStartParameters extends TeaModel {
 
     private JobStartParameters(Builder builder) {
         this.deploymentId = builder.deploymentId;
+        this.jobId = builder.jobId;
         this.localVariables = builder.localVariables;
         this.resourceQueueName = builder.resourceQueueName;
         this.restoreStrategy = builder.restoreStrategy;
@@ -43,6 +47,13 @@ public class JobStartParameters extends TeaModel {
      */
     public String getDeploymentId() {
         return this.deploymentId;
+    }
+
+    /**
+     * @return jobId
+     */
+    public String getJobId() {
+        return this.jobId;
     }
 
     /**
@@ -68,6 +79,7 @@ public class JobStartParameters extends TeaModel {
 
     public static final class Builder {
         private String deploymentId; 
+        private String jobId; 
         private java.util.List < LocalVariable > localVariables; 
         private String resourceQueueName; 
         private DeploymentRestoreStrategy restoreStrategy; 
@@ -77,6 +89,14 @@ public class JobStartParameters extends TeaModel {
          */
         public Builder deploymentId(String deploymentId) {
             this.deploymentId = deploymentId;
+            return this;
+        }
+
+        /**
+         * jobId.
+         */
+        public Builder jobId(String jobId) {
+            this.jobId = jobId;
             return this;
         }
 

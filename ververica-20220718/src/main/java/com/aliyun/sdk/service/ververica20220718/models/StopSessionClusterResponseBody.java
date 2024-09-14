@@ -6,14 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetFolderResponseBody} extends {@link TeaModel}
+ * {@link StopSessionClusterResponseBody} extends {@link TeaModel}
  *
- * <p>GetFolderResponseBody</p>
+ * <p>StopSessionClusterResponseBody</p>
  */
-public class GetFolderResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("data")
-    private Folder data;
-
+public class StopSessionClusterResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
@@ -29,8 +26,7 @@ public class GetFolderResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private GetFolderResponseBody(Builder builder) {
-        this.data = builder.data;
+    private StopSessionClusterResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.httpCode = builder.httpCode;
@@ -42,15 +38,8 @@ public class GetFolderResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetFolderResponseBody create() {
+    public static StopSessionClusterResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return data
-     */
-    public Folder getData() {
-        return this.data;
     }
 
     /**
@@ -89,20 +78,11 @@ public class GetFolderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Folder data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpCode; 
         private String requestId; 
         private Boolean success; 
-
-        /**
-         * The data structure of the folder.
-         */
-        public Builder data(Folder data) {
-            this.data = data;
-            return this;
-        }
 
         /**
          * errorCode.
@@ -144,8 +124,8 @@ public class GetFolderResponseBody extends TeaModel {
             return this;
         }
 
-        public GetFolderResponseBody build() {
-            return new GetFolderResponseBody(this);
+        public StopSessionClusterResponseBody build() {
+            return new StopSessionClusterResponseBody(this);
         } 
 
     } 

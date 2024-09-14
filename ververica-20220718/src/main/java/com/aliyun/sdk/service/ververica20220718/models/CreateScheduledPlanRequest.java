@@ -6,30 +6,29 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RegisterCustomConnectorRequest} extends {@link RequestModel}
+ * {@link CreateScheduledPlanRequest} extends {@link RequestModel}
  *
- * <p>RegisterCustomConnectorRequest</p>
+ * <p>CreateScheduledPlanRequest</p>
  */
-public class RegisterCustomConnectorRequest extends Request {
+public class CreateScheduledPlanRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("namespace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("jarUrl")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String jarUrl;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
+    private ScheduledPlan body;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("workspace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
-    private RegisterCustomConnectorRequest(Builder builder) {
+    private CreateScheduledPlanRequest(Builder builder) {
         super(builder);
         this.namespace = builder.namespace;
-        this.jarUrl = builder.jarUrl;
+        this.body = builder.body;
         this.workspace = builder.workspace;
     }
 
@@ -37,7 +36,7 @@ public class RegisterCustomConnectorRequest extends Request {
         return new Builder();
     }
 
-    public static RegisterCustomConnectorRequest create() {
+    public static CreateScheduledPlanRequest create() {
         return builder().build();
     }
 
@@ -54,10 +53,10 @@ public class RegisterCustomConnectorRequest extends Request {
     }
 
     /**
-     * @return jarUrl
+     * @return body
      */
-    public String getJarUrl() {
-        return this.jarUrl;
+    public ScheduledPlan getBody() {
+        return this.body;
     }
 
     /**
@@ -67,24 +66,24 @@ public class RegisterCustomConnectorRequest extends Request {
         return this.workspace;
     }
 
-    public static final class Builder extends Request.Builder<RegisterCustomConnectorRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateScheduledPlanRequest, Builder> {
         private String namespace; 
-        private String jarUrl; 
+        private ScheduledPlan body; 
         private String workspace; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RegisterCustomConnectorRequest request) {
+        private Builder(CreateScheduledPlanRequest request) {
             super(request);
             this.namespace = request.namespace;
-            this.jarUrl = request.jarUrl;
+            this.body = request.body;
             this.workspace = request.workspace;
         } 
 
         /**
-         * The name of the namespace.
+         * namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,16 +92,16 @@ public class RegisterCustomConnectorRequest extends Request {
         }
 
         /**
-         * The URL in which the JAR package of the custom connector is stored. The platform must be able to access this address.
+         * body.
          */
-        public Builder jarUrl(String jarUrl) {
-            this.putQueryParameter("jarUrl", jarUrl);
-            this.jarUrl = jarUrl;
+        public Builder body(ScheduledPlan body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 
         /**
-         * The workspace ID.
+         * workspace.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);
@@ -111,8 +110,8 @@ public class RegisterCustomConnectorRequest extends Request {
         }
 
         @Override
-        public RegisterCustomConnectorRequest build() {
-            return new RegisterCustomConnectorRequest(this);
+        public CreateScheduledPlanRequest build() {
+            return new CreateScheduledPlanRequest(this);
         } 
 
     } 

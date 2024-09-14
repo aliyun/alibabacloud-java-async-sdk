@@ -19,15 +19,23 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ApplyScheduledPlanResponse> applyScheduledPlan(ApplyScheduledPlanRequest request);
+
     CompletableFuture<CreateDeploymentResponse> createDeployment(CreateDeploymentRequest request);
 
     CompletableFuture<CreateDeploymentDraftResponse> createDeploymentDraft(CreateDeploymentDraftRequest request);
+
+    CompletableFuture<CreateDeploymentTargetResponse> createDeploymentTarget(CreateDeploymentTargetRequest request);
 
     CompletableFuture<CreateFolderResponse> createFolder(CreateFolderRequest request);
 
     CompletableFuture<CreateMemberResponse> createMember(CreateMemberRequest request);
 
     CompletableFuture<CreateSavepointResponse> createSavepoint(CreateSavepointRequest request);
+
+    CompletableFuture<CreateScheduledPlanResponse> createScheduledPlan(CreateScheduledPlanRequest request);
+
+    CompletableFuture<CreateSessionClusterResponse> createSessionCluster(CreateSessionClusterRequest request);
 
     CompletableFuture<CreateUdfArtifactResponse> createUdfArtifact(CreateUdfArtifactRequest request);
 
@@ -39,6 +47,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDeploymentDraftResponse> deleteDeploymentDraft(DeleteDeploymentDraftRequest request);
 
+    CompletableFuture<DeleteDeploymentTargetResponse> deleteDeploymentTarget(DeleteDeploymentTargetRequest request);
+
     CompletableFuture<DeleteFolderResponse> deleteFolder(DeleteFolderRequest request);
 
     CompletableFuture<DeleteJobResponse> deleteJob(DeleteJobRequest request);
@@ -46,6 +56,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMemberResponse> deleteMember(DeleteMemberRequest request);
 
     CompletableFuture<DeleteSavepointResponse> deleteSavepoint(DeleteSavepointRequest request);
+
+    CompletableFuture<DeleteScheduledPlanResponse> deleteScheduledPlan(DeleteScheduledPlanRequest request);
+
+    CompletableFuture<DeleteSessionClusterResponse> deleteSessionCluster(DeleteSessionClusterRequest request);
 
     CompletableFuture<DeleteUdfArtifactResponse> deleteUdfArtifact(DeleteUdfArtifactRequest request);
 
@@ -61,6 +75,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GenerateResourcePlanWithFlinkConfAsyncResponse> generateResourcePlanWithFlinkConfAsync(GenerateResourcePlanWithFlinkConfAsyncRequest request);
 
+    CompletableFuture<GetAppliedScheduledPlanResponse> getAppliedScheduledPlan(GetAppliedScheduledPlanRequest request);
+
     CompletableFuture<GetCatalogsResponse> getCatalogs(GetCatalogsRequest request);
 
     CompletableFuture<GetDatabasesResponse> getDatabases(GetDatabasesRequest request);
@@ -72,6 +88,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDeploymentDraftResponse> getDeploymentDraft(GetDeploymentDraftRequest request);
 
     CompletableFuture<GetDeploymentDraftLockResponse> getDeploymentDraftLock(GetDeploymentDraftLockRequest request);
+
+    CompletableFuture<GetEventsResponse> getEvents(GetEventsRequest request);
 
     CompletableFuture<GetFolderResponse> getFolder(GetFolderRequest request);
 
@@ -88,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMemberResponse> getMember(GetMemberRequest request);
 
     CompletableFuture<GetSavepointResponse> getSavepoint(GetSavepointRequest request);
+
+    CompletableFuture<GetSessionClusterResponse> getSessionCluster(GetSessionClusterRequest request);
 
     CompletableFuture<GetTablesResponse> getTables(GetTablesRequest request);
 
@@ -113,6 +133,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSavepointsResponse> listSavepoints(ListSavepointsRequest request);
 
+    CompletableFuture<ListScheduledPlanResponse> listScheduledPlan(ListScheduledPlanRequest request);
+
+    CompletableFuture<ListScheduledPlanExecutedHistoryResponse> listScheduledPlanExecutedHistory(ListScheduledPlanExecutedHistoryRequest request);
+
+    CompletableFuture<ListSessionClustersResponse> listSessionClusters(ListSessionClustersRequest request);
+
     CompletableFuture<ListVariablesResponse> listVariables(ListVariablesRequest request);
 
     CompletableFuture<RegisterCustomConnectorResponse> registerCustomConnector(RegisterCustomConnectorRequest request);
@@ -127,15 +153,27 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StartJobWithParamsResponse> startJobWithParams(StartJobWithParamsRequest request);
 
+    CompletableFuture<StartSessionClusterResponse> startSessionCluster(StartSessionClusterRequest request);
+
+    CompletableFuture<StopApplyScheduledPlanResponse> stopApplyScheduledPlan(StopApplyScheduledPlanRequest request);
+
     CompletableFuture<StopJobResponse> stopJob(StopJobRequest request);
+
+    CompletableFuture<StopSessionClusterResponse> stopSessionCluster(StopSessionClusterRequest request);
 
     CompletableFuture<UpdateDeploymentResponse> updateDeployment(UpdateDeploymentRequest request);
 
     CompletableFuture<UpdateDeploymentDraftResponse> updateDeploymentDraft(UpdateDeploymentDraftRequest request);
 
+    CompletableFuture<UpdateDeploymentTargetResponse> updateDeploymentTarget(UpdateDeploymentTargetRequest request);
+
     CompletableFuture<UpdateFolderResponse> updateFolder(UpdateFolderRequest request);
 
     CompletableFuture<UpdateMemberResponse> updateMember(UpdateMemberRequest request);
+
+    CompletableFuture<UpdateScheduledPlanResponse> updateScheduledPlan(UpdateScheduledPlanRequest request);
+
+    CompletableFuture<UpdateSessionClusterResponse> updateSessionCluster(UpdateSessionClusterRequest request);
 
     CompletableFuture<UpdateUdfArtifactResponse> updateUdfArtifact(UpdateUdfArtifactRequest request);
 

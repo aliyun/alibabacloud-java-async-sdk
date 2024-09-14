@@ -14,12 +14,8 @@ public class RescaleJobParam extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("jobParallelism")
     private Long jobParallelism;
 
-    @com.aliyun.core.annotation.NameInMap("vertexParallelism")
-    private java.util.Map < String, ? > vertexParallelism;
-
     private RescaleJobParam(Builder builder) {
         this.jobParallelism = builder.jobParallelism;
-        this.vertexParallelism = builder.vertexParallelism;
     }
 
     public static Builder builder() {
@@ -37,30 +33,14 @@ public class RescaleJobParam extends TeaModel {
         return this.jobParallelism;
     }
 
-    /**
-     * @return vertexParallelism
-     */
-    public java.util.Map < String, ? > getVertexParallelism() {
-        return this.vertexParallelism;
-    }
-
     public static final class Builder {
         private Long jobParallelism; 
-        private java.util.Map < String, ? > vertexParallelism; 
 
         /**
          * jobParallelism.
          */
         public Builder jobParallelism(Long jobParallelism) {
             this.jobParallelism = jobParallelism;
-            return this;
-        }
-
-        /**
-         * vertexParallelism.
-         */
-        public Builder vertexParallelism(java.util.Map < String, ? > vertexParallelism) {
-            this.vertexParallelism = vertexParallelism;
             return this;
         }
 

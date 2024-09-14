@@ -6,30 +6,35 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RegisterCustomConnectorRequest} extends {@link RequestModel}
+ * {@link ListScheduledPlanExecutedHistoryRequest} extends {@link RequestModel}
  *
- * <p>RegisterCustomConnectorRequest</p>
+ * <p>ListScheduledPlanExecutedHistoryRequest</p>
  */
-public class RegisterCustomConnectorRequest extends Request {
+public class ListScheduledPlanExecutedHistoryRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("namespace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("jarUrl")
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String jarUrl;
+    private String deploymentId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("origin")
+    private String origin;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("workspace")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
-    private RegisterCustomConnectorRequest(Builder builder) {
+    private ListScheduledPlanExecutedHistoryRequest(Builder builder) {
         super(builder);
         this.namespace = builder.namespace;
-        this.jarUrl = builder.jarUrl;
+        this.deploymentId = builder.deploymentId;
+        this.origin = builder.origin;
         this.workspace = builder.workspace;
     }
 
@@ -37,7 +42,7 @@ public class RegisterCustomConnectorRequest extends Request {
         return new Builder();
     }
 
-    public static RegisterCustomConnectorRequest create() {
+    public static ListScheduledPlanExecutedHistoryRequest create() {
         return builder().build();
     }
 
@@ -54,10 +59,17 @@ public class RegisterCustomConnectorRequest extends Request {
     }
 
     /**
-     * @return jarUrl
+     * @return deploymentId
      */
-    public String getJarUrl() {
-        return this.jarUrl;
+    public String getDeploymentId() {
+        return this.deploymentId;
+    }
+
+    /**
+     * @return origin
+     */
+    public String getOrigin() {
+        return this.origin;
     }
 
     /**
@@ -67,24 +79,26 @@ public class RegisterCustomConnectorRequest extends Request {
         return this.workspace;
     }
 
-    public static final class Builder extends Request.Builder<RegisterCustomConnectorRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListScheduledPlanExecutedHistoryRequest, Builder> {
         private String namespace; 
-        private String jarUrl; 
+        private String deploymentId; 
+        private String origin; 
         private String workspace; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RegisterCustomConnectorRequest request) {
+        private Builder(ListScheduledPlanExecutedHistoryRequest request) {
             super(request);
             this.namespace = request.namespace;
-            this.jarUrl = request.jarUrl;
+            this.deploymentId = request.deploymentId;
+            this.origin = request.origin;
             this.workspace = request.workspace;
         } 
 
         /**
-         * The name of the namespace.
+         * namespace.
          */
         public Builder namespace(String namespace) {
             this.putPathParameter("namespace", namespace);
@@ -93,16 +107,25 @@ public class RegisterCustomConnectorRequest extends Request {
         }
 
         /**
-         * The URL in which the JAR package of the custom connector is stored. The platform must be able to access this address.
+         * deploymentId.
          */
-        public Builder jarUrl(String jarUrl) {
-            this.putQueryParameter("jarUrl", jarUrl);
-            this.jarUrl = jarUrl;
+        public Builder deploymentId(String deploymentId) {
+            this.putQueryParameter("deploymentId", deploymentId);
+            this.deploymentId = deploymentId;
             return this;
         }
 
         /**
-         * The workspace ID.
+         * origin.
+         */
+        public Builder origin(String origin) {
+            this.putQueryParameter("origin", origin);
+            this.origin = origin;
+            return this;
+        }
+
+        /**
+         * workspace.
          */
         public Builder workspace(String workspace) {
             this.putHeaderParameter("workspace", workspace);
@@ -111,8 +134,8 @@ public class RegisterCustomConnectorRequest extends Request {
         }
 
         @Override
-        public RegisterCustomConnectorRequest build() {
-            return new RegisterCustomConnectorRequest(this);
+        public ListScheduledPlanExecutedHistoryRequest build() {
+            return new ListScheduledPlanExecutedHistoryRequest(this);
         } 
 
     } 
