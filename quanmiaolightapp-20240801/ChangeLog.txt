@@ -1,3 +1,6 @@
+2024-09-14 Version: 1.0.3
+- Generated java-async 2024-08-01 for QuanMiaoLightApp.
+
 2024-09-13 Version: 1.0.2
 - Generated java-async 2024-08-01 for QuanMiaoLightApp.
 
