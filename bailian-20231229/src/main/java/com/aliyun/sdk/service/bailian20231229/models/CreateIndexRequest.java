@@ -29,6 +29,10 @@ public class CreateIndexRequest extends Request {
     private java.util.List < Columns> columns;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSource")
+    private DataSource dataSource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -90,6 +94,7 @@ public class CreateIndexRequest extends Request {
         this.categoryIds = builder.categoryIds;
         this.chunkSize = builder.chunkSize;
         this.columns = builder.columns;
+        this.dataSource = builder.dataSource;
         this.description = builder.description;
         this.documentIds = builder.documentIds;
         this.embeddingModelName = builder.embeddingModelName;
@@ -144,6 +149,13 @@ public class CreateIndexRequest extends Request {
      */
     public java.util.List < Columns> getColumns() {
         return this.columns;
+    }
+
+    /**
+     * @return dataSource
+     */
+    public DataSource getDataSource() {
+        return this.dataSource;
     }
 
     /**
@@ -242,6 +254,7 @@ public class CreateIndexRequest extends Request {
         private java.util.List < String > categoryIds; 
         private Integer chunkSize; 
         private java.util.List < Columns> columns; 
+        private DataSource dataSource; 
         private String description; 
         private java.util.List < String > documentIds; 
         private String embeddingModelName; 
@@ -266,6 +279,7 @@ public class CreateIndexRequest extends Request {
             this.categoryIds = request.categoryIds;
             this.chunkSize = request.chunkSize;
             this.columns = request.columns;
+            this.dataSource = request.dataSource;
             this.description = request.description;
             this.documentIds = request.documentIds;
             this.embeddingModelName = request.embeddingModelName;
@@ -316,6 +330,16 @@ public class CreateIndexRequest extends Request {
             String columnsShrink = shrink(columns, "Columns", "json");
             this.putQueryParameter("Columns", columnsShrink);
             this.columns = columns;
+            return this;
+        }
+
+        /**
+         * DataSource.
+         */
+        public Builder dataSource(DataSource dataSource) {
+            String dataSourceShrink = shrink(dataSource, "DataSource", "json");
+            this.putQueryParameter("DataSource", dataSourceShrink);
+            this.dataSource = dataSource;
             return this;
         }
 
@@ -560,6 +584,227 @@ public class CreateIndexRequest extends Request {
 
             public Columns build() {
                 return new Columns(this);
+            } 
+
+        } 
+
+    }
+    public static class DataSource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CredentialId")
+        private String credentialId;
+
+        @com.aliyun.core.annotation.NameInMap("CredentialKey")
+        private String credentialKey;
+
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private String database;
+
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("IsPrivateLink")
+        private Boolean isPrivateLink;
+
+        @com.aliyun.core.annotation.NameInMap("Region")
+        private String region;
+
+        @com.aliyun.core.annotation.NameInMap("SubPath")
+        private String subPath;
+
+        @com.aliyun.core.annotation.NameInMap("SubType")
+        private String subType;
+
+        @com.aliyun.core.annotation.NameInMap("Table")
+        private String table;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private DataSource(Builder builder) {
+            this.credentialId = builder.credentialId;
+            this.credentialKey = builder.credentialKey;
+            this.database = builder.database;
+            this.endpoint = builder.endpoint;
+            this.isPrivateLink = builder.isPrivateLink;
+            this.region = builder.region;
+            this.subPath = builder.subPath;
+            this.subType = builder.subType;
+            this.table = builder.table;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataSource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return credentialId
+         */
+        public String getCredentialId() {
+            return this.credentialId;
+        }
+
+        /**
+         * @return credentialKey
+         */
+        public String getCredentialKey() {
+            return this.credentialKey;
+        }
+
+        /**
+         * @return database
+         */
+        public String getDatabase() {
+            return this.database;
+        }
+
+        /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return isPrivateLink
+         */
+        public Boolean getIsPrivateLink() {
+            return this.isPrivateLink;
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
+         * @return subPath
+         */
+        public String getSubPath() {
+            return this.subPath;
+        }
+
+        /**
+         * @return subType
+         */
+        public String getSubType() {
+            return this.subType;
+        }
+
+        /**
+         * @return table
+         */
+        public String getTable() {
+            return this.table;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String credentialId; 
+            private String credentialKey; 
+            private String database; 
+            private String endpoint; 
+            private Boolean isPrivateLink; 
+            private String region; 
+            private String subPath; 
+            private String subType; 
+            private String table; 
+            private String type; 
+
+            /**
+             * CredentialId.
+             */
+            public Builder credentialId(String credentialId) {
+                this.credentialId = credentialId;
+                return this;
+            }
+
+            /**
+             * CredentialKey.
+             */
+            public Builder credentialKey(String credentialKey) {
+                this.credentialKey = credentialKey;
+                return this;
+            }
+
+            /**
+             * Database.
+             */
+            public Builder database(String database) {
+                this.database = database;
+                return this;
+            }
+
+            /**
+             * Endpoint.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * IsPrivateLink.
+             */
+            public Builder isPrivateLink(Boolean isPrivateLink) {
+                this.isPrivateLink = isPrivateLink;
+                return this;
+            }
+
+            /**
+             * Region.
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            /**
+             * SubPath.
+             */
+            public Builder subPath(String subPath) {
+                this.subPath = subPath;
+                return this;
+            }
+
+            /**
+             * SubType.
+             */
+            public Builder subType(String subType) {
+                this.subType = subType;
+                return this;
+            }
+
+            /**
+             * Table.
+             */
+            public Builder table(String table) {
+                this.table = table;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public DataSource build() {
+                return new DataSource(this);
             } 
 
         } 

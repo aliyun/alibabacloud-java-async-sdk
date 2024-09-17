@@ -29,6 +29,10 @@ public class RetrieveRequest extends Request {
     private Boolean enableRewrite;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Images")
+    private java.util.List < String > images;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IndexId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String indexId;
@@ -71,6 +75,7 @@ public class RetrieveRequest extends Request {
         this.denseSimilarityTopK = builder.denseSimilarityTopK;
         this.enableReranking = builder.enableReranking;
         this.enableRewrite = builder.enableRewrite;
+        this.images = builder.images;
         this.indexId = builder.indexId;
         this.query = builder.query;
         this.rerank = builder.rerank;
@@ -121,6 +126,13 @@ public class RetrieveRequest extends Request {
      */
     public Boolean getEnableRewrite() {
         return this.enableRewrite;
+    }
+
+    /**
+     * @return images
+     */
+    public java.util.List < String > getImages() {
+        return this.images;
     }
 
     /**
@@ -191,6 +203,7 @@ public class RetrieveRequest extends Request {
         private Integer denseSimilarityTopK; 
         private Boolean enableReranking; 
         private Boolean enableRewrite; 
+        private java.util.List < String > images; 
         private String indexId; 
         private String query; 
         private java.util.List < Rerank> rerank; 
@@ -211,6 +224,7 @@ public class RetrieveRequest extends Request {
             this.denseSimilarityTopK = request.denseSimilarityTopK;
             this.enableReranking = request.enableReranking;
             this.enableRewrite = request.enableRewrite;
+            this.images = request.images;
             this.indexId = request.indexId;
             this.query = request.query;
             this.rerank = request.rerank;
@@ -255,6 +269,16 @@ public class RetrieveRequest extends Request {
         public Builder enableRewrite(Boolean enableRewrite) {
             this.putQueryParameter("EnableRewrite", enableRewrite);
             this.enableRewrite = enableRewrite;
+            return this;
+        }
+
+        /**
+         * Images.
+         */
+        public Builder images(java.util.List < String > images) {
+            String imagesShrink = shrink(images, "Images", "simple");
+            this.putQueryParameter("Images", imagesShrink);
+            this.images = images;
             return this;
         }
 
