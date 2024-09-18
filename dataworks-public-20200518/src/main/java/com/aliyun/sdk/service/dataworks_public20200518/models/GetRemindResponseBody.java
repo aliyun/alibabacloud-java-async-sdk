@@ -414,6 +414,67 @@ public class GetRemindResponseBody extends TeaModel {
         } 
 
     }
+    public static class Receivers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertTargets")
+        private java.util.List < String > alertTargets;
+
+        @com.aliyun.core.annotation.NameInMap("AlertUnit")
+        private String alertUnit;
+
+        private Receivers(Builder builder) {
+            this.alertTargets = builder.alertTargets;
+            this.alertUnit = builder.alertUnit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Receivers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alertTargets
+         */
+        public java.util.List < String > getAlertTargets() {
+            return this.alertTargets;
+        }
+
+        /**
+         * @return alertUnit
+         */
+        public String getAlertUnit() {
+            return this.alertUnit;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > alertTargets; 
+            private String alertUnit; 
+
+            /**
+             * AlertTargets.
+             */
+            public Builder alertTargets(java.util.List < String > alertTargets) {
+                this.alertTargets = alertTargets;
+                return this;
+            }
+
+            /**
+             * AlertUnit.
+             */
+            public Builder alertUnit(String alertUnit) {
+                this.alertUnit = alertUnit;
+                return this;
+            }
+
+            public Receivers build() {
+                return new Receivers(this);
+            } 
+
+        } 
+
+    }
     public static class Robots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AtAll")
         private Boolean atAll;
@@ -488,6 +549,9 @@ public class GetRemindResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertUnit")
         private String alertUnit;
 
+        @com.aliyun.core.annotation.NameInMap("AllowNodes")
+        private java.util.List < Long > allowNodes;
+
         @com.aliyun.core.annotation.NameInMap("Baselines")
         private java.util.List < Baselines> baselines;
 
@@ -515,6 +579,9 @@ public class GetRemindResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Projects")
         private java.util.List < Projects> projects;
 
+        @com.aliyun.core.annotation.NameInMap("Receivers")
+        private java.util.List < Receivers> receivers;
+
         @com.aliyun.core.annotation.NameInMap("RemindId")
         private Long remindId;
 
@@ -541,6 +608,7 @@ public class GetRemindResponseBody extends TeaModel {
             this.alertMethods = builder.alertMethods;
             this.alertTargets = builder.alertTargets;
             this.alertUnit = builder.alertUnit;
+            this.allowNodes = builder.allowNodes;
             this.baselines = builder.baselines;
             this.bizProcesses = builder.bizProcesses;
             this.detail = builder.detail;
@@ -550,6 +618,7 @@ public class GetRemindResponseBody extends TeaModel {
             this.maxAlertTimes = builder.maxAlertTimes;
             this.nodes = builder.nodes;
             this.projects = builder.projects;
+            this.receivers = builder.receivers;
             this.remindId = builder.remindId;
             this.remindName = builder.remindName;
             this.remindType = builder.remindType;
@@ -593,6 +662,13 @@ public class GetRemindResponseBody extends TeaModel {
          */
         public String getAlertUnit() {
             return this.alertUnit;
+        }
+
+        /**
+         * @return allowNodes
+         */
+        public java.util.List < Long > getAllowNodes() {
+            return this.allowNodes;
         }
 
         /**
@@ -659,6 +735,13 @@ public class GetRemindResponseBody extends TeaModel {
         }
 
         /**
+         * @return receivers
+         */
+        public java.util.List < Receivers> getReceivers() {
+            return this.receivers;
+        }
+
+        /**
          * @return remindId
          */
         public Long getRemindId() {
@@ -712,6 +795,7 @@ public class GetRemindResponseBody extends TeaModel {
             private java.util.List < String > alertMethods; 
             private java.util.List < String > alertTargets; 
             private String alertUnit; 
+            private java.util.List < Long > allowNodes; 
             private java.util.List < Baselines> baselines; 
             private java.util.List < BizProcesses> bizProcesses; 
             private String detail; 
@@ -721,6 +805,7 @@ public class GetRemindResponseBody extends TeaModel {
             private Integer maxAlertTimes; 
             private java.util.List < Nodes> nodes; 
             private java.util.List < Projects> projects; 
+            private java.util.List < Receivers> receivers; 
             private Long remindId; 
             private String remindName; 
             private String remindType; 
@@ -758,6 +843,14 @@ public class GetRemindResponseBody extends TeaModel {
              */
             public Builder alertUnit(String alertUnit) {
                 this.alertUnit = alertUnit;
+                return this;
+            }
+
+            /**
+             * AllowNodes.
+             */
+            public Builder allowNodes(java.util.List < Long > allowNodes) {
+                this.allowNodes = allowNodes;
                 return this;
             }
 
@@ -835,6 +928,14 @@ public class GetRemindResponseBody extends TeaModel {
              */
             public Builder projects(java.util.List < Projects> projects) {
                 this.projects = projects;
+                return this;
+            }
+
+            /**
+             * Receivers.
+             */
+            public Builder receivers(java.util.List < Receivers> receivers) {
+                this.receivers = receivers;
                 return this;
             }
 

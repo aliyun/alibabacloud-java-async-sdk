@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-dataworks_public20200518</artifactId>
-  <version>3.0.8</version>
+  <version>3.0.9</version>
   <packaging>jar</packaging>
   <name>alibabacloud-dataworks_public20200518</name>
   <description>Alibaba Cloud dataworks-public (20200518) Async SDK for Java
