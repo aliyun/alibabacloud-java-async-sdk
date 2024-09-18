@@ -432,7 +432,7 @@ public class QueryNetListResponseBody extends TeaModel {
         private String netExtend;
 
         @com.aliyun.core.annotation.NameInMap("NetMain")
-        private Long netMain;
+        private String netMain;
 
         @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
@@ -541,7 +541,7 @@ public class QueryNetListResponseBody extends TeaModel {
         /**
          * @return netMain
          */
-        public Long getNetMain() {
+        public String getNetMain() {
             return this.netMain;
         }
 
@@ -590,7 +590,7 @@ public class QueryNetListResponseBody extends TeaModel {
             private String mode; 
             private String net; 
             private String netExtend; 
-            private Long netMain; 
+            private String netMain; 
             private String netType; 
             private Integer permit; 
             private String saleId; 
@@ -684,7 +684,7 @@ public class QueryNetListResponseBody extends TeaModel {
             /**
              * The primary CIDR block.
              */
-            public Builder netMain(Long netMain) {
+            public Builder netMain(String netMain) {
                 this.netMain = netMain;
                 return this;
             }
