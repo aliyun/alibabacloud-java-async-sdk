@@ -227,6 +227,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTemplateListByUserIdResponse> getTemplateListByUserId(GetTemplateListByUserIdRequest request);
 
+    CompletableFuture<GetTodoTaskResponse> getTodoTask(GetTodoTaskRequest request);
+
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
     CompletableFuture<GetUserIdResponse> getUserId(GetUserIdRequest request);
