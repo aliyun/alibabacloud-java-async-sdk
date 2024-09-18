@@ -305,6 +305,9 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FactColumn")
         private String factColumn;
 
+        @com.aliyun.core.annotation.NameInMap("FieldDescription")
+        private String fieldDescription;
+
         @com.aliyun.core.annotation.NameInMap("Granularity")
         private String granularity;
 
@@ -323,6 +326,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             this.dimensionType = builder.dimensionType;
             this.expression = builder.expression;
             this.factColumn = builder.factColumn;
+            this.fieldDescription = builder.fieldDescription;
             this.granularity = builder.granularity;
             this.refUid = builder.refUid;
             this.tableUniqueId = builder.tableUniqueId;
@@ -373,6 +377,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return fieldDescription
+         */
+        public String getFieldDescription() {
+            return this.fieldDescription;
+        }
+
+        /**
          * @return granularity
          */
         public String getGranularity() {
@@ -406,6 +417,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String dimensionType; 
             private String expression; 
             private String factColumn; 
+            private String fieldDescription; 
             private String granularity; 
             private String refUid; 
             private String tableUniqueId; 
@@ -453,6 +465,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
              */
             public Builder factColumn(String factColumn) {
                 this.factColumn = factColumn;
+                return this;
+            }
+
+            /**
+             * FieldDescription.
+             */
+            public Builder fieldDescription(String fieldDescription) {
+                this.fieldDescription = fieldDescription;
                 return this;
             }
 
@@ -614,6 +634,9 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FactColumn")
         private String factColumn;
 
+        @com.aliyun.core.annotation.NameInMap("FieldDescription")
+        private String fieldDescription;
+
         @com.aliyun.core.annotation.NameInMap("MeasureType")
         private String measureType;
 
@@ -628,6 +651,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             this.dataType = builder.dataType;
             this.expression = builder.expression;
             this.factColumn = builder.factColumn;
+            this.fieldDescription = builder.fieldDescription;
             this.measureType = builder.measureType;
             this.tableUniqueId = builder.tableUniqueId;
             this.uid = builder.uid;
@@ -670,6 +694,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return fieldDescription
+         */
+        public String getFieldDescription() {
+            return this.fieldDescription;
+        }
+
+        /**
          * @return measureType
          */
         public String getMeasureType() {
@@ -695,6 +726,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String dataType; 
             private String expression; 
             private String factColumn; 
+            private String fieldDescription; 
             private String measureType; 
             private String tableUniqueId; 
             private String uid; 
@@ -737,6 +769,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
              */
             public Builder factColumn(String factColumn) {
                 this.factColumn = factColumn;
+                return this;
+            }
+
+            /**
+             * FieldDescription.
+             */
+            public Builder fieldDescription(String fieldDescription) {
+                this.fieldDescription = fieldDescription;
                 return this;
             }
 
