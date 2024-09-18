@@ -23,6 +23,9 @@ public class OrderResult extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("orderAmount")
     private Long orderAmount;
 
+    @com.aliyun.core.annotation.NameInMap("orderClosedReason")
+    private String orderClosedReason;
+
     @com.aliyun.core.annotation.NameInMap("orderId")
     private String orderId;
 
@@ -40,6 +43,7 @@ public class OrderResult extends TeaModel {
         this.distributorId = builder.distributorId;
         this.logisticsStatus = builder.logisticsStatus;
         this.orderAmount = builder.orderAmount;
+        this.orderClosedReason = builder.orderClosedReason;
         this.orderId = builder.orderId;
         this.orderLineList = builder.orderLineList;
         this.orderStatus = builder.orderStatus;
@@ -83,6 +87,13 @@ public class OrderResult extends TeaModel {
     }
 
     /**
+     * @return orderClosedReason
+     */
+    public String getOrderClosedReason() {
+        return this.orderClosedReason;
+    }
+
+    /**
      * @return orderId
      */
     public String getOrderId() {
@@ -115,6 +126,7 @@ public class OrderResult extends TeaModel {
         private String distributorId; 
         private String logisticsStatus; 
         private Long orderAmount; 
+        private String orderClosedReason; 
         private String orderId; 
         private java.util.List < OrderLineResult > orderLineList; 
         private String orderStatus; 
@@ -149,6 +161,14 @@ public class OrderResult extends TeaModel {
          */
         public Builder orderAmount(Long orderAmount) {
             this.orderAmount = orderAmount;
+            return this;
+        }
+
+        /**
+         * orderClosedReason.
+         */
+        public Builder orderClosedReason(String orderClosedReason) {
+            this.orderClosedReason = orderClosedReason;
             return this;
         }
 
