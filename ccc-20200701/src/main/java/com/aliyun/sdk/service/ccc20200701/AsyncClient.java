@@ -159,6 +159,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetChatMediaUrlResponse> getChatMediaUrl(GetChatMediaUrlRequest request);
 
+    CompletableFuture<GetChatRoutingProfileResponse> getChatRoutingProfile(GetChatRoutingProfileRequest request);
+
     CompletableFuture<GetContactFlowResponse> getContactFlow(GetContactFlowRequest request);
 
     CompletableFuture<GetConversationDetailResponse> getConversationDetail(GetConversationDetailRequest request);
@@ -516,6 +518,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnregisterDeviceResponse> unregisterDevice(UnregisterDeviceRequest request);
 
     CompletableFuture<UpdateCampaignResponse> updateCampaign(UpdateCampaignRequest request);
+
+    CompletableFuture<UpdateChatRoutingProfileResponse> updateChatRoutingProfile(UpdateChatRoutingProfileRequest request);
 
     CompletableFuture<UpdateConfigItemsResponse> updateConfigItems(UpdateConfigItemsRequest request);
 
