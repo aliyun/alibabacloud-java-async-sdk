@@ -44,6 +44,10 @@ public class BuildIndexRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("partition")
     private String partition;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tag")
+    private String tag;
+
     private BuildIndexRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
@@ -54,6 +58,7 @@ public class BuildIndexRequest extends Request {
         this.domain = builder.domain;
         this.generation = builder.generation;
         this.partition = builder.partition;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -125,6 +130,13 @@ public class BuildIndexRequest extends Request {
         return this.partition;
     }
 
+    /**
+     * @return tag
+     */
+    public String getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<BuildIndexRequest, Builder> {
         private String instanceId; 
         private String buildMode; 
@@ -134,6 +146,7 @@ public class BuildIndexRequest extends Request {
         private String domain; 
         private Long generation; 
         private String partition; 
+        private String tag; 
 
         private Builder() {
             super();
@@ -149,6 +162,7 @@ public class BuildIndexRequest extends Request {
             this.domain = request.domain;
             this.generation = request.generation;
             this.partition = request.partition;
+            this.tag = request.tag;
         } 
 
         /**
@@ -220,6 +234,15 @@ public class BuildIndexRequest extends Request {
         public Builder partition(String partition) {
             this.putBodyParameter("partition", partition);
             this.partition = partition;
+            return this;
+        }
+
+        /**
+         * tag.
+         */
+        public Builder tag(String tag) {
+            this.putBodyParameter("tag", tag);
+            this.tag = tag;
             return this;
         }
 

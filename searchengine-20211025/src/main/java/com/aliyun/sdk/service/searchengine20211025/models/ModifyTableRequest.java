@@ -554,6 +554,12 @@ public class ModifyTableRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("bucket")
         private String bucket;
 
+        @com.aliyun.core.annotation.NameInMap("catalog")
+        private String catalog;
+
+        @com.aliyun.core.annotation.NameInMap("database")
+        private String database;
+
         @com.aliyun.core.annotation.NameInMap("endpoint")
         private String endpoint;
 
@@ -569,15 +575,21 @@ public class ModifyTableRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("table")
         private String table;
 
+        @com.aliyun.core.annotation.NameInMap("tag")
+        private String tag;
+
         private Config(Builder builder) {
             this.accessKey = builder.accessKey;
             this.accessSecret = builder.accessSecret;
             this.bucket = builder.bucket;
+            this.catalog = builder.catalog;
+            this.database = builder.database;
             this.endpoint = builder.endpoint;
             this.ossPath = builder.ossPath;
             this.partition = builder.partition;
             this.project = builder.project;
             this.table = builder.table;
+            this.tag = builder.tag;
         }
 
         public static Builder builder() {
@@ -607,6 +619,20 @@ public class ModifyTableRequest extends Request {
          */
         public String getBucket() {
             return this.bucket;
+        }
+
+        /**
+         * @return catalog
+         */
+        public String getCatalog() {
+            return this.catalog;
+        }
+
+        /**
+         * @return database
+         */
+        public String getDatabase() {
+            return this.database;
         }
 
         /**
@@ -644,15 +670,25 @@ public class ModifyTableRequest extends Request {
             return this.table;
         }
 
+        /**
+         * @return tag
+         */
+        public String getTag() {
+            return this.tag;
+        }
+
         public static final class Builder {
             private String accessKey; 
             private String accessSecret; 
             private String bucket; 
+            private String catalog; 
+            private String database; 
             private String endpoint; 
             private String ossPath; 
             private String partition; 
             private String project; 
             private String table; 
+            private String tag; 
 
             /**
              * The AccessKey ID of the MaxCompute data source.
@@ -675,6 +711,22 @@ public class ModifyTableRequest extends Request {
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
+                return this;
+            }
+
+            /**
+             * catalog.
+             */
+            public Builder catalog(String catalog) {
+                this.catalog = catalog;
+                return this;
+            }
+
+            /**
+             * database.
+             */
+            public Builder database(String database) {
+                this.database = database;
                 return this;
             }
 
@@ -715,6 +767,14 @@ public class ModifyTableRequest extends Request {
              */
             public Builder table(String table) {
                 this.table = table;
+                return this;
+            }
+
+            /**
+             * tag.
+             */
+            public Builder tag(String tag) {
+                this.tag = tag;
                 return this;
             }
 

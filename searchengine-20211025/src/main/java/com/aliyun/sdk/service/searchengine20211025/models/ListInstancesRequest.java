@@ -12,6 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("catalog")
+    private String catalog;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("dataSourceType")
+    private String dataSourceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("database")
+    private String database;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
@@ -36,17 +48,25 @@ public class ListInstancesRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("table")
+    private String table;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < Tags> tags;
 
     private ListInstancesRequest(Builder builder) {
         super(builder);
+        this.catalog = builder.catalog;
+        this.dataSourceType = builder.dataSourceType;
+        this.database = builder.database;
         this.description = builder.description;
         this.edition = builder.edition;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
+        this.table = builder.table;
         this.tags = builder.tags;
     }
 
@@ -61,6 +81,27 @@ public class ListInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return catalog
+     */
+    public String getCatalog() {
+        return this.catalog;
+    }
+
+    /**
+     * @return dataSourceType
+     */
+    public String getDataSourceType() {
+        return this.dataSourceType;
+    }
+
+    /**
+     * @return database
+     */
+    public String getDatabase() {
+        return this.database;
     }
 
     /**
@@ -106,6 +147,13 @@ public class ListInstancesRequest extends Request {
     }
 
     /**
+     * @return table
+     */
+    public String getTable() {
+        return this.table;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List < Tags> getTags() {
@@ -113,12 +161,16 @@ public class ListInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
+        private String catalog; 
+        private String dataSourceType; 
+        private String database; 
         private String description; 
         private String edition; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
+        private String table; 
         private java.util.List < Tags> tags; 
 
         private Builder() {
@@ -127,14 +179,45 @@ public class ListInstancesRequest extends Request {
 
         private Builder(ListInstancesRequest request) {
             super(request);
+            this.catalog = request.catalog;
+            this.dataSourceType = request.dataSourceType;
+            this.database = request.database;
             this.description = request.description;
             this.edition = request.edition;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
+            this.table = request.table;
             this.tags = request.tags;
         } 
+
+        /**
+         * catalog.
+         */
+        public Builder catalog(String catalog) {
+            this.putQueryParameter("catalog", catalog);
+            this.catalog = catalog;
+            return this;
+        }
+
+        /**
+         * dataSourceType.
+         */
+        public Builder dataSourceType(String dataSourceType) {
+            this.putQueryParameter("dataSourceType", dataSourceType);
+            this.dataSourceType = dataSourceType;
+            return this;
+        }
+
+        /**
+         * database.
+         */
+        public Builder database(String database) {
+            this.putQueryParameter("database", database);
+            this.database = database;
+            return this;
+        }
 
         /**
          * The description of the instance. You can use this description to filter instances. Fuzzy match is supported.
@@ -187,6 +270,15 @@ public class ListInstancesRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * table.
+         */
+        public Builder table(String table) {
+            this.putQueryParameter("table", table);
+            this.table = table;
             return this;
         }
 

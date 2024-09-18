@@ -90,6 +90,348 @@ public class ListInstancesResponseBody extends TeaModel {
 
     } 
 
+    public static class Config extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("accessKey")
+        private String accessKey;
+
+        @com.aliyun.core.annotation.NameInMap("bucket")
+        private String bucket;
+
+        @com.aliyun.core.annotation.NameInMap("catalog")
+        private String catalog;
+
+        @com.aliyun.core.annotation.NameInMap("database")
+        private String database;
+
+        @com.aliyun.core.annotation.NameInMap("endpoint")
+        private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("namespace")
+        private String namespace;
+
+        @com.aliyun.core.annotation.NameInMap("ossPath")
+        private String ossPath;
+
+        @com.aliyun.core.annotation.NameInMap("partition")
+        private String partition;
+
+        @com.aliyun.core.annotation.NameInMap("path")
+        private String path;
+
+        @com.aliyun.core.annotation.NameInMap("project")
+        private String project;
+
+        @com.aliyun.core.annotation.NameInMap("table")
+        private String table;
+
+        @com.aliyun.core.annotation.NameInMap("tag")
+        private String tag;
+
+        private Config(Builder builder) {
+            this.accessKey = builder.accessKey;
+            this.bucket = builder.bucket;
+            this.catalog = builder.catalog;
+            this.database = builder.database;
+            this.endpoint = builder.endpoint;
+            this.namespace = builder.namespace;
+            this.ossPath = builder.ossPath;
+            this.partition = builder.partition;
+            this.path = builder.path;
+            this.project = builder.project;
+            this.table = builder.table;
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Config create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessKey
+         */
+        public String getAccessKey() {
+            return this.accessKey;
+        }
+
+        /**
+         * @return bucket
+         */
+        public String getBucket() {
+            return this.bucket;
+        }
+
+        /**
+         * @return catalog
+         */
+        public String getCatalog() {
+            return this.catalog;
+        }
+
+        /**
+         * @return database
+         */
+        public String getDatabase() {
+            return this.database;
+        }
+
+        /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
+         * @return ossPath
+         */
+        public String getOssPath() {
+            return this.ossPath;
+        }
+
+        /**
+         * @return partition
+         */
+        public String getPartition() {
+            return this.partition;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return project
+         */
+        public String getProject() {
+            return this.project;
+        }
+
+        /**
+         * @return table
+         */
+        public String getTable() {
+            return this.table;
+        }
+
+        /**
+         * @return tag
+         */
+        public String getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private String accessKey; 
+            private String bucket; 
+            private String catalog; 
+            private String database; 
+            private String endpoint; 
+            private String namespace; 
+            private String ossPath; 
+            private String partition; 
+            private String path; 
+            private String project; 
+            private String table; 
+            private String tag; 
+
+            /**
+             * accessKey.
+             */
+            public Builder accessKey(String accessKey) {
+                this.accessKey = accessKey;
+                return this;
+            }
+
+            /**
+             * bucket.
+             */
+            public Builder bucket(String bucket) {
+                this.bucket = bucket;
+                return this;
+            }
+
+            /**
+             * catalog.
+             */
+            public Builder catalog(String catalog) {
+                this.catalog = catalog;
+                return this;
+            }
+
+            /**
+             * database.
+             */
+            public Builder database(String database) {
+                this.database = database;
+                return this;
+            }
+
+            /**
+             * endpoint.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * ossPath.
+             */
+            public Builder ossPath(String ossPath) {
+                this.ossPath = ossPath;
+                return this;
+            }
+
+            /**
+             * partition.
+             */
+            public Builder partition(String partition) {
+                this.partition = partition;
+                return this;
+            }
+
+            /**
+             * path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * project.
+             */
+            public Builder project(String project) {
+                this.project = project;
+                return this;
+            }
+
+            /**
+             * table.
+             */
+            public Builder table(String table) {
+                this.table = table;
+                return this;
+            }
+
+            /**
+             * tag.
+             */
+            public Builder tag(String tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Config build() {
+                return new Config(this);
+            } 
+
+        } 
+
+    }
+    public static class DataSourceDetails extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("config")
+        private Config config;
+
+        @com.aliyun.core.annotation.NameInMap("indexName")
+        private String indexName;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private DataSourceDetails(Builder builder) {
+            this.config = builder.config;
+            this.indexName = builder.indexName;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataSourceDetails create() {
+            return builder().build();
+        }
+
+        /**
+         * @return config
+         */
+        public Config getConfig() {
+            return this.config;
+        }
+
+        /**
+         * @return indexName
+         */
+        public String getIndexName() {
+            return this.indexName;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Config config; 
+            private String indexName; 
+            private String type; 
+
+            /**
+             * config.
+             */
+            public Builder config(Config config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * indexName.
+             */
+            public Builder indexName(String indexName) {
+                this.indexName = indexName;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public DataSourceDetails build() {
+                return new DataSourceDetails(this);
+            } 
+
+        } 
+
+    }
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("allow")
         private String allow;
@@ -585,6 +927,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("dataSourceDetails")
+        private java.util.List < DataSourceDetails> dataSourceDetails;
+
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
@@ -634,6 +979,7 @@ public class ListInstancesResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.commodityCode = builder.commodityCode;
             this.createTime = builder.createTime;
+            this.dataSourceDetails = builder.dataSourceDetails;
             this.description = builder.description;
             this.edition = builder.edition;
             this.expiredTime = builder.expiredTime;
@@ -678,6 +1024,13 @@ public class ListInstancesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return dataSourceDetails
+         */
+        public java.util.List < DataSourceDetails> getDataSourceDetails() {
+            return this.dataSourceDetails;
         }
 
         /**
@@ -789,6 +1142,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String chargeType; 
             private String commodityCode; 
             private String createTime; 
+            private java.util.List < DataSourceDetails> dataSourceDetails; 
             private String description; 
             private String edition; 
             private String expiredTime; 
@@ -826,6 +1180,14 @@ public class ListInstancesResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * dataSourceDetails.
+             */
+            public Builder dataSourceDetails(java.util.List < DataSourceDetails> dataSourceDetails) {
+                this.dataSourceDetails = dataSourceDetails;
                 return this;
             }
 
