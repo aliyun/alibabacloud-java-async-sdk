@@ -13,14 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetTraceRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("topicName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("messageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String messageId;
 
     private GetTraceRequest(Builder builder) {

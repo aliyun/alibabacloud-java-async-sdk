@@ -13,14 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListTracesRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("topicName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("endTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
     @com.aliyun.core.annotation.Query
@@ -33,20 +36,22 @@ public class ListTracesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
-    @com.aliyun.core.annotation.Validation(maximum = 100000000, minimum = 1)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100000000, minimum = 1)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageSize")
-    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000, minimum = 1)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("queryType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queryType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("startTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private ListTracesRequest(Builder builder) {
