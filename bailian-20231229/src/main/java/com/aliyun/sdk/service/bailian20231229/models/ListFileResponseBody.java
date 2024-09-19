@@ -175,6 +175,9 @@ public class ListFileResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < String > tags;
+
         private FileList(Builder builder) {
             this.categoryId = builder.categoryId;
             this.createTime = builder.createTime;
@@ -184,6 +187,7 @@ public class ListFileResponseBody extends TeaModel {
             this.parser = builder.parser;
             this.sizeInBytes = builder.sizeInBytes;
             this.status = builder.status;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -250,6 +254,13 @@ public class ListFileResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return tags
+         */
+        public java.util.List < String > getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String categoryId; 
             private String createTime; 
@@ -259,6 +270,7 @@ public class ListFileResponseBody extends TeaModel {
             private String parser; 
             private Long sizeInBytes; 
             private String status; 
+            private java.util.List < String > tags; 
 
             /**
              * CategoryId.
@@ -321,6 +333,14 @@ public class ListFileResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < String > tags) {
+                this.tags = tags;
                 return this;
             }
 

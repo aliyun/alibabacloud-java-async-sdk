@@ -35,6 +35,10 @@ public class AddFileRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String parser;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List < String > tags;
+
     private AddFileRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
@@ -42,6 +46,7 @@ public class AddFileRequest extends Request {
         this.categoryId = builder.categoryId;
         this.leaseId = builder.leaseId;
         this.parser = builder.parser;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -92,12 +97,20 @@ public class AddFileRequest extends Request {
         return this.parser;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < String > getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<AddFileRequest, Builder> {
         private String workspaceId; 
         private String regionId; 
         private String categoryId; 
         private String leaseId; 
         private String parser; 
+        private java.util.List < String > tags; 
 
         private Builder() {
             super();
@@ -110,6 +123,7 @@ public class AddFileRequest extends Request {
             this.categoryId = request.categoryId;
             this.leaseId = request.leaseId;
             this.parser = request.parser;
+            this.tags = request.tags;
         } 
 
         /**
@@ -154,6 +168,16 @@ public class AddFileRequest extends Request {
         public Builder parser(String parser) {
             this.putBodyParameter("Parser", parser);
             this.parser = parser;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < String > tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putBodyParameter("Tags", tagsShrink);
+            this.tags = tags;
             return this;
         }
 
