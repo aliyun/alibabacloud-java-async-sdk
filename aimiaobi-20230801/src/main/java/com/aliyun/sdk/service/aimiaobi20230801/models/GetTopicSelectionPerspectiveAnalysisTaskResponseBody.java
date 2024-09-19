@@ -435,6 +435,9 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
     }
     public static class News extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
         @com.aliyun.core.annotation.NameInMap("DocId")
         private String docId;
 
@@ -444,18 +447,35 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         @com.aliyun.core.annotation.NameInMap("ImageUrls")
         private java.util.List < String > imageUrls;
 
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
+        @com.aliyun.core.annotation.NameInMap("Summary")
+        private String summary;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < String > tags;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        private String title;
 
         @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
         private News(Builder builder) {
+            this.content = builder.content;
             this.docId = builder.docId;
             this.docUuid = builder.docUuid;
             this.imageUrls = builder.imageUrls;
+            this.source = builder.source;
+            this.summary = builder.summary;
             this.tags = builder.tags;
+            this.title = builder.title;
             this.topic = builder.topic;
+            this.url = builder.url;
         }
 
         public static Builder builder() {
@@ -464,6 +484,13 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
 
         public static News create() {
             return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
         }
 
         /**
@@ -488,10 +515,31 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
         }
 
         /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
+         * @return summary
+         */
+        public String getSummary() {
+            return this.summary;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List < String > getTags() {
             return this.tags;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
         }
 
         /**
@@ -501,12 +549,32 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             return this.topic;
         }
 
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
         public static final class Builder {
+            private String content; 
             private String docId; 
             private String docUuid; 
             private java.util.List < String > imageUrls; 
+            private String source; 
+            private String summary; 
             private java.util.List < String > tags; 
+            private String title; 
             private String topic; 
+            private String url; 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
 
             /**
              * DocId.
@@ -533,6 +601,22 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             }
 
             /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
+                return this;
+            }
+
+            /**
+             * Summary.
+             */
+            public Builder summary(String summary) {
+                this.summary = summary;
+                return this;
+            }
+
+            /**
              * Tags.
              */
             public Builder tags(java.util.List < String > tags) {
@@ -541,10 +625,26 @@ public class GetTopicSelectionPerspectiveAnalysisTaskResponseBody extends TeaMod
             }
 
             /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
              * Topic.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
                 return this;
             }
 
