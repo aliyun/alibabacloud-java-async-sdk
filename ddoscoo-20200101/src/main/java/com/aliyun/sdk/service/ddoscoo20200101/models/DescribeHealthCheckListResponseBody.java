@@ -57,7 +57,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -184,7 +184,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
              * The domain name.
              * <p>
              * 
-             * > This parameter is returned only when the Layer 7 health check configuration is queried.
+             * >  This parameter is returned only when the Layer 7 health check configuration is queried.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -247,7 +247,7 @@ public class DescribeHealthCheckListResponseBody extends TeaModel {
              * The check path.
              * <p>
              * 
-             * > This parameter is returned only when the Layer 7 health check configuration is queried.
+             * >  This parameter is returned only when the Layer 7 health check configuration is queried.
              */
             public Builder uri(String uri) {
                 this.uri = uri;

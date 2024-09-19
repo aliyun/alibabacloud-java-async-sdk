@@ -20,6 +20,9 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("RsAttrRwTimeoutMax")
+    private Long rsAttrRwTimeoutMax;
+
     @com.aliyun.core.annotation.NameInMap("UpstreamRetry")
     private Integer upstreamRetry;
 
@@ -27,6 +30,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         this.attributes = builder.attributes;
         this.proxyMode = builder.proxyMode;
         this.requestId = builder.requestId;
+        this.rsAttrRwTimeoutMax = builder.rsAttrRwTimeoutMax;
         this.upstreamRetry = builder.upstreamRetry;
     }
 
@@ -60,6 +64,13 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return rsAttrRwTimeoutMax
+     */
+    public Long getRsAttrRwTimeoutMax() {
+        return this.rsAttrRwTimeoutMax;
+    }
+
+    /**
      * @return upstreamRetry
      */
     public Integer getUpstreamRetry() {
@@ -70,6 +81,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         private java.util.List < Attributes> attributes; 
         private String proxyMode; 
         private String requestId; 
+        private Long rsAttrRwTimeoutMax; 
         private Integer upstreamRetry; 
 
         /**
@@ -98,6 +110,14 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * RsAttrRwTimeoutMax.
+         */
+        public Builder rsAttrRwTimeoutMax(Long rsAttrRwTimeoutMax) {
+            this.rsAttrRwTimeoutMax = rsAttrRwTimeoutMax;
             return this;
         }
 

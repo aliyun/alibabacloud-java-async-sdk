@@ -161,7 +161,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * Cname.
+         * The CNAME address to query.
          */
         public Builder cname(String cname) {
             this.putQueryParameter("Cname", cname);
@@ -170,7 +170,10 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The domain name of the website to query.
+         * <p>
+         * 
+         * > The domain must have been configured with website business forwarding rules. You can call [DescribeDomains](~~DescribeDomains~~) to query all domains that have been configured with website business forwarding rules.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -179,7 +182,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The list of DDoS protection instance IDs to query.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -188,7 +191,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * When paginating, set the page number of the current page. The default value is 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -197,7 +200,7 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * When paginating, set the number of forwarding rules per page. The range of values is: 1~10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -206,7 +209,10 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * QueryDomainPattern.
+         * The query matching pattern. Values:
+         * <p>
+         * - **fuzzy** (default): Indicates fuzzy query.
+         * - **exact**: Indicates exact query.
          */
         public Builder queryDomainPattern(String queryDomainPattern) {
             this.putQueryParameter("QueryDomainPattern", queryDomainPattern);
@@ -215,7 +221,10 @@ public class DescribeWebRulesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID of the DDoS protection instance in the resource management service.
+         * <p>
+         * 
+         * Not setting this parameter indicates the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

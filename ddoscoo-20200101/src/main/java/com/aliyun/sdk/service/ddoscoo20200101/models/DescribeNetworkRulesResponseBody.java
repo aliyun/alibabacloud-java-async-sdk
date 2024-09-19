@@ -61,7 +61,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The details of a port forwarding rule.
+         * The details of the port forwarding rule.
          */
         public Builder networkRules(java.util.List < NetworkRules> networkRules) {
             this.networkRules = networkRules;

@@ -167,7 +167,7 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * The number of the page to return. For example, if you want to obtain results on the first page, set the value to **1**.
+         * The page number. For example, if you want to obtain results on the first page, set the value to **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -176,7 +176,7 @@ public class DescribePortRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

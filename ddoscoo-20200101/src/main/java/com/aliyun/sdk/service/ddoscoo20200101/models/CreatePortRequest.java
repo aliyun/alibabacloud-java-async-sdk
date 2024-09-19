@@ -168,7 +168,7 @@ public class CreatePortRequest extends Request {
         }
 
         /**
-         * The type of the protocol. Valid values:
+         * The type of the forwarding protocol. Valid values:
          * <p>
          * 
          * *   **tcp**

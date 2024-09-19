@@ -193,7 +193,7 @@ public class DescribeWebCCRulesV2ResponseBody extends TeaModel {
             }
 
             /**
-             * ContentList.
+             * The match content when the match method is Equals to One of Multiple Values.
              */
             public Builder contentList(String contentList) {
                 this.contentList = contentList;
