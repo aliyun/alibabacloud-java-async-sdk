@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EnrichRequest</p>
  */
 public class EnrichRequest extends Request {
-    @Body
-    @NameInMap("adults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("adults")
     private Integer adults;
 
-    @Body
-    @NameInMap("cabin_class")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cabin_class")
     private String cabinClass;
 
-    @Body
-    @NameInMap("children")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("children")
     private Integer children;
 
-    @Body
-    @NameInMap("infants")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("infants")
     private Integer infants;
 
-    @Body
-    @NameInMap("journey_param_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("journey_param_list")
     private java.util.List < JourneyParamList> journeyParamList;
 
-    @Body
-    @NameInMap("solution_id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("solution_id")
     private String solutionId;
 
-    @Header
-    @NameInMap("x-acs-airticket-access-token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-access-token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String xAcsAirticketAccessToken;
 
-    @Header
-    @NameInMap("x-acs-airticket-language")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-language")
     private String xAcsAirticketLanguage;
 
     private EnrichRequest(Builder builder) {
@@ -233,32 +232,32 @@ public class EnrichRequest extends Request {
     } 
 
     public static class SegmentParamList extends TeaModel {
-        @NameInMap("arrival_airport")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arrival_airport")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalAirport;
 
-        @NameInMap("arrival_city")
+        @com.aliyun.core.annotation.NameInMap("arrival_city")
         private String arrivalCity;
 
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("child_cabin")
+        @com.aliyun.core.annotation.NameInMap("child_cabin")
         private String childCabin;
 
-        @NameInMap("departure_airport")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("departure_airport")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureAirport;
 
-        @NameInMap("departure_city")
+        @com.aliyun.core.annotation.NameInMap("departure_city")
         private String departureCity;
 
-        @NameInMap("departure_time")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("departure_time")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureTime;
 
-        @NameInMap("marketing_flight_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("marketing_flight_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String marketingFlightNo;
 
         private SegmentParamList(Builder builder) {
@@ -418,20 +417,20 @@ public class EnrichRequest extends Request {
 
     }
     public static class JourneyParamList extends TeaModel {
-        @NameInMap("arrival_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arrival_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalCity;
 
-        @NameInMap("departure_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("departure_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureCity;
 
-        @NameInMap("departure_date")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("departure_date")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureDate;
 
-        @NameInMap("segment_param_list")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("segment_param_list")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < SegmentParamList> segmentParamList;
 
         private JourneyParamList(Builder builder) {

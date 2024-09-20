@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BookRequest</p>
  */
 public class BookRequest extends Request {
-    @Body
-    @NameInMap("contact")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contact")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Contact contact;
 
-    @Body
-    @NameInMap("out_order_num")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("out_order_num")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outOrderNum;
 
-    @Body
-    @NameInMap("passenger_ancillary_purchase_map_list")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("passenger_ancillary_purchase_map_list")
     private java.util.List < PassengerAncillaryPurchaseMapList> passengerAncillaryPurchaseMapList;
 
-    @Body
-    @NameInMap("passenger_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("passenger_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < PassengerList> passengerList;
 
-    @Body
-    @NameInMap("solution_id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("solution_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String solutionId;
 
-    @Header
-    @NameInMap("x-acs-airticket-access-token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-access-token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String xAcsAirticketAccessToken;
 
-    @Header
-    @NameInMap("x-acs-airticket-language")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-language")
     private String xAcsAirticketLanguage;
 
     private BookRequest(Builder builder) {
@@ -216,19 +215,19 @@ public class BookRequest extends Request {
     } 
 
     public static class Contact extends TeaModel {
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("first_name")
+        @com.aliyun.core.annotation.NameInMap("first_name")
         private String firstName;
 
-        @NameInMap("last_name")
+        @com.aliyun.core.annotation.NameInMap("last_name")
         private String lastName;
 
-        @NameInMap("mobile_country_code")
+        @com.aliyun.core.annotation.NameInMap("mobile_country_code")
         private String mobileCountryCode;
 
-        @NameInMap("mobile_phone_num")
+        @com.aliyun.core.annotation.NameInMap("mobile_phone_num")
         private String mobilePhoneNum;
 
         private Contact(Builder builder) {
@@ -337,10 +336,10 @@ public class BookRequest extends Request {
 
     }
     public static class BookAncillaryReqItem extends TeaModel {
-        @NameInMap("ancillary_id")
+        @com.aliyun.core.annotation.NameInMap("ancillary_id")
         private String ancillaryId;
 
-        @NameInMap("ancillary_type")
+        @com.aliyun.core.annotation.NameInMap("ancillary_type")
         private Integer ancillaryType;
 
         private BookAncillaryReqItem(Builder builder) {
@@ -398,17 +397,17 @@ public class BookRequest extends Request {
 
     }
     public static class Credential extends TeaModel {
-        @NameInMap("cert_issue_place")
+        @com.aliyun.core.annotation.NameInMap("cert_issue_place")
         private String certIssuePlace;
 
-        @NameInMap("credential_num")
+        @com.aliyun.core.annotation.NameInMap("credential_num")
         private String credentialNum;
 
-        @NameInMap("credential_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("credential_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer credentialType;
 
-        @NameInMap("expire_date")
+        @com.aliyun.core.annotation.NameInMap("expire_date")
         private String expireDate;
 
         private Credential(Builder builder) {
@@ -500,36 +499,36 @@ public class BookRequest extends Request {
 
     }
     public static class PassengerAncillaryPurchaseMapListPassengerList extends TeaModel {
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
 
-        @NameInMap("credential")
+        @com.aliyun.core.annotation.NameInMap("credential")
         private Credential credential;
 
-        @NameInMap("first_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("first_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String firstName;
 
-        @NameInMap("gender")
+        @com.aliyun.core.annotation.NameInMap("gender")
         private Integer gender;
 
-        @NameInMap("last_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("last_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String lastName;
 
-        @NameInMap("mobile_country_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("mobile_country_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mobileCountryCode;
 
-        @NameInMap("mobile_phone_number")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("mobile_phone_number")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mobilePhoneNumber;
 
-        @NameInMap("nationality")
+        @com.aliyun.core.annotation.NameInMap("nationality")
         private String nationality;
 
-        @NameInMap("type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer type;
 
         private PassengerAncillaryPurchaseMapListPassengerList(Builder builder) {
@@ -706,10 +705,10 @@ public class BookRequest extends Request {
 
     }
     public static class PassengerAncillaryPurchaseMapList extends TeaModel {
-        @NameInMap("book_ancillary_req_item")
+        @com.aliyun.core.annotation.NameInMap("book_ancillary_req_item")
         private BookAncillaryReqItem bookAncillaryReqItem;
 
-        @NameInMap("passenger_list")
+        @com.aliyun.core.annotation.NameInMap("passenger_list")
         private java.util.List < PassengerAncillaryPurchaseMapListPassengerList> passengerList;
 
         private PassengerAncillaryPurchaseMapList(Builder builder) {
@@ -767,17 +766,17 @@ public class BookRequest extends Request {
 
     }
     public static class PassengerListCredential extends TeaModel {
-        @NameInMap("cert_issue_place")
+        @com.aliyun.core.annotation.NameInMap("cert_issue_place")
         private String certIssuePlace;
 
-        @NameInMap("credential_num")
+        @com.aliyun.core.annotation.NameInMap("credential_num")
         private String credentialNum;
 
-        @NameInMap("credential_type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("credential_type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer credentialType;
 
-        @NameInMap("expire_date")
+        @com.aliyun.core.annotation.NameInMap("expire_date")
         private String expireDate;
 
         private PassengerListCredential(Builder builder) {
@@ -869,36 +868,36 @@ public class BookRequest extends Request {
 
     }
     public static class PassengerList extends TeaModel {
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
 
-        @NameInMap("credential")
+        @com.aliyun.core.annotation.NameInMap("credential")
         private PassengerListCredential credential;
 
-        @NameInMap("first_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("first_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String firstName;
 
-        @NameInMap("gender")
+        @com.aliyun.core.annotation.NameInMap("gender")
         private Integer gender;
 
-        @NameInMap("last_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("last_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String lastName;
 
-        @NameInMap("mobile_country_code")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("mobile_country_code")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mobileCountryCode;
 
-        @NameInMap("mobile_phone_number")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("mobile_phone_number")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mobilePhoneNumber;
 
-        @NameInMap("nationality")
+        @com.aliyun.core.annotation.NameInMap("nationality")
         private String nationality;
 
-        @NameInMap("type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer type;
 
         private PassengerList(Builder builder) {

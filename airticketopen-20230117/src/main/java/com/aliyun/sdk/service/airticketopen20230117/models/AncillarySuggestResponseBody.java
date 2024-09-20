@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AncillarySuggestResponseBody</p>
  */
 public class AncillarySuggestResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("error_code")
+    @com.aliyun.core.annotation.NameInMap("error_code")
     private String errorCode;
 
-    @NameInMap("error_data")
+    @com.aliyun.core.annotation.NameInMap("error_data")
     private Object errorData;
 
-    @NameInMap("error_msg")
+    @com.aliyun.core.annotation.NameInMap("error_msg")
     private String errorMsg;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private AncillarySuggestResponseBody(Builder builder) {
@@ -172,19 +171,19 @@ public class AncillarySuggestResponseBody extends TeaModel {
     } 
 
     public static class BaggageAncillary extends TeaModel {
-        @NameInMap("baggage_amount")
+        @com.aliyun.core.annotation.NameInMap("baggage_amount")
         private Integer baggageAmount;
 
-        @NameInMap("baggage_weight")
+        @com.aliyun.core.annotation.NameInMap("baggage_weight")
         private Integer baggageWeight;
 
-        @NameInMap("baggage_weight_unit")
+        @com.aliyun.core.annotation.NameInMap("baggage_weight_unit")
         private String baggageWeightUnit;
 
-        @NameInMap("is_all_weight")
+        @com.aliyun.core.annotation.NameInMap("is_all_weight")
         private Boolean isAllWeight;
 
-        @NameInMap("price")
+        @com.aliyun.core.annotation.NameInMap("price")
         private Double price;
 
         private BaggageAncillary(Builder builder) {
@@ -293,13 +292,13 @@ public class AncillarySuggestResponseBody extends TeaModel {
 
     }
     public static class Ancillary extends TeaModel {
-        @NameInMap("ancillary_id")
+        @com.aliyun.core.annotation.NameInMap("ancillary_id")
         private String ancillaryId;
 
-        @NameInMap("ancillary_type")
+        @com.aliyun.core.annotation.NameInMap("ancillary_type")
         private Integer ancillaryType;
 
-        @NameInMap("baggage_ancillary")
+        @com.aliyun.core.annotation.NameInMap("baggage_ancillary")
         private BaggageAncillary baggageAncillary;
 
         private Ancillary(Builder builder) {
@@ -374,10 +373,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
 
     }
     public static class SegAncillaryMapList extends TeaModel {
-        @NameInMap("ancillary")
+        @com.aliyun.core.annotation.NameInMap("ancillary")
         private Ancillary ancillary;
 
-        @NameInMap("segment_id_list")
+        @com.aliyun.core.annotation.NameInMap("segment_id_list")
         private java.util.List < String > segmentIdList;
 
         private SegAncillaryMapList(Builder builder) {
@@ -435,10 +434,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("seg_ancillary_map_list")
+        @com.aliyun.core.annotation.NameInMap("seg_ancillary_map_list")
         private java.util.List < SegAncillaryMapList> segAncillaryMapList;
 
-        @NameInMap("solution_id")
+        @com.aliyun.core.annotation.NameInMap("solution_id")
         private String solutionId;
 
         private Data(Builder builder) {

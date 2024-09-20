@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeApplyRequest</p>
  */
 public class ChangeApplyRequest extends Request {
-    @Body
-    @NameInMap("change_passenger_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("change_passenger_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ChangePassengerList> changePassengerList;
 
-    @Body
-    @NameInMap("changed_journeys")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("changed_journeys")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ChangedJourneys> changedJourneys;
 
-    @Body
-    @NameInMap("contact")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contact")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Contact contact;
 
-    @Body
-    @NameInMap("order_num")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_num")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long orderNum;
 
-    @Body
-    @NameInMap("remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
-    @Body
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer type;
 
-    @Header
-    @NameInMap("x-acs-airticket-access-token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-access-token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String xAcsAirticketAccessToken;
 
-    @Header
-    @NameInMap("x-acs-airticket-language")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-language")
     private String xAcsAirticketLanguage;
 
     private ChangeApplyRequest(Builder builder) {
@@ -240,15 +239,15 @@ public class ChangeApplyRequest extends Request {
     } 
 
     public static class ChangePassengerList extends TeaModel {
-        @NameInMap("document")
+        @com.aliyun.core.annotation.NameInMap("document")
         private String document;
 
-        @NameInMap("first_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("first_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String firstName;
 
-        @NameInMap("last_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("last_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String lastName;
 
         private ChangePassengerList(Builder builder) {
@@ -323,44 +322,44 @@ public class ChangeApplyRequest extends Request {
 
     }
     public static class SegmentList extends TeaModel {
-        @NameInMap("arrival_airport")
+        @com.aliyun.core.annotation.NameInMap("arrival_airport")
         private String arrivalAirport;
 
-        @NameInMap("arrival_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arrival_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalCity;
 
-        @NameInMap("arrive_terminal")
+        @com.aliyun.core.annotation.NameInMap("arrive_terminal")
         private String arriveTerminal;
 
-        @NameInMap("arrive_time")
+        @com.aliyun.core.annotation.NameInMap("arrive_time")
         private Long arriveTime;
 
-        @NameInMap("code_share")
+        @com.aliyun.core.annotation.NameInMap("code_share")
         private Boolean codeShare;
 
-        @NameInMap("departure_airport")
+        @com.aliyun.core.annotation.NameInMap("departure_airport")
         private String departureAirport;
 
-        @NameInMap("departure_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("departure_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureCity;
 
-        @NameInMap("departure_date")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("departure_date")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureDate;
 
-        @NameInMap("departure_terminal")
+        @com.aliyun.core.annotation.NameInMap("departure_terminal")
         private String departureTerminal;
 
-        @NameInMap("departure_time")
+        @com.aliyun.core.annotation.NameInMap("departure_time")
         private Long departureTime;
 
-        @NameInMap("marketing_flight_no")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("marketing_flight_no")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String marketingFlightNo;
 
-        @NameInMap("operating_flight_no")
+        @com.aliyun.core.annotation.NameInMap("operating_flight_no")
         private String operatingFlightNo;
 
         private SegmentList(Builder builder) {
@@ -588,7 +587,7 @@ public class ChangeApplyRequest extends Request {
 
     }
     public static class ChangedJourneys extends TeaModel {
-        @NameInMap("segment_list")
+        @com.aliyun.core.annotation.NameInMap("segment_list")
         private java.util.List < SegmentList> segmentList;
 
         private ChangedJourneys(Builder builder) {
@@ -629,13 +628,13 @@ public class ChangeApplyRequest extends Request {
 
     }
     public static class Contact extends TeaModel {
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("mobile_country_code")
+        @com.aliyun.core.annotation.NameInMap("mobile_country_code")
         private String mobileCountryCode;
 
-        @NameInMap("mobile_phone_num")
+        @com.aliyun.core.annotation.NameInMap("mobile_phone_num")
         private String mobilePhoneNum;
 
         private Contact(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue</p>
  */
 public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue extends TeaModel {
-    @NameInMap("refund_rule_all_unused_list")
+    @com.aliyun.core.annotation.NameInMap("refund_rule_all_unused_list")
     private java.util.List < RefundRuleAllUnusedList> refundRuleAllUnusedList;
 
-    @NameInMap("refund_rule_part_unused_list")
+    @com.aliyun.core.annotation.NameInMap("refund_rule_part_unused_list")
     private java.util.List < RefundRulePartUnusedList> refundRulePartUnusedList;
 
-    @NameInMap("change_rule_in_unused_list")
+    @com.aliyun.core.annotation.NameInMap("change_rule_in_unused_list")
     private java.util.List < ChangeRuleInUnusedList> changeRuleInUnusedList;
 
-    @NameInMap("change_rule_out_unused_list")
+    @com.aliyun.core.annotation.NameInMap("change_rule_out_unused_list")
     private java.util.List < ChangeRuleOutUnusedList> changeRuleOutUnusedList;
 
     private DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue(Builder builder) {
@@ -112,28 +111,28 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
     } 
 
     public static class RefundRuleAllUnusedList extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
-        @NameInMap("time_unit")
+        @com.aliyun.core.annotation.NameInMap("time_unit")
         private String timeUnit;
 
-        @NameInMap("rule_start_time")
+        @com.aliyun.core.annotation.NameInMap("rule_start_time")
         private Integer ruleStartTime;
 
-        @NameInMap("rule_end_time")
+        @com.aliyun.core.annotation.NameInMap("rule_end_time")
         private Integer ruleEndTime;
 
-        @NameInMap("can_refund")
+        @com.aliyun.core.annotation.NameInMap("can_refund")
         private Boolean canRefund;
 
-        @NameInMap("refund_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Double refundFee;
 
-        @NameInMap("can_return_all_tax")
+        @com.aliyun.core.annotation.NameInMap("can_return_all_tax")
         private Boolean canReturnAllTax;
 
-        @NameInMap("return_part_tax_fee")
+        @com.aliyun.core.annotation.NameInMap("return_part_tax_fee")
         private Double returnPartTaxFee;
 
         private RefundRuleAllUnusedList(Builder builder) {
@@ -293,28 +292,28 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
 
     }
     public static class RefundRulePartUnusedList extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
-        @NameInMap("time_unit")
+        @com.aliyun.core.annotation.NameInMap("time_unit")
         private String timeUnit;
 
-        @NameInMap("rule_start_time")
+        @com.aliyun.core.annotation.NameInMap("rule_start_time")
         private Integer ruleStartTime;
 
-        @NameInMap("rule_end_time")
+        @com.aliyun.core.annotation.NameInMap("rule_end_time")
         private Integer ruleEndTime;
 
-        @NameInMap("can_refund")
+        @com.aliyun.core.annotation.NameInMap("can_refund")
         private Boolean canRefund;
 
-        @NameInMap("refund_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Double refundFee;
 
-        @NameInMap("can_return_all_tax")
+        @com.aliyun.core.annotation.NameInMap("can_return_all_tax")
         private Boolean canReturnAllTax;
 
-        @NameInMap("return_part_tax_fee")
+        @com.aliyun.core.annotation.NameInMap("return_part_tax_fee")
         private Double returnPartTaxFee;
 
         private RefundRulePartUnusedList(Builder builder) {
@@ -474,22 +473,22 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
 
     }
     public static class ChangeRuleInUnusedList extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
-        @NameInMap("time_unit")
+        @com.aliyun.core.annotation.NameInMap("time_unit")
         private String timeUnit;
 
-        @NameInMap("rule_start_time")
+        @com.aliyun.core.annotation.NameInMap("rule_start_time")
         private Integer ruleStartTime;
 
-        @NameInMap("rule_end_time")
+        @com.aliyun.core.annotation.NameInMap("rule_end_time")
         private Integer ruleEndTime;
 
-        @NameInMap("can_change")
+        @com.aliyun.core.annotation.NameInMap("can_change")
         private Boolean canChange;
 
-        @NameInMap("change_fee")
+        @com.aliyun.core.annotation.NameInMap("change_fee")
         private Double changeFee;
 
         private ChangeRuleInUnusedList(Builder builder) {
@@ -615,22 +614,22 @@ public class DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapVa
 
     }
     public static class ChangeRuleOutUnusedList extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
-        @NameInMap("time_unit")
+        @com.aliyun.core.annotation.NameInMap("time_unit")
         private String timeUnit;
 
-        @NameInMap("rule_start_time")
+        @com.aliyun.core.annotation.NameInMap("rule_start_time")
         private Integer ruleStartTime;
 
-        @NameInMap("rule_end_time")
+        @com.aliyun.core.annotation.NameInMap("rule_end_time")
         private Integer ruleEndTime;
 
-        @NameInMap("can_change")
+        @com.aliyun.core.annotation.NameInMap("can_change")
         private Boolean canChange;
 
-        @NameInMap("change_fee")
+        @com.aliyun.core.annotation.NameInMap("change_fee")
         private Double changeFee;
 
         private ChangeRuleOutUnusedList(Builder builder) {

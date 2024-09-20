@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OrderListRequest</p>
  */
 public class OrderListRequest extends Request {
-    @Query
-    @NameInMap("book_time_end")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("book_time_end")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long bookTimeEnd;
 
-    @Query
-    @NameInMap("book_time_start")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("book_time_start")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long bookTimeStart;
 
-    @Query
-    @NameInMap("page_index")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_index")
     private Integer pageIndex;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @Header
-    @NameInMap("x-acs-airticket-access-token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-access-token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String xAcsAirticketAccessToken;
 
-    @Header
-    @NameInMap("x-acs-airticket-language")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-language")
     private String xAcsAirticketLanguage;
 
     private OrderListRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTokenResponseBody</p>
  */
 public class GetTokenResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("error_code")
+    @com.aliyun.core.annotation.NameInMap("error_code")
     private String errorCode;
 
-    @NameInMap("error_data")
+    @com.aliyun.core.annotation.NameInMap("error_data")
     private Object errorData;
 
-    @NameInMap("error_msg")
+    @com.aliyun.core.annotation.NameInMap("error_msg")
     private String errorMsg;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetTokenResponseBody(Builder builder) {
@@ -172,13 +171,13 @@ public class GetTokenResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("expire_time")
+        @com.aliyun.core.annotation.NameInMap("expire_time")
         private Long expireTime;
 
-        @NameInMap("generate_time")
+        @com.aliyun.core.annotation.NameInMap("generate_time")
         private Long generateTime;
 
-        @NameInMap("token")
+        @com.aliyun.core.annotation.NameInMap("token")
         private String token;
 
         private Data(Builder builder) {

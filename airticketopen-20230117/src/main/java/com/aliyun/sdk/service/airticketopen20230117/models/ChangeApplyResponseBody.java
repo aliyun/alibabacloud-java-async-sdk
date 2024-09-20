@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeApplyResponseBody</p>
  */
 public class ChangeApplyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("error_code")
+    @com.aliyun.core.annotation.NameInMap("error_code")
     private String errorCode;
 
-    @NameInMap("error_data")
+    @com.aliyun.core.annotation.NameInMap("error_data")
     private Object errorData;
 
-    @NameInMap("error_msg")
+    @com.aliyun.core.annotation.NameInMap("error_msg")
     private String errorMsg;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ChangeApplyResponseBody(Builder builder) {
@@ -172,13 +171,13 @@ public class ChangeApplyResponseBody extends TeaModel {
     } 
 
     public static class Passengers extends TeaModel {
-        @NameInMap("document")
+        @com.aliyun.core.annotation.NameInMap("document")
         private String document;
 
-        @NameInMap("first_name")
+        @com.aliyun.core.annotation.NameInMap("first_name")
         private String firstName;
 
-        @NameInMap("last_name")
+        @com.aliyun.core.annotation.NameInMap("last_name")
         private String lastName;
 
         private Passengers(Builder builder) {
@@ -253,16 +252,16 @@ public class ChangeApplyResponseBody extends TeaModel {
 
     }
     public static class ChangeOrders extends TeaModel {
-        @NameInMap("change_order_num")
+        @com.aliyun.core.annotation.NameInMap("change_order_num")
         private Long changeOrderNum;
 
-        @NameInMap("change_order_status")
+        @com.aliyun.core.annotation.NameInMap("change_order_status")
         private Integer changeOrderStatus;
 
-        @NameInMap("fail_reason")
+        @com.aliyun.core.annotation.NameInMap("fail_reason")
         private String failReason;
 
-        @NameInMap("passengers")
+        @com.aliyun.core.annotation.NameInMap("passengers")
         private java.util.List < Passengers> passengers;
 
         private ChangeOrders(Builder builder) {
@@ -354,10 +353,10 @@ public class ChangeApplyResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("change_orders")
+        @com.aliyun.core.annotation.NameInMap("change_orders")
         private java.util.List < ChangeOrders> changeOrders;
 
-        @NameInMap("order_num")
+        @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
         private Data(Builder builder) {

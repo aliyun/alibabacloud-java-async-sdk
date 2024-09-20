@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue</p>
  */
 public class DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue extends TeaModel {
-    @NameInMap("baggage_amount")
+    @com.aliyun.core.annotation.NameInMap("baggage_amount")
     private Integer baggageAmount;
 
-    @NameInMap("baggage_weight")
+    @com.aliyun.core.annotation.NameInMap("baggage_weight")
     private Integer baggageWeight;
 
-    @NameInMap("baggage_weight_unit")
+    @com.aliyun.core.annotation.NameInMap("baggage_weight_unit")
     private String baggageWeightUnit;
 
-    @NameInMap("is_all_weight")
+    @com.aliyun.core.annotation.NameInMap("is_all_weight")
     private Boolean isAllWeight;
 
-    @NameInMap("carry_on_amount")
+    @com.aliyun.core.annotation.NameInMap("carry_on_amount")
     private Integer carryOnAmount;
 
-    @NameInMap("carry_on_weight")
+    @com.aliyun.core.annotation.NameInMap("carry_on_weight")
     private Integer carryOnWeight;
 
-    @NameInMap("carry_on_weight_unit")
+    @com.aliyun.core.annotation.NameInMap("carry_on_weight_unit")
     private String carryOnWeightUnit;
 
-    @NameInMap("is_all_carry_on_weight")
+    @com.aliyun.core.annotation.NameInMap("is_all_carry_on_weight")
     private Boolean isAllCarryOnWeight;
 
     private DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue(Builder builder) {

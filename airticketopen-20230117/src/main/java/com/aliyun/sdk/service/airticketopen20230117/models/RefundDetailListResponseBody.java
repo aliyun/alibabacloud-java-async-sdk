@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefundDetailListResponseBody</p>
  */
 public class RefundDetailListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("error_code")
+    @com.aliyun.core.annotation.NameInMap("error_code")
     private String errorCode;
 
-    @NameInMap("error_data")
+    @com.aliyun.core.annotation.NameInMap("error_data")
     private Object errorData;
 
-    @NameInMap("error_msg")
+    @com.aliyun.core.annotation.NameInMap("error_msg")
     private String errorMsg;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private RefundDetailListResponseBody(Builder builder) {
@@ -172,25 +171,25 @@ public class RefundDetailListResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("is_multi_refund")
+        @com.aliyun.core.annotation.NameInMap("is_multi_refund")
         private Boolean isMultiRefund;
 
-        @NameInMap("order_num")
+        @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
-        @NameInMap("refund_order_num")
+        @com.aliyun.core.annotation.NameInMap("refund_order_num")
         private Long refundOrderNum;
 
-        @NameInMap("refund_order_status")
+        @com.aliyun.core.annotation.NameInMap("refund_order_status")
         private Integer refundOrderStatus;
 
-        @NameInMap("related_refund_order_num")
+        @com.aliyun.core.annotation.NameInMap("related_refund_order_num")
         private String relatedRefundOrderNum;
 
-        @NameInMap("transaction_no")
+        @com.aliyun.core.annotation.NameInMap("transaction_no")
         private String transactionNo;
 
-        @NameInMap("utc_create_time")
+        @com.aliyun.core.annotation.NameInMap("utc_create_time")
         private Long utcCreateTime;
 
         private List(Builder builder) {
@@ -333,16 +332,16 @@ public class RefundDetailListResponseBody extends TeaModel {
 
     }
     public static class Pagination extends TeaModel {
-        @NameInMap("current_page")
+        @com.aliyun.core.annotation.NameInMap("current_page")
         private Integer currentPage;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Integer totalCount;
 
-        @NameInMap("total_page")
+        @com.aliyun.core.annotation.NameInMap("total_page")
         private Integer totalPage;
 
         private Pagination(Builder builder) {
@@ -434,10 +433,10 @@ public class RefundDetailListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("list")
+        @com.aliyun.core.annotation.NameInMap("list")
         private java.util.List < List> list;
 
-        @NameInMap("pagination")
+        @com.aliyun.core.annotation.NameInMap("pagination")
         private Pagination pagination;
 
         private Data(Builder builder) {

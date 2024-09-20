@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OrderListResponseBody</p>
  */
 public class OrderListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("error_code")
+    @com.aliyun.core.annotation.NameInMap("error_code")
     private String errorCode;
 
-    @NameInMap("error_data")
+    @com.aliyun.core.annotation.NameInMap("error_data")
     private Object errorData;
 
-    @NameInMap("error_msg")
+    @com.aliyun.core.annotation.NameInMap("error_msg")
     private String errorMsg;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private OrderListResponseBody(Builder builder) {
@@ -172,16 +171,16 @@ public class OrderListResponseBody extends TeaModel {
     } 
 
     public static class Credential extends TeaModel {
-        @NameInMap("cert_issue_place")
+        @com.aliyun.core.annotation.NameInMap("cert_issue_place")
         private String certIssuePlace;
 
-        @NameInMap("credential_num")
+        @com.aliyun.core.annotation.NameInMap("credential_num")
         private String credentialNum;
 
-        @NameInMap("credential_type")
+        @com.aliyun.core.annotation.NameInMap("credential_type")
         private Integer credentialType;
 
-        @NameInMap("expire_date")
+        @com.aliyun.core.annotation.NameInMap("expire_date")
         private String expireDate;
 
         private Credential(Builder builder) {
@@ -273,31 +272,31 @@ public class OrderListResponseBody extends TeaModel {
 
     }
     public static class PassengerList extends TeaModel {
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private String birthday;
 
-        @NameInMap("credential")
+        @com.aliyun.core.annotation.NameInMap("credential")
         private Credential credential;
 
-        @NameInMap("first_name")
+        @com.aliyun.core.annotation.NameInMap("first_name")
         private String firstName;
 
-        @NameInMap("gender")
+        @com.aliyun.core.annotation.NameInMap("gender")
         private Integer gender;
 
-        @NameInMap("last_name")
+        @com.aliyun.core.annotation.NameInMap("last_name")
         private String lastName;
 
-        @NameInMap("mobile_country_code")
+        @com.aliyun.core.annotation.NameInMap("mobile_country_code")
         private String mobileCountryCode;
 
-        @NameInMap("mobile_phone_number")
+        @com.aliyun.core.annotation.NameInMap("mobile_phone_number")
         private String mobilePhoneNumber;
 
-        @NameInMap("nationality")
+        @com.aliyun.core.annotation.NameInMap("nationality")
         private String nationality;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Integer type;
 
         private PassengerList(Builder builder) {
@@ -474,43 +473,43 @@ public class OrderListResponseBody extends TeaModel {
 
     }
     public static class List extends TeaModel {
-        @NameInMap("book_time")
+        @com.aliyun.core.annotation.NameInMap("book_time")
         private Long bookTime;
 
-        @NameInMap("order_num")
+        @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
-        @NameInMap("order_status")
+        @com.aliyun.core.annotation.NameInMap("order_status")
         private String orderStatus;
 
-        @NameInMap("out_order_num")
+        @com.aliyun.core.annotation.NameInMap("out_order_num")
         private String outOrderNum;
 
-        @NameInMap("passenger_list")
+        @com.aliyun.core.annotation.NameInMap("passenger_list")
         private java.util.List < PassengerList> passengerList;
 
-        @NameInMap("pay_status")
+        @com.aliyun.core.annotation.NameInMap("pay_status")
         private String payStatus;
 
-        @NameInMap("pay_time")
+        @com.aliyun.core.annotation.NameInMap("pay_time")
         private Long payTime;
 
-        @NameInMap("promotion_price")
+        @com.aliyun.core.annotation.NameInMap("promotion_price")
         private Double promotionPrice;
 
-        @NameInMap("real_pay_price")
+        @com.aliyun.core.annotation.NameInMap("real_pay_price")
         private Double realPayPrice;
 
-        @NameInMap("session_nick")
+        @com.aliyun.core.annotation.NameInMap("session_nick")
         private String sessionNick;
 
-        @NameInMap("succeed_time")
+        @com.aliyun.core.annotation.NameInMap("succeed_time")
         private Long succeedTime;
 
-        @NameInMap("total_price")
+        @com.aliyun.core.annotation.NameInMap("total_price")
         private Double totalPrice;
 
-        @NameInMap("transaction_no")
+        @com.aliyun.core.annotation.NameInMap("transaction_no")
         private String transactionNo;
 
         private List(Builder builder) {
@@ -755,16 +754,16 @@ public class OrderListResponseBody extends TeaModel {
 
     }
     public static class Pagination extends TeaModel {
-        @NameInMap("current_page")
+        @com.aliyun.core.annotation.NameInMap("current_page")
         private Integer currentPage;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Integer totalCount;
 
-        @NameInMap("total_page")
+        @com.aliyun.core.annotation.NameInMap("total_page")
         private Integer totalPage;
 
         private Pagination(Builder builder) {
@@ -856,10 +855,10 @@ public class OrderListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("list")
+        @com.aliyun.core.annotation.NameInMap("list")
         private java.util.List < List> list;
 
-        @NameInMap("pagination")
+        @com.aliyun.core.annotation.NameInMap("pagination")
         private Pagination pagination;
 
         private Data(Builder builder) {

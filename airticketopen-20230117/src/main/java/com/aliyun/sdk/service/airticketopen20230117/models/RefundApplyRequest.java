@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefundApplyRequest</p>
  */
 public class RefundApplyRequest extends Request {
-    @Body
-    @NameInMap("order_num")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_num")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long orderNum;
 
-    @Body
-    @NameInMap("refund_journeys")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("refund_journeys")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < RefundJourneys> refundJourneys;
 
-    @Body
-    @NameInMap("refund_passenger_list")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("refund_passenger_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < RefundPassengerList> refundPassengerList;
 
-    @Body
-    @NameInMap("refund_type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("refund_type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private RefundType refundType;
 
-    @Header
-    @NameInMap("x-acs-airticket-access-token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-access-token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String xAcsAirticketAccessToken;
 
-    @Header
-    @NameInMap("x-acs-airticket-language")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-language")
     private String xAcsAirticketLanguage;
 
     private RefundApplyRequest(Builder builder) {
@@ -193,20 +192,20 @@ public class RefundApplyRequest extends Request {
     } 
 
     public static class SegmentList extends TeaModel {
-        @NameInMap("arrival_airport")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arrival_airport")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalAirport;
 
-        @NameInMap("arrival_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arrival_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalCity;
 
-        @NameInMap("departure_airport")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("departure_airport")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureAirport;
 
-        @NameInMap("departure_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("departure_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureCity;
 
         private SegmentList(Builder builder) {
@@ -298,8 +297,8 @@ public class RefundApplyRequest extends Request {
 
     }
     public static class RefundJourneys extends TeaModel {
-        @NameInMap("segment_list")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("segment_list")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < SegmentList> segmentList;
 
         private RefundJourneys(Builder builder) {
@@ -340,15 +339,15 @@ public class RefundApplyRequest extends Request {
 
     }
     public static class RefundPassengerList extends TeaModel {
-        @NameInMap("document")
+        @com.aliyun.core.annotation.NameInMap("document")
         private String document;
 
-        @NameInMap("first_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("first_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String firstName;
 
-        @NameInMap("last_name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("last_name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String lastName;
 
         private RefundPassengerList(Builder builder) {
@@ -423,14 +422,14 @@ public class RefundApplyRequest extends Request {
 
     }
     public static class RefundType extends TeaModel {
-        @NameInMap("file")
+        @com.aliyun.core.annotation.NameInMap("file")
         private java.util.List < String > file;
 
-        @NameInMap("refund_type_id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("refund_type_id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer refundTypeId;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
         private RefundType(Builder builder) {

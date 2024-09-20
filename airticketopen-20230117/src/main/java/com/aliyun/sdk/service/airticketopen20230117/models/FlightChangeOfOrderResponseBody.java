@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightChangeOfOrderResponseBody</p>
  */
 public class FlightChangeOfOrderResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("error_code")
+    @com.aliyun.core.annotation.NameInMap("error_code")
     private String errorCode;
 
-    @NameInMap("error_data")
+    @com.aliyun.core.annotation.NameInMap("error_data")
     private Object errorData;
 
-    @NameInMap("error_msg")
+    @com.aliyun.core.annotation.NameInMap("error_msg")
     private String errorMsg;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private FlightChangeOfOrderResponseBody(Builder builder) {
@@ -172,43 +171,43 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
     } 
 
     public static class FlightChangeDetail extends TeaModel {
-        @NameInMap("change_reason")
+        @com.aliyun.core.annotation.NameInMap("change_reason")
         private String changeReason;
 
-        @NameInMap("change_time")
+        @com.aliyun.core.annotation.NameInMap("change_time")
         private String changeTime;
 
-        @NameInMap("change_type")
+        @com.aliyun.core.annotation.NameInMap("change_type")
         private Integer changeType;
 
-        @NameInMap("new_arrival_airport")
+        @com.aliyun.core.annotation.NameInMap("new_arrival_airport")
         private String newArrivalAirport;
 
-        @NameInMap("new_arrival_time")
+        @com.aliyun.core.annotation.NameInMap("new_arrival_time")
         private String newArrivalTime;
 
-        @NameInMap("new_departure_airport")
+        @com.aliyun.core.annotation.NameInMap("new_departure_airport")
         private String newDepartureAirport;
 
-        @NameInMap("new_departure_time")
+        @com.aliyun.core.annotation.NameInMap("new_departure_time")
         private String newDepartureTime;
 
-        @NameInMap("new_flight_no")
+        @com.aliyun.core.annotation.NameInMap("new_flight_no")
         private String newFlightNo;
 
-        @NameInMap("old_arrival_airport")
+        @com.aliyun.core.annotation.NameInMap("old_arrival_airport")
         private String oldArrivalAirport;
 
-        @NameInMap("old_arrival_time")
+        @com.aliyun.core.annotation.NameInMap("old_arrival_time")
         private String oldArrivalTime;
 
-        @NameInMap("old_departure_airport")
+        @com.aliyun.core.annotation.NameInMap("old_departure_airport")
         private String oldDepartureAirport;
 
-        @NameInMap("old_departure_time")
+        @com.aliyun.core.annotation.NameInMap("old_departure_time")
         private String oldDepartureTime;
 
-        @NameInMap("old_flight_no")
+        @com.aliyun.core.annotation.NameInMap("old_flight_no")
         private String oldFlightNo;
 
         private FlightChangeDetail(Builder builder) {
@@ -453,10 +452,10 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("flight_change_detail")
+        @com.aliyun.core.annotation.NameInMap("flight_change_detail")
         private FlightChangeDetail flightChangeDetail;
 
-        @NameInMap("order_num")
+        @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
         private Data(Builder builder) {

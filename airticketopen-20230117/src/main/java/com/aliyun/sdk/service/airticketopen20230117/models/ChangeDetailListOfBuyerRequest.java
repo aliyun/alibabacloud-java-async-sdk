@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeDetailListOfBuyerRequest</p>
  */
 public class ChangeDetailListOfBuyerRequest extends Request {
-    @Query
-    @NameInMap("page_index")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_index")
     private Integer pageIndex;
 
-    @Query
-    @NameInMap("page_size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page_size")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("utc_create_begin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("utc_create_begin")
     private Long utcCreateBegin;
 
-    @Query
-    @NameInMap("utc_create_end")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("utc_create_end")
     private Long utcCreateEnd;
 
-    @Header
-    @NameInMap("x-acs-airticket-access-token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-access-token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String xAcsAirticketAccessToken;
 
-    @Header
-    @NameInMap("x-acs-airticket-language")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-language")
     private String xAcsAirticketLanguage;
 
     private ChangeDetailListOfBuyerRequest(Builder builder) {

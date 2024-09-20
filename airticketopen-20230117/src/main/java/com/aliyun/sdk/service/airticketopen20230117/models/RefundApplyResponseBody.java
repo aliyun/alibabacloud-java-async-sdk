@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefundApplyResponseBody</p>
  */
 public class RefundApplyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("error_code")
+    @com.aliyun.core.annotation.NameInMap("error_code")
     private String errorCode;
 
-    @NameInMap("error_data")
+    @com.aliyun.core.annotation.NameInMap("error_data")
     private Object errorData;
 
-    @NameInMap("error_msg")
+    @com.aliyun.core.annotation.NameInMap("error_msg")
     private String errorMsg;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private RefundApplyResponseBody(Builder builder) {
@@ -172,13 +171,13 @@ public class RefundApplyResponseBody extends TeaModel {
     } 
 
     public static class RefundPassengers extends TeaModel {
-        @NameInMap("document")
+        @com.aliyun.core.annotation.NameInMap("document")
         private String document;
 
-        @NameInMap("first_name")
+        @com.aliyun.core.annotation.NameInMap("first_name")
         private String firstName;
 
-        @NameInMap("last_name")
+        @com.aliyun.core.annotation.NameInMap("last_name")
         private String lastName;
 
         private RefundPassengers(Builder builder) {
@@ -253,16 +252,16 @@ public class RefundApplyResponseBody extends TeaModel {
 
     }
     public static class RefundResults extends TeaModel {
-        @NameInMap("fail_reason")
+        @com.aliyun.core.annotation.NameInMap("fail_reason")
         private String failReason;
 
-        @NameInMap("refund_order_num")
+        @com.aliyun.core.annotation.NameInMap("refund_order_num")
         private Long refundOrderNum;
 
-        @NameInMap("refund_passengers")
+        @com.aliyun.core.annotation.NameInMap("refund_passengers")
         private java.util.List < RefundPassengers> refundPassengers;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
         private RefundResults(Builder builder) {
@@ -354,10 +353,10 @@ public class RefundApplyResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("order_num")
+        @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
-        @NameInMap("refund_results")
+        @com.aliyun.core.annotation.NameInMap("refund_results")
         private java.util.List < RefundResults> refundResults;
 
         private Data(Builder builder) {

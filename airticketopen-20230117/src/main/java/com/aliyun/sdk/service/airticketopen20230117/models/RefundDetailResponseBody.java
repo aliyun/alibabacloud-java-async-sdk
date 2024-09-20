@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefundDetailResponseBody</p>
  */
 public class RefundDetailResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("error_code")
+    @com.aliyun.core.annotation.NameInMap("error_code")
     private String errorCode;
 
-    @NameInMap("error_data")
+    @com.aliyun.core.annotation.NameInMap("error_data")
     private Object errorData;
 
-    @NameInMap("error_msg")
+    @com.aliyun.core.annotation.NameInMap("error_msg")
     private String errorMsg;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private RefundDetailResponseBody(Builder builder) {
@@ -172,13 +171,13 @@ public class RefundDetailResponseBody extends TeaModel {
     } 
 
     public static class Passenger extends TeaModel {
-        @NameInMap("document")
+        @com.aliyun.core.annotation.NameInMap("document")
         private String document;
 
-        @NameInMap("first_name")
+        @com.aliyun.core.annotation.NameInMap("first_name")
         private String firstName;
 
-        @NameInMap("last_name")
+        @com.aliyun.core.annotation.NameInMap("last_name")
         private String lastName;
 
         private Passenger(Builder builder) {
@@ -253,13 +252,13 @@ public class RefundDetailResponseBody extends TeaModel {
 
     }
     public static class PassengerMultiRefundDetails extends TeaModel {
-        @NameInMap("change_order_refund_fee")
+        @com.aliyun.core.annotation.NameInMap("change_order_refund_fee")
         private Double changeOrderRefundFee;
 
-        @NameInMap("original_order_refund_fee")
+        @com.aliyun.core.annotation.NameInMap("original_order_refund_fee")
         private Double originalOrderRefundFee;
 
-        @NameInMap("passenger")
+        @com.aliyun.core.annotation.NameInMap("passenger")
         private Passenger passenger;
 
         private PassengerMultiRefundDetails(Builder builder) {
@@ -334,13 +333,13 @@ public class RefundDetailResponseBody extends TeaModel {
 
     }
     public static class MultiRefundDetails extends TeaModel {
-        @NameInMap("multi_refund_order_num")
+        @com.aliyun.core.annotation.NameInMap("multi_refund_order_num")
         private Long multiRefundOrderNum;
 
-        @NameInMap("multi_refund_transaction_no")
+        @com.aliyun.core.annotation.NameInMap("multi_refund_transaction_no")
         private String multiRefundTransactionNo;
 
-        @NameInMap("passenger_multi_refund_details")
+        @com.aliyun.core.annotation.NameInMap("passenger_multi_refund_details")
         private java.util.List < PassengerMultiRefundDetails> passengerMultiRefundDetails;
 
         private MultiRefundDetails(Builder builder) {
@@ -415,13 +414,13 @@ public class RefundDetailResponseBody extends TeaModel {
 
     }
     public static class PassengerRefundDetailsPassenger extends TeaModel {
-        @NameInMap("document")
+        @com.aliyun.core.annotation.NameInMap("document")
         private String document;
 
-        @NameInMap("first_name")
+        @com.aliyun.core.annotation.NameInMap("first_name")
         private String firstName;
 
-        @NameInMap("last_name")
+        @com.aliyun.core.annotation.NameInMap("last_name")
         private String lastName;
 
         private PassengerRefundDetailsPassenger(Builder builder) {
@@ -496,25 +495,25 @@ public class RefundDetailResponseBody extends TeaModel {
 
     }
     public static class RefundFee extends TeaModel {
-        @NameInMap("already_used_total_fee")
+        @com.aliyun.core.annotation.NameInMap("already_used_total_fee")
         private Double alreadyUsedTotalFee;
 
-        @NameInMap("modify_refund_to_buyer_money")
+        @com.aliyun.core.annotation.NameInMap("modify_refund_to_buyer_money")
         private Double modifyRefundToBuyerMoney;
 
-        @NameInMap("non_refundable_change_service_fee")
+        @com.aliyun.core.annotation.NameInMap("non_refundable_change_service_fee")
         private Double nonRefundableChangeServiceFee;
 
-        @NameInMap("non_refundable_change_upgrade_fee")
+        @com.aliyun.core.annotation.NameInMap("non_refundable_change_upgrade_fee")
         private Double nonRefundableChangeUpgradeFee;
 
-        @NameInMap("non_refundable_tax_fee")
+        @com.aliyun.core.annotation.NameInMap("non_refundable_tax_fee")
         private Double nonRefundableTaxFee;
 
-        @NameInMap("non_refundable_ticket_fee")
+        @com.aliyun.core.annotation.NameInMap("non_refundable_ticket_fee")
         private Double nonRefundableTicketFee;
 
-        @NameInMap("refund_to_buyer_money")
+        @com.aliyun.core.annotation.NameInMap("refund_to_buyer_money")
         private Double refundToBuyerMoney;
 
         private RefundFee(Builder builder) {
@@ -657,10 +656,10 @@ public class RefundDetailResponseBody extends TeaModel {
 
     }
     public static class PassengerRefundDetails extends TeaModel {
-        @NameInMap("passenger")
+        @com.aliyun.core.annotation.NameInMap("passenger")
         private PassengerRefundDetailsPassenger passenger;
 
-        @NameInMap("refund_fee")
+        @com.aliyun.core.annotation.NameInMap("refund_fee")
         private RefundFee refundFee;
 
         private PassengerRefundDetails(Builder builder) {
@@ -718,70 +717,70 @@ public class RefundDetailResponseBody extends TeaModel {
 
     }
     public static class SegmentList extends TeaModel {
-        @NameInMap("arrival_airport")
+        @com.aliyun.core.annotation.NameInMap("arrival_airport")
         private String arrivalAirport;
 
-        @NameInMap("arrival_city")
+        @com.aliyun.core.annotation.NameInMap("arrival_city")
         private String arrivalCity;
 
-        @NameInMap("arrival_terminal")
+        @com.aliyun.core.annotation.NameInMap("arrival_terminal")
         private String arrivalTerminal;
 
-        @NameInMap("arrival_time")
+        @com.aliyun.core.annotation.NameInMap("arrival_time")
         private String arrivalTime;
 
-        @NameInMap("availability")
+        @com.aliyun.core.annotation.NameInMap("availability")
         private String availability;
 
-        @NameInMap("cabin")
+        @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
-        @NameInMap("cabin_class")
+        @com.aliyun.core.annotation.NameInMap("cabin_class")
         private String cabinClass;
 
-        @NameInMap("code_share")
+        @com.aliyun.core.annotation.NameInMap("code_share")
         private Boolean codeShare;
 
-        @NameInMap("departure_airport")
+        @com.aliyun.core.annotation.NameInMap("departure_airport")
         private String departureAirport;
 
-        @NameInMap("departure_city")
+        @com.aliyun.core.annotation.NameInMap("departure_city")
         private String departureCity;
 
-        @NameInMap("departure_terminal")
+        @com.aliyun.core.annotation.NameInMap("departure_terminal")
         private String departureTerminal;
 
-        @NameInMap("departure_time")
+        @com.aliyun.core.annotation.NameInMap("departure_time")
         private String departureTime;
 
-        @NameInMap("equip_type")
+        @com.aliyun.core.annotation.NameInMap("equip_type")
         private String equipType;
 
-        @NameInMap("flight_duration")
+        @com.aliyun.core.annotation.NameInMap("flight_duration")
         private Integer flightDuration;
 
-        @NameInMap("marketing_airline")
+        @com.aliyun.core.annotation.NameInMap("marketing_airline")
         private String marketingAirline;
 
-        @NameInMap("marketing_flight_no")
+        @com.aliyun.core.annotation.NameInMap("marketing_flight_no")
         private String marketingFlightNo;
 
-        @NameInMap("marketing_flight_no_int")
+        @com.aliyun.core.annotation.NameInMap("marketing_flight_no_int")
         private Integer marketingFlightNoInt;
 
-        @NameInMap("operating_airline")
+        @com.aliyun.core.annotation.NameInMap("operating_airline")
         private String operatingAirline;
 
-        @NameInMap("operating_flight_no")
+        @com.aliyun.core.annotation.NameInMap("operating_flight_no")
         private String operatingFlightNo;
 
-        @NameInMap("segment_id")
+        @com.aliyun.core.annotation.NameInMap("segment_id")
         private String segmentId;
 
-        @NameInMap("stop_city_list")
+        @com.aliyun.core.annotation.NameInMap("stop_city_list")
         private String stopCityList;
 
-        @NameInMap("stop_quantity")
+        @com.aliyun.core.annotation.NameInMap("stop_quantity")
         private Integer stopQuantity;
 
         private SegmentList(Builder builder) {
@@ -1179,10 +1178,10 @@ public class RefundDetailResponseBody extends TeaModel {
 
     }
     public static class RefundJourneys extends TeaModel {
-        @NameInMap("segment_list")
+        @com.aliyun.core.annotation.NameInMap("segment_list")
         private java.util.List < SegmentList> segmentList;
 
-        @NameInMap("transfer_count")
+        @com.aliyun.core.annotation.NameInMap("transfer_count")
         private Integer transferCount;
 
         private RefundJourneys(Builder builder) {
@@ -1240,46 +1239,46 @@ public class RefundDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("contain_multi_refund")
+        @com.aliyun.core.annotation.NameInMap("contain_multi_refund")
         private Boolean containMultiRefund;
 
-        @NameInMap("multi_refund_details")
+        @com.aliyun.core.annotation.NameInMap("multi_refund_details")
         private java.util.List < MultiRefundDetails> multiRefundDetails;
 
-        @NameInMap("order_num")
+        @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
-        @NameInMap("passenger_refund_details")
+        @com.aliyun.core.annotation.NameInMap("passenger_refund_details")
         private java.util.List < PassengerRefundDetails> passengerRefundDetails;
 
-        @NameInMap("pay_success_utc_time")
+        @com.aliyun.core.annotation.NameInMap("pay_success_utc_time")
         private Long paySuccessUtcTime;
 
-        @NameInMap("refund_attachment_urls")
+        @com.aliyun.core.annotation.NameInMap("refund_attachment_urls")
         private java.util.List < String > refundAttachmentUrls;
 
-        @NameInMap("refund_journeys")
+        @com.aliyun.core.annotation.NameInMap("refund_journeys")
         private java.util.List < RefundJourneys> refundJourneys;
 
-        @NameInMap("refund_order_num")
+        @com.aliyun.core.annotation.NameInMap("refund_order_num")
         private Long refundOrderNum;
 
-        @NameInMap("refund_reason")
+        @com.aliyun.core.annotation.NameInMap("refund_reason")
         private String refundReason;
 
-        @NameInMap("refund_type")
+        @com.aliyun.core.annotation.NameInMap("refund_type")
         private Integer refundType;
 
-        @NameInMap("refuse_reason")
+        @com.aliyun.core.annotation.NameInMap("refuse_reason")
         private String refuseReason;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
-        @NameInMap("transaction_no")
+        @com.aliyun.core.annotation.NameInMap("transaction_no")
         private String transactionNo;
 
-        @NameInMap("utc_create_time")
+        @com.aliyun.core.annotation.NameInMap("utc_create_time")
         private Long utcCreateTime;
 
         private Data(Builder builder) {

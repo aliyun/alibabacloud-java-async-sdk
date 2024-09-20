@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchRequest</p>
  */
 public class SearchRequest extends Request {
-    @Body
-    @NameInMap("adults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("adults")
     private Integer adults;
 
-    @Body
-    @NameInMap("air_legs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("air_legs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AirLegs> airLegs;
 
-    @Body
-    @NameInMap("cabin_class")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cabin_class")
     private String cabinClass;
 
-    @Body
-    @NameInMap("children")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("children")
     private Integer children;
 
-    @Body
-    @NameInMap("infants")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("infants")
     private Integer infants;
 
-    @Header
-    @NameInMap("x-acs-airticket-access-token")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("search_control_options")
+    private SearchControlOptions searchControlOptions;
+
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-access-token")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String xAcsAirticketAccessToken;
 
-    @Header
-    @NameInMap("x-acs-airticket-language")
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("x-acs-airticket-language")
     private String xAcsAirticketLanguage;
 
     private SearchRequest(Builder builder) {
@@ -49,6 +52,7 @@ public class SearchRequest extends Request {
         this.cabinClass = builder.cabinClass;
         this.children = builder.children;
         this.infants = builder.infants;
+        this.searchControlOptions = builder.searchControlOptions;
         this.xAcsAirticketAccessToken = builder.xAcsAirticketAccessToken;
         this.xAcsAirticketLanguage = builder.xAcsAirticketLanguage;
     }
@@ -102,6 +106,13 @@ public class SearchRequest extends Request {
     }
 
     /**
+     * @return searchControlOptions
+     */
+    public SearchControlOptions getSearchControlOptions() {
+        return this.searchControlOptions;
+    }
+
+    /**
      * @return xAcsAirticketAccessToken
      */
     public String getXAcsAirticketAccessToken() {
@@ -121,6 +132,7 @@ public class SearchRequest extends Request {
         private String cabinClass; 
         private Integer children; 
         private Integer infants; 
+        private SearchControlOptions searchControlOptions; 
         private String xAcsAirticketAccessToken; 
         private String xAcsAirticketLanguage; 
 
@@ -135,6 +147,7 @@ public class SearchRequest extends Request {
             this.cabinClass = request.cabinClass;
             this.children = request.children;
             this.infants = request.infants;
+            this.searchControlOptions = request.searchControlOptions;
             this.xAcsAirticketAccessToken = request.xAcsAirticketAccessToken;
             this.xAcsAirticketLanguage = request.xAcsAirticketLanguage;
         } 
@@ -186,6 +199,16 @@ public class SearchRequest extends Request {
         }
 
         /**
+         * search_control_options.
+         */
+        public Builder searchControlOptions(SearchControlOptions searchControlOptions) {
+            String searchControlOptionsShrink = shrink(searchControlOptions, "search_control_options", "json");
+            this.putBodyParameter("search_control_options", searchControlOptionsShrink);
+            this.searchControlOptions = searchControlOptions;
+            return this;
+        }
+
+        /**
          * access_token
          */
         public Builder xAcsAirticketAccessToken(String xAcsAirticketAccessToken) {
@@ -211,22 +234,22 @@ public class SearchRequest extends Request {
     } 
 
     public static class AirLegs extends TeaModel {
-        @NameInMap("arrival_airport_list")
+        @com.aliyun.core.annotation.NameInMap("arrival_airport_list")
         private java.util.List < String > arrivalAirportList;
 
-        @NameInMap("arrival_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("arrival_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalCity;
 
-        @NameInMap("departure_airport_list")
+        @com.aliyun.core.annotation.NameInMap("departure_airport_list")
         private java.util.List < String > departureAirportList;
 
-        @NameInMap("departure_city")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("departure_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureCity;
 
-        @NameInMap("departure_date")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("departure_date")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureDate;
 
         private AirLegs(Builder builder) {
@@ -329,6 +352,67 @@ public class SearchRequest extends Request {
 
             public AirLegs build() {
                 return new AirLegs(this);
+            } 
+
+        } 
+
+    }
+    public static class SearchControlOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("airline_excluded_list")
+        private java.util.List < String > airlineExcludedList;
+
+        @com.aliyun.core.annotation.NameInMap("airline_prefer_list")
+        private java.util.List < String > airlinePreferList;
+
+        private SearchControlOptions(Builder builder) {
+            this.airlineExcludedList = builder.airlineExcludedList;
+            this.airlinePreferList = builder.airlinePreferList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SearchControlOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return airlineExcludedList
+         */
+        public java.util.List < String > getAirlineExcludedList() {
+            return this.airlineExcludedList;
+        }
+
+        /**
+         * @return airlinePreferList
+         */
+        public java.util.List < String > getAirlinePreferList() {
+            return this.airlinePreferList;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > airlineExcludedList; 
+            private java.util.List < String > airlinePreferList; 
+
+            /**
+             * airline_excluded_list.
+             */
+            public Builder airlineExcludedList(java.util.List < String > airlineExcludedList) {
+                this.airlineExcludedList = airlineExcludedList;
+                return this;
+            }
+
+            /**
+             * airline_prefer_list.
+             */
+            public Builder airlinePreferList(java.util.List < String > airlinePreferList) {
+                this.airlinePreferList = airlinePreferList;
+                return this;
+            }
+
+            public SearchControlOptions build() {
+                return new SearchControlOptions(this);
             } 
 
         } 

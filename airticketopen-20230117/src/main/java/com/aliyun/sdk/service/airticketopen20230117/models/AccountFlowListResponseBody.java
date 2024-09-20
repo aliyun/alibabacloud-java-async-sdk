@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.airticketopen20230117.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AccountFlowListResponseBody</p>
  */
 public class AccountFlowListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("error_code")
+    @com.aliyun.core.annotation.NameInMap("error_code")
     private String errorCode;
 
-    @NameInMap("error_data")
+    @com.aliyun.core.annotation.NameInMap("error_data")
     private Object errorData;
 
-    @NameInMap("error_msg")
+    @com.aliyun.core.annotation.NameInMap("error_msg")
     private String errorMsg;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private Integer status;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private AccountFlowListResponseBody(Builder builder) {
@@ -172,40 +171,40 @@ public class AccountFlowListResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("after_available_amount")
+        @com.aliyun.core.annotation.NameInMap("after_available_amount")
         private Double afterAvailableAmount;
 
-        @NameInMap("before_available_amount")
+        @com.aliyun.core.annotation.NameInMap("before_available_amount")
         private Double beforeAvailableAmount;
 
-        @NameInMap("change_order_num")
+        @com.aliyun.core.annotation.NameInMap("change_order_num")
         private Long changeOrderNum;
 
-        @NameInMap("flow_id")
+        @com.aliyun.core.annotation.NameInMap("flow_id")
         private Long flowId;
 
-        @NameInMap("gmt_create")
+        @com.aliyun.core.annotation.NameInMap("gmt_create")
         private Long gmtCreate;
 
-        @NameInMap("gmt_modified")
+        @com.aliyun.core.annotation.NameInMap("gmt_modified")
         private Long gmtModified;
 
-        @NameInMap("op_amount")
+        @com.aliyun.core.annotation.NameInMap("op_amount")
         private Double opAmount;
 
-        @NameInMap("op_type")
+        @com.aliyun.core.annotation.NameInMap("op_type")
         private Integer opType;
 
-        @NameInMap("order_num")
+        @com.aliyun.core.annotation.NameInMap("order_num")
         private Long orderNum;
 
-        @NameInMap("order_type")
+        @com.aliyun.core.annotation.NameInMap("order_type")
         private Integer orderType;
 
-        @NameInMap("out_order_num")
+        @com.aliyun.core.annotation.NameInMap("out_order_num")
         private String outOrderNum;
 
-        @NameInMap("refund_order_num")
+        @com.aliyun.core.annotation.NameInMap("refund_order_num")
         private Long refundOrderNum;
 
         private List(Builder builder) {
@@ -433,16 +432,16 @@ public class AccountFlowListResponseBody extends TeaModel {
 
     }
     public static class Pagination extends TeaModel {
-        @NameInMap("current_page")
+        @com.aliyun.core.annotation.NameInMap("current_page")
         private Integer currentPage;
 
-        @NameInMap("page_size")
+        @com.aliyun.core.annotation.NameInMap("page_size")
         private Integer pageSize;
 
-        @NameInMap("total_count")
+        @com.aliyun.core.annotation.NameInMap("total_count")
         private Integer totalCount;
 
-        @NameInMap("total_page")
+        @com.aliyun.core.annotation.NameInMap("total_page")
         private Integer totalPage;
 
         private Pagination(Builder builder) {
@@ -534,10 +533,10 @@ public class AccountFlowListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("list")
+        @com.aliyun.core.annotation.NameInMap("list")
         private java.util.List < List> list;
 
-        @NameInMap("pagination")
+        @com.aliyun.core.annotation.NameInMap("pagination")
         private Pagination pagination;
 
         private Data(Builder builder) {
