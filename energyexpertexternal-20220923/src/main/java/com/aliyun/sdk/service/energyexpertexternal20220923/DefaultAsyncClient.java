@@ -39,6 +39,62 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    @Override
+    public CompletableFuture<BatchSaveInstructionStatusResponse> batchSaveInstructionStatus(BatchSaveInstructionStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchSaveInstructionStatus").setMethod(HttpMethod.POST).setPathRegex("/api/v1/carbon/hvac/batchSaveInstructionStatus").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchSaveInstructionStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchSaveInstructionStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<BatchUpdateSystemRunningPlanResponse> batchUpdateSystemRunningPlan(BatchUpdateSystemRunningPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BatchUpdateSystemRunningPlan").setMethod(HttpMethod.POST).setPathRegex("/api/v1/carbon/hvac/batchUpdateSystemRunningPlan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchUpdateSystemRunningPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchUpdateSystemRunningPlanResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<EditProhibitedDevicesResponse> editProhibitedDevices(EditProhibitedDevicesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EditProhibitedDevices").setMethod(HttpMethod.POST).setPathRegex("/api/v1/carbon/hvac/editProhibitedDevices").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EditProhibitedDevicesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EditProhibitedDevicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<EditUnfavorableAreaDevicesResponse> editUnfavorableAreaDevices(EditUnfavorableAreaDevicesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("EditUnfavorableAreaDevices").setMethod(HttpMethod.POST).setPathRegex("/api/v1/carbon/hvac/editUnfavorableAreaDevices").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EditUnfavorableAreaDevicesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EditUnfavorableAreaDevicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
       * Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\\"s status can be checked using the `IsCompleted` API. Following the generation of results, other result inquiry APIs can be accessed for display content.
       *
@@ -125,8 +181,8 @@ public final class DefaultAsyncClient implements AsyncClient {
       * *   You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.
       * *   You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.
       * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-      * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
-      * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
+      * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
+      * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
       *
      */
     @Override
@@ -147,8 +203,8 @@ public final class DefaultAsyncClient implements AsyncClient {
       * *   You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.
       * *   Virtual meters at the site are not returned.
       * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-      * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
-      * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
+      * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
+      * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
       *
      */
     @Override
@@ -396,8 +452,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     /**
       * *   If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.
       * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-      * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
-      * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
+      * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
+      * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
       *
      */
     @Override
@@ -543,6 +599,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SendDocumentAskQuestionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<SetRunningPlanResponse> setRunningPlan(SetRunningPlanRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SetRunningPlan").setMethod(HttpMethod.POST).setPathRegex("/api/v1/carbon/hvac/setRunningPlan").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetRunningPlanResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetRunningPlanResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -162,7 +162,9 @@ public class GetInventoryListRequest extends Request {
         }
 
         /**
-         * The type of the obtained environmental impact: gwp indicates the carbon footprint of climate change. For more information, see the type value of the enumerated values.
+         * The type of the obtained environmental impact: gwp indicates the carbon footprint of climate change. 
+         * <p>
+         * <props="intl">[For more information, see the environment impact category enumeration.](https://www.alibabacloud.com/help/en/energy-expert/developer-reference/enumerated-values-of-energy-expert#RhGn7)</props>
          */
         public Builder methodType(String methodType) {
             this.putBodyParameter("methodType", methodType);

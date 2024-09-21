@@ -19,6 +19,14 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<BatchSaveInstructionStatusResponse> batchSaveInstructionStatus(BatchSaveInstructionStatusRequest request);
+
+    CompletableFuture<BatchUpdateSystemRunningPlanResponse> batchUpdateSystemRunningPlan(BatchUpdateSystemRunningPlanRequest request);
+
+    CompletableFuture<EditProhibitedDevicesResponse> editProhibitedDevices(EditProhibitedDevicesRequest request);
+
+    CompletableFuture<EditUnfavorableAreaDevicesResponse> editUnfavorableAreaDevices(EditUnfavorableAreaDevicesRequest request);
+
     /**
       * Given a product ID, this API initiates a task to calculate the carbon footprint result for the corresponding product. The task\\"s status can be checked using the `IsCompleted` API. Following the generation of results, other result inquiry APIs can be accessed for display content.
       *
@@ -45,8 +53,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   You can call this operation to query the parameters of a data collection device based on the device ID. If the verification is passed, the device parameters are returned. If the verification fails, a null value is returned.
       * *   You can query the parameters of a single device by day. If data of the device does not exist, a null value is returned.
       * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-      * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
-      * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
+      * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
+      * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
       *
      */
     CompletableFuture<GetDeviceInfoResponse> getDeviceInfo(GetDeviceInfoRequest request);
@@ -55,8 +63,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   You can query the information about data collection devices of a site based on the ID of the site. If the verification is passed, the information about the devices of the site is returned. If the verification fails, a null value is returned.
       * *   Virtual meters at the site are not returned.
       * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-      * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
-      * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
+      * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
+      * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
       *
      */
     CompletableFuture<GetDeviceListResponse> getDeviceList(GetDeviceListRequest request);
@@ -124,8 +132,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * *   If an activated site exists, the information about the site and the organization to which the site belongs is returned. If no activated site exists, null is returned.
       * - By current, endpoint only supports Hangzhou: `energyexpertexternal.cn-hangzhou.aliyuncs.com`.
-      * - To use this API, you need to be added to the whitelist. Please contact us through the official website <props="china">[here](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
-      * <props="intl">[here](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
+      * - To use this API, you need to be added to the whitelist. Please contact us through  <props="china">[official website](https://energy.aliyun.com/ifa/web/defaultLoginPage?adapter=aliyun#/consult?source=%E8%83%BD%E8%80%97%E5%AE%9D%E7%99%BB%E5%BD%95%E9%A1%B5%EF%BC%88WEB%EF%BC%89)</props> 
+      * <props="intl">[official website](https://energy.alibabacloud.com/common?adapter=aliyun&lang=en-US#/home/en)</props> to apply for whitelist activation.
       *
      */
     CompletableFuture<GetOrgAndFactoryResponse> getOrgAndFactory(GetOrgAndFactoryRequest request);
@@ -167,5 +175,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RecalculateCarbonEmissionResponse> recalculateCarbonEmission(RecalculateCarbonEmissionRequest request);
 
     CompletableFuture<SendDocumentAskQuestionResponse> sendDocumentAskQuestion(SendDocumentAskQuestionRequest request);
+
+    CompletableFuture<SetRunningPlanResponse> setRunningPlan(SetRunningPlanRequest request);
 
 }

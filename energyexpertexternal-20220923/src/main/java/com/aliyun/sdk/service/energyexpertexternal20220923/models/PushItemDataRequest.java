@@ -93,7 +93,7 @@ public class PushItemDataRequest extends Request {
         }
 
         /**
-         * Push data list.
+         * List of data to be pushed.
          */
         public Builder items(Items items) {
             this.putBodyParameter("items", items);
