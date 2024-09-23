@@ -85,10 +85,10 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code.
+         * The responses code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call is successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +96,7 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The statistics of the specified metric.
+         * The statistics.
          */
         public Builder data(String data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +120,11 @@ public class DescribeSiteMonitorStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call is successful.
-         * *   false: The call fails.
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;

@@ -208,7 +208,7 @@ public class DescribeSiteMonitorLogRequest extends Request {
         } 
 
         /**
-         * 浏览器类型。
+         * Browser.
          */
         public Builder browser(String browser) {
             this.putQueryParameter("Browser", browser);
@@ -217,7 +217,7 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * 该参数已废弃，无需关注。
+         * BrowserInfo.
          */
         public Builder browserInfo(String browserInfo) {
             this.putQueryParameter("BrowserInfo", browserInfo);
@@ -235,7 +235,7 @@ public class DescribeSiteMonitorLogRequest extends Request {
         }
 
         /**
-         * 设备类型（模拟屏幕大小类型）。
+         * Device.
          */
         public Builder device(String device) {
             this.putQueryParameter("Device", device);

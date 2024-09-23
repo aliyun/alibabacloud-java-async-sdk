@@ -100,7 +100,7 @@ public class DescribeContactListResponseBody extends TeaModel {
          * The HTTP status code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -116,7 +116,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -124,7 +124,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,11 +132,11 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -144,7 +144,7 @@ public class DescribeContactListResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The total number of entries returned.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -244,7 +244,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The phone number of the alert contact.
+             * The phone number of the alert contac.
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -326,7 +326,7 @@ public class DescribeContactListResponseBody extends TeaModel {
              * 
              * Valid value: OK. The value OK indicates that the TradeManager ID is valid and can receive alert notifications.
              * 
-             * >  This parameter can be returned only on the China site (aliyun.com).
+             * >  This parameter applies only to the Alibaba Cloud China site (aliyun.com).
              */
             public Builder aliIM(String aliIM) {
                 this.aliIM = aliIM;
@@ -348,8 +348,8 @@ public class DescribeContactListResponseBody extends TeaModel {
              * The status of the email address. Valid values:
              * <p>
              * 
-             * *   PENDING: The email address is not activated. Alert notifications can be sent to the email address only after the email address is activated.
-             * *   OK: The email address is activated and can receive alert notifications.
+             * *   PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.
+             * *   OK: The phone number is activated and can receive alert notifications.
              */
             public Builder mail(String mail) {
                 this.mail = mail;
@@ -363,7 +363,7 @@ public class DescribeContactListResponseBody extends TeaModel {
              * *   PENDING: The phone number is not activated. Alert notifications can be sent to the phone number by using text messages only after the phone number is activated.
              * *   OK: The phone number is activated and can receive alert notifications.
              * 
-             * >  This parameter can be returned only on the China site (aliyun.com).
+             * >  This parameter applies only to the Alibaba Cloud China site (aliyun.com).
              */
             public Builder SMS(String SMS) {
                 this.SMS = SMS;
@@ -548,7 +548,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The alert contact groups.
+             * None.
              */
             public Builder contactGroups(ContactGroups contactGroups) {
                 this.contactGroups = contactGroups;
@@ -567,7 +567,7 @@ public class DescribeContactListResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert contact.
+             * The description.
              */
             public Builder desc(String desc) {
                 this.desc = desc;

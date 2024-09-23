@@ -67,7 +67,7 @@ public class DescribeMetricRuleCountRequest extends Request {
         } 
 
         /**
-         * The name of the metric. For more information, see [Appendix 1: Metrics](~~163515~~).
+         * The metric name. For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -76,7 +76,7 @@ public class DescribeMetricRuleCountRequest extends Request {
         }
 
         /**
-         * The namespace of the service. For more information, see [Appendix 1: Metrics](~~163515~~).
+         * The namespace of the cloud service. For more information, see [Appendix 1: Metrics](~~163515~~).
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

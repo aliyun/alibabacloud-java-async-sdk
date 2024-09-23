@@ -97,7 +97,7 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         private String total; 
 
         /**
-         * The details of the alert rules.
+         * The alert rules.
          */
         public Builder alarms(Alarms alarms) {
             this.alarms = alarms;
@@ -451,12 +451,12 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the alert. Valid values:
+             * The alert level. Valid values:
              * <p>
              * 
-             * *   Critical
-             * *   Warn
-             * *   Info
+             * *   CRITICAL
+             * *   WARN
+             * *   INFO
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1254,12 +1254,12 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the alert. Valid values:
+             * The alert level. Valid values:
              * <p>
              * 
-             * *   Critical
-             * *   Warn
-             * *   Info
+             * *   CRITICAL
+             * *   WARN
+             * *   INFO
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1731,10 +1731,10 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             }
 
             /**
-             * The Prometheus alert rule.
+             * The Prometheus alerts.
              * <p>
              * 
-             * >  This parameter is required only when you create a Prometheus alert rule for Hybrid Cloud Monitoring.
+             * >  This parameter is required only if you create a Prometheus alert rule for Hybrid Cloud Monitoring.
              */
             public Builder prometheus(Prometheus prometheus) {
                 this.prometheus = prometheus;

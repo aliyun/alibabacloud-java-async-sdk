@@ -1012,7 +1012,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  You can call the DescribeMetricList operation to query the metrics of a cloud service. For more information, see [DescribeMetricList](~~51936~~).
+      * >  You can call the DescribeMetricList operation to query the metrics of cloud services. For more information, see [DescribeMetricList](~~51936~~).
       *
      */
     @Override
@@ -1828,7 +1828,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example to show how to query the statistics of the `Availability` metric for a site monitoring task whose ID is `ef4cdc8b-9dc7-43e7-810e-f950e56c****`. The result indicates that the availability rate of the site is `100%`.
+      * This topic provides an example on how to query the statistics of the `Availability` metric for a site monitoring task whose ID is `ef4cdc8b-9dc7-43e7-810e-f950e56c****`. The result indicates that the availability rate of the site is `100%`.
       *
      */
     @Override

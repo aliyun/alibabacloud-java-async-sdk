@@ -73,10 +73,10 @@ public class DescribeCustomMetricListResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * The HTTP status code.
+         * The responses code.
          * <p>
          * 
-         * >  The value 200 indicates that the call is successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -92,7 +92,7 @@ public class DescribeCustomMetricListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

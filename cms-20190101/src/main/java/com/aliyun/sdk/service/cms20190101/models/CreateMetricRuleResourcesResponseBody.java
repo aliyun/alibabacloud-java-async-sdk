@@ -73,10 +73,10 @@ public class CreateMetricRuleResourcesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code.
+         * The response code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -92,7 +92,7 @@ public class CreateMetricRuleResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -100,7 +100,7 @@ public class CreateMetricRuleResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.
+         * Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

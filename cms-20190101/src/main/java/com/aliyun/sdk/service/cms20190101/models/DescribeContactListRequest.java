@@ -143,7 +143,7 @@ public class DescribeContactListRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Default value: 1.
@@ -155,7 +155,7 @@ public class DescribeContactListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Default value: 100.

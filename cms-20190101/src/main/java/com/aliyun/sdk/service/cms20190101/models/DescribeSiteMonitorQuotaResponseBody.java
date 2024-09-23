@@ -85,10 +85,10 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code.
+         * The responses code.
          * <p>
          * 
-         * >  The status code 200 indicates that the call was successful.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -96,7 +96,7 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The quotas and version of site monitoring.
+         * The quota.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -112,7 +112,7 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +120,11 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: The call was successful.
-         * *   false: The call failed.
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -224,11 +224,11 @@ public class DescribeSiteMonitorQuotaResponseBody extends TeaModel {
             private String siteMonitorVersion; 
 
             /**
-             * Indicates whether the second-level monitoring is enabled. Valid values:
+             * Indicates whether second-level monitoring is enabled. Valid values:
              * <p>
              * 
-             * *   true
-             * *   false
+             * *   true: Second-level monitoring is enabled.
+             * *   false: Second-level monitoring is disabled.
              */
             public Builder secondMonitor(Boolean secondMonitor) {
                 this.secondMonitor = secondMonitor;

@@ -69,7 +69,7 @@ public class DeleteMetricRuleResourcesRequest extends Request {
         } 
 
         /**
-         * The resources to be disassociated from the alert rule.
+         * The resources that are associated with the alert rule.
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);

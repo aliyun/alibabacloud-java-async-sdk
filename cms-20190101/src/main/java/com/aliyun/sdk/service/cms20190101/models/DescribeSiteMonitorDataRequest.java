@@ -153,11 +153,11 @@ public class DescribeSiteMonitorDataRequest extends Request {
         } 
 
         /**
-         * The end of the time range for the query. Supported formats:
+         * The end of the time range to query. The following formats are supported:
          * <p>
          * 
-         * *   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-         * *   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.
+         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.
+         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -175,7 +175,7 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The name of the metric. Valid values:
+         * The metric name. Valid values:
          * <p>
          * 
          * *   Availability
@@ -188,7 +188,7 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The pagination cursor.
+         * The pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -197,7 +197,7 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The interval at which monitoring data is returned. The value is an integral multiple of 60. Unit: seconds.
+         * The statistical period. The value is an integral multiple of 60. Unit: seconds.
          * <p>
          * 
          * >  The default value equals the minimum interval at which detection requests are sent to the monitored address.
@@ -209,11 +209,11 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The beginning of the time range for the query. Supported formats:
+         * The start of the time range to query. The following formats are supported:
          * <p>
          * 
-         * *   UNIX timestamp: The value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
-         * *   Time format: The value is in the YYYY-MM-DDThh:mm:ssZ format.
+         * *   UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.
+         * *   UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -222,7 +222,7 @@ public class DescribeSiteMonitorDataRequest extends Request {
         }
 
         /**
-         * The ID of the site monitoring task.
+         * The job ID.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

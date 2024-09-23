@@ -247,10 +247,10 @@ public class CreateSiteMonitorRequest extends Request {
         }
 
         /**
-         * The type of the site monitoring task.
+         * The protocol that is used by the site monitoring task.
          * <p>
          * 
-         * Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.
+         * Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, FTP, and WEBSOCKET.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

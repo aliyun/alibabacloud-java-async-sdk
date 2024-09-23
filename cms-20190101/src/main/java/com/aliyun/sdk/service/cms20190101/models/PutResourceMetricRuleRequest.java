@@ -582,6 +582,7 @@ public class PutResourceMetricRuleRequest extends Request {
              * *   LessThanOrEqualToThreshold: less than or equal to the threshold
              * *   LessThanThreshold: less than the threshold
              * *   NotEqualToThreshold: not equal to the threshold
+             * *   EqualToThreshold: equal to the threshold
              * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
              * *   LessThanYesterday: less than the metric value at the same time yesterday
              * *   GreaterThanLastWeek: greater than the metric value at the same time last week
@@ -709,6 +710,7 @@ public class PutResourceMetricRuleRequest extends Request {
              * *   LessThanOrEqualToThreshold: less than or equal to the threshold
              * *   LessThanThreshold: less than the threshold
              * *   NotEqualToThreshold: not equal to the threshold
+             * *   EqualToThreshold: equal to the threshold
              * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
              * *   LessThanYesterday: less than the metric value at the same time yesterday
              * *   GreaterThanLastWeek: greater than the metric value at the same time last week
@@ -836,6 +838,7 @@ public class PutResourceMetricRuleRequest extends Request {
              * *   LessThanOrEqualToThreshold: less than or equal to the threshold
              * *   LessThanThreshold: less than the threshold
              * *   NotEqualToThreshold: not equal to the threshold
+             * *   EqualToThreshold: equal to the threshold
              * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
              * *   LessThanYesterday: less than the metric value at the same time yesterday
              * *   GreaterThanLastWeek: greater than the metric value at the same time last week
@@ -1059,6 +1062,7 @@ public class PutResourceMetricRuleRequest extends Request {
              * *   LessThanOrEqualToThreshold: less than or equal to the threshold
              * *   LessThanThreshold: less than the threshold
              * *   NotEqualToThreshold: not equal to the threshold
+             * *   EqualToThreshold: equal to the threshold
              * *   GreaterThanYesterday: greater than the metric value at the same time yesterday
              * *   LessThanYesterday: less than the metric value at the same time yesterday
              * *   GreaterThanLastWeek: greater than the metric value at the same time last week

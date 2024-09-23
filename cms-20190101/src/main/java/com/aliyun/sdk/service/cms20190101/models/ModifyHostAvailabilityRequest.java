@@ -589,7 +589,7 @@ public class ModifyHostAvailabilityRequest extends Request {
             }
 
             /**
-             * The URI that you want to monitor. This parameter must be specified when TaskType is set to HTTP.
+             * The URI that you want to monitor. This parameter is required if the TaskType parameter is set to HTTP or Telnet.
              */
             public Builder httpURI(String httpURI) {
                 this.httpURI = httpURI;
@@ -611,7 +611,7 @@ public class ModifyHostAvailabilityRequest extends Request {
              * The domain name or IP address that you want to monitor.
              * <p>
              * 
-             * > This parameter must be specified when TaskType is set to PING or TELNET. For more information about how to configure the TaskType parameter, see [CreateHostAvailability](~~115317~~).
+             * >  This parameter is required if the TaskType parameter is set to PING. For more information about how to set the TaskType parameter, see [CreateHostAvailability](~~115317~~).
              */
             public Builder telnetOrPingHost(String telnetOrPingHost) {
                 this.telnetOrPingHost = telnetOrPingHost;

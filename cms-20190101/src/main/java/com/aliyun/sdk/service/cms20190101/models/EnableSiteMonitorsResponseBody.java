@@ -85,10 +85,10 @@ public class EnableSiteMonitorsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The status code.
+         * The responses code.
          * <p>
          * 
-         * >  The status code 200 indicates a success.
+         * >  The status code 200 indicates that the request was successful.
          */
         public Builder code(String code) {
             this.code = code;
@@ -112,7 +112,7 @@ public class EnableSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +120,11 @@ public class EnableSiteMonitorsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   true: successful.
-         * *   false: failed.
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;

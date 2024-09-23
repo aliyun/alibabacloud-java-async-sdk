@@ -1556,6 +1556,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("retry_delay")
         private Integer retryDelay;
 
+        @com.aliyun.core.annotation.NameInMap("screen_shot")
+        private Boolean screenShot;
+
         @com.aliyun.core.annotation.NameInMap("strict_mode")
         private Boolean strictMode;
 
@@ -1618,6 +1621,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             this.responseContent = builder.responseContent;
             this.responseFormat = builder.responseFormat;
             this.retryDelay = builder.retryDelay;
+            this.screenShot = builder.screenShot;
             this.strictMode = builder.strictMode;
             this.timeOut = builder.timeOut;
             this.trafficHijackElementBlacklist = builder.trafficHijackElementBlacklist;
@@ -1916,6 +1920,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return screenShot
+         */
+        public Boolean getScreenShot() {
+            return this.screenShot;
+        }
+
+        /**
          * @return strictMode
          */
         public Boolean getStrictMode() {
@@ -2005,6 +2016,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             private String responseContent; 
             private String responseFormat; 
             private Integer retryDelay; 
+            private Boolean screenShot; 
             private Boolean strictMode; 
             private Long timeOut; 
             private TrafficHijackElementBlacklist trafficHijackElementBlacklist; 
@@ -2229,7 +2241,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ip_network.
+             * ip_network indicates the network type of the task. Valid values: v4, v6, and auto. Default value: v4.
              */
             public Builder ipNetwork(String ipNetwork) {
                 this.ipNetwork = ipNetwork;
@@ -2289,7 +2301,12 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ping_type.
+             * The PING protocol type. Valid values:
+             * <p>
+             * 
+             * *   icmp
+             * *   tcp
+             * *   udp
              */
             public Builder pingType(String pingType) {
                 this.pingType = pingType;
@@ -2313,7 +2330,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * quic_enabled.
+             * Indicates whether the Quick UDP Internet Connections (QUIC) protocol is used for browser detection. Valid values: true false Default value: false.
              */
             public Builder quicEnabled(Boolean quicEnabled) {
                 this.quicEnabled = quicEnabled;
@@ -2321,7 +2338,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * quic_target.
+             * The sites for which the QUIC protocol is forcibly used.
              */
             public Builder quicTarget(QuicTarget quicTarget) {
                 this.quicTarget = quicTarget;
@@ -2373,6 +2390,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder retryDelay(Integer retryDelay) {
                 this.retryDelay = retryDelay;
+                return this;
+            }
+
+            /**
+             * screen_shot.
+             */
+            public Builder screenShot(Boolean screenShot) {
+                this.screenShot = screenShot;
                 return this;
             }
 

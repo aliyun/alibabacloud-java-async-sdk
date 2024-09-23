@@ -97,7 +97,7 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
         } 
 
         /**
-         * The name of the metric. Valid values:
+         * The metric name. Valid values:
          * <p>
          * 
          * *   Availability
@@ -111,7 +111,7 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
         }
 
         /**
-         * The timestamp that specifies the beginning of the time range to query.
+         * The beginning of the time range to query.
          * <p>
          * 
          * Unit: milliseconds. The default value is 1 hour ahead of the current time.
@@ -138,7 +138,7 @@ public class DescribeSiteMonitorStatisticsRequest extends Request {
          * The statistical period.
          * <p>
          * 
-         * Unit: minutes. Default value: 1440 (1 day). Maximum value: 43200 (30 days).
+         * Unit: minutes. Default value: 1440 (one day). Maximum value: 43200 (30 days).
          */
         public Builder timeRange(String timeRange) {
             this.putQueryParameter("TimeRange", timeRange);

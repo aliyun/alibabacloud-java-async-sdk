@@ -189,7 +189,7 @@ public class CreateDynamicTagGroupRequest extends Request {
         }
 
         /**
-         * MatchExpress.
+         * The conditional expressions used to create an application group based on the tag.
          */
         public Builder matchExpress(java.util.List < MatchExpress> matchExpress) {
             this.putQueryParameter("MatchExpress", matchExpress);
@@ -306,7 +306,7 @@ public class CreateDynamicTagGroupRequest extends Request {
             }
 
             /**
-             * The tag values of the cloud resources. In this example, set the value of N to 1.
+             * The tag values of the cloud resources. Set the value of N to 1.
              * <p>
              * 
              * >  If you set the `MatchExpress.N.TagValueMatchFunction` parameter, you must also set the `MatchExpress.N.TagValue` parameter.
@@ -317,7 +317,7 @@ public class CreateDynamicTagGroupRequest extends Request {
             }
 
             /**
-             * The method that is used to match the tag values of the cloud resources. In this example, set the value of N to 1. Valid values:
+             * The method that is used to match the tag values of the cloud resources. Set the value of N to 1. Valid values:
              * <p>
              * 
              * *   contains: contains

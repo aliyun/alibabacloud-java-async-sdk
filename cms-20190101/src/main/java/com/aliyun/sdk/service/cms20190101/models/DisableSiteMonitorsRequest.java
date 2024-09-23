@@ -54,7 +54,7 @@ public class DisableSiteMonitorsRequest extends Request {
         } 
 
         /**
-         * The IDs of the site monitoring tasks. Separate multiple IDs with commas (,).
+         * The ID of the site monitoring task. Separate multiple IDs with commas (,).
          */
         public Builder taskIds(String taskIds) {
             this.putQueryParameter("TaskIds", taskIds);

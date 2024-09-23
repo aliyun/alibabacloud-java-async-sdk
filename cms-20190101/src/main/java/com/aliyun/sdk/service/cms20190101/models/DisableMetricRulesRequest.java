@@ -54,7 +54,7 @@ public class DisableMetricRulesRequest extends Request {
         } 
 
         /**
-         * RuleId.
+         * The ID of the alert rule. Valid values of N: 1 to 20.
          */
         public Builder ruleId(java.util.List < String > ruleId) {
             this.putQueryParameter("RuleId", ruleId);
