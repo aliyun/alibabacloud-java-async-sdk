@@ -230,7 +230,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Confidence.
+             * The confidence level of the bang recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -238,7 +238,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * Indicates whether the recognition result of bangs is available.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -291,7 +291,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Confidence.
+             * The confidence level of the gender recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -299,7 +299,12 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The gender recognition result. Valid values:
+             * <p>
+             * 
+             * - Male
+             * 
+             * - FeMale
              */
             public Builder value(String value) {
                 this.value = value;
@@ -352,7 +357,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Confidence.
+             * The confidence level of the hairstyle recognition result. Valid values: 0 to 100. A higher value indicates a more credible result.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -360,7 +365,14 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The hairstyle recognition result. Valid values:
+             * <p>
+             * 
+             * - Bald: bald head.
+             * 
+             * - Long: Long hair.
+             * 
+             * - Short: Short hair.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -413,7 +425,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Confidence.
+             * The confidence level of the result of wearing the hat. Valid values: 0 to 100. A higher value indicates a more credible result.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -421,7 +433,12 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The recognition result of whether to wear the hat. Valid values:
+             * <p>
+             * 
+             * - Wear: Wear a hat.
+             * 
+             * - None: No hat.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -498,7 +515,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private Integer y; 
 
             /**
-             * H.
+             * The height of the face area. Unit: pixels.
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -506,7 +523,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * W.
+             * The width of the face area. Unit: pixels.
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -514,7 +531,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * The distance from the upper-left corner of the face area to the y-axis with the upper-left corner of the image as the coordinate origin. Unit: pixels.
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -522,7 +539,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * The distance from the upper-left corner of the face area to the x-axis with the upper-left corner of the image as the coordinate origin. Unit: pixels.
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -575,7 +592,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Confidence.
+             * The confidence level of the result of wearing the mask. Valid values: 0 to 100. A higher value indicates a more credible result.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -583,7 +600,12 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The recognition result of whether to wear a mask. Valid values:
+             * <p>
+             * 
+             * - Wear a mask.
+             * 
+             *  - None: No mask.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -636,7 +658,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Confidence.
+             * The confidence level of the result of the beard. Valid values: 0 to 100. A higher value indicates a more credible result.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -644,7 +666,12 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The identification result of whether there is a beard.Valid values:
+             * <p>
+             * 
+             * - Has:have a beard.
+             * 
+             * - None:No beard.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -733,7 +760,9 @@ public class ImageModerationResponseBody extends TeaModel {
             private Float yaw; 
 
             /**
-             * Blur.
+             * The blur of the face image. Valid values: 0 to 100. The higher the score, the more fuzzy it is.
+             * <p>
+             * Recommended values: 0 to 25.
              */
             public Builder blur(Float blur) {
                 this.blur = blur;
@@ -741,7 +770,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Integrity.
+             * The integrity of the human face. Recommended values:80 to 100.
              */
             public Builder integrity(Float integrity) {
                 this.integrity = integrity;
@@ -749,7 +778,9 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Pitch.
+             * The head-up or head-down angle of the face.
+             * <p>
+             * Recommended values:-30 to 30.
              */
             public Builder pitch(Float pitch) {
                 this.pitch = pitch;
@@ -757,7 +788,9 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Roll.
+             * The plane rotation angle of the face.
+             * <p>
+             * Recommended values:-30 to 30.
              */
             public Builder roll(Float roll) {
                 this.roll = roll;
@@ -765,7 +798,9 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Yaw.
+             * The left and right shaking angle of the human face.
+             * <p>
+             * Recommended values:-30 to 30.
              */
             public Builder yaw(Float yaw) {
                 this.yaw = yaw;
@@ -926,7 +961,7 @@ public class ImageModerationResponseBody extends TeaModel {
             private Float smile; 
 
             /**
-             * Age.
+             * The age recognition result.
              */
             public Builder age(Integer age) {
                 this.age = age;
@@ -934,7 +969,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Bang.
+             * Indicates whether the recognition result of bangs is available.
              */
             public Builder bang(Bang bang) {
                 this.bang = bang;
@@ -942,7 +977,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Gender.
+             * The gender recognition result.
              */
             public Builder gender(Gender gender) {
                 this.gender = gender;
@@ -950,7 +985,14 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Glasses.
+             * The recognition result of whether to wear glasses.
+             * <p>
+             * 
+             * - None: No glasses.
+             * 
+             * - Wear: Wear glasses.
+             * 
+             * - Sunglass: Wear sunglasses.
              */
             public Builder glasses(String glasses) {
                 this.glasses = glasses;
@@ -958,7 +1000,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Hairstyle.
+             * The hairstyle recognition result.
              */
             public Builder hairstyle(Hairstyle hairstyle) {
                 this.hairstyle = hairstyle;
@@ -966,7 +1008,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Hat.
+             * The recognition result of whether to wear a hat.
              */
             public Builder hat(Hat hat) {
                 this.hat = hat;
@@ -974,7 +1016,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The location of the face.
              */
             public Builder location(Location location) {
                 this.location = location;
@@ -982,7 +1024,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Mask.
+             * The recognition result of whether to wear a mask.
              */
             public Builder mask(Mask mask) {
                 this.mask = mask;
@@ -990,7 +1032,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Mustache.
+             * The identification result of whether there is a beard.
              */
             public Builder mustache(Mustache mustache) {
                 this.mustache = mustache;
@@ -998,7 +1040,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Quality.
+             * The quality information of the face image.
              */
             public Builder quality(Quality quality) {
                 this.quality = quality;
@@ -1006,7 +1048,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * Smile.
+             * The smiling degree of the face.
              */
             public Builder smile(Float smile) {
                 this.smile = smile;
@@ -2099,7 +2141,7 @@ public class ImageModerationResponseBody extends TeaModel {
             }
 
             /**
-             * FaceData.
+             * The returned face attribute information
              */
             public Builder faceData(java.util.List < FaceData> faceData) {
                 this.faceData = faceData;

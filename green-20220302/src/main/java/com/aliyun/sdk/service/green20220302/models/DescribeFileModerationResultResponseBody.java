@@ -73,7 +73,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned HTTP status code.
+         * The returned HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -97,7 +97,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +161,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String label; 
 
             /**
-             * Confidence score, 0 to 100, reserved to 2 decimal places.
+             * The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
@@ -169,7 +169,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -367,7 +367,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String service; 
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -375,7 +375,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label information.
+             * The label information.
              */
             public Builder labelResult(java.util.List < LabelResult> labelResult) {
                 this.labelResult = labelResult;
@@ -383,7 +383,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Location information.
+             * The location information
              */
             public Builder location(Location location) {
                 this.location = location;
@@ -391,7 +391,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * Risk Level
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -524,7 +524,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String textSegment; 
 
             /**
-             * Description
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -540,7 +540,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * Risk Level
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -572,7 +572,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Text content.
+             * The text content.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -580,7 +580,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Text segmentation information.
+             * The text segmentation information.
              */
             public Builder textSegment(String textSegment) {
                 this.textSegment = textSegment;
@@ -669,7 +669,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String textUrl; 
 
             /**
-             * Image detection results.
+             * The image moderation results.
              */
             public Builder imageResult(java.util.List < ImageResult> imageResult) {
                 this.imageResult = imageResult;
@@ -677,7 +677,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The image url.
+             * The image URL.
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -693,7 +693,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Text detection results.
+             * The text moderation results.
              */
             public Builder textResult(java.util.List < TextResult> textResult) {
                 this.textResult = textResult;
@@ -701,7 +701,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * the text url.
+             * The text URL.
              */
             public Builder textUrl(String textUrl) {
                 this.textUrl = textUrl;
@@ -766,7 +766,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private Integer labelSum; 
 
             /**
-             * Description
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -782,7 +782,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * LabelSum.
+             * The number of times that the label is matched.
              */
             public Builder labelSum(Integer labelSum) {
                 this.labelSum = labelSum;
@@ -835,7 +835,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private String riskLevel; 
 
             /**
-             * ImageLabels.
+             * Image Label
              */
             public Builder imageLabels(java.util.List < ImageLabels> imageLabels) {
                 this.imageLabels = imageLabels;
@@ -843,7 +843,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * Risk Level
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -904,7 +904,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * LabelSum.
+             * The number of times that the label is matched.
              */
             public Builder labelSum(Integer labelSum) {
                 this.labelSum = labelSum;
@@ -957,7 +957,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private java.util.List < TextLabels> textLabels; 
 
             /**
-             * RiskLevel.
+             * Risk Level
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -965,7 +965,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TextLabels.
+             * Text Label
              */
             public Builder textLabels(java.util.List < TextLabels> textLabels) {
                 this.textLabels = textLabels;
@@ -1030,7 +1030,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             private TextSummary textSummary; 
 
             /**
-             * ImageSummary.
+             * Image Results Summary
              */
             public Builder imageSummary(ImageSummary imageSummary) {
                 this.imageSummary = imageSummary;
@@ -1038,7 +1038,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * PageSum.
+             * Number of pages
              */
             public Builder pageSum(Integer pageSum) {
                 this.pageSum = pageSum;
@@ -1046,7 +1046,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TextSummary.
+             * Text Results Summary
              */
             public Builder textSummary(TextSummary textSummary) {
                 this.textSummary = textSummary;
@@ -1155,7 +1155,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Optional, document type.
+             * Optional. The document type.
              */
             public Builder docType(String docType) {
                 this.docType = docType;
@@ -1163,7 +1163,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The pagination information.
+             * An array that consists of the moderation results.
              */
             public Builder pageResult(java.util.List < PageResult> pageResult) {
                 this.pageResult = pageResult;
@@ -1171,7 +1171,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * PageSummary.
+             * Summary of results
              */
             public Builder pageSummary(PageSummary pageSummary) {
                 this.pageSummary = pageSummary;
@@ -1179,7 +1179,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * Risk Level
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -1187,7 +1187,7 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the moderation object.
+             * The URL of the moderated object.
              */
             public Builder url(String url) {
                 this.url = url;

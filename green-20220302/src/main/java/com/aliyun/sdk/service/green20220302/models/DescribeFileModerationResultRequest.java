@@ -77,6 +77,9 @@ public class DescribeFileModerationResultRequest extends Request {
 
         /**
          * The parameters required by the moderation service. The value is a JSON string.
+         * <p>
+         * 
+         * *   taskId: required. The URL of the object that you want to moderate. Make sure that the URL can be accessed over the Internet.
          */
         public Builder serviceParameters(String serviceParameters) {
             this.putBodyParameter("ServiceParameters", serviceParameters);

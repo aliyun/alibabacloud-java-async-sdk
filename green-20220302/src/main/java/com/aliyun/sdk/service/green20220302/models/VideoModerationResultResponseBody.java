@@ -184,6 +184,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
         @com.aliyun.core.annotation.NameInMap("RiskTips")
         private String riskTips;
 
@@ -210,6 +213,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             this.endTimestamp = builder.endTimestamp;
             this.extend = builder.extend;
             this.labels = builder.labels;
+            this.riskLevel = builder.riskLevel;
             this.riskTips = builder.riskTips;
             this.riskWords = builder.riskWords;
             this.score = builder.score;
@@ -253,6 +257,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
          */
         public String getLabels() {
             return this.labels;
+        }
+
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
         }
 
         /**
@@ -309,6 +320,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Long endTimestamp; 
             private String extend; 
             private String labels; 
+            private String riskLevel; 
             private String riskTips; 
             private String riskWords; 
             private Float score; 
@@ -346,6 +358,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder labels(String labels) {
                 this.labels = labels;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 
@@ -416,11 +436,15 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AudioSummarys")
         private java.util.List < AudioSummarys> audioSummarys;
 
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
         @com.aliyun.core.annotation.NameInMap("SliceDetails")
         private java.util.List < SliceDetails> sliceDetails;
 
         private AudioResult(Builder builder) {
             this.audioSummarys = builder.audioSummarys;
+            this.riskLevel = builder.riskLevel;
             this.sliceDetails = builder.sliceDetails;
         }
 
@@ -440,6 +464,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
          * @return sliceDetails
          */
         public java.util.List < SliceDetails> getSliceDetails() {
@@ -448,6 +479,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < AudioSummarys> audioSummarys; 
+            private String riskLevel; 
             private java.util.List < SliceDetails> sliceDetails; 
 
             /**
@@ -455,6 +487,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder audioSummarys(java.util.List < AudioSummarys> audioSummarys) {
                 this.audioSummarys = audioSummarys;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 
@@ -474,6 +514,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
     public static class FrameSummarys extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
@@ -481,6 +524,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private Integer labelSum;
 
         private FrameSummarys(Builder builder) {
+            this.description = builder.description;
             this.label = builder.label;
             this.labelSum = builder.labelSum;
         }
@@ -491,6 +535,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static FrameSummarys create() {
             return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -508,8 +559,17 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String description; 
             private String label; 
             private Integer labelSum; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
 
             /**
              * The label against which a captured frame is matched.
@@ -640,11 +700,15 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Confidence")
         private Float confidence;
 
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private Result(Builder builder) {
             this.confidence = builder.confidence;
+            this.description = builder.description;
             this.label = builder.label;
         }
 
@@ -664,6 +728,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return label
          */
         public String getLabel() {
@@ -672,6 +743,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private Float confidence; 
+            private String description; 
             private String label; 
 
             /**
@@ -679,6 +751,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder confidence(Float confidence) {
                 this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 
@@ -825,6 +905,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Results")
         private java.util.List < Results> results;
 
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
         @com.aliyun.core.annotation.NameInMap("TempUrl")
         private String tempUrl;
 
@@ -834,6 +917,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private Frames(Builder builder) {
             this.offset = builder.offset;
             this.results = builder.results;
+            this.riskLevel = builder.riskLevel;
             this.tempUrl = builder.tempUrl;
             this.timestamp = builder.timestamp;
         }
@@ -861,6 +945,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
          * @return tempUrl
          */
         public String getTempUrl() {
@@ -877,6 +968,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private Float offset; 
             private java.util.List < Results> results; 
+            private String riskLevel; 
             private String tempUrl; 
             private Long timestamp; 
 
@@ -893,6 +985,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder results(java.util.List < Results> results) {
                 this.results = results;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 
@@ -929,10 +1029,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Frames")
         private java.util.List < Frames> frames;
 
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
         private FrameResult(Builder builder) {
             this.frameNum = builder.frameNum;
             this.frameSummarys = builder.frameSummarys;
             this.frames = builder.frames;
+            this.riskLevel = builder.riskLevel;
         }
 
         public static Builder builder() {
@@ -964,10 +1068,18 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return this.frames;
         }
 
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
         public static final class Builder {
             private Integer frameNum; 
             private java.util.List < FrameSummarys> frameSummarys; 
             private java.util.List < Frames> frames; 
+            private String riskLevel; 
 
             /**
              * The number of captured frames that are returned for the video file.
@@ -993,6 +1105,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
+                return this;
+            }
+
             public FrameResult build() {
                 return new FrameResult(this);
             } 
@@ -1013,6 +1133,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LiveId")
         private String liveId;
 
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
@@ -1021,6 +1144,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             this.dataId = builder.dataId;
             this.frameResult = builder.frameResult;
             this.liveId = builder.liveId;
+            this.riskLevel = builder.riskLevel;
             this.taskId = builder.taskId;
         }
 
@@ -1061,6 +1185,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
          * @return taskId
          */
         public String getTaskId() {
@@ -1072,6 +1203,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String dataId; 
             private FrameResult frameResult; 
             private String liveId; 
+            private String riskLevel; 
             private String taskId; 
 
             /**
@@ -1103,6 +1235,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder liveId(String liveId) {
                 this.liveId = liveId;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 
