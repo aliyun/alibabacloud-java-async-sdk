@@ -44,6 +44,10 @@ public class ListIpamResourceCidrsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
     private ListIpamResourceCidrsRequest(Builder builder) {
         super(builder);
         this.ipamPoolId = builder.ipamPoolId;
@@ -54,6 +58,7 @@ public class ListIpamResourceCidrsRequest extends Request {
         this.resourceId = builder.resourceId;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.resourceType = builder.resourceType;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -125,6 +130,13 @@ public class ListIpamResourceCidrsRequest extends Request {
         return this.resourceType;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<ListIpamResourceCidrsRequest, Builder> {
         private String ipamPoolId; 
         private String ipamScopeId; 
@@ -134,6 +146,7 @@ public class ListIpamResourceCidrsRequest extends Request {
         private String resourceId; 
         private Long resourceOwnerId; 
         private String resourceType; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -149,6 +162,7 @@ public class ListIpamResourceCidrsRequest extends Request {
             this.resourceId = request.resourceId;
             this.resourceOwnerId = request.resourceOwnerId;
             this.resourceType = request.resourceType;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -220,6 +234,15 @@ public class ListIpamResourceCidrsRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

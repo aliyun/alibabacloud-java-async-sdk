@@ -24,6 +24,10 @@ public class CreateIpamPoolRequest extends Request {
     private Integer allocationMinCidrMask;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoImport")
+    private Boolean autoImport;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -77,11 +81,16 @@ public class CreateIpamPoolRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SourceIpamPoolId")
     private String sourceIpamPoolId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private CreateIpamPoolRequest(Builder builder) {
         super(builder);
         this.allocationDefaultCidrMask = builder.allocationDefaultCidrMask;
         this.allocationMaxCidrMask = builder.allocationMaxCidrMask;
         this.allocationMinCidrMask = builder.allocationMinCidrMask;
+        this.autoImport = builder.autoImport;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ipVersion = builder.ipVersion;
@@ -95,6 +104,7 @@ public class CreateIpamPoolRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.sourceIpamPoolId = builder.sourceIpamPoolId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -129,6 +139,13 @@ public class CreateIpamPoolRequest extends Request {
      */
     public Integer getAllocationMinCidrMask() {
         return this.allocationMinCidrMask;
+    }
+
+    /**
+     * @return autoImport
+     */
+    public Boolean getAutoImport() {
+        return this.autoImport;
     }
 
     /**
@@ -222,10 +239,18 @@ public class CreateIpamPoolRequest extends Request {
         return this.sourceIpamPoolId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<CreateIpamPoolRequest, Builder> {
         private Integer allocationDefaultCidrMask; 
         private Integer allocationMaxCidrMask; 
         private Integer allocationMinCidrMask; 
+        private Boolean autoImport; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ipVersion; 
@@ -239,6 +264,7 @@ public class CreateIpamPoolRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String sourceIpamPoolId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -249,6 +275,7 @@ public class CreateIpamPoolRequest extends Request {
             this.allocationDefaultCidrMask = request.allocationDefaultCidrMask;
             this.allocationMaxCidrMask = request.allocationMaxCidrMask;
             this.allocationMinCidrMask = request.allocationMinCidrMask;
+            this.autoImport = request.autoImport;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ipVersion = request.ipVersion;
@@ -262,6 +289,7 @@ public class CreateIpamPoolRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.sourceIpamPoolId = request.sourceIpamPoolId;
+            this.tag = request.tag;
         } 
 
         /**
@@ -288,6 +316,15 @@ public class CreateIpamPoolRequest extends Request {
         public Builder allocationMinCidrMask(Integer allocationMinCidrMask) {
             this.putQueryParameter("AllocationMinCidrMask", allocationMinCidrMask);
             this.allocationMinCidrMask = allocationMinCidrMask;
+            return this;
+        }
+
+        /**
+         * AutoImport.
+         */
+        public Builder autoImport(Boolean autoImport) {
+            this.putQueryParameter("AutoImport", autoImport);
+            this.autoImport = autoImport;
             return this;
         }
 
@@ -408,6 +445,15 @@ public class CreateIpamPoolRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public CreateIpamPoolRequest build() {
             return new CreateIpamPoolRequest(this);
@@ -415,4 +461,65 @@ public class CreateIpamPoolRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

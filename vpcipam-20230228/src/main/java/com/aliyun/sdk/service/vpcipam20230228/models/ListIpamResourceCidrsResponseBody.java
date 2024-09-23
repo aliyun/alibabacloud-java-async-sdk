@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIpamResourceCidrsResponseBody</p>
  */
 public class ListIpamResourceCidrsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Count")
+    private Long count;
+
     @com.aliyun.core.annotation.NameInMap("IpamResourceCidrs")
     private java.util.List < IpamResourceCidrs> ipamResourceCidrs;
 
@@ -27,6 +30,7 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
     private Long totalCount;
 
     private ListIpamResourceCidrsResponseBody(Builder builder) {
+        this.count = builder.count;
         this.ipamResourceCidrs = builder.ipamResourceCidrs;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -40,6 +44,13 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
 
     public static ListIpamResourceCidrsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return count
+     */
+    public Long getCount() {
+        return this.count;
     }
 
     /**
@@ -78,11 +89,20 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long count; 
         private java.util.List < IpamResourceCidrs> ipamResourceCidrs; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        /**
+         * Count.
+         */
+        public Builder count(Long count) {
+            this.count = count;
+            return this;
+        }
 
         /**
          * IpamResourceCidrs.
@@ -179,6 +199,9 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         private IpamResourceCidrs(Builder builder) {
             this.aliUid = builder.aliUid;
             this.cidr = builder.cidr;
@@ -196,6 +219,7 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             this.resourceType = builder.resourceType;
             this.sourceCidr = builder.sourceCidr;
             this.status = builder.status;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -318,6 +342,13 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private Long aliUid; 
             private String cidr; 
@@ -335,6 +366,7 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             private String resourceType; 
             private String sourceCidr; 
             private String status; 
+            private String vpcId; 
 
             /**
              * AliUid.
@@ -461,6 +493,14 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

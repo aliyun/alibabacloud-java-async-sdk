@@ -24,6 +24,10 @@ public class UpdateIpamPoolRequest extends Request {
     private Integer allocationMinCidrMask;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoImport")
+    private Boolean autoImport;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClearAllocationDefaultCidrMask")
     private Boolean clearAllocationDefaultCidrMask;
 
@@ -74,6 +78,7 @@ public class UpdateIpamPoolRequest extends Request {
         this.allocationDefaultCidrMask = builder.allocationDefaultCidrMask;
         this.allocationMaxCidrMask = builder.allocationMaxCidrMask;
         this.allocationMinCidrMask = builder.allocationMinCidrMask;
+        this.autoImport = builder.autoImport;
         this.clearAllocationDefaultCidrMask = builder.clearAllocationDefaultCidrMask;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
@@ -119,6 +124,13 @@ public class UpdateIpamPoolRequest extends Request {
      */
     public Integer getAllocationMinCidrMask() {
         return this.allocationMinCidrMask;
+    }
+
+    /**
+     * @return autoImport
+     */
+    public Boolean getAutoImport() {
+        return this.autoImport;
     }
 
     /**
@@ -202,6 +214,7 @@ public class UpdateIpamPoolRequest extends Request {
         private Integer allocationDefaultCidrMask; 
         private Integer allocationMaxCidrMask; 
         private Integer allocationMinCidrMask; 
+        private Boolean autoImport; 
         private Boolean clearAllocationDefaultCidrMask; 
         private String clientToken; 
         private Boolean dryRun; 
@@ -223,6 +236,7 @@ public class UpdateIpamPoolRequest extends Request {
             this.allocationDefaultCidrMask = request.allocationDefaultCidrMask;
             this.allocationMaxCidrMask = request.allocationMaxCidrMask;
             this.allocationMinCidrMask = request.allocationMinCidrMask;
+            this.autoImport = request.autoImport;
             this.clearAllocationDefaultCidrMask = request.clearAllocationDefaultCidrMask;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
@@ -260,6 +274,15 @@ public class UpdateIpamPoolRequest extends Request {
         public Builder allocationMinCidrMask(Integer allocationMinCidrMask) {
             this.putQueryParameter("AllocationMinCidrMask", allocationMinCidrMask);
             this.allocationMinCidrMask = allocationMinCidrMask;
+            return this;
+        }
+
+        /**
+         * AutoImport.
+         */
+        public Builder autoImport(Boolean autoImport) {
+            this.putQueryParameter("AutoImport", autoImport);
+            this.autoImport = autoImport;
             return this;
         }
 

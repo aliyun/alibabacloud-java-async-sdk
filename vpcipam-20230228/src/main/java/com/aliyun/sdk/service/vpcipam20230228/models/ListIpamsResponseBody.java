@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIpamsResponseBody</p>
  */
 public class ListIpamsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Count")
+    private Long count;
+
     @com.aliyun.core.annotation.NameInMap("Ipams")
     private java.util.List < Ipams> ipams;
 
@@ -27,6 +30,7 @@ public class ListIpamsResponseBody extends TeaModel {
     private Long totalCount;
 
     private ListIpamsResponseBody(Builder builder) {
+        this.count = builder.count;
         this.ipams = builder.ipams;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -40,6 +44,13 @@ public class ListIpamsResponseBody extends TeaModel {
 
     public static ListIpamsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return count
+     */
+    public Long getCount() {
+        return this.count;
     }
 
     /**
@@ -78,11 +89,20 @@ public class ListIpamsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long count; 
         private java.util.List < Ipams> ipams; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        /**
+         * Count.
+         */
+        public Builder count(Long count) {
+            this.count = count;
+            return this;
+        }
 
         /**
          * Ipams.

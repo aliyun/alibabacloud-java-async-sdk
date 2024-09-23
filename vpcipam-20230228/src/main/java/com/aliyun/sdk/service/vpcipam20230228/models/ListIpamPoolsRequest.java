@@ -24,6 +24,10 @@ public class ListIpamPoolsRequest extends Request {
     private String ipamScopeId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsShared")
+    private Boolean isShared;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
@@ -74,6 +78,7 @@ public class ListIpamPoolsRequest extends Request {
         this.ipamPoolIds = builder.ipamPoolIds;
         this.ipamPoolName = builder.ipamPoolName;
         this.ipamScopeId = builder.ipamScopeId;
+        this.isShared = builder.isShared;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
@@ -119,6 +124,13 @@ public class ListIpamPoolsRequest extends Request {
      */
     public String getIpamScopeId() {
         return this.ipamScopeId;
+    }
+
+    /**
+     * @return isShared
+     */
+    public Boolean getIsShared() {
+        return this.isShared;
     }
 
     /**
@@ -202,6 +214,7 @@ public class ListIpamPoolsRequest extends Request {
         private java.util.List < String > ipamPoolIds; 
         private String ipamPoolName; 
         private String ipamScopeId; 
+        private Boolean isShared; 
         private Integer maxResults; 
         private String nextToken; 
         private String ownerAccount; 
@@ -223,6 +236,7 @@ public class ListIpamPoolsRequest extends Request {
             this.ipamPoolIds = request.ipamPoolIds;
             this.ipamPoolName = request.ipamPoolName;
             this.ipamScopeId = request.ipamScopeId;
+            this.isShared = request.isShared;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
@@ -260,6 +274,15 @@ public class ListIpamPoolsRequest extends Request {
         public Builder ipamScopeId(String ipamScopeId) {
             this.putQueryParameter("IpamScopeId", ipamScopeId);
             this.ipamScopeId = ipamScopeId;
+            return this;
+        }
+
+        /**
+         * IsShared.
+         */
+        public Builder isShared(Boolean isShared) {
+            this.putQueryParameter("IsShared", isShared);
+            this.isShared = isShared;
             return this;
         }
 

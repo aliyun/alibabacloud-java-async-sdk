@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIpamPoolsResponseBody</p>
  */
 public class ListIpamPoolsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Count")
+    private Long count;
+
     @com.aliyun.core.annotation.NameInMap("IpamPools")
     private java.util.List < IpamPools> ipamPools;
 
@@ -27,6 +30,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
     private Long totalCount;
 
     private ListIpamPoolsResponseBody(Builder builder) {
+        this.count = builder.count;
         this.ipamPools = builder.ipamPools;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -40,6 +44,13 @@ public class ListIpamPoolsResponseBody extends TeaModel {
 
     public static ListIpamPoolsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return count
+     */
+    public Long getCount() {
+        return this.count;
     }
 
     /**
@@ -78,11 +89,20 @@ public class ListIpamPoolsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long count; 
         private java.util.List < IpamPools> ipamPools; 
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        /**
+         * Count.
+         */
+        public Builder count(Long count) {
+            this.count = count;
+            return this;
+        }
 
         /**
          * IpamPools.
@@ -201,6 +221,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllocationMinCidrMask")
         private Integer allocationMinCidrMask;
 
+        @com.aliyun.core.annotation.NameInMap("AutoImport")
+        private Boolean autoImport;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -231,6 +254,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpamScopeType")
         private String ipamScopeType;
 
+        @com.aliyun.core.annotation.NameInMap("IsShared")
+        private Boolean isShared;
+
         @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
 
@@ -256,6 +282,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             this.allocationDefaultCidrMask = builder.allocationDefaultCidrMask;
             this.allocationMaxCidrMask = builder.allocationMaxCidrMask;
             this.allocationMinCidrMask = builder.allocationMinCidrMask;
+            this.autoImport = builder.autoImport;
             this.createTime = builder.createTime;
             this.hasSubPool = builder.hasSubPool;
             this.ipVersion = builder.ipVersion;
@@ -266,6 +293,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             this.ipamRegionId = builder.ipamRegionId;
             this.ipamScopeId = builder.ipamScopeId;
             this.ipamScopeType = builder.ipamScopeType;
+            this.isShared = builder.isShared;
             this.ownerId = builder.ownerId;
             this.poolDepth = builder.poolDepth;
             this.poolRegionId = builder.poolRegionId;
@@ -302,6 +330,13 @@ public class ListIpamPoolsResponseBody extends TeaModel {
          */
         public Integer getAllocationMinCidrMask() {
             return this.allocationMinCidrMask;
+        }
+
+        /**
+         * @return autoImport
+         */
+        public Boolean getAutoImport() {
+            return this.autoImport;
         }
 
         /**
@@ -375,6 +410,13 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isShared
+         */
+        public Boolean getIsShared() {
+            return this.isShared;
+        }
+
+        /**
          * @return ownerId
          */
         public Long getOwnerId() {
@@ -427,6 +469,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             private Integer allocationDefaultCidrMask; 
             private Integer allocationMaxCidrMask; 
             private Integer allocationMinCidrMask; 
+            private Boolean autoImport; 
             private String createTime; 
             private Boolean hasSubPool; 
             private String ipVersion; 
@@ -437,6 +480,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             private String ipamRegionId; 
             private String ipamScopeId; 
             private String ipamScopeType; 
+            private Boolean isShared; 
             private Long ownerId; 
             private Integer poolDepth; 
             private String poolRegionId; 
@@ -466,6 +510,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
              */
             public Builder allocationMinCidrMask(Integer allocationMinCidrMask) {
                 this.allocationMinCidrMask = allocationMinCidrMask;
+                return this;
+            }
+
+            /**
+             * AutoImport.
+             */
+            public Builder autoImport(Boolean autoImport) {
+                this.autoImport = autoImport;
                 return this;
             }
 
@@ -546,6 +598,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
              */
             public Builder ipamScopeType(String ipamScopeType) {
                 this.ipamScopeType = ipamScopeType;
+                return this;
+            }
+
+            /**
+             * IsShared.
+             */
+            public Builder isShared(Boolean isShared) {
+                this.isShared = isShared;
                 return this;
             }
 
