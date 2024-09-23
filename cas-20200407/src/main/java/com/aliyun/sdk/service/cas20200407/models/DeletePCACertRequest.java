@@ -54,7 +54,7 @@ public class DeletePCACertRequest extends Request {
         } 
 
         /**
-         * Identifier.
+         * The unique identifier of the certificate. You can call the [ListCert](~~452331~~) operation to query the unique identifiers of certificates.
          */
         public Builder identifier(String identifier) {
             this.putQueryParameter("Identifier", identifier);

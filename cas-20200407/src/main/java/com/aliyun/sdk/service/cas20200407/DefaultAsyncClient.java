@@ -283,6 +283,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call the DeletePCACert operation to delete a private certificate from a certificate application repository.
+      * ### Limits
+      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      *
+     */
     @Override
     public CompletableFuture<DeletePCACertResponse> deletePCACert(DeletePCACertRequest request) {
         try {

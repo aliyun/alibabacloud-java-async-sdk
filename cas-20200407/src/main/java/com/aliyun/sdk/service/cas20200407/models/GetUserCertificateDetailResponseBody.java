@@ -20,6 +20,9 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Cert")
     private String cert;
 
+    @com.aliyun.core.annotation.NameInMap("CertIdentifier")
+    private String certIdentifier;
+
     @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
@@ -96,6 +99,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         this.algorithm = builder.algorithm;
         this.buyInAliyun = builder.buyInAliyun;
         this.cert = builder.cert;
+        this.certIdentifier = builder.certIdentifier;
         this.city = builder.city;
         this.common = builder.common;
         this.country = builder.country;
@@ -149,6 +153,13 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
      */
     public String getCert() {
         return this.cert;
+    }
+
+    /**
+     * @return certIdentifier
+     */
+    public String getCertIdentifier() {
+        return this.certIdentifier;
     }
 
     /**
@@ -323,6 +334,7 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         private String algorithm; 
         private Boolean buyInAliyun; 
         private String cert; 
+        private String certIdentifier; 
         private String city; 
         private String common; 
         private String country; 
@@ -373,6 +385,14 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
          */
         public Builder cert(String cert) {
             this.cert = cert;
+            return this;
+        }
+
+        /**
+         * The unique identifier of the certificate. The value of this parameter must be in the {Certificate ID}-cn-hangzhou format.
+         */
+        public Builder certIdentifier(String certIdentifier) {
+            this.certIdentifier = certIdentifier;
             return this;
         }
 
