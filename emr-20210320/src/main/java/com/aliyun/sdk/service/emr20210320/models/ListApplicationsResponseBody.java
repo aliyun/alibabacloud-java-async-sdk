@@ -85,7 +85,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about applications.
+         * The applications.
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -202,7 +202,13 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the application operation.
+             * The status of the applications. Valid values:
+             * <p>
+             * 
+             * *   STOPPED: At least one application is in the Stopped state.
+             * *   RUNNING: All applications are in the Running state.
+             * 
+             * This parameter is returned only for DataLake, OLAP, Dataflow, DataServing, and custom clusters. For other types of clusters, no value is returned for this parameter.
              */
             public Builder applicationState(String applicationState) {
                 this.applicationState = applicationState;

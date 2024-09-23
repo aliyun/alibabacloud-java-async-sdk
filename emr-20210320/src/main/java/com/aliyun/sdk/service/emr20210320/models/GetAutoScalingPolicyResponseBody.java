@@ -383,7 +383,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum and minimum numbers of node groups.
+             * The maximum and minimum number of nodes in the node group.
              */
             public Builder constraints(Constraints constraints) {
                 this.constraints = constraints;

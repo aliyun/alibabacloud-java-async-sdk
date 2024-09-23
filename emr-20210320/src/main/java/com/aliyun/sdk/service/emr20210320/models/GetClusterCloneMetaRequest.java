@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetClusterRequest} extends {@link RequestModel}
+ * {@link GetClusterCloneMetaRequest} extends {@link RequestModel}
  *
- * <p>GetClusterRequest</p>
+ * <p>GetClusterCloneMetaRequest</p>
  */
-public class GetClusterRequest extends Request {
+public class GetClusterCloneMetaRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -21,7 +21,7 @@ public class GetClusterRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    private GetClusterRequest(Builder builder) {
+    private GetClusterCloneMetaRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.regionId = builder.regionId;
@@ -31,7 +31,7 @@ public class GetClusterRequest extends Request {
         return new Builder();
     }
 
-    public static GetClusterRequest create() {
+    public static GetClusterCloneMetaRequest create() {
         return builder().build();
     }
 
@@ -54,7 +54,7 @@ public class GetClusterRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<GetClusterRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetClusterCloneMetaRequest, Builder> {
         private String clusterId; 
         private String regionId; 
 
@@ -62,14 +62,14 @@ public class GetClusterRequest extends Request {
             super();
         } 
 
-        private Builder(GetClusterRequest request) {
+        private Builder(GetClusterCloneMetaRequest request) {
             super(request);
             this.clusterId = request.clusterId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -87,8 +87,8 @@ public class GetClusterRequest extends Request {
         }
 
         @Override
-        public GetClusterRequest build() {
-            return new GetClusterRequest(this);
+        public GetClusterCloneMetaRequest build() {
+            return new GetClusterCloneMetaRequest(this);
         } 
 
     } 

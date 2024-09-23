@@ -113,7 +113,7 @@ public class CreateApiTemplateRequest extends Request {
         } 
 
         /**
-         * 接口名。
+         * The name of the API operation. You can create only a cluster API operation template. Set the value to CreateCluster.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -122,7 +122,7 @@ public class CreateApiTemplateRequest extends Request {
         }
 
         /**
-         * 接口request内容。
+         * The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the [CreateCluster](https://help.aliyun.com/zh/emr/emr-on-ecs/developer-reference/api-emr-2021-03-20-createcluster) API operation for creating a cluster.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);

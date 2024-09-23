@@ -128,7 +128,7 @@ public class UpdateApiTemplateRequest extends Request {
         } 
 
         /**
-         * 接口名。
+         * The name of the API. You can create only a cluster API operation template. Set the value to CreateCluster.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -137,7 +137,7 @@ public class UpdateApiTemplateRequest extends Request {
         }
 
         /**
-         * 接口request内容。
+         * The content of the cluster API operation template. Set the value to JSON strings of the request parameters of the [CreateCluster](~~454393~~) API for creating a cluster.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);

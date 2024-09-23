@@ -61,6 +61,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetClusterResponse> getCluster(GetClusterRequest request);
 
+    CompletableFuture<GetClusterCloneMetaResponse> getClusterCloneMeta(GetClusterCloneMetaRequest request);
+
     /**
       * get one doctor analysis app
       *
@@ -165,10 +167,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListApplicationConfigsResponse> listApplicationConfigs(ListApplicationConfigsRequest request);
 
-    /**
-      * 查询应用列表。
-      *
-     */
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
 
     /**
