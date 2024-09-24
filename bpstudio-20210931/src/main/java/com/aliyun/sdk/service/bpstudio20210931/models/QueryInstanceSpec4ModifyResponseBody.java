@@ -18,7 +18,7 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -63,7 +63,7 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -91,7 +91,7 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
-        private String data; 
+        private Data data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -115,7 +115,7 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(String data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -150,4 +150,166 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
 
     } 
 
+    public static class OptionalValues extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Label")
+        private String label;
+
+        @com.aliyun.core.annotation.NameInMap("Max")
+        private Double max;
+
+        @com.aliyun.core.annotation.NameInMap("Min")
+        private Double min;
+
+        @com.aliyun.core.annotation.NameInMap("Step")
+        private Double step;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private OptionalValues(Builder builder) {
+            this.label = builder.label;
+            this.max = builder.max;
+            this.min = builder.min;
+            this.step = builder.step;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OptionalValues create() {
+            return builder().build();
+        }
+
+        /**
+         * @return label
+         */
+        public String getLabel() {
+            return this.label;
+        }
+
+        /**
+         * @return max
+         */
+        public Double getMax() {
+            return this.max;
+        }
+
+        /**
+         * @return min
+         */
+        public Double getMin() {
+            return this.min;
+        }
+
+        /**
+         * @return step
+         */
+        public Double getStep() {
+            return this.step;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String label; 
+            private Double max; 
+            private Double min; 
+            private Double step; 
+            private String value; 
+
+            /**
+             * Label.
+             */
+            public Builder label(String label) {
+                this.label = label;
+                return this;
+            }
+
+            /**
+             * Max.
+             */
+            public Builder max(Double max) {
+                this.max = max;
+                return this;
+            }
+
+            /**
+             * Min.
+             */
+            public Builder min(Double min) {
+                this.min = min;
+                return this;
+            }
+
+            /**
+             * Step.
+             */
+            public Builder step(Double step) {
+                this.step = step;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public OptionalValues build() {
+                return new OptionalValues(this);
+            } 
+
+        } 
+
+    }
+    public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OptionalValues")
+        private java.util.List < OptionalValues> optionalValues;
+
+        private Data(Builder builder) {
+            this.optionalValues = builder.optionalValues;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return optionalValues
+         */
+        public java.util.List < OptionalValues> getOptionalValues() {
+            return this.optionalValues;
+        }
+
+        public static final class Builder {
+            private java.util.List < OptionalValues> optionalValues; 
+
+            /**
+             * OptionalValues.
+             */
+            public Builder optionalValues(java.util.List < OptionalValues> optionalValues) {
+                this.optionalValues = optionalValues;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

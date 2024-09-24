@@ -134,8 +134,8 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiscountAmount")
         private Double discountAmount;
 
-        @com.aliyun.core.annotation.NameInMap("ERROR")
-        private String ERROR;
+        @com.aliyun.core.annotation.NameInMap("Error")
+        private String error;
 
         @com.aliyun.core.annotation.NameInMap("NodeType")
         private String nodeType;
@@ -154,7 +154,7 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
 
         private PriceList(Builder builder) {
             this.discountAmount = builder.discountAmount;
-            this.ERROR = builder.ERROR;
+            this.error = builder.error;
             this.nodeType = builder.nodeType;
             this.originalAmount = builder.originalAmount;
             this.priceUnit = builder.priceUnit;
@@ -178,10 +178,10 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
         }
 
         /**
-         * @return ERROR
+         * @return error
          */
-        public String getERROR() {
-            return this.ERROR;
+        public String getError() {
+            return this.error;
         }
 
         /**
@@ -221,7 +221,7 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
 
         public static final class Builder {
             private Double discountAmount; 
-            private String ERROR; 
+            private String error; 
             private String nodeType; 
             private Double originalAmount; 
             private String priceUnit; 
@@ -237,10 +237,10 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
             }
 
             /**
-             * ERROR.
+             * Error.
              */
-            public Builder ERROR(String ERROR) {
-                this.ERROR = ERROR;
+            public Builder error(String error) {
+                this.error = error;
                 return this;
             }
 
