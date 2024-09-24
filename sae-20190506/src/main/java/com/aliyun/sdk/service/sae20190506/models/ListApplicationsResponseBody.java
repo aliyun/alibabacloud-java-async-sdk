@@ -695,6 +695,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
+        private String imageUrl;
+
         @com.aliyun.core.annotation.NameInMap("Instances")
         private Integer instances;
 
@@ -709,6 +712,9 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
+
+        @com.aliyun.core.annotation.NameInMap("PackageUrl")
+        private String packageUrl;
 
         @com.aliyun.core.annotation.NameInMap("ProgrammingLanguage")
         private String programmingLanguage;
@@ -730,11 +736,13 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.baseAppId = builder.baseAppId;
             this.children = builder.children;
             this.cpu = builder.cpu;
+            this.imageUrl = builder.imageUrl;
             this.instances = builder.instances;
             this.mem = builder.mem;
             this.mseEnabled = builder.mseEnabled;
             this.mseNamespaceId = builder.mseNamespaceId;
             this.namespaceId = builder.namespaceId;
+            this.packageUrl = builder.packageUrl;
             this.programmingLanguage = builder.programmingLanguage;
             this.regionId = builder.regionId;
             this.runningInstances = builder.runningInstances;
@@ -799,6 +807,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return imageUrl
+         */
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        /**
          * @return instances
          */
         public Integer getInstances() {
@@ -831,6 +846,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public String getNamespaceId() {
             return this.namespaceId;
+        }
+
+        /**
+         * @return packageUrl
+         */
+        public String getPackageUrl() {
+            return this.packageUrl;
         }
 
         /**
@@ -869,11 +891,13 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String baseAppId; 
             private java.util.List < Children> children; 
             private Integer cpu; 
+            private String imageUrl; 
             private Integer instances; 
             private Integer mem; 
             private Boolean mseEnabled; 
             private String mseNamespaceId; 
             private String namespaceId; 
+            private String packageUrl; 
             private String programmingLanguage; 
             private String regionId; 
             private Integer runningInstances; 
@@ -949,6 +973,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
+             * ImageUrl.
+             */
+            public Builder imageUrl(String imageUrl) {
+                this.imageUrl = imageUrl;
+                return this;
+            }
+
+            /**
              * The number of application instances.
              */
             public Builder instances(Integer instances) {
@@ -997,6 +1029,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
+                return this;
+            }
+
+            /**
+             * PackageUrl.
+             */
+            public Builder packageUrl(String packageUrl) {
+                this.packageUrl = packageUrl;
                 return this;
             }
 

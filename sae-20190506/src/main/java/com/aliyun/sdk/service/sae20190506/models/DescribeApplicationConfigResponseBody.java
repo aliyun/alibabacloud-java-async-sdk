@@ -552,6 +552,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomHostAlias")
         private String customHostAlias;
 
+        @com.aliyun.core.annotation.NameInMap("Dotnet")
+        private String dotnet;
+
         @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
         private String edasContainerVersion;
 
@@ -734,6 +737,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.configMapMountDesc = builder.configMapMountDesc;
             this.cpu = builder.cpu;
             this.customHostAlias = builder.customHostAlias;
+            this.dotnet = builder.dotnet;
             this.edasContainerVersion = builder.edasContainerVersion;
             this.enableAhas = builder.enableAhas;
             this.enableGreyTagRoute = builder.enableGreyTagRoute;
@@ -889,6 +893,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getCustomHostAlias() {
             return this.customHostAlias;
+        }
+
+        /**
+         * @return dotnet
+         */
+        public String getDotnet() {
+            return this.dotnet;
         }
 
         /**
@@ -1297,6 +1308,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private java.util.List < ConfigMapMountDesc> configMapMountDesc; 
             private Integer cpu; 
             private String customHostAlias; 
+            private String dotnet; 
             private String edasContainerVersion; 
             private String enableAhas; 
             private Boolean enableGreyTagRoute; 
@@ -1489,6 +1501,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder customHostAlias(String customHostAlias) {
                 this.customHostAlias = customHostAlias;
+                return this;
+            }
+
+            /**
+             * Dotnet.
+             */
+            public Builder dotnet(String dotnet) {
+                this.dotnet = dotnet;
                 return this;
             }
 

@@ -69,6 +69,10 @@ public class CreateApplicationRequest extends Request {
     private Boolean deploy;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dotnet")
+    private String dotnet;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EdasContainerVersion")
     private String edasContainerVersion;
 
@@ -279,6 +283,7 @@ public class CreateApplicationRequest extends Request {
         this.cpu = builder.cpu;
         this.customHostAlias = builder.customHostAlias;
         this.deploy = builder.deploy;
+        this.dotnet = builder.dotnet;
         this.edasContainerVersion = builder.edasContainerVersion;
         this.enableEbpf = builder.enableEbpf;
         this.enableNewArms = builder.enableNewArms;
@@ -438,6 +443,13 @@ public class CreateApplicationRequest extends Request {
      */
     public Boolean getDeploy() {
         return this.deploy;
+    }
+
+    /**
+     * @return dotnet
+     */
+    public String getDotnet() {
+        return this.dotnet;
     }
 
     /**
@@ -791,6 +803,7 @@ public class CreateApplicationRequest extends Request {
         private Integer cpu; 
         private String customHostAlias; 
         private Boolean deploy; 
+        private String dotnet; 
         private String edasContainerVersion; 
         private String enableEbpf; 
         private Boolean enableNewArms; 
@@ -860,6 +873,7 @@ public class CreateApplicationRequest extends Request {
             this.cpu = request.cpu;
             this.customHostAlias = request.customHostAlias;
             this.deploy = request.deploy;
+            this.dotnet = request.dotnet;
             this.edasContainerVersion = request.edasContainerVersion;
             this.enableEbpf = request.enableEbpf;
             this.enableNewArms = request.enableNewArms;
@@ -1033,6 +1047,15 @@ public class CreateApplicationRequest extends Request {
         public Builder deploy(Boolean deploy) {
             this.putQueryParameter("Deploy", deploy);
             this.deploy = deploy;
+            return this;
+        }
+
+        /**
+         * Dotnet.
+         */
+        public Builder dotnet(String dotnet) {
+            this.putQueryParameter("Dotnet", dotnet);
+            this.dotnet = dotnet;
             return this;
         }
 

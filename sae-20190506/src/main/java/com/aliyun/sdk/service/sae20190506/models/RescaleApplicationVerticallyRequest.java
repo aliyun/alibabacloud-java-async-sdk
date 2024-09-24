@@ -26,11 +26,26 @@ public class RescaleApplicationVerticallyRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String memory;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("autoEnableApplicationScalingRule")
+    private Boolean autoEnableApplicationScalingRule;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("minReadyInstanceRatio")
+    private Integer minReadyInstanceRatio;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("minReadyInstances")
+    private Integer minReadyInstances;
+
     private RescaleApplicationVerticallyRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.cpu = builder.cpu;
         this.memory = builder.memory;
+        this.autoEnableApplicationScalingRule = builder.autoEnableApplicationScalingRule;
+        this.minReadyInstanceRatio = builder.minReadyInstanceRatio;
+        this.minReadyInstances = builder.minReadyInstances;
     }
 
     public static Builder builder() {
@@ -67,10 +82,34 @@ public class RescaleApplicationVerticallyRequest extends Request {
         return this.memory;
     }
 
+    /**
+     * @return autoEnableApplicationScalingRule
+     */
+    public Boolean getAutoEnableApplicationScalingRule() {
+        return this.autoEnableApplicationScalingRule;
+    }
+
+    /**
+     * @return minReadyInstanceRatio
+     */
+    public Integer getMinReadyInstanceRatio() {
+        return this.minReadyInstanceRatio;
+    }
+
+    /**
+     * @return minReadyInstances
+     */
+    public Integer getMinReadyInstances() {
+        return this.minReadyInstances;
+    }
+
     public static final class Builder extends Request.Builder<RescaleApplicationVerticallyRequest, Builder> {
         private String appId; 
         private String cpu; 
         private String memory; 
+        private Boolean autoEnableApplicationScalingRule; 
+        private Integer minReadyInstanceRatio; 
+        private Integer minReadyInstances; 
 
         private Builder() {
             super();
@@ -81,6 +120,9 @@ public class RescaleApplicationVerticallyRequest extends Request {
             this.appId = request.appId;
             this.cpu = request.cpu;
             this.memory = request.memory;
+            this.autoEnableApplicationScalingRule = request.autoEnableApplicationScalingRule;
+            this.minReadyInstanceRatio = request.minReadyInstanceRatio;
+            this.minReadyInstances = request.minReadyInstances;
         } 
 
         /**
@@ -107,6 +149,33 @@ public class RescaleApplicationVerticallyRequest extends Request {
         public Builder memory(String memory) {
             this.putQueryParameter("Memory", memory);
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * autoEnableApplicationScalingRule.
+         */
+        public Builder autoEnableApplicationScalingRule(Boolean autoEnableApplicationScalingRule) {
+            this.putQueryParameter("autoEnableApplicationScalingRule", autoEnableApplicationScalingRule);
+            this.autoEnableApplicationScalingRule = autoEnableApplicationScalingRule;
+            return this;
+        }
+
+        /**
+         * minReadyInstanceRatio.
+         */
+        public Builder minReadyInstanceRatio(Integer minReadyInstanceRatio) {
+            this.putQueryParameter("minReadyInstanceRatio", minReadyInstanceRatio);
+            this.minReadyInstanceRatio = minReadyInstanceRatio;
+            return this;
+        }
+
+        /**
+         * minReadyInstances.
+         */
+        public Builder minReadyInstances(Integer minReadyInstances) {
+            this.putQueryParameter("minReadyInstances", minReadyInstances);
+            this.minReadyInstances = minReadyInstances;
             return this;
         }
 
