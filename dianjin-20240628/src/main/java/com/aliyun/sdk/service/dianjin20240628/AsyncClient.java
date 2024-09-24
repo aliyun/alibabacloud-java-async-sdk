@@ -19,6 +19,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CreateFinReportSummaryTaskResponse> createFinReportSummaryTask(CreateFinReportSummaryTaskRequest request);
+
     CompletableFuture<CreateLibraryResponse> createLibrary(CreateLibraryRequest request);
 
     CompletableFuture<CreatePredefinedDocumentResponse> createPredefinedDocument(CreatePredefinedDocumentRequest request);
@@ -26,6 +28,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDocumentResponse> deleteDocument(DeleteDocumentRequest request);
 
     CompletableFuture<DeleteLibraryResponse> deleteLibrary(DeleteLibraryRequest request);
+
+    CompletableFuture<EvictTaskResponse> evictTask(EvictTaskRequest request);
 
     CompletableFuture<GetAppConfigResponse> getAppConfig(GetAppConfigRequest request);
 
@@ -45,6 +49,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetParseResultResponse> getParseResult(GetParseResultRequest request);
 
+    CompletableFuture<GetSummaryTaskResultResponse> getSummaryTaskResult(GetSummaryTaskResultRequest request);
+
+    CompletableFuture<GetTaskStatusResponse> getTaskStatus(GetTaskStatusRequest request);
+
     CompletableFuture<InvokePluginResponse> invokePlugin(InvokePluginRequest request);
 
     CompletableFuture<PreviewDocumentResponse> previewDocument(PreviewDocumentRequest request);
@@ -52,6 +60,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReIndexResponse> reIndex(ReIndexRequest request);
 
     CompletableFuture<RecallDocumentResponse> recallDocument(RecallDocumentRequest request);
+
+    CompletableFuture<RecognizeIntentionResponse> recognizeIntention(RecognizeIntentionRequest request);
 
     CompletableFuture<RunChatResultGenerationResponse> runChatResultGeneration(RunChatResultGenerationRequest request);
 
