@@ -82,6 +82,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CancelDataFlowAutoRefreshResponse> cancelDataFlowAutoRefresh(CancelDataFlowAutoRefreshRequest request);
 
+    CompletableFuture<CancelDataFlowSubTaskResponse> cancelDataFlowSubTask(CancelDataFlowSubTaskRequest request);
+
     /**
       * *   This operation is available only to Cloud Parallel File Storage (CPFS) file systems on the China site (aliyun.com).
       * *   Only CPFS V2.2.0 and later support dataflow tasks. You can view the version information on the file system details page in the console.
@@ -198,6 +200,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<CreateDataFlowResponse> createDataFlow(CreateDataFlowRequest request);
+
+    CompletableFuture<CreateDataFlowSubTaskResponse> createDataFlowSubTask(CreateDataFlowSubTaskRequest request);
 
     /**
       * *   Only Cloud Parallel File Storage (CPFS) V2.2.0 and later and CPFS for LINGJUN V2.3.4 and later support data flows. You can view the version information on the file system details page in the console.
@@ -451,6 +455,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeBlackListClientsResponse> describeBlackListClients(DescribeBlackListClientsRequest request);
+
+    CompletableFuture<DescribeDataFlowSubTasksResponse> describeDataFlowSubTasks(DescribeDataFlowSubTasksRequest request);
 
     /**
       * ###
