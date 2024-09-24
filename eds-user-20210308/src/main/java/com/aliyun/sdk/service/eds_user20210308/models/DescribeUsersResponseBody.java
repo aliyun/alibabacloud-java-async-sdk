@@ -90,6 +90,47 @@ public class DescribeUsersResponseBody extends TeaModel {
 
     } 
 
+    public static class Extras extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AssignedResourceCount")
+        private java.util.Map < String, ? > assignedResourceCount;
+
+        private Extras(Builder builder) {
+            this.assignedResourceCount = builder.assignedResourceCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Extras create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assignedResourceCount
+         */
+        public java.util.Map < String, ? > getAssignedResourceCount() {
+            return this.assignedResourceCount;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, ? > assignedResourceCount; 
+
+            /**
+             * AssignedResourceCount.
+             */
+            public Builder assignedResourceCount(java.util.Map < String, ? > assignedResourceCount) {
+                this.assignedResourceCount = assignedResourceCount;
+                return this;
+            }
+
+            public Extras build() {
+                return new Extras(this);
+            } 
+
+        } 
+
+    }
     public static class Groups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
@@ -225,6 +266,9 @@ public class DescribeUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
+        @com.aliyun.core.annotation.NameInMap("Extras")
+        private Extras extras;
+
         @com.aliyun.core.annotation.NameInMap("Groups")
         private java.util.List < Groups> groups;
 
@@ -269,6 +313,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             this.avatar = builder.avatar;
             this.email = builder.email;
             this.endUserId = builder.endUserId;
+            this.extras = builder.extras;
             this.groups = builder.groups;
             this.id = builder.id;
             this.isTenantManager = builder.isTenantManager;
@@ -318,6 +363,13 @@ public class DescribeUsersResponseBody extends TeaModel {
          */
         public String getEndUserId() {
             return this.endUserId;
+        }
+
+        /**
+         * @return extras
+         */
+        public Extras getExtras() {
+            return this.extras;
         }
 
         /**
@@ -416,6 +468,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String avatar; 
             private String email; 
             private String endUserId; 
+            private Extras extras; 
             private java.util.List < Groups> groups; 
             private Long id; 
             private Boolean isTenantManager; 
@@ -459,6 +512,14 @@ public class DescribeUsersResponseBody extends TeaModel {
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
+                return this;
+            }
+
+            /**
+             * Extras.
+             */
+            public Builder extras(Extras extras) {
+                this.extras = extras;
                 return this;
             }
 

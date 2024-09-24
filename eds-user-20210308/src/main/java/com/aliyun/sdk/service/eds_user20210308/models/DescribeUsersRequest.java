@@ -24,6 +24,10 @@ public class DescribeUsersRequest extends Request {
     private String filter;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilterWithAssignedResources")
+    private java.util.Map < String, Boolean > filterWithAssignedResources;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
@@ -40,15 +44,21 @@ public class DescribeUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("OrgId")
     private String orgId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShowExtras")
+    private java.util.Map < String, ? > showExtras;
+
     private DescribeUsersRequest(Builder builder) {
         super(builder);
         this.endUserIds = builder.endUserIds;
         this.excludeEndUserIds = builder.excludeEndUserIds;
         this.filter = builder.filter;
+        this.filterWithAssignedResources = builder.filterWithAssignedResources;
         this.groupId = builder.groupId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.orgId = builder.orgId;
+        this.showExtras = builder.showExtras;
     }
 
     public static Builder builder() {
@@ -86,6 +96,13 @@ public class DescribeUsersRequest extends Request {
     }
 
     /**
+     * @return filterWithAssignedResources
+     */
+    public java.util.Map < String, Boolean > getFilterWithAssignedResources() {
+        return this.filterWithAssignedResources;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
@@ -113,14 +130,23 @@ public class DescribeUsersRequest extends Request {
         return this.orgId;
     }
 
+    /**
+     * @return showExtras
+     */
+    public java.util.Map < String, ? > getShowExtras() {
+        return this.showExtras;
+    }
+
     public static final class Builder extends Request.Builder<DescribeUsersRequest, Builder> {
         private java.util.List < String > endUserIds; 
         private java.util.List < String > excludeEndUserIds; 
         private String filter; 
+        private java.util.Map < String, Boolean > filterWithAssignedResources; 
         private String groupId; 
         private Long maxResults; 
         private String nextToken; 
         private String orgId; 
+        private java.util.Map < String, ? > showExtras; 
 
         private Builder() {
             super();
@@ -131,10 +157,12 @@ public class DescribeUsersRequest extends Request {
             this.endUserIds = request.endUserIds;
             this.excludeEndUserIds = request.excludeEndUserIds;
             this.filter = request.filter;
+            this.filterWithAssignedResources = request.filterWithAssignedResources;
             this.groupId = request.groupId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.orgId = request.orgId;
+            this.showExtras = request.showExtras;
         } 
 
         /**
@@ -161,6 +189,16 @@ public class DescribeUsersRequest extends Request {
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
             this.filter = filter;
+            return this;
+        }
+
+        /**
+         * FilterWithAssignedResources.
+         */
+        public Builder filterWithAssignedResources(java.util.Map < String, Boolean > filterWithAssignedResources) {
+            String filterWithAssignedResourcesShrink = shrink(filterWithAssignedResources, "FilterWithAssignedResources", "json");
+            this.putBodyParameter("FilterWithAssignedResources", filterWithAssignedResourcesShrink);
+            this.filterWithAssignedResources = filterWithAssignedResources;
             return this;
         }
 
@@ -203,6 +241,16 @@ public class DescribeUsersRequest extends Request {
         public Builder orgId(String orgId) {
             this.putBodyParameter("OrgId", orgId);
             this.orgId = orgId;
+            return this;
+        }
+
+        /**
+         * ShowExtras.
+         */
+        public Builder showExtras(java.util.Map < String, ? > showExtras) {
+            String showExtrasShrink = shrink(showExtras, "ShowExtras", "json");
+            this.putBodyParameter("ShowExtras", showExtrasShrink);
+            this.showExtras = showExtras;
             return this;
         }
 
