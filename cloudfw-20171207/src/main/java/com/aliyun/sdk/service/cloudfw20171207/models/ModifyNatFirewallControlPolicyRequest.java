@@ -481,10 +481,10 @@ public class ModifyNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The direction of the traffic to which the access control policy applies.
+         * The direction of the traffic to which the access control policy applies. Valid value:
          * <p>
          * 
-         * *   Set the value to **out**.
+         * *   **out**: outbound.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);

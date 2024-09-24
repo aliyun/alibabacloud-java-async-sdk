@@ -198,7 +198,11 @@ public class CreateSecurityProxyRequest extends Request {
         } 
 
         /**
-         * FirewallSwitch.
+         * The status of the NAT firewall. Valid values:
+         * <p>
+         * 
+         * *   **open**: enabled
+         * *   **close**: disabled
          */
         public Builder firewallSwitch(String firewallSwitch) {
             this.putQueryParameter("FirewallSwitch", firewallSwitch);
@@ -207,7 +211,11 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -216,7 +224,7 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * NatGatewayId.
+         * The ID of the NAT gateway.
          */
         public Builder natGatewayId(String natGatewayId) {
             this.putQueryParameter("NatGatewayId", natGatewayId);
@@ -225,7 +233,7 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * NatRouteEntryList.
+         * The routes to be switched to the NAT gateway.
          */
         public Builder natRouteEntryList(java.util.List < NatRouteEntryList> natRouteEntryList) {
             this.putQueryParameter("NatRouteEntryList", natRouteEntryList);
@@ -234,7 +242,7 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * ProxyName.
+         * The name of the NAT firewall. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (\_). However, it cannot start with an underscore.
          */
         public Builder proxyName(String proxyName) {
             this.putQueryParameter("ProxyName", proxyName);
@@ -243,7 +251,10 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * RegionNo.
+         * The region ID of the virtual private cloud (VPC).
+         * <p>
+         * 
+         * >  For more information about Cloud Firewall supported regions, see [Supported regions](~~195657~~).
          */
         public Builder regionNo(String regionNo) {
             this.putQueryParameter("RegionNo", regionNo);
@@ -252,7 +263,11 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * StrictMode.
+         * Specifies whether to enable the strict mode. Valid values:
+         * <p>
+         * 
+         * *   1: yes
+         * *   0: no
          */
         public Builder strictMode(Integer strictMode) {
             this.putQueryParameter("StrictMode", strictMode);
@@ -261,7 +276,7 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -270,7 +285,11 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * VswitchAuto.
+         * The mode of the vSwitch that you want to use. Valid values:
+         * <p>
+         * 
+         * *   **true**: automatic
+         * *   **false**: manual
          */
         public Builder vswitchAuto(String vswitchAuto) {
             this.putQueryParameter("VswitchAuto", vswitchAuto);
@@ -279,7 +298,7 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * VswitchCidr.
+         * The CIDR block of the vSwitch.
          */
         public Builder vswitchCidr(String vswitchCidr) {
             this.putQueryParameter("VswitchCidr", vswitchCidr);
@@ -288,7 +307,7 @@ public class CreateSecurityProxyRequest extends Request {
         }
 
         /**
-         * VswitchId.
+         * The ID of the vSwitch. This parameter is required if you set the VswitchAuto parameter to true.
          */
         public Builder vswitchId(String vswitchId) {
             this.putQueryParameter("VswitchId", vswitchId);
@@ -370,7 +389,7 @@ public class CreateSecurityProxyRequest extends Request {
             private String routeTableId; 
 
             /**
-             * DestinationCidr.
+             * The destination CIDR block of the default route.
              */
             public Builder destinationCidr(String destinationCidr) {
                 this.destinationCidr = destinationCidr;
@@ -378,7 +397,7 @@ public class CreateSecurityProxyRequest extends Request {
             }
 
             /**
-             * NextHopId.
+             * The next hop of the original NAT gateway.
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -386,7 +405,7 @@ public class CreateSecurityProxyRequest extends Request {
             }
 
             /**
-             * NextHopType.
+             * The network type of the next hop. Set the value to NatGateway.
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -394,7 +413,7 @@ public class CreateSecurityProxyRequest extends Request {
             }
 
             /**
-             * RouteTableId.
+             * The route table to which the default route of the NAT gateway belongs.
              */
             public Builder routeTableId(String routeTableId) {
                 this.routeTableId = routeTableId;

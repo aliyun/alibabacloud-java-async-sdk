@@ -507,7 +507,12 @@ public class CreateVpcFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * DomainResolveType.
+         * The domain name resolution method of the access control policy. Valid values:
+         * <p>
+         * 
+         * * **FQDN**: fully qualified domain name (FQDN)-based resolution
+         * * **DNS**: DNS-based dynamic resolution
+         * * **FQDN_AND_DNS**: FQDN and DNS-based dynamic resolution
          */
         public Builder domainResolveType(String domainResolveType) {
             this.putQueryParameter("DomainResolveType", domainResolveType);

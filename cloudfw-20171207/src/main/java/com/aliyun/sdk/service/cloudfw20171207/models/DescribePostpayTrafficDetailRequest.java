@@ -33,6 +33,10 @@ public class DescribePostpayTrafficDetailRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionNo")
+    private String regionNo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SearchItem")
     private String searchItem;
 
@@ -53,6 +57,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         this.lang = builder.lang;
         this.order = builder.order;
         this.pageSize = builder.pageSize;
+        this.regionNo = builder.regionNo;
         this.searchItem = builder.searchItem;
         this.startTime = builder.startTime;
         this.trafficType = builder.trafficType;
@@ -107,6 +112,13 @@ public class DescribePostpayTrafficDetailRequest extends Request {
     }
 
     /**
+     * @return regionNo
+     */
+    public String getRegionNo() {
+        return this.regionNo;
+    }
+
+    /**
      * @return searchItem
      */
     public String getSearchItem() {
@@ -133,6 +145,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         private String lang; 
         private String order; 
         private Long pageSize; 
+        private String regionNo; 
         private String searchItem; 
         private String startTime; 
         private String trafficType; 
@@ -148,6 +161,7 @@ public class DescribePostpayTrafficDetailRequest extends Request {
             this.lang = request.lang;
             this.order = request.order;
             this.pageSize = request.pageSize;
+            this.regionNo = request.regionNo;
             this.searchItem = request.searchItem;
             this.startTime = request.startTime;
             this.trafficType = request.trafficType;
@@ -207,6 +221,15 @@ public class DescribePostpayTrafficDetailRequest extends Request {
         }
 
         /**
+         * RegionNo.
+         */
+        public Builder regionNo(String regionNo) {
+            this.putQueryParameter("RegionNo", regionNo);
+            this.regionNo = regionNo;
+            return this;
+        }
+
+        /**
          * The instance ID or the IP address of the asset.
          */
         public Builder searchItem(String searchItem) {
@@ -228,9 +251,9 @@ public class DescribePostpayTrafficDetailRequest extends Request {
          * The traffic type. This parameter is required. Valid values:
          * <p>
          * 
-         * *   **EIP_TRAFFIC**: traffic for the Internet firewall
-         * *   **NatGateway_TRAFFIC**: traffic for NAT firewalls
-         * *   **VPC_TRAFFIC**: traffic for virtual private cloud (VPC) firewalls
+         * *   **EIP_TRAFFIC**: traffic for the Internet firewall.
+         * *   **NatGateway_TRAFFIC**: traffic for NAT firewalls.
+         * *   **VPC_TRAFFIC**: traffic for virtual private cloud (VPC) firewalls.
          */
         public Builder trafficType(String trafficType) {
             this.putQueryParameter("TrafficType", trafficType);

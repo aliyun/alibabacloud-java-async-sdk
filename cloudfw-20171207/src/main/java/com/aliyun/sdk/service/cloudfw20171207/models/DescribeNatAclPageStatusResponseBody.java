@@ -61,7 +61,7 @@ public class DescribeNatAclPageStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Detail.
+         * Extra error information.
          */
         public Builder detail(String detail) {
             this.detail = detail;

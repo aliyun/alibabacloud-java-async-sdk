@@ -36,8 +36,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddControlPolicyResponse> addControlPolicy(AddControlPolicyRequest request);
 
     /**
-      * You can call the AddInstanceMembers operation to add members to Cloud Firewall. 
-      * ## Limits
+      * You can call this operation to add members to Cloud Firewall.
+      * ## [](#qps-)Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
@@ -125,8 +125,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFirewallV2RoutePoliciesResponse> deleteFirewallV2RoutePolicies(DeleteFirewallV2RoutePoliciesRequest request);
 
     /**
-      * You can call the DeleteInstanceMembers operation to remove members from Cloud Firewall. 
-      * ## Limits
+      * You can call this operation to remove up to 20 members from Cloud Firewall at a time. Separate multiple members with commas (,). After a member is removed, Cloud Firewall can no longer access the cloud resources of the member. Proceed with caution. Before you call this operation, call the [DescribeInstanceMembers](~~271704~~) operation to obtain the information about the members that are added to Cloud Firewall.
+      * ## [](#qps-)Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
@@ -201,6 +201,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDefaultIPSConfigResponse> describeDefaultIPSConfig(DescribeDefaultIPSConfigRequest request);
 
     /**
+      * @deprecated
       * You can use this operation to query the DNS record of a domain name. This operation can retrieve DNS records only from Alibaba Cloud DNS. Before you can call this operation, make sure that your domain name is hosted on Alibaba Cloud DNS.
       * ## Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
@@ -257,8 +258,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribePolicyAdvancedConfigResponse> describePolicyAdvancedConfig(DescribePolicyAdvancedConfigRequest request);
 
     /**
-      * You can call the DescribePolicyPriorUsed operation to query the priority range of the access control policies that match specific query conditions.  
-      * ## Limits
+      * You can call this operation to query the priority range of the access control policies that match specific query conditions.
+      * ## [](#qps-)Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
@@ -301,6 +302,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTrFirewallsV2RouteListResponse> describeTrFirewallsV2RouteList(DescribeTrFirewallsV2RouteListRequest request);
 
     CompletableFuture<DescribeUserAssetIPTrafficInfoResponse> describeUserAssetIPTrafficInfo(DescribeUserAssetIPTrafficInfoRequest request);
+
+    CompletableFuture<DescribeUserBuyVersionResponse> describeUserBuyVersion(DescribeUserBuyVersionRequest request);
 
     CompletableFuture<DescribeUserIPSWhitelistResponse> describeUserIPSWhitelist(DescribeUserIPSWhitelistRequest request);
 
@@ -364,8 +367,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVpcFirewallListResponse> describeVpcFirewallList(DescribeVpcFirewallListRequest request);
 
     /**
-      * You can call the DescribeVpcFirewallPolicyPriorUsed operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.  
-      * ## Limits
+      * You can call this operation to query the priority range of access control policies that are created for a VPC firewall in a specific policy group.
+      * ## [](#qps-)Limits
       * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
@@ -479,9 +482,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyVpcFirewallControlPolicyPositionResponse> modifyVpcFirewallControlPolicyPosition(ModifyVpcFirewallControlPolicyPositionRequest request);
 
     /**
-      * You can call the ModifyVpcFirewallDefaultIPSConfig operation to modify the intrusion prevention configurations of a VPC firewall.  
-      * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation to modify the intrusion prevention configurations of a VPC firewall.
+      * ## [](#qps-)Limits
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     CompletableFuture<ModifyVpcFirewallDefaultIPSConfigResponse> modifyVpcFirewallDefaultIPSConfig(ModifyVpcFirewallDefaultIPSConfigRequest request);
@@ -524,7 +527,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
       * You can call the PutEnableFwSwitch operation to enable a firewall. After you enable a firewall, traffic passes through Cloud Firewall.
       * ## Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
+      * You can call this operation up to 5 times per second per account. If the number of the calls per second exceeds a limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limits when you call this operation.
       *
      */
     CompletableFuture<PutEnableFwSwitchResponse> putEnableFwSwitch(PutEnableFwSwitchRequest request);

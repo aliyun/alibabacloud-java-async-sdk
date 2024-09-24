@@ -54,7 +54,7 @@ public class DeleteInstanceMembersRequest extends Request {
         } 
 
         /**
-         * The unique identifiers (UID) of members that you want to remove from Cloud Firewall.
+         * The UIDs of the members.
          */
         public Builder memberUids(java.util.List < Long > memberUids) {
             this.putQueryParameter("MemberUids", memberUids);

@@ -114,8 +114,8 @@ public class DeleteControlPolicyRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   **in**: inbound traffic
-         * *   **out**: outbound traffic
+         * *   **in**: inbound.
+         * *   **out**: outbound.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);

@@ -253,7 +253,15 @@ public class ModifyAddressBookRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * Modification mode with the following values:
+         * <p>
+         * 
+         * - **Cover**: Use the value of the AddressList parameter to overwrite the original address book.
+         * - **Append**: After the original address book, append addresses using the value of the AddressList parameter.
+         * - **Delete**: Delete addresses using the value of the AddressList parameter from the address book.
+         * 
+         * >When GroupType is **ip**, **ipv6**, **port**, or **domain**, if this parameter is not configured, the default is to use the **Cover** method to modify the address book.
+         * ><notice>When GroupType is **tag**, this parameter must be empty.</notice>
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);

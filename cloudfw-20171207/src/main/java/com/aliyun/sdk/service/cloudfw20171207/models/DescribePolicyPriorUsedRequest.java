@@ -102,8 +102,8 @@ public class DescribePolicyPriorUsedRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   **in**: inbound traffic
-         * *   **out**: outbound traffic
+         * *   **in**: inbound.
+         * *   **out**: outbound.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -117,8 +117,8 @@ public class DescribePolicyPriorUsedRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   **4**: IPv4 (default)
-         * *   **6**: IPv6
+         * *   **4** (default): IPv4.
+         * *   **6**: IPv6.
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -127,13 +127,13 @@ public class DescribePolicyPriorUsedRequest extends Request {
         }
 
         /**
-         * The natural language of the request and response.
+         * The language of the content within the request and response.
          * <p>
          * 
          * Valid values:
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * *   **zh** (default)
+         * *   **en**
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

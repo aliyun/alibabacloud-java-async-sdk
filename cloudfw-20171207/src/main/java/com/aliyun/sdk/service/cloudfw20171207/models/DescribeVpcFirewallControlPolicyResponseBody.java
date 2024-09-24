@@ -61,7 +61,7 @@ public class DescribeVpcFirewallControlPolicyResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The access control policies.
+         * The details of the access control policies.
          */
         public Builder policys(java.util.List < Policys> policys) {
             this.policys = policys;

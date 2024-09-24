@@ -289,11 +289,11 @@ public class DescribeControlPolicyRequest extends Request {
         }
 
         /**
-         * The direction of the traffic to which the access control policy applies. Valid values:
+         * The direction of the traffic to which the access control policies apply. Valid values:
          * <p>
          * 
-         * *   **in**: inbound traffic
-         * *   **out**: outbound traffic
+         * *   **in**: inbound.
+         * *   **out**: outbound.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);

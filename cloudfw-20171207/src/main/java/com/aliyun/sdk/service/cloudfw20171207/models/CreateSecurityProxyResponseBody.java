@@ -49,7 +49,7 @@ public class CreateSecurityProxyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ProxyId.
+         * The ID of the NAT firewall.
          */
         public Builder proxyId(String proxyId) {
             this.proxyId = proxyId;
@@ -57,7 +57,7 @@ public class CreateSecurityProxyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

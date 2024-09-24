@@ -77,7 +77,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details about the VPC firewall.
+         * The information about the VPC firewalls.
          */
         public Builder vpcFirewalls(java.util.List < VpcFirewalls> vpcFirewalls) {
             this.vpcFirewalls = vpcFirewalls;
@@ -177,7 +177,12 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * RuleClass.
+             * The level of the rule group for the IPS. Valid values:
+             * <p>
+             * 
+             * *   **1**: loose
+             * *   **2**: medium
+             * *   **3**: strict
              */
             public Builder ruleClass(Integer ruleClass) {
                 this.ruleClass = ruleClass;
@@ -929,7 +934,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the intrusion prevention system (IPS) configuration.
+             * The intrusion prevention system (IPS) configurations.
              */
             public Builder ipsConfig(IpsConfig ipsConfig) {
                 this.ipsConfig = ipsConfig;

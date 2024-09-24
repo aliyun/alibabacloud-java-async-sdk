@@ -127,6 +127,12 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceNameList")
         private java.util.List < String > serviceNameList;
 
+        @com.aliyun.core.annotation.NameInMap("SrcIpCnt")
+        private Long srcIpCnt;
+
+        @com.aliyun.core.annotation.NameInMap("TotalReplyBytes")
+        private Long totalReplyBytes;
+
         @com.aliyun.core.annotation.NameInMap("TrafficPercent1Day")
         private String trafficPercent1Day;
 
@@ -149,6 +155,8 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             this.riskLevel = builder.riskLevel;
             this.riskReason = builder.riskReason;
             this.serviceNameList = builder.serviceNameList;
+            this.srcIpCnt = builder.srcIpCnt;
+            this.totalReplyBytes = builder.totalReplyBytes;
             this.trafficPercent1Day = builder.trafficPercent1Day;
             this.trafficPercent30Day = builder.trafficPercent30Day;
             this.trafficPercent7Day = builder.trafficPercent7Day;
@@ -247,6 +255,20 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
         }
 
         /**
+         * @return srcIpCnt
+         */
+        public Long getSrcIpCnt() {
+            return this.srcIpCnt;
+        }
+
+        /**
+         * @return totalReplyBytes
+         */
+        public Long getTotalReplyBytes() {
+            return this.totalReplyBytes;
+        }
+
+        /**
          * @return trafficPercent1Day
          */
         public String getTrafficPercent1Day() {
@@ -280,6 +302,8 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
             private Integer riskLevel; 
             private String riskReason; 
             private java.util.List < String > serviceNameList; 
+            private Long srcIpCnt; 
+            private Long totalReplyBytes; 
             private String trafficPercent1Day; 
             private String trafficPercent30Day; 
             private String trafficPercent7Day; 
@@ -393,6 +417,22 @@ public class DescribeInternetOpenIpResponseBody extends TeaModel {
              */
             public Builder serviceNameList(java.util.List < String > serviceNameList) {
                 this.serviceNameList = serviceNameList;
+                return this;
+            }
+
+            /**
+             * SrcIpCnt.
+             */
+            public Builder srcIpCnt(Long srcIpCnt) {
+                this.srcIpCnt = srcIpCnt;
+                return this;
+            }
+
+            /**
+             * TotalReplyBytes.
+             */
+            public Builder totalReplyBytes(Long totalReplyBytes) {
+                this.totalReplyBytes = totalReplyBytes;
                 return this;
             }
 

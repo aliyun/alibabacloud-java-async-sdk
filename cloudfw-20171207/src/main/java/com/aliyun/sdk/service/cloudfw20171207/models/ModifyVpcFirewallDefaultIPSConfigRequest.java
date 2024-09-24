@@ -159,8 +159,8 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
          * Specifies whether to enable basic protection. Valid values:
          * <p>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * *   **1**: yes.
+         * *   **0**: no.
          */
         public Builder basicRules(String basicRules) {
             this.putQueryParameter("BasicRules", basicRules);
@@ -172,8 +172,8 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
          * Specifies whether to enable virtual patching. Valid values:
          * <p>
          * 
-         * *   **1**: yes
-         * *   **0**: no
+         * *   **1**: yes.
+         * *   **0**: no.
          */
         public Builder enableAllPatch(String enableAllPatch) {
             this.putQueryParameter("EnableAllPatch", enableAllPatch);
@@ -185,8 +185,8 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
          * The language of the content within the request and response. Valid values:
          * <p>
          * 
-         * *   **zh**: Chinese (default)
-         * *   **en**: English
+         * *   **zh** (default)
+         * *   **en**
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -204,7 +204,12 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * RuleClass.
+         * The level of the rule group for the IPS. Valid values:
+         * <p>
+         * 
+         * *   **1**: loose
+         * *   **2**: medium
+         * *   **3**: strict
          */
         public Builder ruleClass(String ruleClass) {
             this.putQueryParameter("RuleClass", ruleClass);
@@ -216,8 +221,8 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
          * The mode of the intrusion prevention system (IPS). Valid values:
          * <p>
          * 
-         * *   **1**: block mode
-         * *   **0**: monitor mode
+         * *   **1**: block mode.
+         * *   **0**: monitor mode.
          */
         public Builder runMode(String runMode) {
             this.putQueryParameter("RunMode", runMode);
@@ -235,11 +240,11 @@ public class ModifyVpcFirewallDefaultIPSConfigRequest extends Request {
         }
 
         /**
-         * The instance ID of the VPC firewall. Valid values:
+         * The instance ID of the VPC firewall.
          * <p>
          * 
-         * *   If the VPC firewall protects mutual access traffic between a VPC and a specified network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the IDs of CEN instances.
-         * *   If the VPC firewall protects mutual access traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the ID of the VPC firewall. You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
+         * *   If the VPC firewall protects traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the [DescribeVpcFirewallCenList](~~345777~~) operation to query the IDs of CEN instances.
+         * *   If the VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall. You can call the [DescribeVpcFirewallList](~~342932~~) operation to query the instance IDs of VPC firewalls.
          */
         public Builder vpcFirewallId(String vpcFirewallId) {
             this.putQueryParameter("VpcFirewallId", vpcFirewallId);

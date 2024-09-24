@@ -61,7 +61,7 @@ public class DescribeAssetRiskListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The details of the asset.
+         * The details of the assets.
          */
         public Builder assetList(java.util.List < AssetList> assetList) {
             this.assetList = assetList;

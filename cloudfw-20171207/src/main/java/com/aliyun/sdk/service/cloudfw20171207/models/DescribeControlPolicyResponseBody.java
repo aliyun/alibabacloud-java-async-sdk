@@ -704,13 +704,13 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType. Valid values:
+             * The destination address in the access control policy. The value of this parameter varies based on the value of DestinationType.
              * <p>
              * 
-             * *   If **DestinationType** is set to **net**, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.
-             * *   If **DestinationType** is set to **domain**, the value of Destination is a domain name. Example: aliyuncs.com.
-             * *   If **DestinationType** is set to **group**, the value of Destination is the name of an address book. Example: db_group.
-             * *   If **DestinationType** is set to **location**, the value of Destination is a location. For more information about location codes, see [AddControlPolicy](~~138867~~). Example: \["BJ11", "ZB"].
+             * *   If the value of **DestinationType** is **net**, the value of Destination is a CIDR block. Example: 192.0.XX.XX/24.
+             * *   If the value of **DestinationType** is **domain**, the value of Destination is a domain name. Example: aliyuncs.com.
+             * *   If the value of **DestinationType** is **group**, the value of Destination is the name of an address book. Example: db_group.
+             * *   If the value of **DestinationType** is **location**, the value of Destination is the name of a location. For more information about location codes, see AddControlPolicy. Example: \["BJ11", "ZB"].
              */
             public Builder destination(String destination) {
                 this.destination = destination;
@@ -767,7 +767,7 @@ public class DescribeControlPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The DNS resolution result.
+             * The DNS resolution results.
              */
             public Builder dnsResult(String dnsResult) {
                 this.dnsResult = dnsResult;

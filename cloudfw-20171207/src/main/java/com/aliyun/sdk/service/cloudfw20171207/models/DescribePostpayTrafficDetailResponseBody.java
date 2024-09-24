@@ -106,6 +106,9 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProtectionDuration")
         private Long protectionDuration;
 
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
+        private String regionNo;
+
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
@@ -124,6 +127,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.outBytes = builder.outBytes;
             this.protectionDuration = builder.protectionDuration;
+            this.regionNo = builder.regionNo;
             this.resourceId = builder.resourceId;
             this.totalBytes = builder.totalBytes;
             this.trafficDay = builder.trafficDay;
@@ -174,6 +178,13 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionNo
+         */
+        public String getRegionNo() {
+            return this.regionNo;
+        }
+
+        /**
          * @return resourceId
          */
         public String getResourceId() {
@@ -207,6 +218,7 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
             private String instanceType; 
             private Long outBytes; 
             private Long protectionDuration; 
+            private String regionNo; 
             private String resourceId; 
             private Long totalBytes; 
             private String trafficDay; 
@@ -249,6 +261,14 @@ public class DescribePostpayTrafficDetailResponseBody extends TeaModel {
              */
             public Builder protectionDuration(Long protectionDuration) {
                 this.protectionDuration = protectionDuration;
+                return this;
+            }
+
+            /**
+             * RegionNo.
+             */
+            public Builder regionNo(String regionNo) {
+                this.regionNo = regionNo;
                 return this;
             }
 

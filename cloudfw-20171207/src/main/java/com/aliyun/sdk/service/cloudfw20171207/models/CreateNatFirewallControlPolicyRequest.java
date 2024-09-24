@@ -509,10 +509,10 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
         }
 
         /**
-         * The direction of the traffic to which the access control policy applies. Valid values:
+         * The direction of the traffic to which the access control policy applies. Valid value:
          * <p>
          * 
-         * *   **out**: outbound traffic
+         * *   **out**: outbound.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -597,10 +597,12 @@ public class CreateNatFirewallControlPolicyRequest extends Request {
          * 
          * Valid values:
          * 
-         * *   ANY: all types of protocols
+         * *   ANY: all types of protocols.
          * *   TCP
          * *   UDP
          * *   ICMP
+         * 
+         * >  If the destination address is a threat intelligence address book of the domain name type or a cloud service address book, you can set Proto only to TCP and set ApplicationNameList to HTTP, HTTPS, SMTP, SMTPS, or SSL.
          */
         public Builder proto(String proto) {
             this.putQueryParameter("Proto", proto);

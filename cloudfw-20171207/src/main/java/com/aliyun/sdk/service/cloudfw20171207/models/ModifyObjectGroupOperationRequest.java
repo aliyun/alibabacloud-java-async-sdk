@@ -141,7 +141,7 @@ public class ModifyObjectGroupOperationRequest extends Request {
         } 
 
         /**
-         * Comment.
+         * The remarks of the operation.
          */
         public Builder comment(String comment) {
             this.putQueryParameter("Comment", comment);
@@ -150,7 +150,13 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * Direction.
+         * The direction of the traffic to which the access control policy applies.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **in**: inbound.
+         * *   **out**: outbound.
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -159,7 +165,11 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of the content within the response. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default)
+         * *   **en**
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -168,7 +178,7 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * ObjectList.
+         * The operation objects.
          */
         public Builder objectList(java.util.List < String > objectList) {
             this.putQueryParameter("ObjectList", objectList);
@@ -177,7 +187,13 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * ObjectOperation.
+         * The operation. Valid values:
+         * <p>
+         * 
+         * *   **ignore**: adds the operation object to the whitelist.
+         * *   **cancelIgnore**: removes the operation object from the whitelist.
+         * *   **subscribe**: follows the operation object.
+         * *   **unsubscribe**: unfollows the operation object.
          */
         public Builder objectOperation(String objectOperation) {
             this.putQueryParameter("ObjectOperation", objectOperation);
@@ -186,7 +202,15 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * The type of the operation object.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **assetsIp**: the asset IP address.
+         * *   **destinationIp**: the destination IP address.
+         * *   **destinationPort**: the destination port.
+         * *   **destinationDomain**: the destination domain name.
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -195,7 +219,7 @@ public class ModifyObjectGroupOperationRequest extends Request {
         }
 
         /**
-         * SourceIp.
+         * The source IP address of the request.
          */
         public Builder sourceIp(String sourceIp) {
             this.putQueryParameter("SourceIp", sourceIp);

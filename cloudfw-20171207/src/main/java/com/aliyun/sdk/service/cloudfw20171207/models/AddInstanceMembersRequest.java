@@ -54,7 +54,7 @@ public class AddInstanceMembersRequest extends Request {
         } 
 
         /**
-         * The members that you want to add to Cloud Firewall.
+         * The members.
          */
         public Builder members(java.util.List < Members> members) {
             this.putQueryParameter("Members", members);
@@ -109,7 +109,7 @@ public class AddInstanceMembersRequest extends Request {
             private Long memberUid; 
 
             /**
-             * The remarks of member that you want to add to Cloud Firewall. The remarks must be 1 to 256 characters in length.
+             * The remarks of the member. The value must be 1 to 256 characters in length.
              */
             public Builder memberDesc(String memberDesc) {
                 this.memberDesc = memberDesc;
@@ -117,7 +117,7 @@ public class AddInstanceMembersRequest extends Request {
             }
 
             /**
-             * The UID of member that you want to add to Cloud Firewall.
+             * The UID of the member. You can add up to 20 members to Cloud Firewall at a time.
              */
             public Builder memberUid(Long memberUid) {
                 this.memberUid = memberUid;

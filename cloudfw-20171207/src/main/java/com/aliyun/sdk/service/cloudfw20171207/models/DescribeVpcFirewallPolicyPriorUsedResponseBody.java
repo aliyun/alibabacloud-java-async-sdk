@@ -61,7 +61,7 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
         private Integer start; 
 
         /**
-         * The lowest priority for the access control policy.
+         * The lowest priority for the access control policies.
          */
         public Builder end(Integer end) {
             this.end = end;
@@ -69,7 +69,7 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class DescribeVpcFirewallPolicyPriorUsedResponseBody extends TeaModel {
         }
 
         /**
-         * The highest priority for the access control policy.
+         * The highest priority for the access control policies.
          */
         public Builder start(Integer start) {
             this.start = start;
