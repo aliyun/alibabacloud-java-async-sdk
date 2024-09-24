@@ -67,6 +67,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetPotentialFailZonesResponse> getPotentialFailZones(GetPotentialFailZonesRequest request);
 
+    CompletableFuture<GetResource4ModifyRecordResponse> getResource4ModifyRecord(GetResource4ModifyRecordRequest request);
+
+    CompletableFuture<GetResult4QueryInstancePrice4ModifyResponse> getResult4QueryInstancePrice4Modify(GetResult4QueryInstancePrice4ModifyRequest request);
+
     CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
 
     /**
@@ -93,6 +97,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     CompletableFuture<ListTemplateResponse> listTemplate(ListTemplateRequest request);
+
+    CompletableFuture<ModifyApplicationSpecResponse> modifyApplicationSpec(ModifyApplicationSpecRequest request);
+
+    CompletableFuture<QueryInstancePrice4ModifyResponse> queryInstancePrice4Modify(QueryInstancePrice4ModifyRequest request);
+
+    CompletableFuture<QueryInstanceSpec4ModifyResponse> queryInstanceSpec4Modify(QueryInstanceSpec4ModifyRequest request);
 
     CompletableFuture<ReConfigApplicationResponse> reConfigApplication(ReConfigApplicationRequest request);
 
