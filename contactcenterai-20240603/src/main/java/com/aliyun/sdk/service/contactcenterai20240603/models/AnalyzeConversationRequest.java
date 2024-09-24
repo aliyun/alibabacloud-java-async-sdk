@@ -26,6 +26,10 @@ public class AnalyzeConversationRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("categoryTags")
+    private java.util.List < CategoryTags> categoryTags;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("dialogue")
     @com.aliyun.core.annotation.Validation(required = true)
     private Dialogue dialogue;
@@ -60,11 +64,16 @@ public class AnalyzeConversationRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Boolean stream;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userProfiles")
+    private java.util.List < UserProfiles> userProfiles;
+
     private AnalyzeConversationRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.appId = builder.appId;
         this.regionId = builder.regionId;
+        this.categoryTags = builder.categoryTags;
         this.dialogue = builder.dialogue;
         this.examples = builder.examples;
         this.fields = builder.fields;
@@ -73,6 +82,7 @@ public class AnalyzeConversationRequest extends Request {
         this.sceneName = builder.sceneName;
         this.serviceInspection = builder.serviceInspection;
         this.stream = builder.stream;
+        this.userProfiles = builder.userProfiles;
     }
 
     public static Builder builder() {
@@ -107,6 +117,13 @@ public class AnalyzeConversationRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return categoryTags
+     */
+    public java.util.List < CategoryTags> getCategoryTags() {
+        return this.categoryTags;
     }
 
     /**
@@ -165,10 +182,18 @@ public class AnalyzeConversationRequest extends Request {
         return this.stream;
     }
 
+    /**
+     * @return userProfiles
+     */
+    public java.util.List < UserProfiles> getUserProfiles() {
+        return this.userProfiles;
+    }
+
     public static final class Builder extends Request.Builder<AnalyzeConversationRequest, Builder> {
         private String workspaceId; 
         private String appId; 
         private String regionId; 
+        private java.util.List < CategoryTags> categoryTags; 
         private Dialogue dialogue; 
         private java.util.List < Examples> examples; 
         private java.util.List < Fields> fields; 
@@ -177,6 +202,7 @@ public class AnalyzeConversationRequest extends Request {
         private String sceneName; 
         private ServiceInspection serviceInspection; 
         private Boolean stream; 
+        private java.util.List < UserProfiles> userProfiles; 
 
         private Builder() {
             super();
@@ -187,6 +213,7 @@ public class AnalyzeConversationRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.appId = request.appId;
             this.regionId = request.regionId;
+            this.categoryTags = request.categoryTags;
             this.dialogue = request.dialogue;
             this.examples = request.examples;
             this.fields = request.fields;
@@ -195,6 +222,7 @@ public class AnalyzeConversationRequest extends Request {
             this.sceneName = request.sceneName;
             this.serviceInspection = request.serviceInspection;
             this.stream = request.stream;
+            this.userProfiles = request.userProfiles;
         } 
 
         /**
@@ -221,6 +249,15 @@ public class AnalyzeConversationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * categoryTags.
+         */
+        public Builder categoryTags(java.util.List < CategoryTags> categoryTags) {
+            this.putBodyParameter("categoryTags", categoryTags);
+            this.categoryTags = categoryTags;
             return this;
         }
 
@@ -296,6 +333,15 @@ public class AnalyzeConversationRequest extends Request {
             return this;
         }
 
+        /**
+         * userProfiles.
+         */
+        public Builder userProfiles(java.util.List < UserProfiles> userProfiles) {
+            this.putBodyParameter("userProfiles", userProfiles);
+            this.userProfiles = userProfiles;
+            return this;
+        }
+
         @Override
         public AnalyzeConversationRequest build() {
             return new AnalyzeConversationRequest(this);
@@ -303,6 +349,67 @@ public class AnalyzeConversationRequest extends Request {
 
     } 
 
+    public static class CategoryTags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("tagDesc")
+        private String tagDesc;
+
+        @com.aliyun.core.annotation.NameInMap("tagName")
+        private String tagName;
+
+        private CategoryTags(Builder builder) {
+            this.tagDesc = builder.tagDesc;
+            this.tagName = builder.tagName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CategoryTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagDesc
+         */
+        public String getTagDesc() {
+            return this.tagDesc;
+        }
+
+        /**
+         * @return tagName
+         */
+        public String getTagName() {
+            return this.tagName;
+        }
+
+        public static final class Builder {
+            private String tagDesc; 
+            private String tagName; 
+
+            /**
+             * tagDesc.
+             */
+            public Builder tagDesc(String tagDesc) {
+                this.tagDesc = tagDesc;
+                return this;
+            }
+
+            /**
+             * tagName.
+             */
+            public Builder tagName(String tagName) {
+                this.tagName = tagName;
+                return this;
+            }
+
+            public CategoryTags build() {
+                return new CategoryTags(this);
+            } 
+
+        } 
+
+    }
     public static class Sentences extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("role")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -882,6 +989,67 @@ public class AnalyzeConversationRequest extends Request {
 
             public ServiceInspection build() {
                 return new ServiceInspection(this);
+            } 
+
+        } 
+
+    }
+    public static class UserProfiles extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private UserProfiles(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserProfiles create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public UserProfiles build() {
+                return new UserProfiles(this);
             } 
 
         } 
