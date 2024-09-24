@@ -598,12 +598,12 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * The type of the resource creator. Valid values:
+             * The resource creator. Valid values:
              * <p>
              * 
-             * *   user: the resource is created by the user.
-             * *   system: the resource is created by the ACK management system.
-             * *   addon: the resource is created by a cluster component.
+             * *   user: The resource is created by the user.
+             * *   system: The resource is created by the ACK management system.
+             * *   addon: The resource is created by a cluster component.
              */
             public Builder creatorType(String creatorType) {
                 this.creatorType = creatorType;

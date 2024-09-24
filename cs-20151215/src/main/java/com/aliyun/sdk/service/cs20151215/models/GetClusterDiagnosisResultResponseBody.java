@@ -133,7 +133,11 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * code.
+         * The code that indicates the diagnostic result. Valid values:
+         * <p>
+         * 
+         * *   0: the diagnostic is completed.
+         * *   1: the diagnostic failed.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -141,7 +145,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * created.
+         * The time when the diagnostic is initiated.
          */
         public Builder created(String created) {
             this.created = created;
@@ -149,7 +153,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * diagnosis_id.
+         * The diagnostic ID.
          */
         public Builder diagnosisId(String diagnosisId) {
             this.diagnosisId = diagnosisId;
@@ -157,7 +161,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * finished.
+         * The time when the diagnostic is completed.
          */
         public Builder finished(String finished) {
             this.finished = finished;
@@ -165,7 +169,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * message.
+         * The diagnostic status information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -173,7 +177,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The diagnostic result.
          */
         public Builder result(String result) {
             this.result = result;
@@ -181,7 +185,12 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * status.
+         * The status of the diagnostic. Valid values:
+         * <p>
+         * 
+         * *   0: The diagnostic is created.
+         * *   1: The diagnostic is running.
+         * *   2: The diagnostic is completed.
          */
         public Builder status(Long status) {
             this.status = status;
@@ -189,7 +198,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * target.
+         * The diagnostic object.
          */
         public Builder target(String target) {
             this.target = target;
@@ -197,7 +206,18 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
         }
 
         /**
-         * type.
+         * The type of the diagnostic.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   node
+         * *   ingress
+         * *   cluster
+         * *   memory
+         * *   pod
+         * *   service
+         * *   network
          */
         public Builder type(String type) {
             this.type = type;

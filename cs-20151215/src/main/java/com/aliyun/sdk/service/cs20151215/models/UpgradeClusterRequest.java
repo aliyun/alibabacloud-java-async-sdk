@@ -135,7 +135,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * This parameter is discontinued.
+         * This parameter is deprecated.
          */
         public Builder componentName(String componentName) {
             this.putBodyParameter("component_name", componentName);
@@ -147,8 +147,8 @@ public class UpgradeClusterRequest extends Request {
          * Specifies whether to update only the master nodes. Valid values:
          * <p>
          * 
-         * *   true: Updates only the master nodes.
-         * *   false: Updates the master nodes and worker nodes.
+         * *   true: updates only the master nodes.
+         * *   false: updates the master nodes and worker nodes.
          */
         public Builder masterOnly(Boolean masterOnly) {
             this.putBodyParameter("master_only", masterOnly);
@@ -175,7 +175,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * This parameter is discontinued. Specify the Kubernetes version by using the next_version parameter.
+         * This parameter is deprecated. Specify the Kubernetes version by using the next_version parameter.
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);

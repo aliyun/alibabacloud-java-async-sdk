@@ -141,10 +141,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * This parameter is deprecated.
+         * This parameter is discontinued.
          * <p>
          * 
-         * The quota of enhanced edge node pools.
+         * The quotas of enhanced edge node pools.
          */
         public Builder edgeImprovedNodepoolQuota(EdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota) {
             this.edgeImprovedNodepoolQuota = edgeImprovedNodepoolQuota;
@@ -224,10 +224,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
             private Integer period; 
 
             /**
-             * This parameter is deprecated.
+             * This parameter is discontinued.
              * <p>
              * 
-             * The maximum bandwidth of each enhanced node pool. Unit: Mbit/s.
+             * The maximum bandwidth of each enhanced edge node pool. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -235,10 +235,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * This parameter is discontinued.
              * <p>
              * 
-             * The quota of enhanced edge node pools that belong to an Alibaba Cloud account.
+             * The maximum number of enhanced edge node pools that you can create within an Alibaba Cloud account.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -246,12 +246,12 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * This parameter is discontinued.
              * <p>
              * 
              * The maximum subscription duration of an enhanced edge node pool. Unit: months.
              * 
-             * > You can ignore this parameter because enhanced edge node pools are pay-as-you-go resources.
+             * >  You are charged for enhanced edge node pools based on the pay-as-you-go billing method. Therefore, you can ignore this parameter.
              */
             public Builder period(Integer period) {
                 this.period = period;

@@ -13,10 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeClusterAddonInstanceRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("ClusterID")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterID;
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("AddonName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addonName;
 
     private DescribeClusterAddonInstanceRequest(Builder builder) {

@@ -57,7 +57,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the kubeconfig files associated with the cluster.
+         * The status list of the kubeconfig files associated with the cluster.
          */
         public Builder states(java.util.List < States> states) {
             this.states = states;
@@ -262,7 +262,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             private Boolean revokable; 
 
             /**
-             * The display name of the account.
+             * The displayed name or role name of the RAM user.
              */
             public Builder accountDisplayName(String accountDisplayName) {
                 this.accountDisplayName = accountDisplayName;
@@ -278,7 +278,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * The logon name or role name of the RAM user.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -286,7 +286,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the account. Valid values:
+             * The status of the account.
              * <p>
              * 
              * *   Active: The account is active.
@@ -299,7 +299,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account. Valid values:
+             * The type of the account.
              * <p>
              * 
              * *   RootAccount: Alibaba Cloud account.
@@ -312,7 +312,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * Expiration time of the certificate.
+             * The expiration time of the client certificate for the kubeconfig file.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -320,7 +320,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the certificate.
+             * The status of the client certificate for the kubeconfig file.
              * <p>
              * 
              * *   Unexpired: The certificate is not expired.
@@ -333,7 +333,7 @@ public class ListClusterKubeconfigStatesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the certificate can be revoked.
+             * Indicates whether the client certificate for the kubeconfig file can be revoked.
              */
             public Builder revokable(Boolean revokable) {
                 this.revokable = revokable;

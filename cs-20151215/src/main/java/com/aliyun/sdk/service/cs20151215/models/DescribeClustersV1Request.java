@@ -160,13 +160,11 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * The cluster type, which is available only when the cluster type is set to `ManagedKubernetes`. Valid values:
+         * After you set `cluster_type` to `ManagedKubernetes` and configure the `profile` parameter, you can further specify the edition of the cluster. Valid values:
          * <p>
          * 
-         * *   `ack.pro.small`: ACK Pro cluster
-         * *   `ack.standard`: ACK Basic cluster
-         * 
-         * By default, this parameter is left empty, which means that ACK clusters are not filtered by this parameter.
+         * *   `ack.pro.small`: ACK Pro cluster.
+         * *   `ack.standard`: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -175,11 +173,9 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * The cluster type. Valid values:
-         * <p>
-         * 
          * *   `Kubernetes`: ACK dedicated cluster.
-         * *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.
+         * <p>
+         * *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.
          * *   `ExternalKubernetes`: registered cluster.
          */
         public Builder clusterType(String clusterType) {
@@ -219,18 +215,13 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * The identifier of the cluster. Valid values when the cluster_type parameter is set to `ManagedKubernetes`:
+         * If you set `cluster_type` to `ManagedKubernetes`, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:
          * <p>
          * 
-         * *   `Default`: ACK managed cluster
-         * *   `Serverless`: ACK Serverless cluster
-         * *   `Edge`: ACK Edge cluster
-         * 
-         * Valid values when the cluster_type parameter is set to `Ask`:
-         * 
-         * `ask.v2`: ACK Serverless cluster
-         * 
-         * By default, this parameter is left empty. If you leave this parameter empty, ACK clusters are not filtered by identifier.
+         * *   `Default`: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.
+         * *   `Edge`: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.
+         * *   `Serverless`: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.
+         * *   `Lingjun`: ACK Lingjun Pro cluster.
          */
         public Builder profile(String profile) {
             this.putQueryParameter("profile", profile);

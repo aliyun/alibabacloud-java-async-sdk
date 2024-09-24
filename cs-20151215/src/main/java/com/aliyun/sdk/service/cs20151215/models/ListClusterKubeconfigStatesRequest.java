@@ -81,7 +81,7 @@ public class ListClusterKubeconfigStatesRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class ListClusterKubeconfigStatesRequest extends Request {
          * <p>
          * 
          * *   Valid values: 10 to 50.
-         * *   Default value: 10.
+         * *   Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

@@ -37,7 +37,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
         private java.util.List < Roles> roles; 
 
         /**
-         * roles.
+         * The check results.
          */
         public Builder roles(java.util.List < Roles> roles) {
             this.roles = roles;
@@ -101,7 +101,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * granted.
+             * Specifies whether the service role is granted required permissions.
              */
             public Builder granted(Boolean granted) {
                 this.granted = granted;
@@ -109,7 +109,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * The message returned if the service role is not granted required permissions.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -117,7 +117,7 @@ public class CheckServiceRoleResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The service role name.
              */
             public Builder name(String name) {
                 this.name = name;

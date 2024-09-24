@@ -259,7 +259,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * The waiting time before the auto scaling feature performs a scale-in activity. Only if the resource usage on a node remains below the scale-in threshold within the waiting time, the node is removed after the waiting time ends. Unit: minutes.
+         * The waiting time before the auto scaling feature performs a scale-in activity. It is an interval between the time when the scale-in threshold is reached and the time when the scale-in activity (reduce the number of pods) starts. Unit: minutes. Default value: 10.
          */
         public Builder coolDownDuration(String coolDownDuration) {
             this.putBodyParameter("cool_down_duration", coolDownDuration);
@@ -268,7 +268,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to evict DaemonSet pods during scale-in activities. Valid values:
+         * Specifies whether to evict pods created by DaemonSets when the cluster autoscaler performs a scale-in activity. Valid values:
          * <p>
          * 
          * *   `true`: evicts DaemonSet pods.
@@ -296,6 +296,9 @@ public class CreateAutoscalingConfigRequest extends Request {
 
         /**
          * The scale-in threshold of GPU utilization. This threshold specifies the ratio of the GPU resources that are requested by pods to the total GPU resources on the node.
+         * <p>
+         * 
+         * A scale-in activity is performed only when the CPU utilization, memory utilization, and GPU utilization of a GPU-accelerated node are lower than the scale-in threshold of GPU utilization.
          */
         public Builder gpuUtilizationThreshold(String gpuUtilizationThreshold) {
             this.putBodyParameter("gpu_utilization_threshold", gpuUtilizationThreshold);
@@ -304,7 +307,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * The maximum amount of time that the cluster autoscaler waits for pods on the nodes to terminate during scale-in activities. Unit: seconds.
+         * The maximum amount of time to wait for pods on a node to terminate during a scale-in activity. Unit: seconds.
          */
         public Builder maxGracefulTerminationSec(Integer maxGracefulTerminationSec) {
             this.putBodyParameter("max_graceful_termination_sec", maxGracefulTerminationSec);
@@ -313,7 +316,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * The minimum number of pods that must be guaranteed during scale-in activities.
+         * The minimum number of pods allowed in each ReplicaSet before a scale-in activity is performed.
          */
         public Builder minReplicaCount(Integer minReplicaCount) {
             this.putBodyParameter("min_replica_count", minReplicaCount);
@@ -322,7 +325,11 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to delete the corresponding Kubernetes node objects after nodes are removed in swift mode.
+         * Specifies whether to delete the corresponding Kubernetes node objects after nodes are removed in swift mode. For more information about the swift mode, see [Scaling mode](~~119099~~). Default value: false. Valid values:
+         * <p>
+         * 
+         * *   `true`: deletes the corresponding Kubernetes node objects after nodes are removed in swift mode. We recommend that you do not set the value to true because data inconsistency may occur in Kubernetes objects.
+         * *   `false`: retains the corresponding Kubernetes node objects after nodes are removed in swift mode.
          */
         public Builder recycleNodeDeletionEnabled(Boolean recycleNodeDeletionEnabled) {
             this.putBodyParameter("recycle_node_deletion_enabled", recycleNodeDeletionEnabled);
@@ -344,7 +351,11 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether the cluster autoscaler performs scale-out activities when the number of ready nodes in the cluster is zero.
+         * Specifies whether the cluster autoscaler performs a scale-out activity when the number of ready nodes in the cluster is 0. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   `true`: performs a scale-out activity.
+         * *   `false`: does not perform a scale-out activity.
          */
         public Builder scaleUpFromZero(Boolean scaleUpFromZero) {
             this.putBodyParameter("scale_up_from_zero", scaleUpFromZero);
@@ -353,7 +364,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * The interval at which the cluster is scanned and evaluated for scaling. Unit: seconds.
+         * The interval at which the system scans for events that trigger scaling activities. Unit: seconds. Default value: 60.
          */
         public Builder scanInterval(String scanInterval) {
             this.putBodyParameter("scan_interval", scanInterval);
@@ -362,7 +373,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the cluster autoscaler to scale in nodes that host pods mounted with local storage, such as EmptyDir volumes or HostPath volumes. Valid values:
+         * Specifies whether the cluster autoscaler scales in nodes that host pods mounted with local volumes, such as EmptyDir or HostPath volumes. Valid values:
          * <p>
          * 
          * *   `true`: does not allow the cluster autoscaler to scale in these nodes.
@@ -375,7 +386,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow the cluster autoscaler to scale in nodes that host pods in the kube-system namespace, excluding DaemonSet pods and mirror pods. Valid values:
+         * Specifies whether the cluster autoscaler scales in nodes that host pods in the kube-system namespace. This parameter does not take effect on pods created by DaemonSets and mirror pods. Valid values:
          * <p>
          * 
          * *   `true`: does not allow the cluster autoscaler to scale in these nodes.
@@ -388,7 +399,7 @@ public class CreateAutoscalingConfigRequest extends Request {
         }
 
         /**
-         * The cooldown period. Newly added nodes can be removed in scale-in activities only after the cooldown period ends. Unit: minutes.
+         * The cooldown period. After the autoscaler performs a scale-out activity, the autoscaler waits a cooldown period before it can perform a scale-in activity. Newly added nodes can be removed in scale-in activities only after the cooldown period ends. Unit: minutes.
          */
         public Builder unneededDuration(String unneededDuration) {
             this.putBodyParameter("unneeded_duration", unneededDuration);
@@ -398,6 +409,9 @@ public class CreateAutoscalingConfigRequest extends Request {
 
         /**
          * The scale-in threshold. This threshold specifies the ratio of the resources that are requested by pods to the total resources on the node.
+         * <p>
+         * 
+         * A scale-in activity is performed only when the CPU utilization and memory utilization of a node are lower than the scale-in threshold.
          */
         public Builder utilizationThreshold(String utilizationThreshold) {
             this.putBodyParameter("utilization_threshold", utilizationThreshold);

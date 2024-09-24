@@ -54,7 +54,7 @@ public class CheckServiceRoleRequest extends Request {
         } 
 
         /**
-         * roles.
+         * The service roles that you want to check.
          */
         public Builder roles(java.util.List < Roles> roles) {
             this.putBodyParameter("roles", roles);
@@ -97,7 +97,7 @@ public class CheckServiceRoleRequest extends Request {
             private String name; 
 
             /**
-             * name.
+             * The service role name.
              */
             public Builder name(String name) {
                 this.name = name;

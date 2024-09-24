@@ -61,7 +61,7 @@ public class CreateClusterDiagnosisResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -69,7 +69,7 @@ public class CreateClusterDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * diagnosis_id.
+         * The diagnostic ID.
          */
         public Builder diagnosisId(String diagnosisId) {
             this.diagnosisId = diagnosisId;
@@ -77,7 +77,7 @@ public class CreateClusterDiagnosisResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

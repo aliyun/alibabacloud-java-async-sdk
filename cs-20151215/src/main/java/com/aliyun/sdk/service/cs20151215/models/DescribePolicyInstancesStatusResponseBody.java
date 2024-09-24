@@ -49,7 +49,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         private java.util.List < PolicyInstances> policyInstances; 
 
         /**
-         * Information about the number of policy instances of each severity level.
+         * The number of policy instances that are deployed in the cluster at different severity levels.
          */
         public Builder instancesSeverityCount(java.util.Map < String, ? > instancesSeverityCount) {
             this.instancesSeverityCount = instancesSeverityCount;
@@ -57,7 +57,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Details about policy instances of different types.
+         * The number of policy instances of each policy type.
          */
         public Builder policyInstances(java.util.List < PolicyInstances> policyInstances) {
             this.policyInstances = policyInstances;
@@ -145,7 +145,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             private String policySeverity; 
 
             /**
-             * The policy type. For more information about different types of policies and their descriptions, see [Predefined security policies of ACK](~~359819~~).
+             * The type of the policy. For more information about different types of policies and their descriptions, see [Predefined security policies of ACK](~~359819~~).
              */
             public Builder policyCategory(String policyCategory) {
                 this.policyCategory = policyCategory;

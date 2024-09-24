@@ -441,11 +441,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The type of ACK managed cluster. This parameter is available only for ACK managed clusters. Valid values:
+             * After you set `cluster_type` to `ManagedKubernetes` and configure the `profile` parameter, you can further specify the edition of the cluster. Valid values:
              * <p>
              * 
-             * *   `ack.pro.small`: ACK Pro cluster
-             * *   `ack.standard`: ACK Basic cluster
+             * *   `ack.pro.small`: ACK Pro cluster.
+             * *   `ack.standard`: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -453,13 +453,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster type. Valid values:
+             * *   `Kubernetes`: ACK dedicated cluster.
              * <p>
-             * 
-             * *   `Kubernetes`: ACK dedicated cluster
-             * *   `ManagedKubernetes`: ACK managed cluster
-             * *   `Ask`: ACK Serverless cluster
-             * *   `ExternalKubernetes`: registered cluster
+             * *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.
+             * *   `ExternalKubernetes`: registered cluster.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -483,11 +480,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether deletion protection is enabled for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:
+             * Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:
              * <p>
              * 
-             * *   `true`: Deletion protection is enabled for the cluster. The cluster cannot be deleted in the ACK console or by calling API operations.
-             * *   `false`: Deletion protection is disabled for the cluster. The cluster can be deleted in the ACK console or by calling API operations.
+             * *   `true`: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.
+             * *   `false`: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -503,7 +500,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Server Load Balancer (SLB) instance that is used by the Ingress of the cluster.
+             * The ID of the Server Load Balancer (SLB) instance that is used by the Ingresses of the cluster.
              * <p>
              * 
              * The default SLB specification is slb.s1.small, which belongs to the high-performance instance type.
@@ -514,10 +511,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the versions of open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.
+             * The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.
              * <p>
              * 
-             * You can create clusters of the latest two Kubernetes versions in the ACK console. You can call the corresponding ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
+             * You can create clusters that run the latest two Kubernetes versions in the ACK console. You can call the API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
              */
             public Builder initVersion(String initVersion) {
                 this.initVersion = initVersion;
@@ -525,7 +522,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The maintenance window of the cluster. This feature is available only for ACK Pro clusters.
+             * The maintenance window of the cluster. This feature is available only for ACK managed clusters and ACK Serverless clusters.
              */
             public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
                 this.maintenanceWindow = maintenanceWindow;
@@ -533,7 +530,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the cluster API server, including an internal endpoint and a public endpoint.
+             * The address of the cluster API server. It includes an internal endpoint and a public endpoint.
              */
             public Builder masterUrl(String masterUrl) {
                 this.masterUrl = masterUrl;
@@ -552,7 +549,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              * The cluster name.
              * <p>
              * 
-             * The name must be 1 to 63 characters in length and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+             * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
              */
             public Builder name(String name) {
                 this.name = name;
@@ -563,9 +560,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              * The network mode of the cluster. Valid values:
              * <p>
              * 
-             * *   `classic`: classic network
-             * *   `vpc`: virtual private cloud (VPC)
-             * *   `overlay`: overlay network
+             * *   `classic`: classic network.
+             * *   `vpc`: virtual private cloud (VPC).
+             * *   `overlay`: overlay network.
              * *   `calico`: network powered by Calico.
              */
             public Builder networkMode(String networkMode) {
@@ -597,8 +594,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              * The cluster identifier. Valid values:
              * <p>
              * 
-             * *   `Edge`: The cluster is an ACK Edge cluster.
-             * *   `Default`: The cluster is not an ACK Edge cluster.
+             * *   `Default`: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.
+             * *   `Edge`: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.
+             * *   `Serverless`: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.
+             * *   `Lingjun`: ACK Lingjun Pro cluster.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -622,7 +621,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the security group to which the instances of the cluster belong.
+             * The ID of the security group of the cluster.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -665,9 +664,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
              * *   172.16-31.0.0/12-16
              * *   192.168.0.0/16
              * 
-             * The CIDR block of pods cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after the cluster is created.
+             * The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.
              * 
-             * For more information, see [Plan CIDR blocks for an ACK cluster](~~86500~~).
+             * For more information about the network planning of ACK clusters, see [Plan CIDR blocks for an ACK cluster](~~86500~~).
              */
             public Builder subnetCidr(String subnetCidr) {
                 this.subnetCidr = subnetCidr;
@@ -707,7 +706,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage Elastic Compute Service (ECS) instances.
+             * The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.
              */
             public Builder workerRamRoleName(String workerRamRoleName) {
                 this.workerRamRoleName = workerRamRoleName;
@@ -715,7 +714,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * The ID of the zone where the cluster is deployed.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

@@ -124,13 +124,11 @@ public class DescribeAddonsRequest extends Request {
         }
 
         /**
-         * The edition of the cluster. If you set the cluster type to `ManagedKubernetes`, the following editions are supported:
+         * If you set `cluster_type` to `ManagedKubernetes` and specify `profile`, you can further specify the edition of the cluster. Valid values:
          * <p>
          * 
-         * *   `ack.pro.small`: ACK Pro cluster
-         * *   `ack.standard`: ACK Basic cluster
-         * 
-         * By default, this parameter is left empty. If you leave this parameter empty, clusters are not filtered by edition.
+         * *   `ack.pro.small`: creates an ACK Pro cluster.
+         * *   `ack.standard`: creates an ACK Basic cluster. If you leave the parameter empty, an ACK Basic cluster is created.
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -139,11 +137,9 @@ public class DescribeAddonsRequest extends Request {
         }
 
         /**
-         * The type of cluster. Valid values:
-         * <p>
-         * 
          * *   `Kubernetes`: ACK dedicated cluster.
-         * *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.
+         * <p>
+         * *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.
          * *   `ExternalKubernetes`: registered cluster.
          */
         public Builder clusterType(String clusterType) {

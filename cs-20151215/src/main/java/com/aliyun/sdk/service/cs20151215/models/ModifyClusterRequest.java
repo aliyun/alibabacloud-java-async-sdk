@@ -259,7 +259,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.
+         * The network access control lists (ACLs) of the SLB instance associated with the API server if the cluster is a registered cluster.
          */
         public Builder accessControlList(java.util.List < String > accessControlList) {
             this.putBodyParameter("access_control_list", accessControlList);
@@ -268,7 +268,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * api_server_custom_cert_sans.
+         * The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. This parameter is available only for ACK managed clusters.
          */
         public Builder apiServerCustomCertSans(ApiServerCustomCertSans apiServerCustomCertSans) {
             this.putBodyParameter("api_server_custom_cert_sans", apiServerCustomCertSans);
@@ -277,7 +277,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to associate an elastic IP address (EIP) with the cluster. This EIP is used for accessing the API server over the Internet. Valid values:
+         * Specifies whether to associate an elastic IP address (EIP) with the cluster. This EIP is used to enable access to the API server over the Internet. Valid values:
          * <p>
          * 
          * *   `true`: associates an EIP with the cluster.
@@ -299,10 +299,10 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The cluster name.
+         * The name of the cluster.
          * <p>
          * 
-         * The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (\_). The cluster name cannot start with a hyphen (-).
+         * The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The cluster name cannot start with a hyphen (-).
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("cluster_name", clusterName);
@@ -311,13 +311,13 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:
+         * Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:
          * <p>
          * 
-         * *   `true`
-         * *   `false`
+         * *   `true`: enables cluster deletion protection.
+         * *   `false`: disables cluster deletion protection.
          * 
-         * Default value: `false`
+         * Default value: `false`.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putBodyParameter("deletion_protection", deletionProtection);
@@ -326,11 +326,11 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the RRSA feature. Valid values:
+         * Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature. This parameter is available only for ACK managed clusters. Valid values:
          * <p>
          * 
-         * *   `true`
-         * *   `false`
+         * *   `true`: enables the RRSA feature.
+         * *   `false`: disables the RRSA feature.
          */
         public Builder enableRrsa(Boolean enableRrsa) {
             this.putBodyParameter("enable_rrsa", enableRrsa);
@@ -342,10 +342,10 @@ public class ModifyClusterRequest extends Request {
          * Specifies whether to remap the test domain name of the cluster. Valid values:
          * <p>
          * 
-         * *   `true`
-         * *   `false`
+         * *   `true`: remaps the test domain name of the cluster.
+         * *   `false`: does not remap the test domain name of the cluster.
          * 
-         * Default value: `false`
+         * Default value: `false`.
          */
         public Builder ingressDomainRebinding(Boolean ingressDomainRebinding) {
             this.putBodyParameter("ingress_domain_rebinding", ingressDomainRebinding);
@@ -363,13 +363,13 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable instance deletion protection. If this option is enabled, the instance cannot be deleted in the console or by calling API operations. Valid values:
+         * Specifies whether to enable instance deletion protection. If you enable this option, the instance cannot be deleted in the console or by calling API operations. Valid values:
          * <p>
          * 
-         * *   `true`
-         * *   `false`
+         * *   `true`: enables instance deletion protection.
+         * *   `false`: disables instance deletion protection.
          * 
-         * Default value: `false`
+         * Default value: `false`.
          */
         public Builder instanceDeletionProtection(Boolean instanceDeletionProtection) {
             this.putBodyParameter("instance_deletion_protection", instanceDeletionProtection);
@@ -378,7 +378,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The cluster maintenance window. This feature takes effect only for managed Pro clusters.
+         * The cluster maintenance window. This feature takes effect only for ACK Pro clusters.
          */
         public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
             this.putBodyParameter("maintenance_window", maintenanceWindow);
@@ -387,7 +387,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * operation_policy.
+         * The automatic O\&M policy of the cluster.
          */
         public Builder operationPolicy(OperationPolicy operationPolicy) {
             this.putBodyParameter("operation_policy", operationPolicy);
@@ -396,7 +396,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The ID of the cluster resource group.
+         * The cluster resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resource_group_id", resourceGroupId);
@@ -459,7 +459,11 @@ public class ModifyClusterRequest extends Request {
             private java.util.List < String > subjectAlternativeNames; 
 
             /**
-             * action.
+             * Specifies whether to overwrite or add SANs. Valid values:
+             * <p>
+             * 
+             * *   overwrite: overwrites SANs.
+             * *   append: adds SANs.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -467,7 +471,7 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * subject_alternative_names.
+             * The SANs.
              */
             public Builder subjectAlternativeNames(java.util.List < String > subjectAlternativeNames) {
                 this.subjectAlternativeNames = subjectAlternativeNames;
@@ -520,7 +524,12 @@ public class ModifyClusterRequest extends Request {
             private Boolean enabled; 
 
             /**
-             * channel.
+             * The frequency of auto cluster updates. Valid values:
+             * <p>
+             * 
+             * *   patch
+             * *   stable
+             * *   rapid
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -528,7 +537,7 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * enabled.
+             * Specifies whether to enable auto cluster update.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -569,7 +578,7 @@ public class ModifyClusterRequest extends Request {
             private ClusterAutoUpgrade clusterAutoUpgrade; 
 
             /**
-             * cluster_auto_upgrade.
+             * The configurations of auto cluster update.
              */
             public Builder clusterAutoUpgrade(ClusterAutoUpgrade clusterAutoUpgrade) {
                 this.clusterAutoUpgrade = clusterAutoUpgrade;
@@ -630,7 +639,7 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * The name of the LogProject that stores system events.
+             * The name of the Simple Log Service project that stores system events.
              */
             public Builder loggingProject(String loggingProject) {
                 this.loggingProject = loggingProject;

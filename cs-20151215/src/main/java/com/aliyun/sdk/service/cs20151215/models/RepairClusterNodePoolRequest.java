@@ -129,7 +129,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * Specifies whether to allow node restart.
+         * Specifies whether to restart the instance of the node.
          */
         public Builder autoRestart(Boolean autoRestart) {
             this.putBodyParameter("auto_restart", autoRestart);
@@ -138,7 +138,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * The nodes that you want to repair. If you do not specify nodes, all nodes in the node pool are repaired.
+         * The list of nodes. If you do not specify nodes, all nodes in the node pool are selected.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);

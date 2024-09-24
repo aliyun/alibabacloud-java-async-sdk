@@ -67,7 +67,7 @@ public class GetClusterDiagnosisResultRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -76,7 +76,7 @@ public class GetClusterDiagnosisResultRequest extends Request {
         }
 
         /**
-         * diagnosis_id.
+         * The diagnostic ID.
          */
         public Builder diagnosisId(String diagnosisId) {
             this.putPathParameter("diagnosis_id", diagnosisId);

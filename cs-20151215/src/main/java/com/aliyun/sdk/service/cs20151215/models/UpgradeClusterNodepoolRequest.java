@@ -194,7 +194,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The Kubernetes version that is used by the nodes.
+         * The Kubernetes version that is used by the nodes. You can call the [DescribeKubernetesVersionMetadata](~~2667899~~) operation to query the Kubernetes version of the cluster returned in the current_version parameter.
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putBodyParameter("kubernetes_version", kubernetesVersion);
@@ -203,7 +203,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * node_names.
+         * The nodes that you want to update. If you do not specify this parameter, all nodes in the node pool are updated by default.
          */
         public Builder nodeNames(java.util.List < String > nodeNames) {
             this.putBodyParameter("node_names", nodeNames);
@@ -212,7 +212,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * rolling_policy.
+         * The rotation configuration.
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -221,7 +221,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The runtime type. Valid values: containerd and docker.
+         * The runtime type. You can call the [DescribeKubernetesVersionMetadata](~~2667899~~) operation to query the runtime information returned in the runtime parameter.
          */
         public Builder runtimeType(String runtimeType) {
             this.putBodyParameter("runtime_type", runtimeType);
@@ -230,7 +230,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * The version of the container runtime that is used by the nodes.
+         * The version of the container runtime that is used by the nodes. You can call the [DescribeKubernetesVersionMetadata](~~2667899~~) operation to query the runtime version information returned in the runtime parameter.
          */
         public Builder runtimeVersion(String runtimeVersion) {
             this.putBodyParameter("runtime_version", runtimeVersion);
@@ -239,7 +239,13 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * use_replace.
+         * Specifies whether to perform the update by replacing the system disk. Valid values:
+         * <p>
+         * 
+         * *   true: updates by replacing the system disk.
+         * *   false: does not update by replacing the system disk.
+         * 
+         * Default value: false.
          */
         public Builder useReplace(Boolean useReplace) {
             this.putBodyParameter("use_replace", useReplace);
@@ -305,7 +311,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
             private String pausePolicy; 
 
             /**
-             * batch_interval.
+             * The update interval between batches takes effect only when the pause policy is set to NotPause. Unit: minutes. Valid values: 5 to 120.
              */
             public Builder batchInterval(Integer batchInterval) {
                 this.batchInterval = batchInterval;
@@ -313,7 +319,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
             }
 
             /**
-             * max_parallelism.
+             * The maximum number of unavailable nodes.
              */
             public Builder maxParallelism(Integer maxParallelism) {
                 this.maxParallelism = maxParallelism;
@@ -321,7 +327,12 @@ public class UpgradeClusterNodepoolRequest extends Request {
             }
 
             /**
-             * pause_policy.
+             * The policy that is used to pause the update. Valid values:
+             * <p>
+             * 
+             * *   FirstBatch: pauses the update after the first batch is completed.
+             * *   EveryBatch: pauses after each batch is completed.
+             * *   NotPause: does not pause.
              */
             public Builder pausePolicy(String pausePolicy) {
                 this.pausePolicy = pausePolicy;

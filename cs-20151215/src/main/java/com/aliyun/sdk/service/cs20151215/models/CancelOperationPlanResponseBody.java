@@ -11,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelOperationPlanResponseBody</p>
  */
 public class CancelOperationPlanResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("request_id")
     private String requestId;
 
     private CancelOperationPlanResponseBody(Builder builder) {
@@ -37,7 +37,7 @@ public class CancelOperationPlanResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * request_id.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

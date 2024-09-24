@@ -56,8 +56,8 @@ public class OpenAckServiceRequest extends Request {
          * The type of service that you want to activate. Valid values:
          * <p>
          * 
-         * *   `propayasgo`: professional managed Kubernetes service.
-         * *   `edgepayasgo`: ACK Edge.
+         * *   `propayasgo`: ACK clusters (including ACK managed clusters and ACK dedicated clusters), ACK Serverless clusters, and registered clusters.
+         * *   `edgepayasgo`: ACK Edge clusters.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

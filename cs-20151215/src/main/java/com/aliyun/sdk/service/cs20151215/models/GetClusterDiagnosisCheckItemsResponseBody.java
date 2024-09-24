@@ -73,7 +73,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * check_items.
+         * The check item.
          */
         public Builder checkItems(java.util.List < CheckItems> checkItems) {
             this.checkItems = checkItems;
@@ -81,7 +81,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         }
 
         /**
-         * code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -89,7 +89,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         }
 
         /**
-         * is_success.
+         * Indicates whether the check is successful.
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -97,7 +97,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -221,7 +221,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * desc.
+             * The description.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -229,7 +229,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * display.
+             * The display name.
              */
             public Builder display(String display) {
                 this.display = display;
@@ -237,7 +237,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * group.
+             * The name of the group to which the check item belongs.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -245,7 +245,14 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * level.
+             * The severity level of the check result.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   normal
+             * *   warning
+             * *   error
              */
             public Builder level(String level) {
                 this.level = level;
@@ -253,7 +260,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * The check result.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -261,7 +268,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the check item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -269,7 +276,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * refer.
+             * The reference value.
              */
             public Builder refer(String refer) {
                 this.refer = refer;
@@ -277,7 +284,7 @@ public class GetClusterDiagnosisCheckItemsResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * The value of the check item.
              */
             public Builder value(String value) {
                 this.value = value;

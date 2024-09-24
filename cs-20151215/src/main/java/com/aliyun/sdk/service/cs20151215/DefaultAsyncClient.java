@@ -210,7 +210,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * > 
-      * *   To call this operation, make sure that you have the AliyunCSFullAccess permissions.
+      * *   To call this operation, make sure that you have the AliyunCSFullAccess permission.
       * *   You cannot revoke the permissions of an Alibaba Cloud account.
       * *   You cannot revoke the permissions of the account that you use to call this operation.
       *
@@ -264,13 +264,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic describes all parameters for creating an ACK cluster. You can create the following types of ACK clusters.
-      * *   [Create an ACK managed cluster](~~90776~~)
-      * *   [Create an ACK dedicated cluster](~~197620~~)
-      * *   [Create an ACK Serverless cluster](~~144246~~)
-      * *   [Create an ACK Edge cluster](~~128204~~)
-      * *   [Create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
-      * *   [Create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
+      * This topic describes all request parameters for creating a Container Service for Kubernetes (ACK) cluster. For more information about how to call the API to create each type of ACK cluster, refer to the following topics:
+      * *   [Call the API to create an ACK managed cluster](~~90776~~)
+      * *   [Call the API to create an ACK dedicated cluster](~~197620~~)
+      * *   [Call the API to create an ACK Serverless cluster](~~144246~~)
+      * *   [Call the API to create an ACK Edge cluster](~~128204~~)
+      * *   [Call the API to create an ACK Basic cluster that supports sandboxed containers](~~196321~~)
+      * *   [Call the API to create an ACK Pro cluster that supports sandboxed containers](~~140623~~)
       *
      */
     @Override
@@ -428,8 +428,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > 
-      * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours. - The operation may have unexpected risks. Back up the data before you perform this operation. - When the system removes a node, it sets the status of the node to Unschedulable. - The system removes only worker nodes. It does not remove master nodes.
+      * *   When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.
+      * *   The operation may have unexpected risks. Back up the data before you perform this operation.
+      * *   When the system removes a node, it sets the status of the node to Unschedulable.
+      * *   The system removes only worker nodes. It does not remove master nodes.
       *
      */
     @Override
@@ -797,8 +799,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * **
-      * ****The default validity period of a kubeconfig file is 3 years. Two months before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the secret is valid for 3 years. The previous kubeconfig secret remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
+      * >  The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.
       *
      */
     @Override
@@ -1168,6 +1169,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **Precautions**:
+      * *   If you call this operation as a Resource Access Management (RAM) user or by assuming a RAM role, only the permissions granted on the clusters on which the current account has the role-based access control (RBAC) administrator permissions are returned. If you want to query the permissions on all clusters, you must use an account that has the RBAC administrator permissions on all clusters.
+      *
+     */
     @Override
     public CompletableFuture<DescribeUserPermissionResponse> describeUserPermission(DescribeUserPermissionRequest request) {
         try {
@@ -1429,9 +1435,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > 
-      * *   To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.
-      * *   To call this operation, make sure that you have the AliyunCSFullAccess permissions.
+      * > - To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.
+      * > - To call this operation, make sure that you have the AliyunCSFullAccess permissions.
       *
      */
     @Override
@@ -1524,8 +1529,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * You can use this API operation to modify the components in a Container Service for Kubernetes (ACK) cluster or the control plane components in an ACK Pro cluster.
-      * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/query).
-      * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](https://www.alibabacloud.com/help/zh/container-service-for-kubernetes/latest/customize-control-plane-parameters-for-a-professional-kubernetes-cluster).
+      * *   To query the customizable parameters of a component, call the `DescribeClusterAddonMetadata` API operation. For more information, see [Query the metadata of a specified component version](~~2667944~~).
+      * *   For more information about the customizable parameters of control plane components in ACK Pro clusters, see [Customize the parameters of control plane components in ACK Pro clusters](~~199588~~).
       * After you call this operation, the component may be redeployed and restarted. We recommend that you assess the impact before you call this operation.
       *
      */
@@ -2053,8 +2058,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * - You can call this operation only with an Alibaba Cloud account. 
-      * - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+      * *   You can call this operation only with an Alibaba Cloud account.
+      * *   If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
       *
      */
     @Override

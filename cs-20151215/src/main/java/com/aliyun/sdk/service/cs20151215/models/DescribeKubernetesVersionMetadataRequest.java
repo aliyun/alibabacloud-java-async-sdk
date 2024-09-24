@@ -198,7 +198,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * QueryUpgradableVersion.
+         * Specify whether to query the Kubernetes versions available for updates. This parameter takes effect only when the KubernetesVersion parameter is specified.
          */
         public Builder queryUpgradableVersion(Boolean queryUpgradableVersion) {
             this.putQueryParameter("QueryUpgradableVersion", queryUpgradableVersion);

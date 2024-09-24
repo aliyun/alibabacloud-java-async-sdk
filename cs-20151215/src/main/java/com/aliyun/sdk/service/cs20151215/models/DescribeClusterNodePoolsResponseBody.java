@@ -2218,7 +2218,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.
+             * This field is deprecated and replaced by the ram_role_name parameter.
              */
             public Builder ramPolicy(String ramPolicy) {
                 this.ramPolicy = ramPolicy;
@@ -2278,13 +2278,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 阿里云OS安全加固。取值：
-             * <p>
-             * 
-             * - `true`：开启阿里云OS安全加固。
-             * - `false`：不开启阿里云OS安全加固。
-             * 
-             * 默认值：`false`。
+             * security_hardening_os.
              */
             public Builder securityHardeningOs(Boolean securityHardeningOs) {
                 this.securityHardeningOs = securityHardeningOs;
@@ -2901,7 +2895,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * The configurations of the scaling group.
+             * The configuration of the scaling group.
              */
             public Builder scalingGroup(ScalingGroup scalingGroup) {
                 this.scalingGroup = scalingGroup;

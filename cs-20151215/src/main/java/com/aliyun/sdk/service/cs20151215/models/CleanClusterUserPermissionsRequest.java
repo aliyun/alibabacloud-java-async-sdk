@@ -104,8 +104,8 @@ public class CleanClusterUserPermissionsRequest extends Request {
          * Specifies whether to forcefully delete the specified kubeconfig files. Valid values:
          * <p>
          * 
-         * *   **false** (default): checks the cluster access records within the previous seven days before deleting the kubeconfig files. The kubeconfig files are not deleted if cluster access records are found or fail to be retrieved.
-         * *   **true**: forcefully deletes the kubeconfig files without checking cluster access records.
+         * *   false (default): checks the cluster access records within the previous seven days before deleting the kubeconfig files. The kubeconfig files are not deleted if cluster access records are found or fail to be retrieved.
+         * *   true: forcefully deletes the kubeconfig files without checking the cluster access records.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);

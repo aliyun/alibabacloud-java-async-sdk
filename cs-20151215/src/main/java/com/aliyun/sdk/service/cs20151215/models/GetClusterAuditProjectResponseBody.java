@@ -49,7 +49,7 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
         private String slsProjectName; 
 
         /**
-         * audit_enabled.
+         * Indicates whether the cluster auditing feature is enabled for the cluster. `true`: The cluster auditing feature is enabled for the cluster. `false`: The cluster auditing feature is disabled for the cluster.
          */
         public Builder auditEnabled(Boolean auditEnabled) {
             this.auditEnabled = auditEnabled;
@@ -57,7 +57,7 @@ public class GetClusterAuditProjectResponseBody extends TeaModel {
         }
 
         /**
-         * sls_project_name.
+         * The SLS project in which the audit logs of the API server are stored.
          */
         public Builder slsProjectName(String slsProjectName) {
             this.slsProjectName = slsProjectName;

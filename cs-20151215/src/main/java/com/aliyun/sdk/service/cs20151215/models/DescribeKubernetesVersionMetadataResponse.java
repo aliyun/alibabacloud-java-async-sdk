@@ -290,7 +290,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The type of operating system. Examples:
+             * The type of OS. Examples:
              * <p>
              * 
              * *   `Windows`
@@ -485,7 +485,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * The Kubernetes version that is supported by ACK. For more information, see [Release notes for Kubernetes versions](~~185269~~).
+             * The Kubernetes version supported by ACK. For more information, see [Release notes for Kubernetes versions](~~185269~~).
              */
             public Builder version(String version) {
                 this.version = version;
@@ -517,7 +517,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * upgradable_versions.
+             * The list of available versions for updates.
              */
             public Builder upgradableVersions(java.util.List < String > upgradableVersions) {
                 this.upgradableVersions = upgradableVersions;

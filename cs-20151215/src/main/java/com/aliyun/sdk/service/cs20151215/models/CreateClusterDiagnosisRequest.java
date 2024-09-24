@@ -81,7 +81,7 @@ public class CreateClusterDiagnosisRequest extends Request {
         } 
 
         /**
-         * cluster_id.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -90,7 +90,32 @@ public class CreateClusterDiagnosisRequest extends Request {
         }
 
         /**
-         * target.
+         * The parameter used to specify the diagnostic object. Examples of parameters for different types of diagnostic objects:
+         * <p>
+         * 
+         * node:
+         * 
+         *     {"name": "cn-shanghai.10.10.10.107"}
+         * 
+         * pod
+         * 
+         *     {"namespace": "kube-system", "name": "csi-plugin-2cg9f"}
+         * 
+         * network
+         * 
+         *     {"src": "10.10.10.108", "dst": "10.11.247.16", "dport": "80"}
+         * 
+         * ingress
+         * 
+         *     {"url": "https://example.com"}
+         * 
+         * memory
+         * 
+         *     {"node":"cn-hangzhou.172.16.9.240"}
+         * 
+         * service
+         * 
+         *     {"namespace": "kube-system", "name": "nginx-ingress-lb"}
          */
         public Builder target(java.util.Map < String, ? > target) {
             this.putBodyParameter("target", target);
@@ -99,7 +124,18 @@ public class CreateClusterDiagnosisRequest extends Request {
         }
 
         /**
-         * type.
+         * The type of the diagnostic.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   node
+         * *   ingress
+         * *   cluster
+         * *   memory
+         * *   pod
+         * *   service
+         * *   network
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
