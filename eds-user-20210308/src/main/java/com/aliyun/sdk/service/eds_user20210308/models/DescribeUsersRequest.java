@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUsersRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    private String bizType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
     private java.util.List < String > endUserIds;
 
@@ -48,8 +52,13 @@ public class DescribeUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ShowExtras")
     private java.util.Map < String, ? > showExtras;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SolutionId")
+    private String solutionId;
+
     private DescribeUsersRequest(Builder builder) {
         super(builder);
+        this.bizType = builder.bizType;
         this.endUserIds = builder.endUserIds;
         this.excludeEndUserIds = builder.excludeEndUserIds;
         this.filter = builder.filter;
@@ -59,6 +68,7 @@ public class DescribeUsersRequest extends Request {
         this.nextToken = builder.nextToken;
         this.orgId = builder.orgId;
         this.showExtras = builder.showExtras;
+        this.solutionId = builder.solutionId;
     }
 
     public static Builder builder() {
@@ -72,6 +82,13 @@ public class DescribeUsersRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
     }
 
     /**
@@ -137,7 +154,15 @@ public class DescribeUsersRequest extends Request {
         return this.showExtras;
     }
 
+    /**
+     * @return solutionId
+     */
+    public String getSolutionId() {
+        return this.solutionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeUsersRequest, Builder> {
+        private String bizType; 
         private java.util.List < String > endUserIds; 
         private java.util.List < String > excludeEndUserIds; 
         private String filter; 
@@ -147,6 +172,7 @@ public class DescribeUsersRequest extends Request {
         private String nextToken; 
         private String orgId; 
         private java.util.Map < String, ? > showExtras; 
+        private String solutionId; 
 
         private Builder() {
             super();
@@ -154,6 +180,7 @@ public class DescribeUsersRequest extends Request {
 
         private Builder(DescribeUsersRequest request) {
             super(request);
+            this.bizType = request.bizType;
             this.endUserIds = request.endUserIds;
             this.excludeEndUserIds = request.excludeEndUserIds;
             this.filter = request.filter;
@@ -163,7 +190,17 @@ public class DescribeUsersRequest extends Request {
             this.nextToken = request.nextToken;
             this.orgId = request.orgId;
             this.showExtras = request.showExtras;
+            this.solutionId = request.solutionId;
         } 
+
+        /**
+         * BizType.
+         */
+        public Builder bizType(String bizType) {
+            this.putBodyParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
 
         /**
          * The list of usernames that must be exactly matched.
@@ -251,6 +288,15 @@ public class DescribeUsersRequest extends Request {
             String showExtrasShrink = shrink(showExtras, "ShowExtras", "json");
             this.putBodyParameter("ShowExtras", showExtrasShrink);
             this.showExtras = showExtras;
+            return this;
+        }
+
+        /**
+         * SolutionId.
+         */
+        public Builder solutionId(String solutionId) {
+            this.putBodyParameter("SolutionId", solutionId);
+            this.solutionId = solutionId;
             return this;
         }
 
