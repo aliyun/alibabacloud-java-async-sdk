@@ -517,6 +517,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeSiteMonitorStatisticsResponse> describeSiteMonitorStatistics(DescribeSiteMonitorStatisticsRequest request);
 
+    CompletableFuture<DescribeSyntheticProbeListResponse> describeSyntheticProbeList(DescribeSyntheticProbeListRequest request);
+
     CompletableFuture<DescribeSystemEventAttributeResponse> describeSystemEventAttribute(DescribeSystemEventAttributeRequest request);
 
     /**

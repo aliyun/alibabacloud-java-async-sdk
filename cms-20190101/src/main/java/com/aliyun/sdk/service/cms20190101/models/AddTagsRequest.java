@@ -139,14 +139,14 @@ public class AddTagsRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
+             * The tag key.
              * <p>
              * 
              * Valid values of N: 1 to 3. A tag key can be 1 to 64 characters in length.
              * 
              * You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see [DescribeTagKeyList](~~145558~~).
              * 
-             * > The tag key cannot start with `aliyun` or `acs:`. The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
+             * >  The tag key cannot start with `aliyun` or `acs:`. The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -154,14 +154,14 @@ public class AddTagsRequest extends Request {
             }
 
             /**
-             * The value of tag N.
+             * The tag value.
              * <p>
              * 
              * Valid values of N: 1 to 3. A tag value can be 1 to 64 characters in length.
              * 
-             * You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see [DescribeTagKeyList](~~145557~~).
+             * You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see [DescribeTagValueList](~~145557~~).
              * 
-             * > The tag value cannot start with `aliyun` or `acs:`. The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
+             * >  The tag value cannot start with `aliyun` or `acs:`. The tag key (`Tag.N.Key`) and tag value (`Tag.N.Value`) must be specified at the same time.
              */
             public Builder value(String value) {
                 this.value = value;

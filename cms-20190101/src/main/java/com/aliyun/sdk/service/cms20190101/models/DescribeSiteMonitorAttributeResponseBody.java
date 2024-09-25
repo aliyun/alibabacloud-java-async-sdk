@@ -734,11 +734,15 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         private IspCity(Builder builder) {
             this.city = builder.city;
             this.cityName = builder.cityName;
             this.isp = builder.isp;
             this.ispName = builder.ispName;
+            this.type = builder.type;
         }
 
         public static Builder builder() {
@@ -777,11 +781,19 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.ispName;
         }
 
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
         public static final class Builder {
             private String city; 
             private String cityName; 
             private String isp; 
             private String ispName; 
+            private String type; 
 
             /**
              * The city ID.
@@ -812,6 +824,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
                 return this;
             }
 
@@ -2465,6 +2485,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     }
     public static class VpcConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Region")
+        private String region;
+
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -2475,6 +2498,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         private String vswitchId;
 
         private VpcConfig(Builder builder) {
+            this.region = builder.region;
             this.securityGroupId = builder.securityGroupId;
             this.vpcId = builder.vpcId;
             this.vswitchId = builder.vswitchId;
@@ -2486,6 +2510,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
         public static VpcConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
         }
 
         /**
@@ -2510,9 +2541,18 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String region; 
             private String securityGroupId; 
             private String vpcId; 
             private String vswitchId; 
+
+            /**
+             * Region.
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
 
             /**
              * SecurityGroupId.
