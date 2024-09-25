@@ -253,13 +253,14 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * The language that indicates the collation of the databases that are created.
+         * The language that defines the collation rules in the database.
          * <p>
          * 
-         * > *   The language must be compatible with the character set that is specified by **CharacterSetName**.
-         * >*   This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is not supported by PolarDB for MySQL clusters.
+         * > 
          * 
-         * To view the valid values for this parameter, perform the following steps: Log on to the PolarDB console and click the ID of a cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.
+         * *   The language must be compatible with the character set that is specified by **CharacterSetName**.
+         * 
+         * *   This parameter is required for a PolarDB for PostgreSQL (Compatible with Oracle) or PolarDB for PostgreSQL cluster. This parameter is optional for a PolarDB for MySQL cluster. To view the valid values of this parameter, perform the following steps: Log on to the PolarDB console and click the ID of the cluster. In the left-side navigation pane, choose **Settings and Management** > **Databases**. Then, click **Create Database**.
          */
         public Builder collate(String collate) {
             this.putQueryParameter("Collate", collate);

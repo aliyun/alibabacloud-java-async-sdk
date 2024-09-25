@@ -308,7 +308,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * The code of the version to which you want to upgrade the cluster. You can call the [DescribeDBClusterVersion](~~2319145~~) operation to query the version code.
+         * The code of the db version to which you want to upgrade the cluster. You can call the [DescribeDBClusterVersion](~~2319145~~) operation to query the version code.
          */
         public Builder targetDBRevisionVersionCode(String targetDBRevisionVersionCode) {
             this.putQueryParameter("TargetDBRevisionVersionCode", targetDBRevisionVersionCode);
@@ -317,7 +317,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * TargetProxyRevisionVersionCode.
+         * The code of the proxy version to which you want to upgrade the cluster. You can call the [DescribeDBClusterVersion](~~2319145~~) operation to query the version code.
          */
         public Builder targetProxyRevisionVersionCode(String targetProxyRevisionVersionCode) {
             this.putQueryParameter("TargetProxyRevisionVersionCode", targetProxyRevisionVersionCode);
@@ -339,11 +339,11 @@ public class UpgradeDBClusterVersionRequest extends Request {
         }
 
         /**
-         * The upgrade policy. Valid values:
+         * The engine version upgrade policy. Valid values:
          * <p>
          * 
          * *   **HOT**: hot upgrade.
-         * *   **COLD**: cold upgrade. Only PolarDB for MySQL Cluster Edition that runs MySQL 8.0 supports this upgrade method.
+         * *   **COLD**: cold upgrade. Only PolarDB for MySQL 8.0 Cluster Edition supports this upgrade method.
          */
         public Builder upgradePolicy(String upgradePolicy) {
             this.putQueryParameter("UpgradePolicy", upgradePolicy);

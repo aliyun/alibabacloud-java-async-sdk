@@ -198,6 +198,9 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReturnRowCounts")
         private Long returnRowCounts;
 
+        @com.aliyun.core.annotation.NameInMap("SQLHash")
+        private String SQLHash;
+
         @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
@@ -211,6 +214,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             this.queryTimeMS = builder.queryTimeMS;
             this.queryTimes = builder.queryTimes;
             this.returnRowCounts = builder.returnRowCounts;
+            this.SQLHash = builder.SQLHash;
             this.SQLText = builder.SQLText;
         }
 
@@ -286,6 +290,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
+         * @return SQLHash
+         */
+        public String getSQLHash() {
+            return this.SQLHash;
+        }
+
+        /**
          * @return SQLText
          */
         public String getSQLText() {
@@ -302,6 +313,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private Long queryTimeMS; 
             private Long queryTimes; 
             private Long returnRowCounts; 
+            private String SQLHash; 
             private String SQLText; 
 
             /**
@@ -373,6 +385,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
              */
             public Builder returnRowCounts(Long returnRowCounts) {
                 this.returnRowCounts = returnRowCounts;
+                return this;
+            }
+
+            /**
+             * SQLHash.
+             */
+            public Builder SQLHash(String SQLHash) {
+                this.SQLHash = SQLHash;
                 return this;
             }
 
