@@ -110,6 +110,67 @@ public class CredentialVerifyResponseBody extends TeaModel {
 
     } 
 
+    public static class VlResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Success")
+        private Boolean success;
+
+        @com.aliyun.core.annotation.NameInMap("VlContent")
+        private java.util.Map < String, ? > vlContent;
+
+        private VlResult(Builder builder) {
+            this.success = builder.success;
+            this.vlContent = builder.vlContent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VlResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return success
+         */
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        /**
+         * @return vlContent
+         */
+        public java.util.Map < String, ? > getVlContent() {
+            return this.vlContent;
+        }
+
+        public static final class Builder {
+            private Boolean success; 
+            private java.util.Map < String, ? > vlContent; 
+
+            /**
+             * Success.
+             */
+            public Builder success(Boolean success) {
+                this.success = success;
+                return this;
+            }
+
+            /**
+             * VlContent.
+             */
+            public Builder vlContent(java.util.Map < String, ? > vlContent) {
+                this.vlContent = vlContent;
+                return this;
+            }
+
+            public VlResult build() {
+                return new VlResult(this);
+            } 
+
+        } 
+
+    }
     public static class ResultObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaterialInfo")
         private String materialInfo;
@@ -132,6 +193,9 @@ public class CredentialVerifyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VerifyResult")
         private String verifyResult;
 
+        @com.aliyun.core.annotation.NameInMap("VlResult")
+        private VlResult vlResult;
+
         private ResultObject(Builder builder) {
             this.materialInfo = builder.materialInfo;
             this.ocrInfo = builder.ocrInfo;
@@ -140,6 +204,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             this.riskTag = builder.riskTag;
             this.verifyDetail = builder.verifyDetail;
             this.verifyResult = builder.verifyResult;
+            this.vlResult = builder.vlResult;
         }
 
         public static Builder builder() {
@@ -199,6 +264,13 @@ public class CredentialVerifyResponseBody extends TeaModel {
             return this.verifyResult;
         }
 
+        /**
+         * @return vlResult
+         */
+        public VlResult getVlResult() {
+            return this.vlResult;
+        }
+
         public static final class Builder {
             private String materialInfo; 
             private String ocrInfo; 
@@ -207,6 +279,7 @@ public class CredentialVerifyResponseBody extends TeaModel {
             private String riskTag; 
             private String verifyDetail; 
             private String verifyResult; 
+            private VlResult vlResult; 
 
             /**
              * MaterialInfo.
@@ -261,6 +334,14 @@ public class CredentialVerifyResponseBody extends TeaModel {
              */
             public Builder verifyResult(String verifyResult) {
                 this.verifyResult = verifyResult;
+                return this;
+            }
+
+            /**
+             * VlResult.
+             */
+            public Builder vlResult(VlResult vlResult) {
+                this.vlResult = vlResult;
                 return this;
             }
 

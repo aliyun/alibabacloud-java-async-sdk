@@ -48,8 +48,24 @@ public class CredentialVerifyRequest extends Request {
     private String isOCR;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantDetail")
+    private java.util.List < MerchantDetail> merchantDetail;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantId")
     private String merchantId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    private String productCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Prompt")
+    private String prompt;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromptModel")
+    private String promptModel;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserName")
@@ -66,7 +82,11 @@ public class CredentialVerifyRequest extends Request {
         this.imageUrl = builder.imageUrl;
         this.isCheck = builder.isCheck;
         this.isOCR = builder.isOCR;
+        this.merchantDetail = builder.merchantDetail;
         this.merchantId = builder.merchantId;
+        this.productCode = builder.productCode;
+        this.prompt = builder.prompt;
+        this.promptModel = builder.promptModel;
         this.userName = builder.userName;
     }
 
@@ -147,10 +167,38 @@ public class CredentialVerifyRequest extends Request {
     }
 
     /**
+     * @return merchantDetail
+     */
+    public java.util.List < MerchantDetail> getMerchantDetail() {
+        return this.merchantDetail;
+    }
+
+    /**
      * @return merchantId
      */
     public String getMerchantId() {
         return this.merchantId;
+    }
+
+    /**
+     * @return productCode
+     */
+    public String getProductCode() {
+        return this.productCode;
+    }
+
+    /**
+     * @return prompt
+     */
+    public String getPrompt() {
+        return this.prompt;
+    }
+
+    /**
+     * @return promptModel
+     */
+    public String getPromptModel() {
+        return this.promptModel;
     }
 
     /**
@@ -170,7 +218,11 @@ public class CredentialVerifyRequest extends Request {
         private String imageUrl; 
         private String isCheck; 
         private String isOCR; 
+        private java.util.List < MerchantDetail> merchantDetail; 
         private String merchantId; 
+        private String productCode; 
+        private String prompt; 
+        private String promptModel; 
         private String userName; 
 
         private Builder() {
@@ -188,7 +240,11 @@ public class CredentialVerifyRequest extends Request {
             this.imageUrl = request.imageUrl;
             this.isCheck = request.isCheck;
             this.isOCR = request.isOCR;
+            this.merchantDetail = request.merchantDetail;
             this.merchantId = request.merchantId;
+            this.productCode = request.productCode;
+            this.prompt = request.prompt;
+            this.promptModel = request.promptModel;
             this.userName = request.userName;
         } 
 
@@ -274,11 +330,48 @@ public class CredentialVerifyRequest extends Request {
         }
 
         /**
+         * MerchantDetail.
+         */
+        public Builder merchantDetail(java.util.List < MerchantDetail> merchantDetail) {
+            String merchantDetailShrink = shrink(merchantDetail, "MerchantDetail", "json");
+            this.putQueryParameter("MerchantDetail", merchantDetailShrink);
+            this.merchantDetail = merchantDetail;
+            return this;
+        }
+
+        /**
          * MerchantId.
          */
         public Builder merchantId(String merchantId) {
             this.putQueryParameter("MerchantId", merchantId);
             this.merchantId = merchantId;
+            return this;
+        }
+
+        /**
+         * ProductCode.
+         */
+        public Builder productCode(String productCode) {
+            this.putQueryParameter("ProductCode", productCode);
+            this.productCode = productCode;
+            return this;
+        }
+
+        /**
+         * Prompt.
+         */
+        public Builder prompt(String prompt) {
+            this.putQueryParameter("Prompt", prompt);
+            this.prompt = prompt;
+            return this;
+        }
+
+        /**
+         * PromptModel.
+         */
+        public Builder promptModel(String promptModel) {
+            this.putQueryParameter("PromptModel", promptModel);
+            this.promptModel = promptModel;
             return this;
         }
 
@@ -298,4 +391,65 @@ public class CredentialVerifyRequest extends Request {
 
     } 
 
+    public static class MerchantDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private MerchantDetail(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MerchantDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public MerchantDetail build() {
+                return new MerchantDetail(this);
+            } 
+
+        } 
+
+    }
 }
