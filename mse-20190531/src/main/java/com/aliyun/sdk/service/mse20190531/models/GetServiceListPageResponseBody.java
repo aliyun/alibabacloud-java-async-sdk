@@ -129,6 +129,9 @@ public class GetServiceListPageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
+        private String serviceType;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
@@ -139,6 +142,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             this.group = builder.group;
             this.instanceNum = builder.instanceNum;
             this.serviceName = builder.serviceName;
+            this.serviceType = builder.serviceType;
             this.version = builder.version;
         }
 
@@ -193,6 +197,13 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceType
+         */
+        public String getServiceType() {
+            return this.serviceType;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -206,6 +217,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             private String group; 
             private Integer instanceNum; 
             private String serviceName; 
+            private String serviceType; 
             private String version; 
 
             /**
@@ -253,6 +265,14 @@ public class GetServiceListPageResponseBody extends TeaModel {
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * ServiceType.
+             */
+            public Builder serviceType(String serviceType) {
+                this.serviceType = serviceType;
                 return this;
             }
 
