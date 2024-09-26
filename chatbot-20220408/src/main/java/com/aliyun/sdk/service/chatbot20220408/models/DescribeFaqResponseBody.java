@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeFaqResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeFaqResponseBody</p>
@@ -330,6 +331,12 @@ public class DescribeFaqResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeFaqResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaqResponseBody</p>
+     */
     public static class Outlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnQuestionId")
         private Long connQuestionId;
@@ -451,6 +458,12 @@ public class DescribeFaqResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaqResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaqResponseBody</p>
+     */
     public static class SimQuestions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -552,6 +565,12 @@ public class DescribeFaqResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeFaqResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeFaqResponseBody</p>
+     */
     public static class Solutions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;

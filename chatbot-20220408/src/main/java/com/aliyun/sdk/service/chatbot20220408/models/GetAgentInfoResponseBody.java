@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAgentInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetAgentInfoResponseBody</p>
@@ -89,7 +90,10 @@ public class GetAgentInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FC384CE1-8D42-1900-84E1-F33F990F2B5E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,6 +114,12 @@ public class GetAgentInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetAgentInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAgentInfoResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentKey")
         private String agentKey;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSaasPermissionGroupInfosResponseBody} extends {@link TeaModel}
  *
  * <p>ListSaasPermissionGroupInfosResponseBody</p>
@@ -57,7 +58,10 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AD9FA10-7780-5E12-B701-13C928524F32</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSaasPermissionGroupInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSaasPermissionGroupInfosResponseBody</p>
+     */
     public static class PgInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PgCode")
         private String pgCode;
@@ -151,6 +161,12 @@ public class ListSaasPermissionGroupInfosResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSaasPermissionGroupInfosResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSaasPermissionGroupInfosResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnName")
         private String enName;

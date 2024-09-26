@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>ListInstanceResponseBody</p>
@@ -130,6 +131,12 @@ public class ListInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstanceResponseBody</p>
+     */
     public static class Instances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Avatar")
         private String avatar;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDocResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDocResponseBody</p>
@@ -31,6 +32,9 @@ public class DescribeDocResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("DocInfo")
     private DocInfo docInfo;
+
+    @com.aliyun.core.annotation.NameInMap("DocMetadata")
+    private java.util.List < DocMetadata> docMetadata;
 
     @com.aliyun.core.annotation.NameInMap("DocName")
     private String docName;
@@ -91,6 +95,7 @@ public class DescribeDocResponseBody extends TeaModel {
         this.createUserId = builder.createUserId;
         this.createUserName = builder.createUserName;
         this.docInfo = builder.docInfo;
+        this.docMetadata = builder.docMetadata;
         this.docName = builder.docName;
         this.docTags = builder.docTags;
         this.effectStatus = builder.effectStatus;
@@ -165,6 +170,13 @@ public class DescribeDocResponseBody extends TeaModel {
      */
     public DocInfo getDocInfo() {
         return this.docInfo;
+    }
+
+    /**
+     * @return docMetadata
+     */
+    public java.util.List < DocMetadata> getDocMetadata() {
+        return this.docMetadata;
     }
 
     /**
@@ -294,6 +306,7 @@ public class DescribeDocResponseBody extends TeaModel {
         private Long createUserId; 
         private String createUserName; 
         private DocInfo docInfo; 
+        private java.util.List < DocMetadata> docMetadata; 
         private String docName; 
         private java.util.List < DocTags> docTags; 
         private Integer effectStatus; 
@@ -365,6 +378,14 @@ public class DescribeDocResponseBody extends TeaModel {
          */
         public Builder docInfo(DocInfo docInfo) {
             this.docInfo = docInfo;
+            return this;
+        }
+
+        /**
+         * DocMetadata.
+         */
+        public Builder docMetadata(java.util.List < DocMetadata> docMetadata) {
+            this.docMetadata = docMetadata;
             return this;
         }
 
@@ -465,7 +486,10 @@ public class DescribeDocResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7F132693-212A-40A9-8A81-11E7694E478B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -510,6 +534,12 @@ public class DescribeDocResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDocResponseBody</p>
+     */
     public static class DocParas extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParaLevel")
         private Integer paraLevel;
@@ -611,6 +641,12 @@ public class DescribeDocResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDocResponseBody</p>
+     */
     public static class DocInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DocParas")
         private java.util.List < DocParas> docParas;
@@ -652,6 +688,186 @@ public class DescribeDocResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDocResponseBody</p>
+     */
+    public static class MetaCellInfoDTOList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FieldCode")
+        private String fieldCode;
+
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        private String fieldName;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private MetaCellInfoDTOList(Builder builder) {
+            this.fieldCode = builder.fieldCode;
+            this.fieldName = builder.fieldName;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MetaCellInfoDTOList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fieldCode
+         */
+        public String getFieldCode() {
+            return this.fieldCode;
+        }
+
+        /**
+         * @return fieldName
+         */
+        public String getFieldName() {
+            return this.fieldName;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String fieldCode; 
+            private String fieldName; 
+            private String value; 
+
+            /**
+             * FieldCode.
+             */
+            public Builder fieldCode(String fieldCode) {
+                this.fieldCode = fieldCode;
+                return this;
+            }
+
+            /**
+             * FieldName.
+             */
+            public Builder fieldName(String fieldName) {
+                this.fieldName = fieldName;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public MetaCellInfoDTOList build() {
+                return new MetaCellInfoDTOList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDocResponseBody</p>
+     */
+    public static class DocMetadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BusinessViewId")
+        private String businessViewId;
+
+        @com.aliyun.core.annotation.NameInMap("BusinessViewName")
+        private String businessViewName;
+
+        @com.aliyun.core.annotation.NameInMap("MetaCellInfoDTOList")
+        private java.util.List < MetaCellInfoDTOList> metaCellInfoDTOList;
+
+        private DocMetadata(Builder builder) {
+            this.businessViewId = builder.businessViewId;
+            this.businessViewName = builder.businessViewName;
+            this.metaCellInfoDTOList = builder.metaCellInfoDTOList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DocMetadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return businessViewId
+         */
+        public String getBusinessViewId() {
+            return this.businessViewId;
+        }
+
+        /**
+         * @return businessViewName
+         */
+        public String getBusinessViewName() {
+            return this.businessViewName;
+        }
+
+        /**
+         * @return metaCellInfoDTOList
+         */
+        public java.util.List < MetaCellInfoDTOList> getMetaCellInfoDTOList() {
+            return this.metaCellInfoDTOList;
+        }
+
+        public static final class Builder {
+            private String businessViewId; 
+            private String businessViewName; 
+            private java.util.List < MetaCellInfoDTOList> metaCellInfoDTOList; 
+
+            /**
+             * BusinessViewId.
+             */
+            public Builder businessViewId(String businessViewId) {
+                this.businessViewId = businessViewId;
+                return this;
+            }
+
+            /**
+             * BusinessViewName.
+             */
+            public Builder businessViewName(String businessViewName) {
+                this.businessViewName = businessViewName;
+                return this;
+            }
+
+            /**
+             * MetaCellInfoDTOList.
+             */
+            public Builder metaCellInfoDTOList(java.util.List < MetaCellInfoDTOList> metaCellInfoDTOList) {
+                this.metaCellInfoDTOList = metaCellInfoDTOList;
+                return this;
+            }
+
+            public DocMetadata build() {
+                return new DocMetadata(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDocResponseBody</p>
+     */
     public static class DocTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultTag")
         private Boolean defaultTag;

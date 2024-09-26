@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchFaqResponseBody} extends {@link TeaModel}
  *
  * <p>SearchFaqResponseBody</p>
@@ -130,6 +131,12 @@ public class SearchFaqResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchFaqResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchFaqResponseBody</p>
+     */
     public static class FaqHits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CategoryId")
         private Long categoryId;

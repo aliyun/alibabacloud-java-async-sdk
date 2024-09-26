@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateUserSayRequest} extends {@link RequestModel}
  *
  * <p>CreateUserSayRequest</p>
@@ -139,6 +140,12 @@ public class CreateUserSayRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateUserSayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUserSayRequest</p>
+     */
     public static class SlotInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndIndex")
         private Integer endIndex;
@@ -220,6 +227,12 @@ public class CreateUserSayRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateUserSayRequest} extends {@link TeaModel}
+     *
+     * <p>CreateUserSayRequest</p>
+     */
     public static class UserSayDefinition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         @com.aliyun.core.annotation.Validation(required = true)

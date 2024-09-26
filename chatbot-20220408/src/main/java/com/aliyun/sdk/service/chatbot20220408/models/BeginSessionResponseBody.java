@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BeginSessionResponseBody} extends {@link TeaModel}
  *
  * <p>BeginSessionResponseBody</p>
@@ -109,7 +110,10 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * 静默超时时间
+         * <p>静默超时时间</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder silenceReplyTimeout(Integer silenceReplyTimeout) {
             this.silenceReplyTimeout = silenceReplyTimeout;

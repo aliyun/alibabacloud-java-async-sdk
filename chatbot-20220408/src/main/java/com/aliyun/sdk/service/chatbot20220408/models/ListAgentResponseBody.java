@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAgentResponseBody} extends {@link TeaModel}
  *
  * <p>ListAgentResponseBody</p>
@@ -109,7 +110,10 @@ public class ListAgentResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F55D90C1-31BE-4B2A-AA3F-25EFC36F9419</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class ListAgentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAgentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAgentResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private Long agentId;

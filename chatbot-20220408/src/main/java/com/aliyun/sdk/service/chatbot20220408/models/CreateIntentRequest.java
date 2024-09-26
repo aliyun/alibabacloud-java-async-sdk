@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIntentRequest} extends {@link RequestModel}
  *
  * <p>CreateIntentRequest</p>
@@ -139,6 +140,12 @@ public class CreateIntentRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateIntentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIntentRequest</p>
+     */
     public static class SlotInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Array")
         private Boolean array;
@@ -283,6 +290,12 @@ public class CreateIntentRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateIntentRequest} extends {@link TeaModel}
+     *
+     * <p>CreateIntentRequest</p>
+     */
     public static class IntentDefinition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SearchDocResponseBody} extends {@link TeaModel}
  *
  * <p>SearchDocResponseBody</p>
@@ -109,7 +110,10 @@ public class SearchDocResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E3E5C779-A630-45AC-B0F2-A4506A4212F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,6 +134,12 @@ public class SearchDocResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SearchDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDocResponseBody</p>
+     */
     public static class DocTags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefaultTag")
         private Boolean defaultTag;
@@ -251,6 +261,12 @@ public class SearchDocResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link SearchDocResponseBody} extends {@link TeaModel}
+     *
+     * <p>SearchDocResponseBody</p>
+     */
     public static class DocHits extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListConnQuestionResponseBody} extends {@link TeaModel}
  *
  * <p>ListConnQuestionResponseBody</p>
@@ -70,6 +71,12 @@ public class ListConnQuestionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListConnQuestionResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListConnQuestionResponseBody</p>
+     */
     public static class Outlines extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnQuestionId")
         private Long connQuestionId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link NluResponseBody} extends {@link TeaModel}
  *
  * <p>NluResponseBody</p>
@@ -90,6 +91,12 @@ public class NluResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class GlobalDictList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StandardWord")
         private String standardWord;
@@ -151,6 +158,12 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class GlobalSensitiveWordList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StandardWord")
         private String standardWord;
@@ -212,6 +225,12 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class DialogHubNluInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GlobalDictList")
         private java.util.List < GlobalDictList> globalDictList;
@@ -273,6 +292,12 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class EntityList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -374,6 +399,12 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class SlotList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -475,6 +506,12 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class IntentList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntentId")
         private Long intentId;
@@ -616,6 +653,12 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class DsNluInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityList")
         private java.util.List < EntityList> entityList;
@@ -677,6 +720,12 @@ public class NluResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link NluResponseBody} extends {@link TeaModel}
+     *
+     * <p>NluResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DialogHubNluInfo")
         private DialogHubNluInfo dialogHubNluInfo;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateIntentResponseBody} extends {@link TeaModel}
  *
  * <p>CreateIntentResponseBody</p>

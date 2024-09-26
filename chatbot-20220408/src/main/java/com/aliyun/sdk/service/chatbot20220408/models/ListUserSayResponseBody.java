@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListUserSayResponseBody} extends {@link TeaModel}
  *
  * <p>ListUserSayResponseBody</p>
@@ -130,6 +131,12 @@ public class ListUserSayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListUserSayResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserSayResponseBody</p>
+     */
     public static class SlotInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndIndex")
         private Integer endIndex;
@@ -211,6 +218,12 @@ public class ListUserSayResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListUserSayResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListUserSayResponseBody</p>
+     */
     public static class UserSays extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;

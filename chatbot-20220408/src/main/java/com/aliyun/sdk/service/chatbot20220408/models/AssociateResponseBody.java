@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AssociateResponseBody} extends {@link TeaModel}
  *
  * <p>AssociateResponseBody</p>
@@ -110,6 +111,12 @@ public class AssociateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AssociateResponseBody} extends {@link TeaModel}
+     *
+     * <p>AssociateResponseBody</p>
+     */
     public static class Associate extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Meta")
         private String meta;

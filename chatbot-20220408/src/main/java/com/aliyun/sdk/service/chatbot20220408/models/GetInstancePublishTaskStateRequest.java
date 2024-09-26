@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstancePublishTaskStateRequest} extends {@link RequestModel}
  *
  * <p>GetInstancePublishTaskStateRequest</p>

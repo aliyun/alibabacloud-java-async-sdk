@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLgfRequest} extends {@link RequestModel}
  *
  * <p>DeleteLgfRequest</p>
@@ -148,7 +149,10 @@ public class DeleteLgfRequest extends Request {
         }
 
         /**
-         * lgf Id
+         * <p>lgf Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2342424</p>
          */
         public Builder lgfId(Long lgfId) {
             this.putQueryParameter("LgfId", lgfId);

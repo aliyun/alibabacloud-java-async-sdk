@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLgfRequest} extends {@link RequestModel}
  *
  * <p>UpdateLgfRequest</p>
@@ -149,7 +150,10 @@ public class UpdateLgfRequest extends Request {
         }
 
         /**
-         * LGF ID
+         * <p>LGF ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12121</p>
          */
         public Builder lgfId(Long lgfId) {
             this.putQueryParameter("LgfId", lgfId);
@@ -164,6 +168,12 @@ public class UpdateLgfRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateLgfRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateLgfRequest</p>
+     */
     public static class LgfDefinition extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntentId")
         @com.aliyun.core.annotation.Validation(required = true)

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLgfResponseBody} extends {@link TeaModel}
  *
  * <p>DeleteLgfResponseBody</p>
@@ -49,7 +50,10 @@ public class DeleteLgfResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LGF ID
+         * <p>LGF ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2342424</p>
          */
         public Builder lgfId(Long lgfId) {
             this.lgfId = lgfId;

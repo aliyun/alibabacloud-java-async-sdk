@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLgfResponseBody} extends {@link TeaModel}
  *
  * <p>ListLgfResponseBody</p>
@@ -130,6 +131,12 @@ public class ListLgfResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLgfResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLgfResponseBody</p>
+     */
     public static class Lgfs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -221,7 +228,10 @@ public class ListLgfResponseBody extends TeaModel {
             }
 
             /**
-             * LGF ID
+             * <p>LGF ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder lgfId(Long lgfId) {
                 this.lgfId = lgfId;

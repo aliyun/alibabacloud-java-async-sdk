@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ChatResponseBody} extends {@link TeaModel}
  *
  * <p>ChatResponseBody</p>
@@ -130,6 +131,12 @@ public class ChatResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatResponseBody</p>
+     */
     public static class RelatedKnowledges extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KnowledgeId")
         private String knowledgeId;
@@ -191,6 +198,12 @@ public class ChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatResponseBody</p>
+     */
     public static class Knowledge extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
@@ -412,6 +425,12 @@ public class ChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatResponseBody</p>
+     */
     public static class Recommends extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
@@ -513,6 +532,12 @@ public class ChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatResponseBody</p>
+     */
     public static class Slots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hit")
         private Boolean hit;
@@ -614,6 +639,12 @@ public class ChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatResponseBody</p>
+     */
     public static class Text extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
@@ -975,6 +1006,12 @@ public class ChatResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ChatResponseBody} extends {@link TeaModel}
+     *
+     * <p>ChatResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
