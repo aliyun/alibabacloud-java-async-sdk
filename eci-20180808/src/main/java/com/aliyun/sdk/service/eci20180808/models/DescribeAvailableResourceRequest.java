@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeAvailableResourceRequest</p>
@@ -153,7 +154,7 @@ public class DescribeAvailableResourceRequest extends Request {
         } 
 
         /**
-         * The information about the resource that you want to query.
+         * <p>The information about the resource that you want to query.</p>
          */
         public Builder destinationResource(DestinationResource destinationResource) {
             this.putQueryParameter("DestinationResource", destinationResource);
@@ -180,10 +181,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The region ID of the ECS instance families.
-         * <p>
+         * <p>The region ID of the ECS instance families.</p>
+         * <p>You can call the <a href="~~146965~~">DescribeRegions</a> operation to query the most recent list of regions.</p>
          * 
-         * You can call the [DescribeRegions](~~146965~~) operation to query the most recent list of regions.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +212,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The information about the preemptible instances that you want to query.
+         * <p>The information about the preemptible instances that you want to query.</p>
          */
         public Builder spotResource(SpotResource spotResource) {
             this.putQueryParameter("SpotResource", spotResource);
@@ -219,10 +221,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The zone ID of the ECS instance families.
-         * <p>
+         * <p>The zone ID of the ECS instance families.</p>
+         * <p>This parameter is empty by default, which indicates that ECS instance families available in all zones in the specified region are queried.</p>
          * 
-         * This parameter is empty by default, which indicates that ECS instance families available in all zones in the specified region are queried.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-e</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -237,6 +240,12 @@ public class DescribeAvailableResourceRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableResourceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceRequest</p>
+     */
     public static class DestinationResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Category")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -301,11 +310,14 @@ public class DescribeAvailableResourceRequest extends Request {
             private String value; 
 
             /**
-             * The type of the resource. Valid values:
-             * <p>
+             * <p>The type of the resource. Valid values:</p>
+             * <ul>
+             * <li>InstanceTypeFamily: queries instance families. If you use this parameter value, you must also specify the Value parameter.</li>
+             * <li>InstanceType: queries instance types. If you use this parameter value, you must also specify the Value, Cores, and Memory parameters.</li>
+             * </ul>
              * 
-             * *   InstanceTypeFamily: queries instance families. If you use this parameter value, you must also specify the Value parameter.
-             * *   InstanceType: queries instance types. If you use this parameter value, you must also specify the Value, Cores, and Memory parameters.
+             * <strong>example:</strong>
+             * <p>InstanceTypeFamily</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -313,7 +325,10 @@ public class DescribeAvailableResourceRequest extends Request {
             }
 
             /**
-             * The number of vCPUs. This parameter is available only when the Category parameter is set to InstanceType.
+             * <p>The number of vCPUs. This parameter is available only when the Category parameter is set to InstanceType.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder cores(Float cores) {
                 this.cores = cores;
@@ -321,7 +336,10 @@ public class DescribeAvailableResourceRequest extends Request {
             }
 
             /**
-             * The size of the memory. Unit: GiB. This parameter is available only when the Category parameter is set to InstanceType.
+             * <p>The size of the memory. Unit: GiB. This parameter is available only when the Category parameter is set to InstanceType.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -329,11 +347,14 @@ public class DescribeAvailableResourceRequest extends Request {
             }
 
             /**
-             * Instance families or instance types.
-             * <p>
+             * <p>Instance families or instance types.</p>
+             * <ul>
+             * <li>If you set Category to InstanceTypeFamily, you must set this parameter to instance families such as ecs.c5.</li>
+             * <li>If you set Category to InstanceType, you must set this parameter to instance types such as ecs.c5.large.</li>
+             * </ul>
              * 
-             * *   If you set Category to InstanceTypeFamily, you must set this parameter to instance families such as ecs.c5.
-             * *   If you set Category to InstanceType, you must set this parameter to instance types such as ecs.c5.large.
+             * <strong>example:</strong>
+             * <p>ecs.c6</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -347,6 +368,12 @@ public class DescribeAvailableResourceRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceRequest</p>
+     */
     public static class SpotResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpotDuration")
         private Integer spotDuration;
@@ -398,7 +425,10 @@ public class DescribeAvailableResourceRequest extends Request {
             private String spotStrategy; 
 
             /**
-             * The protection period of the preemptible instance. Unit: hours. Default value: 1. The value of 0 indicates no protection period.
+             * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. The value of 0 indicates no protection period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder spotDuration(Integer spotDuration) {
                 this.spotDuration = spotDuration;
@@ -406,7 +436,10 @@ public class DescribeAvailableResourceRequest extends Request {
             }
 
             /**
-             * The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places. If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.
+             * <p>The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places. If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder spotPriceLimit(Double spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -414,16 +447,19 @@ public class DescribeAvailableResourceRequest extends Request {
             }
 
             /**
-             * The bidding policy for the elastic container instance. Valid values:
-             * <p>
+             * <p>The bidding policy for the elastic container instance. Valid values:</p>
+             * <ul>
+             * <li>NoSpot: The instance is created as a regular pay-as-you-go instance.</li>
+             * <li>SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.</li>
+             * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+             * </ul>
+             * <p>Default value: NoSpot.</p>
+             * <blockquote>
+             * <p>If you set this parameter to SpotWithPriceLimit or SpotAsPriceGo to query preemptible instances, you must set Category to InstanceType. You must also use the Value parameter to specify instance types, or use the Cores and Memory parameters to specify the number of vCPUs and memory size.</p>
+             * </blockquote>
              * 
-             * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The instance is created as a preemptible instance with a user-defined maximum hourly price.
-             * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
-             * 
-             * Default value: NoSpot.
-             * 
-             * > If you set this parameter to SpotWithPriceLimit or SpotAsPriceGo to query preemptible instances, you must set Category to InstanceType. You must also use the Value parameter to specify instance types, or use the Cores and Memory parameters to specify the number of vCPUs and memory size.
+             * <strong>example:</strong>
+             * <p>SpotAsPriceGo</p>
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;

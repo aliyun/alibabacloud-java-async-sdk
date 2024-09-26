@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommitContainerTaskResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCommitContainerTaskResponseBody</p>
@@ -85,7 +86,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the task.
+         * <p>Details of the task.</p>
          */
         public Builder commitTasks(java.util.List < CommitTasks> commitTasks) {
             this.commitTasks = commitTasks;
@@ -93,7 +94,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +105,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The query token that is returned in this request.
+         * <p>The query token that is returned in this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +116,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>45D5B0AD-3B00-4A9B-9911-6D5303B06712</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +127,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +143,12 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCommitContainerTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommitContainerTaskResponseBody</p>
+     */
     public static class CommitPhaseInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -193,7 +212,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The message about the phase.
+             * <p>The message about the phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pull base image for container container-1 successfully</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -201,12 +223,15 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The phase name. Valid values:
-             * <p>
+             * <p>The phase name. Valid values:</p>
+             * <ul>
+             * <li>PullBaseImage: Pull the original container image.</li>
+             * <li>CommitContainer: Commit the container to generate an image.</li>
+             * <li>PushCommittedImage: Push the image to Container Registry.</li>
+             * </ul>
              * 
-             * *   PullBaseImage: Pull the original container image.
-             * *   CommitContainer: Commit the container to generate an image.
-             * *   PushCommittedImage: Push the image to Container Registry.
+             * <strong>example:</strong>
+             * <p>PullBaseImage</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -214,7 +239,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The record time of the phase.
+             * <p>The record time of the phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-01-05T14:06:40.920005316+08:00</p>
              */
             public Builder recordTime(String recordTime) {
                 this.recordTime = recordTime;
@@ -222,7 +250,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the phase.
+             * <p>The state of the phase.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -236,6 +267,12 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCommitContainerTaskResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCommitContainerTaskResponseBody</p>
+     */
     public static class CommitTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommitPhaseInfos")
         private java.util.List < CommitPhaseInfos> commitPhaseInfos;
@@ -347,7 +384,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * The information about the phase that the task arrives.
+             * <p>The information about the phase that the task arrives.</p>
              */
             public Builder commitPhaseInfos(java.util.List < CommitPhaseInfos> commitPhaseInfos) {
                 this.commitPhaseInfos = commitPhaseInfos;
@@ -355,7 +392,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The container name.
+             * <p>The container name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>worker0</p>
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -363,7 +403,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the state.
+             * <p>The message about the state.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Commit container -xxxxxx</p>
              */
             public Builder statusMessage(String statusMessage) {
                 this.statusMessage = statusMessage;
@@ -371,7 +414,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was started.
+             * <p>The time when the task was started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-06T08:22:40Z</p>
              */
             public Builder taskCreationTime(String taskCreationTime) {
                 this.taskCreationTime = taskCreationTime;
@@ -379,7 +425,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was complete.
+             * <p>The time when the task was complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-03-06T08:23:40Z</p>
              */
             public Builder taskFinishedTime(String taskFinishedTime) {
                 this.taskFinishedTime = taskFinishedTime;
@@ -387,7 +436,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>t-2zej6nstkg744qc3****</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -395,7 +447,10 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The progress of the task in percentage.
+             * <p>The progress of the task in percentage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50%</p>
              */
             public Builder taskProgress(String taskProgress) {
                 this.taskProgress = taskProgress;
@@ -403,12 +458,15 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the task. Valid values:
-             * <p>
+             * <p>The state of the task. Valid values:</p>
+             * <ul>
+             * <li>Running</li>
+             * <li>Succeeded</li>
+             * <li>Failed</li>
+             * </ul>
              * 
-             * *   Running
-             * *   Succeeded
-             * *   Failed
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

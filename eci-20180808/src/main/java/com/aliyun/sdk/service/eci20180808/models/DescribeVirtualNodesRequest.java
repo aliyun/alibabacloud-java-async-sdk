@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeVirtualNodesRequest} extends {@link RequestModel}
  *
  * <p>DescribeVirtualNodesRequest</p>
@@ -222,7 +223,10 @@ public class DescribeVirtualNodesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency of requests?](~~25693~~)
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotency of requests?</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -231,10 +235,13 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * The maximum number of resources that are allowed to return for this request. Default value: 20. Maximum value: 20.
-         * <p>
+         * <p>The maximum number of resources that are allowed to return for this request. Default value: 20. Maximum value: 20.</p>
+         * <blockquote>
+         * <p> The number of returned resources is less than or equal to the specified number.</p>
+         * </blockquote>
          * 
-         * >  The number of returned resources is less than or equal to the specified number.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -243,10 +250,11 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the next query. If this parameter is empty, all results have been returned.
-         * <p>
+         * <p>The token that determines the start point of the next query. If this parameter is empty, all results have been returned.</p>
+         * <p>You do not need to specify this parameter in the first request. From the second request, you can obtain the token from the result returned by the previous request.</p>
          * 
-         * You do not need to specify this parameter in the first request. From the second request, you can obtain the token from the result returned by the previous request.
+         * <strong>example:</strong>
+         * <p>d78f2dd8-5979-42fe-****-b16db43be5bc</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -273,7 +281,10 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual nodes.
+         * <p>The region ID of the virtual nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -282,7 +293,10 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-uf66jeqopgqa9hdn****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -309,12 +323,15 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * The status of the virtual node. Valid values:
-         * <p>
+         * <p>The status of the virtual node. Valid values:</p>
+         * <ul>
+         * <li>Pending</li>
+         * <li>Ready</li>
+         * <li>Failed</li>
+         * </ul>
          * 
-         * *   Pending
-         * *   Ready
-         * *   Failed
+         * <strong>example:</strong>
+         * <p>Ready</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -323,7 +340,7 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * The tags that are bound to the virtual node.
+         * <p>The tags that are bound to the virtual node.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -332,7 +349,10 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * The IDs of the virtual nodes. You can specify up to 20 IDs. Each ID must be a string in the JSON format.
+         * <p>The IDs of the virtual nodes. You can specify up to 20 IDs. Each ID must be a string in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;vnd-2ze960zkdqrldeaw****&quot;,&quot;vnd-3ebzcviqbwt25dsz****&quot;]</p>
          */
         public Builder virtualNodeIds(String virtualNodeIds) {
             this.putQueryParameter("VirtualNodeIds", virtualNodeIds);
@@ -341,7 +361,10 @@ public class DescribeVirtualNodesRequest extends Request {
         }
 
         /**
-         * The names of the virtual nodes.
+         * <p>The names of the virtual nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testNode</p>
          */
         public Builder virtualNodeName(String virtualNodeName) {
             this.putQueryParameter("VirtualNodeName", virtualNodeName);
@@ -356,6 +379,12 @@ public class DescribeVirtualNodesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeVirtualNodesRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeVirtualNodesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -395,7 +424,10 @@ public class DescribeVirtualNodesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N.
+             * <p>The key of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -403,7 +435,10 @@ public class DescribeVirtualNodesRequest extends Request {
             }
 
             /**
-             * The value of tag N.
+             * <p>The value of tag N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

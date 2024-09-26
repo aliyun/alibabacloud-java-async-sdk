@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerLogRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerLogRequest</p>
@@ -223,7 +224,10 @@ public class DescribeContainerLogRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-uf6fonnghi50v6nq****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -232,7 +236,10 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * The name of the container.
+         * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -241,13 +248,15 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the logs of the previous container if the container exits and restarts. Valid values:
-         * <p>
+         * <p>Specifies whether to query the logs of the previous container if the container exits and restarts. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder lastTime(Boolean lastTime) {
             this.putQueryParameter("LastTime", lastTime);
@@ -256,7 +265,10 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * The limit on the total size of logs. Unit: bytes. Valid values: 1 to 1048576(1 MB).
+         * <p>The limit on the total size of logs. Unit: bytes. Valid values: 1 to 1048576(1 MB).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123798</p>
          */
         public Builder limitBytes(Long limitBytes) {
             this.putQueryParameter("LimitBytes", limitBytes);
@@ -283,7 +295,10 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * The region ID of the elastic container instance.
+         * <p>The region ID of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -310,7 +325,10 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * A relative time in seconds before the current time from which to show logs. Examples: 10, 20, and 30.
+         * <p>A relative time in seconds before the current time from which to show logs. Examples: 10, 20, and 30.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder sinceSeconds(Integer sinceSeconds) {
             this.putQueryParameter("SinceSeconds", sinceSeconds);
@@ -319,7 +337,10 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.
+         * <p>The beginning of the time range to query. Specify the time in the RFC 3339 standard. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-02T15:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -328,9 +349,10 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * The number of the most recent log entries that you want to query. Default value: 500. Maximum value: 2000.\
-         * <p>
-         * A maximum of 1 MB log data can be returned.
+         * <p>The number of the most recent log entries that you want to query. Default value: 500. Maximum value: 2000.<br>A maximum of 1 MB log data can be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
          */
         public Builder tail(Integer tail) {
             this.putQueryParameter("Tail", tail);
@@ -339,13 +361,15 @@ public class DescribeContainerLogRequest extends Request {
         }
 
         /**
-         * Specifies whether to return the timestamps of logs. Valid values:
-         * <p>
+         * <p>Specifies whether to return the timestamps of logs. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder timestamps(Boolean timestamps) {
             this.putQueryParameter("Timestamps", timestamps);

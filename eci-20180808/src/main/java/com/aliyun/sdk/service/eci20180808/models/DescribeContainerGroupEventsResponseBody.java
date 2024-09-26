@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupEventsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerGroupEventsResponseBody</p>
@@ -61,7 +62,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the events.
+         * <p>Details of the events.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -69,7 +70,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1340C38D-6189-54D1-86F6-7D5ECF3E0088</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +81,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries of returned events.
+         * <p>The total number of entries of returned events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -90,6 +97,12 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerGroupEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupEventsResponseBody</p>
+     */
     public static class Metadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -129,7 +142,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private String namespace; 
 
             /**
-             * The event name.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eci-uto-created-eci-for-ubuntu.167e3fb73cc7f9cb</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -137,7 +153,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace.
+             * <p>The namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -151,6 +170,12 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupEventsResponseBody</p>
+     */
     public static class Source extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Component")
         private String component;
@@ -190,7 +215,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private String host; 
 
             /**
-             * The component.
+             * <p>The component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kubelet</p>
              */
             public Builder component(String component) {
                 this.component = component;
@@ -198,7 +226,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The host.
+             * <p>The host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eci</p>
              */
             public Builder host(String host) {
                 this.host = host;
@@ -212,6 +243,12 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupEventsResponseBody</p>
+     */
     public static class InvolvedObject extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiVersion")
         private String apiVersion;
@@ -287,7 +324,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private String uid; 
 
             /**
-             * The version of Kubernetes.
+             * <p>The version of Kubernetes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder apiVersion(String apiVersion) {
                 this.apiVersion = apiVersion;
@@ -295,7 +335,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Pod</p>
              */
             public Builder kind(String kind) {
                 this.kind = kind;
@@ -303,7 +346,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource name.
+             * <p>The resource name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -311,7 +357,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace where the resource resides.
+             * <p>The namespace where the resource resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -319,7 +368,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eci-8vb5nkcq3a5cu0p3****</p>
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -333,6 +385,12 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupEventsResponseBody</p>
+     */
     public static class Events extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -480,7 +538,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private InvolvedObject involvedObject; 
 
             /**
-             * The number of events.
+             * <p>The number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -488,7 +549,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The first occurrence time of the event.
+             * <p>The first occurrence time of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-04T09:08:04Z</p>
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -496,7 +560,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The most recent occurrence time of the event.
+             * <p>The most recent occurrence time of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-10-04T09:08:04Z</p>
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -504,7 +571,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the event.
+             * <p>The message about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Started container</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -512,7 +582,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The metadata of the event.
+             * <p>The metadata of the event.</p>
              */
             public Builder metadata(Metadata metadata) {
                 this.metadata = metadata;
@@ -520,7 +590,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The cause of the event.
+             * <p>The cause of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Started</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -528,7 +601,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The component from which the event is reported.
+             * <p>The component from which the event is reported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder reportingComponent(String reportingComponent) {
                 this.reportingComponent = reportingComponent;
@@ -536,7 +612,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The instance from which the event is reported.
+             * <p>The instance from which the event is reported.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder reportingInstance(String reportingInstance) {
                 this.reportingInstance = reportingInstance;
@@ -544,7 +623,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The source.
+             * <p>The source.</p>
              */
             public Builder source(Source source) {
                 this.source = source;
@@ -552,11 +631,14 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The event type. Valid values:
-             * <p>
+             * <p>The event type. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Warning</li>
+             * </ul>
              * 
-             * *   Normal
-             * *   Warning
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -564,7 +646,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource object that the event is about.
+             * <p>The resource object that the event is about.</p>
              */
             public Builder involvedObject(InvolvedObject involvedObject) {
                 this.involvedObject = involvedObject;
@@ -578,6 +660,12 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupEventsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupEventsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Annotations")
         private String annotations;
@@ -665,7 +753,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The annotations of the elastic container instance.
+             * <p>The annotations of the elastic container instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;tenancy.x-k8s.io/namespace&quot;:&quot;redis&quot;}&quot;</p>
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -673,7 +764,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the elastic container instance.
+             * <p>The ID of the elastic container instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eci-uf6fonnghi50v6nq****</p>
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -681,7 +775,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The events.
+             * <p>The events.</p>
              */
             public Builder events(java.util.List < Events> events) {
                 this.events = events;
@@ -689,7 +783,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the elastic container instance.
+             * <p>The name of the elastic container instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -697,7 +794,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace where the elastic container instance resides.
+             * <p>The namespace where the elastic container instance resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>redis</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -705,7 +805,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the elastic container instance.
+             * <p>The UUID of the elastic container instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3fc6b309-<strong><strong>-</strong></strong></p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

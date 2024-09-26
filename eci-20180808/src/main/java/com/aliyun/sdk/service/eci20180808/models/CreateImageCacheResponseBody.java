@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateImageCacheResponseBody} extends {@link TeaModel}
  *
  * <p>CreateImageCacheResponseBody</p>
@@ -61,7 +62,10 @@ public class CreateImageCacheResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the intermediate elastic container instance that is used to create the image cache.
+         * <p>The ID of the intermediate elastic container instance that is used to create the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-2zebxkiifuyzzlhl****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
@@ -69,7 +73,10 @@ public class CreateImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the image cache.
+         * <p>The ID of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc-2zebxkiifuyzzlhl****</p>
          */
         public Builder imageCacheId(String imageCacheId) {
             this.imageCacheId = imageCacheId;
@@ -77,7 +84,10 @@ public class CreateImageCacheResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E234675-3465-4CC3-9D0F-9A864BC391DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateVirtualNodeResponseBody} extends {@link TeaModel}
  *
  * <p>CreateVirtualNodeResponseBody</p>
@@ -49,7 +50,10 @@ public class CreateVirtualNodeResponseBody extends TeaModel {
         private String virtualNodeId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89164E78-FC82-4684-BE97-DCDD85D26546</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CreateVirtualNodeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VNode.
+         * <p>The ID of the VNode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vnd-2ze960zkdqrldeaw****</p>
          */
         public Builder virtualNodeId(String virtualNodeId) {
             this.virtualNodeId = virtualNodeId;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteDataCacheRequest} extends {@link RequestModel}
  *
  * <p>DeleteDataCacheRequest</p>
@@ -166,7 +167,10 @@ public class DeleteDataCacheRequest extends Request {
         } 
 
         /**
-         * The bucket that stores the DataCache. By default, the bucket is named default.
+         * <p>The bucket that stores the DataCache. By default, the bucket is named default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -175,7 +179,10 @@ public class DeleteDataCacheRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure the idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5e74729e-ce21-4c3e-9163-cbaf0f02768e</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -184,7 +191,10 @@ public class DeleteDataCacheRequest extends Request {
         }
 
         /**
-         * The ID of the DataCache.
+         * <p>The ID of the DataCache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edc-bp1a7n7uawwwol******</p>
          */
         public Builder dataCacheId(String dataCacheId) {
             this.putQueryParameter("DataCacheId", dataCacheId);
@@ -211,7 +221,10 @@ public class DeleteDataCacheRequest extends Request {
         }
 
         /**
-         * The directory in which the virtual host of the DataCache is located.
+         * <p>The directory in which the virtual host of the DataCache is located.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/data/models/</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -220,7 +233,10 @@ public class DeleteDataCacheRequest extends Request {
         }
 
         /**
-         * The region ID of the DataCache.
+         * <p>The region ID of the DataCache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

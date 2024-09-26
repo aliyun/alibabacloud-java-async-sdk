@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateImageCacheRequest} extends {@link RequestModel}
  *
  * <p>CreateImageCacheRequest</p>
@@ -64,6 +65,10 @@ public class CreateImageCacheRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InsecureRegistry")
     private String insecureRegistry;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OsType")
+    private String osType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -133,6 +138,7 @@ public class CreateImageCacheRequest extends Request {
         this.imageCacheSize = builder.imageCacheSize;
         this.imageRegistryCredential = builder.imageRegistryCredential;
         this.insecureRegistry = builder.insecureRegistry;
+        this.osType = builder.osType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.plainHttpRegistry = builder.plainHttpRegistry;
@@ -253,6 +259,13 @@ public class CreateImageCacheRequest extends Request {
     }
 
     /**
+     * @return osType
+     */
+    public String getOsType() {
+        return this.osType;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -357,6 +370,7 @@ public class CreateImageCacheRequest extends Request {
         private Integer imageCacheSize; 
         private java.util.List < ImageRegistryCredential> imageRegistryCredential; 
         private String insecureRegistry; 
+        private String osType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String plainHttpRegistry; 
@@ -390,6 +404,7 @@ public class CreateImageCacheRequest extends Request {
             this.imageCacheSize = request.imageCacheSize;
             this.imageRegistryCredential = request.imageRegistryCredential;
             this.insecureRegistry = request.insecureRegistry;
+            this.osType = request.osType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.plainHttpRegistry = request.plainHttpRegistry;
@@ -406,7 +421,7 @@ public class CreateImageCacheRequest extends Request {
         } 
 
         /**
-         * Information about the Container Registry Enterprise Edition instance. For more information, see [Pull images from a Container Registry Enterprise Edition instance without using secrets](~~194250~~).
+         * <p>Information about the Container Registry Enterprise Edition instance. For more information, see <a href="~~194250~~">Pull images from a Container Registry Enterprise Edition instance without using secrets</a>.</p>
          */
         public Builder acrRegistryInfo(java.util.List < AcrRegistryInfo> acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
@@ -415,7 +430,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * Comments.
+         * <p>Comments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hide</p>
          */
         public Builder annotations(String annotations) {
             this.putQueryParameter("Annotations", annotations);
@@ -424,13 +442,15 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable reuse of image cache layers. If you enable this feature, and the image cache that you want to create and an existing image cache contain duplicate image layers, the system reuses the duplicate image layers to create the new image cache. This accelerates the creation of the image cache. Valid values:
-         * <p>
+         * <p>Specifies whether to enable reuse of image cache layers. If you enable this feature, and the image cache that you want to create and an existing image cache contain duplicate image layers, the system reuses the duplicate image layers to create the new image cache. This accelerates the creation of the image cache. Valid values:</p>
+         * <ul>
+         * <li>true: enables reuse of image cache layers.</li>
+         * <li>false: disables reuse of image cache layers.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true: enables reuse of image cache layers.
-         * *   false: disables reuse of image cache layers.
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoMatchImageCache(Boolean autoMatchImageCache) {
             this.putQueryParameter("AutoMatchImageCache", autoMatchImageCache);
@@ -439,7 +459,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure the idempotence of a request</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-xxx-xxx-xxxx-42665544xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -448,7 +471,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The ID of the elastic IP address (EIP). If you want to pull images over the Internet, make sure that the elastic container instance can access the Internet. You can configure an EIP or a NAT gateway for the elastic container instance to access the Internet.
+         * <p>The ID of the elastic IP address (EIP). If you want to pull images over the Internet, make sure that the elastic container instance can access the Internet. You can configure an EIP or a NAT gateway for the elastic container instance to access the Internet.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-2zedsm5mfl3uhdj2d****</p>
          */
         public Builder eipInstanceId(String eipInstanceId) {
             this.putQueryParameter("EipInstanceId", eipInstanceId);
@@ -457,10 +483,11 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The elimination policy of the image cache. This parameter is empty by default, which indicates that the image cache is always retained.
-         * <p>
+         * <p>The elimination policy of the image cache. This parameter is empty by default, which indicates that the image cache is always retained.</p>
+         * <p>You can set this parameter to LRU, which indicates that the image cache can be automatically deleted. When the number of image caches reaches the quota, the system automatically deletes the image caches whose EliminationStrategy parameter is set to LRU and that are least commonly used.</p>
          * 
-         * You can set this parameter to LRU, which indicates that the image cache can be automatically deleted. When the number of image caches reaches the quota, the system automatically deletes the image caches whose EliminationStrategy parameter is set to LRU and that are least commonly used.
+         * <strong>example:</strong>
+         * <p>LRU</p>
          */
         public Builder eliminationStrategy(String eliminationStrategy) {
             this.putQueryParameter("EliminationStrategy", eliminationStrategy);
@@ -469,13 +496,15 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the instant image cache feature. The feature can accelerate the creation of image caches. Valid values:
-         * <p>
+         * <p>Specifies whether to enable the instant image cache feature. The feature can accelerate the creation of image caches. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder flash(Boolean flash) {
             this.putQueryParameter("Flash", flash);
@@ -484,10 +513,13 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The number of temporary local snapshots. By default, the system creates one snapshot for each image cache. If an image cache is used to create multiple elastic container instances at a time, we recommend that you set this parameter to create multiple snapshots for the image cache. We recommend that you create one snapshot for creation of every 1,000 elastic container instances.
-         * <p>
+         * <p>The number of temporary local snapshots. By default, the system creates one snapshot for each image cache. If an image cache is used to create multiple elastic container instances at a time, we recommend that you set this parameter to create multiple snapshots for the image cache. We recommend that you create one snapshot for creation of every 1,000 elastic container instances.</p>
+         * <blockquote>
+         * <p> If you set the Flash parameter to true, instant image cache is enabled. During the creation of the image cache, the system first creates a temporary local snapshot for you to instantly use the snapshot. After the temporary local snapshot is created, the system begins to create a regular snapshot. After the regular snapshot is created, the temporary local snapshot is automatically deleted.</p>
+         * </blockquote>
          * 
-         * >  If you set the Flash parameter to true, instant image cache is enabled. During the creation of the image cache, the system first creates a temporary local snapshot for you to instantly use the snapshot. After the temporary local snapshot is created, the system begins to create a regular snapshot. After the regular snapshot is created, the temporary local snapshot is automatically deleted.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder flashCopyCount(Integer flashCopyCount) {
             this.putQueryParameter("FlashCopyCount", flashCopyCount);
@@ -496,7 +528,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * Container image N that is used to create the image cache.
+         * <p>Container image N that is used to create the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:1.15.10-perl</p>
          */
         public Builder image(java.util.List < String > image) {
             this.putQueryParameter("Image", image);
@@ -505,7 +540,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The name of the image cache.
+         * <p>The name of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testcache</p>
          */
         public Builder imageCacheName(String imageCacheName) {
             this.putQueryParameter("ImageCacheName", imageCacheName);
@@ -514,7 +552,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The size of the image cache. Unit: GiB. Default value: 20.
+         * <p>The size of the image cache. Unit: GiB. Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder imageCacheSize(Integer imageCacheSize) {
             this.putQueryParameter("ImageCacheSize", imageCacheSize);
@@ -523,7 +564,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The image repository.
+         * <p>The image repository.</p>
          */
         public Builder imageRegistryCredential(java.util.List < ImageRegistryCredential> imageRegistryCredential) {
             this.putQueryParameter("ImageRegistryCredential", imageRegistryCredential);
@@ -532,14 +573,24 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The address of the self-managed image repository.
-         * <p>
+         * <p>The address of the self-managed image repository.</p>
+         * <p>When you create an image cache by using an image in a self-managed image repository that uses a self-signed certificate, you must specify this parameter to skip the certificate authentication. This can prevent the image from failing to pull due to certificate authentication failures.</p>
          * 
-         * When you create an image cache by using an image in a self-managed image repository that uses a self-signed certificate, you must specify this parameter to skip the certificate authentication. This can prevent the image from failing to pull due to certificate authentication failures.
+         * <strong>example:</strong>
+         * <p>&quot;harbor***.pre.com,192.168.XX.XX:5000,reg***.test.com:80&quot;</p>
          */
         public Builder insecureRegistry(String insecureRegistry) {
             this.putQueryParameter("InsecureRegistry", insecureRegistry);
             this.insecureRegistry = insecureRegistry;
+            return this;
+        }
+
+        /**
+         * OsType.
+         */
+        public Builder osType(String osType) {
+            this.putQueryParameter("OsType", osType);
+            this.osType = osType;
             return this;
         }
 
@@ -562,7 +613,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The address of the self-managed image repository. When you create an image cache by using an image in a self-managed image repository that uses the HTTP protocol, you must specify this parameter. This way, Elastic Container Instance uses the HTTP protocol instead of the default HTTPS protocol to pull the image. This can prevent the image from failing to pull due to different protocols.
+         * <p>The address of the self-managed image repository. When you create an image cache by using an image in a self-managed image repository that uses the HTTP protocol, you must specify this parameter. This way, Elastic Container Instance uses the HTTP protocol instead of the default HTTPS protocol to pull the image. This can prevent the image from failing to pull due to different protocols.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;harbor***.pre.com,192.168.XX.XX:5000,reg***.test.com:80&quot;</p>
          */
         public Builder plainHttpRegistry(String plainHttpRegistry) {
             this.putQueryParameter("PlainHttpRegistry", plainHttpRegistry);
@@ -571,7 +625,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The region ID of the image cache.
+         * <p>The region ID of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -580,7 +637,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzh43v*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -607,10 +667,13 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The retention period of the image cache. Unit: days. When the retention period ends, the image cache expires and is deleted. By default, image caches never expire.
-         * <p>
+         * <p>The retention period of the image cache. Unit: days. When the retention period ends, the image cache expires and is deleted. By default, image caches never expire.</p>
+         * <blockquote>
+         * <p> The image caches that fail to be created are only retained for one day.</p>
+         * </blockquote>
          * 
-         * >  The image caches that fail to be created are only retained for one day.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -619,7 +682,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The ID of the security group.
+         * <p>The ID of the security group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-uf66jeqopgqa9hdn****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -628,10 +694,13 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The number of regular snapshots. By default, the system creates one snapshot for each image cache. If an image cache is used to create multiple elastic container instances at a time, we recommend that you set this parameter to create multiple snapshots for the image cache. We recommend that you create one snapshot for creation of every 1,000 elastic container instances.
-         * <p>
+         * <p>The number of regular snapshots. By default, the system creates one snapshot for each image cache. If an image cache is used to create multiple elastic container instances at a time, we recommend that you set this parameter to create multiple snapshots for the image cache. We recommend that you create one snapshot for creation of every 1,000 elastic container instances.</p>
+         * <blockquote>
+         * <p> If you set the Flash parameter to false, instant image cache is disabled. In this case, only regular snapshots are generated during the creation of the image cache.</p>
+         * </blockquote>
          * 
-         * >  If you set the Flash parameter to false, instant image cache is disabled. In this case, only regular snapshots are generated during the creation of the image cache.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder standardCopyCount(Integer standardCopyCount) {
             this.putQueryParameter("StandardCopyCount", standardCopyCount);
@@ -640,7 +709,7 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The tag of the image cache.
+         * <p>The tag of the image cache.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -649,7 +718,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch. You can specify up to 10 vSwitch IDs. Separate multiple vSwitch IDs with commas (,). Example: `vsw-***,vsw-***`.
+         * <p>The ID of the vSwitch. You can specify up to 10 vSwitch IDs. Separate multiple vSwitch IDs with commas (,). Example: <code>vsw-***,vsw-***</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6h3rbwbm90urjwa****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -658,7 +730,10 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * The zone ID of the image cache.
+         * <p>The zone ID of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -673,6 +748,12 @@ public class CreateImageCacheRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateImageCacheRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImageCacheRequest</p>
+     */
     public static class AcrRegistryInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArnService")
         private String arnService;
@@ -760,7 +841,10 @@ public class CreateImageCacheRequest extends Request {
             private String regionId; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the RAM roles in the Alibaba Cloud account to which the elastic container instance belongs.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM roles in the Alibaba Cloud account to which the elastic container instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1609982529******:role/role-assume</p>
              */
             public Builder arnService(String arnService) {
                 this.arnService = arnService;
@@ -768,7 +852,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * The ARN of the RAM roles in the Alibaba Cloud account to which the Container Registry Enterprise Edition instance belongs.
+             * <p>The ARN of the RAM roles in the Alibaba Cloud account to which the Container Registry Enterprise Edition instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1298452580******:role/role-acr</p>
              */
             public Builder arnUser(String arnUser) {
                 this.arnUser = arnUser;
@@ -776,7 +863,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify multiple domain names. Separate multiple domain names with commas (,).
+             * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify multiple domain names. Separate multiple domain names with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test****-registry.cn-beijing.cr.aliyuncs.com</p>
              */
             public Builder domain(java.util.List < String > domain) {
                 this.domain = domain;
@@ -784,7 +874,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * The ID of Container Registry Enterprise Edition instance N.
+             * <p>The ID of Container Registry Enterprise Edition instance N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-nwj395hgf6f3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -792,7 +885,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * The name of Container Registry Enterprise Edition instance N.
+             * <p>The name of Container Registry Enterprise Edition instance N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -800,7 +896,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * The region ID of Container Registry Enterprise Edition instance N.
+             * <p>The region ID of Container Registry Enterprise Edition instance N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -814,6 +913,12 @@ public class CreateImageCacheRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateImageCacheRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImageCacheRequest</p>
+     */
     public static class ImageRegistryCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
@@ -865,7 +970,10 @@ public class CreateImageCacheRequest extends Request {
             private String userName; 
 
             /**
-             * The password that is used to log on to image repository N.
+             * <p>The password that is used to log on to image repository N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>password</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -873,7 +981,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * The address of the image repository without the `http://` or `https://` prefix.
+             * <p>The address of the image repository without the <code>http://</code> or <code>https://</code> prefix.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -881,7 +992,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * The username that is used to log on to image repository N.
+             * <p>The username that is used to log on to image repository N.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>username</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -895,6 +1009,12 @@ public class CreateImageCacheRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateImageCacheRequest} extends {@link TeaModel}
+     *
+     * <p>CreateImageCacheRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -934,7 +1054,10 @@ public class CreateImageCacheRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the image cache. Valid values of N: 1 to 20.
+             * <p>The key of tag N of the image cache. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>imc</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -942,7 +1065,10 @@ public class CreateImageCacheRequest extends Request {
             }
 
             /**
-             * The value of tag N of the image cache. Valid values of N: 1 to 20.
+             * <p>The value of tag N of the image cache. Valid values of N: 1 to 20.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupsRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerGroupsRequest</p>
@@ -278,7 +279,14 @@ public class DescribeContainerGroupsRequest extends Request {
         } 
 
         /**
-         * The computing power type of the elastic container instance. A value of economy specifies economic elastic container instances.
+         * <p>The compute category of the instance. Valid values:</p>
+         * <ul>
+         * <li>economy</li>
+         * <li>general</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>economy</p>
          */
         public Builder computeCategory(String computeCategory) {
             this.putQueryParameter("ComputeCategory", computeCategory);
@@ -287,7 +295,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The IDs of the elastic container instances in JSON format. You can specify up to 20 IDs.
+         * <p>The IDs of the elastic container instances in JSON format. You can specify up to 20 IDs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;eci-bp17gw49eu09yiwm****&quot;, &quot;eci-bp19aq49du01abcm****&quot;, &quot;eci-2zegym1qhbmdfr1s****&quot;]</p>
          */
         public Builder containerGroupIds(String containerGroupIds) {
             this.putQueryParameter("ContainerGroupIds", containerGroupIds);
@@ -296,7 +307,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The name of the elastic container instance.
+         * <p>The name of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder containerGroupName(String containerGroupName) {
             this.putQueryParameter("ContainerGroupName", containerGroupName);
@@ -305,10 +319,13 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The maximum number of resources to return. Default value: 20. Maximum value: 20.
-         * <p>
+         * <p>The maximum number of resources to return. Default value: 20. Maximum value: 20.</p>
+         * <blockquote>
+         * <p> The number of returned resources is less than or equal to the specified number.</p>
+         * </blockquote>
          * 
-         * >  The number of returned resources is less than or equal to the specified number.
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -317,10 +334,13 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. If this parameter is left empty, all results have been returned.
-         * <p>
+         * <p>The token that determines the start point of the query. If this parameter is left empty, all results have been returned.</p>
+         * <blockquote>
+         * <p>You do not need to specify this parameter in the first request. Starting from the second request, you can obtain the token from the result returned by the previous request.</p>
+         * </blockquote>
          * 
-         * > You do not need to specify this parameter in the first request. Starting from the second request, you can obtain the token from the result returned by the previous request.
+         * <strong>example:</strong>
+         * <p>d78f2dd8-5979-42fe-****-b16db43be5bc</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -347,7 +367,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -356,7 +379,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instance belongs.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzh43v*****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -383,7 +409,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which the instance belongs.
+         * <p>The ID of the security group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-uf66jeqopgqa9hdn****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -392,19 +421,22 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The status of the elastic container instance. Valid values:
-         * <p>
+         * <p>The status of the elastic container instance. Valid values:</p>
+         * <ul>
+         * <li>Pending: The instance is being started.</li>
+         * <li>Running: The instance is running.</li>
+         * <li>Succeeded: The instance runs successfully.</li>
+         * <li>Failed: The instance fails to run.</li>
+         * <li>Scheduling: The instance is being created.</li>
+         * <li>ScheduleFailed: The instance fails to be created.</li>
+         * <li>Restarting: The instance is being restarted.</li>
+         * <li>Updating: The instance is being updated.</li>
+         * <li>Terminating: The instance is being terminated.</li>
+         * <li>Expired: The instance expires.</li>
+         * </ul>
          * 
-         * *   Pending: The instance is being started.
-         * *   Running: The instance is running.
-         * *   Succeeded: The instance runs successfully.
-         * *   Failed: The instance fails to run.
-         * *   Scheduling: The instance is being created.
-         * *   ScheduleFailed: The instance fails to be created.
-         * *   Restarting: The instance is being restarted.
-         * *   Updating: The instance is being updated.
-         * *   Terminating: The instance is being terminated.
-         * *   Expired: The instance expires.
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -413,7 +445,7 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The tag of the instances.
+         * <p>The tag of the instances.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -422,7 +454,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch to which the elastic container instances are connected.
+         * <p>The ID of the vSwitch to which the elastic container instances are connected.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-bp1jrgfqqy54kg5hc****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -431,7 +466,10 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * Specify whether to return event information.
+         * <p>Specify whether to return event information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder withEvent(Boolean withEvent) {
             this.putQueryParameter("WithEvent", withEvent);
@@ -440,10 +478,11 @@ public class DescribeContainerGroupsRequest extends Request {
         }
 
         /**
-         * The ID of the zone in which the elastic container instances are deployed. If you do not specify this parameter, the system selects a zone.
-         * <p>
+         * <p>The ID of the zone in which the elastic container instances are deployed. If you do not specify this parameter, the system selects a zone.</p>
+         * <p>This parameter is empty by default.</p>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -458,6 +497,12 @@ public class DescribeContainerGroupsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerGroupsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupsRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -497,7 +542,10 @@ public class DescribeContainerGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The tag key of the instances.
+             * <p>The tag key of the instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -505,7 +553,10 @@ public class DescribeContainerGroupsRequest extends Request {
             }
 
             /**
-             * The tag value of the instances.
+             * <p>The tag value of the instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCommitContainerTaskRequest} extends {@link RequestModel}
  *
  * <p>DescribeCommitContainerTaskRequest</p>
@@ -180,9 +181,10 @@ public class DescribeCommitContainerTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the elastic container instance on which the CommitContainer task is executed.\
-         * <p>
-         * You must enter the instance ID, the task ID, or both for the request.
+         * <p>The ID of the elastic container instance on which the CommitContainer task is executed.<br>You must enter the instance ID, the task ID, or both for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-2zelg8vwnlzdhf8hv****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -191,10 +193,10 @@ public class DescribeCommitContainerTaskRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.\
-         * <p>
-         * Maximum value: 50.\
-         * Default value: 10.
+         * <p>The number of entries to return on each page.<br>Maximum value: 50.<br>Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -203,7 +205,10 @@ public class DescribeCommitContainerTaskRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Set the value to the value of NextToken that is returned from the last request.
+         * <p>The token that determines the start point of the query. Set the value to the value of NextToken that is returned from the last request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -230,7 +235,10 @@ public class DescribeCommitContainerTaskRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -257,7 +265,7 @@ public class DescribeCommitContainerTaskRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
          */
         public Builder taskId(java.util.List < String > taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -266,12 +274,15 @@ public class DescribeCommitContainerTaskRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
-         * <p>
+         * <p>The status of the task. Valid values:</p>
+         * <ul>
+         * <li>Running</li>
+         * <li>Succeeded</li>
+         * <li>Failed</li>
+         * </ul>
          * 
-         * *   Running
-         * *   Succeeded
-         * *   Failed
+         * <strong>example:</strong>
+         * <p>Running</p>
          */
         public Builder taskStatus(String taskStatus) {
             this.putQueryParameter("TaskStatus", taskStatus);

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResizeContainerGroupVolumeRequest} extends {@link RequestModel}
  *
  * <p>ResizeContainerGroupVolumeRequest</p>
@@ -169,7 +170,10 @@ public class ResizeContainerGroupVolumeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +182,10 @@ public class ResizeContainerGroupVolumeRequest extends Request {
         }
 
         /**
-         * The ID of the elastic container instance.
+         * <p>The ID of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-2zelg8vwnlzdhf8hv****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -187,15 +194,19 @@ public class ResizeContainerGroupVolumeRequest extends Request {
         }
 
         /**
-         * The size of the volume after the volume is scaled up. Unit: GiB. Valid values:
-         * <p>
+         * <p>The size of the volume after the volume is scaled up. Unit: GiB. Valid values:</p>
+         * <ul>
+         * <li>Ultra disk (cloud_efficiency): 20 to 32768</li>
+         * <li>Standard SSD (cloud_ssd): 20 to 32768</li>
+         * <li>Enhanced SSD (cloud_essd): 20 to 32768</li>
+         * <li>Basic disk (cloud): 5 to 2000</li>
+         * </ul>
+         * <blockquote>
+         * <p> The capacity of the volume after the volume is scaled up must be greater than the original capacity of the volume. If the new capacity is equal to the original capacity of the volume, only the file system is scaled up.</p>
+         * </blockquote>
          * 
-         * *   Ultra disk (cloud_efficiency): 20 to 32768
-         * *   Standard SSD (cloud_ssd): 20 to 32768
-         * *   Enhanced SSD (cloud_essd): 20 to 32768
-         * *   Basic disk (cloud): 5 to 2000
-         * 
-         * >  The capacity of the volume after the volume is scaled up must be greater than the original capacity of the volume. If the new capacity is equal to the original capacity of the volume, only the file system is scaled up.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder newSize(Long newSize) {
             this.putQueryParameter("NewSize", newSize);
@@ -222,7 +233,10 @@ public class ResizeContainerGroupVolumeRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -249,7 +263,10 @@ public class ResizeContainerGroupVolumeRequest extends Request {
         }
 
         /**
-         * The name of the volume that you want to scale up. The volume must be an Alibaba Cloud disk.
+         * <p>The name of the volume that is mounted to the elastic container instance. Only disk volumes can be scaled up.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default-volume1</p>
          */
         public Builder volumeName(String volumeName) {
             this.putQueryParameter("VolumeName", volumeName);

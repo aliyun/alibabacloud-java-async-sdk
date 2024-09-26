@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateContainerGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateContainerGroupRequest</p>
@@ -1069,7 +1070,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The information about the Container Registry Enterprise Edition instance that provides the image for the creation of the elastic container instance. For more information, see [Pull images from a Container Registry Enterprise Edition instance without using a secret](~~194250~~).
+         * <p>The information about the Container Registry Enterprise Edition instance that provides the image for the creation of the elastic container instance. For more information, see <a href="~~194250~~">Pull images from a Container Registry Enterprise Edition instance without using a secret</a>.</p>
          */
         public Builder acrRegistryInfo(java.util.List < AcrRegistryInfo> acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
@@ -1078,7 +1079,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The active period of the elastic container instance. After this period expires, the instance is forced to exit. Unit: seconds.
+         * <p>The active period of the elastic container instance. After this period expires, the instance is forced to exit. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder activeDeadlineSeconds(Long activeDeadlineSeconds) {
             this.putQueryParameter("ActiveDeadlineSeconds", activeDeadlineSeconds);
@@ -1087,7 +1091,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically create an EIP and associate it with the elastic container instance.
+         * <p>Specifies whether to automatically create an EIP and associate it with the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoCreateEip(Boolean autoCreateEip) {
             this.putQueryParameter("AutoCreateEip", autoCreateEip);
@@ -1096,7 +1103,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically match image caches. Default value: false.
+         * <p>Specifies whether to automatically match image caches. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder autoMatchImageCache(Boolean autoMatchImageCache) {
             this.putQueryParameter("AutoMatchImageCache", autoMatchImageCache);
@@ -1105,7 +1115,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotency</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-xxxx-12d3-xxxx-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -1114,7 +1127,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The computing power type of the instance. For more information, see [Set the computing power type to economy when you create an elastic container instance](~~2638061~~).
+         * <p>The compute category of the instance. For more information, see <a href="~~2638061~~">Specify a compute category to create an elastic container instance</a>.</p>
          */
         public Builder computeCategory(java.util.List < String > computeCategory) {
             this.putQueryParameter("ComputeCategory", computeCategory);
@@ -1123,7 +1136,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The information about the container.
+         * <p>The information about the container.</p>
          */
         public Builder container(java.util.List < Container> container) {
             this.putQueryParameter("Container", container);
@@ -1132,11 +1145,14 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The name of the elastic container instance (container group). The name must meet the following requirements:
-         * <p>
+         * <p>The name of the elastic container instance (container group). The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name must be 2 to 128 characters in length.</li>
+         * <li>The name can contain lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).</li>
+         * </ul>
          * 
-         * *   The name must be 2 to 128 characters in length.
-         * *   The name can contain lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).
+         * <strong>example:</strong>
+         * <p>nginx-test</p>
          */
         public Builder containerGroupName(String containerGroupName) {
             this.putQueryParameter("ContainerGroupName", containerGroupName);
@@ -1145,7 +1161,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable container resource view. Container resource view displays the actual container resource data instead of data of the host. If the specifications of the generated elastic container instance are larger than the specifications that you request for when you create the instance, you can enable the ContainerResourceView feature to ensure that the resources that you view in the container are the same as the resources that you request for.
+         * <p>Specifies whether to enable container resource view. Container resource view displays the actual container resource data instead of data of the host. If the specifications of the generated elastic container instance are larger than the specifications that you request for when you create the instance, you can enable the ContainerResourceView feature to ensure that the resources that you view in the container are the same as the resources that you request for.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder containerResourceView(Boolean containerResourceView) {
             this.putQueryParameter("ContainerResourceView", containerResourceView);
@@ -1154,10 +1173,13 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The path to core dump files. For more information, see [Save core files to volumes](~~167801~~).
-         * <p>
+         * <p>The path to core dump files. For more information, see <a href="~~167801~~">Save core files to volumes</a>.</p>
+         * <blockquote>
+         * <p> The path cannot start with |. You cannot use core dump files to configure executable programs.``</p>
+         * </blockquote>
          * 
-         * >  The path cannot start with |. You cannot use core dump files to configure executable programs.``
+         * <strong>example:</strong>
+         * <p>/xx/xx/core</p>
          */
         public Builder corePattern(String corePattern) {
             this.putQueryParameter("CorePattern", corePattern);
@@ -1166,7 +1188,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The number of vCPUs that you want to allocate to the instance.
+         * <p>The number of vCPUs that you want to allocate to the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
          */
         public Builder cpu(Float cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -1175,11 +1200,14 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The CPU architecture of the instance. Default value: AMD64. Valid values:
-         * <p>
+         * <p>The CPU architecture of the instance. Default value: AMD64. Valid values:</p>
+         * <ul>
+         * <li>AMD64</li>
+         * <li>ARM64</li>
+         * </ul>
          * 
-         * *   AMD64
-         * *   ARM64
+         * <strong>example:</strong>
+         * <p>ARM64</p>
          */
         public Builder cpuArchitecture(String cpuArchitecture) {
             this.putQueryParameter("CpuArchitecture", cpuArchitecture);
@@ -1188,7 +1216,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The number of physical CPU cores. You can specify this parameter for only specific ECS instance types.
+         * <p>The number of physical CPU cores. You can specify this parameter for only specific ECS instance types.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuOptionsCore(Integer cpuOptionsCore) {
             this.putQueryParameter("CpuOptionsCore", cpuOptionsCore);
@@ -1197,7 +1228,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * This parameter is not available.
+         * <p>This parameter is not available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder cpuOptionsNuma(String cpuOptionsNuma) {
             this.putQueryParameter("CpuOptionsNuma", cpuOptionsNuma);
@@ -1206,7 +1240,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The number of threads per core. You can specify this parameter for only specific ECS instance types. A value of 1 specifies that Hyper-Threading is disabled.
+         * <p>The number of threads per core. You can specify this parameter for only specific ECS instance types. A value of 1 specifies that Hyper-Threading is disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder cpuOptionsThreadsPerCore(Integer cpuOptionsThreadsPerCore) {
             this.putQueryParameter("CpuOptionsThreadsPerCore", cpuOptionsThreadsPerCore);
@@ -1215,7 +1252,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The bucket that stores the data cache.
+         * <p>The bucket that stores the data cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder dataCacheBucket(String dataCacheBucket) {
             this.putQueryParameter("DataCacheBucket", dataCacheBucket);
@@ -1224,7 +1264,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the performance burst feature when ESSDs AutoPL are used to store data caches. For more information, see [ESSDs AutoPL](~~368372~~).
+         * <p>Specifies whether to enable the performance burst feature when ESSDs AutoPL are used to store data caches. For more information, see <a href="~~368372~~">ESSDs AutoPL</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dataCacheBurstingEnabled(Boolean dataCacheBurstingEnabled) {
             this.putQueryParameter("DataCacheBurstingEnabled", dataCacheBurstingEnabled);
@@ -1233,9 +1276,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The performance level (PL) of the disk that you want to use to store data caches.\
-         * <p>
-         * Enhanced SSDs (ESSDs) are preferentially used to store data caches. The default performance level is PL1.
+         * <p>The performance level (PL) of the disk that you want to use to store data caches.<br>Enhanced SSDs (ESSDs) are preferentially used to store data caches. The default performance level is PL1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL1</p>
          */
         public Builder dataCachePL(String dataCachePL) {
             this.putQueryParameter("DataCachePL", dataCachePL);
@@ -1244,10 +1288,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The input/output operations per second (IOPS) provisioned for ESSDs AutoPL when ESSDs AutoPL are used to store data caches.\
-         * <p>
-         * Valid values: 0 to min{50000, 1000 × Storage capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Storage capacity, 50,000}.\
-         * For more information, see [ESSDs AutoPL](~~368372~~).
+         * <p>The input/output operations per second (IOPS) provisioned for ESSDs AutoPL when ESSDs AutoPL are used to store data caches.<br>Valid values: 0 to min{50000, 1000 × Storage capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Storage capacity, 50,000}.<br>For more information, see <a href="~~368372~~">ESSDs AutoPL</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40000</p>
          */
         public Builder dataCacheProvisionedIops(Long dataCacheProvisionedIops) {
             this.putQueryParameter("DataCacheProvisionedIops", dataCacheProvisionedIops);
@@ -1256,11 +1300,14 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The Domain Name System (DNS) policy. Valid values:
-         * <p>
+         * <p>The Domain Name System (DNS) policy. Valid values:</p>
+         * <ul>
+         * <li>None: uses the DNS that is specified by DnsConfig.</li>
+         * <li>Default: uses the DNS that is specified for the runtime environment.</li>
+         * </ul>
          * 
-         * *   None: uses the DNS that is specified by DnsConfig.
-         * *   Default: uses the DNS that is specified for the runtime environment.
+         * <strong>example:</strong>
+         * <p>Default</p>
          */
         public Builder dnsPolicy(String dnsPolicy) {
             this.putQueryParameter("DnsPolicy", dnsPolicy);
@@ -1269,11 +1316,14 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid values:
-         * <p>
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available resources. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</li>
+         * <li>false (default): performs a dry run and performs the actual request. If the request passes the dry run, the elastic container instance is created.</li>
+         * </ul>
          * 
-         * *   true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and available resources. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.
-         * *   false (default): performs a dry run and performs the actual request. If the request passes the dry run, the elastic container instance is created.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -1282,7 +1332,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The maximum outbound bandwidth. Unit: bit/s.
+         * <p>The maximum outbound bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
          */
         public Builder egressBandwidth(Long egressBandwidth) {
             this.putQueryParameter("EgressBandwidth", egressBandwidth);
@@ -1291,9 +1344,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth value for the EIP. Unit: Mbit/s. Default value: 5.\
-         * <p>
-         * This parameter is valid only when AutoCreateEip is set to true.
+         * <p>The maximum bandwidth value for the EIP. Unit: Mbit/s. Default value: 5.<br>This parameter is valid only when AutoCreateEip is set to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder eipBandwidth(Integer eipBandwidth) {
             this.putQueryParameter("EipBandwidth", eipBandwidth);
@@ -1302,7 +1356,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The EIP bandwidth plan that you want to associate with the instance.
+         * <p>The EIP bandwidth plan that you want to associate with the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cbwp-2zeukbj916scmj51m****</p>
          */
         public Builder eipCommonBandwidthPackage(String eipCommonBandwidthPackage) {
             this.putQueryParameter("EipCommonBandwidthPackage", eipCommonBandwidthPackage);
@@ -1311,11 +1368,14 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The line type of the EIP. Default value: BGP. Valid values:
-         * <p>
+         * <p>The line type of the EIP. Default value: BGP. Valid values:</p>
+         * <ul>
+         * <li>BGP: BGP (Multi-ISP) line</li>
+         * <li>BGP_PRO: BGP (Multi-ISP) Pro line</li>
+         * </ul>
          * 
-         * *   BGP: BGP (Multi-ISP) line
-         * *   BGP_PRO: BGP (Multi-ISP) Pro line
+         * <strong>example:</strong>
+         * <p>BPG</p>
          */
         public Builder eipISP(String eipISP) {
             this.putQueryParameter("EipISP", eipISP);
@@ -1324,7 +1384,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the elastic IP address (EIP).
+         * <p>The ID of the elastic IP address (EIP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eip-uf66jeqopgqa9hdn****</p>
          */
         public Builder eipInstanceId(String eipInstanceId) {
             this.putQueryParameter("EipInstanceId", eipInstanceId);
@@ -1333,9 +1396,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The increased capacity of the temporary storage space. Unit: GiB.\
-         * <p>
-         * For more information, see [Increase the size of the temporary storage space](~~204066~~).
+         * <p>The increased capacity of the temporary storage space. Unit: GiB.<br>For more information, see <a href="~~204066~~">Increase the size of the temporary storage space</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder ephemeralStorage(Integer ephemeralStorage) {
             this.putQueryParameter("EphemeralStorage", ephemeralStorage);
@@ -1344,7 +1408,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to configure the instance to use a fixed IP address. For more information, see [Configure an elastic container instance to use a fixed IP address](~~2381086~~).
+         * <p>Specifies whether to configure the instance to use a fixed IP address. For more information, see <a href="~~2381086~~">Configure an elastic container instance to use a fixed IP address</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fixedIp(String fixedIp) {
             this.putQueryParameter("FixedIp", fixedIp);
@@ -1353,7 +1420,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The retention period of the fixed IP address after the original instance is released and the fixed IP address becomes idle. Unit: hours. Default value: 48.
+         * <p>The retention period of the fixed IP address after the original instance is released and the fixed IP address becomes idle. Unit: hours. Default value: 48.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
          */
         public Builder fixedIpRetainHour(Integer fixedIpRetainHour) {
             this.putQueryParameter("FixedIpRetainHour", fixedIpRetainHour);
@@ -1362,13 +1432,17 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The version of the GPU driver. Default value: tesla=470.82.01. Valid values:
-         * <p>
+         * <p>The version of the GPU driver. Default value: tesla=470.82.01. Valid values:</p>
+         * <ul>
+         * <li>tesla=470.82.01</li>
+         * <li>tesla=525.85.12</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can switch the GPU driver version only for a few Elastic Compute Service (ECS) instance types. For more information, see <a href="~~2579486~~">Specify GPU-accelerated ECS instance types to create an elastic container instance</a>.</p>
+         * </blockquote>
          * 
-         * *   tesla=470.82.01
-         * *   tesla=525.85.12
-         * 
-         * >  You can switch the GPU driver version only for a few Elastic Compute Service (ECS) instance types. For more information, see [Specify GPU-accelerated ECS instance types to create an elastic container instance](~~2579486~~).
+         * <strong>example:</strong>
+         * <p>tesla=525.85.12</p>
          */
         public Builder gpuDriverVersion(String gpuDriverVersion) {
             this.putQueryParameter("GpuDriverVersion", gpuDriverVersion);
@@ -1377,7 +1451,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The alias of the elastic container instance.
+         * <p>The alias of the elastic container instance.</p>
          */
         public Builder hostAliase(java.util.List < HostAliase> hostAliase) {
             this.putQueryParameter("HostAliase", hostAliase);
@@ -1386,7 +1460,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The hostname.
+         * <p>The hostname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder hostName(String hostName) {
             this.putQueryParameter("HostName", hostName);
@@ -1395,13 +1472,16 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The image acceleration mode. Valid values:
-         * <p>
+         * <p>The image acceleration mode. Valid values:</p>
+         * <ul>
+         * <li>nydus: uses Nydus to accelerate image pulling. The images must support Nydus.</li>
+         * <li>dadi: uses DADI to accelerate image pulling. The images must support DADI.</li>
+         * <li>p2p: uses P2P to accelerate image pulling. The images must support p2p.</li>
+         * <li>imc: uses image caches to accelerate image pulling.</li>
+         * </ul>
          * 
-         * *   nydus: uses Nydus to accelerate image pulling. The images must support Nydus.
-         * *   dadi: uses DADI to accelerate image pulling. The images must support DADI.
-         * *   p2p: uses P2P to accelerate image pulling. The images must support p2p.
-         * *   imc: uses image caches to accelerate image pulling.
+         * <strong>example:</strong>
+         * <p>imc</p>
          */
         public Builder imageAccelerateMode(String imageAccelerateMode) {
             this.putQueryParameter("ImageAccelerateMode", imageAccelerateMode);
@@ -1410,7 +1490,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The information about the logon credentials.
+         * <p>The information about the logon credentials.</p>
          */
         public Builder imageRegistryCredential(java.util.List < ImageRegistryCredential> imageRegistryCredential) {
             this.putQueryParameter("ImageRegistryCredential", imageRegistryCredential);
@@ -1419,7 +1499,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the image cache. For more information, see [Use image caches to accelerate the creation of instances](~~141281~~).
+         * <p>The ID of the image cache. For more information, see <a href="~~141281~~">Use image caches to accelerate the creation of instances</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc-2zebxkiifuyzzlhl****</p>
          */
         public Builder imageSnapshotId(String imageSnapshotId) {
             this.putQueryParameter("ImageSnapshotId", imageSnapshotId);
@@ -1428,7 +1511,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The maximum inbound bandwidth. Unit: bit/s.
+         * <p>The maximum inbound bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024000</p>
          */
         public Builder ingressBandwidth(Long ingressBandwidth) {
             this.putQueryParameter("IngressBandwidth", ingressBandwidth);
@@ -1437,7 +1523,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The information about the init containers.
+         * <p>The information about the init containers.</p>
          */
         public Builder initContainer(java.util.List < InitContainer> initContainer) {
             this.putQueryParameter("InitContainer", initContainer);
@@ -1446,7 +1532,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The address of the self-managed image repository. When you create an elastic container instance by using an image in a self-managed image repository that uses a self-signed certificate, you must specify this parameter to skip the certificate authentication. This prevents image pull failures caused by certificate authentication failures.
+         * <p>The address of the self-managed image repository. When you create an elastic container instance by using an image in a self-managed image repository that uses a self-signed certificate, you must specify this parameter to skip the certificate authentication. This prevents image pull failures caused by certificate authentication failures.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;harbor***.pre.com,192.168.XX.XX:5000,reg***.test.com:80&quot;</p>
          */
         public Builder insecureRegistry(String insecureRegistry) {
             this.putQueryParameter("InsecureRegistry", insecureRegistry);
@@ -1455,7 +1544,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The ECS instance types that you specify to create the elastic container instance. Multiple instance types are supported. For more information, see [Specify ECS instance types to create an elastic container instance](~~114664~~).
+         * <p>The ECS instance types that you specify to create the elastic container instance. Multiple instance types are supported. For more information, see <a href="~~114664~~">Specify ECS instance types to create an elastic container instance</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ecs.c5.xlarge</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -1464,7 +1556,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The number of IPv6 addresses that are assigned to the instance. Set the value to 1. You can assign only one IPv6 address to an elastic container instance.
+         * <p>The number of IPv6 addresses that are assigned to the instance. Set the value to 1. You can assign only one IPv6 address to an elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder ipv6AddressCount(Integer ipv6AddressCount) {
             this.putQueryParameter("Ipv6AddressCount", ipv6AddressCount);
@@ -1473,18 +1568,22 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The maximum IPv6 Internet bandwidth when you set Ipv6GatewayBandwidthEnable to true. Valid values:
-         * <p>
+         * <p>The maximum IPv6 Internet bandwidth when you set Ipv6GatewayBandwidthEnable to true. Valid values:</p>
+         * <ul>
+         * <li><p>If the billing method for IPv6 network usage is pay-by-bandwidth, the maximum IPv6 Internet bandwidth ranges from 1 to 2,000 Mbit/s.</p>
+         * </li>
+         * <li><p>If the billing method for IPv6 network usage is pay-by-traffic, the maximum IPv6 Internet bandwidth varies based on the edition of the IPv6 gateway.</p>
+         * <ul>
+         * <li>If the IPv6 gateway is of Free Edition, the maximum IPv6 Internet bandwidth ranges from 1 to 200 Mbit/s.</li>
+         * <li>If the IPv6 gateway is of Enterprise Edition, the maximum IPv6 Internet bandwidth ranges from 1 to 500 Mbit/s.</li>
+         * <li>If the IPv6 gateway is of Enhanced Enterprise Edition, the maximum IPv6 Internet bandwidth ranges from 1 to 1000 Mbit/s.</li>
+         * </ul>
+         * </li>
+         * </ul>
+         * <p>The default value is the maximum value in the Internet bandwidth range of the IPv6 gateway.</p>
          * 
-         * *   If the billing method for IPv6 network usage is pay-by-bandwidth, the maximum IPv6 Internet bandwidth ranges from 1 to 2,000 Mbit/s.
-         * 
-         * *   If the billing method for IPv6 network usage is pay-by-traffic, the maximum IPv6 Internet bandwidth varies based on the edition of the IPv6 gateway.
-         * 
-         *     *   If the IPv6 gateway is of Free Edition, the maximum IPv6 Internet bandwidth ranges from 1 to 200 Mbit/s.
-         *     *   If the IPv6 gateway is of Enterprise Edition, the maximum IPv6 Internet bandwidth ranges from 1 to 500 Mbit/s.
-         *     *   If the IPv6 gateway is of Enhanced Enterprise Edition, the maximum IPv6 Internet bandwidth ranges from 1 to 1000 Mbit/s.
-         * 
-         * The default value is the maximum value in the Internet bandwidth range of the IPv6 gateway.
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder ipv6GatewayBandwidth(String ipv6GatewayBandwidth) {
             this.putQueryParameter("Ipv6GatewayBandwidth", ipv6GatewayBandwidth);
@@ -1493,7 +1592,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Internet access to the elastic container instance over IPv6 addresses.
+         * <p>Specifies whether to enable Internet access to the elastic container instance over IPv6 addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder ipv6GatewayBandwidthEnable(Boolean ipv6GatewayBandwidthEnable) {
             this.putQueryParameter("Ipv6GatewayBandwidthEnable", ipv6GatewayBandwidthEnable);
@@ -1502,7 +1604,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The memory size that you want to allocate to the instance. Unit: GiB.
+         * <p>The memory size that you want to allocate to the instance. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -1511,7 +1616,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The endpoints of the Network Time Protocol (NTP) servers.
+         * <p>The endpoints of the Network Time Protocol (NTP) servers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ntp.cloud.aliyuncs.com</p>
          */
         public Builder ntpServer(java.util.List < String > ntpServer) {
             this.putQueryParameter("NtpServer", ntpServer);
@@ -1520,13 +1628,17 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The operating system of the elastic container instance. Default value: Linux. Valid values:
-         * <p>
+         * <p>The operating system of the elastic container instance. Default value: Linux. Valid values:</p>
+         * <ul>
+         * <li>Linux</li>
+         * <li>Windows</li>
+         * </ul>
+         * <blockquote>
+         * <p> Windows instances are in invitational preview. To use the operating system, submit a ticket.</p>
+         * </blockquote>
          * 
-         * *   Linux
-         * *   Windows
-         * 
-         * >  Windows instances are in invitational preview. To use the operating system, submit a ticket.
+         * <strong>example:</strong>
+         * <p>Windows</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -1535,7 +1647,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The options that you can configure when you enable the overhead reservation feature.
+         * <p>The options that you can configure when you enable the overhead reservation feature.</p>
          */
         public Builder overheadReservationOption(OverheadReservationOption overheadReservationOption) {
             this.putQueryParameter("OverheadReservationOption", overheadReservationOption);
@@ -1562,7 +1674,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The address of the self-managed image repository. When you create an elastic container instance by using an image in a self-managed image repository that uses the HTTP protocol, you must specify this parameter. This way, Elastic Container Instance pulls the image over the HTTP protocol instead of the default HTTPS protocol. This prevents image pull failures caused by different protocols.
+         * <p>The address of the self-managed image repository. When you create an elastic container instance by using an image in a self-managed image repository that uses the HTTP protocol, you must specify this parameter. This way, Elastic Container Instance pulls the image over the HTTP protocol instead of the default HTTPS protocol. This prevents image pull failures caused by different protocols.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;harbor***.pre.com,192.168.XX.XX:5000,reg***.test.com:80&quot;</p>
          */
         public Builder plainHttpRegistry(String plainHttpRegistry) {
             this.putQueryParameter("PlainHttpRegistry", plainHttpRegistry);
@@ -1571,7 +1686,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The private IP address of the elastic container instance. Only IPv4 addresses are supported. Make sure that the IP address is idle.
+         * <p>The private IP address of the elastic container instance. Only IPv4 addresses are supported. Make sure that the IP address is idle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.1</p>
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -1580,7 +1698,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The name of the instance Resource Access Management (RAM) role. You can use the same RAM role to access elastic container instances and ECS instances. For more information, see [Use an instance RAM role by calling API operations](~~61178~~).
+         * <p>The name of the instance Resource Access Management (RAM) role. You can use the same RAM role to access elastic container instances and ECS instances. For more information, see <a href="~~61178~~">Use an instance RAM role by calling API operations</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RamTestRole</p>
          */
         public Builder ramRoleName(String ramRoleName) {
             this.putQueryParameter("RamRoleName", ramRoleName);
@@ -1589,7 +1710,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -1598,7 +1722,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-uf66jeqopgqa9hdn****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -1625,14 +1752,16 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The restart policy of the instance. Valid values:
-         * <p>
+         * <p>The restart policy of the instance. Valid values:</p>
+         * <ul>
+         * <li>Always: Always restarts the instance if a container in the instance exits upon termination.</li>
+         * <li>Never: Never restarts the instance if a container in the instance exits upon termination.</li>
+         * <li>OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.</li>
+         * </ul>
+         * <p>Default value: Always.</p>
          * 
-         * *   Always: Always restarts the instance if a container in the instance exits upon termination.
-         * *   Never: Never restarts the instance if a container in the instance exits upon termination.
-         * *   OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.
-         * 
-         * Default value: Always.
+         * <strong>example:</strong>
+         * <p>Always</p>
          */
         public Builder restartPolicy(String restartPolicy) {
             this.putQueryParameter("RestartPolicy", restartPolicy);
@@ -1641,13 +1770,15 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The resource scheduling policy when you specify multiple zones to create an elastic container instance. To specify multiple zones, you can use the VSwitchId to specify multiple vSwitches. Valid values:
-         * <p>
+         * <p>The resource scheduling policy when you specify multiple zones to create an elastic container instance. To specify multiple zones, you can use the VSwitchId to specify multiple vSwitches. Valid values:</p>
+         * <ul>
+         * <li>VSwitchOrdered: The system schedules resources in the sequence of the vSwitches.</li>
+         * <li>VSwitchRandom: The system schedules resources at random.</li>
+         * </ul>
+         * <p>For more information, see <a href="~~157290~~">Specify multiple zones to create an elastic container instance</a>.</p>
          * 
-         * *   VSwitchOrdered: The system schedules resources in the sequence of the vSwitches.
-         * *   VSwitchRandom: The system schedules resources at random.
-         * 
-         * For more information, see [Specify multiple zones to create an elastic container instance](~~157290~~).
+         * <strong>example:</strong>
+         * <p>VSwitchOrdered</p>
          */
         public Builder scheduleStrategy(String scheduleStrategy) {
             this.putQueryParameter("ScheduleStrategy", scheduleStrategy);
@@ -1656,10 +1787,11 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which the instance belongs. Instances in the same security group can access each other.
-         * <p>
+         * <p>The ID of the security group to which the instance belongs. Instances in the same security group can access each other.</p>
+         * <p>If you do not specify a security group, the system automatically uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the container protocols and port numbers that you want to expose. If you do not have a default security group in the region, the system creates a default security group, and then adds the container protocols and port numbers that you specified to the inbound rules of the security group.</p>
          * 
-         * If you do not specify a security group, the system automatically uses the default security group in the region that you selected. Make sure that the inbound rules of the security group contain the container protocols and port numbers that you want to expose. If you do not have a default security group in the region, the system creates a default security group, and then adds the container protocols and port numbers that you specified to the inbound rules of the security group.
+         * <strong>example:</strong>
+         * <p>sg-uf66jeqopgqa9hdn****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -1668,7 +1800,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a shared namespace. Default value: false.
+         * <p>Specifies whether to use a shared namespace. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder shareProcessNamespace(Boolean shareProcessNamespace) {
             this.putQueryParameter("ShareProcessNamespace", shareProcessNamespace);
@@ -1677,7 +1812,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The protection period of the preemptible elastic container instance. Unit: hours. Default value: 1. A value of 0 indicates no protection period.
+         * <p>The protection period of the preemptible elastic container instance. Unit: hours. Default value: 1. A value of 0 indicates no protection period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder spotDuration(Long spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -1686,10 +1824,11 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places.
-         * <p>
+         * <p>The maximum hourly price of the preemptible elastic container instance. The value can be accurate to three decimal places.</p>
+         * <p>If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.</p>
          * 
-         * If you set SpotStrategy to SpotWithPriceLimit, you must specify the SpotPriceLimit parameter.
+         * <strong>example:</strong>
+         * <p>0.025</p>
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -1698,14 +1837,16 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The bid policy for the instance. Valid values:
-         * <p>
+         * <p>The bid policy for the instance. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is created as a preemptible instance for which you specify the maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The instance is created as a pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is created as a preemptible instance for which you specify the maximum hourly price.
-         * *   SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>SpotWithPriceLimit</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -1714,11 +1855,14 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable periodical execution.
-         * <p>
+         * <p>Specifies whether to enable periodical execution.</p>
+         * <ul>
+         * <li>true: enables periodical execution.</li>
+         * <li>false: disables periodical execution.</li>
+         * </ul>
          * 
-         * *   true: enables periodical execution.
-         * *   false: disables periodical execution.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder strictSpot(Boolean strictSpot) {
             this.putQueryParameter("StrictSpot", strictSpot);
@@ -1727,7 +1871,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The tags that you want to add to the instance. You can bind a maximum of 20 tags. For more information, see [Use tags to manage elastic container instances](~~146608~~).
+         * <p>The tags that you want to add to the instance. You can bind a maximum of 20 tags. For more information, see <a href="~~146608~~">Use tags to manage elastic container instances</a>.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -1736,7 +1880,10 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The buffer period of time during which the program handles operations before the program is stopped. Unit: seconds.
+         * <p>The buffer period of time during which the program handles operations before the program is stopped. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder terminationGracePeriodSeconds(Long terminationGracePeriodSeconds) {
             this.putQueryParameter("TerminationGracePeriodSeconds", terminationGracePeriodSeconds);
@@ -1745,12 +1892,14 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The IDs of the vSwitches that connect to the instance. You can specify up to 10 vSwitch IDs at a time. Separate multiple vSwitch IDs with commas (,). Example: `vsw-***,vsw-***`.
-         * <p>
+         * <p>The IDs of the vSwitches that connect to the instance. You can specify up to 10 vSwitch IDs at a time. Separate multiple vSwitch IDs with commas (,). Example: <code>vsw-***,vsw-***</code>.</p>
+         * <p>If you do not specify a vSwitch, the system automatically uses the default vSwitch in the default VPC in the region that you selected. If you do not have a default VPC or a default vSwitch in the region, the system automatically creates a default VPC and a default vSwitch.</p>
+         * <blockquote>
+         * <p> The number of IP addresses in the vSwitch CIDR block determines the maximum number of elastic container instances that you can create for the vSwitch. Before you create elastic container instances, you must plan the CIDR block of the vSwitch.</p>
+         * </blockquote>
          * 
-         * If you do not specify a vSwitch, the system automatically uses the default vSwitch in the default VPC in the region that you selected. If you do not have a default VPC or a default vSwitch in the region, the system automatically creates a default VPC and a default vSwitch.
-         * 
-         * >  The number of IP addresses in the vSwitch CIDR block determines the maximum number of elastic container instances that you can create for the vSwitch. Before you create elastic container instances, you must plan the CIDR block of the vSwitch.
+         * <strong>example:</strong>
+         * <p>vsw-bp1xpiowfm5vo8o3c****,vsw-bp1rkyjgr1xwoho6k****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -1759,7 +1908,7 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The information about the volume that you want to mount to the container.
+         * <p>The information about the volume that you want to mount to the container.</p>
          */
         public Builder volume(java.util.List < Volume> volume) {
             this.putQueryParameter("Volume", volume);
@@ -1768,10 +1917,11 @@ public class CreateContainerGroupRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. If you do not specify this parameter, the system selects a zone.
-         * <p>
+         * <p>The zone ID of the instance. If you do not specify this parameter, the system selects a zone.</p>
+         * <p>This parameter is empty by default.</p>
          * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-b</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -1786,6 +1936,12 @@ public class CreateContainerGroupRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class Option extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1825,7 +1981,10 @@ public class CreateContainerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The name of the option.
+             * <p>The name of the option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1833,7 +1992,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The value of the option.
+             * <p>The value of the option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1847,6 +2009,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class DnsConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameServer")
         private java.util.List < String > nameServer;
@@ -1898,7 +2066,10 @@ public class CreateContainerGroupRequest extends Request {
             private java.util.List < String > search; 
 
             /**
-             * The IP addresses of DNS servers.
+             * <p>The IP addresses of DNS servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.10.<em>.</em>*</p>
              */
             public Builder nameServer(java.util.List < String > nameServer) {
                 this.nameServer = nameServer;
@@ -1906,7 +2077,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Configuration options of the DNS server.
+             * <p>Configuration options of the DNS server.</p>
              */
             public Builder option(java.util.List < Option> option) {
                 this.option = option;
@@ -1914,7 +2085,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The search domains of DNS servers.
+             * <p>The search domains of DNS servers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>svc.local.kubenetes</p>
              */
             public Builder search(java.util.List < String > search) {
                 this.search = search;
@@ -1928,6 +2102,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class Sysctl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -1967,14 +2147,17 @@ public class CreateContainerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The name of the unsafe sysctl when you modify sysctls by configuring a security context. Valid values:
-             * <p>
+             * <p>The name of the unsafe sysctl when you modify sysctls by configuring a security context. Valid values:</p>
+             * <ul>
+             * <li>kernel.shm * (except kernel.shm_rmid_forced)</li>
+             * <li>kernel.msg*</li>
+             * <li>kernel.sem</li>
+             * <li>fs.mqueue.*</li>
+             * <li>net.*(except net.ipv4.tcp_syncookies, net.ipv4.ping_group_range, and net.ipv4.ip_unprivileged_port_start)</li>
+             * </ul>
              * 
-             * *   kernel.shm \* (except kernel.shm_rmid_forced)
-             * *   kernel.msg\*
-             * *   kernel.sem
-             * *   fs.mqueue.\*
-             * *   net.\*(except net.ipv4.tcp_syncookies, net.ipv4.ping_group_range, and net.ipv4.ip_unprivileged_port_start)
+             * <strong>example:</strong>
+             * <p>kernel.msgmax</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1982,7 +2165,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The value of the unsafe sysctl when you modify sysctls by configuring a security context.
+             * <p>The value of the unsafe sysctl when you modify sysctls by configuring a security context.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65536</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1996,6 +2182,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class HostSecurityContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sysctl")
         private java.util.List < Sysctl> sysctl;
@@ -2023,7 +2215,7 @@ public class CreateContainerGroupRequest extends Request {
             private java.util.List < Sysctl> sysctl; 
 
             /**
-             * Configure a security context to modify unsafe sysctls. For more information, see [Configure a security context](~~462313~~).
+             * <p>Configure a security context to modify unsafe sysctls. For more information, see <a href="~~462313~~">Configure a security context</a>.</p>
              */
             public Builder sysctl(java.util.List < Sysctl> sysctl) {
                 this.sysctl = sysctl;
@@ -2037,6 +2229,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class SecurityContextSysctl extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -2076,11 +2274,14 @@ public class CreateContainerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The name of the safe sysctl when you modify sysctls by configuring a security context. Valid values:
-             * <p>
+             * <p>The name of the safe sysctl when you modify sysctls by configuring a security context. Valid values:</p>
+             * <ul>
+             * <li>net.ipv4.ping_group_range</li>
+             * <li>net.ipv4.ip_unprivileged_port_start</li>
+             * </ul>
              * 
-             * *   net.ipv4.ping_group_range
-             * *   net.ipv4.ip_unprivileged_port_start
+             * <strong>example:</strong>
+             * <p>kernel.msgmax</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2088,7 +2289,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The value of the safe sysctl when you modify sysctls by configuring a security context.
+             * <p>The value of the safe sysctl when you modify sysctls by configuring a security context.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>65536</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2102,6 +2306,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class SecurityContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sysctl")
         private java.util.List < SecurityContextSysctl> sysctl;
@@ -2129,7 +2339,7 @@ public class CreateContainerGroupRequest extends Request {
             private java.util.List < SecurityContextSysctl> sysctl; 
 
             /**
-             * Configure a security context to modify safe sysctls. For more information, see [Configure a security context](~~462313~~).
+             * <p>Configure a security context to modify safe sysctls. For more information, see <a href="~~462313~~">Configure a security context</a>.</p>
              */
             public Builder sysctl(java.util.List < SecurityContextSysctl> sysctl) {
                 this.sysctl = sysctl;
@@ -2143,6 +2353,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class AcrRegistryInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArnService")
         private String arnService;
@@ -2230,7 +2446,10 @@ public class CreateContainerGroupRequest extends Request {
             private String regionId; 
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the RAM role in the Alibaba Cloud account to which the elastic container instance belongs.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role in the Alibaba Cloud account to which the elastic container instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1609982529******:role/role-assume</p>
              */
             public Builder arnService(String arnService) {
                 this.arnService = arnService;
@@ -2238,7 +2457,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The ARN of the RAM role in the Alibaba Cloud account to which the Container Registry Enterprise Edition instance belongs.
+             * <p>The ARN of the RAM role in the Alibaba Cloud account to which the Container Registry Enterprise Edition instance belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1298452580******:role/role-acr</p>
              */
             public Builder arnUser(String arnUser) {
                 this.arnUser = arnUser;
@@ -2246,7 +2468,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify multiple domain names. Separate multiple domain names with commas (,).
+             * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify multiple domain names. Separate multiple domain names with commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>*****-****-registry.cn-beijing.cr.aliyuncs.com</p>
              */
             public Builder domain(java.util.List < String > domain) {
                 this.domain = domain;
@@ -2254,7 +2479,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The ID of the Container Registry Enterprise Edition instance.
+             * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-nwj395hgf6f3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2262,7 +2490,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the Container Registry Enterprise Edition instance.
+             * <p>The name of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acr-test</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -2270,7 +2501,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The region ID of the Container Registry Enterprise Edition instance.
+             * <p>The region ID of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2284,6 +2518,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class Exec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List < String > command;
@@ -2325,6 +2565,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class HttpGet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -2406,6 +2652,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class TcpSocket extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -2447,6 +2699,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class LivenessProbe extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Exec")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -2631,6 +2889,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class ReadinessProbeExec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List < String > command;
@@ -2672,6 +2936,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class ReadinessProbeHttpGet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -2753,6 +3023,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class ReadinessProbeTcpSocket extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -2794,6 +3070,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class ReadinessProbe extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Exec")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -2978,6 +3260,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class Capability extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Add")
         private java.util.List < String > add;
@@ -3019,6 +3307,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class ContainerSecurityContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capability")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -3101,6 +3395,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class FieldRef extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldPath")
         private String fieldPath;
@@ -3142,6 +3442,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class EnvironmentVar extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldRef")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -3202,7 +3508,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (\_). It cannot start with a digit.``
+             * <p>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (_). It cannot start with a digit.``</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PATH</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -3210,7 +3519,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The value of the environment variable. The value can be up to 256 characters in length.
+             * <p>The value of the environment variable. The value can be up to 256 characters in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/bin</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3224,6 +3536,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class LifecyclePostStartHandlerHttpGetHttpHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -3263,7 +3581,10 @@ public class CreateContainerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The name of the custom field in the HTTP GET request header when you use HTTP requests to specify a postStart hook.
+             * <p>The name of the custom field in the HTTP GET request header when you use HTTP requests to specify a postStart hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Xiao-Custom-Header</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3271,7 +3592,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The value of the custom field in the HTTP GET request header when you use HTTP requests to specify a postStart hook.
+             * <p>The value of the custom field in the HTTP GET request header when you use HTTP requests to specify a postStart hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-postStart</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3285,6 +3609,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class LifecyclePreStopHandlerHttpGetHttpHeader extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -3324,7 +3654,10 @@ public class CreateContainerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The name of the custom field in the HTTP GET request header when you use HTTP requests to specify a presto hook.
+             * <p>The name of the custom field in the HTTP GET request header when you use HTTP requests to specify a presto hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Xiao-Custom-Header</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3332,7 +3665,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The value of the custom field in the HTTP GET request header when you use HTTP requests to specify a preStop hook.
+             * <p>The value of the custom field in the HTTP GET request header when you use HTTP requests to specify a preStop hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-preStop</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3346,6 +3682,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class Port extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -3385,7 +3727,10 @@ public class CreateContainerGroupRequest extends Request {
             private String protocol; 
 
             /**
-             * The port number. Valid values: 1 to 65535.
+             * <p>The port number. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -3393,11 +3738,14 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The type of the protocol. Valid values:
-             * <p>
+             * <p>The type of the protocol. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * </ul>
              * 
-             * *   TCP
-             * *   UDP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -3411,6 +3759,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class VolumeMount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
@@ -3486,10 +3840,13 @@ public class CreateContainerGroupRequest extends Request {
             private String subPath; 
 
             /**
-             * The directory to which the volume is mounted.
-             * <p>
+             * <p>The directory to which the volume is mounted.</p>
+             * <blockquote>
+             * <p> The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.</p>
+             * </blockquote>
              * 
-             * >  The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.
+             * <strong>example:</strong>
+             * <p>/pod/data</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -3497,14 +3854,16 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
-             * <p>
+             * <p>The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:</p>
+             * <ul>
+             * <li>None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.</li>
+             * <li>HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.</li>
+             * <li>Bidirectional: This value is similar to HostToContainer. The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.</li>
+             * </ul>
+             * <p>Default value: None.</p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
-             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
-             * *   Bidirectional: This value is similar to HostToContainer. The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume. In addition, all volume mounts that are mounted on the container are propagated back to the host and all containers of all pods that use the same volume.
-             * 
-             * Default value: None.
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -3512,7 +3871,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the volume. The value of this parameter is the same as the value of Volume.N.Name.
+             * <p>The name of the volume. The value of this parameter is the same as the name of the volume that is mounted to containers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-volume1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -3520,7 +3882,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether the volume is read-only. Default value: false.
+             * <p>Specifies whether the volume is read-only. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -3528,7 +3893,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The subdirectory of the volume.
+             * <p>The subdirectory of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data2/</p>
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -3542,6 +3910,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class Container extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LivenessProbe")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -4067,7 +4441,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The arguments that are passed to the startup command of the container. You can specify up to 10 arguments.
+             * <p>The arguments that are passed to the startup command of the container. You can specify up to 10 arguments.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder arg(java.util.List < String > arg) {
                 this.arg = arg;
@@ -4075,10 +4452,13 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The commands to be executed in containers when you use a CLI to perform health checks.
-             * <p>
+             * <p>The commands to be executed in the container when you use a CLI to perform health checks.</p>
+             * <blockquote>
+             * <p> When you configure ReadinessProbe-related parameters, you can select only one of the HttpGet, Exec, and TcpSocket check methods.</p>
+             * </blockquote>
              * 
-             * >  When you configure ReadinessProbe-related parameters, you can select only one of the HttpGet, Exec, and TcpSocket check methods.
+             * <strong>example:</strong>
+             * <p>sleep</p>
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -4086,7 +4466,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The number of vCPUs that are allocated to the container.
+             * <p>The number of vCPUs that you want to allocate to the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.25</p>
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -4094,7 +4477,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The environment variables of the container.
+             * <p>The environment variables of the container.</p>
              */
             public Builder environmentVar(java.util.List < EnvironmentVar> environmentVar) {
                 this.environmentVar = environmentVar;
@@ -4102,11 +4485,14 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to hide the information about environment variables when you query the details of an elastic container instance. Valid values:
-             * <p>
+             * <p>Specifies whether to hide the information about environment variables when you query the details of an elastic container instance. Default value: false. Valid values:</p>
+             * <ul>
+             * <li>false</li>
+             * <li>true If environment variables contain sensitive information, you can set this parameter to true to improve security of the information.</li>
+             * </ul>
              * 
-             * *   false
-             * *   true If environment variables contain sensitive information, you can set this parameter to true to improve security of the information.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder environmentVarHide(Boolean environmentVarHide) {
                 this.environmentVarHide = environmentVarHide;
@@ -4114,7 +4500,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The number of GPUs that you want to allocate to the container.
+             * <p>The number of GPUs that you want to allocate to the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -4122,7 +4511,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The image of the container.
+             * <p>The image of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -4130,12 +4522,15 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The policy that you want to use to pull images. Valid values:
-             * <p>
+             * <p>The policy that you want to use to pull images. Valid values:</p>
+             * <ul>
+             * <li>Always: Each time instances are created, image pulling is performed.</li>
+             * <li>IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</li>
+             * <li>Never: On-premises images are always used. Image pulling is not performed.</li>
+             * </ul>
              * 
-             * *   Always: Each time instances are created, image pulling is performed.
-             * *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
-             * *   Never: On-premises images are always used. Image pulling is not performed.
+             * <strong>example:</strong>
+             * <p>Always</p>
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -4143,7 +4538,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The commands to be executed in containers when you use a CLI to specify a postStart hook.
+             * <p>The commands to be executed in containers when you use a CLI to specify a postStart hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;echo Hello from the postStart handler &gt; /usr/share/message&quot;]</p>
              */
             public Builder lifecyclePostStartHandlerExec(java.util.List < String > lifecyclePostStartHandlerExec) {
                 this.lifecyclePostStartHandlerExec = lifecyclePostStartHandlerExec;
@@ -4151,7 +4549,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify a postStart hook.
+             * <p>The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify a postStart hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
              */
             public Builder lifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
                 this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
@@ -4159,7 +4560,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The HTTP GET request header.
+             * <p>The HTTP GET request header.</p>
              */
             public Builder lifecyclePostStartHandlerHttpGetHttpHeader(java.util.List < LifecyclePostStartHandlerHttpGetHttpHeader> lifecyclePostStartHandlerHttpGetHttpHeader) {
                 this.lifecyclePostStartHandlerHttpGetHttpHeader = lifecyclePostStartHandlerHttpGetHttpHeader;
@@ -4167,7 +4568,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify a postStart hook.
+             * <p>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify a postStart hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/healthyz</p>
              */
             public Builder lifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
                 this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
@@ -4175,7 +4579,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port to which the system sends an HTTP GET request when you use an HTTP request to specify a postStart hook.
+             * <p>The port to which the system sends an HTTP GET request when you use an HTTP request to specify a postStart hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5050</p>
              */
             public Builder lifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
                 this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
@@ -4183,11 +4590,14 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The protocol type of HTTP GET requests when you use HTTP requests to specify a postStart hook. Valid values:
-             * <p>
+             * <p>The protocol type of HTTP GET requests when you use HTTP requests to specify a postStart hook. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * </ul>
              * 
-             * *   HTTP
-             * *   HTTPS
+             * <strong>example:</strong>
+             * <p>HTTPS</p>
              */
             public Builder lifecyclePostStartHandlerHttpGetScheme(String lifecyclePostStartHandlerHttpGetScheme) {
                 this.lifecyclePostStartHandlerHttpGetScheme = lifecyclePostStartHandlerHttpGetScheme;
@@ -4195,7 +4605,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify a postStart hook.
+             * <p>The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify a postStart hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
              */
             public Builder lifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
                 this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
@@ -4203,7 +4616,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify a postStart hook.
+             * <p>The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify a postStart hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder lifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
                 this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
@@ -4211,7 +4627,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The commands to be executed in containers when you use a CLI to specify a preStop hook.
+             * <p>The commands to be executed in containers when you use a CLI to specify a preStop hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;/bin/sh&quot;, &quot;-c&quot;,&quot;echo Hello from the preStop handler &gt; /usr/share/message&quot;]</p>
              */
             public Builder lifecyclePreStopHandlerExec(java.util.List < String > lifecyclePreStopHandlerExec) {
                 this.lifecyclePreStopHandlerExec = lifecyclePreStopHandlerExec;
@@ -4219,7 +4638,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify a preStop hook.
+             * <p>The IP address of the host that receives the HTTP GET request when you use an HTTP request to specify a preStop hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
              */
             public Builder lifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
                 this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
@@ -4227,7 +4649,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The HTTP GET request header.
+             * <p>The HTTP GET request header.</p>
              */
             public Builder lifecyclePreStopHandlerHttpGetHttpHeader(java.util.List < LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader) {
                 this.lifecyclePreStopHandlerHttpGetHttpHeader = lifecyclePreStopHandlerHttpGetHttpHeader;
@@ -4235,7 +4657,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify a preSop hook.
+             * <p>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify a preSop hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/healthyz</p>
              */
             public Builder lifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
                 this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
@@ -4243,7 +4668,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to specify a preStop hook.
+             * <p>The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to specify a preStop hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>88</p>
              */
             public Builder lifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
                 this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
@@ -4251,11 +4679,14 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The protocol type of the HTTP GET request when you use an HTTP request to specify a preStop hook. Valid values:
-             * <p>
+             * <p>The protocol type of the HTTP GET request when you use an HTTP request to specify a preStop hook. Valid values:</p>
+             * <ul>
+             * <li>HTTP</li>
+             * <li>HTTPS</li>
+             * </ul>
              * 
-             * *   HTTP
-             * *   HTTPS
+             * <strong>example:</strong>
+             * <p>HTTP</p>
              */
             public Builder lifecyclePreStopHandlerHttpGetScheme(String lifecyclePreStopHandlerHttpGetScheme) {
                 this.lifecyclePreStopHandlerHttpGetScheme = lifecyclePreStopHandlerHttpGetScheme;
@@ -4263,7 +4694,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify a preStop hook.
+             * <p>The IP address of the host that receives the TCP socket request when you use a TCP socket request to specify a preStop hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.0.XX.XX</p>
              */
             public Builder lifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
                 this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
@@ -4271,7 +4705,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify a preStop hook.
+             * <p>The port to which the system sends a TCP socket request for a health check when you use TCP sockets to specify a preStop hook.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90</p>
              */
             public Builder lifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
                 this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
@@ -4279,7 +4716,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The memory size of the container. Unit: GiB.
+             * <p>The memory size of the container. Unit: GiB</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -4287,7 +4727,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the container.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4295,10 +4738,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to perform health checks.
-             * <p>
-             * 
-             * >  When you configure LivenessProbe-related parameters, you can select only one of the HttpGet, Exec, and TcpSocket check methods.
+             * <p>The port to which the system sends an HTTP GET request for a health check when you use HTTP requests to perform health checks.</p>
+             * <blockquote>
+             * <p> When you configure LivenessProbe-related parameters, you can select only one of the HttpGet, Exec, and TcpSocket check methods.</p>
+             * </blockquote>
              */
             public Builder port(java.util.List < Port> port) {
                 this.port = port;
@@ -4306,7 +4749,14 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * SecurityContextPrivileged.
+             * <p>Specifies whether to enable privileged mode for the container. That is, whether to run the container in privileged mode. Default value: false. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder securityContextPrivileged(Boolean securityContextPrivileged) {
                 this.securityContextPrivileged = securityContextPrivileged;
@@ -4314,7 +4764,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The user group that runs the container.
+             * <p>The user group that runs the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder securityContextRunAsGroup(Long securityContextRunAsGroup) {
                 this.securityContextRunAsGroup = securityContextRunAsGroup;
@@ -4322,7 +4775,14 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to run the container as a non-root user.
+             * <p>Specifies whether to run the container as a non-root user. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder securityContextRunAsNonRoot(Boolean securityContextRunAsNonRoot) {
                 this.securityContextRunAsNonRoot = securityContextRunAsNonRoot;
@@ -4330,7 +4790,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
+             * <p>Specifies whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder stdin(Boolean stdin) {
                 this.stdin = stdin;
@@ -4338,9 +4801,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether standard input streams are disconnected from multiple sessions after a client is disconnected.\
-             * <p>
-             * If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, standard input streams are also disconnected, and remain disconnected until the container restarts.
+             * <p>Specifies whether standard input streams are disconnected from multiple sessions after a client is disconnected.<br>If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, standard input streams are also disconnected, and remain disconnected until the container restarts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -4348,7 +4812,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The path of the file from which the system retrieves termination messages of the container when the container exits.
+             * <p>The path of the file from which the system retrieves termination messages of the container when the container exits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/termination-log</p>
              */
             public Builder terminationMessagePath(String terminationMessagePath) {
                 this.terminationMessagePath = terminationMessagePath;
@@ -4356,7 +4823,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The message notification policy. This parameter is empty by default. Only Message Service (MNS) queue message notifications can be sent.
+             * <p>The message notification policy. This parameter is empty by default. Only Message Service (MNS) queue message notifications can be sent.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FallbackToLogsOnError</p>
              */
             public Builder terminationMessagePolicy(String terminationMessagePolicy) {
                 this.terminationMessagePolicy = terminationMessagePolicy;
@@ -4364,10 +4834,11 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable interaction. Default value: false.
-             * <p>
+             * <p>Specifies whether to enable interaction. Default value: false.</p>
+             * <p>If the command is a /bin/bash command, set the value to true.</p>
              * 
-             * If the command is a /bin/bash command, set the value to true.
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder tty(Boolean tty) {
                 this.tty = tty;
@@ -4375,7 +4846,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The information about the volume that you want to mount on the container.
+             * <p>The information about the volume that you want to mount on the container.</p>
              */
             public Builder volumeMount(java.util.List < VolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
@@ -4383,7 +4854,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The working directory of the container.
+             * <p>The working directory of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local/</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -4397,6 +4871,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class HostAliase extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hostname")
         private java.util.List < String > hostname;
@@ -4436,7 +4916,10 @@ public class CreateContainerGroupRequest extends Request {
             private String ip; 
 
             /**
-             * The hostnames of the elastic container instance.
+             * <p>The hostnames of the elastic container instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hehe.com</p>
              */
             public Builder hostname(java.util.List < String > hostname) {
                 this.hostname = hostname;
@@ -4444,7 +4927,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The IP address of the elastic container instance.
+             * <p>The IP address of the elastic container instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.1.1.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -4458,6 +4944,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class ImageRegistryCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
@@ -4509,7 +5001,10 @@ public class CreateContainerGroupRequest extends Request {
             private String userName; 
 
             /**
-             * The password that you use to access the image repository.
+             * <p>The password that you use to access the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourpassword</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -4517,7 +5012,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The address of the image repository.
+             * <p>The address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-shanghai.aliyuncs.com</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -4525,7 +5023,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The username that you use to access the image repository.
+             * <p>The username that you use to access the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yourusername</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -4539,6 +5040,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class SecurityContextCapability extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Add")
         private java.util.List < String > add;
@@ -4580,6 +5087,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class InitContainerSecurityContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capability")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -4662,6 +5175,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class EnvironmentVarFieldRef extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldPath")
         private String fieldPath;
@@ -4703,6 +5222,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class InitContainerEnvironmentVar extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldRef")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -4763,7 +5288,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (\_). It cannot start with a digit.``
+             * <p>The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (_). It cannot start with a digit.``</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Path</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -4771,7 +5299,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The value of the environment variable. The value must be 0 to 256 bits in length.
+             * <p>The value of the environment variable. The value must be 0 to 256 bits in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/bin/</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -4785,6 +5316,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class InitContainerPort extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
@@ -4824,7 +5361,10 @@ public class CreateContainerGroupRequest extends Request {
             private String protocol; 
 
             /**
-             * The port number. Valid values: 1 to 65535.
+             * <p>The port number. Valid values: 1 to 65535.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8888</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -4832,11 +5372,14 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The protocol type. Valid values:
-             * <p>
+             * <p>The protocol type. Valid values:</p>
+             * <ul>
+             * <li>TCP</li>
+             * <li>UDP</li>
+             * </ul>
              * 
-             * *   TCP
-             * *   UDP
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -4850,6 +5393,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class InitContainerVolumeMount extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
@@ -4925,7 +5474,10 @@ public class CreateContainerGroupRequest extends Request {
             private String subPath; 
 
             /**
-             * The directory to which the volume is mounted. The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.
+             * <p>The directory to which the volume is mounted. The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/share/</p>
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -4933,14 +5485,16 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one init container to be shared with other init containers in the same pod, or even with other pods on the same node. Valid values:
-             * <p>
+             * <p>The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one init container to be shared with other init containers in the same pod, or even with other pods on the same node. Valid values:</p>
+             * <ul>
+             * <li>None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.</li>
+             * <li>HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.</li>
+             * <li>Bidirectional: This value is similar to HostToContainer. The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume. In addition, all volume mounts that are mounted on the init container are propagated back to the host and all init containers of all pods that use the same volume.</li>
+             * </ul>
+             * <p>Default value: None.</p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are performed on this volume or subdirectories of this volume.
-             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
-             * *   Bidirectional: This value is similar to HostToContainer. The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume. In addition, all volume mounts that are mounted on the init container are propagated back to the host and all init containers of all pods that use the same volume.
-             * 
-             * Default value: None.
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -4948,7 +5502,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the volume.
+             * <p>The name of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-empty</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -4956,7 +5513,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether the mount path is read-only. Default value: false.
+             * <p>Specifies whether the mount path is read-only. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -4964,7 +5524,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The subdirectory of the volume. The pod can mount different directories of the same volume to different subdirectories of init containers.
+             * <p>The subdirectory of the volume. The pod can mount different directories of the same volume to different subdirectories of init containers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/sub/</p>
              */
             public Builder subPath(String subPath) {
                 this.subPath = subPath;
@@ -4978,6 +5541,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class InitContainer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityContext")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -5183,7 +5752,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The arguments that are passed to the startup command of the init container.
+             * <p>The arguments that are passed to the startup command of the init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder arg(java.util.List < String > arg) {
                 this.arg = arg;
@@ -5191,7 +5763,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The startup commands of the init container.
+             * <p>The startup commands of the init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sleep</p>
              */
             public Builder command(java.util.List < String > command) {
                 this.command = command;
@@ -5199,7 +5774,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The number of vCPUs that you want to allocate to the init container.
+             * <p>The number of vCPUs that you want to allocate to the init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder cpu(Float cpu) {
                 this.cpu = cpu;
@@ -5207,7 +5785,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The environment variable of the init container.
+             * <p>The environment variable of the init container.</p>
              */
             public Builder environmentVar(java.util.List < InitContainerEnvironmentVar> environmentVar) {
                 this.environmentVar = environmentVar;
@@ -5215,7 +5793,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The number of GPUs that you want to allocate to the init container.
+             * <p>The number of GPUs that you want to allocate to the init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder gpu(Integer gpu) {
                 this.gpu = gpu;
@@ -5223,7 +5804,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The image of the init container.
+             * <p>The image of the init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -5231,12 +5815,15 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The policy that you want to use to pull images. Valid values:
-             * <p>
+             * <p>The policy that you want to use to pull images. Valid values:</p>
+             * <ul>
+             * <li>Always: Each time instances are created, image pulling is performed.</li>
+             * <li>IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</li>
+             * <li>Never: On-premises images are always used. Image pulling is not performed.</li>
+             * </ul>
              * 
-             * *   Always: Each time instances are created, image pulling is performed.
-             * *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
-             * *   Never: On-premises images are always used. Image pulling is not performed.
+             * <strong>example:</strong>
+             * <p>Always</p>
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
                 this.imagePullPolicy = imagePullPolicy;
@@ -5244,7 +5831,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The memory size that you want to allocate to the init container. Unit: GiB.
+             * <p>The memory size that you want to allocate to the init container. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -5252,7 +5842,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the init container.
+             * <p>The name of the init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-init</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -5260,7 +5853,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The information about the port.
+             * <p>The information about the port.</p>
              */
             public Builder port(java.util.List < InitContainerPort> port) {
                 this.port = port;
@@ -5268,7 +5861,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The path of the file from which the system retrieves termination messages of the init container when the init container exits.
+             * <p>The path of the file from which the system retrieves termination messages of the init container when the init container exits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/tmp/termination-log</p>
              */
             public Builder terminationMessagePath(String terminationMessagePath) {
                 this.terminationMessagePath = terminationMessagePath;
@@ -5276,7 +5872,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The message notification policy. This parameter is empty by default.
+             * <p>The message notification policy. This parameter is empty by default.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder terminationMessagePolicy(String terminationMessagePolicy) {
                 this.terminationMessagePolicy = terminationMessagePolicy;
@@ -5284,7 +5883,7 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The information about the volumes that you want to mount to the init containers.
+             * <p>The information about the volumes that you want to mount to the init containers.</p>
              */
             public Builder volumeMount(java.util.List < InitContainerVolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
@@ -5292,7 +5891,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The working directory of the init container.
+             * <p>The working directory of the init container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/usr/local</p>
              */
             public Builder workingDir(String workingDir) {
                 this.workingDir = workingDir;
@@ -5306,6 +5908,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class OverheadReservationOption extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableOverheadReservation")
         private Boolean enableOverheadReservation;
@@ -5333,7 +5941,10 @@ public class CreateContainerGroupRequest extends Request {
             private Boolean enableOverheadReservation; 
 
             /**
-             * Specify whether to enable the overhead reservation feature. Default: false. Valid values: true and false. After you enable the overhead reservation feature, the system automatically adds the overhead to the specification of the elastic container instance, and then adjusts the specification of the instance upward to the most approximate specification. You are charged based on the new specification after the adjustment.
+             * <p>Specify whether to enable the overhead reservation feature. Default: false. Valid values: true and false. After you enable the overhead reservation feature, the system automatically adds the overhead to the specification of the elastic container instance, and then adjusts the specification of the instance upward to the most approximate specification. You are charged based on the new specification after the adjustment.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder enableOverheadReservation(Boolean enableOverheadReservation) {
                 this.enableOverheadReservation = enableOverheadReservation;
@@ -5347,6 +5958,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -5386,7 +6003,10 @@ public class CreateContainerGroupRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. The tag key cannot be an empty string and must be unique. The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+             * <p>The tag key. The tag key cannot be an empty string and must be unique. The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>version</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -5394,7 +6014,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
+             * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -5408,6 +6031,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class ConfigFileToPath extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
@@ -5489,6 +6118,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class ConfigFileVolume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigFileToPath")
         private java.util.List < ConfigFileToPath> configFileToPath;
@@ -5550,6 +6185,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class DiskVolume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
@@ -5631,6 +6272,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class EmptyDirVolume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Medium")
         private String medium;
@@ -5692,6 +6339,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class FlexVolume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Driver")
         private String driver;
@@ -5773,6 +6426,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class HostPathVolume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -5834,6 +6493,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class NFSVolume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
@@ -5893,7 +6558,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * Specifies whether the mount path is read-only. Default value: false.
+             * <p>Specifies whether the mount path is read-only. Default value: false.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -5901,7 +6569,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The address of the image repository.
+             * <p>The address of the image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-shanghai.aliyuncs.com</p>
              */
             public Builder server(String server) {
                 this.server = server;
@@ -5915,6 +6586,12 @@ public class CreateContainerGroupRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CreateContainerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateContainerGroupRequest</p>
+     */
     public static class Volume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigFileVolume")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -6080,7 +6757,10 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The name of the volume.
+             * <p>The name of the volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default-volume1</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -6088,13 +6768,17 @@ public class CreateContainerGroupRequest extends Request {
             }
 
             /**
-             * The type of the HostPath volume. Valid values:
-             * <p>
+             * <p>The type of the HostPath volume. Valid values:</p>
+             * <ul>
+             * <li>Directory</li>
+             * <li>File</li>
+             * </ul>
+             * <blockquote>
+             * <p> Only users in the whitelist can mount HostPath volumes.</p>
+             * </blockquote>
              * 
-             * *   Directory
-             * *   File
-             * 
-             * >  Only users in the whitelist can mount HostPath volumes.
+             * <strong>example:</strong>
+             * <p>ConfigFileVolume</p>
              */
             public Builder type(String type) {
                 this.type = type;

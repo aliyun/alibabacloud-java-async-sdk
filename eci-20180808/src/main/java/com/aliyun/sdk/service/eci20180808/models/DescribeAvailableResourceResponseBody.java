@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAvailableResourceResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The zones in which the specified resources are available.
+         * <p>The zones in which the specified resources are available.</p>
          */
         public Builder availableZones(AvailableZones availableZones) {
             this.availableZones = availableZones;
@@ -57,7 +58,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6829735A-FF76-58C6-AECB-27CBF135A7AA</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StatusCategory")
         private String statusCategory;
@@ -109,13 +119,16 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The category of resources based on stock status. Valid values:
-             * <p>
+             * <p>The category of resources based on stock status. Valid values:</p>
+             * <ul>
+             * <li>WithStock: Resources are in sufficient stock.</li>
+             * <li>ClosedWithStock: Resources are insufficient. We recommend that you use instance types that are in sufficient stock.</li>
+             * <li>WithoutStock: Resources are sold out and will be replenished. We recommend that you use instance types that are in sufficient stock.</li>
+             * <li>ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use instance types that are in sufficient stock.</li>
+             * </ul>
              * 
-             * *   WithStock: Resources are in sufficient stock.
-             * *   ClosedWithStock: Resources are insufficient. We recommend that you use instance types that are in sufficient stock.
-             * *   WithoutStock: Resources are sold out and will be replenished. We recommend that you use instance types that are in sufficient stock.
-             * *   ClosedWithoutStock: Resources are sold out and will not be replenished. We recommend that you use instance types that are in sufficient stock.
+             * <strong>example:</strong>
+             * <p>WithStock</p>
              */
             public Builder statusCategory(String statusCategory) {
                 this.statusCategory = statusCategory;
@@ -123,11 +136,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ECS instance types or instance families that are available in the zones.
-             * <p>
+             * <p>The ECS instance types or instance families that are available in the zones.</p>
+             * <ul>
+             * <li>If the return value of the Type parameter is InstanceTypeFamily, this parameter indicates instance families that are returned.</li>
+             * <li>If the return value of the Type parameter is InstanceType, this parameter indicates instance types that are returned.</li>
+             * </ul>
              * 
-             * *   If the return value of the Type parameter is InstanceTypeFamily, this parameter indicates instance families that are returned.
-             * *   If the return value of the Type parameter is InstanceType, this parameter indicates instance types that are returned.
+             * <strong>example:</strong>
+             * <p>ecs.c6</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -141,6 +157,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class SupportedResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedResource")
         private java.util.List < SupportedResource> supportedResource;
@@ -182,6 +204,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedResources")
         private SupportedResources supportedResources;
@@ -221,7 +249,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The information about the resources that are available in the zones.
+             * <p>The information about the resources that are available in the zones.</p>
              */
             public Builder supportedResources(SupportedResources supportedResources) {
                 this.supportedResources = supportedResources;
@@ -229,11 +257,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Valid values:
-             * <p>
+             * <p>The type of the resource. Valid values:</p>
+             * <ul>
+             * <li>InstanceTypeFamily: instance families.</li>
+             * <li>InstanceType: instance types.</li>
+             * </ul>
              * 
-             * *   InstanceTypeFamily: instance families.
-             * *   InstanceType: instance types.
+             * <strong>example:</strong>
+             * <p>InstanceTypeFamily</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -247,6 +278,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableResource")
         private java.util.List < AvailableResource> availableResource;
@@ -288,6 +325,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableZone extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableResources")
         private AvailableResources availableResources;
@@ -339,7 +382,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The resources that are available in the specified zone.
+             * <p>The resources that are available in the specified zone.</p>
              */
             public Builder availableResources(AvailableResources availableResources) {
                 this.availableResources = availableResources;
@@ -347,7 +390,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the resources.
+             * <p>The region ID of the resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -355,7 +401,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the resources.
+             * <p>The zone ID of the resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-e</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -369,6 +418,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAvailableResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAvailableResourceResponseBody</p>
+     */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableZone")
         private java.util.List < AvailableZone> availableZone;

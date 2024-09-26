@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyDataCacheRequest} extends {@link RequestModel}
  *
  * <p>CopyDataCacheRequest</p>
@@ -238,7 +239,10 @@ public class CopyDataCacheRequest extends Request {
         } 
 
         /**
-         * The bucket in which the DataCache is stored.
+         * <p>The bucket in which the DataCache is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -247,7 +251,10 @@ public class CopyDataCacheRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -256,7 +263,10 @@ public class CopyDataCacheRequest extends Request {
         }
 
         /**
-         * The ID of the DataCache in the source region.
+         * <p>The ID of the DataCache in the source region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edc-bp15l4vvys94oo******</p>
          */
         public Builder dataCacheId(String dataCacheId) {
             this.putQueryParameter("DataCacheId", dataCacheId);
@@ -265,7 +275,10 @@ public class CopyDataCacheRequest extends Request {
         }
 
         /**
-         * The destination region of the DataCache.
+         * <p>The destination region of the DataCache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder destinationRegionId(String destinationRegionId) {
             this.putQueryParameter("DestinationRegionId", destinationRegionId);
@@ -274,7 +287,10 @@ public class CopyDataCacheRequest extends Request {
         }
 
         /**
-         * The DataCache name.
+         * <p>The DataCache name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -301,7 +317,10 @@ public class CopyDataCacheRequest extends Request {
         }
 
         /**
-         * The storage path of the data.
+         * <p>The storage path of the data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/bucket-test</p>
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -310,7 +329,10 @@ public class CopyDataCacheRequest extends Request {
         }
 
         /**
-         * The source region of the DataCache.
+         * <p>The source region of the DataCache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -319,7 +341,10 @@ public class CopyDataCacheRequest extends Request {
         }
 
         /**
-         * The resource group to which the DataCache belongs.
+         * <p>The resource group to which the DataCache belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-2df3isufhi38****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -346,7 +371,10 @@ public class CopyDataCacheRequest extends Request {
         }
 
         /**
-         * The number of days for which the DataCache is retained.
+         * <p>The number of days for which the DataCache is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("RetentionDays", retentionDays);
@@ -355,7 +383,7 @@ public class CopyDataCacheRequest extends Request {
         }
 
         /**
-         * The tags of the DataCache.
+         * <p>The tags of the DataCache.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -370,6 +398,12 @@ public class CopyDataCacheRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CopyDataCacheRequest} extends {@link TeaModel}
+     *
+     * <p>CopyDataCacheRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -409,7 +443,10 @@ public class CopyDataCacheRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -417,7 +454,10 @@ public class CopyDataCacheRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;

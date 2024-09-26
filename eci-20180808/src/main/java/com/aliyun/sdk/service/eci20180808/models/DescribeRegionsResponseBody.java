@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionsResponseBody</p>
@@ -49,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried regions.
+         * <p>The queried regions.</p>
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -57,7 +58,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89945DD3-9072-47D0-A318-353284CFC7B3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +74,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecommendZones")
         private java.util.List < String > recommendZones;
@@ -133,7 +143,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private java.util.List < String > zones; 
 
             /**
-             * The recommended zones. Recommended zones are zones that have relatively sufficient resources in the current region.
+             * <p>The recommended zones. Recommended zones are zones that have relatively sufficient resources in the current region.</p>
              */
             public Builder recommendZones(java.util.List < String > recommendZones) {
                 this.recommendZones = recommendZones;
@@ -141,7 +151,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint for the region.
+             * <p>The endpoint for the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eci.aliyuncs.com</p>
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -149,7 +162,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -157,7 +173,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * The queried zones.
+             * <p>The queried zones.</p>
              */
             public Builder zones(java.util.List < String > zones) {
                 this.zones = zones;

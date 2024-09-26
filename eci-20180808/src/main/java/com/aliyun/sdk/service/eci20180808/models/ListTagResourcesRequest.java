@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListTagResourcesRequest} extends {@link RequestModel}
  *
  * <p>ListTagResourcesRequest</p>
@@ -181,7 +182,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * Limit.
+         * <p>The maximum number of entries to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder limit(String limit) {
             this.putQueryParameter("Limit", limit);
@@ -190,7 +194,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAdDWBF2****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -217,7 +224,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -226,7 +236,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The IDs of the resources.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -253,7 +263,16 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>ContainerGroup: elastic container instance</li>
+         * <li>ImageCache: image cache</li>
+         * <li>DataCache: data cache</li>
+         * <li>VirtualNode: virtual node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ContainerGroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -262,7 +281,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags that are added to the resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -277,6 +296,12 @@ public class ListTagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>ListTagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -316,7 +341,10 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -324,7 +352,10 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;

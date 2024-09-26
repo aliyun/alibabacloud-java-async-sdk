@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UntagResourcesRequest} extends {@link RequestModel}
  *
  * <p>UntagResourcesRequest</p>
@@ -182,7 +183,15 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Specifies whether to remove all tags from the resource. This parameter is valid only when the <code>TagKey</code> parameter is not specified in the request. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -191,7 +200,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-xxx-xxx-xxxx-42665544xxxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -218,7 +230,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -227,7 +242,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The IDs of the resources.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -254,7 +269,16 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>ContainerGroup: elastic container instance</li>
+         * <li>ImageCache: image cache</li>
+         * <li>DataCache: data cache</li>
+         * <li>VirtualNode: virtual node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ContainerGroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -263,7 +287,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>The keys of the tags that you want to remove from the resource. You can enter up to 20 tag keys.</p>
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

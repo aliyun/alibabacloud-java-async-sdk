@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteImageCacheRequest} extends {@link RequestModel}
  *
  * <p>DeleteImageCacheRequest</p>
@@ -139,7 +140,10 @@ public class DeleteImageCacheRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence](~~25693~~).
+         * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure the idempotence</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -148,7 +152,10 @@ public class DeleteImageCacheRequest extends Request {
         }
 
         /**
-         * The ID of the image cache.
+         * <p>The ID of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>imc-2zebxkiifuyzzlhl****</p>
          */
         public Builder imageCacheId(String imageCacheId) {
             this.putQueryParameter("ImageCacheId", imageCacheId);
@@ -175,7 +182,10 @@ public class DeleteImageCacheRequest extends Request {
         }
 
         /**
-         * The region ID of the image cache.
+         * <p>The region ID of the image cache.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

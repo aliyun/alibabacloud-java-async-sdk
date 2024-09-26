@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagResourcesRequest</p>
@@ -173,7 +174,10 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +186,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The IDs of the resources.</p>
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -209,7 +213,16 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li>ContainerGroup: elastic container instance</li>
+         * <li>ImageCache: image cache</li>
+         * <li>DataCache: data cache</li>
+         * <li>VirtualNode: virtual node</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ContainerGroup</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -218,7 +231,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags that you want to add to the resource. A maximum of 20 tags can be added to a resource.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -233,6 +246,12 @@ public class TagResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -272,7 +291,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * <p>The tag key. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -280,7 +302,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;

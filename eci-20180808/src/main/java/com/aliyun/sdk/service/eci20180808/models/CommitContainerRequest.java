@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitContainerRequest} extends {@link RequestModel}
  *
  * <p>CommitContainerRequest</p>
@@ -182,10 +183,10 @@ public class CommitContainerRequest extends Request {
         } 
 
         /**
-         * The access credential configurations of the Container Registry Enterprise Edition instance.
-         * <p>
-         * 
-         * >  If you use a Container Registry Personal Edition instance, you do not need to configure this parameter. If you use a Container Registry Enterprise Edition instance, you must configure this parameter.
+         * <p>The access credential configurations of the Container Registry Enterprise Edition instance.</p>
+         * <blockquote>
+         * <p> If you use a Container Registry Personal Edition instance, you do not need to configure this parameter. If you use a Container Registry Enterprise Edition instance, you must configure this parameter.</p>
+         * </blockquote>
          */
         public Builder acrRegistryInfo(AcrRegistryInfo acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
@@ -194,7 +195,7 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The details about the ARN that is required for authorization.
+         * <p>The details about the ARN that is required for authorization.</p>
          */
         public Builder arn(Arn arn) {
             this.putQueryParameter("Arn", arn);
@@ -203,7 +204,10 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The ID of the container group.
+         * <p>The ID of the container group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-bp1do4xz75fa5sd****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -212,7 +216,10 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The name of the container.
+         * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>container-1</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -221,7 +228,7 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The image of the container.
+         * <p>The image of the container.</p>
          */
         public Builder image(Image image) {
             this.putQueryParameter("Image", image);
@@ -248,7 +255,10 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,6 +291,12 @@ public class CommitContainerRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CommitContainerRequest} extends {@link TeaModel}
+     *
+     * <p>CommitContainerRequest</p>
+     */
     public static class AcrRegistryInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ArnService")
         private String arnService;
@@ -344,7 +360,10 @@ public class CommitContainerRequest extends Request {
             private String regionId; 
 
             /**
-             * The Alibaba Cloud Resource Access (ARN) of the RAM role that is assigned to the user (the authorized account) in cross-account authorization scenarios.
+             * <p>The Alibaba Cloud Resource Access (ARN) of the RAM role that is assigned to the user (the authorized account) in cross-account authorization scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1609982529******:role/role-test</p>
              */
             public Builder arnService(String arnService) {
                 this.arnService = arnService;
@@ -352,7 +371,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The ARN of the RAM role that is assigned to the authorizer in cross-account authorization scenarios.
+             * <p>The ARN of the RAM role that is assigned to the authorizer in cross-account authorization scenarios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram::1298452580******:role/role-test</p>
              */
             public Builder arnUser(String arnUser) {
                 this.arnUser = arnUser;
@@ -360,7 +382,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The ID of the Container Registry Enterprise Edition instance.
+             * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-nwj395hgf6f3****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -368,7 +393,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The region ID of the Container Registry Enterprise Edition instance.
+             * <p>The region ID of the Container Registry Enterprise Edition instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -382,6 +410,12 @@ public class CommitContainerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CommitContainerRequest} extends {@link TeaModel}
+     *
+     * <p>CommitContainerRequest</p>
+     */
     public static class Arn extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
@@ -421,7 +455,10 @@ public class CommitContainerRequest extends Request {
             private String roleType; 
 
             /**
-             * The ARN of the authorized role.
+             * <p>The ARN of the authorized role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:ram:xxx</p>
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -429,7 +466,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The authorization type. A value of service indicates that RAM roles are used for authorization.
+             * <p>The authorization type. A value of service indicates that RAM roles are used for authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user</p>
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -443,6 +483,12 @@ public class CommitContainerRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link CommitContainerRequest} extends {@link TeaModel}
+     *
+     * <p>CommitContainerRequest</p>
+     */
     public static class Image extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
@@ -508,7 +554,10 @@ public class CommitContainerRequest extends Request {
             private String tag; 
 
             /**
-             * The authorization of the image.
+             * <p>The authorization of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ECI</p>
              */
             public Builder author(String author) {
                 this.author = author;
@@ -516,7 +565,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The message about the image.
+             * <p>The message about the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test commit</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -524,7 +576,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The image repository.
+             * <p>The image repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eastest/registry-test</p>
              */
             public Builder repository(String repository) {
                 this.repository = repository;
@@ -532,7 +587,10 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The tag of the image. This parameter is empty by default, which indicates that the tag is not modified.
+             * <p>The tag of the image. This parameter is empty by default, which indicates that the tag is not modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.6</p>
              */
             public Builder tag(String tag) {
                 this.tag = tag;

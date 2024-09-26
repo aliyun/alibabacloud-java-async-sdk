@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeInstanceOpsRecordsRequest} extends {@link RequestModel}
  *
  * <p>DescribeInstanceOpsRecordsRequest</p>
@@ -140,7 +141,10 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
         } 
 
         /**
-         * The ID of the elastic container instance.
+         * <p>The ID of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-bp1dvysdafbh00t7****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -149,11 +153,14 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
         }
 
         /**
-         * The type of the O\&M task. Valid values:
-         * <p>
+         * <p>The type of the O&amp;M task. Valid values:</p>
+         * <ul>
+         * <li>coredump</li>
+         * <li>tcpdump</li>
+         * </ul>
          * 
-         * *   coredump
-         * *   tcpdump
+         * <strong>example:</strong>
+         * <p>coredump</p>
          */
         public Builder opsType(String opsType) {
             this.putQueryParameter("OpsType", opsType);
@@ -180,7 +187,10 @@ public class DescribeInstanceOpsRecordsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

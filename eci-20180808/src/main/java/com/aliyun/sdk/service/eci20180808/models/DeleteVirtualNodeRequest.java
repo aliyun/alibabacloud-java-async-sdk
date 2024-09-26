@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteVirtualNodeRequest} extends {@link RequestModel}
  *
  * <p>DeleteVirtualNodeRequest</p>
@@ -139,7 +140,10 @@ public class DeleteVirtualNodeRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotency of requests](~~25693~~).
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure idempotency of requests</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -166,7 +170,10 @@ public class DeleteVirtualNodeRequest extends Request {
         }
 
         /**
-         * The region ID of the virtual node.
+         * <p>The region ID of the virtual node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +200,10 @@ public class DeleteVirtualNodeRequest extends Request {
         }
 
         /**
-         * The ID of the virtual node.
+         * <p>The ID of the virtual node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vnd-2ze960zkdqrldeaw****</p>
          */
         public Builder virtualNodeId(String virtualNodeId) {
             this.putQueryParameter("VirtualNodeId", virtualNodeId);

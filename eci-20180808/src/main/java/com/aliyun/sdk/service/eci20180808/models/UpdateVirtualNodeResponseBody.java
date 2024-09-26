@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateVirtualNodeResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateVirtualNodeResponseBody</p>
@@ -37,7 +38,10 @@ public class UpdateVirtualNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89945DD3-9072-47D0-A318-353284CFC7B3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

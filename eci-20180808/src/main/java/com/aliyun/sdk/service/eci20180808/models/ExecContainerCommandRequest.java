@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExecContainerCommandRequest} extends {@link RequestModel}
  *
  * <p>ExecContainerCommandRequest</p>
@@ -197,9 +198,10 @@ public class ExecContainerCommandRequest extends Request {
         } 
 
         /**
-         * The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.\
-         * <p>
-         * The strings must be in the JSON format. Example: `["/bin/sh", "-c", "ls -a"]`.
+         * <p>The commands to run in the container. You can specify up to 20 commands. Each command can be up to 256 characters in length.<br>The strings must be in the JSON format. Example: <code>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;ls -a&quot;]</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;/bin/sh&quot;, &quot;-c&quot;, &quot;ls -a&quot;]</p>
          */
         public Builder command(String command) {
             this.putQueryParameter("Command", command);
@@ -208,7 +210,10 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * The ID of the elastic container instance.
+         * <p>The ID of the elastic container instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-2zebxkiifulhl****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -217,7 +222,10 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * The name of the container.
+         * <p>The name of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);
@@ -244,7 +252,10 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -271,7 +282,10 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to read the commands from standard input (stdin). Default value: true.
+         * <p>Specifies whether to read the commands from standard input (stdin). Default value: true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder stdin(Boolean stdin) {
             this.putQueryParameter("Stdin", stdin);
@@ -280,9 +294,10 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to immediately run the command and synchronously return the result. Default value: false.\
-         * <p>
-         * If this parameter is set to true, TTY must be set to false. Command cannot be set to `/bin/bash`.
+         * <p>Specifies whether to immediately run the command and synchronously return the result. Default value: false.<br>If this parameter is set to true, TTY must be set to false. Command cannot be set to <code>/bin/bash</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder sync(Boolean sync) {
             this.putQueryParameter("Sync", sync);
@@ -291,9 +306,10 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable interaction. Default value: false.\
-         * <p>
-         * If the Command parameter is set to `/bin/bash`, set this parameter to true.
+         * <p>Specifies whether to enable interaction. Default value: false.<br>If the Command parameter is set to <code>/bin/bash</code>, set this parameter to true.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder TTY(Boolean TTY) {
             this.putQueryParameter("TTY", TTY);

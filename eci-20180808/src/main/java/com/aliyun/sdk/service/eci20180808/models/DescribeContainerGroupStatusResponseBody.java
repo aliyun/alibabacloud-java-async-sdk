@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeContainerGroupStatusResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The collection of the statuses of the container groups.
+         * <p>The collection of the statuses of the container groups.</p>
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -81,7 +82,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d78f2dd8-5979-42fe-****-b16db43be5bc</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +93,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1340C38D-6189-54D1-86F6-7D5ECF3E0088</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -110,6 +120,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class Conditions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -185,7 +201,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The message about the event.
+             * <p>The message about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -193,7 +212,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the transition into the current status of the event.
+             * <p>The reason for the transition into the current status of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -201,7 +223,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the status last changed.
+             * <p>The time when the status last changed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-12T07:02:47Z</p>
              */
             public Builder lastTransitionTime(String lastTransitionTime) {
                 this.lastTransitionTime = lastTransitionTime;
@@ -209,7 +234,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the condition.
+             * <p>The status of the condition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -217,17 +245,20 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the condition. Valid values:
-             * <p>
+             * <p>The type of the condition. Valid values:</p>
+             * <ul>
+             * <li>PodReadyToStartContainers</li>
+             * <li>Initialized</li>
+             * <li>Ready</li>
+             * <li>ContainersReady</li>
+             * <li>PodScheduled</li>
+             * <li>ContainerHasSufficientDisk</li>
+             * <li>ContainerInstanceCreated</li>
+             * <li>Unschedulable</li>
+             * </ul>
              * 
-             * *   PodReadyToStartContainers
-             * *   Initialized
-             * *   Ready
-             * *   ContainersReady
-             * *   PodScheduled
-             * *   ContainerHasSufficientDisk
-             * *   ContainerInstanceCreated
-             * *   Unschedulable
+             * <strong>example:</strong>
+             * <p>Ready</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -241,6 +272,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class Running extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartedAtstartedAt")
         private String startedAtstartedAt;
@@ -268,7 +305,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String startedAtstartedAt; 
 
             /**
-             * The time when the container started to run.
+             * <p>The time when the container started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-23T20:49:31Z</p>
              */
             public Builder startedAtstartedAt(String startedAtstartedAt) {
                 this.startedAtstartedAt = startedAtstartedAt;
@@ -282,6 +322,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class Terminated extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContainerID")
         private String containerID;
@@ -381,7 +427,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String startedAt; 
 
             /**
-             * The container ID.
+             * <p>The container ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>containerd://3ff993933bea366c4719e43a1b067d89bc7f01f1f573981659a44ff17a******</p>
              */
             public Builder containerID(String containerID) {
                 this.containerID = containerID;
@@ -389,7 +438,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The exit code.
+             * <p>The exit code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -397,7 +449,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container ends running.
+             * <p>The time when the container ends running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-23T20:49:31Z</p>
              */
             public Builder finishedAt(String finishedAt) {
                 this.finishedAt = finishedAt;
@@ -405,7 +460,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the event.
+             * <p>The message about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -413,7 +471,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the transition into the current status of the event.
+             * <p>The reason for the transition into the current status of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -421,7 +482,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The signal code.
+             * <p>The signal code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder signal(Integer signal) {
                 this.signal = signal;
@@ -429,7 +493,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container started to run.
+             * <p>The time when the container started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-12T07:02:52Z</p>
              */
             public Builder startedAt(String startedAt) {
                 this.startedAt = startedAt;
@@ -443,6 +510,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class Waiting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -482,7 +555,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * The message about the event.
+             * <p>The message about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Back-off</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -490,7 +566,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the transition into the current status of the event.
+             * <p>The reason for the transition into the current status of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Started</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -504,6 +583,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class LastState extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Running")
         private Running running;
@@ -555,7 +640,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private Waiting waiting; 
 
             /**
-             * The container is created and running.
+             * <p>The container is created and running.</p>
              */
             public Builder running(Running running) {
                 this.running = running;
@@ -563,7 +648,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The container is terminated and exits after a successful or failed running.
+             * <p>The container is terminated and exits after a successful or failed running.</p>
              */
             public Builder terminated(Terminated terminated) {
                 this.terminated = terminated;
@@ -571,7 +656,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The container is waiting for being created.
+             * <p>The container is waiting for being created.</p>
              */
             public Builder waiting(Waiting waiting) {
                 this.waiting = waiting;
@@ -585,6 +670,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class StateRunning extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StartedAtstartedAt")
         private String startedAtstartedAt;
@@ -612,7 +703,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String startedAtstartedAt; 
 
             /**
-             * The time when the container started to run.
+             * <p>The time when the container started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-23T20:49:31Z</p>
              */
             public Builder startedAtstartedAt(String startedAtstartedAt) {
                 this.startedAtstartedAt = startedAtstartedAt;
@@ -626,6 +720,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class StateTerminated extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ContainerID")
         private String containerID;
@@ -725,7 +825,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String startedAt; 
 
             /**
-             * The container ID.
+             * <p>The container ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>containerd://3ff993933bea366c4719e43a1b067d89bc7f01f1f573981659a44ff17a******</p>
              */
             public Builder containerID(String containerID) {
                 this.containerID = containerID;
@@ -733,7 +836,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The exit code.
+             * <p>The exit code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder exitCode(Integer exitCode) {
                 this.exitCode = exitCode;
@@ -741,7 +847,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container ends running.
+             * <p>The time when the container ends running.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-23T20:55:31Z</p>
              */
             public Builder finishedAt(String finishedAt) {
                 this.finishedAt = finishedAt;
@@ -749,7 +858,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the event.
+             * <p>The message about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -757,7 +869,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the transition into the current status of the event.
+             * <p>The reason for the transition into the current status of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Completed</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -765,7 +880,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The signal code.
+             * <p>The signal code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder signal(Integer signal) {
                 this.signal = signal;
@@ -773,7 +891,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container started to run.
+             * <p>The time when the container started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-23T20:49:31Z</p>
              */
             public Builder startedAt(String startedAt) {
                 this.startedAt = startedAt;
@@ -787,6 +908,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class StateWaiting extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
@@ -826,7 +953,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * The message about the event.
+             * <p>The message about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Back-off</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -834,7 +964,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the transition into the current status of the event.
+             * <p>The reason for the transition into the current status of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Started</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -848,6 +981,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class State extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Running")
         private StateRunning running;
@@ -899,7 +1038,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private StateWaiting waiting; 
 
             /**
-             * The container is created and running.
+             * <p>The container is created and running.</p>
              */
             public Builder running(StateRunning running) {
                 this.running = running;
@@ -907,7 +1046,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The container is terminated and exits after a successful or failed running.
+             * <p>The container is terminated and exits after a successful or failed running.</p>
              */
             public Builder terminated(StateTerminated terminated) {
                 this.terminated = terminated;
@@ -915,7 +1054,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The container is waiting for being created.
+             * <p>The container is waiting for being created.</p>
              */
             public Builder waiting(StateWaiting waiting) {
                 this.waiting = waiting;
@@ -929,6 +1068,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class ContainerStatuses extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
@@ -1040,7 +1185,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private State state; 
 
             /**
-             * The image of the container.
+             * <p>The image of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-zhangjiakou.aliyuncs.com/eci_open/ubuntu:18.04</p>
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1048,7 +1196,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The image ID.
+             * <p>The image ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>registry-vpc.cn-zhangjiakou.aliyuncs.com/eci_open/ubuntu@sha256:134c7fe821b9d359490cd009ce7ca322453f4f2d018623f849e580a89a685e5d</p>
              */
             public Builder imageID(String imageID) {
                 this.imageID = imageID;
@@ -1056,7 +1207,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The last status of the container.
+             * <p>The last status of the container.</p>
              */
             public Builder lastState(LastState lastState) {
                 this.lastState = lastState;
@@ -1064,7 +1215,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * <p>The name of the container.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ubuntu</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1072,7 +1226,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container is ready.
+             * <p>Indicates whether the container is ready.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ready(Boolean ready) {
                 this.ready = ready;
@@ -1080,7 +1237,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times that the container restarted.
+             * <p>The number of times that the container restarted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder restartCount(Integer restartCount) {
                 this.restartCount = restartCount;
@@ -1088,7 +1248,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the container is started.
+             * <p>Indicates whether the container is started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder started(Boolean started) {
                 this.started = started;
@@ -1096,12 +1259,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the container. Valid values:
-             * <p>
-             * 
-             * *   Waiting
-             * *   Running
-             * *   Terminated
+             * <p>The status of the container. Valid values:</p>
+             * <ul>
+             * <li>Waiting</li>
+             * <li>Running</li>
+             * <li>Terminated</li>
+             * </ul>
              */
             public Builder state(State state) {
                 this.state = state;
@@ -1115,6 +1278,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class PodIps extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -1142,7 +1311,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String ip; 
 
             /**
-             * The IP address of the container group.
+             * <p>The IP address of the container group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1156,6 +1328,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class PodStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
         private java.util.List < Conditions> conditions;
@@ -1267,7 +1445,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The conditions of the container group.
+             * <p>The conditions of the container group.</p>
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -1275,7 +1453,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The statuses about the containers.
+             * <p>The statuses about the containers.</p>
              */
             public Builder containerStatuses(java.util.List < ContainerStatuses> containerStatuses) {
                 this.containerStatuses = containerStatuses;
@@ -1283,7 +1461,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the host.
+             * <p>The IP address of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder hostIp(String hostIp) {
                 this.hostIp = hostIp;
@@ -1291,7 +1472,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The lifecycle phase of the container group.
+             * <p>The lifecycle phase of the container group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder phase(String phase) {
                 this.phase = phase;
@@ -1299,7 +1483,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the container group.
+             * <p>The IP address of the container group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.XX.XX</p>
              */
             public Builder podIp(String podIp) {
                 this.podIp = podIp;
@@ -1307,7 +1494,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the container groups.
+             * <p>The IP addresses of the container groups.</p>
              */
             public Builder podIps(java.util.List < PodIps> podIps) {
                 this.podIps = podIps;
@@ -1315,7 +1502,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The quality of service (QoS) of the container group.
+             * <p>The quality of service (QoS) of the container group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Guaranteed</p>
              */
             public Builder qosClass(String qosClass) {
                 this.qosClass = qosClass;
@@ -1323,7 +1513,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the container started to run.
+             * <p>The time when the container started to run.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-12T07:02:47Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1337,6 +1530,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Annotations")
         private String annotations;
@@ -1436,7 +1635,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * Annotations that are added to the container groups.
+             * <p>Annotations that are added to the container groups.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;{&quot;tenancy.x-k8s.io/namespace&quot;:&quot;redis&quot;}&quot;</p>
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -1444,7 +1646,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the container group.
+             * <p>The ID of the container group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eci-bp1jrgfqqy54kg5hc****</p>
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -1452,7 +1657,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container group.
+             * <p>The name of the container group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>nginx</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1460,7 +1668,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace in which the container group resides.
+             * <p>The namespace in which the container group resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1468,7 +1679,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the container group.
+             * <p>The status of the container group.</p>
              */
             public Builder podStatus(PodStatus podStatus) {
                 this.podStatus = podStatus;
@@ -1476,7 +1687,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the container group.
+             * <p>The status of the container group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1484,7 +1698,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The universally unique identifier (UUID) of the container group, which is similar to the unique identifier (UID) of the Kubernetes pod in terms of the concept and usage.
+             * <p>The universally unique identifier (UUID) of the container group, which is similar to the unique identifier (UID) of the Kubernetes pod in terms of the concept and usage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>78ee0657-987g-b8b2-1f507dic4****</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

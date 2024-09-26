@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataCachesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataCachesResponseBody</p>
@@ -73,7 +74,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the data caches.
+         * <p>The information about the data caches.</p>
          */
         public Builder dataCaches(java.util.List < DataCaches> dataCaches) {
             this.dataCaches = dataCaches;
@@ -81,7 +82,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         }
 
         /**
-         * The query token. Set the value to the NextToken value that is returned in the previous call.
+         * <p>The query token. Set the value to the NextToken value that is returned in the previous call.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d78f2dd8-5979-42fe-xaee-b16db43be5bc</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -89,7 +93,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B8756BA0-6452-419C-9727-37A6209C85E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +104,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -110,6 +120,12 @@ public class DescribeDataCachesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataCachesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataCachesResponseBody</p>
+     */
     public static class DataSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
@@ -149,7 +165,18 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The parameters that are configured for the data source.
+             * <p>The parameters that are configured for the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *       &quot;options&quot;: {
+             *             &quot;path&quot;: &quot;/&quot;,
+             *             &quot;server&quot;: &quot;0ce1f4****-or***.cn-hangzhou.nas.aliyuncs.com&quot;,
+             *             &quot;vers&quot;: &quot;3&quot;,
+             *             &quot;options&quot;: &quot;nolock,proto=tcp,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport&quot;
+             *       },
+             *       &quot;type&quot;: &quot;NAS&quot;
+             * }</p>
              */
             public Builder options(String options) {
                 this.options = options;
@@ -157,13 +184,16 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>NAS</li>
+             * <li>OSS</li>
+             * <li>URL</li>
+             * <li>SNAPSHOT</li>
+             * </ul>
              * 
-             * *   NAS
-             * *   OSS
-             * *   URL
-             * *   SNAPSHOT
+             * <strong>example:</strong>
+             * <p>URL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -177,6 +207,12 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataCachesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataCachesResponseBody</p>
+     */
     public static class Events extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -276,7 +312,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The number of times that the event occurred.
+             * <p>The number of times that the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -284,7 +323,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event started.
+             * <p>The time when the event started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-16T02:14:48Z</p>
              */
             public Builder firstTimestamp(String firstTimestamp) {
                 this.firstTimestamp = firstTimestamp;
@@ -292,7 +334,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event ended.
+             * <p>The time when the event ended.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-06-16T02:24:48Z</p>
              */
             public Builder lastTimestamp(String lastTimestamp) {
                 this.lastTimestamp = lastTimestamp;
@@ -300,7 +345,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The message about the event.
+             * <p>The message about the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Successfully check data cache resource.</p>
              */
             public Builder message(String message) {
                 this.message = message;
@@ -308,7 +356,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The event name.
+             * <p>The event name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>datacache</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -316,7 +367,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason for the transition into the current status of the event.
+             * <p>The reason for the transition into the current status of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Started</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -324,11 +378,14 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the event. Valid values:
-             * <p>
+             * <p>The type of the event. Valid values:</p>
+             * <ul>
+             * <li>Normal</li>
+             * <li>Warning</li>
+             * </ul>
              * 
-             * *   Normal
-             * *   Warning
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -342,6 +399,12 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataCachesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataCachesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -381,7 +444,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -389,7 +455,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -403,6 +472,12 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataCachesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataCachesResponseBody</p>
+     */
     public static class DataCaches extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
@@ -634,7 +709,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The bucket that stores the data cache.
+             * <p>The bucket that stores the data cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -642,7 +720,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the elastic container instance that was generated when the data cache was created.
+             * <p>The ID of the elastic container instance that was generated when the data cache was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>eci-8vb1y2w1dv7zeirn****</p>
              */
             public Builder containerGroupId(String containerGroupId) {
                 this.containerGroupId = containerGroupId;
@@ -650,7 +731,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data cache was created.
+             * <p>The time when the data cache was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-16T02:43Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -658,7 +742,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data cache.
+             * <p>The ID of the data cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>edc-bp15l4vvys94oo******</p>
              */
             public Builder dataCacheId(String dataCacheId) {
                 this.dataCacheId = dataCacheId;
@@ -666,7 +753,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the data source.
+             * <p>The information about the data source.</p>
              */
             public Builder dataSource(DataSource dataSource) {
                 this.dataSource = dataSource;
@@ -674,7 +761,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The events.
+             * <p>The events.</p>
              */
             public Builder events(java.util.List < Events> events) {
                 this.events = events;
@@ -682,7 +769,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data cache expires.
+             * <p>The time when the data cache expires.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-26T02:43Z</p>
              */
             public Builder expireDateTime(String expireDateTime) {
                 this.expireDateTime = expireDateTime;
@@ -690,7 +780,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the on-premises snapshot.
+             * <p>The ID of the on-premises snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-bp12w3v37sit96t6****</p>
              */
             public Builder flashSnapshotId(String flashSnapshotId) {
                 this.flashSnapshotId = flashSnapshotId;
@@ -698,7 +791,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the data cache was last matched.
+             * <p>The time when the data cache was last matched.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-06-18T02:43Z</p>
              */
             public Builder lastMatchedTime(String lastMatchedTime) {
                 this.lastMatchedTime = lastMatchedTime;
@@ -706,7 +802,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data cache.
+             * <p>The name of the data cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -714,7 +813,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The directory in which the virtual host of the data cache resides.
+             * <p>The directory in which the virtual host of the data cache resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/data/models/</p>
              */
             public Builder path(String path) {
                 this.path = path;
@@ -722,7 +824,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The creation progress of the data cache.
+             * <p>The creation progress of the data cache.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100%</p>
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -730,7 +835,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -738,7 +846,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2hlt3ux4****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -746,7 +857,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the data cache. Unit: GiB.
+             * <p>The size of the data cache. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -754,7 +868,10 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot ID.
+             * <p>The snapshot ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>s-2zec5oj8e1yhxijt****</p>
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -762,17 +879,19 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data cache. Valid values:
-             * <p>
+             * <p>The status of the data cache. Valid values:</p>
+             * <ul>
+             * <li>Loading: The data cache is loading data.</li>
+             * <li>Creating: The data cache is being created.</li>
+             * <li>Available: The data cache is created.</li>
+             * <li>Failed: The data cache failed to be created.</li>
+             * <li>Updating: The data cache is being updated.</li>
+             * <li>UpdateFailed: The data cache failed to be updated.</li>
+             * </ul>
+             * <p>If the data cache is in the Available state, the data cache can be used.</p>
              * 
-             * *   Loading: The data cache is loading data.
-             * *   Creating: The data cache is being created.
-             * *   Available: The data cache is created.
-             * *   Failed: The data cache failed to be created.
-             * *   Updating: The data cache is being updated.
-             * *   UpdateFailed: The data cache failed to be updated.
-             * 
-             * If the data cache is in the Available state, the data cache can be used.
+             * <strong>example:</strong>
+             * <p>Available</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -780,7 +899,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are attached to the data cache.
+             * <p>The tags that are attached to the data cache.</p>
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

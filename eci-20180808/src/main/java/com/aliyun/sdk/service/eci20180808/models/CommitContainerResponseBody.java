@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CommitContainerResponseBody} extends {@link TeaModel}
  *
  * <p>CommitContainerResponseBody</p>
@@ -49,7 +50,10 @@ public class CommitContainerResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CB8D2B22-D636-4182-****-1FC9DBDAD66F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +61,10 @@ public class CommitContainerResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the task.
+         * <p>The ID of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-bp18cwvrb3v9tjk0tekz</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

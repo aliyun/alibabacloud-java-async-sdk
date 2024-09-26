@@ -1,3 +1,6 @@
+2024-09-26 Version: 1.0.6
+- Generated java-async 2018-08-08 for Eci.
+
 2024-06-28 Version: 1.0.5
 - Generated java-async 2018-08-08 for Eci.
 

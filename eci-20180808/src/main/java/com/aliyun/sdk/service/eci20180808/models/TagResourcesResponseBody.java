@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagResourcesResponseBody} extends {@link TeaModel}
  *
  * <p>TagResourcesResponseBody</p>
@@ -37,7 +38,10 @@ public class TagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E234675-3465-4CC3-9D0F-9A864BC391DD</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

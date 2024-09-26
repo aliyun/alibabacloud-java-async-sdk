@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupStatusRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerGroupStatusRequest</p>
@@ -168,7 +169,10 @@ public class DescribeContainerGroupStatusRequest extends Request {
         } 
 
         /**
-         * The IDs of the instances. You can specify up to 20 IDs. Each ID must be a string in the JSON format.
+         * <p>The IDs of the instances. You can specify up to 20 IDs. Each ID must be a string in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;eci-bp17gw49eu09yiwm****&quot;, &quot;eci-bp19aq49du01abcm****&quot;, &quot;eci-2zegym1qhbmdfr1s****&quot;]</p>
          */
         public Builder containerGroupIds(String containerGroupIds) {
             this.putQueryParameter("ContainerGroupIds", containerGroupIds);
@@ -177,10 +181,13 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * Specifies the maximum number of elastic container instances to be returned for this request. Default value: 200.
-         * <p>
+         * <p>Specifies the maximum number of elastic container instances to be returned for this request. Default value: 200.</p>
+         * <blockquote>
+         * <p>The number of returned resources can be less than or equal to the value of this parameter.</p>
+         * </blockquote>
          * 
-         * > The number of returned resources can be less than or equal to the value of this parameter.
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -189,9 +196,10 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.\
-         * <p>
-         * You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.<br>You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d78f2dd8-5979-42fe-xaee-b16db43be5bc</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -200,7 +208,10 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the instances.
+         * <p>The region ID of the instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -209,7 +220,10 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instances belong.
+         * <p>The ID of the resource group to which the instances belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-uf66jeqopgqa9hdn****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -218,7 +232,10 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * A relative time in seconds before the current time from which to show elastic container instances whose status changes. This parameter is used to poll status of elastic container instances.
+         * <p>A relative time in seconds before the current time from which to show elastic container instances whose status changes. This parameter is used to poll status of elastic container instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder sinceSecond(Integer sinceSecond) {
             this.putQueryParameter("SinceSecond", sinceSecond);
@@ -227,7 +244,7 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * The tag that is bound to the instances.
+         * <p>The tag that is bound to the instances.</p>
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -236,7 +253,10 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * The vSwitch ID.
+         * <p>The vSwitch ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-uf6h3rbwbm90urjwa****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -245,7 +265,10 @@ public class DescribeContainerGroupStatusRequest extends Request {
         }
 
         /**
-         * The zone ID of the instances.
+         * <p>The zone ID of the instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-k</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -260,6 +283,12 @@ public class DescribeContainerGroupStatusRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeContainerGroupStatusRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeContainerGroupStatusRequest</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -299,7 +328,10 @@ public class DescribeContainerGroupStatusRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -307,7 +339,10 @@ public class DescribeContainerGroupStatusRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeContainerGroupPriceRequest} extends {@link RequestModel}
  *
  * <p>DescribeContainerGroupPriceRequest</p>
@@ -236,7 +237,10 @@ public class DescribeContainerGroupPriceRequest extends Request {
         } 
 
         /**
-         * The computing power type. A value of economy specifies economic instances.
+         * <p>The computing power type. A value of economy specifies economic instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>economy</p>
          */
         public Builder computeCategory(String computeCategory) {
             this.putQueryParameter("ComputeCategory", computeCategory);
@@ -245,7 +249,10 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * The number of vCPUs. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see [vCPU and memory specifications](~~114662~~).
+         * <p>The number of vCPUs. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see <a href="~~114662~~">vCPU and memory specifications</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.0</p>
          */
         public Builder cpu(Float cpu) {
             this.putQueryParameter("Cpu", cpu);
@@ -254,7 +261,10 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * The storage size of the temporary storage space. Unit: GiB.
+         * <p>The storage size of the temporary storage space. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder ephemeralStorage(Integer ephemeralStorage) {
             this.putQueryParameter("EphemeralStorage", ephemeralStorage);
@@ -263,10 +273,13 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * The instance type of the Elastic Compute Service (ECS) instance that is used to create the elastic container instance. For information about the ECS instance types that are supported by Elastic Container Instance, see [ECS instance types that are supported by Elastic Container Instance](~~114664~~).
-         * <p>
+         * <p>The instance type of the Elastic Compute Service (ECS) instance that is used to create the elastic container instance. For information about the ECS instance types that are supported by Elastic Container Instance, see <a href="~~114664~~">ECS instance types that are supported by Elastic Container Instance</a>.</p>
+         * <blockquote>
+         * <p>If you specify this parameter, the specified specifications of vCPUs and memory are ignored. Only the price of the ECS instance type is returned.</p>
+         * </blockquote>
          * 
-         * > If you specify this parameter, the specified specifications of vCPUs and memory are ignored. Only the price of the ECS instance type is returned.
+         * <strong>example:</strong>
+         * <p>ecs.c5.large</p>
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -275,7 +288,10 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * The size of the memory. Unit: GiB. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see [vCPU and memory specifications](~~114662~~).
+         * <p>The size of the memory. Unit: GiB. For information about the vCPU and memory specifications that are supported by Elastic Container Instance, see <a href="~~114662~~">vCPU and memory specifications</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.0</p>
          */
         public Builder memory(Float memory) {
             this.putQueryParameter("Memory", memory);
@@ -302,7 +318,10 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~146965~~) operation to query the most recent region and zone list.
+         * <p>The region ID of the instance. You can call the <a href="~~146965~~">DescribeRegions</a> operation to query the most recent region and zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -329,7 +348,10 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * The protection period of the preemptible instance. Unit: hours. Default value: 1. The value of 0 indicates no protection period.
+         * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. The value of 0 indicates no protection period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder spotDuration(Integer spotDuration) {
             this.putQueryParameter("SpotDuration", spotDuration);
@@ -338,7 +360,10 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * The maximum hourly price of the preemptible elastic container instance. The value can contain up to three decimal places. If you set SpotStrategy to SpotWithPriceLimit, you must specify SpotPriceLimit.
+         * <p>The maximum hourly price of the preemptible elastic container instance. The value can contain up to three decimal places. If you set SpotStrategy to SpotWithPriceLimit, you must specify SpotPriceLimit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
          */
         public Builder spotPriceLimit(Float spotPriceLimit) {
             this.putQueryParameter("SpotPriceLimit", spotPriceLimit);
@@ -347,14 +372,16 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * The bidding policy for the elastic container instance. Valid values:
-         * <p>
+         * <p>The bidding policy for the elastic container instance. Valid values:</p>
+         * <ul>
+         * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
+         * <li>SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+         * </ul>
+         * <p>Default value: NoSpot.</p>
          * 
-         * *   NoSpot: The instance is a regular pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.
-         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
-         * 
-         * Default value: NoSpot.
+         * <strong>example:</strong>
+         * <p>SpotWithPriceLimit</p>
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);
@@ -363,7 +390,10 @@ public class DescribeContainerGroupPriceRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeRegions](~~146965~~) operation to query the most recent region and zone list.
+         * <p>The zone ID of the instance. You can call the <a href="~~146965~~">DescribeRegions</a> operation to query the most recent region and zone list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-g</p>
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

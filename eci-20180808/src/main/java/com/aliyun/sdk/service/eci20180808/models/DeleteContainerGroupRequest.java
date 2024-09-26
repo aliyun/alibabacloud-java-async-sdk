@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteContainerGroupRequest} extends {@link RequestModel}
  *
  * <p>DeleteContainerGroupRequest</p>
@@ -153,7 +154,10 @@ public class DeleteContainerGroupRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request?](~~25693~~)
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="~~25693~~">How to ensure the idempotence of a request?</a></p>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +166,10 @@ public class DeleteContainerGroupRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eci-2zelg8vwnlzdhf8hv****</p>
          */
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
@@ -171,7 +178,14 @@ public class DeleteContainerGroupRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Specifies whether to forcibly delete resources. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true: forcibly deletes resources without waiting for the timeout period for graceful terminations.</li>
+         * <li>false: waits for the timeout period for graceful terminations to delete resources.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -198,7 +212,10 @@ public class DeleteContainerGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * <p>The region ID of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

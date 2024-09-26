@@ -6,6 +6,7 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyDataCacheResponseBody} extends {@link TeaModel}
  *
  * <p>CopyDataCacheResponseBody</p>
@@ -49,7 +50,10 @@ public class CopyDataCacheResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID generated for the DataCache in the destination region.
+         * <p>The ID generated for the DataCache in the destination region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edc-bp1423y6d7v7l6ua****</p>
          */
         public Builder dataCacheId(String dataCacheId) {
             this.dataCacheId = dataCacheId;
@@ -57,7 +61,10 @@ public class CopyDataCacheResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>58EE0CB3-C864-5395-A4F7-24F425074839</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
