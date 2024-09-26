@@ -41,8 +41,16 @@ public class RunVideoAnalysisRequest extends Request {
     private String originalSessionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("snapshotInterval")
+    private Double snapshotInterval;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("taskId")
     private String taskId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("videoExtraInfo")
+    private String videoExtraInfo;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("videoModelCustomPromptTemplate")
@@ -65,7 +73,9 @@ public class RunVideoAnalysisRequest extends Request {
         this.modelCustomPromptTemplateId = builder.modelCustomPromptTemplateId;
         this.modelId = builder.modelId;
         this.originalSessionId = builder.originalSessionId;
+        this.snapshotInterval = builder.snapshotInterval;
         this.taskId = builder.taskId;
+        this.videoExtraInfo = builder.videoExtraInfo;
         this.videoModelCustomPromptTemplate = builder.videoModelCustomPromptTemplate;
         this.videoModelId = builder.videoModelId;
         this.videoUrl = builder.videoUrl;
@@ -134,10 +144,24 @@ public class RunVideoAnalysisRequest extends Request {
     }
 
     /**
+     * @return snapshotInterval
+     */
+    public Double getSnapshotInterval() {
+        return this.snapshotInterval;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
         return this.taskId;
+    }
+
+    /**
+     * @return videoExtraInfo
+     */
+    public String getVideoExtraInfo() {
+        return this.videoExtraInfo;
     }
 
     /**
@@ -169,7 +193,9 @@ public class RunVideoAnalysisRequest extends Request {
         private String modelCustomPromptTemplateId; 
         private String modelId; 
         private String originalSessionId; 
+        private Double snapshotInterval; 
         private String taskId; 
+        private String videoExtraInfo; 
         private String videoModelCustomPromptTemplate; 
         private String videoModelId; 
         private String videoUrl; 
@@ -187,7 +213,9 @@ public class RunVideoAnalysisRequest extends Request {
             this.modelCustomPromptTemplateId = request.modelCustomPromptTemplateId;
             this.modelId = request.modelId;
             this.originalSessionId = request.originalSessionId;
+            this.snapshotInterval = request.snapshotInterval;
             this.taskId = request.taskId;
+            this.videoExtraInfo = request.videoExtraInfo;
             this.videoModelCustomPromptTemplate = request.videoModelCustomPromptTemplate;
             this.videoModelId = request.videoModelId;
             this.videoUrl = request.videoUrl;
@@ -258,11 +286,29 @@ public class RunVideoAnalysisRequest extends Request {
         }
 
         /**
+         * snapshotInterval.
+         */
+        public Builder snapshotInterval(Double snapshotInterval) {
+            this.putBodyParameter("snapshotInterval", snapshotInterval);
+            this.snapshotInterval = snapshotInterval;
+            return this;
+        }
+
+        /**
          * taskId.
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("taskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * videoExtraInfo.
+         */
+        public Builder videoExtraInfo(String videoExtraInfo) {
+            this.putBodyParameter("videoExtraInfo", videoExtraInfo);
+            this.videoExtraInfo = videoExtraInfo;
             return this;
         }
 

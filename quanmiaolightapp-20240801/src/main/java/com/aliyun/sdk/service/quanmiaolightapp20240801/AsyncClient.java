@@ -19,7 +19,15 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<GenerateBroadcastNewsResponse> generateBroadcastNews(GenerateBroadcastNewsRequest request);
+
     CompletableFuture<ListHotTopicSummariesResponse> listHotTopicSummaries(ListHotTopicSummariesRequest request);
+
+    CompletableFuture<RunCommentGenerationResponse> runCommentGeneration(RunCommentGenerationRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runCommentGenerationWithAsyncResponseHandler(RunCommentGenerationRequest request, AsyncResponseHandler<RunCommentGenerationResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunCommentGenerationResponseBody> runCommentGenerationWithResponseIterable(RunCommentGenerationRequest request);
 
     CompletableFuture<RunMarketingInformationExtractResponse> runMarketingInformationExtract(RunMarketingInformationExtractRequest request);
 
